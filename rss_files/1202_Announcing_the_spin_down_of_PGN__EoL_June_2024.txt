@@ -1,0 +1,549 @@
+
+
+
+Announcing the spin down of PGN (EoL June 2024)
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430
+    ## Tl;dr
+
+The launch of PGN was a feat that came together quickly, and with an incredible amount of support from the community, our partners, and from Gitcoin. I / We are immensely grateful for the time and effort everyone spent in helping us first shape our thinking, and then work to launch and sustain the network. After reviewing a number of key metrics (usage, incentives, cost, staffing, etc.) we have decided we are going to be winding down the Public Goods Network over the next 6mos (network shutdown tentatively planned for June of 2024). This decision is a hard one for us and not the outcome we anticipated, however it feels right after taking a realistic assessment of the project. We have plans we will share soon on how we plan to shut things down in an orderly manner. We also feel it is best to showcase where this experiment was successful and where there were failures. Read on for more details.
+
+## As Incepted
+
+PGN was conceived as the network that funds the world’s public goods. By building an alliance of public goods supporters, we could move network traffic to PGN so that low cost Tx fees would offer funding for public goods projects and supporters. The unique selling proposition of PGN was based on launching Contract Secured Revenue (CSR), and the appeal of directing sequencer fees to fund public goods. We felt there would be enough interest in CSR to drive development and adoption of the network (ie, people deploying smart contracts) all while it would be steered by an alliance of public goods supporters to help us govern the surplus of funding. Through the six months of building post-launch, what we learned was that:
+
+1. CSR was not a viable technology to integrate given the law of chains and requirements to maintain parity with Bedrock (for valid reasons)
+2. Convincing people to migrate network traffic without the convenience of a scaled network was not possible
+3. Low liquidity on bridges (cannot move large Tx volumes on stables or other tokens), lack of DEXs, missing core components like a Safe UI, etc. all caused large headwinds.
+4. Without promise of a future airdrop (we didn’t want to do a token… and OP governs the superchain), we saw far less traffic than other emerging L2s who likely will do a token.
+
+The network was intended to be larger than just Gitcoin. In fact, the Gitcoin Foundation / I decided to bootstrap the funding of this initiative so that the Gitcoin DAO did not need to take on any of the financial cost or work associated with launching and maintaining the network. What we learned was that:
+
+1. Gitcoin wanted to be involved, and I should have included them in the decision making process. This decision to fund the network this way caused frustration and eroded trust within Gitcoin.
+2. The cost / revenue estimates we initially made with OP have not borne out. (ie, the network is more expensive to operate than expected.)
+3. The Alliance has been terrific but has not driven much Tx volume as they dont have the same dApp / Protocol usage that Gitcoin has during Grants rounds.
+4. There was confusion on how the Tx volume would be filled - OP felt this would be an App chain for Gitcoin and we wanted this to be an ecosystem chain like Base.
+
+## The Silver lining
+
+By having a network live and focused on public goods, we were able to bring many of the best public goods projects together to explore how we might expand and grow funding. For Gitcoin, having a “default chain with financial upside” gave us leverage to raise additional funds for public goods (e.g., Polygon sponsoring the Eth Infra round for us to run the round on Polygon instead of on PGN). We learned that L2s are generally interested in supporting public goods, and want to support a community of builders. Giving them incentive to fund rounds on Gitcoin is positive for both ecosystems.
+
+We learned an immense amount about how to launch, grow and scale a L2. We had interest from those who wanted to run validators and RPC nodes, we had immense support from the community in adopting and validating PGN as a legitimate L2 option on bridges, insight dashboards, core infrastructure (like the Graph Protocol, etc.). Partnerships and support from Zora, Base, OP, jokerace, Layerswap, Hats Protocol, Guild, Goldsky, Superbridge, Hop Protocol, LayerZero, have been incredibly generous and we want to thank them for all of the time and effort they have spent with us.
+
+We were able to meet and work with some really awesome, intelligent people. PGN brought Nicole, Sophia, Dan and others closer to our ecosystem. Finding really great individuals to partner with on an initiative as large as PGN can often be daunting. Having Nicole lead so much of PGN has been such a joy to watch and participate with.
+
+The Gitcoin team has risen to the occasion and really supported PGN from day one. The brand work by folks on MMM, the NFT drops, the engineering team (Grants Stack and Allo!) supporting the deployment of stable coins, bridging and other core infra has been immensely valuable. PGN gave us a fun sandbox to build a new brand identity and really showcase Gitcoin’s skills in going from 0 to 1.
+
+## The Path Forward
+
+Work has been done to map out what would need to be true for PGN to be successful, and the reality is that the list is quite large, and the capital required is also significant (and not something the Gitcoin Foundation can absorb on its own). It was through the review of these requirements, and also evaluating the current appetite Gitcoin has to lead this initiative, that we have decided to shut down the network.
+
+If there are others that would like to financially support this initiative… perhaps take over the network, please get in contact. As currently planned, PGN will be sunset (lights out) in June of 2024. We will offer more details as we get closer to that timeline. In the meantime, we plan to disable bridging onto PGN, and would encourage folks to bridge assets off PGN as they need them. See our documentation (docs.publicgoods.network) for bridging options and reach out in our [Telegram](https://t.me/+9_ZHRaz7nmJkMTIx) with further questions.
+
+## Gratitude
+
+Thank you so much to everyone who rallied around us to make PGN what it is today. I still believe we are in a race to the bottom where sequencer fees are one of the most sustainable sources of funding for public goods. As more and more L2 ecosystem’s grants programs evolve, there may just be enough funding to sustain our innovation for a while to come.
+Sun, 12 May 2024 12:11:20 +0000
+PGN
+
+
+Announcing the spin down of PGN (EoL June 2024)
+han
+
+            <aside class="quote no-group" data-username="enidavis" data-post="14" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/enidavis/48/11716_2.png" class="avatar"> enidavis:</div>
+<blockquote>
+<p>At the current state of interoperability infrastructure, there is no seamless way to wind down without risking freezing or burning assets that remain on PGN.</p>
+</blockquote>
+</aside>
+<p>What about transferring the assets on PGN to Ethereum that would let the owners redeem their assets?</p>
+<p>Assumption: The bridge contract could transfer the assets arbitrarily.</p>
+<p>Technical Steps:</p>
+<ul>
+<li>Develop a PGN Redemption contract that will let asset owners withdraw their assets. This is similar to airdrop contracts. It will utilize a merkle-tree to have a small on-chain footprint. A list of asset-owner-amount state will be provided.</li>
+<li>Develop the accompanying frontend.</li>
+<li>Get the contract audited.</li>
+<li>Freeze the assets.</li>
+<li>Provide the state to the contract and the frontend.</li>
+<li>Transfer the remaining PGN assets from the bridge to the PGN Redemption contract.</li>
+</ul>
+<p>Benefits:</p>
+<ul>
+<li>PGN would spin down faster.</li>
+</ul>
+<p>Costs:</p>
+<ul>
+<li>Contract and frontend development costs.</li>
+<li>Contract audit or bug bounty costs.</li>
+<li>Contract deployment and asset transfer gas costs. A L2 could be used to reduce this, with additional risks arising from the selected L2 and poorer UX.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/15
+        Sun, 12 May 2024 12:11:20 +0000
+gov.gitcoin.co-post-17430-15
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+enidavis
+
+            <p>Since announcing the network shutdown, many have approached me with questions about why the network is shutting down and with a desire to keep it going and transition ownership. While it is important to note that ultimately PGN is an experiment run by the Gitcoin Foundation, and so the decision to wind it down or transition it remains in the Foundation’s hands, I understand that my perspective is valuable, as I was most involved day to day. For that reason, I’m sharing the below in the hopes of explaining why I support a wind down, and with learnings that may be valuable for others building in and around the Public Goods ecosystem. <strong>MANY thanks to <a class="mention" href="https://gov.gitcoin.co/u/sophia">@sophia</a> for her very valuable input and edits to make this retro as legible and constructive as possible.</strong></p>
+<p><strong>Public Goods Network Retrospective &amp; Recommendations</strong></p>
+<p><strong>TLDR:</strong></p>
+<ul>
+<li>Key learnings from running PGN</li>
+<li>Criteria needed for potential future success of the network</li>
+<li>Why I am supportive of a successful wind down</li>
+</ul>
+<p>We deserve a network dedicated to funding and building public goods. It is my hope that as L2 innovations advance, the vision of PGN will one day be realized. While my idealism believes in a future PGN, my realism knows that its time has not yet arrived, at least not in its current form.</p>
+<p>My hope is that sharing this external retro of my time launching and building provides additional context and background on my recommendations to continue winding down the network. It also aims to help everyone understand the process and reasoning behind the difficult decision to end PGN.</p>
+<p><strong>Key Learnings from Running PGN</strong></p>
+<p>My approach to technology has always focused on users and their experience. I care about users first and foremost, and PGN has attracted communities with a broad spectrum of experiences and resources. While there were certainly (too) many airdrop farmers who bridged and still hold funds on PGN, the largest concentrated spikes of user onboarding occurred during Gitcoin Grants funding rounds, specifically GG18 and especially GG19. These were global grantees and donors who have looked to crypto as a new form and source of funding for their public goods projects. Public goods onchain users deserve an efficient, well-built, reliable, affordable, and accessible platform, perhaps more than any other L2 users.</p>
+<p>Because PGN was never able to tap into sufficient resources, we were at a disadvantage in the L2 race for developer talent and dApp development. This led to a subpar user experience. I cannot stand behind the PGN UX for those two grant rounds and say it was high quality.</p>
+<p>In particular, I felt that user pain when supporting grantees and donors from around the world with limited funds and limited English proficiency. Bridging and wallets, in particular, did not consistently work well and were expensive. There is still no DEX. For grantees, every dollar counts, and paying $50-100+ on bridging fees and gas was a substantial cost. Similarly for donors, these $50-100 fees swallowed up most of the funds they planned to donate. Moving forward, prioritizing an improved user experience with affordable and accessible tools would be crucial for PGN to better serve its public goods communities.</p>
+<p><strong>Criteria Needed for Future Success</strong></p>
+<p>While I will go into some of the detailed reasoning behind my thinking, my overarching takeaway is that PGN needed substantial liquid resources in order to survive and provide the experience users deserve. Relying on eventual revenue was insufficient. In retrospect, by not starting with substantial resources, we lost traction (in UX, deployed dApps, liquidity, partnerships, etc.) that we were never able to regain. Although there is interest to transition PGN to a new team, I’m not yet confident that there is a new team that can bring sufficient liquid financial (by my estimate, $500-750k/year) and social capital to the table at the level needed to make this happen.</p>
+<p>To be clear, this is not a condemnation for anyone who has been involved at any stage. Everyone who contributed was amazing and so talented, both within the PGN team as well as the many Gitcoin contributors and member organizations. We all gave it our all, and I stand behind the effort, especially given how small our team was. No one was full time, and people were all pitching in however they could. But it wasn’t enough, and ultimately, our users deserve better.</p>
+<p><strong>PGN’s Inflection Point</strong></p>
+<p>As PGN hit its 6-months landmark, it reached an inflection point. PGN was launched to experiment with new primitives in sequencer fee generation and allocation, grounded in the unique mission of directing all revenue exothermically to public goods at large. Since launch, it accomplished important wins but also faced a few notable challenges that delayed its development.</p>
+<p>As one of the first OP-stack superchains to launch, PGN likely launched too early, without critical infrastructure for a successful L2 rollout (ie, liquidity for expanded bridging and DEX use cases). PGN launched before key advancements like EIP-4844 and Celestia DA that drastically reduced data availability (DA) costs from around ~$70k (July - Dec) to ~$2k (Jan - now) per month. Additionally, the Superchain ecosystem itself continues to concurrently mature, meaning that early challenges in bridging and interoperability were not PGN’s alone but nonetheless impacted the PGN experience, user satisfaction, and opinions (ie, Metamask gas calculations, lack of support to run additional RPC nodes, etc.). For those who interacted with PGN and experienced this friction, trust and goodwill were lost. For potential new users, the network will need to meaningfully differentiate itself in the now crowded L2 landscape.</p>
+<p>The following summary details my personal perspective on the successes, challenges, and requirements for PGN. While I would love to see a new future for PGN, I still haven’t been assured that there is a team that has all the key factors in place to ensure success. Rather than restarting the PGN experiment and putting users through another challenging experience, I think it’s the humane and correct thing to be strict about PGN’s requirements for success. It is my opinion that PGN and Gitcoin owe it to their community to not greenlight a future PGN unless we are certain these requirements are in place, and that a dedicated and committed organization was prepared to provide these resources and support over the long term.</p>
+<p><strong>Criteria 1: Team / Ecosystem</strong></p>
+<p>The lack of a dedicated engineering team that could quickly implement necessary infrastructure, identify paths forward with dapps, and implement necessary steps in-house was a major blocker for consistent, meaningful progress toward PGN’s overall goals. As folks looked to adopt PGN, questions on where to find core infrastructure (Graph nodes, Safe contracts, a Safe UI, etc.) were common. Unfortunately we didn’t have the resources to deploy and scale the infra ourselves (nor the financial incentives to woo teams into doing it for us).</p>
+<p>The addition of Sophia (originally hired as DevRel and technical integration support) to the team brought much needed attention and acceleration to the technical side of PGN, and allowed us to understand the most efficient strategies to address those technical challenges. I also increased my commitment and focus on PGN, working with partners and Alliance members to establish the foundation for more regular content &amp; narrative discussions while framing a more strategic roadmap for Q1 of 2024. This temporary bump in team capacity and skill showed what might be possible given sustained staffing, especially on the engineering and partnerships side.</p>
+<p>Sophia’s direct involvement at conferences significantly deepened relationships with pivotal partners. We were able to secure a few key dependencies at no cost, accomplish the deployment of core dApps, and meaningfully improve community adoption and willingness to deploy and support PGN. This was a strong indicator of the level of commitment that is necessary among a team, which can only be achieved with a full-time team dedicated to PGN.</p>
+<p><strong>Requirements:</strong><br>
+The minimum viable team members needed to support a successful long-term network would be:</p>
+<ul>
+<li>Protocol Lead - with strong social capital, BD operations, &amp; technical knowledge</li>
+<li>Senior engineer - with strong L2 experience &amp; knowledge</li>
+<li>DevRel / Community Manager - with strong technical skills &amp; relationship building abilities</li>
+<li>Marketing / Growth - with strong writing, PR, and ecosystem knowledge</li>
+<li>Designer - to support marketing efforts as well as frontend UX</li>
+</ul>
+<p>In addition, presence at future crypto events is critically necessary in order to maintain PGN as a front of mind competitor in the L2 space and to deepen relationships with key partners. PGN will need to have a sustained presence at crypto events year round, and be featured in speaking engagements at these events, which can be costly. Much of the $500-750k I estimated above would need to go toward staffing and travel, and in my opinion is a non-negotiable criteria for success.</p>
+<p><strong>Criteria 2: Alliance / Governance</strong></p>
+<p>Alliance members participated consistently in meetings and in modest additional actions such as advocating in forums and amplifying PGN on socials. They provided input towards defining public goods and initial governance for distributing PGN funds, as well as defining the technical dependencies required for deploying on PGN. However, despite their participation, the reality was that the majority of partners were not planning to deploy or fill blockspace on PGN in the near term, primarily due to a lack of omnichain plans, though they did intend to provide meaningful contributions to governance. Alliance members also lacked the capacity to take on larger needs, such as marketing or maintaining documentation.</p>
+<p>Although PGN never reached a point where there were funds to govern, it is worth noting that there were and will likely continue to be debates around how these funds should be used and governed. The discussion ranged from completely exothermic (e.g., solely directed to funding external public goods projects - though even there, the question arose of which public goods, for example, climate change vs. diversity initiatives vs. Ethereum infrastructure) to whether a portion (and how much) should be dedicated to developing in-house public goods infrastructure. There was also the question of how much should be directed back to fund the actual PGN team and budget.</p>
+<p>For reasons of alignment and funding, PGN never intended to launch a token, but this raised the obvious question of who would then decide these matters and how. There is a draft governance outline and basic recommendations on what a governance structure might look like (e.g., different types of members based on participation types, to decide on fee distribution vs. receive fees), and ultimately, the top priority was to generate revenue so that funds exist to be distributed. This major question will need to be addressed in the long term.</p>
+<p><strong>Requirement:</strong><br>
+These major questions will need to be addressed in the long term.</p>
+<ul>
+<li>What public goods are being funded?</li>
+<li>How are funds being governed?</li>
+<li>What percentage of funds are reinvested back into PGN?</li>
+<li>Will PGN forever be at a disadvantage if profits are donated?</li>
+<li>Who will provide the necessary liquidity to fund PGN if it doesn’t have future profitable prospects?</li>
+</ul>
+<p><strong>Criteria 3: Tech &amp; Infrastructure</strong></p>
+<p>During GG19 in November 2023, significant issues hindering PGN became apparent. These friction points prevented PGN from offering a high-quality on-chain experience for users and dApps building on the network. These unresolved challenges significantly compromised both user experience and brand trust. This impact was felt not only by consumers but also by Gitcoin, the largest user of PGN to date. The discovery of these limitations was a key factor in the decision to wind down the network.</p>
+<p>Specific technical challenges included:</p>
+<ul>
+<li><strong>Staffing Shortages:</strong> Delays were primarily caused by inconsistent staffing, hindering progress on key technical aspects like USDC, Safe UI, a DEX, and improved wallet and bridging options.</li>
+<li><strong>Pacing with Superchain and Law of Chains:</strong> Plans to introduce contract-secured revenue as a distinguishing feature for PGN proved to not be possible due to compatibility issues with the Superchain and restrictions from the Law of Chains. Although there were proposals to integrate CSR into the OP Stack, governance processes moved too slowly and there has not been meaningful progress on this to date.</li>
+<li><strong>Integration Deficiencies:</strong> There were significant gaps in integrating essential infrastructure, particularly with wallets like Metamask and L2 to L2 bridges such as Socket or Hop, leading to high transaction costs. Additionally, there was a lack of clear communication and guidance for global users on navigating VPNs for interacting with the network.</li>
+</ul>
+<p>The OP Labs team provided invaluable assistance, particularly in unblocking the Safe UI deployment. They consistently offered constructive solutions and clear paths forward to address technical challenges through their 2024 Superchain development efforts. Additionally, the Biweekly Builders Call gained consistent momentum, showcasing 1-2 deployed dApps or infrastructure projects each call, highlighting the grassroots growth of the developer community.</p>
+<p>While a short-term path to technical maturity for PGN existed in Q1 2024, long-term success hinges on establishing a unique value proposition. This requires not just technical prowess, but also distinct dApp and UI experiences. Currently, the “killer use case” for PGN, the specific types of dApps that would thrive on PGN compared to other networks, remains unclear. While Gitcoin was originally envisioned as a potential anchor tenant, technical challenges and delays have shifted internal priorities. <strong>Addressing this unanswered question about PGN’s UVP will be the top priority moving forward.</strong></p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li><strong>Frictionless On-Chain Experience:</strong> PGN needs highly functional, accessible bridges, wallets, and decentralized exchanges (DEXs) for a smooth user experience. Ideally, these wouldn’t be standalone solutions but integrated within existing, heavily used platforms.</li>
+<li><strong>Committed Alliance Members:</strong> If the Alliance continues, involving members in Builders Calls would foster technical collaboration and identify their needs. This united approach would boost community engagement and ownership within both groups.</li>
+<li><strong>Closer Partnership with Superchain:</strong> PGN should establish itself as a key player of the Superchain, collaborating closely with OP Labs, partners, and other Superchains.</li>
+<li><strong>RaaS Provider:</strong> A guaranteed budget to pay for RaaS fees for, at minimum, 12 months. This is estimated at around $70k a year ($36k RaaS fee + an estimated $30k of cushion room for DA costs if PGN is not profitable).</li>
+<li><strong>Omnichain Strategy:</strong> Exploring an omnichain strategy with Layer Zero could improve accessibility for developers and users by reducing reliance on PGN solely.</li>
+<li><strong>Improved Relationship with Gitcoin:</strong> Gitcoin will always be a primary strategic partner. While Gitcoin could eventually provide the onchain volume itself to sustain PGN, there are numerous hurdles to completing this, including lack of required and consistently functional infrastructure, substantial reduction of social capital and goodwill toward PGN by key Gitcoin team members and workstream leaders, and user friction in the PGN experience. As PGN works to address and remove the various challenges that have hindered its progress to-date, it would need to eventually go back to Gitcoin with a clear proposal of how it has improved functionality and accessibility, and how economically it would be beneficial to Gitcoin to return to and prioritize PGN as a top network. However this will only be possible once PGN has established itself as a stronger player technically, and with Alliance backing beyond Gitcoin.</li>
+<li><strong>Finding a “Killer App”:</strong> PGN needs to decide if developing a unique in-house killer app is feasible with its resources, and if yes, then what the functions of this app/experience would be. This is still probably the most important question to answer for the future of PGN: what is it that a user can do on PGN that is a better experience and makes more sense on PGN than any other Network. How will PGN differentiate itself not only through its mission to fund public goods, but through its UX and technical development.</li>
+</ul>
+<p><strong>Criteria 4: Business Strategy &amp; Financial Prospects</strong></p>
+<p>While technical challenges and development are at the core of most of the work, the business model for PGN is where the network has ultimately most suffered, and where quantitatively the need for improvement is most clear. While the rollout of Celestia DA in January reduced costs by 98% and significantly improved financial prospects, PGN would still need to increase its transaction volume from its current 1.5m to 2m monthly transactions in order to consistently break even.</p>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li><strong>Financial Resources:</strong> A clear runway of funding is needed to support RaaS costs, staffing, infrastructure deployments, builder ecosystem incentives, and other network experiments.</li>
+<li><strong>Incentivizing Adoption:</strong> PGN needs to drive increased adoption of transaction-heavy dApps, and financial incentives through airdrops or points could be a compelling strategy. Some other potential ideas include:
+<ul>
+<li><strong>Bootstrapping CSR:</strong> Airdrop $5,000 to the addresses that consumed the most blockspace, rewarding responsible resource usage and potentially sparking community engagement.</li>
+<li><strong>Community round incentives:</strong> Increase the matching pool for any community running a Gitcoin Grants round under PGN, directly supporting community-driven projects.</li>
+<li><strong>Rewarding early adopters:</strong> Airdrop tokens to anyone who creates a PGN Hypercert or mints an NFT on PGN, recognizing and incentivizing pioneering users of the platform.</li>
+</ul>
+</li>
+<li><strong>Building Brand Authority:</strong> PGN would need to continue to build its brand authority and unique narrative through publishing content and amplifying via X, Farcaster, forums and other mediums. This would include co-marketing with Optimism and Superchain partners to build off of the shared brand, visibility and trust of these partners, and through twitter spaces and case studies as well.</li>
+<li><strong>Superchain Partner Engagement:</strong> Following discussions with Superchain partners such as Lyra and Mode, it was discussed to hold monthly Superchain partner meetings to share information about relevant the apps, infra, and identify opportunities for coordination, e.g. to synchronize pull requests efforts to infra partners for joint integration as a united Superchain.</li>
+</ul>
+<p><strong>Wind Down Plan and Asset Migration:</strong></p>
+<p><em><strong>UPDATED: The PGN team, in cooperation with Conduit and Optimism, is working on the most efficient and affordable method of making assets available post network shutdown, which is still slated for June 2024. We are committed to ensuring that all users are able to receive their funds.  We still highly recommend users bridge their assets off the network.</strong></em></p>
+<p>Through conversations with Conduit, our rollup provider, and Optimism, the hope is that as Superchain infrastructure matures, opportunities for seamless asset movement will become available. We are currently exploring options to extend the wind-down date and do not intend to shut down the chain until 99% of assets are bridged off the network. The estimated funding required to extend our contract with Conduit for an additional 12 months is around $70k ($36k RaaS fees + an extra $30k buffer for data availability fees if PGN continues to be unprofitable).</p>
+<p>Currently, shutting down without proper bridge infrastructure could lead to the current community assets being frozen or burned. Therefore, we highly recommend renewing our RaaS contract for a year. In the worst-case scenario that PGN continues to be unsuccessful, waiting a year allows us to leverage significantly improved interoperability and infrastructure to minimize the risk of asset loss.</p>
+<p><strong>Final Thoughts:</strong></p>
+<p>My hope is that this retro and set of requirements gives some insight and visibility into some of the challenges and learnings for what it takes for a successful future for PGN. While my role is now simply as a supportive team member to coordinate the wind down of the network and ensure users are protected, I do not hold any formal decision making authority in this role. I applaud and appreciate the optimism (no pun intended) of public goods champions to seek a future for PGN. I hope that this provides a more thorough understanding of what it would really take to make PGN a success, and a sober outline of the responsibility that anyone would take on as a future steward of the Network.</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/14
+        Thu, 09 May 2024 20:08:37 +0000
+gov.gitcoin.co-post-17430-14
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+KarlaGod
+
+            <p>Oh wow, I guess it’s all for the best, I had put a team of B&lt;&gt;rder/ess students and a team of builders in PGN network to build PGN’s first dex, PIGEON.</p>
+<p>We had created a TG group with me and a team to build PIGEON<br>
+<a href="https://t.me/+0aJ-RxBlL7w1N2Nk" class="onebox" target="_blank" rel="noopener nofollow ugc">https://t.me/+0aJ-RxBlL7w1N2Nk</a></p>
+<p>Built a UI</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.figma.com/file/4iX8stgWvBq0Rn6K6U5gqw/Pigeon?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=Mfn4yxvgmrn5xH9P-1">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/4/46b68c732942369c25b4f21b54c73cbb7337d8d2.png" class="site-icon" data-dominant-color="37353A" width="192" height="192">
+
+      <a href="https://www.figma.com/file/4iX8stgWvBq0Rn6K6U5gqw/Pigeon?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=Mfn4yxvgmrn5xH9P-1" target="_blank" rel="noopener nofollow ugc" title="02:32PM - 06 December 2023">Figma – 6 Dec 23</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/280;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0ef956d8c3de98091fd3c14c8697a057646fa1fd_2_690x280.png" class="thumbnail" data-dominant-color="BAB9B2" width="690" height="280"></div>
+
+<h3><a href="https://www.figma.com/file/4iX8stgWvBq0Rn6K6U5gqw/Pigeon?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=Mfn4yxvgmrn5xH9P-1" target="_blank" rel="noopener nofollow ugc">Figma</a></h3>
+
+  <p>Created with Figma</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c164d4c403f92892eb6e043cc3dbb8d032b5da0c.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/c164d4c403f92892eb6e043cc3dbb8d032b5da0c" title="pgn"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c164d4c403f92892eb6e043cc3dbb8d032b5da0c_2_690x284.png" alt="pgn" data-base62-sha1="rAQbfyuUeeN9PF1oDEIVBQi2CFS" width="690" height="284" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c164d4c403f92892eb6e043cc3dbb8d032b5da0c_2_690x284.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c164d4c403f92892eb6e043cc3dbb8d032b5da0c_2_1035x426.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/c/c164d4c403f92892eb6e043cc3dbb8d032b5da0c.png 2x" data-dominant-color="605F5A"></a></div><p></p>
+<p>And <a class="mention" href="https://gov.gitcoin.co/u/bertux">@bertux</a> was working on the Contracts.</p>
+<p>It’s all good, I guess we’d just close it off and count our losses, the good thing is PGN allowed me to meet amazing developers like <a class="mention" href="https://gov.gitcoin.co/u/bertux">@bertux</a> and it allowed me to have great Jamboree sessions with other PGN builders and the person of <a class="mention" href="https://gov.gitcoin.co/u/sophia">@sophia</a>.</p>
+<p>If this is the best decision, then it’s all good, I’d still find more ways to contribute to the Public Goods ecosystem.</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/12
+        Thu, 18 Jan 2024 13:59:56 +0000
+gov.gitcoin.co-post-17430-12
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+0x666
+
+            <aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>ie, the network is more expensive to operate than expected</p>
+</blockquote>
+</aside>
+<p>testinpod team is <a href="https://gov.optimism.io/t/ready-to-vote-upgrade-proposal-3-delta-network-upgrade/7310" rel="noopener nofollow ugc">going to push delta upgrade to OP Mainnet</a><br>
+this upgrade will brings Span Batch, which can reduce 50%-90% of costs(it says performance in the backtest article,but i personally think it is costs) while in GG round,and reduce 97% costs if theres no GG round.</p>
+<blockquote>
+<p>The PGN case represents that people can now use OP Chain for periodic use cases.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/32f3afffc79ebb49e747c5677120ab1b986c4004.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/32f3afffc79ebb49e747c5677120ab1b986c4004" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/32f3afffc79ebb49e747c5677120ab1b986c4004_2_627x500.jpeg" alt="image" data-base62-sha1="7gJYeJN5kCw9DW61Svb9UaOIuHy" width="627" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/32f3afffc79ebb49e747c5677120ab1b986c4004_2_627x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/32f3afffc79ebb49e747c5677120ab1b986c4004_2_940x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/32f3afffc79ebb49e747c5677120ab1b986c4004_2_1254x1000.jpeg 2x" data-dominant-color="F0F1F2"></a></div><p></p>
+</blockquote>
+<p>you can check the article <a href="https://op-tip.notion.site/Span-Batch-Design-Docs-b85e599a47774dcdb8171cc84cab2476" rel="noopener nofollow ugc">here</a></p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/11
+        Thu, 18 Jan 2024 12:10:40 +0000
+gov.gitcoin.co-post-17430-11
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+sophia
+
+            <p>It’s been an honor to work on PGN.</p>
+<p>PGN was an excellent experiment for how we can leverage the economically exothermic nature of blockchain to create sustainable, durable, and recurring funding for public goods. I still believe in its mission and hope that as the L2 ecosystem evolves, its goals will be realized.</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>We learned that L2s are generally interested in supporting public goods, and want to support a community of builders.</p>
+</blockquote>
+</aside>
+<p>Yes! This was exciting to witness. L2 ecosystems are realizing that there’s a competitive advantage to fund public goods. While this made it a bit harder to sell our narrative as a unique selling point, the more L2s funding public goods the better. Symbiotic relationships are the backbone of web3.</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Work has been done to map out what would need to be true for PGN to be successful, and the reality is that the list is quite large, and the capital required is also significant</p>
+</blockquote>
+</aside>
+<p>And the L2 landscape is rapidly evolving. It’s like that saying about startups… building a plane while flying. But in our case, the plane pieces are changing, many people with significantly more resources are also creating planes, and there’s just not enough passengers who even want to ride a plane…</p>
+<p>As the ecosystem matures, we will move towards a direction where L2s will be easier and cheaper to maintain. But we just aren’t there yet. And it’s unclear what that exact timeline will be.</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>We are immensely grateful for the time and effort everyone spent in helping us first shape our thinking, and then work to launch and sustain the network.</p>
+</blockquote>
+</aside>
+<p>Couldn’t have said it better. The schelling point that PGN created amongst the partners, alliance members, the supercahin, and the PGF ecosystem at large was truly special. Lots of amazing things came from this experiment and grateful I had the opportunity to give it my all!</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/10
+        Wed, 17 Jan 2024 23:44:38 +0000
+gov.gitcoin.co-post-17430-10
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+sophia
+
+            <aside class="quote no-group" data-username="thedevanshmehta" data-post="7" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Or can we actually retain the amazing team that PGN has brought together and carve out a larger role for the Foundation to play of being like Gitcoin Labs, creating a culture of rapid 0-1 iterations while DAO workstreams retain the ethos of 1-10?</p>
+</blockquote>
+</aside>
+<p>I love this idea. When it became clear that we needed more tx volume on PGN, we started to focus builder calls on creating public good dApps to boost network activity. In theory, the idea is simple: build useful products.</p>
+<p>One key blocker for PGN’s success was the lack of high tx volume non-defi dApps. I’m a strong believer that PGF infra will revolutionize how we coordinate, collaborate, and fund solutions to the world’s most pressing problems. But growing PGF dApp adoption requires real-world testing and refinement.</p>
+<p>The products that launched through Gitcoin (grant stack, passport, and allo) are an excellent start. There are a lot of very talented teams across the PGF ecosystem. If we can work together and leverage each team’s strengths, we can begin to build products with strong market fit that scale into the real world.</p>
+<p>I think the best way to do that is to support more people to rapidly iterate on human-centered products that connect the different PGF lego blocks together. Imo, a lot of the web3 landscape often gets caught in a loop of developers building for developers, resulting in products that fail to gain traction beyond their insular circles. I think we can disrupt this pattern by centering our efforts on the end-users.</p>
+<p>I personally don’t know what’s next for me after PGN, but I want to do all I can to scale adoption of PGF tools. PGN was full of so many learnings and a really powerful, passionate, determined community. It would be a shame to see the momentum that was created from this schelling point go to waste.</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/9
+        Wed, 17 Jan 2024 22:48:17 +0000
+gov.gitcoin.co-post-17430-9
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+sophia
+
+            <p>There are no plans to have future rounds on PGN</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/8
+        Wed, 17 Jan 2024 22:06:07 +0000
+gov.gitcoin.co-post-17430-8
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+thedevanshmehta
+
+            <p>After following PGN since launch, I’m glad we are doing a retrospective on this experiment for us all to learn from.</p>
+<p>Overall, a lot of the assessment centers around PGN simply being too early for its time, with inadequate tooling and unpredictable costs making this an unsustainable venture. Specifically, a gitcoin/public goods appchain may be worth revisiting as a validium after the ecosystem solves</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Low liquidity on bridges (cannot move large Tx volumes on stables or other tokens), lack of DEXs, missing core components like a Safe UI, etc.</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>If the network is financially sustainable after the move of DA to Celestia, I think this <em>could</em> be interesting</p>
+</blockquote>
+</aside>
+<p>There were also benefits for us to have a BATNA (best alternative to a negotiated agreement) that we could use to get L2s to sponsor the matching pool in return for us hosting rounds on their chain.</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>For Gitcoin, having a “default chain with financial upside” gave us leverage to raise additional funds for public goods (e.g., Polygon sponsoring the Eth Infra round for us to run the round on Polygon instead of on PGN)</p>
+</blockquote>
+</aside>
+<p>I wonder what our new BATNA would be to preserve this fundraising strategy - telling Polygon that if they don’t sponsor we will host a round on Optimism (due to retropgf) might understandably not be taken too well by them.</p>
+<p>Now, some harsh questions not for the sake of it but so we can all learn the maximum from this experiment</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>CSR was not a viable technology to integrate given the law of chains and requirements to maintain parity with Bedrock</p>
+</blockquote>
+</aside>
+<p>Was this assessment not possible to do before we invested in spinning up an OP stack chain?</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>The Alliance has been terrific but has not driven much Tx volume as they dont have the same dApp / Protocol usage that Gitcoin has during Grants rounds.</p>
+</blockquote>
+</aside>
+<p>This was something we already knew beforehand, it did not come as any surprise right? What benefit did we perceive the alliance partners as bringing to the table in the 1st place?</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>The cost / revenue estimates we initially made with OP have not borne out. (ie, the network is more expensive to operate than expected.)</p>
+</blockquote>
+</aside>
+<p>This is in many ways a forecasting failure - may we know who and how the cost estimates were done in how much time? It’s important to investigate the lapse on this front in committing the resources we did before proper due diligence.</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Gitcoin wanted to be involved, and I should have included them in the decision making process. This decision to fund the network this way caused frustration and eroded trust within Gitcoin.</p>
+</blockquote>
+</aside>
+<p>Now for the most interesting question of all - what have we learnt from this for the right relation between Gitcoin Foundation and the DAO?</p>
+<p>Should we stick to <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a>’s suggestion of the foundation just being a legal wrapper?</p>
+<aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17419">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/temp-check-rapid-prototyping-gitcoin/17419/4">TEMP CHECK - Rapid Prototyping @ Gitcoin <img width="20" height="20" src="https://gov.gitcoin.co/images/emoji/twitter/test_tube.png?v=12" title="test_tube" loading="lazy" alt="test_tube" class="emoji"></a></div>
+<blockquote>
+<p>Afaik the Foundation is chartered to be the legal/administrative wrapper for the DAO. Whereas Labs would be chartered more for rapid experimentation.</p>
+<p><em>(Keep me honest Foundation team members, but it seems like PGN was a one-off strategic project, but lmk if wrong. FWIW some of the folks that built parts of PGN, like <span class="mention">@carlb</span>, will be contributing to Labs</em></p>
+</blockquote>
+</aside>
+<p>Or can we actually retain the amazing team that PGN has brought together and carve out a larger role for the Foundation to play of being like Gitcoin Labs, creating a culture of rapid 0-1 iterations while DAO workstreams retain the ethos of 1-10?</p>
+<p>Arbitrum has some interesting learnings in this regard. Initially, they too focused on being the legal wrapper. Over time, the division has evolved to where the DAO supports teams in the ecosystem while the foundation poaches teams from outside. It is not a bad thing for these relationships to evolve over time.</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/7
+        Wed, 17 Jan 2024 20:55:18 +0000
+gov.gitcoin.co-post-17430-7
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+M0nkeyFl0wer
+
+            <p>Not planning on running more rounds on PGN. Best to bridge funds back to other L2s or mainnet.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> thanks for sharing this thoughtful post and for being open to experimenting with potentially important mechanisms that benefit the community at large. <img src="https://gov.gitcoin.co/images/emoji/twitter/sparkling_heart.png?v=12" title=":sparkling_heart:" class="emoji" alt=":sparkling_heart:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/6
+        Wed, 17 Jan 2024 19:50:04 +0000
+gov.gitcoin.co-post-17430-6
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+QuickMythril
+
+            <p>does anyone know if this will affect GG plans?  unclear if there will be any more rounds using PGN or not.</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/5
+        Wed, 17 Jan 2024 18:05:55 +0000
+gov.gitcoin.co-post-17430-5
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+annika
+
+            <p>Earlier this week, I heard someone ask a question regarding another project: “Is this not a worthwhile experiment?”</p>
+<p>PGN was a worthwhile experiment.</p>
+<p>Its learnings will live on and help the Web3 community continue to improve the Layer 2 landscape &amp; public goods funding mechanisms at large.</p>
+<p>I can’t say it better than <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> did:</p>
+<blockquote>
+<p>Kudos for taking the shot <img src="https://gov.gitcoin.co/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"> and for making the hard call in the end <img src="https://gov.gitcoin.co/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/4
+        Wed, 17 Jan 2024 17:12:25 +0000
+gov.gitcoin.co-post-17430-4
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+ZER8
+
+            <p>This is a sad day for PG and I’m very sorry to hear that PGN is winding down, I just want to share that you’re all amazing and to thank you for the herculean efforts made here!</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/3
+        Wed, 17 Jan 2024 16:30:27 +0000
+gov.gitcoin.co-post-17430-3
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+owocki
+
+            <p>Gitcoin has experiemented with many different initiatives over the years.  This is something I spoke about briefly in <a href="https://gov.gitcoin.co/t/temp-check-gitcoin-labs/17419" class="inline-onebox">TEMP CHECK - Rapid Prototyping @ Gitcoin 🧪</a> :</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="17419">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/temp-check-rapid-prototyping-gitcoin/17419/1">TEMP CHECK - Rapid Prototyping @ Gitcoin <img width="20" height="20" src="https://gov.gitcoin.co/images/emoji/twitter/test_tube.png?v=12" title="test_tube" loading="lazy" alt="test_tube" class="emoji"></a></div>
+<blockquote>
+<h1>History of Product Exploration at Gitcoin 2015-2023</h1>
+<p>Gitcoin has had a rich history of exploration in the web3 design space through the years. As the market cycled through bull + bear + back again several times, Gitcoin has <a href="https://twitter.com/owocki/status/1736831846439076250">explored the design space organically</a>.</p>
+<p>Here is what the history of product exploration at Gitcoin looks like in my minds eye (and in the case of 2015-2017 cycle, what led to the creation of Gitcoin):</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/277c56cd50f6c36337c55cdac15bb4d6b1ce4499.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/277c56cd50f6c36337c55cdac15bb4d6b1ce4499" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/277c56cd50f6c36337c55cdac15bb4d6b1ce4499_2_690x370.png" alt="" data-base62-sha1="5Dj11IOcZasF0KoVk5FHSw9DfND" role="presentation" width="690" height="370" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/277c56cd50f6c36337c55cdac15bb4d6b1ce4499_2_690x370.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/277c56cd50f6c36337c55cdac15bb4d6b1ce4499_2_1035x555.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/277c56cd50f6c36337c55cdac15bb4d6b1ce4499.png 2x" data-dominant-color="F8F8F8"></a></div><p></p>
+</blockquote>
+</aside>
+<p>My perspective has always been that the projects that don’t survive themselves, the learnings from them live on.  Experimentation isn’t about having 100% hit rate.  Its about having a 100% learning rate + compounding those learnings over time.</p>
+<p>Kudos for taking the shot <img src="https://gov.gitcoin.co/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20">  and for making the hard call in the end <img src="https://gov.gitcoin.co/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17430">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>If there are others that would like to financially support this initiative… perhaps take over the network, please get in contact.</p>
+</blockquote>
+</aside>
+<p>If the network is financially sustainable after the move of DA to Celestia, I think this <em>could</em> be interesting. i wonder what a viable path forward would be. i just worry about (1) reducing focus on my 2024 focus (gitcoin = grants, grants = growwth) (2) what this networks USP could be.</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/2
+        Wed, 17 Jan 2024 16:02:23 +0000
+gov.gitcoin.co-post-17430-2
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+Announcing the spin down of PGN (EoL June 2024)
+kyle
+
+            <h2><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>Tl;dr</h2>
+<p>The launch of PGN was a feat that came together quickly, and with an incredible amount of support from the community, our partners, and from Gitcoin. I / We are immensely grateful for the time and effort everyone spent in helping us first shape our thinking, and then work to launch and sustain the network. After reviewing a number of key metrics (usage, incentives, cost, staffing, etc.) we have decided we are going to be winding down the Public Goods Network over the next 6mos (network shutdown tentatively planned for June of 2024). This decision is a hard one for us and not the outcome we anticipated, however it feels right after taking a realistic assessment of the project. We have plans we will share soon on how we plan to shut things down in an orderly manner. We also feel it is best to showcase where this experiment was successful and where there were failures. Read on for more details.</p>
+<h2><a name="as-incepted-2" class="anchor" href="https://gov.gitcoin.co#as-incepted-2"></a>As Incepted</h2>
+<p>PGN was conceived as the network that funds the world’s public goods. By building an alliance of public goods supporters, we could move network traffic to PGN so that low cost Tx fees would offer funding for public goods projects and supporters. The unique selling proposition of PGN was based on launching Contract Secured Revenue (CSR), and the appeal of directing sequencer fees to fund public goods. We felt there would be enough interest in CSR to drive development and adoption of the network (ie, people deploying smart contracts) all while it would be steered by an alliance of public goods supporters to help us govern the surplus of funding. Through the six months of building post-launch, what we learned was that:</p>
+<ol>
+<li>CSR was not a viable technology to integrate given the law of chains and requirements to maintain parity with Bedrock (for valid reasons)</li>
+<li>Convincing people to migrate network traffic without the convenience of a scaled network was not possible</li>
+<li>Low liquidity on bridges (cannot move large Tx volumes on stables or other tokens), lack of DEXs, missing core components like a Safe UI, etc. all caused large headwinds.</li>
+<li>Without promise of a future airdrop (we didn’t want to do a token… and OP governs the superchain), we saw far less traffic than other emerging L2s who likely will do a token.</li>
+</ol>
+<p>The network was intended to be larger than just Gitcoin. In fact, the Gitcoin Foundation / I decided to bootstrap the funding of this initiative so that the Gitcoin DAO did not need to take on any of the financial cost or work associated with launching and maintaining the network. What we learned was that:</p>
+<ol>
+<li>Gitcoin wanted to be involved, and I should have included them in the decision making process. This decision to fund the network this way caused frustration and eroded trust within Gitcoin.</li>
+<li>The cost / revenue estimates we initially made with OP have not borne out. (ie, the network is more expensive to operate than expected.)</li>
+<li>The Alliance has been terrific but has not driven much Tx volume as they dont have the same dApp / Protocol usage that Gitcoin has during Grants rounds.</li>
+<li>There was confusion on how the Tx volume would be filled - OP felt this would be an App chain for Gitcoin and we wanted this to be an ecosystem chain like Base.</li>
+</ol>
+<h2><a name="the-silver-lining-3" class="anchor" href="https://gov.gitcoin.co#the-silver-lining-3"></a>The Silver lining</h2>
+<p>By having a network live and focused on public goods, we were able to bring many of the best public goods projects together to explore how we might expand and grow funding. For Gitcoin, having a “default chain with financial upside” gave us leverage to raise additional funds for public goods (e.g., Polygon sponsoring the Eth Infra round for us to run the round on Polygon instead of on PGN). We learned that L2s are generally interested in supporting public goods, and want to support a community of builders. Giving them incentive to fund rounds on Gitcoin is positive for both ecosystems.</p>
+<p>We learned an immense amount about how to launch, grow and scale a L2. We had interest from those who wanted to run validators and RPC nodes, we had immense support from the community in adopting and validating PGN as a legitimate L2 option on bridges, insight dashboards, core infrastructure (like the Graph Protocol, etc.). Partnerships and support from Zora, Base, OP, jokerace, Layerswap, Hats Protocol, Guild, Goldsky, Superbridge, Hop Protocol, LayerZero, have been incredibly generous and we want to thank them for all of the time and effort they have spent with us.</p>
+<p>We were able to meet and work with some really awesome, intelligent people. PGN brought Nicole, Sophia, Dan and others closer to our ecosystem. Finding really great individuals to partner with on an initiative as large as PGN can often be daunting. Having Nicole lead so much of PGN has been such a joy to watch and participate with.</p>
+<p>The Gitcoin team has risen to the occasion and really supported PGN from day one. The brand work by folks on MMM, the NFT drops, the engineering team (Grants Stack and Allo!) supporting the deployment of stable coins, bridging and other core infra has been immensely valuable. PGN gave us a fun sandbox to build a new brand identity and really showcase Gitcoin’s skills in going from 0 to 1.</p>
+<h2><a name="the-path-forward-4" class="anchor" href="https://gov.gitcoin.co#the-path-forward-4"></a>The Path Forward</h2>
+<p>Work has been done to map out what would need to be true for PGN to be successful, and the reality is that the list is quite large, and the capital required is also significant (and not something the Gitcoin Foundation can absorb on its own). It was through the review of these requirements, and also evaluating the current appetite Gitcoin has to lead this initiative, that we have decided to shut down the network.</p>
+<p>If there are others that would like to financially support this initiative… perhaps take over the network, please get in contact. As currently planned, PGN will be sunset (lights out) in June of 2024. We will offer more details as we get closer to that timeline. In the meantime, we plan to disable bridging onto PGN, and would encourage folks to bridge assets off PGN as they need them. See our documentation (docs.publicgoods.network) for bridging options and reach out in our <a href="https://t.me/+9_ZHRaz7nmJkMTIx">Telegram</a> with further questions.</p>
+<h2><a name="gratitude-5" class="anchor" href="https://gov.gitcoin.co#gratitude-5"></a>Gratitude</h2>
+<p>Thank you so much to everyone who rallied around us to make PGN what it is today. I still believe we are in a race to the bottom where sequencer fees are one of the most sustainable sources of funding for public goods. As more and more L2 ecosystem’s grants programs evolve, there may just be enough funding to sustain our innovation for a while to come.</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-spin-down-of-pgn-eol-june-2024/17430/1
+        Wed, 17 Jan 2024 15:56:11 +0000
+gov.gitcoin.co-post-17430-1
+Announcing the spin down of PGN (EoL June 2024)
+      
+
+

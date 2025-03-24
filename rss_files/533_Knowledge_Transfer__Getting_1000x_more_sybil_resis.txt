@@ -1,0 +1,362 @@
+
+
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677
+    # Post TLDR
+
+1. there is 1000x more sybil resistance available from POAP than the Gitcoin Passport is currently consuming.
+2. there is a data intelligence problem of "how much is each POAP worth?".
+3. there may be decentralized ways to solve the problem.
+
+# Post Body
+
+Gitcoin Passport uses (among other things) [POAP](https://poap.xyz/) for sybil resistance.  This is what the stamp looks like:
+
+![Screen Shot 2022-10-18 at 8.14.57 AM|417x500, 75%](upload://qamJKLOsoxxQga3f1UAo1aKk0iB.png)
+
+As you can see, you get the POAP stamp if you "Connect an account to a PoAP owned for over 15 days."
+
+I was having a conversation with Patricio Worthalter about the stamp at Devcon, and we both agreed there was 1000x more sybil resistance that could be gotten out of POAP than what Passport currently does.   
+
+I've actually had this same conversation with a few different Gitcoiners over the last several months, and so I'm writing up this post to detail it.
+
+The objective of this post is to detail the diversity of POAPs and to talk about how the sybil resistance from that diversity of POAPs might be tapped.
+
+There are 10000s of different POAPs out there.   This screencap from https://poap.delivery/ shows the diversity of the POAPS out there.
+
+![Screen Shot 2022-10-18 at 8.23.56 AM|491x500](upload://hTlDjvQTBlvuPq3Slt263J5IWq2.jpeg)
+
+Each of these POAPs can have between 0 and 1000s of collectors.  
+Each of these POAPs can be a sybil resistance signal on Passport, though some may be stronger than others.  For example a publicly available POAP likely only creates a sybil resistance of about $0.01 (because the cost of forgery is low), whereas a "I met owocki.eth at Devcon 2022" POAP is likely worth much more in terms of sybil resistance (because the cost of forgery is high).
+
+What would have to be true for Passport to process the diversity and plurality of POAPs out there + to reward sybil resistance of each of these POAPs, instead of just one small criteria of "owned a POAP for more than 15 days"?
+
+GitcoinDAO would need to categorize the POAPS + figure out the sybil resistance each POAP confers, and then find a way of loading all of that sybil resistance into the passport.  This is a huge data + governance challenge (and perhaps a UI challenge too) .
+
+A naive way of solving this problem might be to hire someone to catalogue all of the POAPs + reward them with sybil resistance scores.  But that person would surely have a very large backlog to work through, and there would be a non-negligible cost to keeping that person on staff.  And one person only has a limited vantage point on the problem.
+
+A more decentralized and scalable way of solving this problem might be to push the problem out to the edges of the network.  What if there was a dapp that allowed people to do [conviction voting](https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523) on the POAPs.  eg when someone stakes GTC on a POAP, then that increases the sybil resistence that that POAP grants to the system.  Then this problem of "how does the DAO categorize the POAPs?" becomes a giant collective intelligence problem which the market can solve.
+
+Thanks for reading to the end.  If you made it this far, you now see see that 
+1. there is 1000x more sybil resistance available from POAP than the Gitcoin Passport is currently consuming.
+2. there is a data intelligence problem of "how much is each POAP worth?".
+3. there may be decentralized ways to solve the problem.
+
+Thanks for reading this knowledge transfer post.
+Fri, 05 May 2023 03:54:35 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+Rahul123458
+
+            <p>This ia a good idea beacuse you need to badge​:partying_face:<img src="https://gov.gitcoin.co/images/emoji/twitter/partying_face.png?v=12" title=":partying_face:" class="emoji" alt=":partying_face:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/partying_face.png?v=12" title=":partying_face:" class="emoji" alt=":partying_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/17
+        Fri, 05 May 2023 03:54:35 +0000
+gov.gitcoin.co-post-11677-17
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+SkyDAO
+
+            <aside class="quote no-group" data-username="omahs" data-post="12" data-topic="11677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/omahs/48/7325_2.png" class="avatar"> omahs:</div>
+<blockquote>
+<p>It would be interesting to see how many POAPs are actually transferred after being claimed. I believe it’s a minority.</p>
+</blockquote>
+</aside>
+<p>a quick look:</p>
+<p>600k have been transferred on top of the claimed txns out of 5.7m POAPs, so ~10%…a minority but more than you might have guessed!</p>
+<p>Won’t let me embed a picture or URL!</p>
+<p>Not a URL: https:// gnosisscan .io /token/0x22c1f6050e56d2876009903609a2cc3fef83b415</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/16
+        Tue, 25 Oct 2022 19:48:48 +0000
+gov.gitcoin.co-post-11677-16
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+PaigeDAO
+
+            <p>Also, what about GR past participation POAPs that have remained in original claimant’s wallet?  Could this act as a ‘gold standard’ POAP? <img src="https://emoji.discourse-cdn.com/twitter/dizzy.png?v=12" title=":dizzy:" class="emoji" alt=":dizzy:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/15
+        Sat, 22 Oct 2022 11:29:24 +0000
+gov.gitcoin.co-post-11677-15
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+PaigeDAO
+
+            <p>Good point. And good reply.<br>
+Raises the question of could SBTs be used like you are talking about POAPs?<br>
+If not instead of, then in addition to?</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/14
+        Sat, 22 Oct 2022 11:27:30 +0000
+gov.gitcoin.co-post-11677-14
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+torlak78
+
+            <p>If the ceramic API problem is fixed it will be awesome <img src="https://emoji.discourse-cdn.com/twitter/roll_eyes.png?v=12" title=":roll_eyes:" class="emoji" alt=":roll_eyes:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/13
+        Fri, 21 Oct 2022 11:46:52 +0000
+gov.gitcoin.co-post-11677-13
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+omahs
+
+            <p>Hey everyone,</p>
+<p>That’s an interesting topic, I’m looking forward to seeing POAPs being used for sybil resistance.</p>
+<p>Here are a few things that could be used in a scoring algorithm:</p>
+<p><strong>Frequency:</strong> Less chances of sybil accounts if user attended POAPs events over a long period of time</p>
+<p><strong>Uniqueness:</strong> Let’s say someone owns 100 POAPs and those were not bought. There could be a <em>POAPs-in-common</em> comparison. If the closest match is 50 POAPs in common, that user would have an extremely high chance of being unique. If 5000 other accounts own the same set of POAPs it has more chances of being a sybil.</p>
+<p><strong>Old POAPs:</strong> In my opinion POAP farming wasn’t very common before summer 2021, old POAPs could have a bonus</p>
+<p>Other things:</p>
+<p>POAPs have an ID, number indicating which one was claimed first for a specific event. From my observation, POAP <span class="hashtag">#1</span>/670 has a much higher chance of being a unique account than <span class="hashtag">#652</span>/670. Usually <span class="hashtag">#1</span> and other low numbers are claimed by the event organiser and other people very involved. POAP <span class="hashtag">#652</span> might be someone who shared a secret word somewhere.</p>
+<p>Most farmed and heavily traded POAPs are speculation about future airdrops (Metamask, Zksync…)</p>
+<p>It would be interesting to see how many POAPs are actually transferred after being claimed. I believe it’s a minority.</p>
+<p>I agree with <a class="mention" href="https://gov.gitcoin.co/u/torlak78">@torlak78</a> about the downside of choosing only POAPs related to real-life ETH events. The scope of POAP events is very large and it would be good to be inclusive.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/12
+        Fri, 21 Oct 2022 11:02:28 +0000
+gov.gitcoin.co-post-11677-12
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+torlak78
+
+            <p>Hello owocki<br>
+I agree with most of what you wrote. Yes, the poap criterion set for sybil is very ordinary. More serious steps can be taken. First of all, I would like to express some of my concerns.</p>
+<ol>
+<li>Scoring a particular group of poap increases that poap’s floor price in the market.</li>
+<li>Not everyone has a chance to participate in events like Devcon. There is inequality here.</li>
+<li>Certain projects have their poap mint their poap in return for paying a certain fee. If the score of this type and similar projects is high, the prices requested from us will increase. Many projects that see this will switch to similar practice. Also, the poap team does not approve of poap’s trade and says it is against the spirit of poap, I agree. However, the fact that the projects make poap mint at a certain price will unfortunately bring the poap trade to the legal ground. This is a big risk.</li>
+<li>Not everyone can afford to pay for the poap, which may lead to unfair competition.</li>
+<li>Every poap’s lover is different. Some are programmers, hackhatlon collects poap, some art lovers collect art poap. Therefore, how will the poap scores be determined here?<br>
+My suggestion</li>
+<li>Poaps should be classified (such as art-software-entertainment-defi-culture). Each title can be rated in itself.</li>
+<li>Ens requirement can be introduced for one-time or subsequent poap mints. An application like Devcon. (Having a person’s ens domain name on the poap can be considered a condition for sybil. Also, I think that type of poaps will not be traded.<br>
+3)Poap period may be spread over a long period of time such as 3-6 months, not 15 days.</li>
+<li>Minimum poap requirement may be introduced.</li>
+<li>Like the requirement to participate in a minimum of 5 events of any project (5 poaps)</li>
+</ol>
+<p>Thank you</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/11
+        Thu, 20 Oct 2022 18:40:07 +0000
+gov.gitcoin.co-post-11677-11
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+neo
+
+            <p>This idea is interesting and attractive and I agree with this idea and support it. We see the events of Sybil every day. It is a good thing with this move.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/10
+        Thu, 20 Oct 2022 18:39:59 +0000
+gov.gitcoin.co-post-11677-10
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+1chioku
+
+            <p>My bad, went through too many SSOs <img src="https://emoji.discourse-cdn.com/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/9
+        Thu, 20 Oct 2022 14:59:59 +0000
+gov.gitcoin.co-post-11677-9
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+owocki
+
+            <aside class="quote no-group" data-username="1chioku" data-post="7" data-topic="11677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/1chioku/48/7229_2.png" class="avatar"> 1chioku:</div>
+<blockquote>
+<p>centralised KYC like gitcoin passport.</p>
+</blockquote>
+</aside>
+<p>passport is decentralized and doesnt use KYC.</p>
+<p>if you are interested in doing a little research =&gt; <a href="http://docs.passport.gitcoin.co">docs.passport.gitcoin.co</a></p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/8
+        Thu, 20 Oct 2022 13:39:30 +0000
+gov.gitcoin.co-post-11677-8
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+1chioku
+
+            <p>I had had an extensive discussion with other data analysts at Berlin in September on POAPs, and yes fundamentally the metadata they contain can be used to build a better identity, especially for anons who collect POAPs but are allergic to centralised KYC like gitcoin passport.</p>
+<p>However the current weakness of POAPs is on the technical implementation: they use a QR code or an NFC to open a URL which from a malicious point of view can be used to create artificial identities, i.e I could be in a group that shares POAP urls from events and keep accumulating those on sybil wallets.</p>
+<p>POAPs can only become 100% reliable if there is a physical device with geolocation signing capabilities that only issues the POAP  to the POAP seeker that has the private key is physically near the POAP issuing machine.</p>
+<p>It’s Pokemon Go all over.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/7
+        Thu, 20 Oct 2022 09:28:42 +0000
+gov.gitcoin.co-post-11677-7
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+whiskey
+
+            <p>AGREED , I think GitPOAPs (decentralized reputation platform that represents off-chain accomplishments and contributions on chain as POAPs ) are great choice to assign high weight sybil resistant points . Protocols and dapps distribute this kind of POAPs with extra care (as <a class="mention" href="https://gov.gitcoin.co/u/anthony">@Anthony</a>  mentioned the quality of distribution is the most important ), so they are farmed way less .</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/6
+        Wed, 19 Oct 2022 19:50:18 +0000
+gov.gitcoin.co-post-11677-6
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+owocki
+
+            <aside class="quote no-group" data-username="dghelm" data-post="3" data-topic="11677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/dghelm/48/7289_2.png" class="avatar"> dghelm:</div>
+<blockquote>
+<p>. A minor concern I have is about how trivial it is to transfer a POAP.</p>
+</blockquote>
+</aside>
+<p>This is a great point.  Perhaps only a POAP that hasn’t been transfered and remains at its “origin” should count towards a personhood score.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/5
+        Wed, 19 Oct 2022 13:45:05 +0000
+gov.gitcoin.co-post-11677-5
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+zeroknowledge
+
+            <p>I think if POAP differentiates IRL POAPs(e.g: İ met worthalter at devcon) vs POAPs distributed online, we could have a solid foundation for sybil resistance. IRL POAPs could also be made non-transferrable so they keep their anti-sybil properties.</p>
+<p>A good starting point for online POAPs would be imo either verified communities (e.g: Rocketpool, POAP) and whitelists submitted by community leaders attesting to users or the fair distribution of POAPs.</p>
+<p>Another idea is having a dedicated forum and voting process with verified POAP holders and community members attesting to the legitimacy and anti-sybil properties of new POAPs.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/4
+        Wed, 19 Oct 2022 09:30:39 +0000
+gov.gitcoin.co-post-11677-4
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+dghelm
+
+            <p>This is a really interesting idea. A minor concern I have is about how trivial it is to transfer a POAP. Most of the other passport mechanisms aren’t easy to spread across multiple accounts, and I’d expect we could see a market created around bad actors paying for POAPs if their sybil resistance signal was weighted too heavily.</p>
+<p>Perhaps one mechanism would be to diminish the value of a POAP that has been transferred from its initial owner.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/3
+        Tue, 18 Oct 2022 20:42:52 +0000
+gov.gitcoin.co-post-11677-3
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+Anthony
+
+            <p>Hey Owocki,</p>
+<p>I completely agree that POAP’s can be great for sybil resistance but there is an open problem of quantifying how much weight each POAP holds.</p>
+<p><strong>Short Term Fun, Unscalable</strong></p>
+<p>An interesting short term solution would be to fund a small bounty(s) for someone to gather a ~top 100 list of Sybil resistant POAPs. It could be anchored around a few data points (collector base, size, historical significance, etc) but focusing on the quality of distribution is the most important.</p>
+<p>Examples of POAPs that could be included may be:</p>
+<ul>
+<li>You Met Me POAPs from Patricio</li>
+<li>Schelling Point POAPs</li>
+<li>rAAVE POAPs</li>
+<li>ETHGlobal Builder POAPs (distributed to builders at events)</li>
+<li>Ethereum Foundation POAPs (DevConnect)</li>
+<li>and the entire gambit of Ethereum core events (ETH Denver, DappCon, ETH Berlin, ETH CC, etc)</li>
+</ul>
+<p>There are random goodies that exist that are not known to most but a good analyst can find, like the <a href="https://poap.gallery/event/566" rel="noopener nofollow ugc">AAVE V2 Pioneers POAP.</a></p>
+<p>The POAP Community Call has a small treasury and I would assume they would be willing to throw into this bounty as well.</p>
+<p><strong>Mid Term Solution, More Scalable</strong></p>
+<p>Zooming out, it’s easy to see that this isn’t very scalable and feels more like a fun POC for learnings.</p>
+<p>I like your idea of having some sort of stake-weighted-voting mechanism to measure conviction, there could be interesting dynamics as well if not only GTC could be staked but some of those “top 100” POAPs as well. One may assume that those collectors may be more philosophically aligned with what we are trying to achieve here and may have quality input into the conviction voting system.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/2
+        Tue, 18 Oct 2022 20:15:57 +0000
+gov.gitcoin.co-post-11677-2
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+owocki
+
+            <h1>
+<a name="post-tldr-1" class="anchor" href="https://gov.gitcoin.co#post-tldr-1"></a>Post TLDR</h1>
+<ol>
+<li>there is 1000x more sybil resistance available from POAP than the Gitcoin Passport is currently consuming.</li>
+<li>there is a data intelligence problem of “how much is each POAP worth?”.</li>
+<li>there may be decentralized ways to solve the problem.</li>
+</ol>
+<h1>
+<a name="post-body-2" class="anchor" href="https://gov.gitcoin.co#post-body-2"></a>Post Body</h1>
+<p>Gitcoin Passport uses (among other things) <a href="https://poap.xyz/">POAP</a> for sybil resistance.  This is what the stamp looks like:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b76484daa7c2107a015edae401aed7e858b58dc1.png" data-download-href="/uploads/short-url/qamJKLOsoxxQga3f1UAo1aKk0iB.png?dl=1" title="Screen Shot 2022-10-18 at 8.14.57 AM"><img src="/uploads/db4391/optimized/2X/b/b76484daa7c2107a015edae401aed7e858b58dc1_2_312x375.png" alt="Screen Shot 2022-10-18 at 8.14.57 AM" data-base62-sha1="qamJKLOsoxxQga3f1UAo1aKk0iB" width="312" height="375" srcset="/uploads/db4391/optimized/2X/b/b76484daa7c2107a015edae401aed7e858b58dc1_2_312x375.png, /uploads/db4391/optimized/2X/b/b76484daa7c2107a015edae401aed7e858b58dc1_2_468x562.png 1.5x, /uploads/db4391/optimized/2X/b/b76484daa7c2107a015edae401aed7e858b58dc1_2_624x750.png 2x" data-dominant-color="F9F8FC"></a></div><p></p>
+<p>As you can see, you get the POAP stamp if you “Connect an account to a PoAP owned for over 15 days.”</p>
+<p>I was having a conversation with Patricio Worthalter about the stamp at Devcon, and we both agreed there was 1000x more sybil resistance that could be gotten out of POAP than what Passport currently does.</p>
+<p>I’ve actually had this same conversation with a few different Gitcoiners over the last several months, and so I’m writing up this post to detail it.</p>
+<p>The objective of this post is to detail the diversity of POAPs and to talk about how the sybil resistance from that diversity of POAPs might be tapped.</p>
+<p>There are 10000s of different POAPs out there.   This screencap from <a href="https://poap.delivery/">https://poap.delivery/</a> shows the diversity of the POAPS out there.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7d66a93b1a4795d019e35bb269d8a2b471b2b046.jpeg" data-download-href="/uploads/short-url/hTlDjvQTBlvuPq3Slt263J5IWq2.jpeg?dl=1" title="Screen Shot 2022-10-18 at 8.23.56 AM"><img src="/uploads/db4391/optimized/2X/7/7d66a93b1a4795d019e35bb269d8a2b471b2b046_2_491x500.jpeg" alt="Screen Shot 2022-10-18 at 8.23.56 AM" data-base62-sha1="hTlDjvQTBlvuPq3Slt263J5IWq2" width="491" height="500" srcset="/uploads/db4391/optimized/2X/7/7d66a93b1a4795d019e35bb269d8a2b471b2b046_2_491x500.jpeg, /uploads/db4391/optimized/2X/7/7d66a93b1a4795d019e35bb269d8a2b471b2b046_2_736x750.jpeg 1.5x, /uploads/db4391/optimized/2X/7/7d66a93b1a4795d019e35bb269d8a2b471b2b046_2_982x1000.jpeg 2x" data-dominant-color="F4F0F3"></a></div><p></p>
+<p>Each of these POAPs can have between 0 and 1000s of collectors.<br>
+Each of these POAPs can be a sybil resistance signal on Passport, though some may be stronger than others.  For example a publicly available POAP likely only creates a sybil resistance of about $0.01 (because the cost of forgery is low), whereas a “I met owocki.eth at Devcon 2022” POAP is likely worth much more in terms of sybil resistance (because the cost of forgery is high).</p>
+<p>What would have to be true for Passport to process the diversity and plurality of POAPs out there + to reward sybil resistance of each of these POAPs, instead of just one small criteria of “owned a POAP for more than 15 days”?</p>
+<p>GitcoinDAO would need to categorize the POAPS + figure out the sybil resistance each POAP confers, and then find a way of loading all of that sybil resistance into the passport.  This is a huge data + governance challenge (and perhaps a UI challenge too) .</p>
+<p>A naive way of solving this problem might be to hire someone to catalogue all of the POAPs + reward them with sybil resistance scores.  But that person would surely have a very large backlog to work through, and there would be a non-negligible cost to keeping that person on staff.  And one person only has a limited vantage point on the problem.</p>
+<p>A more decentralized and scalable way of solving this problem might be to push the problem out to the edges of the network.  What if there was a dapp that allowed people to do <a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523">conviction voting</a> on the POAPs.  eg when someone stakes GTC on a POAP, then that increases the sybil resistence that that POAP grants to the system.  Then this problem of “how does the DAO categorize the POAPs?” becomes a giant collective intelligence problem which the market can solve.</p>
+<p>Thanks for reading to the end.  If you made it this far, you now see see that</p>
+<ol>
+<li>there is 1000x more sybil resistance available from POAP than the Gitcoin Passport is currently consuming.</li>
+<li>there is a data intelligence problem of “how much is each POAP worth?”.</li>
+<li>there may be decentralized ways to solve the problem.</li>
+</ol>
+<p>Thanks for reading this knowledge transfer post.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-getting-1000x-more-sybil-resistance-out-of-poap/11677/1
+        Tue, 18 Oct 2022 14:57:03 +0000
+gov.gitcoin.co-post-11677-1
+Knowledge Transfer: Getting 1000x more sybil resistance out of POAP
+      
+
+

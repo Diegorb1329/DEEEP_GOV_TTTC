@@ -1,0 +1,248 @@
+
+
+
+PubSub On Allo V2
+https://gov.gitcoin.co/t/pubsub-on-allo-v2/17742
+    Thanks to @jaxcoder for the feedback on this idea.
+
+# Tldr
+
+This document proposes building pubsub (publish subscribe) into Allo protocol V2 in Q1/Q2 2024.
+
+Pub/Sub is short for Publish/Subscribe. PubSub is a standard way of thinking about data models on the web, having been used for many open source projects [as a design pattern pattern](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern).
+
+Pub/Sub in the context of Allo protocol means being able to publish Allo grants to other registries. And subscribe from other registries.
+
+Pub/Sub would be of great strategic importance to Gitcoin. Implementing Pub/Sub in H1 2024 would enhance Gitcoin’s network effects greatly by allowing Allo Protocol to be used on every Grant Platform in the ecosystem. It would also make Gitcoin’s Builder tool into a very valuable tool for every Grant hunter in the ecosystem. and could work to further solidify Allo as THE library for capital allocation in web3.
+
+# Essential intent
+
+![|211x259](upload://eNcgbf393Lev39HMnnsYstHJD1s.jpeg)
+
+# Problem
+
+## 1. Lack of Adoption of Allo Registry
+
+Right now, there are several prominent Grants standards created by Gitcoin (5% market share by 2023 ETH public goods funding GMV) Optimism (90% market share) Giveth (2%) CLRFund (1%), Hypercerts (1%) and more (1%).
+
+Allo v1 tried to standardize them on Allo, but that didn’t work.
+
+It’s almost like there is a pattern to how standards proliferate.
+
+![|624x356](upload://4d5kNwyKXu2D9rgGbj4zOSp84Qx.jpeg)
+
+## 2. Cold start problem
+
+Network effects of these tools are reflexible. The more people use the Allo registry, the more people use the Allo registry, the more people use the Allo registry, and so on…
+
+Tools that are trying to boostrap network effects have what we call the [cold start problem](https://www.nfx.com/post/19-marketplace-tactics-for-overcoming-the-chicken-or-egg-problem).
+
+If we were still the top market leader in EVM based grants, we could bootstrap it with our dominance. But after the rise of Protocol Guild + Optimism Retro PGF, we are not the dominant market leader anymore.
+
+![|299x271](upload://qNMh5SvMIVtRBNWPnDQMYyH7aHh.png)
+
+We need to solve this cold start problem.
+
+# Solution
+
+Owocki/Jaxcoder propose the following solution: Pub/Sub For Allo v2.
+
+High level this would be two things
+
+1. **Publish**: The ability to publish your Gitcoin Grant to any major registry.
+2. **Subscribe**: the ability to subscribe to any grants registry and import it into Allo.
+
+## Subscribe
+
+We could effectively solve Gitcoin’s cold start problem by importing other registries into Allo v2.
+
+![|624x255](upload://uTigZdZQlBeDQoQ2zOUzuV1kBXZ.png)
+
+Once this has hit scale, there is much more value in building things on top of Allo v2 (reputation, impact attestations, etc..) because all grants in the ecosystem are on the same registry.
+
+## Publish
+
+In college applications in the United States, students can fill out a “common app”. One college application that allows them to apply to hundreds of schools.
+
+This is a killer app for college applicants who want to make multiple bets + have their time respected while doing so.
+
+We should build a “common app for web3 grants” that allows grant owners to build / manage their grant in one place, then publish it to other registries.
+
+![|624x312](upload://72KrgHp0WV2QwdiHuJ6A3HXZk1k.png)
+
+
+# Conclusion
+
+Implementing Pub/Sub into Allo protocol would enhance Gitcoin’s network effects greatly by allowing Allo Protocol to be used on every Grant Platform in the ecosystem. It would also make Gitcoin’s Builder tool into a must-use tool for every Grant hunter in the ecosystem. It would solidify Allo as THE library for capital allocation.
+
+# Appendix A - Implementation Details
+
+Thanks @jaxcoder for authoring this part of the post.
+
+### Implementation
+
+Subscribers typically receive only a subset of the total messages published. There are two common forms of filtering: topic-based and content-based. I think we could also add a third and possibly a fourth, or more, filter method.
+
+We could start out with simple pub/sub options.
+
+1.  Add a IRegistryWrapper interface - this will allow the user/developer to use the wrapper instead of the IRegistry (the wrapper will inherit this) which will contain the EAS functions.
+2.  Add a RegistryManager contract - this will allow the user/developer to subscribe to any registry within the protocol and allo registries to publish ‘profiles’ and any other relevant information.
+
+Current Problems:
+
+* Cross-chain registry synchronization
+* Wrapping each other registry “profile” into IRegistry for consumption
+   * How do we define the interface(s)?
+* EAS uses a registry specifically for attestations, to me this means we will still need a layer on top of EAS to map the UID (this is returned when an attestation is made) to a profileId (this profileId can exist on any registry that the RegistryManager has subscribed to and may even be called something different).
+* Registries leveraging other registry data.
+
+Solution(s):
+
+* Use a [hybrid](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern#:~:text=In%20a%20topic,or%20more%20topics.) pub/sub system where the user's profile publishes the attestations via the registry or registries they subscribe to using the registry manager.
+* To allow for a mapping from a profileId to a UID we need a contract layer to handle this and the other features we want to build out for managing multiple registries in one place.
+* The user can then start to include many features provided by other registries within Allo by using the IRegistryWrapper interface. This will include all functions previously offered by the Allo IRegistry interface plus additional plug-and-play features that a user can turn on and off. One of the key features will be the PubSub model of providing profile and registry data.
+* A flag that can be used to include EAS by default.
+* [Diagram](https://excalidraw.com/#room=0c9d1eb62ff432c4aebc,O-QrXh4xoGYU1LkYrACt-g) currently representing the idea of having a RegistryManager and IRegistryWrapper interface.
+Tue, 13 Aug 2024 18:52:01 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+PubSub On Allo V2
+skilesare
+
+            <p>Hello,</p>
+<p>We’ve decided to make this the focus of our GG21 raise for ICDevs.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://explorer.gitcoin.co/?utm_source=grants.gitcoin.co&amp;utm_medium=internal_link&amp;utm_campaign=gg19&amp;utm_content=community-rounds#/round/42161/385/35">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b165bf3e241f4ba0e5b4338fe9b2bc579c9a5ca4.png" class="site-icon" data-dominant-color="2B3330" width="32" height="32">
+
+      <a href="https://explorer.gitcoin.co/?utm_source=grants.gitcoin.co&amp;utm_medium=internal_link&amp;utm_campaign=gg19&amp;utm_content=community-rounds#/round/42161/385/35" target="_blank" rel="noopener nofollow ugc">explorer.gitcoin.co</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/ca57b0aeef81a2ef085d64a9a0451923cbb597f0_2_690x345.png" class="thumbnail" data-dominant-color="B9B498" width="690" height="345"></div>
+
+<h3><a href="https://explorer.gitcoin.co/?utm_source=grants.gitcoin.co&amp;utm_medium=internal_link&amp;utm_campaign=gg19&amp;utm_content=community-rounds#/round/42161/385/35" target="_blank" rel="noopener nofollow ugc">Gitcoin Grants Stack</a></h3>
+
+  <p>Grants power growth in Web3. Make your voice heard and support open-source software and public goods across the EVM ecosystem</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>The general idea is to use the Internet Computer as a trustless router that can sync data across chains. Bonus points if we can make it governable via an existing staking mechanism via GTC.</p>
+<p>We’ll likely need a few resources to dial it in. Any suggestions or insight would be welcome.</p>
+<p>The largest challenge will be funding the gas fees to relay the messages, but perhaps that is raisable via grants themselves once it is up and running.</p>
+          <p><a href="https://gov.gitcoin.co/t/pubsub-on-allo-v2/17742/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pubsub-on-allo-v2/17742/3
+        Tue, 13 Aug 2024 18:52:01 +0000
+gov.gitcoin.co-post-17742-3
+PubSub On Allo V2
+      
+
+PubSub On Allo V2
+owocki
+
+            <p>Had a good discussion with <span class="mention">@launaumau</span> about this idea at ethcc and posting some notes here</p>
+<ol>
+<li>
+<p>Is friction of submitting grants a feature or a bug?  I think that this brief considers it a bug… but there are lots of grants managers who want more friction to weed out bad applicants.</p>
+</li>
+<li>
+<p>How do fields translate across registries?  Sometimes this will be obvious but in others it will not be obvious.</p>
+</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/pubsub-on-allo-v2/17742/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pubsub-on-allo-v2/17742/2
+        Mon, 15 Jul 2024 12:45:04 +0000
+gov.gitcoin.co-post-17742-2
+PubSub On Allo V2
+      
+
+PubSub On Allo V2
+owocki
+
+            <p>Thanks to <a class="mention" href="https://gov.gitcoin.co/u/jaxcoder">@jaxcoder</a> for the feedback on this idea.</p>
+<h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>Tldr</h1>
+<p>This document proposes building pubsub (publish subscribe) into Allo protocol V2 in Q1/Q2 2024.</p>
+<p>Pub/Sub is short for Publish/Subscribe. PubSub is a standard way of thinking about data models on the web, having been used for many open source projects <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern">as a design pattern pattern</a>.</p>
+<p>Pub/Sub in the context of Allo protocol means being able to publish Allo grants to other registries. And subscribe from other registries.</p>
+<p>Pub/Sub would be of great strategic importance to Gitcoin. Implementing Pub/Sub in H1 2024 would enhance Gitcoin’s network effects greatly by allowing Allo Protocol to be used on every Grant Platform in the ecosystem. It would also make Gitcoin’s Builder tool into a very valuable tool for every Grant hunter in the ecosystem. and could work to further solidify Allo as THE library for capital allocation in web3.</p>
+<h1><a name="essential-intent-2" class="anchor" href="https://gov.gitcoin.co#essential-intent-2"></a>Essential intent</h1>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/67ae227143f630543541d55bac6bc15e08fd9d9e.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/67ae227143f630543541d55bac6bc15e08fd9d9e" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/67ae227143f630543541d55bac6bc15e08fd9d9e_2_211x259.jpeg" alt="" data-base62-sha1="eNcgbf393Lev39HMnnsYstHJD1s" width="211" height="259" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/67ae227143f630543541d55bac6bc15e08fd9d9e_2_211x259.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/67ae227143f630543541d55bac6bc15e08fd9d9e_2_316x388.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/67ae227143f630543541d55bac6bc15e08fd9d9e_2_422x518.jpeg 2x" data-dominant-color="E4EDF3"></a></div><p></p>
+<h1><a name="problem-3" class="anchor" href="https://gov.gitcoin.co#problem-3"></a>Problem</h1>
+<h2><a name="h-1-lack-of-adoption-of-allo-registry-4" class="anchor" href="https://gov.gitcoin.co#h-1-lack-of-adoption-of-allo-registry-4"></a>1. Lack of Adoption of Allo Registry</h2>
+<p>Right now, there are several prominent Grants standards created by Gitcoin (5% market share by 2023 ETH public goods funding GMV) Optimism (90% market share) Giveth (2%) CLRFund (1%), Hypercerts (1%) and more (1%).</p>
+<p>Allo v1 tried to standardize them on Allo, but that didn’t work.</p>
+<p>It’s almost like there is a pattern to how standards proliferate.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1d83624ac0b3952557ede7fced30d5f04f451059.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/1d83624ac0b3952557ede7fced30d5f04f451059" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1d83624ac0b3952557ede7fced30d5f04f451059_2_624x356.jpeg" alt="" data-base62-sha1="4d5kNwyKXu2D9rgGbj4zOSp84Qx" width="624" height="356" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1d83624ac0b3952557ede7fced30d5f04f451059_2_624x356.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1d83624ac0b3952557ede7fced30d5f04f451059_2_936x534.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1d83624ac0b3952557ede7fced30d5f04f451059_2_1248x712.jpeg 2x" data-dominant-color="E2E2E2"></a></div><p></p>
+<h2><a name="h-2-cold-start-problem-5" class="anchor" href="https://gov.gitcoin.co#h-2-cold-start-problem-5"></a>2. Cold start problem</h2>
+<p>Network effects of these tools are reflexible. The more people use the Allo registry, the more people use the Allo registry, the more people use the Allo registry, and so on…</p>
+<p>Tools that are trying to boostrap network effects have what we call the <a href="https://www.nfx.com/post/19-marketplace-tactics-for-overcoming-the-chicken-or-egg-problem">cold start problem</a>.</p>
+<p>If we were still the top market leader in EVM based grants, we could bootstrap it with our dominance. But after the rise of Protocol Guild + Optimism Retro PGF, we are not the dominant market leader anymore.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/b/bbd9082c0f6856aa263017858429df6f750b44db.png" alt="" data-base62-sha1="qNMh5SvMIVtRBNWPnDQMYyH7aHh" width="299" height="271" role="presentation"></p>
+<p>We need to solve this cold start problem.</p>
+<h1><a name="solution-6" class="anchor" href="https://gov.gitcoin.co#solution-6"></a>Solution</h1>
+<p>Owocki/Jaxcoder propose the following solution: Pub/Sub For Allo v2.</p>
+<p>High level this would be two things</p>
+<ol>
+<li><strong>Publish</strong>: The ability to publish your Gitcoin Grant to any major registry.</li>
+<li><strong>Subscribe</strong>: the ability to subscribe to any grants registry and import it into Allo.</li>
+</ol>
+<h2><a name="subscribe-7" class="anchor" href="https://gov.gitcoin.co#subscribe-7"></a>Subscribe</h2>
+<p>We could effectively solve Gitcoin’s cold start problem by importing other registries into Allo v2.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d8815ab568e7f2901fee2b76bb00299fbf83106b.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/d8815ab568e7f2901fee2b76bb00299fbf83106b" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d8815ab568e7f2901fee2b76bb00299fbf83106b_2_624x255.png" alt="" data-base62-sha1="uTigZdZQlBeDQoQ2zOUzuV1kBXZ" width="624" height="255" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d8815ab568e7f2901fee2b76bb00299fbf83106b_2_624x255.png, https://gov.gitcoin.co/uploads/db4391/original/2X/d/d8815ab568e7f2901fee2b76bb00299fbf83106b.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/d/d8815ab568e7f2901fee2b76bb00299fbf83106b.png 2x" data-dominant-color="F3EEE8"></a></div><p></p>
+<p>Once this has hit scale, there is much more value in building things on top of Allo v2 (reputation, impact attestations, etc…) because all grants in the ecosystem are on the same registry.</p>
+<h2><a name="publish-8" class="anchor" href="https://gov.gitcoin.co#publish-8"></a>Publish</h2>
+<p>In college applications in the United States, students can fill out a “common app”. One college application that allows them to apply to hundreds of schools.</p>
+<p>This is a killer app for college applicants who want to make multiple bets + have their time respected while doing so.</p>
+<p>We should build a “common app for web3 grants” that allows grant owners to build / manage their grant in one place, then publish it to other registries.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/315ec51e585641605a2d1157bd2ed8e72420aeca.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/315ec51e585641605a2d1157bd2ed8e72420aeca" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/315ec51e585641605a2d1157bd2ed8e72420aeca_2_624x312.png" alt="" data-base62-sha1="72KrgHp0WV2QwdiHuJ6A3HXZk1k" width="624" height="312" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/315ec51e585641605a2d1157bd2ed8e72420aeca_2_624x312.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/315ec51e585641605a2d1157bd2ed8e72420aeca_2_936x468.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/3/315ec51e585641605a2d1157bd2ed8e72420aeca.png 2x" data-dominant-color="F7F1EB"></a></div><p></p>
+<h1><a name="conclusion-9" class="anchor" href="https://gov.gitcoin.co#conclusion-9"></a>Conclusion</h1>
+<p>Implementing Pub/Sub into Allo protocol would enhance Gitcoin’s network effects greatly by allowing Allo Protocol to be used on every Grant Platform in the ecosystem. It would also make Gitcoin’s Builder tool into a must-use tool for every Grant hunter in the ecosystem. It would solidify Allo as THE library for capital allocation.</p>
+<h1><a name="appendix-a-implementation-details-10" class="anchor" href="https://gov.gitcoin.co#appendix-a-implementation-details-10"></a>Appendix A - Implementation Details</h1>
+<p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/jaxcoder">@jaxcoder</a> for authoring this part of the post.</p>
+<h3><a name="implementation-11" class="anchor" href="https://gov.gitcoin.co#implementation-11"></a>Implementation</h3>
+<p>Subscribers typically receive only a subset of the total messages published. There are two common forms of filtering: topic-based and content-based. I think we could also add a third and possibly a fourth, or more, filter method.</p>
+<p>We could start out with simple pub/sub options.</p>
+<ol>
+<li>Add a IRegistryWrapper interface - this will allow the user/developer to use the wrapper instead of the IRegistry (the wrapper will inherit this) which will contain the EAS functions.</li>
+<li>Add a RegistryManager contract - this will allow the user/developer to subscribe to any registry within the protocol and allo registries to publish ‘profiles’ and any other relevant information.</li>
+</ol>
+<p>Current Problems:</p>
+<ul>
+<li>Cross-chain registry synchronization</li>
+<li>Wrapping each other registry “profile” into IRegistry for consumption
+<ul>
+<li>How do we define the interface(s)?</li>
+</ul>
+</li>
+<li>EAS uses a registry specifically for attestations, to me this means we will still need a layer on top of EAS to map the UID (this is returned when an attestation is made) to a profileId (this profileId can exist on any registry that the RegistryManager has subscribed to and may even be called something different).</li>
+<li>Registries leveraging other registry data.</li>
+</ul>
+<p>Solution(s):</p>
+<ul>
+<li>Use a <a href="https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern#:~:text=In%20a%20topic,or%20more%20topics.">hybrid</a> pub/sub system where the user’s profile publishes the attestations via the registry or registries they subscribe to using the registry manager.</li>
+<li>To allow for a mapping from a profileId to a UID we need a contract layer to handle this and the other features we want to build out for managing multiple registries in one place.</li>
+<li>The user can then start to include many features provided by other registries within Allo by using the IRegistryWrapper interface. This will include all functions previously offered by the Allo IRegistry interface plus additional plug-and-play features that a user can turn on and off. One of the key features will be the PubSub model of providing profile and registry data.</li>
+<li>A flag that can be used to include EAS by default.</li>
+<li><a href="https://excalidraw.com/#room=0c9d1eb62ff432c4aebc,O-QrXh4xoGYU1LkYrACt-g">Diagram</a> currently representing the idea of having a RegistryManager and IRegistryWrapper interface.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/pubsub-on-allo-v2/17742/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pubsub-on-allo-v2/17742/1
+        Mon, 12 Feb 2024 19:02:20 +0000
+gov.gitcoin.co-post-17742-1
+PubSub On Allo V2
+      
+
+

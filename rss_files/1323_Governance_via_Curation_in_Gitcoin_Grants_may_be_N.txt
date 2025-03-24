@@ -1,0 +1,364 @@
+
+
+
+Governance via Curation in Gitcoin Grants may be Necessary
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365
+    DAOs are bringing an extraordinary conflict into the grants ecosystem. 
+
+The main Ethereum ecosystem rounds have a precedent that previous token sales can disqualify a grant from being eligible for participation. Having investments over $500k is not a policy, but a norm that has been repeatedly followed. 
+
+A DAO might have released a token giving it a $100 million market cap and a large treasury. This would make the DAO ineligible for the platform or Ethereum ecosystem according to current policy. 
+
+**There are some edge cases and logical conflicts that make the current policy model unsustainable.** 
+
+**CASE 1** 
+
+BanklessDAO has a token and plenty of funding to go around. But there are still plenty of Bankless grants being created. 
+
+EXAMPLE: https://gitcoin.co/grants/4095/bankless-africa is a grant for an organization that is starting up and would like to use Gitcoin Grants to get enough traction to get a proposal into BanklessDAO. 
+
+It could be argued to be a public good. It could be said they aren't part of BanklessDAO if they didn't receive direct funding from the DAO. 
+
+This is difficult to adjudicate because I look at GitcoinDAO workstreams and see that there are many substreams & squads. Each collective level of organization is searching for resources to further it's mission. 
+
+**CASE 2**
+
+[https://gitcoin.co/grants/1155/token-engineering-commons](https://gitcoin.co/grants/1155/token-engineering-commons) & [https://gitcoin.co/grants/798/a-hitchhikers-guide-to-token-engineering](https://gitcoin.co/grants/798/a-hitchhikers-guide-to-token-engineering) & [https://gitcoin.co/grants/2978/incubating-governauts](https://gitcoin.co/grants/2978/incubating-governauts)
+
+These three grants all involve Token Engineering Commons. However, they are distinct projects & entities. 
+
+**The difference of these three is that TEC does not have a token and treasury available to fund their projects.** Bankless could choose to run a side-round where they supply the matching pool to support the grants in their round. 
+
+**CLARIFICATION**
+
+But let's say TEC released a token and had a large treasury. Would we even know if the Governauts was a part of it? 
+
+In my view, **every individual and collective level of organization has independent and autonomous rights.** 
+
+The collectives maintain the right to choose what collectives and individuals may participate in the collective. A policy based solution is not scalable in the long term. 
+
+We need to move towards governance via curation. **Each collective level needs a model to say 'Who has a voice in this curation" & "How much weight does their voice carry"** 
+
+**GTC as a decentralizing force**
+
+GTC governance token is the metric we can (and probably will) use to curate "What is acceptable to appear on the Gitcoin UI"
+
+GTC governance token is also used to incentivize curators for the Ethereum ecosystem via the FDD Grant Eligibility stream. 
+
+For new ecosystems, especially as we move to decentralized grants, the platform curation will separate from the ecosystem curation. 
+
+This round we added "thematic" rounds. These may have a sponsor who will independently whitelist acceptable grants, but the main gitcoin round should be spread to every public good in the ecosystem. 
+
+**GTC from the DAO can be used to incentivize curation in any rounds with curators being verified non-sybil accounts past a certain threshhold** of trust, reputation, ecosystem holdings or whatever threshold we will find in discovery. 
+
+This takes the single point of failure out of the curation model.
+
+**NEXT STEPS**
+
+I believe we need two things to scale this out in the future:
+
+**STEP ONE**
+
+We need to distinguish the main Gitcoin Grants round from the Ethereum Ecosystem Rounds. As more integrations have been built, it is impossible to say that the rules for the Eth ecosystem and main round should be the same: 
+
+EXAMPLE 1: A climate change 501c3 grant in the thematic rounds. Should they receive funding from the Ethereum ecosystem's funders league donors?
+
+EXAMPLE 2: A Zcash ecosystem project. Again, should they receive funding from the Eth Ecosystem sponsors? 
+
+Both "Ecosystem" & "Thematic" rounds are simply collections of grants with a dedicated matching pool. The grants included in either are always a subset of all the grants on the platform. This should be the "main" round with it's own matching pool (which might be smaller than the eth ecosystem pool!)
+
+**STEP TWO**
+
+We need a dynamic tool for gauging an ecosystems criteria for grant participation & a way for their stakeholders to participate in curation. 
+
+Using the graph, we can identify stakeholders of an ecosystem. All GTC holders would be curators of the thematic rounds. 
+
+FDD Grant Investigation Agency is a new squad tasked with adjudicating the Grant Disputes that come up during a round. They are using a tool called Ethelo with consultation from the PG Grants Operations stream, Ethelo team, FDD Policy stream, and the FDD Grant Eligibility squad. 
+
+They are determining criteria for the Eth Ecosystem, which is now synonymous with the "main round" although it is logically impossible to align these two things with our current trajectory. 
+
+**PURPOSE**
+
+This post is designed to spark conversation, inform the community, and serve as a precursor to a proposal to potentially have steward ratification of the main round being separated from the Ethereum ecosystem rounds at a technical level and their guidance towards governance via curation.
+
+This move would benefit all stakeholders.
+
+Matching Pool Funders:  Knowledge that their funds are going to the intended collective of grants
+
+Grant Funders: Knowledge that the matching funds they are signaling are not diluted by grants unrelated to the specific ecosystem. More options for ecosystems and themes. 
+
+Grant Creators: Less dilution of matching funds to unrelated grants
+
+PG Grants Operations: Reduced complexity
+
+FDD Grant Eligibility: Opportunity opens up for more people to earn by participating in the communities they hold stake in
+
+FDD Policy: Less policy to maintain
+
+Stewards: Reduces policy questions needing attention to a simple YES/NO should any ecosystem or theme be allowed on the Gitcoin UI and included in the main round?
+
+GTC Holders: GTC decentralizing the rewards for "curation mining" on the platform turns would be based on users staking GTC to participate in curating grants lowering the velocity of the token.
+Fri, 04 Mar 2022 08:21:24 +0000
+📜 Proposals
+
+
+Governance via Curation in Gitcoin Grants may be Necessary
+wkarshat
+
+            <p>An interesting configuration, but with many complex interactions between the tokens, it is difficult to validate from first principles. Have you considered how to model it more formally?</p>
+<p>With GT as the only governance token, unclear why FT would be readily valued in the open market. Burning FT to gen RT seems to defeat RT purpose, providing a way to effectively buy RT. A single ‘reputation’ metric has been critiqued before, and I’m planning to write this up.</p>
+<p>Not sure that the xDAI POSDAO ERC677 token example actually applies here, as it is strictly a validator control mechanism, not related to the DAO-like contributor or governance operations. A MakerDAO configuration with the MKR token driving the DAI mechanics, has been around for over four years.</p>
+<p>I’ve been working on a multi-factor governance model, which takes into account at the vote level the values of Participation, Expertise, and Contribution [PEC] factors. Prior to further modeling, decided not to fast-forward mapping on-chain value store to a token representation.</p>
+<p>However, C can be readily implemented with a fungible token. Both P and E may need anti-Sybil or even higher personhood guarantees, and E is not transferable, and will not need some of the token primitives.</p>
+<p>Planning to publish more details, and a visualization, even next week.</p>
+          <p><a href="https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/10
+        Fri, 04 Mar 2022 08:21:24 +0000
+gov.gitcoin.co-post-9365-10
+Governance via Curation in Gitcoin Grants may be Necessary
+      
+
+Governance via Curation in Gitcoin Grants may be Necessary
+lanlan3322
+
+            <p>To build the foundation for this curation we might consider a new token model:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://mirror.xyz/zhanglaurence.eth/vdyJQadgv9n1C5KU9xwLZoBfcYJ3GR__kCUMpPGK9Jc">
+  <header class="source">
+      <img src="/uploads/db4391/original/2X/4/4140abcc91d66802524b3df49740da963830d4cd.png" class="site-icon" width="32" height="32">
+
+      <a href="https://mirror.xyz/zhanglaurence.eth/vdyJQadgv9n1C5KU9xwLZoBfcYJ3GR__kCUMpPGK9Jc" target="_blank" rel="noopener nofollow ugc">mirror.xyz</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="/uploads/db4391/optimized/2X/2/20c2667fbe8502eaf1b9c0b32a1169fa1508a2b8_2_690x345.png" class="thumbnail" width="690" height="345" srcset="/uploads/db4391/optimized/2X/2/20c2667fbe8502eaf1b9c0b32a1169fa1508a2b8_2_690x345.png, /uploads/db4391/original/2X/2/20c2667fbe8502eaf1b9c0b32a1169fa1508a2b8.png 1.5x, /uploads/db4391/original/2X/2/20c2667fbe8502eaf1b9c0b32a1169fa1508a2b8.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/20c2667fbe8502eaf1b9c0b32a1169fa1508a2b8_2_10x10.png"></div>
+
+<h3><a href="https://mirror.xyz/zhanglaurence.eth/vdyJQadgv9n1C5KU9xwLZoBfcYJ3GR__kCUMpPGK9Jc" target="_blank" rel="noopener nofollow ugc">Token Centric DAO - Triple Token Model (part 1) — Mirror</a></h3>
+
+  <p>As DAO is getting more and more attention there are duel-token models emerging in this ecosystem like POSDAO. Along the way, we realize that the governance token is taking too much responsibility more than securing the system. The heart of the...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>This is a rough idea for discussion.<br>
+<a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> <a class="mention" href="https://gov.gitcoin.co/u/wkarshat">@wkarshat</a></p>
+          <p><a href="https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/9
+        Wed, 29 Dec 2021 02:12:32 +0000
+gov.gitcoin.co-post-9365-9
+Governance via Curation in Gitcoin Grants may be Necessary
+      
+
+Governance via Curation in Gitcoin Grants may be Necessary
+lanlan3322
+
+            <p>Thank you Joe, I will reply on this topic later, including the suggested new tokens responsible for “rewards” and “reputation” in the curation process and the connections between these two different tokens that are governed by GTC token.</p>
+          <p><a href="https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/8
+        Thu, 16 Dec 2021 06:15:34 +0000
+gov.gitcoin.co-post-9365-8
+Governance via Curation in Gitcoin Grants may be Necessary
+      
+
+Governance via Curation in Gitcoin Grants may be Necessary
+DisruptionJoe
+
+            <p>How would you start the process of modeling the economic design of a token specific to this process?</p>
+          <p><a href="https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/7
+        Mon, 13 Dec 2021 21:43:07 +0000
+gov.gitcoin.co-post-9365-7
+Governance via Curation in Gitcoin Grants may be Necessary
+      
+
+Governance via Curation in Gitcoin Grants may be Necessary
+lanlan3322
+
+            <p>Great move from here!<br>
+Curation is a great way of coordinating in DAO!<br>
+Referring to the <a href="https://kleros.gitbook.io/docs/products/curate" rel="noopener nofollow ugc">curate of Kleros</a> which is used by clr.fund, Omen, and DefersiFi the concept is to involve all community members in the curation process.</p>
+<p>For step one:<br>
+Creating different curation lists for different rounds and the grant submissions are free to choose which list to go for. The decentralised verification process by the community will identify whether the submission is fit into this round according to the curation list policy.</p>
+<p>For step two:<br>
+The grant funders may create a list with their defined policies and the community members are open to joining the verification process to flag out suspicious ones. The disputes could be resolved by external service providers like Kleros, Jur, Celeste (Let’s try not to reinvent wheels in the blockchain world since there are specialized projects that are good at it).</p>
+<p>Gitcoin provides the platform and community to secure the system.<br>
+Policies are owned by the owners of the curation lists (Matching Pool Funders, Grant Funders).<br>
+GTC holders earn by verifying submissions through staking - you may call it “curation mining”.<br>
+Stewards are focusing on community building instead of Q&amp;A for all kinds of different policies all day.<br>
+FDD policy holds only the top-level “General Grant Policy” overseeing the policies in all curation lists.</p>
+<p>This is a realistic governance proposal that is technically accomplished by <a href="https://curate.kleros.io/tcr/0xba0304273a54dfec1fc7f4bccbf4b15519aecf15" rel="noopener nofollow ugc">Kleros Curate</a> and tested by <a href="https://medium.com/@PresenceNumeriq/journey-of-a-fresh-kleros-token-curated-registry-bounty-hunter-1e5f4833ec8a" rel="noopener nofollow ugc">Kleros TCR</a>.</p>
+<p>Add on an idea about the curation: GTC as the governance token may not be good for incentivizing community members in the curation maintenance. There would be a need for a second token in Gitcoin ecosystem which works as “fuel” to move the community forward with the proper token economic design.</p>
+          <p><a href="https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/6
+        Sun, 12 Dec 2021 08:00:35 +0000
+gov.gitcoin.co-post-9365-6
+Governance via Curation in Gitcoin Grants may be Necessary
+      
+
+Governance via Curation in Gitcoin Grants may be Necessary
+elbeth
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="9365">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>We need a dynamic tool for gauging an ecosystems criteria for grant participation &amp; a way for their stakeholders to participate in curation.</p>
+</blockquote>
+</aside>
+<p>This will be a great tool to gauge the ecosystem.</p>
+<p>The purposes in step two are laudable. I’m inclined to the point of complexity reduction.</p>
+          <p><a href="https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/5
+        Sat, 11 Dec 2021 13:49:02 +0000
+gov.gitcoin.co-post-9365-5
+Governance via Curation in Gitcoin Grants may be Necessary
+      
+
+Governance via Curation in Gitcoin Grants may be Necessary
+bobjiang
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="9365">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>but the main gitcoin round should be spread to every public good in the ecosystem.</p>
+</blockquote>
+</aside>
+<p>totally agree with this.</p>
+<p>I believe that it is a tough question, we could make exploration with control.</p>
+<p>love to have more positive-sum ideas and solutions here.</p>
+<p>one side, we would have more public goods support;<br>
+the other side, we would protect the system, and all the stakeholders.</p>
+          <p><a href="https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/4
+        Thu, 09 Dec 2021 04:12:48 +0000
+gov.gitcoin.co-post-9365-4
+Governance via Curation in Gitcoin Grants may be Necessary
+      
+
+Governance via Curation in Gitcoin Grants may be Necessary
+Sirlupinwatson
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a>!</p>
+<p>I think those are really good points that needs to be clarified, thanks for pointing out.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="9365">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>BanklessDAO has a token and plenty of funding to go around. But there are still plenty of Bankless grants being created.</p>
+</blockquote>
+</aside>
+<p>In short, if you create a DAO with with a Governance Token, that has no “commercial” value, then this grant seems to be eligible and turn into a “grey zone”</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="9365">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>We need to distinguish the main Gitcoin Grants round from the Ethereum Ecosystem Rounds.</p>
+</blockquote>
+</aside>
+<p>Agree!</p>
+          <p><a href="https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/3
+        Wed, 08 Dec 2021 18:38:23 +0000
+gov.gitcoin.co-post-9365-3
+Governance via Curation in Gitcoin Grants may be Necessary
+      
+
+Governance via Curation in Gitcoin Grants may be Necessary
+seanmac
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="9365">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>revious token sales can disqualify a grant from being eligible for participation</p>
+</blockquote>
+</aside>
+<p>Thanks for the thoughts, Joe. I’d love to learn more about the thinking behind “Previous token sales can disqualify a grant from being eligible for participation”… What are some of the best resources to better understand the dynamics here?</p>
+          <p><a href="https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/2
+        Wed, 08 Dec 2021 17:44:24 +0000
+gov.gitcoin.co-post-9365-2
+Governance via Curation in Gitcoin Grants may be Necessary
+      
+
+Governance via Curation in Gitcoin Grants may be Necessary
+DisruptionJoe
+
+            <p>DAOs are bringing an extraordinary conflict into the grants ecosystem.</p>
+<p>The main Ethereum ecosystem rounds have a precedent that previous token sales can disqualify a grant from being eligible for participation. Having investments over $500k is not a policy, but a norm that has been repeatedly followed.</p>
+<p>A DAO might have released a token giving it a $100 million market cap and a large treasury. This would make the DAO ineligible for the platform or Ethereum ecosystem according to current policy.</p>
+<p><strong>There are some edge cases and logical conflicts that make the current policy model unsustainable.</strong></p>
+<p><strong>CASE 1</strong></p>
+<p>BanklessDAO has a token and plenty of funding to go around. But there are still plenty of Bankless grants being created.</p>
+<p>EXAMPLE: <a href="https://gitcoin.co/grants/4095/bankless-africa" class="inline-onebox">BANKLESS AFRICA | Grants | Gitcoin</a> is a grant for an organization that is starting up and would like to use Gitcoin Grants to get enough traction to get a proposal into BanklessDAO.</p>
+<p>It could be argued to be a public good. It could be said they aren’t part of BanklessDAO if they didn’t receive direct funding from the DAO.</p>
+<p>This is difficult to adjudicate because I look at GitcoinDAO workstreams and see that there are many substreams &amp; squads. Each collective level of organization is searching for resources to further it’s mission.</p>
+<p><strong>CASE 2</strong></p>
+<p><a href="https://gitcoin.co/grants/1155/token-engineering-commons">https://gitcoin.co/grants/1155/token-engineering-commons</a> &amp; <a href="https://gitcoin.co/grants/798/a-hitchhikers-guide-to-token-engineering">https://gitcoin.co/grants/798/a-hitchhikers-guide-to-token-engineering</a> &amp; <a href="https://gitcoin.co/grants/2978/incubating-governauts">https://gitcoin.co/grants/2978/incubating-governauts</a></p>
+<p>These three grants all involve Token Engineering Commons. However, they are distinct projects &amp; entities.</p>
+<p><strong>The difference of these three is that TEC does not have a token and treasury available to fund their projects.</strong> Bankless could choose to run a side-round where they supply the matching pool to support the grants in their round.</p>
+<p><strong>CLARIFICATION</strong></p>
+<p>But let’s say TEC released a token and had a large treasury. Would we even know if the Governauts was a part of it?</p>
+<p>In my view, <strong>every individual and collective level of organization has independent and autonomous rights.</strong></p>
+<p>The collectives maintain the right to choose what collectives and individuals may participate in the collective. A policy based solution is not scalable in the long term.</p>
+<p>We need to move towards governance via curation. <strong>Each collective level needs a model to say 'Who has a voice in this curation" &amp; "How much weight does their voice carry"</strong></p>
+<p><strong>GTC as a decentralizing force</strong></p>
+<p>GTC governance token is the metric we can (and probably will) use to curate “What is acceptable to appear on the Gitcoin UI”</p>
+<p>GTC governance token is also used to incentivize curators for the Ethereum ecosystem via the FDD Grant Eligibility stream.</p>
+<p>For new ecosystems, especially as we move to decentralized grants, the platform curation will separate from the ecosystem curation.</p>
+<p>This round we added “thematic” rounds. These may have a sponsor who will independently whitelist acceptable grants, but the main gitcoin round should be spread to every public good in the ecosystem.</p>
+<p><strong>GTC from the DAO can be used to incentivize curation in any rounds with curators being verified non-sybil accounts past a certain threshhold</strong> of trust, reputation, ecosystem holdings or whatever threshold we will find in discovery.</p>
+<p>This takes the single point of failure out of the curation model.</p>
+<p><strong>NEXT STEPS</strong></p>
+<p>I believe we need two things to scale this out in the future:</p>
+<p><strong>STEP ONE</strong></p>
+<p>We need to distinguish the main Gitcoin Grants round from the Ethereum Ecosystem Rounds. As more integrations have been built, it is impossible to say that the rules for the Eth ecosystem and main round should be the same:</p>
+<p>EXAMPLE 1: A climate change 501c3 grant in the thematic rounds. Should they receive funding from the Ethereum ecosystem’s funders league donors?</p>
+<p>EXAMPLE 2: A Zcash ecosystem project. Again, should they receive funding from the Eth Ecosystem sponsors?</p>
+<p>Both “Ecosystem” &amp; “Thematic” rounds are simply collections of grants with a dedicated matching pool. The grants included in either are always a subset of all the grants on the platform. This should be the “main” round with it’s own matching pool (which might be smaller than the eth ecosystem pool!)</p>
+<p><strong>STEP TWO</strong></p>
+<p>We need a dynamic tool for gauging an ecosystems criteria for grant participation &amp; a way for their stakeholders to participate in curation.</p>
+<p>Using the graph, we can identify stakeholders of an ecosystem. All GTC holders would be curators of the thematic rounds.</p>
+<p>FDD Grant Investigation Agency is a new squad tasked with adjudicating the Grant Disputes that come up during a round. They are using a tool called Ethelo with consultation from the PG Grants Operations stream, Ethelo team, FDD Policy stream, and the FDD Grant Eligibility squad.</p>
+<p>They are determining criteria for the Eth Ecosystem, which is now synonymous with the “main round” although it is logically impossible to align these two things with our current trajectory.</p>
+<p><strong>PURPOSE</strong></p>
+<p>This post is designed to spark conversation, inform the community, and serve as a precursor to a proposal to potentially have steward ratification of the main round being separated from the Ethereum ecosystem rounds at a technical level and their guidance towards governance via curation.</p>
+<p>This move would benefit all stakeholders.</p>
+<p>Matching Pool Funders:  Knowledge that their funds are going to the intended collective of grants</p>
+<p>Grant Funders: Knowledge that the matching funds they are signaling are not diluted by grants unrelated to the specific ecosystem. More options for ecosystems and themes.</p>
+<p>Grant Creators: Less dilution of matching funds to unrelated grants</p>
+<p>PG Grants Operations: Reduced complexity</p>
+<p>FDD Grant Eligibility: Opportunity opens up for more people to earn by participating in the communities they hold stake in</p>
+<p>FDD Policy: Less policy to maintain</p>
+<p>Stewards: Reduces policy questions needing attention to a simple YES/NO should any ecosystem or theme be allowed on the Gitcoin UI and included in the main round?</p>
+<p>GTC Holders: GTC decentralizing the rewards for “curation mining” on the platform turns would be based on users staking GTC to participate in curating grants lowering the velocity of the token.</p>
+          <p><a href="https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/governance-via-curation-in-gitcoin-grants-may-be-necessary/9365/1
+        Wed, 08 Dec 2021 14:11:18 +0000
+gov.gitcoin.co-post-9365-1
+Governance via Curation in Gitcoin Grants may be Necessary
+      
+
+

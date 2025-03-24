@@ -1,0 +1,422 @@
+
+
+
+Web3 Funding Fatigue: a growing problem
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423
+    **Web3 Funding Fatigue: a growing problem**
+*Investigating the funding fatigue in supply and demand side web3 public goods.*
+Authors: Vengist + Owocki
+
+# TLDR
+
+"Funding fatigue" is a growing issue in Web3 public goods funding.
+
+Grantees experience fatigue from maintaining and promoting multiple grants across platforms, while funders face overwhelming requests and high attention costs in evaluating numerous proposals. The system's complexity is a barrier for both sides.
+
+Proposed solutions:
+
+* **Aggregation**: Aggregating labour supply and demand.
+* **Mechanisms**: Introducing a "common app" for grantees, interoperable registry protocols, weighted lists for funding, and tools like Drips, 0xsplits, and Protocol Guild Forks to streamline the process.
+
+# Introduction
+
+Public goods funding in Web3 is essential but increasingly strained by "funding fatigue."
+
+Grantees are overwhelmed by managing and promoting multiple grants across fragmented platforms, while funders struggle with an influx of proposals and high computational costs in evaluating them. This imbalance between supply and demand complicates the funding process.
+
+Grantees face visibility challenges, needing constant promotion, while funders must navigate numerous deserving projects with limited resources. The system’s complexity worsens these issues.
+
+Our proposed solution is aggregation. By formalizing grantee applications and funding decisions through tools like a “common app,” registry protocols, and guilds, the process can be simplified, reducing strain on both funders and grantees. Protopian increase in probabilities that desired public goods are realized.
+
+# Problems:
+
+## Grantee fatigue: supply-side
+
+Grantees have to maintain grants on many diff platforms, across (often) multiple grants. And for QF they have to shill each of them. This is causing grantee fatigue.
+
+Combating the matthew’s effect: intensive effort to become visible in the distributed, complicated public goods funding ecosystem.
+
+## Supply fatigue: demand-side
+
+There are DAOs that are overwhelmed with requests for funding from multiple worthy (but attention consuming to validate) causes.
+
+Computational overhead:: observing, orienting, deciding, acting all take too much computation currently for a funder to navigate the public goods funding ecosystem, mismatch of supply and demand. The system is currently very complicated, instead of complex.
+
+# Solution
+
+# Aggregation of Supply
+
+**Grantee Common App** - a webapp that allows you to apply to multiple grant programs at once.
+
+**Registry Protocol Interop** - build an a way to push/pull grants from one registry to another.
+
+# Aggregation of Demand
+
+One solution may be Weighted Lists of causes that share sales/marketing/governance responsibilities.
+
+One important primitive here is the self-curating registry (SCRs), popularized by protocol guild. SCRS (and nested SCRS of SCRS) could self to aggregate demand to navigate the funding of the commons.
+
+Useful tools: Drips, 0xsplits, Protocol Guild Forks
+
+Computation savings: Aggregated guilds act as high level strategies that funders can more easily navigate. Each guild serves as specialized tactics down stream of high level strategies. The low governance overhead of the SCRs, simply maintenance of the registry’s weights, allows for low-cost formation and operation of guild-like entities.
+
+Ex. A self-curating registry of ethereum public goods
+
+Because SCRs are just a simple address with governance + splitting logic, they can be chained and nested together in a number of interesting ways.
+
+Let's imagine creating an SCR to represent Ethereum Public Goods. Instead of individual contributors, we can just add various guilds with reputable contributions to public goods. We would only need to determine the orgs, and the funding flows directly through to their contributors, based on the logic local to their context.
+
+![|316x314](upload://mc9cvdG5l4Xme8CLkKTsVM25M6i.png)
+
+Lets envision what funding flows look like before and after this fatigue issue is solved.
+
+![|624x335](upload://twWik5hkpkKljlD6Vuebmn3gl3i.png)
+
+![|666x365](upload://yVFSan8YCIwlzGWgs7fdQ0fgJCq.png)
+
+# Conclusion
+
+Addressing "funding fatigue" in Web3 public goods funding is critical to ensuring a sustainable ecosystem. The current system overwhelms both grantees and funders, leading to inefficiencies and missed opportunities. By focusing on solutions that aggregate supply and demand locally, both sides can operate with more efficiency and legitimacy. Tools like a "common app" for grantees and funding guilds for funders could reduce complexity, lower computational overhead, and improve the overall flow of funding. Simplifying these processes is key to maintaining the health and vitality of the Web3 public goods ecosystem.
+Mon, 28 Oct 2024 14:23:38 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Web3 Funding Fatigue: a growing problem
+owocki
+
+            <p>This article is fascinating.  Thanks for sharing.</p>
+<p>Id be interested to play with a pairwise funding pilot sometime.  I wonder if this is something we could consider in 2025 for citizens <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a></p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/15
+        Mon, 28 Oct 2024 14:23:38 +0000
+gov.gitcoin.co-post-19423-15
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+Kronosapiens
+
+            <p>Following up on my <a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/11">earlier comment</a>, here’s a deeper analysis contrasting Quadratic Funding with Pairwise Preference, with focus on the attentional dimension of the mechanisms. Should be relevant to this discussion.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://blog.zaratan.world/p/quadratic-v-pairwise">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a4fb8a225004b549cf963de0c107beb5a2574e15.jpeg" class="site-icon" data-dominant-color="59657B" width="64" height="64">
+
+      <a href="https://blog.zaratan.world/p/quadratic-v-pairwise" target="_blank" rel="noopener nofollow ugc">blog.zaratan.world</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/404;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7da4befcb3b8defa25995ff3201fbc12dbdb9559_2_690x404.jpeg" class="thumbnail" data-dominant-color="616D78" width="690" height="404"></div>
+
+<h3><a href="https://blog.zaratan.world/p/quadratic-v-pairwise" target="_blank" rel="noopener nofollow ugc">Quadratic v. Pairwise</a></h3>
+
+  <p>Comparing two approaches to community-driven public goods funding</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/14
+        Mon, 28 Oct 2024 01:16:09 +0000
+gov.gitcoin.co-post-19423-14
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+1a35e1
+
+            <p>I just put out an RFC for a new method to potentially address this problem. DMs always open.</p>
+<p><a href="https://x.com/1a35e1/status/1849084464028131503" class="onebox" target="_blank" rel="noopener nofollow ugc">https://x.com/1a35e1/status/1849084464028131503</a></p>
+<pre><code class="lang-auto">TL;DR
+- We introduce "initiatives" as a term to refer to ideation/macro planning in on-chain orgs (not proposals)
+- Members create initiatives by locking gov tokens [some amount * some interval]
+- The length of a lock boosts weight; Weight decays to the initial lock amount
+- DAO sets an proposal/acceptance threshold (configurable)
+- Anyone can "contribute" towards an Initiative (with on-chain clauses eg. None or Accepted before timestamp)
+Outcomes
+- Gov tokens removed from voting supply while locked
+- Smaller token holders can lock for longer periods (boosted voice)
+- A dynamic ranked on-chain priority board
+- Incentives (contributions split eg. [ (5/30/65), (fee/supporters/treasury) ])
+- Inverted capital allocation ( External committees can fund projects directly via this mechanism) 
+- Issue bonds for locked token on an AMM to achieve a secondary.
+</code></pre>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/13
+        Wed, 23 Oct 2024 16:30:00 +0000
+gov.gitcoin.co-post-19423-13
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+arunmaharajan
+
+            <aside class="quote no-group" data-username="owocki" data-post="9" data-topic="19423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>owocki</p>
+</blockquote>
+</aside>
+<p>Pinged you on Telegram. I am <a class="mention" href="https://gov.gitcoin.co/u/arunmaharajan">@arunmaharajan</a></p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/12
+        Wed, 09 Oct 2024 13:35:01 +0000
+gov.gitcoin.co-post-19423-12
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+Kronosapiens
+
+            <p>Regarding the demand-side fatigue of evaluating projects, I’d highly encourage folks to look into the <strong>pairwise-preference based approaches</strong> that have been developed over the last few years. They’ve gotten less attention than QF-based approaches but have a lot to recommend them from the perspective of cognitive overload.</p>
+<p>The big lift is that they simplify the evaluation process: instead of evaluating every project in <em>absolute</em> terms, funders can make <em>relative</em> choices between projects – much easier to do at scale.</p>
+<p>These techniques were first (to my knowledge) developed by Colony with their <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3317445" rel="noopener nofollow ugc">BudgetBox</a> mechanism, which was picked up by General Magic with <a href="https://www.pairwise.vote/" rel="noopener nofollow ugc">Pairwise</a>, and by dOrg with <a href="https://pairdrop.daodrops.io/" rel="noopener nofollow ugc">Pairdrop</a>, so at this point there are multiple working implementations to play with.</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/11
+        Tue, 01 Oct 2024 20:58:14 +0000
+gov.gitcoin.co-post-19423-11
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+owocki
+
+            <p>Just published another post about guilding <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> <a href="https://gov.gitcoin.co/t/guild-guild-a-locus-of-coordination-for-guilding/19452" class="inline-onebox">Guild Guild - a locus of coordination for Guilding</a></p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/10
+        Mon, 30 Sep 2024 18:30:55 +0000
+gov.gitcoin.co-post-19423-10
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+owocki
+
+            <aside class="quote no-group" data-username="arunmaharajan" data-post="8" data-topic="19423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/arunmaharajan/48/13774_2.png" class="avatar"> arunmaharajan:</div>
+<blockquote>
+<p>The marketplace is still in ideation / design stage, so would be quite open to take part in any such discussions to collaborate or influence or get influenced.</p>
+</blockquote>
+</aside>
+<p>would love to chat.  DM me on telegram or twitter: I’m owocki in both places</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/9
+        Mon, 30 Sep 2024 15:39:12 +0000
+gov.gitcoin.co-post-19423-9
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+arunmaharajan
+
+            <p>At UNICEF we are looking to build a “marketplace” for Digital Public Goods to be able to find funding. We would immensely benefit from this common app, to be linked through APIs to our marketplace. The marketplace is still in ideation / design stage, so would be quite open to take part in any such discussions to collaborate or influence or get influenced.</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/8
+        Mon, 30 Sep 2024 07:51:43 +0000
+gov.gitcoin.co-post-19423-8
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+mmurthy
+
+            <aside class="quote no-group" data-username="owocki" data-post="5" data-topic="19423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>yes portable profiles are definitely a key piece of the puzzle! i want to fund a “Common App” that can make it easy to transport grant profiles across registries. eventually ill get my life together and write an RFP for this</p>
+</blockquote>
+</aside>
+<p>We are trying to solve the portable profile problem at Karma by helping project owners aggregate all their grants, milestones, progress updates and roadmap in one place and onchain (as EAS attestations). <a href="https://gap.karmahq.xyz/project/viaprize-2" rel="noopener nofollow ugc">See Example here</a>. We have about 3k project profiles and we see hundreds of projects posting updates on a weekly basis and keeping their project/grant updated. I am very interested in building this Common App given lot of the data is already in project’s GAP profile and this is a logical extension of it. Infact, multiple common apps can be built given that this data is all onchain and in clear structured format. Getting all the platforms onboard is the most challenging problem imho.</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/7
+        Thu, 26 Sep 2024 16:24:19 +0000
+gov.gitcoin.co-post-19423-7
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+1a35e1
+
+            <p>Its an interesting solution but I think the current problems will just get transferred to the guilds who have less of an incentive to allocate effectively.</p>
+<p>That said:</p>
+<ul>
+<li>Curated Registries are <img src="https://gov.gitcoin.co/images/emoji/twitter/pinched_fingers.png?v=12" title=":pinched_fingers:" class="emoji" alt=":pinched_fingers:" loading="lazy" width="20" height="20"></li>
+<li>Self service is with agency on the builder sider is good.</li>
+<li>Building on chain reputation by consistently delivering to spec <img src="https://gov.gitcoin.co/images/emoji/twitter/pinched_fingers.png?v=12" title=":pinched_fingers:" class="emoji" alt=":pinched_fingers:" loading="lazy" width="20" height="20"></li>
+</ul>
+<p>In an ideal world:</p>
+<ul>
+<li>Grantees can publish initiatives they are looking to get funded.</li>
+<li>Initiatives map to macro themes set by Guild/Network</li>
+<li>Discovery is facilitated by theme</li>
+<li>Multiple Funding sources may fund themes or Initiatives</li>
+<li>Funding sources evaluate delivery</li>
+<li>Everything is on-chain.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/6
+        Wed, 25 Sep 2024 23:00:59 +0000
+gov.gitcoin.co-post-19423-6
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+owocki
+
+            <aside class="quote no-group" data-username="magentaceiba" data-post="3" data-topic="19423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/magentaceiba/48/11286_2.png" class="avatar"> magentaceiba:</div>
+<blockquote>
+<p>In case the guilds approach doesn’t take root, another detail piece I’ve seen could be helpful is a portable profiles app/protocol for projects.</p>
+</blockquote>
+</aside>
+<p>yes portable profiles are definitely a key piece of the puzzle!  i want to fund a “Common App” that can make it easy to transport grant profiles across registries.  eventually ill get my life together and write an RFP for this</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/5
+        Wed, 25 Sep 2024 17:01:20 +0000
+gov.gitcoin.co-post-19423-5
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+owocki
+
+            <aside class="quote no-group" data-username="jon-spark-eco" data-post="2" data-topic="19423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jon-spark-eco/48/10207_2.png" class="avatar"> jon-spark-eco:</div>
+<blockquote>
+<ul>
+<li>In this scenario the Guilds do the shilling and the down stream public goods do the building. This solves the fatigue for the public goods builders but doesn’t it just shift the fatigue to the Guilds?</li>
+</ul>
+</blockquote>
+</aside>
+<p>anyone can do the shilling.  but there is an opportunity to pool bd/shilling resources at the guild level, so not every project needs a shiller/salesperson.</p>
+<aside class="quote no-group" data-username="jon-spark-eco" data-post="2" data-topic="19423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jon-spark-eco/48/10207_2.png" class="avatar"> jon-spark-eco:</div>
+<blockquote>
+<ul>
+<li>How does this solve the Funder fatigue? Aren’t the Guilds going to be shilling to the funding sources regularly to keep funds flowing?</li>
+</ul>
+</blockquote>
+</aside>
+<p>it makes it easy for anyone to fund an entire category of public goods, instead of having to pick every little project themselves.</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/4
+        Wed, 25 Sep 2024 17:00:16 +0000
+gov.gitcoin.co-post-19423-4
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+magentaceiba
+
+            <p>In case the guilds approach doesn’t take root, another detail piece I’ve seen could be helpful is a portable profiles app/protocol for projects. So it’s easy for projects to own their grant listing and be able to easily pull it in to the specific grants program they’re applying to and make modifications necessary for the specific grant. Ideally that listing could be available across platforms, for example across Gitcoin, Charmverse, Giveth, Octant, etc.</p>
+<p>Description of the problem: As the # of Gitcoin rounds has proliferated, when a project is eligible for multiple increasingly specific grant parameters there, they’ve had to write multiple different applications (just Gitcoin rounds, not talking about all the other Web3 grants programs). If there was a way for a project to keep a stored core of what their project does, and add details specific to a specific funding team’s ask, that could streamline efforts from the project’s side.</p>
+<p>The reason I think this might be more helpful for a project than say, a Google or Hackmd file with the project’s description, is that it also allows more flexibility when it comes to assigning streaming/drips, and also for any dashboard like apps like allow funders to see across different platforms and filter by stage, scale, focus vertical, region, any other common params.</p>
+<p>The UI/api port for the project listing in any funding app would look like "Enter your core project description here or pull in from [The Protocol].</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/3
+        Wed, 25 Sep 2024 14:57:01 +0000
+gov.gitcoin.co-post-19423-3
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+jon-spark-eco
+
+            <p>I like the way this streamlines funding. Checking my understanding:</p>
+<ul>
+<li>In this scenario the Guilds do the shilling and the down stream public goods do the building. This solves the fatigue for the public goods builders but doesn’t it just shift the fatigue to the Guilds?</li>
+<li>How does this solve the Funder fatigue? Aren’t the Guilds going to be shilling to the funding sources regularly to keep funds flowing?</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/2
+        Wed, 25 Sep 2024 00:31:12 +0000
+gov.gitcoin.co-post-19423-2
+Web3 Funding Fatigue: a growing problem
+      
+
+Web3 Funding Fatigue: a growing problem
+owocki
+
+            <p><strong>Web3 Funding Fatigue: a growing problem</strong><br>
+<em>Investigating the funding fatigue in supply and demand side web3 public goods.</em><br>
+Authors: Vengist + Owocki</p>
+<h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR</h1>
+<p>“Funding fatigue” is a growing issue in Web3 public goods funding.</p>
+<p>Grantees experience fatigue from maintaining and promoting multiple grants across platforms, while funders face overwhelming requests and high attention costs in evaluating numerous proposals. The system’s complexity is a barrier for both sides.</p>
+<p>Proposed solutions:</p>
+<ul>
+<li><strong>Aggregation</strong>: Aggregating labour supply and demand.</li>
+<li><strong>Mechanisms</strong>: Introducing a “common app” for grantees, interoperable registry protocols, weighted lists for funding, and tools like Drips, 0xsplits, and Protocol Guild Forks to streamline the process.</li>
+</ul>
+<h1><a name="introduction-2" class="anchor" href="https://gov.gitcoin.co#introduction-2"></a>Introduction</h1>
+<p>Public goods funding in Web3 is essential but increasingly strained by “funding fatigue.”</p>
+<p>Grantees are overwhelmed by managing and promoting multiple grants across fragmented platforms, while funders struggle with an influx of proposals and high computational costs in evaluating them. This imbalance between supply and demand complicates the funding process.</p>
+<p>Grantees face visibility challenges, needing constant promotion, while funders must navigate numerous deserving projects with limited resources. The system’s complexity worsens these issues.</p>
+<p>Our proposed solution is aggregation. By formalizing grantee applications and funding decisions through tools like a “common app,” registry protocols, and guilds, the process can be simplified, reducing strain on both funders and grantees. Protopian increase in probabilities that desired public goods are realized.</p>
+<h1><a name="problems-3" class="anchor" href="https://gov.gitcoin.co#problems-3"></a>Problems:</h1>
+<h2><a name="grantee-fatigue-supply-side-4" class="anchor" href="https://gov.gitcoin.co#grantee-fatigue-supply-side-4"></a>Grantee fatigue: supply-side</h2>
+<p>Grantees have to maintain grants on many diff platforms, across (often) multiple grants. And for QF they have to shill each of them. This is causing grantee fatigue.</p>
+<p>Combating the matthew’s effect: intensive effort to become visible in the distributed, complicated public goods funding ecosystem.</p>
+<h2><a name="supply-fatigue-demand-side-5" class="anchor" href="https://gov.gitcoin.co#supply-fatigue-demand-side-5"></a>Supply fatigue: demand-side</h2>
+<p>There are DAOs that are overwhelmed with requests for funding from multiple worthy (but attention consuming to validate) causes.</p>
+<p>Computational overhead:: observing, orienting, deciding, acting all take too much computation currently for a funder to navigate the public goods funding ecosystem, mismatch of supply and demand. The system is currently very complicated, instead of complex.</p>
+<h1><a name="solution-6" class="anchor" href="https://gov.gitcoin.co#solution-6"></a>Solution</h1>
+<h1><a name="aggregation-of-supply-7" class="anchor" href="https://gov.gitcoin.co#aggregation-of-supply-7"></a>Aggregation of Supply</h1>
+<p><strong>Grantee Common App</strong> - a webapp that allows you to apply to multiple grant programs at once.</p>
+<p><strong>Registry Protocol Interop</strong> - build an a way to push/pull grants from one registry to another.</p>
+<h1><a name="aggregation-of-demand-8" class="anchor" href="https://gov.gitcoin.co#aggregation-of-demand-8"></a>Aggregation of Demand</h1>
+<p>One solution may be Weighted Lists of causes that share sales/marketing/governance responsibilities.</p>
+<p>One important primitive here is the self-curating registry (SCRs), popularized by protocol guild. SCRS (and nested SCRS of SCRS) could self to aggregate demand to navigate the funding of the commons.</p>
+<p>Useful tools: Drips, 0xsplits, Protocol Guild Forks</p>
+<p>Computation savings: Aggregated guilds act as high level strategies that funders can more easily navigate. Each guild serves as specialized tactics down stream of high level strategies. The low governance overhead of the SCRs, simply maintenance of the registry’s weights, allows for low-cost formation and operation of guild-like entities.</p>
+<p>Ex. A self-curating registry of ethereum public goods</p>
+<p>Because SCRs are just a simple address with governance + splitting logic, they can be chained and nested together in a number of interesting ways.</p>
+<p>Let’s imagine creating an SCR to represent Ethereum Public Goods. Instead of individual contributors, we can just add various guilds with reputable contributions to public goods. We would only need to determine the orgs, and the funding flows directly through to their contributors, based on the logic local to their context.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9b8f61b34622e92fdb81d5784490bdf70e154e7e.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/9b8f61b34622e92fdb81d5784490bdf70e154e7e" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9b8f61b34622e92fdb81d5784490bdf70e154e7e_2_316x314.png" alt="" data-base62-sha1="mc9cvdG5l4Xme8CLkKTsVM25M6i" width="316" height="314" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9b8f61b34622e92fdb81d5784490bdf70e154e7e_2_316x314.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9b8f61b34622e92fdb81d5784490bdf70e154e7e_2_474x471.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9b8f61b34622e92fdb81d5784490bdf70e154e7e_2_632x628.png 2x" data-dominant-color="F9F9F9"></a></div><p></p>
+<p>Lets envision what funding flows look like before and after this fatigue issue is solved.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cef8479541295b4bf4694edb142c6c54f40662f0.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/cef8479541295b4bf4694edb142c6c54f40662f0" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cef8479541295b4bf4694edb142c6c54f40662f0_2_624x335.png" alt="" data-base62-sha1="twWik5hkpkKljlD6Vuebmn3gl3i" width="624" height="335" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cef8479541295b4bf4694edb142c6c54f40662f0_2_624x335.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cef8479541295b4bf4694edb142c6c54f40662f0_2_936x502.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cef8479541295b4bf4694edb142c6c54f40662f0_2_1248x670.png 2x" data-dominant-color="F6F4F4"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f4cef11d52edda8103f16e483e0f0bbf9ac22cf2.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/f4cef11d52edda8103f16e483e0f0bbf9ac22cf2" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f4cef11d52edda8103f16e483e0f0bbf9ac22cf2_2_666x365.png" alt="" data-base62-sha1="yVFSan8YCIwlzGWgs7fdQ0fgJCq" width="666" height="365" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f4cef11d52edda8103f16e483e0f0bbf9ac22cf2_2_666x365.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f4cef11d52edda8103f16e483e0f0bbf9ac22cf2_2_999x547.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f4cef11d52edda8103f16e483e0f0bbf9ac22cf2_2_1332x730.png 2x" data-dominant-color="F5F5F5"></a></div><p></p>
+<h1><a name="conclusion-9" class="anchor" href="https://gov.gitcoin.co#conclusion-9"></a>Conclusion</h1>
+<p>Addressing “funding fatigue” in Web3 public goods funding is critical to ensuring a sustainable ecosystem. The current system overwhelms both grantees and funders, leading to inefficiencies and missed opportunities. By focusing on solutions that aggregate supply and demand locally, both sides can operate with more efficiency and legitimacy. Tools like a “common app” for grantees and funding guilds for funders could reduce complexity, lower computational overhead, and improve the overall flow of funding. Simplifying these processes is key to maintaining the health and vitality of the Web3 public goods ecosystem.</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-funding-fatigue-a-growing-problem/19423/1
+        Tue, 24 Sep 2024 17:33:27 +0000
+gov.gitcoin.co-post-19423-1
+Web3 Funding Fatigue: a growing problem
+      
+
+

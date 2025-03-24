@@ -1,0 +1,341 @@
+
+
+
+[Discussion Series] Future of the Grants Program
+https://gov.gitcoin.co/t/discussion-series-future-of-the-grants-program/11252
+    Last week, @kyle kicked off a discussion series on what the next 12-18 months might mean for Gitcoin if we are successful. 
+
+This post is intended to follow on that, diving into the long-term future of the grants program. It seeks to surface conversations we are beginning to have in the DAO, in an attempt to continually build in public.
+
+I'd like to call out fellow DAO contributors @connor @lthrift @nategosselin @ceresstation @kevin.olsen @J9leger who co-wrote and/or deeply contributed to much of this thinking.
+
+# Context
+
+Gitcoin Grants is at a critical turning point. We’re evolving from a small, mostly-centralized group running a quarterly grants program into a large DAO managing & maintaining both a grants program as well as a modular protocol.
+
+In the last six months, we’ve focused largely on kicking off protocol development and defining what the different components of the protocol will entail.
+
+A major question for Gitcoin as we look ahead is what the Program entails, and what the Protocol entails. This includes questions around how we should restructure the rounds we run today.
+
+These are large questions that will require multiple perspectives, but this doc exists to give us a starting point for the discussion. It is one point of view that should not be taken as the “final decision”, but rather as a jumping off point while we navigate this new Protocol and Program territory.
+
+# Where we’ve come from
+
+Gitcoin Grants has evolved substantially since [its launch three years ago](https://gitcoin.co/blog/gitcoin-grants/).
+
+In the very early days, Gitcoin Grants was focused on two things – and since those early days, Gitcoin Grants has become much more than its two original focus areas.
+
+Let’s revisit where both of those stand today.
+
+### 1. Funding Open Source in the Ethereum Ecosystem
+
+At the genesis of Gitcoin Grants in early 2019, [this question was posed](https://gitcoin.co/blog/gitcoin-grants/):
+
+![image|610x156](upload://leS2Yqzv4ovInXpIyGcu5OqHWBe.png)
+
+Today, open source and the Ethereum ecosystem are still deeply embedded in the veins of the Gitcoin community – but they now are far from the only communities we serve with our Grants program.
+
+Over the past few rounds, we have expanded beyond just open source – and beyond just Ethereum – and into funding public goods both on other chains, as well as in the real world through our Ecosystem & Cause Rounds.
+
+With our Ecosystem Rounds, we’ve helped over 20 unique groups fund their shared needs – from individual projects like Lootverse & Polygon, to collaborations like the ZK Tech & Open Gaming rounds.
+
+With Cause Rounds, which represent Gitcoin grants’ first material expansion beyond just software, Gitcoin Grants is now providing funding to entirely off-chain projects, many of which are onboarding to crypto for the first time with our program. Cause Rounds now account for roughly a third of our program.
+
+### 2. Experimenting with Quadratic Funding (aka Liberal Radicalism)
+
+![|594x209](upload://8vfDSn08ypX2TuWBViEVbay2zUb.png)
+
+Gitcoin Grants has effectively been synonymous with Quadratic Funding [since day one](https://gitcoin.co/blog/gitcoin-grants/), and a big part of who we are has involved implementing [Zoe, Glen, and Vitalik’s vision](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3243656) in the real world.
+
+Over the past fourteen rounds, we’ve experimented with many configurations of QF – from having just one large pool, to a pool sub-divided into percentage-based categories, to running eighteen unique QF pools in tandem in GR14.
+
+We are the largest QF deployment in the world – now distributing over $5M entirely via QF each quarter – and we have proven that there is product-market fit here from funders, community donors, and grantees alike. We have also seen other projects begin to focus on enabling QF for communities in light of our success.
+
+# Where we are today
+
+In today’s world, we effectively have an inextricably coupled tech product + program + services, where Gitcoin is the only operator of our legacy platform (dubbed “cGrants”, for “Centralized Grants”) and anyone wishing to fund grants using our technology needs to go through us.
+
+Since early 2019, Gitcoin has been running our quarterly grants program. This program has become our flagship product, the thing for which Gitcoin is most well-known and is where the majority of our resources have been focused over the past couple years.
+
+This program involves two-week grants rounds which run each March, June, September, and December. Today’s program, which has evolved in the ways described above, currently consists of three round types, all running at the same time on cGrants:
+
+1. **Main Round** — one large matching pool (in recent rounds, ~$1M) funded by many partners, distributed using QF to all projects on the platform with an Ethereum payout address
+
+2. **Cause Rounds** — individual matching pools for specific social causes (e.g., Climate, DEI, Longevity) typically funded by many partners, distributed using QF to projects working on that cause
+
+3. **Ecosystem Rounds** — individual matching pools for specific Web3 ecosystems (e.g, Polygon, Web3 Social), typically funded by one or a few organizations, distributed using QF to projects who meets the funders’ eligibility criteria
+
+Running a program centrally can only scale so much. As the DAO revealed earlier this year in announcing [Grants 2.0](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981), we are moving towards becoming a protocol DAO. In addition to offering our protocol permissionlessly for others to use, the Gitcoin Grants program itself will soon run on top of that protocol.
+
+The remainder of this post is intended to outline a vision for the future state we are working towards.
+
+# The Big Vision
+
+[Gitcoin’s purpose](https://twitter.com/owocki/status/1551618547482103809?s=20&t=Urrt7gvglQCvg-yK4nj7LA) is to empower communities to fund their shared needs.
+
+![image|446x461](upload://6RdfbLhi37ArT0yvnVJmyPM000O.jpeg)
+
+Today, the Gitcoin Grants program accomplishes that on a small scale.
+
+Our ambition with this new protocol & program delineation is to be able to accomplish this vision on a much larger scale, funding tens if not hundreds of millions of dollars in shared needs. We aspire to provide the mechanisms to help communities – whether they be DAOs, companies, countries, cities, not-for-profits, groups of friends – fund their collective needs in the way that is right for them.
+
+For some communities, this might look like picking up our grants protocol and reference interfaces and running with it themselves. For others, it might involve Gitcoin providing some hands-on operational support.
+
+And for some communities, this might involve using Quadratic Funding as the sole mechanism, as with our program today. For others, this might look like experimenting with a combination of direct grants + retroactive public goods funding + MACI QF – all of which we’ll offer as money legos within our protocol.
+
+In all cases, we aspire to be a trusted resource on the journey – to provide the toolkit these communities need in order to effectively distribute funding, based on their terms.
+
+In addition, we aspire to continue to intentionally fund areas that meet the Gitcoin community’s perception of humanity’s shared needs – this will be the continuation of our Grants Program, which will run on top of the new Protocol.
+
+So, in this future state, the Gitcoin Grants Program is just one of many programs that run on top of our Gitcoin-built technology – and is a program that we hope will inspire others to start their own, too.
+
+![|624x351](upload://yw137BJlAWXLN6XugoHQXEyjN4b.jpeg)
+And, finally, we envision a world, for grantees, where access to grants funding & early-stage funding at large is much less disparate. Blockchains provide the opportunity to build a unified grants registry, a one-stop-shop source of truth where both institutional funders & individual funders alike can access data – depending on permissions a grantee sets – on all of the projects out there looking for funding.
+
+# Deconstructing our Future Grants Components
+
+In the future state, we envision separating the product, program, and services components of Gitcoin Grants into distinct efforts. The protocol will programmatically enable the goals of many grant programs, inclusive of the Gitcoin Grants program.
+
+### 1. Grants 2.0 Protocol (i.e. the product)
+
+This is the decentralized, permissionless protocol for running grants programs.
+
+As outlined in [the initial Grants 2.0 forum post](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981), the Gitcoin Grants protocol will be open source, modular, and decentralized – any community can create a grant program using our dApp front-end (or by interacting with the protocol directly), and then running it themselves.
+
+When the grants protocol is launched, matching funders don’t operationally *need* the Gitcoin Grants program anymore. Anyone, anywhere can stand up a grants program anytime – they aren’t bound to Gitcoin’s quadratic funding construct, nor are they bound to our quarterly grants round cadence.
+
+So, what does the protocol change? The protocol represents a few substantial shifts:
+
+* **Gitcoin moving beyond just QF, and into grants tooling at large.** The protocol is, in short, a software stack to run & manage your entire grants program by yourself – without Gitcoin’s help. Today, the Gitcoin Grants program is 100% quadratic funding-focused. With the protocol, QF is but one module, one funding lego that exists among many.
+
+* **The ability for anyone at all to use it.** By virtue of the protocol being truly permissionless, anyone can use it without needing to go through Gitcoin as a gatekeeper – today, we have the ability to hand-pick which matching funders engage with the program. With the protocol, as with anything open-source, the maintainer (Gitcoin) will not have authority over who uses it or what it is used for.
+
+* **The ability to fund anything – not just public goods.** Again, by virtue of this protocol being truly permissionless, those using the protocol can use it to fund whatever they want – not just public goods. Today, in our program, we explicitly focus – and always have focused – on funding public goods.
+
+### 2. Gitcoin Grants Program
+
+In the early days of the protocol, the Gitcoin Grants Program is likely to be a super-user of the protocol – given our current scale, we expect to be the largest implementation on the protocol in the near-term.
+
+With the move to the protocol, we plan to gradually ramp down on running so many rounds ourselves, and will instead focus the Program on key areas where the DAO aspires to have an impact.
+
+Today, as described above, the program funds the shared needs of Web3 communities (Main Round / Ecosystem Rounds) and of humanity at large (Cause Rounds).
+
+As we look ahead, we have three objectives for the program in mind:
+
+* **To grow Gitcoin’s brand.** The quarterly grants rounds have become a schelling point for Web3 and have been extremely effective in developing our brand and bringing in funders. We see no reason this shouldn’t continue.
+
+* **To have an impact, on the DAO’s terms.** At the heart of Gitcoin since day one has been funding public goods, and maintaining a program allows us to continue to direct pools of capital specifically towards projects that meet the public good ethos – or whatever ethos the DAO decides is most important to fund – in spite of the protocol itself being entirely permissionless and, in theory, funding *anything*.
+
+* **To drive protocol interest.** As with any piece of technology, the protocol is something that will mature gradually over time, becoming easier to use self-serve as it gets built out. Continuing to run a program is a way we can hand-hold early users of the protocol and enable them, with an eye to them using the protocol more independently in the long-term.
+
+We also see an opportunity for the program to become financially self-sustaining – which, today, it is not. As we evolve the program direction and where it is headed, we’ll explore business models that could make the program more long-term sustainable.
+
+To reiterate the “where we’ve come from section” above, the three objectives above move us further along the journey we’ve already implicitly begun in starting to move away from just “fund open source / public goods in the Ethereum ecosystem” and “serve as a testing ground for QF” as core objectives. While both remain core to our ethos, we are building towards something bigger.
+
+### 3. Services
+
+Looking ahead, we aspire to be a trusted partner that helps communities in deploying their funds using our protocol.
+
+We will do this through the Services we offer – by understanding the efficacy of funding models better than anyone else, we can effectively advise funders on how they might deploy capital and help them in deploying that capital through our protocol.
+
+Today, the program & services are inextricably coupled. To run a QF round in the Gitcoin program, given that our platform is centralized, you need Gitcoin’s help operationally – there is no way to run grants through our platform without the PGF team’s involvement. Although we have not charged for our Services to date, receiving service from us has been a requirement to use the Gitcoin Grants Program, given that there has been no self-serve way to engage with the program due to its tech limitations.
+
+In the “programs-as-trees” analogy, services can be thought of as a watering service. The services we offer are Gitcoin helping you water your garden, so that your program can become the most thriving, fruit-bearing tree it can become. And these services would be completely optional – if you chose to water your own tree, and just use the protocol yourself, you could absolutely do so.
+
+# What does this mean for GR15?
+
+In Grants Round 15, we will still be running the Gitcoin Grants Program as usual on our cGrants platform. As we prepare for a protocol future, we will de-couple the Main Round from the Ecosystem / Cause Rounds.
+
+De-coupling starts to move us in the direction of what living in a protocol world will look like – wherein anyone can stand up any sort of round permissionlessly.
+
+What this means, tactically speaking for GR15, is that grantees will be able to be eligible for a specific Ecosystem or Cause Round, as long as they meet that round’s eligibility criteria – even if they don’t meet the Gitcoin Main Round criteria.
+
+Today, the Main Round criteria include not having raised VC funding over $500k, not having a token, not selling NFTs, being open source, and generally being a public good. We have received feedback from some of our funding partners that this is more restrictive than they would like to be, and this is the first step in our journey to enable permissionless funding of shared needs more broadly than just what we as Gitcoin prescribe as “public goods” based on our (imperfect) working definition.
+
+More to come in the upcoming GR15 Governance Brief.
+
+# Next Steps
+
+We would like to solicit feedback from DAO contributors, grantees, and funders alike as we crystallize this vision and more clearly define what the Program & Protocol will look like in the future. We will continue to provide updates on the journey as pieces get built out and tested.
+Wed, 10 Aug 2022 17:37:31 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+[Discussion Series] Future of the Grants Program
+Viriya
+
+            <p>Absolutely loved the thought and work that went into this. A great summary.</p>
+<p>This, naturally, stood out to me as one of the pieces I see MMM aligning and directly contributing to in future seasons:</p>
+<aside class="quote no-group" data-username="annika" data-post="1" data-topic="11252">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p><strong>To grow Gitcoin’s brand.</strong> The quarterly grants rounds have become a schelling point for Web3 and have been extremely effective in developing our brand and bringing in funders. We see no reason this shouldn’t continue.</p>
+</blockquote>
+</aside>
+<p>MMM is currently working on Gitcoin’s overall brand narrative and how the protocols fit into the vision for Gitcoin. Your post helped outline a lot of what has already been <a href="https://docs.google.com/document/d/1KdhE2VGHP5efT9we9ZjdeyoPf87452daRjJ3wJlQg-k/edit#" rel="noopener nofollow ugc">discussed by our branding team</a> (and I’m sure that’s not a coincidence lol).</p>
+<p>All that said, I believe that it would be helpful to define a Grants Program narrative that is heavily values-centric and continue to lean in and rally around our vision for a regen future. Our protocols will be neutral but our Program should be explicit in its stance/embody our community’s stance for a flourishing future for humanity, imo.</p>
+<p>I wanted to plant the seed here for future discussions as MMM builds out a marketing strategy for Grants Round growth.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-series-future-of-the-grants-program/11252/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-series-future-of-the-grants-program/11252/3
+        Wed, 10 Aug 2022 17:37:31 +0000
+gov.gitcoin.co-post-11252-3
+[Discussion Series] Future of the Grants Program
+      
+
+[Discussion Series] Future of the Grants Program
+kyle
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a> and everyone else who has been thinking about this. I love the direction we are contemplating!</p>
+<blockquote>
+<p>What this means, tactically speaking for GR15, is that grantees will be able to be eligible for a specific Ecosystem or Cause Round, as long as they meet that round’s eligibility criteria – even if they don’t meet the Gitcoin Main Round criteria.</p>
+</blockquote>
+<p>Having the capability to define round level eligibility has been requested for a while, and is an awesome first step into this future.</p>
+<aside class="quote no-group" data-username="annika" data-post="1" data-topic="11252">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>by understanding the efficacy of funding models better than anyone else, we can effectively advise funders on how they might deploy capital and help them in deploying that capital through our protocol.</p>
+</blockquote>
+</aside>
+<p>I want to call out that this is really one of the unsung heroes of our future.</p>
+<p>Gitcoin today is largely a one (very large) trick pony when it comes to grants funding. Luckily the QF mechanism has proven to be one of the most democratically fair way to distribute funds. Imagine if you don’t need the consensus of the commons and instead want to fund using a different method. In theory, Gitcoin should be experts in helping you understand hte pro<code>s and con</code>s of deploying that capital. We will have the expertise to offer insights (to the world) on how effective capital distribution has been.</p>
+<p>Further, imagine if we could track the impact projects had, and tie that back to the funding model used… We can actually evaluate “are the grants the community choose ‘better’ than the grants chosen by VCs, Grants programs, etc.?”</p>
+<p>I am excited for our skillset to grow into the data analysis and insights generation too!</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-series-future-of-the-grants-program/11252/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-series-future-of-the-grants-program/11252/2
+        Wed, 10 Aug 2022 14:41:24 +0000
+gov.gitcoin.co-post-11252-2
+[Discussion Series] Future of the Grants Program
+      
+
+[Discussion Series] Future of the Grants Program
+annika
+
+            <p>Last week, <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> kicked off a discussion series on what the next 12-18 months might mean for Gitcoin if we are successful.</p>
+<p>This post is intended to follow on that, diving into the long-term future of the grants program. It seeks to surface conversations we are beginning to have in the DAO, in an attempt to continually build in public.</p>
+<p>I’d like to call out fellow DAO contributors <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a> <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> <a class="mention" href="https://gov.gitcoin.co/u/ceresstation">@ceresstation</a> <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a> who co-wrote and/or deeply contributed to much of this thinking.</p>
+<h1>
+<a name="context-1" class="anchor" href="https://gov.gitcoin.co#context-1"></a>Context</h1>
+<p>Gitcoin Grants is at a critical turning point. We’re evolving from a small, mostly-centralized group running a quarterly grants program into a large DAO managing &amp; maintaining both a grants program as well as a modular protocol.</p>
+<p>In the last six months, we’ve focused largely on kicking off protocol development and defining what the different components of the protocol will entail.</p>
+<p>A major question for Gitcoin as we look ahead is what the Program entails, and what the Protocol entails. This includes questions around how we should restructure the rounds we run today.</p>
+<p>These are large questions that will require multiple perspectives, but this doc exists to give us a starting point for the discussion. It is one point of view that should not be taken as the “final decision”, but rather as a jumping off point while we navigate this new Protocol and Program territory.</p>
+<h1>
+<a name="where-weve-come-from-2" class="anchor" href="https://gov.gitcoin.co#where-weve-come-from-2"></a>Where we’ve come from</h1>
+<p>Gitcoin Grants has evolved substantially since <a href="https://gitcoin.co/blog/gitcoin-grants/" rel="noopener nofollow ugc">its launch three years ago</a>.</p>
+<p>In the very early days, Gitcoin Grants was focused on two things – and since those early days, Gitcoin Grants has become much more than its two original focus areas.</p>
+<p>Let’s revisit where both of those stand today.</p>
+<h3>
+<a name="h-1-funding-open-source-in-the-ethereum-ecosystem-3" class="anchor" href="https://gov.gitcoin.co#h-1-funding-open-source-in-the-ethereum-ecosystem-3"></a>1. Funding Open Source in the Ethereum Ecosystem</h3>
+<p>At the genesis of Gitcoin Grants in early 2019, <a href="https://gitcoin.co/blog/gitcoin-grants/" rel="noopener nofollow ugc">this question was posed</a>:</p>
+<p><img src="/uploads/db4391/original/2X/9/94dc0420187f8f979746e1de7702bbc37c1b5534.png" alt="image" data-base62-sha1="leS2Yqzv4ovInXpIyGcu5OqHWBe" width="610" height="156"></p>
+<p>Today, open source and the Ethereum ecosystem are still deeply embedded in the veins of the Gitcoin community – but they now are far from the only communities we serve with our Grants program.</p>
+<p>Over the past few rounds, we have expanded beyond just open source – and beyond just Ethereum – and into funding public goods both on other chains, as well as in the real world through our Ecosystem &amp; Cause Rounds.</p>
+<p>With our Ecosystem Rounds, we’ve helped over 20 unique groups fund their shared needs – from individual projects like Lootverse &amp; Polygon, to collaborations like the ZK Tech &amp; Open Gaming rounds.</p>
+<p>With Cause Rounds, which represent Gitcoin grants’ first material expansion beyond just software, Gitcoin Grants is now providing funding to entirely off-chain projects, many of which are onboarding to crypto for the first time with our program. Cause Rounds now account for roughly a third of our program.</p>
+<h3>
+<a name="h-2-experimenting-with-quadratic-funding-aka-liberal-radicalism-4" class="anchor" href="https://gov.gitcoin.co#h-2-experimenting-with-quadratic-funding-aka-liberal-radicalism-4"></a>2. Experimenting with Quadratic Funding (aka Liberal Radicalism)</h3>
+<p><img src="/uploads/db4391/original/2X/3/3b99c7b6f0aee4bbd40768122fd162a9e38bc037.png" alt="" data-base62-sha1="8vfDSn08ypX2TuWBViEVbay2zUb" width="594" height="209"></p>
+<p>Gitcoin Grants has effectively been synonymous with Quadratic Funding <a href="https://gitcoin.co/blog/gitcoin-grants/" rel="noopener nofollow ugc">since day one</a>, and a big part of who we are has involved implementing <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3243656" rel="noopener nofollow ugc">Zoe, Glen, and Vitalik’s vision</a> in the real world.</p>
+<p>Over the past fourteen rounds, we’ve experimented with many configurations of QF – from having just one large pool, to a pool sub-divided into percentage-based categories, to running eighteen unique QF pools in tandem in GR14.</p>
+<p>We are the largest QF deployment in the world – now distributing over $5M entirely via QF each quarter – and we have proven that there is product-market fit here from funders, community donors, and grantees alike. We have also seen other projects begin to focus on enabling QF for communities in light of our success.</p>
+<h1>
+<a name="where-we-are-today-5" class="anchor" href="https://gov.gitcoin.co#where-we-are-today-5"></a>Where we are today</h1>
+<p>In today’s world, we effectively have an inextricably coupled tech product + program + services, where Gitcoin is the only operator of our legacy platform (dubbed “cGrants”, for “Centralized Grants”) and anyone wishing to fund grants using our technology needs to go through us.</p>
+<p>Since early 2019, Gitcoin has been running our quarterly grants program. This program has become our flagship product, the thing for which Gitcoin is most well-known and is where the majority of our resources have been focused over the past couple years.</p>
+<p>This program involves two-week grants rounds which run each March, June, September, and December. Today’s program, which has evolved in the ways described above, currently consists of three round types, all running at the same time on cGrants:</p>
+<ol>
+<li>
+<p><strong>Main Round</strong> — one large matching pool (in recent rounds, ~$1M) funded by many partners, distributed using QF to all projects on the platform with an Ethereum payout address</p>
+</li>
+<li>
+<p><strong>Cause Rounds</strong> — individual matching pools for specific social causes (e.g., Climate, DEI, Longevity) typically funded by many partners, distributed using QF to projects working on that cause</p>
+</li>
+<li>
+<p><strong>Ecosystem Rounds</strong> — individual matching pools for specific Web3 ecosystems (e.g, Polygon, Web3 Social), typically funded by one or a few organizations, distributed using QF to projects who meets the funders’ eligibility criteria</p>
+</li>
+</ol>
+<p>Running a program centrally can only scale so much. As the DAO revealed earlier this year in announcing <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Grants 2.0</a>, we are moving towards becoming a protocol DAO. In addition to offering our protocol permissionlessly for others to use, the Gitcoin Grants program itself will soon run on top of that protocol.</p>
+<p>The remainder of this post is intended to outline a vision for the future state we are working towards.</p>
+<h1>
+<a name="the-big-vision-6" class="anchor" href="https://gov.gitcoin.co#the-big-vision-6"></a>The Big Vision</h1>
+<p><a href="https://twitter.com/owocki/status/1551618547482103809?s=20&amp;t=Urrt7gvglQCvg-yK4nj7LA" rel="noopener nofollow ugc">Gitcoin’s purpose</a> is to empower communities to fund their shared needs.</p>
+<p><img src="/uploads/db4391/original/2X/3/3010f489fd334f9dcec7c5aff12004aded397552.jpeg" alt="image" data-base62-sha1="6RdfbLhi37ArT0yvnVJmyPM000O" width="446" height="461"></p>
+<p>Today, the Gitcoin Grants program accomplishes that on a small scale.</p>
+<p>Our ambition with this new protocol &amp; program delineation is to be able to accomplish this vision on a much larger scale, funding tens if not hundreds of millions of dollars in shared needs. We aspire to provide the mechanisms to help communities – whether they be DAOs, companies, countries, cities, not-for-profits, groups of friends – fund their collective needs in the way that is right for them.</p>
+<p>For some communities, this might look like picking up our grants protocol and reference interfaces and running with it themselves. For others, it might involve Gitcoin providing some hands-on operational support.</p>
+<p>And for some communities, this might involve using Quadratic Funding as the sole mechanism, as with our program today. For others, this might look like experimenting with a combination of direct grants + retroactive public goods funding + MACI QF – all of which we’ll offer as money legos within our protocol.</p>
+<p>In all cases, we aspire to be a trusted resource on the journey – to provide the toolkit these communities need in order to effectively distribute funding, based on their terms.</p>
+<p>In addition, we aspire to continue to intentionally fund areas that meet the Gitcoin community’s perception of humanity’s shared needs – this will be the continuation of our Grants Program, which will run on top of the new Protocol.</p>
+<p>So, in this future state, the Gitcoin Grants Program is just one of many programs that run on top of our Gitcoin-built technology – and is a program that we hope will inspire others to start their own, too.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f1e86e335ed989110bb5f066d337ac6fa5e8a60f.jpeg" data-download-href="/uploads/short-url/yw137BJlAWXLN6XugoHQXEyjN4b.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/f/f1e86e335ed989110bb5f066d337ac6fa5e8a60f_2_624x351.jpeg" alt="" data-base62-sha1="yw137BJlAWXLN6XugoHQXEyjN4b" width="624" height="351" srcset="/uploads/db4391/optimized/2X/f/f1e86e335ed989110bb5f066d337ac6fa5e8a60f_2_624x351.jpeg, /uploads/db4391/optimized/2X/f/f1e86e335ed989110bb5f066d337ac6fa5e8a60f_2_936x526.jpeg 1.5x, /uploads/db4391/optimized/2X/f/f1e86e335ed989110bb5f066d337ac6fa5e8a60f_2_1248x702.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/f/f1e86e335ed989110bb5f066d337ac6fa5e8a60f_2_10x10.png"></a></div><br>
+And, finally, we envision a world, for grantees, where access to grants funding &amp; early-stage funding at large is much less disparate. Blockchains provide the opportunity to build a unified grants registry, a one-stop-shop source of truth where both institutional funders &amp; individual funders alike can access data – depending on permissions a grantee sets – on all of the projects out there looking for funding.<p></p>
+<h1>
+<a name="deconstructing-our-future-grants-components-7" class="anchor" href="https://gov.gitcoin.co#deconstructing-our-future-grants-components-7"></a>Deconstructing our Future Grants Components</h1>
+<p>In the future state, we envision separating the product, program, and services components of Gitcoin Grants into distinct efforts. The protocol will programmatically enable the goals of many grant programs, inclusive of the Gitcoin Grants program.</p>
+<h3>
+<a name="h-1-grants-20-protocol-ie-the-product-8" class="anchor" href="https://gov.gitcoin.co#h-1-grants-20-protocol-ie-the-product-8"></a>1. Grants 2.0 Protocol (i.e. the product)</h3>
+<p>This is the decentralized, permissionless protocol for running grants programs.</p>
+<p>As outlined in <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">the initial Grants 2.0 forum post</a>, the Gitcoin Grants protocol will be open source, modular, and decentralized – any community can create a grant program using our dApp front-end (or by interacting with the protocol directly), and then running it themselves.</p>
+<p>When the grants protocol is launched, matching funders don’t operationally <em>need</em> the Gitcoin Grants program anymore. Anyone, anywhere can stand up a grants program anytime – they aren’t bound to Gitcoin’s quadratic funding construct, nor are they bound to our quarterly grants round cadence.</p>
+<p>So, what does the protocol change? The protocol represents a few substantial shifts:</p>
+<ul>
+<li>
+<p><strong>Gitcoin moving beyond just QF, and into grants tooling at large.</strong> The protocol is, in short, a software stack to run &amp; manage your entire grants program by yourself – without Gitcoin’s help. Today, the Gitcoin Grants program is 100% quadratic funding-focused. With the protocol, QF is but one module, one funding lego that exists among many.</p>
+</li>
+<li>
+<p><strong>The ability for anyone at all to use it.</strong> By virtue of the protocol being truly permissionless, anyone can use it without needing to go through Gitcoin as a gatekeeper – today, we have the ability to hand-pick which matching funders engage with the program. With the protocol, as with anything open-source, the maintainer (Gitcoin) will not have authority over who uses it or what it is used for.</p>
+</li>
+<li>
+<p><strong>The ability to fund anything – not just public goods.</strong> Again, by virtue of this protocol being truly permissionless, those using the protocol can use it to fund whatever they want – not just public goods. Today, in our program, we explicitly focus – and always have focused – on funding public goods.</p>
+</li>
+</ul>
+<h3>
+<a name="h-2-gitcoin-grants-program-9" class="anchor" href="https://gov.gitcoin.co#h-2-gitcoin-grants-program-9"></a>2. Gitcoin Grants Program</h3>
+<p>In the early days of the protocol, the Gitcoin Grants Program is likely to be a super-user of the protocol – given our current scale, we expect to be the largest implementation on the protocol in the near-term.</p>
+<p>With the move to the protocol, we plan to gradually ramp down on running so many rounds ourselves, and will instead focus the Program on key areas where the DAO aspires to have an impact.</p>
+<p>Today, as described above, the program funds the shared needs of Web3 communities (Main Round / Ecosystem Rounds) and of humanity at large (Cause Rounds).</p>
+<p>As we look ahead, we have three objectives for the program in mind:</p>
+<ul>
+<li>
+<p><strong>To grow Gitcoin’s brand.</strong> The quarterly grants rounds have become a schelling point for Web3 and have been extremely effective in developing our brand and bringing in funders. We see no reason this shouldn’t continue.</p>
+</li>
+<li>
+<p><strong>To have an impact, on the DAO’s terms.</strong> At the heart of Gitcoin since day one has been funding public goods, and maintaining a program allows us to continue to direct pools of capital specifically towards projects that meet the public good ethos – or whatever ethos the DAO decides is most important to fund – in spite of the protocol itself being entirely permissionless and, in theory, funding <em>anything</em>.</p>
+</li>
+<li>
+<p><strong>To drive protocol interest.</strong> As with any piece of technology, the protocol is something that will mature gradually over time, becoming easier to use self-serve as it gets built out. Continuing to run a program is a way we can hand-hold early users of the protocol and enable them, with an eye to them using the protocol more independently in the long-term.</p>
+</li>
+</ul>
+<p>We also see an opportunity for the program to become financially self-sustaining – which, today, it is not. As we evolve the program direction and where it is headed, we’ll explore business models that could make the program more long-term sustainable.</p>
+<p>To reiterate the “where we’ve come from section” above, the three objectives above move us further along the journey we’ve already implicitly begun in starting to move away from just “fund open source / public goods in the Ethereum ecosystem” and “serve as a testing ground for QF” as core objectives. While both remain core to our ethos, we are building towards something bigger.</p>
+<h3>
+<a name="h-3-services-10" class="anchor" href="https://gov.gitcoin.co#h-3-services-10"></a>3. Services</h3>
+<p>Looking ahead, we aspire to be a trusted partner that helps communities in deploying their funds using our protocol.</p>
+<p>We will do this through the Services we offer – by understanding the efficacy of funding models better than anyone else, we can effectively advise funders on how they might deploy capital and help them in deploying that capital through our protocol.</p>
+<p>Today, the program &amp; services are inextricably coupled. To run a QF round in the Gitcoin program, given that our platform is centralized, you need Gitcoin’s help operationally – there is no way to run grants through our platform without the PGF team’s involvement. Although we have not charged for our Services to date, receiving service from us has been a requirement to use the Gitcoin Grants Program, given that there has been no self-serve way to engage with the program due to its tech limitations.</p>
+<p>In the “programs-as-trees” analogy, services can be thought of as a watering service. The services we offer are Gitcoin helping you water your garden, so that your program can become the most thriving, fruit-bearing tree it can become. And these services would be completely optional – if you chose to water your own tree, and just use the protocol yourself, you could absolutely do so.</p>
+<h1>
+<a name="what-does-this-mean-for-gr15-11" class="anchor" href="https://gov.gitcoin.co#what-does-this-mean-for-gr15-11"></a>What does this mean for GR15?</h1>
+<p>In Grants Round 15, we will still be running the Gitcoin Grants Program as usual on our cGrants platform. As we prepare for a protocol future, we will de-couple the Main Round from the Ecosystem / Cause Rounds.</p>
+<p>De-coupling starts to move us in the direction of what living in a protocol world will look like – wherein anyone can stand up any sort of round permissionlessly.</p>
+<p>What this means, tactically speaking for GR15, is that grantees will be able to be eligible for a specific Ecosystem or Cause Round, as long as they meet that round’s eligibility criteria – even if they don’t meet the Gitcoin Main Round criteria.</p>
+<p>Today, the Main Round criteria include not having raised VC funding over $500k, not having a token, not selling NFTs, being open source, and generally being a public good. We have received feedback from some of our funding partners that this is more restrictive than they would like to be, and this is the first step in our journey to enable permissionless funding of shared needs more broadly than just what we as Gitcoin prescribe as “public goods” based on our (imperfect) working definition.</p>
+<p>More to come in the upcoming GR15 Governance Brief.</p>
+<h1>
+<a name="next-steps-12" class="anchor" href="https://gov.gitcoin.co#next-steps-12"></a>Next Steps</h1>
+<p>We would like to solicit feedback from DAO contributors, grantees, and funders alike as we crystallize this vision and more clearly define what the Program &amp; Protocol will look like in the future. We will continue to provide updates on the journey as pieces get built out and tested.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-series-future-of-the-grants-program/11252/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-series-future-of-the-grants-program/11252/1
+        Tue, 09 Aug 2022 18:11:56 +0000
+gov.gitcoin.co-post-11252-1
+[Discussion Series] Future of the Grants Program
+      
+
+

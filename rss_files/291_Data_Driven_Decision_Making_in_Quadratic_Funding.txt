@@ -1,0 +1,301 @@
+
+
+
+Data-Driven Decision Making in Quadratic Funding
+https://gov.gitcoin.co/t/data-driven-decision-making-in-quadratic-funding/19752
+    *Context: This artifact represents a learning journey as part of the Devcon Scholars Program and is a continuation of experiments conducted under the [GrantsScope](https://grantsscope.xyz/) project, funded through Gitcoin Grants since June 2023.*
+
+*When decision-making is decentralized, ensuring donors and delegates share a unified context becomes essential to effectively channel capital toward shared objectives. This study documents the data, code, prototype, and findings from the exploration of personalized, data-driven sensemaking for Quadratic Funding (QF) donors, aiming to enhance their ability to make informed and impactful decisions.*
+
+## Pivoting From Subjective Narratives to Objective Insights in QF
+### Abstract 
+This study explores the potential of data-driven tools in enhancing quadratic funding (QF) for public goods in the web3 ecosystem. By leveraging the donation window for Gitcoin Grants 22 (GG22), the study deployed a live tool that provided QF donors with actionable insights and customizable metrics to objectively evaluate open-source software (OSS) grantees. Combining data from [Open Source Observer (OSO)](https://www.opensource.observer/) and [RegenData](https://github.com/ufkhan97/regendata), the methodology introduces a composite scoring system that balances repository activity and community engagement, allowing donors to prioritize projects effectively. This feature accommodates diverse donor objectives, whether they are supporting high-growth projects, stable and mature initiatives, or experimental endeavors.
+
+Key findings reveal that data-driven tools empower grantee discovery, promote transparency, and foster accountability, shifting the donor experience from subjective narratives to objective evaluation. Challenges, such as potential biases in data and over-reliance on quantitative metrics, are addressed with future opportunities like predictive analytics, qualitative assessments, and lifecycle impact monitoring. By advancing data-driven decision-making, this study highlights the critical role of analytics in driving equitable and efficient funding strategies for web3 public goods.
+### Introduction
+Cryptocurrency and blockchain technology offer transformative potential in capital allocation, enabling efficient, transparent, and equitable resource distribution through programmable smart contracts (Owocki, 2024a). By addressing coordination failures and introducing innovative onchain strategies, these technologies have the capacity to reshape how resources are allocated, much like the internet revolutionized information sharing.
+
+For digital public goods in web3, grants are vital in nurturing early-stage projects, empowering teams to retain sovereignty while building competitive ecosystems. Grants also attract and retain talent by supporting developers and creatives working on impactful projects, highlighting their strategic value in ecosystem growth (Gitcoin, 2023).
+
+As the ecosystem evolves, measuring and evaluating the impact of grant programs has become increasingly critical. Moving beyond simple metrics, a blend of outputs, outcomes, and long-term impact offers a more comprehensive approach to assessment. This shift emphasizes transparency and data-driven decision-making as essential to effective public goods funding (Grant Innovation Lab at Metagov, 2024).
+
+This research attempts to validate the effectiveness of data-driven tools in public goods funding in the context of capital allocation using quadratic funding (QF).
+
+> ***How can data-driven tools provide QF donors with actionable insights into the outputs of open-source software (OSS) grantees, enhancing informed decision-making and transparency in public goods funding?***
+
+This study is part of a series of experiments conducted under the [GrantsScope](https://grantsscope.xyz/) project, initially funded by the Gitcoin Citizens Round and later supported by the QF donations since GG18. These experiments include personalized grantee recommendations based on donation history and AI-driven suggestions using Retrieval Augmented Generation (RAG). Refer to [this list](https://grantsscope.xyz/) for additional insights into these initiatives.
+### About Gitcoin Grants
+Gitcoin Grants is a leading platform in Web3 public goods funding, leveraging quadratic funding (QF) to democratize resource allocation. By matching individual contributions with larger funding pools (Buterin, Hitzig, & Weyl, 2018), Gitcoin Grants amplify community-driven priorities, ensuring diverse voices shape the ecosystem's development. Over 250+ rounds, it has distributed over $66 million, supporting thousands of open-source projects (Gitcoin, 2024).
+
+At the same time, in large QF rounds, where hundreds of grantees vie for attention, the brightest spotlight often falls on those with the strongest marketing. This imbalance creates a cycle where deserving projects may go unnoticed, leading to an uneven distribution of resources and opportunities (Malekar, 2024a). This disparity places additional burdens on grantees to amplify their visibility and diverts their focus from delivering meaningful outcomes. 
+### Methodology
+This study employs a data-driven approach to empower QF donors with actionable insights into the outputs of open-source software (OSS) grantees in GG22 (Gitcoin Grants). By integrating interactive tools and advanced metrics, the methodology enables users to customize assessments and align their funding decisions with individual preferences. Below, we detail the key steps and components of the methodology:
+#### 1. Data Sources
+The analysis utilizes two primary datasets:
+- **Open Source Observer (OSO):** OSO maintains a large repository of open source projects called [oss-directory](https://github.com/opensource-observer/oss-directory). Indexers are run on every artifact linked to projects in the directory to produce detailed metrics on OSS project activities, including developer contributions and repository performance. GG22 grantees who submitted their application by the early deadline were added to oss-directory to capture their development activity.
+- **RegenData:** RegenData was used to extract detailed information about approved grant applications from GG22 OSS rounds. The final dataset provided rich metadata for each project, including its title, recipient address, GitHub repository, Twitter handle, website, description, and a direct link to its Gitcoin Explorer page.
+
+#### 2. Metrics Selection and Normalization
+As part of their grantee discovery experience, donors can select up to three key metrics to define their custom composite measure. The available metrics derived from OSO include:
+- **Repository Activity:** Commit count, merged pull requests, and closed issues over six months.
+- **Community Engagement:** Star count and fork count.
+Each selected metric is normalized using Min-Max normalization to scale values between 0 and 1, ensuring equitable comparison across varying magnitudes.
+
+![](upload://az9NwbmPErN5pbX6uoozSkVJzAx.png)
+
+#### 3. Weight Assignment
+Users assign weights to their selected metrics, totaling 100. This weight distribution reflects the donor's priorities and is the basis for calculating the composite score. Donors can emphasize metrics that resonate with their priorities, such as development activity or community involvement, creating a personalized lens for evaluating projects.
+
+![](upload://af4FS3eBIOXgyBuvsvuFcvditzA.jpeg)
+
+#### 4. Composite Score and Impact Efficiency Per Contributor
+By allowing donors to define their composite metrics, the design shifts control from a one-size-fits-all evaluation to a customizable approach, empowering donors to actively shape their funding strategies. Based on the metrics selected by the user and relative weights, the composite score is computed as a weighted sum of the normalized metrics:
+
+> Composite Score=(∑(Normalized Metric×Weight))×100
+
+The final score is scaled to a range of 0 to 100, providing an intuitive metric for project comparison. The composite score combines multiple developer activity-related metrics into a single value to simplify complexity, enable comparison, and support objective decision-making. Balancing key dimensions (e.g., activity, popularity), it provides a holistic view, reduces bias, and highlights trends, making it easier to evaluate and prioritize projects or initiatives effectively.
+
+To evaluate the efficiency of contributions, the composite score is divided by the normalized contributor count (over six months). This metric is further normalized to provide a scale of 0 to 100, highlighting the relative impact generated per contributor. The **Impact Efficiency Per Contributor** metric offers a fair and nuanced way to evaluate the productivity of open-source projects by normalizing impact relative to team size. It ensures smaller teams aren’t overshadowed by larger ones, highlights individual contributor effectiveness, and helps identify high-performing projects. 
+
+![](upload://jCVtxymIV172DxePN8She9upOsA.jpeg)
+
+### User Interface
+The [custom-built web application](https://gg22-grantsscope.streamlit.app/), developed using Streamlit, is designed to give donors fine-tuned control over grantee discovery, enabling them to tailor their evaluations to align with specific funding priorities. This intuitive platform offers:
+- **Metric Selection and Weight Assignment**: Donors can define which metrics matter most to them (e.g., commits, merged pull requests, closed issues) and assign weights to create a personalized composite impact score.
+- **Advanced Filtering Options**: Projects can be filtered based on attributes like activity levels, contributor count, age of the project, or funding round, allowing donors to pinpoint grantees that meet their exact criteria.
+- **Dynamic Rankings**: A customized ranking system highlights projects based on the donor's chosen metrics and weights, making comparisons straightforward and data-driven.
+
+#### Example: Discovering Emerging Grantees Building dApps and Apps
+For example, if a donor wants to identify **emerging dApps with fewer than five contributors that demonstrate the highest impact per contributor** (measured by metrics like commits, merged PRs, and closed issues), the application can extract this information using specific filters and sorting options as follows.
+
+![](upload://kYRKKJS9Troxh8L5e3RXR2ltPoY.jpeg)
+
+In contrast, when the same query is applied without filtering for project age and focuses solely on composite scores, the results may include mature projects or those with larger teams, shifting the focus away from smaller, high-impact initiatives.
+
+![](upload://awyRqDIdRxuUnJd5Yi6UseNuMvY.png)
+
+By offering granular control, the application enables QF donors to fund projects that align more closely with their personal or strategic priorities, fostering a more effective and meaningful donation experience. Here are a few examples of the insights donors can uncover using the application:
+- Identify Web3 infrastructure grantees with development teams of fewer than 10 members that have the most forked repositories.
+- Sort the most mature grantees (first commit before January 1, 2020) in the Developer Tooling round by developer activity.
+- Discover grantees with the highest commits per contributor over the last six months but with relatively unknown repositories (lowest star ratings).
+### From Narratives to Numbers: Enhancing QF Donations
+The user experience demonstrates how data-driven tools empower quadratic funding (QF) donors by shifting the donation experience from subjective narratives to objective evaluation of outputs. Key insights include:
+- **Empowering Grantee Discovery with Self-Service Analytics**
+    - Enables donors to explore and evaluate grantees independently using actionable, data-driven insights.
+    - Allows customization of metrics to align with individual priorities.
+    - Provides detailed views of project-level outputs, such as repository activity, community engagement, and developer contributions.
+- **Objective Evaluation of Outputs**
+    - Offers tools to quantify project outputs, including commits, pull requests, and issue resolutions, for a transparent activity view.
+    - Standardizes project comparisons using composite scores and efficiency metrics.
+- **Advancing Transparency and Accountability**
+    - Improves transparency by delivering measurable insights into grantee performance.
+    - Promotes equitable funding decisions by highlighting impactful projects regardless of size or resources.
+    - Fosters a culture of data-driven accountability, strengthening the Web3 ecosystem's credibility and sustainability.
+### Challenges and Limitations
+While the methodology and findings demonstrate the potential of data-driven tools to transform quadratic funding (QF) decisions, several challenges and limitations were identified during the study:
+- **Bias in Data Sources**:  Metrics, like commit counts or pull requests, may disproportionately favor specific projects, such as highly active repositories, while undervaluing others in stable or less dynamic development phases.
+- **Neglect of Qualitative Aspects**: The reliance on quantitative data risks overlooking qualitative elements, such as a project's social impact or innovation potential, which are more challenging to measure but equally critical.
+- **Reductionism**: Complex project contributions may be oversimplified when condensed into composite scores, potentially misrepresenting their true impact.
+- **Potential for Misaligned Priorities**: Without sufficient guidance, donors may prioritize certain metrics without fully understanding their implications, leading to suboptimal funding decisions.
+- **Over-Reliance on Data Transparency**: In highly competitive environments, excessive transparency could deter some grantees from participating due to fear of reputational risks associated with public performance metrics.
+### Future Opportunities
+The findings of this study open avenues for further innovation and improvement. The following opportunities represent strategic directions to enhance the utility and impact of the methodology:
+#### 1. Integrating Predictive Analytics and AI
+- **Forecasting Long-Term Outcomes**: Incorporating predictive analytics or machine learning models can help donors and funders anticipate the future trajectory of a project based on historical trends and performance data. This could include forecasting contributor growth, sustainability, and potential ecosystem impact.
+- **Enhancing Decision Support**: AI-driven recommendations could provide donors with tailored suggestions for funding projects that align with their historical preferences (e.g. donation history) and strategic goals (e.g. specific use cases) in addition to current performance and predicted outcomes (Malekar, 2024b).
+#### 2. Enabling Community-Driven Features
+- **Incorporating Qualitative Input**: Building features that allow delegates or community members to contribute qualitative assessments, such as reviews or testimonials, could complement quantitative metrics. This would ensure a more holistic evaluation of projects, capturing aspects like innovation, social value, and ecosystem alignment that are difficult to quantify.
+- **Crowdsourced Metrics Refinement**: Engaging the community in defining or weighting metrics could create a dynamic and inclusive evaluation framework that evolves with ecosystem needs, including metrics-based evaluations that are reviewed and finalized by domain experts (The Optimism Collective, 2024).
+#### 3. Extending Analytics Across the Grant Lifecycle
+- **Eligibility Assessment**: Analytics could be applied during the grant application stage to evaluate project readiness and alignment with funding priorities, streamlining the eligibility determination process.
+- **Impact Monitoring and Reporting**: Data-driven tools could assist grantees in tracking and reporting their progress over the grant lifecycle, providing funders with real-time updates and fostering accountability. This can also help facilitate continuous rewards to impactful contributions based on past results using Auto Retro Funding (Ríos & Cheng, 2024).
+#### 4. Cluster-Based Funding Strategies
+- **Identifying Performance Clusters**: Analyzing patterns in project outputs and performance can reveal clusters of projects with similar strengths, challenges, or focus areas. This could enable funders to:
+    - Develop tailored funding strategies for specific clusters (Lister, 2023; Owocki, 2024b).
+    - Allocate resources efficiently to amplify collective impact within a cluster.
+- **Fostering Collaboration**: Identifying clusters can also promote collaboration among projects with complementary goals or shared challenges, enhancing the overall ecosystem impact.
+### Acknowledgments 
+I am deeply grateful to Open Source Observer (OSO) and RegenData by Gitcoin for providing clean, normalized data that significantly reduced barriers in building the data pipeline. Their support allowed me to focus on enhancing the donor experience and generating valuable insights. I am also delighted by the support of 70 contributors who generously donated to this effort during the dApps and Apps Round in GG22. Since 2023, over 800 community members have supported similar experiments by contributing to the [GrantsScope](https://grantsscope.xyz/) project through their QF donations in Gitcoin Grants, following its initial funding in the Gitcoin Citizens Round.
+### Appendices
+- [StreamLit Prototype](https://gg22-grantsscope.streamlit.app/)
+- [Github Repository](https://github.com/rohitmalekar/gg22)
+- [Querying RegenData](https://app.regendata.xyz/question/369-gg22-approved-projects) (requires access)
+- [How to add a project to OSS Directory?](https://docs.opensource.observer/docs/contribute/project-data)
+- [How to create a collection in OSO?](https://docs.opensource.observer/docs/how-oso-works/oss-directory/collection)
+- [How to retrieve key metrics for projects?](https://docs.opensource.observer/docs/use-cases/collection-view)
+### References
+- Buterin, V., Hitzig, Z., & Weyl, E. G. (2018). _A flexible design for funding public goods_. Retrieved from [https://arxiv.org/pdf/1809.06421](https://arxiv.org/pdf/1809.06421)
+- Gitcoin. (2023). _The case for grant programs: How to incentivise ecosystem growth by funding innovation_. Retrieved from [https://www.gitcoin.co/blog/the-case-for-grant-programs-how-to-incentivise-ecosystem-growth-by-funding-innovation](https://www.gitcoin.co/blog/the-case-for-grant-programs-how-to-incentivise-ecosystem-growth-by-funding-innovation)
+- Gitcoin. (2024). *Gitcoin by the numbers.* Retrieved from https://impact.gitcoin.co/
+- Grant Innovation Lab at Metagov. (2024). _State of Web3 grants report_. Retrieved from [https://drive.google.com/file/d/1JBbGos6Bjdvd1LRGDvIijREic4l7Th2I/view](https://drive.google.com/file/d/1JBbGos6Bjdvd1LRGDvIijREic4l7Th2I/view)
+- Lister, M. (2023, July). _Grants for public good: A roadmap for resilient democratic funding._ Retrieved from [https://gitcoin.mirror.xyz/YoSf01Pjm7ZDflCrLypbWxN0B0Fv2bYCVGLSOye8xjE](https://gitcoin.mirror.xyz/YoSf01Pjm7ZDflCrLypbWxN0B0Fv2bYCVGLSOye8xjE)
+- Malekar, R. [@RohitMalekar](https://twitter.com/RohitMalekar). (2024a, March 28). _Power law in quadratic funding._ X (formerly Twitter). Retrieved from [https://x.com/RohitMalekar/status/1773102167890559420](https://x.com/RohitMalekar/status/1773102167890559420)
+- Malekar, R. (2024b, January 23). _Concepts, PoCs, and early results for personalized grantee recommendations._ Retrieved from [https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469](https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469)
+- Owocki, K. (2024a). *Onchain Capital Allocation Handbook.* Retrieved from https://allobook.gitcoin.co/
+- Owocki, K. (2024b, November 6). _Allo.Expert creates strategic intelligence for Gitcoin’s multi-mechanism future._ Retrieved from [https://gov.gitcoin.co/t/allo-expert-creates-strategic-intelligence-for-gitcoins-multi-mechanism-future/19584](https://gov.gitcoin.co/t/allo-expert-creates-strategic-intelligence-for-gitcoins-multi-mechanism-future/19584)
+- Ríos, J., & Cheng, R. (2024, November 19). _Auto retro funding: Continuous, simple, automatic._ Retrieved from [https://docs.opensource.observer/blog/auto-retro-funding](https://docs.opensource.observer/blog/auto-retro-funding)
+- The Optimism Collective. (2024, November 22). _Retro funding 2025._ Retrieved from [https://optimism.mirror.xyz/zWlA9LROAzRee5BFqbquYHawmruKzLmXbONp_hcCwE4](https://optimism.mirror.xyz/zWlA9LROAzRee5BFqbquYHawmruKzLmXbONp_hcCwE4)
+Fri, 13 Dec 2024 18:17:23 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Data-Driven Decision Making in Quadratic Funding
+rohit
+
+            <p><em>Context: This artifact represents a learning journey as part of the Devcon Scholars Program and is a continuation of experiments conducted under the <a href="https://grantsscope.xyz/" rel="noopener nofollow ugc">GrantsScope</a> project, funded through Gitcoin Grants since June 2023.</em></p>
+<p><em>When decision-making is decentralized, ensuring donors and delegates share a unified context becomes essential to effectively channel capital toward shared objectives. This study documents the data, code, prototype, and findings from the exploration of personalized, data-driven sensemaking for Quadratic Funding (QF) donors, aiming to enhance their ability to make informed and impactful decisions.</em></p>
+<h2><a name="pivoting-from-subjective-narratives-to-objective-insights-in-qf-1" class="anchor" href="https://gov.gitcoin.co#pivoting-from-subjective-narratives-to-objective-insights-in-qf-1"></a>Pivoting From Subjective Narratives to Objective Insights in QF</h2>
+<h3><a name="abstract-2" class="anchor" href="https://gov.gitcoin.co#abstract-2"></a>Abstract</h3>
+<p>This study explores the potential of data-driven tools in enhancing quadratic funding (QF) for public goods in the web3 ecosystem. By leveraging the donation window for Gitcoin Grants 22 (GG22), the study deployed a live tool that provided QF donors with actionable insights and customizable metrics to objectively evaluate open-source software (OSS) grantees. Combining data from <a href="https://www.opensource.observer/" rel="noopener nofollow ugc">Open Source Observer (OSO)</a> and <a href="https://github.com/ufkhan97/regendata" rel="noopener nofollow ugc">RegenData</a>, the methodology introduces a composite scoring system that balances repository activity and community engagement, allowing donors to prioritize projects effectively. This feature accommodates diverse donor objectives, whether they are supporting high-growth projects, stable and mature initiatives, or experimental endeavors.</p>
+<p>Key findings reveal that data-driven tools empower grantee discovery, promote transparency, and foster accountability, shifting the donor experience from subjective narratives to objective evaluation. Challenges, such as potential biases in data and over-reliance on quantitative metrics, are addressed with future opportunities like predictive analytics, qualitative assessments, and lifecycle impact monitoring. By advancing data-driven decision-making, this study highlights the critical role of analytics in driving equitable and efficient funding strategies for web3 public goods.</p>
+<h3><a name="introduction-3" class="anchor" href="https://gov.gitcoin.co#introduction-3"></a>Introduction</h3>
+<p>Cryptocurrency and blockchain technology offer transformative potential in capital allocation, enabling efficient, transparent, and equitable resource distribution through programmable smart contracts (Owocki, 2024a). By addressing coordination failures and introducing innovative onchain strategies, these technologies have the capacity to reshape how resources are allocated, much like the internet revolutionized information sharing.</p>
+<p>For digital public goods in web3, grants are vital in nurturing early-stage projects, empowering teams to retain sovereignty while building competitive ecosystems. Grants also attract and retain talent by supporting developers and creatives working on impactful projects, highlighting their strategic value in ecosystem growth (Gitcoin, 2023).</p>
+<p>As the ecosystem evolves, measuring and evaluating the impact of grant programs has become increasingly critical. Moving beyond simple metrics, a blend of outputs, outcomes, and long-term impact offers a more comprehensive approach to assessment. This shift emphasizes transparency and data-driven decision-making as essential to effective public goods funding (Grant Innovation Lab at Metagov, 2024).</p>
+<p>This research attempts to validate the effectiveness of data-driven tools in public goods funding in the context of capital allocation using quadratic funding (QF).</p>
+<blockquote>
+<p><em><strong>How can data-driven tools provide QF donors with actionable insights into the outputs of open-source software (OSS) grantees, enhancing informed decision-making and transparency in public goods funding?</strong></em></p>
+</blockquote>
+<p>This study is part of a series of experiments conducted under the <a href="https://grantsscope.xyz/" rel="noopener nofollow ugc">GrantsScope</a> project, initially funded by the Gitcoin Citizens Round and later supported by the QF donations since GG18. These experiments include personalized grantee recommendations based on donation history and AI-driven suggestions using Retrieval Augmented Generation (RAG). Refer to <a href="https://grantsscope.xyz/" rel="noopener nofollow ugc">this list</a> for additional insights into these initiatives.</p>
+<h3><a name="about-gitcoin-grants-4" class="anchor" href="https://gov.gitcoin.co#about-gitcoin-grants-4"></a>About Gitcoin Grants</h3>
+<p>Gitcoin Grants is a leading platform in Web3 public goods funding, leveraging quadratic funding (QF) to democratize resource allocation. By matching individual contributions with larger funding pools (Buterin, Hitzig, &amp; Weyl, 2018), Gitcoin Grants amplify community-driven priorities, ensuring diverse voices shape the ecosystem’s development. Over 250+ rounds, it has distributed over $66 million, supporting thousands of open-source projects (Gitcoin, 2024).</p>
+<p>At the same time, in large QF rounds, where hundreds of grantees vie for attention, the brightest spotlight often falls on those with the strongest marketing. This imbalance creates a cycle where deserving projects may go unnoticed, leading to an uneven distribution of resources and opportunities (Malekar, 2024a). This disparity places additional burdens on grantees to amplify their visibility and diverts their focus from delivering meaningful outcomes.</p>
+<h3><a name="methodology-5" class="anchor" href="https://gov.gitcoin.co#methodology-5"></a>Methodology</h3>
+<p>This study employs a data-driven approach to empower QF donors with actionable insights into the outputs of open-source software (OSS) grantees in GG22 (Gitcoin Grants). By integrating interactive tools and advanced metrics, the methodology enables users to customize assessments and align their funding decisions with individual preferences. Below, we detail the key steps and components of the methodology:</p>
+<h4><a name="h-1-data-sources-6" class="anchor" href="https://gov.gitcoin.co#h-1-data-sources-6"></a>1. Data Sources</h4>
+<p>The analysis utilizes two primary datasets:</p>
+<ul>
+<li><strong>Open Source Observer (OSO):</strong> OSO maintains a large repository of open source projects called <a href="https://github.com/opensource-observer/oss-directory" rel="noopener nofollow ugc">oss-directory</a>. Indexers are run on every artifact linked to projects in the directory to produce detailed metrics on OSS project activities, including developer contributions and repository performance. GG22 grantees who submitted their application by the early deadline were added to oss-directory to capture their development activity.</li>
+<li><strong>RegenData:</strong> RegenData was used to extract detailed information about approved grant applications from GG22 OSS rounds. The final dataset provided rich metadata for each project, including its title, recipient address, GitHub repository, Twitter handle, website, description, and a direct link to its Gitcoin Explorer page.</li>
+</ul>
+<h4><a name="h-2-metrics-selection-and-normalization-7" class="anchor" href="https://gov.gitcoin.co#h-2-metrics-selection-and-normalization-7"></a>2. Metrics Selection and Normalization</h4>
+<p>As part of their grantee discovery experience, donors can select up to three key metrics to define their custom composite measure. The available metrics derived from OSO include:</p>
+<ul>
+<li><strong>Repository Activity:</strong> Commit count, merged pull requests, and closed issues over six months.</li>
+<li><strong>Community Engagement:</strong> Star count and fork count.<br>
+Each selected metric is normalized using Min-Max normalization to scale values between 0 and 1, ensuring equitable comparison across varying magnitudes.</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4a0f27414e2ae304d948d785a13a345f794f710d.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/4a0f27414e2ae304d948d785a13a345f794f710d" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4a0f27414e2ae304d948d785a13a345f794f710d_2_689x342.png" alt="" data-base62-sha1="az9NwbmPErN5pbX6uoozSkVJzAx" role="presentation" width="689" height="342" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4a0f27414e2ae304d948d785a13a345f794f710d_2_689x342.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4a0f27414e2ae304d948d785a13a345f794f710d_2_1033x513.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/4a0f27414e2ae304d948d785a13a345f794f710d.png 2x" data-dominant-color="F6F6F7"></a></div><p></p>
+<h4><a name="h-3-weight-assignment-8" class="anchor" href="https://gov.gitcoin.co#h-3-weight-assignment-8"></a>3. Weight Assignment</h4>
+<p>Users assign weights to their selected metrics, totaling 100. This weight distribution reflects the donor’s priorities and is the basis for calculating the composite score. Donors can emphasize metrics that resonate with their priorities, such as development activity or community involvement, creating a personalized lens for evaluating projects.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/47c9ff09a259ba77c12f6f6f9e4d64c0334828f2.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/47c9ff09a259ba77c12f6f6f9e4d64c0334828f2" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/47c9ff09a259ba77c12f6f6f9e4d64c0334828f2_2_690x466.jpeg" alt="" data-base62-sha1="af4FS3eBIOXgyBuvsvuFcvditzA" role="presentation" width="690" height="466" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/47c9ff09a259ba77c12f6f6f9e4d64c0334828f2_2_690x466.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/47c9ff09a259ba77c12f6f6f9e4d64c0334828f2_2_1035x699.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/47c9ff09a259ba77c12f6f6f9e4d64c0334828f2.jpeg 2x" data-dominant-color="FAFAF9"></a></div><p></p>
+<h4><a name="h-4-composite-score-and-impact-efficiency-per-contributor-9" class="anchor" href="https://gov.gitcoin.co#h-4-composite-score-and-impact-efficiency-per-contributor-9"></a>4. Composite Score and Impact Efficiency Per Contributor</h4>
+<p>By allowing donors to define their composite metrics, the design shifts control from a one-size-fits-all evaluation to a customizable approach, empowering donors to actively shape their funding strategies. Based on the metrics selected by the user and relative weights, the composite score is computed as a weighted sum of the normalized metrics:</p>
+<blockquote>
+<p>Composite Score=(∑(Normalized Metric×Weight))×100</p>
+</blockquote>
+<p>The final score is scaled to a range of 0 to 100, providing an intuitive metric for project comparison. The composite score combines multiple developer activity-related metrics into a single value to simplify complexity, enable comparison, and support objective decision-making. Balancing key dimensions (e.g., activity, popularity), it provides a holistic view, reduces bias, and highlights trends, making it easier to evaluate and prioritize projects or initiatives effectively.</p>
+<p>To evaluate the efficiency of contributions, the composite score is divided by the normalized contributor count (over six months). This metric is further normalized to provide a scale of 0 to 100, highlighting the relative impact generated per contributor. The <strong>Impact Efficiency Per Contributor</strong> metric offers a fair and nuanced way to evaluate the productivity of open-source projects by normalizing impact relative to team size. It ensures smaller teams aren’t overshadowed by larger ones, highlights individual contributor effectiveness, and helps identify high-performing projects.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/898fc991144ed5538df7328abe831b5b24d441ac.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/898fc991144ed5538df7328abe831b5b24d441ac" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/898fc991144ed5538df7328abe831b5b24d441ac_2_690x179.jpeg" alt="" data-base62-sha1="jCVtxymIV172DxePN8She9upOsA" role="presentation" width="690" height="179" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/898fc991144ed5538df7328abe831b5b24d441ac_2_690x179.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/898fc991144ed5538df7328abe831b5b24d441ac_2_1035x268.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/898fc991144ed5538df7328abe831b5b24d441ac_2_1380x358.jpeg 2x" data-dominant-color="F7F6F7"></a></div><p></p>
+<h3><a name="user-interface-10" class="anchor" href="https://gov.gitcoin.co#user-interface-10"></a>User Interface</h3>
+<p>The <a href="https://gg22-grantsscope.streamlit.app/" rel="noopener nofollow ugc">custom-built web application</a>, developed using Streamlit, is designed to give donors fine-tuned control over grantee discovery, enabling them to tailor their evaluations to align with specific funding priorities. This intuitive platform offers:</p>
+<ul>
+<li><strong>Metric Selection and Weight Assignment</strong>: Donors can define which metrics matter most to them (e.g., commits, merged pull requests, closed issues) and assign weights to create a personalized composite impact score.</li>
+<li><strong>Advanced Filtering Options</strong>: Projects can be filtered based on attributes like activity levels, contributor count, age of the project, or funding round, allowing donors to pinpoint grantees that meet their exact criteria.</li>
+<li><strong>Dynamic Rankings</strong>: A customized ranking system highlights projects based on the donor’s chosen metrics and weights, making comparisons straightforward and data-driven.</li>
+</ul>
+<h4><a name="example-discovering-emerging-grantees-building-dapps-and-apps-11" class="anchor" href="https://gov.gitcoin.co#example-discovering-emerging-grantees-building-dapps-and-apps-11"></a>Example: Discovering Emerging Grantees Building dApps and Apps</h4>
+<p>For example, if a donor wants to identify <strong>emerging dApps with fewer than five contributors that demonstrate the highest impact per contributor</strong> (measured by metrics like commits, merged PRs, and closed issues), the application can extract this information using specific filters and sorting options as follows.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/930cddc663783f8d72d7fdf51c63cda72994f9c0.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/930cddc663783f8d72d7fdf51c63cda72994f9c0" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/930cddc663783f8d72d7fdf51c63cda72994f9c0_2_690x335.jpeg" alt="" data-base62-sha1="kYRKKJS9Troxh8L5e3RXR2ltPoY" role="presentation" width="690" height="335" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/930cddc663783f8d72d7fdf51c63cda72994f9c0_2_690x335.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/930cddc663783f8d72d7fdf51c63cda72994f9c0_2_1035x502.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/930cddc663783f8d72d7fdf51c63cda72994f9c0_2_1380x670.jpeg 2x" data-dominant-color="F7F5F6"></a></div><p></p>
+<p>In contrast, when the same query is applied without filtering for project age and focuses solely on composite scores, the results may include mature projects or those with larger teams, shifting the focus away from smaller, high-impact initiatives.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/49c4095d061d363f04276365f0c27297a1b147de.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/49c4095d061d363f04276365f0c27297a1b147de" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/49c4095d061d363f04276365f0c27297a1b147de_2_690x261.png" alt="" data-base62-sha1="awyRqDIdRxuUnJd5Yi6UseNuMvY" role="presentation" width="690" height="261" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/49c4095d061d363f04276365f0c27297a1b147de_2_690x261.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/49c4095d061d363f04276365f0c27297a1b147de_2_1035x391.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/49c4095d061d363f04276365f0c27297a1b147de_2_1380x522.png 2x" data-dominant-color="F7F5F6"></a></div><p></p>
+<p>By offering granular control, the application enables QF donors to fund projects that align more closely with their personal or strategic priorities, fostering a more effective and meaningful donation experience. Here are a few examples of the insights donors can uncover using the application:</p>
+<ul>
+<li>Identify Web3 infrastructure grantees with development teams of fewer than 10 members that have the most forked repositories.</li>
+<li>Sort the most mature grantees (first commit before January 1, 2020) in the Developer Tooling round by developer activity.</li>
+<li>Discover grantees with the highest commits per contributor over the last six months but with relatively unknown repositories (lowest star ratings).</li>
+</ul>
+<h3><a name="from-narratives-to-numbers-enhancing-qf-donations-12" class="anchor" href="https://gov.gitcoin.co#from-narratives-to-numbers-enhancing-qf-donations-12"></a>From Narratives to Numbers: Enhancing QF Donations</h3>
+<p>The user experience demonstrates how data-driven tools empower quadratic funding (QF) donors by shifting the donation experience from subjective narratives to objective evaluation of outputs. Key insights include:</p>
+<ul>
+<li><strong>Empowering Grantee Discovery with Self-Service Analytics</strong>
+<ul>
+<li>Enables donors to explore and evaluate grantees independently using actionable, data-driven insights.</li>
+<li>Allows customization of metrics to align with individual priorities.</li>
+<li>Provides detailed views of project-level outputs, such as repository activity, community engagement, and developer contributions.</li>
+</ul>
+</li>
+<li><strong>Objective Evaluation of Outputs</strong>
+<ul>
+<li>Offers tools to quantify project outputs, including commits, pull requests, and issue resolutions, for a transparent activity view.</li>
+<li>Standardizes project comparisons using composite scores and efficiency metrics.</li>
+</ul>
+</li>
+<li><strong>Advancing Transparency and Accountability</strong>
+<ul>
+<li>Improves transparency by delivering measurable insights into grantee performance.</li>
+<li>Promotes equitable funding decisions by highlighting impactful projects regardless of size or resources.</li>
+<li>Fosters a culture of data-driven accountability, strengthening the Web3 ecosystem’s credibility and sustainability.</li>
+</ul>
+</li>
+</ul>
+<h3><a name="challenges-and-limitations-13" class="anchor" href="https://gov.gitcoin.co#challenges-and-limitations-13"></a>Challenges and Limitations</h3>
+<p>While the methodology and findings demonstrate the potential of data-driven tools to transform quadratic funding (QF) decisions, several challenges and limitations were identified during the study:</p>
+<ul>
+<li><strong>Bias in Data Sources</strong>:  Metrics, like commit counts or pull requests, may disproportionately favor specific projects, such as highly active repositories, while undervaluing others in stable or less dynamic development phases.</li>
+<li><strong>Neglect of Qualitative Aspects</strong>: The reliance on quantitative data risks overlooking qualitative elements, such as a project’s social impact or innovation potential, which are more challenging to measure but equally critical.</li>
+<li><strong>Reductionism</strong>: Complex project contributions may be oversimplified when condensed into composite scores, potentially misrepresenting their true impact.</li>
+<li><strong>Potential for Misaligned Priorities</strong>: Without sufficient guidance, donors may prioritize certain metrics without fully understanding their implications, leading to suboptimal funding decisions.</li>
+<li><strong>Over-Reliance on Data Transparency</strong>: In highly competitive environments, excessive transparency could deter some grantees from participating due to fear of reputational risks associated with public performance metrics.</li>
+</ul>
+<h3><a name="future-opportunities-14" class="anchor" href="https://gov.gitcoin.co#future-opportunities-14"></a>Future Opportunities</h3>
+<p>The findings of this study open avenues for further innovation and improvement. The following opportunities represent strategic directions to enhance the utility and impact of the methodology:</p>
+<h4><a name="h-1-integrating-predictive-analytics-and-ai-15" class="anchor" href="https://gov.gitcoin.co#h-1-integrating-predictive-analytics-and-ai-15"></a>1. Integrating Predictive Analytics and AI</h4>
+<ul>
+<li><strong>Forecasting Long-Term Outcomes</strong>: Incorporating predictive analytics or machine learning models can help donors and funders anticipate the future trajectory of a project based on historical trends and performance data. This could include forecasting contributor growth, sustainability, and potential ecosystem impact.</li>
+<li><strong>Enhancing Decision Support</strong>: AI-driven recommendations could provide donors with tailored suggestions for funding projects that align with their historical preferences (e.g. donation history) and strategic goals (e.g. specific use cases) in addition to current performance and predicted outcomes (Malekar, 2024b).</li>
+</ul>
+<h4><a name="h-2-enabling-community-driven-features-16" class="anchor" href="https://gov.gitcoin.co#h-2-enabling-community-driven-features-16"></a>2. Enabling Community-Driven Features</h4>
+<ul>
+<li><strong>Incorporating Qualitative Input</strong>: Building features that allow delegates or community members to contribute qualitative assessments, such as reviews or testimonials, could complement quantitative metrics. This would ensure a more holistic evaluation of projects, capturing aspects like innovation, social value, and ecosystem alignment that are difficult to quantify.</li>
+<li><strong>Crowdsourced Metrics Refinement</strong>: Engaging the community in defining or weighting metrics could create a dynamic and inclusive evaluation framework that evolves with ecosystem needs, including metrics-based evaluations that are reviewed and finalized by domain experts (The Optimism Collective, 2024).</li>
+</ul>
+<h4><a name="h-3-extending-analytics-across-the-grant-lifecycle-17" class="anchor" href="https://gov.gitcoin.co#h-3-extending-analytics-across-the-grant-lifecycle-17"></a>3. Extending Analytics Across the Grant Lifecycle</h4>
+<ul>
+<li><strong>Eligibility Assessment</strong>: Analytics could be applied during the grant application stage to evaluate project readiness and alignment with funding priorities, streamlining the eligibility determination process.</li>
+<li><strong>Impact Monitoring and Reporting</strong>: Data-driven tools could assist grantees in tracking and reporting their progress over the grant lifecycle, providing funders with real-time updates and fostering accountability. This can also help facilitate continuous rewards to impactful contributions based on past results using Auto Retro Funding (Ríos &amp; Cheng, 2024).</li>
+</ul>
+<h4><a name="h-4-cluster-based-funding-strategies-18" class="anchor" href="https://gov.gitcoin.co#h-4-cluster-based-funding-strategies-18"></a>4. Cluster-Based Funding Strategies</h4>
+<ul>
+<li><strong>Identifying Performance Clusters</strong>: Analyzing patterns in project outputs and performance can reveal clusters of projects with similar strengths, challenges, or focus areas. This could enable funders to:
+<ul>
+<li>Develop tailored funding strategies for specific clusters (Lister, 2023; Owocki, 2024b).</li>
+<li>Allocate resources efficiently to amplify collective impact within a cluster.</li>
+</ul>
+</li>
+<li><strong>Fostering Collaboration</strong>: Identifying clusters can also promote collaboration among projects with complementary goals or shared challenges, enhancing the overall ecosystem impact.</li>
+</ul>
+<h3><a name="acknowledgments-19" class="anchor" href="https://gov.gitcoin.co#acknowledgments-19"></a>Acknowledgments</h3>
+<p>I am deeply grateful to Open Source Observer (OSO) and RegenData by Gitcoin for providing clean, normalized data that significantly reduced barriers in building the data pipeline. Their support allowed me to focus on enhancing the donor experience and generating valuable insights. I am also delighted by the support of 70 contributors who generously donated to this effort during the dApps and Apps Round in GG22. Since 2023, over 800 community members have supported similar experiments by contributing to the <a href="https://grantsscope.xyz/" rel="noopener nofollow ugc">GrantsScope</a> project through their QF donations in Gitcoin Grants, following its initial funding in the Gitcoin Citizens Round.</p>
+<h3><a name="appendices-20" class="anchor" href="https://gov.gitcoin.co#appendices-20"></a>Appendices</h3>
+<ul>
+<li><a href="https://gg22-grantsscope.streamlit.app/" rel="noopener nofollow ugc">StreamLit Prototype</a></li>
+<li><a href="https://github.com/rohitmalekar/gg22" rel="noopener nofollow ugc">Github Repository</a></li>
+<li><a href="https://app.regendata.xyz/question/369-gg22-approved-projects" rel="noopener nofollow ugc">Querying RegenData</a> (requires access)</li>
+<li><a href="https://docs.opensource.observer/docs/contribute/project-data" rel="noopener nofollow ugc">How to add a project to OSS Directory?</a></li>
+<li><a href="https://docs.opensource.observer/docs/how-oso-works/oss-directory/collection" rel="noopener nofollow ugc">How to create a collection in OSO?</a></li>
+<li><a href="https://docs.opensource.observer/docs/use-cases/collection-view" rel="noopener nofollow ugc">How to retrieve key metrics for projects?</a></li>
+</ul>
+<h3><a name="references-21" class="anchor" href="https://gov.gitcoin.co#references-21"></a>References</h3>
+<ul>
+<li>Buterin, V., Hitzig, Z., &amp; Weyl, E. G. (2018). <em>A flexible design for funding public goods</em>. Retrieved from <a href="https://arxiv.org/pdf/1809.06421" rel="noopener nofollow ugc">https://arxiv.org/pdf/1809.06421</a></li>
+<li>Gitcoin. (2023). <em>The case for grant programs: How to incentivise ecosystem growth by funding innovation</em>. Retrieved from <a href="https://www.gitcoin.co/blog/the-case-for-grant-programs-how-to-incentivise-ecosystem-growth-by-funding-innovation" rel="noopener nofollow ugc">https://www.gitcoin.co/blog/the-case-for-grant-programs-how-to-incentivise-ecosystem-growth-by-funding-innovation</a></li>
+<li>Gitcoin. (2024). <em>Gitcoin by the numbers.</em> Retrieved from <a href="https://impact.gitcoin.co/" rel="noopener nofollow ugc">https://impact.gitcoin.co/</a></li>
+<li>Grant Innovation Lab at Metagov. (2024). <em>State of Web3 grants report</em>. Retrieved from <a href="https://drive.google.com/file/d/1JBbGos6Bjdvd1LRGDvIijREic4l7Th2I/view" rel="noopener nofollow ugc">https://drive.google.com/file/d/1JBbGos6Bjdvd1LRGDvIijREic4l7Th2I/view</a></li>
+<li>Lister, M. (2023, July). <em>Grants for public good: A roadmap for resilient democratic funding.</em> Retrieved from <a href="https://gitcoin.mirror.xyz/YoSf01Pjm7ZDflCrLypbWxN0B0Fv2bYCVGLSOye8xjE" rel="noopener nofollow ugc">https://gitcoin.mirror.xyz/YoSf01Pjm7ZDflCrLypbWxN0B0Fv2bYCVGLSOye8xjE</a></li>
+<li>Malekar, R. <a href="https://twitter.com/RohitMalekar" rel="noopener nofollow ugc">@RohitMalekar</a>. (2024a, March 28). <em>Power law in quadratic funding.</em> X (formerly Twitter). Retrieved from <a href="https://x.com/RohitMalekar/status/1773102167890559420" rel="noopener nofollow ugc">https://x.com/RohitMalekar/status/1773102167890559420</a></li>
+<li>Malekar, R. (2024b, January 23). <em>Concepts, PoCs, and early results for personalized grantee recommendations.</em> Retrieved from <a href="https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469">https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469</a></li>
+<li>Owocki, K. (2024a). <em>Onchain Capital Allocation Handbook.</em> Retrieved from <a href="https://allobook.gitcoin.co/" rel="noopener nofollow ugc">https://allobook.gitcoin.co/</a></li>
+<li>Owocki, K. (2024b, November 6). <em>Allo.Expert creates strategic intelligence for Gitcoin’s multi-mechanism future.</em> Retrieved from <a href="https://gov.gitcoin.co/t/allo-expert-creates-strategic-intelligence-for-gitcoins-multi-mechanism-future/19584">https://gov.gitcoin.co/t/allo-expert-creates-strategic-intelligence-for-gitcoins-multi-mechanism-future/19584</a></li>
+<li>Ríos, J., &amp; Cheng, R. (2024, November 19). <em>Auto retro funding: Continuous, simple, automatic.</em> Retrieved from <a href="https://docs.opensource.observer/blog/auto-retro-funding" rel="noopener nofollow ugc">https://docs.opensource.observer/blog/auto-retro-funding</a></li>
+<li>The Optimism Collective. (2024, November 22). <em>Retro funding 2025.</em> Retrieved from <a href="https://optimism.mirror.xyz/zWlA9LROAzRee5BFqbquYHawmruKzLmXbONp_hcCwE4" rel="noopener nofollow ugc">https://optimism.mirror.xyz/zWlA9LROAzRee5BFqbquYHawmruKzLmXbONp_hcCwE4</a></li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/data-driven-decision-making-in-quadratic-funding/19752/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-driven-decision-making-in-quadratic-funding/19752/1
+        Fri, 13 Dec 2024 18:17:23 +0000
+gov.gitcoin.co-post-19752-1
+Data-Driven Decision Making in Quadratic Funding
+      
+
+

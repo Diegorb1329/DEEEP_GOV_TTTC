@@ -1,0 +1,908 @@
+
+
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114
+    # Gitcoin Allo S18-S19 Workstream Budget Proposal
+
+This is the integrated funding proposal for the Gitcoin Allo Workstream requesting funding for Season 18 and S19 (1 May 2023 through 31 October 2023), authored by @kevin.olsen, @nategosselin, and @Sor03. This budget request has been deeply reviewed by CSDO, as well as some of our top Stewards, including @griff, @lthrift, @annika, @epowell101. We invite you to offer feedback, ask questions and help us identify any blindspots we may have. Coordination starts at the governance layer, and we need you to make us better.
+
+## TL;DR
+This season the Gitcoin Allo workstream’s core focus is on establishing product-market fit for web3 grants programs. To get there, we will be executing against two key outcomes:
+1. Enabling web3 grants programs to run the majority of their funding through Grants Stack
+2. Empowering builders to create new software applications on top of Allo protocol
+
+### Outline
+Allo is a protocol for democratic resource allocation, which enables communities to easily pool and distribute capital to their needs — **Fund What Matters**. In order to meet this value proposition, Allo needs to support a wide range of community-oriented resource allocation mechanisms. Up until now, the team has been focused on laying Allo’s foundation and creating a flagship Quadratic Funding experience on the protocol. However, over the course of our Design Partner Program (55+ interviews with ~30 web3 grants programs) we’ve learned that web3 communities tend to employ a wide variety of grant types that are geared to specific use cases. Those partners told us that Quadratic Funding, while popular as a tactic for engaging their broader communities, is generally considered a fit for a minority of those use cases (typically <20% of overall funding). In most cases, the programs want to use higher-touch mechanisms (e.g. committee/expert approvals, milestone-based payments, RFP-style grants, etc) for the bulk of their fund distribution. If we want to truly achieve product-market fit for Allo among web3 communities we’ll need to build additional mechanisms so that we are a viable option for those higher-touch scenarios. Strategically, we feel that building a strong foothold within web3 will give us a foundation for bringing our public good to additional communities. 
+
+In Season 18 and 19 we are going to pursue a two-pronged approach to building this strategic base. **The first is Grants Stack** — our primary interface for using Allo today. We want to ensure that it’s offering web3 communities a delightful entry-point to running grant programs. Our work here will be focused on expanding the types of grant programs that can be run through our three dApps (i.e. hitting our [13-5-5 goal](https://gov.gitcoin.co/t/march-2023-gitcoins-progress-and-future/13527) of 13 QF rounds, 5 QV rounds, and 5 Direct Grants programs by September 1), continuing to improve the user experience, and establishing the next wave of our strategy once 13-5-5 has been achieved. **The second prong is core Allo protocol**. We want Allo to be a truly decentralized public good, and the work in this swimlane will be focused on enabling other builders to create apps on top of Allo. Tactically, that will likely be things like advancing the core protocol’s capabilities and assisting other teams with their builds. 
+
+### Amount
+Allo is requesting  2,031,127 GTC* = $3,229,491 for S18-19, assuming 1.59 USD/GTC, excluding reserves and rolled over amounts. 
+
+Budget evolution:
+
+
+| Gitcoin Season | Season 15 | Season 16 | Season 17 | Season 18 | Season 19|
+| -------- | -------- | -------- |-------- | -------- |-------- |
+| Season Budget     | N/A     | N/A     | $804k | $1,622k | $1,199k |
+| Under/overspend** |N/A | N/A | $16,6k | N/A | N/A |
+
+
+
+
+
+A full breakdown of the budget can be found at the end of this post.
+
+**The amount of GTC requested and the value of the reserves will be adjusted based on the current market value at the time this proposal is moved to Tally using the lower of the current price or the 20 day moving average, whichever is lower.*
+
+*We will be requesting our funds through one Snapshot vote, but the release of the actual funds will be split over two Tally votes (one at the start of each season) for reasons of accountability and to mitigate potential price fluctuations.*
+
+***How much more/less did we spend than the requested budget (excluding reserves)*
+
+## Outcomes, Projects and Milestones
+
+As outlined above, our core focus will be establishing product-market fit for web3 grants programs. To achieve this goal, we will be pursuing two key outcomes:
+1. Enabling web3 grants programs to run the majority of their funding through Grants Stack
+2. Empowering builders to create new software applications on top of Allo Protocol
+
+As these swimlanes illustrate, we want to draw more explicit lines between Grants Stack and Allo in S18/19 so that we can focus our development on their respective user bases. The workstream has been developing these two stacks together in this initial phase of development, but our next stage will require Grants Stack to build specifically for non-technical web3 grants programs, while Allo will need to entice builders to create new apps on the protocol. Both teams will be aiming at a shared protocol metric ($10mm in GMV) while also pursuing more product-specific goals (13-5-5 for Grants Stack and 10+ apps for Allo).
+
+### Grants Stack
+The Grants Stack target user is a grant program manager. Currently they operate their program with makeshift processes built on general tools like Airtable and Notion, but the intended value proposition of Grants Stack is that it’s a purpose-built tool that enables these (non-engineer) users to easily spin up and execute a grant distribution. The time that they aren’t spending managing tools is time that they can then spend working with their grantees.
+
+While we know that good UX will be an important part of paying off that value proposition, a key learning from our customer research is that web3 grant programs tend to have multiple flavors of grants that are targeted to specific outcomes. For example, many programs offer a light-touch pathway for small grants and a separate process for larger grants that tend to look more like investments. In light of this, most program managers describe QF as a good fit for part of their portfolio and see the need for Grants Stack to offer a variety of grant types to truly become a one-stop shop. The 13-5-5 target is designed to push us to create three base grant “flavors” to cover the majority of these use cases, while also setting us up to create more variations within those categories. 
+
+Given the need for continuous validation, we are outlining a basket of milestones that we are considering this season. We are committing to at least experimenting with these milestones — we may decide not to pursue some of them, but will provide reasoning if/when that happens.
+
+* **Direct Grants** — enabling a direct grants process to support higher-touch grant programs
+* **Quadratic Voting** — enabling a quadratic voting process to support more targeted community voting
+* **Future QF** — developing novel forms of QF, such as pluralistic, to allow for greater customization of the mechanism
+* **Gnosis Safe App** — integrating with Gnosis Safe to allow for easier team management in Grants Stack
+* **Messaging** — allowing program managers and project owners to message their constituents / build their audience
+
+### Allo Protocol
+With v1 of Allo now live, we need to turn our attention to seeding and growing the ecosystem on top of the protocol. Our long-term goal is to make Allo a decentralized, community-owned hyperstructure, and to get there we need to strike a balance between advancing the protocol (to attract more builders) and crystallizing its structure (to provide stability to the community). In S18/19, the Allo team will likely lean more towards the former so that we can expand the ecosystem beyond Grants Stack. We know of three builder archetypes at this stage:
+1. Independent grants management apps that want to leverage the Allo backend (e.g. Questbook, Charmesverse)
+2. Large web3 communities that want to build their own front-end grant experience (e.g. Optimism)
+3. Direct protocol integrations that want lay Allo on top of their existing protocol (e.g. SuperRare, Endaoment, Decent, Giveth)
+
+
+This season we want to continue to explore this space, identify our top priority opportunities, and flesh out a compelling roadmap for Allo. Our north star metric will be independent software applications (i.e. not owned / operated by Gitcoin) built on Allo — if we aren’t enticing builders to work with our protocol, then we’re not building something valuable. The goal is to have 10+ independent apps built on the protocol, and we will be exploring a mix of milestones aimed both at advancing the underlying technology and aiding teams who are building on Allo. As with Grants Stack above, we are committing to at least exploring the milestones below, although we may not build all of it:
+
+* **Project Reputation** — We’ve learned that a core requirement for this ecosystem is a trusted, universal registry of projects. Today we have a base database of projects, but we want to enrich that with web3-native attestations so that we can build a lattice of project reputation.
+* **Decentralized QF Compute** — The calculations for our QF implementation are currently public, but run on centralized services. We believe in QF as a method and want to ensure that it is available as a truly decentralized mechanism in Allo. A key step towards that future is exploring a decentralized compute design that can make the mechanism truly open.
+* **MACI** — MACI is a privacy-oriented style of QF with a growing, dedicated following. The current protocol design is not easily compatible with this mechanism and we want to explore evolving Allo to support this as an additional type. 
+* **Reference UI** — Currently Grants Stack straddles the line between stand-alone app and an entry-point reference UI (think Matcha vis-a-vis Uniswap). As Grants Stack becomes more sophisticated, we may want to explore creating a simple reference UI to allow users to engage with Allo on neutral ground. 
+* **Value Capture Strategy** — We hope that Allo (and its ecosystem) becomes a key source of funds for public goods, and we need to determine a strategy for turning the value of the protocol into usable resources. 
+* **Voting Strategy Library** — We have a hypothesis that having a pre-vetted library of voting strategies packaged with the protocol will enable more builders to create new applications, without having to build up expertise in allocation techniques. 
+
+## Measurement
+### Grants Stack
+* 13-5-5
+    * 13 Quadratic Funding rounds
+    * 5 Quadratic Voting rounds
+    * 5 Direct Grants programs
+* 80% of programs would run again
+* $10mm in GMV on Allo
+
+### Allo Protocol
+* $10mm in GMV on Allo
+* 10+ independent apps built on top of Allo
+
+Note: these goals were established with a 6-month time horizon, which expires at the end of August. That is two months before S19 ends, so the team will also be responsible for developing and publishing the next set of targets, strategy, and roadmap during the lifespan of this budget. 
+
+
+
+## Budget Breakdown
+The Allo budget has increased from past seasons, primarily due to team growth (~9 new heads) and planned outsourced work. We feel that the grants opportunity space is massive and these increases are aimed at helping us move more quickly to maximize that opportunity. In addition to the tables below, we wanted to add some color on the changes we’ve made:
+* **Key Hires** — we’ve hired or are planning to hire additional Product and DevRel heads so that we can expand our capabilities in these disciplines. Those new team members include a Product lead for Grants Stack, a DevRel engineer, and a planned senior Product Designer to lead our UX efforts. 
+* **DAO Reorganization** — as FDD and DAO Ops have dissolved, the Allo team has absorbed existing team members that are crucial to building a successful product team. That includes an Analyst, a Data Engineer, a dedicated Ops person, and four support team members (mostly part-time). 
+* **Outsourcing** — we want to build a muscle for engaging our community in building the Allo ecosystem, as we feel that this is our strongest path to success. This season we plan to hire external teams to work on a few Gitcoin-defined projects as a way to tackle key market needs more quickly while also providing a forcing function for building open-source, developer-friendly tools.
+
+### View 1: Breakdown per initiative and milestones
+
+**Milestones by overall resources** 
+
+
+| Project | Resources ($) | Resources (%) |
+| -------- | -------- | -------- |
+| Direct Grants (Outsourced)     | $358,721.78     | 19.51%     |
+| Project Reputation| $358,721.78 | 19.51%
+QF Compute |$134,520.67 |7.32%
+MACI (Outsourced) |$179,360.89|9.76%
+|Reference UI|$134,520.67|7.32%
+Value Capture|$89,680.44|4.88%
+|QV|$89,680.44|4.88%
+Future QF|$179,360.89|9.76%
+Gnosis Safe App (Outsourced)|$89,680.44|4.88%
+Messaging|$89,680.44|4.88%
+|TBD - partial arc|$67,260.33|3.66%
+|TBD - partial arc|$67,260.33|3.66%
+
+
+
+
+**Hypothetical milestones by capacity**
+This is a hypothetical view of how we could theoretically flight our milestones given our team capacity. The actual timeline for our projects will likely look different. 
+
+
+| Initiative/
+Projects| Cost 05.23 | Cost 06.23 | Cost 07.23 | Cost 08.23 | Cost 09.23 |Cost 10.23 | Totals | % |
+| -------- | -------- | -------- |-------- | -------- |-------- | -------- |-------- | -------- |
+| Direct Grants (Outsourced)|149,467|119,574|89,680|0|0|0|$358,721.78|19.51%
+Project Reputation|149,467|119,574|89,680|0|0|0|$358,721.78|19.51%
+QF Compute|112,101|0|0|89,680|0|0|$134,520.67|7.32%
+MACI (Outsourced)|0|89,680.44|89,680|0|0|0|$179,360.89|9.76%
+Reference UI|0|0|44,840.22|89,680|0|0|$134,520.67|7.32%
+Value Capture|0|44,840.22|44,840|0|0|0|$89,680.44|4.88%
+QV|0|0|0|0|59,787|29,893|$89,680.44|4.88%
+Future QF|0|0|0|0|119,574|59,787|$179,360.89|9.76%
+Gnosis Safe App (Outsourced)|0|0|29,893.48|59,787|0|0|$89,680.44|4.88%
+Messaging|74,734|14,947|0|0|0|0|$89,680.44|4.88%
+TBD - partial arc|0|0|0|0|0|67,260.33|$67,260.33|3.66%
+TBD - partial arc|0|0|0|0|0|67,260.33|$67,260.33|3.66%|
+
+
+
+### View 2: Breakdown staffing, contracting, operational expenses
+
+
+
+| Function | Description | Amount USD | %|
+| -------- | -------- | -------- |-------- |
+| **Core Contributors** <br> Nate Gosselin - Workstream Co-lead<br>Aditya Anand - Eng Lead<br>Andrea Franz - Eng Lead<br>Bhargav - Engineer<br>Daniele Salatti -Engineer<br>Hans - Engineer<br>Jason Romero - Engineer<br>Josef - Engineer<br>Kurt M - Engineer<br>Mo - Engineer<br>Melissa Neira - Designer<br>Will Goi - Designer<br>Michelle Ma - Product <br>Meg Lister - Product <br>Baoki - Analyst<br>Zen - Data Engineer<br>Yuki - Support<br>Lolu - Support Engineer<br>TBD - Senior Hire| $1,566,525     | 55.5%     |
+**Trusted Contributors**<br>Emmanuel - Support<br>Julliet - Support<br>Sorana - Operations & Data analyst|$74,500|2.6%|
+**Shared** <br>Kevin - Workstream Co-lead<br>Zakk - Devrel Lead<br>TBD - Devrel Engineer|$133,746|4.8%|
+**Outsourcing**<br>DevOps<br>Direct Grants<br>MACI<br>Gnosis Safe|$699,762|24.8%
+**DevRel**<br>Hackathons & Bounties|$70,000|2.5%
+|**Opex**<br>Infrastructure<br>Audits<br>Events/Travel<br>Professional Development|$277,000|9.8%
+Total |$2,821,533|100%
+
+
+
+
+### View 3: Total request including reserves & budget rollover 
+
+
+
+| Total [Workstream] Budgeted Spend S18-S19 | $2,821,533|
+| -------- | -------- | 
+| 60 Day Reserves     | $940,511     |
+S17 Treasury Balance, incl unspent reserves and any source of revenue*|$538,874
+Total S18-19 Request|**$3,223,170**
+
+
+
+**Any and all revenue generated during the past season will flow back to the DAO treasury or will be rolled over to the next season.*
+
+During the season we will transparently report to CSDO and Stewards on revenue plus efforts to remediate currency fluctuations and report on these in the next budget request.  
+
+We look forward to your comments, thanks for your consideration!
+Wed, 10 May 2023 16:34:14 +0000
+📜 Proposals
+
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+shawn16400
+
+            <p>This budget proposal has passed a snapshot vote has passed with ~72% approval rate.<br>
+Metrics:<br>
+1976 unique votes<br>
+~10.3M GTC tokens cast.</p>
+<p>Thank you to all the voters for participating in our governance and the proposal reviewers for going deep on these budgets!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/15
+        Wed, 10 May 2023 16:34:14 +0000
+gov.gitcoin.co-post-14114-15
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+Viriya
+
+            <p>I’ll be voting “yes” on this proposal.</p>
+<p>For the comments on size and scope of the workstream, I think all of us are aware that structures within the DAO need to shift to be more product-oriented. Those conversations are being had and planned around at CSDO. Is this a big team? Yes. Is their scope massive? Yes. Does the budget in it’s current state support the work they’re undertaking with their current structure? I believe so.</p>
+<p>One thing I’d really love from those working on Grants Stack to focus on in S18 &amp; 19 is creating better UX flows for our suite of apps in the Stack – I’m hoping this is something we can collectively work on improving as a DAO. I’m also really looking forward to refining some of our messaging as we enter into open beta season (so exciting!!).</p>
+<p>Big thanks to this team who’s been working hard under tight deadlines to make the beta rounds happen. It’s been so awesome to see the first adopters use the stack pretty autonomously for the Beta Rounds.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/14
+        Wed, 03 May 2023 21:12:03 +0000
+gov.gitcoin.co-post-14114-14
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+shawn16400
+
+            <p>Thank you to the stewards and all those who reviewed this budget.</p>
+<p>The budget has been posted for vote, so please vote here:<br>
+<a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x2d2bb7898c0e397168fefd01496f835ee8345bbc73f6ead3bd10aefdc54a51a0" class="onebox" target="_blank" rel="noopener">https://snapshot.org/#/gitcoindao.eth/proposal/0x2d2bb7898c0e397168fefd01496f835ee8345bbc73f6ead3bd10aefdc54a51a0</a></p>
+<p><strong>End date</strong> May 10, 2023, 11:50 AM  EST</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/13
+        Wed, 03 May 2023 15:51:40 +0000
+gov.gitcoin.co-post-14114-13
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+epowell101
+
+            <p>Hi All</p>
+<p>My feedback provided to Nate was that I’d like us to try to externalize some of the metrics that are used during development to determine the performance of the dev teams, such as the burn down charts and so forth that <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> mentions above.</p>
+<p>It may seem like a tax or inconvenience - and maybe it is under most scenarios.  However it also can enable all of us to do a better job in providing feedback AND I’ve certainly seen it have an impact on the motivation of teams to know each of their PRs for example will be counted and those counts will be published and shared.</p>
+<p>That said - I feel very comfortable w/ the persona focused product leadership I perceive Nate and others providing in the Allo workstream and the positive impact that beta adoption will have on retaining focus and motivation and for those reasons I will be voting in favor of this budget.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/12
+        Wed, 03 May 2023 15:35:31 +0000
+gov.gitcoin.co-post-14114-12
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+annika
+
+            <p>This is a really well-written budget request — and strategically speaking, I’m enthusiastic about the direction here. Very supportive.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/11
+        Wed, 03 May 2023 15:30:49 +0000
+gov.gitcoin.co-post-14114-11
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+meglister
+
+            <p>As the newest member of this team and product lead for Grants Stack, I’m honored to be here and excited to see the Gitcoin community’s meaningful investment in our product teams and capabilities. We have a huge opportunity ahead of us in growing Allo + Grants Stack, and I’m excited to have org’s support as well as resources to attack it.</p>
+<p>Appreciate all of the comments on this post especially from <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a>, <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a> , and <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a>  and looking forward to iterating on our structure with <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> and team in future budgeting cycles.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/10
+        Tue, 02 May 2023 21:21:00 +0000
+gov.gitcoin.co-post-14114-10
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+0xZakk
+
+            <p>Hey, you raise some really great questions here! Here’s how I’m thinking about this</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="6" data-topic="14114">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<h2>Size of the worksteam</h2>
+<p>I do not understand why DevRel and Support are function are in the Allo Workstream.</p>
+<p>Allo product workstream could be separated to 3-4 product owner led workstreams with the PM connecting and coaching them being in a leadership circle.</p>
+</blockquote>
+</aside>
+<p>This budget covers Allo, Grants Stack, Support (for GS), and DevRel (for Allo). As you say, that is indeed a lot for one work stream and it leads to a large budget. Inside the work stream, these are separate teams that work together. I think it makes sense to keep them all together for one last budgeting cycle because the two are still so closely linked. There will be a future point where that doesn’t make sense, both from a budgeting perspective and a functional perspective. But for now, these teams overlap so much still that it would be too difficult to separate them - especially if we were just doing so for the budgeting process.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="6" data-topic="14114">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<h2>No leadership accountability separate from the workstream</h2>
+<p>This is a concern for all the workstreams. In Allo, I’d like to see some leadership roles such as product manager, engineering director, design director, devrel strategist, data lead - likely workstream leads and heads of guild/service streams be given full time pay through a separate proposal in the future.</p>
+<p>We need a way to hold leadership accountable that doesn’t make the entire workstream feel conflicted behind doing their job, speaking up about inefficiencies, and knowing if they will continue to be employed.</p>
+<p>These leadership roles could then be stewards of guilds that operate via GCPs.</p>
+</blockquote>
+</aside>
+<p>I’m not sure I understand what you’re saying here. Are you saying that the leaders of a work stream should have their salaries come from a separate proposal? GCPs are intended to be project-based (and so have a specific scope and an end date). Maybe this is a suggestion that can get outlined discussed in a separate forum post.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/9
+        Tue, 02 May 2023 01:42:26 +0000
+gov.gitcoin.co-post-14114-9
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+0xZakk
+
+            <p>Really excited to support this proposal!</p>
+<p>It’s been exciting to see the reception of Allo and the Grants Stack from the web3 ecosystem and the creative ways in which people are thinking of using it (i.e. SuperRare, Endaoment, Decent, etc, etc).</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/8
+        Tue, 02 May 2023 01:28:47 +0000
+gov.gitcoin.co-post-14114-8
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+azeem
+
+            <p>As we move forward into the next iteration of being a protocol DAO, the work happening here is essential. Had a chance to look through the proposal and fully supportive of the budget here.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/7
+        Mon, 01 May 2023 17:25:13 +0000
+gov.gitcoin.co-post-14114-7
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+DisruptionJoe
+
+            <p>I am supportive of this budget as is. This is not to say I think it is perfect or perfectly transparent. I think the Allo team has been continually delivering on difficult builds and Allo continues to be our most important thing. As it stands, this budget is safe to try.</p>
+<h1>
+<a name="what-i-like-1" class="anchor" href="https://gov.gitcoin.co#what-i-like-1"></a>What I Like</h1>
+<h1>
+<a name="a-clear-plan-path-with-strong-leadership-2" class="anchor" href="https://gov.gitcoin.co#a-clear-plan-path-with-strong-leadership-2"></a>A clear plan &amp; path with strong leadership</h1>
+<p>I’d like to fund the current workstreams with a high level of trust in their leadership to move them in the right direction. Experimentation where the DAO nitpicks how things get done can happen with the non-critical workstream GCPs.</p>
+<h1>
+<a name="what-concerns-me-3" class="anchor" href="https://gov.gitcoin.co#what-concerns-me-3"></a>What Concerns Me</h1>
+<h2>
+<a name="size-of-the-worksteam-4" class="anchor" href="https://gov.gitcoin.co#size-of-the-worksteam-4"></a>Size of the worksteam</h2>
+<p>I do not understand why DevRel and Support are function are in the Allo Workstream.</p>
+<p>Allo product workstream could be separated to 3-4 product owner led workstreams with the PM connecting and coaching them being in a leadership circle.</p>
+<h2>
+<a name="no-leadership-accountability-separate-from-the-workstream-5" class="anchor" href="https://gov.gitcoin.co#no-leadership-accountability-separate-from-the-workstream-5"></a>No leadership accountability separate from the workstream</h2>
+<p>This is a concern for all the workstreams. In Allo, I’d like to see some leadership roles such as product manager, engineering director, design director, devrel strategist, data lead - likely workstream leads and heads of guild/service streams be given full time pay through a separate proposal in the future.</p>
+<p>We need a way to hold leadership accountable that doesn’t make the entire workstream feel conflicted behind doing their job, speaking up about inefficiencies, and  knowing if they will continue to be employed.</p>
+<p>These leadership roles could then be stewards of guilds that operate via GCPs.</p>
+<h2>
+<a name="lack-of-performance-metrics-6" class="anchor" href="https://gov.gitcoin.co#lack-of-performance-metrics-6"></a>Lack of performance metrics</h2>
+<p>Another concern is that we don’t have pretty standard development metrics like sprint/release burndown, velocity, code churn, etc. I’m all for the  high-level 13-5-5, 80%, and $10m gmv metrics, but what if you don’t hit them?</p>
+<p><em><strong>If the high-level metrics aren’t hit, how do we know that the Allo team is performing, but the goal was aggressive?</strong></em></p>
+<p>This is a concern partly for the DAO, but moreso for the workstream because I foresee problems if there aren’t clear ways to justify or point at why certain metrics aren’t hit.</p>
+<h1>
+<a name="overall-support-as-is-7" class="anchor" href="https://gov.gitcoin.co#overall-support-as-is-7"></a>Overall - SUPPORT AS IS</h1>
+<p>It is a difficult balance to please everyone. I am grateful for how this team, especially <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> took care in adopting FDD team members. I do think this team will deliver.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/6
+        Thu, 27 Apr 2023 16:51:39 +0000
+gov.gitcoin.co-post-14114-6
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+kevin.olsen
+
+            <p>Thank you Janine,</p>
+<ol>
+<li>
+<p>This is really interesting, and I missed the suggestion in <span class="mention">@lthrifts</span> comment to utilize the protocol in the delivery of work with external groups. I’ll definitely take this on and look for ways to apply the protocol to our work with external groups. Great suggestion.</p>
+</li>
+<li>
+<p>This is a complex topic. We are always trying to balance product development’s speed vs. quality dynamic. I think your suggestion to look for slimmer first versions is very valid. We are hoping to create an internal dynamic of shipping slim first version by adopting a <a href="https://basecamp.com/shapeup">shapeup</a> 6wk delivery arc. This should give us the balance of an internal deadline for each milestone, the need to limit scope to a reasonable size, and the need to test, ship, and release work that doesn’t carry excessive maintenance debt into subsequent delivery arcs.</p>
+</li>
+</ol>
+<p>Thank you for your suggestions and support!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/5
+        Thu, 27 Apr 2023 09:48:38 +0000
+gov.gitcoin.co-post-14114-5
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+J9leger
+
+            <p>Well written proposal.</p>
+<p>While I feel like this budget is high, I’m supportive given how much is said to be built these next two seasons with the budget breakdown.</p>
+<p>Two thoughts / questions:</p>
+<ol>
+<li>
+<p>To <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a> how can we put anything we outsource through the protocol in some capacity? To <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> point that these are large budget items. Why does a large budget change it being a bounty? How can we use Allo to test paying contractors? Especially ones that should be learning all they can about how it currently works:)</p>
+</li>
+<li>
+<p>I’ve heard Allo get the criticism about working faster a lot. While I indeed would like to see things move faster, or for us to stick to timelines more strictly (as not doing so puts a lot of strain on other teams), I’ll instead make an observation that if feels like we’re not building with the mindset of how do we build the simplest version first and iterate from there. Could this team adopt more of a mindset of “what is the simplest version of the product to build?” and how can we get more people using it sooner to iterate faster?</p>
+</li>
+</ol>
+<p>Regardless, I am appreciate of all the effort and creative ways to achieve our strategic goals.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/4
+        Wed, 26 Apr 2023 23:03:29 +0000
+gov.gitcoin.co-post-14114-4
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+kevin.olsen
+
+            <p>These larger line items for external development are different than the dev rel efforts to incentivize builders. We intend for these milestones to be delivered by vendors selected by the Allo team.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/3
+        Tue, 25 Apr 2023 15:44:39 +0000
+gov.gitcoin.co-post-14114-3
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+lthrift
+
+            <aside class="quote no-group" data-username="nategosselin" data-post="1" data-topic="14114">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/nategosselin/48/7217_2.png" class="avatar"> nategosselin:</div>
+<blockquote>
+<p><strong>Outsourcing</strong> — we want to build a muscle for engaging our community in building the Allo ecosystem, as we feel that this is our strongest path to success. This season we plan to hire external teams to work on a few Gitcoin-defined projects as a way to tackle key market needs more quickly while also providing a forcing function for building open-source, developer-friendly tools.</p>
+</blockquote>
+</aside>
+<p>Are these bounties, forthcoming Gitcoin Community Proposals, or something different? I’d like to better understand where this budget does or does not intersect with the goal to have external parties building independent applications on the protocol.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/2
+        Mon, 24 Apr 2023 21:10:13 +0000
+gov.gitcoin.co-post-14114-2
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+nategosselin
+
+            <h1>
+<a name="gitcoin-allo-s18-s19-workstream-budget-proposal-1" class="anchor" href="https://gov.gitcoin.co#gitcoin-allo-s18-s19-workstream-budget-proposal-1"></a>Gitcoin Allo S18-S19 Workstream Budget Proposal</h1>
+<p>This is the integrated funding proposal for the Gitcoin Allo Workstream requesting funding for Season 18 and S19 (1 May 2023 through 31 October 2023), authored by <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a>, <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a>, and <a class="mention" href="https://gov.gitcoin.co/u/sor03">@Sor03</a>. This budget request has been deeply reviewed by CSDO, as well as some of our top Stewards, including <a class="mention" href="https://gov.gitcoin.co/u/griff">@griff</a>, <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a>, <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a>, <a class="mention" href="https://gov.gitcoin.co/u/epowell101">@epowell101</a>. We invite you to offer feedback, ask questions and help us identify any blindspots we may have. Coordination starts at the governance layer, and we need you to make us better.</p>
+<h2>
+<a name="tldr-2" class="anchor" href="https://gov.gitcoin.co#tldr-2"></a>TL;DR</h2>
+<p>This season the Gitcoin Allo workstream’s core focus is on establishing product-market fit for web3 grants programs. To get there, we will be executing against two key outcomes:</p>
+<ol>
+<li>Enabling web3 grants programs to run the majority of their funding through Grants Stack</li>
+<li>Empowering builders to create new software applications on top of Allo protocol</li>
+</ol>
+<h3>
+<a name="outline-3" class="anchor" href="https://gov.gitcoin.co#outline-3"></a>Outline</h3>
+<p>Allo is a protocol for democratic resource allocation, which enables communities to easily pool and distribute capital to their needs — <strong>Fund What Matters</strong>. In order to meet this value proposition, Allo needs to support a wide range of community-oriented resource allocation mechanisms. Up until now, the team has been focused on laying Allo’s foundation and creating a flagship Quadratic Funding experience on the protocol. However, over the course of our Design Partner Program (55+ interviews with ~30 web3 grants programs) we’ve learned that web3 communities tend to employ a wide variety of grant types that are geared to specific use cases. Those partners told us that Quadratic Funding, while popular as a tactic for engaging their broader communities, is generally considered a fit for a minority of those use cases (typically &lt;20% of overall funding). In most cases, the programs want to use higher-touch mechanisms (e.g. committee/expert approvals, milestone-based payments, RFP-style grants, etc) for the bulk of their fund distribution. If we want to truly achieve product-market fit for Allo among web3 communities we’ll need to build additional mechanisms so that we are a viable option for those higher-touch scenarios. Strategically, we feel that building a strong foothold within web3 will give us a foundation for bringing our public good to additional communities.</p>
+<p>In Season 18 and 19 we are going to pursue a two-pronged approach to building this strategic base. <strong>The first is Grants Stack</strong> — our primary interface for using Allo today. We want to ensure that it’s offering web3 communities a delightful entry-point to running grant programs. Our work here will be focused on expanding the types of grant programs that can be run through our three dApps (i.e. hitting our <a href="https://gov.gitcoin.co/t/march-2023-gitcoins-progress-and-future/13527">13-5-5 goal</a> of 13 QF rounds, 5 QV rounds, and 5 Direct Grants programs by September 1), continuing to improve the user experience, and establishing the next wave of our strategy once 13-5-5 has been achieved. <strong>The second prong is core Allo protocol</strong>. We want Allo to be a truly decentralized public good, and the work in this swimlane will be focused on enabling other builders to create apps on top of Allo. Tactically, that will likely be things like advancing the core protocol’s capabilities and assisting other teams with their builds.</p>
+<h3>
+<a name="amount-4" class="anchor" href="https://gov.gitcoin.co#amount-4"></a>Amount</h3>
+<p>Allo is requesting  2,031,127 GTC* = $3,229,491 for S18-19, assuming 1.59 USD/GTC, excluding reserves and rolled over amounts.</p>
+<p>Budget evolution:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Gitcoin Season</th>
+<th>Season 15</th>
+<th>Season 16</th>
+<th>Season 17</th>
+<th>Season 18</th>
+<th>Season 19</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Season Budget</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>$804k</td>
+<td>$1,622k</td>
+<td>$1,199k</td>
+</tr>
+<tr>
+<td>Under/overspend**</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>$16,6k</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+</div><p>A full breakdown of the budget can be found at the end of this post.</p>
+<p>*<em>The amount of GTC requested and the value of the reserves will be adjusted based on the current market value at the time this proposal is moved to Tally using the lower of the current price or the 20 day moving average, whichever is lower.</em></p>
+<p><em>We will be requesting our funds through one Snapshot vote, but the release of the actual funds will be split over two Tally votes (one at the start of each season) for reasons of accountability and to mitigate potential price fluctuations.</em></p>
+<p>**<em>How much more/less did we spend than the requested budget (excluding reserves)</em></p>
+<h2>
+<a name="outcomes-projects-and-milestones-5" class="anchor" href="https://gov.gitcoin.co#outcomes-projects-and-milestones-5"></a>Outcomes, Projects and Milestones</h2>
+<p>As outlined above, our core focus will be establishing product-market fit for web3 grants programs. To achieve this goal, we will be pursuing two key outcomes:</p>
+<ol>
+<li>Enabling web3 grants programs to run the majority of their funding through Grants Stack</li>
+<li>Empowering builders to create new software applications on top of Allo Protocol</li>
+</ol>
+<p>As these swimlanes illustrate, we want to draw more explicit lines between Grants Stack and Allo in S18/19 so that we can focus our development on their respective user bases. The workstream has been developing these two stacks together in this initial phase of development, but our next stage will require Grants Stack to build specifically for non-technical web3 grants programs, while Allo will need to entice builders to create new apps on the protocol. Both teams will be aiming at a shared protocol metric ($10mm in GMV) while also pursuing more product-specific goals (13-5-5 for Grants Stack and 10+ apps for Allo).</p>
+<h3>
+<a name="grants-stack-6" class="anchor" href="https://gov.gitcoin.co#grants-stack-6"></a>Grants Stack</h3>
+<p>The Grants Stack target user is a grant program manager. Currently they operate their program with makeshift processes built on general tools like Airtable and Notion, but the intended value proposition of Grants Stack is that it’s a purpose-built tool that enables these (non-engineer) users to easily spin up and execute a grant distribution. The time that they aren’t spending managing tools is time that they can then spend working with their grantees.</p>
+<p>While we know that good UX will be an important part of paying off that value proposition, a key learning from our customer research is that web3 grant programs tend to have multiple flavors of grants that are targeted to specific outcomes. For example, many programs offer a light-touch pathway for small grants and a separate process for larger grants that tend to look more like investments. In light of this, most program managers describe QF as a good fit for part of their portfolio and see the need for Grants Stack to offer a variety of grant types to truly become a one-stop shop. The 13-5-5 target is designed to push us to create three base grant “flavors” to cover the majority of these use cases, while also setting us up to create more variations within those categories.</p>
+<p>Given the need for continuous validation, we are outlining a basket of milestones that we are considering this season. We are committing to at least experimenting with these milestones — we may decide not to pursue some of them, but will provide reasoning if/when that happens.</p>
+<ul>
+<li>
+<strong>Direct Grants</strong> — enabling a direct grants process to support higher-touch grant programs</li>
+<li>
+<strong>Quadratic Voting</strong> — enabling a quadratic voting process to support more targeted community voting</li>
+<li>
+<strong>Future QF</strong> — developing novel forms of QF, such as pluralistic, to allow for greater customization of the mechanism</li>
+<li>
+<strong>Gnosis Safe App</strong> — integrating with Gnosis Safe to allow for easier team management in Grants Stack</li>
+<li>
+<strong>Messaging</strong> — allowing program managers and project owners to message their constituents / build their audience</li>
+</ul>
+<h3>
+<a name="allo-protocol-7" class="anchor" href="https://gov.gitcoin.co#allo-protocol-7"></a>Allo Protocol</h3>
+<p>With v1 of Allo now live, we need to turn our attention to seeding and growing the ecosystem on top of the protocol. Our long-term goal is to make Allo a decentralized, community-owned hyperstructure, and to get there we need to strike a balance between advancing the protocol (to attract more builders) and crystallizing its structure (to provide stability to the community). In S18/19, the Allo team will likely lean more towards the former so that we can expand the ecosystem beyond Grants Stack. We know of three builder archetypes at this stage:</p>
+<ol>
+<li>Independent grants management apps that want to leverage the Allo backend (e.g. Questbook, Charmesverse)</li>
+<li>Large web3 communities that want to build their own front-end grant experience (e.g. Optimism)</li>
+<li>Direct protocol integrations that want lay Allo on top of their existing protocol (e.g. SuperRare, Endaoment, Decent, Giveth)</li>
+</ol>
+<p>This season we want to continue to explore this space, identify our top priority opportunities, and flesh out a compelling roadmap for Allo. Our north star metric will be independent software applications (i.e. not owned / operated by Gitcoin) built on Allo — if we aren’t enticing builders to work with our protocol, then we’re not building something valuable. The goal is to have 10+ independent apps built on the protocol, and we will be exploring a mix of milestones aimed both at advancing the underlying technology and aiding teams who are building on Allo. As with Grants Stack above, we are committing to at least exploring the milestones below, although we may not build all of it:</p>
+<ul>
+<li>
+<strong>Project Reputation</strong> — We’ve learned that a core requirement for this ecosystem is a trusted, universal registry of projects. Today we have a base database of projects, but we want to enrich that with web3-native attestations so that we can build a lattice of project reputation.</li>
+<li>
+<strong>Decentralized QF Compute</strong> — The calculations for our QF implementation are currently public, but run on centralized services. We believe in QF as a method and want to ensure that it is available as a truly decentralized mechanism in Allo. A key step towards that future is exploring a decentralized compute design that can make the mechanism truly open.</li>
+<li>
+<strong>MACI</strong> — MACI is a privacy-oriented style of QF with a growing, dedicated following. The current protocol design is not easily compatible with this mechanism and we want to explore evolving Allo to support this as an additional type.</li>
+<li>
+<strong>Reference UI</strong> — Currently Grants Stack straddles the line between stand-alone app and an entry-point reference UI (think Matcha vis-a-vis Uniswap). As Grants Stack becomes more sophisticated, we may want to explore creating a simple reference UI to allow users to engage with Allo on neutral ground.</li>
+<li>
+<strong>Value Capture Strategy</strong> — We hope that Allo (and its ecosystem) becomes a key source of funds for public goods, and we need to determine a strategy for turning the value of the protocol into usable resources.</li>
+<li>
+<strong>Voting Strategy Library</strong> — We have a hypothesis that having a pre-vetted library of voting strategies packaged with the protocol will enable more builders to create new applications, without having to build up expertise in allocation techniques.</li>
+</ul>
+<h2>
+<a name="measurement-8" class="anchor" href="https://gov.gitcoin.co#measurement-8"></a>Measurement</h2>
+<h3>
+<a name="grants-stack-9" class="anchor" href="https://gov.gitcoin.co#grants-stack-9"></a>Grants Stack</h3>
+<ul>
+<li>13-5-5
+<ul>
+<li>13 Quadratic Funding rounds</li>
+<li>5 Quadratic Voting rounds</li>
+<li>5 Direct Grants programs</li>
+</ul>
+</li>
+<li>80% of programs would run again</li>
+<li>$10mm in GMV on Allo</li>
+</ul>
+<h3>
+<a name="allo-protocol-10" class="anchor" href="https://gov.gitcoin.co#allo-protocol-10"></a>Allo Protocol</h3>
+<ul>
+<li>$10mm in GMV on Allo</li>
+<li>10+ independent apps built on top of Allo</li>
+</ul>
+<p>Note: these goals were established with a 6-month time horizon, which expires at the end of August. That is two months before S19 ends, so the team will also be responsible for developing and publishing the next set of targets, strategy, and roadmap during the lifespan of this budget.</p>
+<h2>
+<a name="budget-breakdown-11" class="anchor" href="https://gov.gitcoin.co#budget-breakdown-11"></a>Budget Breakdown</h2>
+<p>The Allo budget has increased from past seasons, primarily due to team growth (~9 new heads) and planned outsourced work. We feel that the grants opportunity space is massive and these increases are aimed at helping us move more quickly to maximize that opportunity. In addition to the tables below, we wanted to add some color on the changes we’ve made:</p>
+<ul>
+<li>
+<strong>Key Hires</strong> — we’ve hired or are planning to hire additional Product and DevRel heads so that we can expand our capabilities in these disciplines. Those new team members include a Product lead for Grants Stack, a DevRel engineer, and a planned senior Product Designer to lead our UX efforts.</li>
+<li>
+<strong>DAO Reorganization</strong> — as FDD and DAO Ops have dissolved, the Allo team has absorbed existing team members that are crucial to building a successful product team. That includes an Analyst, a Data Engineer, a dedicated Ops person, and four support team members (mostly part-time).</li>
+<li>
+<strong>Outsourcing</strong> — we want to build a muscle for engaging our community in building the Allo ecosystem, as we feel that this is our strongest path to success. This season we plan to hire external teams to work on a few Gitcoin-defined projects as a way to tackle key market needs more quickly while also providing a forcing function for building open-source, developer-friendly tools.</li>
+</ul>
+<h3>
+<a name="view-1-breakdown-per-initiative-and-milestones-12" class="anchor" href="https://gov.gitcoin.co#view-1-breakdown-per-initiative-and-milestones-12"></a>View 1: Breakdown per initiative and milestones</h3>
+<p><strong>Milestones by overall resources</strong></p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Resources ($)</th>
+<th>Resources (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direct Grants (Outsourced)</td>
+<td>$358,721.78</td>
+<td>19.51%</td>
+</tr>
+<tr>
+<td>Project Reputation</td>
+<td>$358,721.78</td>
+<td>19.51%</td>
+</tr>
+<tr>
+<td>QF Compute</td>
+<td>$134,520.67</td>
+<td>7.32%</td>
+</tr>
+<tr>
+<td>MACI (Outsourced)</td>
+<td>$179,360.89</td>
+<td>9.76%</td>
+</tr>
+<tr>
+<td>Reference UI</td>
+<td>$134,520.67</td>
+<td>7.32%</td>
+</tr>
+<tr>
+<td>Value Capture</td>
+<td>$89,680.44</td>
+<td>4.88%</td>
+</tr>
+<tr>
+<td>QV</td>
+<td>$89,680.44</td>
+<td>4.88%</td>
+</tr>
+<tr>
+<td>Future QF</td>
+<td>$179,360.89</td>
+<td>9.76%</td>
+</tr>
+<tr>
+<td>Gnosis Safe App (Outsourced)</td>
+<td>$89,680.44</td>
+<td>4.88%</td>
+</tr>
+<tr>
+<td>Messaging</td>
+<td>$89,680.44</td>
+<td>4.88%</td>
+</tr>
+<tr>
+<td>TBD - partial arc</td>
+<td>$67,260.33</td>
+<td>3.66%</td>
+</tr>
+<tr>
+<td>TBD - partial arc</td>
+<td>$67,260.33</td>
+<td>3.66%</td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>Hypothetical milestones by capacity</strong><br>
+This is a hypothetical view of how we could theoretically flight our milestones given our team capacity. The actual timeline for our projects will likely look different.</p>
+<p>| Initiative/</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Projects</th>
+<th>Cost 05.23</th>
+<th>Cost 06.23</th>
+<th>Cost 07.23</th>
+<th>Cost 08.23</th>
+<th>Cost 09.23</th>
+<th>Cost 10.23</th>
+<th>Totals</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direct Grants (Outsourced)</td>
+<td>149,467</td>
+<td>119,574</td>
+<td>89,680</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>$358,721.78</td>
+<td>19.51%</td>
+</tr>
+<tr>
+<td>Project Reputation</td>
+<td>149,467</td>
+<td>119,574</td>
+<td>89,680</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>$358,721.78</td>
+<td>19.51%</td>
+</tr>
+<tr>
+<td>QF Compute</td>
+<td>112,101</td>
+<td>0</td>
+<td>0</td>
+<td>89,680</td>
+<td>0</td>
+<td>0</td>
+<td>$134,520.67</td>
+<td>7.32%</td>
+</tr>
+<tr>
+<td>MACI (Outsourced)</td>
+<td>0</td>
+<td>89,680.44</td>
+<td>89,680</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>$179,360.89</td>
+<td>9.76%</td>
+</tr>
+<tr>
+<td>Reference UI</td>
+<td>0</td>
+<td>0</td>
+<td>44,840.22</td>
+<td>89,680</td>
+<td>0</td>
+<td>0</td>
+<td>$134,520.67</td>
+<td>7.32%</td>
+</tr>
+<tr>
+<td>Value Capture</td>
+<td>0</td>
+<td>44,840.22</td>
+<td>44,840</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>$89,680.44</td>
+<td>4.88%</td>
+</tr>
+<tr>
+<td>QV</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>59,787</td>
+<td>29,893</td>
+<td>$89,680.44</td>
+<td>4.88%</td>
+</tr>
+<tr>
+<td>Future QF</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>119,574</td>
+<td>59,787</td>
+<td>$179,360.89</td>
+<td>9.76%</td>
+</tr>
+<tr>
+<td>Gnosis Safe App (Outsourced)</td>
+<td>0</td>
+<td>0</td>
+<td>29,893.48</td>
+<td>59,787</td>
+<td>0</td>
+<td>0</td>
+<td>$89,680.44</td>
+<td>4.88%</td>
+</tr>
+<tr>
+<td>Messaging</td>
+<td>74,734</td>
+<td>14,947</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>$89,680.44</td>
+<td>4.88%</td>
+</tr>
+<tr>
+<td>TBD - partial arc</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>67,260.33</td>
+<td>$67,260.33</td>
+<td>3.66%</td>
+</tr>
+<tr>
+<td>TBD - partial arc</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>67,260.33</td>
+<td>$67,260.33</td>
+<td>3.66%</td>
+</tr>
+</tbody>
+</table>
+</div><h3>
+<a name="view-2-breakdown-staffing-contracting-operational-expenses-13" class="anchor" href="https://gov.gitcoin.co#view-2-breakdown-staffing-contracting-operational-expenses-13"></a>View 2: Breakdown staffing, contracting, operational expenses</h3>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Amount USD</th>
+<th>%</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<strong>Core Contributors</strong> <br> Nate Gosselin - Workstream Co-lead<br>Aditya Anand - Eng Lead<br>Andrea Franz - Eng Lead<br>Bhargav - Engineer<br>Daniele Salatti -Engineer<br>Hans - Engineer<br>Jason Romero - Engineer<br>Josef - Engineer<br>Kurt M - Engineer<br>Mo - Engineer<br>Melissa Neira - Designer<br>Will Goi - Designer<br>Michelle Ma - Product <br>Meg Lister - Product <br>Baoki - Analyst<br>Zen - Data Engineer<br>Yuki - Support<br>Lolu - Support Engineer<br>TBD - Senior Hire</td>
+<td>$1,566,525</td>
+<td>55.5%</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<strong>Trusted Contributors</strong><br>Emmanuel - Support<br>Julliet - Support<br>Sorana - Operations &amp; Data analyst</td>
+<td>$74,500</td>
+<td>2.6%</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<strong>Shared</strong> <br>Kevin - Workstream Co-lead<br>Zakk - Devrel Lead<br>TBD - Devrel Engineer</td>
+<td>$133,746</td>
+<td>4.8%</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<strong>Outsourcing</strong><br>DevOps<br>Direct Grants<br>MACI<br>Gnosis Safe</td>
+<td>$699,762</td>
+<td>24.8%</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<strong>DevRel</strong><br>Hackathons &amp; Bounties</td>
+<td>$70,000</td>
+<td>2.5%</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<strong>Opex</strong><br>Infrastructure<br>Audits<br>Events/Travel<br>Professional Development</td>
+<td>$277,000</td>
+<td>9.8%</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>$2,821,533</td>
+<td>100%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div><h3>
+<a name="view-3-total-request-including-reserves-budget-rollover-14" class="anchor" href="https://gov.gitcoin.co#view-3-total-request-including-reserves-budget-rollover-14"></a>View 3: Total request including reserves &amp; budget rollover</h3>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Total [Workstream] Budgeted Spend S18-S19</th>
+<th>$2,821,533</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>60 Day Reserves</td>
+<td>$940,511</td>
+</tr>
+<tr>
+<td>S17 Treasury Balance, incl unspent reserves and any source of revenue*</td>
+<td>$538,874</td>
+</tr>
+<tr>
+<td>Total S18-19 Request</td>
+<td><strong>$3,223,170</strong></td>
+</tr>
+</tbody>
+</table>
+</div><p>*<em>Any and all revenue generated during the past season will flow back to the DAO treasury or will be rolled over to the next season.</em></p>
+<p>During the season we will transparently report to CSDO and Stewards on revenue plus efforts to remediate currency fluctuations and report on these in the next budget request.</p>
+<p>We look forward to your comments, thanks for your consideration!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-allo-workstream-season-18-19-budget-request/14114/1
+        Mon, 24 Apr 2023 15:46:28 +0000
+gov.gitcoin.co-post-14114-1
+[Proposal] Gitcoin Allo Workstream Season 18 & 19 Budget Request
+      
+
+

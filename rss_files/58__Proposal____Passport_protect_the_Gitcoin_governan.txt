@@ -1,0 +1,442 @@
+
+
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677
+    ## Summary
+
+In S19, we partnered with ENS and a developer shop to create a Discourse plugin that enables web3 organizations to Passport-protect their forums from Sybils and bots.
+
+We would like to implement this functionality on the Gitcoin governance forum to take advantage of these protections, to promote the functionality, and to dogfood the plugin.
+
+## Abstract
+
+As also stated in recent [Metaforo proposals](https://gov.optimism.io/t/proposal-move-optimisms-forum-from-discourse-to-a-web3-native-forum-platform-to-prevent-sybil-attacks-metaforo/6032), the web3 forum is a critical piece of community infrastructure where members brainstorm ideas, draft proposals, give feedback on each other’s ideas, and generally coordinate to get things done. In many cases, these community forums are hosted using Discourse, a web2 tool that has some additional plugins that make it work well with web3 tools.
+
+While there are fantastic web3 forum solutions out there (some of which have Passport built in), not all companies have the resources to or interest in migrating. Because of this, we’ve partnered with ENS and 3rd party developers to create a Gitcoin Passport plugin that allows you to protect your forum from Sybil attacks.
+
+This proposal outlines the functionality made available using this plugin, and suggests how we should integrate it into the Gitcoin forums.
+
+## Motivations
+
+Discourse is highly susceptible to Sybil attacks, where community proposals, feedback, and coordination can be manipulated. We would like to ensure that we are only allowing verified humans to contribute to the conversation and governance of our DAO.
+
+## Specification
+
+### All available protections
+
+For this proposal, we are recommending using the following plugin: [Dappy.Lol’s Gitcoin Passport Plugin](https://meta.discourse.org/t/gitcoin-passport-plugin/273532)
+
+The following features are available:
+
+* Require a score over a certain threshold to create an account
+* Require a score over a certain threshold to reply to topics
+  * User-level – Score required to reply to any topics for specific user
+  * Category-level – Score required to reply to specific topic
+  * Forum-level – Score required to reply to any topic for all users
+* Require a score over a certain threshold to create topic
+* Scheduled date where score will be required
+
+### Recommended implementation
+
+We would like to implement the new Discourse x Passport plugin to protect the following forum functionality:
+
+* Topic protection: Require users to have a score of 20 to create a new topic in any category
+* Reply protection: Require users to have a score of 20 to reply to any topic in any category
+* Implementation date: Start to require these new score levels on November 1st, 2023
+
+Every 3 months, we will collect feedback and review the integration to make sure it continues to have the desired effect.
+
+## Benefits
+
+* The forum will be protected against sybil attacks.
+* We will be able to prove out the sybil-protection that Gitcoin Passport provides, and use it as a use case to encourage others to take advantage of it.
+
+## Drawbacks
+
+* Participants will need to create a Passport and generate a score of 20.
+* There is some maintenance required to reverify your Passport’s credentials every 90 days, and the score can change as our scoring models adapt to changes in Sybil behavior.
+
+## Vote
+
+A “Yes” vote means that you would like to add the Sybil protection to the governance forums for at least a period of 3 months. We will continue to monitor how effective this is every 3-6 months after that to ensure it is continuing to have the desired effect.
+
+A “No” vote means that you do not approve of this proposal in its current form. This does not mean that you disapprove of the overall concept of adding Sybil protection. It might just mean that we need to adjust the integration details based on your feedback.
+
+—
+
+### Alternative solutions considered
+
+The team has also discussed the following solution for this same problem, but ultimately recommend we move forward with just the Passport protection at this time.
+
+We are happy to review your feedback on this solution as well in the comments of this proposal.
+
+**Alternative solution**
+
+Require individuals wishing to participate to have at least 1 GTC staked.
+
+**Identified issues with this solution:**
+
+Regardless of the low token price, this may exclude some who cannot afford to stake 1 GTC
+
+**Potential Solution:**
+
+Establish a program to delegate the necessary 1 GTC to participate to those who need it
+
+* New Steward onboarding call quarterly (we should do this anyway)
+* To minimize gas fees, we’ll do a multi-batch transaction for all of those who have applied & been accepted
+* Delegates must maintain a score of X (aka be active) over 180 day period to maintain their delegation
+* Each quarter we will do a sweep of inactive stewards and revoke the delegation
+Mon, 06 Nov 2023 21:54:52 +0000
+🤖 DAO Governance and Vision
+
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+lebraat
+
+            <p>Wanted to close this out.</p>
+<p>We will not be gating our governance forum with Passport for the time being. We have a few other partners testing integrations, so dogfooding the process is not as important.</p>
+<p>If we identify in the future that we are experiencing a sybil problem, or if we make Passport onboarding more simple, we will revisit this and potentially make some adjustments.</p>
+<p>Thank you all for your input!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/18
+        Mon, 06 Nov 2023 21:54:52 +0000
+gov.gitcoin.co-post-16677-18
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+CoachJonathan
+
+            <p>I appreciate everyone’s comments on this post. After reading back and forth, I am going to change my position and would vote toward “no” for implementing this at this time.</p>
+<p>Until gov forum attacks become a more serious problem, I think dogfood &gt; participation is not the right heuristic for us.</p>
+<p>I’m also keen to work with the Passport team (and maybe the Discourse team?) to create more experiments around “roles” within our gov forum so that those who have more at stake (aka more GTC) have access to more actions (creating proposals, commenting on certain proposals, etc.).</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/17
+        Tue, 24 Oct 2023 07:16:48 +0000
+gov.gitcoin.co-post-16677-17
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+gaoa97
+
+            <p>Great idea! I support this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/16
+        Sat, 14 Oct 2023 02:47:14 +0000
+gov.gitcoin.co-post-16677-16
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+flowscience
+
+            <p>Big agree <a class="mention" href="https://gov.gitcoin.co/u/thedevanshmehta">@thedevanshmehta</a> - this feels like solving a problem that doesn’t exist and putting up barriers to participation.</p>
+<p>If there’s concern over temp check voting being compromised here. It would be very persuasive to show a specific example for those of us who participate less frequently. Further, if the concern is about protecting the integrity of voting, then I’d be more in favor of this initiative if the implementation was restricted to voting (instead of creating accounts, making a first post, and replying).</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/15
+        Wed, 11 Oct 2023 23:02:50 +0000
+gov.gitcoin.co-post-16677-15
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+meglister
+
+            <p>I love Passport and the idea of using it to gate parts of our engagement processes where we incur high volumes of spam or want to set a high bar for legitimate actors to participate. I haven’t personally seen high volumes of spam on the forum, but <code>1</code> I might be missing something and <code>2</code> I wonder if there are other areas where Passport gating could have a beneficial impact. Maybe GCP gating for the Allo test that’s proposed here? <a href="https://gov.gitcoin.co/t/temp-check-managing-s20-gcps-on-allo-v2-repost/16726/3" class="inline-onebox">Temp Check: Managing S20 GCPs on Allo v2 [Repost] - #3 by FractalVisions</a></p>
+<p>As it stands I voted no in the temp check, since we’ve been optimizing so heavily for forum-based conversation in the wake of some controversial GG18 topics. Happy to be outvoted and participate in this experiment though! I’d also likely vote yes to a lowered score threshold.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/14
+        Tue, 10 Oct 2023 21:54:40 +0000
+gov.gitcoin.co-post-16677-14
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+garysheng
+
+            <aside class="quote no-group" data-username="DistributedDoge" data-post="12" data-topic="16677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/distributeddoge/48/10188_2.png" class="avatar"> DistributedDoge:</div>
+<blockquote>
+<p>I would support a test that is limited in scope to a single forum category (Proposals?) but I would also suggest lowering score treshold considerably (20 is a pain to get).</p>
+</blockquote>
+</aside>
+<p>This make sense to me, with exception of 20 being a pain to get. This is what the Passport team has through research learned is a substantial gate for Sybils.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/13
+        Tue, 10 Oct 2023 15:36:43 +0000
+gov.gitcoin.co-post-16677-13
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+DistributedDoge
+
+            <p>I don’t think putting additional barriers to participation in Gitcoin forums is a good thing. I would rather see forums remain open to attract quality contributors and discussion.</p>
+<p>There are many situations when some external actor pops up, offers valuable perspective and leaves - asking them to spend 20 minutes messing with Passport before they write a single post is a bit much.</p>
+<p>I would support a test that is limited in scope to a single forum category (Proposals?) but I would also suggest lowering score treshold considerably (20 is a pain to get).</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/12
+        Mon, 09 Oct 2023 20:28:39 +0000
+gov.gitcoin.co-post-16677-12
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+lebraat
+
+            <aside class="quote no-group" data-username="thedevanshmehta" data-post="8" data-topic="16677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>From my vantage point it looks like we’ve incurred the sunk cost of building passport gating for discourse forums and are now looking for a problem to apply it towards as its already been built</p>
+</blockquote>
+</aside>
+<p>Wanted to quickly point out that this integration was built for any Discourse forum provider to utilize, not just for us. ENS partnered with us to fund a bounty to build out this functionality and they have already integrated it into their forum.</p>
+<p>Sybil-resistance was just one of the benefits of this proposal… Dogfooding the plugin was another, but I agree that it would add some friction to the governance of the DAO.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/11
+        Mon, 09 Oct 2023 15:52:38 +0000
+gov.gitcoin.co-post-16677-11
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+CoachJonathan
+
+            <p>There seems to be some great points being brought up as to whether or not this is something we want to integrate. I like the way Devansh put it of:</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="8" data-topic="16677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>like a solution in search of a problem</p>
+</blockquote>
+</aside>
+<p>I’m going to set up a quick poll as a pulse check here to see how others are feeling about it based on the conversation we’ve been having so far.</p>
+<p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/10">Click to view the poll.</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/10
+        Mon, 09 Oct 2023 10:51:53 +0000
+gov.gitcoin.co-post-16677-10
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+FractalVisions
+
+            <p>I’m curious as to why the forums can’t have a dashboard that is easy for newcomers to understand &amp; join the governance with a web3 token gate like charmverse offers…</p>
+<p>This seems like a simple solution to give role based permissions for forum discussions.</p>
+<p>Are we really still relying on old web2 legacy systems to try and come up with a solution for something that is supposed to be decentralized?</p>
+<p>To me the suggestion to integrate passport with discourse in order to gate the forums seems to be heading in the opposite direction of further decentralized governance for the Gitcoin ecosystem.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/9
+        Sun, 08 Oct 2023 18:33:09 +0000
+gov.gitcoin.co-post-16677-9
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+thedevanshmehta
+
+            <aside class="quote no-group" data-username="CoachJonathan" data-post="7" data-topic="16677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>I also don’t think the number of bot attacks is alarming at this point</p>
+</blockquote>
+</aside>
+<p>In that case passport protecting our forum does look alarmingly like a solution in search of a problem</p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="7" data-topic="16677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>If we don’t find this feature useful, I’m not sure why we would build them/have them</p>
+</blockquote>
+</aside>
+<p>From my vantage point it looks like we’ve incurred the sunk cost of building passport gating for discourse forums and are now looking for a problem to apply it towards as its already been built</p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="7" data-topic="16677">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>also want to work with the team to ensure that the score needed to participate is relatively low, and that there are avenues to connect with us if a failing score is preventing someone from participating.</p>
+</blockquote>
+</aside>
+<p>Amazon’s research is pretty conclusive that a % of users drop away at each point of friction (hence their emphasis on 3 click checkout).</p>
+<p>So the tradeoff is looking like passport gating solves the non-existent problem of bot attacks on discourse forums at the cost of a non-zero number of users choosing to disengage rather than go through the hassle of extra steps to participate</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/8
+        Sun, 08 Oct 2023 10:32:58 +0000
+gov.gitcoin.co-post-16677-8
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+CoachJonathan
+
+            <p>This is a great point and something I’d want to continuously keep in mind as we continue with governance experiments. I also don’t think the number of bot attacks is alarming at this point, but a good metric to keep looking at.</p>
+<p>That said, one reason I’m keen to proceed with this is that we are, straight up, dogfooding our products. If we don’t find this feature useful, I’m not sure why we would build them/have them or why others would use them.</p>
+<p>To address your more specific concern, I also want to work with the team to ensure that the score needed to participate is relatively low, and that there are avenues to connect with us if a failing score is preventing someone from participating.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/7
+        Sat, 07 Oct 2023 13:36:01 +0000
+gov.gitcoin.co-post-16677-7
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+thedevanshmehta
+
+            <p>Hi there i wanted to know whether this is a solution for an existing problem the forum faces or for a hypothetical future one.</p>
+<p>Is the forum under attack by bots that it needs to be passport protected in the first place?</p>
+<p>I’d be against creating boundaries to participation, its hard enough to get engagement without creating additional hoops to jump through for posting a single comment</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/6
+        Fri, 06 Oct 2023 14:59:52 +0000
+gov.gitcoin.co-post-16677-6
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+jengajojo
+
+            <p>Great to see that this updated is finally shipped! I’m in favor of this proposal</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/5
+        Fri, 06 Oct 2023 09:31:08 +0000
+gov.gitcoin.co-post-16677-5
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+CoachJonathan
+
+            <p>I think this is a great step in terms of not just protecting our governance forum, but also dogfooding our products. I’m a yes to this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/4
+        Thu, 05 Oct 2023 18:17:27 +0000
+gov.gitcoin.co-post-16677-4
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+Jeremy
+
+            <p>Thanks for raising this and driving the use of Passport to help protect our forum. I think this will be a great experiment where we can determine if a score of 20 is too high for replies (e.g. will it exclude too many people) and the impact it has on preventing spam.</p>
+<p>Big yes from me!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/3
+        Thu, 05 Oct 2023 17:57:41 +0000
+gov.gitcoin.co-post-16677-3
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+quaylawn
+
+            <p>Hey thanks so much for posting this <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> I’m tagging <a class="mention" href="https://gov.gitcoin.co/u/garysheng">@garysheng</a> to get the right set of eyes on this!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/2
+        Thu, 05 Oct 2023 11:58:16 +0000
+gov.gitcoin.co-post-16677-2
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+[Proposal] - Passport-protect the Gitcoin governance forum
+lebraat
+
+            <h2><a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary</h2>
+<p>In S19, we partnered with ENS and a developer shop to create a Discourse plugin that enables web3 organizations to Passport-protect their forums from Sybils and bots.</p>
+<p>We would like to implement this functionality on the Gitcoin governance forum to take advantage of these protections, to promote the functionality, and to dogfood the plugin.</p>
+<h2><a name="abstract-2" class="anchor" href="https://gov.gitcoin.co#abstract-2"></a>Abstract</h2>
+<p>As also stated in recent <a href="https://gov.optimism.io/t/proposal-move-optimisms-forum-from-discourse-to-a-web3-native-forum-platform-to-prevent-sybil-attacks-metaforo/6032">Metaforo proposals</a>, the web3 forum is a critical piece of community infrastructure where members brainstorm ideas, draft proposals, give feedback on each other’s ideas, and generally coordinate to get things done. In many cases, these community forums are hosted using Discourse, a web2 tool that has some additional plugins that make it work well with web3 tools.</p>
+<p>While there are fantastic web3 forum solutions out there (some of which have Passport built in), not all companies have the resources to or interest in migrating. Because of this, we’ve partnered with ENS and 3rd party developers to create a Gitcoin Passport plugin that allows you to protect your forum from Sybil attacks.</p>
+<p>This proposal outlines the functionality made available using this plugin, and suggests how we should integrate it into the Gitcoin forums.</p>
+<h2><a name="motivations-3" class="anchor" href="https://gov.gitcoin.co#motivations-3"></a>Motivations</h2>
+<p>Discourse is highly susceptible to Sybil attacks, where community proposals, feedback, and coordination can be manipulated. We would like to ensure that we are only allowing verified humans to contribute to the conversation and governance of our DAO.</p>
+<h2><a name="specification-4" class="anchor" href="https://gov.gitcoin.co#specification-4"></a>Specification</h2>
+<h3><a name="all-available-protections-5" class="anchor" href="https://gov.gitcoin.co#all-available-protections-5"></a>All available protections</h3>
+<p>For this proposal, we are recommending using the following plugin: <a href="https://meta.discourse.org/t/gitcoin-passport-plugin/273532">Dappy.Lol’s Gitcoin Passport Plugin</a></p>
+<p>The following features are available:</p>
+<ul>
+<li>Require a score over a certain threshold to create an account</li>
+<li>Require a score over a certain threshold to reply to topics
+<ul>
+<li>User-level – Score required to reply to any topics for specific user</li>
+<li>Category-level – Score required to reply to specific topic</li>
+<li>Forum-level – Score required to reply to any topic for all users</li>
+</ul>
+</li>
+<li>Require a score over a certain threshold to create topic</li>
+<li>Scheduled date where score will be required</li>
+</ul>
+<h3><a name="recommended-implementation-6" class="anchor" href="https://gov.gitcoin.co#recommended-implementation-6"></a>Recommended implementation</h3>
+<p>We would like to implement the new Discourse x Passport plugin to protect the following forum functionality:</p>
+<ul>
+<li>Topic protection: Require users to have a score of 20 to create a new topic in any category</li>
+<li>Reply protection: Require users to have a score of 20 to reply to any topic in any category</li>
+<li>Implementation date: Start to require these new score levels on November 1st, 2023</li>
+</ul>
+<p>Every 3 months, we will collect feedback and review the integration to make sure it continues to have the desired effect.</p>
+<h2><a name="benefits-7" class="anchor" href="https://gov.gitcoin.co#benefits-7"></a>Benefits</h2>
+<ul>
+<li>The forum will be protected against sybil attacks.</li>
+<li>We will be able to prove out the sybil-protection that Gitcoin Passport provides, and use it as a use case to encourage others to take advantage of it.</li>
+</ul>
+<h2><a name="drawbacks-8" class="anchor" href="https://gov.gitcoin.co#drawbacks-8"></a>Drawbacks</h2>
+<ul>
+<li>Participants will need to create a Passport and generate a score of 20.</li>
+<li>There is some maintenance required to reverify your Passport’s credentials every 90 days, and the score can change as our scoring models adapt to changes in Sybil behavior.</li>
+</ul>
+<h2><a name="vote-9" class="anchor" href="https://gov.gitcoin.co#vote-9"></a>Vote</h2>
+<p>A “Yes” vote means that you would like to add the Sybil protection to the governance forums for at least a period of 3 months. We will continue to monitor how effective this is every 3-6 months after that to ensure it is continuing to have the desired effect.</p>
+<p>A “No” vote means that you do not approve of this proposal in its current form. This does not mean that you disapprove of the overall concept of adding Sybil protection. It might just mean that we need to adjust the integration details based on your feedback.</p>
+<p>—</p>
+<h3><a name="alternative-solutions-considered-10" class="anchor" href="https://gov.gitcoin.co#alternative-solutions-considered-10"></a>Alternative solutions considered</h3>
+<p>The team has also discussed the following solution for this same problem, but ultimately recommend we move forward with just the Passport protection at this time.</p>
+<p>We are happy to review your feedback on this solution as well in the comments of this proposal.</p>
+<p><strong>Alternative solution</strong></p>
+<p>Require individuals wishing to participate to have at least 1 GTC staked.</p>
+<p><strong>Identified issues with this solution:</strong></p>
+<p>Regardless of the low token price, this may exclude some who cannot afford to stake 1 GTC</p>
+<p><strong>Potential Solution:</strong></p>
+<p>Establish a program to delegate the necessary 1 GTC to participate to those who need it</p>
+<ul>
+<li>New Steward onboarding call quarterly (we should do this anyway)</li>
+<li>To minimize gas fees, we’ll do a multi-batch transaction for all of those who have applied &amp; been accepted</li>
+<li>Delegates must maintain a score of X (aka be active) over 180 day period to maintain their delegation</li>
+<li>Each quarter we will do a sweep of inactive stewards and revoke the delegation</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-passport-protect-the-gitcoin-governance-forum/16677/1
+        Wed, 04 Oct 2023 20:37:39 +0000
+gov.gitcoin.co-post-16677-1
+[Proposal] - Passport-protect the Gitcoin governance forum
+      
+
+

@@ -1,0 +1,218 @@
+
+
+
+Knowledge Transfer: Generate Economic Graph Visualizations
+https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481
+    Over the years I have been publishing graph visualizations of the Gitcoin Grants datasets, like [these](https://twitter.com/owocki/status/1540257178233106433).
+
+![Screen Shot 2022-09-10 at 7.45.08 PM|627x500, 75%](upload://l4NCWXi5skqJCHbvpfuf33UqyJa.jpeg)
+This is data from Grants Round 13.  Each node in the network is a user (or grant) and each edge is a transaction between those nodes.
+
+I find these graphs are useful for visualizing each grants round in 3-dimensional space.  Using this data you can see which users/grants are [hyperconnectors](https://www.shortform.com/blog/malcolm-gladwell-connectors/) and which are on islands unto themselves.
+
+@Benwest asked me to [tell him how to generate mesh visualizations of the grant data.](https://twitter.com/BenWest/status/1565818468934492162), so here goes:
+
+# On Grants 1
+
+1. Get staff permissions on Grants 1 from CSDO.
+2. Go to `https://gitcoin.co/_administration/mesh` 
+3. Enter the fields on the form, and click 'Go'.
+4. This doesnt ALWAYS work because sometimes there is so much data the tool times out (either server side, or client side it can crash your browser).  If this happens, try again and use the 'trimmed' parameter to trim the dataset by 99%.
+
+Here is what the form looks like.  The fields:
+1. Trimmed, 0% to 99% how much should the data be trimmed into a representative sample? (default: 0%)
+2. Label: Do you want to see the names of the nodes? (default: no)
+3. Theme: light or dark, self explanatory (default: light)
+3. type: return grant data, bounties data, tip data, kudos data, or all data (default: all data)
+4. From/to: from => to dates (default: current day)
+
+# /results updates
+
+Every round I've historically tweeted out these onto [this thread](https://twitter.com/owocki/status/1540257178233106433) and updating [https://gitcoin.co/results/](https://gitcoin.co/results/) with the new viz [here](https://github.com/gitcoinco/web/blob/master/app/retail/templates/results.html#L190)
+
+Now [that I'm disaffilated](https://gov.gitcoin.co/t/passing-the-torch/10971) I wont be doing this for [GR15 data](https://gitcoin.co/_administration/mesh?trim_pct=97&show_labels=0&theme=light&type=grant&year=2022&month=9&day=7&to_year=2022&to_month=9&to_day=22&submit=Go).  Someone in the DAO should probably do it IFF it the DAOs intent to keep publishing these.
+
+
+# On Grants 2
+
+If anyone wishes to build a similar tool for traversing the data in Grants 2, you can just use [simplegraph.js](https://github.com/gitcoinco/web/blob/master/app/dataviz/templates/dataviz/mesh.html#L30) to do it.  Just plug in the transactional data to that visualization tool.
+
+There are probably better graph analysis tools to use, but simplegraph.js is the one i've used.
+Thu, 27 Jun 2024 21:00:43 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Knowledge Transfer: Generate Economic Graph Visualizations
+ccerv1
+
+            <p>Adding these little toys:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://ethereumgrantsdata.streamlit.app/">
+  <header class="source">
+      
+
+      <a href="https://ethereumgrantsdata.streamlit.app/" target="_blank" rel="noopener nofollow ugc">Streamlit</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/362;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5f63fa3309140470d522e4fda379c968de65e91e_2_690x362.png" class="thumbnail" data-dominant-color="F6DDDE" width="690" height="362"></div>
+
+<h3><a href="https://ethereumgrantsdata.streamlit.app/" target="_blank" rel="noopener nofollow ugc">main</a></h3>
+
+  <p>A mini app deployed with Streamlit.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/ccerv1/ethereum_grants_data">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/ccerv1/ethereum_grants_data" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b38d2c1da5e9c3cd8f599a44e79e40e399995afb_2_690x345.png" class="thumbnail" data-dominant-color="E9EAEB" width="690" height="345"></div>
+
+<h3><a href="https://github.com/ccerv1/ethereum_grants_data" target="_blank" rel="noopener nofollow ugc">GitHub - ccerv1/ethereum_grants_data: Visualizing Ethereum ecosystem grant flows</a></h3>
+
+  <p>Visualizing Ethereum ecosystem grant flows. Contribute to ccerv1/ethereum_grants_data development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/6
+        Thu, 27 Jun 2024 21:00:43 +0000
+gov.gitcoin.co-post-11481-6
+Knowledge Transfer: Generate Economic Graph Visualizations
+      
+
+Knowledge Transfer: Generate Economic Graph Visualizations
+umarkhaneth
+
+            <p><a href="https://gitcoin-networks.streamlit.app/" class="onebox" target="_blank" rel="noopener nofollow ugc">https://gitcoin-networks.streamlit.app/</a></p>
+<p>The economic graph visualizer lives at this link now ^ added gg18 in there and filters by donation amount + passport score</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/5
+        Mon, 21 Aug 2023 13:52:39 +0000
+gov.gitcoin.co-post-11481-5
+Knowledge Transfer: Generate Economic Graph Visualizations
+      
+
+Knowledge Transfer: Generate Economic Graph Visualizations
+owocki
+
+            <p>FYI there are now two graph visualization tools you can use for allo protocol era economic graph vis</p>
+<ol>
+<li><a href="https://gitcoin-beta-networks.streamlit.app/">https://gitcoin-beta-networks.streamlit.app/</a> by <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> (works for alpha rounds)</li>
+<li><a href="https://grants-graph.vercel.app/">https://grants-graph.vercel.app/</a> by <a class="mention" href="https://gov.gitcoin.co/u/ghostffcode">@ghostffcode</a> (works for alpha rounds/GG18)</li>
+</ol>
+<p>neat to see one of the most prominent grants out there using these visualizations to promote the round <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> <a href="https://twitter.com/lensterxyz/status/1692963337330729288">https://twitter.com/lensterxyz/status/1692963337330729288</a></p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/4
+        Sun, 20 Aug 2023 19:39:54 +0000
+gov.gitcoin.co-post-11481-4
+Knowledge Transfer: Generate Economic Graph Visualizations
+      
+
+Knowledge Transfer: Generate Economic Graph Visualizations
+owocki
+
+            <aside class="quote no-group" data-username="ccerv1" data-post="2" data-topic="11481">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ccerv1/48/6966_2.png" class="avatar"> ccerv1:</div>
+<blockquote>
+<p>For other tools for making directed or undirected network graphs, also consider:</p>
+</blockquote>
+</aside>
+<p>I think there is a sweet spot for data exploration/viz tools like these to hasten the DAOs ability to turn data into learning into insights.   could be major alpha in the <a href="https://twitter.com/owocki/status/1565728303767375873">infinite game against the red team</a>!</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/3
+        Sun, 11 Sep 2022 06:07:53 +0000
+gov.gitcoin.co-post-11481-3
+Knowledge Transfer: Generate Economic Graph Visualizations
+      
+
+Knowledge Transfer: Generate Economic Graph Visualizations
+ccerv1
+
+            <p>This is amazing. I want to give it a whirl!</p>
+<p>For other tools for making directed or undirected network graphs, also consider:</p>
+<ul>
+<li>
+<a href="https://flourish.studio/" rel="noopener nofollow ugc">Flourish</a> - easy no code solution</li>
+<li>
+<a href="https://observablehq.com/@d3/force-directed-graph" rel="noopener nofollow ugc">Observable</a> - need to know some javascript and have your data processed, but very easy to customize AND takes advantage of the full d3 physics engine</li>
+<li>
+<a href="https://dash.plotly.com/cytoscape" rel="noopener nofollow ugc">Plotly Cytoscape</a> - need to know python and how to deploy to a web server. This is even more customizable and helpful if you want a standalone webapp with features that a user can customize.</li>
+</ul>
+<p>You can also just use NetworkX in python for a static visualization, but that’s no fun.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/2
+        Sun, 11 Sep 2022 02:08:43 +0000
+gov.gitcoin.co-post-11481-2
+Knowledge Transfer: Generate Economic Graph Visualizations
+      
+
+Knowledge Transfer: Generate Economic Graph Visualizations
+owocki
+
+            <p>Over the years I have been publishing graph visualizations of the Gitcoin Grants datasets, like <a href="https://twitter.com/owocki/status/1540257178233106433">these</a>.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/93b892006b029ecb1d5f56f7cc9b9a9d2d788b08.jpeg" data-download-href="/uploads/short-url/l4NCWXi5skqJCHbvpfuf33UqyJa.jpeg?dl=1" title="Screen Shot 2022-09-10 at 7.45.08 PM"><img src="/uploads/db4391/optimized/2X/9/93b892006b029ecb1d5f56f7cc9b9a9d2d788b08_2_470x375.jpeg" alt="Screen Shot 2022-09-10 at 7.45.08 PM" data-base62-sha1="l4NCWXi5skqJCHbvpfuf33UqyJa" width="470" height="375" srcset="/uploads/db4391/optimized/2X/9/93b892006b029ecb1d5f56f7cc9b9a9d2d788b08_2_470x375.jpeg, /uploads/db4391/optimized/2X/9/93b892006b029ecb1d5f56f7cc9b9a9d2d788b08_2_705x562.jpeg 1.5x, /uploads/db4391/optimized/2X/9/93b892006b029ecb1d5f56f7cc9b9a9d2d788b08_2_940x750.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/9/93b892006b029ecb1d5f56f7cc9b9a9d2d788b08_2_10x10.png"></a></div><br>
+This is data from Grants Round 13.  Each node in the network is a user (or grant) and each edge is a transaction between those nodes.<p></p>
+<p>I find these graphs are useful for visualizing each grants round in 3-dimensional space.  Using this data you can see which users/grants are <a href="https://www.shortform.com/blog/malcolm-gladwell-connectors/">hyperconnectors</a> and which are on islands unto themselves.</p>
+<p><span class="mention">@Benwest</span> asked me to <a href="https://twitter.com/BenWest/status/1565818468934492162">tell him how to generate mesh visualizations of the grant data.</a>, so here goes:</p>
+<h1>
+<a name="on-grants-1-1" class="anchor" href="https://gov.gitcoin.co#on-grants-1-1"></a>On Grants 1</h1>
+<ol>
+<li>Get staff permissions on Grants 1 from CSDO.</li>
+<li>Go to <code>https://gitcoin.co/_administration/mesh</code>
+</li>
+<li>Enter the fields on the form, and click ‘Go’.</li>
+<li>This doesnt ALWAYS work because sometimes there is so much data the tool times out (either server side, or client side it can crash your browser).  If this happens, try again and use the ‘trimmed’ parameter to trim the dataset by 99%.</li>
+</ol>
+<p>Here is what the form looks like.  The fields:</p>
+<ol>
+<li>Trimmed, 0% to 99% how much should the data be trimmed into a representative sample? (default: 0%)</li>
+<li>Label: Do you want to see the names of the nodes? (default: no)</li>
+<li>Theme: light or dark, self explanatory (default: light)</li>
+<li>type: return grant data, bounties data, tip data, kudos data, or all data (default: all data)</li>
+<li>From/to: from =&gt; to dates (default: current day)</li>
+</ol>
+<h1>
+<a name="results-updates-2" class="anchor" href="https://gov.gitcoin.co#results-updates-2"></a>/results updates</h1>
+<p>Every round I’ve historically tweeted out these onto <a href="https://twitter.com/owocki/status/1540257178233106433">this thread</a> and updating <a href="https://gitcoin.co/results/">https://gitcoin.co/results/</a> with the new viz <a href="https://github.com/gitcoinco/web/blob/master/app/retail/templates/results.html#L190">here</a></p>
+<p>Now <a href="https://gov.gitcoin.co/t/passing-the-torch/10971">that I’m disaffilated</a> I wont be doing this for <a href="https://gitcoin.co/_administration/mesh?trim_pct=97&amp;show_labels=0&amp;theme=light&amp;type=grant&amp;year=2022&amp;month=9&amp;day=7&amp;to_year=2022&amp;to_month=9&amp;to_day=22&amp;submit=Go">GR15 data</a>.  Someone in the DAO should probably do it IFF it the DAOs intent to keep publishing these.</p>
+<h1>
+<a name="on-grants-2-3" class="anchor" href="https://gov.gitcoin.co#on-grants-2-3"></a>On Grants 2</h1>
+<p>If anyone wishes to build a similar tool for traversing the data in Grants 2, you can just use <a href="https://github.com/gitcoinco/web/blob/master/app/dataviz/templates/dataviz/mesh.html#L30">simplegraph.js</a> to do it.  Just plug in the transactional data to that visualization tool.</p>
+<p>There are probably better graph analysis tools to use, but simplegraph.js is the one i’ve used.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-generate-economic-graph-visualizations/11481/1
+        Sun, 11 Sep 2022 01:54:24 +0000
+gov.gitcoin.co-post-11481-1
+Knowledge Transfer: Generate Economic Graph Visualizations
+      
+
+

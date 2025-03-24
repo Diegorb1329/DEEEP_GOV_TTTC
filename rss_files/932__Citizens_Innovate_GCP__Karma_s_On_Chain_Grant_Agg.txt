@@ -1,0 +1,627 @@
+
+
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415
+    ### **Summary (TL;DR):**
+
+Karma proposes to develop an onchain grant program aggregator platform, leveraging the foundational work of the Grantee Accountability Protocol ([GAP](https://gap.karmahq.xyz)). This platform aims to build a registry atop Allo that will bring together details on the broad scope of grant programs within the EVM ecosystem, enabling grant program discovery and improving the application process for grantees and management for grantors while embodying Gitcoin's open-source ethos.
+
+### **Abstract:**
+
+This project is designed to establish a comprehensive and accessible registry of EVM-compatible grant programs, capitalizing on the strengths of the Grantee Accountability Protocol (GAP).
+
+By developing an on-chain platform built atop Allo Protocol, we aim to streamline the discovery and management of grant programs, making it simpler for grantees to find relevant opportunities and for grantors to maintain up-to-date program information. The initiative focuses on delivering a user-centric interface for exploring grant listings integrated directly with GAP to ensure a seamless, transparent, and efficient process for all stakeholders.
+
+We are excited to collaborate with @Sov for this project. Sov has vast experience collaborating with various grant programs and has managed grants program data in the past. His expertise will be crucial in driving the success of this project.
+
+### **Benefits & Motivation:**
+
+Grants are crucial for ecosystem development, offering essential funding for projects and initiatives. However, the current grant landscape needs to be more cohesive and clear, which poses challenges. This platform addresses these by simplifying discovery, application, and management processes, fostering ecosystem growth, enhancing transparency, and encouraging community participation.
+
+### **Scope:**
+
+- An onchain registry of EVM-aligned grant programs built on top of Allo Protocol
+
+- Integration with Karma GAP.
+
+- Open-source development and community collaboration.
+
+### **Strategic Fit:**
+
+The opportunity presented by this project is multifaceted and deeply aligned with Gitcoin's overarching goals. Here's a breakdown of the "why" behind its potential impact and value:
+
+**Aligns with Open-Source Development Goals**
+
+Gitcoin has long championed open-source development, recognizing it as a cornerstone of progress within Web3. The platform's open-source nature ensures that the community can continuously improve, audit, and extend it, fostering a collective development and learning culture.
+
+**Enhances Transparency Across EVM Ecosystem**
+
+The project's core objective is to create a transparent overview of EVM-aligned grant programs. In the current landscape, finding and applying to these programs can be opaque, with information scattered and processes varying significantly between programs. This platform centralizes and clarifies the available opportunities, making it easier for potential grantees to find relevant programs and for grantors to attract suitable applicants. Such transparency is crucial in building trust and accountability within the ecosystem, encouraging more participation and engagement.
+
+**Facilitates Accessibility and Management**
+
+Grantors are empowered to keep their information up-to-date and reflect current opportunities and requirements by enabling the claiming and proactive management of program profiles on the platform. This feature benefits the grantors by ensuring that programs are represented and aids grantees in accessing the most relevant and current opportunities. The ease of access and the ability to directly manage these profiles democratize the grant application process, making it more inclusive and efficient for all parties involved.
+
+**Leverages the Allo Protocol**
+
+Allo's design for facilitating on-chain actions and interactions makes it an ideal foundation for this aggregator platform. It offers scalability, security, and integration capabilities with existing Web3 infrastructure. This alignment with Allo harnesses its technical strengths and signifies a strategic collaboration within the Gitcoin ecosystem.
+
+**Presents Broad EVM Ecosystem Benefits**
+
+While the immediate benefits to Gitcoin and its community are clear, this project also presents significant opportunities for the broader EVM ecosystem. By streamlining access to grant programs, the platform can stimulate more active participation across different projects, leading to increased innovation, collaboration, and growth. It catalyzes ecosystem-wide development, supporting projects at various stages and fostering a more interconnected and supportive Web3 community.
+
+### Risk Assessment
+
+The primary risks involve adoption by grant programs and applicants and the technical challenges of integration. To address these, we will leverage the relationships already built with existing programs along with our in-house development expertise. The work we have already done with Karma GAP demonstrates our ability to execute in both of these areas.
+
+### Budget
+
+The projected budget for developing and implementing Karma's On-Chain Grant Aggregator platform is $40,000. This budget encompasses work across seven key phases, ranging from website design to automating program data aggregation. A high-level breakdown of the phases and estimated LOE is as follows:
+
+|Scope|Task|Resource|Level of Effort|
+| --- | --- | --- | --- |
+|1|Website Design|Design|40|
+|2|Design Data Model|Developer|12|
+|3|Frontend Implementation + Allo Registry Integration|Developer|50|
+|4|Indexer|Developer|24|
+|5|Backend Work|Developer|40|
+|6|Populate Registry|Analyst|40|
+|7|Jobs to Auto Pull Programs|Developer|24|
+||Total||230|
+
+## Project breakdown
+
+### High-Level Architecture
+
+![|624x436](upload://2K0btGVJzTid7GQnI2s90ndLkv7.png)
+
+### Website Design
+
+- **Objective:** Create intuitive, user-friendly Figma designs for the GrantHub website, enabling users to efficiently browse, navigate, and interact with grant program listings. Build a program manager interface to manage their grant program information.
+
+### Design Data Model
+
+- **Objective:** Identify all grant program data and design a schema to store it in the Allo registry. Also, design the data models for offchain storage of data.
+
+### Frontend Implementation + Allo Registry Integration
+
+- **Objective:** Construct the frontend application based on the Figma designs and seamlessly integrate it with the Allo registry smart contract. This integration will enable program managers to manage their grant programs on-chain effectively. A specific program manager interface will be implemented to facilitate these on-chain management activities. The frontend will be developed as an extension of the existing GAP front end, utilizing React/NestJS frameworks.
+
+This integration aims to maintain consistency with the Allo registry by using the same identifiers for projects as found in the registry, ensuring a unified source of truth across the platform.
+
+In addition to leveraging data directly from the Allo v2 registry, the platform is designed to import and incorporate project data from sources outside of Allo v2. Projects ingested from external sources will be integrated into the Allo v2 registry, providing a comprehensive view of grant programs across the ecosystem.
+
+Recognizing the multi-chain nature of projects within the Web3 space, our platform supports the management of program data across multiple chains. Program managers can select a preferred chain for maintaining their program data, accommodating grant programs' diverse operational needs. This approach ensures that the GAP architecture includes the multi-chain landscape, offering program managers a tailored and efficient management experience.
+
+### Indexer
+
+- **Objective:** Develop dynamic scripts and services designed to continuously monitor and respond to blockchain events associated with grant programs. This includes capturing essential actions such as program creation, updates, and other modifications. The goal is to ensure the Allo registry is always current and the definitive source of truth. Indexed data will be systematically stored, facilitating efficient retrieval and allowing for real-time adjustments to the registry entries (e.g., adding, editing, or removing entries) to maintain their accuracy and relevance.
+
+### Backend Work
+
+- **Objective:** Develop a robust backend infrastructure to support frontend operations, data management, and integrations. Design and implement RESTful APIs to serve data to the front end, including lists of grant programs, detailed program information, and submission endpoints.
+
+### Populate Registry
+
+- **Objective:** Leverage an existing database containing information on EVM-compatible grant programs as the foundational dataset for creating the new on-chain registry. This process involves extracting and transferring relevant data from Airtable to populate the registry, ensuring an extensive and accurate listing.
+
+### Jobs to Auto Pull Programs
+
+- **Objective:** After initial import, we will develop a continuous automation process for aggregating grant program data from various platforms to ensure the registry remains comprehensive and up-to-date. This will facilitate the integration of new grant programs into the Allo registry via an ongoing job that extracts data from diverse platforms and consolidates it within Allo. The process is designed to leverage both on-chain data directly from the blockchain and off-chain data through our sophisticated Indexer, ensuring a thorough and dynamic update mechanism for the registry.
+
+### Ongoing Analytics and Reporting
+
+- **Objective:** Integrate analytics tools for tracking user interactions and engagement, providing insights for continuous improvement.
+
+For the **Acceptance Criteria** and **Relevant Metrics**, expanding them can help ensure a comprehensive assessment of the platform's success and impact. Here are some ideas:
+
+## Milestones
+
+**Milestone 1**: MVP website with read only program data
+**Details**: We will build a basic program registry page that will let anyone browse programs. This will be a barebones website without any bells and whistles like filtering, sorting etc. 
+**Timeline**: 2 weeks (will update this to exact date if/when proposal passes)
+**Budget**: $10k
+
+**Milestone 2**: Implement Program manager functionality
+**Details**: Upon completion of this milestone, program manager will be able to login to the website, fill in program details and write to the Allo registry. The program data will be displayed in the registry page to the public.
+**Timeline**: 1 weeks (we'll update this to exact date if/when proposal passes)
+**Budget**: $10k
+
+**Milestone 3**: Aggregate and load program data to registry
+**Details**: Work with analyst to aggregate program data from across the EVM ecosystem and load it into the registry. Come up with a clean process to easily upload program data to the registry. Anyone will be able to view all program info on the website once this milestone is complete.
+**Timeline**: 1 weeks  (we'll update this to exact date if/when proposal passes)
+**Budget**: $5k
+
+**Milestone 4**: Launch fully featured registry with program data
+**Details**: Launch the registry feature with atleast 25 programs listed in the registry. Upon completion of this milestone, anyone will be able to visit the registry page, browse the programs and find all the program details. Program managers will be able to login and add their program details.
+**Timeline**: 2 weeks  (we'll update this to exact date if/when proposal passes)
+**Budget**: $15k
+
+## Acceptance Criteria
+
+- **Successful Integration with Karma GAP and Allo v2:** The platform must seamlessly integrate the Grantee Accountability Protocol (GAP) functionalities and leverage Allo v2's capabilities.
+
+- **User-friendly Interface for Grantees and Grantors:** The platform should have an intuitive, easy-to-navigate interface that simplifies finding, applying, and managing grants.
+
+- ** Listing Accuracy:** The information about each grant program must be accurate and up-to-date.
+
+## Relevant Metrics
+
+- **Number of Grant Programs Listed (target 100+):** Track the total number of grant programs available on the platform to ensure a broad and diverse range of opportunities for grantees.
+- **Number of Profiles Claimed in First Month (target 10+):** Monitor grant programs' engagement with the platform, as indicated by the number of programs that claim and manage their profiles. For the initial version (v1), we will implement a manual process for profile claiming. This will involve a simple form on the platform where grant programs can submit requests to claim ownership. Once a claim is verified, the Allo contract's ownership transfer feature will manually assign ownership. This approach allows us to carefully verify each claim to ensure legitimacy before considering automation for future iterations. We will develop a structured verification process to confirm the authenticity of claims, learning from these interactions to streamline and automate this process in subsequent versions.
+
+- **User Engagement Rate:** Measure the frequency and duration of user interactions with the platform to gauge its attractiveness and usefulness to the community.
+
+- Interaction with each program page
+
+- No. of program filter and search interactions
+
+- No. of redirects to the program site
+
+## Team
+
+We are team of developers who have been building [contributor reputation tools](https://www.karmahq.xyz) for the past two years. We have been long time contributors of Gitcoin. We currently maintain the [Gitcoin Steward Dashboard](https://delegate.gitcoin.co/) that displays all the stewards and their governance activity. Our grantee protocol [GAP](https://gap.karmahq.xyz/gitcoin) is used by many Gitcoin grantees to build reputation and show their project progress to the funders. GAP has also been integrated into Grants Stack making it easy to the funders to view updates from grantees. 
+
+## Conclusion
+
+We are excited about this project's potential to streamline the discovery of grant programs within the broader EVM ecosystem. This project represents another step forward for Karma in our ongoing efforts to enhance transparency, accessibility, and efficiency for both grantors and grantees.
+
+We welcome your feedback, questions, and suggestions. Your input is invaluable in ensuring the project meets the community's needs and expectations.
+Thu, 25 Jul 2024 11:48:55 +0000
+📝 Citizen Grants
+
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+rohit
+
+            <p>Congrats, <a class="mention" href="https://gov.gitcoin.co/u/mmurthy">@mmurthy</a> <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> and the Karma team on the launch. I have validated the functionality for all milestones (grant registry portal with program data and program manager functionality to add/edit program details) and attested it onchain using the “verify” functionality for the project on Karma GAP (a neat feature for decentralized verification!).</p>
+<p>Here’s a quick update on the Citizen Grants payment: On May 7th, $10K was disbursed for the first MVP milestone. I will now initiate the transaction for consolidated payments for all remaining milestones.</p>
+<p>Looking forward to future updates on the registry!</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/18
+        Thu, 25 Jul 2024 11:48:55 +0000
+gov.gitcoin.co-post-18415-18
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+KMLLC
+
+            <p>Have you reached out to CharmVerse as they have grants available on their platform. One of the most significant is the current Polygon Community Grants Program?</p>
+<p>More info here: <a href="https://app.charmverse.io/grants-tracker/web3-grants-hq-5501690381350384" class="inline-onebox" rel="noopener nofollow ugc">CharmVerse - The Network for Onchain Communities</a></p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/17
+        Tue, 23 Jul 2024 22:17:00 +0000
+gov.gitcoin.co-post-18415-17
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+mmurthy
+
+            <p>Hello! I wanted to provide an update on grant registry project.</p>
+<p>We recently launched the registry! You can find the registry with all the grant programs here: <a href="https://gap.karmahq.xyz/funding-map" class="inline-onebox" rel="noopener nofollow ugc">Karma GAP - Grant Program Aggregator</a>. There are just under 300 grant programs listed, all onchain, on allo registry and more being added. Anyone can submit a grant program. We will review and approve them to go onchain. We also have started indexing all the Gitcoin rounds, they will be automatically displayed.</p>
+<p>Announcement tweet: <a href="https://x.com/karmahq_/status/1808512070083838011" class="inline-onebox" rel="noopener nofollow ugc">x.com</a></p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> and I went on greenpill podcast to talk about it: <a href="https://x.com/greenpillnet/status/1814336232610312346" class="inline-onebox" rel="noopener nofollow ugc">x.com</a></p>
+<p>There is now an active community <a href="https://sovs.notion.site/Cartographer-Syndicate-a574b48ae162451cb73c17326f471b6a" rel="noopener nofollow ugc">cartographer syndicate</a> who has been contributing to the research, growth and development of the registry.</p>
+<p>Shoutout to <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> for helping through the entire process and making the grant experience seamless!</p>
+<p>We are actively working on adding more features to the registry. If anyone has suggestions to improve the registry or general feedback, please let me know.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/16
+        Tue, 23 Jul 2024 18:34:47 +0000
+gov.gitcoin.co-post-18415-16
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+KMLLC
+
+            <p>I am in support of this. Very necessary for startups, founders, and orgs to be able to find available funding sources easily. Shifting the paradigm from traditional fundraising to Web3 fundraising, the onus on founders should not to be in a debt creation position, rather who can I find that is willing to support us based on our mission, vision, focus, and ability to execute without cause or prejudice to repayment schedules.</p>
+<p>The majority of startups don’t make it past the first 3 years without adequate funding sources. As a Web3 advocate for creating more responsible solutions, we can act more fair, equitable, and inclusive.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/15
+        Wed, 19 Jun 2024 23:09:30 +0000
+gov.gitcoin.co-post-18415-15
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+mmurthy
+
+            <p>I created the grant on GAP and added all the milestones. I will continue to post updates on our progress there <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://gap.karmahq.xyz/project/karma---gap/grants?grantId=0x3f3037ea95b224fe360479e5f8547653f869579d8503235de579f797e760c875&amp;tab=overview">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2bf7c416b1b081236d5f4d76a4717330443008b9.png" class="site-icon" data-dominant-color="4FC0D8" width="32" height="32">
+
+      <a href="https://gap.karmahq.xyz/project/karma---gap/grants?grantId=0x3f3037ea95b224fe360479e5f8547653f869579d8503235de579f797e760c875&amp;tab=overview" target="_blank" rel="noopener nofollow ugc">Karma GAP - Grantee Accountability Protocol</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/388;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5dcca39fba9b1b3f7b933f3bef5a9d65299f1c0b_2_690x388.jpeg" class="thumbnail" data-dominant-color="9589D8" width="690" height="388"></div>
+
+<h3><a href="https://gap.karmahq.xyz/project/karma---gap/grants?grantId=0x3f3037ea95b224fe360479e5f8547653f869579d8503235de579f797e760c875&amp;tab=overview" target="_blank" rel="noopener nofollow ugc">Karma GAP - Karma - GAP - Grant Program Registry grant overview</a></h3>
+
+  <p>### **Summary (TL;DR):**
+
+Karma proposes to develop an onchain grant program aggregator platform, leveraging the foundational work of the Grantee Accountability...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/14
+        Thu, 02 May 2024 12:43:34 +0000
+gov.gitcoin.co-post-18415-14
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+webx1610
+
+            <p>That is correct, I m already part of the application</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/13
+        Fri, 26 Apr 2024 07:27:25 +0000
+gov.gitcoin.co-post-18415-13
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+mmurthy
+
+            <p>We will capture github org and also look into connecting the registry with your dataset!</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/12
+        Tue, 16 Apr 2024 03:35:37 +0000
+gov.gitcoin.co-post-18415-12
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+mmurthy
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a>. We feel the best way to encourage more participation is by driving high quality builders to these grant programs. We are going to build in that direction. We plan to run workshops, post on various forums and onboard programs one at a time for first few to learn and get feedback and iterate on the product.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/11
+        Tue, 16 Apr 2024 03:32:09 +0000
+gov.gitcoin.co-post-18415-11
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+ccerv1
+
+            <p>Very cool initiative! I am supportive. Where it makes sense, please capture the project’s GitHub org so we (at <a href="https://docs.opensource.observer/docs/contribute/project-data" rel="noopener nofollow ugc">OSO</a>) can compose with it. Would also be keen to connect the registry to <a href="https://docs.opensource.observer/docs/contribute/connect-data" rel="noopener nofollow ugc">our dataset</a> when it makes sense. I imagine there will be a decent amount of overlap especially when it comes to OSS grantees.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/10
+        Fri, 12 Apr 2024 17:23:58 +0000
+gov.gitcoin.co-post-18415-10
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+deltajuliet
+
+            <p>Really excited about this proposal and the approach to tackling EVM ecosystem challenges. It’s a solid move towards reducing friction for projects seeking support, which could significantly speed up their development.</p>
+<p>Enhancing discoverability and simplifying the application process will likely draw a broader range of projects and contributors to our ecosystem. Engaging with the community to pinpoint and tackle potential challenges early is crucial. Also, are we considering ways to encourage more participation and collaboration/feedback? Curious about any strategies on that front, <a class="mention" href="https://gov.gitcoin.co/u/mmurthy">@mmurthy</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/9
+        Mon, 08 Apr 2024 10:19:13 +0000
+gov.gitcoin.co-post-18415-9
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+rohit
+
+            <p>Awesome, that’s perfect. And thanks for the breakdown!</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/8
+        Fri, 29 Mar 2024 12:38:45 +0000
+gov.gitcoin.co-post-18415-8
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+Viriya
+
+            <p>Really excited about this proposal and the value add it specifically around impact measurement (which is something that is very much on all of our minds!) but also bullish on how this will enable us to improve builder UX for Grants Stack <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/7
+        Thu, 28 Mar 2024 19:13:13 +0000
+gov.gitcoin.co-post-18415-7
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+mmurthy
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> Thanks for the feedback! I added new milestone section with details you requested.</p>
+<p>Regarding support/resources - we have been in constant communication with product and tech teams and all our questions have been addressed. So I didn’t add anything. Let me know if you see anything else missing. Thanks!</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/6
+        Wed, 27 Mar 2024 21:16:07 +0000
+gov.gitcoin.co-post-18415-6
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+webx1610
+
+            <p>super to participate actively and hope that I will get there, and there I need to know how and when I will be to be part of the application</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/5
+        Wed, 27 Mar 2024 12:43:16 +0000
+gov.gitcoin.co-post-18415-5
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+rohit
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/mmurthy">@mmurthy</a>, thanks for the detailed proposal. I am excited about the possibilities here for broader use cases on top of this foundation for streamlining workflows for grant programs and builders, especially for reducing friction grantees have today in finding appropriate grants in a timely manner and saving the effort involved in submitting similar information multiple times across grant programs.</p>
+<p>A couple of quick suggestions:</p>
+<ul>
+<li>Besides the high-level tasks, could you propose 3 to 5 milestones with relevant outcomes and associated budget for each? This will aid in tracking progress and managing the budget effectively.</li>
+<li>If relevant, also include any support or resources you might need from the Gitcoin team so that the project’s needs are met effectively and in a timely manner.</li>
+</ul>
+<p>As a next step, once the 5-day window for reviewing and feedback on the proposal is completed, the Grant Council will decide on it as part of the monthly funding decisions for Citizens Innovate.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/4
+        Wed, 27 Mar 2024 08:18:20 +0000
+gov.gitcoin.co-post-18415-4
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+Sov
+
+            <p>Super excited to work on this.</p>
+<p>As <a class="mention" href="https://gov.gitcoin.co/u/mmurthy">@mmurthy</a> mentions, I have been collecting data on these programs for some time, and I can’t wait to bring this all on-chain with Allo for all the reasons mentioned in this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/3
+        Wed, 27 Mar 2024 00:13:46 +0000
+gov.gitcoin.co-post-18415-3
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+meglister
+
+            <p>I’m super supportive of this proposal. It’s a great use case for the Allo registry and provides sustained value back to the protocol (rich data and reputation building) and Karma GAP (increased surface area for impact measurement).</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/2
+        Tue, 26 Mar 2024 19:41:08 +0000
+gov.gitcoin.co-post-18415-2
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+mmurthy
+
+            <h3><a name="summary-tldr-1" class="anchor" href="https://gov.gitcoin.co#summary-tldr-1"></a><strong>Summary (TL;DR):</strong></h3>
+<p>Karma proposes to develop an onchain grant program aggregator platform, leveraging the foundational work of the Grantee Accountability Protocol (<a href="https://gap.karmahq.xyz" rel="noopener nofollow ugc">GAP</a>). This platform aims to build a registry atop Allo that will bring together details on the broad scope of grant programs within the EVM ecosystem, enabling grant program discovery and improving the application process for grantees and management for grantors while embodying Gitcoin’s open-source ethos.</p>
+<h3><a name="abstract-2" class="anchor" href="https://gov.gitcoin.co#abstract-2"></a><strong>Abstract:</strong></h3>
+<p>This project is designed to establish a comprehensive and accessible registry of EVM-compatible grant programs, capitalizing on the strengths of the Grantee Accountability Protocol (GAP).</p>
+<p>By developing an on-chain platform built atop Allo Protocol, we aim to streamline the discovery and management of grant programs, making it simpler for grantees to find relevant opportunities and for grantors to maintain up-to-date program information. The initiative focuses on delivering a user-centric interface for exploring grant listings integrated directly with GAP to ensure a seamless, transparent, and efficient process for all stakeholders.</p>
+<p>We are excited to collaborate with <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> for this project. Sov has vast experience collaborating with various grant programs and has managed grants program data in the past. His expertise will be crucial in driving the success of this project.</p>
+<h3><a name="benefits-motivation-3" class="anchor" href="https://gov.gitcoin.co#benefits-motivation-3"></a><strong>Benefits &amp; Motivation:</strong></h3>
+<p>Grants are crucial for ecosystem development, offering essential funding for projects and initiatives. However, the current grant landscape needs to be more cohesive and clear, which poses challenges. This platform addresses these by simplifying discovery, application, and management processes, fostering ecosystem growth, enhancing transparency, and encouraging community participation.</p>
+<h3><a name="scope-4" class="anchor" href="https://gov.gitcoin.co#scope-4"></a><strong>Scope:</strong></h3>
+<ul>
+<li>
+<p>An onchain registry of EVM-aligned grant programs built on top of Allo Protocol</p>
+</li>
+<li>
+<p>Integration with Karma GAP.</p>
+</li>
+<li>
+<p>Open-source development and community collaboration.</p>
+</li>
+</ul>
+<h3><a name="strategic-fit-5" class="anchor" href="https://gov.gitcoin.co#strategic-fit-5"></a><strong>Strategic Fit:</strong></h3>
+<p>The opportunity presented by this project is multifaceted and deeply aligned with Gitcoin’s overarching goals. Here’s a breakdown of the “why” behind its potential impact and value:</p>
+<p><strong>Aligns with Open-Source Development Goals</strong></p>
+<p>Gitcoin has long championed open-source development, recognizing it as a cornerstone of progress within Web3. The platform’s open-source nature ensures that the community can continuously improve, audit, and extend it, fostering a collective development and learning culture.</p>
+<p><strong>Enhances Transparency Across EVM Ecosystem</strong></p>
+<p>The project’s core objective is to create a transparent overview of EVM-aligned grant programs. In the current landscape, finding and applying to these programs can be opaque, with information scattered and processes varying significantly between programs. This platform centralizes and clarifies the available opportunities, making it easier for potential grantees to find relevant programs and for grantors to attract suitable applicants. Such transparency is crucial in building trust and accountability within the ecosystem, encouraging more participation and engagement.</p>
+<p><strong>Facilitates Accessibility and Management</strong></p>
+<p>Grantors are empowered to keep their information up-to-date and reflect current opportunities and requirements by enabling the claiming and proactive management of program profiles on the platform. This feature benefits the grantors by ensuring that programs are represented and aids grantees in accessing the most relevant and current opportunities. The ease of access and the ability to directly manage these profiles democratize the grant application process, making it more inclusive and efficient for all parties involved.</p>
+<p><strong>Leverages the Allo Protocol</strong></p>
+<p>Allo’s design for facilitating on-chain actions and interactions makes it an ideal foundation for this aggregator platform. It offers scalability, security, and integration capabilities with existing Web3 infrastructure. This alignment with Allo harnesses its technical strengths and signifies a strategic collaboration within the Gitcoin ecosystem.</p>
+<p><strong>Presents Broad EVM Ecosystem Benefits</strong></p>
+<p>While the immediate benefits to Gitcoin and its community are clear, this project also presents significant opportunities for the broader EVM ecosystem. By streamlining access to grant programs, the platform can stimulate more active participation across different projects, leading to increased innovation, collaboration, and growth. It catalyzes ecosystem-wide development, supporting projects at various stages and fostering a more interconnected and supportive Web3 community.</p>
+<h3><a name="risk-assessment-6" class="anchor" href="https://gov.gitcoin.co#risk-assessment-6"></a>Risk Assessment</h3>
+<p>The primary risks involve adoption by grant programs and applicants and the technical challenges of integration. To address these, we will leverage the relationships already built with existing programs along with our in-house development expertise. The work we have already done with Karma GAP demonstrates our ability to execute in both of these areas.</p>
+<h3><a name="budget-7" class="anchor" href="https://gov.gitcoin.co#budget-7"></a>Budget</h3>
+<p>The projected budget for developing and implementing Karma’s On-Chain Grant Aggregator platform is $40,000. This budget encompasses work across seven key phases, ranging from website design to automating program data aggregation. A high-level breakdown of the phases and estimated LOE is as follows:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Scope</th>
+<th>Task</th>
+<th>Resource</th>
+<th>Level of Effort</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Website Design</td>
+<td>Design</td>
+<td>40</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Design Data Model</td>
+<td>Developer</td>
+<td>12</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Frontend Implementation + Allo Registry Integration</td>
+<td>Developer</td>
+<td>50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Indexer</td>
+<td>Developer</td>
+<td>24</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Backend Work</td>
+<td>Developer</td>
+<td>40</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Populate Registry</td>
+<td>Analyst</td>
+<td>40</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Jobs to Auto Pull Programs</td>
+<td>Developer</td>
+<td>24</td>
+</tr>
+<tr>
+<td></td>
+<td>Total</td>
+<td></td>
+<td>230</td>
+</tr>
+</tbody>
+</table>
+</div><h2><a name="project-breakdown-8" class="anchor" href="https://gov.gitcoin.co#project-breakdown-8"></a>Project breakdown</h2>
+<h3><a name="high-level-architecture-9" class="anchor" href="https://gov.gitcoin.co#high-level-architecture-9"></a>High-Level Architecture</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1337987ecb5396858c280df7b1029a20655abcd1.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/1337987ecb5396858c280df7b1029a20655abcd1" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1337987ecb5396858c280df7b1029a20655abcd1_2_624x436.png" alt="" data-base62-sha1="2K0btGVJzTid7GQnI2s90ndLkv7" width="624" height="436" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1337987ecb5396858c280df7b1029a20655abcd1_2_624x436.png, https://gov.gitcoin.co/uploads/db4391/original/2X/1/1337987ecb5396858c280df7b1029a20655abcd1.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/1/1337987ecb5396858c280df7b1029a20655abcd1.png 2x" data-dominant-color="F1F3F1"></a></div><p></p>
+<h3><a name="website-design-10" class="anchor" href="https://gov.gitcoin.co#website-design-10"></a>Website Design</h3>
+<ul>
+<li><strong>Objective:</strong> Create intuitive, user-friendly Figma designs for the GrantHub website, enabling users to efficiently browse, navigate, and interact with grant program listings. Build a program manager interface to manage their grant program information.</li>
+</ul>
+<h3><a name="design-data-model-11" class="anchor" href="https://gov.gitcoin.co#design-data-model-11"></a>Design Data Model</h3>
+<ul>
+<li><strong>Objective:</strong> Identify all grant program data and design a schema to store it in the Allo registry. Also, design the data models for offchain storage of data.</li>
+</ul>
+<h3><a name="frontend-implementation-allo-registry-integration-12" class="anchor" href="https://gov.gitcoin.co#frontend-implementation-allo-registry-integration-12"></a>Frontend Implementation + Allo Registry Integration</h3>
+<ul>
+<li><strong>Objective:</strong> Construct the frontend application based on the Figma designs and seamlessly integrate it with the Allo registry smart contract. This integration will enable program managers to manage their grant programs on-chain effectively. A specific program manager interface will be implemented to facilitate these on-chain management activities. The frontend will be developed as an extension of the existing GAP front end, utilizing React/NestJS frameworks.</li>
+</ul>
+<p>This integration aims to maintain consistency with the Allo registry by using the same identifiers for projects as found in the registry, ensuring a unified source of truth across the platform.</p>
+<p>In addition to leveraging data directly from the Allo v2 registry, the platform is designed to import and incorporate project data from sources outside of Allo v2. Projects ingested from external sources will be integrated into the Allo v2 registry, providing a comprehensive view of grant programs across the ecosystem.</p>
+<p>Recognizing the multi-chain nature of projects within the Web3 space, our platform supports the management of program data across multiple chains. Program managers can select a preferred chain for maintaining their program data, accommodating grant programs’ diverse operational needs. This approach ensures that the GAP architecture includes the multi-chain landscape, offering program managers a tailored and efficient management experience.</p>
+<h3><a name="indexer-13" class="anchor" href="https://gov.gitcoin.co#indexer-13"></a>Indexer</h3>
+<ul>
+<li><strong>Objective:</strong> Develop dynamic scripts and services designed to continuously monitor and respond to blockchain events associated with grant programs. This includes capturing essential actions such as program creation, updates, and other modifications. The goal is to ensure the Allo registry is always current and the definitive source of truth. Indexed data will be systematically stored, facilitating efficient retrieval and allowing for real-time adjustments to the registry entries (e.g., adding, editing, or removing entries) to maintain their accuracy and relevance.</li>
+</ul>
+<h3><a name="backend-work-14" class="anchor" href="https://gov.gitcoin.co#backend-work-14"></a>Backend Work</h3>
+<ul>
+<li><strong>Objective:</strong> Develop a robust backend infrastructure to support frontend operations, data management, and integrations. Design and implement RESTful APIs to serve data to the front end, including lists of grant programs, detailed program information, and submission endpoints.</li>
+</ul>
+<h3><a name="populate-registry-15" class="anchor" href="https://gov.gitcoin.co#populate-registry-15"></a>Populate Registry</h3>
+<ul>
+<li><strong>Objective:</strong> Leverage an existing database containing information on EVM-compatible grant programs as the foundational dataset for creating the new on-chain registry. This process involves extracting and transferring relevant data from Airtable to populate the registry, ensuring an extensive and accurate listing.</li>
+</ul>
+<h3><a name="jobs-to-auto-pull-programs-16" class="anchor" href="https://gov.gitcoin.co#jobs-to-auto-pull-programs-16"></a>Jobs to Auto Pull Programs</h3>
+<ul>
+<li><strong>Objective:</strong> After initial import, we will develop a continuous automation process for aggregating grant program data from various platforms to ensure the registry remains comprehensive and up-to-date. This will facilitate the integration of new grant programs into the Allo registry via an ongoing job that extracts data from diverse platforms and consolidates it within Allo. The process is designed to leverage both on-chain data directly from the blockchain and off-chain data through our sophisticated Indexer, ensuring a thorough and dynamic update mechanism for the registry.</li>
+</ul>
+<h3><a name="ongoing-analytics-and-reporting-17" class="anchor" href="https://gov.gitcoin.co#ongoing-analytics-and-reporting-17"></a>Ongoing Analytics and Reporting</h3>
+<ul>
+<li><strong>Objective:</strong> Integrate analytics tools for tracking user interactions and engagement, providing insights for continuous improvement.</li>
+</ul>
+<p>For the <strong>Acceptance Criteria</strong> and <strong>Relevant Metrics</strong>, expanding them can help ensure a comprehensive assessment of the platform’s success and impact. Here are some ideas:</p>
+<h2><a name="milestones-18" class="anchor" href="https://gov.gitcoin.co#milestones-18"></a>Milestones</h2>
+<p><strong>Milestone 1</strong>: MVP website with read only program data<br>
+<strong>Details</strong>: We will build a basic program registry page that will let anyone browse programs. This will be a barebones website without any bells and whistles like filtering, sorting etc.<br>
+<strong>Timeline</strong>: 2 weeks (will update this to exact date if/when proposal passes)<br>
+<strong>Budget</strong>: $10k</p>
+<p><strong>Milestone 2</strong>: Implement Program manager functionality<br>
+<strong>Details</strong>: Upon completion of this milestone, program manager will be able to login to the website, fill in program details and write to the Allo registry. The program data will be displayed in the registry page to the public.<br>
+<strong>Timeline</strong>: 1 weeks (we’ll update this to exact date if/when proposal passes)<br>
+<strong>Budget</strong>: $10k</p>
+<p><strong>Milestone 3</strong>: Aggregate and load program data to registry<br>
+<strong>Details</strong>: Work with analyst to aggregate program data from across the EVM ecosystem and load it into the registry. Come up with a clean process to easily upload program data to the registry. Anyone will be able to view all program info on the website once this milestone is complete.<br>
+<strong>Timeline</strong>: 1 weeks  (we’ll update this to exact date if/when proposal passes)<br>
+<strong>Budget</strong>: $5k</p>
+<p><strong>Milestone 4</strong>: Launch fully featured registry with program data<br>
+<strong>Details</strong>: Launch the registry feature with atleast 25 programs listed in the registry. Upon completion of this milestone, anyone will be able to visit the registry page, browse the programs and find all the program details. Program managers will be able to login and add their program details.<br>
+<strong>Timeline</strong>: 2 weeks  (we’ll update this to exact date if/when proposal passes)<br>
+<strong>Budget</strong>: $15k</p>
+<h2><a name="acceptance-criteria-19" class="anchor" href="https://gov.gitcoin.co#acceptance-criteria-19"></a>Acceptance Criteria</h2>
+<ul>
+<li>
+<p><strong>Successful Integration with Karma GAP and Allo v2:</strong> The platform must seamlessly integrate the Grantee Accountability Protocol (GAP) functionalities and leverage Allo v2’s capabilities.</p>
+</li>
+<li>
+<p><strong>User-friendly Interface for Grantees and Grantors:</strong> The platform should have an intuitive, easy-to-navigate interface that simplifies finding, applying, and managing grants.</p>
+</li>
+<li>
+<p>** Listing Accuracy:** The information about each grant program must be accurate and up-to-date.</p>
+</li>
+</ul>
+<h2><a name="relevant-metrics-20" class="anchor" href="https://gov.gitcoin.co#relevant-metrics-20"></a>Relevant Metrics</h2>
+<ul>
+<li>
+<p><strong>Number of Grant Programs Listed (target 100+):</strong> Track the total number of grant programs available on the platform to ensure a broad and diverse range of opportunities for grantees.</p>
+</li>
+<li>
+<p><strong>Number of Profiles Claimed in First Month (target 10+):</strong> Monitor grant programs’ engagement with the platform, as indicated by the number of programs that claim and manage their profiles. For the initial version (v1), we will implement a manual process for profile claiming. This will involve a simple form on the platform where grant programs can submit requests to claim ownership. Once a claim is verified, the Allo contract’s ownership transfer feature will manually assign ownership. This approach allows us to carefully verify each claim to ensure legitimacy before considering automation for future iterations. We will develop a structured verification process to confirm the authenticity of claims, learning from these interactions to streamline and automate this process in subsequent versions.</p>
+</li>
+<li>
+<p><strong>User Engagement Rate:</strong> Measure the frequency and duration of user interactions with the platform to gauge its attractiveness and usefulness to the community.</p>
+</li>
+<li>
+<p>Interaction with each program page</p>
+</li>
+<li>
+<p>No. of program filter and search interactions</p>
+</li>
+<li>
+<p>No. of redirects to the program site</p>
+</li>
+</ul>
+<h2><a name="team-21" class="anchor" href="https://gov.gitcoin.co#team-21"></a>Team</h2>
+<p>We are team of developers who have been building <a href="https://www.karmahq.xyz" rel="noopener nofollow ugc">contributor reputation tools</a> for the past two years. We have been long time contributors of Gitcoin. We currently maintain the <a href="https://delegate.gitcoin.co/" rel="noopener nofollow ugc">Gitcoin Steward Dashboard</a> that displays all the stewards and their governance activity. Our grantee protocol <a href="https://gap.karmahq.xyz/gitcoin" rel="noopener nofollow ugc">GAP</a> is used by many Gitcoin grantees to build reputation and show their project progress to the funders. GAP has also been integrated into Grants Stack making it easy to the funders to view updates from grantees.</p>
+<h2><a name="conclusion-22" class="anchor" href="https://gov.gitcoin.co#conclusion-22"></a>Conclusion</h2>
+<p>We are excited about this project’s potential to streamline the discovery of grant programs within the broader EVM ecosystem. This project represents another step forward for Karma in our ongoing efforts to enhance transparency, accessibility, and efficiency for both grantors and grantees.</p>
+<p>We welcome your feedback, questions, and suggestions. Your input is invaluable in ensuring the project meets the community’s needs and expectations.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-karmas-on-chain-grant-aggregator-on-allo-v2/18415/1
+        Tue, 26 Mar 2024 19:35:27 +0000
+gov.gitcoin.co-post-18415-1
+[Citizens Innovate GCP] Karma's On-Chain Grant Aggregator on Allo V2
+      
+
+

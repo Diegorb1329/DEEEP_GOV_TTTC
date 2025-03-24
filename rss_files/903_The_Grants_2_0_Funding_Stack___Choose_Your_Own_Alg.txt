@@ -1,0 +1,219 @@
+
+
+
+The Grants 2.0 Funding Stack - Choose Your Own Algorithm
+https://gov.gitcoin.co/t/the-grants-2-0-funding-stack-choose-your-own-algorithm/10770
+    # Choose Your Own Algorithm
+
+Grants 2.0 will bring a new paradigm where users will dictate the terms used to fund their shared needs. We might call this the era of CYOA - Choose Your Own Algorithm
+
+Because Quadratic Funding’s theoretical implementation assumes uniqueness of voters, the practical implementation requires an iterative process to discover vulnerabilities and adjust the dynamic components of the system to better align the outcomes with the intention of the community.
+
+**Grants 2.0 will allow any community to choose it’s own funding stack.** Two rounds could fund the same cause with different rule sets, or they could make one large pool combined with better democratic and scientific processes for achieving better outcomes.
+
+The complexity of the system means that an evolutionary approach is appropriate. Users will choose their communities based on how well the communities align with their values. Resources will continue to flow to communities which fund their shared needs in a legitimate and credibly neutral way.
+
+![|624x351](upload://szE7GfGggrPyMwwHoXFe9TzxwgJ.jpeg)
+
+# Grants 2.0 System Components
+
+The backend for grants 2.0 will be hosted on distributed storage creating an “immutable” registry for each of the three components of a grants round.
+
+1. Identity Registry
+2. Grants Registry
+3. Matching Pool Registry
+
+Each of these components will have a Gitcoin user interface to interact with it. Eligibility for the Gitcoin community UI will be dependent on the Gitcoin’s code of conduct, Gitcoin’s Terms of Service, and Gitcoin’s Platform Eligibility Policy which are enforced by the community through the Fraud Detection & Defense workstream.
+
+Gitcoin community rounds will still be run seasonally and other ecosystems and cause communities will likely choose to run theirs at the same time for a while. Most will use the Gitcoin UI to do this for a period of time after the Grants 2.0 launch.
+
+# Optimizing the Functions
+
+A grant round uses a function f(f(x)) to distribute funds. For Gitcoin community rounds we might consider this f(FDD) as the Fraud Detection & Defense (FDD) workstream is responsible for multiple dynamic components.
+
+The primary functions that make up the f(FDD) function are:
+
+* Passport Verification (Sybil Defense)
+* Grant Eligibility
+
+*Note: FDD has done some work on Funding Mechanism designs which has not been used, but is likely relevant when Grants 2.0 is released.*
+
+Each of these functions is composed of multiple inputs which eventually deliver a usable result. Many of these processes involve humans in the loop to statistically validate the algorithms are functioning properly at scale along with continually identifying new behaviors and discovering unknown attack vectors.
+
+Adding even more complexity is the human element in the system. A grant reviewer gets better over time by communicating with others. A community may have a “bad apple”, but be a positive community. An accused user may be subject to a misinterpretation. Etcetera.
+
+Here are all the primary and secondary mechanisms we are currently monitoring or planning to use with Grants 2.0 with a * indicating which are currently being used and ^ indicating current work is being done.
+
+## Funding Mechanism
+
+**f(f(x)) = Funding Mechanism***
+
+The funding mechanisms a community may use to calculate the final matching pool earnings of each grant after a round. This is a combination of many other input functions below.
+
+**f(p) = Pairwise Dampening Coefficient***
+
+A collusion deterrent mechanism based on similar patterns between users.
+
+**f(k) = Plural Pairwise Dampening Coefficient**
+
+Dampening adjustment which incorporates social distance to encourage outgroup collaboration. See @erich [model here](https://gov.gitcoin.co/t/how-soulbound-tokens-can-make-gitcoin-grants-more-pluralistic/10077)
+
+**f(t) = Taxation Mechanism***
+
+Ways to utilize participation fees to change the game theory of a funding mechansim.
+
+## Passport Verification (Sybil Defense)
+
+**f(t) - Gitcoin Trust Score (GTS)***
+
+A score that determines if a user’s donations are eligible for matching consideration in Gitcoin community rounds. This score is also available for dapps to access through passport if they do not want to roll their own algorithm. It can be used to weight influence as a coefficient, or a threshold may be set to convert it to a binary. Gitcoin currently uses both as the “Trust Bonus” determines influence and a binary eligibility determination is used for users deemed over x% likely to be sybil by the probabilistic output of our machine learning algorithm.
+
+**f(u) - Community Passport Verification (CPT)^**
+
+Any community can roll their own user verification using Gitcoin Passport. The Gitcoin trust score is the Gitcoin community’s CPT.
+
+**f(c) = Community Trust Rating (CTR)**
+
+Every stamp issuing community has a trust score. To determine a trust score based on stamps, an algorithm developer would likely need to know if stamps are from communities which can be trusted . To begin we will likely use a binary score which only gives weight to communities we know and trust. FDD would likely create a measurement for the Gitcoin community.
+
+**f(i) = Inter-reviewer reliability( (IRR)***
+
+A score showing the reliability between reviewers to be used in assessing the quality of human evaluations of algorithmic outputs. While this score can’t be used as a “target”, it can show if the humans involved in a review process may need more training or may even be attempting to sabotage a round.
+
+## Grant Eligibility
+
+**f(e) = Grant Eligibility Score (GES)**
+
+A grant review process can be done by one person in a community who is the delegated authority, or by any other mechanism that gives each grant a binary output for eligibility. The current FDD process uses transparency and community reviewers along with a community flagging system for disputes and an appeals process for resolving incorrect determinations and evolving the Gitcoin community eligibility policy. Our work on permissionless reviews is at 50% completion and may serve as a Use Case Specific Reputation stamping opportunity for grant reviewers.
+
+**f(u(x)) = Use case specific reputation^**
+
+Any community may come up with a specific use case for stamping a passport. Some examples might include:
+
+* DAO Contributors
+* Donors to a cause
+* Attendance at an event
+* Certification of a skill
+
+While some might consider a binary output (Did they or did they not), other use cases may want to add some type of weighting specific for the use case such as “how trusted is this reviewer”.
+
+## Grant Discovery
+
+**f(d) = Grant Discoverability Sorting (GDS)***
+
+Each community will choose a sortition mechanism for ordering the grants on the UI. Our a/b test in GR9 showed that changing the sortition DOES produce a substantial difference in outcome. (FDD does not work on this at this time.)
+
+**f(r) = Round Discoverability Placement***
+
+The same principle as the GDP above but for rounds & communities.
+Tue, 23 Aug 2022 08:36:07 +0000
+🌱 Gitcoin Grants
+
+
+The Grants 2.0 Funding Stack - Choose Your Own Algorithm
+DisruptionJoe
+
+            <p>Not yet. We have only recently begun to split out our process to include more than the SAD which you can read a high level overview here: <a href="https://gov.gitcoin.co/t/closing-the-gap-between-fdd-and-gitcoin-passport-sybil-defenses/11218" class="inline-onebox">Closing the Gap between FDD and Gitcoin Passport Sybil Defenses</a></p>
+<p>Now we are searching for the pluralist answer for the problem by building out a meta-model solution. The long-term goal is to crowdsource the models in a similar way to Numerai.</p>
+<p>Please reach out on Discord and I’ll send you a Calendly to discuss how you could help!</p>
+          <p><a href="https://gov.gitcoin.co/t/the-grants-2-0-funding-stack-choose-your-own-algorithm/10770/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-grants-2-0-funding-stack-choose-your-own-algorithm/10770/4
+        Tue, 23 Aug 2022 08:36:07 +0000
+gov.gitcoin.co-post-10770-4
+The Grants 2.0 Funding Stack - Choose Your Own Algorithm
+      
+
+The Grants 2.0 Funding Stack - Choose Your Own Algorithm
+llllvvuu
+
+            <p>This is a bit off topic, but do we have a wiki for all of these techniques/algorithms? Some of these ideas come from different forums, and require some background knowledge to find on Google. As the QF ecosystem becomes more modular, pluralistic, and decentralized, we could end up with hundreds of variants at every part of the stack. It would be helpful for both researchers and end users (community managers) to have a view into the frontier of global research outside of core contributors/researchers.</p>
+<p>If not, I’d be happy to propose and/or contribute to a bounty for this.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-grants-2-0-funding-stack-choose-your-own-algorithm/10770/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-grants-2-0-funding-stack-choose-your-own-algorithm/10770/3
+        Mon, 22 Aug 2022 20:56:49 +0000
+gov.gitcoin.co-post-10770-3
+The Grants 2.0 Funding Stack - Choose Your Own Algorithm
+      
+
+The Grants 2.0 Funding Stack - Choose Your Own Algorithm
+DisruptionJoe
+
+            <h1>
+<a name="choose-your-own-algorithm-1" class="anchor" href="https://gov.gitcoin.co#choose-your-own-algorithm-1"></a>Choose Your Own Algorithm</h1>
+<p>Grants 2.0 will bring a new paradigm where users will dictate the terms used to fund their shared needs. We might call this the era of CYOA - Choose Your Own Algorithm</p>
+<p>Because Quadratic Funding’s theoretical implementation assumes uniqueness of voters, the practical implementation requires an iterative process to discover vulnerabilities and adjust the dynamic components of the system to better align the outcomes with the intention of the community.</p>
+<p><strong>Grants 2.0 will allow any community to choose it’s own funding stack.</strong> Two rounds could fund the same cause with different rule sets, or they could make one large pool combined with better democratic and scientific processes for achieving better outcomes.</p>
+<p>The complexity of the system means that an evolutionary approach is appropriate. Users will choose their communities based on how well the communities align with their values. Resources will continue to flow to communities which fund their shared needs in a legitimate and credibly neutral way.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15.jpeg" data-download-href="/uploads/short-url/szE7GfGggrPyMwwHoXFe9TzxwgJ.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15_2_624x351.jpeg" alt="" data-base62-sha1="szE7GfGggrPyMwwHoXFe9TzxwgJ" width="624" height="351" srcset="/uploads/db4391/optimized/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15_2_624x351.jpeg, /uploads/db4391/optimized/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15_2_936x526.jpeg 1.5x, /uploads/db4391/original/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15_2_10x10.png"></a></div><p></p>
+<h1>
+<a name="grants-20-system-components-2" class="anchor" href="https://gov.gitcoin.co#grants-20-system-components-2"></a>Grants 2.0 System Components</h1>
+<p>The backend for grants 2.0 will be hosted on distributed storage creating an “immutable” registry for each of the three components of a grants round.</p>
+<ol>
+<li>Identity Registry</li>
+<li>Grants Registry</li>
+<li>Matching Pool Registry</li>
+</ol>
+<p>Each of these components will have a Gitcoin user interface to interact with it. Eligibility for the Gitcoin community UI will be dependent on the Gitcoin’s code of conduct, Gitcoin’s Terms of Service, and Gitcoin’s Platform Eligibility Policy which are enforced by the community through the Fraud Detection &amp; Defense workstream.</p>
+<p>Gitcoin community rounds will still be run seasonally and other ecosystems and cause communities will likely choose to run theirs at the same time for a while. Most will use the Gitcoin UI to do this for a period of time after the Grants 2.0 launch.</p>
+<h1>
+<a name="optimizing-the-functions-3" class="anchor" href="https://gov.gitcoin.co#optimizing-the-functions-3"></a>Optimizing the Functions</h1>
+<p>A grant round uses a function f(f(x)) to distribute funds. For Gitcoin community rounds we might consider this f(FDD) as the Fraud Detection &amp; Defense (FDD) workstream is responsible for multiple dynamic components.</p>
+<p>The primary functions that make up the f(FDD) function are:</p>
+<ul>
+<li>Passport Verification (Sybil Defense)</li>
+<li>Grant Eligibility</li>
+</ul>
+<p><em>Note: FDD has done some work on Funding Mechanism designs which has not been used, but is likely relevant when Grants 2.0 is released.</em></p>
+<p>Each of these functions is composed of multiple inputs which eventually deliver a usable result. Many of these processes involve humans in the loop to statistically validate the algorithms are functioning properly at scale along with continually identifying new behaviors and discovering unknown attack vectors.</p>
+<p>Adding even more complexity is the human element in the system. A grant reviewer gets better over time by communicating with others. A community may have a “bad apple”, but be a positive community. An accused user may be subject to a misinterpretation. Etcetera.</p>
+<p>Here are all the primary and secondary mechanisms we are currently monitoring or planning to use with Grants 2.0 with a * indicating which are currently being used and ^ indicating current work is being done.</p>
+<h2>
+<a name="funding-mechanism-4" class="anchor" href="https://gov.gitcoin.co#funding-mechanism-4"></a>Funding Mechanism</h2>
+<p><strong>f(f(x)) = Funding Mechanism</strong>*</p>
+<p>The funding mechanisms a community may use to calculate the final matching pool earnings of each grant after a round. This is a combination of many other input functions below.</p>
+<p><strong>f(p) = Pairwise Dampening Coefficient</strong>*</p>
+<p>A collusion deterrent mechanism based on similar patterns between users.</p>
+<p><strong>f(k) = Plural Pairwise Dampening Coefficient</strong></p>
+<p>Dampening adjustment which incorporates social distance to encourage outgroup collaboration. See <a class="mention" href="https://gov.gitcoin.co/u/erich">@erich</a> <a href="https://gov.gitcoin.co/t/how-soulbound-tokens-can-make-gitcoin-grants-more-pluralistic/10077">model here</a></p>
+<p><strong>f(t) = Taxation Mechanism</strong>*</p>
+<p>Ways to utilize participation fees to change the game theory of a funding mechansim.</p>
+<h2>
+<a name="passport-verification-sybil-defense-5" class="anchor" href="https://gov.gitcoin.co#passport-verification-sybil-defense-5"></a>Passport Verification (Sybil Defense)</h2>
+<p><strong>f(t) - Gitcoin Trust Score (GTS)</strong>*</p>
+<p>A score that determines if a user’s donations are eligible for matching consideration in Gitcoin community rounds. This score is also available for dapps to access through passport if they do not want to roll their own algorithm. It can be used to weight influence as a coefficient, or a threshold may be set to convert it to a binary. Gitcoin currently uses both as the “Trust Bonus” determines influence and a binary eligibility determination is used for users deemed over x% likely to be sybil by the probabilistic output of our machine learning algorithm.</p>
+<p><strong>f(u) - Community Passport Verification (CPT)^</strong></p>
+<p>Any community can roll their own user verification using Gitcoin Passport. The Gitcoin trust score is the Gitcoin community’s CPT.</p>
+<p><strong>f(c) = Community Trust Rating (CTR)</strong></p>
+<p>Every stamp issuing community has a trust score. To determine a trust score based on stamps, an algorithm developer would likely need to know if stamps are from communities which can be trusted . To begin we will likely use a binary score which only gives weight to communities we know and trust. FDD would likely create a measurement for the Gitcoin community.</p>
+<p><strong>f(i) = Inter-reviewer reliability( (IRR)</strong>*</p>
+<p>A score showing the reliability between reviewers to be used in assessing the quality of human evaluations of algorithmic outputs. While this score can’t be used as a “target”, it can show if the humans involved in a review process may need more training or may even be attempting to sabotage a round.</p>
+<h2>
+<a name="grant-eligibility-6" class="anchor" href="https://gov.gitcoin.co#grant-eligibility-6"></a>Grant Eligibility</h2>
+<p><strong>f(e) = Grant Eligibility Score (GES)</strong></p>
+<p>A grant review process can be done by one person in a community who is the delegated authority, or by any other mechanism that gives each grant a binary output for eligibility. The current FDD process uses transparency and community reviewers along with a community flagging system for disputes and an appeals process for resolving incorrect determinations and evolving the Gitcoin community eligibility policy. Our work on permissionless reviews is at 50% completion and may serve as a Use Case Specific Reputation stamping opportunity for grant reviewers.</p>
+<p><strong>f(u(x)) = Use case specific reputation^</strong></p>
+<p>Any community may come up with a specific use case for stamping a passport. Some examples might include:</p>
+<ul>
+<li>DAO Contributors</li>
+<li>Donors to a cause</li>
+<li>Attendance at an event</li>
+<li>Certification of a skill</li>
+</ul>
+<p>While some might consider a binary output (Did they or did they not), other use cases may want to add some type of weighting specific for the use case such as “how trusted is this reviewer”.</p>
+<h2>
+<a name="grant-discovery-7" class="anchor" href="https://gov.gitcoin.co#grant-discovery-7"></a>Grant Discovery</h2>
+<p><strong>f(d) = Grant Discoverability Sorting (GDS)</strong>*</p>
+<p>Each community will choose a sortition mechanism for ordering the grants on the UI. Our a/b test in GR9 showed that changing the sortition DOES produce a substantial difference in outcome. (FDD does not work on this at this time.)</p>
+<p><strong>f(r) = Round Discoverability Placement</strong>*</p>
+<p>The same principle as the GDP above but for rounds &amp; communities.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-grants-2-0-funding-stack-choose-your-own-algorithm/10770/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-grants-2-0-funding-stack-choose-your-own-algorithm/10770/1
+        Tue, 31 May 2022 23:03:21 +0000
+gov.gitcoin.co-post-10770-1
+The Grants 2.0 Funding Stack - Choose Your Own Algorithm
+      
+
+

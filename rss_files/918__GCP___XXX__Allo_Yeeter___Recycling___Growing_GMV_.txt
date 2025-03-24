@@ -1,0 +1,902 @@
+
+
+
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852
+    ## **Proposal Description**
+
+### Short Summary
+
+Allo Yeeter is a user-friendly tool built on top of the Allo Protocol that streamlines recurring, multi-address fund distributions (“Yeets”). Each Yeet creates a reusable Allo Pool, so recurring payments are quick and straightforward. Allo Yeeter integrate with popular Web3 event tools like POAP, allowing communities to distribute funds based on event attendance. By simplifying the distribution process, Allo Yeeter aims to drive significant GMV (Gross Merchandise Value) through the Allo Protocol, targeting $500K–$1M annually.
+
+### Impacted Stakeholders & Expected Outcomes
+
+* **Greenpill Stewards & Leads** : Easily manage Chapter/Guild payouts and project funding with minimal friction.
+* **Community Managers** : Automate recurring contributor payments via CSV or POAP-based lists.
+* **Grant Operators** : Simplify disbursing grants to multiple recipients, increasing transparency and efficiency.
+* **Web3 Event Organizers** : Airdrop funds to event attendees (POAP holders) and reward staff instantly.
+
+---
+
+## **Motivation**
+
+1. **Why We Are Submitting This Proposal**
+   - Existing on-chain tools often make recurring or event-based fund distributions tedious. By leveraging Allo’s reusable pools and integrating with event protocols (like POAP), Allo Yeeter reduces friction, increases user adoption, and drives more capital flow through Allo.
+2. **Potential Conflicts of Interest**
+   - The team behind Allo Yeeter is also passionate about the broader Web3 ecosystem, but there are no direct conflicts that compromise the integrity of this proposal.
+3. **Why the Citizen Grants Program Should Adopt This Proposal**
+   - **Community Engagement** : Encourages frequent, transparent funding of community members and initiatives.
+   - **Network Growth** : Brings new DAOs, event organizers, and grant operators onto the Allo Protocol.
+   - **Financial Sustainability** : Streamlined on-chain transactions expand the total GMV passing through Allo.
+4. **Recycling GMV & Building a Circular Economy**
+   - **Concrete Example** : The Greenpill Dev Guild alone disbursed over $50K in quarterly payouts. If these funds had been funneled through Allo, they would have added significantly to Allo’s on-chain volume.
+   - **Scaling Across Greenpill** : With 15 active Chapters and Guilds in the Greenpill Network, each handling up to $50K per quarter, we could see **$500K–$1M** in annual GMV if these payouts recycle back into the Allo ecosystem through Allo Yeeter.
+   - **Circular Economy Benefit** : By making it easy to repeatedly use Allo Pools, Allo Yeeter helps capital stay within the Allo ecosystem—reinforcing a self-sustaining loop of distributing, receiving, and reallocating funds on-chain.
+
+---
+
+## **Previous Work**
+
+Linked below is our **previous proposal** for Allo Yeeter, which has served as a foundation for our current approach:
+
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/8?u=oba-one
+
+---
+
+## **Specifications**
+
+### **Scope of Activities**
+
+1. **Core Features**
+   - **Reusable Allo Pools** : Every “Yeet” automatically creates or reuses an Allo Pool for future allocations.
+   - **POAP Integration** : Fetch attendee wallets for simple event-based payouts.
+   - **CSV Upload Support** : Allow bulk uploading of addresses and amounts.
+   - **Intuitive UI/UX** : Ensure frictionless onboarding and minimal steps to Yeet funds.
+2. **Technical Details**
+   - **Front-End Stack** : Next.js, TailwindCSS, RainbowKit, Viem.
+   - **Allo Protocol** : Custom strategy that ties each distribution to an Allo profile/pool.
+   - **Security & Reliability** : Code reviews, potential audits, and robust QA for stable mainnet deployment.
+
+3. **Deliverables and Artifacts**
+   - **[Product Requirements Doc](https://app.charmverse.io/greenpill-dev-guild/allo-yeeter-v1-0909261187116186)** 
+   - **[Figma Designs & Prototypes](https://www.figma.com/design/oZt0WBUNECuaZKJxhRKP5W/Allo-Yeeter?m=auto&t=nDx3rXHjkKf5NbjJ-6)**
+   - **[Workflow Diagrams](https://miro.com/app/board/uXjVLY6JirE=/?share_link_id=286094470048)**
+   -  **Open-Source Code** in [GitHub Repo](https://github.com/greenpill-dev-guild/allo-yeeter) and [Project Board](https://github.com/orgs/greenpill-dev-guild/projects/16)
+
+---
+
+## Roadmap and Milestones (3-Month Deadline)
+
+We plan to launch and iterate quickly, with a major showcase at **ETHDenver 2025** in late February.
+
+### Complete MVP (January/February 2025)
+
+* **Overview** : We will quickly start to integrate reusable pools and POAP lists to start internal testing in late January and early February to ensure stability by ETHDenver.
+* **Activities**
+  * Finalize key features (CSV uploads, POAP integration, Allo pool reusability).
+  * Conduct QA testing, fix bugs, and refine UI.
+  * Initiate outreach to 1–2 DAOs as pilot partners.
+
+* **Expected GMV Outcome** : Onboard at least 1–2 pilot communities, generating $20K–$30K in monthly disbursements.
+
+### Showcase at ETHDenver 2025 (February 2025)
+
+* **Overview** : During ETHDenver we will use Allo Yeeter in Greenpill activations and other regenerative events throughout the conference targeting the multitude of use cases and users.
+* **Activities**
+  * Live demos, workshops, and direct user feedback sessions at ETHDenver.
+  * Sign on 2–3 additional partners (DAOs, event organizers).
+  * Rapidly integrate user feedback, focusing on feature refinements.
+
+* **Expected GMV Outcome** : Grow total monthly volume to $25K–50K for community disbursements with an additional $50k-100k from ETHDenver activations setting the stage for further adoption post-ETHDenver.
+
+### Refine & Scale (March 2025)
+
+* **Overview** : After ETHDenver we will gather insights on our activations and measure how effective Allo Yeeter was for allocating capital.
+* **Activities**
+  * Implement post-ETHDenver feedback, finalize new partner onboarding.
+  * Deploy marketing push showcasing success stories from pilot users.
+  * Introduce analytics dashboards for tracking real-time GMV..
+
+* **Expected GMV Outcome** : Achieve $80K–100K monthly distribution volume, positioning Allo Yeeter on track for $500k–1 million annual GMV by year’s end.
+
+---
+
+## Benefits
+
+1. **High GMV Potential:** Allo Yeeter has the capacity to drive significant GMV growth, aligning with **Greenpill Dev Guild insights** that show quarterly payouts of $50K. When scaled across 15 active Greenpill chapters and guilds, this could generate substantial annual volume directly funneled through Allo, reinforcing its value as a core tool for recurring fund distribution.
+2. **Community & Ecosystem Growth:** Integrations with POAP and future event protocols attract a new wave of users to Allo.
+3. **Ease of Use:** Simple “Start Yeet” workflows, CSV uploads, and automatic Allo Pool creation reduce friction for repeated fund distributions.
+
+---
+
+## Drawbacks
+
+1. **Dependence on Allo Infrastructure:** If Allo experiences downtime or architectural changes, Allo Yeeter is directly affected.
+2. **Adoption Curve:** While the UI is designed to be simple, DAOs and event organizers may need initial guidance to fully switch to a new tool.
+3. **Security & Trust:** Winning over large treasuries requires thorough code audits and proven reliability.
+
+---
+
+## Budget Overview:
+
+### Development
+* **Description**
+  * Finalize MVP.
+  * Post-ETHDenver fixes & feature updates
+  * Ongoing technical support for pilot users
+* **Amount** : .$16,000
+  * **Product Management** : $3,000 to oversee development cycles, coordinate feedback, and align priorities.
+  * **Design** : $3,000 for UI/UX improvements and refining front-end workflows.
+  * **Engineering** : $10,000 for full-stack development (front-end and back-end integrations).
+* **GMV Impact** : A polished, stable product attracts new partners, ensuring recurring monthly volumes.
+
+### BizDev & Partnerships
+* **Description** :
+  * Direct outreach to DAOs & event organizers
+  * ETHDenver networking to secure high-volume treasuries
+* **Amount** : $5,000
+  * **Business Development Leads** : $4,000 for identifying partners, running meetings, and maintaining relationships.
+  * **Documentation** : $1,000 for creation of onboarding materials, use case decks, and pitch content.
+* **GMV Impact** : Each partnership can funnel tens of thousands monthly, pivotal to reaching $500k-1M annual GMV.
+
+### Marketing & Outreach
+* **Description** :
+  * Demos & workshops (esp. at ETHDenver)
+  * Case studies, success stories
+  * User guides & walkthroughs
+* **Amount** : $4,000
+  * **Graphic Designers** : $1,500 for creating visual assets, presentations, and case studies.
+  * **Engagement Coordinator** : $1,500 for hosting workshops, live Q&A sessions, and guiding user onboarding.
+  * **Business Development Leads** : $1,000 for organizing campaigns and coordinating ETHDenver marketing efforts.
+* **GMV Impact** : Showcasing real user success encourages more DAOs and communities to adopt Allo Yeeter.
+
+### Contingency & Audit
+* **Description** :
+  * Code audits
+  * Bug bounties
+  * Unforeseen user requests or security updates
+* **Amount** : $3,000
+  * **External Auditors** : $2,000 for third-party security audits and code reviews.
+  * **Bug Bounties** : $1,000 for incentivizing internal and external testers.
+* **GMV Impact** : Secure tooling gives organizations with large treasuries confidence to move significant funds, directly increasing GMV potential.
+
+### Analytics & Reporting
+* **Description** :
+  * Build GMV tracking dashboards
+  * Data-driven outreach campaigns
+* **Amount** : $2,000
+  * **Researcher/Data Analyst** : $2,000 for building dashboards, analyzing GMV data, and creating actionable insights.
+* **GMV Impact** : Real-time performance metrics help identify and capitalize on top GMV opportunities (e.g., large DAOs, popular event organizers).
+
+
+**Total** : $30,000
+
+---
+
+## Measures of Success & KPIs
+
+1. **Monthly GMV**
+   - **Target:** $80–100K by March 2025.
+   - **Annual Objective** : $1–2 million by end of 2025 (with potential to hit $500K–1M just within the Greenpill Network alone).
+2. **Number of Yeets Completed**
+    - **Target** : At least 50 Yeets completed across DAOs, events, and community initiatives by March 2025.
+    - **Annual Objective** : Grow to over 200 Yeets by year-end to establish Allo Yeeter as a standard tool for recurring fund distributions.
+3. **Active Pools & Partnerships**
+    - **Target** : Onboard at least 5 unique DAOs, guilds, or event organizers actively using Allo Yeeter by March 2025.
+   - **Annual Objective** : Expand to 20+ active partnerships across DAOs, events, and community organizations by December 2025
+4. **User Satisfaction & Retention**
+   - **Target** : Achieve a retention rate of 75%+ by March 2025.
+   - **Annual Objective** : Retain at least 75% of active users while steadily improving user satisfaction through iterative updates and support.
+
+---
+
+## Non-Financial Requirements
+
+1. **Marketing & Community Support:** Inclusion in Gitcoin/Allo newsletters, social media, and community calls.
+2. **Technical Consultation:** Periodic syncs with the Allo Protocol team to ensure seamless integration.
+3. **Ecosystem Access:** Introductions to relevant DAO communities, event organizations, or grant councils to accelerate adoption.
+
+---
+
+## Conclusion
+
+Allo Yeeter is poised to drive substantial GMV through the Allo Protocol by providing a simple, reusable, and event-friendly fund distribution solution. Over a focused 3-month period, culminating in a major ETHDenver demo, our team will onboard key DAOs and event organizers, ultimately targeting **$1–$2 million** in annual on-chain flows. Moreover, **existing community payout data** from the Dev Guild and Greenpill chapters shows a path to **$500K–$1M** in annual volume simply by recycling these payouts through Allo. With a modest $30,000 budget, we will aggressively pursue partnerships, refine the user experience, and build the trust needed for recurring multi-address fund distributions at scale, thus creating a **circular economy** where funds are continually recycled within the Allo ecosystem.
+
+*Thank you for your consideration in supporting Allo Yeeter!*
+Wed, 05 Feb 2025 08:37:31 +0000
+📝 Citizen Grants
+
+
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+cauetomaz
+
+            <p>Hey Owocki,</p>
+<p>Appreciate the deep dive and the push for clarity.</p>
+<aside class="quote no-group" data-username="owocki" data-post="3" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/14140_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>do we need to use allo protocol here? since allo is pivoting from protocol first to category first, should allo yeeter do the same? why not just strip away the onchain deployments and just do the distribution in memory if the ux is better that way? (eg no contracts to deploy)</p>
+</blockquote>
+</aside>
+<p>I agree that we <strong>need</strong> to be sharp on product-market fit, but I also want to <strong>challenge some assumptions about what makes Allo Yeeter valuable</strong> and why just focusing on “category-first” might <strong>oversimplify</strong> what actually drives long-term success in Web3.</p>
+<aside class="quote no-group" data-username="owocki" data-post="3" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/14140_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>what differentiates yeeter from existing bulk sending apps like multisender? are there new things that the allo ecosystem can bring along that are important to the market?</p>
+</blockquote>
+</aside>
+<aside class="quote no-group quote-modified" data-username="owocki" data-post="7" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/14140_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>my gut is that the way to go forward is to add more simplicity and utility, not more complexity or network-effects dependant utility. but i’m happy to go another way if we have done real research on a customer/use case for this build and they are demanding something different…</p>
+<blockquote>
+<ul>
+<li>Multisender - Does the job but UI lacks refinement can only use CSV and is tedious, already Yeeter improves upon this with nice input to add addresses if just a few people.</li>
+</ul>
+</blockquote>
+<p>I feel like we are overly dismissive of multisender. <a href="https://etherscan.io/address/0x88888c037df4527933fa8ab203a89e1e6e58db70#tokentxns" rel="noopener nofollow ugc">Look at how much volume it does</a>! We should study where it’s demand comes from …</p>
+<blockquote>
+<ul>
+<li>Safe Batch Transactions - At times works well, but many times will run into issues and the transaction will need to be replaced. Nice that you can do different tokens of course but typically that when issues arise.</li>
+</ul>
+</blockquote>
+<p>same with safe! it has a TON of adoption…</p>
+</blockquote>
+</aside>
+<p>You brought up <strong>Multisender’s volume</strong>, and yeah, we can’t ignore that—it’s moving a lot of transactions. But the reality is:</p>
+<ul>
+<li><strong>Their UX is a disaster</strong>—too many half-baked features, constant crashes, and <strong>they still haven’t even fixed their analytics tab with Dune</strong>.</li>
+<li><strong>Their fees are insane and unpredictable.</strong> They literally have a cost <strong>calculator</strong> that <strong>still doesn’t give you the right price because the costs change!</strong> <img src="https://gov.gitcoin.co/images/emoji/twitter/joy.png?v=12" title=":joy:" class="emoji" alt=":joy:" loading="lazy" width="20" height="20"></li>
+<li><strong>They launched in April 2022, during peak airdrop season.</strong> That was perfect timing, but today’s market is different.</li>
+</ul>
+<p>This is where their demand comes from.</p>
+<p>In my opinion, if we <strong>chase the fund primitive</strong> (token batch distribution) ignoring the network effects who brought us here, we gonna be <strong>following</strong> 2022’s trend instead of <strong>building the next generation of funding allocation mechanisms</strong>.<br>
+Which goes <strong>beyond</strong> just sending tokens with Allo, right? Its about <strong>funding efficiency</strong> in a way that <strong>Multisender never thinked about</strong> .</p>
+<aside class="quote no-group quote-modified" data-username="owocki" data-post="5" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/14140_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>(fyi for everyone following the chat, we are pivoting from being protocol first for allo bo being category first. more here <a href="https://gov.gitcoin.co/t/allo-2-1-2-2/19724">Allo 2.1 =&gt; 2.2 </a>)</p>
+<aside class="quote no-group" data-username="c-georgen" data-post="4" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/c-georgen/48/13743_2.png" class="avatar"> c-georgen:</div>
+<blockquote>
+<p>The things that make up a web3 category fundamentally benefit from being composable with each other.</p>
+</blockquote>
+</aside>
+<p>if the allo yeeter protocol is stateless, i dont see any reason it has to be onchain. the reason defi stuff like uniswap/yearn has to be onchain is that they are stateful and accrue network effects through liqudity.</p>
+<p>i think that allo yeeter being onchain introduces a lot more dev costs (contract deployment, auditing, etc) user costs (have to deploy multiple contracts in v1) and complexity (look at all these components)… so i think we should think through whether the juice is worth the squeeze.</p>
+</blockquote>
+</aside>
+<p>The <strong>“protocol-first” vs. “category-first”</strong> discussion is something i’ve been thinking about a lot. <strong>There’s no doubt that stripping away on-chain deployments would make UX smoother</strong>, and for a stateless tool like Yeeter, that does make sense in many cases. But, we’re not talking about a full platform yet, we’re still talking about a modular token batch sending tool. Since contracts are done, we dont need much to start interating, and the costs, they can be reduced if we choose to dedicate enough time defining the problem we want to solve.<br>
+So, i agree that <strong>we need to think strategically about squeezing this juice</strong>, but <strong>network effects are the reason we’re here in the first place.</strong> If we <strong>only</strong> chase immediate market fit without thinking about how value aggregates over time, we risk building something that <strong>works today but has no real future growth engine</strong>.</p>
+<ul>
+<li><strong>Gitcoin didn’t just let people donate</strong>—it created <strong>quadratic funding and reputation-based contributions.</strong> - things that can only exists in Web3 and are the basic set for the regen category until GG22 (excited for multi-mechanisms in GG23 <img src="https://gov.gitcoin.co/images/emoji/twitter/stuck_out_tongue_winking_eye.png?v=12" title=":stuck_out_tongue_winking_eye:" class="emoji" alt=":stuck_out_tongue_winking_eye:" loading="lazy" width="20" height="20">).</li>
+</ul>
+<p>As <a class="mention" href="https://gov.gitcoin.co/u/c-georgen">@c-georgen</a> pointed out, the <strong>biggest advantage of Web3 categories is composability</strong>, and yes, js apps can be composable too, but <strong>Web3 public goods are a key vertical where funding needs to be more accountable, efficient, and impactful.</strong> <strong>Yeeter is perfectly positioned</strong> to capture that need.</p>
+<p><strong>Our current design for Allo Yeeter is fully on-chain</strong>  because we’re aiming to provide a straightforward tool <strong>to fund Real World Impact</strong> without excessive costs or feature overload. There is <strong>a clear problem being solved</strong>, not a solution looking for a problem. While tools like <strong>Multisender</strong> fall short in many aspects, like <strong>user experience, feature overload</strong>, and <strong>community</strong> (because they only have <strong>consumers</strong>), <strong>Allo Yeeter</strong> on the contrary, without launching, <strong>already have commitments from different communities</strong> (perks of Gitcoin Network Effects). So <strong>i agree that being fully on-chain makes harder to hit a market fit, but, since integrations like POAPs and Hypercerts enhances engagement and reputation, by linking funding to actual community involvement and real world actions</strong>, it’s just a matter of time for this decision pays it self.</p>
+<hr>
+<aside class="quote no-group" data-username="owocki" data-post="7" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/14140_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>i worry that this product/app remains a solution looking for a problem and that we do not understand our customer yet.</p>
+<p>a few probing questions:<br>
+0. are the greenpill guilds just offering to bootstrap this to be nice? or do they have actual demand for a tool like this?</p>
+<ol>
+<li>do you have traction outside greenpill guilds? if so, with who? if not, why do you think only GPN chapters have signed on?</li>
+<li>what is the use case for allo yeeter (what is the <a href="https://jobs-to-be-done.com/jobs-to-be-done-a-framework-for-customer-needs-c883cbf61c90" rel="noopener nofollow ugc">job to be done </a>?), and why would i use it over something that already exists like multisend.app? eg why would i switch?</li>
+</ol>
+</blockquote>
+</aside>
+<p>We’re doubling down <strong>going after Gitcoin’s existing funding cycles</strong> and <strong>becoming the go-to tool for fund distribution on Web3 Public Goods Space.</strong></p>
+<p><strong>The facts:</strong></p>
+<ul>
+<li><strong>Gitcoin already moves millions every quarter</strong>—this isn’t theoretical demand, it’s recurring capital flow.</li>
+<li><strong>Grantees from other public goods funding orgs</strong> like Giveth, Octant, Celo, ReFi DAO, Regen Coordination, and Optimism <strong>also need fund allocation tools.</strong></li>
+<li><strong>Many of these orgs (Greenpill, Celo, ReFi DAO) need proof of real-world impact.</strong> That’s where our proposal for <strong>POAP integration</strong> is putting up the flag - <strong>funding what matters</strong> to them and making Yeeter more than just a “token sender”.</li>
+<li><strong>DAOs like Bankless and ENS already use POAPs for governance tracking.</strong></li>
+<li><strong>Optimism’s RetroPGF model already funds projects based on past impact.</strong></li>
+</ul>
+<p>If Yeeter becomes <strong>the go-to tool for Gitcoin grantees, Giveth rounds, or Regen projects,</strong> we’re automatically in the flow of real-world impact funding. From there, <strong>adoption compounds, integrations become obvious, and we start playing on a much larger scale.</strong></p>
+<hr>
+<aside class="quote no-group quote-modified" data-username="owocki" data-post="7" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/14140_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>…<br>
+2. what is the use case for allo yeeter (what is the <a href="https://jobs-to-be-done.com/jobs-to-be-done-a-framework-for-customer-needs-c883cbf61c90" rel="noopener nofollow ugc">job to be done </a>?), and why would i use it over something that already exists like multisend.app? eg why would i switch?</p>
+<ul>
+<li>note: <a href="https://bothsidesofthetable.com/your-product-needs-to-be-10x-better-than-the-competition-to-win-here-s-why-6168bab60de7" rel="noopener nofollow ugc">i think ppl dont switch for something 10% better, they switch for something 10x better </a></li>
+<li>(one hunch i have for a 10x reason why ppl might switch from a multisender is if they could easily toggle between (1) batch transfers (2) merkle root withdrawers (3) drips (4) superfluid (5) sablier (6) other distribution mechanisms. but this is just a hunch).</li>
+</ul>
+</blockquote>
+</aside>
+<p>If we want <strong>10x in this space, we need to move from 0 to 1</strong> first, by <strong>becoming a default tool</strong>, embedding <strong>Yeeter where funding already happens</strong>. Once we <strong>own</strong> that niche, <strong>we’re in a perfect position to expand into the broader Web3 capital allocation space</strong> - which seems to be <strong>one of the hottest sectors in 2025</strong> according to <a href="https://www.coindesk.com/business/2025/01/29/former-binance-labs-makes-first-investment-following-zhao-s-return-report" rel="noopener nofollow ugc">binance labs</a>. Binance’s ex-CEO <strong>CZ just invested $16M in Sign</strong>, a startup focused on <strong>improving airdrop distribution <strong>in a more reputation-based way.</strong>.</strong> The fact that a major investor is putting $16M, <strong>validates what we already know — fund distribution needs better infrastructure,</strong> and is a strong signal that <strong>capital allocation tools still can have a massive upside, beyond bulking transactions.</strong><br>
+So, let’s make Yeeter <strong>ecosystem-first and build something that outlasts market trends.</strong></p>
+<p>Thanks again for the thoughtful feedback, appreciate the push to clarify our thinking. We might not have communicated some of our key differentiators as clearly as we should have, and that’s on us, but i’m glad to see this discussion evolving and putting Yeeter in the right direction!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/9
+        Wed, 05 Feb 2025 08:37:31 +0000
+gov.gitcoin.co-post-19852-9
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+      
+
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+EvanHudson
+
+            <p>Hi Kevin,</p>
+<p>To answer your first question, about how to get initial traction for Yeeter:</p>
+<p>Our idea was to reach out to Regen Web3 friends/allies/fellow travelers (ReFiDAO, Octant, Optimism/Nouns/Vrbs, Charmverse, Giveth, Regen, Thrive Protocol, Funding the Commons, and so on) and propose to them that they use Yeeter for incentivizing participation in their activities (twitter spaces, block parties, IRL events, and so forth).</p>
+<p>I lack the business acumen to be able to put numbers on how much money this could potentially bring through Allo Protocol on a monthly or yearly basis, but $10k or $50k or even $100k yearly doesn’t strike me as impossible if Yeeter gets some traction, especially if it becomes a “default tool” in the niche, similar to how KarmaGap became the default tool for tracking grant progress.</p>
+<p>As far why someone would use Allo Yeeter instead of Multisender or another tool- I don’t think the answer to this question will be found in the tech underlying Yeeter, but rather the marketing and business development we’d hypothetically do to promote it.</p>
+<p>In plain language: people wouldn’t use Yeeter in this initial stage because it represents sophisticated technology, but because we talked to them and made them aware of the tool and it fits their needs and they agreed to use it.</p>
+<p>I’m no Madison Avenue ad exec but I gather that marketing can be powerful, and if we spin Yeeter as the coolest, most Regen, GreenPilled way to send funds quickly then that might be enough to get people to use it.</p>
+<p>To be clear, I’m just referring to the initial stage, like the first 6 months or so. Regen Web3 is a small world, blockchain is much bigger than that, so it would be counterproductive to limit our focus unnecessarily. But since we have the best contacts in Regen Web3, that is a logical starting point.</p>
+<p>In a later stage (eg, late 2025/early 2026), after getting Yeeter on its feet, I can see three promising strategies for getting establishing Yeeter as the go-to tool for quick and easy capital allocation:</p>
+<p>We could seek to make Yeeter to become the tool of choice for people seeking to make payments attached to POAPs or hypercerts- Yeeter could add functionality to Web3 tools that already are gaining traction.</p>
+<p>(We’re proposing to integrate POAPs, ENS and Hypercerts if this funding goes through, and are meeting with the POAP team tomorrow to start that process).</p>
+<p>Another angle we could take would be to piggy-back on GitCoin and Allo’s name-brand recognition as blue chip Regen Web3 projects and encourage Yeeting by GitCoin projects/round leaders and Allo builders.</p>
+<p>(“Hey GitCoin Grantees! Paying your volunteers? Yeet! Hosting Twitter spaces? Yeet! Hosting parties? Yeet!”)</p>
+<p>Adjacent to this strategy would be emphasizing the “Allo” in “Allo Yeeter,” basically selling Allo Yeeter as an entry point into Allo that fulfills a function many different entities are likely to need.</p>
+<p>(“Want to get involved with Allo? Start by sending a few Yeets!”)</p>
+<p>Users could learn more about Allo by using Yeeter- each stage in the Yeet process could be accompanied by “click here to learn more” where users learn about the different parts of Allo Protocol- pool creation, allocation strategies, and finally learning about Allo.Capital and other projects in the Allo ecosystem.</p>
+<p>A third strategy might be to market it in the nonprofit tech world, outside the Web3 bubble, as a simple way to send funds, reward volunteers or distribute aid, taking the financial inclusion angle- something like what Giveth is doing with Unicorn Wallet for ETH Denver.</p>
+<p>However, those three strategies- framing Yeeter as a simple tool for Web3 newcomers, marketing Yeeter as the tool of choice for payments on HyperCerts or POAPs, and marketing Yeeter to GitCoin projects/as an entry point into Allo Protocol- are all hypothetical at this stage.</p>
+<p>The first step will be getting initial users, and the way we’ll do that is by leveraging GreenPill Network’s existing social capital, in other words using our network- asking our friends to do some Yeeting.</p>
+<p>**Summary: **<br>
+<strong>Who are Yeeter’s (initial) customers?</strong><br>
+Regen Web3-aligned blockchain orgs like Octant, Optimism, ThriveProtocol, CharmVerse, Presenti, Giveth, GitCoin, projects who have received funding through GitCoin or run funding rounds on Gitcoin, entities who already host regular events</p>
+<p>Later, the community managers of blockchain foundations, centralized exchanges, stablecoin protocols, large DAOs, grant programs, DeFi protocols, IRL Web3 conference organizers, would present likely candidates for business development.</p>
+<p><strong>Where is their money coming from?</strong><br>
+It varies, but generally (as I understand it) money in blockchain comes from fees or yield from pooled assets.<br>
+Yeeter’s revenue would come from bigger projects’ marketing funds- money which has been earmarked for growing communities and incentivizing community participation.</p>
+<p><strong>What is (the customer demographic)'s job?</strong><br>
+We’d initially target community managers, event organizers and grant funders- people whose job it is to get people (developers, investors, and other nerds) interested in whatever they are selling.<br>
+Giving away token rewards is one common way of accomplishing that.<br>
+Yeeter makes this customer demographic’s job easier by sending those rewards simply and easily.</p>
+<p><strong>Why would they use Yeeter instead of some other tool?</strong><br>
+Because Yeeter is the coolest, easiest, most GreenPilled way to send payments, and because it’s integrated with other things they are already using (e.g. POAPs, Hypercerts, ENS, etc etc).</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/8
+        Tue, 04 Feb 2025 22:17:02 +0000
+gov.gitcoin.co-post-19852-8
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+      
+
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+owocki
+
+            <p>thanks for the thoughtful retrospective and proposal!</p>
+<blockquote>
+<p>The future implementation would reuse profiles and from a user experience feel more like you’re creating Yeet lists.</p>
+</blockquote>
+<p>are we sure we need profiles at all?   EOA wallets are an order of magnitude simpler and more adopted.</p>
+<p>and i think investing profiles only matters if we are post product market fit and pursuing a strategy of scaling via building network effects. i wonder what profile/identity systems have the most network effects already and are not starting from zero, that we can ride the growth of.</p>
+<p>theres an old startup saying <a href="https://cdixon.org/2015/01/31/come-for-the-tool-stay-for-the-network">come for the tool, stay for the network.</a>. i think we need utility for the yeeter before we build foir network effects.</p>
+<p>my gut is that the way to go forward is to add more simplicity and utility, not more complexity or network-effects dependant utility.  but i’m happy to go another way if we have done real research on a customer/use case for this build and they are demanding something different…</p>
+<blockquote>
+<ul>
+<li>Multisender - Does the job but UI lacks refinement can only use CSV and is tedious, already Yeeter improves upon this with nice input to add addresses if just a few people.</li>
+</ul>
+</blockquote>
+<p>I feel like we are overly dismissive of multisender.  <a href="https://etherscan.io/address/0x88888c037df4527933fa8ab203a89e1e6e58db70#tokentxns">Look at how much volume it does</a>!  We should study where it’s demand comes from …</p>
+<blockquote>
+<ul>
+<li>Safe Batch Transactions - At times works well, but many times will run into issues and the transaction will need to be replaced. Nice that you can do different tokens of course but typically that when issues arise.</li>
+</ul>
+</blockquote>
+<p>same with safe! it has a TON of adoption…</p>
+<aside class="quote no-group" data-username="Oba-One" data-post="6" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/oba-one/48/11524_2.png" class="avatar"> Oba-One:</div>
+<blockquote>
+<p>Within the Greenpill Network we have commitments from:</p>
+<ul>
+<li>Greenpill Dev Guild</li>
+<li>Greenpill Writers Guild</li>
+<li>Greenpill Gov Guild</li>
+<li>Greenpill Nigeria</li>
+<li>Greenpill Brasil</li>
+<li>Greenpill Ottawa</li>
+<li>Greenpill California</li>
+<li>CFCE</li>
+</ul>
+<p>We’re actively talking to more Chapters and Allo builders to use Yeeter for payouts. Lastly we’ve reached out to POAP to get their support on the project and be involved in product development.</p>
+</blockquote>
+</aside>
+<p>i worry that this product/app remains a solution looking for a problem and that we do not understand our customer yet.</p>
+<p>a few probing questions:<br>
+0. are the greenpill guilds just offering to bootstrap this to be nice? or do they have actual demand for a tool like this?</p>
+<ol>
+<li>do you have traction outside greenpill guilds?  if so, with who?  if not, why do you think only GPN chapters have signed on?</li>
+<li>what is the use case for allo yeeter (what is the <a href="https://jobs-to-be-done.com/jobs-to-be-done-a-framework-for-customer-needs-c883cbf61c90">job to be done</a>?), and why would i use it over something that already exists like multisend.app? eg why would i switch?
+<ul>
+<li>note: <a href="https://bothsidesofthetable.com/your-product-needs-to-be-10x-better-than-the-competition-to-win-here-s-why-6168bab60de7">i think ppl dont switch for something 10% better, they switch for something 10x better</a></li>
+<li>(one hunch i have for a 10x reason why ppl might switch from a multisender is if they could easily toggle between (1) batch transfers (2) merkle root withdrawers (3) drips (4) superfluid (5) sablier (6) other distribution mechanisms. but this is just a hunch).</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>i am thankful for our dialogue and looking forward to figuring out a path forward.</p>
+<p>here is i think a way we can focus the conversation from here:</p>
+<p>what would have to be true to have $10k, 50k, $100k in credible customer committments to use the next version of the app?  who are those customers, where is their money coming from, what is their job to be done, and why are they using yeeter over multisender?</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/oba-one">@Oba-One</a> <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a> <a class="mention" href="https://gov.gitcoin.co/u/sejalrekhan">@sejalrekhan</a> pls lmk if u disagree. would value ur perspectives.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/7
+        Thu, 30 Jan 2025 05:23:55 +0000
+gov.gitcoin.co-post-19852-7
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+      
+
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+Oba-One
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> for taking the time to reply to our proposal, I think since the response with discussions in Allo Capital it has become more clear how to respond and how the proposal can proceed with or without Allo Protocol.</p>
+<aside class="quote no-group" data-username="owocki" data-post="3" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/14140_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>do we need to use allo protocol here? since allo is pivoting from protocol first to category first, should allo yeeter do the same? why not just strip away the onchain deployments and just do the distribution in memory if the ux is better that way? (eg no contracts to deploy)</p>
+</blockquote>
+</aside>
+<p>Technically no we could build this with existing onchain primitives like how <a href="https://multisender.app/#welcome" rel="noopener nofollow ugc">multisender</a> functions. However the benefits of Allo Protocol are the registry and network effects. Given Allo Yeeter is focusing on being a tool for community/project payouts being able to tie allocation to a profile enables evaluating the quality of “Yeets” being sent and can tap into tools like Karma Gap as they expand their toolset to capture and evaluate impact. The networking aspect already touched upon with Karma Gap is the ability to easily extend Allo Yeeter with future strategies and tooling that progresses the registry. Yes we could build this without Allo Protocol but to me that would be leaving a great community of builder building on the protocol and stepping back out to the wild wild west of how we can build Yeeter. I was hesitant at 1st around the value of Allo for Yeeter but since learning more about the  protocol and builders supporting it I’m bullish on it being the right protocol to build upon and help Yeeter and Allo Capital and Protocol scale.</p>
+<p>I would like to acknowledge the current version of Allo Yeeter is not optimized for the use case we want to build, every Yeet is ephemeral and requires you to create a profile and deploy a strategy. The future implementation would reuse profiles and from a user experience feel more like you’re creating Yeet lists. So as a project manager you could scope Yeet list based on project 1, 2, 3 and an event based on POAP list then on a recurring basis do payouts.</p>
+<p><strong>Other Alternatives</strong></p>
+<ul>
+<li>Multisender - Does the job but UI lacks refinement can only use CSV and is tedious, already Yeeter improves upon this with nice input to add addresses if just a few people.</li>
+<li>Safe Batch Transactions - At times works well, but many times will run into issues and the transaction will need to be replaced. Nice that you can do different tokens of course but typically that when issues arise.</li>
+</ul>
+<aside class="quote no-group" data-username="owocki" data-post="3" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/14140_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>where will this $80k-$100k/mo come from?? do have verbal committments to use this, if so by whom?</p>
+</blockquote>
+</aside>
+<p>Last year across the Grant space (<a href="https://www.gitcoin.co/blog/reflecting-on-2024-a-year-of-growth-innovation-and-community" rel="noopener nofollow ugc">Gitcoin/Allo</a>, <a href="https://blog.giveth.io/a-year-of-giving-2024-milestones-recap-5d1ed3becf42" rel="noopener nofollow ugc">Giveth</a>, <a href="https://blog.octant.build/our-year-in-review-octant-2/" rel="noopener nofollow ugc">Octant</a>) over $15 million was distributed not counting blockchains like (Ethereum, Optimism, Arbitrum &amp; Celo) to over 2000 projects. We can get a slice of the 15 million by projects yeeting a small percentage of their Grant disbursement for payouts and activities.</p>
+<p>Within the Greenpill Network we have commitments from:</p>
+<ul>
+<li>Greenpill Dev Guild</li>
+<li>Greenpill Writers Guild</li>
+<li>Greenpill Gov Guild</li>
+<li>Greenpill Nigeria</li>
+<li>Greenpill Brasil</li>
+<li>Greenpill Ottawa</li>
+<li>Greenpill California</li>
+<li>CFCE</li>
+</ul>
+<p>We’re actively talking to more Chapters and Allo builders to use Yeeter for payouts. Lastly we’ve reached out to POAP to get their support on the project and be involved in product development.</p>
+<p>My final thoughts are Allo Yeeter does not need to be defined by Allo Protocol it should define itself on the ability to easily send fund for community/project activities. I believe Allo Protocol helps by tapping into the Network of builders and tools that enhance Allo Yeeter and its utility. Without Allo Protocol, Yeeter will need to carve it own space and it’s possible but imo a much harder journey.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/6
+        Thu, 30 Jan 2025 03:40:21 +0000
+gov.gitcoin.co-post-19852-6
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+      
+
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+owocki
+
+            <p>(fyi for everyone following the chat, we are pivoting from being protocol first for allo bo being category first.  more here <a href="https://gov.gitcoin.co/t/allo-2-1-2-2/19724" class="inline-onebox">Allo 2.1 =&gt; 2.2</a>)</p>
+<aside class="quote no-group" data-username="c-georgen" data-post="4" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/c-georgen/48/13743_2.png" class="avatar"> c-georgen:</div>
+<blockquote>
+<p>The things that make up a web3 category fundamentally benefit from being composable with each other.</p>
+</blockquote>
+</aside>
+<p>arent js apps composable too?</p>
+<p>if the allo yeeter protocol is stateless, i dont see any reason it has to be onchain.   the reason defi stuff like uniswap/yearn has to be onchain is that they are stateful and accrue network effects through liqudity.</p>
+<p>i think that allo yeeter being onchain introduces a lot more dev costs (contract deployment, auditing, etc) user costs (have to deploy multiple contracts in v1) and complexity (look at all these components)… so i think we should think through whether the juice is worth the squeeze.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/26a65378cca1abb725a48a135d3f280d8b644beb.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/26a65378cca1abb725a48a135d3f280d8b644beb" title="Screenshot 2025-01-13 at 5.54.05 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/26a65378cca1abb725a48a135d3f280d8b644beb_2_690x457.png" alt="Screenshot 2025-01-13 at 5.54.05 PM" data-base62-sha1="5vUuJW7YjETT9TO4qlIGRVsiUQz" width="690" height="457" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/26a65378cca1abb725a48a135d3f280d8b644beb_2_690x457.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/26a65378cca1abb725a48a135d3f280d8b644beb_2_1035x685.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/26a65378cca1abb725a48a135d3f280d8b644beb_2_1380x914.png 2x" data-dominant-color="1A1D21"></a></div><p></p>
+<p>note: i will allow that there might be valuable to having SOME onchain componentss at the end of the payout.  esp having multiple distribution options like (1) token transfers (2) merkle drops (3) cross chain xfrs (4) radicle drips/superfluid etc integration</p>
+<p>would be curious what <a class="mention" href="https://gov.gitcoin.co/u/gnomadic">@gnomadic</a> or <a class="mention" href="https://gov.gitcoin.co/u/thelostone-mc">@thelostone-mc</a> or other smart technical ppl think tho!</p>
+<p>(note: as a steward, im not saying my vote hinges on this.  this is consider feedback not “MUST DO” feedback, i would defer to the talented technical ppl who show up here say)</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/5
+        Tue, 14 Jan 2025 00:55:38 +0000
+gov.gitcoin.co-post-19852-5
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+      
+
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+c-georgen
+
+            <aside class="quote no-group" data-username="owocki" data-post="3" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/14140_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>do we need to use allo protocol here? since allo is pivoting from protocol first to category first, should allo yeeter do the same? why not just strip away the onchain deployments and just do the distribution in memory if the ux is better that way? (eg no contracts to deploy)</p>
+</blockquote>
+</aside>
+<p>IMO it’s the question of how a web3 category differs from a web2 or legacy category. The things that make up a web3 category fundamentally benefit from being composable with each other. DeFi is the category that it is because one protocol can build on another and everyone can reference existing data and history. ERC20 tokens, DAI, Uniswap, etc., each of these helped create DeFi as a category because they were protocols and primitives that could be leveraged one to the next on-chain.</p>
+<p>So even being category first in web3 necessarily assumes some level of on-chain protocol and common primitives.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/4
+        Mon, 13 Jan 2025 22:55:13 +0000
+gov.gitcoin.co-post-19852-4
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+      
+
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+owocki
+
+            <aside class="quote no-group" data-username="Oba-One" data-post="1" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/oba-one/48/11524_2.png" class="avatar"> Oba-One:</div>
+<blockquote>
+<ul>
+<li><strong>Reusable Allo Pools</strong> : Every “Yeet” automatically creates or reuses an Allo Pool for future allocations.</li>
+</ul>
+</blockquote>
+</aside>
+<p>do we need to use allo protocol here?  since allo is pivoting from protocol first to category first, should allo yeeter do the same? why not just strip away the onchain deployments and just do the distribution in memory if the ux is better that way?  (eg no contracts to deploy)</p>
+<aside class="quote no-group" data-username="Oba-One" data-post="1" data-topic="19852">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/oba-one/48/11524_2.png" class="avatar"> Oba-One:</div>
+<blockquote>
+<ul>
+<li><strong>Expected GMV Outcome</strong> : Achieve $80K–100K monthly distribution volume, positioning Allo Yeeter on track for $500k–1 million annual GMV by year’s end.</li>
+</ul>
+</blockquote>
+</aside>
+<p>where will this $80k-$100k/mo come from??  do have verbal committments to use this, if so by whom?</p>
+<p>what differentiates yeeter from existing bulk sending apps like multisender?    are there new things that the allo ecosystem can bring along that are important to the market?</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/3
+        Mon, 13 Jan 2025 02:12:05 +0000
+gov.gitcoin.co-post-19852-3
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+      
+
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+cauetomaz
+
+            <p>Hello Gitcoin Community! <img src="https://gov.gitcoin.co/images/emoji/twitter/wave.png?v=12" title=":wave:" class="emoji" alt=":wave:" loading="lazy" width="20" height="20"></p>
+<p>First congratulations to the Allo Yeeter team for the incredible work everyone did, and thank you Gitcoin for allowing this experiment to run! It’s been an eye-opening experience, and a great preparation to start a more deep exploration on Allo’s modular architecture.</p>
+<p>So, to contribute to the discussion, I’d like to share <strong>two simple use cases</strong> where <strong>Allo Yeeter POAP integration</strong> could make a meaningful impact for GreenPill Brasil:</p>
+<ol>
+<li>
+<p><strong>Rewarding Workstream Participation:</strong><br>
+In GreenPill Brasil and in the Greenpill Dev Guild, we currently use POAPs to track attendance in workstream or community meetings. Now with this new POAP feature  we can seamlessly retrieve participant addresses and distribute rewards or payouts directly. This can save a lot of time, and simplify the workflows to ensure that contributions are being recognized.</p>
+</li>
+<li>
+<p><strong>Supporting Community Task Forces:</strong><br>
+GreenPill Brasil has a campaign focused on supporting community task forces with funds. These funds are currently allocated through a direct proposal flow on Charmverse, but in the future, Allo Yeeter could enable us to compensate all participants in these initiatives more effectively. For example, POAPs could be claimed on-site during activities like agroforestry events, citizen science projects, or trash pickups, and rewards could be distributed retroactively to everyone involved.</p>
+</li>
+</ol>
+<p>I think Allo Yeeter has the potential to become a core element on Allo Starter Kit, creating streamlined integrations and workflows for projects that are building on top of Allo.</p>
+<p>Looking forward to hear the community feedback and excited to see how this evolves!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/2
+        Mon, 13 Jan 2025 00:10:21 +0000
+gov.gitcoin.co-post-19852-2
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+      
+
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+Oba-One
+
+            <h2><a name="proposal-description-1" class="anchor" href="https://gov.gitcoin.co#proposal-description-1"></a><strong>Proposal Description</strong></h2>
+<h3><a name="short-summary-2" class="anchor" href="https://gov.gitcoin.co#short-summary-2"></a>Short Summary</h3>
+<p>Allo Yeeter is a user-friendly tool built on top of the Allo Protocol that streamlines recurring, multi-address fund distributions (“Yeets”). Each Yeet creates a reusable Allo Pool, so recurring payments are quick and straightforward. Allo Yeeter integrate with popular Web3 event tools like POAP, allowing communities to distribute funds based on event attendance. By simplifying the distribution process, Allo Yeeter aims to drive significant GMV (Gross Merchandise Value) through the Allo Protocol, targeting $500K–$1M annually.</p>
+<h3><a name="impacted-stakeholders-expected-outcomes-3" class="anchor" href="https://gov.gitcoin.co#impacted-stakeholders-expected-outcomes-3"></a>Impacted Stakeholders &amp; Expected Outcomes</h3>
+<ul>
+<li><strong>Greenpill Stewards &amp; Leads</strong> : Easily manage Chapter/Guild payouts and project funding with minimal friction.</li>
+<li><strong>Community Managers</strong> : Automate recurring contributor payments via CSV or POAP-based lists.</li>
+<li><strong>Grant Operators</strong> : Simplify disbursing grants to multiple recipients, increasing transparency and efficiency.</li>
+<li><strong>Web3 Event Organizers</strong> : Airdrop funds to event attendees (POAP holders) and reward staff instantly.</li>
+</ul>
+<hr>
+<h2><a name="motivation-4" class="anchor" href="https://gov.gitcoin.co#motivation-4"></a><strong>Motivation</strong></h2>
+<ol>
+<li><strong>Why We Are Submitting This Proposal</strong>
+<ul>
+<li>Existing on-chain tools often make recurring or event-based fund distributions tedious. By leveraging Allo’s reusable pools and integrating with event protocols (like POAP), Allo Yeeter reduces friction, increases user adoption, and drives more capital flow through Allo.</li>
+</ul>
+</li>
+<li><strong>Potential Conflicts of Interest</strong>
+<ul>
+<li>The team behind Allo Yeeter is also passionate about the broader Web3 ecosystem, but there are no direct conflicts that compromise the integrity of this proposal.</li>
+</ul>
+</li>
+<li><strong>Why the Citizen Grants Program Should Adopt This Proposal</strong>
+<ul>
+<li><strong>Community Engagement</strong> : Encourages frequent, transparent funding of community members and initiatives.</li>
+<li><strong>Network Growth</strong> : Brings new DAOs, event organizers, and grant operators onto the Allo Protocol.</li>
+<li><strong>Financial Sustainability</strong> : Streamlined on-chain transactions expand the total GMV passing through Allo.</li>
+</ul>
+</li>
+<li><strong>Recycling GMV &amp; Building a Circular Economy</strong>
+<ul>
+<li><strong>Concrete Example</strong> : The Greenpill Dev Guild alone disbursed over $50K in quarterly payouts. If these funds had been funneled through Allo, they would have added significantly to Allo’s on-chain volume.</li>
+<li><strong>Scaling Across Greenpill</strong> : With 15 active Chapters and Guilds in the Greenpill Network, each handling up to $50K per quarter, we could see <strong>$500K–$1M</strong> in annual GMV if these payouts recycle back into the Allo ecosystem through Allo Yeeter.</li>
+<li><strong>Circular Economy Benefit</strong> : By making it easy to repeatedly use Allo Pools, Allo Yeeter helps capital stay within the Allo ecosystem—reinforcing a self-sustaining loop of distributing, receiving, and reallocating funds on-chain.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2><a name="previous-work-5" class="anchor" href="https://gov.gitcoin.co#previous-work-5"></a><strong>Previous Work</strong></h2>
+<p>Linked below is our <strong>previous proposal</strong> for Allo Yeeter, which has served as a foundation for our current approach:</p>
+<aside class="quote quote-modified" data-post="8" data-topic="19277">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/oba-one/48/11524_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/8">RFP - Allo Yeeter Build</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/citizen-grants/20"><span data-category-id="20" style="--category-badge-color: #0de37f; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Welcome to the Citizen Grants home on the governance forum."><span class="badge-category__name">📝 Citizen Grants</span></span></a>
+  </div>
+  <blockquote>
+    <a name="rfp-title-greenpill-dev-guild-allo-yeeter-proposal-1" class="anchor" href="https://gov.gitcoin.co#rfp-title-greenpill-dev-guild-allo-yeeter-proposal-1"></a>RFP Title: Greenpill Dev Guild Allo Yeeter Proposal
+<a name="overview-2" class="anchor" href="https://gov.gitcoin.co#overview-2"></a>Overview
+Allo Yeeter a quick, simple and user-friendly mechanism built on Allo Protocol for programmatically allocating capital directly to designated wallet addresses via a smart contract. 
+<a name="scope-of-work-3" class="anchor" href="https://gov.gitcoin.co#scope-of-work-3"></a>Scope of Work
+<a name="user-interface-4" class="anchor" href="https://gov.gitcoin.co#user-interface-4"></a>User interface
+A simple user-friendly way to interact with the Allo Yeeter 
+
+Built with NextJS, React, Tailwind, Typescript
+Simple web app deployed on Vercel
+
+<a name="yeeter-smart-contract-5" class="anchor" href="https://gov.gitcoin.co#yeeter-smart-contract-5"></a>Yeeter Smart contract
+A mechanism for inputting addresses and weights for distributi…
+  </blockquote>
+</aside>
+
+<hr>
+<h2><a name="specifications-6" class="anchor" href="https://gov.gitcoin.co#specifications-6"></a><strong>Specifications</strong></h2>
+<h3><a name="scope-of-activities-7" class="anchor" href="https://gov.gitcoin.co#scope-of-activities-7"></a><strong>Scope of Activities</strong></h3>
+<ol>
+<li>
+<p><strong>Core Features</strong></p>
+<ul>
+<li><strong>Reusable Allo Pools</strong> : Every “Yeet” automatically creates or reuses an Allo Pool for future allocations.</li>
+<li><strong>POAP Integration</strong> : Fetch attendee wallets for simple event-based payouts.</li>
+<li><strong>CSV Upload Support</strong> : Allow bulk uploading of addresses and amounts.</li>
+<li><strong>Intuitive UI/UX</strong> : Ensure frictionless onboarding and minimal steps to Yeet funds.</li>
+</ul>
+</li>
+<li>
+<p><strong>Technical Details</strong></p>
+<ul>
+<li><strong>Front-End Stack</strong> : Next.js, TailwindCSS, RainbowKit, Viem.</li>
+<li><strong>Allo Protocol</strong> : Custom strategy that ties each distribution to an Allo profile/pool.</li>
+<li><strong>Security &amp; Reliability</strong> : Code reviews, potential audits, and robust QA for stable mainnet deployment.</li>
+</ul>
+</li>
+<li>
+<p><strong>Deliverables and Artifacts</strong></p>
+<ul>
+<li><strong><a href="https://app.charmverse.io/greenpill-dev-guild/allo-yeeter-v1-0909261187116186" rel="noopener nofollow ugc">Product Requirements Doc</a></strong></li>
+<li><strong><a href="https://www.figma.com/design/oZt0WBUNECuaZKJxhRKP5W/Allo-Yeeter?m=auto&amp;t=nDx3rXHjkKf5NbjJ-6" rel="noopener nofollow ugc">Figma Designs &amp; Prototypes</a></strong></li>
+<li><strong><a href="https://miro.com/app/board/uXjVLY6JirE=/?share_link_id=286094470048" rel="noopener nofollow ugc">Workflow Diagrams</a></strong></li>
+<li><strong>Open-Source Code</strong> in <a href="https://github.com/greenpill-dev-guild/allo-yeeter" rel="noopener nofollow ugc">GitHub Repo</a> and <a href="https://github.com/orgs/greenpill-dev-guild/projects/16" rel="noopener nofollow ugc">Project Board</a></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2><a name="roadmap-and-milestones-3-month-deadline-8" class="anchor" href="https://gov.gitcoin.co#roadmap-and-milestones-3-month-deadline-8"></a>Roadmap and Milestones (3-Month Deadline)</h2>
+<p>We plan to launch and iterate quickly, with a major showcase at <strong>ETHDenver 2025</strong> in late February.</p>
+<h3><a name="complete-mvp-januaryfebruary-2025-9" class="anchor" href="https://gov.gitcoin.co#complete-mvp-januaryfebruary-2025-9"></a>Complete MVP (January/February 2025)</h3>
+<ul>
+<li>
+<p><strong>Overview</strong> : We will quickly start to integrate reusable pools and POAP lists to start internal testing in late January and early February to ensure stability by ETHDenver.</p>
+</li>
+<li>
+<p><strong>Activities</strong></p>
+<ul>
+<li>Finalize key features (CSV uploads, POAP integration, Allo pool reusability).</li>
+<li>Conduct QA testing, fix bugs, and refine UI.</li>
+<li>Initiate outreach to 1–2 DAOs as pilot partners.</li>
+</ul>
+</li>
+<li>
+<p><strong>Expected GMV Outcome</strong> : Onboard at least 1–2 pilot communities, generating $20K–$30K in monthly disbursements.</p>
+</li>
+</ul>
+<h3><a name="showcase-at-ethdenver-2025-february-2025-10" class="anchor" href="https://gov.gitcoin.co#showcase-at-ethdenver-2025-february-2025-10"></a>Showcase at ETHDenver 2025 (February 2025)</h3>
+<ul>
+<li>
+<p><strong>Overview</strong> : During ETHDenver we will use Allo Yeeter in Greenpill activations and other regenerative events throughout the conference targeting the multitude of use cases and users.</p>
+</li>
+<li>
+<p><strong>Activities</strong></p>
+<ul>
+<li>Live demos, workshops, and direct user feedback sessions at ETHDenver.</li>
+<li>Sign on 2–3 additional partners (DAOs, event organizers).</li>
+<li>Rapidly integrate user feedback, focusing on feature refinements.</li>
+</ul>
+</li>
+<li>
+<p><strong>Expected GMV Outcome</strong> : Grow total monthly volume to $25K–50K for community disbursements with an additional $50k-100k from ETHDenver activations setting the stage for further adoption post-ETHDenver.</p>
+</li>
+</ul>
+<h3><a name="refine-scale-march-2025-11" class="anchor" href="https://gov.gitcoin.co#refine-scale-march-2025-11"></a>Refine &amp; Scale (March 2025)</h3>
+<ul>
+<li>
+<p><strong>Overview</strong> : After ETHDenver we will gather insights on our activations and measure how effective Allo Yeeter was for allocating capital.</p>
+</li>
+<li>
+<p><strong>Activities</strong></p>
+<ul>
+<li>Implement post-ETHDenver feedback, finalize new partner onboarding.</li>
+<li>Deploy marketing push showcasing success stories from pilot users.</li>
+<li>Introduce analytics dashboards for tracking real-time GMV…</li>
+</ul>
+</li>
+<li>
+<p><strong>Expected GMV Outcome</strong> : Achieve $80K–100K monthly distribution volume, positioning Allo Yeeter on track for $500k–1 million annual GMV by year’s end.</p>
+</li>
+</ul>
+<hr>
+<h2><a name="benefits-12" class="anchor" href="https://gov.gitcoin.co#benefits-12"></a>Benefits</h2>
+<ol>
+<li><strong>High GMV Potential:</strong> Allo Yeeter has the capacity to drive significant GMV growth, aligning with <strong>Greenpill Dev Guild insights</strong> that show quarterly payouts of $50K. When scaled across 15 active Greenpill chapters and guilds, this could generate substantial annual volume directly funneled through Allo, reinforcing its value as a core tool for recurring fund distribution.</li>
+<li><strong>Community &amp; Ecosystem Growth:</strong> Integrations with POAP and future event protocols attract a new wave of users to Allo.</li>
+<li><strong>Ease of Use:</strong> Simple “Start Yeet” workflows, CSV uploads, and automatic Allo Pool creation reduce friction for repeated fund distributions.</li>
+</ol>
+<hr>
+<h2><a name="drawbacks-13" class="anchor" href="https://gov.gitcoin.co#drawbacks-13"></a>Drawbacks</h2>
+<ol>
+<li><strong>Dependence on Allo Infrastructure:</strong> If Allo experiences downtime or architectural changes, Allo Yeeter is directly affected.</li>
+<li><strong>Adoption Curve:</strong> While the UI is designed to be simple, DAOs and event organizers may need initial guidance to fully switch to a new tool.</li>
+<li><strong>Security &amp; Trust:</strong> Winning over large treasuries requires thorough code audits and proven reliability.</li>
+</ol>
+<hr>
+<h2><a name="budget-overview-14" class="anchor" href="https://gov.gitcoin.co#budget-overview-14"></a>Budget Overview:</h2>
+<h3><a name="development-15" class="anchor" href="https://gov.gitcoin.co#development-15"></a>Development</h3>
+<ul>
+<li><strong>Description</strong>
+<ul>
+<li>Finalize MVP.</li>
+<li>Post-ETHDenver fixes &amp; feature updates</li>
+<li>Ongoing technical support for pilot users</li>
+</ul>
+</li>
+<li><strong>Amount</strong> : .$16,000
+<ul>
+<li><strong>Product Management</strong> : $3,000 to oversee development cycles, coordinate feedback, and align priorities.</li>
+<li><strong>Design</strong> : $3,000 for UI/UX improvements and refining front-end workflows.</li>
+<li><strong>Engineering</strong> : $10,000 for full-stack development (front-end and back-end integrations).</li>
+</ul>
+</li>
+<li><strong>GMV Impact</strong> : A polished, stable product attracts new partners, ensuring recurring monthly volumes.</li>
+</ul>
+<h3><a name="bizdev-partnerships-16" class="anchor" href="https://gov.gitcoin.co#bizdev-partnerships-16"></a>BizDev &amp; Partnerships</h3>
+<ul>
+<li><strong>Description</strong> :
+<ul>
+<li>Direct outreach to DAOs &amp; event organizers</li>
+<li>ETHDenver networking to secure high-volume treasuries</li>
+</ul>
+</li>
+<li><strong>Amount</strong> : $5,000
+<ul>
+<li><strong>Business Development Leads</strong> : $4,000 for identifying partners, running meetings, and maintaining relationships.</li>
+<li><strong>Documentation</strong> : $1,000 for creation of onboarding materials, use case decks, and pitch content.</li>
+</ul>
+</li>
+<li><strong>GMV Impact</strong> : Each partnership can funnel tens of thousands monthly, pivotal to reaching $500k-1M annual GMV.</li>
+</ul>
+<h3><a name="marketing-outreach-17" class="anchor" href="https://gov.gitcoin.co#marketing-outreach-17"></a>Marketing &amp; Outreach</h3>
+<ul>
+<li><strong>Description</strong> :
+<ul>
+<li>Demos &amp; workshops (esp. at ETHDenver)</li>
+<li>Case studies, success stories</li>
+<li>User guides &amp; walkthroughs</li>
+</ul>
+</li>
+<li><strong>Amount</strong> : $4,000
+<ul>
+<li><strong>Graphic Designers</strong> : $1,500 for creating visual assets, presentations, and case studies.</li>
+<li><strong>Engagement Coordinator</strong> : $1,500 for hosting workshops, live Q&amp;A sessions, and guiding user onboarding.</li>
+<li><strong>Business Development Leads</strong> : $1,000 for organizing campaigns and coordinating ETHDenver marketing efforts.</li>
+</ul>
+</li>
+<li><strong>GMV Impact</strong> : Showcasing real user success encourages more DAOs and communities to adopt Allo Yeeter.</li>
+</ul>
+<h3><a name="contingency-audit-18" class="anchor" href="https://gov.gitcoin.co#contingency-audit-18"></a>Contingency &amp; Audit</h3>
+<ul>
+<li><strong>Description</strong> :
+<ul>
+<li>Code audits</li>
+<li>Bug bounties</li>
+<li>Unforeseen user requests or security updates</li>
+</ul>
+</li>
+<li><strong>Amount</strong> : $3,000
+<ul>
+<li><strong>External Auditors</strong> : $2,000 for third-party security audits and code reviews.</li>
+<li><strong>Bug Bounties</strong> : $1,000 for incentivizing internal and external testers.</li>
+</ul>
+</li>
+<li><strong>GMV Impact</strong> : Secure tooling gives organizations with large treasuries confidence to move significant funds, directly increasing GMV potential.</li>
+</ul>
+<h3><a name="analytics-reporting-19" class="anchor" href="https://gov.gitcoin.co#analytics-reporting-19"></a>Analytics &amp; Reporting</h3>
+<ul>
+<li><strong>Description</strong> :
+<ul>
+<li>Build GMV tracking dashboards</li>
+<li>Data-driven outreach campaigns</li>
+</ul>
+</li>
+<li><strong>Amount</strong> : $2,000
+<ul>
+<li><strong>Researcher/Data Analyst</strong> : $2,000 for building dashboards, analyzing GMV data, and creating actionable insights.</li>
+</ul>
+</li>
+<li><strong>GMV Impact</strong> : Real-time performance metrics help identify and capitalize on top GMV opportunities (e.g., large DAOs, popular event organizers).</li>
+</ul>
+<p><strong>Total</strong> : $30,000</p>
+<hr>
+<h2><a name="measures-of-success-kpis-20" class="anchor" href="https://gov.gitcoin.co#measures-of-success-kpis-20"></a>Measures of Success &amp; KPIs</h2>
+<ol>
+<li><strong>Monthly GMV</strong>
+<ul>
+<li><strong>Target:</strong> $80–100K by March 2025.</li>
+<li><strong>Annual Objective</strong> : $1–2 million by end of 2025 (with potential to hit $500K–1M just within the Greenpill Network alone).</li>
+</ul>
+</li>
+<li><strong>Number of Yeets Completed</strong>
+<ul>
+<li><strong>Target</strong> : At least 50 Yeets completed across DAOs, events, and community initiatives by March 2025.</li>
+<li><strong>Annual Objective</strong> : Grow to over 200 Yeets by year-end to establish Allo Yeeter as a standard tool for recurring fund distributions.</li>
+</ul>
+</li>
+<li><strong>Active Pools &amp; Partnerships</strong>
+<ul>
+<li><strong>Target</strong> : Onboard at least 5 unique DAOs, guilds, or event organizers actively using Allo Yeeter by March 2025.</li>
+<li><strong>Annual Objective</strong> : Expand to 20+ active partnerships across DAOs, events, and community organizations by December 2025</li>
+</ul>
+</li>
+<li><strong>User Satisfaction &amp; Retention</strong>
+<ul>
+<li><strong>Target</strong> : Achieve a retention rate of 75%+ by March 2025.</li>
+<li><strong>Annual Objective</strong> : Retain at least 75% of active users while steadily improving user satisfaction through iterative updates and support.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2><a name="non-financial-requirements-21" class="anchor" href="https://gov.gitcoin.co#non-financial-requirements-21"></a>Non-Financial Requirements</h2>
+<ol>
+<li><strong>Marketing &amp; Community Support:</strong> Inclusion in Gitcoin/Allo newsletters, social media, and community calls.</li>
+<li><strong>Technical Consultation:</strong> Periodic syncs with the Allo Protocol team to ensure seamless integration.</li>
+<li><strong>Ecosystem Access:</strong> Introductions to relevant DAO communities, event organizations, or grant councils to accelerate adoption.</li>
+</ol>
+<hr>
+<h2><a name="conclusion-22" class="anchor" href="https://gov.gitcoin.co#conclusion-22"></a>Conclusion</h2>
+<p>Allo Yeeter is poised to drive substantial GMV through the Allo Protocol by providing a simple, reusable, and event-friendly fund distribution solution. Over a focused 3-month period, culminating in a major ETHDenver demo, our team will onboard key DAOs and event organizers, ultimately targeting <strong>$1–$2 million</strong> in annual on-chain flows. Moreover, <strong>existing community payout data</strong> from the Dev Guild and Greenpill chapters shows a path to <strong>$500K–$1M</strong> in annual volume simply by recycling these payouts through Allo. With a modest $30,000 budget, we will aggressively pursue partnerships, refine the user experience, and build the trust needed for recurring multi-address fund distributions at scale, thus creating a <strong>circular economy</strong> where funds are continually recycled within the Allo ecosystem.</p>
+<p><em>Thank you for your consideration in supporting Allo Yeeter!</em></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-allo-yeeter-recycling-growing-gmv-with-simple-allocation/19852/1
+        Sat, 11 Jan 2025 07:12:50 +0000
+gov.gitcoin.co-post-19852-1
+[GCP - XXX] Allo Yeeter - Recycling & Growing GMV With Simple Allocation
+      
+
+

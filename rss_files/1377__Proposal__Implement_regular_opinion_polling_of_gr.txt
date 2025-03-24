@@ -1,0 +1,198 @@
+
+
+
+[Proposal]--Implement regular opinion polling of grant contributors
+https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736
+    **Summary**
+
+For traditional, investment-funded projects, the people contributing money have skin in the game. if a project succeeds or fails ten years down the line, the people who put in money will lose out. This creates an incentive for investors to carefully vet projects' long term viability, and creates an incentive for projects to make credible promises and deliver on them. 
+
+Projects on Gitcoin grants don't have this incentive; a project that sounds good could get tons of funding and then fail to deliver on its promises. Also, if a project fails to deliver on its promises, it may still be able to attract new contributors with a good sales pitch even if it has a poor track record. This proposal tries to create an incentive for projects to deliver on their promises in the simplest possible way. 
+
+**Abstract** 
+
+I propose the following: 
+
+1. At regular intervals, have Gitcoin send a message to all the contributors to a project asking whether they're satisfied with how the project has used their money in the time since they contributed. 
+
+2. Display the results of this poll on the grant project page. 
+
+**Motivation**
+
+Polling contributors and displaying the results on the grants page would create a clear signal of which projects are delivering results for their funders. This way the satisfaction of funders can be aggregated fairly and secretly, and displayed for all to see so that others can make an informed decision about which public goods to fund. 
+
+**Specification**
+
+I would suggest that Gitcoin send out a multiple-choice questionnaire with the following format:
+
+Q: Are you satisfied with how this project has used your funding since the last time you contributed? 
+
+A:  
+
+-Yes 
+
+-No
+
+-Don't know
+
+I would suggest that Gitcoin present grant funders the choice to opt-out of these polls on the checkout page. Funders should be opted-in by default, and have the choice to opt out of all polls with a mouse-click, or opt out of specific grants that they aren't motivated to be polled about. 
+
+Funders should be able to specify the interval at which they want to receive these polls. I would suggest the following options:
+
+-Once a quarter [the default]
+
+-Once a year
+
+-Once every 4 years
+
+-Custom [enter specific time interval]
+
+Additionally, I suggest that funders should be able to give a rating outside the regular polling cycle whenever they want to by navigating to their funded grants and clicking a "give feedback" button.  
+
+Optional: projects can restrict the options for how frequently their funders are able to give poll results if they don't want to be distracted by short-term feedback. This choice to restrict feedback should be indicated publicly on the project page. 
+
+The results of these polls for a given grant should be displayed prominently somewhere on the grant page, and should be updated more or less in real time. I would suggest displaying the percentages of each response (yes, no, don't know), possibly graphically, eg as a bar divided into 3 colors corresponding to the percentage of each response. Alternately, it may make sense to collapse the responses into a single number corresponding to a favorability rating. 
+
+Optional: in my opinion the best implementation of these polls would allow users to vote quadratically. This would allow users with strong negative or positive opinions due to skin in the game or insider knowledge to make their voices heard over users who are less involved or less informed. Implementing this may be saved for a future proposal if it's too complex.
+
+Alternately, poll responses may be weighted by the square root of how much money the respondent contributed to the project.
+
+**Benefits**
+
+Implementing this proposal would create additional transparency about which projects are doing well according to their backers, which would incentivize projects to do well by them. It would create a signal that could be used in various beneficial ways: most obviously, Gitcoin or projects using Gitcoin's API could allow users to display grants pages in order of how favorable their poll responses are. 
+
+As a side benefit, people could bet on the future favorability rating of a project, either on third party sites or perhaps in the future on Gitcoin itself. If a project is willing to place a large bet on its own future favorability in the community, that could create a strong signal of which projects are serious about the long term. 
+
+**Drawbacks**
+
+Displaying poll results may raise stress for grantees, which may make them less intrinsically motivated to work on their projects.
+
+ Frequent polling may cause projects to focus too much on the short term (which is why I suggest allowing them to restrict how often polls can go out). 
+
+Polling only funders excludes the signal from people who feel negatively about a project, who wouldn't want to contribute any money at all (as a separate proposal, it may make sense to allow non-funders to rate a project by paying a fee that goes directly to the grants matching pool rather than to the project in question). 
+
+**Vote**
+What do you think of this proposal?
+[poll type=regular results=always chartType=bar]
+* Good
+* Bad
+* Good idea but needs more work
+[/poll]
+Thu, 15 Jul 2021 18:28:30 +0000
+📜 Proposals
+
+
+[Proposal]--Implement regular opinion polling of grant contributors
+Sirlupinwatson
+
+            <p>Thank you for the clarification.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/5
+        Thu, 15 Jul 2021 18:28:30 +0000
+gov.gitcoin.co-post-7736-5
+[Proposal]--Implement regular opinion polling of grant contributors
+      
+
+[Proposal]--Implement regular opinion polling of grant contributors
+Spugpow
+
+            <p>The point is that there may be a group of people who are negatively affected by a project and want to express that without contributing any funds to the project itself. For example, there could be a twitter account soliciting funding for divisive/propagandistic posts attacking a specific community that members of that community might want to express dissatisfaction with.</p>
+<p>In any case, I agree that this idea should probably be considered separately from the core proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/4
+        Thu, 15 Jul 2021 12:44:41 +0000
+gov.gitcoin.co-post-7736-4
+[Proposal]--Implement regular opinion polling of grant contributors
+      
+
+[Proposal]--Implement regular opinion polling of grant contributors
+Cryptosense
+
+            <p>Very brilliant idea indeed, it will curtail the bad intentions towards this space, when humanity is put first before gains, what a perfect world we would have.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/3
+        Tue, 06 Jul 2021 07:51:09 +0000
+gov.gitcoin.co-post-7736-3
+[Proposal]--Implement regular opinion polling of grant contributors
+      
+
+[Proposal]--Implement regular opinion polling of grant contributors
+Sirlupinwatson
+
+            <p>This make sense.</p>
+<p>I just dont see the point where</p>
+<aside class="quote no-group" data-username="Spugpow" data-post="1" data-topic="7736">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/s/e47774/48.png" class="avatar"> Spugpow:</div>
+<blockquote>
+<p>(as a separate proposal, it may make sense to allow non-funders to rate a project by paying a fee that goes directly to the grants matching pool rather than to the project in question).</p>
+</blockquote>
+</aside>
+<p>Why non-funders should be tipping the matching pool instead of the grant in itself, and be able to leave a review if this proposal is around adding an option to give feedback and see how the funds have been used, I dont think this part is relevant but otherwise it’s a great idea I think.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/2
+        Mon, 05 Jul 2021 23:21:30 +0000
+gov.gitcoin.co-post-7736-2
+[Proposal]--Implement regular opinion polling of grant contributors
+      
+
+[Proposal]--Implement regular opinion polling of grant contributors
+Spugpow
+
+            <p><strong>Summary</strong></p>
+<p>For traditional, investment-funded projects, the people contributing money have skin in the game. if a project succeeds or fails ten years down the line, the people who put in money will lose out. This creates an incentive for investors to carefully vet projects’ long term viability, and creates an incentive for projects to make credible promises and deliver on them.</p>
+<p>Projects on Gitcoin grants don’t have this incentive; a project that sounds good could get tons of funding and then fail to deliver on its promises. Also, if a project fails to deliver on its promises, it may still be able to attract new contributors with a good sales pitch even if it has a poor track record. This proposal tries to create an incentive for projects to deliver on their promises in the simplest possible way.</p>
+<p><strong>Abstract</strong></p>
+<p>I propose the following:</p>
+<ol>
+<li>
+<p>At regular intervals, have Gitcoin send a message to all the contributors to a project asking whether they’re satisfied with how the project has used their money in the time since they contributed.</p>
+</li>
+<li>
+<p>Display the results of this poll on the grant project page.</p>
+</li>
+</ol>
+<p><strong>Motivation</strong></p>
+<p>Polling contributors and displaying the results on the grants page would create a clear signal of which projects are delivering results for their funders. This way the satisfaction of funders can be aggregated fairly and secretly, and displayed for all to see so that others can make an informed decision about which public goods to fund.</p>
+<p><strong>Specification</strong></p>
+<p>I would suggest that Gitcoin send out a multiple-choice questionnaire with the following format:</p>
+<p>Q: Are you satisfied with how this project has used your funding since the last time you contributed?</p>
+<p>A:</p>
+<p>-Yes</p>
+<p>-No</p>
+<p>-Don’t know</p>
+<p>I would suggest that Gitcoin present grant funders the choice to opt-out of these polls on the checkout page. Funders should be opted-in by default, and have the choice to opt out of all polls with a mouse-click, or opt out of specific grants that they aren’t motivated to be polled about.</p>
+<p>Funders should be able to specify the interval at which they want to receive these polls. I would suggest the following options:</p>
+<p>-Once a quarter [the default]</p>
+<p>-Once a year</p>
+<p>-Once every 4 years</p>
+<p>-Custom [enter specific time interval]</p>
+<p>Additionally, I suggest that funders should be able to give a rating outside the regular polling cycle whenever they want to by navigating to their funded grants and clicking a “give feedback” button.</p>
+<p>Optional: projects can restrict the options for how frequently their funders are able to give poll results if they don’t want to be distracted by short-term feedback. This choice to restrict feedback should be indicated publicly on the project page.</p>
+<p>The results of these polls for a given grant should be displayed prominently somewhere on the grant page, and should be updated more or less in real time. I would suggest displaying the percentages of each response (yes, no, don’t know), possibly graphically, eg as a bar divided into 3 colors corresponding to the percentage of each response. Alternately, it may make sense to collapse the responses into a single number corresponding to a favorability rating.</p>
+<p>Optional: in my opinion the best implementation of these polls would allow users to vote quadratically. This would allow users with strong negative or positive opinions due to skin in the game or insider knowledge to make their voices heard over users who are less involved or less informed. Implementing this may be saved for a future proposal if it’s too complex.</p>
+<p>Alternately, poll responses may be weighted by the square root of how much money the respondent contributed to the project.</p>
+<p><strong>Benefits</strong></p>
+<p>Implementing this proposal would create additional transparency about which projects are doing well according to their backers, which would incentivize projects to do well by them. It would create a signal that could be used in various beneficial ways: most obviously, Gitcoin or projects using Gitcoin’s API could allow users to display grants pages in order of how favorable their poll responses are.</p>
+<p>As a side benefit, people could bet on the future favorability rating of a project, either on third party sites or perhaps in the future on Gitcoin itself. If a project is willing to place a large bet on its own future favorability in the community, that could create a strong signal of which projects are serious about the long term.</p>
+<p><strong>Drawbacks</strong></p>
+<p>Displaying poll results may raise stress for grantees, which may make them less intrinsically motivated to work on their projects.</p>
+<p>Frequent polling may cause projects to focus too much on the short term (which is why I suggest allowing them to restrict how often polls can go out).</p>
+<p>Polling only funders excludes the signal from people who feel negatively about a project, who wouldn’t want to contribute any money at all (as a separate proposal, it may make sense to allow non-funders to rate a project by paying a fee that goes directly to the grants matching pool rather than to the project in question).</p>
+<p><strong>Vote</strong><br>
+What do you think of this proposal?</p>
+<p><a href="https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/1">Click to view the poll.</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implement-regular-opinion-polling-of-grant-contributors/7736/1
+        Mon, 05 Jul 2021 17:56:52 +0000
+gov.gitcoin.co-post-7736-1
+[Proposal]--Implement regular opinion polling of grant contributors
+      
+
+

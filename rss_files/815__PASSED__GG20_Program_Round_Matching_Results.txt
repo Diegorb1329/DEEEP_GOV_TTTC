@@ -1,0 +1,645 @@
+
+
+
+[PASSED] GG20 Program Round Matching Results
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816
+    UPDATE: We ratified results [on snapshot](https://snapshot.org/#/gitcoindao.eth/proposal/0x3527cb7a0c0e2100fc508b3d3b95e255ab34b95a18fd5fe6ab41c928d8aa5901) on May 28th
+
+Hey y’all, our GG20 OSS program round matching results are live [here](https://docs.google.com/spreadsheets/d/1rZ9JPldY1AjzMdGgfqpfRfxlUyQdGLoVAZJ90Eamxq4/edit#gid=1546480797)! We’ll have five days for review and feedback then, barring any major issues, will move to ratify on snapshot on May 22nd and payout on May 28th.
+
+Special thanks to  @Joel_m, @MathildaDV, @sejalrekhan, @M0nkeyFl0wer, @Jeremy, @meglister, @owocki  and @deltajuliet for their eyes, comments, and feedback! 
+
+
+# TL;DR
+
+* GG20 saw a [number of exciting developments](https://www.gitcoin.co/blog/announcing-gg20) including a $1M OSS matching pool, the election of a grants council, an upgrade to our core protocol, and a deepened partnership with our friends at Arbitrum.
+* We implemented a two-pronged [sybil resistance strategy](https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524). We used a [pluralistic variant of QF](https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705) and we used Passport's model based detection system. We did not do any closed-source silencing of sybils/donors. Instead, we’re solely relying on our mechanism and Gitcoin Passport.
+* Discussion will be open for five days before moving to snapshot on May 22nd. 
+
+# 🌎 GG20 Overview
+
+Every round sees new developments. Some of the most exciting in GG20 included:
+* Returning to our [Open Source Software](https://gov.gitcoin.co/t/gg20-project-charter/18307) roots, doubling the number of rounds, projects, and matching funding available since GG19.
+* Initiating [Community Rounds Governance](https://gov.gitcoin.co/t/gg20-community-round-governance-a-retrospective/18766), electing a council to allocate matching funds for community-led QF rounds. Read [the retro](https://gov.gitcoin.co/t/gg20-community-round-governance-a-retrospective/18766) and see the [proposal to extend the council’s term](https://gov.gitcoin.co/t/proposal-extending-the-term-of-gg-community-council/18776).
+* Upgrading our core protocol to enable more permissionless building, going from [allo v1 to allo v2](https://docs.allo.gitcoin.co/), with GG20 being the first rounds to run on our new protocol!
+* Providing the same sybil resistance tooling we use for our rounds to every community using Grants Stack by creating a [cluster-matching calculator](http://github.com/gitcoinco/qf-calculator) and integrating with [Passport’s model based detection](https://support.passport.xyz/passport-knowledge-base/stamps/guide-to-model-based-detection).
+* Expanding our collections feature, enabling more people to add their own grant collections.
+* Seeing the proliferation of side-apps and tooling, following our [modular, unix philosophy](https://gov.gitcoin.co/t/gitcoin-could-embrace-the-unix-philosophy-to-create-exponential-innovation/18602). GG20 launches included [GG Wrapped](https://ggwrapped.gitcoin.co/), [Grants Scan](https://grantscan.gitcoin.co/), [IDriss cross-chain donations on Twitter](https://www.idriss.xyz/), [gitcoindonordata.xyz](http://gitcoindonordata.xyz), and [a QF calculator](http://github.com/gitcoinco/qf-calculator) for round managers.
+* Consolidating all of our program rounds onto Arbitrum, partnering with [Arbitrum and Thrive Coin](https://gov.gitcoin.co/t/thriving-gg20-thank-arb-and-gitcoin/18565) to expand the matching pool and incentives for contributors and grantees.
+
+## Key Metrics:
+
+### Overall
+
+* 11 Total Rounds
+* $1.647M Matching Pool
+* $633,431.29 Crowdfunded
+* 35,109 Unique Donors
+* 629 Projects
+* More data [here](http://gitcoin.co/grants-data)
+
+### OSS Program
+
+* 4 Program Rounds
+* $1.0M Matching Pool
+* $484,487.00 Crowdfunded
+* 28, 393 Unique Donors
+* 327 Projects
+
+# 🧮 Round and Results Calculation Details
+
+Before GG20 began, we proposed a two-pronged [sybil resistance strategy](https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524). To recap it briefly, we would continue to use COCM (Connection-Oriented Cluster Matching) as we had in GG19 and we would additionally introduce passport’s model-based detection system.
+
+As explained in the post, and the [paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507) which introduced this mechanism to the world, COCM is much less vulnerable to Sybil Attacks than ordinary QF because it reduces the matching of donors who look similar.
+
+In addition, testing Passport’s model-based detection system (PMBDS) on GG19 donor data yielded greater sybil resistance than the stamp-based system without any of the user friction. When used together, we believe these two tools produce the most sybil-resistant results we’ve ever had.
+
+We also continue the precedent we began in GG19 of not doing any black-box squelching of donor accounts. All of the code we used to calculate results is [available on GitHub](http://github.com/gitcoinco/qf-calculator). Turning off squelching has allowed us to increase transparency of matching result calculations and reduced our time to payouts. In addition, it enabled us to scale the same sybil resistance methods we use to our partners through integrations with Grants Stack.
+
+## Recap of COCM: [Connection-Oriented Cluster Matching](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507)
+
+Quadratic Funding empowers a decentralized network to prioritize the public goods that need funding most. In doing so, it amplifies the voices of those with less money, ensuring bigger crowds receive more matching funds than larger wallets. However, it can be exploited by sybils or colluding groups who align their funding choices to unfairly influence matching fund distribution.
+
+[COCM](https://www.gitcoin.co/blog/wtf-is-cluster-matching-qf) is one of the tools we use to address this issue. It identifies projects with the most diverse bases of support and increases their matching funds. It offers a bridging bonus for projects that find common ground across different groups, rewarding cross-tribal support and broad reach. In this way, COCM values not only the number of voters supporting a project but also the diversity of tribes supporting it.
+
+Recently, Joel upgraded the mechanism further with a [Markov chain approach](https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705), which assesses the likelihood of a user's connection to a project based on intermediate connections. In experiments, this provided more sybil resistance by a large margin.
+
+As an unintended side effect, COCM also tends to distribute funding away from top projects and toward the long tail.
+
+## Passport’s Model Based Detection System
+
+The Gitcoin Passport team has recently introduced a Model-Based Detection System that analyzes the on-chain history of addresses, comparing them to known human and sybil addresses. The model assigns each address a probability of being a genuine human user.
+
+In GG20, this model detected 42.39% of participating wallets as very likely belonging to sybils, and these wallets were excluded from matching. The unmatched wallets accounted for 22.55% of all crowdfunded dollars. 
+
+While the model isn't perfect and sometimes mistakes new users or those with few mainnet transactions for sybils, the team is continuously improving the dataset and expanding the model to L2s. Overall, it effectively reduced the impact of sybil accounts on matching results.
+
+
+# 💡 Project Spotlight
+
+Here are the top five projects by total matching funding and per voter matching funding for each of our four rounds (gleaned from the [overall matching results](https://docs.google.com/spreadsheets/d/1rZ9JPldY1AjzMdGgfqpfRfxlUyQdGLoVAZJ90Eamxq4/edit#gid=1546480797)). The “total matching” list highlights those who received the most support overall, while the “matching per voter” list showcases those who received the most diverse support, benefiting from the use of COCM. The projects on this list are the ones with the most diverse bases of support, regardless of the size of the base.
+
+### Developer Tooling & Libraries - Top 5 by Total Matching
+
+| Rank | Project | Matching Funds |
+|------|---------|----------------|
+| 1    | [ethers.js](https://explorer.gitcoin.co/#/round/42161/27/3) | $29,637.50   |
+| 2    | [OpenZeppelin Contracts](https://explorer.gitcoin.co/#/round/42161/27/41) | $23,281.82   |
+| 3    | [Blockscout Block Explorer - Decentralized, Open-Source, Transparent Block Explorer for All Chains](https://explorer.gitcoin.co/#/round/42161/27/12) | $17,741.54   |
+| 4    | [Swiss-Knife.xyz](https://explorer.gitcoin.co/#/round/42161/27/33) | $16,518.84   |
+| 5    | [Wagmi](https://explorer.gitcoin.co/#/round/42161/27/30) | $16,243.91   |
+
+
+### Developer Tooling & Libraries - Top 5 by Matching per Voter
+
+| Rank | Project | Matching Per Voter (Avg) |
+|------|-------------------------------------|--------------------------|
+| 1    | [Swiss-Knife.xyz](https://explorer.gitcoin.co/#/round/42161/27/33) | $83.43   |
+| 2    | [Viem](https://explorer.gitcoin.co/#/round/42161/27/20) | $64.28   |
+| 3    | [Ape Framework](https://explorer.gitcoin.co/#/round/42161/27/15) | $60.40   |
+| 4    | [ethui](https://explorer.gitcoin.co/#/round/42161/27/8) | $60.34   |
+| 5    | [Pentacle](https://explorer.gitcoin.co/#/round/42161/27/35)  | $57.51   |
+
+
+### Hackathon Alumni - Top 5 by Total Matching
+| Rank | Project | Matching Funds |
+|------|---------|----------------|
+| 1    | [NFC wallet](https://explorer.gitcoin.co/#/round/42161/23/36) | $10,000.00   |
+| 2    | [WalletX  A Gasless Smart Wallet](https://explorer.gitcoin.co/#/round/42161/23/0) | $7,592.87   |
+| 3    | [Fluidpay](https://explorer.gitcoin.co/#/round/42161/23/27) | $7,228.21   |
+| 4    | [RejuvenateAI](https://explorer.gitcoin.co/#/round/42161/23/32) | $6,121.22   |
+| 5    | [Mosaic: Earn rewards for using your favorite web3 apps and protocols](https://explorer.gitcoin.co/#/round/42161/23/40) | $3,801.02   |
+
+
+### Hackathon Alumni - Top 5 by Matching per Voter
+
+| Rank | Project | Matching Per Voter (Avg) |
+|------|---------|--------------------------|
+| 1    | [hashlists](https://explorer.gitcoin.co/#/round/42161/23/48) | $69.02   |
+| 2    | [Gnomish](https://explorer.gitcoin.co/#/round/42161/23/49) | $66.79   |
+| 3    | [DeStealth](https://explorer.gitcoin.co/#/round/42161/23/34) | $63.23   |
+| 4    | [Mosaic: Earn rewards for using your favorite web3 apps and protocols](https://explorer.gitcoin.co/#/round/42161/23/40) | $60.33   |
+| 5    | [Margari](https://explorer.gitcoin.co/#/round/42161/23/2) | $60.23   |
+
+### Web3 Infrastructure - Top 5 by Total Matching
+
+| Rank | Project | Matching Funds |
+|------|---------|----------------|
+| 1    | [DefiLlama](https://explorer.gitcoin.co/#/round/42161/26/14) | $30,000.00   |
+| 2    | [L2BEAT](https://explorer.gitcoin.co/#/round/42161/26/66) | $25,206.67   |
+| 3    | [Umbra](https://explorer.gitcoin.co/#/round/42161/26/67) | $17,319.34   |
+| 4    | [Dappnode](https://explorer.gitcoin.co/#/round/42161/26/48) | $16,165.74   |
+| 5    | [Ethereum Attestation Service (EAS)](https://explorer.gitcoin.co/#/round/42161/26/42) | $16,022.61   |
+
+### Web3 Infrastructure - Top 5 by Matching per Voter
+
+| Rank | Project | Matching Per Voter (Avg) |
+|------|---------|--------------------------|
+| 1    | [Ethereum on ARM](https://explorer.gitcoin.co/#/round/42161/26/30) | $14.65   |
+| 2    | [The Tor Project](https://explorer.gitcoin.co/#/round/42161/26/24) | $14.55   |
+| 3    | [Lighthouse by Sigma Prime](https://explorer.gitcoin.co/#/round/42161/26/69) | $14.41   |
+| 4    | [eth.limo](https://explorer.gitcoin.co/#/round/42161/26/9) | $10.69   |
+| 5    | [libp2p General](https://explorer.gitcoin.co/#/round/42161/26/98) | $10.63   |
+| HM | [Lodestar](https://explorer.gitcoin.co/#/round/42161/26/38) | $10.58
+
+### dApps & Apps - Top 5 by Total Matching
+
+| Rank | Project | Matching Funds |
+|------|---------|----------------|
+| 1    | [JediSwap](https://explorer.gitcoin.co/#/round/42161/25/96) | $15,000.00   |
+| 2    | [IDriss - A more usable web3 for everyone](https://explorer.gitcoin.co/#/round/42161/25/92) | $15,000.00   |
+| 3    | [Hey.xyz (formerly Lenster)](https://explorer.gitcoin.co/#/round/42161/25/1) | $15,000.00   |
+| 4    | [Revoke.cash](https://explorer.gitcoin.co/#/round/42161/25/25) | $15,000.00   |
+| 5    | [Event Horizon](https://explorer.gitcoin.co/#/round/42161/25/105) | $12,098.09   |
+
+### dApps & Apps - Top 5 Matching per Voter
+
+| Rank | Project | Matching Per Voter (Avg) |
+|------|---------|--------------------------|
+| 1    | [rotki](https://explorer.gitcoin.co/#/round/42161/25/8) | $27.93   |
+| 2    | [Karma GAP](https://explorer.gitcoin.co/#/round/42161/25/83) | $26.87   |
+| 3    | [Giveth](https://explorer.gitcoin.co/#/round/42161/25/55) | $25.94   |
+| 4    | [Funding the Commons](https://explorer.gitcoin.co/#/round/42161/25/95) | $22.78   |
+| 5    | [Glo Dollar](https://explorer.gitcoin.co/#/round/42161/25/51) | $22.06   |
+
+
+# Code of Conduct
+
+As a reminder to all projects, [quid pro quo](https://support.gitcoin.co/gitcoin-knowledge-base/about-gitcoin/policy/understanding-potential-attack-vectors/bribery-quid-pro-quo) is explicitly against [our agreement](https://grants-portal.gitcoin.co/gitcoin-grants-grantee-portal/gg19-eligibility). Providing an incentive or reward for individuals to donate to specific projects can affect your ability to participate in future rounds. If you see someone engaging in this type of behavior, please [let us know.](https://forms.gle/n3b5MDgHskehNQ7s8)
+
+# Next Steps
+
+We plan to distribute the matching by May 28th, after the [results](https://docs.google.com/spreadsheets/d/1rZ9JPldY1AjzMdGgfqpfRfxlUyQdGLoVAZJ90Eamxq4/edit#gid=1546480797) are ratified through governance. We are leaving five days of discussion on this post, and barring any major problems or issues found with these results, will proceed to a Snapshot vote that is open for five days.
+
+It's worth noting that GG19 pre-approved the matching fund to be paid out before results were posted. This is a strong precedent and, if the community agrees, we could pass a policy that matching payouts for all future rounds not require ratification. 
+
+We are also hosting an internal retro on May 20th and will publish further results and learnings. And as always, a detailed blog post will be published on the day that payouts are distributed.
+
+We're also always looking for direct feedback from the community on which improvements would make GG21 even better. Please don't hesitate to let us know!
+
+![|624x557](upload://rqT88fXJEsoViTuugd299v5m59p.jpeg)
+Tue, 09 Jul 2024 18:13:32 +0000
+🌱 Gitcoin Grants
+
+
+[PASSED] GG20 Program Round Matching Results
+skilesare
+
+            <p>Joel…I think this is just a case of most of my contributions being at opposite ends of the spectrum. Most of my donors were coming from outside the ETH ecosystem. Hopefully they are more established now and will get better scores in the next go around. We’ll just have to build it up over time.</p>
+<p>We do have a cool demo of bringing passport over to our community now, so hopefully I can get better engagement with it in the future: <a href="https://kristoferlund.se/blog/240703-verifiable-credentials" class="inline-onebox" rel="noopener nofollow ugc">Demo – Bring the Gitcoin Passport Score to the Internet Computer</a></p>
+<p>I’m also lobbying to get ckGTC enababled, but we likely need a good use case first. <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> <a href="https://github.com/dfinity/ic/blob/master/rs/ethereum/cketh/docs/ckerc20.adoc" class="inline-onebox" rel="noopener nofollow ugc">ic/rs/ethereum/cketh/docs/ckerc20.adoc at master · dfinity/ic · GitHub</a></p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/40">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/40
+        Tue, 09 Jul 2024 18:13:32 +0000
+gov.gitcoin.co-post-18816-40
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+Joel_m
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/skilesare">@skilesare</a>, sorry for the delay here.</p>
+<p>I re-ran the results with the “carpet bombers” you indicated removed from the donor pool. Removing them doesn’t seem to significantly change outcomes – in particular, your project does get more matching, but only an additional 0.00000027 of the funding pool.</p>
+<p>I also tried stress-testing the results by adding in up to five thousand more fake carpet bombers, to see if this can become a viable attack with many such accounts. With 5k carpet bombers added in, your project’s share of the matching pool does decrease, but only by a fraction of 0.0000021 (compared to the world with all carpet bombers removed).</p>
+<p>That being said, these seem to be very different results than what you noted in your original post. If you’re comfortable emailing me with further information about what numbers you crunched to get the results you did, please shoot me another email.</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/39">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/39
+        Thu, 13 Jun 2024 18:31:18 +0000
+gov.gitcoin.co-post-18816-39
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+skilesare
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a> Did you ever have a chance to look at that list?  Still trying to figure out what went wrong and how I can do better next round.</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/38">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/38
+        Mon, 03 Jun 2024 12:38:02 +0000
+gov.gitcoin.co-post-18816-38
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+umarkhaneth
+
+            <p>This <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x3527cb7a0c0e2100fc508b3d3b95e255ab34b95a18fd5fe6ab41c928d8aa5901" rel="noopener nofollow ugc">snapshot has closed</a> and option to “Ratify the round results” has won.</p>
+<p>Metrics:<br>
+1,635 unique wallets voted<br>
+~4.9M GTC tokens cast.</p>
+<p>Thank you to all who voted!</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/37">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/37
+        Tue, 28 May 2024 15:15:42 +0000
+gov.gitcoin.co-post-18816-37
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+skilesare
+
+            <p>Sent the list last week but just noticed my message didn’t post. Did you receive it via email?</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/36">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/36
+        Tue, 28 May 2024 15:02:04 +0000
+gov.gitcoin.co-post-18816-36
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+umarkhaneth
+
+            <p>reposting these links from above</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="16" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>you can always find voting data available via SQL in our metabase instance at <a href="https://github.com/ufkhan97/regendata" rel="noopener nofollow ugc">regendata </a> or our Indexer’s <a href="https://github.com/gitcoinco/grants-stack-indexer?tab=readme-ov-file" rel="noopener nofollow ugc">GraphQL endpoint </a>. For GG20 I also uploaded CSVs <a href="https://drive.google.com/drive/u/1/folders/1_FQdrNLiTPxJ7OHIJFULGDxOIuW3_vvt" rel="noopener nofollow ugc">here</a>.</p>
+</blockquote>
+</aside>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/35">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/35
+        Fri, 24 May 2024 17:50:52 +0000
+gov.gitcoin.co-post-18816-35
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+CryptoRohittt
+
+            <aside class="quote no-group" data-username="Joel_m" data-post="17" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/joel_m/48/9525_2.png" class="avatar"> Joel_m:</div>
+<blockquote>
+<p>I think that this almost certainly had something to do with it.</p>
+</blockquote>
+</aside>
+<p>Why speculate? just share the data with us!</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/34">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/34
+        Fri, 24 May 2024 04:19:09 +0000
+gov.gitcoin.co-post-18816-34
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+umarkhaneth
+
+            <aside class="quote no-group" data-username="CODEX" data-post="31" data-topic="18816" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/codex/48/12902_2.png" class="avatar"> CODEX:</div>
+<blockquote>
+<p>To confirm: there are still no donations in the wallets connected to the <span class="hashtag-raw">#GG20</span> grant until the QF has been calculated?</p>
+</blockquote>
+</aside>
+<p>No all crowdfunded donations are already in grantee wallets. If you’re having issues pls dm me on telegram <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a></p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/33">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/33
+        Thu, 23 May 2024 16:44:47 +0000
+gov.gitcoin.co-post-18816-33
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+umarkhaneth
+
+            <p>The <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x3527cb7a0c0e2100fc508b3d3b95e255ab34b95a18fd5fe6ab41c928d8aa5901" rel="noopener nofollow ugc">vote to ratify the GG20 results</a> is now live on snapshot and running until May 28th! Please go vote! <img src="https://gov.gitcoin.co/images/emoji/twitter/ballot_box.png?v=12" title=":ballot_box:" class="emoji" alt=":ballot_box:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/32">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/32
+        Thu, 23 May 2024 16:21:07 +0000
+gov.gitcoin.co-post-18816-32
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+CODEX
+
+            <p>To confirm: there are still no donations in the wallets connected to the <span class="hashtag-raw">#GG20</span> grant until the QF has been calculated?</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/31">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/31
+        Wed, 22 May 2024 23:37:36 +0000
+gov.gitcoin.co-post-18816-31
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+umarkhaneth
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/solarpunkmaxi">@solarpunkmaxi</a>, our program automatically pulls data on accepted projects and calculates the matching results. Including the votes from a rejected project and/or combining votes on two projects means a manual intervention.</p>
+<p>With that said, we’ve gone ahead and processed this for $EARTH in the Dapps round and for DSPYT (who reached out via telegram and also had a duplicate project situation) in the Hackathon round.</p>
+<p>The updated results are live in the results sheet.</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/30">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/30
+        Wed, 22 May 2024 22:44:29 +0000
+gov.gitcoin.co-post-18816-30
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+solarpunkmaxi
+
+            <p>hey <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> , since $EARTH was rejected initially and then we got through after making the necessary changes for the OSS round, there were 2 grants LIVE - the one that got rejected and the one with which we reapplied.</p>
+<p>Have been given to believe that votes given to only of the 2 live are getting counted.</p>
+<p>Any particular reason not to include votes to both ?</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/29">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/29
+        Wed, 22 May 2024 15:53:19 +0000
+gov.gitcoin.co-post-18816-29
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+Joel_m
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/skilesare">@skilesare</a> – could you send me the addresses of the 46 carpet bombers you mention? Email is the best way – <a href="mailto:joel@gitcoin.co">joel@gitcoin.co</a></p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/28
+        Tue, 21 May 2024 05:07:38 +0000
+gov.gitcoin.co-post-18816-28
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+ayush035
+
+            <p>Got it , I appreciate your efforts for helping us understand COMC  ,things makes much more sense now.</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/27">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/27
+        Mon, 20 May 2024 22:05:28 +0000
+gov.gitcoin.co-post-18816-27
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+Moeen
+
+            <p>Thank you for providing this data and taking the time to explain all the details. I think it might be beneficial to exclude the outliers for each project. This could help to eliminate any potential bias if a random wallet only donated to one project.</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/26">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/26
+        Mon, 20 May 2024 22:02:14 +0000
+gov.gitcoin.co-post-18816-26
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+Joel_m
+
+            <p>Ok, here are some graphs that may help <a class="mention" href="https://gov.gitcoin.co/u/moeen">@Moeen</a> , <a class="mention" href="https://gov.gitcoin.co/u/cryptorohittt">@CryptoRohittt</a> , and <a class="mention" href="https://gov.gitcoin.co/u/ayush035">@ayush035</a> understand their funding outcomes.</p>
+<p>We’ve mentioned above and in other communications how COCM prioritizes projects with diverse sets of donors. The charts below give one way of visualizing that on GG20 data.</p>
+<p>Each dot on these scatterplots is one project. The X axis is the average diversity of that project’s donors, and the Y axis shows the amount that project benefited from moving from standard QF to COCM.</p>
+<p>In more detail: to calculate the X axis number, we looked at all pairs of donors to a project. For each pair, we found the number of other projects that just <em>one</em> person out of the pair donated to, and averaged all those numbers. To calculate the Y axis number, we found the percent of the matching pool that project got under COCM, and divided that by the percent they would’ve captured under standard QF. Also, since the DApps round was so big, we used 10k randomly sampled pairs instead of all pairs, per project.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5c18f882d0017a0767e0b9b7af12caf7fbeac00f.png" alt="Untitled" data-base62-sha1="d8JqsQcKKJ778N1fbQN3KT28uDB" width="571" height="492"></p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b2f48c19c26561f241e8f9bc7b790f9d8299f45d.png" alt="Untitled-1" data-base62-sha1="px6VEkbq9chuEEH7i2Ne9OcY6Tj" width="562" height="492"></p>
+<p>These scatterplots show a correlation between this particular measure of donor diversity and project success. They might also help to explain why BerryLab, WalletX, and Stogram performed less well than expected: in regards to this measure, they’re on the lower end of the distribution, coming in at  9.57, 4.97, and 10.64 respectively.</p>
+<p>Hopefully these charts can be helpful to everyone trying to understand why funding results look the way they did, and can help all of us in the Gitcoin community understand how we want to align the algorithm in the future. I would love everyone’s feedback on whether or not this is the type of behavior we want out of the algorithm, and why or why not that’s the case.</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/25">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/25
+        Mon, 20 May 2024 21:28:53 +0000
+gov.gitcoin.co-post-18816-25
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+umarkhaneth
+
+            <p>Hey! 100 is good. We apply a sliding scale to donations based on the passport score. If your score is 0 you get no matching. If your score is 1 you get 50% matching, and this increases linearly until a score of 25 at which point you get 100% matching. The amountUSD is the value after this scale is applied while the startingAmountUSD is the original donation.</p>
+<p>I’m looking into the bug in the registration process. If you DM me a good email address I can add you manually for now. I’m <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> on tg</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/24
+        Mon, 20 May 2024 21:00:25 +0000
+gov.gitcoin.co-post-18816-24
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+skilesare
+
+            <aside class="quote no-group" data-username="skilesare" data-post="18" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/skilesare/48/9533_2.png" class="avatar"> skilesare:</div>
+<blockquote>
+<p>Dumb question here, but in the csv, for raw score, is 100 good or bad?</p>
+</blockquote>
+</aside>
+<p>Just raising this again as it is blocking my analysis.<img src="https://gov.gitcoin.co/images/emoji/twitter/grimacing.png?v=12" title=":grimacing:" class="emoji" alt=":grimacing:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/23
+        Mon, 20 May 2024 20:50:23 +0000
+gov.gitcoin.co-post-18816-23
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+gulliverz
+
+            <aside class="quote no-group" data-username="DistributedDoge" data-post="4" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/distributeddoge/48/10188_2.png" class="avatar"> DistributedDoge:</div>
+<blockquote>
+<p>Having my account passively scanned by some third-party black-box model is much less hassle than manually collecting stamps, so overall, it is an improvement.</p>
+</blockquote>
+</aside>
+<p>Nice way of thinking, I second to that <img src="https://gov.gitcoin.co/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/22
+        Mon, 20 May 2024 15:36:10 +0000
+gov.gitcoin.co-post-18816-22
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+rohit
+
+            <aside class="quote no-group" data-username="Moeen" data-post="20" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/moeen/48/13189_2.png" class="avatar"> Moeen:</div>
+<blockquote>
+<p>For instance, a project with approximately 90 contributions totaling $200 received a higher matching amount than our project, which had around 650 contributions totaling $1600.</p>
+</blockquote>
+</aside>
+<p>I was intrigued by this and thought of digging deeper into the data. I would like to think the following supports <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a>’s assertion about donor diversity.</p>
+<p>I profiled BerryLab’s top 50 donors compared to the other project (with fewer contributors/contributions, let’s call it Project A). The top 50 donors of Project A collectively supported 152 out of the 153 projects in the dApps &amp; Apps round, while the top 50 donors of BerryLab have contributed to 34 out of the 153 projects. In relative terms, the top contributors for Project A are likely to be part of more diverse clusters by a long shot.</p>
+<p>While this is not conclusive, it is a directionally indicative reason behind the difference. I have spot-checked this with 3 other projects with less than 100 unique voters contributing to less than $350 in crowdfunding but have received an average matching Per Voter &gt; $15. In each case, their top 50 donors collectively support at least 120 or more projects in the round.</p>
+<p>(Query to support this analysis is available in the Metabase instance of Regendata <a href="https://app.regendata.xyz/question/249-total-projects-supported-by-top-donors-of-a-project-dapps-apps">here</a>).</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/21
+        Sun, 19 May 2024 20:34:28 +0000
+gov.gitcoin.co-post-18816-21
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+Moeen
+
+            <aside class="quote no-group quote-modified" data-username="Joel_m" data-post="17" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/joel_m/48/9525_2.png" class="avatar"> Joel_m:</div>
+<blockquote>
+<p>Definitely, this is also something I can look into, but like above it may have something to do with donor diversity.</p>
+<p>In case it helps anyone out, I’m also going to share [a link to the COCM code written in a clearer way than what’s in the public repository/ what we use in production.This code is VERY slow and is only really there to look at, in case doing so makes it more clear what’s going on in the algorithm. To run your own experiments, I suggest using the version of COCM in this [github repo] with the default arguments.</p>
+<p>I’m also going to share [the similarity scores as calculated by COCM for all GG20 rounds. This is already a long post but there is information linked above that explains how we use these.</p>
+<p>However you don’t really need these if you want to replicate the round results, you can just plug in the data Umar shared above (after a little pre-processing). COCM doesn’t take the similarity scores as input, it calculates them as a by-product, so this is just a way to examine the “guts” of the algorithm, should anyone want to.</p>
+<p>We’re also always trying to tune this algorithm to give better results. It’s a careful three-way balancing act between 1) prioritizing popular projects, 2) not letting sybils have too much sway, and 3) reducing user friction (i.e. not requiring too much proof of humanity stuff). Thanks all</p>
+</blockquote>
+</aside>
+<p>Thank you for the detailed follow-up and for providing additional resources to understand the COCM code and its application.</p>
+<p>I’ve reviewed the available information, and while I understand the complexity of balancing donor diversity, project popularity, and sybil resistance, I’m still puzzled by some discrepancies in the matching funds. For instance, a project with approximately 90 contributions totaling $200 received a higher matching amount than our project, which had around 650 contributions totaling $1600.</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/20
+        Sat, 18 May 2024 10:17:33 +0000
+gov.gitcoin.co-post-18816-20
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+skilesare
+
+            <aside class="quote no-group" data-username="Joel_m" data-post="17" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/joel_m/48/9525_2.png" class="avatar"> Joel_m:</div>
+<blockquote>
+<p>Thanks for flagging this – I’m not the best person to capture the whole picture of what happened here, since I only work on the QF side of things and not passport, but if it really is the case that <em>fewer</em> donations to your project would’ve yielded more matching, that’s definitely something we want to look into.</p>
+</blockquote>
+</aside>
+<p>I’m going to slice this a bit by the number of these that were ‘carpet bomb’ votes…but most of those got a 100 score:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/21dd4cc1d19ca90bcd9e536a17e0a285e8b9ff89.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/21dd4cc1d19ca90bcd9e536a17e0a285e8b9ff89" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/21dd4cc1d19ca90bcd9e536a17e0a285e8b9ff89_2_689x292.png" alt="image" data-base62-sha1="4PzT8ccD3JfJ7v6VpNfqrq1hR6V" width="689" height="292" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/21dd4cc1d19ca90bcd9e536a17e0a285e8b9ff89_2_689x292.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/21dd4cc1d19ca90bcd9e536a17e0a285e8b9ff89_2_1033x438.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/21dd4cc1d19ca90bcd9e536a17e0a285e8b9ff89_2_1378x584.png 2x" data-dominant-color="FBFBFB"></a></div><p></p>
+<p>Not sure if it is helpful or not.</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/19
+        Sat, 18 May 2024 00:46:38 +0000
+gov.gitcoin.co-post-18816-19
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+skilesare
+
+            <aside class="quote no-group" data-username="umarkhaneth" data-post="16" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>Hi skilesare, you can always find voting data available via SQL in our metabase instance at <a href="https://github.com/ufkhan97/regendata" rel="noopener nofollow ugc">regendata</a> or our Indexer’s <a href="https://github.com/gitcoinco/grants-stack-indexer?tab=readme-ov-file" rel="noopener nofollow ugc">GraphQL endpoint</a>. For GG20 I also uploaded CSVs <a href="https://drive.google.com/drive/u/1/folders/1_FQdrNLiTPxJ7OHIJFULGDxOIuW3_vvt" rel="noopener nofollow ugc">here</a>.</p>
+</blockquote>
+</aside>
+<p>Dumb question here, but in the csv, for raw score, is 100 good or bad?</p>
+<p>What is the difference between amountUSD and startingAmountUSD?</p>
+<p>I tried signing up for the SQL and the registration process was down.</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/18
+        Sat, 18 May 2024 00:24:27 +0000
+gov.gitcoin.co-post-18816-18
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+Joel_m
+
+            <aside class="quote no-group" data-username="CryptoRohittt" data-post="8" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/cryptorohittt/48/13179_2.png" class="avatar"> CryptoRohittt:</div>
+<blockquote>
+<p>But now when we got the email from Gitcoin, we are shocked to see that we are ranked 2nd? I cannot understand why! <img src="https://gov.gitcoin.co/images/emoji/twitter/slightly_frowning_face.png?v=12" title=":slightly_frowning_face:" class="emoji" alt=":slightly_frowning_face:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+</aside>
+<p>Hey <a class="mention" href="https://gov.gitcoin.co/u/cryptorohittt">@CryptoRohittt</a>  – I can look into the data here this weekend, but as mentioned in the post, COCM tends to take more than raw donor numbers / donation amounts into account. I think that this almost certainly had something to do with it. In particular, in an effort to curb sybils, COCM gives a leg up to donors who donate do more than one project, and tends to give single-issue voters less sway. So a big push to rope in folks who weren’t already GG donors may have had less impact if those people only donated to your project.</p>
+<aside class="quote no-group" data-username="skilesare" data-post="6" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/skilesare/48/9533_2.png" class="avatar"> skilesare:</div>
+<blockquote>
+<p>If I take out these 46 or so contributions that were part of a carpet bomb my average goes from about 1.5 to 9.1 per donor.</p>
+</blockquote>
+</aside>
+<p>Thanks for flagging this – I’m not the best person to capture the whole picture of what happened here, since I only work on the QF side of things and not passport, but if it really is the case that <em>fewer</em> donations to your project would’ve yielded more matching, that’s definitely something we want to look into.</p>
+<aside class="quote no-group" data-username="Moeen" data-post="15" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/moeen/48/13189_2.png" class="avatar"> Moeen:</div>
+<blockquote>
+<p>Could you please help me understand the rationale behind the allocation of matching funds in this case? Insights into the process will be invaluable for our future participation and ensure we align better with the intended outcomes of the program.</p>
+</blockquote>
+</aside>
+<p>Definitely, this is also something I can look into, but like above it may have something to do with donor diversity.</p>
+<p>In case it helps anyone out, I’m also going to share <a href="https://colab.research.google.com/drive/1D_3h-Lvpvd5p2YUbyhV8pMRzCZmbFxbk?usp=sharing" rel="noopener nofollow ugc">a link to the COCM code written in a clearer way than what’s in the public repository/ what we use in production.</a> This code is VERY slow and is only really there to look at, in case doing so makes it more clear what’s going on in the algorithm. To run your own experiments, I suggest using the version of COCM in this <a href="https://github.com/Jmiller4/qf-variants/blob/main/qf-variants.py" rel="noopener nofollow ugc">github repo</a> with the default arguments.</p>
+<p>I’m also going to share <a href="https://drive.google.com/drive/folders/1LpJjxLJCSwp5ACaKHN_BwftX0IqmTo88?usp=sharing" rel="noopener nofollow ugc">the similarity scores as calculated by  COCM for all GG20 rounds</a>. This is already a long post but there is information linked above that explains how we use these.</p>
+<p>However you don’t really need these if you want to replicate the round results, you can just plug in the data Umar shared above (after a little pre-processing). COCM doesn’t take the similarity scores as input, it calculates them as a by-product, so this is just a way to examine the “guts” of the algorithm, should anyone want to.</p>
+<p>We’re also always trying to tune this algorithm to give better results. It’s a careful three-way balancing act between 1) prioritizing popular projects, 2) not letting sybils have too much sway, and 3) reducing user friction (i.e. not requiring too much proof of humanity stuff). Thanks all</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/17
+        Fri, 17 May 2024 22:59:02 +0000
+gov.gitcoin.co-post-18816-17
+[PASSED] GG20 Program Round Matching Results
+      
+
+[PASSED] GG20 Program Round Matching Results
+umarkhaneth
+
+            <aside class="quote no-group" data-username="skilesare" data-post="6" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/skilesare/48/9533_2.png" class="avatar"> skilesare:</div>
+<blockquote>
+<p>Is there some way to get at the underlying results and data?</p>
+</blockquote>
+</aside>
+<p>Hi skilesare, you can always find voting data available via SQL in our metabase instance at <a href="https://github.com/ufkhan97/regendata" rel="noopener nofollow ugc">regendata</a> or our Indexer’s <a href="https://github.com/gitcoinco/grants-stack-indexer?tab=readme-ov-file" rel="noopener nofollow ugc">GraphQL endpoint</a>. For GG20 I also uploaded  CSVs <a href="https://drive.google.com/drive/u/1/folders/1_FQdrNLiTPxJ7OHIJFULGDxOIuW3_vvt" rel="noopener nofollow ugc">here</a>.</p>
+<aside class="quote no-group" data-username="skilesare" data-post="6" data-topic="18816">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/skilesare/48/9533_2.png" class="avatar"> skilesare:</div>
+<blockquote>
+<p>As most of our community was coming from outside the ETH universe I wasn’t expecting a huge match, but where we ended up is disappointing nonetheless. I’d like to better understand what went wrong and what we can do better as a community in the next round.</p>
+</blockquote>
+</aside>
+<p>I understand ending up with less funding than you expected can be really disappointing. I also hear you that you want to better understand what happened and how results are calculated. In your shoes, I’d want the same thing.</p>
+<p>I looked into your project to see what’s happening – ICDevs right? I see that over 80% of your donors passed the Passport model as having sufficient ETH activity and qualified for matching. Instead, it may be the case that the community of individuals who supported your project are not as diverse in the projects they choose to support.  <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a> is adding his expertise here as an inventor of COCM and we can dig in some more!</p>
+<hr>
+<p>On a related note,  I’ve updated the <a href="https://docs.google.com/spreadsheets/d/1rZ9JPldY1AjzMdGgfqpfRfxlUyQdGLoVAZJ90Eamxq4/edit#gid=1546480797" rel="noopener nofollow ugc">results sheet</a> to include the number and percent of users passing passport for each project. I hope that addresses the request from <a class="mention" href="https://gov.gitcoin.co/u/kronosapiens">@Kronosapiens</a> as well. Let me know!</p>
+<hr>
+<p>One thing I’d like to emphasize is that these rounds are meant to serve our OSS community. It’s ultimately up to the members of this community to decide how these rounds should be run. If something we’re doing isn’t working then we should change it. With that said, it’s hard to get an accurate read on things sometimes. My personal bias says that the projects with high matching per voter are ones that should be getting boosted. It would be helpful to hear from more people.</p>
+<p>Projects like Giveth and Rotki, for example, are not doing well because they are ‘friends of the founders.’   Griff, Lefteris, their teams, and our co-founders have been active contributors to the Ethereum ecosystem for many years, consistently move the industry forward, and have earned meaningful support from people across the space. That support shows up in the donation record. If in doubt of any of this, I recommend instead of leaving a comment just check the <a href="https://github.com/gitcoinco/qf-calculator" rel="noopener nofollow ugc">code</a> and <a href="https://drive.google.com/drive/u/1/folders/1_FQdrNLiTPxJ7OHIJFULGDxOIuW3_vvt" rel="noopener nofollow ugc">on-chain data</a> for yourself.</p>
+<hr>
+<p>I know there are more comments to address and will be back soon! Thanks to all projects for your engagement and patience here</p>
+          <p><a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816/16
+        Fri, 17 May 2024 22:52:53 +0000
+gov.gitcoin.co-post-18816-16
+[PASSED] GG20 Program Round Matching Results
+      
+
+

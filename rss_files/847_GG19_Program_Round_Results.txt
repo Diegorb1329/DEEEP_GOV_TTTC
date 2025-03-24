@@ -1,0 +1,474 @@
+
+
+
+GG19 Program Round Results
+https://gov.gitcoin.co/t/gg19-program-round-results/17281
+    ![image|690x153](upload://1zTwNaxfy4LPESs2UvZEUEujbjc.jpeg)
+
+Hey all, GG19 program round matching results are live [here](https://docs.google.com/spreadsheets/d/1J-llvoR7dJ8tisZf5TFCUE_72_W9gjaHjcOmjBF2nbo/edit#gid=668799987)! We’ll have five days for review and feedback, then process payouts on 12/20. 
+
+Thank you to @connor for co-authoring this post with me. Thank you ​​to @Joel_m, @ghostffcode, & @stefi_says for contributing to the post-round analysis results. Thank you to @M0nkeyFl0wer @Sov and others within the DAO for their thoughts and reviews.
+
+# TL;DR
+
+In GG19, we continue moving to a variant of QF that uses clustering to move sybil and collusion resistance natively inside the mechanism and reward projects with more diverse and pluralistic communities. GG19 will be the first round in years where we will not do any closed-source silencing of Sybils/donors. Instead, we’re solely relying on our mechanism and Gitcoin Passport.
+
+For this round, we had a proactive [governance discussion](https://gov.gitcoin.co/t/gg19-matching-funds-proposal-for-discussion/16945) and a subsequent [snapshot vote](https://snapshot.org/#/gitcoindao.eth/proposal/0x28602986792817ae8bd51ac57775966a4d4bf101eb585011715a9cf64c94e9df) to approve the transfer of matching funds. Consequently, there will not be a formal vote to ratify these results; however, we will have five days for review and discussion on the forums.
+
+# GG19 Overview
+
+GG19 took [a few steps to evolve](https://gov.gitcoin.co/t/gg19-outline-and-strategy/16682) our program round strategy from prior rounds. This time we had 3 program rounds distribute $1,094,662 to 471 projects. Big thank you to the Dev Con team, Polygon, & Arbitrum for supporting Ethereum Infrastructure, Open Source Software, and Web3 Community Builders! 💚💜💙
+
+We also had an amazing 9 community rounds and 9 independent rounds running at the same time! This broke a Gitcoin record for most concurrent rounds. Special gratitude goes to all our partners and especially to our community round runners at the Climate Coordination Network, Arbitrum Citizens, Metagov (Governance Research), Token Engineering Commons, OpenCivics, Mask Network (Web3 Social), Meta Pool, and 1inch.
+
+|Round|Matching Pool|Matching Cap|Crowdfund|
+| --- | --- | --- | --- |
+|Open Source Software|$200,000.00|7.420%|$297,252|
+|Ethereum Infrastructure|$200,000.00|10%|$58,723|
+|Web3 Community & Education|$200,000.00|7.420%|$138,687|
+
+
+Each Gitcoin round sees improvements over the last but this one feels like a turning point in many ways. Some of the new features and additions include:
+
+* Passport Sliding Scale: Rather than having passport scores resolve to a binary “pass” or “fail” result to determine whether a donor gets matched, GG19 had a new feature where once scores were over a certain threshold(15), an increase in the score would result in an increased matching impact. 76.0% of wallets qualified for this round, an increase of 4% from last round.
+
+* Matching Estimates: Donors could now see an estimate of their donation's impact on a project’s matching amount.
+
+* Explorer Landing Page: [explorer.gitcoin.co](https://explorer.gitcoin.co/)'s beautiful redesign also improved search and sort functionality
+
+* Collections: created a way for donors to delegate funding decisions
+* Report Cards: provided round operators a new channel to communicate publicly about their round
+
+* Passport UI Improvements: sleek new interface makes it easier to see how you can earn points to increase your unique humanity score.
+
+* Passport Scoring Improvements: continuous adjustments to the stamp scoring models are adapting to sybil strategies, making it harder for them and easier for real humans
+
+Read more here:
+- https://gov.gitcoin.co/t/gg19-oss-round-review-reflections/17278/
+- https://gov.gitcoin.co/t/gg19-web3-community-and-education-round-review-reflections/17279
+- https://gov.gitcoin.co/t/gg19-eth-infra-round-review-reflections/17268
+
+Kudos to everyone who worked hard to make this round a success! There are many people behind the scenes at Gitcoin whose work makes it possible to fund what matters. Thank you!!
+
+# Round and Results Calculation Details
+
+The complete list of final results & payout amounts can be found [here](https://docs.google.com/spreadsheets/d/1J-llvoR7dJ8tisZf5TFCUE_72_W9gjaHjcOmjBF2nbo/edit#gid=668799987). Below, we’ll cover how these results were calculated and other decisions.
+
+Post-round mechanism selection had a $350k financial impact. This means $175k was reduced from projects that saw over-coordinated or sybil activity and given to other projects.
+
+
+# Next Gen Quadratic Funding: Collusion-Resistance Inside The Mechanism
+
+We introduced post-round sybil squelching a few years ago as part of our defense against the dark arts of sybil attackers and airdrop farmers. This process involves the Gitcoin team utilizing on and off-chain data, machine learning, and manual verification to find sybils and sockpuppet accounts to take them out of the matching distribution. Because our methods only worked so long as the attackers didn’t know how we found them, we had to be closed source. This round, with an improved mechanism, we found our closed-source solution only improved results by between 5 and 20%. That’s why we’re really glad to not use it at all. Instead, we’ll draw attention to the [open source code](https://github.com/Jmiller4/qf-variants/tree/main) we use to calculate quadratic funding results.
+
+About a year ago, @joel_m, @GlenWeyl, and @erich published an innovative [paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507) in which they designed collusion-resistant methods for quadratic funding. Recently we began implementing their strategies and they’ve proven highly effective. We successfully reduced the match of the most suspicious projects by up to 85% and redirected those funds to other projects.
+
+Quadratic funding helps us solve coordination failures by creating a way to allocate towards the projects a community believes should be funded. As a base case it assumes people are making independent decisions. However, this assumption can be exploited by colluding groups who align their funding choices to unfairly influence the distribution of matching funds.
+
+Collusion-oriented cluster-matching (COCM) doesn’t make this assumption. Instead, it quantifies just how coordinated groups of donors are likely to be based on the social signals they have in common. Projects backed by more independent agents receive greater matching funds. Conversely, if a project’s support network shows higher levels of coordination, the matching funds are reduced, encouraging self-organized solutions within more coordinated groups.
+
+One open area of research examines what data points make the best social signals. For this round we used the donation choices themselves as those signals. We also studied alternative options such as using passport stamp data and POAP data. If you’re interested in conversations on clustering data or mechanism developments, please join this [telegram group](https://t.me/+Of1AvIwXZAJjYmM5).
+
+In addition, as an unintended side-effect of the COCM mechanism most projects get more funding. As an example, here is the chart of per-project funding for the Web3 Open Source Software round:
+
+![|624x341](upload://iw2K8hkKp2C8U6dRg7llTqaHJ51.png)
+
+We’re directing more of the funding to the long-tail of projects.
+
+For more details about pluralistic QF methods, check out [this paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507) and/or [these](https://www.youtube.com/watch?v=Gi1madKCWWA) [podcasts](https://www.youtube.com/watch?v=ueQDnq-J2mY).
+
+# Code of Conduct
+
+As a reminder to all projects, [quid pro quo](https://support.gitcoin.co/gitcoin-knowledge-base/about-gitcoin/policy/understanding-potential-attack-vectors/bribery-quid-pro-quo) is explicitly against [our agreement](https://grants-portal.gitcoin.co/gitcoin-grants-grantee-portal/gg19-eligibility). Providing an incentive or reward for individuals to donate to specific projects can affect your ability to participate in future rounds. If you see someone engaging in this type of behavior, please [let us know. ](https://forms.gle/n3b5MDgHskehNQ7s8)
+
+# Coordination Technology == Social Technology
+
+For us to fund what matters, we need to use our collective voices. Let’s chat below on these results, the mechanism choice, and your experiences in the round. What did you see working well? What could be improved?
+
+
+# Next Steps 
+We plan to distribute matches before the holidays, by the end of next week. We are leaving 5 days of discussion on this post, and sans any major problems or issues found with these results, will process payouts shortly thereafter. But that doesn’t mean this conversation ends there! We want the conversation to continue to help us shape strategies and improvements for future rounds. Cheers!
+
+
+![|624x351](upload://p4UkhFuRtCsOttdg2x1svICaPF5.jpeg)
+Thu, 04 Jan 2024 18:14:08 +0000
+🌱 Gitcoin Grants
+
+
+GG19 Program Round Results
+carlosjmelgar
+
+            <p>Hello. We’re waiting on the matching Arbitrum funds. Sorry for the delay. We’ll post an update when those have been received.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/17
+        Thu, 04 Jan 2024 18:14:08 +0000
+gov.gitcoin.co-post-17281-17
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+gabriellamena
+
+            <p>Hey Carlos, how are you? Do u have any news about the 1inch Latam round? <a class="mention" href="https://gov.gitcoin.co/u/carlosjmelgar">@carlosjmelgar</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/16
+        Wed, 03 Jan 2024 18:21:41 +0000
+gov.gitcoin.co-post-17281-16
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+umarkhaneth
+
+            <p>Thank you everyone for the warm wishes and congratulations! Finalizing the results was a big team effort and I’m grateful for  <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a> 's galaxy brain, <a class="mention" href="https://gov.gitcoin.co/u/ghostffcode">@ghostffcode</a>’s stoic sureness,  <a class="mention" href="https://gov.gitcoin.co/u/stefi_says">@stefi_says</a> data magic ,  <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a>’s process prudence and many more individuals within the DAO who gave review and feedback.</p>
+<p>On to some comments and questions.</p>
+<aside class="quote no-group" data-username="ccerv1" data-post="3" data-topic="17281">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ccerv1/48/6966_2.png" class="avatar"> ccerv1:</div>
+<blockquote>
+<p>I’d be curious to see any trends related to which projects seemed to attract a lot of clustering or other signs of Sybil attention.</p>
+</blockquote>
+</aside>
+<p>Hey Carl, thank you for asking this! Overwhelmingly, I’m seeing these projects are the ones someone would donate to <strong>in expectation of a future reward</strong>. There are generally 3 kinds:</p>
+<ul>
+<li>Projects which provide Airdrop Farming Guides or Investment Advice via content publication</li>
+<li>Projects which guide the user to complete specific tasks/quests for rewards</li>
+<li>Projects which may do an Airdrop one day</li>
+</ul>
+<p>Although every round sees a difference in the matching distribution when switching to COCM, the biggest difference comes in the Community and Education Round which accounts for 55% of the  redistributed funds. OSS follows with 30% and Eth Infra 15%. We heavily curated the Eth Infra round as an invite-only round while the Community and Education round was more intended to allow quadratic funding to decide.</p>
+<p>By incentivizing an existing community of farmers and sybils to visit Gitcoin these rewards-based projects directly distort our matching outcomes. Cluster Matching reduced the match of these projects by up to 85% yet they are still able to draw thousands in funding. The place to solve for this is not in post-round analysis but in pre-round gating.</p>
+<p>For future rounds it’s clear (imo) that we can draft explicit rules against allowing in projects whose primary output is advice/instruction on how to get airdrops or win rewards. While these have a place in Web3, it’s probably not in our QF rounds.</p>
+<aside class="quote no-group" data-username="ccerv1" data-post="3" data-topic="17281">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ccerv1/48/6966_2.png" class="avatar"> ccerv1:</div>
+<blockquote>
+<p>I’m also curious if you think the collections feature was helpful in giving any projects additional signal.</p>
+</blockquote>
+</aside>
+<p>The answer to this one isn’t yet clear to me. I think there’s some more analysis to be done to fully answer it. But, just to share some quick thinking: in this debut round it seems to have primarily helped add visibility to projects but did not yet drive bulk donations. I was a bit worried about the effect this cGrants fave would have on our clusterQF methods but the most popular collection (Stake From Home) saw 18 donors who donated to every project in the grant, while most were single digits. I think that’s mainly because this feature launched this round and the bulk-add-grants-from-collection option may not have been available for the entire round. Def will keep an eye on and see if we can dig deeper into this in collaboration w the GS team.</p>
+<aside class="quote no-group" data-username="mars" data-post="6" data-topic="17281">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/mars/48/10960_2.png" class="avatar"> mars:</div>
+<blockquote>
+<p>Does the algorithm allow to read stamps from Passport and then analyse social graph?</p>
+<p><em>(for example I connected Twitter / Facebook to get some points and then you read my data and the data of my frens)</em></p>
+<p>Or maybe “social signals” analysing on-chain history?</p>
+</blockquote>
+</aside>
+<p>That’s an interesting idea! Like <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> mentioned, we don’t do this and I’ll add that we couldn’t even if we wanted to. Passport encrypts all your information. Gitcoin cannot look at your twitter or facebook friends/follower relationships.</p>
+<aside class="quote no-group" data-username="gabriellamena" data-post="10" data-topic="17281">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/gabriellamena/48/11995_2.png" class="avatar"> gabriellamena:</div>
+<blockquote>
+<p>I was wondering if there is a possibility of bringing greater transparency to the data, especially in relation to the number of donors who had more than the necessary points on their passport and what was the % of the distribution in relation to the passport points. I believe this makes it easier to visualize the reason for the distributed values. If you could provide this information it would be amazing! <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+</aside>
+<p>Hey Gabriella, thanks for asking this!<br>
+We had 76% of our 44.6k users reach a passport score of 15 or higher qualifying them for matching funds. See the distribution of scores below:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cdb32d05ad564a238b234dc90860cc15fbadbd9b.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/cdb32d05ad564a238b234dc90860cc15fbadbd9b" title="Screen Shot 2023-12-20 at 3.21.36 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cdb32d05ad564a238b234dc90860cc15fbadbd9b_2_690x256.png" alt="Screen Shot 2023-12-20 at 3.21.36 PM" data-base62-sha1="tlHLmH5IWIEUnW8cNX58TGZlHWX" width="690" height="256" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cdb32d05ad564a238b234dc90860cc15fbadbd9b_2_690x256.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cdb32d05ad564a238b234dc90860cc15fbadbd9b_2_1035x384.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cdb32d05ad564a238b234dc90860cc15fbadbd9b_2_1380x512.png 2x" data-dominant-color="EDF1F9"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/15
+        Wed, 20 Dec 2023 20:26:08 +0000
+gov.gitcoin.co-post-17281-15
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+gabriellamena
+
+            <p>Thank you so much for the answer, Carlos! <img src="https://gov.gitcoin.co/images/emoji/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/14
+        Wed, 20 Dec 2023 19:28:48 +0000
+gov.gitcoin.co-post-17281-14
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+carlosjmelgar
+
+            <p>gm <a class="mention" href="https://gov.gitcoin.co/u/gabriellamena">@gabriellamena</a> , The LatAm round ran during the same dates as GG19. We’re waiting for the contract to be funded and distribution will happen shortly after that.</p>
+<p>These are the voting results from the round. We’ll update with matching amounts soon.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d47f178009f2c4373bab316e9559c9a537667599.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/d47f178009f2c4373bab316e9559c9a537667599" title="newplot (1)"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d47f178009f2c4373bab316e9559c9a537667599_2_690x336.png" alt="newplot (1)" data-base62-sha1="ujPw21sRvG1I9Gn59ICeaF0dHkt" width="690" height="336" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d47f178009f2c4373bab316e9559c9a537667599_2_690x336.png, https://gov.gitcoin.co/uploads/db4391/original/2X/d/d47f178009f2c4373bab316e9559c9a537667599.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/d/d47f178009f2c4373bab316e9559c9a537667599.png 2x" data-dominant-color="CEAAAA"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/13
+        Wed, 20 Dec 2023 19:02:36 +0000
+gov.gitcoin.co-post-17281-13
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+adminrefimedellin
+
+            <p>Thanks to all the Gitcoin Team for the hard work done <img src="https://gov.gitcoin.co/images/emoji/twitter/raised_hands.png?v=12" title=":raised_hands:" class="emoji" alt=":raised_hands:" loading="lazy" width="20" height="20">, and thanks to  <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> for this detailed post. <img src="https://gov.gitcoin.co/images/emoji/twitter/boom.png?v=12" title=":boom:" class="emoji" alt=":boom:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/12
+        Wed, 20 Dec 2023 07:01:40 +0000
+gov.gitcoin.co-post-17281-12
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+rohit
+
+            <aside class="quote no-group" data-username="umarkhaneth" data-post="1" data-topic="17281">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>For this round we used the donation choices themselves as those signals.</p>
+</blockquote>
+</aside>
+<p>No other social signals were used in this round other than the contribution choices made by a donor.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/11
+        Wed, 20 Dec 2023 06:11:02 +0000
+gov.gitcoin.co-post-17281-11
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+gabriellamena
+
+            <p>GMGM guys, how are you doing? First of all, I would like to congratulate the Gitcoin team for the amazing work you have done! <img src="https://gov.gitcoin.co/images/emoji/twitter/people_hugging.png?v=12" title=":people_hugging:" class="emoji" alt=":people_hugging:" loading="lazy" width="20" height="20"></p>
+<p>I was wondering if there is a possibility of bringing greater transparency to the data, especially in relation to the number of donors who had more than the necessary points on their passport and what was the % of the distribution in relation to the passport points. I believe this makes it easier to visualize the reason for the distributed values. If you could provide this information it would be amazing! <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+<p>Also, I would like to know if anyone has any information about the 1inch round for Latam projects. I could not find the dates and how the distribution will be done. <img src="https://gov.gitcoin.co/images/emoji/twitter/frowning_face.png?v=12" title=":frowning_face:" class="emoji" alt=":frowning_face:" loading="lazy" width="20" height="20"></p>
+<p>Thank you very much in advance for your attention guys! <img src="https://gov.gitcoin.co/images/emoji/twitter/heartpulse.png?v=12" title=":heartpulse:" class="emoji" alt=":heartpulse:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/10
+        Tue, 19 Dec 2023 14:51:22 +0000
+gov.gitcoin.co-post-17281-10
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+smith
+
+            <blockquote>
+<p>GG19 will be the first round in years where we will not do any closed-source silencing of Sybils/donors. Instead, we’re solely relying on our mechanism and Gitcoin Passport.</p>
+</blockquote>
+<p>This is awesome news. Congratulations to the many folks who have worked so hard on improving this process. From a grantee perspective, this was the smoothest round so far. We love to see it!</p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/9
+        Tue, 19 Dec 2023 02:28:03 +0000
+gov.gitcoin.co-post-17281-9
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+KarlaGod
+
+            <p>This is great work, congratulations to all grantees, and thank you so much for the detailed report <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/8
+        Mon, 18 Dec 2023 20:57:11 +0000
+gov.gitcoin.co-post-17281-8
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+charlesfreeborn
+
+            <p>thumbs to the GitCoin team for an amazing work</p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/7
+        Mon, 18 Dec 2023 19:14:31 +0000
+gov.gitcoin.co-post-17281-7
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+mars
+
+            <aside class="quote no-group" data-username="umarkhaneth" data-post="1" data-topic="17281">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>social signals they have in common</p>
+</blockquote>
+</aside>
+<p>Does the algorithm allow to read stamps from Passport and then analyse social graph?</p>
+<p><em>(for example I connected Twitter / Facebook to get some points and then you read my data and the data of my frens)</em></p>
+<p>Or maybe “social signals” analysing on-chain history?</p>
+<h3><a name="notable-outlier-1" class="anchor" href="https://gov.gitcoin.co#notable-outlier-1"></a>Notable outlier:</h3>
+<p><code>3.7x</code> more money<br>
+<code>8.5x</code> more people<br>
+Roughly the same matching</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2e52e7a6d78beb04193d4e50db462e22b4120359.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/2e52e7a6d78beb04193d4e50db462e22b4120359" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2e52e7a6d78beb04193d4e50db462e22b4120359_2_690x444.png" alt="image" data-base62-sha1="6BNAmGECJ2dFv4MRURprrzZjOyZ" width="690" height="444" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2e52e7a6d78beb04193d4e50db462e22b4120359_2_690x444.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2e52e7a6d78beb04193d4e50db462e22b4120359_2_1035x666.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2e52e7a6d78beb04193d4e50db462e22b4120359_2_1380x888.png 2x" data-dominant-color="F1EDEE"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/6
+        Sat, 16 Dec 2023 23:07:54 +0000
+gov.gitcoin.co-post-17281-6
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+Romko.eth
+
+            <p>Congrats! Great work <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> and team. Happy Holidays to all team!</p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/5
+        Sat, 16 Dec 2023 19:39:07 +0000
+gov.gitcoin.co-post-17281-5
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+Sov
+
+            <p>Great work on this <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a>.  Looking forward to taking the lessons learned from here into GG20 and beyond.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/4
+        Sat, 16 Dec 2023 13:41:59 +0000
+gov.gitcoin.co-post-17281-4
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+ccerv1
+
+            <p>Congrats! Well done <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> and team. This felt like a classic Gitcoin Grants round.</p>
+<p>I’d be curious to see any trends related to which projects seemed to attract a lot of clustering or other signs of Sybil attention. I’m also curious if you think the collections feature was helpful in giving any projects additional signal.</p>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/clap.png?v=12" title=":clap:" class="emoji only-emoji" alt=":clap:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/clap.png?v=12" title=":clap:" class="emoji only-emoji" alt=":clap:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/clap.png?v=12" title=":clap:" class="emoji only-emoji" alt=":clap:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/3
+        Sat, 16 Dec 2023 02:32:49 +0000
+gov.gitcoin.co-post-17281-3
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+connor
+
+            <p>Props to <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> for putting in so much time and effort to get this across the finish line! Much of the work behind the scenes isn’t obvious but there has been a lot of testing, experimentation, and fine-tuning with different QF mechanisms. I’m bullish on cluster mapping, moving towards more objective (and transparent) mechanisms and less subjective squelches/decisions. Awesome work!</p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/2
+        Sat, 16 Dec 2023 02:02:05 +0000
+gov.gitcoin.co-post-17281-2
+GG19 Program Round Results
+      
+
+GG19 Program Round Results
+umarkhaneth
+
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0b10ee9ab1e3a2a96d4bb23243a503b31d1df81a.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/0b10ee9ab1e3a2a96d4bb23243a503b31d1df81a" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0b10ee9ab1e3a2a96d4bb23243a503b31d1df81a_2_690x153.jpeg" alt="image" data-base62-sha1="1zTwNaxfy4LPESs2UvZEUEujbjc" width="690" height="153" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0b10ee9ab1e3a2a96d4bb23243a503b31d1df81a_2_690x153.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0b10ee9ab1e3a2a96d4bb23243a503b31d1df81a_2_1035x229.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0b10ee9ab1e3a2a96d4bb23243a503b31d1df81a_2_1380x306.jpeg 2x" data-dominant-color="69928A"></a></div><p></p>
+<p>Hey all, GG19 program round matching results are live <a href="https://docs.google.com/spreadsheets/d/1J-llvoR7dJ8tisZf5TFCUE_72_W9gjaHjcOmjBF2nbo/edit#gid=668799987" rel="noopener nofollow ugc">here</a>! We’ll have five days for review and feedback, then process payouts on 12/20.</p>
+<p>Thank you to <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> for co-authoring this post with me. Thank you ​​to <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a>, <a class="mention" href="https://gov.gitcoin.co/u/ghostffcode">@ghostffcode</a>, &amp; <a class="mention" href="https://gov.gitcoin.co/u/stefi_says">@stefi_says</a> for contributing to the post-round analysis results. Thank you to <a class="mention" href="https://gov.gitcoin.co/u/m0nkeyfl0wer">@M0nkeyFl0wer</a> <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> and others within the DAO for their thoughts and reviews.</p>
+<h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TL;DR</h1>
+<p>In GG19, we continue moving to a variant of QF that uses clustering to move sybil and collusion resistance natively inside the mechanism and reward projects with more diverse and pluralistic communities. GG19 will be the first round in years where we will not do any closed-source silencing of Sybils/donors. Instead, we’re solely relying on our mechanism and Gitcoin Passport.</p>
+<p>For this round, we had a proactive <a href="https://gov.gitcoin.co/t/gg19-matching-funds-proposal-for-discussion/16945">governance discussion</a> and a subsequent <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x28602986792817ae8bd51ac57775966a4d4bf101eb585011715a9cf64c94e9df" rel="noopener nofollow ugc">snapshot vote</a> to approve the transfer of matching funds. Consequently, there will not be a formal vote to ratify these results; however, we will have five days for review and discussion on the forums.</p>
+<h1><a name="gg19-overview-2" class="anchor" href="https://gov.gitcoin.co#gg19-overview-2"></a>GG19 Overview</h1>
+<p>GG19 took <a href="https://gov.gitcoin.co/t/gg19-outline-and-strategy/16682">a few steps to evolve</a> our program round strategy from prior rounds. This time we had 3 program rounds distribute $1,094,662 to 471 projects. Big thank you to the Dev Con team, Polygon, &amp; Arbitrum for supporting Ethereum Infrastructure, Open Source Software, and Web3 Community Builders! <img src="https://gov.gitcoin.co/images/emoji/twitter/green_heart.png?v=12" title=":green_heart:" class="emoji" alt=":green_heart:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/purple_heart.png?v=12" title=":purple_heart:" class="emoji" alt=":purple_heart:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/blue_heart.png?v=12" title=":blue_heart:" class="emoji" alt=":blue_heart:" loading="lazy" width="20" height="20"></p>
+<p>We also had an amazing 9 community rounds and 9 independent rounds running at the same time! This broke a Gitcoin record for most concurrent rounds. Special gratitude goes to all our partners and especially to our community round runners at the Climate Coordination Network, Arbitrum Citizens, Metagov (Governance Research), Token Engineering Commons, OpenCivics, Mask Network (Web3 Social), Meta Pool, and 1inch.</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Round</th>
+<th>Matching Pool</th>
+<th>Matching Cap</th>
+<th>Crowdfund</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open Source Software</td>
+<td>$200,000.00</td>
+<td>7.420%</td>
+<td>$297,252</td>
+</tr>
+<tr>
+<td>Ethereum Infrastructure</td>
+<td>$200,000.00</td>
+<td>10%</td>
+<td>$58,723</td>
+</tr>
+<tr>
+<td>Web3 Community &amp; Education</td>
+<td>$200,000.00</td>
+<td>7.420%</td>
+<td>$138,687</td>
+</tr>
+</tbody>
+</table>
+</div><p>Each Gitcoin round sees improvements over the last but this one feels like a turning point in many ways. Some of the new features and additions include:</p>
+<ul>
+<li>
+<p>Passport Sliding Scale: Rather than having passport scores resolve to a binary “pass” or “fail” result to determine whether a donor gets matched, GG19 had a new feature where once scores were over a certain threshold(15), an increase in the score would result in an increased matching impact. 76.0% of wallets qualified for this round, an increase of 4% from last round.</p>
+</li>
+<li>
+<p>Matching Estimates: Donors could now see an estimate of their donation’s impact on a project’s matching amount.</p>
+</li>
+<li>
+<p>Explorer Landing Page: <a href="https://explorer.gitcoin.co/" rel="noopener nofollow ugc">explorer.gitcoin.co</a>’s beautiful redesign also improved search and sort functionality</p>
+</li>
+<li>
+<p>Collections: created a way for donors to delegate funding decisions</p>
+</li>
+<li>
+<p>Report Cards: provided round operators a new channel to communicate publicly about their round</p>
+</li>
+<li>
+<p>Passport UI Improvements: sleek new interface makes it easier to see how you can earn points to increase your unique humanity score.</p>
+</li>
+<li>
+<p>Passport Scoring Improvements: continuous adjustments to the stamp scoring models are adapting to sybil strategies, making it harder for them and easier for real humans</p>
+</li>
+</ul>
+<p>Read more here:</p>
+<ul>
+<li><a href="https://gov.gitcoin.co/t/gg19-oss-round-review-reflections/17278/" class="inline-onebox">GG19 OSS Round Review: Reflections</a></li>
+<li><a href="https://gov.gitcoin.co/t/gg19-web3-community-and-education-round-review-reflections/17279" class="inline-onebox">GG19 Web3 Community and Education Round Review: Reflections</a></li>
+<li><a href="https://gov.gitcoin.co/t/gg19-eth-infra-round-review-reflections/17268" class="inline-onebox">GG19 Eth Infra Round Review: Reflections</a></li>
+</ul>
+<p>Kudos to everyone who worked hard to make this round a success! There are many people behind the scenes at Gitcoin whose work makes it possible to fund what matters. Thank you!!</p>
+<h1><a name="round-and-results-calculation-details-3" class="anchor" href="https://gov.gitcoin.co#round-and-results-calculation-details-3"></a>Round and Results Calculation Details</h1>
+<p>The complete list of final results &amp; payout amounts can be found <a href="https://docs.google.com/spreadsheets/d/1J-llvoR7dJ8tisZf5TFCUE_72_W9gjaHjcOmjBF2nbo/edit#gid=668799987" rel="noopener nofollow ugc">here</a>. Below, we’ll cover how these results were calculated and other decisions.</p>
+<p>Post-round mechanism selection had a $350k financial impact. This means $175k was reduced from projects that saw over-coordinated or sybil activity and given to other projects.</p>
+<h1><a name="next-gen-quadratic-funding-collusion-resistance-inside-the-mechanism-4" class="anchor" href="https://gov.gitcoin.co#next-gen-quadratic-funding-collusion-resistance-inside-the-mechanism-4"></a>Next Gen Quadratic Funding: Collusion-Resistance Inside The Mechanism</h1>
+<p>We introduced post-round sybil squelching a few years ago as part of our defense against the dark arts of sybil attackers and airdrop farmers. This process involves the Gitcoin team utilizing on and off-chain data, machine learning, and manual verification to find sybils and sockpuppet accounts to take them out of the matching distribution. Because our methods only worked so long as the attackers didn’t know how we found them, we had to be closed source. This round, with an improved mechanism, we found our closed-source solution only improved results by between 5 and 20%. That’s why we’re really glad to not use it at all. Instead, we’ll draw attention to the <a href="https://github.com/Jmiller4/qf-variants/tree/main" rel="noopener nofollow ugc">open source code</a> we use to calculate quadratic funding results.</p>
+<p>About a year ago, <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@joel_m</a>, <a class="mention" href="https://gov.gitcoin.co/u/glenweyl">@GlenWeyl</a>, and <a class="mention" href="https://gov.gitcoin.co/u/erich">@erich</a> published an innovative <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507" rel="noopener nofollow ugc">paper</a> in which they designed collusion-resistant methods for quadratic funding. Recently we began implementing their strategies and they’ve proven highly effective. We successfully reduced the match of the most suspicious projects by up to 85% and redirected those funds to other projects.</p>
+<p>Quadratic funding helps us solve coordination failures by creating a way to allocate towards the projects a community believes should be funded. As a base case it assumes people are making independent decisions. However, this assumption can be exploited by colluding groups who align their funding choices to unfairly influence the distribution of matching funds.</p>
+<p>Collusion-oriented cluster-matching (COCM) doesn’t make this assumption. Instead, it quantifies just how coordinated groups of donors are likely to be based on the social signals they have in common. Projects backed by more independent agents receive greater matching funds. Conversely, if a project’s support network shows higher levels of coordination, the matching funds are reduced, encouraging self-organized solutions within more coordinated groups.</p>
+<p>One open area of research examines what data points make the best social signals. For this round we used the donation choices themselves as those signals. We also studied alternative options such as using passport stamp data and POAP data. If you’re interested in conversations on clustering data or mechanism developments, please join this <a href="https://t.me/+Of1AvIwXZAJjYmM5" rel="noopener nofollow ugc">telegram group</a>.</p>
+<p>In addition, as an unintended side-effect of the COCM mechanism most projects get more funding. As an example, here is the chart of per-project funding for the Web3 Open Source Software round:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/81c6700090b3100fb2b695a737ebc445a7540c33.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/81c6700090b3100fb2b695a737ebc445a7540c33" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/81c6700090b3100fb2b695a737ebc445a7540c33_2_624x341.png" alt="" data-base62-sha1="iw2K8hkKp2C8U6dRg7llTqaHJ51" width="624" height="341" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/81c6700090b3100fb2b695a737ebc445a7540c33_2_624x341.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/81c6700090b3100fb2b695a737ebc445a7540c33_2_936x511.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/81c6700090b3100fb2b695a737ebc445a7540c33_2_1248x682.png 2x" data-dominant-color="FCFCFC"></a></div><p></p>
+<p>We’re directing more of the funding to the long-tail of projects.</p>
+<p>For more details about pluralistic QF methods, check out <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507" rel="noopener nofollow ugc">this paper</a> and/or <a href="https://www.youtube.com/watch?v=Gi1madKCWWA" rel="noopener nofollow ugc">these</a> <a href="https://www.youtube.com/watch?v=ueQDnq-J2mY" rel="noopener nofollow ugc">podcasts</a>.</p>
+<h1><a name="code-of-conduct-5" class="anchor" href="https://gov.gitcoin.co#code-of-conduct-5"></a>Code of Conduct</h1>
+<p>As a reminder to all projects, <a href="https://support.gitcoin.co/gitcoin-knowledge-base/about-gitcoin/policy/understanding-potential-attack-vectors/bribery-quid-pro-quo" rel="noopener nofollow ugc">quid pro quo</a> is explicitly against <a href="https://grants-portal.gitcoin.co/gitcoin-grants-grantee-portal/gg19-eligibility" rel="noopener nofollow ugc">our agreement</a>. Providing an incentive or reward for individuals to donate to specific projects can affect your ability to participate in future rounds. If you see someone engaging in this type of behavior, please <a href="https://forms.gle/n3b5MDgHskehNQ7s8" rel="noopener nofollow ugc">let us know. </a></p>
+<h1><a name="coordination-technology-social-technology-6" class="anchor" href="https://gov.gitcoin.co#coordination-technology-social-technology-6"></a>Coordination Technology == Social Technology</h1>
+<p>For us to fund what matters, we need to use our collective voices. Let’s chat below on these results, the mechanism choice, and your experiences in the round. What did you see working well? What could be improved?</p>
+<h1><a name="next-steps-7" class="anchor" href="https://gov.gitcoin.co#next-steps-7"></a>Next Steps</h1>
+<p>We plan to distribute matches before the holidays, by the end of next week. We are leaving 5 days of discussion on this post, and sans any major problems or issues found with these results, will process payouts shortly thereafter. But that doesn’t mean this conversation ends there! We want the conversation to continue to help us shape strategies and improvements for future rounds. Cheers!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/afc464951fd282dfcff2c07e63c90e4cf748030f.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/afc464951fd282dfcff2c07e63c90e4cf748030f" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/afc464951fd282dfcff2c07e63c90e4cf748030f_2_624x351.jpeg" alt="" data-base62-sha1="p4UkhFuRtCsOttdg2x1svICaPF5" width="624" height="351" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/afc464951fd282dfcff2c07e63c90e4cf748030f_2_624x351.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/afc464951fd282dfcff2c07e63c90e4cf748030f_2_936x526.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/afc464951fd282dfcff2c07e63c90e4cf748030f_2_1248x702.jpeg 2x" data-dominant-color="4C5063"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gg19-program-round-results/17281/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg19-program-round-results/17281/1
+        Fri, 15 Dec 2023 22:46:01 +0000
+gov.gitcoin.co-post-17281-1
+GG19 Program Round Results
+      
+
+

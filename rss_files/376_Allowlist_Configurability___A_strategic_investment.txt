@@ -1,0 +1,287 @@
+
+
+
+Allowlist Configurability - A strategic investment
+https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741
+    Thanks to Feems and @DisruptionJoe from ThankARB for pointing this out to me!  Thanks to @meglister and @renaobrien for reviewing this doc before publishing!
+
+# Allowlist Configurability - A strategic investment
+
+Right now, Gitcoin Grants Stack has a limitation in utility for grants round operators because a key configuration variable (who gets to vote?) is not very tunable.
+
+To do a QF Round on Grants stack I must decide whose votes count in allocating the matching pool. In doing so I must choose between
+
+1. No Sybil Resistance
+2. Passport > 20
+
+Because there are only 2 options, that means that round managers cannot really tune their capital allocation. If I want to just upload a simple list of Badgeholders, like Optimism does, I can’t do that. If I want to give a specific Hats role in my DAO the ability to do a vote, I can’t do that.
+
+# Strategic Investment
+
+We should make this parameter more tunable.
+
+I should be able to configure this very important parameter.
+
+As @meglister pointed out to me, JokeRace does a great job of providing a UX. eg you can upload a lsit of addresses, tokens, criteria like "you have held token for x amount of time", etc and then those people can vote on the JokeRace.  We could perhaps take some inspiration from that.
+
+Some options that seem like no brainers to me:
+1. Configure passport. What if I want to use a non-Gitcoin scorer, or specific set of stamps? What if I want the threshold < 20?
+2. Other options:
+   1. Easiest - CSV Upload of addresses I want to be able to vote.
+   2. More advanced stuff
+      1. Hats role.
+       2. Owner of SAFE Multisig
+       3. People who have more than x amount of y token (I should be able to vote with these tokens, either with the number of votes being the number of tokens, 1 per account, or other formulas in between).
+       4. EAS Attestations
+       5. Guild roles
+3. Use other sources for sybil resistance.
+    1. Worldcoin or brightid or zupass
+
+# Conclusion
+
+Giving round managers the ability to be able to tune these parameters would give them the ability to sculpt very specific capital allocation requirements into their rounds. It would allow Gitcoin Grants Stack to be more configurable to capture not just QF, but RPGF, or other novel use cases.
+
+# Open Questions
+
+1. What 1-3 allowlist options are the most important ?
+2. How do we make sure we are continuously keeping up with the markets needs?
+3. Is this an Allo build or Grants Stack build?
+Tue, 16 Apr 2024 16:30:06 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Allowlist Configurability - A strategic investment
+carlb
+
+            <p>I have written some suggestions in my allo sketch doc on gating that might be interesting.<br>
+It’s basically just a small contract with a modifier:</p>
+<pre data-code-wrap="solidity"><code class="lang-solidity">contract GatedRound is Round, EASGate, NFTGate {
+  function init(bytes config) {
+    __EASGate_init(attester);
+    __NFTGate_init(nftAddress);
+  }
+  // Only allow projects with an EAS Attestation
+  function register(address recipient) onlyAttestation(recipient, attester, schemaId) {}
+
+  // Only funders with an NFT can allocate
+  function allocate(address recipient, uint256 amount) onlyNFT(recipient) {}
+
+  // Or with 10 GTC
+  function allocate(address recipient, uint256 amount) onlyERC20(gtcAddress, 10e18) {}
+</code></pre>
+<p>That way they can be composed with other types of round, not just QF.</p>
+          <p><a href="https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/6
+        Tue, 16 Apr 2024 16:30:06 +0000
+gov.gitcoin.co-post-17741-6
+Allowlist Configurability - A strategic investment
+      
+
+Allowlist Configurability - A strategic investment
+thelostone-mc
+
+            <aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17741">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>would it be possible to configure the allowlist at round creation time, such that a round manager can select between allowlist type upon round creation?</p>
+</blockquote>
+</aside>
+<p>Yes.<br>
+<strong>OPTION 1</strong><br>
+We would simply create a QFGating.sol contract which imports QF contract and we’d have to override</p>
+<ul>
+<li>init function : to set what type of gating is needed</li>
+<li>implement the beforeAllocate to gate based on the type of gating  (all gating logic is stored in 1 contract)</li>
+</ul>
+<p><strong>OPTION 2 (RECOMMENDED)</strong><br>
+Another option is to keep the contract logic simpler. We just have multiple contracts instead of one QFGating contract. We’d have QFNFTGating.sol, QFPassportGating.sol or QFHatsGating.sol and all these contracts would</p>
+<ul>
+<li>override init function</li>
+<li>implement the beforeAllocate to gate based on the type of gating</li>
+</ul>
+<p>=======</p>
+<p>Both are good options but option 2 might be smarted cause that way we have gating contact specifc to a protocol and we can control where this is deployed (For example: if we deploy QFGating.sol aka option 1 on a chain where passport and hats isn’t deployed → it’s a pointless deploy ) but option 2 ensures we can deploy the specific gating contract where that gating protocol is present</p>
+<p>Both options have the same level of effort in terms of coding / integrating into grants-stack as the sdk would handle which contract to create based on the gating option selected</p>
+<p>Sidnote: We could honestly do both options cause it’s that simple</p>
+          <p><a href="https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/5
+        Tue, 16 Apr 2024 04:25:27 +0000
+gov.gitcoin.co-post-17741-5
+Allowlist Configurability - A strategic investment
+      
+
+Allowlist Configurability - A strategic investment
+owocki
+
+            <aside class="quote no-group" data-username="thelostone-mc" data-post="3" data-topic="17741">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thelostone-mc/48/3456_2.png" class="avatar"> thelostone-mc:</div>
+<blockquote>
+<ul>
+<li>If we make a library of utils hooks like these, others can use them and we have gating hooks available to all strategies and all you have to do is write afew lines of code to import the file and call the function</li>
+</ul>
+</blockquote>
+</aside>
+<p>i think this is a very exciting direction to me!  having these functions in a well organized library would make it easy to drop in diff allowlists to diff strategies as they are built out.</p>
+<p>would it be possible to configure the allowlist at round creation time, such that a round manager can select between allowlist type upon round creation?</p>
+          <p><a href="https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/4
+        Mon, 15 Apr 2024 21:46:16 +0000
+gov.gitcoin.co-post-17741-4
+Allowlist Configurability - A strategic investment
+      
+
+Allowlist Configurability - A strategic investment
+thelostone-mc
+
+            <p>This would be an Allo Build at the strategy level.</p>
+<p>This is what we currently have.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f426787ac208b0449220a94a548d219b84bd7d67.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/f426787ac208b0449220a94a548d219b84bd7d67" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f426787ac208b0449220a94a548d219b84bd7d67_2_507x499.png" alt="image" data-base62-sha1="yPQVosSwZ39zlG0evRu0juvNG9F" width="507" height="499" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f426787ac208b0449220a94a548d219b84bd7d67_2_507x499.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f426787ac208b0449220a94a548d219b84bd7d67_2_760x748.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/f/f426787ac208b0449220a94a548d219b84bd7d67.png 2x" data-dominant-color="EFEFE9"></a></div><p></p>
+<p>Given how allo is built, we can evolve it to<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/845301b15a0179073befa5b32b9d659514f5809c.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/845301b15a0179073befa5b32b9d659514f5809c" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/845301b15a0179073befa5b32b9d659514f5809c_2_690x409.png" alt="image" data-base62-sha1="iSARKxyezJopJ4FCo9AZ8iGwaU4" width="690" height="409" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/845301b15a0179073befa5b32b9d659514f5809c_2_690x409.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/845301b15a0179073befa5b32b9d659514f5809c_2_1035x613.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/845301b15a0179073befa5b32b9d659514f5809c_2_1380x818.png 2x" data-dominant-color="EDEDE6"></a></div><p></p>
+<p>We built out something along those lines in MicroGrants</p><aside class="onebox githubblob" data-onebox-src="https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/_poc/micro-grants/MicroGrantsHatsStrategy.sol#L74">
+  <header class="source">
+
+      <a href="https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/_poc/micro-grants/MicroGrantsHatsStrategy.sol#L74" target="_blank" rel="noopener">github.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <h4><a href="https://github.com/allo-protocol/allo-v2/blob/main/contracts/strategies/_poc/micro-grants/MicroGrantsHatsStrategy.sol#L74" target="_blank" rel="noopener">allo-protocol/allo-v2/blob/main/contracts/strategies/_poc/micro-grants/MicroGrantsHatsStrategy.sol#L74</a></h4>
+
+
+
+    <pre class="onebox"><code class="lang-sol">
+      <ol class="start lines" start="64" style="counter-reset: li-counter 63 ;">
+          <li>    }</li>
+          <li></li>
+          <li>    /// ====================================</li>
+          <li>    /// ============ Internal ==============</li>
+          <li>    /// ====================================</li>
+          <li></li>
+          <li>    /// @notice Checks if address is valid allocator.</li>
+          <li>    /// @param _allocator The allocator address</li>
+          <li>    /// @return Returns true if address is wearer of hatId</li>
+          <li>    function _isValidAllocator(address _allocator) internal view override returns (bool) {</li>
+          <li class="selected">        return hats.isWearerOfHat(_allocator, hatId);</li>
+          <li>    }</li>
+          <li></li>
+          <li>    /// @notice Hook called before allocation to check if the sender is an allocator</li>
+          <li>    /// @param _sender The sender of the transaction</li>
+          <li>    function _beforeAllocate(bytes memory, address _sender) internal view override {</li>
+          <li>        if (!_isValidAllocator(_sender)) revert UNAUTHORIZED();</li>
+          <li>    }</li>
+          <li>}</li>
+      </ol>
+    </code></pre>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>We could just throw this into it’s beforeAllocate util function and create mixes of all of these gating strategies.</p>
+<p>Advantages:</p>
+<ul>
+<li>We create optional dependencies with other protocol which means if allo choses to launch in a chain without passport or hats, it could still do so. If it does → then the strategies using these hooks can be deployed/used as well</li>
+<li>If we make a library of utils hooks like these, others can use them and we have gating hooks available to all strategies and all you have to do is write afew lines of code to import the file and call the function</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/3
+        Mon, 15 Apr 2024 17:29:34 +0000
+gov.gitcoin.co-post-17741-3
+Allowlist Configurability - A strategic investment
+      
+
+Allowlist Configurability - A strategic investment
+Sov
+
+            <p>I believe this would be worth pursuing.  To answer your questions:</p>
+<ol>
+<li>
+<p>I think we can start simple and enable allowlisting via 1) simple delegation (i.e. who is an admin versus a reviewer, etc.) 2) .csv upload of allowlist (the badgeholder example you share) and 3) integration with best of breed partners like Hats Protocol.</p>
+</li>
+<li>
+<p>Develop partnerships with others in the space who are specializing in this domain and keep our internal functionality (simple delegation/.csv upload) limited.  We should also be actively looking to fund integration partners that are best of breed versus internalizing effort ongoing.</p>
+</li>
+<li>
+<p>IMO simple integration (the delagation example and .csv uploads) could be Grants Stack with more advanced/partner integrations being an Allo build that eventually can make its’ way upstream to Grants Stack if feasible.</p>
+</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/2
+        Tue, 13 Feb 2024 01:41:07 +0000
+gov.gitcoin.co-post-17741-2
+Allowlist Configurability - A strategic investment
+      
+
+Allowlist Configurability - A strategic investment
+owocki
+
+            <p>Thanks to Feems and <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> from ThankARB for pointing this out to me!  Thanks to <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> and <span class="mention">@renaobrien</span> for reviewing this doc before publishing!</p>
+<h1><a name="allowlist-configurability-a-strategic-investment-1" class="anchor" href="https://gov.gitcoin.co#allowlist-configurability-a-strategic-investment-1"></a>Allowlist Configurability - A strategic investment</h1>
+<p>Right now, Gitcoin Grants Stack has a limitation in utility for grants round operators because a key configuration variable (who gets to vote?) is not very tunable.</p>
+<p>To do a QF Round on Grants stack I must decide whose votes count in allocating the matching pool. In doing so I must choose between</p>
+<ol>
+<li>No Sybil Resistance</li>
+<li>Passport &gt; 20</li>
+</ol>
+<p>Because there are only 2 options, that means that round managers cannot really tune their capital allocation. If I want to just upload a simple list of Badgeholders, like Optimism does, I can’t do that. If I want to give a specific Hats role in my DAO the ability to do a vote, I can’t do that.</p>
+<h1><a name="strategic-investment-2" class="anchor" href="https://gov.gitcoin.co#strategic-investment-2"></a>Strategic Investment</h1>
+<p>We should make this parameter more tunable.</p>
+<p>I should be able to configure this very important parameter.</p>
+<p>As <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> pointed out to me, JokeRace does a great job of providing a UX. eg you can upload a lsit of addresses, tokens, criteria like “you have held token for x amount of time”, etc and then those people can vote on the JokeRace.  We could perhaps take some inspiration from that.</p>
+<p>Some options that seem like no brainers to me:</p>
+<ol>
+<li>Configure passport. What if I want to use a non-Gitcoin scorer, or specific set of stamps? What if I want the threshold &lt; 20?</li>
+<li>Other options:
+<ol>
+<li>Easiest - CSV Upload of addresses I want to be able to vote.</li>
+<li>More advanced stuff
+<ol>
+<li>Hats role.</li>
+<li>Owner of SAFE Multisig</li>
+<li>People who have more than x amount of y token (I should be able to vote with these tokens, either with the number of votes being the number of tokens, 1 per account, or other formulas in between).</li>
+<li>EAS Attestations</li>
+<li>Guild roles</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Use other sources for sybil resistance.
+<ol>
+<li>Worldcoin or brightid or zupass</li>
+</ol>
+</li>
+</ol>
+<h1><a name="conclusion-3" class="anchor" href="https://gov.gitcoin.co#conclusion-3"></a>Conclusion</h1>
+<p>Giving round managers the ability to be able to tune these parameters would give them the ability to sculpt very specific capital allocation requirements into their rounds. It would allow Gitcoin Grants Stack to be more configurable to capture not just QF, but RPGF, or other novel use cases.</p>
+<h1><a name="open-questions-4" class="anchor" href="https://gov.gitcoin.co#open-questions-4"></a>Open Questions</h1>
+<ol>
+<li>What 1-3 allowlist options are the most important ?</li>
+<li>How do we make sure we are continuously keeping up with the markets needs?</li>
+<li>Is this an Allo build or Grants Stack build?</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741/1
+        Mon, 12 Feb 2024 18:47:18 +0000
+gov.gitcoin.co-post-17741-1
+Allowlist Configurability - A strategic investment
+      
+
+

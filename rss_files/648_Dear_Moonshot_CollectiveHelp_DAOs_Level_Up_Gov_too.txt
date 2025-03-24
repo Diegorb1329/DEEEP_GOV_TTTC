@@ -1,0 +1,432 @@
+
+
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027
+    ![image|574x435](upload://nVh6FVEjXjr93vENTh20CtzzotG.jpeg)
+
+![image|574x435](upload://w2QhMaNHj9tu2LJfvPwhCCiZ881.jpeg)
+
+![image|612x407](upload://vjgBolZ5dsyolW0W3A6kYklXCLN.jpeg)
+
+
+
+
+# **TL;DR**
+**WTF is Conviction Voting?**
+[1Hive](https://1hive.gitbook.io/gardens/on-chain-governance/garden-framework/conviction-voting) built the first instance of a super handy tool called Conviction Voting.
+
+>**If you haven't heard of it, here's the [TL;DR tweet thread](https://twitter.com/commonsstack/status/1309211776425365510).**
+
+![image|535x467](upload://9ntoty5aIIcDeiEdy9ptEl9ADiI.jpeg)
+
+**The Problem:**
+Many DAOs (including Gitcoin) are struggling hard with the same problems: Insurmountable overhead with [keeping up with and voting on every proposal](https://gov.gitcoin.co/c/governance-proposals/5), all or nothing (1 or 0 analog) funding proposals votes [like this one](https://twitter.com/muninn23/status/1501194712203640836) where there is significant support but not quorum, [last minute vote swings](https://twitter.com/j0hnwang/status/1489756724613373956) and other governance "attack" vectors that require time weighted voting to correct and more..
+
+**A Solution:**
+The DAO buidler tool box ***must* have Conviction Voting** to more efficiently distribute & decentralize funding proposals and visualize dynamic average consensus signals. 
+
+The consent, rather than consensus based tool can help:
+* Increase operational efficiency
+* Mitigates many governance "attack" vectors 
+
+![image|688x375](upload://uS85COsqbTmnHlaAZl1ZHyMLV0J.png)
+*Image by [Jeff Emmett](https://twitter.com/jeffemmett)*
+
+## "CV shifts the governance space from majoritarian decision making towards sufficient support for proposals, based on the amount of funds they are requesting."
+[Credit Jeff Emmett](https://twitter.com/jeffemmett/status/1488924850085416962/photo/2)
+![image|690x424](upload://zMPm3LAytPr00CTwMQ6uFx6hYDm.jpeg)
+![image|606x431](upload://6ej0ziC9PFO2IMHXYcfy6SN510O.png)
+ *(Addressing plutocracy will require SSIDs/DIDs to scale in a meaningful way - I'm sure it won't be long!)* 
+
+## Oh and did I forget to mention it provides rich data streams of continuous preference signals?
+![image|577x432](upload://3Uoj7ZbUhXz6CumnzM3hlfdeRxx.jpeg)
+
+**Who Am I (Reputation Flags)**
+I am a [Founding member of the FDD Working Group](https://gov.gitcoin.co/t/workstream-fraud-detection-and-defense-working-group-assemble/158/18), Token Engineering & Governance Researcher at [BlockScience](https://block.science/), Advisor & Course Author at the [Token Engineering Academy](https://tokenengineeringcommunity.github.io/website/docs/academy-welcome/), [Trusted Seed](https://medium.com/giveth/the-trusted-seed-of-the-commons-stack-5af6fb04cd30) Member of the [CommonsStack](https://commonsstack.org/), Ground Control at the [Governauts](https://twitter.com/GovernanceDAO) & Founding Steward of the [Token Engineering Commons](http://tecommons.org/).
+
+**Why We Need Moonshot's Support**
+My colleague, TE OG @jeffemmett & I have been chatting with @owocki and several others about the need to expand and create a public good, chain agnostic version of this tool. 
+
+I tried to rally some groups last year to fund/build this initiative but they all wanted their own version, to which the incredibly amazing, talented & busy lead engineer/developer of CV said, "Hey guys, I can't support 20 versions, let's build this in RUST." To which the groups said, "If we fund it, we want our way." 
+
+*So, this is where the heroes of Gitcoin DAO & Moonshot Collective come in -  the pan-ultimate supporters of public goods!* 😍
+
+## **Okay, I 💘it, Now What?**
+One note before I let you go - this tool is customizable: 
+![image|690x388](upload://2UHXOfCqJ9EdlOEbbJ5aRTa2xiV.jpeg)
+
+So, we can build something for funding, for continuous [general signaling or ranking like a continous TCR](https://twitter.com/jeffemmett/status/1500863021605916676) - we definitely would need lots of discussion and some research with developers to figure out what would be the best, high leverage lego version that multiple DAOs could build on. 
+
+So, don't be shy and let's crank up the conversation on this thread - pass to your friends :smiley: and **let's get the VC in the pipeline for the MC**, who can be a hero for all DAOs - and build the chain agnostic version of Conviction Voting that we all need! 🦸‍♀️ HOORAY!!! 🥳
+
+*NOTE: @jeffemmett & I are available (limited bandwidth) to support R&D and would also love to see some resources (a few others / CV team) to continue to expand content/education/research/documentation of these concepts/tooling/R&D 🙏 Thank you so much for reading and in advance, for your thoughts & support! 💚🤖*
+
+#
+-----------------------------------------------
+#
+*🤓 **INTERDIMENSIONAL LIBRARIANS ONLY PAST THIS POINT** 🤓*
+#
+-----------------------------------------------
+
+
+# 📚 **Deep Library**: **Conviction Voting-Funding / Signaling (Dynamic Average Consensus)📚** 
+
+
+## **On chain**
+
+**Documentation**
+**[Conviction Voting: Novel Continuous Decision making](https://medium.com/giveth/conviction-voting-a-novel-continuous-decision-making-alternative-to-governance-aa746cfb9475)**
+
+**[Presentation on Conviction voting by one of its developers, [David Llop (Sem Brestels)](https://twitter.com/404ouch)](https://www.youtube.com/watch?v=r4-G18YNogw&list=PLy6j39s17_jQfcxhI-64Dt9ttyu1HGv4q)**
+
+**[Social Sensor Fusion](https://github.com/BlockScience/conviction/blob/master/social-sensorfusion.pdf)**
+
+**[cadCAD Model Walkthrough](https://www.youtube.com/watch?v=ZtVtBjcIlRw&t=77s)**
+https://cadcad.org/
+
+**[Simple Voting Model](https://www.youtube.com/watch?v=WDkk3ZXoTn0)** 
+
+**[Dynamic Average Consensus: A Brief History of Conviction Voting](https://michaelzargham.medium.com/a-brief-history-of-conviction-voting-ad4ca4eb4aee)**
+
+**[Tutorial on Dynamic Average Consensus: The Problem, Its Applications, and the Algorithms](https://ieeexplore.ieee.org/document/8716798)**
+
+**[Distributed Maximum Likelihood using Dynamic Average Consensus Algorithm](https://arxiv.org/pdf/1803.03224.pdf)**
+
+**Implementations**
+
+**[Github repo](https://github.com/1Hive/conviction-voting-cadcad)**
+
+**[Aragon Conviction Funding Pilot](https://aragon.org/blog/introducing-the-conviction-funding-pilot)** 
+*(struggled because of gas prices back in the day, they had it on mainnet, most others are on xDAI - could also be built on ID chain for Bright ID)*
+
+**[1Hive Conviction Voting Discussion & Dapp Walk Through](https://www.youtube.com/watch?v=CSWCDbrOeXA&feature=youtu.be)** 
+*(a bit outdated but some good general overview)*
+
+**[Token Engineering Commons Conviction Voting Test App Walk Through](https://www.youtube.com/watch?v=6ohUOlBwhek&list=PLusWL9gf0FITLhObprqjHSEnngieil6Kx)**
+
+**[Conviction Voting Used as Ranking/Signaling for Allocating Grants in CommonsStack Community](https://medium.com/commonsstack/cstk-token-holders-can-now-use-conviction-voting-on-xdai-5090fdc3b8ad)** 
+
+## **Off Chain**
+
+[**Ceramic Version**](https://blog.ceramic.network/trust-minimized-off-chain-conviction-voting/amp/)
+Thu, 07 Apr 2022 16:56:35 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+JessicaZartler
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/pop">@Pop</a> <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a> FYI <a href="https://forum.tecommons.org/t/invitation-to-the-tec-community-to-join-the-luna-swarm-research-group-at-1hive/974" class="inline-onebox">Invitation to the TEC community to join the Luna Swarm research group at 1Hive - ⚛ Community - Token Engineering Commons</a> Maybe a chance to combine efforts <img src="https://emoji.discourse-cdn.com/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/15
+        Thu, 07 Apr 2022 16:56:35 +0000
+gov.gitcoin.co-post-10027-15
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+JessicaZartler
+
+            <p>Thank you so much <a class="mention" href="https://gov.gitcoin.co/u/pop">@Pop</a> <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a> for your time and meeting with us <img src="https://emoji.discourse-cdn.com/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"><br>
+We agree that’s a great direction and would be a really cool tool for the space!</p>
+<p>To share a few more notes from the meeting - it could also (eventually) be a composite system where Gitcoin DAO uses Conviction Voting for proposal funding for Capital Expenses and develops a new Conviction Funding Flow mechanisms for flowing salaries &amp; ongoing costs (Operational Expenses).</p>
+<p>FROM MEETING NOTES:<br>
+An OpEx Conviction Funding Flow Tool would:<br>
+-Removes the BINARY “funds” or ”no funds” of proposals, and moves towards sliding scale of funds unlocked - like a dam opening with proportional amounts of water flowing according to tokens.<br>
+-w/ configuration to correlate staking/threshholds with %s of the budget, rather than all or nothing - i.e. stewards agree w/ 80% of the budget, 80% unlocked while discussing/debating the other 20% so work can keep going</p>
+<p>Here is documentation of a mechanism Sem from 1hive and some others have been working on, that may be useful for the developers in looking at what primitives/code exists for building a tool like this:</p>
+<p>Osmotic Funding<br>
+<a href="https://showcase.ethglobal.com/ethonline2021/osmotic-funding" class="inline-onebox">Osmotic Funding · ETHGlobal Showcase</a><br>
+<a href="https://github.com/BlossomLabs/osmotic-funding" class="inline-onebox">GitHub - BlossomLabs/osmotic-funding: Superfluid + Conviction Voting</a><br>
+<a href="https://gitcoin.co/grants/4503/osmotic-funding" class="inline-onebox">Osmotic Funding | Grants | Gitcoin</a></p>
+<p>There are other flow funding tools i.e. Radicle Drips, but they don’t have a conviction voting mechanism, so would be a really interesting and incredibly useful for many DAOs to have a tool combining these primitives…</p>
+<p>Thank you again and look forward to next steps and supporting <img src="https://emoji.discourse-cdn.com/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/14
+        Wed, 06 Apr 2022 15:34:59 +0000
+gov.gitcoin.co-post-10027-14
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+Pop
+
+            <p>Quick update for everyone here: <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a> and I met with <a class="mention" href="https://gov.gitcoin.co/u/jessicazartler">@JessicaZartler</a> and <a class="mention" href="https://gov.gitcoin.co/u/jeffemmett">@jeffemmett</a> to discuss what the most pressing application/POC might be in the context of GD.</p>
+<p>My view is that we should focus on something that enables a 20/80 split in voting for budgets where if a small % of a proposal is disputed, it can continue to be discussed vs either holding up the whole proposal or meaning the full amount gets passed even though some stewards may still have reservations around it or require further clarification.</p>
+<p>Next steps: <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a> and I are synching to establish what work might look like for Moonshot/the research team</p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/13
+        Wed, 06 Apr 2022 12:50:26 +0000
+gov.gitcoin.co-post-10027-13
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+jeffemmett
+
+            <p>I was just going to drop <a href="https://github.com/1Hive/gardens/discussions/536" rel="noopener nofollow ugc">this link</a> as well in response to <a class="mention" href="https://gov.gitcoin.co/u/loietaylor">@loietaylor</a>’s point above.</p>
+<p>Osmotic Funding is an interesting modification of CV that may be more useful for continuous Operational Expenses (OpEx) like staff salaries or working group budgets, rather than more discrete proposals for Capital Expenses (CapEx) like one off projects, etc.</p>
+<p>There are several interesting use cases for variations of the CV tool - eager to see how &amp; where they may find PMF in GitcoinDAO! <img src="https://emoji.discourse-cdn.com/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"><img src="https://emoji.discourse-cdn.com/twitter/partying_face.png?v=12" title=":partying_face:" class="emoji" alt=":partying_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/12
+        Mon, 21 Mar 2022 17:02:46 +0000
+gov.gitcoin.co-post-10027-12
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+JessicaZartler
+
+            <p>Adding to the <img src="https://emoji.discourse-cdn.com/twitter/books.png?v=12" title=":books:" class="emoji" alt=":books:" loading="lazy" width="20" height="20">Library…</p>
+<p>1hive is continuing to explore innovations based on conviction voting – this is a lot like a conviction voting modulated <a href="https://medium.com/primedao/exploring-dao2dao-collaboration-mechanisms-c37218a17a21">proposal inverter</a> - a mechanism that can be used to flow funds to regular contributors with more fluidity.</p>
+<p><a href="https://github.com/1Hive/gardens/discussions/536" class="inline-onebox">Fluid proposals (Osmotic Funding) 🚰 · Discussion #536 · 1Hive/gardens · GitHub</a></p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/11
+        Mon, 21 Mar 2022 14:55:05 +0000
+gov.gitcoin.co-post-10027-11
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+JessicaZartler
+
+            <p>Thank you so much everyone for your thoughtful comments and feedback! <img src="https://emoji.discourse-cdn.com/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"> Sitting with all of this and meantime, <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a> I’ve sent you a Telegram message and will add you to a Discord group with <a class="mention" href="https://gov.gitcoin.co/u/pop">@Pop</a> to get something on the calendar. Appreciate all of you weighing in and will keep you all posted on any developments or research discussions <img src="https://emoji.discourse-cdn.com/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/10
+        Mon, 21 Mar 2022 14:08:06 +0000
+gov.gitcoin.co-post-10027-10
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+lthrift
+
+            <p>hi <a class="mention" href="https://gov.gitcoin.co/u/jessicazartler">@JessicaZartler</a> and <a class="mention" href="https://gov.gitcoin.co/u/jeffemmett">@jeffemmett</a> we at Moonshot Collective would like to dig in on this! What’s the best way to reach you? Feel free to ping me on Telegram <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a></p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/9
+        Mon, 21 Mar 2022 03:43:08 +0000
+gov.gitcoin.co-post-10027-9
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+David_Dyor
+
+            <p>I got familiar with conviction voting at the Token Engineering Commons and I am a big fan.  We should absolutely consider its application here at Gitcoin.  No matter if we can make it fit OKR boxes or not.  CV is like a real-time signalling mechanism.  One lessor known feature of CV is that votes have a half-life much like a radioactive element.  This metric gets set in advance and determines the period of time after-which, a vote begins decomposing.  Signals do not last forever.  I wonder if CV could be used to make steward voting more powerful and timely.</p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/8
+        Wed, 16 Mar 2022 21:40:40 +0000
+gov.gitcoin.co-post-10027-8
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="loietaylor" data-post="6" data-topic="10027">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/l/b5a626/48.png" class="avatar"> loietaylor:</div>
+<blockquote>
+<p>1 concern is that the type of decisions that are ideal for CV (long game strategic/organizational direction decisions) might not match the type of decisions that Gitcoin Stewards vote on (regularly scheduled, short interval budgetary/steering decisions). It’s possible that CV could change the way stewards vote, could change the way Workstreams propose. But it’s also possible that the types of proposals &amp; mode of interacting with them would be too disparate and CV would gather dust living in Gitcoin’s governance system.</p>
+</blockquote>
+</aside>
+<p>I see the CPK as a toolset. You might not use a hammer to screw in a socket, but you still need it in the tool kit! It would be up for the workstreams to decide when to use it.</p>
+<aside class="quote no-group" data-username="loietaylor" data-post="6" data-topic="10027">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/l/b5a626/48.png" class="avatar"> loietaylor:</div>
+<blockquote>
+<p>It’s not a major mandate of Gitcoin’s mission. So in order to find alignment to put development work towards this we’d need to see why building chain-agnostic Conviction Voting helps serve the mission of Gitcoin (which is to provide Public Goods Funding infrastructure) thru achieving our <em>current</em> OKRs</p>
+</blockquote>
+</aside>
+<p>I see these tools as force multipliers. They enable ecosystems rather than individuals. It seems to me that the potential to improve resource allocation, especially to public goods, is vastly greater through core primitives than through pounding out product to achieve OKRs. Hence being named the Moonshot Collective and not the 3rd story shot collective <img src="https://gov.gitcoin.co/images/emoji/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/7
+        Thu, 10 Mar 2022 00:20:14 +0000
+gov.gitcoin.co-post-10027-7
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+loietaylor
+
+            <p>I <img src="https://emoji.discourse-cdn.com/twitter/heartbeat.png?v=12" title=":heartbeat:" class="emoji" alt=":heartbeat:" loading="lazy" width="20" height="20"> Conviction Voting and I <img src="https://emoji.discourse-cdn.com/twitter/heart_eyes.png?v=12" title=":heart_eyes:" class="emoji" alt=":heart_eyes:" loading="lazy" width="20" height="20"> this post big time. Love this form of inter-DAO suggesting thru the forum!<br>
+As a Commons Stacker, I’ve spent a lot of time with CV (and Jeff and Jess!) and I agree that it’s:</p>
+<ul>
+<li>a necessary piece of the DAO tooling stack</li>
+<li>full of potential to liberate society from ills of static voting</li>
+<li>capable of increasing legitimacy &amp; engagement in Gitcoin Steward voting</li>
+</ul>
+<p>This last point I see as the major benefit to Gitcoin’s mission. So we must investigate it <img src="https://emoji.discourse-cdn.com/twitter/nerd_face.png?v=12" title=":nerd_face:" class="emoji" alt=":nerd_face:" loading="lazy" width="20" height="20"> 1 concern is that the type of decisions that are ideal for CV (long game strategic/organizational direction decisions) might not match the type of decisions that Gitcoin Stewards vote on (regularly scheduled, short interval budgetary/steering decisions). It’s possible that CV could change the way stewards vote, could change the way Workstreams propose. But it’s also possible that the types of proposals &amp; mode of interacting with them would be too disparate and CV would gather dust living in Gitcoin’s governance system. I’m curious to hear what <a class="mention" href="https://gov.gitcoin.co/u/pop">@Pop</a> thinks as steward engagement is truly her domain.</p>
+<p>Knowing where Gitcoin &amp; Moonshot Collective are at, I don’t see us being focused on providing DAO tooling in the near future. It’s not a major mandate of Gitcoin’s mission. So in order to find alignment to put development work towards this we’d need to see why building chain-agnostic Conviction Voting helps serve the mission of Gitcoin (which is to provide Public Goods Funding infrastructure) thru achieving our <em>current</em> OKRs: <a href="https://gov.gitcoin.co/t/2022-roadmap-2022-goals/9613" class="inline-onebox">2022 Roadmap &amp; 2022 Goals</a></p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/6
+        Wed, 09 Mar 2022 19:27:46 +0000
+gov.gitcoin.co-post-10027-6
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+DisruptionJoe
+
+            <p>Absolutely Jeff. I think this is not only aligned, but necessary.</p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/5
+        Wed, 09 Mar 2022 14:24:55 +0000
+gov.gitcoin.co-post-10027-5
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+tjayrush
+
+            <p>I very much support this suggestion/post. The people behind this idea have been working on these ideas for a very long time. Super interested to see this become better known.</p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/4
+        Wed, 09 Mar 2022 00:12:32 +0000
+gov.gitcoin.co-post-10027-4
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+jeffemmett
+
+            <p>To add to this (admittedly, with fewer memes <img src="https://emoji.discourse-cdn.com/twitter/cry.png?v=12" title=":cry:" class="emoji" alt=":cry:" loading="lazy" width="20" height="20">): Conviction Voting in its present form is geared towards easing fund allocations in DAOs, which is a great use case and is likely to ease some of these kinds of funding decisions.  It could also be augmented with <strong>quadratic</strong> conviction voting, or perhaps even <strong>quadratic downvoting</strong> on CV proposals, to provide the capability for a DAO to express negative sentiment towards CV proposals, if there was a concern that too many proposals were passing too easily.  There is still a wide design space to explore in the use of these new tools, and we’re interested to see how they can be iterated &amp; improved!</p>
+<p>On top of CV for fund allocation, there are also discussions about a CV-variation called <span class="hashtag">#ConvictionRanking</span>, which could act more like a continuous TCR (token curated registry). If this were created with a ‘BYO token’ design, any DAO could plug in their native token and allow any token holder to surface &amp; vote on anything they see needing improvement in the DAO.  It could be a sort of “digital suggestion box” which curates &amp; surfaces the most popular sentiments for action in a continuous, distributed &amp; asynchronous manner.  I got the sense that GitcoinDAO would benefit from such a tool (as well as vanilla Conviction Voting for fund allocation!) when I came across a tweet convo between <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> &amp; <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a>: <a href="https://twitter.com/jeffemmett/status/1499784633747054592" rel="noopener nofollow ugc">https://twitter.com/jeffemmett/status/1499784633747054592</a></p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/3
+        Tue, 08 Mar 2022 22:47:19 +0000
+gov.gitcoin.co-post-10027-3
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+DisruptionJoe
+
+            <p>Love the post. Love the idea. I think it fits in perfectly in the coordination party kit suite of tools.</p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/2
+        Tue, 08 Mar 2022 21:54:34 +0000
+gov.gitcoin.co-post-10027-2
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+JessicaZartler
+
+            <p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a7ab7800717255d94943669057244a7429239f88.jpeg" alt="image" data-base62-sha1="nVh6FVEjXjr93vENTh20CtzzotG" width="574" height="435"></p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e097d925ff1d6ef32615e693d3cca32fac8bf289.jpeg" alt="image" data-base62-sha1="w2QhMaNHj9tu2LJfvPwhCCiZ881" width="574" height="435"></p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/d/db70f85116fb258cfa0fbd8a38e0eaa4d4e6bb23.jpeg" alt="image" data-base62-sha1="vjgBolZ5dsyolW0W3A6kYklXCLN" width="612" height="407"></p>
+<h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a><strong>TL;DR</strong></h1>
+<p><strong>WTF is Conviction Voting?</strong><br>
+<a href="https://1hive.gitbook.io/gardens/on-chain-governance/garden-framework/conviction-voting">1Hive</a> built the first instance of a super handy tool called Conviction Voting.</p>
+<blockquote>
+<p><strong>If you haven’t heard of it, here’s the <a href="https://twitter.com/commonsstack/status/1309211776425365510">TL;DR tweet thread</a>.</strong></p>
+</blockquote>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/4/41baddc5f1b0cc85c2d5f244de21e6b5c522e574.jpeg" alt="image" data-base62-sha1="9ntoty5aIIcDeiEdy9ptEl9ADiI" width="535" height="467"></p>
+<p><strong>The Problem:</strong><br>
+Many DAOs (including Gitcoin) are struggling hard with the same problems: Insurmountable overhead with <a href="https://gov.gitcoin.co/c/governance-proposals/5">keeping up with and voting on every proposal</a>, all or nothing (1 or 0 analog) funding proposals votes <a href="https://twitter.com/muninn23/status/1501194712203640836">like this one</a> where there is significant support but not quorum, <a href="https://twitter.com/j0hnwang/status/1489756724613373956">last minute vote swings</a> and other governance “attack” vectors that require time weighted voting to correct and more…</p>
+<p><strong>A Solution:</strong><br>
+The DAO buidler tool box <strong><em>must</em> have Conviction Voting</strong> to more efficiently distribute &amp; decentralize funding proposals and visualize dynamic average consensus signals.</p>
+<p>The consent, rather than consensus based tool can help:</p>
+<ul>
+<li>Increase operational efficiency</li>
+<li>Mitigates many governance “attack” vectors</li>
+</ul>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d85fa9bd37cf50cb1b2f7fe4bc149ccab9212199.png" alt="image" data-base62-sha1="uS85COsqbTmnHlaAZl1ZHyMLV0J" width="688" height="375"><br>
+<em>Image by <a href="https://twitter.com/jeffemmett">Jeff Emmett</a></em></p>
+<h2><a name="cv-shifts-the-governance-space-from-majoritarian-decision-making-towards-sufficient-support-for-proposals-based-on-the-amount-of-funds-they-are-requesting-2" class="anchor" href="https://gov.gitcoin.co#cv-shifts-the-governance-space-from-majoritarian-decision-making-towards-sufficient-support-for-proposals-based-on-the-amount-of-funds-they-are-requesting-2"></a>“CV shifts the governance space from majoritarian decision making towards sufficient support for proposals, based on the amount of funds they are requesting.”</h2>
+<p><a href="https://twitter.com/jeffemmett/status/1488924850085416962/photo/2">Credit Jeff Emmett</a><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/fad118d377b41aa0369216a2f0583616390e3a70.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/fad118d377b41aa0369216a2f0583616390e3a70" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fad118d377b41aa0369216a2f0583616390e3a70_2_690x424.jpeg" alt="image" data-base62-sha1="zMPm3LAytPr00CTwMQ6uFx6hYDm" width="690" height="424" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fad118d377b41aa0369216a2f0583616390e3a70_2_690x424.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/f/fad118d377b41aa0369216a2f0583616390e3a70.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/f/fad118d377b41aa0369216a2f0583616390e3a70.jpeg 2x" data-dominant-color="ECEBDF"></a></div><br>
+<img src="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2bab0d66538b23a30562ff72f526b28a973ed9de.png" alt="image" data-base62-sha1="6ej0ziC9PFO2IMHXYcfy6SN510O" width="606" height="431"><br>
+<em>(Addressing plutocracy will require SSIDs/DIDs to scale in a meaningful way - I’m sure it won’t be long!)</em><p></p>
+<h2><a name="oh-and-did-i-forget-to-mention-it-provides-rich-data-streams-of-continuous-preference-signals-3" class="anchor" href="https://gov.gitcoin.co#oh-and-did-i-forget-to-mention-it-provides-rich-data-streams-of-continuous-preference-signals-3"></a>Oh and did I forget to mention it provides rich data streams of continuous preference signals?</h2>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1b66697cc8bdf030daff8cfe168b18e795176433.jpeg" alt="image" data-base62-sha1="3Uoj7ZbUhXz6CumnzM3hlfdeRxx" width="577" height="432"></p>
+<p><strong>Who Am I (Reputation Flags)</strong><br>
+I am a <a href="https://gov.gitcoin.co/t/workstream-fraud-detection-and-defense-working-group-assemble/158/18">Founding member of the FDD Working Group</a>, Token Engineering &amp; Governance Researcher at <a href="https://block.science/">BlockScience</a>, Advisor &amp; Course Author at the <a href="https://tokenengineeringcommunity.github.io/website/docs/academy-welcome/">Token Engineering Academy</a>, <a href="https://medium.com/giveth/the-trusted-seed-of-the-commons-stack-5af6fb04cd30">Trusted Seed</a> Member of the <a href="https://commonsstack.org/">CommonsStack</a>, Ground Control at the <a href="https://twitter.com/GovernanceDAO">Governauts</a> &amp; Founding Steward of the <a href="http://tecommons.org/">Token Engineering Commons</a>.</p>
+<p><strong>Why We Need Moonshot’s Support</strong><br>
+My colleague, TE OG <a class="mention" href="https://gov.gitcoin.co/u/jeffemmett">@jeffemmett</a> &amp; I have been chatting with <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> and several others about the need to expand and create a public good, chain agnostic version of this tool.</p>
+<p>I tried to rally some groups last year to fund/build this initiative but they all wanted their own version, to which the incredibly amazing, talented &amp; busy lead engineer/developer of CV said, “Hey guys, I can’t support 20 versions, let’s build this in RUST.” To which the groups said, “If we fund it, we want our way.”</p>
+<p><em>So, this is where the heroes of Gitcoin DAO &amp; Moonshot Collective come in -  the pan-ultimate supporters of public goods!</em> <img src="https://gov.gitcoin.co/images/emoji/twitter/heart_eyes.png?v=12" title=":heart_eyes:" class="emoji" alt=":heart_eyes:" loading="lazy" width="20" height="20"></p>
+<h2><a name="okay-i-it-now-what-4" class="anchor" href="https://gov.gitcoin.co#okay-i-it-now-what-4"></a><strong>Okay, I <img src="https://gov.gitcoin.co/images/emoji/twitter/cupid.png?v=12" title=":cupid:" class="emoji" alt=":cupid:" loading="lazy" width="20" height="20">it, Now What?</strong></h2>
+<p>One note before I let you go - this tool is customizable:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/146d699bf17c72382b8e079406484b9b06396709.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/146d699bf17c72382b8e079406484b9b06396709" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/146d699bf17c72382b8e079406484b9b06396709_2_690x388.jpeg" alt="image" data-base62-sha1="2UHXOfCqJ9EdlOEbbJ5aRTa2xiV" width="690" height="388" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/146d699bf17c72382b8e079406484b9b06396709_2_690x388.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/1/146d699bf17c72382b8e079406484b9b06396709.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/1/146d699bf17c72382b8e079406484b9b06396709.jpeg 2x" data-dominant-color="D7C1A4"></a></div><p></p>
+<p>So, we can build something for funding, for continuous <a href="https://twitter.com/jeffemmett/status/1500863021605916676">general signaling or ranking like a continous TCR</a> - we definitely would need lots of discussion and some research with developers to figure out what would be the best, high leverage lego version that multiple DAOs could build on.</p>
+<p>So, don’t be shy and let’s crank up the conversation on this thread - pass to your friends <img src="https://gov.gitcoin.co/images/emoji/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> and <strong>let’s get the VC in the pipeline for the MC</strong>, who can be a hero for all DAOs - and build the chain agnostic version of Conviction Voting that we all need! <img src="https://gov.gitcoin.co/images/emoji/twitter/woman_superhero.png?v=12" title=":woman_superhero:" class="emoji" alt=":woman_superhero:" loading="lazy" width="20" height="20"> HOORAY!!! <img src="https://gov.gitcoin.co/images/emoji/twitter/partying_face.png?v=12" title=":partying_face:" class="emoji" alt=":partying_face:" loading="lazy" width="20" height="20"></p>
+<p><em>NOTE: <a class="mention" href="https://gov.gitcoin.co/u/jeffemmett">@jeffemmett</a> &amp; I are available (limited bandwidth) to support R&amp;D and would also love to see some resources (a few others / CV team) to continue to expand content/education/research/documentation of these concepts/tooling/R&amp;D <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"> Thank you so much for reading and in advance, for your thoughts &amp; support! <img src="https://gov.gitcoin.co/images/emoji/twitter/green_heart.png?v=12" title=":green_heart:" class="emoji" alt=":green_heart:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"></em></p>
+<h1><a name="h-5" class="anchor" href="https://gov.gitcoin.co#h-5"></a></h1>
+<hr>
+<h1><a name="h-6" class="anchor" href="https://gov.gitcoin.co#h-6"></a></h1>
+<p><em><img src="https://gov.gitcoin.co/images/emoji/twitter/nerd_face.png?v=12" title=":nerd_face:" class="emoji" alt=":nerd_face:" loading="lazy" width="20" height="20"> <strong>INTERDIMENSIONAL LIBRARIANS ONLY PAST THIS POINT</strong> <img src="https://gov.gitcoin.co/images/emoji/twitter/nerd_face.png?v=12" title=":nerd_face:" class="emoji" alt=":nerd_face:" loading="lazy" width="20" height="20"></em></p>
+<h1><a name="h-7" class="anchor" href="https://gov.gitcoin.co#h-7"></a></h1>
+<hr>
+<h1><a name="deep-library-conviction-voting-funding-signaling-dynamic-average-consensus-8" class="anchor" href="https://gov.gitcoin.co#deep-library-conviction-voting-funding-signaling-dynamic-average-consensus-8"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/books.png?v=12" title=":books:" class="emoji" alt=":books:" loading="lazy" width="20" height="20"> <strong>Deep Library</strong>: <strong>Conviction Voting-Funding / Signaling (Dynamic Average Consensus)<img src="https://gov.gitcoin.co/images/emoji/twitter/books.png?v=12" title=":books:" class="emoji" alt=":books:" loading="lazy" width="20" height="20"></strong></h1>
+<h2><a name="on-chain-9" class="anchor" href="https://gov.gitcoin.co#on-chain-9"></a><strong>On chain</strong></h2>
+<p><strong>Documentation</strong><br>
+<strong><a href="https://medium.com/giveth/conviction-voting-a-novel-continuous-decision-making-alternative-to-governance-aa746cfb9475">Conviction Voting: Novel Continuous Decision making</a></strong></p>
+<p><strong>[Presentation on Conviction voting by one of its developers, <a href="https://twitter.com/404ouch">David Llop (Sem Brestels)</a>](<a href="https://www.youtube.com/watch?v=r4-G18YNogw&amp;list=PLy6j39s17_jQfcxhI-64Dt9ttyu1HGv4q">https://www.youtube.com/watch?v=r4-G18YNogw&amp;list=PLy6j39s17_jQfcxhI-64Dt9ttyu1HGv4q</a>)</strong></p>
+<p><strong><a href="https://github.com/BlockScience/conviction/blob/master/social-sensorfusion.pdf">Social Sensor Fusion</a></strong></p>
+<p><strong><a href="https://www.youtube.com/watch?v=ZtVtBjcIlRw&amp;t=77s">cadCAD Model Walkthrough</a></strong></p><aside class="onebox allowlistedgeneric" data-onebox-src="https://cadcad.org/">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f9b4ac76983ee90a7fc9e0c0d1273fd0aba05a2b.png" class="site-icon" data-dominant-color="145E89" width="16" height="16">
+
+      <a href="https://cadcad.org/" target="_blank" rel="noopener">cadcad.org</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/367;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/02fb6873fe0b5378380c48bace40d71656de4b84_2_690x367.png" class="thumbnail" data-dominant-color="151648" width="690" height="367"></div>
+
+<h3><a href="https://cadcad.org/" target="_blank" rel="noopener">cadCAD – A Python package for designing, testing and validating complex...</a></h3>
+
+  <p>At its core, cadCAD is a differential games engine that supports parameter sweeping and Monte Carlo analyses and can be easily integrated with other scientific computing Python modules and data science workflows.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p><strong><a href="https://www.youtube.com/watch?v=WDkk3ZXoTn0">Simple Voting Model</a></strong></p>
+<p><strong><a href="https://michaelzargham.medium.com/a-brief-history-of-conviction-voting-ad4ca4eb4aee">Dynamic Average Consensus: A Brief History of Conviction Voting</a></strong></p>
+<p><strong><a href="https://ieeexplore.ieee.org/document/8716798">Tutorial on Dynamic Average Consensus: The Problem, Its Applications, and the Algorithms</a></strong></p>
+<p><strong><a href="https://arxiv.org/pdf/1803.03224.pdf">Distributed Maximum Likelihood using Dynamic Average Consensus Algorithm</a></strong></p>
+<p><strong>Implementations</strong></p>
+<p><strong><a href="https://github.com/1Hive/conviction-voting-cadcad">Github repo</a></strong></p>
+<p><strong><a href="https://aragon.org/blog/introducing-the-conviction-funding-pilot">Aragon Conviction Funding Pilot</a></strong><br>
+<em>(struggled because of gas prices back in the day, they had it on mainnet, most others are on xDAI - could also be built on ID chain for Bright ID)</em></p>
+<p><strong><a href="https://www.youtube.com/watch?v=CSWCDbrOeXA&amp;feature=youtu.be">1Hive Conviction Voting Discussion &amp; Dapp Walk Through</a></strong><br>
+<em>(a bit outdated but some good general overview)</em></p>
+<p><strong><a href="https://www.youtube.com/watch?v=6ohUOlBwhek&amp;list=PLusWL9gf0FITLhObprqjHSEnngieil6Kx">Token Engineering Commons Conviction Voting Test App Walk Through</a></strong></p>
+<p><strong><a href="https://medium.com/commonsstack/cstk-token-holders-can-now-use-conviction-voting-on-xdai-5090fdc3b8ad">Conviction Voting Used as Ranking/Signaling for Allocating Grants in CommonsStack Community</a></strong></p>
+<h2><a name="off-chain-10" class="anchor" href="https://gov.gitcoin.co#off-chain-10"></a><strong>Off Chain</strong></h2>
+<p><a href="https://blog.ceramic.network/trust-minimized-off-chain-conviction-voting/amp/"><strong>Ceramic Version</strong></a></p>
+          <p><a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027/1
+        Tue, 08 Mar 2022 18:05:31 +0000
+gov.gitcoin.co-post-10027-1
+Dear Moonshot Collective 🌜 Help DAOs Level Up Gov tooling: BUIDL Request for Chain Agnostic Conviction Voting
+      
+
+

@@ -1,0 +1,559 @@
+
+
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277
+    Edit: Snapshot vote is now [ratified](https://snapshot.org/#/gitcoindao.eth/proposal/0x921899e842c8a3f43026e0817b3a06b8117d1a23166ef192db275fb11af9ac7b)!
+
+TLDR: Alpha Round final results are live [here](https://docs.google.com/spreadsheets/d/1Oq5Fp3y9z5Ffv4ipx1zAiw3YL6FBPMh2PtyyG6apmfQ/edit?usp=sharing)! We propose 5 days for discussion and review followed by a 5-day snapshot vote to ratify, before processing final payouts.
+
+**Background**
+
+First, we’d like to thank the community and the grantees for all of the patience everyone has shown as we fine-tune our “canon” QF implementation for the Allo protocol, passport scoring, and end-of-round analysis. We understand the results (and subsequent payouts) for this round have taken longer than usual and we look forward to accelerating this process in future rounds. Additionally, thanks to @AlexK @nategosselin @umarkhaneth @koday @kyle @M0nkeyFl0wer @zen @baoki and many other amazing contributors in the Gitcoin DAO for all the work that went into making this round successful and getting us to these final results.
+
+The first Gitcoin Program Alpha QF rounds on Allo Protocol ran from January 17th to January 31st and included a subset of established grantees from past rounds. $1 million in matching was available between 3 distinct rounds (and correspondingly 3 smart contracts), with 333,333 DAI pools for the following categories:
+
+1. Web3 Open Source Software [[Explorer](https://grant-explorer.gitcoin.co/#/round/1/0xd95a1969c41112cee9a2c931e849bcef36a16f4c) | [Contract](https://etherscan.io/address/0xd95a1969c41112cee9a2c931e849bcef36a16f4c)]
+2. Ethereum Infrastructure [[Explorer](https://grant-explorer.gitcoin.co/#/round/1/0xe575282b376e3c9886779a841a2510f1dd8c2ce4) | [Contract](https://etherscan.io/address/0xe575282b376e3c9886779a841a2510f1dd8c2ce4)]
+3. Climate Solutions [[Explorer](https://grant-explorer.gitcoin.co/#/round/1/0x1b165fe4da6bc58ab8370ddc763d367d29f50ef0) | [Contract](https://etherscan.io/address/0x1b165fe4da6bc58ab8370ddc763d367d29f50ef0)]
+
+You can learn more about how these rounds were planned and structured here:
+https://gov.gitcoin.co/t/discussion-feedback-request-grants-protocol-alpha-round-eligibility/11873
+
+https://gov.gitcoin.co/t/gitcoin-program-alpha-round-grantee-invite-lists-eligibility-criteria/12538
+
+https://go.gitcoin.co/blog/announcing-the-gitcoin-alpha-round
+
+**Results & Ratification**
+
+The full list of **final results & payout amounts can be found [here](https://docs.google.com/spreadsheets/d/1Oq5Fp3y9z5Ffv4ipx1zAiw3YL6FBPMh2PtyyG6apmfQ/edit?usp=sharing).** Below we’ll cover how these results were calculated and what decisions were made (given this is the first round integrating Gitcoin Passport and the first large-scale round on Allo, it was a new process and one we’d like to get community feedback and iterate on).
+
+We ask our Community Stewards to ratify the Alpha Round payout amounts as being correct, fair, and abiding by community norms, including the implementation of Passport scoring as well as judgments and sanctions made by the Fraud Detection & Defense workstream.
+
+**If stewards and the community approve after this discussion, we would like to suggest voting on Snapshot to run from Monday, March 20th to Friday, March 25th, in advance of payouts being processed the last week of March.**
+
+**Options to vote on:**
+
+*1. Ratify the round results*
+
+You ratify the results as reported by the Public Goods Funding & Fraud Detection & Defense workstreams and request the keyholders of the community multisig to payout funds according to the Alpha Round final payout amounts.
+
+*2. Request further deliberation*
+
+You do not ratify the results and request keyholders of the community multi-sig wallet to delay payment until further notice.
+
+**Round and Results Calculation Details**
+
+To summarize:
+
+* The Gitcoin Program Alpha Round was conducted on the new protocol from January 17-31, 2023
+* It consisted of 3 curated rounds with their own matching pool: Web3 Open Source Software, Ethereum Infrastructure, and Climate Solutions
+* There were 159 returning grants split between the rounds invited based on funding criteria from GR14 and GR15
+* A total of $667k was donated from 30,893 unique wallets
+
+![|624x352](upload://t8KAi8XW28DuveXYk1f8sL0zkug.jpeg)
+
+**Matching Calculation Approach**
+
+The final results shared here stray from the “pure QF” calculations after treatment for supporter eligibility. Our eligibility controls were:
+
+* Sufficient passport score
+* Non-arbitrary donation minimum
+* Removal of sybil-attackers
+* Support amounts totaling to matching cap limit in place per round
+
+**Passport scores**: Gitcoin Passport ran into some issues that we’re glad to have ironed out - some donors were unable to verify their unique identity for most of the round due to infrastructure instability, and some passport stamps were reset at times. As a result, donors were given 2 extra weeks after the round concluded to reverify their passports and stamps. Given the 2-week grace period, we are happy with the final outcome of verified passports:
+
+![|624x123](upload://vSG07pMaK0lKSekCV3shtEetwMg.png)
+
+Only ~10% of attempted passports failed, and ~10% of donors did not have any passport at all. Only donors with a passport and sufficient score were counted for matching calculations.
+
+You can find more about Passport’s round issues, lessons learned, and future mitigation plans in Erich’s [post](https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011).
+
+**Donation minimum**: In past cGrants rounds the donation minimum was $1. For the Alpha Rounds, we instead went with a cutoff of a certain bottom percentile of donations, which all ended up at about $.50, but varied between 30% and 60% of total donations depending on the round:
+
+![|624x347](upload://oSUiZyiRDdnsWPF7uWLr281cWYH.jpeg)
+
+These lower boundary limits were selected based on examining statistical anomalies across projects in aggregate for each round, along with time-series analysis to identify botted behavior. Whether a cohort of airdrop farmers was found to act as a group of isolated, unique individuals, or as a sybil-network, this limit neutralized the impact of such speculation on the disbursement of matching funds and we found that Passport did a good job of limiting the prevalence of unsophisticated sybil network in our alpha rounds.
+
+**Advanced sybil attackers**: As with most QF Rounds, we saw some more sophisticated Sybil Attack patterns which were not stopped by Passport (yet!), as well as donations from addresses which were known to be attackers of prior rounds. After on-chain data analysis and a manual sampling process, donations from addresses that were associated with these types of behaviors were excluded for the purposes of matching calculations. Moving forward, more of this analysis process will be automated and executed in near real-time with the help of on-chain data called within Passport.
+
+**Matching caps**: Matching caps were introduced many rounds ago on cGrants, where there is a maximum percent of the total matching pool any one grant can capture. Once they hit this cap, they will not earn more, and any excess is redistributed to all other grants. Alpha Round caps were:
+
+* 5% for OSS
+* 10% for Climate
+* 10% for Eth Infra
+
+These amounts were selected based on the number of grants invited/expected to be in each round.
+
+*Please note:* in an effort to create a transparent minimum viable product of QF formula, *simple* quadratic voting has been deployed here. In the future, we will offer pairwise matching as an option for possible customizations that will be set and published on-chain at the time of grant program creation.
+
+**Prior Estimated Results & Takeaways**
+
+Multiple DAO contributors have already shared detailed analyses, statistics, and takeaways from the Alpha Rounds. You can find those governance posts here:
+
+https://gov.gitcoin.co/t/gitcoin-program-alpha-rounds-data-findings/13045
+
+https://gov.gitcoin.co/t/gitcoin-program-alpha-round-post-op-writeup/13043
+
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011
+
+Again, we thank everyone for your patience and participation in the Alpha Rounds. We’re excited for the Beta Program launch the last week of April (details coming soon) as we reignite the Gitcoin Program on the Allo protocol and support many other organizations to host their own programs and rounds.
+
+For questions, comments, or concerns on any of the above, please comment below or join the [Gitcoin Discord](https://discord.gg/cD6RKWjZ6g).
+Sun, 13 Aug 2023 00:33:50 +0000
+🌱 Gitcoin Grants
+
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+Digijoe7
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/alex07up">@Alex07UP</a> I agree. There was definitely not enough info</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/24
+        Sun, 13 Aug 2023 00:33:50 +0000
+gov.gitcoin.co-post-13277-24
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+connor
+
+            <p>Quick update - the ratification vote has passed! <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x921899e842c8a3f43026e0817b3a06b8117d1a23166ef192db275fb11af9ac7b" class="inline-onebox" rel="noopener nofollow ugc">Snapshot</a></p>
+<p>We hope to process payouts by the end of this week. Stay tuned <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/22
+        Tue, 28 Mar 2023 06:29:28 +0000
+gov.gitcoin.co-post-13277-22
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+smartionet
+
+            <p>I agree. <img src="https://gov.gitcoin.co/images/emoji/twitter/grinning.png?v=12" title=":grinning:" class="emoji" alt=":grinning:" loading="lazy" width="20" height="20"><br>
+Nice to be with you in this round.<br>
+Yours JJ</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/19
+        Fri, 24 Mar 2023 02:59:11 +0000
+gov.gitcoin.co-post-13277-19
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+epowell101
+
+            <p>Good ideas IMO <a class="mention" href="https://gov.gitcoin.co/u/bobjiang">@bobjiang</a> and <a class="mention" href="https://gov.gitcoin.co/u/lefterisjp">@lefterisjp</a></p>
+<p>Fwiw one of the projects emerging out of the OpenData Community looks specifically at grants both to screen (proactive like Passport) and within the round (for eg seeing which grants are receiving lots of Sybils to vote for them).</p>
+<p>Hopefully this will be helpful to all future round operators to make their own determination.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/18
+        Tue, 21 Mar 2023 21:25:17 +0000
+gov.gitcoin.co-post-13277-18
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+lefterisjp
+
+            <p>voted yes as per my initial post here: <a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/2" class="inline-onebox">[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations - #2 by lefterisjp</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/17
+        Tue, 21 Mar 2023 20:34:45 +0000
+gov.gitcoin.co-post-13277-17
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+Alex07UP
+
+            <p>Unfortunately, there was little information on some projects, especially on the website. I hope Gitcoin was accurate to the selection.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/16
+        Tue, 21 Mar 2023 15:35:05 +0000
+gov.gitcoin.co-post-13277-16
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+shawn16400
+
+            <p>Stewards and GTC holders,<br>
+Following the standard process, this proposal has been moved to a snapshot vote and can be found here.  The vote closes on Monday, March 27.  Please cast your vote!</p>
+<p><a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x921899e842c8a3f43026e0817b3a06b8117d1a23166ef192db275fb11af9ac7b" class="onebox" target="_blank" rel="noopener">https://snapshot.org/#/gitcoindao.eth/proposal/0x921899e842c8a3f43026e0817b3a06b8117d1a23166ef192db275fb11af9ac7b</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/15
+        Tue, 21 Mar 2023 09:45:52 +0000
+gov.gitcoin.co-post-13277-15
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+krrisis
+
+            <p>Thanks Connor for the great and detailed overview, I will vote yes here.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/14
+        Mon, 20 Mar 2023 22:00:38 +0000
+gov.gitcoin.co-post-13277-14
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+DisruptionJoe
+
+            <p>Thanks for the work here. Congrats to a successful Alpha Round. It looks like we have plenty of steward comments to legitimately move this forward to a Snapshot vote.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/13
+        Mon, 20 Mar 2023 18:47:30 +0000
+gov.gitcoin.co-post-13277-13
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+ale.k
+
+            <p>Really excited for the learnings unearthed from this round and looking forward to keep iterating for beta rounds! I’m in support of these matching amounts- and congratulations to everyone who participated with amazing projects around the space!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/12
+        Mon, 20 Mar 2023 18:00:09 +0000
+gov.gitcoin.co-post-13277-12
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+M0nkeyFl0wer
+
+            <p>Thanks for all the work done on this y’all and the detailed explanation.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/11
+        Mon, 20 Mar 2023 17:26:13 +0000
+gov.gitcoin.co-post-13277-11
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+babytiger
+
+            <p>good stuff i like how gitcoin is moving things and getting the community involve</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/10
+        Fri, 17 Mar 2023 23:26:17 +0000
+gov.gitcoin.co-post-13277-10
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+azeem
+
+            <p>After taking a look, I’d say “yes” to this proposal. Appreciate you taking the time to put together so comprehensive.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/9
+        Fri, 17 Mar 2023 15:13:19 +0000
+gov.gitcoin.co-post-13277-9
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+ccerv1
+
+            <p>I agree with these points – and in general that Gitcoin should be more opinionated in how it runs its own rounds. (This can also help mitigate Sybil attacks.)</p>
+<p>I am also excited about the near-future when anyone can be a Round Manager and thereby toggle those parameters however they see fit.</p>
+<p>31K unique donors + 74% passport completion is no small feat! Congrats everyone!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/7
+        Thu, 16 Mar 2023 21:11:19 +0000
+gov.gitcoin.co-post-13277-7
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+jengajojo
+
+            <p>Thanks for the summary <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a></p>
+<p>First I want to thank everyone involved for their contribution. Considering many other alpha stage products perform way below the output we have here, I am in favor of ’ <em>Ratify the round results</em>’</p>
+<aside class="quote no-group" data-username="connor" data-post="1" data-topic="13277">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>Only ~10% of attempted passports failed, and ~10% of donors did not have any passport at all.</p>
+</blockquote>
+</aside>
+<p>Are there any conversation on having a fail-safe backup for passport incase the service doesn’t work? If i understand the text below accurately, 20% donors were never factored into the calculation which seems like a high number?</p>
+<aside class="quote no-group" data-username="connor" data-post="1" data-topic="13277">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p><strong>Advanced sybil attackers</strong>:</p>
+</blockquote>
+</aside>
+<p>Do we know what % of address/donors fall in this category? Is it possible that advanced sybils maybe able to learn and route around automations, which means that we’d need to perpetually fund creation of new filters?</p>
+<aside class="quote no-group" data-username="connor" data-post="1" data-topic="13277">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>pairwise matching as an option for possible customizations that will be set and published on-chain at the time of grant program creation.</p>
+</blockquote>
+</aside>
+<p>+1</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/6
+        Thu, 16 Mar 2023 09:13:59 +0000
+gov.gitcoin.co-post-13277-6
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+connor
+
+            <p>Thanks for the quick reply!</p>
+<p>For the April Beta rounds, which will be larger scale, <a class="mention" href="https://gov.gitcoin.co/u/koday">@koday</a> will be sharing the first draft of the eligibility criteria and other rules on the gov forum soon, hopefully by this Friday. From there we’d love to get significant community and steward input on how we structure the rules for this upcoming round and in the future. That will be the perfect place to raise points like this and ensure they are enacted where the majority agrees</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/5
+        Thu, 16 Mar 2023 03:09:33 +0000
+gov.gitcoin.co-post-13277-5
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+caifukk
+
+            <p>As a donor, the money is used where it should be used, and not being scammed by malicious projects is the best result. It is doing very well so far, everyone has worked hard</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/4
+        Thu, 16 Mar 2023 00:55:23 +0000
+gov.gitcoin.co-post-13277-4
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+bobjiang
+
+            <p>Thank a lot <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> for your summary!<br>
+I would say “yes” for this proposal.</p>
+<p>Also I have the same concerns with <a class="mention" href="https://gov.gitcoin.co/u/lefterisjp">@lefterisjp</a> about one grants within multiple rounds.<br>
+This must be a bit complex situations for dGrant. e.g</p>
+<ul>
+<li>one grant could be in multiple rounds (no limitations)</li>
+<li>one grant could be in limited rounds (e.g N)</li>
+</ul>
+<p>but if we limit the number of rounds one grant could be in, what is the number? 1,2,or more?</p>
+<p>I can understand lefteris concerns, which are that grantees farmed the rounds.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/3
+        Wed, 15 Mar 2023 23:54:57 +0000
+gov.gitcoin.co-post-13277-3
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+lefterisjp
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a>! Thank you for posting the results.</p>
+<p>I don’t see anything against the pre-stated rules so I would vote for this.</p>
+<p>But I do have some very serious comments to take into account for future iterations.</p>
+<ol>
+<li>
+<p>We need smaller caps, as we had introduced into the old grants. We see the currently most popular pojects hoarding biggest % of the votes. Exactly the reason the caps were introduced before. Imo the point of these rounds is to make as much impact as help as much as possible across a wide array of projects. Not the most popular one.</p>
+</li>
+<li>
+<p>We should limit projects per entity, especially if they are applying across multiple categories. I like the lammas and use their stuff, but I don’t find it okay to see them apply in both OSS and infra categories with separate projects, ran by the same team. Especially with chainlist being just a list of rpcs, forked by another project.<br>
+It feels like a way to participate in both rounds, and utilize their fans to max out matching funds in both rounds. I believe this should be discouraged, otherwise other projects will follow suit in order to game the system if some rules are not set.</p>
+</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/2
+        Wed, 15 Mar 2023 23:05:39 +0000
+gov.gitcoin.co-post-13277-2
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+connor
+
+            <p>Edit: Snapshot vote is now <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x921899e842c8a3f43026e0817b3a06b8117d1a23166ef192db275fb11af9ac7b" rel="noopener nofollow ugc">ratified</a>!</p>
+<p>TLDR: Alpha Round final results are live <a href="https://docs.google.com/spreadsheets/d/1Oq5Fp3y9z5Ffv4ipx1zAiw3YL6FBPMh2PtyyG6apmfQ/edit?usp=sharing" rel="noopener nofollow ugc">here</a>! We propose 5 days for discussion and review followed by a 5-day snapshot vote to ratify, before processing final payouts.</p>
+<p><strong>Background</strong></p>
+<p>First, we’d like to thank the community and the grantees for all of the patience everyone has shown as we fine-tune our “canon” QF implementation for the Allo protocol, passport scoring, and end-of-round analysis. We understand the results (and subsequent payouts) for this round have taken longer than usual and we look forward to accelerating this process in future rounds. Additionally, thanks to <a class="mention" href="https://gov.gitcoin.co/u/alexk">@AlexK</a> <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> <a class="mention" href="https://gov.gitcoin.co/u/koday">@koday</a> <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> <a class="mention" href="https://gov.gitcoin.co/u/m0nkeyfl0wer">@M0nkeyFl0wer</a> <a class="mention" href="https://gov.gitcoin.co/u/zen">@zen</a> <a class="mention" href="https://gov.gitcoin.co/u/baoki">@baoki</a> and many other amazing contributors in the Gitcoin DAO for all the work that went into making this round successful and getting us to these final results.</p>
+<p>The first Gitcoin Program Alpha QF rounds on Allo Protocol ran from January 17th to January 31st and included a subset of established grantees from past rounds. $1 million in matching was available between 3 distinct rounds (and correspondingly 3 smart contracts), with 333,333 DAI pools for the following categories:</p>
+<ol>
+<li>Web3 Open Source Software [<a href="https://grant-explorer.gitcoin.co/#/round/1/0xd95a1969c41112cee9a2c931e849bcef36a16f4c" rel="noopener nofollow ugc">Explorer</a> | <a href="https://etherscan.io/address/0xd95a1969c41112cee9a2c931e849bcef36a16f4c" rel="noopener nofollow ugc">Contract</a>]</li>
+<li>Ethereum Infrastructure [<a href="https://grant-explorer.gitcoin.co/#/round/1/0xe575282b376e3c9886779a841a2510f1dd8c2ce4" rel="noopener nofollow ugc">Explorer</a> | <a href="https://etherscan.io/address/0xe575282b376e3c9886779a841a2510f1dd8c2ce4" rel="noopener nofollow ugc">Contract</a>]</li>
+<li>Climate Solutions [<a href="https://grant-explorer.gitcoin.co/#/round/1/0x1b165fe4da6bc58ab8370ddc763d367d29f50ef0" rel="noopener nofollow ugc">Explorer</a> | <a href="https://etherscan.io/address/0x1b165fe4da6bc58ab8370ddc763d367d29f50ef0" rel="noopener nofollow ugc">Contract</a>]</li>
+</ol>
+<p>You can learn more about how these rounds were planned and structured here:</p><aside class="quote quote-modified" data-post="1" data-topic="11873">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/discussion-feedback-request-grants-protocol-alpha-round-eligibility/11873">[Discussion &amp; Feedback Request] Grants Protocol Alpha Round Eligibility</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/grants/15"><span data-category-id="15" style="--category-badge-color: #0088CC; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Everything around Gitcoin Grants, our flagship product"><span class="badge-category__name">🌱 Grants</span></span></a>
+  </div>
+  <blockquote>
+    Firstly, I want to say a big thank you to <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@j9leger</a> and <a class="mention" href="https://gov.gitcoin.co/u/m0nkeyfl0wer">@M0nkeyFl0wer</a> for co-authoring the below, <a class="mention" href="https://gov.gitcoin.co/u/koday">@koday</a> <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> for helping with all the analysis, and <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> for helping with all the analysis, and <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> &amp; the GPC team for helping bring these alpha rounds to life. 
+TL;DR 
+
+Governance has approved the decision to sunset cGrants and transition to the Grants Protocol
+GR16 will not happen in December and instead we’ll run an Alpha Round on the protocol in January with the goal of …
+  </blockquote>
+</aside>
+
+<aside class="quote quote-modified" data-post="1" data-topic="12538">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/koday/48/7280_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gitcoin-program-alpha-round-grantee-invite-lists-eligibility-criteria/12538">Gitcoin Program Alpha Round Grantee Invite Lists &amp; Eligibility Criteria</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/grants/15"><span data-category-id="15" style="--category-badge-color: #0088CC; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Everything around Gitcoin Grants, our flagship product"><span class="badge-category__name">🌱 Grants</span></span></a>
+  </div>
+  <blockquote>
+    ***Note: If you think your grant might be eligible for one of these rounds, reference the <a href="https://docs.google.com/spreadsheets/d/1dD6NeofEKvSMMEXmqjU8dtDqS_pfEdiBpCcBpqIan5A/edit?usp=sharing" rel="noopener nofollow ugc">Open Source Software &amp; ETH Infra invited grant list</a> or the <a href="https://docs.google.com/document/d/1TOiFR9RzCtTJWy98XNrfKH-QOnw2bwbBwyN4INV2wVs/edit?usp=sharing" rel="noopener nofollow ugc">climate grant list</a> and look for your grant. Please check the inbox of your email associated with the grant for your invite with links and info on how to apply. Please verify you meet all <a href="https://docs.google.com/document/d/1I4U3RA-q9ZW_Mtlz-EiFtj4YZTkPEwebQSKbEZlCfdY/edit?usp=sharing" rel="noopener nofollow ugc">eligibility criteria</a> for your round or your application may not be accepted. If you no longer have access to that email, please reach out to me @kierano on Telegram…
+  </blockquote>
+</aside>
+
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.gitcoin.co/blog/announcing-the-gitcoin-alpha-round">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/5/586d9129777e138c657844f0d64ee7fedaf9047b.png" class="site-icon" data-dominant-color="308991" width="32" height="32">
+
+      <a href="https://www.gitcoin.co/blog/announcing-the-gitcoin-alpha-round" target="_blank" rel="noopener nofollow ugc">gitcoin.co</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/381;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fc5048be7f455e5d503a2c866119fa03435145ac_2_690x381.jpeg" class="thumbnail" data-dominant-color="1F4E9C" width="690" height="381"></div>
+
+<h3><a href="https://www.gitcoin.co/blog/announcing-the-gitcoin-alpha-round" target="_blank" rel="noopener nofollow ugc">Announcing: The Gitcoin Program Alpha Round | Gitcoin Blog</a></h3>
+
+  <p>In 2023 we're transitioning to a blockchain-based grants protocol that allows anyone to launch a Quadratic Funding grants program.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p><strong>Results &amp; Ratification</strong></p>
+<p>The full list of <strong>final results &amp; payout amounts can be found <a href="https://docs.google.com/spreadsheets/d/1Oq5Fp3y9z5Ffv4ipx1zAiw3YL6FBPMh2PtyyG6apmfQ/edit?usp=sharing" rel="noopener nofollow ugc">here</a>.</strong> Below we’ll cover how these results were calculated and what decisions were made (given this is the first round integrating Gitcoin Passport and the first large-scale round on Allo, it was a new process and one we’d like to get community feedback and iterate on).</p>
+<p>We ask our Community Stewards to ratify the Alpha Round payout amounts as being correct, fair, and abiding by community norms, including the implementation of Passport scoring as well as judgments and sanctions made by the Fraud Detection &amp; Defense workstream.</p>
+<p><strong>If stewards and the community approve after this discussion, we would like to suggest voting on Snapshot to run from Monday, March 20th to Friday, March 25th, in advance of payouts being processed the last week of March.</strong></p>
+<p><strong>Options to vote on:</strong></p>
+<p><em>1. Ratify the round results</em></p>
+<p>You ratify the results as reported by the Public Goods Funding &amp; Fraud Detection &amp; Defense workstreams and request the keyholders of the community multisig to payout funds according to the Alpha Round final payout amounts.</p>
+<p><em>2. Request further deliberation</em></p>
+<p>You do not ratify the results and request keyholders of the community multi-sig wallet to delay payment until further notice.</p>
+<p><strong>Round and Results Calculation Details</strong></p>
+<p>To summarize:</p>
+<ul>
+<li>The Gitcoin Program Alpha Round was conducted on the new protocol from January 17-31, 2023</li>
+<li>It consisted of 3 curated rounds with their own matching pool: Web3 Open Source Software, Ethereum Infrastructure, and Climate Solutions</li>
+<li>There were 159 returning grants split between the rounds invited based on funding criteria from GR14 and GR15</li>
+<li>A total of $667k was donated from 30,893 unique wallets</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cc3c4b83a77620012198fbfb1b41a6a81876d1ac.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/cc3c4b83a77620012198fbfb1b41a6a81876d1ac" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cc3c4b83a77620012198fbfb1b41a6a81876d1ac_2_624x352.jpeg" alt="" data-base62-sha1="t8KAi8XW28DuveXYk1f8sL0zkug" width="624" height="352" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cc3c4b83a77620012198fbfb1b41a6a81876d1ac_2_624x352.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cc3c4b83a77620012198fbfb1b41a6a81876d1ac_2_936x528.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cc3c4b83a77620012198fbfb1b41a6a81876d1ac_2_1248x704.jpeg 2x" data-dominant-color="464863"></a></div><p></p>
+<p><strong>Matching Calculation Approach</strong></p>
+<p>The final results shared here stray from the “pure QF” calculations after treatment for supporter eligibility. Our eligibility controls were:</p>
+<ul>
+<li>Sufficient passport score</li>
+<li>Non-arbitrary donation minimum</li>
+<li>Removal of sybil-attackers</li>
+<li>Support amounts totaling to matching cap limit in place per round</li>
+</ul>
+<p><strong>Passport scores</strong>: Gitcoin Passport ran into some issues that we’re glad to have ironed out - some donors were unable to verify their unique identity for most of the round due to infrastructure instability, and some passport stamps were reset at times. As a result, donors were given 2 extra weeks after the round concluded to reverify their passports and stamps. Given the 2-week grace period, we are happy with the final outcome of verified passports:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/df71aa39c25d203f84d87504ece03a9cf51096e8.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/df71aa39c25d203f84d87504ece03a9cf51096e8" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/df71aa39c25d203f84d87504ece03a9cf51096e8_2_624x123.png" alt="" data-base62-sha1="vSG07pMaK0lKSekCV3shtEetwMg" width="624" height="123" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/df71aa39c25d203f84d87504ece03a9cf51096e8_2_624x123.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/df71aa39c25d203f84d87504ece03a9cf51096e8_2_936x184.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/df71aa39c25d203f84d87504ece03a9cf51096e8_2_1248x246.png 2x" data-dominant-color="E1E2E2"></a></div><p></p>
+<p>Only ~10% of attempted passports failed, and ~10% of donors did not have any passport at all. Only donors with a passport and sufficient score were counted for matching calculations.</p>
+<p>You can find more about Passport’s round issues, lessons learned, and future mitigation plans in Erich’s <a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011">post</a>.</p>
+<p><strong>Donation minimum</strong>: In past cGrants rounds the donation minimum was $1. For the Alpha Rounds, we instead went with a cutoff of a certain bottom percentile of donations, which all ended up at about $.50, but varied between 30% and 60% of total donations depending on the round:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/ae691faa758b73d376b952444a9298f03cb0be4b.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/ae691faa758b73d376b952444a9298f03cb0be4b" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ae691faa758b73d376b952444a9298f03cb0be4b_2_624x347.jpeg" alt="" data-base62-sha1="oSUiZyiRDdnsWPF7uWLr281cWYH" width="624" height="347" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ae691faa758b73d376b952444a9298f03cb0be4b_2_624x347.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ae691faa758b73d376b952444a9298f03cb0be4b_2_936x520.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ae691faa758b73d376b952444a9298f03cb0be4b_2_1248x694.jpeg 2x" data-dominant-color="434560"></a></div><p></p>
+<p>These lower boundary limits were selected based on examining statistical anomalies across projects in aggregate for each round, along with time-series analysis to identify botted behavior. Whether a cohort of airdrop farmers was found to act as a group of isolated, unique individuals, or as a sybil-network, this limit neutralized the impact of such speculation on the disbursement of matching funds and we found that Passport did a good job of limiting the prevalence of unsophisticated sybil network in our alpha rounds.</p>
+<p><strong>Advanced sybil attackers</strong>: As with most QF Rounds, we saw some more sophisticated Sybil Attack patterns which were not stopped by Passport (yet!), as well as donations from addresses which were known to be attackers of prior rounds. After on-chain data analysis and a manual sampling process, donations from addresses that were associated with these types of behaviors were excluded for the purposes of matching calculations. Moving forward, more of this analysis process will be automated and executed in near real-time with the help of on-chain data called within Passport.</p>
+<p><strong>Matching caps</strong>: Matching caps were introduced many rounds ago on cGrants, where there is a maximum percent of the total matching pool any one grant can capture. Once they hit this cap, they will not earn more, and any excess is redistributed to all other grants. Alpha Round caps were:</p>
+<ul>
+<li>5% for OSS</li>
+<li>10% for Climate</li>
+<li>10% for Eth Infra</li>
+</ul>
+<p>These amounts were selected based on the number of grants invited/expected to be in each round.</p>
+<p><em>Please note:</em> in an effort to create a transparent minimum viable product of QF formula, <em>simple</em> quadratic voting has been deployed here. In the future, we will offer pairwise matching as an option for possible customizations that will be set and published on-chain at the time of grant program creation.</p>
+<p><strong>Prior Estimated Results &amp; Takeaways</strong></p>
+<p>Multiple DAO contributors have already shared detailed analyses, statistics, and takeaways from the Alpha Rounds. You can find those governance posts here:</p>
+<aside class="quote quote-modified" data-post="1" data-topic="13045">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gitcoin-program-alpha-rounds-data-findings/13045">Gitcoin Program Alpha Rounds Data Findings</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/grants/15"><span data-category-id="15" style="--category-badge-color: #0088CC; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Everything around Gitcoin Grants, our flagship product"><span class="badge-category__name">🌱 Grants</span></span></a>
+  </div>
+  <blockquote>
+    <a name="gitcoin-alpha-rounds-analysis-1" class="anchor" href="https://gov.gitcoin.co#gitcoin-alpha-rounds-analysis-1"></a>Gitcoin Alpha Rounds Analysis
+The latest alpha program rounds are the first Gitcoin program rounds on the new protocol. They are the closest thing we had to a full GR in S16. All of the grants in these three rounds participated in GR15. The rounds are Open Source Software, Ethereum Infrastructure, and Climate Solutions. 
+Special thanks to <a class="mention" href="https://gov.gitcoin.co/u/koday">@koday</a> for his detailed thoughts on this post. Be sure to check out his <a href="https://gov.gitcoin.co/t/gitcoin-program-alpha-round-post-op-writeup/13043">post-op write up</a> on the alpha rounds. 
+
+<a name="round-results-preliminary-2" class="anchor" href="https://gov.gitcoin.co#round-results-preliminary-2"></a>Round Results (preliminary):
+This data is stil…
+  </blockquote>
+</aside>
+
+<aside class="quote quote-modified" data-post="1" data-topic="13043">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/koday/48/7280_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gitcoin-program-alpha-round-post-op-writeup/13043">Gitcoin Program Alpha Round Post-Op Writeup</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/grants/15"><span data-category-id="15" style="--category-badge-color: #0088CC; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Everything around Gitcoin Grants, our flagship product"><span class="badge-category__name">🌱 Grants</span></span></a>
+  </div>
+  <blockquote>
+    TL;DR 
+
+The <a href="https://go.gitcoin.co/blog/announcing-the-gitcoin-alpha-round" rel="noopener nofollow ugc">Gitcoin Program Alpha Round</a> was conducted on the new protocol from January 17-31, 2023.
+It consisted of 3 curated rounds with their own matching pool: Web3 Open Source Software, Ethereum Infrastructure, and Climate Solutions.
+There were 159 returning grants split between the rounds; invited based on funding criteria from GR14 and GR15.
+A total of $667k was donated from more than 29k unique wallets, and more detailed results can be seen in this <a href="https://dune.com/umarkhaneth/gitcoin-alpha-all-rounds" rel="noopener nofollow ugc">Dune Dashboard</a>.
+Operating this round all…
+  </blockquote>
+</aside>
+
+<aside class="quote quote-modified" data-post="1" data-topic="13011">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011">Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/grants/15"><span data-category-id="15" style="--category-badge-color: #0088CC; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Everything around Gitcoin Grants, our flagship product"><span class="badge-category__name">🌱 Grants</span></span></a>
+  </div>
+  <blockquote>
+    The purpose of this post-mortem is to document the experience with Gitcoin Passport during Gitcoin Allo Alpha Rounds. The goal is to understand what went well, wrong, and what can be improved to prevent similar issues from happening in the future. 
+
+<a name="summary-of-the-experience-1" class="anchor" href="https://gov.gitcoin.co#summary-of-the-experience-1"></a>Summary of the Experience
+During the Gitcoin Allo Alpha Rounds, donors were unable to verify their unique identity for most of the program due to infrastructure instability with Gitcoin Passport. This resulted in a significant number of donors being …
+  </blockquote>
+</aside>
+
+<p>Again, we thank everyone for your patience and participation in the Alpha Rounds. We’re excited for the Beta Program launch the last week of April (details coming soon) as we reignite the Gitcoin Program on the Allo protocol and support many other organizations to host their own programs and rounds.</p>
+<p>For questions, comments, or concerns on any of the above, please comment below or join the <a href="https://discord.gg/cD6RKWjZ6g" rel="noopener nofollow ugc">Gitcoin Discord</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277/1
+        Wed, 15 Mar 2023 21:41:41 +0000
+gov.gitcoin.co-post-13277-1
+[Proposal] Ratify the Results of January’s Alpha Rounds and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+

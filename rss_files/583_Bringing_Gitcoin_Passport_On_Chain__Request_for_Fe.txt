@@ -1,0 +1,89 @@
+
+
+
+Bringing Gitcoin Passport On-Chain [Request for Feedback]
+https://gov.gitcoin.co/t/bringing-gitcoin-passport-on-chain-request-for-feedback/12267
+    The Gitcoin Passport team is kicking off collaborative product research to make Passport more composable with blockchain applications. A critical benefit of blockchain-based identity solutions over an off-chain approach (like the current Passport architecture with the Ceramic Network) is more native composability with blockchain-native applications, also known as smart contracts.
+
+Blockchain-native composability of identity certificates and smart contracts may enable apps that execute as programmed and protect Passport holder privacy and coercion and censorship resistance. Unfortunately, off-chain identity solutions (including Gitcoin Passport 🥲) cannot cohesively satisfy these goals because they heavily rely on trusted intermediaries to feed the identity data into the apps.
+
+Through an internal hackathon, the Passport team has prototyped [different](https://github.com/gitcoinco/passport/issues/617#issuecomment-1285668189) [implementations](https://github.com/gitcoinco/passport/issues/618#issuecomment-1290046517) in these and adjacent directions. The outcome we are looking to achieve through our research is to more deeply understand the community’s needs to inform how we architect an on-chain Passport.
+
+Areas the team is trying to gain a deeper understanding:
+* The problems that can be solved by a blockchain-based Passport
+* Importance of privacy-preserving capabilities (e.g., zero-knowledge proofs, designated verifier proofs) of on-chain Passports;
+* Partner preferences around specific networks (Optimism, Ethereum, Arbitrum, and more)
+
+Are you a Passport holder, (potential) integration partner, or Gitcoin community member interested in this work and want to guide our research? Then we'd love to hear your thoughts on this. Indeed, we’d encourage you to provide contextual feedback exclusively via 👉 **[Pol.is](https://pol.is/8fyrkbujac)** 👈 so we can get a more meaningful insight into the community sentiment. Feel free to post procedural / bureaucratic questions in this thread.
+
+
+Sincerely,
+@GTChase and Erich
+
+PS: Here's the **[Pol.is](https://pol.is/8fyrkbujac)** link again.
+Thu, 08 Dec 2022 18:48:38 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Bringing Gitcoin Passport On-Chain [Request for Feedback]
+owocki
+
+            <aside class="quote no-group" data-username="erich" data-post="1" data-topic="12267">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar"> erich:</div>
+<blockquote>
+<p>Are you a Passport holder, (potential) integration partner, or Gitcoin community member interested in this work and want to guide our research?</p>
+</blockquote>
+</aside>
+<p>hi from supermodular.xyz - we are considering building things on top of passport.  here is our 002 wei:</p>
+<p>i would like to have a set of smart contract functions that allow me interact with the personhood scores of various identities</p>
+<h1><a name="modifier-onlypersonhoodscoreaboveuint-256-above_score-1" class="anchor" href="https://gov.gitcoin.co#modifier-onlypersonhoodscoreaboveuint-256-above_score-1"></a>modifier onlyPersonhoodScoreAbove(uint 256 above_score)</h1>
+<p>a smart contract modifier</p>
+<pre><code class="lang-auto">modifier onlyPersonhoodScoreAbove(uint 256 above_score)
+</code></pre>
+<p>that only allows ppl with a personhood score above <code>above_score</code> to call a function and a second modifier:</p>
+<h1><a name="modifier-onlyntimesuint-256-n_times-uint256-nonce-2" class="anchor" href="https://gov.gitcoin.co#modifier-onlyntimesuint-256-n_times-uint256-nonce-2"></a>modifier onlyNtimes(uint 256 n_times, uint256 nonce)</h1>
+<pre><code class="lang-auto">modifier onlyNtimes(uint 256 n_times, uint256 nonce)
+</code></pre>
+<p>that allows a function to be called only <code>n_times</code> by a unique person for each <code>nonce</code> . (<code>n_times</code> will usually just be 1, eg 1 person 1 vote) it would also be useful to have a function:</p>
+<h1><a name="function-getpersonhoodscoreaddress-addr-returns-uint-256-3" class="anchor" href="https://gov.gitcoin.co#function-getpersonhoodscoreaddress-addr-returns-uint-256-3"></a>function getPersonhoodScore(address addr) returns uint 256</h1>
+<pre><code class="lang-auto">function getPersonhoodScore(address addr) returns uint 256
+</code></pre>
+<p>where i can pull the personhood score of a specific address.</p>
+<h1><a name="summary-a-comment-on-the-level-of-abstraction-i-care-about-4" class="anchor" href="https://gov.gitcoin.co#summary-a-comment-on-the-level-of-abstraction-i-care-about-4"></a>summary / a comment on the level of abstraction i care about</h1>
+<p>youll note that exactly 0 of these functions care about which verifiable credentials an address has used. to me as a customer of this smart contract, i dont care about at all, the VCs are just an implementation detail. i just want them abstracted away by someone who has done the work to figure out how to translate them into a scare + i want to know who is a unique human + who is not. i trust passport + the scoring algorithm i’ve chosen to take care of the details.</p>
+<p>my 002 wei as someone whos building above the protocol.</p>
+          <p><a href="https://gov.gitcoin.co/t/bringing-gitcoin-passport-on-chain-request-for-feedback/12267/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/bringing-gitcoin-passport-on-chain-request-for-feedback/12267/2
+        Thu, 08 Dec 2022 18:48:38 +0000
+gov.gitcoin.co-post-12267-2
+Bringing Gitcoin Passport On-Chain [Request for Feedback]
+      
+
+Bringing Gitcoin Passport On-Chain [Request for Feedback]
+erich
+
+            <p>The Gitcoin Passport team is kicking off collaborative product research to make Passport more composable with blockchain applications. A critical benefit of blockchain-based identity solutions over an off-chain approach (like the current Passport architecture with the Ceramic Network) is more native composability with blockchain-native applications, also known as smart contracts.</p>
+<p>Blockchain-native composability of identity certificates and smart contracts may enable apps that execute as programmed and protect Passport holder privacy and coercion and censorship resistance. Unfortunately, off-chain identity solutions (including Gitcoin Passport <img src="https://gov.gitcoin.co/images/emoji/twitter/smiling_face_with_tear.png?v=12" title=":smiling_face_with_tear:" class="emoji" alt=":smiling_face_with_tear:" loading="lazy" width="20" height="20">) cannot cohesively satisfy these goals because they heavily rely on trusted intermediaries to feed the identity data into the apps.</p>
+<p>Through an internal hackathon, the Passport team has prototyped <a href="https://github.com/gitcoinco/passport/issues/617#issuecomment-1285668189" rel="noopener nofollow ugc">different</a> <a href="https://github.com/gitcoinco/passport/issues/618#issuecomment-1290046517" rel="noopener nofollow ugc">implementations</a> in these and adjacent directions. The outcome we are looking to achieve through our research is to more deeply understand the community’s needs to inform how we architect an on-chain Passport.</p>
+<p>Areas the team is trying to gain a deeper understanding:</p>
+<ul>
+<li>The problems that can be solved by a blockchain-based Passport</li>
+<li>Importance of privacy-preserving capabilities (e.g., zero-knowledge proofs, designated verifier proofs) of on-chain Passports;</li>
+<li>Partner preferences around specific networks (Optimism, Ethereum, Arbitrum, and more)</li>
+</ul>
+<p>Are you a Passport holder, (potential) integration partner, or Gitcoin community member interested in this work and want to guide our research? Then we’d love to hear your thoughts on this. Indeed, we’d encourage you to provide contextual feedback exclusively via <img src="https://gov.gitcoin.co/images/emoji/twitter/point_right.png?v=12" title=":point_right:" class="emoji" alt=":point_right:" loading="lazy" width="20" height="20"> <strong><a href="https://pol.is/8fyrkbujac" rel="noopener nofollow ugc">Pol.is</a></strong> <img src="https://gov.gitcoin.co/images/emoji/twitter/point_left.png?v=12" title=":point_left:" class="emoji" alt=":point_left:" loading="lazy" width="20" height="20"> so we can get a more meaningful insight into the community sentiment. Feel free to post procedural / bureaucratic questions in this thread.</p>
+<p>Sincerely,<br>
+<a class="mention" href="https://gov.gitcoin.co/u/gtchase">@GTChase</a> and Erich</p>
+<p>PS: Here’s the <strong><a href="https://pol.is/8fyrkbujac" rel="noopener nofollow ugc">Pol.is</a></strong> link again.</p>
+          <p><a href="https://gov.gitcoin.co/t/bringing-gitcoin-passport-on-chain-request-for-feedback/12267/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/bringing-gitcoin-passport-on-chain-request-for-feedback/12267/1
+        Thu, 08 Dec 2022 17:57:08 +0000
+gov.gitcoin.co-post-12267-1
+Bringing Gitcoin Passport On-Chain [Request for Feedback]
+      
+
+

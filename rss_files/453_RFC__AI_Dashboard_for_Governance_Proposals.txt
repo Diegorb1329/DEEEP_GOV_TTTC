@@ -1,0 +1,317 @@
+
+
+
+RFC: AI Dashboard for Governance Proposals
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561
+    ## The problem of governance
+
+We are a team of Web3 builders, working on ways to help DAOs make better decisions, *faster*.
+
+One pattern we have found in different DAOs is that they are impacted by *excessive* *governance burden*, which comes from the need to:
+
+* Moderate online forums (like discourse)
+* Consume proposals easily (getting to the point)
+* Differentiating proposals (the good from the bad)
+
+## A Visual solution for governance burden
+
+We are exploring ways of representing proposal information visually, so it can be consumed quickly & easily. We use a combination of AI customized specifically for DAOs, and other software libraries.
+
+#### Visual Summaries
+
+For example, the general sentiment of comments on a proposal can be presented visually, so that a quick glance (rather than a 10 minute read) will give the reader an idea of the receptivity of the proposal.
+
+![image|688x213](upload://9o5bmwHBtDS2C23unmU7EQsvKIu.png)
+
+
+*In this example, users strongly favor the proposal.*
+
+#### Mind Maps
+
+Another way that proposals can be distilled is through mind-maps, to help users quickly gauge the benefit of a proposal. The mind map below has been generated from: [[GCP-009] - Upgrading Gitcoin’s Governance Contracts](https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010)
+
+![image|690x368](upload://lL1alypZfXNZOhajQRO1XSOVpbu.png)
+
+
+#### Tables
+
+Tables can also create a way for quick proposal consumption. The table below has been generated from: [[GCP-009] - Upgrading Gitcoin’s Governance Contracts](https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010)
+
+![image|690x365](upload://cqYUKXmmx0xgIRaQX2LcVPvGqsj.png)
+
+
+## Our offer
+
+We are looking for DAOs to participate in our alpha version of our dashboard. By offering our service free to the first DAOs that sign up, we hope to:
+
+1. Use live proposal data to generate dashboards for the participating DAO
+2. Get feedback and iterate to give the DAO better proposal management tools
+
+#### To Participate
+
+To accomplish this, we need participating DAOs to provide a read-only API key of their discourse platform. This will allow us to pull proposal data and package it in a way that is easy to consume for DAO users.
+
+In summary, we are offering:
+
+1. A way to reduce the governance burden through AI digests of proposals
+2. To participate, Gitcoin needs to provide a read-only key of the discourse platform
+3. Being read-only, this is risk-free and allows us to provide a dashboard for easy AI digests
+4. Feedback from the community will allow us to improve the AI digests
+5. This service is offered free to Gitcoin DAO, as it helps us improve our product.
+Tue, 21 Nov 2023 04:22:29 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+RFC: AI Dashboard for Governance Proposals
+skyfoxx
+
+            <p>We’re still working on something in the background, based on feedback we received - This was super appreciated. <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/11
+        Tue, 21 Nov 2023 04:22:29 +0000
+gov.gitcoin.co-post-16561-11
+RFC: AI Dashboard for Governance Proposals
+      
+
+RFC: AI Dashboard for Governance Proposals
+Adedipupo
+
+            <p>Good ideas. I like this Proposals actually I can see it’s waiting for the approvement. and I support this teams. But let us having a conversation from our people here.</p>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/10
+        Thu, 05 Oct 2023 21:30:47 +0000
+gov.gitcoin.co-post-16561-10
+RFC: AI Dashboard for Governance Proposals
+      
+
+RFC: AI Dashboard for Governance Proposals
+kyle
+
+            <p>I dont see a DM, but let me know if I missed something.</p>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/9
+        Wed, 04 Oct 2023 16:23:21 +0000
+gov.gitcoin.co-post-16561-9
+RFC: AI Dashboard for Governance Proposals
+      
+
+RFC: AI Dashboard for Governance Proposals
+skyfoxx
+
+            <blockquote>
+<p>Can you share more on what this combination looks like?</p>
+</blockquote>
+<p>Pretty straightforward, actually. Most of the lifting is done using <a href="https://js.langchain.com/docs/get_started/introduction/" rel="noopener nofollow ugc">langchain</a>. To simplify a proposal, several LLMs are chained together. E.g. one’s job is is to fetch context online around a proposal, another one is to decide what context is needed to fetch, another one summarizes, another highlights, etc.</p>
+<p>The prompts are specifically designed to work with proposals, so it’s not something throwaway like: “summarize this”. Each type of analysis (e.g. pros &amp; cons of a proposal) will go through maybe 5 LLMs. After that, simple javascript libraries to convert generated markdown to html, or to a mindmap. Happy to share more details.</p>
+<blockquote>
+<p>Also interested in seeing other GCP examples</p>
+</blockquote>
+<p>Here is one I just did</p>
+<aside class="quote quote-modified" data-post="6" data-topic="16561">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/skyfoxx/48/11634_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/6">RFC: AI Dashboard for Governance Proposals</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/open-discussion/9"><span data-category-id="9" style="--category-badge-color: #12A89D; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Discuss, and even debate topics, that might be good ideas for us to explore or will spark a good conversation.  And some of them might turn into an official proposal eventually, but don’t need to."><span class="badge-category__name">🧙 🧙‍♀️ Ideas and Open Discussion</span></span></a>
+  </div>
+  <blockquote>
+    Thanks for the feedback! 
+
+Do you have any case studies of other DAOs using this kind of visualization 
+
+We are in early alpha so don’t have any case studies yet. The idea is to build out the idea with some participating DAOs. 
+I ran the tool through this GloDollar proposal <img width="20" height="20" src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title="slight_smile" alt="slight_smile" class="emoji"> 
+
+
+A quick summary: 
+ <a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/fc0f89e01b00b030d330e011f28e6efca2ee836f.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/fc0f89e01b00b030d330e011f28e6efca2ee836f" title="image">[image]</a> 
+ <a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/305cb7d1be0f1c60a5489de5106eca001a53d2dd.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/305cb7d1be0f1c60a5489de5106eca001a53d2dd" title="image">[image]</a> 
+ <a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f51a75e9f661be264e1daa579b74238021a095ce.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/f51a75e9f661be264e1daa579b74238021a095ce" title="image">[image]</a> 
+ <a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/392d7cb8618fbd46bcbf5f66660c9e821e2bef9b.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/392d7cb8618fbd46bcbf5f66660c9e821e2bef9b" title="image">[image]</a> 
+ <a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/98eb5ad17ff8158e53d05417d405f328a31954ad.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/98eb5ad17ff8158e53d05417d405f328a31954ad" title="image">[image]</a> 
+Note these are experiments we are working to improve on (based on feedback, of course)
+  </blockquote>
+</aside>
+
+<blockquote>
+<p>Do the visualizations sort or link to the responses they reflect? If I click on the heart eyes, or “Onchain governance expansion”, will I be directed to the comments represented? Are users able to customize the visualizations?</p>
+</blockquote>
+<p>Actually really cool ideas. Right now, it’s super alpha and rough so we want to get ideas from the DAOs and polish it up so it’s good. (In weekly short sprints). Since we have the structure set up, should be super easy to polish up. It still makes occasionall mistakes for now.</p>
+<blockquote>
+<p>Next week’s community call is a wrap up of recent Gov Posts. Would you be interested in joining to share more about this? It’s on Wednesday at noon EST.</p>
+</blockquote>
+<p>Would actually love to demo and get some feedback. How can we arrange a slot? Also, could you let me know if there are specific proposals you’d like me to run through the tool for then?</p>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/8
+        Wed, 27 Sep 2023 02:02:06 +0000
+gov.gitcoin.co-post-16561-8
+RFC: AI Dashboard for Governance Proposals
+      
+
+RFC: AI Dashboard for Governance Proposals
+skyfoxx
+
+            <p>dm’ing - note we are in early alpha but we want to work with DAOs so we can build with them itteratively.</p>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/7
+        Tue, 26 Sep 2023 21:53:31 +0000
+gov.gitcoin.co-post-16561-7
+RFC: AI Dashboard for Governance Proposals
+      
+
+RFC: AI Dashboard for Governance Proposals
+skyfoxx
+
+            <p>Thanks for the feedback!</p>
+<blockquote>
+<p>Do you have any case studies of other DAOs using this kind of visualization</p>
+</blockquote>
+<p>We are in early alpha so don’t have any case studies yet. The idea is to build out the idea with some participating DAOs.</p>
+<p>I ran the tool through this GloDollar proposal <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<aside class="quote quote-modified" data-post="1" data-topic="16398">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/garm/48/10620_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/proposal-diversify-gitcoin-stablecoin-holdings-by-exchanging-usdc-for-glo-dollars/16398">[Proposal] Diversify Gitcoin Stablecoin Holdings by exchanging USDC for Glo Dollars</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/open-discussion/9"><span data-category-id="9" style="--category-badge-color: #12A89D; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Discuss, and even debate topics, that might be good ideas for us to explore or will spark a good conversation.  And some of them might turn into an official proposal eventually, but don’t need to."><span class="badge-category__name">🧙 🧙‍♀️ Ideas and Open Discussion</span></span></a>
+  </div>
+  <blockquote>
+    <a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary
+We propose that Gitcoin diversify 10% of its stablecoin treasury holdings into Glo Dollar - the stablecoin that helps end extreme poverty. Doing so has three benefits: 
+
+Reduce Gitcoin’s reliance on USDC - the current highly concentrated stablecoin allocation now has a single point of failure.
+Enable Gitcoin’s treasury to have additional impact through Glo Dollar’s basic income funding mechanism that reduces extreme poverty.
+Support the development of an alternative US regulated stableco…
+  </blockquote>
+</aside>
+
+<p>A quick summary:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/fc0f89e01b00b030d330e011f28e6efca2ee836f.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/fc0f89e01b00b030d330e011f28e6efca2ee836f" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fc0f89e01b00b030d330e011f28e6efca2ee836f_2_690x185.png" alt="image" data-base62-sha1="zXPC3rkrB8iBGLTnSRCD1VYCU1x" width="690" height="185" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fc0f89e01b00b030d330e011f28e6efca2ee836f_2_690x185.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fc0f89e01b00b030d330e011f28e6efca2ee836f_2_1035x277.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/f/fc0f89e01b00b030d330e011f28e6efca2ee836f.png 2x" data-dominant-color="F2F2F2"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/305cb7d1be0f1c60a5489de5106eca001a53d2dd.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/305cb7d1be0f1c60a5489de5106eca001a53d2dd" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/305cb7d1be0f1c60a5489de5106eca001a53d2dd_2_690x175.png" alt="image" data-base62-sha1="6TPz5ZwMYZk35zjNsCos2p1woNL" width="690" height="175" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/305cb7d1be0f1c60a5489de5106eca001a53d2dd_2_690x175.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/305cb7d1be0f1c60a5489de5106eca001a53d2dd_2_1035x262.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/3/305cb7d1be0f1c60a5489de5106eca001a53d2dd.png 2x" data-dominant-color="FAFAF9"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f51a75e9f661be264e1daa579b74238021a095ce.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/f51a75e9f661be264e1daa579b74238021a095ce" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f51a75e9f661be264e1daa579b74238021a095ce_2_690x389.png" alt="image" data-base62-sha1="yYhFExuQ8jR7qjnmfxifNFZsfoO" width="690" height="389" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f51a75e9f661be264e1daa579b74238021a095ce_2_690x389.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f51a75e9f661be264e1daa579b74238021a095ce_2_1035x583.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/f/f51a75e9f661be264e1daa579b74238021a095ce.png 2x" data-dominant-color="F2F1F0"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/392d7cb8618fbd46bcbf5f66660c9e821e2bef9b.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/392d7cb8618fbd46bcbf5f66660c9e821e2bef9b" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/392d7cb8618fbd46bcbf5f66660c9e821e2bef9b_2_690x371.png" alt="image" data-base62-sha1="89OFDT8s7F6ykaxtLgUi0c3BX8T" width="690" height="371" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/392d7cb8618fbd46bcbf5f66660c9e821e2bef9b_2_690x371.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/392d7cb8618fbd46bcbf5f66660c9e821e2bef9b_2_1035x556.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/3/392d7cb8618fbd46bcbf5f66660c9e821e2bef9b.png 2x" data-dominant-color="EEEEEE"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/98eb5ad17ff8158e53d05417d405f328a31954ad.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/98eb5ad17ff8158e53d05417d405f328a31954ad" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/98eb5ad17ff8158e53d05417d405f328a31954ad_2_690x299.png" alt="image" data-base62-sha1="lOMOSYJAyEyGVa11FsKeltGo4Wh" width="690" height="299" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/98eb5ad17ff8158e53d05417d405f328a31954ad_2_690x299.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/98eb5ad17ff8158e53d05417d405f328a31954ad_2_1035x448.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/98eb5ad17ff8158e53d05417d405f328a31954ad.png 2x" data-dominant-color="F5F4F3"></a></div><p></p>
+<p>Note these are experiments we are working to improve on (based on feedback, of course)</p>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/6
+        Tue, 26 Sep 2023 21:44:31 +0000
+gov.gitcoin.co-post-16561-6
+RFC: AI Dashboard for Governance Proposals
+      
+
+RFC: AI Dashboard for Governance Proposals
+carlosjmelgar
+
+            <p>This is really cool. Also interested in seeing other GCP examples and learn about other DAOs using it, or interested in using it.</p>
+<p>Do the visualizations sort or link to the responses they reflect? If I click on the heart eyes, or “Onchain governance expansion”, will I be directed to the comments represented?</p>
+<aside class="quote no-group" data-username="skyfoxx" data-post="1" data-topic="16561">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/skyfoxx/48/11634_2.png" class="avatar"> skyfoxx:</div>
+<blockquote>
+<p>We use a combination of AI customized specifically for DAOs, and other software libraries.</p>
+</blockquote>
+</aside>
+<p>Can you share more on what this combination looks like?</p>
+<p>Are users able to customize the visualizations? For example, the <a href="https://imgflip.com/memegenerator/127634487/Mr-McMahon-reaction" rel="noopener nofollow ugc">Vince McMahon reaction meme</a> instead of the emoji faces?</p>
+<p>Very interesting. Would love to play with this.</p>
+<p>Next week’s community call is a wrap up of recent Gov Posts. Would you be interested in joining to share more about this? It’s on Wednesday at noon EST.</p>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/5
+        Tue, 26 Sep 2023 19:39:39 +0000
+gov.gitcoin.co-post-16561-5
+RFC: AI Dashboard for Governance Proposals
+      
+
+RFC: AI Dashboard for Governance Proposals
+kyle
+
+            <p>I am down to get a read-only API key out to you. Shoot me a DM <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/4
+        Tue, 26 Sep 2023 01:18:18 +0000
+gov.gitcoin.co-post-16561-4
+RFC: AI Dashboard for Governance Proposals
+      
+
+RFC: AI Dashboard for Governance Proposals
+CoachJonathan
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/skyfoxx">@skyfoxx</a> this looks great. Do you have any case studies of other DAOs using this kind of visualization and seeing tangible upticks either in participation or comprehension?</p>
+<p>Also, would you be willing to do another example from another recent post, just to get a sense of some more visualizations? Maybe something that is not as comprehensive as GCP009 (since most posts are not very comprehensive and might not be as data rich).</p>
+<p>I love the idea of visualizing more info in the gov forum (which is currently very text heavy).</p>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/3
+        Mon, 25 Sep 2023 18:03:59 +0000
+gov.gitcoin.co-post-16561-3
+RFC: AI Dashboard for Governance Proposals
+      
+
+RFC: AI Dashboard for Governance Proposals
+krrisis
+
+            <p>This looks great!</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> and <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a> are probably the people who could sign off on an experiment like this, not entirely in the loop on steward governance plans</p>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/2
+        Mon, 25 Sep 2023 14:22:25 +0000
+gov.gitcoin.co-post-16561-2
+RFC: AI Dashboard for Governance Proposals
+      
+
+RFC: AI Dashboard for Governance Proposals
+skyfoxx
+
+            <h2><a name="the-problem-of-governance-1" class="anchor" href="https://gov.gitcoin.co#the-problem-of-governance-1"></a>The problem of governance</h2>
+<p>We are a team of Web3 builders, working on ways to help DAOs make better decisions, <em>faster</em>.</p>
+<p>One pattern we have found in different DAOs is that they are impacted by <em>excessive</em> <em>governance burden</em>, which comes from the need to:</p>
+<ul>
+<li>Moderate online forums (like discourse)</li>
+<li>Consume proposals easily (getting to the point)</li>
+<li>Differentiating proposals (the good from the bad)</li>
+</ul>
+<h2><a name="a-visual-solution-for-governance-burden-2" class="anchor" href="https://gov.gitcoin.co#a-visual-solution-for-governance-burden-2"></a>A Visual solution for governance burden</h2>
+<p>We are exploring ways of representing proposal information visually, so it can be consumed quickly &amp; easily. We use a combination of AI customized specifically for DAOs, and other software libraries.</p>
+<h4><a name="visual-summaries-3" class="anchor" href="https://gov.gitcoin.co#visual-summaries-3"></a>Visual Summaries</h4>
+<p>For example, the general sentiment of comments on a proposal can be presented visually, so that a quick glance (rather than a 10 minute read) will give the reader an idea of the receptivity of the proposal.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/4/41cc8103200745570528797ed0c6f77b3b96a346.png" alt="image" data-base62-sha1="9o5bmwHBtDS2C23unmU7EQsvKIu" width="688" height="213"></p>
+<p><em>In this example, users strongly favor the proposal.</em></p>
+<h4><a name="mind-maps-4" class="anchor" href="https://gov.gitcoin.co#mind-maps-4"></a>Mind Maps</h4>
+<p>Another way that proposals can be distilled is through mind-maps, to help users quickly gauge the benefit of a proposal. The mind map below has been generated from: <a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010">[GCP-009] - Upgrading Gitcoin’s Governance Contracts</a></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/987e4c306a7b065ab6eb7dee02116e1e73229604.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/987e4c306a7b065ab6eb7dee02116e1e73229604" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/987e4c306a7b065ab6eb7dee02116e1e73229604_2_690x368.png" alt="image" data-base62-sha1="lL1alypZfXNZOhajQRO1XSOVpbu" width="690" height="368" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/987e4c306a7b065ab6eb7dee02116e1e73229604_2_690x368.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/987e4c306a7b065ab6eb7dee02116e1e73229604_2_1035x552.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/987e4c306a7b065ab6eb7dee02116e1e73229604.png 2x" data-dominant-color="F1F0EF"></a></div><p></p>
+<h4><a name="tables-5" class="anchor" href="https://gov.gitcoin.co#tables-5"></a>Tables</h4>
+<p>Tables can also create a way for quick proposal consumption. The table below has been generated from: <a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010">[GCP-009] - Upgrading Gitcoin’s Governance Contracts</a></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5726ea4d06a5131ecc12c9d70acb804fdc5658c3.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/5726ea4d06a5131ecc12c9d70acb804fdc5658c3" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5726ea4d06a5131ecc12c9d70acb804fdc5658c3_2_690x365.png" alt="image" data-base62-sha1="cqYUKXmmx0xgIRaQX2LcVPvGqsj" width="690" height="365" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5726ea4d06a5131ecc12c9d70acb804fdc5658c3_2_690x365.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5726ea4d06a5131ecc12c9d70acb804fdc5658c3_2_1035x547.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/5/5726ea4d06a5131ecc12c9d70acb804fdc5658c3.png 2x" data-dominant-color="F0F0F0"></a></div><p></p>
+<h2><a name="our-offer-6" class="anchor" href="https://gov.gitcoin.co#our-offer-6"></a>Our offer</h2>
+<p>We are looking for DAOs to participate in our alpha version of our dashboard. By offering our service free to the first DAOs that sign up, we hope to:</p>
+<ol>
+<li>Use live proposal data to generate dashboards for the participating DAO</li>
+<li>Get feedback and iterate to give the DAO better proposal management tools</li>
+</ol>
+<h4><a name="to-participate-7" class="anchor" href="https://gov.gitcoin.co#to-participate-7"></a>To Participate</h4>
+<p>To accomplish this, we need participating DAOs to provide a read-only API key of their discourse platform. This will allow us to pull proposal data and package it in a way that is easy to consume for DAO users.</p>
+<p>In summary, we are offering:</p>
+<ol>
+<li>A way to reduce the governance burden through AI digests of proposals</li>
+<li>To participate, Gitcoin needs to provide a read-only key of the discourse platform</li>
+<li>Being read-only, this is risk-free and allows us to provide a dashboard for easy AI digests</li>
+<li>Feedback from the community will allow us to improve the AI digests</li>
+<li>This service is offered free to Gitcoin DAO, as it helps us improve our product.</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfc-ai-dashboard-for-governance-proposals/16561/1
+        Sun, 24 Sep 2023 20:38:45 +0000
+gov.gitcoin.co-post-16561-1
+RFC: AI Dashboard for Governance Proposals
+      
+
+

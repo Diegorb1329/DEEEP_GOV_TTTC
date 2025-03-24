@@ -1,0 +1,481 @@
+
+
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204
+    Hey Everyone - I have some excited news to share, and I would love to solicit feedback before we get too far along on a few of our Governor upgrade details.
+
+After a couple of [false starts](https://gov.gitcoin.co/t/upgrading-the-gitcoin-governance-contracts/10721), we are about 2/3rds of the way done in scoping the [new Governor Contracts](https://github.com/gitcoinco/2022-Governor-upgrade) for the Gitcoin DAO and Treasury. These contracts are being developed by our friends and partners at [ScopeLift](https://www.scopelift.co/). These folks have worked with Gitcoin for years and have helped us build a number of other products. They have also been championing [flexible voting](https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115) for DAOS and worked with Uniswap to introduce this concept.
+
+Okay, so the exciting news! We are about 2/3rds of the way done and we have a few questions we would love community feedback on. If you can answer the poll, it would be greatly appreciated, but we are essentially looking for feedback on if Flexible Voting should be implemented as part of this governor upgrade, or if we would like to "play it safe" and avoid allowing the voting mechanism. From @bendi - "Flexible Voting allows for the construction of new mechanisms which make governance participation easier, cheaper, and more accessible for GTC holders."
+
+You should really checkout the post linked above what flexible voting is, but to save a few clicks, here is a great graphic outlining the benefits of it. Essentially flexible voting enables Snapshot strategies. Those who have GTC staked in an LP can still use that GTC to vote for on-chain proposals.
+![flex-voting-diagram|690x388](upload://t7GK8vdM1ieF2z0DR5VgjJPZbCt.png)
+
+We are about to start testing the new contracts and will have more info to share on those soon, but we hope to have a vote live in January to upgrade the governor contracts from the Governor Alpha we have today, to an Open Zepplin Variant of Governor Bravo. I can share more of the contract details in a subsequent post soon (ie, if threshold amounts changes are proposed, quorum numbers, etc.)
+
+For now, give me your thoughts on flexible voting!
+[poll type=regular results=always chartType=bar]
+* Yes - Flexible Voting is important to our Governance
+* No - Flexible Voting doesn't seem necessary and we should skip it.
+[/poll]
+Mon, 03 Apr 2023 22:46:19 +0000
+🤖 DAO Governance and Vision
+
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+bendi
+
+            <p>Hey everyone, as <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> said, we’ve completed the audit of Flexible Voting Governor with OpenZeppelin, and <a href="https://blog.openzeppelin.com/scopelift-flexible-voting-audit/" rel="noopener nofollow ugc">the results</a> are now available for public review. Only a few low severity issues were identified and all have been fixed.</p>
+<p>Later this week, we’ll be deploying the prospective new Governor for Gitcoin and sharing the upgrade proposal with the community to begin the formal governance proposal.</p>
+<p>You can read about the audit and everything else going on with Flexible Voting (there’s a bunch!) in this Twitter thread we just shared:</p>
+<p><a href="https://twitter.com/ScopeLift/status/1643018667972788224" class="onebox" target="_blank" rel="noopener nofollow ugc">https://twitter.com/ScopeLift/status/1643018667972788224</a></p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/23
+        Mon, 03 Apr 2023 22:46:19 +0000
+gov.gitcoin.co-post-12204-23
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+kyle
+
+            <p>Hey all - one more update!</p>
+<p>We are getting close to our deploy and testing phase. This means, contracts have been audited, settings have been set (currently no planned changes to the governor options), and we are getting ready to start our testing. We will deploy the new contracts and expose those so that we encourage additional testing <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+<p>Stay tuned for more details next week!</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/22
+        Sat, 01 Apr 2023 12:00:51 +0000
+gov.gitcoin.co-post-12204-22
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+bendi
+
+            <p>Amazing! Thanks so much. Friend request sent on Discord.</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/21
+        Wed, 08 Mar 2023 16:11:03 +0000
+gov.gitcoin.co-post-12204-21
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+shawn16400
+
+            <p>Hey Ben,<br>
+After your presentation, I spoke with several other governance architects about the capability and there was broader interest beyond Gitcoin.  Specifically <a class="mention" href="https://gov.gitcoin.co/u/mmurthy">@mmurthy</a> at <a href="https://www.karmahq.xyz/">https://www.karmahq.xyz/</a>, the folks at the <a href="https://twitter.com/DAOgovernance">DAO Governance Collective</a> and <a href="https://twitter.com/emjicy">mel.eth</a> who has some interesting delegation ideas where this could be put to work.  Ping me in discord and let’s continue the conversation  shawn16400#5507</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/20
+        Wed, 08 Mar 2023 10:03:06 +0000
+gov.gitcoin.co-post-12204-20
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+bendi
+
+            <p>Thanks to the community members who came to my Schelling Point talk. I’ll post the video once it’s available as well.</p>
+<p>After the talk, I had a great brainstorm with a few folks about even more cool stuff that can be built with Flexible Voting. People keep coming up with cool new things that could be built, including:</p>
+<ul>
+<li>A chained delegation scheme where voting weight follows a chain of delegation until someone in the chain votes</li>
+<li>An incentivized voting scheme where anyone who fails to vote loses a small amount of their stake, which is given to those who did vote</li>
+<li>An opt-in doxxed voting pool (for sybil resistance) where votes are amplified quadratically with a pool of token weight delegated by the DAO or another whale</li>
+</ul>
+<p>There was a lot of interest for Flexible Voting at ETHDenver from other DAOs as well. Our audit with OpenZeppelin starts this week, and I’ll share updates on that as it progresses. There’s a lot of momentum building for more modular governance! We’re excited to get the proposal up for the Gitcoin community later this month!</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/19
+        Tue, 07 Mar 2023 21:33:15 +0000
+gov.gitcoin.co-post-12204-19
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+bendi
+
+            <p>Yes! Thanks Kyle. A couple other notes that folks might be interested in:</p>
+<ul>
+<li>The Flexible Voting extension is being audited by OpenZeppelin at the end of the month. We’ll of course make the full report public when the process is over.</li>
+<li>I’ll be speaking on Flexible Voting and what the upgrade would mean for the DAO at Schelling Point <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20">
+</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/18
+        Tue, 07 Feb 2023 14:57:58 +0000
+gov.gitcoin.co-post-12204-18
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+kyle
+
+            <p>Thanks, Ben.</p>
+<p>As an FYI on progress for others. We have been making progress on adopting this and will likely move to change out the contracts after Eth Denver. we are delaying our roll out a bit as we want to make sure Tally.xyz can support the new contract details too.</p>
+<p>You can see the repo here: <a href="https://github.com/gitcoinco/Alpha-Governor-Upgrade" class="inline-onebox">GitHub - gitcoinco/Alpha-Governor-Upgrade</a></p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/17
+        Mon, 06 Feb 2023 20:12:10 +0000
+gov.gitcoin.co-post-12204-17
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+bendi
+
+            <p>For anyone interested, we just shared a blog post about our integration of Flexible Voting with Aave, which is now completed:</p>
+<p><a href="https://twitter.com/ScopeLift/status/1621275019929059329" class="onebox" target="_blank" rel="noopener nofollow ugc">https://twitter.com/ScopeLift/status/1621275019929059329</a></p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/16
+        Thu, 02 Feb 2023 22:40:54 +0000
+gov.gitcoin.co-post-12204-16
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+bendi
+
+            <aside class="quote no-group" data-username="chaselb" data-post="14" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/chaselb/48/7505_2.png" class="avatar"> chaselb:</div>
+<blockquote>
+<p>Okay so just to be clear, the proposed extension is currently unaudited, and not currently implemented by any other major DAOs?</p>
+</blockquote>
+</aside>
+<p>Yep, the new code is not yet audited (working on it) and not yet used by a major DAO.</p>
+<aside class="quote no-group" data-username="chaselb" data-post="14" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/chaselb/48/7505_2.png" class="avatar"> chaselb:</div>
+<blockquote>
+<p>Also, this leads me to a belief that in order for users to get benefits from the type of examples listed above for FV, the actual lending protocols would have to add some sort of functionality on their end. Is this correct?</p>
+</blockquote>
+</aside>
+<p>Correct. In the case of Aave, they’d have to deploy an FV compatible AToken for GTC, or any other Governance token. They’ve given us a grant to write said AToken contract, which should be <a href="https://github.com/ScopeLift/flexible-voting/pull/21" rel="noopener nofollow ugc">done soon</a>.</p>
+<p>In general, we’re very aware that the project has a bootstrapping problem, i.e. a chicken-and-the-egg style issue. We’re aggressively attacking this from every angle, as we <a href="https://www.scopelift.co/blog/introducing-flexible-voting" rel="noopener nofollow ugc">discussed</a> in the blog post, to try to get the activation energy needed.</p>
+<p>We believe the adoption of FV will be a big unlock for the ecosystem, and in the spirit of Public Goods we’re trying to make it happen with grant funding and community support! We’ve had a number of parties express <a href="https://docs.tally.xyz/user-guides/tally-contract-compatibility/flexible-voting-extension" rel="noopener nofollow ugc">support</a> for the extension, and should have some more announcements to share in this regard soon.</p>
+<p>Gitcoin has often been a leader in adopting new tech in the ecosystem. ScopeLift helped build the zkSync integration into Gitcoin Grants back when zkSync was the <em>only</em> rollup live in production, and had less than $100K in funds on the network. I think it’s fair to say that decision by Gitcoin was an inflection point for Ethereum’s L2 ecosystem. We hope the Gitcoin community will see this as an opportunity to once again be leaders the ecosystem.</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/15
+        Wed, 21 Dec 2022 16:23:27 +0000
+gov.gitcoin.co-post-12204-15
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+chaselb
+
+            <aside class="quote no-group" data-username="bendi" data-post="13" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bendi/48/6661_2.png" class="avatar"> bendi:</div>
+<blockquote>
+<p>Our extension is minimal and can be be seen <a href="https://github.com/ScopeLift/flexible-voting/blob/master/src/GovernorCountingFractional.sol" rel="noopener nofollow ugc">here</a>. A good chunk of the code in that contract is itself borrowed from other OZ extensions. Overall the “new code” is extremely minimal, which is by design! All that said, we are also pursuing an audit for the extension, with funding being the biggest blocker.</p>
+</blockquote>
+</aside>
+<p>Okay so just to be clear, the proposed extension is currently unaudited, and not currently implemented by any other major DAOs?</p>
+<aside class="quote no-group" data-username="bendi" data-post="13" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bendi/48/6661_2.png" class="avatar"> bendi:</div>
+<blockquote>
+<p>For example, we’re currently finishing up AToken support for FV with a grant from Aave. This would theoretically allow depositing your GTC into Aave, but still voting with your share of the unborrowed Pool.</p>
+</blockquote>
+</aside>
+<p>Also, this leads me to a belief that in order for users to get benefits from the type of examples listed above for FV, the actual lending protocols would have to add some sort of functionality on their end. Is this correct?</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/14
+        Tue, 20 Dec 2022 15:17:39 +0000
+gov.gitcoin.co-post-12204-14
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+bendi
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/chaselb">@chaselb</a>, these are all <em>great</em> questions! Let me try to take them one or two at a time!</p>
+<aside class="quote no-group" data-username="chaselb" data-post="12" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/chaselb/48/7505_2.png" class="avatar"> chaselb:</div>
+<blockquote>
+<p>How battle-tested is the flexible voting contract? What new attack vectors do we open ourselves up to?</p>
+</blockquote>
+</aside>
+<p>Flexible Voting is an extension of the battle tested OpenZeppelin Governor. The OZ Governor is audited and used by many DAOs. Our extension is minimal and can be be seen <a href="https://github.com/ScopeLift/flexible-voting/blob/master/src/GovernorCountingFractional.sol" rel="noopener nofollow ugc">here</a>. A good chunk of the code in that contract is itself borrowed from other OZ extensions. Overall the “new code” is extremely minimal, which is by design! All that said, we are also pursuing an audit for the extension, with funding being the biggest blocker.</p>
+<aside class="quote no-group" data-username="chaselb" data-post="12" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/chaselb/48/7505_2.png" class="avatar"> chaselb:</div>
+<blockquote>
+<p>How much more context does this require of the average voter</p>
+</blockquote>
+</aside>
+<p>The short answer is none. If a holder or voter is happy with the way things currently work, then no change would be required in their behavior. The FV system is fully backwards compatible with the existing Governor and so voting and delegating can continue as-is. Where a user might need to think a bit is if they choose to opt-in to something built with FV that enables a new experience.</p>
+<p>For example, we’re currently finishing up AToken support for FV with a grant from Aave. This would theoretically allow depositing your GTC into Aave, but still voting with your share of the unborrowed Pool. Obviously, a new UX will have to be built for this, and obviously we’ll want to keep that UX as clean and simple as possible. But all of that is purely on an opt-in basis.</p>
+<aside class="quote no-group" data-username="chaselb" data-post="12" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/chaselb/48/7505_2.png" class="avatar"> chaselb:</div>
+<blockquote>
+<p>does this allow me to give GTC to someone while keeping the voting power without their knowledge? As in, could I give my GTC to person A, but beforehand delegate the votes to contract B without person A’s knowledge?</p>
+</blockquote>
+</aside>
+<p>Nope! Delegation is done in the GTC Token contract, which would change, so the rules around delegation don’t change either. When you transfer your GTC, your delegation (whether to an EOA or to a contract) is reset.</p>
+<p>Edit: clarity</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/13
+        Tue, 20 Dec 2022 14:41:24 +0000
+gov.gitcoin.co-post-12204-13
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+chaselb
+
+            <p>I like this concept as it stands. I think it adds a lot of, well, flexibility. I think a more balanced decision could be made on whether or not we should upgrade though if we got a full understanding of the risks of updating. How battle-tested is the flexible voting contract? What new attack vectors do we open ourselves up to? How much more context does this require of the average voter (i.e., does this add a lot of complexity that would require some of our non-technical voters to read up on?).</p>
+<p>Also, another separate question that I’m curious about, does this allow me to give GTC to someone while keeping the voting power without their knowledge? As in, could I give my GTC to person A, but beforehand delegate the votes to contract B without person A’s knowledge?</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/12
+        Mon, 19 Dec 2022 17:51:21 +0000
+gov.gitcoin.co-post-12204-12
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+bendi
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="10" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>This steward had no ability to say “My priorities have changed and I can no longer serve in this role”</p>
+</blockquote>
+</aside>
+<p>Yeah this makes sense. Like I said, a great example of how FV can be used to build lots of stuff. In the future I can imagine that the large majority of base delegations will be to contracts that come with their own sets of rules and features like this. It allows innovation in the way delegation works without having to ever upgrade the token contract!</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/11
+        Thu, 15 Dec 2022 14:59:32 +0000
+gov.gitcoin.co-post-12204-11
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+DisruptionJoe
+
+            <p>This request came from a specific incident. One steward of ours who was also a steward from ENS was offered a full time position with Gitcoin. They posted on ENS about the offer and that they no longer could put the time and attention to being a good steward, but not many read it.</p>
+<p>A while later they were confronted at a conference from an ENS fan/user who was upset that stewards with large delegations, this person specifically, were not paying attention.</p>
+<p>This steward had no ability to say “My priorities have changed and I can no longer serve in this role”</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/10
+        Wed, 14 Dec 2022 18:36:51 +0000
+gov.gitcoin.co-post-12204-10
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+bendi
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="8" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>As a steward who is receiving delegations, I no longer wish to participate in this ecosystem and would like to release all delegations that are currently assigned to me.</p>
+</blockquote>
+</aside>
+<p>Ohh interesting I see what you mean now—the <em>steward</em> removing other delegations. I’m curious about the motivation for this feature. Like a ragequit kind of thing?</p>
+<p>Thinking about the implementation, similar to the idea of expiring delegates, I believe to implement this globally you’d have to migrate the community to a new version of GTC. But I believe, off the top of my head without thinking about it <em>too</em> deeply, it could also be built as an <em>opt-in</em> feature with Flexible Voting. Great example of how this new primitive will allow the building of all kinds of new stuff by 3rd party devs, including things we haven’t conceived of yet!</p>
+<p>Edit: Grammar</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/9
+        Wed, 14 Dec 2022 15:41:56 +0000
+gov.gitcoin.co-post-12204-9
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="bendi" data-post="7" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bendi/48/6661_2.png" class="avatar"> bendi:</div>
+<blockquote>
+<p>As it stands now anyone can revoke a delegation by re-assigning it at anytime, including to themselves or to no one. So I think this basically exists already. Unless I’m misunderstanding what you mean?</p>
+</blockquote>
+</aside>
+<p>As a steward who is receiving delegations, I no longer wish to participate in this ecosystem and would like to release all delegations that are currently assigned to me.</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/8
+        Mon, 12 Dec 2022 19:28:24 +0000
+gov.gitcoin.co-post-12204-8
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+bendi
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a>, thanks for getting this conversation started, and thanks for your patience in my reply! Has been a busy few weeks for us <img src="https://gov.gitcoin.co/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
+<p>You did a great job summing up what Flexible Voting is all about. We think being able to participate in both DeFi (with your GTC) and governance at the same time is a compelling use case and we recently <a href="https://twitter.com/AaveGrants/status/1570431140389097473" rel="noopener nofollow ugc">received</a> a grant from Aave Grants DAO to add Flexible Voting support to ATokens. We expect the work will be done early next year.</p>
+<p>One note I want to add: while depositing tokens in DeFi protocols is <em>one</em> of the use cases we imagine, there are a lot more, and some of them are just as exciting—if not more so. A couple I’m really excited about are Layer 2 voting (bridge your GTC to a rollup, vote from the rollup with low gas fees) and shielded voting (deposit your GTC to a pool and vote privately with ZKPs).</p>
+<aside class="quote no-group" data-username="shawn16400" data-post="2" data-topic="12204" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar"> shawn16400:</div>
+<blockquote>
+<p>Just catching up on this concept and it looks appealing. <a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a> if you need help in scenario development or testing, let me know - I would be happy to help!</p>
+</blockquote>
+</aside>
+<p>Sure let’s chat. Will follow up!</p>
+<aside class="quote no-group" data-username="krrisis" data-post="3" data-topic="12204" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/krrisis/48/6203_2.png" class="avatar"> krrisis:</div>
+<blockquote>
+<p>An open tab that I missed here - I voted no here because we mainly use Tally for transferring funds, not so much for voting itself, so not sure it is needed.</p>
+</blockquote>
+</aside>
+<p>Hey <a class="mention" href="https://gov.gitcoin.co/u/krrisis">@krrisis</a>, thanks for your thoughts! I’m not quite sure what you mean here regarding Tally and transferring funds. Happy to expand if you have any specific questions. That said, we’ve been in touch with the folks at Tally (they rock!) and they’ve <a href="https://docs.tally.xyz/user-guides/tally-contract-compatibility/flexible-voting-extension" rel="noopener nofollow ugc">signaled</a> their support for the FV mechanism, and even a willingness to support it in their tooling should a DAO request it!</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="5" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>Therefore, the upgrade to flexible voting would make it easier for us use tokens for governance while also using them for other productive use cases.</p>
+</blockquote>
+</aside>
+<p>Yep! That’s exactly right <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a></p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="5" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>Expiration of delegations</p>
+</blockquote>
+</aside>
+<p>This is an interesting idea! Since delegations happen inside the GTC contract, not the Governor contract, the only way to add this by default would be to migrate the community to a new version of GTC. That said, with Flexible Voting, you could design a delegate contract that sub-delegated to regular voters, and included configurable expiration by default. In other words, with Flexible Voting you could build an <em>opt-in</em> version of this.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="5" data-topic="12204">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>Ability for someone to drop their delegations if they no longer want to participate</p>
+</blockquote>
+</aside>
+<p>As it stands now anyone can revoke a delegation by re-assigning it at anytime, including to themselves or to no one. So I think this basically exists already. Unless I’m misunderstanding what you mean?</p>
+<p>Anyway if anyone else has other questions about either the Governor upgrade or Flexible Voting, please hit me up! I’ll be keeping an eye out for replies <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/7
+        Mon, 12 Dec 2022 16:39:22 +0000
+gov.gitcoin.co-post-12204-7
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+kyle
+
+            <p>I love these ideas. I can check to see if those are available options.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a> to perhaps chime in… and <a class="mention" href="https://gov.gitcoin.co/u/mds1">@mds1</a></p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/6
+        Fri, 09 Dec 2022 17:35:33 +0000
+gov.gitcoin.co-post-12204-6
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+DisruptionJoe
+
+            <p>Not sure if I understand it correctly, but I believe the delegation happens on Tally for both Tally and snapshot. Therefore, the upgrade to flexible voting would make it easier for us use tokens for governance while also using them for other productive use cases.</p>
+<p>I would also like to propose that we should add some type of either</p>
+<ol>
+<li>Expiration of delegations</li>
+<li>Ability for someone to drop their delegations if they no longer want to participate</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/5
+        Fri, 09 Dec 2022 17:18:21 +0000
+gov.gitcoin.co-post-12204-5
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+kyle
+
+            <p>I appreciate the reply and the consideration.</p>
+<p>I was of the same mindset as you Kris, but then I wondered if having that option would still be important for those who dont want to hold GTC in a wallet. ie, large token holders could move tokens to Aave and then still help us ratify snapshot results.</p>
+<p>I like that it gives folks more options on how to hold their GTC.</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/4
+        Fri, 09 Dec 2022 15:23:38 +0000
+gov.gitcoin.co-post-12204-4
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+krrisis
+
+            <p>An open tab that I missed here - I voted no here because we mainly use Tally for transferring funds, not so much for voting itself, so not sure it is needed.</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/3
+        Thu, 08 Dec 2022 22:52:43 +0000
+gov.gitcoin.co-post-12204-3
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+shawn16400
+
+            <p>Just catching up on this concept and it looks appealing.  <a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a> if you need help in scenario development or testing, let me know - I would be happy to help!</p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/2
+        Thu, 01 Dec 2022 16:56:57 +0000
+gov.gitcoin.co-post-12204-2
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+kyle
+
+            <p>Hey Everyone - I have some excited news to share, and I would love to solicit feedback before we get too far along on a few of our Governor upgrade details.</p>
+<p>After a couple of <a href="https://gov.gitcoin.co/t/upgrading-the-gitcoin-governance-contracts/10721">false starts</a>, we are about 2/3rds of the way done in scoping the <a href="https://github.com/gitcoinco/2022-Governor-upgrade">new Governor Contracts</a> for the Gitcoin DAO and Treasury. These contracts are being developed by our friends and partners at <a href="https://www.scopelift.co/">ScopeLift</a>. These folks have worked with Gitcoin for years and have helped us build a number of other products. They have also been championing <a href="https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115">flexible voting</a> for DAOS and worked with Uniswap to introduce this concept.</p>
+<p>Okay, so the exciting news! We are about 2/3rds of the way done and we have a few questions we would love community feedback on. If you can answer the poll, it would be greatly appreciated, but we are essentially looking for feedback on if Flexible Voting should be implemented as part of this governor upgrade, or if we would like to “play it safe” and avoid allowing the voting mechanism. From <a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a> - “Flexible Voting allows for the construction of new mechanisms which make governance participation easier, cheaper, and more accessible for GTC holders.”</p>
+<p>You should really checkout the post linked above what flexible voting is, but to save a few clicks, here is a great graphic outlining the benefits of it. Essentially flexible voting enables Snapshot strategies. Those who have GTC staked in an LP can still use that GTC to vote for on-chain proposals.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5.png" data-download-href="/uploads/short-url/t7GK8vdM1ieF2z0DR5VgjJPZbCt.png?dl=1" title="flex-voting-diagram"><img src="/uploads/db4391/optimized/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5_2_690x388.png" alt="flex-voting-diagram" data-base62-sha1="t7GK8vdM1ieF2z0DR5VgjJPZbCt" width="690" height="388" srcset="/uploads/db4391/optimized/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5_2_690x388.png, /uploads/db4391/optimized/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5_2_1035x582.png 1.5x, /uploads/db4391/optimized/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5_2_1380x776.png 2x" data-dominant-color="F3F2F1"></a></div><p></p>
+<p>We are about to start testing the new contracts and will have more info to share on those soon, but we hope to have a vote live in January to upgrade the governor contracts from the Governor Alpha we have today, to an Open Zepplin Variant of Governor Bravo. I can share more of the contract details in a subsequent post soon (ie, if threshold amounts changes are proposed, quorum numbers, etc.)</p>
+<p>For now, give me your thoughts on flexible voting!</p>
+<p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/1">Click to view the poll.</a></p>
+          <p><a href="https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/feedback-upgrading-the-gitcoin-governor-contracts-flexible-voting/12204/1
+        Thu, 01 Dec 2022 15:47:21 +0000
+gov.gitcoin.co-post-12204-1
+[feedback] Upgrading the Gitcoin Governor Contracts - Flexible Voting?
+      
+
+

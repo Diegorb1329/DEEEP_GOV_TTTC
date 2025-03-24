@@ -1,0 +1,162 @@
+
+
+
+Discussion: Securing a GTC Token Reactor
+https://gov.gitcoin.co/t/discussion-securing-a-gtc-token-reactor/9976
+    The goal of this thread is to introduce the concept of [Tokemak](https://tokemak.xyz)'s token reactors and to discuss the merit of campaigning for a GTC Reactor in the next election, dubbed C.o.R.E.3 (Collateralization of Reactors).
+
+If you're not familiar with Tokemak, I encourage you to read this [Introduction](https://docs.tokemak.xyz/). The tl;dr is that Tokemak is a novel protocol designed to generate deep, sustainable liquidity for tokens. Token holders deposit Tokens in exchange for tTokens and earn TOKE. TOKE holders can then stake their TOKE to direct staked liquidity, both by voting on which reactors to allocate TOKE rewards to as well as which DEXs to LP the tokens staked in reactors. 
+
+![image|690x218](upload://koQ3v7nhRfqas18TCYlQozrqiEC.png)
+
+This provides 2 major benefits to tokens:
+1. deeper liquidity on DEXs without liquidity mining
+2. yield for token stakers
+
+Furthermore, the DAO can stake tokens from its own treasury to earn TOKE rewards. ShapeShift DAO (where I spend most of my time) was fortunate enough to secure a FOX Token Reactor in C.o.R.E.2, and subsequently staked 50M FOX from its treasury. We're so happy with our reactor, we're now working on a new contract, [FOXy](https://forum.shapeshift.com/t/bounty-120-000-300-000-fox-for-foxy-aka-sfox-by-mar-22nd/984), which evolves traditional staking contracts that share DAO or protocol revenues with token stakers (ie. xSUSHI) by depositing FOX staked in the FOXy contract into the tokemak reactor to both boost yield while also enabling otherwise idle tokens to be put to work to deepen liquidity. If Gitcoin secures a reactor and is interested, we'd be happy to help you deploy your own GTCy.
+
+Token Reactors are pretty cool, and as a result the demand for them is strong. In CoRE2, 45 projects entered, but only the top 5 projects with the most TOKE votes left with token reactors. The details of CoRE3 haven't been announced yet, but if anything I expect it to be even more competitive now that more projects caught wind. In a world of lengthy governance cycles and juggling priorities, being prepared is a huge advantage.
+
+Things to consider:
+Does Gitcoin DAO want to secure a token reactor?
+If no, we can end the convo here :)
+If yes...
+Should we give everyone who votes for GTC a sweet poap? (this one is a no-brainer)
+Should Gitcoin DAO allocate GTC from the treasury as a bribe using [votemak.com](https://votemak.com/)?
+Should @owocki write a letter to the Tokemak community like [Erik Voorhees did](https://twitter.com/ErikVoorhees/status/1458825043283111949?s=20&t=D5HLGYsqw-bXKyZ-q7vhhA)? 
+What other creative ideas can we come up with to secure the bag? 
+
+Excited to hear your thoughts
+
+Details on the last CoRE:
+[CoRE2](https://medium.com/tokemak/c-o-r-e-2-begins-tuesday-november-9th-f52ca43f0770)
+[CoRE2 Conclusion](https://medium.com/tokemak/c-o-r-e-2-conclusion-introducing-the-second-round-of-reactors-e38b207f2e0)
+Fri, 08 Apr 2022 20:04:32 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Discussion: Securing a GTC Token Reactor
+Willy
+
+            <blockquote>
+<ul>
+<li>Can you break this part down more? Let’s use GTC in this example. So people trade GTC for tGTC and then can stake that tGTC into a staking pool that returns TOKE?</li>
+</ul>
+</blockquote>
+<p>Basically GTC holders can stake GTC to receive tGTC 1:1. No additional staking step required to start earning TOKE (and notably, gas cost for staking is relatively cheap)</p>
+<blockquote>
+<ul>
+<li>Can tGTC be unwrapped for GTC any time?</li>
+</ul>
+</blockquote>
+<p>You can only withdraw at the end of the cycle, but as a result of getting a reactor, TOKE holders can vote to allocate staked GTC to a tGTC/GTC curve pool, enabling instant withdrawals for a small fee.</p>
+<blockquote>
+<ul>
+<li>Are tGTC holders relying on the TOKE price to increase? – ie, TOKE has value as more people want to create Token reactors, and that drives up the price of the yield token tGTC holders are farming for?</li>
+</ul>
+</blockquote>
+<p>If the TOKE price goes down, then the reactor is definitely less valuable, and vice versa. If TOKE achieves their vision of disrupting/replacing liquidity mining, that should create sustainable demand for TOKE, but TBD ofc.</p>
+<blockquote>
+<ul>
+<li>I can imagine that this mechanism creates an incentive for people to stake their tokens in the reactor instead of market selling, but does it actually <strong>increase</strong> liquidity in a DEX somehow?</li>
+</ul>
+</blockquote>
+<p>This is what makes tokemak so cool! TOKE holders can vote on which DEX to deploy tokens staked in reactors. ETH or Stables from the other reactors are paired with GTC to LP. Here’s an example of what this looks like currently for the FOX reactor:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0bb87ae2f6c78d7e8d5c8d1605c3160d530fadaf.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/0bb87ae2f6c78d7e8d5c8d1605c3160d530fadaf" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0bb87ae2f6c78d7e8d5c8d1605c3160d530fadaf_2_690x316.png" alt="image" data-base62-sha1="1FGuVpHOClPJFO2J5E4fOpdZZoz" width="690" height="316" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0bb87ae2f6c78d7e8d5c8d1605c3160d530fadaf_2_690x316.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0bb87ae2f6c78d7e8d5c8d1605c3160d530fadaf_2_1035x474.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0bb87ae2f6c78d7e8d5c8d1605c3160d530fadaf_2_1380x632.png 2x" data-dominant-color="222322"></a></div><p></p>
+<p>Thanks for the questions! Hope these answers help, please keep the good q’s comin!</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-securing-a-gtc-token-reactor/9976/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-securing-a-gtc-token-reactor/9976/3
+        Fri, 08 Apr 2022 20:04:32 +0000
+gov.gitcoin.co-post-9976-3
+Discussion: Securing a GTC Token Reactor
+      
+
+Discussion: Securing a GTC Token Reactor
+kyle
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/willy">@Willy</a> - Thanks a bunch for he thoughts here! I would love to understand a bit more, but I likely need an ELI5.</p>
+<aside class="quote no-group" data-username="Willy" data-post="1" data-topic="9976">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/willy/48/182_2.png" class="avatar"> Willy:</div>
+<blockquote>
+<p>Tokemak is a novel protocol designed to generate deep, sustainable liquidity for tokens.</p>
+</blockquote>
+</aside>
+<p>This sounds great and like something every project is likely looking for!</p>
+<aside class="quote no-group" data-username="Willy" data-post="1" data-topic="9976">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/willy/48/182_2.png" class="avatar"> Willy:</div>
+<blockquote>
+<p>Token holders deposit Tokens in exchange for tTokens and earn TOKE. TOKE holders can then stake their TOKE to direct staked liquidity, both by voting on which reactors to allocate TOKE rewards to as well as which DEXs to LP the tokens staked in reactors.</p>
+</blockquote>
+</aside>
+<ul>
+<li>Can you break this part down more? Let’s use GTC in this example. So people trade GTC for tGTC and then can stake that tGTC into a staking pool that returns TOKE?</li>
+<li>Can tGTC be unwrapped for GTC any time?</li>
+<li>Are tGTC holders relying on the TOKE price to increase?<br>
+– ie, TOKE has value as more people want to create Token reactors, and that drives up the price of the yield token tGTC holders are farming for?</li>
+</ul>
+<aside class="quote no-group" data-username="Willy" data-post="1" data-topic="9976">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/willy/48/182_2.png" class="avatar"> Willy:</div>
+<blockquote>
+<p>deeper liquidity on DEXs without liquidity mining</p>
+</blockquote>
+</aside>
+<p>Can you also explain how this work?</p>
+<ul>
+<li>I can imagine that this mechanism creates an incentive for people to stake their tokens in the reactor instead of market selling, but does it actually <strong>increase</strong> liquidity in a DEX somehow?</li>
+</ul>
+<p>I want to note this from the tokemak’s site:</p>
+<blockquote>
+<p><em>Liquidity Directors</em> stake TOKE into individual Token Reactors and vote how that liquidity gets paired from the Genesis Pools and to what exchange venue it gets directed. They too earn yield in the form of TOKE.</p>
+</blockquote>
+<p>Playing devils advocate, what happens if people move on from token reactors and decide they don’t really care or need to create one with Tokemak, or lose interest in directing the the liquidity? Does the demand for TOKE dry up and then subsequently the yield (in TOKE from the staked tGTC… from staking GTC) become worthless?</p>
+<p>This kind of feels like a ponzi a bit where we want to create fomo in the reactors, to keep demand high of TOKE so that our staked tGTC continues to have value. I feel like I am missing the points on “deep liquidity” and how that works though.</p>
+<p>Thanks again so much for the outline here! I love the conversation and discussion.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-securing-a-gtc-token-reactor/9976/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-securing-a-gtc-token-reactor/9976/2
+        Thu, 07 Apr 2022 19:40:31 +0000
+gov.gitcoin.co-post-9976-2
+Discussion: Securing a GTC Token Reactor
+      
+
+Discussion: Securing a GTC Token Reactor
+Willy
+
+            <p>The goal of this thread is to introduce the concept of <a href="https://tokemak.xyz" rel="noopener nofollow ugc">Tokemak</a>’s token reactors and to discuss the merit of campaigning for a GTC Reactor in the next election, dubbed C.o.R.E.3 (Collateralization of Reactors).</p>
+<p>If you’re not familiar with Tokemak, I encourage you to read this <a href="https://docs.tokemak.xyz/" rel="noopener nofollow ugc">Introduction</a>. The tl;dr is that Tokemak is a novel protocol designed to generate deep, sustainable liquidity for tokens. Token holders deposit Tokens in exchange for tTokens and earn TOKE. TOKE holders can then stake their TOKE to direct staked liquidity, both by voting on which reactors to allocate TOKE rewards to as well as which DEXs to LP the tokens staked in reactors.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8efa4ba735d7d13a5c9430988631e3f5e63b0f9e.png" data-download-href="/uploads/short-url/koQ3v7nhRfqas18TCYlQozrqiEC.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/8/8efa4ba735d7d13a5c9430988631e3f5e63b0f9e_2_690x218.png" alt="image" data-base62-sha1="koQ3v7nhRfqas18TCYlQozrqiEC" width="690" height="218" srcset="/uploads/db4391/optimized/2X/8/8efa4ba735d7d13a5c9430988631e3f5e63b0f9e_2_690x218.png, /uploads/db4391/original/2X/8/8efa4ba735d7d13a5c9430988631e3f5e63b0f9e.png 1.5x, /uploads/db4391/original/2X/8/8efa4ba735d7d13a5c9430988631e3f5e63b0f9e.png 2x" data-small-upload="/uploads/db4391/optimized/2X/8/8efa4ba735d7d13a5c9430988631e3f5e63b0f9e_2_10x10.png"></a></div><p></p>
+<p>This provides 2 major benefits to tokens:</p>
+<ol>
+<li>deeper liquidity on DEXs without liquidity mining</li>
+<li>yield for token stakers</li>
+</ol>
+<p>Furthermore, the DAO can stake tokens from its own treasury to earn TOKE rewards. ShapeShift DAO (where I spend most of my time) was fortunate enough to secure a FOX Token Reactor in C.o.R.E.2, and subsequently staked 50M FOX from its treasury. We’re so happy with our reactor, we’re now working on a new contract, <a href="https://forum.shapeshift.com/t/bounty-120-000-300-000-fox-for-foxy-aka-sfox-by-mar-22nd/984" rel="noopener nofollow ugc">FOXy</a>, which evolves traditional staking contracts that share DAO or protocol revenues with token stakers (ie. xSUSHI) by depositing FOX staked in the FOXy contract into the tokemak reactor to both boost yield while also enabling otherwise idle tokens to be put to work to deepen liquidity. If Gitcoin secures a reactor and is interested, we’d be happy to help you deploy your own GTCy.</p>
+<p>Token Reactors are pretty cool, and as a result the demand for them is strong. In CoRE2, 45 projects entered, but only the top 5 projects with the most TOKE votes left with token reactors. The details of CoRE3 haven’t been announced yet, but if anything I expect it to be even more competitive now that more projects caught wind. In a world of lengthy governance cycles and juggling priorities, being prepared is a huge advantage.</p>
+<p>Things to consider:<br>
+Does Gitcoin DAO want to secure a token reactor?<br>
+If no, we can end the convo here <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"><br>
+If yes…<br>
+Should we give everyone who votes for GTC a sweet poap? (this one is a no-brainer)<br>
+Should Gitcoin DAO allocate GTC from the treasury as a bribe using <a href="https://votemak.com/" rel="noopener nofollow ugc">votemak.com</a>?<br>
+Should <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> write a letter to the Tokemak community like <a href="https://twitter.com/ErikVoorhees/status/1458825043283111949?s=20&amp;t=D5HLGYsqw-bXKyZ-q7vhhA" rel="noopener nofollow ugc">Erik Voorhees did</a>?<br>
+What other creative ideas can we come up with to secure the bag?</p>
+<p>Excited to hear your thoughts</p>
+<p>Details on the last CoRE:<br>
+<a href="https://medium.com/tokemak/c-o-r-e-2-begins-tuesday-november-9th-f52ca43f0770" rel="noopener nofollow ugc">CoRE2</a><br>
+<a href="https://medium.com/tokemak/c-o-r-e-2-conclusion-introducing-the-second-round-of-reactors-e38b207f2e0" rel="noopener nofollow ugc">CoRE2 Conclusion</a></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-securing-a-gtc-token-reactor/9976/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-securing-a-gtc-token-reactor/9976/1
+        Tue, 01 Mar 2022 05:44:10 +0000
+gov.gitcoin.co-post-9976-1
+Discussion: Securing a GTC Token Reactor
+      
+
+

@@ -1,0 +1,485 @@
+
+
+
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201
+    # GCP-004 Overall Learnings and Gitcoin Citizens Round #2 Results
+
+Thank you to @krrisis for co-authoring this post with me and being my dependable partner in crime on the Gitcoin Citizens Round. Thank you also to @shawn16400 for helping us kick this off with the GCP and running round 1 and to @carlosjmelgar for stepping in to help run round 2. 
+
+# TL;DR:
+
+* We tested retroactive and proactive funding and felt more confident in the results of retroactive funding. We plan on sticking to this for future Citizens Rounds.
+* We prefer funding individuals to projects because quadratic funding can be monopolized by big brand names with marketing reach.
+* We saw massive growth in participating Citizens round-over-round as more people heard about the funding opportunity. Communities who wish to run similar rounds should try to plan to run two or more rounds from the get-go.
+
+## Intro
+
+Following the end of Gitcoin Citizens Round #2, we have concluded our [first GCP](https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462) and are reporting back on our main results and learnings from the two rounds.
+
+From the beginning, we set out to run an experiment. We wanted to understand:
+
+- i) can quadratic funding be effectively used to build and support our own ecosystem?
+- ii) can retroactive funding increase the effectiveness of quadratic funding?
+
+The answer to both of these questions was a resounding yes, but not without deeper nuance. In this post we’ll briefly explore the lessons we learned from running two QF rounds for Gitcoin and the trade-offs we encountered.
+
+## Round Results
+
+Here’s a quick recap of how the rounds went.
+
+Gitcoin Citizens Round 1 was the first retroQF round, the first Grants Stack round to run on an L2 (Optimism), and the most successful Gitcoin Round to date in terms of crowdfunding versus matching. The crowdfund quadrupled the 20k matching pool and the round distributed over $100k to Gitcoin Citizens. You can read more in this [case study](https://www.gitcoin.co/blog/citizens-round-a-case-study-retroactive-qf) and in our round 1 [results](https://gov.gitcoin.co/t/gitcoin-citizens-round-1-results/16302) post.
+
+For Round 2 we invited our community to not only apply for retroactive funding but also submit planned work, as promised in our [initial GCP](https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462). We also made Gitcoin history by distributing matching funding in our native token, GTC. We’re very happy with our [results](https://reportcards.gitcoin.co/424/0x7492a8c4ED29B1F1559888Bd832fAe5D33E10370): 64 projects received $14,692 in donations from 1350 unique donors. In the process, they decided how we would distribute a matching pool of 22,232 GTC. Big thanks to @owocki who increased the matching pool by 50% by donating 4.20 ETH.
+
+## Can quadratic funding be effectively used to build and support our own ecosystem?
+
+It is *surprisingly easy* to launch a QF round on Grants Stack in a few minutes. In the cGrants days (just 14 months ago), the only way to launch a QF round was to be a developer with backend access to our system. That is so different from today. Anyone can do it in a few clicks. Hats off to the incredible Allo team that lays the critical foundation and the Grants Stack team that makes it usable.
+
+Now, on to the nuance.
+
+### Did quadratic funding effectively identify what should be built and supported within our own ecosystem?
+
+This is really subjective. Here’s our personal stance: mostly no in round 1 and mostly yes in round 2.
+
+When we initially kicked off the Gitcoin Citizens Round, it was after observing that there were many members of our community who were doing fantastic work and did not have a pathway to being funded for this work. We wanted to create that for them and also for anyone else who may come along. Those individuals (who we even specified as great examples [in our proposal](https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462) to run a Citizens Round) were: @jon-spark-eco, Carlos Melgar, and Carl Cervone. Unfortunately, they did not place close to the top of the Round 1 QF matching distribution.
+
+|Rank|Round 1|Round 2|
+| --- | --- | --- |
+|1|[Karma](https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-30)|[Gitcoin Grants Data Portal](https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370/0x7492a8c4ed29b1f1559888bd832fae5d33e10370-85)|
+|2|[Biteye](https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-25)|[GITCOIN DIGEST](https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370/0x7492a8c4ed29b1f1559888bd832fae5d33e10370-83)|
+|3|[Bankless DAO's Gitcoin Citizens](https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-32)|[Joel Miller - Next Gen QF](https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370/0x7492a8c4ed29b1f1559888bd832fae5d33e10370-73)|
+|4|[Bankless Academy](https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-16)|[Kris' Work as Citizens Round Operator](https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370/0x7492a8c4ed29b1f1559888bd832fae5d33e10370-112)|
+|5|[Dune Dashboard - Proof Of Stake by Vitalik Buterin](https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-39)|[Memes for Gitcoin](https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370/0x7492a8c4ed29b1f1559888bd832fae5d33e10370-41)|
+
+*Table 1: Top 5 projects by round*
+
+Was this because the community didn’t find their work valuable? No, if you ask many of the people at Gitcoin who have the highest-context then the work they did was universally incredibly valuable. However, what’s at play are the two biggest weaknesses quadratic funding faces in correctly determining where funds should go:
+
+* Farmers & Attackers
+* Grantee Awareness
+
+**Farmers & Attackers:** Citizens Round 1 was Gitcoin’s first retroactive funding round and it ran on Optimism. Airdrop farmers were so hopeful! It was still surprising just how many showed up. Of the over 17k donors we know more than half were airdrop farming. In the process of farming the round they donated a lot of funding to Gitcoin community members but they also skewed the matching distribution.
+
+**Grantee Awareness:** Given QF’s democratic/populist nature it’s difficult for lone individuals to compete with projects that hold as much brand recognition, marketing reach, or monogamously loyal supporters as Bankless or Biteye.
+
+We took these lessons from Round 1 and adapted our strategy for Round 2. It’s also worth celebrating that, now, Jon and Carlos are Gitcoin Core and Carl is our largest external steward (by tokens delegated).
+
+Moving into Round 2, we took a different approach. **We decided to limit the eligibility to individual efforts and exclude team projects.** We hoped this would reduce the ability of large brands to monopolize funding and more directly compensate those creating value. This ended up working well. The top projects in Citizens Round 2 are not only high-quality but the value they’re creating for Gitcoin is extremely tangible: from developing better QF algorithms, to building open grants funding databases, crafting our newsletter, cooking our dank memes, and even running our Citizens Round.
+
+Our goal was to fund the people that create value for the Gitcoin Ecosystem. While more specific and tailored eligibility criteria certainly helped with this, it’s worth noting the following:
+
+- a) We had clear examples of the types of grants we wanted to fund (essential to improving eligibility criteria)
+- b) Our second round was much less attacked than our first one (in fact our number of unique donors declined 90% to 1350 – much more reasonable)
+- c) We utilized [cluster-matching QF](https://x.com/gitcoin/status/1717192595003097279?s=20) which greatly mitigated the effect of a number of sybils and PGN airdrop-hopefuls while boosting the grantees who had diverse support.
+
+Further analysis of the donors after payouts determined there were still some sybil attackers/airdrop farmers who received matching on their donation. Continuing to improve how we determine which wallets receive matching is extremely important to funding the projects which have authentic support.
+
+There is likely also room to experiment with different methods of improving the quadratic funding outcomes, such as by encouraging or incentivizing the participation of our highest-context community members. One such experiment could involve airdropping Gitcoin core members funding with the express purpose that they use it to donate to the round.
+
+### Can quadratic funding be effectively used to build and support our own ecosystem?
+
+One of the most telling indicators that the answer to this question is a yes is the increase we saw in builders. **We received and accepted almost twice as many applications in Round 2 while decreasing our acceptance rate.**
+
+![|624x404](upload://mGgFSkPxuyjkzJZiwcAcGYzsl9I.png)
+
+||Acceptances|Applications|Acceptance Rate|
+| --- | --- | --- | --- |
+|Round 1|33|60|0.55|
+|Round 2|64|135|0.47|
+|Percent Difference|93.94%|125.00%|-14.55%|
+
+Table 2: Project Acceptances, Applications, & Acceptance Rate, Round 1 vs. Round 2
+
+It’s captivating to see so much growth RoR. One grantee told us “I only heard about the Citizens Round after Round 1 had ended” and another said that when they found out about the Citizens Round “It was in the middle of donations last time and I decided I’d apply to the next one.” We believe that continuing to run more rounds will continue to increase the quantity and quality of builders in the Gitcoin ecosystem.
+
+> One lesson for other communities is that you should probably try to run multiple rounds from the get-go. Your experience will likely be better because you’ll be able to iterate on eligibility criteria and more builders will be drawn to your ecosystem in round 2 after hearing about round 1.
+
+It’s also worth noting the growth is accelerated by the diversity of acceptable contributions to our round. We did not limit the round to particular types of contributions such as open-source software or education. As a result, we were able to fund governance with Jengajojo, AI solutions such as Rohit with GrantsScope, community-building such as Cori at Regens Unite, and many more. We fund value creation for our ecosystem, whatever form it takes.
+
+## Can retroactive funding increase the effectiveness of quadratic funding?
+
+As we stated in our initial proposal, we planned on running an experiment with our first two rounds. One [fully retroactive round](https://gov.gitcoin.co/t/gitcoin-citizens-round-1-results/16302), with inspiration from Optimism’s RPGF, and one standard round.
+
+Our first round, being retroactive, made it easy on us as reviewers to deny applications from those projects who hadn’t yet done anything.
+
+We ran our standard round after our retroactive round. During this round, when reviewing both retroactive and proactive applications, **we felt much more confident when admitting applications that already had work completed**. We also felt much better about funding these submissions compared to those submissions that were requesting funding for work they *might* do.
+
+One concern we had with retroactive funding and that drove us to also test a standard round was that not everyone can afford to work for free for an uncertain reward. Yet, [as @ccerv1 pointed out on twitter](https://twitter.com/carl_cervone/status/1725258994741395704): all funding is retroactive. All funding is based on work you’ve done before whether on this particular project or previous ones.
+
+More practically, one way to lower the risk for builders would be to increase the cadence of the rounds. If someone works on something for three months and then does not receive adequate funding then this might really hurt them. On the other hand, if they work on it for 1 to 2 weeks and then receive a funding decision they can choose to keep working on it or move to something else. It’ll be important to test different cadences of rounds in the future. We believe there is a viable retroactive path for all.
+
+Overall, for the above reasons, we plan on all future citizens rounds being fully retroactive. Further, given the market direction it may be worth it for the main Gitcoin Grants program to consider a shift to include one or more dedicated retroactive funding pools as well. This may then make it easier to raise funds for the matching pool due to the increase in funder confidence that they are funding impactful, valuable contributions to the ecosystem.
+
+One notable memetic attractor in retroactive funding is ‘impact = profit’ which goes hand-in-hand with ‘fund the gap.’ In our Ccitizens Rround 2, we had individuals seeking retroactive funding for work that had been compensated previously. To adequately fund the gap, it’s essential that donors are paying attention to how much previous funding a grantee has received and that grantees are transparent about their prior funding. If Gitcoin doubles down on retroactive funding, then it’ll be important for us to consider how we surface the idea of funding the gap to voters (and draw attention to the necessary data). You can find some recommendations on this in our feedback to the product team in our [initial documentation](https://docs.google.com/document/d/1W5T9ETvXl_t5ukgTw4UeDhCSdq21DayrBdWsSTzqAwA/edit?usp=sharing) and more elaborately for [round 2](https://docs.google.com/document/d/1ZaoyEfZ0fqMS0V0LRD3shyQWHHhJYSI5PMcz14QFbV0/edit).
+
+# Closing
+
+Thanks for making it this far.
+
+We were surprised by how good it felt to fund retroactively and we were surprised by how good it felt to fund individuals instead of projects. It allows the community to much more directly determine who is creating value and send funds directly to them. It also sends a message to each Citizen that you choose what you want to work on, you don’t have to commit to a particular project: the rest of us will fund you if we find it valuable. This creates autonomy, freedom and a flat organization.
+
+We view the Citizens Rounds as a model for our DAO, fostering a bottom-up, skills-driven owner’s mentality, bringing us back to the essence of what being a DAO is about. Our second GCP is coming very soon, and we’ll continue to check in with our community on missing pieces to achieve our goals, with a high focus on impact through retroactive funding.
+
+# Appendix
+
+## A. Relevant links:
+
+[Learnings product round 1](https://docs.google.com/document/d/1W5T9ETvXl_t5ukgTw4UeDhCSdq21DayrBdWsSTzqAwA/edit?usp=sharing) | [Learnings product round 2](https://docs.google.com/document/d/1ZaoyEfZ0fqMS0V0LRD3shyQWHHhJYSI5PMcz14QFbV0/edit)
+
+[Results round #1](https://gov.gitcoin.co/t/gitcoin-citizens-round-1-results/16302) | [Results round #2](https://reportcards.gitcoin.co/424/0x7492a8c4ED29B1F1559888Bd832fAe5D33E10370)
+
+[Results dashboard](http://gitcoin.co/grants-data)
+
+[Round #1 link](https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc)
+
+[Round #2 link ](https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370)
+
+## B. Survey Results
+
+||Round 1|Round 2|
+| --- | --- | --- |
+|Total Participants|9|13|
+|Fairness of Compensation (3 = fair, 5 = over, 1 = under)|3.11|2.62|
+|Felt Informed|4.56|4.62|
+|Round Operator Rating|4.56|5.00|
+|Intuitive to Set Up Grant Page|3.56|4.23|
+|Intuitive to Apply For The Round|4.11|4.54|
+|Intuitive to Bridge|4.67|3.92|
+|Overall Experience / Satisfaction|4.44|4.38|
+
+*Table 3: Grantee Survey Results*
+
+When comparing Round 1 and 2 here are the most notable changes:
+
+* Overall grantees felt more undercompensated in Round 2
+* The experience of creating a grant and applying to a round was much more intuitive in round 2
+* Bridging was much more intuitive in round 1 (on OP) than in round 2 (on PGN)
+
+Full Survey Questions can be found [here](https://forms.gle/WsJ69mjoLmPpDrgV6) and [here](https://forms.gle/y6fiZhHv8Y7tZG548)
+
+## C. Testimonials
+
+![|527x152](upload://yv73Ckx1REBWmGk1PnoFn2NCkDR.png)
+
+![|527x141](upload://acXydlphPO5QTFxs06ArA5TnTC9.png)![|526x637](upload://mnWEPZI8Byzsaz8VQaMwNDK7V7F.png)
+
+![|553x201](upload://iLcn2Kqfdt1UcFwV3j4dCYty5st.png)
+
+![|400x351](upload://rGDvxP9c5h3ot06poOZXaxevffw.png)
+
+![|402x278](upload://iEptURF8scvv0umLODbXs15XzAv.png)
+Tue, 13 Feb 2024 17:19:18 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+bshevchenko
+
+            <p>This is really exciting! Great job!</p>
+          <p><a href="https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/6
+        Tue, 13 Feb 2024 17:19:18 +0000
+gov.gitcoin.co-post-17201-6
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+      
+
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+FractalVisions
+
+            <p>The citizens program is one <img src="https://gov.gitcoin.co/images/emoji/twitter/point_up.png?v=12" title=":point_up:" class="emoji" alt=":point_up:" loading="lazy" width="20" height="20"> of the best experiments around &amp; hearing about the shift to a fully retroactive rewards model is exciting.</p>
+<p>We feel like many builders will be attracted to this type of ecosystem. Thank you so much for this write up. The innovation here is definitely breaking the ice for new opportunities such as building on public goods network.</p>
+<p>Whenever the next round comes the participation will be sure to increase. For now it’s a very small group of folks who are passionate about working together. That’s something others will recognize and want to join in on throughout the future as the program scales upwards.</p>
+<p>We definitely agree with what <a class="mention" href="https://gov.gitcoin.co/u/paulburg">@PaulBurg</a> mentioned above <img src="https://gov.gitcoin.co/images/emoji/twitter/arrow_up.png?v=12" title=":arrow_up:" class="emoji" alt=":arrow_up:" loading="lazy" width="20" height="20"> relating towards the popularity of the grants program becoming another avenue for funding that anyone could attempt to extract value from.</p>
+<p>At the same time some of the safeguards already in place as well as a tight knit community of Gitizens along with proof of impact reports via KarmaHQ and the Grantee Accountability Protocol aka GAP also help to show who is aligned with the same values of the Gitcoin ecosystem.<br>
+That does provide extra transparency and trust for returning applicants that can be utilized to curate the round of it becomes an issue in the future.</p>
+<p>There are a few scenarios imaginable where veterans of the citizens program could gain priority to enter a round if there is a large amount of funding available to help filter out low effort, high noise influencers from tapping into funds other low visibility participants really deserve who do provide high impact initiatives &amp; contribute to the education or growth of the ecosystems core components.</p>
+          <p><a href="https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/5
+        Sat, 09 Dec 2023 00:06:27 +0000
+gov.gitcoin.co-post-17201-5
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+      
+
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+umarkhaneth
+
+            <aside class="quote no-group" data-username="PaulBurg" data-post="3" data-topic="17201">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/paulburg/48/11466_2.png" class="avatar"> PaulBurg:</div>
+<blockquote>
+<p>As you pointed one of the factors that increase the impact was airdrop farmers. As I understand they are partly responsible for ~$60k extra</p>
+<p>In this case, should we engage more with degens (airdropers here) to exploit their speculative approach</p>
+</blockquote>
+</aside>
+<p>Hey Paul! Good question. basically: does the amount of funding airdrop farmers add to the round outweigh the cost of possibly skewing the QF distribution away from deserving grantees?</p>
+<p>I think there might not be a hard and fast answer to the above question and I can only give my opinion. When looking at Citizens Round 1 for example, it really brought in a lot of airdrop farmers who added funding to the round. Maybe they wanted some RetroPGF of their own. It’s notable that they didn’t come back to Round 2 the same way. To me this partly says: they’re fickle, they may show up for a novel opportunity to make money but they won’t stick around. They are not a funding source to rely on.</p>
+<p>But more importantly, in general as we scale QF I see the answer to this increasingly being: No the cost of skewing the QF distribution is too high. When the matching pool is significantly larger than the crowdfund amount then farmers who skew the distribution have an outsized negative impact on deserving projects.</p>
+<p>For example, if a $100k matching pool raises $20k in contributions then on average each $1 donated directs at least $5 (extremely handwavey). This is harmful in the case where there are particular projects in the round who draw in the airdrop farmers (perhaps because they are teasing a token one day). In that case the cost to <em>deserving projects</em> for each airdrop farmer donating $1 to the token-teasing project is about $5. To me, this is clearly not worth it and against our desire to fund where value is being created.</p>
+<p>On the other hand, it would be interesting to set up more ways to donate to the matching pool where the funds grow the overall pot for everyone in equal measure. Hopefully <a href="https://crowdfund-matchingpool.vercel.app/" rel="noopener nofollow ugc">this app by supermodular</a> could help.</p>
+<aside class="quote no-group" data-username="PaulBurg" data-post="3" data-topic="17201">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/paulburg/48/11466_2.png" class="avatar"> PaulBurg:</div>
+<blockquote>
+<p>degen to regen!</p>
+</blockquote>
+</aside>
+<p>My favorite type of conversion <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/4
+        Sun, 03 Dec 2023 23:13:03 +0000
+gov.gitcoin.co-post-17201-4
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+      
+
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+PaulBurg
+
+            <p>Thank you, Umar for such analysis! And thank you all to participate and support Gitcoin Citizens activities <img src="https://gov.gitcoin.co/images/emoji/twitter/clap.png?v=12" title=":clap:" class="emoji" alt=":clap:" loading="lazy" width="20" height="20"></p>
+<p>As you pointed one of the factors that increase the impact was airdrop farmers. As I understand they are partly responsible for ~$60k extra</p>
+<p>In this case, should we engage more with degens (airdropers here) to exploit their speculative approach</p>
+<p>Let’s say we will talk with them by their language. I understood that it might view as against value. But this is conversion act from degen to regen! They will just realized it after the act not before</p>
+          <p><a href="https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/3
+        Sat, 02 Dec 2023 04:37:00 +0000
+gov.gitcoin.co-post-17201-3
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+      
+
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+KarlaGod
+
+            <p>It’s so great to see the transparency and decisiveness the Gitcoin team supplies. I’m glad that I met the Gitcoin community, and I’m excited for GC3</p>
+          <p><a href="https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/2
+        Fri, 01 Dec 2023 20:42:41 +0000
+gov.gitcoin.co-post-17201-2
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+      
+
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+umarkhaneth
+
+            <h1><a name="gcp-004-overall-learnings-and-gitcoin-citizens-round-2-results-1" class="anchor" href="https://gov.gitcoin.co#gcp-004-overall-learnings-and-gitcoin-citizens-round-2-results-1"></a>GCP-004 Overall Learnings and Gitcoin Citizens Round <span class="hashtag-raw">#2</span> Results</h1>
+<p>Thank you to <a class="mention" href="https://gov.gitcoin.co/u/krrisis">@krrisis</a> for co-authoring this post with me and being my dependable partner in crime on the Gitcoin Citizens Round. Thank you also to <a class="mention" href="https://gov.gitcoin.co/u/shawn16400">@shawn16400</a> for helping us kick this off with the GCP and running round 1 and to <a class="mention" href="https://gov.gitcoin.co/u/carlosjmelgar">@carlosjmelgar</a> for stepping in to help run round 2.</p>
+<h1><a name="tldr-2" class="anchor" href="https://gov.gitcoin.co#tldr-2"></a>TL;DR:</h1>
+<ul>
+<li>We tested retroactive and proactive funding and felt more confident in the results of retroactive funding. We plan on sticking to this for future Citizens Rounds.</li>
+<li>We prefer funding individuals to projects because quadratic funding can be monopolized by big brand names with marketing reach.</li>
+<li>We saw massive growth in participating Citizens round-over-round as more people heard about the funding opportunity. Communities who wish to run similar rounds should try to plan to run two or more rounds from the get-go.</li>
+</ul>
+<h2><a name="intro-3" class="anchor" href="https://gov.gitcoin.co#intro-3"></a>Intro</h2>
+<p>Following the end of Gitcoin Citizens Round <span class="hashtag-raw">#2</span>, we have concluded our <a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462">first GCP</a> and are reporting back on our main results and learnings from the two rounds.</p>
+<p>From the beginning, we set out to run an experiment. We wanted to understand:</p>
+<ul>
+<li>i) can quadratic funding be effectively used to build and support our own ecosystem?</li>
+<li>ii) can retroactive funding increase the effectiveness of quadratic funding?</li>
+</ul>
+<p>The answer to both of these questions was a resounding yes, but not without deeper nuance. In this post we’ll briefly explore the lessons we learned from running two QF rounds for Gitcoin and the trade-offs we encountered.</p>
+<h2><a name="round-results-4" class="anchor" href="https://gov.gitcoin.co#round-results-4"></a>Round Results</h2>
+<p>Here’s a quick recap of how the rounds went.</p>
+<p>Gitcoin Citizens Round 1 was the first retroQF round, the first Grants Stack round to run on an L2 (Optimism), and the most successful Gitcoin Round to date in terms of crowdfunding versus matching. The crowdfund quadrupled the 20k matching pool and the round distributed over $100k to Gitcoin Citizens. You can read more in this <a href="https://www.gitcoin.co/blog/citizens-round-a-case-study-retroactive-qf" rel="noopener nofollow ugc">case study</a> and in our round 1 <a href="https://gov.gitcoin.co/t/gitcoin-citizens-round-1-results/16302">results</a> post.</p>
+<p>For Round 2 we invited our community to not only apply for retroactive funding but also submit planned work, as promised in our <a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462">initial GCP</a>. We also made Gitcoin history by distributing matching funding in our native token, GTC. We’re very happy with our <a href="https://reportcards.gitcoin.co/424/0x7492a8c4ED29B1F1559888Bd832fAe5D33E10370" rel="noopener nofollow ugc">results</a>: 64 projects received $14,692 in donations from 1350 unique donors. In the process, they decided how we would distribute a matching pool of 22,232 GTC. Big thanks to <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> who increased the matching pool by 50% by donating 4.20 ETH.</p>
+<h2><a name="can-quadratic-funding-be-effectively-used-to-build-and-support-our-own-ecosystem-5" class="anchor" href="https://gov.gitcoin.co#can-quadratic-funding-be-effectively-used-to-build-and-support-our-own-ecosystem-5"></a>Can quadratic funding be effectively used to build and support our own ecosystem?</h2>
+<p>It is <em>surprisingly easy</em> to launch a QF round on Grants Stack in a few minutes. In the cGrants days (just 14 months ago), the only way to launch a QF round was to be a developer with backend access to our system. That is so different from today. Anyone can do it in a few clicks. Hats off to the incredible Allo team that lays the critical foundation and the Grants Stack team that makes it usable.</p>
+<p>Now, on to the nuance.</p>
+<h3><a name="did-quadratic-funding-effectively-identify-what-should-be-built-and-supported-within-our-own-ecosystem-6" class="anchor" href="https://gov.gitcoin.co#did-quadratic-funding-effectively-identify-what-should-be-built-and-supported-within-our-own-ecosystem-6"></a>Did quadratic funding effectively identify what should be built and supported within our own ecosystem?</h3>
+<p>This is really subjective. Here’s our personal stance: mostly no in round 1 and mostly yes in round 2.</p>
+<p>When we initially kicked off the Gitcoin Citizens Round, it was after observing that there were many members of our community who were doing fantastic work and did not have a pathway to being funded for this work. We wanted to create that for them and also for anyone else who may come along. Those individuals (who we even specified as great examples <a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462">in our proposal</a> to run a Citizens Round) were: <a class="mention" href="https://gov.gitcoin.co/u/jon-spark-eco">@jon-spark-eco</a>, Carlos Melgar, and Carl Cervone. Unfortunately, they did not place close to the top of the Round 1 QF matching distribution.</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Round 1</th>
+<th>Round 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-30" rel="noopener nofollow ugc">Karma</a></td>
+<td><a href="https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370/0x7492a8c4ed29b1f1559888bd832fae5d33e10370-85" rel="noopener nofollow ugc">Gitcoin Grants Data Portal</a></td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-25" rel="noopener nofollow ugc">Biteye</a></td>
+<td><a href="https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370/0x7492a8c4ed29b1f1559888bd832fae5d33e10370-83" rel="noopener nofollow ugc">GITCOIN DIGEST</a></td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-32" rel="noopener nofollow ugc">Bankless DAO’s Gitcoin Citizens</a></td>
+<td><a href="https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370/0x7492a8c4ed29b1f1559888bd832fae5d33e10370-73" rel="noopener nofollow ugc">Joel Miller - Next Gen QF</a></td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-16" rel="noopener nofollow ugc">Bankless Academy</a></td>
+<td><a href="https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370/0x7492a8c4ed29b1f1559888bd832fae5d33e10370-112" rel="noopener nofollow ugc">Kris’ Work as Citizens Round Operator</a></td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-39" rel="noopener nofollow ugc">Dune Dashboard - Proof Of Stake by Vitalik Buterin</a></td>
+<td><a href="https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370/0x7492a8c4ed29b1f1559888bd832fae5d33e10370-41" rel="noopener nofollow ugc">Memes for Gitcoin</a></td>
+</tr>
+</tbody>
+</table>
+</div><p><em>Table 1: Top 5 projects by round</em></p>
+<p>Was this because the community didn’t find their work valuable? No, if you ask many of the people at Gitcoin who have the highest-context then the work they did was universally incredibly valuable. However, what’s at play are the two biggest weaknesses quadratic funding faces in correctly determining where funds should go:</p>
+<ul>
+<li>Farmers &amp; Attackers</li>
+<li>Grantee Awareness</li>
+</ul>
+<p><strong>Farmers &amp; Attackers:</strong> Citizens Round 1 was Gitcoin’s first retroactive funding round and it ran on Optimism. Airdrop farmers were so hopeful! It was still surprising just how many showed up. Of the over 17k donors we know more than half were airdrop farming. In the process of farming the round they donated a lot of funding to Gitcoin community members but they also skewed the matching distribution.</p>
+<p><strong>Grantee Awareness:</strong> Given QF’s democratic/populist nature it’s difficult for lone individuals to compete with projects that hold as much brand recognition, marketing reach, or monogamously loyal supporters as Bankless or Biteye.</p>
+<p>We took these lessons from Round 1 and adapted our strategy for Round 2. It’s also worth celebrating that, now, Jon and Carlos are Gitcoin Core and Carl is our largest external steward (by tokens delegated).</p>
+<p>Moving into Round 2, we took a different approach. <strong>We decided to limit the eligibility to individual efforts and exclude team projects.</strong> We hoped this would reduce the ability of large brands to monopolize funding and more directly compensate those creating value. This ended up working well. The top projects in Citizens Round 2 are not only high-quality but the value they’re creating for Gitcoin is extremely tangible: from developing better QF algorithms, to building open grants funding databases, crafting our newsletter, cooking our dank memes, and even running our Citizens Round.</p>
+<p>Our goal was to fund the people that create value for the Gitcoin Ecosystem. While more specific and tailored eligibility criteria certainly helped with this, it’s worth noting the following:</p>
+<ul>
+<li>a) We had clear examples of the types of grants we wanted to fund (essential to improving eligibility criteria)</li>
+<li>b) Our second round was much less attacked than our first one (in fact our number of unique donors declined 90% to 1350 – much more reasonable)</li>
+<li>c) We utilized <a href="https://x.com/gitcoin/status/1717192595003097279?s=20" rel="noopener nofollow ugc">cluster-matching QF</a> which greatly mitigated the effect of a number of sybils and PGN airdrop-hopefuls while boosting the grantees who had diverse support.</li>
+</ul>
+<p>Further analysis of the donors after payouts determined there were still some sybil attackers/airdrop farmers who received matching on their donation. Continuing to improve how we determine which wallets receive matching is extremely important to funding the projects which have authentic support.</p>
+<p>There is likely also room to experiment with different methods of improving the quadratic funding outcomes, such as by encouraging or incentivizing the participation of our highest-context community members. One such experiment could involve airdropping Gitcoin core members funding with the express purpose that they use it to donate to the round.</p>
+<h3><a name="can-quadratic-funding-be-effectively-used-to-build-and-support-our-own-ecosystem-7" class="anchor" href="https://gov.gitcoin.co#can-quadratic-funding-be-effectively-used-to-build-and-support-our-own-ecosystem-7"></a>Can quadratic funding be effectively used to build and support our own ecosystem?</h3>
+<p>One of the most telling indicators that the answer to this question is a yes is the increase we saw in builders. <strong>We received and accepted almost twice as many applications in Round 2 while decreasing our acceptance rate.</strong></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9ef704c8a0824b7940fb17e54c998851f47373fe.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/9ef704c8a0824b7940fb17e54c998851f47373fe" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9ef704c8a0824b7940fb17e54c998851f47373fe_2_624x404.png" alt="" data-base62-sha1="mGgFSkPxuyjkzJZiwcAcGYzsl9I" width="624" height="404" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9ef704c8a0824b7940fb17e54c998851f47373fe_2_624x404.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9ef704c8a0824b7940fb17e54c998851f47373fe_2_936x606.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9ef704c8a0824b7940fb17e54c998851f47373fe_2_1248x808.png 2x" data-dominant-color="E7EFE9"></a></div><p></p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Acceptances</th>
+<th>Applications</th>
+<th>Acceptance Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Round 1</td>
+<td>33</td>
+<td>60</td>
+<td>0.55</td>
+</tr>
+<tr>
+<td>Round 2</td>
+<td>64</td>
+<td>135</td>
+<td>0.47</td>
+</tr>
+<tr>
+<td>Percent Difference</td>
+<td>93.94%</td>
+<td>125.00%</td>
+<td>-14.55%</td>
+</tr>
+</tbody>
+</table>
+</div><p>Table 2: Project Acceptances, Applications, &amp; Acceptance Rate, Round 1 vs. Round 2</p>
+<p>It’s captivating to see so much growth RoR. One grantee told us “I only heard about the Citizens Round after Round 1 had ended” and another said that when they found out about the Citizens Round “It was in the middle of donations last time and I decided I’d apply to the next one.” We believe that continuing to run more rounds will continue to increase the quantity and quality of builders in the Gitcoin ecosystem.</p>
+<blockquote>
+<p>One lesson for other communities is that you should probably try to run multiple rounds from the get-go. Your experience will likely be better because you’ll be able to iterate on eligibility criteria and more builders will be drawn to your ecosystem in round 2 after hearing about round 1.</p>
+</blockquote>
+<p>It’s also worth noting the growth is accelerated by the diversity of acceptable contributions to our round. We did not limit the round to particular types of contributions such as open-source software or education. As a result, we were able to fund governance with Jengajojo, AI solutions such as Rohit with GrantsScope, community-building such as Cori at Regens Unite, and many more. We fund value creation for our ecosystem, whatever form it takes.</p>
+<h2><a name="can-retroactive-funding-increase-the-effectiveness-of-quadratic-funding-8" class="anchor" href="https://gov.gitcoin.co#can-retroactive-funding-increase-the-effectiveness-of-quadratic-funding-8"></a>Can retroactive funding increase the effectiveness of quadratic funding?</h2>
+<p>As we stated in our initial proposal, we planned on running an experiment with our first two rounds. One <a href="https://gov.gitcoin.co/t/gitcoin-citizens-round-1-results/16302">fully retroactive round</a>, with inspiration from Optimism’s RPGF, and one standard round.</p>
+<p>Our first round, being retroactive, made it easy on us as reviewers to deny applications from those projects who hadn’t yet done anything.</p>
+<p>We ran our standard round after our retroactive round. During this round, when reviewing both retroactive and proactive applications, <strong>we felt much more confident when admitting applications that already had work completed</strong>. We also felt much better about funding these submissions compared to those submissions that were requesting funding for work they <em>might</em> do.</p>
+<p>One concern we had with retroactive funding and that drove us to also test a standard round was that not everyone can afford to work for free for an uncertain reward. Yet, <a href="https://twitter.com/carl_cervone/status/1725258994741395704" rel="noopener nofollow ugc">as @ccerv1 pointed out on twitter</a>: all funding is retroactive. All funding is based on work you’ve done before whether on this particular project or previous ones.</p>
+<p>More practically, one way to lower the risk for builders would be to increase the cadence of the rounds. If someone works on something for three months and then does not receive adequate funding then this might really hurt them. On the other hand, if they work on it for 1 to 2 weeks and then receive a funding decision they can choose to keep working on it or move to something else. It’ll be important to test different cadences of rounds in the future. We believe there is a viable retroactive path for all.</p>
+<p>Overall, for the above reasons, we plan on all future citizens rounds being fully retroactive. Further, given the market direction it may be worth it for the main Gitcoin Grants program to consider a shift to include one or more dedicated retroactive funding pools as well. This may then make it easier to raise funds for the matching pool due to the increase in funder confidence that they are funding impactful, valuable contributions to the ecosystem.</p>
+<p>One notable memetic attractor in retroactive funding is ‘impact = profit’ which goes hand-in-hand with ‘fund the gap.’ In our Ccitizens Rround 2, we had individuals seeking retroactive funding for work that had been compensated previously. To adequately fund the gap, it’s essential that donors are paying attention to how much previous funding a grantee has received and that grantees are transparent about their prior funding. If Gitcoin doubles down on retroactive funding, then it’ll be important for us to consider how we surface the idea of funding the gap to voters (and draw attention to the necessary data). You can find some recommendations on this in our feedback to the product team in our <a href="https://docs.google.com/document/d/1W5T9ETvXl_t5ukgTw4UeDhCSdq21DayrBdWsSTzqAwA/edit?usp=sharing" rel="noopener nofollow ugc">initial documentation</a> and more elaborately for <a href="https://docs.google.com/document/d/1ZaoyEfZ0fqMS0V0LRD3shyQWHHhJYSI5PMcz14QFbV0/edit" rel="noopener nofollow ugc">round 2</a>.</p>
+<h1><a name="closing-9" class="anchor" href="https://gov.gitcoin.co#closing-9"></a>Closing</h1>
+<p>Thanks for making it this far.</p>
+<p>We were surprised by how good it felt to fund retroactively and we were surprised by how good it felt to fund individuals instead of projects. It allows the community to much more directly determine who is creating value and send funds directly to them. It also sends a message to each Citizen that you choose what you want to work on, you don’t have to commit to a particular project: the rest of us will fund you if we find it valuable. This creates autonomy, freedom and a flat organization.</p>
+<p>We view the Citizens Rounds as a model for our DAO, fostering a bottom-up, skills-driven owner’s mentality, bringing us back to the essence of what being a DAO is about. Our second GCP is coming very soon, and we’ll continue to check in with our community on missing pieces to achieve our goals, with a high focus on impact through retroactive funding.</p>
+<h1><a name="appendix-10" class="anchor" href="https://gov.gitcoin.co#appendix-10"></a>Appendix</h1>
+<h2><a name="a-relevant-links-11" class="anchor" href="https://gov.gitcoin.co#a-relevant-links-11"></a>A. Relevant links:</h2>
+<p><a href="https://docs.google.com/document/d/1W5T9ETvXl_t5ukgTw4UeDhCSdq21DayrBdWsSTzqAwA/edit?usp=sharing" rel="noopener nofollow ugc">Learnings product round 1</a> | <a href="https://docs.google.com/document/d/1ZaoyEfZ0fqMS0V0LRD3shyQWHHhJYSI5PMcz14QFbV0/edit" rel="noopener nofollow ugc">Learnings product round 2</a></p>
+<p><a href="https://gov.gitcoin.co/t/gitcoin-citizens-round-1-results/16302">Results round #1</a> | <a href="https://reportcards.gitcoin.co/424/0x7492a8c4ED29B1F1559888Bd832fAe5D33E10370" rel="noopener nofollow ugc">Results round #2</a></p>
+<p><a href="http://gitcoin.co/grants-data" rel="noopener nofollow ugc">Results dashboard</a></p>
+<p><a href="https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc" rel="noopener nofollow ugc">Round #1 link</a></p>
+<p><a href="https://explorer.gitcoin.co/#/round/424/0x7492a8c4ed29b1f1559888bd832fae5d33e10370" rel="noopener nofollow ugc">Round #2 link </a></p>
+<h2><a name="b-survey-results-12" class="anchor" href="https://gov.gitcoin.co#b-survey-results-12"></a>B. Survey Results</h2>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Round 1</th>
+<th>Round 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total Participants</td>
+<td>9</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Fairness of Compensation (3 = fair, 5 = over, 1 = under)</td>
+<td>3.11</td>
+<td>2.62</td>
+</tr>
+<tr>
+<td>Felt Informed</td>
+<td>4.56</td>
+<td>4.62</td>
+</tr>
+<tr>
+<td>Round Operator Rating</td>
+<td>4.56</td>
+<td>5.00</td>
+</tr>
+<tr>
+<td>Intuitive to Set Up Grant Page</td>
+<td>3.56</td>
+<td>4.23</td>
+</tr>
+<tr>
+<td>Intuitive to Apply For The Round</td>
+<td>4.11</td>
+<td>4.54</td>
+</tr>
+<tr>
+<td>Intuitive to Bridge</td>
+<td>4.67</td>
+<td>3.92</td>
+</tr>
+<tr>
+<td>Overall Experience / Satisfaction</td>
+<td>4.44</td>
+<td>4.38</td>
+</tr>
+</tbody>
+</table>
+</div><p><em>Table 3: Grantee Survey Results</em></p>
+<p>When comparing Round 1 and 2 here are the most notable changes:</p>
+<ul>
+<li>Overall grantees felt more undercompensated in Round 2</li>
+<li>The experience of creating a grant and applying to a round was much more intuitive in round 2</li>
+<li>Bridging was much more intuitive in round 1 (on OP) than in round 2 (on PGN)</li>
+</ul>
+<p>Full Survey Questions can be found <a href="https://forms.gle/WsJ69mjoLmPpDrgV6" rel="noopener nofollow ugc">here</a> and <a href="https://forms.gle/y6fiZhHv8Y7tZG548" rel="noopener nofollow ugc">here</a></p>
+<h2><a name="c-testimonials-13" class="anchor" href="https://gov.gitcoin.co#c-testimonials-13"></a>C. Testimonials</h2>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f1ce4be051cc99d8c811764c51dc2ba061ac08d7.png" alt="" data-base62-sha1="yv73Ckx1REBWmGk1PnoFn2NCkDR" width="527" height="152" role="presentation"></p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/4/478ccb77ae31b3642c15bba810dc4d26ba5089b1.png" alt="" data-base62-sha1="acXydlphPO5QTFxs06ArA5TnTC9" width="527" height="141" role="presentation"></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9ce4c966ced82c0f798a39fc1598a59b159878c7.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/9ce4c966ced82c0f798a39fc1598a59b159878c7" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9ce4c966ced82c0f798a39fc1598a59b159878c7_2_412x500.png" alt="" data-base62-sha1="mnWEPZI8Byzsaz8VQaMwNDK7V7F" width="412" height="500" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9ce4c966ced82c0f798a39fc1598a59b159878c7_2_412x500.png, https://gov.gitcoin.co/uploads/db4391/original/2X/9/9ce4c966ced82c0f798a39fc1598a59b159878c7.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/9ce4c966ced82c0f798a39fc1598a59b159878c7.png 2x" data-dominant-color="25313E"></a></div><p></p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/8/837d01689d3877db31fbde7bdca74a45d1c98e39.png" alt="" data-base62-sha1="iLcn2Kqfdt1UcFwV3j4dCYty5st" width="553" height="201" role="presentation"></p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c20c8bc21b4a79bcd01be56f2f9ca532ade227c6.png" alt="" data-base62-sha1="rGDvxP9c5h3ot06poOZXaxevffw" width="400" height="351" role="presentation"></p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/8/82b88e924a71bb1f280e73efa0850877d799783b.png" alt="" data-base62-sha1="iEptURF8scvv0umLODbXs15XzAv" width="402" height="278" role="presentation"></p>
+          <p><a href="https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/overall-learnings-from-gcp-004-and-gitcoin-citizens-round-2-results/17201/1
+        Thu, 30 Nov 2023 19:41:07 +0000
+gov.gitcoin.co-post-17201-1
+Overall Learnings from GCP-004 and Gitcoin Citizens Round #2 Results
+      
+
+

@@ -1,0 +1,199 @@
+
+
+
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287
+    **Overview**
+
+We put credit card payments on-chain!!! 
+PEW PEW PEW PEW (As @M0nkeyFl0wer would say) :raised_hands: :partying_face: :tada:
+
+See how the viaPrize.org team built that for our platform here - https://youtu.be/19LFDAIDsB0
+
+We are a full-time team of 5 with our only funding as of now by Gitcoin donations from >2,000 people and a couple thousand dollars in revenue (See our gratitude post and story here - https://gov.gitcoin.co/t/gitcoin-appreciations-thread/18332)
+
+So once we built this, we asked how we could build this for the Gitcoin community and you can see this thread as we request a grant for this: [https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827](https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827) 
+
+**Demo**
+So yeah, we built fiat donations to Gitcoin projects! See the demo here - [https://x.com/viaprize/status/1825566773820723566](https://x.com/viaprize/status/1825566773820723566)
+
+**How it works**
+1. User sends funds to viaPrize
+2. We send equivalent USDC (in future perhaps USDGLO) from our crypto reserve to a wallet associated with that user
+3. Then from the wallet associated with that user to the Gitcoin project. 
+
+Before the round, we send a round operator a URL where people can donate with fiat such as: [https://viaprize.org/qf/opencivics/explore](https://viaprize.org/qf/opencivics/explore) 
+
+At the end of the round, we give the round operator a list of wallets to whitelist to receive matching. 
+@umarkhaneth built this out for us and this is all possible thanks to his beautiful magical wizardry :mage:
+
+**Proof of Personhood**
+In this round, we used PayPal for proof of personhood because we can see a confirmed address associated with someone's credit card, we can see whether an account is verified based on if they have a bank account linked to it (only one bank account can be linked to one PayPal account), PayPal often puts payments "on hold" if someone recently changed their name or it's a new account and they haven't completed CIP/KYC with a gov ID. 
+
+For a **future proof of personhood**, we're asking @azeem for help with a connection to Visa and MasterCard to receive their Payment Account Validation API access so we can check if someone is using their real legal name when making a payment. If anyone else has connections there, please let us know with a DM to @viaprize on Twitter.
+
+**OpenCivics PayPal Round Review**
+To start out, our first partner was the OpenCivics community. We received interest from several other round operators, but didn't have the funds for it so we ended up only onboarding CollabTech partway through.
+
+Here is the data for PayPal donations to the OpenCivics round (emails and some other data removed, and payments from Noah and from Patricia were mostly for testing): 
+![Screenshot 2024-08-24 at 8.44.46 AM|690x277](upload://GNAUzVxUMv5Nway9kmB6YrOzCM.jpeg)
+
+Looking at this info, the round operators can now decide what they want to receive matching:
+1. All accounts get matching
+2. Exclude unverified accounts (no bank account attached)
+3. Exclude pending transactions (often happens if it's brand new account that hasn't done KYC or if it just changed its name)
+4. Exclude both pending and unverified
+
+CollabTech has responded they are picking 4, which excluded 2/9 donors due to being unverified accounts (no bank account attached.) OpenCivics is deciding. 
+
+Then they just mark which wallet addresses out of these to white-list and those will receive matching.
+
+If a round operator prefers, we can also just take care of it for them and send them the final CSV to upload that determines matching. 
+
+**Financial Sustainability (Hint: It's not yet!)**
+
+Feedback we received from various people including @rohit , Henry, and Umar of Gitcoin and @omniharmonic and 6 other OpenCivics community members is that they find it fair to build this then charge a fee and continue applying for various grants. So that's what we're pursuing, shoutout to @Clinamenic and Ben West for helping us search for these. 
+
+We received $400.70 through PayPal (about $100 of that was us testing), took a 5% cut (which is taken out of the post-PayPal fee balance. PayPal fees = min $0.35 per tx and 4.5% usually to 9.5% with currency conversions) so in the end made about $13ish in revenue. If anyone knows grant programs to support this, please let us know :pleading_face:
+
+**NEXT STEPS**
+
+GG22, perhaps apply as a community round supporting kids' shelters and at-risk kids projects. (I support a kids' shelter in Ecuador and my evil plan is in particular fund that one: [https://x.com/noahchonlee/status/1793862664961286413](https://x.com/noahchonlee/status/1793862664961286413))
+
+Potentially have 3 options for proof of personhood ready in time:
+1. Model based detection and donate with crypto on that chain (the usual as of now)
+2. Donate with card and we get your real legal name with Visa and MasterCard API for that, PayPal is OK but kinda meh
+3. Multi-chain
+Some sorta KYC that gives us a donor's legal name (maybe with Visa API) and then you can donate with whatever including BTC, Sol, etc and then we send some equivalent USDGLO from our own crypto reserve through a wallet associated with that user to the Gitcoin project
+
+IF ANYONE HAS A CONTACT AT VISA AND/OR MASTERCARD TO GIVE US PAYMENT ACCOUNT VALIDATION API ACCESS PLEASE LET US KNOW. This is the most important thing we could use help with. @kyle would you have any contacts there?
+
+Feel free to contact us [viaPrize](https://x.com/viaprize) on socials and let us know of best options to fund this initiative!
+Wed, 18 Sep 2024 12:59:13 +0000
+🌱 Gitcoin Grants
+
+
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+noahchonlee
+
+            <p>Great point! Looking forward to chatting about it in our call <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287/5
+        Wed, 18 Sep 2024 12:59:13 +0000
+gov.gitcoin.co-post-19287-5
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+      
+
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+Sov
+
+            <p>Thanks for the work that you put into this.  It’s great to see the progress of community members like yourselves in pushing forward with these kinds of initiatives.</p>
+<p>I want to ask if there is a process or template that could be shared with other round operators on how to activate this integration for their rounds.</p>
+<p>Making this available to others with GG22 on the horizon would be a huge unlock to continue to prove out the model.</p>
+          <p><a href="https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287/4
+        Tue, 17 Sep 2024 19:20:38 +0000
+gov.gitcoin.co-post-19287-4
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+      
+
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+noahchonlee
+
+            <p>Thank you Devansh! Always happy to hear from you and been encouraged in our chats <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"><br>
+Yes, viaPrize simulates the transaction with the embedded wallet.<br>
+Yes, same wallet is used on different days. It was 1 wallet per PayPal account.<br>
+Yes, we ended up using custodial wallets for this because Gitcoin smart contracts has a quirk where it recognizes what wallet paid for the gas.<br>
+So if we wanted to do non-custodial, we would need the user to do an extra step signing an erc-20 sending permission and then we would send the crypto from their wallet for them and pay for gas from a different wallet. The “from” field in etherscan for erc-20 transactions would show the user wallet, but the “from” for normal transactions (where the gas came from) would show the platform wallet and that messes with the Gitcoin smart contract, which if they were to change that, we could adjust it.<br>
+With custodial wallets however we can pay for the gas from the “user’s” wallet itself<br>
+Happy to hear from people which is preferred.</p>
+          <p><a href="https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287/3
+        Fri, 06 Sep 2024 19:42:49 +0000
+gov.gitcoin.co-post-19287-3
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+      
+
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+thedevanshmehta
+
+            <p>Really interesting pilot! I love the solution of using bank account as proof of personhood or sybil resistance, definitely the right way to go. <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> had done some work earlier on credit card based QF , curious to hear his thoughts and whether its worth integrating viaprize across all GG22 rounds by default.</p>
+<p>Something i didn’t fully understand was</p>
+<ol>
+<li>supporting multiple projects</li>
+<li>supporting multiple transactions</li>
+</ol>
+<p>If i put many projects in a basket and pay with credit card, does viaprize simulate the transaction with the embedded wallet?</p>
+<p>And if i donate on day 1, and then again on day 7, is the same wallet used?</p>
+<p>Does viaprize have control of the wallet that is doing the donating? which service did you end up using for embedded wallets?</p>
+          <p><a href="https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287/2
+        Fri, 06 Sep 2024 18:05:53 +0000
+gov.gitcoin.co-post-19287-2
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+      
+
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+noahchonlee
+
+            <p><strong>Overview</strong></p>
+<p>We put credit card payments on-chain!!!<br>
+PEW PEW PEW PEW (As <a class="mention" href="https://gov.gitcoin.co/u/m0nkeyfl0wer">@M0nkeyFl0wer</a> would say) <img src="https://gov.gitcoin.co/images/emoji/twitter/raised_hands.png?v=12" title=":raised_hands:" class="emoji" alt=":raised_hands:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/partying_face.png?v=12" title=":partying_face:" class="emoji" alt=":partying_face:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/tada.png?v=12" title=":tada:" class="emoji" alt=":tada:" loading="lazy" width="20" height="20"></p>
+<p>See how the <a href="http://viaPrize.org" rel="noopener nofollow ugc">viaPrize.org</a> team built that for our platform here - <a href="https://youtu.be/19LFDAIDsB0" rel="noopener nofollow ugc">https://youtu.be/19LFDAIDsB0</a></p>
+<p>We are a full-time team of 5 with our only funding as of now by Gitcoin donations from &gt;2,000 people and a couple thousand dollars in revenue (See our gratitude post and story here - <a href="https://gov.gitcoin.co/t/gitcoin-appreciations-thread/18332" class="inline-onebox">Gitcoin Appreciations Thread</a>)</p>
+<p>So once we built this, we asked how we could build this for the Gitcoin community and you can see this thread as we request a grant for this: <a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827">https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827</a></p>
+<p><strong>Demo</strong><br>
+So yeah, we built fiat donations to Gitcoin projects! See the demo here - <a href="https://x.com/viaprize/status/1825566773820723566" rel="noopener nofollow ugc">https://x.com/viaprize/status/1825566773820723566</a></p>
+<p><strong>How it works</strong></p>
+<ol>
+<li>User sends funds to viaPrize</li>
+<li>We send equivalent USDC (in future perhaps USDGLO) from our crypto reserve to a wallet associated with that user</li>
+<li>Then from the wallet associated with that user to the Gitcoin project.</li>
+</ol>
+<p>Before the round, we send a round operator a URL where people can donate with fiat such as: <a href="https://viaprize.org/qf/opencivics/explore" rel="noopener nofollow ugc">https://viaprize.org/qf/opencivics/explore</a></p>
+<p>At the end of the round, we give the round operator a list of wallets to whitelist to receive matching.<br>
+<a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> built this out for us and this is all possible thanks to his beautiful magical wizardry <img src="https://gov.gitcoin.co/images/emoji/twitter/mage.png?v=12" title=":mage:" class="emoji" alt=":mage:" loading="lazy" width="20" height="20"></p>
+<p><strong>Proof of Personhood</strong><br>
+In this round, we used PayPal for proof of personhood because we can see a confirmed address associated with someone’s credit card, we can see whether an account is verified based on if they have a bank account linked to it (only one bank account can be linked to one PayPal account), PayPal often puts payments “on hold” if someone recently changed their name or it’s a new account and they haven’t completed CIP/KYC with a gov ID.</p>
+<p>For a <strong>future proof of personhood</strong>, we’re asking <a class="mention" href="https://gov.gitcoin.co/u/azeem">@azeem</a> for help with a connection to Visa and MasterCard to receive their Payment Account Validation API access so we can check if someone is using their real legal name when making a payment. If anyone else has connections there, please let us know with a DM to <span class="mention">@viaprize</span> on Twitter.</p>
+<p><strong>OpenCivics PayPal Round Review</strong><br>
+To start out, our first partner was the OpenCivics community. We received interest from several other round operators, but didn’t have the funds for it so we ended up only onboarding CollabTech partway through.</p>
+<p>Here is the data for PayPal donations to the OpenCivics round (emails and some other data removed, and payments from Noah and from Patricia were mostly for testing):<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/04d68e7ffe4aaf9487dd054a06ba81c6c79b9e90.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/04d68e7ffe4aaf9487dd054a06ba81c6c79b9e90" title="Screenshot 2024-08-24 at 8.44.46 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/04d68e7ffe4aaf9487dd054a06ba81c6c79b9e90_2_690x277.jpeg" alt="Screenshot 2024-08-24 at 8.44.46 AM" data-base62-sha1="GNAUzVxUMv5Nway9kmB6YrOzCM" width="690" height="277" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/04d68e7ffe4aaf9487dd054a06ba81c6c79b9e90_2_690x277.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/04d68e7ffe4aaf9487dd054a06ba81c6c79b9e90_2_1035x415.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/04d68e7ffe4aaf9487dd054a06ba81c6c79b9e90_2_1380x554.jpeg 2x" data-dominant-color="E4E4E4"></a></div><p></p>
+<p>Looking at this info, the round operators can now decide what they want to receive matching:</p>
+<ol>
+<li>All accounts get matching</li>
+<li>Exclude unverified accounts (no bank account attached)</li>
+<li>Exclude pending transactions (often happens if it’s brand new account that hasn’t done KYC or if it just changed its name)</li>
+<li>Exclude both pending and unverified</li>
+</ol>
+<p>CollabTech has responded they are picking 4, which excluded 2/9 donors due to being unverified accounts (no bank account attached.) OpenCivics is deciding.</p>
+<p>Then they just mark which wallet addresses out of these to white-list and those will receive matching.</p>
+<p>If a round operator prefers, we can also just take care of it for them and send them the final CSV to upload that determines matching.</p>
+<p><strong>Financial Sustainability (Hint: It’s not yet!)</strong></p>
+<p>Feedback we received from various people including <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> , Henry, and Umar of Gitcoin and <a class="mention" href="https://gov.gitcoin.co/u/omniharmonic">@omniharmonic</a> and 6 other OpenCivics community members is that they find it fair to build this then charge a fee and continue applying for various grants. So that’s what we’re pursuing, shoutout to <a class="mention" href="https://gov.gitcoin.co/u/clinamenic">@Clinamenic</a> and Ben West for helping us search for these.</p>
+<p>We received $400.70 through PayPal (about $100 of that was us testing), took a 5% cut (which is taken out of the post-PayPal fee balance. PayPal fees = min $0.35 per tx and 4.5% usually to 9.5% with currency conversions) so in the end made about $13ish in revenue. If anyone knows grant programs to support this, please let us know <img src="https://gov.gitcoin.co/images/emoji/twitter/pleading_face.png?v=12" title=":pleading_face:" class="emoji" alt=":pleading_face:" loading="lazy" width="20" height="20"></p>
+<p><strong>NEXT STEPS</strong></p>
+<p>GG22, perhaps apply as a community round supporting kids’ shelters and at-risk kids projects. (I support a kids’ shelter in Ecuador and my evil plan is in particular fund that one: <a href="https://x.com/noahchonlee/status/1793862664961286413" rel="noopener nofollow ugc">https://x.com/noahchonlee/status/1793862664961286413</a>)</p>
+<p>Potentially have 3 options for proof of personhood ready in time:</p>
+<ol>
+<li>Model based detection and donate with crypto on that chain (the usual as of now)</li>
+<li>Donate with card and we get your real legal name with Visa and MasterCard API for that, PayPal is OK but kinda meh</li>
+<li>Multi-chain<br>
+Some sorta KYC that gives us a donor’s legal name (maybe with Visa API) and then you can donate with whatever including BTC, Sol, etc and then we send some equivalent USDGLO from our own crypto reserve through a wallet associated with that user to the Gitcoin project</li>
+</ol>
+<p>IF ANYONE HAS A CONTACT AT VISA AND/OR MASTERCARD TO GIVE US PAYMENT ACCOUNT VALIDATION API ACCESS PLEASE LET US KNOW. This is the most important thing we could use help with. <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> would you have any contacts there?</p>
+<p>Feel free to contact us <a href="https://x.com/viaprize" rel="noopener nofollow ugc">viaPrize</a> on socials and let us know of best options to fund this initiative!</p>
+          <p><a href="https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287/1
+        Tue, 27 Aug 2024 16:40:07 +0000
+gov.gitcoin.co-post-19287-1
+We Donated to Gitcoin Projects with Credit Card! - Review of PayPal Fiat Payments in GG21
+      
+
+

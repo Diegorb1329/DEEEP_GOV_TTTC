@@ -1,0 +1,499 @@
+
+
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166
+    **EDIT #3** - The snapshot vote to ratify these results is live - thank you to everyone who helped us get to this point, and for your patience during the process. Please vote here: https://snapshot.org/#/gitcoindao.eth/proposal/0xd7eec49493ad459defd055e401eca0cd41d97b10bbf4457bc25ff1393541fcab
+____
+**EDIT #2** - We have recently posted the second iteration of revised results (and hopefully the last) :) You can see these final results [here](https://docs.google.com/spreadsheets/d/1WxA1DqSHuHWVVnAuW9uRX7K_eYAnxTojdNhwIyYyA5E/edit?usp=sharing) and more information on what additional Sybil detection was done in the [comment](https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/70) below. Thank you to all in the community who helped to review and flag discrepancies in the results, helping us prevent more Sybils. We plan to move forward with the ratification of these results via a Snapshot vote in the coming days.
+______
+**EDIT** - We have posted revised results with more robust Sybil detection [here](https://docs.google.com/spreadsheets/d/1-WDK9R4h0vBGhnJtFgd1z1ISISeuIfSP26MKaDeSY5c/edit?usp=sharing) - you can see the full write up towards the bottom of this thread ([direct link](https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/44))
+____
+TLDR: Beta Round final results are live [here](https://docs.google.com/spreadsheets/d/1-06Ul851qBfHAb13jj4zJ4Qx0VicJ3tS9eTd30r3eIA/edit?usp=sharing)! We propose ~5 days for discussion and review followed by a 5-day snapshot to ratify, before processing final payouts.
+
+**Background**
+
+First of all, I'd like to thank @ale.k @koday @umarkhaneth @M0nkeyFl0wer @jon-spark-eco @nategosselin @gravityblast (and many more from the PGF, Allo, and other workstreams) for all the work that went into running this round and helping to get these final QF calculations.
+
+This Beta was the second Gitcoin Grants Program QF round on Grants Stack. It ran from April 25th to May 9th and unlike the [Alpha Round](https://gov.gitcoin.co/t/proposal-ratify-the-results-of-january-s-alpha-rounds-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/13277), it was open for anyone to participate (as long as projects met the [eligibility criteria](https://gitcoin.notion.site/Gitcoin-Grants-Beta-Round-Eligibility-b7fca9fd3c26450b89ded11caaa6497f)* of one of the Core Rounds). $1.25 Million in matching was available between 5 distinct rounds (and correspondingly 5 smart contracts). There were also 10 externally operated Featured Rounds, however, this post only pertains to the Core Rounds operated by Gitcoin. These rounds and matching pools are broken down below:
+
+1. Web3 Open Source Software [[Explorer](https://explorer.gitcoin.co/#/round/1/0x12bb5bbbfe596dbc489d209299b8302c3300fa40) | [Contract](https://etherscan.io/address/0x12bb5bbbfe596dbc489d209299b8302c3300fa40)]
+* Matching pool: 350,000 DAI
+* Matching cap: 4%
+
+2. Climate Solutions [[Explorer](https://explorer.gitcoin.co/#/round/1/0x421510312c40486965767be5ea603aa8a5707983) | [Contract](https://etherscan.io/address/0x421510312c40486965767be5ea603aa8a5707983)]
+* Matching pool: 350,000 DAI
+* Matching cap: 10%
+
+3. Web3 Community & Education [[Explorer](https://explorer.gitcoin.co/#/round/1/0xaa40e2e5c8df03d792a52b5458959c320f86ca18) | [Contract](https://etherscan.io/address/0xaa40e2e5c8df03d792a52b5458959c320f86ca18#code)]
+* Matching pool: 200,000 DAI
+* Matching cap: 6%
+
+4. Ethereum Infrastructure [[Explorer](https://explorer.gitcoin.co/#/round/1/0xdf22a2c8f6ba9376ff17ee13e6154b784ee92094) | [Contract](https://etherscan.io/address/0xdf22a2c8f6ba9376ff17ee13e6154b784ee92094)]
+* Matching pool: 200,000 DAI
+* Matching cap: 10%
+
+5. ZK Tech [[Explorer](https://explorer.gitcoin.co/#/round/1/0x274554eb289004e15a7679123901b7f070dda0fa) | [Contract](https://etherscan.io/address/0x274554eb289004e15a7679123901b7f070dda0fa)]
+
+* Matching pool: 150,000 DAI
+* Matching cap: 10%
+
+*To view and/or weigh in on the discussion of platform and core-round specific[ eligibility criteria](https://gitcoin.notion.site/Gitcoin-Grants-Beta-Round-Eligibility-b7fca9fd3c26450b89ded11caaa6497f), see the following posts in the Gov Forum:
+
+https://gov.gitcoin.co/t/discussion-feedback-request-gitcoin-program-beta-round-eligibility/13306
+
+https://gov.gitcoin.co/t/follow-up-gitcoin-program-beta-round-eligibility/13837
+
+**Results & Ratification**
+
+The full list of final results & payout amounts can be found [here](https://docs.google.com/spreadsheets/d/1-06Ul851qBfHAb13jj4zJ4Qx0VicJ3tS9eTd30r3eIA/edit?usp=sharing). Below we’ll cover how these results were calculated and other decisions that were made.
+
+We ask our Community Stewards to ratify the Beta Round payout amounts as being correct, fair, and abiding by community norms, including the implementation of Passport scoring as well as Sybil/fraud judgments and squelching made by the Public Goods Funding workstream.
+
+**If stewards and the community approve after this discussion, we would like to suggest voting on Snapshot to run from Friday, June 2nd, to Wednesday, June 7th. If the vote passes, the multisig signers can then approve a transaction to fund the round contracts, the results will be finalized on-chain, and payouts will be processed shortly after.**
+
+**Options to vote on:**
+
+*1. Ratify the round results*
+
+You ratify the results as reported by the Public Goods Funding workstream and request the keyholders of the community multisig to payout funds according to the Beta Round final payout amounts.
+
+*2. Request further deliberation*
+
+You do not ratify the results and request keyholders of the community multi-sig wallet to delay payment until further notice.
+
+**Round and Results Calculation Details**
+
+***Note: The final results you see [here](https://docs.google.com/spreadsheets/d/1-06Ul851qBfHAb13jj4zJ4Qx0VicJ3tS9eTd30r3eIA/edit?usp=sharing) show data that has been calculated after imposing various eligibility controls and donor squelching (described below). The numbers may not match exactly what you see on-chain or on the platform’s front end. For example, donations from users without a sufficient Passport score or donations under the minimum will not be counted in the aggregate “Total Received USD” or “Contributions” column for your grant.
+
+**To summarize:**
+
+* The Gitcoin Program Beta Round was conducted on Grants Stack from April 25th to May 9th, 2023.
+* It consisted of 5 Core Rounds with their own matching pools: Web3 Open Source Software, Climate Solutions, Web3 Community & Education, Ethereum Infrastructure, and ZK Tech.
+* There were 470 grants split between the rounds and approved based on round-specific and general platform [eligibility requirements](https://gitcoin.notion.site/Gitcoin-Grants-Beta-Round-Eligibility-b7fca9fd3c26450b89ded11caaa6497f).
+* A total of ~$600k was donated across the 5 core rounds and 10 featured rounds (see this [Dashboard](https://gitcoin-grants.streamlit.app/) for detailed stats).
+
+![Screenshot 2023-05-26 at 7.40.16 PM|690x379, 100%](upload://oA5eDnZBtBfC3a7lBf2E1FapxnZ.png)
+
+
+**Key Metrics by Round**
+
+![Screenshot 2023-05-26 at 6.43.49 PM|453x500, 100%](upload://kUXGLGu0SNS2Mj9IC2A2wEp8BeN.png)
+![Screenshot 2023-05-26 at 6.44.10 PM|690x496, 75%](upload://15CHlrcQO2rErjbjwFNydUY4Xaa.png)
+
+
+**Matching Calculation Approach**
+
+The results shared above stray from the raw output of the QF algorithm due to a few variables:
+
+* Donors must have a sufficient passport score (threshold for all rounds = 15)
+* $1 donation minimum
+* Removal of Sybil attackers and bots
+* Round-specific percentage matching caps imposed
+
+*Passport scores*
+The Gitcoin Passport minimum score threshold was set to 15 for all Beta rounds, which was notably lower than the previous Alpha Round. As a result, we saw a higher passport pass rate (shared in the data above). A donor’s highest score at any point during the 2 week round was used for all of their donations, even if they donated and later raised their score. Only donations from users with a passport and sufficient score were counted for matching calculations.
+
+*Donation minimum*
+Past cGrants rounds used a $1 donation minimum, while the Alpha Round cut off a variable bottom percentile of donations after manual analysis. Now that the Allo Protocol has a minimum donation feature built into Round Manager, we decided to go back to using a predetermined and public minimum value of $1.
+
+An interesting result of using a USD-denominated minimum was that a 1 DAI donation was not always sufficient, depending on the conversion rate of DAI at the time of the transaction. There were thousands of 1 DAI donations, and while they typically ranged from $0.998 to $1.002, over half fell below the $1 USD threshold and were not initially counted towards matching. It was decided that a user should reasonably expect a 1 DAI donation to count, and to ensure their vote was not decided by arbitrary small price fluctuations, we used $0.98 as the minimum for the final calculations.
+
+*Sybil attacks and suspected bots*
+As with most QF Rounds, we saw some sophisticated Sybil attack patterns which were not stopped by Passport (yet!). After on-chain data analysis and a manual sampling process, donations from addresses that were associated with these types of behaviors were excluded for the purposes of matching calculations. This includes things like:
+
+* Suspected bot activity based on specific transaction patterns and similarities
+* ​​Flagging known Sybil networks/addresses from prior rounds
+* Enhanced analysis of Passport stamps and other data to flag evidence of abuse between different wallets
+* Self-donations from grantee wallets
+
+*Matching caps*
+Matching caps were introduced many rounds ago on cGrants, where there is a maximum percent of the total matching pool any one grant can capture. Once they hit this cap, they will not earn more, and any excess is redistributed to all other grants proportionally. Round caps were:
+
+* 4% for Web3 OSS
+* 10% for Climate
+* 6% for Web3 Community & Education
+* 10% for Eth Infra
+* 10% for ZK Tech
+
+These amounts were selected based on the number of grants expected to be in each round and the size of each matching pool, using prior rounds to help advise. We are always looking for community feedback on matching caps for future rounds!
+
+Please note: In an effort to create a transparent minimum viable product of QF formula, *simple* quadratic voting has been deployed here. In the future, we hope to offer pairwise matching and other options for possible customizations that will be set and published on-chain at the time of round creation.
+
+**Future Analysis & Takeaways**
+
+DAO contributors will soon share detailed analyses, statistics, and takeaways from the Beta Round in addition to these results. You will find these posts in the governance forum in the coming weeks. For takeaways from the Alpha Round, see here for [data](https://gov.gitcoin.co/t/gitcoin-program-alpha-rounds-data-findings/13045), [operations](https://gov.gitcoin.co/t/gitcoin-program-alpha-round-post-op-writeup/13043), and [Passport](https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011) retros.
+
+Again, we thank everyone for your patience and for participating in the Beta Round. We’re excited for the next iteration of the Gitcoin Program and to begin supporting many other organizations as they run their own rounds.
+
+For questions, comments, or concerns on any of the above, please comment below or join the [Gitcoin Discord](https://discord.gg/cD6RKWjZ6g). Thanks for reading!
+Fri, 28 Jul 2023 10:34:30 +0000
+🌱 Gitcoin Grants
+
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+littertoken
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> thanks so much for handling the payouts and contributing to public goods. Our project Litter Token didn’t receive the Beta Round funds and we suspect it’s because we provided a Polygon gnosis safe address instead of an ETH one. Any way you can help us can find a solution here?</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/95">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/95
+        Mon, 24 Jul 2023 17:54:56 +0000
+gov.gitcoin.co-post-15166-95
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+shawn16400
+
+            <p>This snapshot vote has passed with ~93% approval rate.<br>
+Metrics:<br>
+2931 unique votes<br>
+~10.2M GTC tokens cast.</p>
+<p><a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xd7eec49493ad459defd055e401eca0cd41d97b10bbf4457bc25ff1393541fcab" class="onebox" target="_blank" rel="noopener">https://snapshot.org/#/gitcoindao.eth/proposal/0xd7eec49493ad459defd055e401eca0cd41d97b10bbf4457bc25ff1393541fcab</a></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/94">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/94
+        Tue, 11 Jul 2023 15:50:43 +0000
+gov.gitcoin.co-post-15166-94
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+connor
+
+            <p>Hey everyone we have a long-anticipated update for you all - the 5 Core rounds have now been finalized and paid out! Thank you again for your patience throughout this entire process. Going forward it should be streamlined significantly <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/93">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/93
+        Tue, 11 Jul 2023 06:01:15 +0000
+gov.gitcoin.co-post-15166-93
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+shawn16400
+
+            <p>This proposal has passed a snapshot vote.   The final metrics are pending a snapshot bug fix, but the result of the vote is a clear passage for this proposal.</p>
+<p><a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xd7eec49493ad459defd055e401eca0cd41d97b10bbf4457bc25ff1393541fcab" class="onebox" target="_blank" rel="noopener">https://snapshot.org/#/gitcoindao.eth/proposal/0xd7eec49493ad459defd055e401eca0cd41d97b10bbf4457bc25ff1393541fcab</a></p>
+<p>Thank you to all the voters for participating in our governance!</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/92">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/92
+        Mon, 10 Jul 2023 12:51:06 +0000
+gov.gitcoin.co-post-15166-92
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+dnllvrvz
+
+            <p>Hi! Thanks for the immense amount of work behind this round. I speak on behalf of the Sympoiesis project (clima solutions) and am wondering if we could get more insights into the discrepancy between the first Beta Round final results announced and the latest ones. I ask that because our project went from having 13 valid contributors to now having 7 valid ones. We don’t have much info on our donors, but our entire crowdfunding campaign was done at zuzalu, which makes us believe that most people had a valid passport. We’re surprised by the big difference between results.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/91">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/91
+        Mon, 03 Jul 2023 18:15:06 +0000
+gov.gitcoin.co-post-15166-91
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+KarlaGod
+
+            <p>Thanks for this hardwork put in. I’d like to know if there’s a reason B&lt;&gt;rder/ess is not on the list.</p>
+<p>What could be the reason?</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/90">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/90
+        Sat, 01 Jul 2023 10:07:28 +0000
+gov.gitcoin.co-post-15166-90
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+connor
+
+            <p>Next quick update - the snapshot vote to ratify these results is live - thank you to everyone who helped us get to this point, and for your patience during the process. Please vote here: <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xd7eec49493ad459defd055e401eca0cd41d97b10bbf4457bc25ff1393541fcab" class="inline-onebox" rel="noopener nofollow ugc">Snapshot</a></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/89">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/89
+        Fri, 30 Jun 2023 23:41:34 +0000
+gov.gitcoin.co-post-15166-89
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+connor
+
+            <p>Appreciate you reaching out on Telegram. We’ve definitely taken away a lot of learnings from this process and will implement them for the next round</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/88">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/88
+        Fri, 30 Jun 2023 23:40:41 +0000
+gov.gitcoin.co-post-15166-88
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+connor
+
+            <p>Thank you for voicing your concerns and happy to continue the discussion we’re having on Telegram. We will certainly strive to make the rules more clear going forward</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/87">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/87
+        Fri, 30 Jun 2023 23:39:38 +0000
+gov.gitcoin.co-post-15166-87
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+dgguardians
+
+            <p>Thanks all the Gitcoin Team for your Hard Work <img src="https://gov.gitcoin.co/images/emoji/twitter/green_heart.png?v=12" title=":green_heart:" class="emoji" alt=":green_heart:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/86">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/86
+        Fri, 30 Jun 2023 16:42:33 +0000
+gov.gitcoin.co-post-15166-86
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+jengajojo
+
+            <p>I wanna step in and second others who have come out to thank <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> and team for working with the community to resolve this!</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/85">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/85
+        Fri, 30 Jun 2023 07:38:08 +0000
+gov.gitcoin.co-post-15166-85
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+MathildaDV
+
+            <p>Great work <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> ! Thank you for this. The blog post from our end will be posted early next week! Thanks for all the hard work that went into this and for the conversations here. It’s given me some great insights into the process.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/84">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/84
+        Thu, 29 Jun 2023 21:54:35 +0000
+gov.gitcoin.co-post-15166-84
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+solarpunkmaxi
+
+            <p>thanks for the detailed response. This clarity will def helps us navigate future rounds better.</p>
+<p>I think most grants acting in good faith have a legit story behind what appears as a sybil attack but at the same time i get that its really not feasible for Gitcoin to look into each to understand the context.</p>
+<p>The current doc on whats considered a sybil attack by Gitcoin is quite broad which is where potential confusion can arise, esp for newer grants. Maybe a forum post where this can be hashed out betn the team and grants once the dust settles on this round would be nice to prevent this next time.</p>
+<p>Have DMed you on twitter/TG <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> with some potential false positives that we would like to get clarity on before the next round.</p>
+<p>Congrats to everyone that made this happen. Looking forward to the next roller coaster</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/83">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/83
+        Thu, 29 Jun 2023 11:42:37 +0000
+gov.gitcoin.co-post-15166-83
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+Dagda
+
+            <p>Hi Connor,</p>
+<p>Thanks for all the hard work you and the team behind, not an easy round for anyone, there is a lot of teaching for all peoples involved here.</p>
+<p>Concerning Mycelia, let’s not deny that it’s a hard blow, we were ranked number 6 after the first curation, then after the second one we were number one, spotlight on us, for then in the last result being ranked 80th. We know that the Gitcoin team cannot do a 1:1 basis analysis of addresses, but we can fairly admit there is a lot to learn for us here.</p>
+<p>If after the first and the second curation most of the addresses were not removed, and at the end in the third curation we go to hell, there is definitely a need for clarification. We admit <a href="https://docs.google.com/document/d/14mJbs7z_zYQIkSP187576U5j0TElOl7Br4sWWaq-UEk/edit" rel="noopener nofollow ugc">some behaviors on our side</a> was not respecting the rules of Gitcoin, and need to be curated, while also proving our legitimacy here in this thread by explaining how <a href="https://docs.google.com/document/d/1S0JYimQUDcTm2q3PqfeSdwfqvBcCjfC_-16tEHdEvYI/edit" rel="noopener nofollow ugc">dedicated we are to connect Web3 and Gitcoin to indigenous communities</a>, the <a href="https://explorer.gitcoin.co/#/round/10/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc/0x984e29dcb4286c2d9cbaa2c238afdd8a191eefbc-54" rel="noopener nofollow ugc">Gitcoin Citizens</a> reflecting that.</p>
+<p>So now getting only 6 contributors with 14$ usd received feels off, when there is at <a href="https://docs.google.com/document/d/1b40uVXrlhh1y7VBUg7AjRAy1RNBlq-54JCO-aQbonuY/edit?usp=sharing" rel="noopener nofollow ugc">least 13 addresses that don’t have any connections to Mycelia</a> (no gas fees paid back, no transfer of GTC) and mostly people from the Gitcoin community (so normally with passport valid). We got the confirmation that some addresses didn’t get the passport valid, but it feels there is still a gap to fill, and all that without considering people we only pay back few gas fees (~20$) or transfer of GTC to help the passport validation (is it something prohibited in the current rules?)</p>
+<p>Again, we are here to learn, we are not here to complain about the work done here, we know its coming from a place of full commitment for the collective best interest, Sybil resistance tools are still in progress.</p>
+<p>We really want to see this day where it would be not possible for anyone to go against Gitcoin rules, because of the design. There is out there bad actors, new grantees, projects who tried to on-board as much people as they can — honesty is a spectrum, not a binary state. It’s not to Gitcoin to decide who is legit or not, who has good attentions, bad ones, mixed ones, it’s up to the design. And it feels it’s getting closer, but in this transition time, there is still a need for clarification, because really, being on the top and going to hell is not a feeling we wish to any legit project out there.</p>
+<p>So thank you all for this round, it seems unlikely to have a change in the final result, the whole community is justly waiting for its matching fund. But at least, we would like a transparent answer on this decision as we are accountable for all the indigenous communities we are working with, this is really important for us.</p>
+<p>DM are open on Telegram, or by email to uni@mycelia.xyz</p>
+<p>Thanks all, and lets do better next time.</p>
+<p>Closing in music : <a href="https://www.youtube.com/watch?v=uC1E6-F7vFk&amp;list=RDhEzSAVkCcUA&amp;index=8" class="inline-onebox" rel="noopener nofollow ugc">Regeneration //Nerdseq/Panharmonium/ER301/DPO/Mangrove/Erbe-Verb// - YouTube</a></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/82">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/82
+        Wed, 28 Jun 2023 20:43:15 +0000
+gov.gitcoin.co-post-15166-82
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+connor
+
+            <p>Great questions - I’ll try to reply below but with the caveat that often the answer is “it depends” and that we can’t possibly check every transaction manually so some things may or may not be caught by automated analysis.</p>
+<aside class="quote no-group" data-username="solarpunkmaxi" data-post="78" data-topic="15166">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/solarpunkmaxi/48/10480_2.png" class="avatar"> solarpunkmaxi:</div>
+<blockquote>
+<p>Do you consider projects contributing to each others grants also as a sybil attack?</p>
+</blockquote>
+</aside>
+<p>No, I would definitely not. In fact, it’s awesome to see grantees supporting one another in these rounds. In the past we have seen cases of “project sybil rings” where a cluster of projects are all donating to each other back and forth, often with additional sybil donors, but that’s a bit different.</p>
+<aside class="quote no-group" data-username="solarpunkmaxi" data-post="78" data-topic="15166">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/solarpunkmaxi/48/10480_2.png" class="avatar"> solarpunkmaxi:</div>
+<blockquote>
+<p>What do you infer when a donor address has interacted with other donors?</p>
+</blockquote>
+</aside>
+<p>Nothing inherently, that definitely can be very normal behavior in most cases. For this specific round, among the 20+ different tests run, I found that flagging donors interacting with other donors that ALSO shared a seed funding source, was a good combination of indicators to catch likely Sybils.</p>
+<aside class="quote no-group" data-username="solarpunkmaxi" data-post="78" data-topic="15166">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/solarpunkmaxi/48/10480_2.png" class="avatar"> solarpunkmaxi:</div>
+<blockquote>
+<p>When we onboard friends and family to contribute to our grants is that considered a sybil attack?</p>
+</blockquote>
+</aside>
+<p>No of course not - a Sybil attack is one person creating multiple identities (don’t mean this in a patronizing way but more info <a href="https://en.wikipedia.org/wiki/Sybil_attack" rel="noopener nofollow ugc">here</a>). Onboarding new people to crypto is an incredible goal and outcome of QF rounds.</p>
+<p>However, what is hard is that we can never be 100% sure or have definitive proof some address is or isn’t a Sybil (without some enhanced biometrics or KYC requirement). We flag likely Sybils, or likely unique humans, and do our best to discourage Sybil behavior. For example if you onboard friends and family to Web3 and help them get a wallet, and then send them some Eth, which they send right back to your grant, they may all be unique humans, but it certainly looks a lot like a Sybil ring. That could also likely fall under some umbrella of “collusion” which is not allowed. So those votes would likely not count, even if in reality there was a totally unique human behind each wallet. The problem is if we gave everyone the benefit of the doubt and took your word that those 10 addresses you funded were friends and family, we’d have to do that for everyone, and any grant could spin up a bunch of wallets themselves and plausibly deny they belong to the same human. So all we can do is analyze the on-chain data, set rules and standards, and make calls to the best of our judgement.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/81">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/81
+        Wed, 28 Jun 2023 20:09:37 +0000
+gov.gitcoin.co-post-15166-81
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+lefterisjp
+
+            <p>yeah haven’t ran rotki on it yet to see what it says for this. Okay understood the difference between them. Would make sense to rename the column then</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/80">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/80
+        Wed, 28 Jun 2023 20:08:02 +0000
+gov.gitcoin.co-post-15166-80
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+connor
+
+            <p>Well you asked why the discrepancy and if the first one was wrongly calculated <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>But yes the accounting question is a very important one, and I think you are right we could rename the columns to make this clear. Perhaps calling it “Total Donations Counted for Matching” would be better than “Revised Total Received USD”. What do you think?</p>
+<p>I’ll also call out that the $2,055 amount you see in the first iteration is also not the raw number - this is the total donations after removing failed passport scores and donations less than $1. And then the $1,633.22 number in the final matching calc iteration is removing both the items above, plus any other transactions flagged by further Sybil analysis and defense.</p>
+<p>I believe the real “raw” sum would be be found on the frontend grant page, so for example <a href="https://explorer.gitcoin.co/#/round/1/0xdf22a2c8f6ba9376ff17ee13e6154b784ee92094/0xdf22a2c8f6ba9376ff17ee13e6154b784ee92094-0" rel="noopener nofollow ugc">Rotki</a> I see is at $2203.96.</p>
+<p>All this said, the goal of this gov discussion/proposal, and the matching calculation sheet, is not to provide an accounting statement for projects, but rather to showcase the final matching results and what numbers were used to calculate them.</p>
+<p>I do absolutely think the product should provide an easy way to export a csv of all donations/matches made to a project. This would be a really useful tool and something that would be best built into the application, rather than done through google sheets/forums. I believe it’s somewhere on the roadmap for Allo/Grants Stack. Perhaps some collaboration with Rotki’s tooling could help to pull and organize on chain data <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/79">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/79
+        Wed, 28 Jun 2023 19:53:24 +0000
+gov.gitcoin.co-post-15166-79
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+solarpunkmaxi
+
+            <p>Appreciate all the effort put in by the FDD team and you <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a>.</p>
+<p>Couple Qs on the process -</p>
+<p>Do you consider projects contributing to each others grants also as a sybil attack?</p>
+<p>What do you infer when a donor address has interacted with other donors?</p>
+<p>When we onboard friends and family to contribute to our grants is that considered a sybil attack?</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/78">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/78
+        Wed, 28 Jun 2023 12:16:09 +0000
+gov.gitcoin.co-post-15166-78
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+lefterisjp
+
+            <p>That’s not what I asked though. Say I want to do my accounting. How much did we receive? Counting it in matching or not. Is the first amount correct or the 2nd?</p>
+<p>If the 2nd is just 1st minus what you regard as sybil through some kind of calculations you believe detects sybil then specify that in the name of the column. Because it would be nice to be able to also know how much each grant received raw.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/77">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/77
+        Wed, 28 Jun 2023 09:11:36 +0000
+gov.gitcoin.co-post-15166-77
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+connor
+
+            <p>Yes correct all direct donations go directly to the grantee wallet where they have full custody. The “Revised Total Received USD” is essentially the sum of donations that were counted for the revised matching calculations, so discounting txs &lt; 1$, txs from non-existent/failing passport scores, and txs removed during Sybil detection.</p>
+<p>In the first two iterations of these results, there was a lot of confusion around the “Total Received USD” amounts (when they weren’t adjusted downward after Sybil checks) not matching up logically with “contributions” and “match”, so I think it is better we can now share the revised donation sums.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/76">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/76
+        Tue, 27 Jun 2023 21:21:12 +0000
+gov.gitcoin.co-post-15166-76
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+lefterisjp
+
+            <p>Hey looking at rotki before and after I am confused.</p>
+<p>Before total received: 2,055.00<br>
+Now total received: $1,633.22</p>
+<p>As faras I understand this is already donated. Nothing to do with matching. Why the discrepancy? Was the first one wrongly calculated?</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/75">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/75
+        Tue, 27 Jun 2023 20:12:57 +0000
+gov.gitcoin.co-post-15166-75
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+DistributedDoge
+
+            <p>Looking at random grants I can agree with amounts reported in “Revised Total USD” columns, so far I can always find such combination of valid votes that would result in “Revised” amount being accurate. This is also consistent with number of contributions reported.</p>
+<p>It is a bit of a shame that revised report seems to have dropped  “Sum Sqrt” column which would be helpful for eyeballing cases where QF calculation might seem counter-intuitive when looking at raw donation amounts, not taking distribution of those donations into account.  Still I wouldn’t want to hold up the results because of this, unless someone else spots something wrong with this iteration, but it is something to think about for future rounds.</p>
+<p>Overall, very nice work. I am not commenting on Sybil or QF calcs, but I am happy to see a consistent report.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/74">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/74
+        Tue, 27 Jun 2023 18:10:05 +0000
+gov.gitcoin.co-post-15166-74
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+carlosjmelgar
+
+            <p>It’s going to be extremely difficult to identify what exactly happened with those four donors to your grant. The team will be unable to provide these explanations to every grantee. Please look at the detailed descriptions in this thread to get a sense of what might have happened with those 4 donors.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/73">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/73
+        Tue, 27 Jun 2023 14:44:38 +0000
+gov.gitcoin.co-post-15166-73
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+playoriginstory
+
+            <p>Thanks for your work on this <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> <a class="mention" href="https://gov.gitcoin.co/u/carlosjmelgar">@carlosjmelgar</a>. It seems our contributions (The Gallery DAO) were reduced by 4 people and 250 DAI from the matching pool. Can you explain what happened?  We also never received any information regarding the DEI round. Just trying to keep up here on decisions and changes being made.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/72">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/72
+        Tue, 27 Jun 2023 14:26:18 +0000
+gov.gitcoin.co-post-15166-72
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+carlosjmelgar
+
+            <p>Thanks for all the hard work that went into this.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/71">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-proposal-ratify-the-results-of-gitcoin-s-beta-round-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/15166/71
+        Tue, 27 Jun 2023 12:28:23 +0000
+gov.gitcoin.co-post-15166-71
+[Discussion & Proposal] Ratify the Results of Gitcoin’s Beta Round and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+

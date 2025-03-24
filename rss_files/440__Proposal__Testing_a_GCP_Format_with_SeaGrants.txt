@@ -1,0 +1,203 @@
+
+
+
+[Proposal] Testing a GCP Format with SeaGrants
+https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243
+    # Summary
+
+We propose dogfooding the new SeaGrants app to administer a January GCP budget on Allo v2. The total budget would be $25k, with individual applications eligible to receive a maximum of $5k. Applications would be funded as long as at least 3 Gitcoin stewards approve it.
+
+# Abstract
+
+This proposal aims to utilize the newly developed front-end, SeaGrants, to facilitate the distribution of $25,000 in Gitcoin Community Proposal (GCP) funding. SeaGrants was inspired by the original desires behind the Gitcoin Community Proposal process, which aimed to make it easier for community members to make tangible contributions to the Gitcoin ecosystem. By implementing this proposal, we intend to streamline and democratize the allocation of these funds, empowering community members to play a more active role in supporting and growing the Gitcoin ecosystem. In addition to streamlining the grant distribution process, this initiative will also serve as a valuable opportunity to test out a new GCP format, setting the stage for an upcoming evolution of our community engagement channels that [CoachJ](mailto:jonathan@gitcoin.co) is currently developing. Furthermore, it’s a valuable opportunity to showcase the capabilities of Allo v2.
+
+# Motivation
+
+The motivation behind this proposal is rooted in addressing three core objectives:
+
+1. Empowerment of Community Members: We aim to support the vision of the GCP process by simplifying the application and distribution of grants. This will empower community members to take an active role in shaping the future of Gitcoin.
+2. Accelerated Growth: By making it easier for community members to access GCP funding, we expect to see an increase in the number of tangible contributions to the Gitcoin ecosystem. This will lead to accelerated growth, innovation, and community engagement.
+3. Showcasing Allo v2: This proposal provides an excellent opportunity to highlight the capabilities of Allo v2, as it demonstrates both the ease of creating new mechanism variations and what’s possible for developers using our SDK.
+
+# Specification
+
+The implementation plan for this proposal includes the following:
+
+* Funding Pool: A total of $25,000 will be deposited into an Allo v2 pool, which will be prominently visible on the SeaGrants app, ensuring transparency and accessibility to all community members.
+  * Maximum Grant Amount: Grant applications can request a maximum of $5,000 each, ensuring a fair allocation of resources.
+* Voter Eligibility: Stewards who have at least 100,000 tokens delegated to them will be eligible to vote on grant applications. Eligible stewards will have one vote per application.
+* Distribution Period: The $25,000 will be available for distribution in the month of January 2024, with the following windows:
+  * Application Period: Applications will be accepted from January 8th to January 12th, providing a five-day window for community members to submit their proposals.
+  * Review and Comment Period: From January 15th to January 19th, grant applications will be in a review and comment period, allowing community members to provide feedback and assess the proposals.
+  * Voting Period: Voting by eligible stewards will take place from January 22nd to January 26th.
+* Evaluation Criteria:
+  * Applications should be focused on advancing one of our three Essential Intents:
+    * 1) Network Effects — Maximizing the network effects of our ecosystem to grow product adoption
+    * 2) Community First — Cultivating a community that thrives on providing positive change and meaningful engagement
+    * 3) Financial Longevity — Ensuring the economic health and vitality of Gitcoin
+  * Applications will be evaluated based upon their ability to drive meaningful impact against any one of those EIs.
+* Approval Criteria: Applications that receive at least three "yes" votes during the voting period will be approved and receive their requested amounts.
+* Funding Order: Funded applications will be processed as soon as they receive their third yes vote. If there aren't enough funds remaining in the pool to fulfill an approved application, that specific application will not receive funds.
+* Unused Funds: Any leftover funds from the pool will be returned to the DAO, ensuring efficient use of resources and community funds.
+
+# Benefits
+
+The core benefits of implementing this proposal include:
+
+* Democratized Grant Distribution: Making it easier for community members to access GCP funding.
+* Increased Community Engagement: Encouraging more community members to contribute to the Gitcoin ecosystem.
+* Dogfooding Allo v2
+
+# Drawbacks
+
+While the proposal offers significant benefits, there are potential drawbacks to consider:
+
+* Increased Administrative Load: Managing a streamlined grant distribution process may require additional administrative resources.
+* Quality Control: Ensuring the quality and impact of funded projects will be critical to the success of this initiative.
+
+# Vote
+
+Voting "Yes" on this proposal signifies support for distributing $25,000 in GCP funding through SeaGrants in January 2024, furthering the goal of empowering community members and accelerating Gitcoin's growth. Voting "No" indicates opposition to this proposal.
+Mon, 18 Dec 2023 15:37:18 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+[Proposal] Testing a GCP Format with SeaGrants
+CoachJonathan
+
+            <p>Hi everyone, after speaking with <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> about this we agreed that this post doesn’t necessarily require a formal proposal since these funds have already been allocated to <a href="https://gov.gitcoin.co/t/proposal-allo-s20-21-budget-request/16766">Allo’s budget in their S20/S21 budget request</a>.</p>
+<p>Since no net new funds will be released, this post is more of an FYI than a proposal and folks can expect to apply and take advantage of the funding in the new year once this initiative kicks off.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243/5
+        Mon, 18 Dec 2023 15:37:18 +0000
+gov.gitcoin.co-post-17243-5
+[Proposal] Testing a GCP Format with SeaGrants
+      
+
+[Proposal] Testing a GCP Format with SeaGrants
+alexalombardo
+
+            <p>Excited to see us try/showcase new things on Allo while also solve an internal challenge which is the funding of community proposals</p>
+<p>This also allows us to allocate a defined amount for GCPs and overall create more structure and hopefully a replicable process</p>
+<p>And from a marketing POV is a nice moment for Allo to talk about something beyond Grants Stack but still align with the larger Gitcoin vision/proposition</p>
+<p>I also like the idea of doing this at the Gitcoin org level but also as a way for workstreams to earmark funds that then can go to funding contributor led projects within the workstream, allowing for a bit of flexibility/creativity that still feels democratic and definitely see this being relevant for a lot of orgs if it can be a low lift, super simple process/tech</p>
+<p>That said I’m curious - where do these proposals get submitted and echoing <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a> how are they evaluated?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243/4
+        Tue, 12 Dec 2023 19:43:55 +0000
+gov.gitcoin.co-post-17243-4
+[Proposal] Testing a GCP Format with SeaGrants
+      
+
+[Proposal] Testing a GCP Format with SeaGrants
+Viriya
+
+            <p>Fun to see this go live!</p>
+<p>Who is owning and vetting the initial proposals before they go to vote? Or is this a completely decentralized process?</p>
+<p>I feel a bit weary about the voting threshold given the things outlined in the drawbacks section. I know we’re working on communicating our roadmaps and getting the community more involved with RFPs but we’re definitely not there yet. I’m also aware that most haven’t seen the governance strategy that <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a> is working on so there’s little understand how this interplays with that but I do know just from personal conversations with him that it could interface well with it.</p>
+<p>I’m down to try the experiment though. Little cost to test a gov tool that could potentially be used elsewhere <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Would love to know (just for my own curiosity) what problem this product solves for other potential customers. That isn’t entirely clear to me and if I know I might be able to help position this for adoption at other orgs!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243/3
+        Tue, 12 Dec 2023 18:30:57 +0000
+gov.gitcoin.co-post-17243-3
+[Proposal] Testing a GCP Format with SeaGrants
+      
+
+[Proposal] Testing a GCP Format with SeaGrants
+CoachJonathan
+
+            <p>I will be voting yes to this proposal and looking forward to seeing how this test fares on the waters of Web3 grants (see what I did there?).</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243/2
+        Tue, 12 Dec 2023 16:50:42 +0000
+gov.gitcoin.co-post-17243-2
+[Proposal] Testing a GCP Format with SeaGrants
+      
+
+[Proposal] Testing a GCP Format with SeaGrants
+nategosselin
+
+            <h1><a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary</h1>
+<p>We propose dogfooding the new SeaGrants app to administer a January GCP budget on Allo v2. The total budget would be $25k, with individual applications eligible to receive a maximum of $5k. Applications would be funded as long as at least 3 Gitcoin stewards approve it.</p>
+<h1><a name="abstract-2" class="anchor" href="https://gov.gitcoin.co#abstract-2"></a>Abstract</h1>
+<p>This proposal aims to utilize the newly developed front-end, SeaGrants, to facilitate the distribution of $25,000 in Gitcoin Community Proposal (GCP) funding. SeaGrants was inspired by the original desires behind the Gitcoin Community Proposal process, which aimed to make it easier for community members to make tangible contributions to the Gitcoin ecosystem. By implementing this proposal, we intend to streamline and democratize the allocation of these funds, empowering community members to play a more active role in supporting and growing the Gitcoin ecosystem. In addition to streamlining the grant distribution process, this initiative will also serve as a valuable opportunity to test out a new GCP format, setting the stage for an upcoming evolution of our community engagement channels that <a href="mailto:jonathan@gitcoin.co">CoachJ</a> is currently developing. Furthermore, it’s a valuable opportunity to showcase the capabilities of Allo v2.</p>
+<h1><a name="motivation-3" class="anchor" href="https://gov.gitcoin.co#motivation-3"></a>Motivation</h1>
+<p>The motivation behind this proposal is rooted in addressing three core objectives:</p>
+<ol>
+<li>Empowerment of Community Members: We aim to support the vision of the GCP process by simplifying the application and distribution of grants. This will empower community members to take an active role in shaping the future of Gitcoin.</li>
+<li>Accelerated Growth: By making it easier for community members to access GCP funding, we expect to see an increase in the number of tangible contributions to the Gitcoin ecosystem. This will lead to accelerated growth, innovation, and community engagement.</li>
+<li>Showcasing Allo v2: This proposal provides an excellent opportunity to highlight the capabilities of Allo v2, as it demonstrates both the ease of creating new mechanism variations and what’s possible for developers using our SDK.</li>
+</ol>
+<h1><a name="specification-4" class="anchor" href="https://gov.gitcoin.co#specification-4"></a>Specification</h1>
+<p>The implementation plan for this proposal includes the following:</p>
+<ul>
+<li>Funding Pool: A total of $25,000 will be deposited into an Allo v2 pool, which will be prominently visible on the SeaGrants app, ensuring transparency and accessibility to all community members.
+<ul>
+<li>Maximum Grant Amount: Grant applications can request a maximum of $5,000 each, ensuring a fair allocation of resources.</li>
+</ul>
+</li>
+<li>Voter Eligibility: Stewards who have at least 100,000 tokens delegated to them will be eligible to vote on grant applications. Eligible stewards will have one vote per application.</li>
+<li>Distribution Period: The $25,000 will be available for distribution in the month of January 2024, with the following windows:
+<ul>
+<li>Application Period: Applications will be accepted from January 8th to January 12th, providing a five-day window for community members to submit their proposals.</li>
+<li>Review and Comment Period: From January 15th to January 19th, grant applications will be in a review and comment period, allowing community members to provide feedback and assess the proposals.</li>
+<li>Voting Period: Voting by eligible stewards will take place from January 22nd to January 26th.</li>
+</ul>
+</li>
+<li>Evaluation Criteria:
+<ul>
+<li>Applications should be focused on advancing one of our three Essential Intents:
+<ul>
+<li>
+<ol>
+<li>Network Effects — Maximizing the network effects of our ecosystem to grow product adoption</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Community First — Cultivating a community that thrives on providing positive change and meaningful engagement</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>Financial Longevity — Ensuring the economic health and vitality of Gitcoin</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Applications will be evaluated based upon their ability to drive meaningful impact against any one of those EIs.</li>
+</ul>
+</li>
+<li>Approval Criteria: Applications that receive at least three “yes” votes during the voting period will be approved and receive their requested amounts.</li>
+<li>Funding Order: Funded applications will be processed as soon as they receive their third yes vote. If there aren’t enough funds remaining in the pool to fulfill an approved application, that specific application will not receive funds.</li>
+<li>Unused Funds: Any leftover funds from the pool will be returned to the DAO, ensuring efficient use of resources and community funds.</li>
+</ul>
+<h1><a name="benefits-5" class="anchor" href="https://gov.gitcoin.co#benefits-5"></a>Benefits</h1>
+<p>The core benefits of implementing this proposal include:</p>
+<ul>
+<li>Democratized Grant Distribution: Making it easier for community members to access GCP funding.</li>
+<li>Increased Community Engagement: Encouraging more community members to contribute to the Gitcoin ecosystem.</li>
+<li>Dogfooding Allo v2</li>
+</ul>
+<h1><a name="drawbacks-6" class="anchor" href="https://gov.gitcoin.co#drawbacks-6"></a>Drawbacks</h1>
+<p>While the proposal offers significant benefits, there are potential drawbacks to consider:</p>
+<ul>
+<li>Increased Administrative Load: Managing a streamlined grant distribution process may require additional administrative resources.</li>
+<li>Quality Control: Ensuring the quality and impact of funded projects will be critical to the success of this initiative.</li>
+</ul>
+<h1><a name="vote-7" class="anchor" href="https://gov.gitcoin.co#vote-7"></a>Vote</h1>
+<p>Voting “Yes” on this proposal signifies support for distributing $25,000 in GCP funding through SeaGrants in January 2024, furthering the goal of empowering community members and accelerating Gitcoin’s growth. Voting “No” indicates opposition to this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-testing-a-gcp-format-with-seagrants/17243/1
+        Fri, 08 Dec 2023 18:45:28 +0000
+gov.gitcoin.co-post-17243-1
+[Proposal] Testing a GCP Format with SeaGrants
+      
+
+

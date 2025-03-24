@@ -1,0 +1,185 @@
+
+
+
+LI.FI x Gitcoin: Scaling Cross-Chain Contributions
+https://gov.gitcoin.co/t/li-fi-x-gitcoin-scaling-cross-chain-contributions/10762
+    **Discussion:** 
+
+LI.FI is super interested in working with Gitcoin to expand the platform's cross-chain contribution capability. This post is designed to begin a conversation about what a Gitcoin x LI.FI collaboration could look like. Here are our current thoughts. 
+
+**End Goal:**
+
+Create a GCP from LI.FI that, once passed, will allow Gitcoin users to contribute tokens from any chain without having to leave the Gitcoin website.
+
+*Gitcoin’s Current Cross-Chain UI/UX*
+
+Gitcoin is the OG crypto fundraising platform. However, as it currently stands, Gitcoin only allows users to donate tokens from Ethereum, Zksync, and Polygon. Furthermore, when “checking out” on the Gitcoin site, a user who wants to donate DAI on Polygon or Zksync is met with a pop-up that looks like this:
+
+![|218x223](upload://wmrSyehIky0Gs4I216C9VrEwNCc.png)
+
+Gitcoin then sends users to a new window to either 1) deposit funds on Polygon or 2) connect to a new wallet on Zksync. This type of user experience is challenging to navigate and off-putting – especially considering the median contribution is less than $2.
+
+![|182x201](upload://qewcdUE9cflb866NqItQCtL92if.png)
+
+For Gitcoin to remain the premier crypto fundraiser, the user experience for donating needs to be SIMPLE and SMOOTH. In all practicality, Gitcoin needs to allow contributions from any chain, with any token, with the least amount of clicks necessary - which can be enabled with LI.FI.
+
+**What A LI.FI x Gitcoin Collaboration Could Look Like**
+
+With LI.FI, Gitcoin could accept any token from any chain on its front end via the “checkout” button. Then, on the back end, LI.FI would facilitate a transfer to Polygon and a swap from any token to DAI – all in one click of the Polygon “checkout” button. As Gitcoin scales the chains it accepts donations from, this functionality could be expanded past Polygon.
+
+
+
+**Three ways to integrate LI.FI**
+
+* For the best UX: [The LI.FI SDK](https://docs.li.fi/products/integrate-li.fis-js-sdk/install-li.fi-sdk)
+  * Gitcoin can integrate LI.FI into its UI using our JS/TS SDK. This is the most efficient and optimal solution for Gitcoin. Through the LI.FI SDK, Gitcoin can fetch routes, fetch user balances, and execute transactions for cross-chain contributions.
+While this does require a bit more developer input, LI.FI would be more than excited to dedicate a dev for the integration.
+
+* A compromise: An additional page: [Any Chain, Any Token Contribution Deposits](https://transferto.xyz/ukraine)
+  * Our team can help make Gitcoin a completely new contribution page. We recently pushed out an example of how this could look to help facilitate cross-chain donations to [KlimaDAO](https://transferto.xyz/showcase/etherspot-klima?toChain=pol&toToken=0x2791bca1f2de4661ed88a30c99a7a9449aa84174).
+* Alternatively: [The LI.FI Widget](https://docs.li.fi/official-documentation/simple-integrations/li.fi-widget) – easiest solution, but not as native of an experience
+  * Gitcoin can use our LI.FI widget to facilitate cross-chain cross-chain contributions in a matter of hours. This widget could be activated via a newly created “bridge” button on Gitcoin’s website, which would allow users to bridge tokens to Polygon or Ethereum from any of LI.FI’s supported chains.
+
+**Conclusion**
+
+LI.FI would be very excited to help Gitcoin integrate a cross-chain checkout solution (with the least developer burden possible).
+
+We believe that offering one-click cross-chain contributions is a killer feature for Gitcoin and would love to help make this possible.
+
+**About LI.FI**
+
+LI.FI is the most advanced bridge aggregation protocol on the market. Audited twice (Code4rena - March ‘22, Quantstamp - April ‘22) and with a team of around 25 people, LI.FI aggregates 9 bridges across 15 EVM compatible chains and all available DEX aggregators & DEXs on those chains into a single solution.
+
+Special features: whitelisting, blacklisting, and a "prefer" function allowing integration partners to customize the suite of bridges that they utilize to their liking (e.g. if the project only trusts trust-minimized bridges like Connext & Hop).
+
+[List of supported chains, bridges, DEXs](https://docs.li.fi/products/supported-chains-bridges-and-exchanges)
+
+Our widget and SDK are the ultimate cross-chain money legos for dApps to build on top of or plug into themselves.
+
+* We’ve integrated multiple fallback bridges+DEXs so that you don’t have to
+* We maintain bridges+DEXs so that you don’t have to
+* We choose the best bridges based on our research so that you don’t have to (positioning ourselves neutral)
+
+For further examples of how LI.FI works, please refer to:
+
+* [Alchemix](https://alchemix.fi/swap) - SDK Integration 
+* [Alps Finance](https://app.alps.finance/#/trade) – SDK integration
+* [Transferto.xyz](https://transferto.xyz/) – LI.FI B2C interface
+* [Cross-Chain Klima Staking](https://transferto.xyz/showcase/etherspot-klima?toChain=pol&toToken=0x2791bca1f2de4661ed88a30c99a7a9449aa84174) – Custom built cross-chain staking product for Klima
+
+Our documentation can be found here:
+
+* SDK: [https://docs.li.fi/official-documentation/](https://docs.li.finance/official-documentation/)
+* API: https://apidocs.li.fi
+
+Website: https://li.fi/
+
+Contact: @philippzentner on Telegram, akshay@li.finance via email
+Sat, 22 Jul 2023 08:23:30 +0000
+🤝 Partnerships
+
+
+LI.FI x Gitcoin: Scaling Cross-Chain Contributions
+JowyAlt
+
+            <p>Thanks for information, i hope this news is good for everyone</p>
+          <p><a href="https://gov.gitcoin.co/t/li-fi-x-gitcoin-scaling-cross-chain-contributions/10762/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/li-fi-x-gitcoin-scaling-cross-chain-contributions/10762/3
+        Sat, 22 Jul 2023 08:23:30 +0000
+gov.gitcoin.co-post-10762-3
+LI.FI x Gitcoin: Scaling Cross-Chain Contributions
+      
+
+LI.FI x Gitcoin: Scaling Cross-Chain Contributions
+Luvlynj
+
+            <p>I think this is a very thoughtful idea, because the idea of checking out only on Eth based makes the whole idea of decentralisation flopped.</p>
+<p>Using a cross chain would not only help the donator but also the developers</p>
+          <p><a href="https://gov.gitcoin.co/t/li-fi-x-gitcoin-scaling-cross-chain-contributions/10762/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/li-fi-x-gitcoin-scaling-cross-chain-contributions/10762/2
+        Mon, 13 Jun 2022 21:00:27 +0000
+gov.gitcoin.co-post-10762-2
+LI.FI x Gitcoin: Scaling Cross-Chain Contributions
+      
+
+LI.FI x Gitcoin: Scaling Cross-Chain Contributions
+kram
+
+            <p><strong>Discussion:</strong></p>
+<p><a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> is super interested in working with Gitcoin to expand the platform’s cross-chain contribution capability. This post is designed to begin a conversation about what a Gitcoin x <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> collaboration could look like. Here are our current thoughts.</p>
+<p><strong>End Goal:</strong></p>
+<p>Create a GCP from <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> that, once passed, will allow Gitcoin users to contribute tokens from any chain without having to leave the Gitcoin website.</p>
+<p><em>Gitcoin’s Current Cross-Chain UI/UX</em></p>
+<p>Gitcoin is the OG crypto fundraising platform. However, as it currently stands, Gitcoin only allows users to donate tokens from Ethereum, Zksync, and Polygon. Furthermore, when “checking out” on the Gitcoin site, a user who wants to donate DAI on Polygon or Zksync is met with a pop-up that looks like this:</p>
+<p><img src="/uploads/db4391/original/2X/e/e2cf38e32d3be9fb90c1da240f257c5fafcc3ae4.png" alt="" data-base62-sha1="wmrSyehIky0Gs4I216C9VrEwNCc" width="218" height="223"></p>
+<p>Gitcoin then sends users to a new window to either 1) deposit funds on Polygon or 2) connect to a new wallet on Zksync. This type of user experience is challenging to navigate and off-putting – especially considering the median contribution is less than $2.</p>
+<p><img src="/uploads/db4391/original/2X/b/b7dcafea35eef4f66f0bc6d9fd2f55d3ebf97cfb.png" alt="" data-base62-sha1="qewcdUE9cflb866NqItQCtL92if" width="182" height="201"></p>
+<p>For Gitcoin to remain the premier crypto fundraiser, the user experience for donating needs to be SIMPLE and SMOOTH. In all practicality, Gitcoin needs to allow contributions from any chain, with any token, with the least amount of clicks necessary - which can be enabled with <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a>.</p>
+<p><strong>What A <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> x Gitcoin Collaboration Could Look Like</strong></p>
+<p>With <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a>, Gitcoin could accept any token from any chain on its front end via the “checkout” button. Then, on the back end, <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> would facilitate a transfer to Polygon and a swap from any token to DAI – all in one click of the Polygon “checkout” button. As Gitcoin scales the chains it accepts donations from, this functionality could be expanded past Polygon.</p>
+<p><strong>Three ways to integrate <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a></strong></p>
+<ul>
+<li>
+<p>For the best UX: <a href="https://docs.li.fi/products/integrate-li.fis-js-sdk/install-li.fi-sdk" rel="noopener nofollow ugc">The LI.FI SDK</a></p>
+<ul>
+<li>Gitcoin can integrate <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> into its UI using our JS/TS SDK. This is the most efficient and optimal solution for Gitcoin. Through the <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> SDK, Gitcoin can fetch routes, fetch user balances, and execute transactions for cross-chain contributions.<br>
+While this does require a bit more developer input, <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> would be more than excited to dedicate a dev for the integration.</li>
+</ul>
+</li>
+<li>
+<p>A compromise: An additional page: <a href="https://transferto.xyz/ukraine" rel="noopener nofollow ugc">Any Chain, Any Token Contribution Deposits</a></p>
+<ul>
+<li>Our team can help make Gitcoin a completely new contribution page. We recently pushed out an example of how this could look to help facilitate cross-chain donations to <a href="https://transferto.xyz/showcase/etherspot-klima?toChain=pol&amp;toToken=0x2791bca1f2de4661ed88a30c99a7a9449aa84174" rel="noopener nofollow ugc">KlimaDAO</a>.</li>
+</ul>
+</li>
+<li>
+<p>Alternatively: <a href="https://docs.li.fi/official-documentation/simple-integrations/li.fi-widget" rel="noopener nofollow ugc">The LI.FI Widget</a> – easiest solution, but not as native of an experience</p>
+<ul>
+<li>Gitcoin can use our <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> widget to facilitate cross-chain cross-chain contributions in a matter of hours. This widget could be activated via a newly created “bridge” button on Gitcoin’s website, which would allow users to bridge tokens to Polygon or Ethereum from any of <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a>’s supported chains.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Conclusion</strong></p>
+<p><a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> would be very excited to help Gitcoin integrate a cross-chain checkout solution (with the least developer burden possible).</p>
+<p>We believe that offering one-click cross-chain contributions is a killer feature for Gitcoin and would love to help make this possible.</p>
+<p><strong>About <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a></strong></p>
+<p><a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> is the most advanced bridge aggregation protocol on the market. Audited twice (Code4rena - March ‘22, Quantstamp - April ‘22) and with a team of around 25 people, <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> aggregates 9 bridges across 15 EVM compatible chains and all available DEX aggregators &amp; DEXs on those chains into a single solution.</p>
+<p>Special features: whitelisting, blacklisting, and a “prefer” function allowing integration partners to customize the suite of bridges that they utilize to their liking (e.g. if the project only trusts trust-minimized bridges like Connext &amp; Hop).</p>
+<p><a href="https://docs.li.fi/products/supported-chains-bridges-and-exchanges" rel="noopener nofollow ugc">List of supported chains, bridges, DEXs</a></p>
+<p>Our widget and SDK are the ultimate cross-chain money legos for dApps to build on top of or plug into themselves.</p>
+<ul>
+<li>We’ve integrated multiple fallback bridges+DEXs so that you don’t have to</li>
+<li>We maintain bridges+DEXs so that you don’t have to</li>
+<li>We choose the best bridges based on our research so that you don’t have to (positioning ourselves neutral)</li>
+</ul>
+<p>For further examples of how <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> works, please refer to:</p>
+<ul>
+<li>
+<a href="https://alchemix.fi/swap" rel="noopener nofollow ugc">Alchemix</a> - SDK Integration</li>
+<li>
+<a href="https://app.alps.finance/#/trade" rel="noopener nofollow ugc">Alps Finance</a> – SDK integration</li>
+<li>
+<a href="https://transferto.xyz/" rel="noopener nofollow ugc">Transferto.xyz</a> – <a href="http://LI.FI" rel="noopener nofollow ugc">LI.FI</a> B2C interface</li>
+<li>
+<a href="https://transferto.xyz/showcase/etherspot-klima?toChain=pol&amp;toToken=0x2791bca1f2de4661ed88a30c99a7a9449aa84174" rel="noopener nofollow ugc">Cross-Chain Klima Staking</a> – Custom built cross-chain staking product for Klima</li>
+</ul>
+<p>Our documentation can be found here:</p>
+<ul>
+<li>SDK: <a href="https://docs.li.finance/official-documentation/" rel="noopener nofollow ugc">https://docs.li.fi/official-documentation/</a>
+</li>
+<li>API: <a href="https://apidocs.li.fi" rel="noopener nofollow ugc">https://apidocs.li.fi</a>
+</li>
+</ul>
+<p>Website: <a href="https://li.fi/" rel="noopener nofollow ugc">https://li.fi/</a></p>
+<p>Contact: <span class="mention">@philippzentner</span> on Telegram, akshay@li.finance via email</p>
+          <p><a href="https://gov.gitcoin.co/t/li-fi-x-gitcoin-scaling-cross-chain-contributions/10762/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/li-fi-x-gitcoin-scaling-cross-chain-contributions/10762/1
+        Mon, 30 May 2022 21:03:10 +0000
+gov.gitcoin.co-post-10762-1
+LI.FI x Gitcoin: Scaling Cross-Chain Contributions
+      
+
+

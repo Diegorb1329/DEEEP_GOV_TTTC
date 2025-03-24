@@ -1,0 +1,267 @@
+
+
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149
+    Grandiose is a Gitcoin grant discovery and exploration tool, aiding users in their quest to find and donate to grants and give an insight to what is present in the grants ecosystem. This is done by experimenting with novel ways to gamify the search for new grants.
+
+The app can be found over at https://grandiose.app.
+The project's focus is currently on delivering a minimal viable product.
+
+The following features are currently live:
+* An overview of all grants (using a test subset at the moment)
+* A like / dislike matching algorithm
+* Leaderboards
+* Grant of the Day
+* Some cute KPIs / stats
+
+Core features that are not yet done but are considered a requirement for the MVP:
+* Shopping cart with support for zkSync. There's no use in using Grandiose if you still have to leave the app and go to the Gitcoin website where you manually have to find your grants again.
+* Collections. A great feature present in the current version of Gitcoin. People want to share what they like.
+* Flash grants. Yeeted the idea from the flash deals you can find in some online game stores. You get shown 4 different grants, and every 6 hours one of the 4 grants gets (randomly?) replaced by a different one.
+* Other leaderboard types / KPIs. Not a hard requirement though.
+
+With these features I feel like the app would be ready to offer users a proper and satisfying first experience. There's no possible way this can be completed by GR10, meaning I'll have until GR11 which should give some extra time. This is a side-project I work on after my normal working hours, so that extra time is a nice boon.
+
+**Why?**
+There's two reasons why I've decided to create this app.
+
+The *first* reason is that whenever a new funding round kicks off, people are presented and overwhelmed with an enormous collection of grants they might contribute to. You can search by terms and tags, but you still have to manually browse through a big list, which isn't very fun. What usually happens is that people ask around, seeking grant recommendations from people they know and trust. This leads to funding becoming a popularity contest where a lot of hidden gems might not get the attention they deserve. The goal of this app is to introduce gamifications that not only should make exploration fun, but also provide a better experience overall where projects will get the attention they so rightfully deserve.
+
+The *second* reason is that Gitcoin wants to be a credibly neutral platform and focus on solving the problem of public goods (funding), not necessarily showcasing users what grants should be to their likings. Such algorithms could also be accused of being biased in some way or another, damaging Gitcoin's legitimacy. This app could relieve Gitcoin from that duty.
+
+**Will it be open source?**
+Naturally. I'm planning to release the source together with the MVP when it is deemed ready. For those interested, the front-end is made with Vue + Typescript. The back-end is written in C# with .NET 5.
+Tue, 08 Jun 2021 19:09:34 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+mlnck
+
+            <p>LOVE the idea!<br>
+Great execution so far - Staying tuned <img src="https://emoji.discourse-cdn.com/twitter/+1.png?v=9" title=":+1:" class="emoji" alt=":+1:"></p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/14
+        Tue, 08 Jun 2021 19:09:34 +0000
+gov.gitcoin.co-post-149-14
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+bobjiang
+
+            <aside class="quote no-group" data-username="Alunara" data-post="12" data-topic="149">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/alunara/48/94_2.png" class="avatar"> Alunara:</div>
+<blockquote>
+<p>GitHub - 0xAlunara/Grandiose: Gitcoin grant exploration app</p>
+</blockquote>
+</aside>
+<p>This is definitely awesome tool, I have the same painpoints for your first reason. love it.</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/13
+        Tue, 08 Jun 2021 02:38:51 +0000
+gov.gitcoin.co-post-149-13
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+Alunara
+
+            <p>Small update: I’m taking a short break at the moment, recharging myself a bit so I can later work on the project in the hopes that it’s ready for GR11. In the meantime I thought it would be nice to open-source the project so that others can have a peek if they want. You can find the project over at <a href="https://github.com/0xAlunara/Grandiose" class="inline-onebox" rel="noopener nofollow ugc">GitHub - 0xAlunara/Grandiose: Gitcoin grant exploration app</a>.</p>
+<p>For the moment the software is licensed under GNU GPLv3, in spirit of public goods. If this is too permissive at a later stage this could be changed. I think it should suffice for now.</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/12
+        Mon, 07 Jun 2021 22:46:17 +0000
+gov.gitcoin.co-post-149-12
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+DreadKnight
+
+            <p>Yeah, I used to hang around there a bit as well back in the day. Good memory you have <img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=9" title=":smiley:" class="emoji" alt=":smiley:"><br>
+I keep grinding, but wish would have received a bit more support instead of TONS of promises.<br>
+Quite close to releasing a major version that finally has online multiplayer, though bumped into some showstopper bugs for now. But once those are squished, hopefully things will improve a lot.</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/11
+        Sat, 29 May 2021 20:04:58 +0000
+gov.gitcoin.co-post-149-11
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+Alunara
+
+            <p>I wouldn’t worry too much about a release date. I’m working on the three main features (shopping cart / collections / flash grants) right now, and will probably release it as open-source as this MVP is done. I believe there’s a new Gitcoin Grants round coming up soon and I definitely won’t be able to get this all done before that. This should give me ample time in order to prepare a usable app before the grants round after that. Still a side-project so I’m working on this in my after hours.</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/10
+        Sat, 29 May 2021 19:22:11 +0000
+gov.gitcoin.co-post-149-10
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+Alunara
+
+            <p>Hey, took me a moment but I finally recognized you! I remember your project from literally 10 years ago in the <span class="hashtag">#reddit-gamedev</span> channel on FreeNode. Nice to see that you’re still working on that! But you got it right, the first iteration is a “tinder for grants”. Not very original, but I have a couple of other ideas I want to implement afterwards.</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/9
+        Sat, 29 May 2021 19:19:38 +0000
+gov.gitcoin.co-post-149-9
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+Cashmoneyind
+
+            <p>This project sounds so great! I’m loving this community more and more!</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/8
+        Fri, 28 May 2021 13:26:32 +0000
+gov.gitcoin.co-post-149-8
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+K1du
+
+            <p>When is the release date more or less?</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/7
+        Fri, 28 May 2021 11:14:15 +0000
+gov.gitcoin.co-post-149-7
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+DreadKnight
+
+            <p>This seems like an awesome project. A tinder for grants &lt;3 but so much more actually. Good job!</p>
+<p>I really need to find ways to raise some money for a possibly world changing project that I’ve been poking at for 2 decades now <a href="https://gitcoin.co/grants/916/ancient-beast" rel="noopener nofollow ugc">https://gitcoin.co/grants/916/ancient-beast</a> - so if this can help with that by bringing more exposure and donors, then Grandiose ftw, because garbage copycat projects like Pepemon that blatantly infriges a well known franchise is raising a lot of money via multiple gitcoin grant campaigns, which is a very sarcastic and depressing thing while I’m starving.</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/6
+        Fri, 28 May 2021 10:36:00 +0000
+gov.gitcoin.co-post-149-6
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+ngovanloi
+
+            <p>nice ! thank you so much for infomation !</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/5
+        Wed, 26 May 2021 17:09:33 +0000
+gov.gitcoin.co-post-149-5
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+phutchins
+
+            <p>This is awesome. I’m excited to see it progress. Along the way it would be great to collect feedback from you around your experiences.</p>
+<p>One of the areas that we plan to put work into in the Decentralize Gitcoin Workstream is documentation of the current API as well as improving and decentralizing the API.</p>
+<p>Keep that in mind while you build and we should connect in a few weeks.</p>
+<p>Keep up the great work!</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/4
+        Fri, 21 May 2021 13:14:59 +0000
+gov.gitcoin.co-post-149-4
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+Alunara
+
+            <p>I’ve given it a peek, and it sure looks cool!</p>
+<p>I’m happily working on this project in my spare time however, and don’t necessarily need any funding (that’s what I think the workstream is for?), given I don’t really have a way to put that funding to use. The app is ‘just’ a website with a small back-end that runs fine for now on a $5/mo VPS. Scaling is not a problem yet. The app’s also living on the very outskirts of Ethereum so it doesn’t really interact with the blockchain at all, aside from the shopping cart I’m working on right now using zkSync. In the future I also might use somebody’s Metamask to store personal settings but that’s about it. I was planning on just dogfeeding the project by having a grant up on Gitcoin itself.</p>
+<p>Of course I’d be happy to connect with other people if they have any ideas, suggestions or need help in general!</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/3
+        Thu, 20 May 2021 19:54:03 +0000
+gov.gitcoin.co-post-149-3
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+ceresstation
+
+            <p>This is actually so cool, you should check out <a class="mention" href="https://gov.gitcoin.co/u/austingriffith">@austingriffith</a>’s prototyping workstream if you haven’t already:</p>
+<aside class="quote quote-modified" data-post="1" data-topic="130">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/austingriffith/48/37_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/workstream-suggestion-public-goods-prototyping/130">[Workstream] dApp *Prototyping* (the Moonshot Collective)</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/open-discussion/9"><span data-category-id="9" style="--category-badge-color: #12A89D; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Discuss, and even debate topics, that might be good ideas for us to explore or will spark a good conversation.  And some of them might turn into an official proposal eventually, but don’t need to."><span class="badge-category__name">🧙 🧙‍♀️ Ideas and Open Discussion</span></span></a>
+  </div>
+  <blockquote>
+    ( Watch the video of the Moonshot Announcement at ETHcc 2021 here - <a href="https://youtu.be/KpXPym_m_wA?t=644" class="inline-onebox" rel="noopener nofollow ugc">Kevin Owocki : It's all Coordination - YouTube</a> ) 
+
+Hey hey hey Gitcoin community, 
+We are <a href="https://twitter.com/austingriffith" rel="noopener nofollow ugc">Austin Griffith</a> and <a href="https://twitter.com/owocki" rel="noopener nofollow ugc">Kevin Owocki</a> - both BUIDLers and frands from the Colorado ecosystem. 
+Austin and Kevin have worked together in a few diff capacities in the past. 
+
+Austin and Kevin met through the EIP 1337 working group back in 2018, where Austin built the <a href="https://github.com/austintgriffith/token-subscription" rel="noopener nofollow ugc">first MVP</a> of EIP 1337 which was later part of an early Gitcoin Grants Prototype.
+A…
+  </blockquote>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/2
+        Thu, 20 May 2021 17:45:09 +0000
+gov.gitcoin.co-post-149-2
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+Grandiose - A Gitcoin grant discovery and exploration tool
+Alunara
+
+            <p>Grandiose is a Gitcoin grant discovery and exploration tool, aiding users in their quest to find and donate to grants and give an insight to what is present in the grants ecosystem. This is done by experimenting with novel ways to gamify the search for new grants.</p>
+<p>The app can be found over at <a href="https://grandiose.app" rel="noopener nofollow ugc">https://grandiose.app</a>.<br>
+The project’s focus is currently on delivering a minimal viable product.</p>
+<p>The following features are currently live:</p>
+<ul>
+<li>An overview of all grants (using a test subset at the moment)</li>
+<li>A like / dislike matching algorithm</li>
+<li>Leaderboards</li>
+<li>Grant of the Day</li>
+<li>Some cute KPIs / stats</li>
+</ul>
+<p>Core features that are not yet done but are considered a requirement for the MVP:</p>
+<ul>
+<li>Shopping cart with support for zkSync. There’s no use in using Grandiose if you still have to leave the app and go to the Gitcoin website where you manually have to find your grants again.</li>
+<li>Collections. A great feature present in the current version of Gitcoin. People want to share what they like.</li>
+<li>Flash grants. Yeeted the idea from the flash deals you can find in some online game stores. You get shown 4 different grants, and every 6 hours one of the 4 grants gets (randomly?) replaced by a different one.</li>
+<li>Other leaderboard types / KPIs. Not a hard requirement though.</li>
+</ul>
+<p>With these features I feel like the app would be ready to offer users a proper and satisfying first experience. There’s no possible way this can be completed by GR10, meaning I’ll have until GR11 which should give some extra time. This is a side-project I work on after my normal working hours, so that extra time is a nice boon.</p>
+<p><strong>Why?</strong><br>
+There’s two reasons why I’ve decided to create this app.</p>
+<p>The <em>first</em> reason is that whenever a new funding round kicks off, people are presented and overwhelmed with an enormous collection of grants they might contribute to. You can search by terms and tags, but you still have to manually browse through a big list, which isn’t very fun. What usually happens is that people ask around, seeking grant recommendations from people they know and trust. This leads to funding becoming a popularity contest where a lot of hidden gems might not get the attention they deserve. The goal of this app is to introduce gamifications that not only should make exploration fun, but also provide a better experience overall where projects will get the attention they so rightfully deserve.</p>
+<p>The <em>second</em> reason is that Gitcoin wants to be a credibly neutral platform and focus on solving the problem of public goods (funding), not necessarily showcasing users what grants should be to their likings. Such algorithms could also be accused of being biased in some way or another, damaging Gitcoin’s legitimacy. This app could relieve Gitcoin from that duty.</p>
+<p><strong>Will it be open source?</strong><br>
+Naturally. I’m planning to release the source together with the MVP when it is deemed ready. For those interested, the front-end is made with Vue + Typescript. The back-end is written in C# with .NET 5.</p>
+          <p><a href="https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grandiose-a-gitcoin-grant-discovery-and-exploration-tool/149/1
+        Tue, 18 May 2021 21:48:27 +0000
+gov.gitcoin.co-post-149-1
+Grandiose - A Gitcoin grant discovery and exploration tool
+      
+
+

@@ -1,0 +1,102 @@
+
+
+
+[Proposal] Process/Procedure for Handling Funds
+https://gov.gitcoin.co/t/proposal-process-procedure-for-handling-funds/16808
+    ## Background
+The other week there was an [incident where we had funds misdirected](https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683) an incorrect address, rendering the funds stuck. This led to some back and forth about the process of how to move forward. What I'm seeing, are some clear gaps in our documentation around governance.
+
+So far our single source of truth (SSOT) for all things governance has lived in this post about [governance v3](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358) and the recently created [Governance Manual](https://manual.gitcoin.co) that will be maintained moving forward. Reading these over, I'm seeing that we have stumbled into undefined territory about how to move forward.
+
+## Proposed Change to Governance
+
+I'd like to propose that moving forward, our governance states explicitly something along the lines of:
+
+> Any new release of funds from Gitcoin's Treasury or Matching Pool requires the approval of GTC token holders
+
+I'm hoping that this clause will actually capture what (I think) @connor and @carlosjmelgar are pointing to in the initial post and by voting "no" and to "abstain" - that if funds are going to be newly sent from the Treasury, that there is some due process required.
+
+This captures scenarios we already vote on, including:
+- Approving the funding of workstreams
+- Approving the funding of GCPs
+- Approving payouts to grantees after each Gitcoin Grants round
+
+One thing that would also be helpful is if Stewards could comment and help draft the exact wording as it should appear in the [Governance Manual](https://manual.gitcoin.co/), specifically on the [Proposals page](https://manual.gitcoin.co/governance-processes/proposals).
+
+After enough comments, we will move this proposal to a Snapshot vote. If passed, I will update the [Governance Manual](https://manual.gitcoin.co/) with the wording we agree on in this thread.
+Sat, 21 Oct 2023 05:16:39 +0000
+🤖 DAO Governance and Vision
+
+
+[Proposal] Process/Procedure for Handling Funds
+owocki
+
+            <h1><a name="first-reaction-1" class="anchor" href="https://gov.gitcoin.co#first-reaction-1"></a>First Reaction</h1>
+<aside class="quote no-group quote-modified" data-username="CoachJonathan" data-post="1" data-topic="16808">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<blockquote>
+<p>Any new release of funds from Gitcoin’s Treasury or Matching Pool requires the approval of GTC token holders</p>
+</blockquote>
+</blockquote>
+</aside>
+<p>I’d propose the following change</p>
+<blockquote>
+<blockquote>
+<p>Any new release of funds from Gitcoin’s Treasury or Matching Pool requires the approval of GTC token holders’ <strong>delegates</strong></p>
+</blockquote>
+</blockquote>
+<p>because that’s actually more accurate way of describing how gitcoin governance actually works.</p>
+<p>one thing to note here is that the <a href="https://etherscan.io/name-lookup-search?id=timelock.gitcoindao.eth">main gitcoin treasury</a> already enforces this condition in code.  (per the design of the timelock contract, no funds can be moved without governance approval).</p>
+<p>the <a href="https://etherscan.io/name-lookup-search?id=multisig.gitcoindao.eth">the matching pool multisig</a> does not have the same trustware-based assurances.  if we are serious about this proposal as written, perhaps one thing to do might be to refactor the matching pool multisig to reflect the new social norm.  though now that i’m suggesting it, i dont think this is what carlos/connor were pointing at.  and that has nothing to do with original MMM fund issue.</p>
+<h1><a name="second-reaction-2" class="anchor" href="https://gov.gitcoin.co#second-reaction-2"></a>Second Reaction</h1>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="1" data-topic="16808">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>I’m hoping that this clause will actually capture what (I think) <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> and <a class="mention" href="https://gov.gitcoin.co/u/carlosjmelgar">@carlosjmelgar</a> are pointing to in the initial post and by voting “no” and to “abstain” - that if funds are going to be newly sent from the Treasury, that there is some due process required.</p>
+</blockquote>
+</aside>
+<p>as far as i understand it, the treasury already enforces the condition that GTC token holder delegates need to approve it. why make a change in the governance manual to represent this?  it feels like thats a meta level change, when the object level thing connor/carlos are looking for is some debate on a proposal to re-fund MMM?  or maybe thats just symbolic since we know it’s going to pass or maybe its a place for <a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/25">connors cocerns</a> to be aired out?  idk maybe im misreading tho.</p>
+<p>i kind of understand where connor is coming from, but on the other hand what are we going about it?  i dont see a way to undo it.</p>
+<p>i am fairly agnostic to this proposal.  i dont think it hurts, and i dont think it helps.  i hope the <a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772">WalletGuard</a> solves for mistransfered funds and we can all go back to focusing on our Essential Intents.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-process-procedure-for-handling-funds/16808/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-process-procedure-for-handling-funds/16808/2
+        Sat, 21 Oct 2023 05:16:39 +0000
+gov.gitcoin.co-post-16808-2
+[Proposal] Process/Procedure for Handling Funds
+      
+
+[Proposal] Process/Procedure for Handling Funds
+CoachJonathan
+
+            <h2><a name="background-1" class="anchor" href="https://gov.gitcoin.co#background-1"></a>Background</h2>
+<p>The other week there was an <a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683">incident where we had funds misdirected</a> an incorrect address, rendering the funds stuck. This led to some back and forth about the process of how to move forward. What I’m seeing, are some clear gaps in our documentation around governance.</p>
+<p>So far our single source of truth (SSOT) for all things governance has lived in this post about <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358">governance v3</a> and the recently created <a href="https://manual.gitcoin.co">Governance Manual</a> that will be maintained moving forward. Reading these over, I’m seeing that we have stumbled into undefined territory about how to move forward.</p>
+<h2><a name="proposed-change-to-governance-2" class="anchor" href="https://gov.gitcoin.co#proposed-change-to-governance-2"></a>Proposed Change to Governance</h2>
+<p>I’d like to propose that moving forward, our governance states explicitly something along the lines of:</p>
+<blockquote>
+<p>Any new release of funds from Gitcoin’s Treasury or Matching Pool requires the approval of GTC token holders</p>
+</blockquote>
+<p>I’m hoping that this clause will actually capture what (I think) <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> and <a class="mention" href="https://gov.gitcoin.co/u/carlosjmelgar">@carlosjmelgar</a> are pointing to in the initial post and by voting “no” and to “abstain” - that if funds are going to be newly sent from the Treasury, that there is some due process required.</p>
+<p>This captures scenarios we already vote on, including:</p>
+<ul>
+<li>Approving the funding of workstreams</li>
+<li>Approving the funding of GCPs</li>
+<li>Approving payouts to grantees after each Gitcoin Grants round</li>
+</ul>
+<p>One thing that would also be helpful is if Stewards could comment and help draft the exact wording as it should appear in the <a href="https://manual.gitcoin.co/">Governance Manual</a>, specifically on the <a href="https://manual.gitcoin.co/governance-processes/proposals">Proposals page</a>.</p>
+<p>After enough comments, we will move this proposal to a Snapshot vote. If passed, I will update the <a href="https://manual.gitcoin.co/">Governance Manual</a> with the wording we agree on in this thread.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-process-procedure-for-handling-funds/16808/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-process-procedure-for-handling-funds/16808/1
+        Thu, 19 Oct 2023 15:06:12 +0000
+gov.gitcoin.co-post-16808-1
+[Proposal] Process/Procedure for Handling Funds
+      
+
+

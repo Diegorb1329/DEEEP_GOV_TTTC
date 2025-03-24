@@ -1,0 +1,200 @@
+
+
+
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115
+    ### Intro
+
+The purpose of this post is to introduce Flexible Voting and begin the discussion about its adoption by the Gitcoin DAO. Flexible Voting is an extension to the Governor contract. It allows for the construction of new mechanisms which make governance participation easier, cheaper, and more accessible for GTC holders.
+
+Flexible Voting was developed by [ScopeLift](https://scopelift.co) as part of our grant from the [Uniswap Grants Program](https://twitter.com/uniswapgrants). Before explaining more about Flexible Voting, let me introduce ScopeLift for anyone whose not familiar with us.
+
+### About ScopeLift
+
+ScopeLift is a dev shop focused on crypto. We're a small technical team with many years of EVM engineering experience. We've had the pleasure of working with many great clients including Uniswap, Optimism, Cozy, Endaoment, POAP, and others.
+
+ScopeLift is a long time friend friend of Gitcoin. W've had the privilege of contributing to Gitcoin in various ways over the last few years, including helping to build the cart based checkout experience, the bulk checkout smart contract, the BrightID integration, the integration with zkSync, and the first iteration of dGrants.
+
+We're also the team behind [Umbra](https://app.umbra.cash/), a stealth address system developed with grant funding from the EF, MolochDAO, and of course Gitcoin :)
+
+ScopeLift received a UGP grant earlier this year to work on Governance related projects. One of those projects is Flexible Voting, which is the subject of this post.
+
+### About Flexible Voting
+
+Flexible Voting is an extension to the Governor contracts that enables delegates to split their voting weight across For, Against, and Abstain on any given proposal. This capability is especially useful when a contract serves as the delegate.
+
+By enabling arbitrary contract logic to roll up the voting weight of disparate parties into a single delegated vote, many possibilities are unlocked. Having a contract act as the delegate also means these mechanisms can be implemented without introducing new trust assumptions.
+
+The inspiration for Flexible Voting came from cUNI (Compound UNI). When a UNI holder deposits their tokens into Compound, they lose the ability to participate in Governance. [Attempts](https://www.comp.xyz/t/setup-community-cuni-voting/440) to mitigate this required trust and were [gameable](https://www.comp.xyz/t/setup-community-cuni-voting/440/8). Any holder of GTC who wants to deploy their tokens in DeFi would experience the same issue.
+
+Flexible Governance fixes this problem. A deposit contract like Compound can delegate its voting weight to another “voting” contract. That contract in turn can implement its own set of rules enabling DeFi depositors to vote on proposals.
+
+![flex-voting-diagram|690x388](upload://t7GK8vdM1ieF2z0DR5VgjJPZbCt.png)
+
+### Other Use Cases
+
+In addition to allowing token holders to vote while their GTC is active in DeFi, Flexible Voting enables many more use cases, such as:
+
+* Voting on L2 with bridged tokens
+
+* Shielded voting (i.e. secret/private voting)
+
+* Cheaper subsidized signature based voting
+
+* Easier voting with tokens held by custodians
+
+**For a much more in-depth introduction to Flexible Voting, how we built it, and what it enables, check out post on the [ScopeLift blog](https://www.scopelift.co/blog/introducing-flexible-voting).**
+
+### Next Steps
+
+Flexible Voting is implemented as an extension to the OpenZeppelin Governor contract. It is [open source](https://github.com/ScopeLift/flexible-voting). Adopting it would require a carefully crafted governance proposal to be submitted and voted on. Since the DAO is [actively considering](https://gov.gitcoin.co/t/upgrading-the-gitcoin-governance-contracts/10721) an upgrade to the OpenZeppelin Governor, now would be the perfect opportunity to adopt Flexible Voting, and ScopeLift is committed to helping should the DAO choose to do this.
+
+We'd love to hear your feedback. If you're a member of the community and you'd like to help us move Flexible Voting forward for Gitcoin, please get in touch.
+
+For our part, we're working to expand the system's capability by implementing some of the concrete use cases which Flexible Voting makes possible. We're working to see Flexible Voting, which is backwards compatible with existing Governor tooling, directly and fully supported. We're also proposing Flexible Voting to other DAOs, including Uniswap, which funded its initial development.
+
+If you’d like to help us build it, fund it, or get it adopted by another community you’re a part of, reach out!
+Wed, 27 Jul 2022 13:06:37 +0000
+🤖 DAO Governance and Vision
+
+
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+kyle
+
+            <aside class="quote no-group" data-username="bendi" data-post="5" data-topic="11115">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bendi/48/6661_2.png" class="avatar"> bendi:</div>
+<blockquote>
+<p>Because it’s written in a modular manner, it allows for the developers deploying the DAO contracts to customize it by extending or writing extensions. This means if you want, you can definitely modify the OZ Governor to break that Bravo Compatibility to differing degrees, depending on how you choose to customize it.</p>
+<p>Our extension is written to be backwards compatible with Bravo-style Governors. This means contract integrations or DAO tools made to work with Bravo should work out of the box with it, but it <em>also</em> enables the new fractional style voting that gives flexible voting all of its flexibility.</p>
+</blockquote>
+</aside>
+<p>This is super slick.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9bfdb6dfbaf0a4f1706505a74c0a99fb7f12d0ba.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/9bfdb6dfbaf0a4f1706505a74c0a99fb7f12d0ba" title="Screen Shot 2022-07-27 at 9.05.28 AM"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9bfdb6dfbaf0a4f1706505a74c0a99fb7f12d0ba.jpeg" alt="Screen Shot 2022-07-27 at 9.05.28 AM" data-base62-sha1="mfXAtQFUQ543V38ZspVz9xAatUC" width="690" height="432" data-dominant-color="B4A79B"></a></div><p></p>
+<p>What is usually involved in upgrading the contractor? As I understand it, there is the need for a vote, to replace the governor contract (which means we also need to deploy the new contract). Once deployed, can it be upgraded without having to deploy a new smart contract (ie, change the contract address?)</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/6
+        Wed, 27 Jul 2022 13:06:37 +0000
+gov.gitcoin.co-post-11115-6
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+      
+
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+bendi
+
+            <p>Hey Kyle, good questions! It’s hard to say what “Uniswap” as a DAO is “considering”, but the short answer is that the UGP folks who pushed for this grant are definitely interested in seeing this upgrade, and we’re doing our part to try to mobilize the community around an upgrade. So, yes! They’re considering it as much as a whole DAO can consider anything <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>This down-in-the-weeds code stuff can be a bit hard to explain, and I’m oversimplifying a bit with this explanation, but the quick TL;DR is that OZ’s Governor works like Bravo’s out of the box, and our extension is written in a backwards compatible way— meaning it adds features without breaking the existing ones.</p>
+<p>Here’s a slightly longer explanation:</p>
+<p>The OpenZeppelin Governor is basically a modular rewrite of Governor Bravo. Out of the box, it is compatible with Bravo, and is used by many DAO’s these days, such as ENS, as one prominent example.</p>
+<p>Because it’s written in a modular manner, it allows for the developers deploying the DAO contracts to customize it by extending or writing extensions. This means if you want, you can definitely modify the OZ Governor to break that Bravo Compatibility to differing degrees, depending on how you choose to customize it.</p>
+<p>Our extension is written to be backwards compatible with Bravo-style Governors. This means contract integrations or DAO tools made to work with Bravo should work out of the box with it, but it <em>also</em> enables the new fractional style voting that gives flexible voting all of its flexibility.</p>
+<p>Let me know if this explanation isn’t clear or if you have further questions!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/5
+        Wed, 27 Jul 2022 02:45:09 +0000
+gov.gitcoin.co-post-11115-5
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+      
+
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+kyle
+
+            <aside class="quote no-group" data-username="bendi" data-post="1" data-topic="11115">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bendi/48/6661_2.png" class="avatar"> bendi:</div>
+<blockquote>
+<p>Flexible Voting is implemented as an extension to the OpenZeppelin Governor contract. It is <a href="https://github.com/ScopeLift/flexible-voting">open source</a>. Adopting it would require a carefully crafted governance proposal to be submitted and voted on.</p>
+</blockquote>
+</aside>
+<p>I would love to learn more! thanks for posting this <a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a>.</p>
+<p>Is Uniswap also considering an upgrade off of the Governor Bravo? I may be mistaken but I didnt think the Comp/Uni style Governor Bravo was the same as the Open Zepplin contracts. Am I off base there?</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/4
+        Mon, 25 Jul 2022 18:11:08 +0000
+gov.gitcoin.co-post-11115-4
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+      
+
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+bendi
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/gtchase">@GTChase</a>, good question! Flexible Voting is implemented as an extension to the OpenZeppelin Governor. The OZ Governor itself is Bravo compatible, but very modular in design. A given DAO, when creating/deploying the contract that will be their Governor, can choose to inherit from different extensions to get different features, including various levels of Bravo compatibility. It’s a bit hard to explain without getting into the details of the code but the basic answer is that OZ Governor is Bravo compatible with lots of room for customization.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/3
+        Fri, 15 Jul 2022 21:43:59 +0000
+gov.gitcoin.co-post-11115-3
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+      
+
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+GTChase
+
+            <p>this is a really important problem space, one that raises itself here at Gitcoin.  its awesome to see Scopelift introducing a solution to the problem.</p>
+<p>I have a quick question as i consume this material a bit deeper… Is the flexible voting extension available for OpenZepplin’s governor alpha, bravo or just a select one?</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/2
+        Fri, 15 Jul 2022 14:07:51 +0000
+gov.gitcoin.co-post-11115-2
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+      
+
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+bendi
+
+            <h3>
+<a name="intro-1" class="anchor" href="https://gov.gitcoin.co#intro-1"></a>Intro</h3>
+<p>The purpose of this post is to introduce Flexible Voting and begin the discussion about its adoption by the Gitcoin DAO. Flexible Voting is an extension to the Governor contract. It allows for the construction of new mechanisms which make governance participation easier, cheaper, and more accessible for GTC holders.</p>
+<p>Flexible Voting was developed by <a href="https://scopelift.co" rel="noopener nofollow ugc">ScopeLift</a> as part of our grant from the <a href="https://twitter.com/uniswapgrants" rel="noopener nofollow ugc">Uniswap Grants Program</a>. Before explaining more about Flexible Voting, let me introduce ScopeLift for anyone whose not familiar with us.</p>
+<h3>
+<a name="about-scopelift-2" class="anchor" href="https://gov.gitcoin.co#about-scopelift-2"></a>About ScopeLift</h3>
+<p>ScopeLift is a dev shop focused on crypto. We’re a small technical team with many years of EVM engineering experience. We’ve had the pleasure of working with many great clients including Uniswap, Optimism, Cozy, Endaoment, POAP, and others.</p>
+<p>ScopeLift is a long time friend friend of Gitcoin. W’ve had the privilege of contributing to Gitcoin in various ways over the last few years, including helping to build the cart based checkout experience, the bulk checkout smart contract, the BrightID integration, the integration with zkSync, and the first iteration of dGrants.</p>
+<p>We’re also the team behind <a href="https://app.umbra.cash/" rel="noopener nofollow ugc">Umbra</a>, a stealth address system developed with grant funding from the EF, MolochDAO, and of course Gitcoin <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>ScopeLift received a UGP grant earlier this year to work on Governance related projects. One of those projects is Flexible Voting, which is the subject of this post.</p>
+<h3>
+<a name="about-flexible-voting-3" class="anchor" href="https://gov.gitcoin.co#about-flexible-voting-3"></a>About Flexible Voting</h3>
+<p>Flexible Voting is an extension to the Governor contracts that enables delegates to split their voting weight across For, Against, and Abstain on any given proposal. This capability is especially useful when a contract serves as the delegate.</p>
+<p>By enabling arbitrary contract logic to roll up the voting weight of disparate parties into a single delegated vote, many possibilities are unlocked. Having a contract act as the delegate also means these mechanisms can be implemented without introducing new trust assumptions.</p>
+<p>The inspiration for Flexible Voting came from cUNI (Compound UNI). When a UNI holder deposits their tokens into Compound, they lose the ability to participate in Governance. <a href="https://www.comp.xyz/t/setup-community-cuni-voting/440" rel="noopener nofollow ugc">Attempts</a> to mitigate this required trust and were <a href="https://www.comp.xyz/t/setup-community-cuni-voting/440/8" rel="noopener nofollow ugc">gameable</a>. Any holder of GTC who wants to deploy their tokens in DeFi would experience the same issue.</p>
+<p>Flexible Governance fixes this problem. A deposit contract like Compound can delegate its voting weight to another “voting” contract. That contract in turn can implement its own set of rules enabling DeFi depositors to vote on proposals.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5.png" data-download-href="/uploads/short-url/t7GK8vdM1ieF2z0DR5VgjJPZbCt.png?dl=1" title="flex-voting-diagram" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5_2_690x388.png" alt="flex-voting-diagram" data-base62-sha1="t7GK8vdM1ieF2z0DR5VgjJPZbCt" width="690" height="388" srcset="/uploads/db4391/optimized/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5_2_690x388.png, /uploads/db4391/optimized/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5_2_1035x582.png 1.5x, /uploads/db4391/optimized/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5_2_1380x776.png 2x" data-small-upload="/uploads/db4391/optimized/2X/c/cc1d905603383c370ba1150a41ffb447e43404e5_2_10x10.png"></a></div><p></p>
+<h3>
+<a name="other-use-cases-4" class="anchor" href="https://gov.gitcoin.co#other-use-cases-4"></a>Other Use Cases</h3>
+<p>In addition to allowing token holders to vote while their GTC is active in DeFi, Flexible Voting enables many more use cases, such as:</p>
+<ul>
+<li>
+<p>Voting on L2 with bridged tokens</p>
+</li>
+<li>
+<p>Shielded voting (i.e. secret/private voting)</p>
+</li>
+<li>
+<p>Cheaper subsidized signature based voting</p>
+</li>
+<li>
+<p>Easier voting with tokens held by custodians</p>
+</li>
+</ul>
+<p><strong>For a much more in-depth introduction to Flexible Voting, how we built it, and what it enables, check out post on the <a href="https://www.scopelift.co/blog/introducing-flexible-voting" rel="noopener nofollow ugc">ScopeLift blog</a>.</strong></p>
+<h3>
+<a name="next-steps-5" class="anchor" href="https://gov.gitcoin.co#next-steps-5"></a>Next Steps</h3>
+<p>Flexible Voting is implemented as an extension to the OpenZeppelin Governor contract. It is <a href="https://github.com/ScopeLift/flexible-voting" rel="noopener nofollow ugc">open source</a>. Adopting it would require a carefully crafted governance proposal to be submitted and voted on. Since the DAO is <a href="https://gov.gitcoin.co/t/upgrading-the-gitcoin-governance-contracts/10721">actively considering</a> an upgrade to the OpenZeppelin Governor, now would be the perfect opportunity to adopt Flexible Voting, and ScopeLift is committed to helping should the DAO choose to do this.</p>
+<p>We’d love to hear your feedback. If you’re a member of the community and you’d like to help us move Flexible Voting forward for Gitcoin, please get in touch.</p>
+<p>For our part, we’re working to expand the system’s capability by implementing some of the concrete use cases which Flexible Voting makes possible. We’re working to see Flexible Voting, which is backwards compatible with existing Governor tooling, directly and fully supported. We’re also proposing Flexible Voting to other DAOs, including Uniswap, which funded its initial development.</p>
+<p>If you’d like to help us build it, fund it, or get it adopted by another community you’re a part of, reach out!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-flexible-voting-an-extension-to-the-governor-enabling-new-voting-mechanisms/11115/1
+        Thu, 14 Jul 2022 17:25:12 +0000
+gov.gitcoin.co-post-11115-1
+Introducing Flexible Voting: An extension to the Governor enabling new voting mechanisms
+      
+
+

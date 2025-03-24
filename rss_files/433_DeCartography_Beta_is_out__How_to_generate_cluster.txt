@@ -1,0 +1,537 @@
+
+
+
+DeCartography Beta is out! How to generate clustered data from GR's participation data, and how to improve current Gitcoin Grants
+https://gov.gitcoin.co/t/decartography-beta-is-out-how-to-generate-clustered-data-from-grs-participation-data-and-how-to-improve-current-gitcoin-grants/17290
+    # TLDR
+I finally finished a project I had been working on for some time called **DeCartography**.
+
+A brief description of this project is "a tool to analyze and cluster data from participants in Gitcoin Grant Rounds and other events through crowdsourcing"
+
+This clustered data could be used as an **infrastructure for Plural QF** and may be useful in [reducing collusion](https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709). As a result, it is hypothesized that paying DeCartography to generate clustered data would make GR more efficient in funding.
+
+However, Plural QF needs to cluster participants as donors. Therefore, **if we decide to analyze clusters based on "XX" (hard coding), a hack will be created to circumvent this.** (well known as [Perverse incentive](https://en.wikipedia.org/wiki/Perverse_incentive), [Campbell's law](https://en.wikipedia.org/wiki/Campbell%27s_law), and [Goodhart's law](https://en.wikipedia.org/wiki/Goodhart%27s_law))
+
+https://x.com/DeCartography/status/1604248863661084681?s=20
+
+Therefore, it is **necessary to cluster participants without defining criteria**.
+
+> Theoretically, you can't do that. It's a contradiction!
+
+You might think, But we believe it is possible with an **analytical oracle that balances the based on [Schelling Point](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed)**. That is DeCartography.
+
+So, DeCartography can be understood as a **Relational computational oracle**. For better understanding, two aspects will be explained.
+![image|690x196](upload://k9G1yPx33MYEl9RwyvFTuIaFWZ7.jpeg)
+1. computational oracle. It analyzes some data and returns clustered data. 
+2. crowdsourcing platform. The analysis process is distributed through crowdsourcing. Crowd workers can solve tasks according to their "intuition" and receive compensation from DeCartography.
+
+
+Currently, [data from GR15](https://fddhub.io/) is being used for analysis, and crowdsourced workers are being paid in ETH (an unpriced token) distributed by **goerli testnet.**
+
+In the future, we would like to use this tool to cluster GR participants and use it as an infrastructure for Plural QF. As a result, if we can prevent collusion and increase the financial efficiency of GR, we can make the project profitable as a computational oracle.
+
+I would like to get feedback from everyone in the Gitcoin community.
+
+---
+
+# How to trial DeCartography
+
+https://medium.com/decartography/decartography-beta-experiment-0-building-a-credible-neutrality-social-graph-powered-by-web3-3ed1a77887ca
+
+**TRY NOW ➡️ http://app.decartography.com/**
+
+[![Image from Gyazo](upload://ylUhcTsF04O9s05nnKCKkw31PRm.gif)](https://gyazo.com/22e64cc57defa57f4c7475bfd015706d)
+
+
+- ***If your GitcoinPassport (GP) score is less than 10 or you have not created one, you will get an error when logging in***. In that case, please go to http://passport.gitcoin.co/#/dashboard to create and score your GP 
+![image|680x478, 50%](upload://dBvmc57CiWWRtX8r0EJyxmcTX8y.png)
+
+- Recommend using MetaMask to test from your desktop browser - After the task, Goerli testnet will send you the ETH reward. Transaction propagation may take a little time
+![image|627x500, 50%](upload://fQpFgSAzGB6CRp9yhQbsdP0t0hX.jpeg) 
+![image|680x394, 50%](upload://yneSjXXOMpDFHn0rLUEYwk4TuaK.jpeg)
+
+https://twitter.com/0xCommune/status/1734831236810715339
+
+---
+
+# Detail as the project
+
+## Problem
+
+The core of the [QF attack vector is  **Sybil attacks** and **collusion**](https://medium.com/block-science/how-to-attack-and-defend-quadratic-funding-a10f0152f069).
+
+For the former, [Gitcoin Passport, a DID aggregator, can mitigate damage by making it harder to create multiple accounts and adjusting voting power based on the Humanity Score](https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382). The latter, on the other hand, makes it difficult to determine what is collusion. Therefore, a mechanism to adjust voting power based on the relationship between donors is proposed. In this area, Vitalik proposed [Pairwise coordination subsidies](https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553/20?u=owocki), which was later published by @Joel_m as [Plural QF](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507) and [implemented](https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553) in Gitcoin by @umarkhaneth.
+
+https://gov.gitcoin.co/t/q-e-d-program-update-1-request-for-community-input/15533/2
+
+https://gov.gitcoin.co/t/q-e-d-program-update-two-experiments-on-the-vote-to-choose-beta-core-rounds/15991
+
+https://gov.gitcoin.co/t/q-e-d-program-update-three-plural-qf-in-gg18-educational-posts-podcasts/17000
+
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553
+
+However, the clustering of participants that will be the infrastructure of the Plural QF is based on "clustering based on direct donation profiles (`donation_profile_clustermatch`)" and "predefined cluster data (`cluster_df`)".  
+ref: https://github.com/Jmiller4/qf-variants/blob/main/qf-variants.py
+
+as I mentioned above as **if we decide to analyze clusters based on "XX" (hard coding), a hack will be created to circumvent this.**  To make significant progress on this, a tool that "analyzes without defining indicators" would make it more collusion-resistant.
+
+**Actually, indicator/matrix is hacked by some of the community.**
+https://twitter.com/YourAirdropETH/status/1593422583088619522?ref_src=twsrc%5Etfw
+https://dune-sight-69e.notion.site/3c304b7bbc2942bcb1dcd33bf6eb3e51
+
+**"Project Side Witch Checking and Witch Prevention Ideas Sharing" describes how to avoid Gitcoin's civil judgment.** This is the problem we're facing
+
+## Value Proposition 
+
+Assumed Plural QF decreases collusion. it makes GR more effective. DeCartography provides infra data for Plural QF. so, **DeCartography makes GR more effective.** 
+
+We provide clustered data in an anti-fragile analysis method that is resistant to such "indicator hacks". Its strength lies in its ability to cluster data using a decentralized, crowdsourced model, enhancing the reliability and integrity of data analysis in Gitcoin grant rounds and other events.
+
+
+## Underlying Magic
+
+The platform uniquely combines crowdsourcing with a peer prediction method, enabling analysis without predefined indicators. This method centers around Schelling Points, ensuring a more organic and unbiased clustering of data.
+
+![image|690x206](upload://gYwckMFaWWRcSOfOebadU5NHq5X.png)
+https://docs.decartography.com/ClusteringAlgorithm/
+
+
+## Funding Model
+
+This is the one of the oracle's business model. They receive compensation from the organization requesting the data analysis. The funds are used to compensate the crowd workers.
+An example of money spent on similar roles is FDD's SAD.
+
+- Revenue: Collect "data analysis/provide fees" from Dapps.
+    - e.g., Gitcoin's #FDD. but, [they're dissolution](https://gov.gitcoin.co/t/fdd-workstream-dissolution-details/13852). so, I don't know who managing this. or, collaborating with [Plurality Labs](https://www.tally.xyz/gov/arbitrum/proposal/48957903989337452494807960514286334301924688097662612089398341037722439754861?chart=0)? cc @disruptionjoe
+- Expenses: Distribute reward to crowd workers.
+
+The difference is the profit.
+
+It is estimated that 26% of users are Sybils (based on [GR14's data](https://gov.gitcoin.co/t/gr14-governance-brief/11050)). and spend 1/eval for Human Evaluations. 
+
+
+> ## Human Evaluations
+> 
+> Although human evaluations are critical for removing bias and improving the sybil account detection algorithm’s learning rate, the stewards elected FDD to reduce this effort.
+> 
+> * GR14 = $1.00/eval | $3000 for 3,000 evaluations by 10 contributors
+>   * Restructuring of the team
+>   * Lowering the amount of evaluation while increasing the quality
+>   * Reducing the cost per review by almost 30%
+> * GR13 = $1.42/eval | $17,050 for 12,000 evaluations by 37 contributors
+>   * Second time “sybil hunters” improve quality
+>   * Established systems for recruiting and executing
+>   * Focused on improving quality while lowering cost/eval
+>   * Brought out the meme culture in FDD
+> * GR12 = $4.39/eval | $26,350 for 6,000 evaluations by 25 contributors
+>   * Opened up participation to all GitcoinDAO contributors
+>   * First inter-reviewer reliability analysis to improve inputs
+>   * Focused on improving quality of data entering the system
+>   * Higher cost to get the inputs right and attract new people to participate
+> * GR11 = $1.25/eval | $1,750 for 1,400 evaluations by 8 contributors
+>   * First DAO led evaluations - Probably higher cost due to expert time from core team and SMEs for help
+>   * Fairly low quality, little training done
+
+DeCartography has the potential to replace this one. 
+
+## Go-to-Market Plan
+
+### Initial Steps
+
+* **Current Status**: We have already launched the platform for analyzing GR15 data. However, currently, the rewards are distributed in testnet tokens.
+* **Immediate Plan**: Following discussions in this post, we aim to transition to using ETH for rewards. We have allocated approximately $3,000 for the Proof of Concept (PoC). so, after discussing it with the Gitcoin team, we can start it.
+
+### Market Penetration Strategy
+
+1. **Proof of Concept with GR15 Data**: Using the data from Gitcoin Grant Round 15, we will demonstrate the effectiveness of DeCartography in reducing collusion. This will serve as a strong case study to showcase the platform's capabilities.
+2. **Launching "DeCartography Rounds"**: Similar to the concept of rounds in Gitcoin Grant and RetroPGF, we will introduce "DeCartography Rounds." These rounds will focus on analyzing specific datasets, concluding once the analysis is complete.
+3. **Integration with Plural QF**: The analyzed data from these rounds will be utilized to enhance the Plural QF mechanism, demonstrating the practical application of our tool.
+
+### Outreach and Engagement
+
+* **Target Audience**: Our primary audience includes teams hosting other QFs, Gitcoin community members, and potential collaborators in the field of decentralized funding.
+* **Educational Content**: We will publish articles and case studies (inspired by sources like [Vitalik's Blog](https://vitalik.eth.limo/categories/gitcoin.html) and [Optimism’s article](https://optimism.mirror.xyz/Upn_LtV2-3SviXgX_PE_LyA7YI00jQyoM1yf55ltvvI) to educate our audience about DeCartography and its impact on reducing collusion.
+* **Community Engagement**: Engaging with the community through forums, social media, and Gitcoin governance discussions to gather feedback and build a user base.
+
+### Monetization Strategy
+
+if find a word from [Public goods Legos: roadmap](https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546), we'll aim to 
+> users can upload their data (e.g. list of usernames and/or Ethereum addresses) and download their results in a web page
+
+> The app then uploads the user’s data to a virtual machine, execute the selected algorithms, aggregate the results and return Sybil scores back to the browser. It is also easy to imagine additional features being made available via a marketplace of optional anti-Sybil add-ons.
+
+>There are costs associated with computing Lego scores. This means that eventually, a cost would need to be attached to the Lego execution such that users pay a small fee to add a Lego to their anti-Sybil pipeline and the actual execution is done in a virtual machine whose management is abstracted away from the user
+
+>a cost in ETH or a stablecoin could be calculated depending on the Legos the user has selected to implement which can be paid via a wallet integration before executing the Sybil Lego code. A freemium model may work well, with foundational Sybil algorithms being provided for free, and more computationally heavy ones being optionally added for a fee.
+
+* **B2B and B2C Integration**: Developing a marketplace where data analysis seekers (toB) can post projects, and individuals wishing to work as crowd workers (toC) can apply. This will be similar to platforms like [AWS’s MTurk](https://www.mturk.com/).
+
+* **Cost Structure**: Implementing a pricing structure based on the complexity of the analysis and the computational resources required, payable in ETH or stablecoins.
+
+### Long-Term Vision
+
+* **Expanding Services**: Post successful implementation in Gitcoin rounds, we plan to extend our services to other platforms and QF hosts, emphasizing the tool's ability to decrease collusion and enhance funding efficiency.
+* **Building Reputation**: The initial phase will be more about building a track record and less about profit, paving the way for broader adoption and market penetration.
+* **Faucet as Hyperstructure**: DeCartography trying to achieve ETH Faucet (on-ramp) for the next billion people as a Hyperstructure
+   * Crypto faucets are a way to earn small amounts of free cryptocurrency by completing simple tasks. for example, you can claim testnet ETH at https://goerlifaucet.com/ or https://goerli-faucet.pk910.de/. 
+   * However, many faucets for the public ETH testnets, including the Goerli testnet, have been [drained by farmers and bots](https://www.gitcoin.co/blog/gitcoin-passport-powfaucet). This has led to a lack of working faucets and a poor developer experience. **So, some Anti-bot services are required before claiming ETH in the faucet.  e.g., [PoWFaucet](https://www.gitcoin.co/blog/gitcoin-passport-powfaucet), [Superchain Faucet](https://blog.oplabs.co/superchain-faucet/)**
+   * DeCartography can aim better on-ramp for the next billion people. probably reward from decartography is not many amounts, but crowdsourcing means a sustainable way. so, if you don't have enough gas fee, you can earn in DeCartography. which can also integrate with Wallet Apps in the future.
+
+## Competitive Analysis
+
+some other examples you imagine are **maybe not similar staff.**
+they can generate a social graph based on paritipate's transaction. however, they must set an indicator/matrix to analyze. (include [Gitcoin](https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016), [Token Engineering](https://twitter.com/tokengineering/status/1370096357906735113?ref_src=twsrc%5Etfw), [bubblemaps](https://bubblemaps.io/), [Breadcrumbs](https://www.breadcrumbs.app/) and [Nansen](https://www.nansen.ai/))
+
+one of the similar things is [Nemurai](https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/2), [Aura](https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159) and [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed).
+
+however, DeCartography is such a unique. I had never seen this type of Oracle. 
+
+## Financial Projections and Key Metrics
+
+
+ **Key Metrics**: Focusing on the number of datasets analyzed, customer satisfaction ratings, and the rate of collusion reduction in funding rounds.
+
+I think it would be a good idea to first provide a social graph that will serve as the infrastructure for Plural QF as a demonstration with Gitcoin. This is a concrete benefit that is easy to understand.
+
+However, we would like to expand beyond that. Make it loosely coupled like the current Gitcoin Passport, which is also used for other Dapps as a Sybil measure.
+
+(after several demonstrations with Gitcoin) The first and foremost idea would be integration with Grant Stack." As mentioned in the "Monetization Strategy", the goal is to make it available to everyone as a Hyperstructure. The fee will be charged on a pay-as-you-go basis based on the amount of data to be analyzed.
+
+
+
+## Current Status, Accomplishments to Date, Timeline, and Use of Funds
+
+
+this project was developed from a year ago. at first, the blueprint was [published in ETH NewYork '22](https://ethglobal.com/showcase/decartography-u9prm) as a hackathon, then [started being discussed in Gitcoin forum](https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927)
+
+- **Current Status**: Successfully launched for GR15 data analysis.
+- **Future Roadmap**: In the next six months, we aim to integrate with additional funding rounds and refine our clustering algorithms.
+- **Use of Funds**: The funds will be allocated towards technological development, expanding our team, and marketing efforts to increase platform awareness.
+Wed, 20 Dec 2023 23:47:35 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+DeCartography Beta is out! How to generate clustered data from GR's participation data, and how to improve current Gitcoin Grants
+fcarva
+
+            <p>huge! happy to see this out! congrats!</p>
+          <p><a href="https://gov.gitcoin.co/t/decartography-beta-is-out-how-to-generate-clustered-data-from-grs-participation-data-and-how-to-improve-current-gitcoin-grants/17290/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decartography-beta-is-out-how-to-generate-clustered-data-from-grs-participation-data-and-how-to-improve-current-gitcoin-grants/17290/2
+        Wed, 20 Dec 2023 23:47:35 +0000
+gov.gitcoin.co-post-17290-2
+DeCartography Beta is out! How to generate clustered data from GR's participation data, and how to improve current Gitcoin Grants
+      
+
+DeCartography Beta is out! How to generate clustered data from GR's participation data, and how to improve current Gitcoin Grants
+tkgshn
+
+            <h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR</h1>
+<p>I finally finished a project I had been working on for some time called <strong>DeCartography</strong>.</p>
+<p>A brief description of this project is “a tool to analyze and cluster data from participants in Gitcoin Grant Rounds and other events through crowdsourcing”</p>
+<p>This clustered data could be used as an <strong>infrastructure for Plural QF</strong> and may be useful in <a href="https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709">reducing collusion</a>. As a result, it is hypothesized that paying DeCartography to generate clustered data would make GR more efficient in funding.</p>
+<p>However, Plural QF needs to cluster participants as donors. Therefore, <strong>if we decide to analyze clusters based on “XX” (hard coding), a hack will be created to circumvent this.</strong> (well known as <a href="https://en.wikipedia.org/wiki/Perverse_incentive" rel="noopener nofollow ugc">Perverse incentive</a>, <a href="https://en.wikipedia.org/wiki/Campbell%27s_law" rel="noopener nofollow ugc">Campbell’s law</a>, and <a href="https://en.wikipedia.org/wiki/Goodhart%27s_law" rel="noopener nofollow ugc">Goodhart’s law</a>)</p>
+<p><a href="https://x.com/DeCartography/status/1604248863661084681?s=20" class="onebox" target="_blank" rel="noopener nofollow ugc">https://x.com/DeCartography/status/1604248863661084681?s=20</a></p>
+<p>Therefore, it is <strong>necessary to cluster participants without defining criteria</strong>.</p>
+<blockquote>
+<p>Theoretically, you can’t do that. It’s a contradiction!</p>
+</blockquote>
+<p>You might think, But we believe it is possible with an <strong>analytical oracle that balances the based on <a href="https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed" rel="noopener nofollow ugc">Schelling Point</a></strong>. That is DeCartography.</p>
+<p>So, DeCartography can be understood as a <strong>Relational computational oracle</strong>. For better understanding, two aspects will be explained.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8d438a0288c15fc4492351c35c9ad085dbbea98d.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/8d438a0288c15fc4492351c35c9ad085dbbea98d" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8d438a0288c15fc4492351c35c9ad085dbbea98d_2_690x196.jpeg" alt="image" data-base62-sha1="k9G1yPx33MYEl9RwyvFTuIaFWZ7" width="690" height="196" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8d438a0288c15fc4492351c35c9ad085dbbea98d_2_690x196.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8d438a0288c15fc4492351c35c9ad085dbbea98d_2_1035x294.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8d438a0288c15fc4492351c35c9ad085dbbea98d_2_1380x392.jpeg 2x" data-dominant-color="EFEEED"></a></div><p></p>
+<ol>
+<li>computational oracle. It analyzes some data and returns clustered data.</li>
+<li>crowdsourcing platform. The analysis process is distributed through crowdsourcing. Crowd workers can solve tasks according to their “intuition” and receive compensation from DeCartography.</li>
+</ol>
+<p>Currently, <a href="https://fddhub.io/" rel="noopener nofollow ugc">data from GR15</a> is being used for analysis, and crowdsourced workers are being paid in ETH (an unpriced token) distributed by <strong>goerli testnet.</strong></p>
+<p>In the future, we would like to use this tool to cluster GR participants and use it as an infrastructure for Plural QF. As a result, if we can prevent collusion and increase the financial efficiency of GR, we can make the project profitable as a computational oracle.</p>
+<p>I would like to get feedback from everyone in the Gitcoin community.</p>
+<hr>
+<h1><a name="how-to-trial-decartography-2" class="anchor" href="https://gov.gitcoin.co#how-to-trial-decartography-2"></a>How to trial DeCartography</h1>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://medium.com/decartography/decartography-beta-experiment-0-building-a-credible-neutrality-social-graph-powered-by-web3-3ed1a77887ca">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/6/60bd12bd7ef15542271c6291b32b623fbef66910.png" class="site-icon" data-dominant-color="585858" width="32" height="32">
+
+      <a href="https://medium.com/decartography/decartography-beta-experiment-0-building-a-credible-neutrality-social-graph-powered-by-web3-3ed1a77887ca" target="_blank" rel="noopener nofollow ugc" title="06:27AM - 14 December 2023">Medium – 14 Dec 23</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/260;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6caecf64b11fa0f6fad16913e21a44b428eb6e76_2_690x260.jpeg" class="thumbnail" data-dominant-color="ECF0F3" width="690" height="260"></div>
+
+<h3><a href="https://medium.com/decartography/decartography-beta-experiment-0-building-a-credible-neutrality-social-graph-powered-by-web3-3ed1a77887ca" target="_blank" rel="noopener nofollow ugc">DeCartography Beta Experiment #0: Building a Credible Neutrality Social Graph...</a></h3>
+
+  <p>Today, we’re thrilled to announce first our experiment on DeCartography. the social graph that will be generated in this round will be…</p>
+
+  <p>
+    <span class="label1">Reading time: 3 min read</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p><strong>TRY NOW <img src="https://gov.gitcoin.co/images/emoji/twitter/arrow_right.png?v=12" title=":arrow_right:" class="emoji" alt=":arrow_right:" loading="lazy" width="20" height="20"> <a href="http://app.decartography.com/" rel="noopener nofollow ugc">http://app.decartography.com/</a></strong></p>
+<p><a href="https://gyazo.com/22e64cc57defa57f4c7475bfd015706d" rel="noopener nofollow ugc"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f0c3e2ea00d041fbd8217a50e1053f67faf59de0.gif" alt="Image from Gyazo" data-base62-sha1="ylUhcTsF04O9s05nnKCKkw31PRm" width="690" height="465"></a></p>
+<ul>
+<li>
+<p><em><strong>If your GitcoinPassport (GP) score is less than 10 or you have not created one, you will get an error when logging in</strong></em>. In that case, please go to <a href="http://passport.gitcoin.co/#/dashboard" class="inline-onebox" rel="noopener nofollow ugc">Gitcoin Passport</a> to create and score your GP<br>
+<img src="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5f599d5331173dc28e9f57b62233577ae4c95d86.png" alt="image" data-base62-sha1="dBvmc57CiWWRtX8r0EJyxmcTX8y" width="340" height="239"></p>
+</li>
+<li>
+<p>Recommend using MetaMask to test from your desktop browser - After the task, Goerli testnet will send you the ETH reward. Transaction propagation may take a little time<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/6f0d6145f81db02069ab5dd029086f82f49cbc51.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/6f0d6145f81db02069ab5dd029086f82f49cbc51" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6f0d6145f81db02069ab5dd029086f82f49cbc51_2_313x250.jpeg" alt="image" data-base62-sha1="fQpFgSAzGB6CRp9yhQbsdP0t0hX" width="313" height="250" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6f0d6145f81db02069ab5dd029086f82f49cbc51_2_313x250.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6f0d6145f81db02069ab5dd029086f82f49cbc51_2_469x375.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6f0d6145f81db02069ab5dd029086f82f49cbc51_2_626x500.jpeg 2x" data-dominant-color="F6F6F8"></a></div><br>
+<img src="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f0ea7062b65b0981084da004051c9041a8e15c1a.jpeg" alt="image" data-base62-sha1="yneSjXXOMpDFHn0rLUEYwk4TuaK" width="340" height="197"><p></p>
+</li>
+</ul>
+<p><a href="https://twitter.com/0xCommune/status/1734831236810715339" class="onebox" target="_blank" rel="noopener nofollow ugc">https://twitter.com/0xCommune/status/1734831236810715339</a></p>
+<hr>
+<h1><a name="detail-as-the-project-3" class="anchor" href="https://gov.gitcoin.co#detail-as-the-project-3"></a>Detail as the project</h1>
+<h2><a name="problem-4" class="anchor" href="https://gov.gitcoin.co#problem-4"></a>Problem</h2>
+<p>The core of the <a href="https://medium.com/block-science/how-to-attack-and-defend-quadratic-funding-a10f0152f069" rel="noopener nofollow ugc">QF attack vector is  <strong>Sybil attacks</strong> and <strong>collusion</strong></a>.</p>
+<p>For the former, <a href="https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382">Gitcoin Passport, a DID aggregator, can mitigate damage by making it harder to create multiple accounts and adjusting voting power based on the Humanity Score</a>. The latter, on the other hand, makes it difficult to determine what is collusion. Therefore, a mechanism to adjust voting power based on the relationship between donors is proposed. In this area, Vitalik proposed <a href="https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553/20?u=owocki" rel="noopener nofollow ugc">Pairwise coordination subsidies</a>, which was later published by <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a> as <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507" rel="noopener nofollow ugc">Plural QF</a> and <a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553">implemented</a> in Gitcoin by <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a>.</p>
+<aside class="quote quote-modified" data-post="2" data-topic="15533">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ale.k/48/8436_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/q-e-d-program-update-1-request-for-community-input/15533/2">Q.E.D. program update 1 + request for community input</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/newscommunity/8"><span data-category-id="8" style="--category-badge-color: #3AB54A; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All the communication from the DAO, such as newsletter and digest, and light topic threads to vibe on the forum and exchange ideas."><span class="badge-category__name">👋 News and Community</span></span></a>
+  </div>
+  <blockquote>
+    I think the sensitivity here to the community’s sense of “fairness” in any grants round is key. Very excited to hone not only the (amoral) mathematical framework for distributing funds, but also for the research necessary to understand the deeply felt and, as you say, “intuitive” reasons that we all appreciate QF mechanisms. 
+Looking forward to more learnings and so appreciative of our talks so far <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a> - it’s been great to have new attention on these age-old problems of fairness and collusi…
+  </blockquote>
+</aside>
+
+<aside class="quote quote-modified" data-post="1" data-topic="15991">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/joel_m/48/9525_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/q-e-d-program-update-two-experiments-on-the-vote-to-choose-beta-core-rounds/15991">Q.E.D. Program Update Two: Experiments on the vote to choose beta "core rounds"</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/newscommunity/8"><span data-category-id="8" style="--category-badge-color: #3AB54A; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All the communication from the DAO, such as newsletter and digest, and light topic threads to vibe on the forum and exchange ideas."><span class="badge-category__name">👋 News and Community</span></span></a>
+  </div>
+  <blockquote>
+    Hi all! Joel from the Q.E.D. program here. In this post, I’ll share some experiments we did to understand how past voting/ funding outcomes change when we use plural QF algorithms. 
+Also – if you haven’t checked it out yet, here’s a reminder to check out our <a href="https://pol.is/7hskapnxhm" rel="noopener nofollow ugc">polis conversation on QF!</a> 
+For these experiments, we looked at the <a href="https://snapshot.org/#/gitcoingov.eth/proposal/0x3bebac743d1da8e72618dceb2c108d3cd71dddb10b8008456abcc87c2ca40992" rel="noopener nofollow ugc">snapshot quadratic vote</a> held to determine which beta funding rounds would be “core rounds” (which received more support from Gitcoin) and which would be community led (more i…
+  </blockquote>
+</aside>
+
+<aside class="quote quote-modified" data-post="1" data-topic="17000">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/joel_m/48/9525_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/q-e-d-program-update-three-plural-qf-in-gg18-educational-posts-podcasts/17000">Q.E.D. Program Update Three: Plural QF in GG18, Educational Posts + Podcasts</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/newscommunity/8"><span data-category-id="8" style="--category-badge-color: #3AB54A; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All the communication from the DAO, such as newsletter and digest, and light topic threads to vibe on the forum and exchange ideas."><span class="badge-category__name">👋 News and Community</span></span></a>
+  </div>
+  <blockquote>
+    Hi all! Joel here with another Q.E.D. program update. A few things to discuss: 
+1. We used plural QF in GG18! I consider this to be a major marker of success. We were able to implement SOTA QF research for use at Gitcoin in a way that respected Gitcoin’s unique needs and circumstances, which was the #1 goal of the Q.E.D. program. I want to give a huge shoutout to <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> for helping this implementation come to life. More info can be found <a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/1">here</a>. 
+I believe there are also some plans for worki…
+  </blockquote>
+</aside>
+
+<aside class="quote quote-modified" data-post="1" data-topic="16553">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553">[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/grants/15"><span data-category-id="15" style="--category-badge-color: #0088CC; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Everything around Gitcoin Grants, our flagship product"><span class="badge-category__name">🌱 Grants</span></span></a>
+  </div>
+  <blockquote>
+    Thank you ​​to <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a>, <a class="mention" href="https://gov.gitcoin.co/u/ghostffcode">@ghostffcode</a>, <a class="mention" href="https://gov.gitcoin.co/u/gerald">@gerald</a>, <a class="mention" href="https://gov.gitcoin.co/u/jeremy">@jeremy</a>, <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a>, <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a>, <a class="mention" href="https://gov.gitcoin.co/u/m0nkeyfl0wer">@M0nkeyFl0wer</a>, and <a class="mention" href="https://gov.gitcoin.co/u/connor">@Connor</a> for getting us to final round results! 
+Payments have now gone out! 
+This proposal has passed on <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xf4f44efa6c9a2968c8fba8fd664b7ba03a03b876eb033c09dd088d62877eb2fa" rel="noopener nofollow ugc">snapshot</a> 
+<a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TL;DR
+GG18 matching results are live <a href="https://docs.google.com/spreadsheets/d/133eTg4V0iSsK0Id3iBMV1eHRogeWhJm91H2t0fWL0WE/edit#gid=1644179427" rel="noopener nofollow ugc">here</a>! We propose five days for discussion and review followed by a 5-day snapshot vote to ratify before processing final payouts. In GG18, we move to a variant of QF that uses cluster-matching to introduce sybil and collusion resistance natively into the mec…
+  </blockquote>
+</aside>
+
+<p>However, the clustering of participants that will be the infrastructure of the Plural QF is based on “clustering based on direct donation profiles (<code>donation_profile_clustermatch</code>)” and “predefined cluster data (<code>cluster_df</code>)”.<br>
+ref: <a href="https://github.com/Jmiller4/qf-variants/blob/main/qf-variants.py" class="inline-onebox" rel="noopener nofollow ugc">qf-variants/qf-variants.py at main · Jmiller4/qf-variants · GitHub</a></p>
+<p>as I mentioned above as <strong>if we decide to analyze clusters based on “XX” (hard coding), a hack will be created to circumvent this.</strong>  To make significant progress on this, a tool that “analyzes without defining indicators” would make it more collusion-resistant.</p>
+<p><strong>Actually, indicator/matrix is hacked by some of the community.</strong><br>
+<a href="https://twitter.com/YourAirdropETH/status/1593422583088619522?ref_src=twsrc%5Etfw" class="onebox" target="_blank" rel="noopener nofollow ugc">https://twitter.com/YourAirdropETH/status/1593422583088619522?ref_src=twsrc^tfw</a></p><aside class="onebox allowlistedgeneric" data-onebox-src="https://dune-sight-69e.notion.site/3c304b7bbc2942bcb1dcd33bf6eb3e51">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/1/10e01ff6885a73388fa8c8d881d440a4b5c59921.png" class="site-icon" data-dominant-color="919191" width="64" height="64">
+
+      <a href="https://dune-sight-69e.notion.site/3c304b7bbc2942bcb1dcd33bf6eb3e51" target="_blank" rel="noopener nofollow ugc">Notion</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/362;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f4f10b180cdc7e8f3334adcc2c52939e0398ef4b_2_690x362.png" class="thumbnail" data-dominant-color="E9E8E5" width="690" height="362"></div>
+
+<h3><a href="https://dune-sight-69e.notion.site/3c304b7bbc2942bcb1dcd33bf6eb3e51" target="_blank" rel="noopener nofollow ugc">Notion – The all-in-one workspace for your notes, tasks, wikis, and databases.</a></h3>
+
+  <p>A new tool that blends your everyday work apps into one. It's the all-in-one workspace for you and your team</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p><strong>“Project Side Witch Checking and Witch Prevention Ideas Sharing” describes how to avoid Gitcoin’s civil judgment.</strong> This is the problem we’re facing</p>
+<h2><a name="value-proposition-5" class="anchor" href="https://gov.gitcoin.co#value-proposition-5"></a>Value Proposition</h2>
+<p>Assumed Plural QF decreases collusion. it makes GR more effective. DeCartography provides infra data for Plural QF. so, <strong>DeCartography makes GR more effective.</strong></p>
+<p>We provide clustered data in an anti-fragile analysis method that is resistant to such “indicator hacks”. Its strength lies in its ability to cluster data using a decentralized, crowdsourced model, enhancing the reliability and integrity of data analysis in Gitcoin grant rounds and other events.</p>
+<h2><a name="underlying-magic-6" class="anchor" href="https://gov.gitcoin.co#underlying-magic-6"></a>Underlying Magic</h2>
+<p>The platform uniquely combines crowdsourcing with a peer prediction method, enabling analysis without predefined indicators. This method centers around Schelling Points, ensuring a more organic and unbiased clustering of data.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/76fa1c11ad7214246abef868324d1e602d870971.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/76fa1c11ad7214246abef868324d1e602d870971" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/76fa1c11ad7214246abef868324d1e602d870971_2_690x206.png" alt="image" data-base62-sha1="gYwckMFaWWRcSOfOebadU5NHq5X" width="690" height="206" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/76fa1c11ad7214246abef868324d1e602d870971_2_690x206.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/76fa1c11ad7214246abef868324d1e602d870971_2_1035x309.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/76fa1c11ad7214246abef868324d1e602d870971_2_1380x412.png 2x" data-dominant-color="F0F2F1"></a></div><p></p><aside class="onebox allowlistedgeneric" data-onebox-src="https://docs.decartography.com/ClusteringAlgorithm/">
+  <header class="source">
+      <img src="https://docs.decartography.com/favicon/favicon.svg" class="site-icon" width="128" height="128">
+
+      <a href="https://docs.decartography.com/ClusteringAlgorithm/" target="_blank" rel="noopener nofollow ugc" title="09:03AM - 20 November 2022">DeCartography Docs – 20 Nov 22</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://docs.decartography.com/ClusteringAlgorithm/" target="_blank" rel="noopener nofollow ugc">Clustering Algorithm</a></h3>
+
+  <p>title: “Clustering Algorithm” date: 2022-11-20T09:03:20-08:00 draft: false Data Collection: First, collect the choices (three addresses) that each crowd-worker sent as a response. These choices express the options that the crowd-workers have chosen....</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<h2><a name="funding-model-7" class="anchor" href="https://gov.gitcoin.co#funding-model-7"></a>Funding Model</h2>
+<p>This is the one of the oracle’s business model. They receive compensation from the organization requesting the data analysis. The funds are used to compensate the crowd workers.<br>
+An example of money spent on similar roles is FDD’s SAD.</p>
+<ul>
+<li>Revenue: Collect “data analysis/provide fees” from Dapps.
+<ul>
+<li>e.g., Gitcoin’s <a class="hashtag-cooked" href="https://gov.gitcoin.co/tag/FDD" data-type="tag" data-slug="FDD" data-id="8"><span class="hashtag-icon-placeholder"><svg class="fa d-icon d-icon-square-full svg-icon svg-node"><use href="#square-full"></use></svg></span><span>FDD</span></a>. but, <a href="https://gov.gitcoin.co/t/fdd-workstream-dissolution-details/13852">they’re dissolution</a>. so, I don’t know who managing this. or, collaborating with <a href="https://www.tally.xyz/gov/arbitrum/proposal/48957903989337452494807960514286334301924688097662612089398341037722439754861?chart=0" rel="noopener nofollow ugc">Plurality Labs</a>? cc <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@disruptionjoe</a></li>
+</ul>
+</li>
+<li>Expenses: Distribute reward to crowd workers.</li>
+</ul>
+<p>The difference is the profit.</p>
+<p>It is estimated that 26% of users are Sybils (based on <a href="https://gov.gitcoin.co/t/gr14-governance-brief/11050">GR14’s data</a>). and spend 1/eval for Human Evaluations.</p>
+<blockquote>
+<h2>Human Evaluations</h2>
+<p>Although human evaluations are critical for removing bias and improving the sybil account detection algorithm’s learning rate, the stewards elected FDD to reduce this effort.</p>
+<ul>
+<li>GR14 = $1.00/eval | $3000 for 3,000 evaluations by 10 contributors
+<ul>
+<li>Restructuring of the team</li>
+<li>Lowering the amount of evaluation while increasing the quality</li>
+<li>Reducing the cost per review by almost 30%</li>
+</ul>
+</li>
+<li>GR13 = $1.42/eval | $17,050 for 12,000 evaluations by 37 contributors
+<ul>
+<li>Second time “sybil hunters” improve quality</li>
+<li>Established systems for recruiting and executing</li>
+<li>Focused on improving quality while lowering cost/eval</li>
+<li>Brought out the meme culture in FDD</li>
+</ul>
+</li>
+<li>GR12 = $4.39/eval | $26,350 for 6,000 evaluations by 25 contributors
+<ul>
+<li>Opened up participation to all GitcoinDAO contributors</li>
+<li>First inter-reviewer reliability analysis to improve inputs</li>
+<li>Focused on improving quality of data entering the system</li>
+<li>Higher cost to get the inputs right and attract new people to participate</li>
+</ul>
+</li>
+<li>GR11 = $1.25/eval | $1,750 for 1,400 evaluations by 8 contributors
+<ul>
+<li>First DAO led evaluations - Probably higher cost due to expert time from core team and SMEs for help</li>
+<li>Fairly low quality, little training done</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p>DeCartography has the potential to replace this one.</p>
+<h2><a name="go-to-market-plan-8" class="anchor" href="https://gov.gitcoin.co#go-to-market-plan-8"></a>Go-to-Market Plan</h2>
+<h3><a name="initial-steps-9" class="anchor" href="https://gov.gitcoin.co#initial-steps-9"></a>Initial Steps</h3>
+<ul>
+<li><strong>Current Status</strong>: We have already launched the platform for analyzing GR15 data. However, currently, the rewards are distributed in testnet tokens.</li>
+<li><strong>Immediate Plan</strong>: Following discussions in this post, we aim to transition to using ETH for rewards. We have allocated approximately $3,000 for the Proof of Concept (PoC). so, after discussing it with the Gitcoin team, we can start it.</li>
+</ul>
+<h3><a name="market-penetration-strategy-10" class="anchor" href="https://gov.gitcoin.co#market-penetration-strategy-10"></a>Market Penetration Strategy</h3>
+<ol>
+<li><strong>Proof of Concept with GR15 Data</strong>: Using the data from Gitcoin Grant Round 15, we will demonstrate the effectiveness of DeCartography in reducing collusion. This will serve as a strong case study to showcase the platform’s capabilities.</li>
+<li><strong>Launching “DeCartography Rounds”</strong>: Similar to the concept of rounds in Gitcoin Grant and RetroPGF, we will introduce “DeCartography Rounds.” These rounds will focus on analyzing specific datasets, concluding once the analysis is complete.</li>
+<li><strong>Integration with Plural QF</strong>: The analyzed data from these rounds will be utilized to enhance the Plural QF mechanism, demonstrating the practical application of our tool.</li>
+</ol>
+<h3><a name="outreach-and-engagement-11" class="anchor" href="https://gov.gitcoin.co#outreach-and-engagement-11"></a>Outreach and Engagement</h3>
+<ul>
+<li><strong>Target Audience</strong>: Our primary audience includes teams hosting other QFs, Gitcoin community members, and potential collaborators in the field of decentralized funding.</li>
+<li><strong>Educational Content</strong>: We will publish articles and case studies (inspired by sources like <a href="https://vitalik.eth.limo/categories/gitcoin.html" rel="noopener nofollow ugc">Vitalik’s Blog</a> and <a href="https://optimism.mirror.xyz/Upn_LtV2-3SviXgX_PE_LyA7YI00jQyoM1yf55ltvvI" rel="noopener nofollow ugc">Optimism’s article</a> to educate our audience about DeCartography and its impact on reducing collusion.</li>
+<li><strong>Community Engagement</strong>: Engaging with the community through forums, social media, and Gitcoin governance discussions to gather feedback and build a user base.</li>
+</ul>
+<h3><a name="monetization-strategy-12" class="anchor" href="https://gov.gitcoin.co#monetization-strategy-12"></a>Monetization Strategy</h3>
+<p>if find a word from <a href="https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546">Public goods Legos: roadmap</a>, we’ll aim to</p>
+<blockquote>
+<p>users can upload their data (e.g. list of usernames and/or Ethereum addresses) and download their results in a web page</p>
+</blockquote>
+<blockquote>
+<p>The app then uploads the user’s data to a virtual machine, execute the selected algorithms, aggregate the results and return Sybil scores back to the browser. It is also easy to imagine additional features being made available via a marketplace of optional anti-Sybil add-ons.</p>
+</blockquote>
+<blockquote>
+<p>There are costs associated with computing Lego scores. This means that eventually, a cost would need to be attached to the Lego execution such that users pay a small fee to add a Lego to their anti-Sybil pipeline and the actual execution is done in a virtual machine whose management is abstracted away from the user</p>
+</blockquote>
+<blockquote>
+<p>a cost in ETH or a stablecoin could be calculated depending on the Legos the user has selected to implement which can be paid via a wallet integration before executing the Sybil Lego code. A freemium model may work well, with foundational Sybil algorithms being provided for free, and more computationally heavy ones being optionally added for a fee.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>B2B and B2C Integration</strong>: Developing a marketplace where data analysis seekers (toB) can post projects, and individuals wishing to work as crowd workers (toC) can apply. This will be similar to platforms like <a href="https://www.mturk.com/" rel="noopener nofollow ugc">AWS’s MTurk</a>.</p>
+</li>
+<li>
+<p><strong>Cost Structure</strong>: Implementing a pricing structure based on the complexity of the analysis and the computational resources required, payable in ETH or stablecoins.</p>
+</li>
+</ul>
+<h3><a name="long-term-vision-13" class="anchor" href="https://gov.gitcoin.co#long-term-vision-13"></a>Long-Term Vision</h3>
+<ul>
+<li><strong>Expanding Services</strong>: Post successful implementation in Gitcoin rounds, we plan to extend our services to other platforms and QF hosts, emphasizing the tool’s ability to decrease collusion and enhance funding efficiency.</li>
+<li><strong>Building Reputation</strong>: The initial phase will be more about building a track record and less about profit, paving the way for broader adoption and market penetration.</li>
+<li><strong>Faucet as Hyperstructure</strong>: DeCartography trying to achieve ETH Faucet (on-ramp) for the next billion people as a Hyperstructure
+<ul>
+<li>Crypto faucets are a way to earn small amounts of free cryptocurrency by completing simple tasks. for example, you can claim testnet ETH at <a href="https://goerlifaucet.com/" rel="noopener nofollow ugc">https://goerlifaucet.com/</a> or <a href="https://goerli-faucet.pk910.de/" rel="noopener nofollow ugc">https://goerli-faucet.pk910.de/</a>.</li>
+<li>However, many faucets for the public ETH testnets, including the Goerli testnet, have been <a href="https://www.gitcoin.co/blog/gitcoin-passport-powfaucet" rel="noopener nofollow ugc">drained by farmers and bots</a>. This has led to a lack of working faucets and a poor developer experience. <strong>So, some Anti-bot services are required before claiming ETH in the faucet.  e.g., <a href="https://www.gitcoin.co/blog/gitcoin-passport-powfaucet" rel="noopener nofollow ugc">PoWFaucet</a>, <a href="https://blog.oplabs.co/superchain-faucet/" rel="noopener nofollow ugc">Superchain Faucet</a></strong></li>
+<li>DeCartography can aim better on-ramp for the next billion people. probably reward from decartography is not many amounts, but crowdsourcing means a sustainable way. so, if you don’t have enough gas fee, you can earn in DeCartography. which can also integrate with Wallet Apps in the future.</li>
+</ul>
+</li>
+</ul>
+<h2><a name="competitive-analysis-14" class="anchor" href="https://gov.gitcoin.co#competitive-analysis-14"></a>Competitive Analysis</h2>
+<p>some other examples you imagine are <strong>maybe not similar staff.</strong><br>
+they can generate a social graph based on paritipate’s transaction. however, they must set an indicator/matrix to analyze. (include <a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016">Gitcoin</a>, <a href="https://twitter.com/tokengineering/status/1370096357906735113?ref_src=twsrc%5Etfw" rel="noopener nofollow ugc">Token Engineering</a>, <a href="https://bubblemaps.io/" rel="noopener nofollow ugc">bubblemaps</a>, <a href="https://www.breadcrumbs.app/" rel="noopener nofollow ugc">Breadcrumbs</a> and <a href="https://www.nansen.ai/" rel="noopener nofollow ugc">Nansen</a>)</p>
+<p>one of the similar things is <a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/2">Nemurai</a>, <a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159">Aura</a> and <a href="https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed" rel="noopener nofollow ugc">SchellingCoin</a>.</p>
+<p>however, DeCartography is such a unique. I had never seen this type of Oracle.</p>
+<h2><a name="financial-projections-and-key-metrics-15" class="anchor" href="https://gov.gitcoin.co#financial-projections-and-key-metrics-15"></a>Financial Projections and Key Metrics</h2>
+<p><strong>Key Metrics</strong>: Focusing on the number of datasets analyzed, customer satisfaction ratings, and the rate of collusion reduction in funding rounds.</p>
+<p>I think it would be a good idea to first provide a social graph that will serve as the infrastructure for Plural QF as a demonstration with Gitcoin. This is a concrete benefit that is easy to understand.</p>
+<p>However, we would like to expand beyond that. Make it loosely coupled like the current Gitcoin Passport, which is also used for other Dapps as a Sybil measure.</p>
+<p>(after several demonstrations with Gitcoin) The first and foremost idea would be integration with Grant Stack." As mentioned in the “Monetization Strategy”, the goal is to make it available to everyone as a Hyperstructure. The fee will be charged on a pay-as-you-go basis based on the amount of data to be analyzed.</p>
+<h2><a name="current-status-accomplishments-to-date-timeline-and-use-of-funds-16" class="anchor" href="https://gov.gitcoin.co#current-status-accomplishments-to-date-timeline-and-use-of-funds-16"></a>Current Status, Accomplishments to Date, Timeline, and Use of Funds</h2>
+<p>this project was developed from a year ago. at first, the blueprint was <a href="https://ethglobal.com/showcase/decartography-u9prm" rel="noopener nofollow ugc">published in ETH NewYork '22</a> as a hackathon, then <a href="https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927">started being discussed in Gitcoin forum</a></p>
+<ul>
+<li><strong>Current Status</strong>: Successfully launched for GR15 data analysis.</li>
+<li><strong>Future Roadmap</strong>: In the next six months, we aim to integrate with additional funding rounds and refine our clustering algorithms.</li>
+<li><strong>Use of Funds</strong>: The funds will be allocated towards technological development, expanding our team, and marketing efforts to increase platform awareness.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/decartography-beta-is-out-how-to-generate-clustered-data-from-grs-participation-data-and-how-to-improve-current-gitcoin-grants/17290/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decartography-beta-is-out-how-to-generate-clustered-data-from-grs-participation-data-and-how-to-improve-current-gitcoin-grants/17290/1
+        Mon, 18 Dec 2023 07:25:52 +0000
+gov.gitcoin.co-post-17290-1
+DeCartography Beta is out! How to generate clustered data from GR's participation data, and how to improve current Gitcoin Grants
+      
+
+

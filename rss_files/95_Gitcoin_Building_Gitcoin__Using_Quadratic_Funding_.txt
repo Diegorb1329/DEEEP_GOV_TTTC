@@ -1,0 +1,186 @@
+
+
+
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015
+    *Thanks to @kevin.olsen for thoughts and help in drafting these ideas.*
+
+Gitcoin has made massive progress over the last few months in becoming more community-first, and high agency between protocol launches and broader changes to the DAO’s overall structure.
+
+As it starts to plan for the next stage of development though, it would be worth considering one more step forward towards a subtraction mindset: post-S17, Gitcoin should leverage quadratic funding rounds for funding its own shared needs, both when it comes to (a) external creative (including developer) communities and (b) meaningful portions (>20%) of internal team budgets.
+
+**Why does this matter?**
+
+As many stewards have noted, Gitcoin currently spends a lot on its core operations, and does so without a lot of immediate accountability. A lot of the DAO's time is still focused internally instead of engaging and rallying the broader ecosystem around the kind of change they want to see. 
+
+Fortunately, Gitcoin already has tooling that helps enable the community to get directly involved: *Allo protocol*. By running Gitcoin Community rounds the DAO can not only empower more people to get involved in governance, but also build more empathy around where the current tooling is successful and where it needs improvement. Some areas we already know there are gaps (and progress being made) include:
+
+- Overall usability of protocols
+- Prevalence of fraud in rounds
+- Consistency / reliability of funding for grantees
+- Robustness of the current QF implementation vs. alternatives
+- Impacts of operational policies (e.g. clawbacks)
+
+In the process of solving these issues for one DAO we can solve them for others, and in turn value is being put **through** the protocol every step of the way rather than **taken** from it.
+
+**What would a Gitcoin Building Gitcoin round look like?**
+
+To keep things simple, a first experiment on this front could involve funding developers that want to build modules on top of the protocol (maybe dominance assurance contracts, QV, streaming payouts, etc), and a separate pool could be for grassroots community efforts that are currently missing across the DAO (incentivised DAO citizens support, discord integrations, community activations and grassroots marketing). These pools could mirror the first “application” and “community” pools Gitcoin Grants started with years ago; rounds that helped make the Ethereum ecosystem what it is today.
+
+Applications could be scoped to only include a few key projects to start, for example a maximum of 10-15 of the highest leverage projects decided on by CSDO or a similarly informed body.
+
+Donors in these rounds could be restricted to funding in GTC to truly ensure that those donating are aligned with the efforts of Gitcoin and not griefing the system (although this won’t stop all attacks).
+
+Round runbooks created by PGF could be used to help rotate who is responsible for running these rounds, and ensure that there are no gaps in how the process is being documented.
+
+**Who’s already doing this?**
+
+**Nouns.** Projects like Nouns already run similar experiments and are all the better for it: votes go through [Agora](https://www.nounsagora.com) and smaller "workstream" proposals go through [Prop House](https://prop.house). The result is that the Nouns community is able to learn from the tools they build every step of the way and embrace a truly open source spirit. Memetically, Nouns has become one of the strongest projects out there and is starting to think deeply about how its treasury and tools could make an impact. 
+
+**Juicebox.** Juicebox runs all of its development through a [core treasury](https://juicebox.money/@juicebox) powered using [their protocol](https://info.juicebox.money/dev/build/getting-started/). Everyone building is on equal footing and gains stake cooperatively based on their contributions, and it empowers people to first **give** contributions and then find value later.
+
+These examples were chosen not only because they're strong projects, but because they're projects we should be empowered by the way we work to engage closely with and collaborate with. Currently with our workstream structure this is challenging.
+
+**What are the risks?**
+
+There are honestly a decent number of very real concerns with this approach. Quadratic funding still has a number of issues like the ones mentioned above, and if ramped up too quickly it could counter-intuitively *slow* development as a result. This is why these experiments should start small, and fund non-core efforts while eventually further supplementing the core team. If this is successful, more of the DAO’s operational expenses and funding allocation decisions could be shifted over this way.
+
+Fundamentally though, there’s no better way to learn than to experience these problems head on. If we’re hesitant about experimenting in this way, we should take the time to reflect inward and ask if these concerns are felt by the broader community.
+Thu, 23 Feb 2023 18:41:45 +0000
+🤖 DAO Governance and Vision
+
+
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+ceresstation
+
+            <p>So I think this is the interesting part of this approach actually. Even in your response you’ve identified a key problem here which is the fact that popularity definitely impacts quadratic funding results (I’d actually argue that this problem extends to lots of democratic systems more broadly).</p>
+<p>The question is then: how do we adjust our instance of the protocol to mitigate these concerns, because they’re certainly concerns others in the community have voiced. I don’t actually know what the right solution is here (although I have ideas) but we’re in the right direction by identifying the problem.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/6
+        Thu, 23 Feb 2023 18:41:45 +0000
+gov.gitcoin.co-post-13015-6
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+      
+
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+umarkhaneth
+
+            <p>I’m a huge fan of this idea. The best way for us to find better ways to make QF work successfully for our grantees is by dogfooding it ourselves.</p>
+<p>I would push for retrospective QF rounds that are minimally curated and run on a regular, frequent basis (maybe every two weeks). This would allow funds to flow places where value is already being created and carries less risk. It would incentivize more community members to meaningfully contribute to Gitcoin and provide a way for community members who are already contributing to receive some rewards. Lastly, it really incentivizes being public about the work you’re doing which naturally creates more accountability.</p>
+<aside class="quote no-group" data-username="ceresstation" data-post="1" data-topic="13015">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ceresstation/48/11042_2.png" class="avatar"> ceresstation:</div>
+<blockquote>
+<p>Fundamentally though, there’s no better way to learn than to experience these problems head on. If we’re hesitant about experimenting in this way, we should take the time to reflect inward and ask if these concerns are felt by the broader community.</p>
+</blockquote>
+</aside>
+<p>Well said</p>
+<p>I think by dogfooding ourselves we would more readily experience the inconsistencies in QF. One pattern I see over and over again is grantees who earn a lot in one round (sometimes over $100k) then earn much less the next round. Grantees almost always have to seek additional sources of funding outside of Gitcoin and only think of us as ‘legroom’ and rarely a primary funding source. What would have to be true for us to be a source of stable, consistent income for more projects?</p>
+<p>The inconsistency in QF may be smoothed out by <a href="https://foresight.org/summary/dominant-assurance-contracts-alex-tabarrok-george-mason-university/" rel="noopener nofollow ugc">Dominance Assurance Contracts</a> because if donors see a project they supported in the past isn’t reaching the amount it needs this quarter, they will be more likely to fund it. Plus, it could also reduce overfunding and overall make QF a source of more stable income for more participants. Internal to Gitcoin, DAC’s will help prevent launching projects that receive some support but not enough to take off.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/5
+        Thu, 23 Feb 2023 02:46:53 +0000
+gov.gitcoin.co-post-13015-5
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+      
+
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+shawn16400
+
+            <aside class="quote no-group" data-username="ceresstation" data-post="1" data-topic="13015">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ceresstation/48/11042_2.png" class="avatar"> ceresstation:</div>
+<blockquote>
+<p>Impacts of operational policies (e.g. clawbacks)</p>
+</blockquote>
+</aside>
+<p>I see two issues with this approach:</p>
+<ol>
+<li>My interpretation is that quadratic funding is a kind of popularity contest.  Projects that do well, do pretty well, but a lot of projects don’t get much funding.  Risk is that fundamental efforts inside the DAO don’t get funded.  But we do stand a pretty good chance of winning the contest if supported by influencers.</li>
+<li>Accountability is already a challenge in the DAO - I think the clawback could be interesting to address the issue.</li>
+</ol>
+<p>NET: I love this direction.  I think this approach gets us closer to a thin DAO focused on supporting the protocol post stabilization and opens up the protocol to a plurality of service providers, and the workstream / subdao is but one option.   Add to that a tri/bicameral governance structure of round operators / stewards / insiders and it could get really interesting.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/4
+        Wed, 22 Feb 2023 12:08:07 +0000
+gov.gitcoin.co-post-13015-4
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+      
+
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+kevin.olsen
+
+            <p>This is great <a class="mention" href="https://gov.gitcoin.co/u/ceresstation">@ceresstation</a>. Thanks for posting!</p>
+<p>I’m very supportive of this and see the Gitcoin building Gitcoin rounds as an invitation to bottoms-up coordination that’s been absent from our DAO.</p>
+<p>I’ve put some more thoughts around this really enables us to improve and evolve in a post I just put up <a href="https://gov.gitcoin.co/t/refactoring-gitcoin-what-falls-between-the-cracks/13026">here</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/3
+        Tue, 21 Feb 2023 14:28:54 +0000
+gov.gitcoin.co-post-13015-3
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+      
+
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+DisruptionJoe
+
+            <p>Yes. Yes. Yes. +10</p>
+<p>We might even consider the context and reference point each group has to create better outcomes.</p>
+<p>A few examples:</p>
+<ul>
+<li>Operations is likely context heavy and may be best done as a quadratic vote by DAO contributors. Maybe JokeDAO is a model for proposing work.</li>
+<li>Empowering our community might include DevRel, Open Data, and program manager training. It would be interesting to see how a dedicated body select eligible projects would change results. Maybe the Open Data Community would be best suited to select data projects which can be proposed by anyone? Maybe not?</li>
+<li>Experimenting at stages BEFORE voting. How do we ideate a best proposal? How do we create eligibility criteria.</li>
+</ul>
+<p>Most of these questions don’t have objective answers unless you take a stand on the “efficiency vs innovation” tradeoff. Therefore, some level of expertise guiding eligibility of grants in this domain, as opposed to any token holder, seems like a good middle ground.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/2
+        Tue, 21 Feb 2023 14:02:52 +0000
+gov.gitcoin.co-post-13015-2
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+      
+
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+ceresstation
+
+            <p><em>Thanks to <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> for thoughts and help in drafting these ideas.</em></p>
+<p>Gitcoin has made massive progress over the last few months in becoming more community-first, and high agency between protocol launches and broader changes to the DAO’s overall structure.</p>
+<p>As it starts to plan for the next stage of development though, it would be worth considering one more step forward towards a subtraction mindset: post-S17, Gitcoin should leverage quadratic funding rounds for funding its own shared needs, both when it comes to (a) external creative (including developer) communities and (b) meaningful portions (&gt;20%) of internal team budgets.</p>
+<p><strong>Why does this matter?</strong></p>
+<p>As many stewards have noted, Gitcoin currently spends a lot on its core operations, and does so without a lot of immediate accountability. A lot of the DAO’s time is still focused internally instead of engaging and rallying the broader ecosystem around the kind of change they want to see.</p>
+<p>Fortunately, Gitcoin already has tooling that helps enable the community to get directly involved: <em>Allo protocol</em>. By running Gitcoin Community rounds the DAO can not only empower more people to get involved in governance, but also build more empathy around where the current tooling is successful and where it needs improvement. Some areas we already know there are gaps (and progress being made) include:</p>
+<ul>
+<li>Overall usability of protocols</li>
+<li>Prevalence of fraud in rounds</li>
+<li>Consistency / reliability of funding for grantees</li>
+<li>Robustness of the current QF implementation vs. alternatives</li>
+<li>Impacts of operational policies (e.g. clawbacks)</li>
+</ul>
+<p>In the process of solving these issues for one DAO we can solve them for others, and in turn value is being put <strong>through</strong> the protocol every step of the way rather than <strong>taken</strong> from it.</p>
+<p><strong>What would a Gitcoin Building Gitcoin round look like?</strong></p>
+<p>To keep things simple, a first experiment on this front could involve funding developers that want to build modules on top of the protocol (maybe dominance assurance contracts, QV, streaming payouts, etc), and a separate pool could be for grassroots community efforts that are currently missing across the DAO (incentivised DAO citizens support, discord integrations, community activations and grassroots marketing). These pools could mirror the first “application” and “community” pools Gitcoin Grants started with years ago; rounds that helped make the Ethereum ecosystem what it is today.</p>
+<p>Applications could be scoped to only include a few key projects to start, for example a maximum of 10-15 of the highest leverage projects decided on by CSDO or a similarly informed body.</p>
+<p>Donors in these rounds could be restricted to funding in GTC to truly ensure that those donating are aligned with the efforts of Gitcoin and not griefing the system (although this won’t stop all attacks).</p>
+<p>Round runbooks created by PGF could be used to help rotate who is responsible for running these rounds, and ensure that there are no gaps in how the process is being documented.</p>
+<p><strong>Who’s already doing this?</strong></p>
+<p><strong>Nouns.</strong> Projects like Nouns already run similar experiments and are all the better for it: votes go through <a href="https://www.nounsagora.com">Agora</a> and smaller “workstream” proposals go through <a href="https://prop.house">Prop House</a>. The result is that the Nouns community is able to learn from the tools they build every step of the way and embrace a truly open source spirit. Memetically, Nouns has become one of the strongest projects out there and is starting to think deeply about how its treasury and tools could make an impact.</p>
+<p><strong>Juicebox.</strong> Juicebox runs all of its development through a <a href="https://juicebox.money/@juicebox">core treasury</a> powered using <a href="https://info.juicebox.money/dev/build/getting-started/">their protocol</a>. Everyone building is on equal footing and gains stake cooperatively based on their contributions, and it empowers people to first <strong>give</strong> contributions and then find value later.</p>
+<p>These examples were chosen not only because they’re strong projects, but because they’re projects we should be empowered by the way we work to engage closely with and collaborate with. Currently with our workstream structure this is challenging.</p>
+<p><strong>What are the risks?</strong></p>
+<p>There are honestly a decent number of very real concerns with this approach. Quadratic funding still has a number of issues like the ones mentioned above, and if ramped up too quickly it could counter-intuitively <em>slow</em> development as a result. This is why these experiments should start small, and fund non-core efforts while eventually further supplementing the core team. If this is successful, more of the DAO’s operational expenses and funding allocation decisions could be shifted over this way.</p>
+<p>Fundamentally though, there’s no better way to learn than to experience these problems head on. If we’re hesitant about experimenting in this way, we should take the time to reflect inward and ask if these concerns are felt by the broader community.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015/1
+        Mon, 20 Feb 2023 16:24:37 +0000
+gov.gitcoin.co-post-13015-1
+Gitcoin Building Gitcoin: Using Quadratic Funding for Subtraction
+      
+
+

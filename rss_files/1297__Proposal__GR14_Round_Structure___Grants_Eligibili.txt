@@ -1,0 +1,633 @@
+
+
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632
+    # Summary
+
+This proposal looks to finalize round structure & matching pool allocations for Grants Round 14.
+
+In addition, we’re proposing a policy change to platform-level eligibility for grantees, following the many discussions on this topic in GR13.
+
+## TLDR:
+
+* GR14 will look similar structurally to GR13, as we hone our innovation focus in on Grants 2.0 and launching the protocol
+
+* We are standing up a dedicated ETH Infra round in order to more intentionally support Ethereum protocol development
+
+* We are proposing removing the “grants should not have a token” criteria from platform eligibility
+
+# Round Structure
+
+### GR13 Recap
+
+*Main Round*
+
+In GR13, we continued on with the no-category approach & the 2.5% main pool matching cap that we had successfully [tested in GR12](https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915).
+
+As background, prior to GR12, the main pool was divided into categories that assigned pre-set percentages of the pool to grants in specific disciplines or geographies (“categories”).
+
+Since then, we have done away with that category-based main pool approach, and instead have been scaling thematic matching pools outwardly with Ecosystem & Cause Rounds, which are dedicated QF pools for specific projects & domains. See the [GR13](https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915) & GR12 posts for more context.
+
+Based on community feedback, the no-category approach and 2.5% matching cap continued to satisfy their intent and people are excited by the benefits that cap continues to bring to the longer-tail of grantees (funding many grants vs. letting the top few take the lion’s share of the pool).
+
+*Ecosystem Rounds*
+
+Based on ecosystem partner feedback, Ecosystem Rounds – rather than main pool categories – are an offering that there is a clear market need for us to continue with & build upon.
+
+We’ve grown Ecosystem Rounds substantially – from 2 in GR11, to 5 in GR12, to 9 in GR13 – and are seeing demand in GR14 from ecosystems that are new to working with Gitcoin, a testament to product-market fit of that offering in spite of market turmoil. We ran retrospectives with several partners after GR13 to get their input as we build these out further.
+
+As we work towards giving ecosystems more agency over their own rounds, we are seeing some awesome community-led innovation take shape. A few examples to note from GR13:
+
+* Collaborative ecosystem rounds, like [ZK Tech](https://docs.google.com/document/d/1xmGnJ5sL-DZxuUWBEYKVQD7eyPq1ccBZuxmiW-m_g_Y/edit) & [Open Gaming](https://docs.google.com/document/d/1gMY4Lnn2veNlAguoKHjwtIk-5vSzXTASEXsk_F26Ra0/edit)
+
+* Novel funding mechanisms, like [Radicle’s Drips](https://twitter.com/gitcoin/status/1499161519497433092?s=20&t=pDELl_YVwQwkOU3wJnF8sw)
+
+* Ecosystem round matching caps: In GR13, we offered the option for these rounds to set their own individual matching caps. All nine rounds took us up on this offer, selecting caps ranging from 10-20%, allowing ecosystems themselves to test QF based on their own needs
+
+As we look towards [Grants 2.0](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981), a world wherein anyone will be able to stand up their own grants program, we want to continue to enable ecosystems to successfully run & innovate on their own rounds on top of Gitcoin, rather than Gitcoin doing this work in a centralized way.
+
+*Cause Rounds*
+
+Cause Rounds are rounds funded by external sponsors for clear sets of global public goods, and represent Gitcoin moving beyond just Web3 & Digital Public Goods, and into Public Goods more broadly speaking. These rounds expand the user base & TAM of Gitcoin Grants, and have successfully brought in funding interest from major Web2 philanthropists.
+
+In GR13, in addition to continuing with the Climate & Longevity rounds from GR12, we added a ‘Support for Ukraine’ round. This round was successful by all accounts, raising $700K in matching funds in the span of just a couple weeks to provide humanitarian aid given the crisis in Ukraine.
+
+All this said, we continued to learn acutely in GR13 that Cause Rounds represent a lot of operational overhead for Gitcoin – since there isn’t usually an external lead driving these rounds forward like we have with Ecosystem Rounds, a substantial lift falls on the PGF workstream for these rounds.
+
+As a result, until we have the [Grants 2.0](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981) protocol which will enable anyone, anywhere to stand up their own Cause Round, we plan to grow these rounds vertically, rather than horizontally (i.e., doubling down on just a few key rounds and scaling funding within those rounds). We don’t have the resources to run many small Cause Rounds in parallel.
+
+## GR14 Proposal
+
+We propose GR14 look a lot like GR13 – partly because the community feedback we have received on the direction of the last couple rounds is positive, and partly because we are honing our innovation focus in on [Grants 2.0](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981) and launching the protocol.
+
+**Context: Grants 2.0 & Maintenance Mode**
+
+To be explicit about the second point above: Grants 1.0, the centralized platform on which our program currently runs, [is now in maintenance mode](https://gov.gitcoin.co/t/grants-2-0-is-how-we-scale-our-impact/10015). The product team will fix any bugs and continue to maintain the platform as we build Grants 2.0 in parallel, but no product resources are prioritized to innovate on the current platform.
+
+This limits how much we can play with the grants program in the near-term, but is the right long-term direction given the vision we are working towards.
+
+Given the above context, we do not plan to make substantial changes to the grants program structure or do any substantial innovation on QF over the next few rounds, with an eye to this longer-term big play we are marching towards.
+
+**Proposed Round Structure**
+
+As a result, the Public Goods Funding workstream proposes that the structure of the round remains the same for GR14 at a high-level.
+
+In summary, the structure of the round will remain:
+
+* A Main Pool (of up to $1M)
+* Ecosystem Rounds
+* Cause Rounds
+
+*Main Pool*
+
+The GR14 main pool will be a single matching pool fund/distribution of up to $1M in matching for the round. As in GR13, no individual grant’s matching contribution amount shall exceed 2.5% of the overall matching pool fund.
+
+We are specifically requesting “up to $1M”, rather than a specific amount.
+
+This “up to $X” is something we’ve been discussing for a bit – while historically we’ve requested a specific amount, we actually don’t think it makes sense for governance to ratify a specific amount prior to the round. Doing so prematurely and setting too high an amount can cause us to unnecessarily pull funds from the multisig – since when these posts are created, we are still fundraising for the main round. This is especially timely right now given the down market, and the fact that we have seen some funders rescind commitments due to that.
+
+*Ecosystem Rounds*
+
+In GR14, we plan to run roughly ten Ecosystem Rounds. As in previous rounds, these are pass-through funds that are not drawn from the existing multisig balance, and once again we have a mix of new & returning ecosystem partners funding these rounds.
+
+Within the ecosystem rounds we plan to run in GR14, we are particularly excited to announce a new Ecosystem Round we are being intentional about standing up: an ETH Infra round focused on protocol devs in the Ethereum ecosystem.
+
+This round was spun up in response to [the discussion here](https://gov.gitcoin.co/t/can-gitcoin-be-doing-more-to-support-ethereum-protocol-devs/10151) -- and as we expand Gitcoin Grants beyond just open-source in the Ethereum ecosystem, we believe this is an important round to prioritize in order to ensure we are continuing to have a dedicated funding pool for protocol development.
+
+*Cause Rounds*
+
+In GR14, we plan to run three Cause Rounds: a Climate Round, a Blockchain Advocacy round, and a new DEI Round. As with Ecosystem Rounds, these are pass-through funds that are not drawn from the existing multisig balance.
+
+# Grants Eligibility Update
+
+We are proposing an expansion to grants eligibility in GR14, based on (1) the direction we are headed with Grants 2.0, and (2) the BrightID appeal which brought into question the existing eligibility criteria.
+
+**Context**
+
+Since its inception, Gitcoin has been focused on funding public goods. In the early days of the grants program, there were no eligibility criteria highlighting ‘what’s in’ and ‘what’s out’ – anyone could get approved for a Gitcoin Grant. At one point, it was brought to Gitcoin’s attention that there were grants on the platform that did not meet the ethos of ‘public good’, and the following norms were established for grants eligibility:
+
+* A grant should not have raised over $500K in VC funding
+
+* A grant should not have a token
+
+Today, FDD declines grant applications that meet these criteria. In addition, community members have the ability to ‘flag’ a grant they see on the platform that they believe should not be deemed a public good, which then sends that grant to FDD’s dispute process. Denied grants are offered a chance to request an appeal which are vetted by the FDD. The ideal process by which appeals might trigger policy revisions (and vice versa) have not yet been established. FDD has consultations with LexDAO Impact Clinic planned.
+
+**Where we are today**
+
+As outlined in [this post](https://gov.gitcoin.co/t/novel-situation-1-project-should-not-have-a-token-or-raised-vc-funding/10029/17), the landscape has evolved and many early-stage projects, like BrightID, that the community would deem eligible for grants do have small token experiments.
+
+In GR13, as we pursued the BrightID appeal, we explored the idea of allowing tokens under a certain market cap. We realized quickly that there is a *ton* of complexity associated with this -- token reporting is non-standard, and setting a market cap would be too arbitrary a criteria that would likely continue to require much manual review.
+
+**Recommendation**
+
+PGF & FDD are recommending that we remove the ‘a grant should not have a token’ criteria from our eligibility.
+
+As per the existing rules, the removal of this criteria does not mean that airdrops and quid pro quo offers will get through, only that the existence of a token doesn't automatically disqualify a project. QPQ also applies to/includes non-monetary rewards.
+
+As with the BrightID appeal, we want to move in the direction of putting the definition of a public good into the community’s hands, rather than having this be something Gitcoin prescribes centrally. As the result of that specific appeal makes evident, the ‘has a token’ criteria is not a good barometer of what the community considers a public good – and so we propose broadening the aperture, and triaging appeals on a case-by-case basis.
+
+In addition, we will work with the product team to determine what changes we might make in assessing whether a project is a public good at application stage (e.g., requiring projects with a token to submit a brief writeup on why they should be eligible).
+
+Grants previously turned down for having tokens will need to re-apply and will not automatically be re-reviewed with this change.
+
+## Voting Options
+
+We will ask the stewards to vote on three options:
+
+**Option 1: FOR GR14 Structure & FOR New Eligibility**
+
+You approve the GR14 structure as is, and are in favour of us removing the “no token” eligibility requirement.
+
+**Option 2: FOR GR14 Structure & AGAINST New Eligibility**
+
+You approve the GR14 structure as is, but are NOT in favour of us removing the “no token” eligibility requirement. If this option prevails, GR14 eligibility will remains as-is.
+
+**Option 3: AGAINST GR14 Structure**
+
+You do not approve of the GR14 structure, and will be submitting an alternate proposal for consideration.
+
+Once we have feedback on both this and any other proposals, the Public Goods Funding workstream will gather all formal proposals and submit a Snapshot vote to decide which to move forward with.
+
+Please do not submit a snapshot vote for your proposal specifically! This just adds confusion and makes it harder for the community’s voice to be heard effectively.
+Sat, 28 May 2022 21:45:10 +0000
+📜 Proposals
+
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+tjayrush
+
+            <aside class="quote no-group" data-username="connor" data-post="63" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>and that could take 5? 10? 20+ years?</p>
+</blockquote>
+</aside>
+<p>Totally understand. Thanks for responding. I think what you say above is true. I guess I’m saying, “Let’s get started…”</p>
+<p>It’s all good though. Cheers.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/65">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/65
+        Sat, 28 May 2022 21:45:10 +0000
+gov.gitcoin.co-post-10632-65
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+gmkung
+
+            <p>On the topic of decentralized curation and arbitration, has there been discussion of using Kleros or Kleros Curate as a solution? Kleros has been used for the approval of bounties and grants for years now, and can be a very viable solution for decentralizing the gatekeeping of eligibility for grant pools (an important feature to have as mentioned by <a class="mention" href="https://gov.gitcoin.co/u/lefterisjp">@lefterisjp</a>).<br>
+Kleros also has the ability to be incredibly generate purpose and comprehensive in the things that should be checked for, utilizing the judgment of a decentralized jury to complement the current usage of decentralized ID systems like Proof-of-Humanity (<a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a>)  to prevent malicious projects from draining the pools.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/64">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/64
+        Fri, 27 May 2022 03:05:20 +0000
+gov.gitcoin.co-post-10632-64
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+connor
+
+            <p>Ah, I see what you mean, my apologies for the misunderstanding. Yeah, I do agree in an ideal world, no manual curation would be needed at all, and the QF mechanism itself would naturally provide the curation. This community curation is part of the appeal for protocols to run ecosystem rounds, instead of or in addition to their traditional grant programs (even with the manual curation, it’s much more community-oriented).</p>
+<p>In practice though I don’t think it’s realistic, at least right now.</p>
+<p>One example of why: it’s not uncommon to find 100% fraudulent grants that are impersonating a legit project, but created by someone totally unrelated to that project. It’s tough for the community to verify (much less get every individual to do their due diligence), and often the project’s real owners don’t find out about the fake grant until much later.</p>
+<p>Another example is quid pro quo. Any project could open a grant and tell their community “hey all donors will get an airdrop” or “we’re raising our seed token round via Gitcoin Grants” and incentivize tons of donations that way. Sure, a lot of the community might protest and raise concerns, but if the only curation method is donations, that grant will still take home a huge undeserved portion of the matching funds.</p>
+<p>And at the end of the day, we probably can’t have a truly open QF protocol curated only via donations until there is a real decentralized identity system widely adopted that is rock solid (and that could take 5? 10? 20+ years?). Plus much better decentralized arbitration systems.</p>
+<p>I definitely agree with the spirit of your opinion on this, and would like to see us move progressively towards that vision, but realistically it’s a long way out</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/63">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/63
+        Thu, 26 May 2022 22:43:54 +0000
+gov.gitcoin.co-post-10632-63
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+DisruptionJoe
+
+            <p>This is exactly why I think building a decentralized grant curation infrastructure is so important. This is the outcome we will get from a combination of grants 2.0 components and FDD research.</p>
+<p>First, by connecting Ethelo to scale our grant reviews we are NOT trying to say Ethelo is the future tool. To date, we have spent $4k on the integration which Ethelo has spent more $$$ and time in building for us. What it does do is allow us to open up reviews to be done by anyone. However, we choose how to weight those reviews. For GR14, we will only consider the trusted reviewers for production use, and we will verify the results with the previous method.</p>
+<p>At the same time, we want to know how we could make the criteria validation decentralized and permissionless. Gitcoin Passport will allow us to give review stamps and model a use case that is outside of simply sybil defense (but also is an AMAZINGLY HIGH QUALITY sybil signal!)</p>
+<p>That is why this work was done last season: <a href="https://gov.gitcoin.co/t/gia-rewards-okr-report/10438" class="inline-onebox">GIA Rewards OKR Report</a></p>
+<p>This season as we gather data from the live Ethelo experiment, we will run the data through the simulations built off the research above. You can see the simulation software here: <a href="https://github.com/dRewardsSystem/Rewards">https://github.com/dRewardsSystem/Rewards</a></p>
+<p>This will allow us to find mathematic proofs and kill assumptions/falsify hypothesis about the system. Then through a proper research, hypothesis, experiment, development cycle, we would hope to be able to provide decentralized and permission-less grant reviewing that uses inter-subjective consensus to ANY community that wants to use it with the launch of Grants 2.0.</p>
+<p>If we don’t fund building this and simply use delegated authority ourselves, the odds of another ecosystem building this are slim to none, but the work is almost done!</p>
+<p>The benefit is analgous to a distributed ledger over a database. It is triple entry accounting that fundamentally changes the game theory. Because users get incentivized to review one grant against one criteria that is <em>randomly</em> selected at a time, and that criteria and grant is filtered to the total set of criteria for any community-curated ecosystem, it makes the optimal strategy provide trusted outcomes. It also is much cheaper to defend than to attack.</p>
+<p>Another really cool benefit that helps push the legitimacy flywheel is that anyone who has a Gitcoin Passport could then participate and get paid for doing reviews, which then incentivizes passport adoption.</p>
+<p>The output of the <a href="https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711">grants 2.0</a> project registry flyweel and the output of the <a href="https://gov.gitcoin.co/t/the-gitcoin-anti-sybil-flywheel/9417">anti-sybil flywheel</a> have a positive feedback loop supporting each other via utility use cases for GTC!  This is an exponential form of the <a href="https://gov.gitcoin.co/t/the-gitcoin-anti-sybil-flywheel/9417">Jet Engine</a> effect <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> has talked about.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/62">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/62
+        Thu, 26 May 2022 21:02:50 +0000
+gov.gitcoin.co-post-10632-62
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+tjayrush
+
+            <p>I think you missed my point. The point I’m making is that in the original paper, the curation function was supposed to be handled by the individual donations from the community. That was the mechanism that was meant to curate “good” projects from “bad.”</p>
+<p>There was an acknowledgement in that paper that there was a Sybil problem, but there was no mention of a gatekeeper (that I remember). I’m talking about the gatekeeping function.</p>
+<p>There are well-established methods to do gatekeeping in a non-smart-contract (i.e. human-in-the-loop) world. Those methods are called KYC.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/61">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/61
+        Thu, 26 May 2022 15:41:43 +0000
+gov.gitcoin.co-post-10632-61
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+connor
+
+            <aside class="quote no-group" data-username="tjayrush" data-post="55" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tjayrush/48/41_2.png" class="avatar"> tjayrush:</div>
+<blockquote>
+<p>I feel that what’s happened is that “GitCoinDAO” the organization has taken over “Curation” task and as a direct result any hope of the community building that skillset themselves will disappear.</p>
+</blockquote>
+</aside>
+<p>From my perspective, as someone who has been with Gitcoin Holdings for over 3 years, what we see happening with the GitcoinDAO and FDD/PGF workstreams is exactly what you describe, community curation. 2 years ago approvals and eligibility were solely handled by people within Gitcoin Holdings, with no governance or public debate.</p>
+<p>FDD’s evolution <strong>IS</strong> the community building that curation skillset, why would that hope disappear? Anyone can join the DAO and volunteer to curate,  we’re having these open debates in a public forum on policies/appeals, governance votes are open. Sure we could have the community more involved using a governance vote on every grant application but that would be a bit messy…</p>
+<aside class="quote no-group" data-username="tjayrush" data-post="55" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tjayrush/48/41_2.png" class="avatar"> tjayrush:</div>
+<blockquote>
+<p>The discussion should not be about whether or not a centralized workstream should allow or disallow projects to participate with or without tokens. It should be about how we can enable, teach, train, and foster an environment where the community builds the skillset themselves.</p>
+</blockquote>
+</aside>
+<p>These aren’t mutually exclusive, we need a platform-wide general policy that the community agrees to, and we also need to enable + train the community to curate (FDD). The reality is grant reviewing, curating, and approving, is time intensive and not the most fun work. No one is going to do it for free just to build a skillset, we need to compensate those putting in the time and effort, hence, a workstream is created.</p>
+<aside class="quote no-group" data-username="tjayrush" data-post="55" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tjayrush/48/41_2.png" class="avatar"> tjayrush:</div>
+<blockquote>
+<p>The obvious, logical conclusion of the path we’re on is human-in-the-loop, centralized KYC.</p>
+</blockquote>
+</aside>
+<p>I don’t think this is obvious or logical, we’re on the opposite path, this is where we started, and we’ve been progressively moving away from it.</p>
+<p>But yes I do think we could build out a more decentralized dispute and arbitration system, maybe with staking, voting, incentives, etc. But we’d still need a general platform-wide policy.</p>
+<p>I also want to say that this is all specific to GitcoinDAO operated rounds - ideally with Grants 2.0, anyone will be able to run their own custom round whenever they’d like, and choose how they curate (via a centralized team or decentralized community).</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/60">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/60
+        Wed, 25 May 2022 20:06:44 +0000
+gov.gitcoin.co-post-10632-60
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+David_Dyor
+
+            <aside class="quote no-group" data-username="linda" data-post="56" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/linda/48/26_2.png" class="avatar"> linda:</div>
+<blockquote>
+<p>can apply for an exception</p>
+</blockquote>
+</aside>
+<p>Since the criteria published in gr13 (and historically) is “A project <strong>should</strong> not have a token” we do not need to create an exception/exemption process imo.  FDD reviewers can already recommend approval of projects with tokens based on their judgement &amp; discretion.</p>
+<aside class="quote no-group" data-username="krrisis" data-post="57" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/krrisis/48/6203_2.png" class="avatar"> krrisis:</div>
+<blockquote>
+<p>to see the draft of these eligibility criteria first and hear if they will already be used in GR14.</p>
+</blockquote>
+</aside>
+<p>The FDD put forth their recommended changes to token-policy in GR13 which did not proceed to Steward vote.</p>
+<p>Since then there has been intermittent coordination between PGF and FDD to try and come up with a suitable suggestion that might reach and pass Steward vote.  Unfortunately there seems to be a diverse range of opinions on how best to deal with the token issue which doesn’t appear headed for fast resolution.  The matter is bigger than the FDD alone imo.  This is why the FDD attempt during GR13 did not reach the voting stage.  People wanted to contribute to the discussion and did not want the FDD deciding unilaterally.</p>
+<p>Feels like we are drifting from the topic of GR14 structure but since the appeal process was brought up I can give a brief summary:</p>
+<ol>
+<li>
+<p>All appeals requests are started via a Google form (posted on the Grant Eligibility Notion page).</p>
+</li>
+<li>
+<p>FDD assesses all requests for merit.  Any with merit (usually based on simple mistakes) get processed internally by the FDD  unless they are based on a Novel Situation (NS), which is the most complex case, as we saw with BrightID</p>
+</li>
+<li>
+<p>The google form states that NS appeals will get 3 days of Gov forum discussion followed by 3 days for Snapshot vote.    The 3 &amp; 3 timeline, suggested by FDD last season, has never been used (or approved by Stewards).   (imo we need to eliminate Steward voting from the Appeal process for true efficiency).</p>
+</li>
+<li>
+<p>FDD is engaging LexDAO to help refine the process, especially for NS.  This part of the process is an experimental work-in-progress that has not been ratified by Stewards.  Instead of clinging to historical procedures designed before the Dao existed the FDD is now considering the challenge from a blank-slate perspective, now with LexDAO.</p>
+</li>
+</ol>
+<p>Notes:<br>
+-Most appeals other than NS can be dealt with quickly (&lt;48 hours).<br>
+-The plan is to replace the FDD assessment stages with assessment by a decentralized group.</p>
+<p>What does this mean for GR14?  The FDD is prepared to deal with the majority of appeal requests quickly.  Should any NS Appeal get requested we should expect dao-wide lengthy vigorous debates.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/59">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/59
+        Wed, 25 May 2022 19:52:19 +0000
+gov.gitcoin.co-post-10632-59
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+DisruptionJoe
+
+            <p>Although I voted for, if “against” wins, we will need to rapidly update the appeal process to execute in a day or two for most cases. This is doable for GR14. Thanks <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a> for getting ahead of this so we can prepare based on the results of the vote!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/58">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/58
+        Wed, 25 May 2022 19:03:59 +0000
+gov.gitcoin.co-post-10632-58
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+krrisis
+
+            <aside class="quote no-group" data-username="connor" data-post="42" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>I think the details to nail down are 1. What is the review/appeal process (I don’t think a BrightID situation with a big forum debate and governance vote is scalable, FDD will likely have to make decisions, all the more reason to set public guidelines), and 2. What those rough guidelines should be (market cap? treasury? funding/runway? type or mechanism of token? etc)</p>
+</blockquote>
+</aside>
+<p>Agree. So I hope the FDD team can share these refined guidelines.<br>
+For now I will abstain from voting because it is unclear to me if a yes vote would lead to rushed implementation. I do not think this will be the case but would love in any case to see the draft of these eligibility criteria first and hear if they will already be used in GR14.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/57">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/57
+        Wed, 25 May 2022 18:15:59 +0000
+gov.gitcoin.co-post-10632-57
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+linda
+
+            <p>Right now the vast majority of projects that have tokens also receive some funding benefit from them (e.g. holding in treasury, selling to investors, etc) upon launch or sometime in the future when tokens become transferable. In these cases, I don’t think it makes sense for them to get matching funds on Gitcoin so we can prioritize public goods that don’t have a clear funding mechanism.</p>
+<p>I lean towards the process of token projects that aren’t using them for funding (e.g. team/treasury didn’t retain any tokens, etc) can apply for an exception. I also believe we can adjust the eligibility later on if we’re seeing way more tokens unrelated to funding.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/56">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/56
+        Wed, 25 May 2022 18:00:35 +0000
+gov.gitcoin.co-post-10632-56
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+tjayrush
+
+            <p>It surprises me sometimes how far we’ve gotten away from the original intent of the Quadratic Funding paper. The ‘curator’, at least in my reading of that paper, was supposed to be the community itself.</p>
+<p>I feel that what’s happened is that “GitCoinDAO” the organization has taken over “Curation” task and as a direct result any hope of the community building that skillset themselves will disappear. The obvious, logical conclusion of the path we’re on is human-in-the-loop, centralized KYC.</p>
+<p>The discussion should not be about whether or not a centralized workstream should allow or disallow projects to participate with or without tokens. It should be about how we can enable, teach, train, and foster an environment where the community builds the skillset themselves.</p>
+<p>Having said that – we shouldn’t allow projects that are already funded with tokens to receive matching funds.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/55">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/55
+        Wed, 25 May 2022 15:40:41 +0000
+gov.gitcoin.co-post-10632-55
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+puncar
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/david_dyor">@David_Dyor</a> - we discussed the last round the eligibility for multiple grants proposals from one DAO/organization, so I just wanted to check if multiple-proposal from one community is still not an option.</p>
+<p>to recap on the specific topic:</p>
+<ul>
+<li>Bankless has 23 000 members, and they are working in self-organized groups, called guilds and projects.</li>
+<li>Some of the projects may/may not be a public good (Bankless Academy, Bounty Board, DAO dash, Ultrasound merch, and many more)</li>
+<li>As of now, a few tried to apply but have been declined based on the one DAO one proposal rule</li>
+</ul>
+<p>My question is if this rule still applies for GR14 or not</p>
+<p>And my second question is, does this rule apply only for the main matching round or overall.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/54">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/54
+        Wed, 25 May 2022 12:36:33 +0000
+gov.gitcoin.co-post-10632-54
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+ZER8
+
+            <p>We will always be here for consultancy. I was talking from a POV in which it would be a waist of resources to not share with them what we believe is of crucial importance for their success. <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/53">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/53
+        Tue, 24 May 2022 18:14:19 +0000
+gov.gitcoin.co-post-10632-53
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+David_Dyor
+
+            <p>There is a side-effect to making the eligibility change.  A likely <strong>big</strong> increase in approved grants.</p>
+<p>I think this will have beneficial PR optics in a time of decreasing momentum and bear markets.  In season 13 we had our first decrease in numbers…this doesn’t paint a nice picture.  How much better would it look if we were able to announce big increases to approved grant numbers?</p>
+<p>This might help extend our Overton window…</p>
+<p>Also, I want to re-state my view that</p>
+<p><strong>If a project is a true public good it really doesn’t matter whether they have NFTs or other tokens</strong>.</p>
+<p>If only we could quickly hold community polls about the projects of questionable public good benefit we could ignore the entire token/nft debate.  If a project is deemed a true public good or public-good-benefit by the majority of our community the fundraising methods become irrelevant (unless illegal or unethical).  The more fundraising such a project achieves the more benefits accrue to public goods.  Even if by an NFT sale.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/52">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/52
+        Tue, 24 May 2022 17:11:20 +0000
+gov.gitcoin.co-post-10632-52
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+Pop
+
+            <p>Can we apply a matrix here as I am trying to do in the governance flow so that an easily digestible and usable format is in place for people to be able to self determine eligibility? Almost a “are you aligned enough to ride” dynamic where we have a set of attributes that must be met for an eligibility score?</p>
+<p>Very much pulling from the engagement score we’re been <a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418">working on with Steward Cards</a> and creating a pattern of self evaluation and accountability vs pages of text…</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/51">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/51
+        Tue, 24 May 2022 11:42:11 +0000
+gov.gitcoin.co-post-10632-51
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+Pop
+
+            <p>A protocol should always be un-opinionated and specific communities should come with their own rules. A best practices can be shared based on Gitcoin experience but again, each community will be able to take what they need and leave the rest</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/50">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/50
+        Tue, 24 May 2022 11:38:02 +0000
+gov.gitcoin.co-post-10632-50
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+Pop
+
+            <p>Agree here and should those allegations be true it is 100% not conducive to levelling out the playing field in terms of access to resource</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/49">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/49
+        Tue, 24 May 2022 11:33:21 +0000
+gov.gitcoin.co-post-10632-49
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+kyle
+
+            <p>There has been a lot of debate here, I want to mention I really appreciate the discussion. It’s opened my eyes to a number of use cases I hadn’t considered, and the broader implications of us denying a grant.</p>
+<p>I still feel that those with a token should apply, get denied, and then appeal. I know this creates friction for us, but to me it send the “right” message that token launches (which fund a project) are a big deal, and exclude you for funding from the community match pool.</p>
+<p>Like it was pointed out, we want to offer more granularity to those ecosystems who are okay with having a token, but we dont have that ability yet. so… for GR14, I would say we keep the rules the same and then evaluate once we have Grants 2.0 ready.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/48">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/48
+        Mon, 23 May 2022 23:15:09 +0000
+gov.gitcoin.co-post-10632-48
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+ZER8
+
+            <p>Thank you for the clarification. I forgot to specify that the main round will not align. It’s also a very good idea to let the communities decide.</p>
+<p>You/we could inform them and brief the round owners on how we suggest they should run their round and what are the biggest issues/vulnerabilities and no-no’s <img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> (that we encountered)</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/47">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/47
+        Mon, 23 May 2022 15:06:14 +0000
+gov.gitcoin.co-post-10632-47
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+annika
+
+            <p>Thanks everyone for the thoughtful dialogue here - eligibility is definitely a nuanced topic, and it is great to see so many people engaging so passionately.</p>
+<p>The proposal is now up on <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xf8a7f4c5c6f894046555d608d5508ab04ae608670c135b27869c184c3c325236" class="inline-onebox" rel="noopener nofollow ugc">Snapshot</a> for voting.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/46">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/46
+        Mon, 23 May 2022 12:38:03 +0000
+gov.gitcoin.co-post-10632-46
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+kevin.olsen
+
+            <p>This conversation has evolved since this post, but I feel the need to clarify the following exchange:</p>
+<aside class="quote no-group quote-modified" data-username="ZER8" data-post="36" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/zer8/48/882_2.png" class="avatar"> ZER8:</div>
+<blockquote>
+<aside class="quote no-group" data-username="lefterisjp" data-post="34" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lefterisjp/48/24_2.png" class="avatar"> lefterisjp:</div>
+<blockquote>
+<p>So your solution is give up and open the doors to all token projects? I am sorry but this is not a solution.</p>
+</blockquote>
+</aside>
+<p>I think that is the aligned vission with Grants 2.0, yes.</p>
+</blockquote>
+</aside>
+<p>Regarding the vision for Grants 2, it is <strong>not</strong> our vision to change the way Gitcoin runs its rounds.</p>
+<p>It <strong>is</strong> our vision to enable grant programs outside of Gitcoin to come to their own policy decisions with their communities and to tailor their programs to their needs. These will and should differ from the set of choices the Gitcoin community has made to run our grant rounds.</p>
+<p>Let’s not conflate the choices we make for the running of our rounds at Gitcoin, with the choices other communities may make when using the Grants 2 protocol.</p>
+<p>The community decided policies for Gitcoin grants will still hold when Gitcoin runs its rounds on top of Grants 2. <img src="https://gov.gitcoin.co/images/emoji/twitter/handshake.png?v=12" title=":handshake:" class="emoji" alt=":handshake:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/45">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/45
+        Mon, 23 May 2022 08:40:31 +0000
+gov.gitcoin.co-post-10632-45
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+M0nkeyFl0wer
+
+            <p>Well said. Totally agree. I think we are all saying similar things here.</p>
+<aside class="quote no-group" data-username="connor" data-post="42" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>It doesn’t look like we’ll come to a resolution to make a change before GR14, and that’s ok. But IMO these two options are essentially the same thing in practice. So I suppose the question is, which one is more work for the DAO, and which one is fairer for grants.</p>
+</blockquote>
+</aside>
+<p>+1</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/44">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/44
+        Fri, 20 May 2022 22:06:35 +0000
+gov.gitcoin.co-post-10632-44
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+lefterisjp
+
+            <aside class="quote no-group" data-username="connor" data-post="42" data-topic="10632">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>Again, doubt this can happen before GR14, but just wanted to state that I really think most people in this thread are in agreement that certain types of projects with tokens should be allowed, but simply disagree on the best policy to communicate and enforce that.</p>
+</blockquote>
+</aside>
+<p>Yes.</p>
+<p>As stated above exactly because of this I think we should not change the rule at all now, but instead properly define what token projects are okay.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/43">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/43
+        Fri, 20 May 2022 15:30:01 +0000
+gov.gitcoin.co-post-10632-43
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+connor
+
+            <p>It actually seems like the two points of view here are not that different:</p>
+<p>Option 1: No token policy stays, but projects that want to can apply for an exception and can be approved after a review (case by case basis)</p>
+<p>Option 2: Token policy is updated with some general guidelines and thresholds, but projects still are applying anyway when opening a grant and are always subject to review and approval (case by case basis)</p>
+<p>I don’t think anyone is really trying to change the policy to “all projects with tokens are allowed no matter what”, but maybe that wasn’t explicitly clear in the initial proposal. I also don’t think anyone is really arguing for a “no token projects allowed no matter what” either.</p>
+<p>It doesn’t look like we’ll come to a resolution to make a change before GR14, and that’s ok. But IMO these two options are essentially the same thing in practice. So I suppose the question is, which one is more work for the DAO, and which one is fairer for grants.</p>
+<p>I’d argue even if we went for option 1, we’d still want to provide some guidance and criteria about what types of projects/tokens are likely eligible for an exception (so we don’t get as many applications to review that are obvious declines, and so our reasoning is public/decisions are justifiable and applied equally). This makes it even closer to option 2, essentially the same thing.</p>
+<p>I think in the long term it will be less work for the DAO and fairer to grantees if we provide general guidelines for what kinds of token projects could be approved, and provide some examples, even if the metrics are not strict values.</p>
+<p>So before making a decision here, I think the details to nail down are 1. What is the review/appeal process (I don’t think a BrightID situation with a big forum debate and governance vote is scalable, FDD will likely have to make decisions, all the more reason to set public guidelines), and 2. What those rough guidelines should be (market cap? treasury? funding/runway? type or mechanism of token? etc)</p>
+<p>Again, doubt this can happen before GR14, but just wanted to state that I really think most people in this thread are in agreement that certain types of projects with tokens should be allowed, but simply disagree on the best policy to communicate and enforce that.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/42">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/42
+        Fri, 20 May 2022 00:01:30 +0000
+gov.gitcoin.co-post-10632-42
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+M0nkeyFl0wer
+
+            <p>Hey everyone. Glad to see this thoughtful and constructive discussion of these important topics.</p>
+<p>I personally feel strongly that projects should not be disqualified for having a token or NFT. Frankly this is the core infrastructure of web3 it seems misguided to eliminate projects from potential funding for wanting to build things that use cryptoeconomic building blocks. I’m focused specifically on ReFi projects and other projects in the cause rounds who are trying to use these tools to make the world a better place. I believe we should be encouraging the use of crypto as a key part of their projects infrastructure. Isn’t that what we want? Why would we discourage using cryptoeconomics and composability to coordinate and fund solutions?</p>
+<p>I tried to explain this debate to a friend who isn’t in crypto and they couldn’t wrap their head around it… “wait the people in crypto don’t want to fund projects that are using tokens and NFTs”.</p>
+<p>There is a big difference in my opinion between a token sale and the use of a token for say carbon credits or as a mechanism for governance. Yes these tokens have value but that is a good thing in these situations. Does it automatically mean these projects no longer need funding? Maybe if they did a token sale and raised millions of dollars that is a different story but in that case we are really talking about how much funding a project has already which is less of an issue of having a token and more an issue of a variety of external factors that effect the size of their treasury.</p>
+<p>It feels to me like the token rule idea is a hold over from the ICO days. I’m all for taking steps to ensure projects are not scams, and focusing the majority of our support to projects that need it but simply cutting out anyone who is using tokens cuts out a big chunk of our community in DAOs and ReFi projects.</p>
+<p>I think an appeal is one possible solution as has been suggested. Another approach would be to carve out some exceptions to that rule like for example not excluding ReFi projects for using tokens for climate solutions. “Appeal” feels a bit punitive, perhaps we need to be more nuanced about how these decisions are made especially in ecosystem and cause rounds. Refi projects are very up front about what they are building and why, they shouldn’t have to appeal as if they are asking for forgiveness for something they are doing wrong. They should apply for funding and we should have the capacity to make nuanced decisions based on use cases.</p>
+<p>I am acutely aware of the operational constraints we are already working within and the implications of a more nuanced process. Thus I think its important we are clear about what we consider appropriate and what we don’t so that team members can focus on implementing those rules and don’t need to go through multiple rounds of initial review and then appeals.</p>
+<p>If this is indeed going to be ReFi Summer we should think carefully about the implications of this decision.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/41">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/41
+        Thu, 19 May 2022 23:20:37 +0000
+gov.gitcoin.co-post-10632-41
+[Proposal] GR14 Round Structure & Grants Eligibility Update
+      
+
+

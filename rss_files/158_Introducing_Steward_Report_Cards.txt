@@ -1,0 +1,463 @@
+
+
+
+Introducing Steward Report Cards
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712
+    The [MMM-Workstream](https://gov.gitcoin.co/t/proposal-merch-memes-marketing-workstream-budget-request/8562) are proud to present *Steward Report Cards*, live via both [DNS](https://www.daostewards.xyz/) and [ENS](https://stewards.eth.limo/)!
+
+![|602x331](upload://h4RrPkWPoRs7vOlxyKZkQ6PNRga.png)
+
+The stewards of Gitcoin DAO play a vital role in driving the Gitcoin ecosystem forward through their work in governance and in workstreams. Previously there hasn’t been an easy way to gauge their level of engagement within the DAO. The Steward Report Cards aims to solve this problem by providing the most valuable metrics of each steward and improve the transparency and accountability of their work. The cards may function as a tool to assist delegators making informed decisions and to allow stewards to compare their involvement relative to their peers.
+
+Public data of each stewards involvement in discourse, workstreams and governance participation are presented and combined to calculate an overall health-score. The titles on the card are clickable and will respectfully route the user to the data source with more info.
+
+
+**A quick walk through of the cards**
+
+* **Steward since:** This is the date that the Steward introduced themselves on the [governance forum](https://gov.gitcoin.co/t/introducing-stewards-governance/41). The earliest date is the [launch of Gitcoin DAO](https://gitcoin.co/blog/introducing-gtc-gitcoins-governance-token/), 25th of may 2021. Link goes to the Stewards introduction post on the forum.
+
+ * **Forum posts:** The number of comments and threads started on the governance forum. 
+Link goes to the Stewards profile on the forum.
+
+* **Workstream:** Involvement in any of the Workstreams of Gitcoin DAO according to the public information of the governance forum and on [Notion](https://www.gitcoindao.com). 
+Link goes to gitcoindao.com
+
+* **Voting weight:** The percentage of governance tokens delegated to the Steward in relation to the total number of tokens. 
+Link goes to the stewards GitcoinDAO-profile on Tally.
+
+* **Vote participation:** This value displays the percentage of proposals [Snapshot](https://snapshot.org/#/gitcoindao.eth) the Steward has participated in. Non-serious proposals on Snapshot are not taken into consideration. As of writing this post, participation in 20 out of 25 proposals are required to achieve a 100% score. On-chain voting on proposals via [Tally](https://www.withtally.com/governance/gitcoin) are not displayed on the cards but are taken into consideration in the health-score calculation, more on this below.
+Link goes to the GitcoinDAO-page on Snapshot.
+
+* **Health:** The metrics described above are combined into an overall health-score, displayed in the top right corner of the card. The current formula for calculating the health of a Steward is based on three sub-scores; Forum-score (F), Voting-score (V) and Workstream-score (W):
+
+  * F = 1.75 * Posts/Weeks as Steward
+(the maximum forum score is set to 1.5)
+
+  * V = (2.2 * S + 1.5 * T) / 2
+  where;
+  S = Snapshot participation
+  T = Tally participation
+
+  * W = Lead Stewards of a Workstream gives 5 points. Workstream contributor gives 3 points.
+
+  These are combined to achieve an over-all health-score:
+   * Health = F * V + W
+
+  *(We are exploring additional ways to represent Steward involvement in Workstreams and DAO-wide initiatives.)*
+
+* **[Statement]:** Link to the stewards introduction post on the forum.
+
+* **[Delegate]:** Link to the stewards GitcoinDAO-profile on Tally with an option to delegate GTC.
+
+
+The search field at the top of the site allows the user to quickly find a specific steward or group of stewards. It is also possible to link to a specific card, or a group of cards, by utilizing the search function. As you search the URL-bar auto-updates with the shareable link. For example:  `https://www.daostewards.xyz/#search=public`
+will display all stewards in the Public Goods Funding-workstream.
+
+We are continuously working on improving the cards are looking forward to receive feedback!
+
+Signed,
+@Fred, @seedphrase and the rest of the [MMM-Workstream](https://gov.gitcoin.co/t/proposal-merch-memes-marketing-workstream-budget-request/8562) ✨
+Wed, 25 May 2022 18:21:04 +0000
+🤖 DAO Governance and Vision
+
+
+Introducing Steward Report Cards
+owocki
+
+            <p>i wish this section of thte tally delegate report card worked better, it’d be nice to see the ENS names of the ppl who delegated, and be able to sort by the largest delegations (not just the latest)</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9d9b1ee519e6fcfeec7d7edec57a516d1aaf03eb.png" data-download-href="/uploads/short-url/mufj3C3tlZSvCKDub2h99mfi1Ht.png?dl=1" title="Screen Shot 2022-05-25 at 12.20.06 PM"><img src="/uploads/db4391/optimized/2X/9/9d9b1ee519e6fcfeec7d7edec57a516d1aaf03eb_2_690x271.png" alt="Screen Shot 2022-05-25 at 12.20.06 PM" data-base62-sha1="mufj3C3tlZSvCKDub2h99mfi1Ht" width="690" height="271" srcset="/uploads/db4391/optimized/2X/9/9d9b1ee519e6fcfeec7d7edec57a516d1aaf03eb_2_690x271.png, /uploads/db4391/optimized/2X/9/9d9b1ee519e6fcfeec7d7edec57a516d1aaf03eb_2_1035x406.png 1.5x, /uploads/db4391/optimized/2X/9/9d9b1ee519e6fcfeec7d7edec57a516d1aaf03eb_2_1380x542.png 2x" data-small-upload="/uploads/db4391/optimized/2X/9/9d9b1ee519e6fcfeec7d7edec57a516d1aaf03eb_2_10x10.png"></a></div><p></p>
+<p><a href="https://www.tally.xyz/voter/profile/L4PZWY" class="onebox" target="_blank" rel="noopener">https://www.tally.xyz/voter/profile/L4PZWY</a></p>
+<p>im happy to be transparent, but a systemic level of transparency would be better design IMHO</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/24
+        Wed, 25 May 2022 18:21:04 +0000
+gov.gitcoin.co-post-8712-24
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+tjayrush
+
+            <p>I always thought APIs were supposed to be designed to be painful to use, so I think you did a really good job there. <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/23
+        Wed, 25 May 2022 17:49:17 +0000
+gov.gitcoin.co-post-8712-23
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+owocki
+
+            <aside class="quote no-group" data-username="seanmac" data-post="21" data-topic="8712">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/seanmac/48/4818_2.png" class="avatar"> seanmac:</div>
+<blockquote>
+<p>IMO this transparency is a key part of making the whole system function.</p>
+</blockquote>
+</aside>
+<p>I think so too.  I’d encourage other large holders of tokens to publish similar reports too.</p>
+<p>Maybe in leiu of that, someone would be able to issue a report on who is delegating to who using on-chain metrics?</p>
+<p>I’d like to treating this initial delegation as an invitation for conversation.  If you think I’m delegating to someone too much or too little, or would like to nominate someone pls DM me (Owocki#1337) on discord.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/22
+        Sun, 22 May 2022 23:55:47 +0000
+gov.gitcoin.co-post-8712-22
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+seanmac
+
+            <p>Thank you for sharing this… it’s really helpful to know who you’re delegating to and why. IMO this transparency is a key part of making the whole system function.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/21
+        Sun, 22 May 2022 19:31:54 +0000
+gov.gitcoin.co-post-8712-21
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+owocki
+
+            <p>again posting for transparency reasons.    similar to my <a href="https://gov.gitcoin.co/t/s14-voter-guide-template/10488" class="inline-onebox">S14 Voter Guide Template</a> i hope that this post inspires others to share who they delegated to and why.</p>
+<p>here are my current delegations along with comments per delegatee.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/113ba2f0e6525d61de0d4499c3f96ad0a311f3b6.jpeg" data-download-href="/uploads/short-url/2srT1SgEIlrRrvL6eHr51X1myPk.jpeg?dl=1" title="Screen Shot 2022-07-06 at 12.15.12 PM"><img src="/uploads/db4391/optimized/2X/1/113ba2f0e6525d61de0d4499c3f96ad0a311f3b6_2_690x493.jpeg" alt="Screen Shot 2022-07-06 at 12.15.12 PM" data-base62-sha1="2srT1SgEIlrRrvL6eHr51X1myPk" width="690" height="493" srcset="/uploads/db4391/optimized/2X/1/113ba2f0e6525d61de0d4499c3f96ad0a311f3b6_2_690x493.jpeg, /uploads/db4391/optimized/2X/1/113ba2f0e6525d61de0d4499c3f96ad0a311f3b6_2_1035x739.jpeg 1.5x, /uploads/db4391/original/2X/1/113ba2f0e6525d61de0d4499c3f96ad0a311f3b6.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/1/113ba2f0e6525d61de0d4499c3f96ad0a311f3b6_2_10x10.png"></a></div><p></p>
+<p>next season, i would like to delegate away from this current group + more broadly to people who:</p>
+<ol>
+<li>have deep context.</li>
+<li>good judgement.</li>
+<li>are damage dealers.</li>
+<li>help <a href="https://gov.gitcoin.co">bring the fire around the fire</a>
+</li>
+<li>have good pulse on Grants 2.0.</li>
+<li>want to help push governance/resource allocation at GitcoinDAO forward to be more effective.</li>
+<li>will stick around to see through the DAO survive the bear market + into the next market cycle.</li>
+</ol>
+<p>please DM me on discord (Owocki#1337) if you want to nominate someone for delegation next season!  to consider delegating to them i’d want to know</p>
+<ol>
+<li>what their ETH address is</li>
+<li>why you think they should be given more governance power</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/20
+        Sat, 21 May 2022 04:19:18 +0000
+gov.gitcoin.co-post-8712-20
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+owocki
+
+            <p>posting this for transparency reasons, i just delegated away from more ppl who were inactive in governance this cycle (away from shreyas, avsa) using the steward report cards (and the comments on the gov forum) as a source of truth for who is active/whos not.  no judgement towards ppl who are inactive (i know ppl get busy), i just think its important that my delegations go to ppl who are most active.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/19
+        Thu, 10 Feb 2022 17:18:03 +0000
+gov.gitcoin.co-post-8712-19
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+seedphrase
+
+            <p>Hey! Thanks for the feedback!</p>
+<p>We’ve tested out a bunch of different ways of calculating the health-metric of the Stewards. After some iterations we ended up with the formula presented in the OP. This formula takes into account all of the currently tracked metrics and the results it produces are aligned with how we understand Steward participation so far.</p>
+<p>We are finalizing the specifications for v2.0 which we aim to ship this quarter with added features and metrics developed alongside the new <a href="https://gov.gitcoin.co/t/introducing-the-steward-council/9485">Steward Council initiative</a>. An important aspect of the new version is to make sure the site does not turn into a dystopian surveillance tool like <a class="mention" href="https://gov.gitcoin.co/u/kelsien">@kelsien</a> touched upon above by only showing relevant metrics i.e. score per season/quarter or similar. We also don’t want to penalize a Steward or hinder their health score forever due to periods of low engagement whether it be other obligations, health reasons or similar.  We’re looking into how Stewards can potentially own their cards and personalize them with social media links and other customization options.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/18
+        Mon, 07 Feb 2022 15:45:18 +0000
+gov.gitcoin.co-post-8712-18
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+wkarshat
+
+            <p>Great tool, solid and bold initiative, thanks!</p>
+<p>Any further explanation or modeling of the coefficients in the Health metric, please? Follow-up plans for the UI or supports for deriving insights, perhaps a time component?</p>
+<p>All the folks commenting on usability and finding the presentation of information useful [or not].  Could you take the time to unpack your thinking, to help with further improvements and tuning of this system, please.</p>
+<p>It can become very significant and impactful, once the DAO effort gets to the phase when the votes become more controversial or contentions.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/17
+        Thu, 06 Jan 2022 19:01:01 +0000
+gov.gitcoin.co-post-8712-17
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+owocki
+
+            <p>hi all,  i just rebalanced some of my delegations from people who were inactive to those who were active and i found <a href="https://www.daostewards.xyz/">https://www.daostewards.xyz/</a> to be a really useful tool in doing so.</p>
+<p>it’s really important that the people who have delegated governance are active &amp; engaged.  thanks for helping to make that possible!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/16
+        Wed, 08 Dec 2021 16:14:10 +0000
+gov.gitcoin.co-post-8712-16
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+tjayrush
+
+            <p>Thanks for sharing this. I’m also concerned with these issues both. Especially the surveillance issue. It’s kind of unbelievable how deeply one can see not only into the activity of the DAO itself but the historical activity of each individual participant as well.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/15
+        Mon, 01 Nov 2021 13:53:48 +0000
+gov.gitcoin.co-post-8712-15
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+kelsien
+
+            <p>Hello GitcoinDAO!</p>
+<p>I’m concerned about how these metrics on volume of activity and attention map to quality of governance? It seems like more activity (noise), rather than greater effectiveness (signal).</p>
+<p>Also, tracking all activities risks creating a surveillance state on what is a voluntary, participatory organisation. This paper on surveillance in DAOs may be of relevance: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3907693#" class="inline-onebox" rel="noopener nofollow ugc">Is a DAO a Panopticon? Algorithmic governance as creating and mitigating vulnerabilities in 'Decentralised Autonomous Organisations' by Kelsie Nabben :: SSRN</a></p>
+<p>My hope is that this offers a constructive perspective</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/14
+        Tue, 19 Oct 2021 12:03:57 +0000
+gov.gitcoin.co-post-8712-14
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+Pop
+
+            <p>Agree here! I am also wondering whether in time, we could also link to social (read Twitter) discussions re Gitcoin DAO/gov…</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/13
+        Mon, 04 Oct 2021 16:13:50 +0000
+gov.gitcoin.co-post-8712-13
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+iyunkz86
+
+            <p>Nice info brother,…,…very cool</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/12
+        Sun, 03 Oct 2021 10:12:41 +0000
+gov.gitcoin.co-post-8712-12
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+linda
+
+            <p>Love this initiative, thank you for starting it!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/11
+        Sun, 03 Oct 2021 03:08:37 +0000
+gov.gitcoin.co-post-8712-11
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+Fred
+
+            <p>Absolutely, we are looking into adding more public metrics to give an even better representation of the involvement and engagement of each Steward in the DAO! Examples are attendance to calls, and potentially Discord and Telegram-activity, if we are comfortable we can do this in a fair way.</p>
+<p>In terms of the Voting weight-metric we use the same terminology as <a href="https://www.withtally.com/governance/gitcoin">Tally</a> to eliminate confusion. Voting weight is calculated as the percentage of tokens delegated in relation to the <em>total amount of tokens</em>, as opposed to the amount of tokens in governance.</p>
+<p>With 15.59% of tokens currently being delegated towards governance we get:<br>
+1% Voting weight equals ~6% influence in GitcoinDAO governance.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/10
+        Sat, 02 Oct 2021 13:43:01 +0000
+gov.gitcoin.co-post-8712-10
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+krrisis
+
+            <p>Awesome, very big fan of the proposal that was made in the stewards chat, to use the bot data to also cover the activity in the discord.</p>
+<p>Next to this I’m just very surprised that even the ‘top stewards’ don’t have more than 1% of GTC delegated to them. Hurray for decentralization but in order to have some impact we need more people to delegate. We’ll have to work on a multitude of programs to incentivize people to delegate their votes asap. But these cards are a great start to keep us wide awake! thx for this, so happy this is out</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/9
+        Fri, 01 Oct 2021 16:07:10 +0000
+gov.gitcoin.co-post-8712-9
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+krrisis
+
+            <p>Yes! We will be sending out a DAO Newsletter very soon, which will gather all the open discussions &amp; proposals, so you can easily review all of them at once and vote, comment etc.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/8
+        Fri, 01 Oct 2021 16:04:13 +0000
+gov.gitcoin.co-post-8712-8
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+Sirlupinwatson
+
+            <p>Looking great! Amazing work <a class="mention" href="https://gov.gitcoin.co/u/fred">@Fred</a> <img src="https://emoji.discourse-cdn.com/twitter/grinning.png?v=10" title=":grinning:" class="emoji" alt=":grinning:"></p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/7
+        Fri, 01 Oct 2021 15:46:31 +0000
+gov.gitcoin.co-post-8712-7
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+seedphrase
+
+            <p>These are great suggestions. I really like the idea of the principle-based questions.</p>
+<p><em>“One other thing: I have initially found it hard to know when votes are coming up. I’ve just changed my notification settings in the forum on proposal posts. But is there another way that we should be getting notified about when and how to participate?”</em></p>
+<p>This is something I struggle with myself, so I’m going to do some digging on how we can be better informed.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/6
+        Fri, 01 Oct 2021 12:08:50 +0000
+gov.gitcoin.co-post-8712-6
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+seedphrase
+
+            <p>Hi! Thanks! Totally agree, a way of sorting the cards based on any of the metrics is high on our todo-list of improvements and we’re looking into adding additional metrics to give a better overview of the engagement of each Steward</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/5
+        Fri, 01 Oct 2021 12:03:46 +0000
+gov.gitcoin.co-post-8712-5
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+ntnsndr
+
+            <p>One other thing: I have initially found it hard to know when votes are coming up. I’ve just changed my notification settings in the forum on proposal posts. But is there another way that we should be getting notified about when and how to participate?</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/4
+        Fri, 01 Oct 2021 04:12:28 +0000
+gov.gitcoin.co-post-8712-4
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+ntnsndr
+
+            <p>This is fantastic—as a steward who has had trouble getting engaged, I can attest that this helps nudge me toward changing that—or, perhaps, stepping back from the role.</p>
+<p>In a next phase, I think it is important to get more data on <em>how</em> people have participated. Some potential data points:</p>
+<ul>
+<li>Create a poll with some basic principle-based questions that users can fill out, as well as stewards, and the app can match users with stewards that match their general philosophy</li>
+<li>Evaluate how often the steward votes with the majority in Snapshot votes</li>
+<li>Track not only the number of forum posts, but the steward’s reputation on the forum based on likes and replies</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/3
+        Fri, 01 Oct 2021 04:03:21 +0000
+gov.gitcoin.co-post-8712-3
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+tjayrush
+
+            <p>Very cool. Nice job. You’all should allow users to sort by engagement percentage as, at least to me, this would be the most important consideration as to whom I would delegate. Also, overall weight of vote (which you already sort by) and also number of forum posts, as this is also an indication of involvement.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/2
+        Fri, 01 Oct 2021 03:12:56 +0000
+gov.gitcoin.co-post-8712-2
+Introducing Steward Report Cards
+      
+
+Introducing Steward Report Cards
+Fred
+
+            <p>The <a href="https://gov.gitcoin.co/t/proposal-merch-memes-marketing-workstream-budget-request/8562">MMM-Workstream</a> are proud to present <em>Steward Report Cards</em>, live via both <a href="https://www.daostewards.xyz/">DNS</a> and <a href="https://stewards.eth.limo/">ENS</a>!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/77b1a85eb080ba3c847e31c2c146eb836569e7a6.png" data-download-href="/uploads/short-url/h4RrPkWPoRs7vOlxyKZkQ6PNRga.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/7/77b1a85eb080ba3c847e31c2c146eb836569e7a6_2_602x331.png" alt="" data-base62-sha1="h4RrPkWPoRs7vOlxyKZkQ6PNRga" width="602" height="331" srcset="/uploads/db4391/optimized/2X/7/77b1a85eb080ba3c847e31c2c146eb836569e7a6_2_602x331.png, /uploads/db4391/optimized/2X/7/77b1a85eb080ba3c847e31c2c146eb836569e7a6_2_903x496.png 1.5x, /uploads/db4391/original/2X/7/77b1a85eb080ba3c847e31c2c146eb836569e7a6.png 2x" data-small-upload="/uploads/db4391/optimized/2X/7/77b1a85eb080ba3c847e31c2c146eb836569e7a6_2_10x10.png"></a></div><p></p>
+<p>The stewards of Gitcoin DAO play a vital role in driving the Gitcoin ecosystem forward through their work in governance and in workstreams. Previously there hasn’t been an easy way to gauge their level of engagement within the DAO. The Steward Report Cards aims to solve this problem by providing the most valuable metrics of each steward and improve the transparency and accountability of their work. The cards may function as a tool to assist delegators making informed decisions and to allow stewards to compare their involvement relative to their peers.</p>
+<p>Public data of each stewards involvement in discourse, workstreams and governance participation are presented and combined to calculate an overall health-score. The titles on the card are clickable and will respectfully route the user to the data source with more info.</p>
+<p><strong>A quick walk through of the cards</strong></p>
+<ul>
+<li>
+<p><strong>Steward since:</strong> This is the date that the Steward introduced themselves on the <a href="https://gov.gitcoin.co/t/introducing-stewards-governance/41">governance forum</a>. The earliest date is the <a href="https://gitcoin.co/blog/introducing-gtc-gitcoins-governance-token/">launch of Gitcoin DAO</a>, 25th of may 2021. Link goes to the Stewards introduction post on the forum.</p>
+</li>
+<li>
+<p><strong>Forum posts:</strong> The number of comments and threads started on the governance forum.<br>
+Link goes to the Stewards profile on the forum.</p>
+</li>
+<li>
+<p><strong>Workstream:</strong> Involvement in any of the Workstreams of Gitcoin DAO according to the public information of the governance forum and on <a href="https://www.gitcoindao.com">Notion</a>.<br>
+Link goes to <a href="http://gitcoindao.com">gitcoindao.com</a></p>
+</li>
+<li>
+<p><strong>Voting weight:</strong> The percentage of governance tokens delegated to the Steward in relation to the total number of tokens.<br>
+Link goes to the stewards GitcoinDAO-profile on Tally.</p>
+</li>
+<li>
+<p><strong>Vote participation:</strong> This value displays the percentage of proposals <a href="https://snapshot.org/#/gitcoindao.eth">Snapshot</a> the Steward has participated in. Non-serious proposals on Snapshot are not taken into consideration. As of writing this post, participation in 20 out of 25 proposals are required to achieve a 100% score. On-chain voting on proposals via <a href="https://www.withtally.com/governance/gitcoin">Tally</a> are not displayed on the cards but are taken into consideration in the health-score calculation, more on this below.<br>
+Link goes to the GitcoinDAO-page on Snapshot.</p>
+</li>
+<li>
+<p><strong>Health:</strong> The metrics described above are combined into an overall health-score, displayed in the top right corner of the card. The current formula for calculating the health of a Steward is based on three sub-scores; Forum-score (F), Voting-score (V) and Workstream-score (W):</p>
+<ul>
+<li>
+<p>F = 1.75 * Posts/Weeks as Steward<br>
+(the maximum forum score is set to 1.5)</p>
+</li>
+<li>
+<p>V = (2.2 * S + 1.5 * T) / 2<br>
+where;<br>
+S = Snapshot participation<br>
+T = Tally participation</p>
+</li>
+<li>
+<p>W = Lead Stewards of a Workstream gives 5 points. Workstream contributor gives 3 points.</p>
+</li>
+</ul>
+<p>These are combined to achieve an over-all health-score:</p>
+<ul>
+<li>Health = F * V + W</li>
+</ul>
+<p><em>(We are exploring additional ways to represent Steward involvement in Workstreams and DAO-wide initiatives.)</em></p>
+</li>
+<li>
+<p><strong>[Statement]:</strong> Link to the stewards introduction post on the forum.</p>
+</li>
+<li>
+<p><strong>[Delegate]:</strong> Link to the stewards GitcoinDAO-profile on Tally with an option to delegate GTC.</p>
+</li>
+</ul>
+<p>The search field at the top of the site allows the user to quickly find a specific steward or group of stewards. It is also possible to link to a specific card, or a group of cards, by utilizing the search function. As you search the URL-bar auto-updates with the shareable link. For example:  <code>https://www.daostewards.xyz/#search=public</code><br>
+will display all stewards in the Public Goods Funding-workstream.</p>
+<p>We are continuously working on improving the cards are looking forward to receive feedback!</p>
+<p>Signed,<br>
+<a class="mention" href="https://gov.gitcoin.co/u/fred">@Fred</a>, <a class="mention" href="https://gov.gitcoin.co/u/seedphrase">@seedphrase</a> and the rest of the <a href="https://gov.gitcoin.co/t/proposal-merch-memes-marketing-workstream-budget-request/8562">MMM-Workstream</a> <img src="https://emoji.discourse-cdn.com/twitter/sparkles.png?v=12" title=":sparkles:" class="emoji" alt=":sparkles:"></p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-report-cards/8712/1
+        Thu, 30 Sep 2021 21:54:35 +0000
+gov.gitcoin.co-post-8712-1
+Introducing Steward Report Cards
+      
+
+

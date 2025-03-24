@@ -1,0 +1,315 @@
+
+
+
+Weekly Grants 2.0 Update — 2022/5/16
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625
+    *This thread consolidates weekly updates for various initiatives affecting the Gitcoin Grants 2.0 protocol.*
+
+*The primary use of this thread is for updates from the Grants 2.0 team at Gitcoin. Still, it may also include updates from projects that utilize the Grants 2.0 toolkit or build related/similar social technologies.*
+
+---
+
+Grants 2.0 is an open-source technology for pluralistic and scalable public goods provision. We are building a modular toolkit for Quadratic Funding and adjacent social incentive designs that enables decentralized, self-organizing ecosystems to increase and govern their capital.
+
+# Relevant Documents
+
+* [Gitcoin Grants 2.0 Vision](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981?u=leone)
+* [Quadratic Funding](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3243656) paper
+* [Decentralized Society](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763) paper
+* Design prototypes
+  * [dPopp Project](https://www.figma.com/proto/RIsPkjpIaeEc73SjLiHK2G/dPopp?page-id=1652%3A46017&node-id=1654%3A46865&viewport=-1674%2C-220%2C0.15&scaling=min-zoom&starting-point-node-id=1654%3A46865&show-proto-sidebar=1)
+  * [Grants Hub](https://www.figma.com/file/obBzCCL8KwoTlVBb5g3ccN/Grant-Hub---Wireframes?node-id=249%3A1000)
+* Staging applications
+  * [dPopp Project](https://orange-sky-5671.on.fleek.co/)
+  * [Grants Hub](https://gitcoinco.github.io/grants-hub/)
+* Video demonstrations
+  * [dPopp Project](https://drive.google.com/file/d/1tsgcrGoO6gQQBTsfSWm3P-hnLacvP8Aa/view?usp=sharing)
+  * [Grants Hub](https://drive.google.com/file/d/1WUDBWIEBvwiQq0xWr368IPdlZCWsTkRo/view)
+
+
+# 2022/05/16 Update
+
+## Highlights
+
+* The dPopp Project, the identity verification application for contributors, is in full swing building the MVP for Grants Round 14. Momentum is growing substantially.
+* Grants Hub, the grantee project registry, aims to be production-ready **by July 1st** when we'll prompt projects in Gitcoin Grants to migrate over.
+* The team kicked off work on the Round Manager. This Quadratic Funding module will connect contributors, grantees, and matching funders.
+
+## Product Work
+
+### dPopp Project
+
+* Planned for dPopp to cGrants integration.
+* Separated work into tracks to scale efforts: verifiable credentials, grants, reader, and interface.
+* Added all stories needed for MVP in the backlog.
+* Added weekly updates and dPopp to cGrants product requirements document.
+* **Further research on BrightID and Idena.**
+* **Finish details on dPopp to cGrants integration.**
+* **Increase coordination on branding.**
+* **Prioritize MVP & GR14 deadlines.**
+
+### Grants Hub
+
+* Improved Grant Hub documentation flow.
+* Notion page now hosts hub v1 PRD and weekly team updates.
+* Github Project now includes new requirements from Round Manager kickoff and updated timelines.
+* **Get v2 of Grant Hub PRD ready with updated MVP use cases and short-term + long-term roadmap.**
+* **Tag team with Eduardo and Nate on user research and testing for Round Manager and the "Apply to a Round" flow:** Start sourcing partners and questions to ask partners.
+
+## Design Work
+
+### dPopp Project
+
+* Reviewed mockups for MVP UI changes.
+* Created mockups for dPopp to cGrants.
+* **Finish adding micro-interactions:** The goal is to create a high-fidelity end-to-end prototype for testing.
+
+### Grants Hub
+
+* Updated user flows & wireframes with changes from Round Manager kickoff
+* Kicked off user interviews this week.
+* **Start testing mid to high-fidelity prototypes with users for Grant Hub & Round Manager.**
+
+## Engineering Work
+
+### dPopp Project
+
+* Completed migration of credential storage to ceramic from local storage
+* Worked on build issues w/ dPopp app & reader app, (due to monorepo & shared dependencies).
+* Made progress on ENS, PoH, and Twitter stamps.
+* Built v1 of the Reader, completing a single slice of end-to-end.
+* **Split the monorepo to reduce build issues** (also makes codebase easier to fork)
+* **Start work on new tracks:** Grants and Interface.
+* **Reduce tech debt:** Add Ceramic integration tests into the CI pipeline and improve application unit tests.
+
+### Grants Hub
+
+* Steel thread proof of concept is demo ready — included login, create and view a grant, and publish a grant (edit a grant is WIP).
+* **Add edit-a-grant functionality.**
+* **Lint the code base and remove any existing error.**
+* **Get the front end code coverage up & the UI looking good.**
+* **Start technical documentation.**
+
+## Marketing and Communications
+
+Organized a dPopp Project branding/naming workshop with @seanmac and @seedphrase and various product stakeholders.
+Wed, 18 May 2022 10:32:07 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Weekly Grants 2.0 Update — 2022/5/16
+vogue20033
+
+            <p>Nice update here. Thanks Leon.</p>
+          <p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/7
+        Wed, 18 May 2022 10:32:07 +0000
+gov.gitcoin.co-post-10625-7
+Weekly Grants 2.0 Update — 2022/5/16
+      
+
+Weekly Grants 2.0 Update — 2022/5/16
+lthrift
+
+            <p>The plan at this point is for all projects to register in the Grant Hub for GR15 and we will reflect those projects in the current <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a> grant explorer. More details to come as we get the core components built and map out the exact adoption plan.</p>
+          <p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/6
+        Tue, 17 May 2022 19:35:08 +0000
+gov.gitcoin.co-post-10625-6
+Weekly Grants 2.0 Update — 2022/5/16
+      
+
+Weekly Grants 2.0 Update — 2022/5/16
+erich
+
+            <p>Thanks, Owocki – I just added the video demonstrations.</p>
+<aside class="quote no-group" data-username="erich" data-post="1" data-topic="10625">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar"> erich:</div>
+<blockquote>
+<p>Video demonstrations</p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1tsgcrGoO6gQQBTsfSWm3P-hnLacvP8Aa/view?usp=sharing" rel="noopener nofollow ugc">dPopp Project</a></li>
+<li><a href="https://drive.google.com/file/d/1WUDBWIEBvwiQq0xWr368IPdlZCWsTkRo/view" rel="noopener nofollow ugc">Grants Hub</a></li>
+</ul>
+</blockquote>
+</aside>
+<p>To your question about the Round Manager: <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a>, are you driving the Round Manager? If so, would you mind providing a related weekly update via Discord on Fridays, too, so we can consolidate it here alongside the other Grants 2.0 updates?</p>
+          <p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/5
+        Tue, 17 May 2022 10:59:48 +0000
+gov.gitcoin.co-post-10625-5
+Weekly Grants 2.0 Update — 2022/5/16
+      
+
+Weekly Grants 2.0 Update — 2022/5/16
+ZER8
+
+            <p>I believe only one round will run on G 2.0 in GR15…Let me find the diagram</p>
+          <p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/4
+        Mon, 16 May 2022 23:55:41 +0000
+gov.gitcoin.co-post-10625-4
+Weekly Grants 2.0 Update — 2022/5/16
+      
+
+Weekly Grants 2.0 Update — 2022/5/16
+owocki
+
+            <p>Hey Leon, are there any plans to release the demo videos that is in <span class="hashtag">#gpc-demos</span> on discord, here, on the weekly thread?</p>
+<p>Any plans to have the round manager updates on this thread too?</p>
+          <p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/3
+        Mon, 16 May 2022 20:27:52 +0000
+gov.gitcoin.co-post-10625-3
+Weekly Grants 2.0 Update — 2022/5/16
+      
+
+Weekly Grants 2.0 Update — 2022/5/16
+lefterisjp
+
+            <p>Hey thanks a lot for the update!</p>
+<aside class="quote no-group" data-username="erich" data-post="1" data-topic="10625">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar"> erich:</div>
+<blockquote>
+<p>Grants Hub, the grantee project registry, aims to be production-ready <strong>by July 1st</strong> when we’ll prompt projects in Gitcoin Grants to migrate over.</p>
+</blockquote>
+</aside>
+<p>Question for this. So for S15 all grants will be on 2.0, or do you intend to have some experiment with 1.0 and some in 2.0?</p>
+          <p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/2
+        Mon, 16 May 2022 19:22:46 +0000
+gov.gitcoin.co-post-10625-2
+Weekly Grants 2.0 Update — 2022/5/16
+      
+
+Weekly Grants 2.0 Update — 2022/5/16
+erich
+
+            <p><em>This thread consolidates weekly updates for various initiatives affecting the Gitcoin Grants 2.0 protocol.</em></p>
+<p><em>The primary use of this thread is for updates from the Grants 2.0 team at Gitcoin. Still, it may also include updates from projects that utilize the Grants 2.0 toolkit or build related/similar social technologies.</em></p>
+<hr>
+<p>Grants 2.0 is an open-source technology for pluralistic and scalable public goods provision. We are building a modular toolkit for Quadratic Funding and adjacent social incentive designs that enables decentralized, self-organizing ecosystems to increase and govern their capital.</p>
+<h1>
+<a name="relevant-documents-1" class="anchor" href="https://gov.gitcoin.co#relevant-documents-1"></a>Relevant Documents</h1>
+<ul>
+<li><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Gitcoin Grants 2.0 Vision</a></li>
+<li>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3243656">Quadratic Funding</a> paper</li>
+<li>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763">Decentralized Society</a> paper</li>
+<li>Design prototypes
+<ul>
+<li><a href="https://www.figma.com/proto/RIsPkjpIaeEc73SjLiHK2G/dPopp?page-id=1652%3A46017&amp;node-id=1654%3A46865&amp;viewport=-1674%2C-220%2C0.15&amp;scaling=min-zoom&amp;starting-point-node-id=1654%3A46865&amp;show-proto-sidebar=1">dPopp Project</a></li>
+<li><a href="https://www.figma.com/file/obBzCCL8KwoTlVBb5g3ccN/Grant-Hub---Wireframes?node-id=249%3A1000">Grants Hub</a></li>
+</ul>
+</li>
+<li>Staging applications
+<ul>
+<li><a href="https://orange-sky-5671.on.fleek.co/">dPopp Project</a></li>
+<li><a href="https://gitcoinco.github.io/grants-hub/">Grants Hub</a></li>
+</ul>
+</li>
+<li>Video demonstrations
+<ul>
+<li><a href="https://drive.google.com/file/d/1tsgcrGoO6gQQBTsfSWm3P-hnLacvP8Aa/view?usp=sharing">dPopp Project</a></li>
+<li><a href="https://drive.google.com/file/d/1WUDBWIEBvwiQq0xWr368IPdlZCWsTkRo/view">Grants Hub</a></li>
+</ul>
+</li>
+</ul>
+<h1>
+<a name="h-20220516-update-2" class="anchor" href="https://gov.gitcoin.co#h-20220516-update-2"></a>2022/05/16 Update</h1>
+<h2>
+<a name="highlights-3" class="anchor" href="https://gov.gitcoin.co#highlights-3"></a>Highlights</h2>
+<ul>
+<li>The dPopp Project, the identity verification application for contributors, is in full swing building the MVP for Grants Round 14. Momentum is growing substantially.</li>
+<li>Grants Hub, the grantee project registry, aims to be production-ready <strong>by July 1st</strong> when we’ll prompt projects in Gitcoin Grants to migrate over.</li>
+<li>The team kicked off work on the Round Manager. This Quadratic Funding module will connect contributors, grantees, and matching funders.</li>
+</ul>
+<h2>
+<a name="product-work-4" class="anchor" href="https://gov.gitcoin.co#product-work-4"></a>Product Work</h2>
+<h3>
+<a name="dpopp-project-5" class="anchor" href="https://gov.gitcoin.co#dpopp-project-5"></a>dPopp Project</h3>
+<ul>
+<li>Planned for dPopp to cGrants integration.</li>
+<li>Separated work into tracks to scale efforts: verifiable credentials, grants, reader, and interface.</li>
+<li>Added all stories needed for MVP in the backlog.</li>
+<li>Added weekly updates and dPopp to cGrants product requirements document.</li>
+<li><strong>Further research on BrightID and Idena.</strong></li>
+<li><strong>Finish details on dPopp to cGrants integration.</strong></li>
+<li><strong>Increase coordination on branding.</strong></li>
+<li><strong>Prioritize MVP &amp; GR14 deadlines.</strong></li>
+</ul>
+<h3>
+<a name="grants-hub-6" class="anchor" href="https://gov.gitcoin.co#grants-hub-6"></a>Grants Hub</h3>
+<ul>
+<li>Improved Grant Hub documentation flow.</li>
+<li>Notion page now hosts hub v1 PRD and weekly team updates.</li>
+<li>Github Project now includes new requirements from Round Manager kickoff and updated timelines.</li>
+<li><strong>Get v2 of Grant Hub PRD ready with updated MVP use cases and short-term + long-term roadmap.</strong></li>
+<li>
+<strong>Tag team with Eduardo and Nate on user research and testing for Round Manager and the “Apply to a Round” flow:</strong> Start sourcing partners and questions to ask partners.</li>
+</ul>
+<h2>
+<a name="design-work-7" class="anchor" href="https://gov.gitcoin.co#design-work-7"></a>Design Work</h2>
+<h3>
+<a name="dpopp-project-8" class="anchor" href="https://gov.gitcoin.co#dpopp-project-8"></a>dPopp Project</h3>
+<ul>
+<li>Reviewed mockups for MVP UI changes.</li>
+<li>Created mockups for dPopp to cGrants.</li>
+<li>
+<strong>Finish adding micro-interactions:</strong> The goal is to create a high-fidelity end-to-end prototype for testing.</li>
+</ul>
+<h3>
+<a name="grants-hub-9" class="anchor" href="https://gov.gitcoin.co#grants-hub-9"></a>Grants Hub</h3>
+<ul>
+<li>Updated user flows &amp; wireframes with changes from Round Manager kickoff</li>
+<li>Kicked off user interviews this week.</li>
+<li><strong>Start testing mid to high-fidelity prototypes with users for Grant Hub &amp; Round Manager.</strong></li>
+</ul>
+<h2>
+<a name="engineering-work-10" class="anchor" href="https://gov.gitcoin.co#engineering-work-10"></a>Engineering Work</h2>
+<h3>
+<a name="dpopp-project-11" class="anchor" href="https://gov.gitcoin.co#dpopp-project-11"></a>dPopp Project</h3>
+<ul>
+<li>Completed migration of credential storage to ceramic from local storage</li>
+<li>Worked on build issues w/ dPopp app &amp; reader app, (due to monorepo &amp; shared dependencies).</li>
+<li>Made progress on ENS, PoH, and Twitter stamps.</li>
+<li>Built v1 of the Reader, completing a single slice of end-to-end.</li>
+<li>
+<strong>Split the monorepo to reduce build issues</strong> (also makes codebase easier to fork)</li>
+<li>
+<strong>Start work on new tracks:</strong> Grants and Interface.</li>
+<li>
+<strong>Reduce tech debt:</strong> Add Ceramic integration tests into the CI pipeline and improve application unit tests.</li>
+</ul>
+<h3>
+<a name="grants-hub-12" class="anchor" href="https://gov.gitcoin.co#grants-hub-12"></a>Grants Hub</h3>
+<ul>
+<li>Steel thread proof of concept is demo ready — included login, create and view a grant, and publish a grant (edit a grant is WIP).</li>
+<li><strong>Add edit-a-grant functionality.</strong></li>
+<li><strong>Lint the code base and remove any existing error.</strong></li>
+<li><strong>Get the front end code coverage up &amp; the UI looking good.</strong></li>
+<li><strong>Start technical documentation.</strong></li>
+</ul>
+<h2>
+<a name="marketing-and-communications-13" class="anchor" href="https://gov.gitcoin.co#marketing-and-communications-13"></a>Marketing and Communications</h2>
+<p>Organized a dPopp Project branding/naming workshop with <a class="mention" href="https://gov.gitcoin.co/u/seanmac">@seanmac</a> and <a class="mention" href="https://gov.gitcoin.co/u/seedphrase">@seedphrase</a> and various product stakeholders.</p>
+          <p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-16/10625/1
+        Mon, 16 May 2022 18:54:39 +0000
+gov.gitcoin.co-post-10625-1
+Weekly Grants 2.0 Update — 2022/5/16
+      
+
+

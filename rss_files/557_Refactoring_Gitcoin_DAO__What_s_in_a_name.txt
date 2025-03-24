@@ -1,0 +1,243 @@
+
+
+
+Refactoring Gitcoin DAO: What's in a name?
+https://gov.gitcoin.co/t/refactoring-gitcoin-dao-whats-in-a-name/12679
+    *In my attempts to bring the "DAO insider" work that I'm apart of into more public spaces, I felt it would help to step back and offer up a post on how I think about problems. I hope it's of value to someone.*
+
+## Background 
+
+So, a bit of context on my background and my approach to solving issues, what I mean by refactoring, and how I see **names** as the high-value place to start addressing change in our DAO.
+
+In the arc of my career, I've spent a lot of time in and around code, but not just coding or programming specifically, but software design and software engineering. There are some concepts from these disciplines that I have internalized deeply enough that it's hard sometimes to tell where those beliefs come from. This pops up in funny non-coding places for me these days, namely: names. 
+
+I hate things that are named wrong. I find acronyms or names that force you to translate their meaning every time you use them not just irritating but alarming. Like literally, when I hear a badly named thing, an alarm goes off in my head. *This is not a subtweet at the branding work. I think that process stands and brands are a bit of a different animal*. 
+
+But this alarm has been useful, and I've tried to pay attention to it. It comes from the years I've spent trying to organize software and systems, and I want to try and explain the importance of names in the hope that my recommendations to rename things can be seen for what they are: an attempt at good systems design.
+
+## Does all code crumble?
+
+I'm going to walk this back to the beginning.
+
+At first, every programmer starts out just learning to code. Just building stuff that works is the hard thing. 
+ 
+But at some point, you encounter the next hard problem: codebases get big, they begin to get buggy, they're hard to work in, and eventually, they start to crumble. It feels like a fact of nature: code slowly rots. 
+
+It's in encountering this "fact" that a fine distinction between just coding and something else emerges.
+
+This next thing is software engineering. I think the Xooglers that wrote the book Software Engineering at Google own the best definition in the section Programming Over Time: 
+>We propose that 'software engineering' encompasses not just the act of writing code, but all of the tools and processes an organization uses to build and maintain that code over time [...] Software engineering can be thought of as programming integrated over time.” https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time
+ 
+And now, as someone thinking about coding in terms of software engineering (including the processes and tooling), you see there are some projects where this "fact" you saw early in your career doesn't hold up - there are cleaner, healthier codebases that don't slowly crumble. 
+ 
+You start wanting to build lasting things, things that scale, things that don't break down slowly over time. And in this part of your journey, you'll encounter a number of techniques: automated testing,  test driven design, clean code, CI/CD, domain driven design, etc. Each of these contributes tools to let you build maintainable systems, not just at a code level, **but at a human-to-human level, at a level where the organization of your work supports the maintainability of the systems you build**. 
+
+ 
+Let's zoom in on two turning points where naming things emerged as clear benefits to building maintainable systems
+
+## Cleaner Code
+
+> “Any fool can write code that a computer can understand. Good programmers write code that humans can understand” — __Martin fowler__
+
+Clean code was something I encountered fairly early on, and it's a bit too big to get into, but one of the core parts of this is to write your code in a way that lowers the cognitive load of those that have to read it, or extend it later.
+ 
+Clean Code - Reveal your intent:
+>`var d: Int // elapsed time in days`
+>a name that requires a comment does not reveal it’s intent
+>           
+>`var elapsedTimeInDays: Int`
+>the name of a variable should tell us the significance of what that variable contains
+>https://bpoplauschi.github.io/2021/01/30/Clean-Code-Naming-by-Uncle-Bob-part-3.html
+
+Kevin, hold it, why do I care. I don't code. 
+
+You don't need to code, relax. What this example shows is that the code itself now captures the meaning that the programmer was trying to express with the comment. When that `var d` gets used later on, potentially dozens of lines of code later it won't have that comment next to it, and the semantic meaning is lost. The programmer will just be seeing that `d` in some new context and have to remember, 'oh yeah, that means elapsed time in days'. The clean code approach is to give that `d` a meaning, reveal the intent of that variable by naming it `elapsedTimeInDays` so when the programmer encounters it many lines later, away from any comment or explanation of what that variable is, they can reason about it in line, no mental lookup or translation necessary.
+
+So really good names in your code is great and we should all do it. Glad we all agree. Moving ON!
+
+## Building a Ubiquitous Language
+
+Now that your code is clean and intention-revealing, you'll notice that you are still doing these mental lookups and translations in conversations with colleagues and in meetings with stakeholders. You'll realize you're constantly translating concepts from your non-engineering colleagues (business, design, product) into concepts in your codebase. If you inherit a legacy codebase or stick around a project long enough, these concepts can drift very far apart!
+
+This higher-order problem is core to Eric Evan's [Domain Driven Design: Tackling Complexity in the Heart of Software](https://a.co/d/1JXcj1b )  (great title) in a concept he repeats (ad nauseam) called Ubiquitous Language.
+
+Ubiquitous Language is the creation and maintenance of a shared vocabulary end to end - from the customer to the codebase. 
+
+For those that were in the event storm as we kicked off the build-out of the Grants Stack / Allo protocol, this ubiquitous language was part of what @lthrift and I were trying to establish.
+
+**But** this is also meant to be a living practice:
+> _Domain experts should object to terms or structures that are awkward or inadequate to convey domain understanding; developers should watch for ambiguity or inconsistency that will trip up design.__
+>  __-- Eric Evans__
+
+Framed in the negative, Evans‘s ideas on what we should avoid:
+> - The lack of a common language, generating “translations”, which is bad for the __Domain Model__, and causes the creation of wrong __Domain Models__.
+> - Team members using terms differently without realizing it, for lack of a common language.
+> - Communication without using __Ubiquitous Language__, even if it exists.
+> - Creation of abstraction by the technical team for the construction of the __Domain Model__, which is not understood by domain experts.
+> - Technical team disregarding the participation of domain experts in the __Domain Model__, considering it too abstract for domain experts. But it is necessary that domain experts participate, because who can validate the __Domain Model__ that was built?
+> - https://thedomaindrivendesign.io/developing-the-ubiquitous-language/
+ 
+Got it, so we all use the same vocabulary to describe our system and we're all good! 
+
+Yes. **AND** we make this a continuous process to check that our vocabulary matches reality and that we update our vocabulary every time our model, our strategy, and our macro context change. Everytime our Domain changes. 
+ 
+## Refactoring the DAO
+
+> In computer programming and software design, code refactoring is the process of restructuring existing computer code—changing the factoring—without changing its external behavior. Refactoring is intended to improve the design, structure, and/or implementation of the software (its non-functional attributes), while preserving its functionality. **Potential advantages of refactoring may include improved [...] readability and reduced complexity; these can improve [..] maintainability and create a simpler, cleaner, or more expressive internal architecture or object model to improve extensibility**. - https://en.wikipedia.org/wiki/Code_refactoring
+
+At the point I'm at in my software engineering journey, I see how software, codebases, teams, and organizations are all helped tremendously by good naming.
+ 
+As I think about and suggest refactorings to the DAO, naming is the low-hanging fruit. Because naming our work badly manifests in the accumulating friction from many repeated low-level translations, mistranslations, and misuse we incur when mapping other team's concepts onto our work. It is a tax we all pay daily to get things done: as we onboard new contributors, as stewards and workstream leads struggle to understand each other's budgets, in the anxiety our DAO Community expresses on the forum.
+
+**We need to reduce this mental burden.**
+ 
+This is at the core of my recommendations: How can we reveal intent in a name that everyone can use as they navigate the complex and abstract structures of these human and software systems we are building? 
+
+I see the solution in clean names mapping the work being done to the budgets we are funding.  **These are the slim workstreams as I see them**. It's my belief the fear of a sprawling and unmaintainable DAO would largely be solved with clear, intent revealing workstream names.
+ 
+I've formed this belief about the importance of naming over the years from my experiences with software engineering (in the broadest possible definition), and I'm basing quite a lot of my recommendations on these beliefs. 
+
+I hope this post helps elucidate at least some of my process and may even help to introduce a tool into the systems design work we do here in organizing and running our DAO.
+Fri, 27 Jan 2023 02:11:52 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Refactoring Gitcoin DAO: What's in a name?
+birdsoar
+
+            <p>Thank you for writing this, it’s been awhile since I considered the principles of code. Good to be reacquainted.</p>
+<aside class="quote no-group" data-username="kevin.olsen" data-post="1" data-topic="12679">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p><em>This is not a subtweet at the branding work. I think that process stands and brands are a bit of a different animal</em>.</p>
+</blockquote>
+</aside>
+<p>Thank you for calling this out!! My first thought was, “Oh no, he hates the name Allo.” <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>In a general sense, I’m in agreement that naming things as they are is the best approach. One of my first suggestions when joining Gitcoin was to rename workstreams in a way that describes our respective intents more clearly.</p>
+<p>I could also seeing this being of benefit to people in the workstreams. Beyond the social energy that comes with (thoughtful) new names, updating our names could be an opportunity to inspire a renewed sense of purpose.</p>
+<p>Looking forward to seeing this conversation develop.</p>
+          <p><a href="https://gov.gitcoin.co/t/refactoring-gitcoin-dao-whats-in-a-name/12679/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/refactoring-gitcoin-dao-whats-in-a-name/12679/4
+        Fri, 27 Jan 2023 02:11:52 +0000
+gov.gitcoin.co-post-12679-4
+Refactoring Gitcoin DAO: What's in a name?
+      
+
+Refactoring Gitcoin DAO: What's in a name?
+kevin.olsen
+
+            <p>Thanks man.</p>
+<p>This was definitely present in my support of the GPC’s decision to split up into Passport and Allo Protocol.</p>
+<p>That said, I don’t think there’s been a holistic effort yet to map all the work done in the DAO to the right names.</p>
+          <p><a href="https://gov.gitcoin.co/t/refactoring-gitcoin-dao-whats-in-a-name/12679/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/refactoring-gitcoin-dao-whats-in-a-name/12679/3
+        Thu, 26 Jan 2023 15:30:47 +0000
+gov.gitcoin.co-post-12679-3
+Refactoring Gitcoin DAO: What's in a name?
+      
+
+Refactoring Gitcoin DAO: What's in a name?
+owocki
+
+            <p>Thanks for the post and the background context/why behind it.</p>
+<aside class="quote no-group" data-username="kevin.olsen" data-post="1" data-topic="12679">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p>I see the solution in clean names mapping the work being done to the budgets we are funding. <strong>These are the slim workstreams as I see them</strong>. It’s my belief the fear of a sprawling and unmaintainable DAO would largely be solved with clear, intent revealing workstream names.</p>
+</blockquote>
+</aside>
+<p>Is there any work scheduled to define the work at Gitcoin in this way?  Has anyone taken a stab at naming workstreams in this way?</p>
+          <p><a href="https://gov.gitcoin.co/t/refactoring-gitcoin-dao-whats-in-a-name/12679/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/refactoring-gitcoin-dao-whats-in-a-name/12679/2
+        Thu, 26 Jan 2023 15:26:33 +0000
+gov.gitcoin.co-post-12679-2
+Refactoring Gitcoin DAO: What's in a name?
+      
+
+Refactoring Gitcoin DAO: What's in a name?
+kevin.olsen
+
+            <p><em>In my attempts to bring the “DAO insider” work that I’m apart of into more public spaces, I felt it would help to step back and offer up a post on how I think about problems. I hope it’s of value to someone.</em></p>
+<h2><a name="background-1" class="anchor" href="https://gov.gitcoin.co#background-1"></a>Background</h2>
+<p>So, a bit of context on my background and my approach to solving issues, what I mean by refactoring, and how I see <strong>names</strong> as the high-value place to start addressing change in our DAO.</p>
+<p>In the arc of my career, I’ve spent a lot of time in and around code, but not just coding or programming specifically, but software design and software engineering. There are some concepts from these disciplines that I have internalized deeply enough that it’s hard sometimes to tell where those beliefs come from. This pops up in funny non-coding places for me these days, namely: names.</p>
+<p>I hate things that are named wrong. I find acronyms or names that force you to translate their meaning every time you use them not just irritating but alarming. Like literally, when I hear a badly named thing, an alarm goes off in my head. <em>This is not a subtweet at the branding work. I think that process stands and brands are a bit of a different animal</em>.</p>
+<p>But this alarm has been useful, and I’ve tried to pay attention to it. It comes from the years I’ve spent trying to organize software and systems, and I want to try and explain the importance of names in the hope that my recommendations to rename things can be seen for what they are: an attempt at good systems design.</p>
+<h2><a name="does-all-code-crumble-2" class="anchor" href="https://gov.gitcoin.co#does-all-code-crumble-2"></a>Does all code crumble?</h2>
+<p>I’m going to walk this back to the beginning.</p>
+<p>At first, every programmer starts out just learning to code. Just building stuff that works is the hard thing.</p>
+<p>But at some point, you encounter the next hard problem: codebases get big, they begin to get buggy, they’re hard to work in, and eventually, they start to crumble. It feels like a fact of nature: code slowly rots.</p>
+<p>It’s in encountering this “fact” that a fine distinction between just coding and something else emerges.</p>
+<p>This next thing is software engineering. I think the Xooglers that wrote the book Software Engineering at Google own the best definition in the section Programming Over Time:</p>
+<blockquote>
+<p>We propose that ‘software engineering’ encompasses not just the act of writing code, but all of the tools and processes an organization uses to build and maintain that code over time […] Software engineering can be thought of as programming integrated over time.” <a href="https://abseil.io/resources/swe-book/html/pr01.html#programming_over_time" class="inline-onebox" rel="noopener nofollow ugc">Software Engineering at Google</a></p>
+</blockquote>
+<p>And now, as someone thinking about coding in terms of software engineering (including the processes and tooling), you see there are some projects where this “fact” you saw early in your career doesn’t hold up - there are cleaner, healthier codebases that don’t slowly crumble.</p>
+<p>You start wanting to build lasting things, things that scale, things that don’t break down slowly over time. And in this part of your journey, you’ll encounter a number of techniques: automated testing,  test driven design, clean code, CI/CD, domain driven design, etc. Each of these contributes tools to let you build maintainable systems, not just at a code level, <strong>but at a human-to-human level, at a level where the organization of your work supports the maintainability of the systems you build</strong>.</p>
+<p>Let’s zoom in on two turning points where naming things emerged as clear benefits to building maintainable systems</p>
+<h2><a name="cleaner-code-3" class="anchor" href="https://gov.gitcoin.co#cleaner-code-3"></a>Cleaner Code</h2>
+<blockquote>
+<p>“Any fool can write code that a computer can understand. Good programmers write code that humans can understand” — <strong>Martin fowler</strong></p>
+</blockquote>
+<p>Clean code was something I encountered fairly early on, and it’s a bit too big to get into, but one of the core parts of this is to write your code in a way that lowers the cognitive load of those that have to read it, or extend it later.</p>
+<p>Clean Code - Reveal your intent:</p>
+<blockquote>
+<p><code>var d: Int // elapsed time in days</code><br>
+a name that requires a comment does not reveal it’s intent</p>
+<p><code>var elapsedTimeInDays: Int</code><br>
+the name of a variable should tell us the significance of what that variable contains<br>
+<a href="https://bpoplauschi.github.io/2021/01/30/Clean-Code-Naming-by-Uncle-Bob-part-3.html" class="inline-onebox" rel="noopener nofollow ugc">Clean Code - Naming - by Uncle Bob - part 3 | Bogdan Poplauschi</a></p>
+</blockquote>
+<p>Kevin, hold it, why do I care. I don’t code.</p>
+<p>You don’t need to code, relax. What this example shows is that the code itself now captures the meaning that the programmer was trying to express with the comment. When that <code>var d</code> gets used later on, potentially dozens of lines of code later it won’t have that comment next to it, and the semantic meaning is lost. The programmer will just be seeing that <code>d</code> in some new context and have to remember, ‘oh yeah, that means elapsed time in days’. The clean code approach is to give that <code>d</code> a meaning, reveal the intent of that variable by naming it <code>elapsedTimeInDays</code> so when the programmer encounters it many lines later, away from any comment or explanation of what that variable is, they can reason about it in line, no mental lookup or translation necessary.</p>
+<p>So really good names in your code is great and we should all do it. Glad we all agree. Moving ON!</p>
+<h2><a name="building-a-ubiquitous-language-4" class="anchor" href="https://gov.gitcoin.co#building-a-ubiquitous-language-4"></a>Building a Ubiquitous Language</h2>
+<p>Now that your code is clean and intention-revealing, you’ll notice that you are still doing these mental lookups and translations in conversations with colleagues and in meetings with stakeholders. You’ll realize you’re constantly translating concepts from your non-engineering colleagues (business, design, product) into concepts in your codebase. If you inherit a legacy codebase or stick around a project long enough, these concepts can drift very far apart!</p>
+<p>This higher-order problem is core to Eric Evan’s <a href="https://a.co/d/1JXcj1b" rel="noopener nofollow ugc">Domain Driven Design: Tackling Complexity in the Heart of Software</a>  (great title) in a concept he repeats (ad nauseam) called Ubiquitous Language.</p>
+<p>Ubiquitous Language is the creation and maintenance of a shared vocabulary end to end - from the customer to the codebase.</p>
+<p>For those that were in the event storm as we kicked off the build-out of the Grants Stack / Allo protocol, this ubiquitous language was part of what <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a> and I were trying to establish.</p>
+<p><strong>But</strong> this is also meant to be a living practice:</p>
+<blockquote>
+<p><em>Domain experts should object to terms or structures that are awkward or inadequate to convey domain understanding; developers should watch for ambiguity or inconsistency that will trip up design.</em>_<br>
+<strong>– Eric Evans</strong></p>
+</blockquote>
+<p>Framed in the negative, Evans‘s ideas on what we should avoid:</p>
+<blockquote>
+<ul>
+<li>The lack of a common language, generating “translations”, which is bad for the <strong>Domain Model</strong>, and causes the creation of wrong <strong>Domain Models</strong>.</li>
+<li>Team members using terms differently without realizing it, for lack of a common language.</li>
+<li>Communication without using <strong>Ubiquitous Language</strong>, even if it exists.</li>
+<li>Creation of abstraction by the technical team for the construction of the <strong>Domain Model</strong>, which is not understood by domain experts.</li>
+<li>Technical team disregarding the participation of domain experts in the <strong>Domain Model</strong>, considering it too abstract for domain experts. But it is necessary that domain experts participate, because who can validate the <strong>Domain Model</strong> that was built?</li>
+<li><a href="https://thedomaindrivendesign.io/developing-the-ubiquitous-language/" class="inline-onebox" rel="noopener nofollow ugc">Developing the ubiquitous language - DDD - The Domain Driven Design</a></li>
+</ul>
+</blockquote>
+<p>Got it, so we all use the same vocabulary to describe our system and we’re all good!</p>
+<p>Yes. <strong>AND</strong> we make this a continuous process to check that our vocabulary matches reality and that we update our vocabulary every time our model, our strategy, and our macro context change. Everytime our Domain changes.</p>
+<h2><a name="refactoring-the-dao-5" class="anchor" href="https://gov.gitcoin.co#refactoring-the-dao-5"></a>Refactoring the DAO</h2>
+<blockquote>
+<p>In computer programming and software design, code refactoring is the process of restructuring existing computer code—changing the factoring—without changing its external behavior. Refactoring is intended to improve the design, structure, and/or implementation of the software (its non-functional attributes), while preserving its functionality. <strong>Potential advantages of refactoring may include improved […] readability and reduced complexity; these can improve […] maintainability and create a simpler, cleaner, or more expressive internal architecture or object model to improve extensibility</strong>. - <a href="https://en.wikipedia.org/wiki/Code_refactoring" class="inline-onebox" rel="noopener nofollow ugc">Code refactoring - Wikipedia</a></p>
+</blockquote>
+<p>At the point I’m at in my software engineering journey, I see how software, codebases, teams, and organizations are all helped tremendously by good naming.</p>
+<p>As I think about and suggest refactorings to the DAO, naming is the low-hanging fruit. Because naming our work badly manifests in the accumulating friction from many repeated low-level translations, mistranslations, and misuse we incur when mapping other team’s concepts onto our work. It is a tax we all pay daily to get things done: as we onboard new contributors, as stewards and workstream leads struggle to understand each other’s budgets, in the anxiety our DAO Community expresses on the forum.</p>
+<p><strong>We need to reduce this mental burden.</strong></p>
+<p>This is at the core of my recommendations: How can we reveal intent in a name that everyone can use as they navigate the complex and abstract structures of these human and software systems we are building?</p>
+<p>I see the solution in clean names mapping the work being done to the budgets we are funding.  <strong>These are the slim workstreams as I see them</strong>. It’s my belief the fear of a sprawling and unmaintainable DAO would largely be solved with clear, intent revealing workstream names.</p>
+<p>I’ve formed this belief about the importance of naming over the years from my experiences with software engineering (in the broadest possible definition), and I’m basing quite a lot of my recommendations on these beliefs.</p>
+<p>I hope this post helps elucidate at least some of my process and may even help to introduce a tool into the systems design work we do here in organizing and running our DAO.</p>
+          <p><a href="https://gov.gitcoin.co/t/refactoring-gitcoin-dao-whats-in-a-name/12679/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/refactoring-gitcoin-dao-whats-in-a-name/12679/1
+        Thu, 26 Jan 2023 12:41:39 +0000
+gov.gitcoin.co-post-12679-1
+Refactoring Gitcoin DAO: What's in a name?
+      
+
+

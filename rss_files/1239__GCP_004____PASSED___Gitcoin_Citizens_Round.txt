@@ -1,0 +1,549 @@
+
+
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462
+    
+**Co-authors:** @shawn16400 @krrisis @umarkhaneth 
+
+# [Vote Passed on Snapshot](https://snapshot.org/#/gitcoindao.eth/proposal/0x8accce753fd16dd013c0c4792b6931e1c29b77ba00d70e1e5f93e7ad4ba32418) 
+
+
+## Summary
+
+Gitcoin is the world’s largest implementer of quadratic funding. We have run 105 quadratic funding rounds, helped fund over 3,700 projects, and grown ecosystems like Uniswap, Polygon, and ENS. Yet, we aren’t currently using quadratic funding ourselves. With the recent launch of the Allo protocol, Gitcoin should be one of the first ecosystems to use the protocol to fund its shared needs.
+
+This proposal is to pilot a series of quadratic funding rounds for rewarding efforts supporting the Gitcoin Community, specifically by [Gitcoin Citizens](https://gitcoin.notion.site/DAO-Citizen-Resource-Hub-7b83f9b5ca06487f84e0142d0180970a). Citizens are value-aligned community members who are eager to contribute their time and skills in service of the DAO. Running these rounds will lower the barrier of entry for contributing to the DAO, determine what the community values most, and help test (dogfood) the Allo protocol.
+
+For this we are requesting a total of $95K in GTC from the Gitcoin treasury, more details below.*
+
+## Abstract
+
+Through using our protocol and products, we’ll be able to better understand what works and what could be improved from both a funding and technology perspective.
+
+In particular, we’ll be able to test two different approaches to quadratic funding: normal QF and retroQF. Normal QF (the kind we see in Grants Rounds) can fund both completed and planned work, while RetroQF exclusively funds work which has already had an observable impact. Because of this, RetroQF may be better at distributing funds according to the value actually created by a contribution but is not suited to situations where contributors can’t afford to wait for compensation. We will try both methods to gain information about which is better suited to the unique needs of our community.
+
+By running different styles of rounds repeatedly and quickly, we’ll be able to gain valuable insight into how to best fund grantees, improve our products, and empower our community. We will also identify what contributions our community finds valuable so that in subsequent rounds people have more information when choosing what to work on.
+
+It is also our hope, that by running these rounds, we can reward Gitcoin Citizens like[ Carl who evaluated Grantee Impact](https://twitter.com/carl_cervone/status/1616792961412640772),[ Carlos who created a video guide for donating to Gitcoin on mobile](https://twitter.com/web3beach/status/1617509775415324672),[ Jon Ruth who spent countless hours answering questions in discord, and more](https://twitter.com/krrisis/status/1616637568992296960?s=20) (these are cherry-picked examples of many voluntary contributions).
+
+## Motivation
+
+This proposal is motivated by[ recent posts from Scott Moore](https://gov.gitcoin.co/t/gitcoin-building-gitcoin-using-quadratic-funding-for-subtraction/13015)[ and Kevin Olsen](https://gov.gitcoin.co/t/refactoring-gitcoin-what-falls-between-the-cracks/13026) encouraging Gitcoin to build Gitcoin using QF. A huge thank you to them!
+
+There are three main reasons why we should try this.
+
+1. To gain experience using quadratic funding and the allo protocol to build our own ecosystem, demonstrate effectiveness, and identify areas for improvement.
+
+In particular, many Gitcoin Citizens will experience for the first time what it’s like to create a grant and raise funding. By dogfooding, we will build empathy for our users and increase our ability to help them. For example, if grantees face inconsistency in how much funding they receive each round we will understand this better by experiencing it ourselves.
+
+2. To experiment with a supplementary budgeting process that has greater accountability and less administrative overhead.
+
+QF creates greater accountability by requiring the support of the community which requires being transparent about what you’re working on.
+
+Further, there have been many recent conversations about how demanding the quarterly budgeting process currently is. One of the flavors of funding we will experiment with is retroactive quadratic funding. This method does not require extensive proposals, only proof that valuable work has been done.
+
+3. To increase community engagement and participation at all levels of Gitcoin from contribution to governance
+
+QF facilitates inclusion of emerging talents within the Gitcoin community by reducing the barriers to entry. This program enables individuals to receive payment from the DAO without the need to be hired by a workstream. By providing funding quickly, regularly, and with short feedback loops, we expect to see far greater participation from Gitcoin Citizens to support the community itself and in the long run to support the development of Gitcoin itself.
+
+Moreover, QF and especially retro QF can recognize the value of contributions that benefit Gitcoin in ways that aren’t traditionally compensated. This may, for example, include well-considered comments in our governance forum that lead to better governance practices.
+
+## Specifications:
+
+We expect to run three quadratic funding rounds on the Grants Stack. After each round we will evaluate the results, survey the community, and complete a post-mortem. This is our current best approximation of timing:
+
+* The first round will be retroQF and run immediately after the Gitcoin Beta Rounds in Mid May to set the tone for Citizen engagement. We hope this will also encourage increased engagement during the Beta rounds to help make them as successful as possible.
+* The second round will run Mid June and will be a normal quadratic funding round. This will be a great dogfooding round because this is the type of round our partners are used to running. It will also provide us a good basis for comparing the effectiveness of retroQF.
+* The third round will be about a month after the second and the exact format will depend on the results of the first two rounds.
+
+**Milestones & Timeline:** 
+
+| Phase      | Task                                             | Date        |
+|------------|--------------------------------------------------|-------------|
+| Phase I    | Send the Draft to stakeholders                   | March 09th  |
+|            | Validate assumptions with stakeholders            | March 17th  |
+|            | Draft posted on the forum                         | March 24th  |
+|            | Community feedback session                        | March 24-28 |
+|            | Update and move to snapshot                       | March 29th  |
+| Phase II   | Round Preparation and Set-Up                      | April 1 - May 15 |
+|            | Gitcoin Citizens Round #1                         | May 16 - 30 |
+|            | Round post mortem                                 | June 1     |
+| Phase III  | Gitcoin Citizens Round #2                         | June 15?   |
+|            | Round post mortem                                 | June 30    |
+|            | Gitcoin Citizens Round #3 (during a round)        | July 15?   |
+|            | Post-project evaluation form (AAR) posted         | July 30th  |
+
+
+Note: the exact and final timing will to be confirmed
+
+**Budget**
+
+Cost of Matching Pool Funds:
+
+* $25k per round x 3 rounds = $75k (requested in GTC)*
+
+Staffing:
+  * $20K covering 3 part time contributors working over a period of 20 weeks, requested in GTC.*
+
+| Name  | PI       | PII      | PIII     | 
+|-------|----------|----------|----------|
+| Umar  | 10% FTE (4 weeks)  | 10% FTE (8 weeks) | 10% FTE (8 weeks) |
+| Shawn | 10% FTE (4 weeks)  | 10% FTE (8 weeks) | 10% FTE (8 weeks) |
+| Kris  | 10% FTE (4 weeks)  | 10% FTE (8 weeks) | 10% FTE (8 weeks) |
+
+
+
+
+**Note: After each round we will evaluate the results to determine how we want to adjust for the next round. Hours of contributors are also based on our best guesses and will be validated as we cycle forward. Contributors will keep track of their actual hours, which can be shared with CSDO and Stewards on request. The fact that this is a new experiment may mean that after two rounds we send funding back to the DAO if we decide not to run a third round or request additional funding to expand the round.*
+
+**Funding Eligibility**
+
+The range of contributions that could be funded this way is purposefully broad and up to the community to define in the long term. However, for the initial rounds we encourage a high focus on community engagement-focused work contributing directly to Gitcoin’s [‘most important things’](https://gov.gitcoin.co/t/s17-musing-gitcoins-most-important-thing/12875) and our [Purpose and Essential Intents.](https://gov.gitcoin.co/t/update-gitcoindaos-adopted-purpose-and-essential-intents/10984). Without our community there is no reason for Gitcoin to exist, we are in service of our users, so we want to reward the people who support our grantees and donors through straightforward educational content, data analysis, and support-oriented initiatives.
+
+More detailed criteria will be communicated before the start of the actual round(s).
+
+**Retroactive Funding.**
+
+Retroactive funding reduces risk and barriers to entry. It takes the guesswork out of deciding what will be valuable to fund because the impact is observable. Anyone can simply work on what they want to work on and they will be funded if the community finds it valuable. For this reason, it is important for contributors to be public about what they’re working on and for us to run frequent rounds with quick feedback loops.
+
+For the first round we imagine a high focus on grassroots projects run by individuals, our [Gitcoin Citizens](https://gitcoin.notion.site/DAO-Citizen-Resource-Hub-7b83f9b5ca06487f84e0142d0180970a). Contributions which have already been compensated (for example through a WS) will not be eligible.
+
+Starting with retroactive funding showcases to the community how we believe Gitcoin can fund Gitcoin. Below you can find some examples of contributions that the core team would submit (or would invite the creators to submit) and we imagine to be funded this way:
+
+* [Grantee Impact Evaluations](https://twitter.com/carl_cervone/status/1616792961412640772) by @ccerv1 ,
+* [Video Guide to Donating to Gitcoin on Mobile](https://twitter.com/web3beach/status/1617509775415324672) by @carlosjmelgar,
+* [Providing support and answering user questions in Discord](https://twitter.com/krrisis/status/1616637568992296960?s=20), by @jon-spark-eco,
+* [A BULL/BEAR case for Gitcoin/GTC in 2023](https://gov.gitcoin.co/t/a-bull-bear-case-for-gitcoin-gtc-in-2023/12442) by @a33titude,
+* [Infinite Garden Coloring Book by Colton, Octavian, Owocki and Aya](https://twitter.com/mettahead/status/1633605871560212481) by @Colton,
+* Stewards we want to give (extra) compensation because they went above and beyond
+* Comment who you think deserves retroQF below!
+
+After the first round, we hope to see more proactive initiatives and will experiment together with our community on what is the ideal process to make this as effective as possible.
+
+## Benefits
+
+This novel mechanism is designed to fund additional Gitcoin community efforts and development of our protocol itself, but we see the following additional benefits:
+
+* Creates ways for the community way to engage and potentially be compensated
+* Encourages new community members to begin getting involved in Gitcoin
+* Provides a flexible contributor pool that is independent of fixed “hired” contributors
+* Enables dogfooding and rapid iteration for Grants Stack and Passport (including runbook updates)
+* Incentivizes Citizens to provide high quality work and to publicly share it
+* Lowers the barrier of entry and provide better scalability
+* Increases individual autonomy
+* Can be used to make a big splash / highlight / announce the efficacy self-serve model
+
+## Drawbacks - & considerations
+
+This pilot could encounter a number of issues or have unintended consequences. Some considerations may include:
+
+* The community could reward non-strategic or lower value work.
+* The process could compensate at greater than market rates for popular deliverables.
+* Contributors could start to expect that all activities will be monetarily rewarded and try to game the system - over time this could actually decrease spontaneity and undermine the positive intent of volunteer activity
+* Not running a round alongside the Beta Round could result in lower participation than if we were part of the main event
+
+As part of the pilot work, here is a list of are things we intend to learn through this process:
+
+* Does the community and the DAO assign different values to deliverables?
+* How much DAO capacity does it take to support these rounds?
+* What impact could a public comment / review have on the efficacy of quadratic voting?
+* Do we have a need for the verification of deliverables (sponsors)?
+* Do we need a post-vote dispute resolution process?
+* How do we authenticate grantees & addresses (fraudulent proposals of real work)?
+* Can we have an open nomination / always on funding?
+* Validate how much time is required to prep for, run, and follow up the round
+* Can PGF support off-cycle self-service rounds - how successful will off cadence rounds be?
+
+**Success measures:**
+
+* A GCP proposal has been made to the community and has been voted upon
+* Three funding rounds have been executed & lessons learned have been captured
+* Assets have been created to facilitate the rounds
+* A project close out has been written with recommendations on if/how to proceed
+
+Appendix: [Gitcoin Citizens Rounds -- Supplementary Info ](https://docs.google.com/document/d/1KBMNIpAeEC5H4uvvXBptoT_LcdvoJpOSFMX5hW2iIWA/edit)
+## Vote
+
+**Yes:** Pilot the Gitcoin quadratic funding rounds and allocate $95K in GTC for three rounds and staffing
+
+**No:** Do not fund this work and do not move forward
+
+**Abstain:** I am missing context or this proposal needs more refinement.
+Wed, 14 Feb 2024 00:23:10 +0000
+📜 Proposals
+
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+DSPYT
+
+            <p>We’ll continue to make posts about Gitcoin and we’ll announce them in this thread</p><aside class="quote quote-modified" data-post="1" data-topic="17779">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/dspyt/48/12416_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/summary-about-initiative-with-allo-protocol-now-available-on-dspyt-into-codeverse/17779">Summary about Initiative with Allo Protocol Now Available on DSPYT - into CodeVerse!</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/newscommunity/8"><span data-category-id="8" style="--category-badge-color: #3AB54A; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All the communication from the DAO, such as newsletter and digest, and light topic threads to vibe on the forum and exchange ideas."><span class="badge-category__name">👋 News and Community</span></span></a>
+  </div>
+  <blockquote>
+    Hey everyone! 
+We’re thrilled to announce that we’ve published a summary <a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462">of the initiative with Allo Protocol</a> on our website <a href="https://dspyt.com/" rel="noopener nofollow ugc">DSPYT - into CodeVerse</a>. This summary highlights the recent milestone achieved by Gitcoin in collaboration with Allo Protocol. You can check out the full summary <a href="https://dspyt.com/funding-pilot-initiative-gitcoin" rel="noopener nofollow ugc">here</a>. 
+ <a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b5726cd943427f62256d2403a81eff3467bf5fca.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/b5726cd943427f62256d2403a81eff3467bf5fca" title="image">[image]</a> 
+This pilot initiative, has passed, marking a significant step forward for Gitcoin and the broader Ethereum ecosystem. It’s an exciting time as we continue to push the boundaries of what’s possible …
+  </blockquote>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/36">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/36
+        Wed, 14 Feb 2024 00:23:10 +0000
+gov.gitcoin.co-post-13462-36
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+Romeo840
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a> keep the good work great future and great interface</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/34">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/34
+        Thu, 04 May 2023 13:55:28 +0000
+gov.gitcoin.co-post-13462-34
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+VitorioC
+
+            <p>Pilot the Gitcoin quadratic funding rounds and allocate $95K in GTC for three rounds and staffing !</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/33">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/33
+        Wed, 19 Apr 2023 18:11:07 +0000
+gov.gitcoin.co-post-13462-33
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+krrisis
+
+            <p>Nomination:</p>
+<p><a href="https://twitter.com/0xDataWolf/status/1646115894740013056" class="onebox" target="_blank" rel="noopener">https://twitter.com/0xDataWolf/status/1646115894740013056</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/32">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/32
+        Wed, 12 Apr 2023 12:57:56 +0000
+gov.gitcoin.co-post-13462-32
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+shawn16400
+
+            <p>This snapshot vote has passed with ~75% approval rate.<br>
+Metrics:<br>
+2046 unique votes<br>
+~7.2M GTC tokens cast.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/31">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/31
+        Fri, 07 Apr 2023 08:58:24 +0000
+gov.gitcoin.co-post-13462-31
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+lefterisjp
+
+            <p>Thanks. Well that sounds rather interesting then. Love the details in the proposal and happy I understood it correctly.</p>
+<p>I will be voting yes as I believe it’s a great idea to reward community members and especially via dogfooding our own product.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/30">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/30
+        Mon, 03 Apr 2023 17:59:40 +0000
+gov.gitcoin.co-post-13462-30
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+anneconnelly
+
+            <p>Very interesting concept and a well developed proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/29">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/29
+        Mon, 03 Apr 2023 17:00:31 +0000
+gov.gitcoin.co-post-13462-29
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+umarkhaneth
+
+            <p>Yes to both these questions! With this proposal, we’re funding community members who voluntarily make contributions that benefit Gitcoin.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/28
+        Mon, 03 Apr 2023 13:01:08 +0000
+gov.gitcoin.co-post-13462-28
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+umarkhaneth
+
+            <p>Hi thanks for engaging! This is an interesting idea and I love the mindset of pay-it-forward. I want to clarify that this QF round is not for core team efforts (which are already compensated) but the many efforts by community members who help elevate and uplift these rounds. In my opinion, the best way to show your appreciation to them is to contribute directly to the grants of the people you appreciate in the retroQF round.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/27">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/27
+        Mon, 03 Apr 2023 13:00:02 +0000
+gov.gitcoin.co-post-13462-27
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+lefterisjp
+
+            <p>Some small questions here. So this is not to fund any specific workgroup but individuals themselves right? And using the grants program itself to try and test it too with a relatively small amount, correct?</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/26">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/26
+        Mon, 03 Apr 2023 10:35:15 +0000
+gov.gitcoin.co-post-13462-26
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+PaigeDAO
+
+            <p>Had a couple more thoughts since posting my reply above… Still support this and feel it is def worth a try…<br>
+Other thoughts are these:  For me it is the retroactive QF that stands out the most.<br>
+So, thinking that through… and recognizing how much effort and goodwill the Gitcoin core teams put into making these rounds successful for the rest of us…<br>
+What IF -<br>
+After each Core and Featured rounds, as well as the expected independently run rounds, every successful grantee paid a Retroactive Thank You into a collective Gitcoin ‘tip jar.’<br>
+The  representative ‘Thank You’ could easily be in the form of a badge or nft or other digital asset. Which could then dually serve as a partial qualification for eligibility into the next round.<br>
+I would suggest basic perameters such as only expected from grantees who raised over 200DAI in their round. And then increase it relative to amount raised - ex. if a group raises 33KDAI then they would ‘tip’ accordingly though maybe a cap could be set.</p>
+<p>One of the main reasons I started thinking down this path is because Quadratic Funding rounds are a huge amount of effort for the grantees as well.  They can also be something of a popularity contest.  After the core Gitcoin team has put so much effort into supporting the ecosystem, is it fair to ask you to ‘sing for your supper’ on top of all that?</p>
+<p>I would frame this as a ‘pay it forward’ sort of a structure. After all, by keeping you guys/ gals happy at Gitcoin, it ensures that this funding support machine keeps going.</p>
+<p>Just some Xtra thoughts. Apologies for the TL;DR</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/25">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/25
+        Sun, 02 Apr 2023 12:57:36 +0000
+gov.gitcoin.co-post-13462-25
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+umarkhaneth
+
+            <p>Thanks Kyle! Updated the top post to include a link to the snapshot.</p>
+<p>In addition to what Shawn mentioned, I hope this section from the post gets to a similar outcome as you mentioned earlier:</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="1" data-topic="13462">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p><em>The fact that this is a new experiment may mean that after two rounds we send funding back to the DAO if we decide not to run a third round or request additional funding to expand the round.</em></p>
+</blockquote>
+</aside>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/24
+        Sun, 02 Apr 2023 10:27:55 +0000
+gov.gitcoin.co-post-13462-24
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+kyle
+
+            <p>Thanks - I didn’t realize it was live when posting. I am <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x8accce753fd16dd013c0c4792b6931e1c29b77ba00d70e1e5f93e7ad4ba32418">adding a link here</a> for others to find that. It would be helpful if the post was updated when the Snapshot vote went live to help us know the “stage” of the GCP.</p>
+<p>I am going to abstain from the vote as I feel neutral on the proposal as is, but want to make sure it hits quorum and others can decide <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/23
+        Sun, 02 Apr 2023 09:45:02 +0000
+gov.gitcoin.co-post-13462-23
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+shawn16400
+
+            <aside class="quote no-group" data-username="kyle" data-post="19" data-topic="13462">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>I would love to kick this off with a commitment for two rounds to start, and then expand to a third if we find it’s successful? Is that possible?</p>
+</blockquote>
+</aside>
+<p>Hey there <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> thanks for the input.  The proposal has already been posted on snapshot, so following process the proposal should not be adjusted.  That said, this initiative it meant to be deliberately executed with operational excellence which includes a published postmortem after each round.  You can see that called out in the overview and in <strong>Milestones &amp; Timelines</strong> as well as in the <strong>Success Measures</strong>.</p>
+<p>As part of any standard post mortem, we should ask “are we delivering on the benefits”?  If the answer is “no” and if we cannot see a pathway to deliver on the promise, as Stewards of Gitcoin we then have to question if we are at risk of throwing good money after bad.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> I really appreciate the push from you on this.</p>
+<p>Every Steward should ask:</p>
+<ul>
+<li>Is there clear success criteria?</li>
+<li>Do I understand and think the success criteria are important?</li>
+<li>Does the plan call out progress/milestones, and will i be able to judge progress?</li>
+<li>How will this project inform me if this was a good use of spend?</li>
+<li>If this were my money, would I spend my money on this?</li>
+</ul>
+<p>If you cannot read a proposal and feel comfortable with these components, you might think twice.</p>
+<p>As a DAO, the more we can hold our projects, programs, and workstreams accountable to this kind of stewardship, the greater our impact will be.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/22
+        Sun, 02 Apr 2023 09:38:34 +0000
+gov.gitcoin.co-post-13462-22
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+bobjiang
+
+            <p>Thank you for the proposal, I’d like to support this experiment!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/21
+        Sun, 02 Apr 2023 01:28:04 +0000
+gov.gitcoin.co-post-13462-21
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+PaigeDAO
+
+            <p>This sounds like a solid 'worth a try. ’<br>
+Esp. for the retroactive QF.<br>
+Everyone mentioned above in blue highlighted for retroactive QF funding has my vote, a big YESSS! <img src="https://gov.gitcoin.co/images/emoji/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/green_heart.png?v=12" title=":green_heart:" class="emoji" alt=":green_heart:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/20
+        Sat, 01 Apr 2023 19:14:09 +0000
+gov.gitcoin.co-post-13462-20
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+kyle
+
+            <p>Hey Umar - Thanks again for posting this. I am excited to see us give this a shot.</p>
+<p>I am supportive of the initiate and I wonder if there can be an option to support one round, two rounds, or three?</p>
+<p>I would love to kick this off with a commitment for two rounds to start, and then expand to a third if we find it’s successful? Is that possible?</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/19
+        Sat, 01 Apr 2023 12:42:54 +0000
+gov.gitcoin.co-post-13462-19
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+Alex07UP
+
+            <p>I would like to think that this money is really going to create a better future.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/18
+        Fri, 31 Mar 2023 19:25:07 +0000
+gov.gitcoin.co-post-13462-18
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+umarkhaneth
+
+            <p>Thank you to everyone who spoke with us or left comments on our doc about the ideas and details of this proposal before it went live. Your energy, engagement, and support has been incredibly motivating.</p>
+<p>Special thank you to those who have been active in this thread <a class="mention" href="https://gov.gitcoin.co/u/carlosjmelgar">@carlosjmelgar</a> <a class="mention" href="https://gov.gitcoin.co/u/colton">@Colton</a> <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> @ UnchainedPicaso  <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> <a class="mention" href="https://gov.gitcoin.co/u/zer8">@ZER8</a> <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a> <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> <a class="mention" href="https://gov.gitcoin.co/u/ale.k">@ale.k</a> <a class="mention" href="https://gov.gitcoin.co/u/epowell101">@epowell101</a> !!</p>
+<p>This proposal was built through a community effort and it exists in order to enable further community efforts. If we pass on snapshot and run these rounds then the success of these rounds will also be based in how much community gathers to participate. There’s an open invitation to anyone who wants to make these rounds a success to help gather nominees for retroactive quadratic funding in our first round. Just comment below why you’re grateful for someone and think they deserve RetroQF.</p>
+<p><strong>Nominee Name:</strong><br>
+<strong>Link to Contribution:</strong><br>
+<strong>Date of Contribution:</strong><br>
+<strong>Brief Description:</strong><br>
+<strong>How this benefited Gitcoin:</strong></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/17
+        Fri, 31 Mar 2023 09:16:38 +0000
+gov.gitcoin.co-post-13462-17
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+epowell101
+
+            <p>For the record - a belated thank you to the drafters who were incredibly inspired in driving this forward and patient in gathering feedback.  I’ll be voting yes.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/16
+        Fri, 31 Mar 2023 04:45:31 +0000
+gov.gitcoin.co-post-13462-16
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+shawn16400
+
+            <p>Stewards &amp; GTC token holders.  This proposal has met the minimum threshold and has been moved to snapshot for a vote.  The vote will close on  Apr 6, 2023, 5:00 PM EST.</p>
+<p>please cast your vote and let your voice be heard.<br>
+<a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x8accce753fd16dd013c0c4792b6931e1c29b77ba00d70e1e5f93e7ad4ba32418" class="onebox" target="_blank" rel="noopener">https://snapshot.org/#/gitcoindao.eth/proposal/0x8accce753fd16dd013c0c4792b6931e1c29b77ba00d70e1e5f93e7ad4ba32418</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/15
+        Thu, 30 Mar 2023 20:29:02 +0000
+gov.gitcoin.co-post-13462-15
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+ale.k
+
+            <p>Big +1 to Nate’s reply.</p>
+<p>Thank you to all who worked through this. Excited to see what’s to come!!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/14
+        Thu, 30 Mar 2023 19:39:58 +0000
+gov.gitcoin.co-post-13462-14
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+nategosselin
+
+            <p>I love the thought and initiative that went into all of this. I am supportive and can’t wait to vote yes on this. Thank you guys!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/13
+        Thu, 30 Mar 2023 17:12:18 +0000
+gov.gitcoin.co-post-13462-13
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+shawn16400
+
+            <p>To my count, we have four steward comments on this post ( <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a>, <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a>, <a class="mention" href="https://gov.gitcoin.co/u/zer8">@ZER8</a> and <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a>) .  I am not including myself or <a class="mention" href="https://gov.gitcoin.co/u/krrisis">@krrisis</a> given we are co-authors of the proposal.  To move to snapshot, this proposal needs the support of one more steward before it can move forward.  If it does not receive an additional comment, it will not move to snapshot.</p>
+<p>note to self… I wonder if we should build-in an expiry period…</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/12
+        Thu, 30 Mar 2023 11:28:41 +0000
+gov.gitcoin.co-post-13462-12
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+[GCP-004] - PASSED - Gitcoin Citizens Round
+Viriya
+
+            <p>I’m 100% FOR this. Can’t wait to make the vote official <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-004-passed-gitcoin-citizens-round/13462/11
+        Wed, 29 Mar 2023 19:32:28 +0000
+gov.gitcoin.co-post-13462-11
+[GCP-004] - PASSED - Gitcoin Citizens Round
+      
+
+

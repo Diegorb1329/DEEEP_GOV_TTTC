@@ -1,0 +1,531 @@
+
+
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827
+    What if users could donate with credit card to Gitcoin campaigns?
+
+This would more than 100x the reach from EVM L2 users to all credit card users (billions of people.)
+
+**How it would work**
+
+A user creates an account on the viaPrize.org platform and adds Gitcoin projects to their cart to fund. In essence, we would test this out with our front-end just being one more way to access Gitcoin projects so Gitcoin doesn't need to make any big changes before seeing results. (To create an account, we use Privy which creates a wallet for a user with account abstraction with simply an OTC sent to an email, so web2 people can easily do this.) Then...
+
+1. The user types in how much they are donating
+2. They sign permission for us to send that amount of an ERC-20 stablecoin from their wallet 
+3. They are taken to a Stripe credit card checkout page which has that amount they are donating pre-filled so they just click send
+(From the user's perspective, they are done. Here's what happens next internally...)
+4. The fiat funds show up in our Stripe account, and we turn it into USDC for example with Circle mint
+5. We send the USDC into the user's wallet, and since we already have their permission to send that amount out of their wallet, we immediately send it to the projects they are donating to. 
+
+In this way, the user has on-chain history of their donations even though they donated with credit card. 
+
+**Why do this instead of an onramp?** 
+Check out this ad from Onramper on my LinkedIn feed from when I and the viaPrize team were testing several onramps: 
+![photo1715874807|230x500](upload://wH4yqjnMfQsjfTfW2ote7uy1Uz9.jpeg)
+A 52% increase of fiat-to-crypto transactions succeeding from 22% equals... 33%? If I did that math right, then still **2/3 of all attempts to onramp fail** through Onramper which is an aggregator offering many onramps (btw Onramper is hard to work with and we honestly feel kinda scammed into spending money on them. Shoutout to Guardarian/ChangeNow for working well so far)
+And that's if the user is even willing to sit through the process of doing KYC if this is their first time buying crypto. 
+
+Compare that with the proposal to: have users send fiat, then we convert that into crypto for them with a trusted solution that works consistently. 
+
+**Background**
+
+At Zuzalu last year, I started testing out crowdfunded prizes as a concept with an MVP for viaPrize. (Details here: https://gov.gitcoin.co/t/gitcoin-appreciations-thread/18332?u=noahchonlee)
+Since then, a team of five has come together with 100% of our funding so far coming from Gitcoin donations. 
+
+We made a tiny bit of revenue in January with some paying users, but to be honest have been slowed down since then spending months talking about how to make web3 easier to use. We think we may finally have found a strategy that addresses this (we already built USDC based contracts so it is a familiar currency, gasless transactions, and ability to send funds to usernames instead of public keys, full roadmap here: https://docs.google.com/document/d/1lwtuuvofkaK1c-zHEgaplcOzVgg_TXCiPeLL-Bwg488/edit?usp=sharing )
+
+It is thanks to Gitcoin that we exist, and we would love to build something that gives back to the community and pioneers a way for many web3 platforms to be easier for web2 users to interact with. 
+
+**Pilot Project**
+
+For this system to work immediately, we need a "buffer reserve" of funds (see "deep dive into issues" below for an explanation.)
+
+We are suggesting a pool of $10,000 be available in the upcoming Zuzalu Gitcoin round so that users may be able to donate up to $10,000 total to projects in that round with credit card.
+
+If this works well, we can expand this to more rounds, and perhaps viaPrize even creates vpfinance - a b2b saas consultancy that works with web3 platforms to make them easier for web2 users to interact with. 
+
+**Deep Dive into Issues (For Nerds Like Me)**
+
+To send fiat from Stripe to a minting service, a wire transfer will take around 3 business days. We are looking into sending from Stripe to a bank account (which adds a different few days wait unless we pay 1% fee for instant stripe withdrawal) then manually buying crypto in an exchange (there's no APIs to automate this) or use CBIT transfers or Hong Kong's special real time gross settlement (which would require opening a Hong Kong company.) 
+
+But if those fall through, basically we need to have a "buffer reserve" so we can immediately send the crypto upon receiving the fiat, and that buffer is replenished once the fiat we received has finished turning into crypto. 
+
+There are many more considerations, some of which we have simplified in this blog post: https://www.noahchonlee.com/post/how-to-bring-credit-card-payments-to-web3-crowdfunding-platforms
+
+The most important tradeoff is that we COULD use dev-controlled wallets and do everything on behalf of the user at the cost of the user giving up sovereignty of their wallet (this would remove the need for users to click "sign" with a wallet pop up which might confuse people unfamiliar with web3.) 
+We would still keep the option for people to use their own self-sovereign/non-custodial wallet, but if someone just wants things to work easier they could select "normal account" instead of a "web3 account" when creating their profile. 
+
+**Funding for This Project**
+
+We see 3 ways this could be funded:
+1. A proposal and DAO vote to make a prize for someone to build in credit card payments to donate to Gitcoin campaigns (which we anticipate winning, but at least it's an open invitation then and it is a results based reward system, and there's another prize on our platform :stuck_out_tongue_winking_eye:)
+2. The community appreciates our work and donates more to us during GG rounds (and maybe in the citizens round?)
+3. We make revenue through a platform fee (we are thinking 5% flat fee, 2.9% of which goes to the credit card fees and potentially 1% goes to Stripe instant payout fee which leaves 2.1%-1.1% for us)
+
+We would prefer all three, and would love feedback from the community on what they think is reasonable. 
+
+**Conclusion**
+
+Gitcoin is making big changes!
+
+Congrats to the switch to the new cluster based matching and model based detection strategy that removes the need for Gitcoin passport stamps!
+See @umarkhaneth great article on that and cheers to him encouraging me to write this: https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524
+
+This change combined with credit card payments may make it orders of magnitude easier to donate and receive matching. 
+
+This could be the start of an even brighter era for Gitcoin, QF, and web3 crowdfunding at large.
+
+What do *you* think? :thinking:
+Fri, 09 Aug 2024 20:25:15 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+mars
+
+            <aside class="quote no-group" data-username="noahchonlee" data-post="19" data-topic="18827">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/noahchonlee/48/12774_2.png" class="avatar"> noahchonlee:</div>
+<blockquote>
+<p>they often only check the zip code</p>
+</blockquote>
+</aside>
+<p>That is likely to be the case in the US.</p>
+<p>In the EU there is 2FA requirement: <a href="https://en.wikipedia.org/wiki/Strong_customer_authentication" class="inline-onebox" rel="noopener nofollow ugc">Strong customer authentication - Wikipedia</a></p>
+<blockquote>
+<p>The requirement ensures that electronic payments are performed with <a href="https://en.wikipedia.org/wiki/Multi-factor_authentication" rel="noopener nofollow ugc">multi-factor authentication</a>, to increase the security of electronic payments.</p>
+</blockquote>
+<p><em>(and because of the 2FA, the validation of ZIP code / name / address does not happen, using Mickey Mouse or Batman works fine)</em></p>
+<p><strong>RELATED.</strong> Yet another way to GROWnate: <a href="https://x.com/jimicohen/status/1821551869728018751" rel="noopener nofollow ugc">x.com/jimicohen/status/1821551869728018751</a></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e7611493accd84ef30c0fc3f35dc4fb56188eaaa.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/e7611493accd84ef30c0fc3f35dc4fb56188eaaa" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e7611493accd84ef30c0fc3f35dc4fb56188eaaa_2_684x500.jpeg" alt="image" data-base62-sha1="x0ShWy66BFNUxCXPFRhY2ESSSM2" width="684" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e7611493accd84ef30c0fc3f35dc4fb56188eaaa_2_684x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e7611493accd84ef30c0fc3f35dc4fb56188eaaa_2_1026x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/e/e7611493accd84ef30c0fc3f35dc4fb56188eaaa.jpeg 2x" data-dominant-color="20252E"></a></div><p></p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.ggframe.xyz/">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/72e1c27d9623d7f410d9cb8f4cc276f113686e90_2_500x500.webp" class="site-icon" data-dominant-color="9CCDC6" width="500" height="500">
+
+      <a href="https://www.ggframe.xyz/" target="_blank" rel="noopener nofollow ugc">ggframe.xyz</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://www.ggframe.xyz/" target="_blank" rel="noopener nofollow ugc">GG Frame</a></h3>
+
+  <p>GG Frame is built to enable user to donate projects on Gitcoin Round easily.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p><a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a> <em>(and the rest of the Gitcoin crew)</em> take note of viaPrize and GG Frame and all the others ways in final calculation of the matching!</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/20
+        Fri, 09 Aug 2024 09:14:35 +0000
+gov.gitcoin.co-post-18827-20
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+noahchonlee
+
+            <p>Thank you! Yes with standard credit card payments they often only check the zip code and the rest can be fake. We tested paying as Batman.</p>
+<p>However, with PayPal specifically we get donors’ legal name</p>
+<p>We are also in contact with Visa requesting API access for checking legal name as well for the future</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/19
+        Wed, 07 Aug 2024 18:45:47 +0000
+gov.gitcoin.co-post-18827-19
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+mars
+
+            <aside class="quote no-group" data-username="noahchonlee" data-post="17" data-topic="18827">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/noahchonlee/48/12774_2.png" class="avatar"> noahchonlee:</div>
+<blockquote>
+<p>based on someone’s legal name</p>
+</blockquote>
+</aside>
+<p>In my country, when you pay with card online, there is usually a question about billing address. But it is not checked. You could put Mickey Mouse as the name or Buckingham Palace as the address.</p>
+<p>My assumption is that there is no government issued ID KYC in viaPrize. Or maybe there is? Where is the legal name coming from?</p>
+<p>Is the signal from viaPrize integrated with QF results on Gitcoin?</p>
+<p>I hope the experiment will be successful and cards will be natively supported.</p>
+<p>Once again congrats for shipping and I’m hoping that my questions / suggestions are on point.</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/18
+        Wed, 07 Aug 2024 17:22:03 +0000
+gov.gitcoin.co-post-18827-18
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+noahchonlee
+
+            <p>Hi Mars! The sybil resistance is not based on unique credit card, it’s based on someone’s legal name. We built it so people can use multiple credit cards and it’ll go through the same single wallet associated with their name <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/17
+        Wed, 07 Aug 2024 15:07:43 +0000
+gov.gitcoin.co-post-18827-17
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+mars
+
+            <p>Well done ser! I’ve seen a demo video posted in the OpenCivics chat:</p>
+<p><a href="https://www.youtube.com/watch?v=Hp47z9_bqVo">💳 viaPrize.org Gitcoin demo</a></p>
+
+<p>Gitcoin stewards, crew, community: Please make sure donations via cards are accounted in QF matching! <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>I think that unique credit card is a good sybil-resistant signal, unless someone creates disposable on the fly.</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/16
+        Wed, 07 Aug 2024 10:38:12 +0000
+gov.gitcoin.co-post-18827-16
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+noahchonlee
+
+            <p>Thank you Rohit! As mentioned in the call you have been awesome to work with and super fast and responsive.</p>
+<p>Just responding as did in the call for the community: All good! For this pilot in our minds the main value is knowing if this system can work so that way we could scale it in the future to more rounds, and the amount of new users from this particular activation is not a focus.</p>
+<p>Also when I asked if it matters more to drive more donations through Allo or more users to grants stack, I’m now operating according to the response that the main goal for Gitcoin is to have more donations through Allo and it is welcome to have more front-ends and platforms which is the intention of making this a protocol. That’s more important for us to understand if we are doing things that fit the community goals long-term than upfront funds right now and I appreciate all the feedback helping us to understand this.</p>
+<p>Sidenote Rohit mentioned: Citizens retro would be awesome, though since only one individual can apply and this was very much a group effort (Myself, Dipanshu, Nithin, Swaraj, and Aryan, plus support from Rohit Umar and Henry) we would have to as individuals quantify the ways we have been researching this together</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/15
+        Tue, 04 Jun 2024 07:57:54 +0000
+gov.gitcoin.co-post-18827-15
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+rohit
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/noahchonlee">@noahchonlee</a>, I’m sharing notes from our discussion here. Thanks for your patience in working through the proposal. At this stage of the pilot, we will be unable to offer a proactive direct grant.</p>
+<p>We appreciate the thoroughness and innovative approach outlined in this post and the supporting research you and the team have done on factoring user experience, Sybil, and other technical tradeoffs.</p>
+<p>The problem you’re tackling is highly relevant and holds immense potential for broadening participation in decentralized web3 grant funding. By integrating fiat payments into the quadratic funding (QF) mechanism for Gitcoin Grants, you’re opening up an opportunity to significantly expand the number of donors, thereby democratizing access and support.</p>
+<p>However, to justify an upfront investment, we would love to see a more scalable approach readily applied across multiple rounds, focusing on the volume of users opting for fiat donations. The following  factors will help reconsider the funding decisions in the future:</p>
+<ol>
+<li>
+<p><strong>Projected Impact:</strong> Based on the Zuzalu rounds in Q1, the projected number of users for fiat donations for the Zuzalu round is likely low, given the crypto-native nature of the community. This makes it challenging to make an upfront investment pending a clear indication of broader adoption and impact.</p>
+</li>
+<li>
+<p><strong>Integration Scope / Scalability:</strong> The current approach involves driving credit card donations through the viaPrize platform. While this keeps the process clean, it also limits the initiative’s visibility and impact (e.g., having a CTA for fiat contributions as part of the donors’ existing workflow on Grants Stack). A deeper integration into Explorer could potentially drive more users.</p>
+</li>
+</ol>
+<p>We strongly encourage you to proceed with the pilot and refine your approach based on your findings for a revised proposal to address the above topics. We would also love the team to continue engaging with the community here to gather feedback on topics like handling Sybils, revenue models, and the integration approach. Also, note that the individuals on the team contributing to research and development can opt into the next Citizens Retro round for additional funding based on the impact of this experiment. As always, feel free to utilize the <a href="https://calendar.app.google/YY1Pnt7i4oMka9sX9">office hours</a> for any follow-up and I look forward to the pilot.</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/14
+        Mon, 03 Jun 2024 17:36:06 +0000
+gov.gitcoin.co-post-18827-14
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+noahchonlee
+
+            <p>GCP update:<br>
+Immensely grateful to <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> and Henry Wilson for our calls helping draft up a Citizens Innovate GCP. They suggested viaPrize provides the buffer funds and then Gitcoin reward us after achieving certain milestones, so now we are thinking viaPrize would take on the risk of providing 5000 USDC. The full proposal should be posted soon.</p>
+<p>Tech Update and Proof of Personhood Challenges:<br>
+Even in COCM as the new sybil resistance, a new wallet without various on-chain history will not receive matching. Thus, we need a proof of personhood for these new people coming in with credit card.</p>
+<p>Solutions: We do proof of personhood through a person’s legal name</p>
+<p>The following payment methods allow us to obtain that info:<br>
+Visa<br>
+Amex<br>
+PayPal<br>
+Bank transfer (this is slower so if we include this option we would need to remove it near the end of the round)</p>
+<p>If a donor has a unique name, they get matching. (Perhaps we can also store these with ZK in the future. There’s also the possibility to add Holonym NFC e-passport and if anyone shows their name through that, then they can donate with any method and get matching.)</p>
+<p>Issue: This means someone could donate with fiat and receive matching with that wallet, then donate again with another wallet that has sufficient on-chain history and get matching on a 2nd wallet. This could be thought of as a 2x Sybil, or we could say that each donation could get you 50%(ish) of your total possible matching.</p>
+<p>2 interesting benefits of this is that:<br>
+For non-crypto people, this incentivizes individuals to onboard to web3 and get more on-chain history so they can get more matching.<br>
+As Henry pointed out, many crypto people will donate the minimum amount to get matching and if they can donate 2x to get more matching, maybe this increases the total amount donated.</p>
+<p>Are these trade-offs worth giving access to billions of non-crypto people? We would love some community input.</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/13
+        Sun, 02 Jun 2024 05:33:38 +0000
+gov.gitcoin.co-post-18827-13
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+noahchonlee
+
+            <p>Hi Paige, thank you! We are currently working on a full website front-end redesign, a blog, and newsletter hopefully all those help <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"><br>
+There’s a bit more info about how prizes work here: <a href="https://www.viaprize.org/prize/about" class="inline-onebox" rel="noopener nofollow ugc">viaPrize</a><br>
+Basically there’s…<br>
+Proposer - Adds the prize idea<br>
+Funders - Adds funds to the prize and can vote on the winner<br>
+Contestants - Wins prizes</p>
+<p>There’s also this blog post with more info - <a href="https://www.noahchonlee.com/post/prizes-as-the-missing-middle-road-in-public-goods-funding" rel="noopener nofollow ugc">https://www.noahchonlee.com/post/prizes-as-the-missing-middle-road-in-public-goods-funding</a></p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/12
+        Mon, 27 May 2024 11:51:09 +0000
+gov.gitcoin.co-post-18827-12
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+PaigeDAO
+
+            <p>Really like the gist of this. And agree that cc payment functionality will be the key to more, broader engagement.</p>
+<p>Looking forward to hearing more about how this potentially syncs with Meg’s/ Gitcoin Product Team’s in-progress plans.</p>
+<p>Keep up the good work!</p>
+<p>Also, your tool looks like it could be very useful to many of the Gitcoin Round participants. Where can I find a more general overview of your product? the website doesn’t seem to illustrate any use cases, at least not on the home page?</p>
+<p>Thank you for all your good work.</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/11
+        Mon, 27 May 2024 11:23:19 +0000
+gov.gitcoin.co-post-18827-11
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+rohit
+
+            <aside class="quote no-group" data-username="noahchonlee" data-post="9" data-topic="18827">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/noahchonlee/48/12774_2.png" class="avatar"> noahchonlee:</div>
+<blockquote>
+<p>Curious about how the Gitcoin idea board could become prizes that could be crowdfunded and funders collectively choose the winners <img src="https://gov.gitcoin.co/images/emoji/twitter/thinking.png?v=12" title=":thinking:" class="emoji" alt=":thinking:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+</aside>
+<p>That’s a great idea—I’m open to experimenting with it. As it stands now, most of the topics on the <a href="https://gitcoin.notion.site/Gitcoin-Idea-Board-3d839ea2b299495d9e4a6268cf1e0f9e">idea board</a> are the DAO’s wishlist to nudge citizens to either opt into existing ideas or submit new ones. It would be great to curate some of these where the chances of having other funders interested are highest. I will DM for a deeper dive.</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/10
+        Thu, 23 May 2024 07:35:05 +0000
+gov.gitcoin.co-post-18827-10
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+noahchonlee
+
+            <p>Thank you for the help through the call!! Really appreciate the guidance and I’m writing up the Citizens Innovate template now. Curious about how the Gitcoin idea board could become prizes that could be crowdfunded and funders collectively choose the winners <img src="https://gov.gitcoin.co/images/emoji/twitter/thinking.png?v=12" title=":thinking:" class="emoji" alt=":thinking:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/9
+        Tue, 21 May 2024 13:05:19 +0000
+gov.gitcoin.co-post-18827-9
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+rohit
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/noahchonlee">@noahchonlee</a> - thanks for booking time for the Citizen Grants office hours. I am looking forward to working with you on this proposal. For more context on the direct grants available for Gitcoin Citizens, you can check out more details <a href="https://gitcoin.co/citizens">here</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/8
+        Mon, 20 May 2024 07:13:34 +0000
+gov.gitcoin.co-post-18827-8
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+noahchonlee
+
+            <p>Thank you Mars! Glad to see others are thinking about this, too and down to call or jam if you want to collab on this. Stripe has a beta program that we applied to for crypto payouts but we haven’t been added to it, they say it will be more widely available over summer. We are a Delaware C corp for legal entity. We don’t have that license and would love intros to lawyers to discuss this more.<br>
+We talked with some people at Transak as well and seems like they are a growing onramp solution!</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/7
+        Fri, 17 May 2024 15:02:23 +0000
+gov.gitcoin.co-post-18827-7
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+noahchonlee
+
+            <p>Ah I see! Do you know what the max is for citizens program budget? Could we do a proposal for $10k? Also Im curious about how voting works, which 5 are eligible, how rejection votes factor in, if there’s any write up explaining that I’m curious. Thank you for info!!</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/6
+        Fri, 17 May 2024 14:59:22 +0000
+gov.gitcoin.co-post-18827-6
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+mars
+
+            <aside class="quote no-group" data-username="noahchonlee" data-post="1" data-topic="18827">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/noahchonlee/48/12774_2.png" class="avatar"> noahchonlee:</div>
+<blockquote>
+<p>What if users could donate with credit card to Gitcoin campaigns?</p>
+<p>This would more than 100x the reach from EVM L2 users to all credit card users (billions of people.)</p>
+</blockquote>
+</aside>
+<h3><a name="i-support-this-idea-it-makes-so-much-sense-1" class="anchor" href="https://gov.gitcoin.co#i-support-this-idea-it-makes-so-much-sense-1"></a>I <img src="https://gov.gitcoin.co/images/emoji/twitter/100.png?v=12" title=":100:" class="emoji" alt=":100:" loading="lazy" width="20" height="20"> support this idea, it makes so much sense…</h3>
+<p>I’ve literally suggested (talk is cheap, show me the code) it some time ago and I’m so happy that you have the code up and running.</p>
+<aside class="quote no-group" data-username="mars" data-post="6" data-topic="16668">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/mars/48/13147_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/gitcoin-dao-topology/16668/6">Gitcoin DAO Topology</a></div>
+<blockquote>
+<p>Potentially an <img src="https://gov.gitcoin.co/images/emoji/twitter/bulb.png?v=12" title=":bulb:" class="emoji" alt=":bulb:" loading="lazy" width="20" height="20"> to <strong>expand beyond Web3</strong> - checkout with payment card as a vote - create a custodial / non-custodial / account abstractions wallet on the backend - that would be pretty neat onboarding into Web3.</p>
+</blockquote>
+</aside>
+<h3><a name="sybil-resistance-2" class="anchor" href="https://gov.gitcoin.co#sybil-resistance-2"></a>Sybil resistance</h3>
+<p>Note that long-term using a payment card is good as <strong>unique data point</strong> for normies without on-chain history and without connecting loads of social accounts.</p>
+<aside class="quote no-group" data-username="noahchonlee" data-post="1" data-topic="18827">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/noahchonlee/48/12774_2.png" class="avatar"> noahchonlee:</div>
+<blockquote>
+<p>me to write this: <a href="https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524">Our Sybil Resistance Strategy for GG20</a></p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="noahchonlee" data-post="14" data-topic="18524">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/noahchonlee/48/12774_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524/14">Our Sybil Resistance Strategy for GG20</a></div>
+<blockquote>
+<p>If they choose the wallet we control, they can log in with just an email OTP for account abstraction and make a username and they don’t need to worry about keys or wallet addresses or anything</p>
+</blockquote>
+</aside>
+<h3><a name="payment-provider-onramp-3" class="anchor" href="https://gov.gitcoin.co#payment-provider-onramp-3"></a>Payment provider / onramp</h3>
+<blockquote>
+<p>Onramper is hard to work<br>
+Shoutout to Guardarian/ChangeNow for working well so far<br>
+users send fiat, then we convert that into crypto for them with a trusted solution that works consistently.</p>
+</blockquote>
+<ul>
+<li>Does Stripe supports that?</li>
+<li>Do you have legal entity?</li>
+<li>Do you have money transmitting / brokering licenses?</li>
+</ul>
+<p>About the Web2 to Web3 onramp, recently they were in the press - <a href="https://transak.com/" rel="noopener nofollow ugc">https://transak.com/</a> - announcing profitability for crypto company? Rare in this space, with such an ability to execute they are here to stay:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/20de5496f322aea8457165cd23afc222ce0c7113.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/20de5496f322aea8457165cd23afc222ce0c7113" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/20de5496f322aea8457165cd23afc222ce0c7113_2_687x500.png" alt="image" data-base62-sha1="4GLCqvJua1KeXgK1t8Ima4zHp3t" width="687" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/20de5496f322aea8457165cd23afc222ce0c7113_2_687x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/20de5496f322aea8457165cd23afc222ce0c7113_2_1030x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/20de5496f322aea8457165cd23afc222ce0c7113_2_1374x1000.png 2x" data-dominant-color="F7F7F9"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/5
+        Fri, 17 May 2024 13:46:13 +0000
+gov.gitcoin.co-post-18827-5
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+thedevanshmehta
+
+            <p>From what I understand, the citizens forward or citizens innovate is a more streamlined version of a GCP</p>
+<p>Where a GCP requires the entire DAO to vote, a citizens proposal only requires approval by a committee of 5.  The citizens program budget was approved via GCP, so those seem to be reserved for more higher end frameworks rather than individual proposals</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/4
+        Fri, 17 May 2024 12:25:50 +0000
+gov.gitcoin.co-post-18827-4
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+noahchonlee
+
+            <p>Nice! I just messaged with Meg who set us up with a call with a devrel tonight to help us understand the Gitcoin stack.<br>
+Why do you think a citizens forward proposal instead of a Gitcoin Community Proposal? It’s unclear to me when to do one or the other</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/3
+        Fri, 17 May 2024 12:22:24 +0000
+gov.gitcoin.co-post-18827-3
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+thedevanshmehta
+
+            <p>The Gitcoin Citizens Active program might be a good place to apply for grant funding. I do know that <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> is already thinking about credit card integrations so she would be the person to talk to about this!</p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/2
+        Fri, 17 May 2024 11:18:25 +0000
+gov.gitcoin.co-post-18827-2
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+noahchonlee
+
+            <p>What if users could donate with credit card to Gitcoin campaigns?</p>
+<p>This would more than 100x the reach from EVM L2 users to all credit card users (billions of people.)</p>
+<p><strong>How it would work</strong></p>
+<p>A user creates an account on the <a href="http://viaPrize.org" rel="noopener nofollow ugc">viaPrize.org</a> platform and adds Gitcoin projects to their cart to fund. In essence, we would test this out with our front-end just being one more way to access Gitcoin projects so Gitcoin doesn’t need to make any big changes before seeing results. (To create an account, we use Privy which creates a wallet for a user with account abstraction with simply an OTC sent to an email, so web2 people can easily do this.) Then…</p>
+<ol>
+<li>The user types in how much they are donating</li>
+<li>They sign permission for us to send that amount of an ERC-20 stablecoin from their wallet</li>
+<li>They are taken to a Stripe credit card checkout page which has that amount they are donating pre-filled so they just click send<br>
+(From the user’s perspective, they are done. Here’s what happens next internally…)</li>
+<li>The fiat funds show up in our Stripe account, and we turn it into USDC for example with Circle mint</li>
+<li>We send the USDC into the user’s wallet, and since we already have their permission to send that amount out of their wallet, we immediately send it to the projects they are donating to.</li>
+</ol>
+<p>In this way, the user has on-chain history of their donations even though they donated with credit card.</p>
+<p><strong>Why do this instead of an onramp?</strong><br>
+Check out this ad from Onramper on my LinkedIn feed from when I and the viaPrize team were testing several onramps:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e5240a239b9346b53063045ed7770323b3da7a7b.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/e5240a239b9346b53063045ed7770323b3da7a7b" title="photo1715874807"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5240a239b9346b53063045ed7770323b3da7a7b_2_230x500.jpeg" alt="photo1715874807" data-base62-sha1="wH4yqjnMfQsjfTfW2ote7uy1Uz9" width="230" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5240a239b9346b53063045ed7770323b3da7a7b_2_230x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5240a239b9346b53063045ed7770323b3da7a7b_2_345x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/e/e5240a239b9346b53063045ed7770323b3da7a7b.jpeg 2x" data-dominant-color="E0E1E0"></a></div><br>
+A 52% increase of fiat-to-crypto transactions succeeding from 22% equals… 33%? If I did that math right, then still <strong>2/3 of all attempts to onramp fail</strong> through Onramper which is an aggregator offering many onramps (btw Onramper is hard to work with and we honestly feel kinda scammed into spending money on them. Shoutout to Guardarian/ChangeNow for working well so far)<br>
+And that’s if the user is even willing to sit through the process of doing KYC if this is their first time buying crypto.<p></p>
+<p>Compare that with the proposal to: have users send fiat, then we convert that into crypto for them with a trusted solution that works consistently.</p>
+<p><strong>Background</strong></p>
+<p>At Zuzalu last year, I started testing out crowdfunded prizes as a concept with an MVP for viaPrize. (Details here: <a href="https://gov.gitcoin.co/t/gitcoin-appreciations-thread/18332" class="inline-onebox">Gitcoin Appreciations Thread</a>)<br>
+Since then, a team of five has come together with 100% of our funding so far coming from Gitcoin donations.</p>
+<p>We made a tiny bit of revenue in January with some paying users, but to be honest have been slowed down since then spending months talking about how to make web3 easier to use. We think we may finally have found a strategy that addresses this (we already built USDC based contracts so it is a familiar currency, gasless transactions, and ability to send funds to usernames instead of public keys, full roadmap here: <a href="https://docs.google.com/document/d/1lwtuuvofkaK1c-zHEgaplcOzVgg_TXCiPeLL-Bwg488/edit?usp=sharing" class="inline-onebox" rel="noopener nofollow ugc">viaPrize Development Roadmap - Google Docs</a> )</p>
+<p>It is thanks to Gitcoin that we exist, and we would love to build something that gives back to the community and pioneers a way for many web3 platforms to be easier for web2 users to interact with.</p>
+<p><strong>Pilot Project</strong></p>
+<p>For this system to work immediately, we need a “buffer reserve” of funds (see “deep dive into issues” below for an explanation.)</p>
+<p>We are suggesting a pool of $10,000 be available in the upcoming Zuzalu Gitcoin round so that users may be able to donate up to $10,000 total to projects in that round with credit card.</p>
+<p>If this works well, we can expand this to more rounds, and perhaps viaPrize even creates vpfinance - a b2b saas consultancy that works with web3 platforms to make them easier for web2 users to interact with.</p>
+<p><strong>Deep Dive into Issues (For Nerds Like Me)</strong></p>
+<p>To send fiat from Stripe to a minting service, a wire transfer will take around 3 business days. We are looking into sending from Stripe to a bank account (which adds a different few days wait unless we pay 1% fee for instant stripe withdrawal) then manually buying crypto in an exchange (there’s no APIs to automate this) or use CBIT transfers or Hong Kong’s special real time gross settlement (which would require opening a Hong Kong company.)</p>
+<p>But if those fall through, basically we need to have a “buffer reserve” so we can immediately send the crypto upon receiving the fiat, and that buffer is replenished once the fiat we received has finished turning into crypto.</p>
+<p>There are many more considerations, some of which we have simplified in this blog post: <a href="https://www.noahchonlee.com/post/how-to-bring-credit-card-payments-to-web3-crowdfunding-platforms" rel="noopener nofollow ugc">https://www.noahchonlee.com/post/how-to-bring-credit-card-payments-to-web3-crowdfunding-platforms</a></p>
+<p>The most important tradeoff is that we COULD use dev-controlled wallets and do everything on behalf of the user at the cost of the user giving up sovereignty of their wallet (this would remove the need for users to click “sign” with a wallet pop up which might confuse people unfamiliar with web3.)<br>
+We would still keep the option for people to use their own self-sovereign/non-custodial wallet, but if someone just wants things to work easier they could select “normal account” instead of a “web3 account” when creating their profile.</p>
+<p><strong>Funding for This Project</strong></p>
+<p>We see 3 ways this could be funded:</p>
+<ol>
+<li>A proposal and DAO vote to make a prize for someone to build in credit card payments to donate to Gitcoin campaigns (which we anticipate winning, but at least it’s an open invitation then and it is a results based reward system, and there’s another prize on our platform <img src="https://gov.gitcoin.co/images/emoji/twitter/stuck_out_tongue_winking_eye.png?v=12" title=":stuck_out_tongue_winking_eye:" class="emoji" alt=":stuck_out_tongue_winking_eye:" loading="lazy" width="20" height="20">)</li>
+<li>The community appreciates our work and donates more to us during GG rounds (and maybe in the citizens round?)</li>
+<li>We make revenue through a platform fee (we are thinking 5% flat fee, 2.9% of which goes to the credit card fees and potentially 1% goes to Stripe instant payout fee which leaves 2.1%-1.1% for us)</li>
+</ol>
+<p>We would prefer all three, and would love feedback from the community on what they think is reasonable.</p>
+<p><strong>Conclusion</strong></p>
+<p>Gitcoin is making big changes!</p>
+<p>Congrats to the switch to the new cluster based matching and model based detection strategy that removes the need for Gitcoin passport stamps!<br>
+See <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> great article on that and cheers to him encouraging me to write this: <a href="https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524" class="inline-onebox">Our Sybil Resistance Strategy for GG20</a></p>
+<p>This change combined with credit card payments may make it orders of magnitude easier to donate and receive matching.</p>
+<p>This could be the start of an even brighter era for Gitcoin, QF, and web3 crowdfunding at large.</p>
+<p>What do <em>you</em> think? <img src="https://gov.gitcoin.co/images/emoji/twitter/thinking.png?v=12" title=":thinking:" class="emoji" alt=":thinking:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-000-donated-to-gitcoin-zuzalu-round-with-credit-card-pilot-project-proposal/18827/1
+        Fri, 17 May 2024 10:08:00 +0000
+gov.gitcoin.co-post-18827-1
+$10,000 Donated to Gitcoin Zuzalu Round with Credit Card Pilot Project Proposal
+      
+
+

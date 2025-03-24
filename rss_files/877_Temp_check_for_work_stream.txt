@@ -1,0 +1,225 @@
+
+
+
+Temp check for work-stream
+https://gov.gitcoin.co/t/temp-check-for-work-stream/14983
+    # Summary
+
+This proposal seeks to develop an unbiased, transparent workstream that increases the amount of funding distributed each Grant round by empowering creators of quality, valuable and impactful projects in the web3 ecosystem.
+
+The proposed system is designed to ensure transparency, fairness, and accountability of projects participating in each Grant Round. From a holistic approach that encompasses the entire round from pre-entry through disbursement of funds.
+
+This approach will maintain and promote a positive reputation for the Gitcoin Brand itself, while also driving funding towards things that matter and facilitating growth of impactful projects.
+
+# Abstract
+
+Think of a vegetable garden. According to [science direct](https://www.sciencedirect.com/science/article/pii/S0261219417306412) in order for optimal growth, it is important to inhibit growth of and eliminate weeds as they compete with desirable plants for resources such as water, nutrients, and sunlight.
+
+Apply that school of thinking towards grants rounds (the garden) projects (the vegetables) and fraudulent projects (weeds).
+
+By limiting the number of fraudulent participants that gain entry to a grants round, the amount of funds distributed to meaningful impactful projects increases.
+
+# Motivation
+
+Previous efforts focused on [verifying identity](https://passport.gitcoin.co/) and [reputation based on specific “good”](https://www.gitcoin.co/blog/introducing-kudos?hs_amp=true) activities that a wallet did. While this is a good way to show participation, it doesn’t offer a true overall picture of individuals and projects participating in grants rounds.
+
+Other [previous efforts](https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/52) focused on citizens to participate and identify potential sybil attacks. While in theory, this could potentially solve the problem of [quadratic funding sybil attacks](https://www.gitcoin.co/blog/defending-quadratic-funding-in-grants-round-10-and-beyond), are multiple areas in the foundational operations that are under addressed.
+
+1. The FDD workstream is centralized. The roll tag “citizen” is given in the discord server:
+
+  * Without exact qualifying criteria necessary.
+  * Given out (one or a few people)
+  * Based on their subjective opinions
+  * Where questions are not [“officially” ](https://discord.com/channels/562828676480237578/783769851226357801/1097929131913650271)answered and often go unanswered or responded to.
+  * Where you can be [kicked out ](https://discord.com/channels/562828676480237578/783769851226357801/1097929131913650271)of if you @tag someone looking for an answer.
+
+2. Recently, the initial barrier to fraud was left open as there are no steps that legitimize projects entering each round.
+
+  * Out of 10 projects sampled in the beta grants round
+    * [This project](https://explorer.gitcoin.co/#/round/1/0xaa40e2e5c8df03d792a52b5458959c320f86ca18/0xaa40e2e5c8df03d792a52b5458959c320f86ca18-91) claims transparent treasury on their grants page, but there is not one.
+    * [This](https://explorer.gitcoin.co/#/round/1/0x6e8dc2e623204d61b0e59e668702654ae336c9f7/0x6e8dc2e623204d61b0e59e668702654ae336c9f7-46) projects [website](https://desciyouths.wordpress.com/) is a single blogpost and does not give any background on the problem it is looking to solve or what it will be doing with the funds received.
+
+* [This](https://explorer.gitcoin.co/#/round/1/0x6e8dc2e623204d61b0e59e668702654ae336c9f7/0x6e8dc2e623204d61b0e59e668702654ae336c9f7-62) project doesn’t list any links other than a Twitter account with automatic looking tweets. From there, they list a [website](https://spacerox.org/). The link to discord does not link anywhere.
+
+* [This](https://explorer.gitcoin.co/#/round/1/0x6e8dc2e623204d61b0e59e668702654ae336c9f7/0x6e8dc2e623204d61b0e59e668702654ae336c9f7-72) project is a [repo](https://github.com/k3nnethfrancis/leo) that is just fork of [open AI’s chat GPT bot ](https://github.com/openai/gpt-discord-bot)
+
+3. There is no transparency, many Notion pages have no access.
+
+4. There are no clear definitions of what constitutes the elimination of a project, leaving many participants unsure if/what they did wrong.
+
+# Specification
+
+The proposed workstream will:
+
+* Vet projects prior to gaining entry to each round.
+* Vet each project participants
+
+Doing this will:
+
+* Eliminate/decrease the number of fraudulent participants that gain entry to a grants rounds
+* Ensure that individuals and organizations are legitimate and have genuine projects that align with the goals of the grant.
+
+This will be done
+
+* transparently - in the open with all information able to be viewed and verified by anyone at any time.
+* asynchronously - can be worked on by anyone at any time.
+* simply - no complicated formulas no connections, no apps
+  * Questions with color coded yes/no answered (see image)
+![image|286x499](upload://uPeFlbnZjYheokqPdRhbDVN2bmx.jpeg)
+
+* 3 red = project can’t participate in the round.
+
+1. The first stage will involve a thorough background check
+
+  * verifying applicable credentials of the potential grant recipient to ensure that they are genuine people and projects. (Links to websites, information provided via the links)
+  * to ensure that the applicant is not engaging in any fraudulent activities or impersonation.
+
+2. The second stage will involve verifying wallet transfer history:
+
+  * Project
+  * Participants
+
+3. The third stage is monitoring for potential sybil attacks:
+
+  * Monitoring stage 2 and [Gitcoin Bulk Checkout ](https://etherscan.io/txs?a=0x7d655c57f71464b6f83811c55d84009cd9f5221c&ps=100&p=10)
+
+# Benefits
+
+The proposed work-stream will ensure transparency, fairness, and accountability of projects participating in each Grant Round.
+
+That will encompass the entire grant rounds from pre-entry through disbursement of funds.
+
+This approach will maintain and promote a positive reputation for the Gitcoin Brand itself, while also driving funding towards things that matter and facilitating growth of impactful projects.
+
+# Drawbacks
+
+This would not be appealing to those looking to extract value and capital from Gitcoin
+Thu, 11 May 2023 21:38:44 +0000
+🌱 Gitcoin Grants
+
+
+Temp check for work-stream
+Supreme
+
+            <h1>
+<a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary</h1>
+<p>This proposal seeks to develop an unbiased, transparent workstream that increases the amount of funding distributed each Grant round by empowering creators of quality, valuable and impactful projects in the web3 ecosystem.</p>
+<p>The proposed system is designed to ensure transparency, fairness, and accountability of projects participating in each Grant Round. From a holistic approach that encompasses the entire round from pre-entry through disbursement of funds.</p>
+<p>This approach will maintain and promote a positive reputation for the Gitcoin Brand itself, while also driving funding towards things that matter and facilitating growth of impactful projects.</p>
+<h1>
+<a name="abstract-2" class="anchor" href="https://gov.gitcoin.co#abstract-2"></a>Abstract</h1>
+<p>Think of a vegetable garden. According to <a href="https://www.sciencedirect.com/science/article/pii/S0261219417306412" rel="noopener nofollow ugc">science direct</a> in order for optimal growth, it is important to inhibit growth of and eliminate weeds as they compete with desirable plants for resources such as water, nutrients, and sunlight.</p>
+<p>Apply that school of thinking towards grants rounds (the garden) projects (the vegetables) and fraudulent projects (weeds).</p>
+<p>By limiting the number of fraudulent participants that gain entry to a grants round, the amount of funds distributed to meaningful impactful projects increases.</p>
+<h1>
+<a name="motivation-3" class="anchor" href="https://gov.gitcoin.co#motivation-3"></a>Motivation</h1>
+<p>Previous efforts focused on <a href="https://passport.gitcoin.co/" rel="noopener nofollow ugc">verifying identity</a> and <a href="https://www.gitcoin.co/blog/introducing-kudos?hs_amp=true" rel="noopener nofollow ugc">reputation based on specific “good”</a> activities that a wallet did. While this is a good way to show participation, it doesn’t offer a true overall picture of individuals and projects participating in grants rounds.</p>
+<p>Other <a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/52">previous efforts</a> focused on citizens to participate and identify potential sybil attacks. While in theory, this could potentially solve the problem of <a href="https://www.gitcoin.co/blog/defending-quadratic-funding-in-grants-round-10-and-beyond" rel="noopener nofollow ugc">quadratic funding sybil attacks</a>, are multiple areas in the foundational operations that are under addressed.</p>
+<ol>
+<li>The FDD workstream is centralized. The roll tag “citizen” is given in the discord server:</li>
+</ol>
+<ul>
+<li>Without exact qualifying criteria necessary.</li>
+<li>Given out (one or a few people)</li>
+<li>Based on their subjective opinions</li>
+<li>Where questions are not <a href="https://discord.com/channels/562828676480237578/783769851226357801/1097929131913650271" rel="noopener nofollow ugc">“officially” </a>answered and often go unanswered or responded to.</li>
+<li>Where you can be <a href="https://discord.com/channels/562828676480237578/783769851226357801/1097929131913650271" rel="noopener nofollow ugc">kicked out </a>of if you <span class="mention">@tag</span> someone looking for an answer.</li>
+</ul>
+<ol start="2">
+<li>Recently, the initial barrier to fraud was left open as there are no steps that legitimize projects entering each round.</li>
+</ol>
+<ul>
+<li>
+<p>Out of 10 projects sampled in the beta grants round</p>
+<ul>
+<li>
+<a href="https://explorer.gitcoin.co/#/round/1/0xaa40e2e5c8df03d792a52b5458959c320f86ca18/0xaa40e2e5c8df03d792a52b5458959c320f86ca18-91" rel="noopener nofollow ugc">This project</a> claims transparent treasury on their grants page, but there is not one.</li>
+<li>
+<a href="https://explorer.gitcoin.co/#/round/1/0x6e8dc2e623204d61b0e59e668702654ae336c9f7/0x6e8dc2e623204d61b0e59e668702654ae336c9f7-46" rel="noopener nofollow ugc">This</a> projects <a href="https://desciyouths.wordpress.com/" rel="noopener nofollow ugc">website</a> is a single blogpost and does not give any background on the problem it is looking to solve or what it will be doing with the funds received.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://explorer.gitcoin.co/#/round/1/0x6e8dc2e623204d61b0e59e668702654ae336c9f7/0x6e8dc2e623204d61b0e59e668702654ae336c9f7-62" rel="noopener nofollow ugc">This</a> project doesn’t list any links other than a Twitter account with automatic looking tweets. From there, they list a <a href="https://spacerox.org/" rel="noopener nofollow ugc">website</a>. The link to discord does not link anywhere.</p>
+</li>
+<li>
+<p><a href="https://explorer.gitcoin.co/#/round/1/0x6e8dc2e623204d61b0e59e668702654ae336c9f7/0x6e8dc2e623204d61b0e59e668702654ae336c9f7-72" rel="noopener nofollow ugc">This</a> project is a <a href="https://github.com/k3nnethfrancis/leo" rel="noopener nofollow ugc">repo</a> that is just fork of <a href="https://github.com/openai/gpt-discord-bot" rel="noopener nofollow ugc">open AI’s chat GPT bot </a></p>
+</li>
+</ul>
+<ol start="3">
+<li>
+<p>There is no transparency, many Notion pages have no access.</p>
+</li>
+<li>
+<p>There are no clear definitions of what constitutes the elimination of a project, leaving many participants unsure if/what they did wrong.</p>
+</li>
+</ol>
+<h1>
+<a name="specification-4" class="anchor" href="https://gov.gitcoin.co#specification-4"></a>Specification</h1>
+<p>The proposed workstream will:</p>
+<ul>
+<li>Vet projects prior to gaining entry to each round.</li>
+<li>Vet each project participants</li>
+</ul>
+<p>Doing this will:</p>
+<ul>
+<li>Eliminate/decrease the number of fraudulent participants that gain entry to a grants rounds</li>
+<li>Ensure that individuals and organizations are legitimate and have genuine projects that align with the goals of the grant.</li>
+</ul>
+<p>This will be done</p>
+<ul>
+<li>
+<p>transparently - in the open with all information able to be viewed and verified by anyone at any time.</p>
+</li>
+<li>
+<p>asynchronously - can be worked on by anyone at any time.</p>
+</li>
+<li>
+<p>simply - no complicated formulas no connections, no apps</p>
+<ul>
+<li>Questions with color coded yes/no answered (see image)<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d80beae30f35f0b4ec79f4e9d35ba732240f7fc1.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/d80beae30f35f0b4ec79f4e9d35ba732240f7fc1" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d80beae30f35f0b4ec79f4e9d35ba732240f7fc1_2_286x499.jpeg" alt="image" data-base62-sha1="uPeFlbnZjYheokqPdRhbDVN2bmx" width="286" height="499" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d80beae30f35f0b4ec79f4e9d35ba732240f7fc1_2_286x499.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d80beae30f35f0b4ec79f4e9d35ba732240f7fc1_2_429x748.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d80beae30f35f0b4ec79f4e9d35ba732240f7fc1_2_572x998.jpeg 2x" data-dominant-color="E9E8E4"></a></div>
+</li>
+</ul>
+</li>
+<li>
+<p>3 red = project can’t participate in the round.</p>
+</li>
+</ul>
+<ol>
+<li>The first stage will involve a thorough background check</li>
+</ol>
+<ul>
+<li>verifying applicable credentials of the potential grant recipient to ensure that they are genuine people and projects. (Links to websites, information provided via the links)</li>
+<li>to ensure that the applicant is not engaging in any fraudulent activities or impersonation.</li>
+</ul>
+<ol start="2">
+<li>The second stage will involve verifying wallet transfer history:</li>
+</ol>
+<ul>
+<li>Project</li>
+<li>Participants</li>
+</ul>
+<ol start="3">
+<li>The third stage is monitoring for potential sybil attacks:</li>
+</ol>
+<ul>
+<li>Monitoring stage 2 and <a href="https://etherscan.io/txs?a=0x7d655c57f71464b6f83811c55d84009cd9f5221c&amp;ps=100&amp;p=10" rel="noopener nofollow ugc">Gitcoin Bulk Checkout </a>
+</li>
+</ul>
+<h1>
+<a name="benefits-5" class="anchor" href="https://gov.gitcoin.co#benefits-5"></a>Benefits</h1>
+<p>The proposed work-stream will ensure transparency, fairness, and accountability of projects participating in each Grant Round.</p>
+<p>That will encompass the entire grant rounds from pre-entry through disbursement of funds.</p>
+<p>This approach will maintain and promote a positive reputation for the Gitcoin Brand itself, while also driving funding towards things that matter and facilitating growth of impactful projects.</p>
+<h1>
+<a name="drawbacks-6" class="anchor" href="https://gov.gitcoin.co#drawbacks-6"></a>Drawbacks</h1>
+<p>This would not be appealing to those looking to extract value and capital from Gitcoin</p>
+          <p><a href="https://gov.gitcoin.co/t/temp-check-for-work-stream/14983/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/temp-check-for-work-stream/14983/1
+        Thu, 11 May 2023 21:38:44 +0000
+gov.gitcoin.co-post-14983-1
+Temp check for work-stream
+      
+
+

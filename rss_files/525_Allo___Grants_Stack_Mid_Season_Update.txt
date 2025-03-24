@@ -1,0 +1,180 @@
+
+
+
+Allo + Grants Stack Mid-Season Update
+https://gov.gitcoin.co/t/allo-grants-stack-mid-season-update/15278
+    Authors: @meglister and @nategosselin 
+
+While we’re not quite halfway through S18 yet, it’s been such an eventful month that we wanted to share some mid-season updates from the Allo + Grants Stack workstream!
+
+The highlights:
+* Allo + Grants Stack team split
+* Grants Stack S18 strategy and roadmap
+* Allo v2 and S18 strategy
+
+## Allo + Grants Stack Team Split
+Allo and Grants Stack remain funded and organized as a single workstream for S18 & S19. The product, engineering, data, developer relations, and product support resources that are part of the workstream have formally organized into two separate teams within the workstream, each focused on a specific user archetype and associated product:
+
+* **Allo Protocol** for developers requiring resource allocation tools
+* **Grants Stack** for program managers requiring a user-friendly tool for operating grants programs
+
+### Why now?
+We’re making this split now because we are at a natural inflection point with our initial products launched, and because this user-focused organizational structure unlocks key benefits that will enable us to better pursue our goals. Additionally, with Meg joining as Product Lead for Grants Stack in May, we have the resources available to lead these products independently.
+
+### Why split?
+We’re splitting the two teams because we think that this structure will better position us to pursue our goals. Specifically, we think our teams will benefit from:
+
+1. **User-centric Product Focus:** By establishing dedicated teams for Allo Protocol and Grants Stack, we can foster a stronger product focus. Allo Protocol targets developers, necessitating a deep understanding of their technical needs, preferences, and challenges. Grants Stack, on the other hand, caters to end-user program managers who require an intuitive and user-friendly interface. Allocating resources, expertise, and time to each team will allow us to immerse ourselves in the intricacies of each product, resulting in improved quality and better alignment with user requirements.
+1. **Specialized Skill Sets:** Splitting the teams will allow team members to develop and specialize in skills relevant to each product's target user base. Allo Protocol will require expertise in blockchain-based protocol infrastructure, integration capabilities, and developer toolkits, while Grants Stack may necessitate skills in UX design, data analytics, and program management. By leveraging specialized skill sets, we can improve efficiency, productivity, and innovation within each team, resulting in higher quality deliverables.
+1. **Enabling Different Work Styles:** We have a hypothesis that building protocols will require a different work style than developing end-user-facing interfaces, as there will be heightened risks of deploying new always-on smart contracts. Splitting teams will enable each team to build development processes more tailored to the type of product they’re building.
+
+We’re excited about the benefits of this split and grateful for the flexibility and enthusiasm that the whole workstream + Gitcoin DAO has brought to our new teams!
+
+## Grants Stack Strategy
+During the pre-beta round period, including our S18-19 budget cycle, the team was primarily focused on shipping a product that would be functional for the May beta program. Running 15 rounds in May was an awesome milestone – it demonstrated that we had successfully built a decentralized grants application that was capable of running high-volume Quadratic Funding programs.
+
+The beta program also afforded us the opportunity to hear feedback from a wide range of participants and use that data to reassess our S18 strategy and roadmap. Though the beta program was the most successful use of Grants Stack to date, we did note a lot of user pain and friction that prevents wider adoption and promotion. We’ve noted a need to address that for future serviced rounds, as well as to make the product easier to use and understand for self-serve grants managers. 
+
+We’ve also been executing on our commitment to explore funding mechanisms outside of Quadratic Funding. We kicked off a partnership with Bootnode to build a Direct Grants MVP and are actively looking for grants managers interested in participating in a direct grants beta round. We had previously lined up a large Quadratic Voting partnership, which influenced our commitment to QV this season but fell through. Though we found other potential partners, the demand for QV is less immediate than QF (self-serve and serviced) and direct grants. It feels more impactful to focus on those two new efforts in order to increase adoption before tackling another new mechanism.
+
+With that in mind, we’ve modified our original seasonal goals.
+
+Original:
+* 13 - Quadratic Funding rounds
+* 5 - Direct Grants programs
+* 5 - Quadratic Voting events
+
+New:
+* 13 - Quadratic Funding rounds (run through PGF)
+* 5 - Direct grants programs
+* 8 - Self serve Quadratic Funding rounds
+
+This new framing allows us to invest in adoption of the self-serve experience, which we’re confident in as a cornerstone of grants and our forward strategy. We will also continue to experiment with new mechanisms in the form of direct grants and applied or observational research into other mechanisms (eg - QV or conviction voting).
+
+You can view the full Grants Stack S18 Strategy and Roadmap at the links below:
+* Strategy: [Grants Stack S18 Strategy](https://docs.google.com/document/d/1nEuAOYdUy9nMMiDvHvMa1vi4gDeTOeEW_G7yTACmnSU/edit#heading=h.fdurw9uhm5r)
+* Roadmap: [Grants Stack Roadmap](https://docs.google.com/spreadsheets/d/1ckMnZWXeJzMfrg8C1g305OE1cRFWaULnu2rpKhnbTdE/edit#gid=0)
+
+## Allo Strategy
+Over the last few months, Allo Protocol v1 has been pressure-tested on three fronts:
+
+
+* **Gitcoin Beta Rounds:** We successfully ran the Gitcoin Beta Rounds on Grants Stack, marking a significant step forward for our Quadratic Funding mechanism. 
+* **Third-Party Audit:** Sherlock, a third-party auditor, thoroughly reviewed the protocol and provided comprehensive feedback.
+* **Protocol Integrations:** The DevRel team has initiated a cohort of protocol integrations, including a subset of teams building new allocation mechanisms. 
+
+While we’re excited that Allo is in a position to even be tested in these ways, we're mindful of the feedback received, which highlighted unintended barriers to developing new mechanisms within our existing architecture. Specifically, we heard that:
+* Our combination of on-chain data with off-chain QF calculations made the mechanism feel black-box
+* Our current core contract design enforces some quadratic-specific parameters that don’t make sense for the broader world of allocation mechanisms we want to enable
+* There are extraneous elements in the protocol (e.g. programs) that can be pruned to simplify Allo and make it easier to build upon
+
+To meet this challenge, the team has decided to kick off work on Allo v2 this season. We’ve decided to begin work on a new version instead of pursuing iterative v1 improvement as we think there is a greater long-term benefit to rethinking our architecture from first principles. This will enable us to take into account everything we’ve learned and the new use cases we’ve heard about since our design sessions for v1. Our hunch is that much of our current code will be reusable, but that there is an alternative configuration that will unlock the power of our protocol. We are expecting to wrap up the first of three phases of the v2 project (architecture) by early July, at which point we will also be able to share more clarity on timing for the following two phases.
+
+You can view the full Allo S18 strategy and more detail on Allo v2 at the links below:
+* Strategy: [Allo Protocol S18 Strategy](https://docs.google.com/document/d/1gL8Y3klppln37ihOksd1RJQUYzfqwtTlSQNx9GOlt5o/edit#heading=h.fdurw9uhm5r)
+* Allo v2: [Brief: Allo Protocol V2](https://docs.google.com/document/d/1Me5jdrkQy7dQkBYys4LZ7cTLIJCdjSHOlughBhTiLIU/edit#heading=h.tvxzmiinefwo)
+
+## Final thoughts
+We’ve hit some exciting milestones for both products – and we know we still have a ton of work ahead. We’re focused on achieving product-market fit and growing adoption to make democratic allocation of capital an accessible and widespread reality. We’re grateful for the support of the Gitcoin community and DAO and welcome feedback on our learnings + goals!
+Thu, 08 Jun 2023 13:30:38 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Allo + Grants Stack Mid-Season Update
+meglister
+
+            <p>Authors: <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> and <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a></p>
+<p>While we’re not quite halfway through S18 yet, it’s been such an eventful month that we wanted to share some mid-season updates from the Allo + Grants Stack workstream!</p>
+<p>The highlights:</p>
+<ul>
+<li>Allo + Grants Stack team split</li>
+<li>Grants Stack S18 strategy and roadmap</li>
+<li>Allo v2 and S18 strategy</li>
+</ul>
+<h2>
+<a name="allo-grants-stack-team-split-1" class="anchor" href="https://gov.gitcoin.co#allo-grants-stack-team-split-1"></a>Allo + Grants Stack Team Split</h2>
+<p>Allo and Grants Stack remain funded and organized as a single workstream for S18 &amp; S19. The product, engineering, data, developer relations, and product support resources that are part of the workstream have formally organized into two separate teams within the workstream, each focused on a specific user archetype and associated product:</p>
+<ul>
+<li>
+<strong>Allo Protocol</strong> for developers requiring resource allocation tools</li>
+<li>
+<strong>Grants Stack</strong> for program managers requiring a user-friendly tool for operating grants programs</li>
+</ul>
+<h3>
+<a name="why-now-2" class="anchor" href="https://gov.gitcoin.co#why-now-2"></a>Why now?</h3>
+<p>We’re making this split now because we are at a natural inflection point with our initial products launched, and because this user-focused organizational structure unlocks key benefits that will enable us to better pursue our goals. Additionally, with Meg joining as Product Lead for Grants Stack in May, we have the resources available to lead these products independently.</p>
+<h3>
+<a name="why-split-3" class="anchor" href="https://gov.gitcoin.co#why-split-3"></a>Why split?</h3>
+<p>We’re splitting the two teams because we think that this structure will better position us to pursue our goals. Specifically, we think our teams will benefit from:</p>
+<ol>
+<li>
+<strong>User-centric Product Focus:</strong> By establishing dedicated teams for Allo Protocol and Grants Stack, we can foster a stronger product focus. Allo Protocol targets developers, necessitating a deep understanding of their technical needs, preferences, and challenges. Grants Stack, on the other hand, caters to end-user program managers who require an intuitive and user-friendly interface. Allocating resources, expertise, and time to each team will allow us to immerse ourselves in the intricacies of each product, resulting in improved quality and better alignment with user requirements.</li>
+<li>
+<strong>Specialized Skill Sets:</strong> Splitting the teams will allow team members to develop and specialize in skills relevant to each product’s target user base. Allo Protocol will require expertise in blockchain-based protocol infrastructure, integration capabilities, and developer toolkits, while Grants Stack may necessitate skills in UX design, data analytics, and program management. By leveraging specialized skill sets, we can improve efficiency, productivity, and innovation within each team, resulting in higher quality deliverables.</li>
+<li>
+<strong>Enabling Different Work Styles:</strong> We have a hypothesis that building protocols will require a different work style than developing end-user-facing interfaces, as there will be heightened risks of deploying new always-on smart contracts. Splitting teams will enable each team to build development processes more tailored to the type of product they’re building.</li>
+</ol>
+<p>We’re excited about the benefits of this split and grateful for the flexibility and enthusiasm that the whole workstream + Gitcoin DAO has brought to our new teams!</p>
+<h2>
+<a name="grants-stack-strategy-4" class="anchor" href="https://gov.gitcoin.co#grants-stack-strategy-4"></a>Grants Stack Strategy</h2>
+<p>During the pre-beta round period, including our S18-19 budget cycle, the team was primarily focused on shipping a product that would be functional for the May beta program. Running 15 rounds in May was an awesome milestone – it demonstrated that we had successfully built a decentralized grants application that was capable of running high-volume Quadratic Funding programs.</p>
+<p>The beta program also afforded us the opportunity to hear feedback from a wide range of participants and use that data to reassess our S18 strategy and roadmap. Though the beta program was the most successful use of Grants Stack to date, we did note a lot of user pain and friction that prevents wider adoption and promotion. We’ve noted a need to address that for future serviced rounds, as well as to make the product easier to use and understand for self-serve grants managers.</p>
+<p>We’ve also been executing on our commitment to explore funding mechanisms outside of Quadratic Funding. We kicked off a partnership with Bootnode to build a Direct Grants MVP and are actively looking for grants managers interested in participating in a direct grants beta round. We had previously lined up a large Quadratic Voting partnership, which influenced our commitment to QV this season but fell through. Though we found other potential partners, the demand for QV is less immediate than QF (self-serve and serviced) and direct grants. It feels more impactful to focus on those two new efforts in order to increase adoption before tackling another new mechanism.</p>
+<p>With that in mind, we’ve modified our original seasonal goals.</p>
+<p>Original:</p>
+<ul>
+<li>13 - Quadratic Funding rounds</li>
+<li>5 - Direct Grants programs</li>
+<li>5 - Quadratic Voting events</li>
+</ul>
+<p>New:</p>
+<ul>
+<li>13 - Quadratic Funding rounds (run through PGF)</li>
+<li>5 - Direct grants programs</li>
+<li>8 - Self serve Quadratic Funding rounds</li>
+</ul>
+<p>This new framing allows us to invest in adoption of the self-serve experience, which we’re confident in as a cornerstone of grants and our forward strategy. We will also continue to experiment with new mechanisms in the form of direct grants and applied or observational research into other mechanisms (eg - QV or conviction voting).</p>
+<p>You can view the full Grants Stack S18 Strategy and Roadmap at the links below:</p>
+<ul>
+<li>Strategy: <a href="https://docs.google.com/document/d/1nEuAOYdUy9nMMiDvHvMa1vi4gDeTOeEW_G7yTACmnSU/edit#heading=h.fdurw9uhm5r" rel="noopener nofollow ugc">Grants Stack S18 Strategy</a>
+</li>
+<li>Roadmap: <a href="https://docs.google.com/spreadsheets/d/1ckMnZWXeJzMfrg8C1g305OE1cRFWaULnu2rpKhnbTdE/edit#gid=0" rel="noopener nofollow ugc">Grants Stack Roadmap</a>
+</li>
+</ul>
+<h2>
+<a name="allo-strategy-5" class="anchor" href="https://gov.gitcoin.co#allo-strategy-5"></a>Allo Strategy</h2>
+<p>Over the last few months, Allo Protocol v1 has been pressure-tested on three fronts:</p>
+<ul>
+<li>
+<strong>Gitcoin Beta Rounds:</strong> We successfully ran the Gitcoin Beta Rounds on Grants Stack, marking a significant step forward for our Quadratic Funding mechanism.</li>
+<li>
+<strong>Third-Party Audit:</strong> Sherlock, a third-party auditor, thoroughly reviewed the protocol and provided comprehensive feedback.</li>
+<li>
+<strong>Protocol Integrations:</strong> The DevRel team has initiated a cohort of protocol integrations, including a subset of teams building new allocation mechanisms.</li>
+</ul>
+<p>While we’re excited that Allo is in a position to even be tested in these ways, we’re mindful of the feedback received, which highlighted unintended barriers to developing new mechanisms within our existing architecture. Specifically, we heard that:</p>
+<ul>
+<li>Our combination of on-chain data with off-chain QF calculations made the mechanism feel black-box</li>
+<li>Our current core contract design enforces some quadratic-specific parameters that don’t make sense for the broader world of allocation mechanisms we want to enable</li>
+<li>There are extraneous elements in the protocol (e.g. programs) that can be pruned to simplify Allo and make it easier to build upon</li>
+</ul>
+<p>To meet this challenge, the team has decided to kick off work on Allo v2 this season. We’ve decided to begin work on a new version instead of pursuing iterative v1 improvement as we think there is a greater long-term benefit to rethinking our architecture from first principles. This will enable us to take into account everything we’ve learned and the new use cases we’ve heard about since our design sessions for v1. Our hunch is that much of our current code will be reusable, but that there is an alternative configuration that will unlock the power of our protocol. We are expecting to wrap up the first of three phases of the v2 project (architecture) by early July, at which point we will also be able to share more clarity on timing for the following two phases.</p>
+<p>You can view the full Allo S18 strategy and more detail on Allo v2 at the links below:</p>
+<ul>
+<li>Strategy: <a href="https://docs.google.com/document/d/1gL8Y3klppln37ihOksd1RJQUYzfqwtTlSQNx9GOlt5o/edit#heading=h.fdurw9uhm5r" rel="noopener nofollow ugc">Allo Protocol S18 Strategy</a>
+</li>
+<li>Allo v2: <a href="https://docs.google.com/document/d/1Me5jdrkQy7dQkBYys4LZ7cTLIJCdjSHOlughBhTiLIU/edit#heading=h.tvxzmiinefwo" rel="noopener nofollow ugc">Brief: Allo Protocol V2</a>
+</li>
+</ul>
+<h2>
+<a name="final-thoughts-6" class="anchor" href="https://gov.gitcoin.co#final-thoughts-6"></a>Final thoughts</h2>
+<p>We’ve hit some exciting milestones for both products – and we know we still have a ton of work ahead. We’re focused on achieving product-market fit and growing adoption to make democratic allocation of capital an accessible and widespread reality. We’re grateful for the support of the Gitcoin community and DAO and welcome feedback on our learnings + goals!</p>
+          <p><a href="https://gov.gitcoin.co/t/allo-grants-stack-mid-season-update/15278/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/allo-grants-stack-mid-season-update/15278/1
+        Thu, 08 Jun 2023 13:30:38 +0000
+gov.gitcoin.co-post-15278-1
+Allo + Grants Stack Mid-Season Update
+      
+
+

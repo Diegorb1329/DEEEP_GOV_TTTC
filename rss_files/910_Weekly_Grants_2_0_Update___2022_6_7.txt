@@ -1,0 +1,392 @@
+
+
+
+Weekly Grants 2.0 Update – 2022/6/7
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-6-7/10835
+    Grants 2.0 is an open-source technology for plural and scalable public goods provision. We are building a modular toolkit for Quadratic Funding and adjacent social incentive designs to increase and govern ecosystem capital.
+
+# Relevant Documents
+
+* [Gitcoin Grants 2.0 Vision ](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981)
+* [Quadratic Funding](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3243656) paper
+* [Decentralized Society](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763) paper
+* Design prototypes
+  * [Grants Hub](https://www.figma.com/file/obBzCCL8KwoTlVBb5g3ccN/Grant-Hub---Wireframes?node-id=249%3A1000)
+  * [Round Manager / Explorer](https://bafybeiew6b2vzsan6szmghz336uc4fm37bn4fmrtdq6fh5ny66tb6we644.on.fleek.co/)
+* Staging applications
+  * [Grants Hub](https://gitcoinco.github.io/grants-hCreate high-level plan and timeline for finishing the Genesis projectsub/)
+  * [Round Manager / Explorer contracts](https://github.com/gitcoinco/grants-round/pull/26)
+* Video demonstrations
+  * [Passport](https://drive.google.com/file/d/1amMgrC2P_agkrwuTkr2wH8zRwfipEAME/view?usp=sharing)
+  * [Grants Hub](https://drive.google.com/file/d/1imFs6YGMjWhEggZcxiNnX9dja5T4o8T5/view?usp=sharing)
+* Live applications
+  * [Passport](https://passport.gitcoin.co/)
+
+# 2022/6/7 Update
+
+## Highlights
+* This week is launch week for Passport - which means this week was spent shipping a ton of UI/UX changes. In terms of MVP, completing the last stamp (BrightID) marked the completion of MVP. Additionally, we have code up for a Reader on gitcoin.co/trust to give users a Trust Bonus Score. Does it feel done - like we’ve crossed some sort of line? No, not at all. The feedback we’ve been gathering has provided us plenty of UI/UX improvements. It’s helped us validate our assumptions on some problems, and invalidate what we thought were problems elsewhere. It’s helped us discover more about the value we’re providing to our users, and how we can provide more.
+* Grants Hub is targeting to be dev-complete with Grant Hub MVP by Friday, June 3rd. With this week’s progress, we are about 90% of the way to hitting our MVP milestone. Our goal is to have Grants Hub production-ready by July 1st, 2022. 
+* This week the Round Manager / Explorer team finished fleshing out the contract structure and tested deploying it to Goerli using some helper scripts we’ve written. We also created a basic UI shell for the [Round Manager Steel Thread](https://miro.com/app/board/uXjVOyDFRMM=/?share_link_id=589961971819) — this currently allows you to connect a wallet, but next week we will begin wiring the contracts up and adding more functionality to the UI. 
+
+
+## Product Work
+
+### Passport
+
+* Shared & gathered user-feedback
+   * Reader (staging) & Passport in Weekly Sync
+   * Passport in DAO Vibes
+   * Directly with members of the DAO
+* Coordinated PMM work w/ Sean
+* Wrote several UI/UX stories based on user-feedback
+* **Test more UI/UX changes**
+* **Launch Passport for GR14**
+* **Create story’s for improvements and bugs**
+* **Support the support team**
+* **More BrightID UX research/strategy**
+
+### Grants Hub
+- Started planning for Phase 2 (Anchor) — set up Phase 1 retro next week & Phase 2 kickoff on Mon 6/13, first draft of Phase 2 user stories
+- Set up weekly “Grants 2.0 Playground” session to drive DAO-wide visibility of Grants 2.0 progress
+- **Lead first “Grants 2.0 Playground session” for the DAO → build a running Grants 2.0 FAQ with feedback and questions**
+- **Finalize Phase 2 (Anchor) PRD and user stories**
+
+### Round Manager / Explorer
+- Mapped the user journey for Grant Explorer ([Miro here](https://miro.com/app/board/uXjVO2CrhpI=/?moveToWidget=3458764526650540270&cot=14)) and created first draft Steel Thread mockups
+- **Finish Steel Thread mocks + stories for Grant Explorer**
+- **Create high-level plan and timeline for finishing the Genesis projects**
+
+## Design Work
+
+### Passport
+
+* Trust Bonus page:
+    * Made UX/UI changes based on user-feedback
+    * Designed a 3 step process for creating, scoring, and saving the passport w/ Gitcoin
+    * Made copy changes to better articulate expectations
+* Passport:
+    * Added loading states for stamp cards during passport creation
+    * Designed POAP pop-up (not found, found, & expanded) states during stamp verification
+* **Testing to validate assumptions**
+* **Mobile designs**
+* **Coordinating with MMM and product to finalize end-to-end copy**
+* **UI Design reviews with engineering**
+
+### Grants Hub
+- Led user research synthesis session and drafted feature changes for Phase 2 (Anchor) from these learnings
+- Updated CTA on cGrants 
+- Completed Phase 1 (MVP) designs for mobile view
+- **Finalize Phase 1 (MVP) mobile web designs**
+- **Continue improving Phase 2 (Anchor) designs**
+
+## Engineering Work
+
+### Passport
+
+* Completed implementation of BrightId Stamp
+* Updated Alchemy RPC for prod readiness
+* UX/UI improvements for Reader on /trust - added the 3-steps content (Connect, Score, Save)
+* UX/UI improvements on the Passport
+    * added loading spinners
+    * better modal text - for BrightID process
+    * better toast text for notifications - also BrightID process
+    * added a 404 page
+* Node whitelisted by Ceramic team and mainnet connection completed
+* Replaced merkle root w/ a hashing function in the VCs we issue for stamps (PII protection)
+* Worked on Datadog implementation for analytics
+* Investigated Passport Bugs
+* **More UX/UI improvements on the Passport**
+    * better wallet signature messaging
+    * add toasts for Stamp completion notifs
+* **More UX/UI improvements on the Reader (/trust)**
+    * remove unnecessary content
+    * warnings when trying to leave the page w/o saving
+    * better experience for users w/ existing Trust Bonus Score
+* **Finish Datadog**
+* **More bug search** 
+
+### Grants Hub
+- All of the hi-fidelity mocks/pages have been built out in the dApp with the exception of the modal and toast component
+- **Developer docs for Phase 1 (MVP)**
+- **Finish up MVP UI work (modal, toast component)**
+- **Integrate Phase 1 (MVP) development on mobile web**
+
+### Round Manager / Explorer
+- Upgradeable contracts deployed on Goerli for the round (details in Demo #1 above) —> those contracts have been verified on etherscan and include the ability to:
+    - deploy a grant round factory
+    - deploy the grant round contract
+    - create a round via factory (which clones the round contract)
+    - deploy a dummy voting mechanism
+    - manage RBAC on round contract  (ability to add/remove operators on grant round)
+    - update on-chain storage variables in round
+- Build out basic UI which can be viewed through the link in Demo #2. (This is from  https://github.com/gitcoinco/grants-round/pull/19 which has not been merged as we are discussing on if **rtk** is what we want to use)
+- Enabled auto-deploying on PR against main on fleek (staging env). This means you can test PR on IPFS before they get merged
+- **Implementing Program Factory & Program Implementation on chain**
+- **Adding deploy scripts for the same and have em deployed**
+- **Improve contract coverage**
+- **Explore Graph**
+- **Finalize on frontend library to use with hub team**
+- **Wire in contract deploy to Steel Thread UI**
+Tue, 14 Jun 2022 01:42:50 +0000
+🌱 Gitcoin Grants
+
+
+Weekly Grants 2.0 Update – 2022/6/7
+owocki
+
+            <aside class="quote no-group" data-username="erich" data-post="1" data-topic="10835">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar"> erich:</div>
+<blockquote>
+<p>It’s helped us validate our assumptions on some problems,</p>
+</blockquote>
+</aside>
+<p>any plans to make the proof of humanity module connect a different wallet?  i use a diff wallet for my POH wallet vs my grants contributions.</p>
+<aside class="quote no-group" data-username="erich" data-post="1" data-topic="10835">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar"> erich:</div>
+<blockquote>
+<p>Grants Hub is targeting to be dev-complete with Grant Hub MVP by Friday, June 3rd.</p>
+</blockquote>
+</aside>
+<p>this post was published june 7th?</p>
+<p>when do we expect to have a GR15 product roadmap?  eg when will we know what GR15 will look like from a product perspective?</p>
+<aside class="quote no-group" data-username="erich" data-post="1" data-topic="10835">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar"> erich:</div>
+<blockquote>
+<ul>
+<li><strong>Launch Passport for GR14</strong></li>
+</ul>
+</blockquote>
+</aside>
+<p>any stats on how this is going?</p>
+<aside class="quote no-group" data-username="erich" data-post="1" data-topic="10835">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar"> erich:</div>
+<blockquote>
+<p>Video demonstrations</p>
+<ul>
+<li><a href="https://drive.google.com/file/d/1amMgrC2P_agkrwuTkr2wH8zRwfipEAME/view?usp=sharing">Passport </a></li>
+<li><a href="https://drive.google.com/file/d/1imFs6YGMjWhEggZcxiNnX9dja5T4o8T5/view?usp=sharing">Grants Hub </a></li>
+</ul>
+</blockquote>
+</aside>
+<p>great to see these demo videos. imo this is a much better way to traverse this info than a long list of text updates.</p>
+<p>would love to see others in the DAO watching these demos + giving feedback, given how grants 2.0 is an essential intent for the dao</p>
+          <p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-6-7/10835/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-6-7/10835/3
+        Tue, 14 Jun 2022 01:42:50 +0000
+gov.gitcoin.co-post-10835-3
+Weekly Grants 2.0 Update – 2022/6/7
+      
+
+Weekly Grants 2.0 Update – 2022/6/7
+Luvlynj
+
+            <p>Why even after stamping my passport and it been verified…  my wallet still says “There are no ceramic account associated with this wallet”</p>
+<p>Please what is the reason?</p>
+<p>And after donation, I didn’t receive a mail to confirm that the donation was successful.</p>
+          <p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-6-7/10835/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-6-7/10835/2
+        Mon, 13 Jun 2022 20:48:56 +0000
+gov.gitcoin.co-post-10835-2
+Weekly Grants 2.0 Update – 2022/6/7
+      
+
+Weekly Grants 2.0 Update – 2022/6/7
+erich
+
+            <p>Grants 2.0 is an open-source technology for plural and scalable public goods provision. We are building a modular toolkit for Quadratic Funding and adjacent social incentive designs to increase and govern ecosystem capital.</p>
+<h1>
+<a name="relevant-documents-1" class="anchor" href="https://gov.gitcoin.co#relevant-documents-1"></a>Relevant Documents</h1>
+<ul>
+<li><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Gitcoin Grants 2.0 Vision </a></li>
+<li>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3243656">Quadratic Funding</a> paper</li>
+<li>
+<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4105763">Decentralized Society</a> paper</li>
+<li>Design prototypes
+<ul>
+<li><a href="https://www.figma.com/file/obBzCCL8KwoTlVBb5g3ccN/Grant-Hub---Wireframes?node-id=249%3A1000">Grants Hub</a></li>
+<li><a href="https://bafybeiew6b2vzsan6szmghz336uc4fm37bn4fmrtdq6fh5ny66tb6we644.on.fleek.co/">Round Manager / Explorer</a></li>
+</ul>
+</li>
+<li>Staging applications
+<ul>
+<li>[Grants Hub](<a href="https://gitcoinco.github.io/grants-hCreate">https://gitcoinco.github.io/grants-hCreate</a> high-level plan and timeline for finishing the Genesis projectsub/)</li>
+<li><a href="https://github.com/gitcoinco/grants-round/pull/26">Round Manager / Explorer contracts</a></li>
+</ul>
+</li>
+<li>Video demonstrations
+<ul>
+<li><a href="https://drive.google.com/file/d/1amMgrC2P_agkrwuTkr2wH8zRwfipEAME/view?usp=sharing">Passport</a></li>
+<li><a href="https://drive.google.com/file/d/1imFs6YGMjWhEggZcxiNnX9dja5T4o8T5/view?usp=sharing">Grants Hub</a></li>
+</ul>
+</li>
+<li>Live applications
+<ul>
+<li><a href="https://passport.gitcoin.co/">Passport</a></li>
+</ul>
+</li>
+</ul>
+<h1>
+<a name="h-202267-update-2" class="anchor" href="https://gov.gitcoin.co#h-202267-update-2"></a>2022/6/7 Update</h1>
+<h2>
+<a name="highlights-3" class="anchor" href="https://gov.gitcoin.co#highlights-3"></a>Highlights</h2>
+<ul>
+<li>This week is launch week for Passport - which means this week was spent shipping a ton of UI/UX changes. In terms of MVP, completing the last stamp (BrightID) marked the completion of MVP. Additionally, we have code up for a Reader on <a href="http://gitcoin.co/trust" class="inline-onebox">@trust | Gitcoin</a> to give users a Trust Bonus Score. Does it feel done - like we’ve crossed some sort of line? No, not at all. The feedback we’ve been gathering has provided us plenty of UI/UX improvements. It’s helped us validate our assumptions on some problems, and invalidate what we thought were problems elsewhere. It’s helped us discover more about the value we’re providing to our users, and how we can provide more.</li>
+<li>Grants Hub is targeting to be dev-complete with Grant Hub MVP by Friday, June 3rd. With this week’s progress, we are about 90% of the way to hitting our MVP milestone. Our goal is to have Grants Hub production-ready by July 1st, 2022.</li>
+<li>This week the Round Manager / Explorer team finished fleshing out the contract structure and tested deploying it to Goerli using some helper scripts we’ve written. We also created a basic UI shell for the <a href="https://miro.com/app/board/uXjVOyDFRMM=/?share_link_id=589961971819">Round Manager Steel Thread</a> — this currently allows you to connect a wallet, but next week we will begin wiring the contracts up and adding more functionality to the UI.</li>
+</ul>
+<h2>
+<a name="product-work-4" class="anchor" href="https://gov.gitcoin.co#product-work-4"></a>Product Work</h2>
+<h3>
+<a name="passport-5" class="anchor" href="https://gov.gitcoin.co#passport-5"></a>Passport</h3>
+<ul>
+<li>Shared &amp; gathered user-feedback
+<ul>
+<li>Reader (staging) &amp; Passport in Weekly Sync</li>
+<li>Passport in DAO Vibes</li>
+<li>Directly with members of the DAO</li>
+</ul>
+</li>
+<li>Coordinated PMM work w/ Sean</li>
+<li>Wrote several UI/UX stories based on user-feedback</li>
+<li><strong>Test more UI/UX changes</strong></li>
+<li><strong>Launch Passport for GR14</strong></li>
+<li><strong>Create story’s for improvements and bugs</strong></li>
+<li><strong>Support the support team</strong></li>
+<li><strong>More BrightID UX research/strategy</strong></li>
+</ul>
+<h3>
+<a name="grants-hub-6" class="anchor" href="https://gov.gitcoin.co#grants-hub-6"></a>Grants Hub</h3>
+<ul>
+<li>Started planning for Phase 2 (Anchor) — set up Phase 1 retro next week &amp; Phase 2 kickoff on Mon 6/13, first draft of Phase 2 user stories</li>
+<li>Set up weekly “Grants 2.0 Playground” session to drive DAO-wide visibility of Grants 2.0 progress</li>
+<li><strong>Lead first “Grants 2.0 Playground session” for the DAO → build a running Grants 2.0 FAQ with feedback and questions</strong></li>
+<li><strong>Finalize Phase 2 (Anchor) PRD and user stories</strong></li>
+</ul>
+<h3>
+<a name="round-manager-explorer-7" class="anchor" href="https://gov.gitcoin.co#round-manager-explorer-7"></a>Round Manager / Explorer</h3>
+<ul>
+<li>Mapped the user journey for Grant Explorer (<a href="https://miro.com/app/board/uXjVO2CrhpI=/?moveToWidget=3458764526650540270&amp;cot=14">Miro here</a>) and created first draft Steel Thread mockups</li>
+<li><strong>Finish Steel Thread mocks + stories for Grant Explorer</strong></li>
+<li><strong>Create high-level plan and timeline for finishing the Genesis projects</strong></li>
+</ul>
+<h2>
+<a name="design-work-8" class="anchor" href="https://gov.gitcoin.co#design-work-8"></a>Design Work</h2>
+<h3>
+<a name="passport-9" class="anchor" href="https://gov.gitcoin.co#passport-9"></a>Passport</h3>
+<ul>
+<li>Trust Bonus page:
+<ul>
+<li>Made UX/UI changes based on user-feedback</li>
+<li>Designed a 3 step process for creating, scoring, and saving the passport w/ Gitcoin</li>
+<li>Made copy changes to better articulate expectations</li>
+</ul>
+</li>
+<li>Passport:
+<ul>
+<li>Added loading states for stamp cards during passport creation</li>
+<li>Designed POAP pop-up (not found, found, &amp; expanded) states during stamp verification</li>
+</ul>
+</li>
+<li><strong>Testing to validate assumptions</strong></li>
+<li><strong>Mobile designs</strong></li>
+<li><strong>Coordinating with MMM and product to finalize end-to-end copy</strong></li>
+<li><strong>UI Design reviews with engineering</strong></li>
+</ul>
+<h3>
+<a name="grants-hub-10" class="anchor" href="https://gov.gitcoin.co#grants-hub-10"></a>Grants Hub</h3>
+<ul>
+<li>Led user research synthesis session and drafted feature changes for Phase 2 (Anchor) from these learnings</li>
+<li>Updated CTA on cGrants</li>
+<li>Completed Phase 1 (MVP) designs for mobile view</li>
+<li><strong>Finalize Phase 1 (MVP) mobile web designs</strong></li>
+<li><strong>Continue improving Phase 2 (Anchor) designs</strong></li>
+</ul>
+<h2>
+<a name="engineering-work-11" class="anchor" href="https://gov.gitcoin.co#engineering-work-11"></a>Engineering Work</h2>
+<h3>
+<a name="passport-12" class="anchor" href="https://gov.gitcoin.co#passport-12"></a>Passport</h3>
+<ul>
+<li>Completed implementation of BrightId Stamp</li>
+<li>Updated Alchemy RPC for prod readiness</li>
+<li>UX/UI improvements for Reader on /trust - added the 3-steps content (Connect, Score, Save)</li>
+<li>UX/UI improvements on the Passport
+<ul>
+<li>added loading spinners</li>
+<li>better modal text - for BrightID process</li>
+<li>better toast text for notifications - also BrightID process</li>
+<li>added a 404 page</li>
+</ul>
+</li>
+<li>Node whitelisted by Ceramic team and mainnet connection completed</li>
+<li>Replaced merkle root w/ a hashing function in the VCs we issue for stamps (PII protection)</li>
+<li>Worked on Datadog implementation for analytics</li>
+<li>Investigated Passport Bugs</li>
+<li>
+<strong>More UX/UI improvements on the Passport</strong>
+<ul>
+<li>better wallet signature messaging</li>
+<li>add toasts for Stamp completion notifs</li>
+</ul>
+</li>
+<li>
+<strong>More UX/UI improvements on the Reader (/trust)</strong>
+<ul>
+<li>remove unnecessary content</li>
+<li>warnings when trying to leave the page w/o saving</li>
+<li>better experience for users w/ existing Trust Bonus Score</li>
+</ul>
+</li>
+<li><strong>Finish Datadog</strong></li>
+<li><strong>More bug search</strong></li>
+</ul>
+<h3>
+<a name="grants-hub-13" class="anchor" href="https://gov.gitcoin.co#grants-hub-13"></a>Grants Hub</h3>
+<ul>
+<li>All of the hi-fidelity mocks/pages have been built out in the dApp with the exception of the modal and toast component</li>
+<li><strong>Developer docs for Phase 1 (MVP)</strong></li>
+<li><strong>Finish up MVP UI work (modal, toast component)</strong></li>
+<li><strong>Integrate Phase 1 (MVP) development on mobile web</strong></li>
+</ul>
+<h3>
+<a name="round-manager-explorer-14" class="anchor" href="https://gov.gitcoin.co#round-manager-explorer-14"></a>Round Manager / Explorer</h3>
+<ul>
+<li>Upgradeable contracts deployed on Goerli for the round (details in Demo <span class="hashtag">#1</span> above) —&gt; those contracts have been verified on etherscan and include the ability to:
+<ul>
+<li>deploy a grant round factory</li>
+<li>deploy the grant round contract</li>
+<li>create a round via factory (which clones the round contract)</li>
+<li>deploy a dummy voting mechanism</li>
+<li>manage RBAC on round contract  (ability to add/remove operators on grant round)</li>
+<li>update on-chain storage variables in round</li>
+</ul>
+</li>
+<li>Build out basic UI which can be viewed through the link in Demo <span class="hashtag">#2</span>. (This is from  <a href="https://github.com/gitcoinco/grants-round/pull/19" class="inline-onebox">feat: connect wallet + rtk rewrite by chibie · Pull Request #19 · gitcoinco/grants-round · GitHub</a> which has not been merged as we are discussing on if <strong>rtk</strong> is what we want to use)</li>
+<li>Enabled auto-deploying on PR against main on fleek (staging env). This means you can test PR on IPFS before they get merged</li>
+<li><strong>Implementing Program Factory &amp; Program Implementation on chain</strong></li>
+<li><strong>Adding deploy scripts for the same and have em deployed</strong></li>
+<li><strong>Improve contract coverage</strong></li>
+<li><strong>Explore Graph</strong></li>
+<li><strong>Finalize on frontend library to use with hub team</strong></li>
+<li><strong>Wire in contract deploy to Steel Thread UI</strong></li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-6-7/10835/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-6-7/10835/1
+        Tue, 07 Jun 2022 18:20:59 +0000
+gov.gitcoin.co-post-10835-1
+Weekly Grants 2.0 Update – 2022/6/7
+      
+
+

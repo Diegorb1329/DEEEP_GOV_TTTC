@@ -1,0 +1,494 @@
+
+
+
+10 Useful Maxims about DAO-Era System Design 📜
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727
+    # TLDR
+
+1. **Gall’s Law** states that a complex system that works is invariably found to have evolved from a simple system that worked.
+1. **The Pareto Principle**, or the 80/20 Rule, posits that for many outcomes, roughly 80% of consequences come from 20% of the causes.
+1. **Parkinson’s Law** states that “work expands so as to fill the time or budget available for its completion.”.
+1. **Goodhart’s Law** states that when a measure becomes a target, it ceases to be a good measure. 
+1. **Brooks’ Law:** From Fred Brooks’ book “The Mythical Man-Month,” it states that “adding manpower to a late software project makes it later.” .
+1. **Moore’s Law** is the observation made in 1965 by Gordon Moore, co-founder of Intel, that the number of transistors on a microchip doubles approximately every two years, though the cost of computers is halved.
+1. **Metcalfe’s Law** posits that the value of a telecommunications network is proportional to the square of the number of connected users of the system (n^2).
+1. **Dunbar’s Number** suggests that there is a cognitive limit to the number of people with whom one can maintain stable social relationships.
+1. **The Unix Philosophy** is (1) Make each program do one thing well, (2) Expect the output of every program to become the input to another, as yet unknown, program, (3) Write programs to work together.
+1. **Conway’s Law** posits that organizations design systems that mirror their own communication structure.
+
+# 10 Useful Maxims about DAO-Era System Design
+
+I've had two conversations with Gitcoin'ers in which I was  espousing a few different maxims I live by (Metcalfe's Law, Galls Law, Parkinsons Law, Unix Philosophy, etc).  
+
+In these convos, the Gitcoiner's asked me what each of these maxims were and why the were important to me. In order to scale up the answering of that question, I'm writing up this gov post.
+
+First, a couple caveats:
+1. **The map is not the territory** = these maxims are representations of reality.  
+   - They are not are not the reality itself but simplified abstractions that cannot capture all the complexities and nuances of the actual world. 
+2. You can think of these maxims as the compression of hundreds of years of learnings about the evolution of human social systems (or sometimes, other complex systems) into simplified maxims (sometimes oversimplified).   These maxims are a combination of both:
+    - **Empirical knowledge** - derived from sensory experience and observation, relying on evidence and experimentation. 
+    - **A priori knowledge** - obtained independently of sensory experience, through reasoning or logical deduction.   
+
+**Why is this useful?**  As the DAO goes through its evolution and re-organization towards its essential intents, these maxims can help us reason about the dynamics at play.  They can also help us to fall through predictable traps in organizational design.
+
+Also, I just find them to be fun mental floss and hope that anyone else in web3 who pursues the practice of Intellectual Curiosity will agree!
+
+![Screenshot 2024-02-11 at 5.28.59 PM|554x398, 50%](upload://9Ag0tccHriwO4wAiOWP2vu9BDRO.png)
+
+
+# 1. Galls Law
+
+**Gall's Law** states that a complex system that works is invariably found to have evolved from a simple system that worked. The law further asserts that a complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system. 
+
+This principle is particularly relevant in the context of systems design and development, emphasizing the importance of starting with simple, manageable projects that can grow in complexity over time through incremental improvements.
+
+**Owocki comment**:  This is one of the principles that I think is really important to practice in pre-product market fit products.  And I hope to put this principle to work as we build [Lean Startups](https://gov.gitcoin.co/t/lessons-about-the-book-lean-startup/17691) and [Rapidly Prototyping](https://gov.gitcoin.co/t/temp-check-rapid-prototyping-gitcoin/17419). 
+
+Galls law reminds me of this image about how to do agile software development :slight_smile::
+ 
+![download|273x184](upload://8vxDRGolaysiKk9Q4jyHmkKBuII.png)
+
+
+# 2. The Pareto Principle
+
+**The Pareto Principle**, or the 80/20 Rule, posits that for many outcomes, roughly 80% of consequences come from 20% of the causes. Organizations often apply this principle in productivity and performance analysis, resource allocation, and strategic planning to identify and focus on the most significant factors driving results.
+
+![1_z8AsP_J0_JSZNCiwbaYZhA|627x500, 50%](upload://2XbNbj4De3zlwl0Q8tSWSMOGw5H.jpeg)
+
+
+**Owocki comment**:   This is another really important one for a startup that is pre-product market fit or pre-revenue.  Getting 80% of outcomes for 20% of the cost is huge in [Lean Startups](https://gov.gitcoin.co/t/lessons-about-the-book-lean-startup/17691) and [Rapidly Prototyping](https://gov.gitcoin.co/t/temp-check-rapid-prototyping-gitcoin/17419).  
+
+# 3. Parkinson's Law
+
+**Parkinson's Law**: Articulated by Cyril Northcote Parkinson, it states that "work expands so as to fill the time or budget available for its completion." It highlights the inefficiency and time management issues within organizations that make budgets or timeframes expand far beyond market standards.
+
+**Owocki comment**:  I wish we had paid more attention to this law during the launch of GitcoinDAO in May 2021.  Perhaps if we had, had smaller budgets that increased over time as workstreams proved success (galls law), and we wouldnt had so many governance challenges that led to us spending $1m/mo (parkinsons law) as we mostly failed to ship Grants 2.0 and lost our market leadership position (2021-2023).
+
+# 4. Goodhart's Law
+
+**Goodhart's Law** states that when a measure becomes a target, it ceases to be a good measure. In organizational contexts, this can refer to the phenomenon where employees and systems optimize for the metrics they are evaluated on, often at the expense of broader organizational goals or unintended negative consequences.
+
+A correlary law to Goodhart's law is Campbell's Law.  Campbell's law suggests when a measure becomes a target for social or economic policy, it is likely to become corrupted or produce misleading results. It highlights the unintended consequences of overemphasizing and misusing metrics for decision-making.
+
+![calltime|600x214](upload://1hCHA44ezY6gTH4cSjkCb6bCUrB.png)
+
+
+**Owocki comment**:  I think this is of particular relevance in 
+1. **Sybil Resistance** - We can characterize the Sybil Resistance Problem as an Infinite Evolutionary Game ([watch my talk on this here](https://archive.devcon.org/archive/watch/6/1-human-1-vote-money-legos-more-democratic-daos/?tab=YouTube)).  Because of Goodhart's law, the definition of cost of forgery must continually evolve because as cost of forgery for time t becomes a measure, it ceases to be a good measure, and so much evolve to Cost of Forgery for time t + 1.
+2. **Public Goods Funding** - As soon as any public goods funding mechanism starts to proliferate and drop a lot of $$$, people will begin to game it.  We've already seen this in QF and RetroPGF (collusion attacks or bribery attacks).  So we will witness a similar infinite evolutionary game around Public Goods Funding in order for it to provide public goods but without being gamed.  (One way I think we can solve for this is by having a diversity of plural PGF mechanisms.. If each mechanism does 1 thing and does it well and only drives 20% of incentives, then it becomes harder to game all of them at once!)
+3. **OKR planning** - We should be mindful of the limits imposed by Campbells/Goodharts law when measuring workstreams by the KPIs the define.
+
+# 5. Brook's Law
+
+**Brooks' Law**: From Fred Brooks' book "The Mythical Man-Month," it states that "adding manpower to a late software project makes it later." This law addresses the complexities and diminishing returns of scaling teams on software projects.
+
+![mmm-communication|600x468, 75%](upload://yrrcOkJJMkU7a2dO2Wm3o2CX0fv.png)
+![realistic|500x500, 75%](upload://3zKZThUAIKROtQW1Qb3NxnuUJrB.png)
+
+
+**Owocki comment**:  This is another good one to remember as we evolve our ability to develop world class Software at Gitcoin :) 
+
+
+# 6. Moore's Law
+
+**Moore's Law** is the observation made in 1965 by Gordon Moore, co-founder of Intel, that the number of transistors on a microchip doubles approximately every two years, though the cost of computers is halved. 
+
+This prediction has guided the semiconductor industry, leading to the exponential increase in computing power and efficiency over time. Although originally about transistor density and cost, Moore's Law has broadly come to represent the rapid and continual pace of technological and computational advancement.
+
+![oin_tutorial.f3|548x500, 75%](upload://iZx6NT09H8XeCh3vOvqj2kfUk55.jpeg)
+
+
+**Owocki comment**:  The entire technology industry, for the last 30 years, is built upon this law.  We are standing on the shoulders of giants!
+
+# 7. Metcalfe's Law
+
+**Metcalfe's Law** posits that the value of a telecommunications network is proportional to the square of the number of connected users of the system (n^2). 
+
+Originally formulated by Robert Metcalfe in the context of ethernet and telecommunications networks, this principle has been widely applied to understand the increasing value of social networks, the internet, and other networked systems as they grow. 
+
+Essentially, Metcalfe's Law suggests that the more people or devices that can interact within a network, the more valuable that network becomes, because the number of potential connections and interactions increases exponentially with each additional user.
+
+![Screenshot 2024-02-11 at 6.07.45 PM|690x281](upload://usKcwEKPspm84Cgn4uFZFbUhD26.png)
+
+
+**Owocki comment**:  Our entire "Network Effects" essential intent for 2024 is built upon Metcalfe's law, so we'd best internalize it :)
+
+# 8. Dunbar's Law
+
+**Dunbar's Number** suggests that there is a cognitive limit to the number of people with whom one can maintain stable social relationships. 
+
+This concept has implications for organizational structure, suggesting that beyond this number, it becomes increasingly difficult to maintain direct social connections and cohesion within a group.
+
+![Dunbars-number-300x300|300x300](upload://ikjNxjXK1bUGO0YX4RORmqFWxdj.png)
+
+
+**Owocki comment**:  IMO this is an important thing to understand as the DAO evolves.  
+
+One thing I would have done differently at the start of the DAO if I could would have been to keep teams below the size of 5-7 0 no more than two pizza team size (eg no more people than could eat two pizzas).,    **Why?**
+1. Having smaller working groups is better because groups can contain context and relationships within themselves.  
+2. It prevents fiefdom building behaviour.
+3. It also prevents falling into [the meta trap](https://gov.gitcoin.co/t/the-meta-trap/10666).  
+4. Working groups should look more like [Orca style pods](https://metropolis.mirror.xyz/_MT98bEtBoEULyOy8LHC3pbAguEZz3GOcB7y1yndox4) than 2021-2023 era Gitcoin maximum bloat workstreams. 
+5. Then every pod should have a defined service layer that other DAOs can use (eg Innovation Collective has a project intake process. As does marketing. As does Citizens RFPs. As does X where X = every pod. KPIs can be built upon this service layer to measure quantity/quality of output).
+6. [It's worked well elsewhere.](https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf)
+
+# 9. Unix Philosophy
+
+The top three principles of the Unix philosophy, distilled from the broader set of guidelines, focus on simplicity, modularity, and reusability. They are:
+
+1. **Make each program do one thing well:** This principle encourages developers to focus on designing programs that perform a single task effectively. The idea is that doing one thing well leads to simpler and more reliable software. This approach facilitates easier debugging, testing, and maintenance, as each component has a clear, dedicated purpose.
+
+2. **Expect the output of every program to become the input to another, as yet unknown, program:** This underscores the importance of designing programs to work together in a pipeline, where the output of one program can seamlessly become the input to another. This principle advocates for interoperability and flexibility, encouraging the use of standardized data formats (like text streams) that make it easy to chain programs together to perform complex tasks.
+
+3. **Write programs to work together:** Related to the second principle, this guideline emphasizes building software components that can easily integrate with one another. By ensuring that programs can communicate and work together, developers can create more complex and versatile applications by combining simpler tools. This approach leverages the power of composition, where small, specialized programs are combined to solve larger problems, promoting code reuse and efficiency.
+
+These three principles together form the core of the Unix philosophy, promoting a development culture that values simplicity, clarity, modularity, and the power of composition. They have profoundly influenced software design and development practices far beyond the Unix operating system itself.
+
+### Unix architecture visualization:
+![2222-5|657x500, 75%](upload://3LEet7Ic0UpAFjHRqPBds2b722K.png)
+
+
+**Owocki comment**:  This philosophy is very similar to the design of modular blockchain systems.  Because Gitcoin's products are built on top of modular blockchains, we inherit a lot of these philosophies and we should extend them into our products.
+
+Where as Gitcoin 1.0 was monolithic, Gitcoin 2.0 is modular.  Meaning it respects these 3 principles.  Take for example, these 3 tools that work together despite being differnet modules.
+1. Gitcoin Grants Stack
+2. reportcards.gitcoin.co
+3. AlloScan
+
+I also think that there is a possiblity to leverage the principlpes of the unix philosophy in organizational design.  These maxims, as applied to organizational design, would look like this:
+1. Make each pod do one thing and do it well.
+2. Make each pod have a process to intake work from other groups.
+3. Pods can work together to form larger working groups as needed, and emergently.
+
+# 10. Conway's Law
+
+**Conway's Law** posits that organizations design systems that mirror their own communication structure. 
+
+It was formulated by Melvin EConway in 1967 and implies that the technical architecture of a system will reflect the social boundaries of the organization that produces it, for example, the divisions between teams or departments. 
+
+This law highlights the influence of organizational structure on the design and functionality of systems and suggests that to create desired systems, one might need to consider or even alter the organization's structure.
+
+![Screenshot 2024-02-11 at 6.08.36 PM|582x500, 75%](upload://wzBZsbvDLRWRfq628aweUc3vSod.png)
+
+
+**Owocki comment**:  
+One thing I think is interesting about Gitcoin is that design products that we ourselves use to allocate capital to ourselves..
+
+So that leads me to wonder if we could leverage conways law in new and interesting ways.
+
+I wonder if we could design grants/allo strategies for funding working units at gitcoin and/or funding GCPs/the community at gitcoin.
+
+This would prove allo market fit, dogfood allo internally, create grants expertise, and build confidence in it that will spill over into selling it to other daos. So much velocity can be built by dogfooding, using our own products would be huge for confidence and empathy.  And using our products to design our organization would be leet . 
+
+It’s like inverse conways law- Gitcoin designs Allo, and then Allo designs GItcoin.  It would create an upward spiral of momentum and positive output.
+
+![Screenshot 2024-02-11 at 5.23.54 PM|690x432, 75%](upload://tq8MqhvCXGyg2dGVPSFCRPopyWE.png)
+
+ 
+# Conclusion.
+
+I hope you found these maxims to be interesting mental floss.  As the DAO continues to evolve, I hope that these terms becoming common knowledge helps us to avoid landmines that we would have detected with these laws.
+
+If there are other laws, principles, or maxims you think are useful to Gitcoin or the regen ecosystem, feel free to comment below.
+Fri, 26 Jul 2024 03:45:07 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+10 Useful Maxims about DAO-Era System Design 📜
+Decentralizedceo
+
+            <p>This is very useful! This collection can actually save a lot of time. Thanks again!</p>
+          <p><a href="https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/10
+        Fri, 26 Jul 2024 03:45:07 +0000
+gov.gitcoin.co-post-17727-10
+10 Useful Maxims about DAO-Era System Design 📜
+      
+
+10 Useful Maxims about DAO-Era System Design 📜
+EventHorizonDAO
+
+            <p>Wonderful collection of principles a lot of us could benefit from keeping in mind going forward, thanks!</p>
+          <p><a href="https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/9
+        Wed, 21 Feb 2024 05:55:55 +0000
+gov.gitcoin.co-post-17727-9
+10 Useful Maxims about DAO-Era System Design 📜
+      
+
+10 Useful Maxims about DAO-Era System Design 📜
+DarylEdwards
+
+            <p>I love this. If we all took a moment to think about how to integrate these ideas into day-to-day decision-making, Gitcoin would definitely accelerate forward!</p>
+<p>I’ve found that actually applying mental models well is often a challenge for many people though, since they’re often quite theoretical. Creating a meme-able tangible example really helps to drive the point home.</p>
+<p>For example on <span class="hashtag-raw">#2</span> The Pareto Principle, I like to talk about <em>hammers:</em></p>
+<p><strong>1.</strong> <strong>Maslow’s Hammer:</strong> “To a person with a hammer, everything looks like a nail.” When you have a tool (say, Allo protocol, or Passport), you start looking for all the things you can do with it (Effort), and find out that only 20% of them matter. But how do you know which 20%?<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/820da49174c73166a96d04f7eb68dce049b24784.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/820da49174c73166a96d04f7eb68dce049b24784" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/820da49174c73166a96d04f7eb68dce049b24784_2_494x375.jpeg" alt="image" data-base62-sha1="iyviElk4pcCqfFKWvwluflMiW4k" width="494" height="375" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/820da49174c73166a96d04f7eb68dce049b24784_2_494x375.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/820da49174c73166a96d04f7eb68dce049b24784_2_741x562.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/8/820da49174c73166a96d04f7eb68dce049b24784.jpeg 2x" data-dominant-color="DCE0E2"></a></div><br>
+<strong>2.</strong> “People don’t buy <em>hammers</em>, they buy <em>ambiance</em>.” Hammers and nails enable them to hang pictures, and improve the vibe in their space. If we get clear on what users/customers want (eg the vibe), then we can prioritize the 20% of the effort (things you can do with a hammer and nail) that get them their results.<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e06585a574c0db05dccb212ca6acb390b51ac391.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/e06585a574c0db05dccb212ca6acb390b51ac391" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e06585a574c0db05dccb212ca6acb390b51ac391_2_375x375.jpeg" alt="image" data-base62-sha1="w16sJeXuQSXx62k36Adn2RfjQVX" width="375" height="375" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e06585a574c0db05dccb212ca6acb390b51ac391_2_375x375.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e06585a574c0db05dccb212ca6acb390b51ac391_2_562x562.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e06585a574c0db05dccb212ca6acb390b51ac391_2_750x750.jpeg 2x" data-dominant-color="7B5C38"></a></div><p></p>
+<p>This is imho also an important contributor to Goodhart’s law, since it’s generally way easier to define targets on “hammers and nails” (internal stuff directly in your control) than on “beautified rooms” (external stuff that’s often subjective). “Hammer and nail” targets then start to diverge from the actual desired results.</p>
+<p>I’m curious about what everyone thinks:</p>
+<p>What are some examples of applying these principles in the Gitcoin community?</p>
+<p>What are some examples of where else we could apply these principles?</p>
+<p>What are some examples where the principles seem to apply, but what they tell us is really unexpected?</p>
+          <p><a href="https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/8
+        Tue, 20 Feb 2024 17:16:03 +0000
+gov.gitcoin.co-post-17727-8
+10 Useful Maxims about DAO-Era System Design 📜
+      
+
+10 Useful Maxims about DAO-Era System Design 📜
+owocki
+
+            <aside class="quote no-group" data-username="thedevanshmehta" data-post="5" data-topic="17727">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>What a brilliant piece ! It’ll also do really well as a twitter thread esp with all the images, you should do it if you haven’t already or else I’ll be happy to (with due credit to you ofc)</p>
+</blockquote>
+</aside>
+<p>ask and yee shall receive! <a href="https://twitter.com/owocki/status/1759655703269069127">https://twitter.com/owocki/status/1759655703269069127</a></p>
+          <p><a href="https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/7
+        Mon, 19 Feb 2024 19:08:00 +0000
+gov.gitcoin.co-post-17727-7
+10 Useful Maxims about DAO-Era System Design 📜
+      
+
+10 Useful Maxims about DAO-Era System Design 📜
+Kronosapiens
+
+            <p>Every time someone brings up the Unix philosphy, it’s worth resurfacing <a href="https://www.youtube.com/watch?v=tc4ROCJYbm0&amp;t=9s" rel="noopener nofollow ugc">this gem</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/6
+        Fri, 16 Feb 2024 17:01:25 +0000
+gov.gitcoin.co-post-17727-6
+10 Useful Maxims about DAO-Era System Design 📜
+      
+
+10 Useful Maxims about DAO-Era System Design 📜
+thedevanshmehta
+
+            <p>What a brilliant piece ! It’ll also do really well as a twitter thread esp with all the images, you should do it if you haven’t already or else I’ll be happy to (with due credit to you ofc)</p>
+<p>Another one I like on the context of DAOs is cunninghams law : best way to get an answer on the internet is not asking a question but posting the wrong answer</p>
+          <p><a href="https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/5
+        Fri, 16 Feb 2024 13:10:41 +0000
+gov.gitcoin.co-post-17727-5
+10 Useful Maxims about DAO-Era System Design 📜
+      
+
+10 Useful Maxims about DAO-Era System Design 📜
+owocki
+
+            <aside class="onebox allowlistedgeneric" data-onebox-src="https://words.jonhillis.com/supper-place-village-city-state/">
+  <header class="source">
+
+      <a href="https://words.jonhillis.com/supper-place-village-city-state/" target="_blank" rel="noopener" title="07:18PM - 14 February 2024">Jon Hillis – 14 Feb 24</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/332;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/88c5447ed05d11aecfe91ceb25ffe085f612cad3_2_690x332.png" class="thumbnail" data-dominant-color="8B9495" width="690" height="332"></div>
+
+<h3><a href="https://words.jonhillis.com/supper-place-village-city-state/" target="_blank" rel="noopener">Supper, place, village, city, state</a></h3>
+
+  <p>There's a basic playbook for building startup societies. It goes: supper, place, village, city, state. You start with dinner, and coordinate your way to something bigger. Over time, you can grow large structures of human coordination—maybe even new...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>This piece from <span class="mention">@jonhillis</span> of Cabin does a nice job of interweaving the concepts of Matcalfe’s law + Galls law into a DAO go to market strategy!</p>
+          <p><a href="https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/4
+        Fri, 16 Feb 2024 00:33:23 +0000
+gov.gitcoin.co-post-17727-4
+10 Useful Maxims about DAO-Era System Design 📜
+      
+
+10 Useful Maxims about DAO-Era System Design 📜
+owocki
+
+            <p>Thanks rohit, thats a useful one.  Especially as the ecosystem evolves more mechanisms for public goods funding (direct grants in 2017, then QF in 2019-2021, now retropgf/protocol guild in 2023-2024).</p>
+          <p><a href="https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/3
+        Mon, 12 Feb 2024 17:55:26 +0000
+gov.gitcoin.co-post-17727-3
+10 Useful Maxims about DAO-Era System Design 📜
+      
+
+10 Useful Maxims about DAO-Era System Design 📜
+rohit
+
+            <p>It will take a few reading cycles to internalize it all <img src="https://gov.gitcoin.co/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"> - thanks for compiling this!!!</p>
+<p>Another one I see a lot of DAO-Era Systems lack was put forth by Ross Ashby.</p>
+<p><strong>Ashby’s Law:</strong> A system must be able to have the same level of variety as its environment in order to survive.</p>
+<p>“When the environment changes from one state to another, the system must be able to change in turn; the system must be able to match the variety in the environment. The way systems achieve this variety and adaptability is through their parts having a high level of autonomy to act as they see fit in their own particular part or niche of the environment. This is the core characteristic that Walter had identified as being common to both cybernetics and anarchism. If systems are too rigid and don’t have this capacity for change and variety, they become overwhelmed and break down.”<br>
+(Reference - <a href="https://theanarchistlibrary.org/library/thomas-swann-anarchist-cybernetics" rel="noopener nofollow ugc">Anarchist Cybernetics</a>)</p>
+          <p><a href="https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/2
+        Mon, 12 Feb 2024 17:13:31 +0000
+gov.gitcoin.co-post-17727-2
+10 Useful Maxims about DAO-Era System Design 📜
+      
+
+10 Useful Maxims about DAO-Era System Design 📜
+owocki
+
+            <h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR</h1>
+<ol>
+<li><strong>Gall’s Law</strong> states that a complex system that works is invariably found to have evolved from a simple system that worked.</li>
+<li><strong>The Pareto Principle</strong>, or the 80/20 Rule, posits that for many outcomes, roughly 80% of consequences come from 20% of the causes.</li>
+<li><strong>Parkinson’s Law</strong> states that “work expands so as to fill the time or budget available for its completion.”.</li>
+<li><strong>Goodhart’s Law</strong> states that when a measure becomes a target, it ceases to be a good measure.</li>
+<li><strong>Brooks’ Law:</strong> From Fred Brooks’ book “The Mythical Man-Month,” it states that “adding manpower to a late software project makes it later.” .</li>
+<li><strong>Moore’s Law</strong> is the observation made in 1965 by Gordon Moore, co-founder of Intel, that the number of transistors on a microchip doubles approximately every two years, though the cost of computers is halved.</li>
+<li><strong>Metcalfe’s Law</strong> posits that the value of a telecommunications network is proportional to the square of the number of connected users of the system (n^2).</li>
+<li><strong>Dunbar’s Number</strong> suggests that there is a cognitive limit to the number of people with whom one can maintain stable social relationships.</li>
+<li><strong>The Unix Philosophy</strong> is (1) Make each program do one thing well, (2) Expect the output of every program to become the input to another, as yet unknown, program, (3) Write programs to work together.</li>
+<li><strong>Conway’s Law</strong> posits that organizations design systems that mirror their own communication structure.</li>
+</ol>
+<h1><a name="h-10-useful-maxims-about-dao-era-system-design-2" class="anchor" href="https://gov.gitcoin.co#h-10-useful-maxims-about-dao-era-system-design-2"></a>10 Useful Maxims about DAO-Era System Design</h1>
+<p>I’ve had two conversations with Gitcoin’ers in which I was  espousing a few different maxims I live by (Metcalfe’s Law, Galls Law, Parkinsons Law, Unix Philosophy, etc).</p>
+<p>In these convos, the Gitcoiner’s asked me what each of these maxims were and why the were important to me. In order to scale up the answering of that question, I’m writing up this gov post.</p>
+<p>First, a couple caveats:</p>
+<ol>
+<li><strong>The map is not the territory</strong> = these maxims are representations of reality.
+<ul>
+<li>They are not are not the reality itself but simplified abstractions that cannot capture all the complexities and nuances of the actual world.</li>
+</ul>
+</li>
+<li>You can think of these maxims as the compression of hundreds of years of learnings about the evolution of human social systems (or sometimes, other complex systems) into simplified maxims (sometimes oversimplified).   These maxims are a combination of both:
+<ul>
+<li><strong>Empirical knowledge</strong> - derived from sensory experience and observation, relying on evidence and experimentation.</li>
+<li><strong>A priori knowledge</strong> - obtained independently of sensory experience, through reasoning or logical deduction.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Why is this useful?</strong>  As the DAO goes through its evolution and re-organization towards its essential intents, these maxims can help us reason about the dynamics at play.  They can also help us to fall through predictable traps in organizational design.</p>
+<p>Also, I just find them to be fun mental floss and hope that anyone else in web3 who pursues the practice of Intellectual Curiosity will agree!</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/4/432cd0ce12a670bccc6b3cab3006f8adc05c3f0c.png" alt="Screenshot 2024-02-11 at 5.28.59 PM" data-base62-sha1="9Ag0tccHriwO4wAiOWP2vu9BDRO" width="277" height="199"></p>
+<h1><a name="h-1-galls-law-3" class="anchor" href="https://gov.gitcoin.co#h-1-galls-law-3"></a>1. Galls Law</h1>
+<p><strong>Gall’s Law</strong> states that a complex system that works is invariably found to have evolved from a simple system that worked. The law further asserts that a complex system designed from scratch never works and cannot be patched up to make it work. You have to start over with a working simple system.</p>
+<p>This principle is particularly relevant in the context of systems design and development, emphasizing the importance of starting with simple, manageable projects that can grow in complexity over time through incremental improvements.</p>
+<p><strong>Owocki comment</strong>:  This is one of the principles that I think is really important to practice in pre-product market fit products.  And I hope to put this principle to work as we build <a href="https://gov.gitcoin.co/t/lessons-about-the-book-lean-startup/17691">Lean Startups</a> and <a href="https://gov.gitcoin.co/t/temp-check-rapid-prototyping-gitcoin/17419">Rapidly Prototyping</a>.</p>
+<p>Galls law reminds me of this image about how to do agile software development <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20">:</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/3/3ba22e762d2599548d59cbad6f1c9857aa73d784.png" alt="download" data-base62-sha1="8vxDRGolaysiKk9Q4jyHmkKBuII" width="273" height="184"></p>
+<h1><a name="h-2-the-pareto-principle-4" class="anchor" href="https://gov.gitcoin.co#h-2-the-pareto-principle-4"></a>2. The Pareto Principle</h1>
+<p><strong>The Pareto Principle</strong>, or the 80/20 Rule, posits that for many outcomes, roughly 80% of consequences come from 20% of the causes. Organizations often apply this principle in productivity and performance analysis, resource allocation, and strategic planning to identify and focus on the most significant factors driving results.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/14b5362514622060bd29b84b75839c4990f69831.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/14b5362514622060bd29b84b75839c4990f69831" title="1_z8AsP_J0_JSZNCiwbaYZhA"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/14b5362514622060bd29b84b75839c4990f69831_2_313x250.jpeg" alt="1_z8AsP_J0_JSZNCiwbaYZhA" data-base62-sha1="2XbNbj4De3zlwl0Q8tSWSMOGw5H" width="313" height="250" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/14b5362514622060bd29b84b75839c4990f69831_2_313x250.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/14b5362514622060bd29b84b75839c4990f69831_2_469x375.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/14b5362514622060bd29b84b75839c4990f69831_2_626x500.jpeg 2x" data-dominant-color="C9C1C7"></a></div><p></p>
+<p><strong>Owocki comment</strong>:   This is another really important one for a startup that is pre-product market fit or pre-revenue.  Getting 80% of outcomes for 20% of the cost is huge in <a href="https://gov.gitcoin.co/t/lessons-about-the-book-lean-startup/17691">Lean Startups</a> and <a href="https://gov.gitcoin.co/t/temp-check-rapid-prototyping-gitcoin/17419">Rapidly Prototyping</a>.</p>
+<h1><a name="h-3-parkinsons-law-5" class="anchor" href="https://gov.gitcoin.co#h-3-parkinsons-law-5"></a>3. Parkinson’s Law</h1>
+<p><strong>Parkinson’s Law</strong>: Articulated by Cyril Northcote Parkinson, it states that “work expands so as to fill the time or budget available for its completion.” It highlights the inefficiency and time management issues within organizations that make budgets or timeframes expand far beyond market standards.</p>
+<p><strong>Owocki comment</strong>:  I wish we had paid more attention to this law during the launch of GitcoinDAO in May 2021.  Perhaps if we had, had smaller budgets that increased over time as workstreams proved success (galls law), and we wouldnt had so many governance challenges that led to us spending $1m/mo (parkinsons law) as we mostly failed to ship Grants 2.0 and lost our market leadership position (2021-2023).</p>
+<h1><a name="h-4-goodharts-law-6" class="anchor" href="https://gov.gitcoin.co#h-4-goodharts-law-6"></a>4. Goodhart’s Law</h1>
+<p><strong>Goodhart’s Law</strong> states that when a measure becomes a target, it ceases to be a good measure. In organizational contexts, this can refer to the phenomenon where employees and systems optimize for the metrics they are evaluated on, often at the expense of broader organizational goals or unintended negative consequences.</p>
+<p>A correlary law to Goodhart’s law is Campbell’s Law.  Campbell’s law suggests when a measure becomes a target for social or economic policy, it is likely to become corrupted or produce misleading results. It highlights the unintended consequences of overemphasizing and misusing metrics for decision-making.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/0/09003079bc5d80aed2acb8f631977c7683db660f.png" alt="calltime" data-base62-sha1="1hCHA44ezY6gTH4cSjkCb6bCUrB" width="600" height="214"></p>
+<p><strong>Owocki comment</strong>:  I think this is of particular relevance in</p>
+<ol>
+<li><strong>Sybil Resistance</strong> - We can characterize the Sybil Resistance Problem as an Infinite Evolutionary Game (<a href="https://archive.devcon.org/archive/watch/6/1-human-1-vote-money-legos-more-democratic-daos/?tab=YouTube">watch my talk on this here</a>).  Because of Goodhart’s law, the definition of cost of forgery must continually evolve because as cost of forgery for time t becomes a measure, it ceases to be a good measure, and so much evolve to Cost of Forgery for time t + 1.</li>
+<li><strong>Public Goods Funding</strong> - As soon as any public goods funding mechanism starts to proliferate and drop a lot of $$$, people will begin to game it.  We’ve already seen this in QF and RetroPGF (collusion attacks or bribery attacks).  So we will witness a similar infinite evolutionary game around Public Goods Funding in order for it to provide public goods but without being gamed.  (One way I think we can solve for this is by having a diversity of plural PGF mechanisms… If each mechanism does 1 thing and does it well and only drives 20% of incentives, then it becomes harder to game all of them at once!)</li>
+<li><strong>OKR planning</strong> - We should be mindful of the limits imposed by Campbells/Goodharts law when measuring workstreams by the KPIs the define.</li>
+</ol>
+<h1><a name="h-5-brooks-law-7" class="anchor" href="https://gov.gitcoin.co#h-5-brooks-law-7"></a>5. Brook’s Law</h1>
+<p><strong>Brooks’ Law</strong>: From Fred Brooks’ book “The Mythical Man-Month,” it states that “adding manpower to a late software project makes it later.” This law addresses the complexities and diminishing returns of scaling teams on software projects.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f163f28733b57b29604324c39deda11568898b89.png" alt="mmm-communication" data-base62-sha1="yrrcOkJJMkU7a2dO2Wm3o2CX0fv" width="450" height="351"><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/19114c5f1ac1153760bd8ed103ab093deb8f3063.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/19114c5f1ac1153760bd8ed103ab093deb8f3063" title="realistic"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19114c5f1ac1153760bd8ed103ab093deb8f3063_2_375x375.png" alt="realistic" data-base62-sha1="3zKZThUAIKROtQW1Qb3NxnuUJrB" width="375" height="375" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19114c5f1ac1153760bd8ed103ab093deb8f3063_2_375x375.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19114c5f1ac1153760bd8ed103ab093deb8f3063_2_562x562.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19114c5f1ac1153760bd8ed103ab093deb8f3063_2_750x750.png 2x" data-dominant-color="000000"></a></div><p></p>
+<p><strong>Owocki comment</strong>:  This is another good one to remember as we evolve our ability to develop world class Software at Gitcoin <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<h1><a name="h-6-moores-law-8" class="anchor" href="https://gov.gitcoin.co#h-6-moores-law-8"></a>6. Moore’s Law</h1>
+<p><strong>Moore’s Law</strong> is the observation made in 1965 by Gordon Moore, co-founder of Intel, that the number of transistors on a microchip doubles approximately every two years, though the cost of computers is halved.</p>
+<p>This prediction has guided the semiconductor industry, leading to the exponential increase in computing power and efficiency over time. Although originally about transistor density and cost, Moore’s Law has broadly come to represent the rapid and continual pace of technological and computational advancement.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/851bd22bfaa58b2ddecf1ae35b78ee71f30a4d3b.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/851bd22bfaa58b2ddecf1ae35b78ee71f30a4d3b" title="oin_tutorial.f3"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/851bd22bfaa58b2ddecf1ae35b78ee71f30a4d3b_2_411x375.jpeg" alt="oin_tutorial.f3" data-base62-sha1="iZx6NT09H8XeCh3vOvqj2kfUk55" width="411" height="375" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/851bd22bfaa58b2ddecf1ae35b78ee71f30a4d3b_2_411x375.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/851bd22bfaa58b2ddecf1ae35b78ee71f30a4d3b_2_616x562.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/8/851bd22bfaa58b2ddecf1ae35b78ee71f30a4d3b.jpeg 2x" data-dominant-color="E7EAEB"></a></div><p></p>
+<p><strong>Owocki comment</strong>:  The entire technology industry, for the last 30 years, is built upon this law.  We are standing on the shoulders of giants!</p>
+<h1><a name="h-7-metcalfes-law-9" class="anchor" href="https://gov.gitcoin.co#h-7-metcalfes-law-9"></a>7. Metcalfe’s Law</h1>
+<p><strong>Metcalfe’s Law</strong> posits that the value of a telecommunications network is proportional to the square of the number of connected users of the system (n^2).</p>
+<p>Originally formulated by Robert Metcalfe in the context of ethernet and telecommunications networks, this principle has been widely applied to understand the increasing value of social networks, the internet, and other networked systems as they grow.</p>
+<p>Essentially, Metcalfe’s Law suggests that the more people or devices that can interact within a network, the more valuable that network becomes, because the number of potential connections and interactions increases exponentially with each additional user.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d5810e4acf0c191fe2676f0dcf4ba8d3ea142b76.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/d5810e4acf0c191fe2676f0dcf4ba8d3ea142b76" title="Screenshot 2024-02-11 at 6.07.45 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d5810e4acf0c191fe2676f0dcf4ba8d3ea142b76_2_690x281.png" alt="Screenshot 2024-02-11 at 6.07.45 PM" data-base62-sha1="usKcwEKPspm84Cgn4uFZFbUhD26" width="690" height="281" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d5810e4acf0c191fe2676f0dcf4ba8d3ea142b76_2_690x281.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d5810e4acf0c191fe2676f0dcf4ba8d3ea142b76_2_1035x421.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/d/d5810e4acf0c191fe2676f0dcf4ba8d3ea142b76.png 2x" data-dominant-color="F0F2F8"></a></div><p></p>
+<p><strong>Owocki comment</strong>:  Our entire “Network Effects” essential intent for 2024 is built upon Metcalfe’s law, so we’d best internalize it <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<h1><a name="h-8-dunbars-law-10" class="anchor" href="https://gov.gitcoin.co#h-8-dunbars-law-10"></a>8. Dunbar’s Law</h1>
+<p><strong>Dunbar’s Number</strong> suggests that there is a cognitive limit to the number of people with whom one can maintain stable social relationships.</p>
+<p>This concept has implications for organizational structure, suggesting that beyond this number, it becomes increasingly difficult to maintain direct social connections and cohesion within a group.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8073236acc55a024e1326c2971c6c2875f15993d.png" alt="Dunbars-number-300x300" data-base62-sha1="ikjNxjXK1bUGO0YX4RORmqFWxdj" width="300" height="300"></p>
+<p><strong>Owocki comment</strong>:  IMO this is an important thing to understand as the DAO evolves.</p>
+<p>One thing I would have done differently at the start of the DAO if I could would have been to keep teams below the size of 5-7 0 no more than two pizza team size (eg no more people than could eat two pizzas).,    <strong>Why?</strong></p>
+<ol>
+<li>Having smaller working groups is better because groups can contain context and relationships within themselves.</li>
+<li>It prevents fiefdom building behaviour.</li>
+<li>It also prevents falling into <a href="https://gov.gitcoin.co/t/the-meta-trap/10666">the meta trap</a>.</li>
+<li>Working groups should look more like <a href="https://metropolis.mirror.xyz/_MT98bEtBoEULyOy8LHC3pbAguEZz3GOcB7y1yndox4">Orca style pods</a> than 2021-2023 era Gitcoin maximum bloat workstreams.</li>
+<li>Then every pod should have a defined service layer that other DAOs can use (eg Innovation Collective has a project intake process. As does marketing. As does Citizens RFPs. As does X where X = every pod. KPIs can be built upon this service layer to measure quantity/quality of output).</li>
+<li><a href="https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf">It’s worked well elsewhere.</a></li>
+</ol>
+<h1><a name="h-9-unix-philosophy-11" class="anchor" href="https://gov.gitcoin.co#h-9-unix-philosophy-11"></a>9. Unix Philosophy</h1>
+<p>The top three principles of the Unix philosophy, distilled from the broader set of guidelines, focus on simplicity, modularity, and reusability. They are:</p>
+<ol>
+<li>
+<p><strong>Make each program do one thing well:</strong> This principle encourages developers to focus on designing programs that perform a single task effectively. The idea is that doing one thing well leads to simpler and more reliable software. This approach facilitates easier debugging, testing, and maintenance, as each component has a clear, dedicated purpose.</p>
+</li>
+<li>
+<p><strong>Expect the output of every program to become the input to another, as yet unknown, program:</strong> This underscores the importance of designing programs to work together in a pipeline, where the output of one program can seamlessly become the input to another. This principle advocates for interoperability and flexibility, encouraging the use of standardized data formats (like text streams) that make it easy to chain programs together to perform complex tasks.</p>
+</li>
+<li>
+<p><strong>Write programs to work together:</strong> Related to the second principle, this guideline emphasizes building software components that can easily integrate with one another. By ensuring that programs can communicate and work together, developers can create more complex and versatile applications by combining simpler tools. This approach leverages the power of composition, where small, specialized programs are combined to solve larger problems, promoting code reuse and efficiency.</p>
+</li>
+</ol>
+<p>These three principles together form the core of the Unix philosophy, promoting a development culture that values simplicity, clarity, modularity, and the power of composition. They have profoundly influenced software design and development practices far beyond the Unix operating system itself.</p>
+<h3><a name="unix-architecture-visualization-12" class="anchor" href="https://gov.gitcoin.co#unix-architecture-visualization-12"></a>Unix architecture visualization:</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1a69667b97b958f6dd6191220c63b863f269236a.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/1a69667b97b958f6dd6191220c63b863f269236a" title="2222-5"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1a69667b97b958f6dd6191220c63b863f269236a_2_492x375.png" alt="2222-5" data-base62-sha1="3LEet7Ic0UpAFjHRqPBds2b722K" width="492" height="375" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1a69667b97b958f6dd6191220c63b863f269236a_2_492x375.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1a69667b97b958f6dd6191220c63b863f269236a_2_738x562.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/1/1a69667b97b958f6dd6191220c63b863f269236a.png 2x" data-dominant-color="F9FBFA"></a></div><p></p>
+<p><strong>Owocki comment</strong>:  This philosophy is very similar to the design of modular blockchain systems.  Because Gitcoin’s products are built on top of modular blockchains, we inherit a lot of these philosophies and we should extend them into our products.</p>
+<p>Where as Gitcoin 1.0 was monolithic, Gitcoin 2.0 is modular.  Meaning it respects these 3 principles.  Take for example, these 3 tools that work together despite being differnet modules.</p>
+<ol>
+<li>Gitcoin Grants Stack</li>
+<li><a href="http://reportcards.gitcoin.co">reportcards.gitcoin.co</a></li>
+<li>AlloScan</li>
+</ol>
+<p>I also think that there is a possiblity to leverage the principlpes of the unix philosophy in organizational design.  These maxims, as applied to organizational design, would look like this:</p>
+<ol>
+<li>Make each pod do one thing and do it well.</li>
+<li>Make each pod have a process to intake work from other groups.</li>
+<li>Pods can work together to form larger working groups as needed, and emergently.</li>
+</ol>
+<h1><a name="h-10-conways-law-13" class="anchor" href="https://gov.gitcoin.co#h-10-conways-law-13"></a>10. Conway’s Law</h1>
+<p><strong>Conway’s Law</strong> posits that organizations design systems that mirror their own communication structure.</p>
+<p>It was formulated by Melvin EConway in 1967 and implies that the technical architecture of a system will reflect the social boundaries of the organization that produces it, for example, the divisions between teams or departments.</p>
+<p>This law highlights the influence of organizational structure on the design and functionality of systems and suggests that to create desired systems, one might need to consider or even alter the organization’s structure.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e44c23b099690a8bbc0ae02b9c33c2f63b9be66d.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/e44c23b099690a8bbc0ae02b9c33c2f63b9be66d" title="Screenshot 2024-02-11 at 6.08.36 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e44c23b099690a8bbc0ae02b9c33c2f63b9be66d_2_436x375.png" alt="Screenshot 2024-02-11 at 6.08.36 PM" data-base62-sha1="wzBZsbvDLRWRfq628aweUc3vSod" width="436" height="375" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e44c23b099690a8bbc0ae02b9c33c2f63b9be66d_2_436x375.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e44c23b099690a8bbc0ae02b9c33c2f63b9be66d_2_654x562.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e44c23b099690a8bbc0ae02b9c33c2f63b9be66d_2_872x750.png 2x" data-dominant-color="F1F6FD"></a></div><p></p>
+<p><strong>Owocki comment</strong>:<br>
+One thing I think is interesting about Gitcoin is that design products that we ourselves use to allocate capital to ourselves…</p>
+<p>So that leads me to wonder if we could leverage conways law in new and interesting ways.</p>
+<p>I wonder if we could design grants/allo strategies for funding working units at gitcoin and/or funding GCPs/the community at gitcoin.</p>
+<p>This would prove allo market fit, dogfood allo internally, create grants expertise, and build confidence in it that will spill over into selling it to other daos. So much velocity can be built by dogfooding, using our own products would be huge for confidence and empathy.  And using our products to design our organization would be leet .</p>
+<p>It’s like inverse conways law- Gitcoin designs Allo, and then Allo designs GItcoin.  It would create an upward spiral of momentum and positive output.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/ce338a05b1bc27b5300846781326bb24a1f59954.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/ce338a05b1bc27b5300846781326bb24a1f59954" title="Screenshot 2024-02-11 at 5.23.54 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/ce338a05b1bc27b5300846781326bb24a1f59954_2_517x324.png" alt="Screenshot 2024-02-11 at 5.23.54 PM" data-base62-sha1="tq8MqhvCXGyg2dGVPSFCRPopyWE" width="517" height="324" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/ce338a05b1bc27b5300846781326bb24a1f59954_2_517x324.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/ce338a05b1bc27b5300846781326bb24a1f59954_2_775x486.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/ce338a05b1bc27b5300846781326bb24a1f59954_2_1034x648.png 2x" data-dominant-color="F7F4F3"></a></div><p></p>
+<h1><a name="conclusion-14" class="anchor" href="https://gov.gitcoin.co#conclusion-14"></a>Conclusion.</h1>
+<p>I hope you found these maxims to be interesting mental floss.  As the DAO continues to evolve, I hope that these terms becoming common knowledge helps us to avoid landmines that we would have detected with these laws.</p>
+<p>If there are other laws, principles, or maxims you think are useful to Gitcoin or the regen ecosystem, feel free to comment below.</p>
+          <p><a href="https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/10-useful-maxims-about-dao-era-system-design/17727/1
+        Mon, 12 Feb 2024 00:39:19 +0000
+gov.gitcoin.co-post-17727-1
+10 Useful Maxims about DAO-Era System Design 📜
+      
+
+

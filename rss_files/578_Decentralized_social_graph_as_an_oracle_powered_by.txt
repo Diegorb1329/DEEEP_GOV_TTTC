@@ -1,0 +1,290 @@
+
+
+
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927
+    Aura is a countermeasure against Sybil attacks, but the only other weakness of Quadratic Funding, resistance to collusion, is currently [Pairwise coordination subsidies](https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553) by Vitalik.
+
+Others, such as [How to Attack and Defend Quadratic Funding](https://medium.com/block-science/how-to-attack-and-defend-quadratic-funding-a10f0152f069) There is also a pattern of using data science, led by BlockScience, as shown in , but I propose a new layer.
+
+We have published a draft of a white paper on a protocol called **DeCartography** that outputs data from the Plurality social graph as an oracle.
+
+A longer version can be read here
+https://docs.google.com/document/d/1i4rPj1qlvV9RhfP9jwaI_ESEMZ-7tvBLbftDdOmEWWk/edit#
+
+
+Here is a summary
+
+This prevents collusion, or perhaps it would be better to call it "Plurality Quadratic Funding.
+ **Precisely, it reduces voting power from similar clusters.**
+
+This ideology is based on "Plurality" which coordinates across the following differences
+
+* [How Soulbound Tokens Can Make Gitcoin Grants More Pluralistic](https://gov.gitcoin.co/t/how-soulbound-tokens-can-make-gitcoin-grants-more-pluralistic/10077)
+* [50 actually independent thinkers are worth more than 1000 NPCs who all consume the same media and vote the same way](https://twitter.com/VitalikButerin/status/1580313964067508224?s=20&t=hx_luOMMPz6k808SXzmGog)
+* [Regenerative Society](https://docs.google.com/presentation/d/1NY17vw1fOFgp9WR40c0hsDkTnafSGkEPT2Pmemr4Rdo/edit#slide=id.g134bebec90a_1_106)
+* https://www.radicalxchange.org/media/blog/why-i-am-a-pluralist/
+
+I don't know if the concept of "distance" is used in the current Gitcoin Grants for Pairwise coordination subsidies, but by establishing a contrasting position with "services that automatically create social graphs from transactions," the Gitcoin FDD team is able to create a social graph that is more personalized, more relevant to the needs of the community, and more effective. I think we can provide data to Gitcoin's FDD team.
+
+
+[details="service that automatically creates social graphs from transactions"]
+* Gitcoin(BlockScience)
+* Bubblemaps
+* Breadcrumbs
+* LensProtocol(?)
+[/details]
+
+Simply put, we ask people to answer "Is this wallet address similar?" by comparing two transactions ⭕️ or ❌.
+
+To draw this into a two-dimensional map like a social graph, when n people vote on each simple question, each opinion is tied to an n-dimensional value. By clustering them, the Assumpution can be dropped into a single social graph.
+
+**Generate the coordinates of the consensus on the Assumption**.
+  Assumption" here refers to the decision "Is this wallet similar (similar community)?
+In this case, there are only two options, Yes or No, but I think this alone will prevent some degree of collusion.
+
+![image|690x447](upload://ayLZe4v3HO9OFI3w1wVqOvMwtOj.jpeg)
+*The image is an earlier prototype, with the tags as choices. This is how the two addresses are lined up, with the question, "Are these two similar?" would be a good question to ask*.
+
+If more than 51% of the respondents give the same answer, we will simply use that answer as the decision. Actual adjustments would need to be made. For Civil Attack, we of course recommend using Gitcoin Passport.
+
+This is because, as you may know if you are familiar with consensus systems as well as PoS, I believe it will settle at **Schelling Point**.
+
+In this case, I expect that the Assumpution will settle on "roughly like this" and when they are separated, we can create coordinates with some accuracy
+* [Nash Equilibria and Schelling Points](https://www.lesswrong.com/posts/yJfBzcDL9fBHJfZ6P/nash-equilibria-and-schelling-points)
+* https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed
+
+As for aggregation, I wonder if **Pol.is** could adopt a method to help find consensus.
+* https://compdemocracy.org/algorithms/
+* https://blog.pol.is/pol-is-in-taiwan-da7570d372b5
+* ![image|525x500](upload://1yFuc89VkCV99bB14huKjRNqI2I.png)
+* **If n people interpret an opinion, n dimensional values are tied to the opinion (clustering with dimensionality reduction)**
+* ![image|498x500](upload://upMQH8sjms3OqXxFWyo7b5oxXDa.png)
+* >The machine learning that's done, in pol.is, is done in real-time, and we do clustering, just like you would have in a recommender engine, Except that pol.is visualizes the groups
+
+
+**The data that DeCartography can provide as Oracle should look something like this**!
+
+* ![image|690x266](upload://4kHhc5V8qlkX6nnUvn5Xxn9y6oU.jpeg)
+
+As for what attributes people are donating with Gitcoin Grants, [Towards a Pluralism Passport Built from DeSoc Legos](https://docs.google.com/presentation/u/1/d/1eINBNP9Ikbs1Melr_g4KDjeNSjAsc-NPyBz4XPo9L8k/edit#slide=id.g13c284ad96c_0_1), but we may be able to map this.
+
+Then we could incorporate the concept of Social Distance.
+
+This may be a promise of Quadratic Land, but I think many people may not understand this Plurality Quadratic Funding at first, so it would be good to have an educational site like this.
+![image|552x396](upload://xvBaNSElfP7tACO3RFwAOtM2yTZ.png)
+
+**Concepts like this Relation Oracle, and Weight Oracle could become the new Plurality identity.**
+
+Thanks to [DisruptionJoe](https://twitter.com/DisruptionJoe), [_sgtn](https://twitter.com/_sgtn) for their reviews.
+Wed, 21 Dec 2022 05:19:17 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+tkgshn
+
+            <p><strong>update</strong>: MVP for worker’s is here</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://gyazo.com/7b759607d84ae3380dd6a50cb3fdb6c3">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/e/edf3f9e2ec6bd3333c944556a79f5b772525ca34.png" class="site-icon" width="32" height="32">
+
+      <a href="https://gyazo.com/7b759607d84ae3380dd6a50cb3fdb6c3" target="_blank" rel="noopener nofollow ugc">Gyazo</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/398;"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/6/63dbdbd1456224af6a6b580a8f35abfb6a60f0c4.gif" class="thumbnail animated" width="690" height="398"></div>
+
+<h3><a href="https://gyazo.com/7b759607d84ae3380dd6a50cb3fdb6c3" target="_blank" rel="noopener nofollow ugc">Gyazo</a></h3>
+
+  <p>Easily capture screenshots, GIFs, and replays that are ready to share. Download the free app for windows and mac.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/5
+        Wed, 21 Dec 2022 05:19:17 +0000
+gov.gitcoin.co-post-11927-5
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+      
+
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+tkgshn
+
+            <p>and here is a “WTF IS DeCartography Quadratic Funding”'s prototype.</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://gyazo.com/8b113ac16d48430e3d299ad7fdbf0015">
+  <header class="source">
+      <img src="/uploads/db4391/original/2X/3/3ac66f4a8693eb18c60f906bb3f75bbd2b6951d1.png" class="site-icon" width="32" height="32">
+
+      <a href="https://gyazo.com/8b113ac16d48430e3d299ad7fdbf0015" target="_blank" rel="noopener nofollow ugc">Gyazo</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/425;"><img src="/uploads/db4391/original/2X/c/ccc6a436a6ec150f608bc6b3a485b36d2840038c.gif" class="thumbnail animated" width="690" height="425"></div>
+
+<h3><a href="https://gyazo.com/8b113ac16d48430e3d299ad7fdbf0015" target="_blank" rel="noopener nofollow ugc">Gyazo</a></h3>
+
+  <p>Easily capture screenshots, GIFs, and replays that are ready to share. Download the free app for windows and mac.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/4
+        Sat, 19 Nov 2022 01:47:21 +0000
+gov.gitcoin.co-post-11927-4
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+      
+
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+tkgshn
+
+            <p>Thank you so much <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> . I’d like to make a new era.</p>
+<p>I’ve been researching <a href="https://gov.gitcoin.co/t/hello-supermodular-xyz-fka-web3studio/11211/2">Ethelo</a> and the FDD team’s move recently. I think this so-called way of working is like a PoC with Gitcoin, and I think that DeCartography could proceed in basically the same case.</p>
+<ul>
+<li><a href="https://gia-testing.ethelo.net/page/welcome-to-the-gia" class="inline-onebox" rel="noopener nofollow ugc">GIA - Grants Investigations Agency - Gitcoin Testing</a></li>
+<li><a href="https://docs.google.com/document/d/1bFfmDK0ZQ9ij4B9mYWPyAGbHjAhlyTFtrkuCS_vrokI/edit" class="inline-onebox" rel="noopener nofollow ugc">Ethelo Gitcoin Gov Forum Post - Google Docs</a></li>
+</ul>
+<p>At first, we are thinking of providing our oracle in a way that only FDD can use it because it can be like the GraphQL API (even centralized).<br>
+What kind of data structures can be added to the k-value (which we call the “QF function”)? For example, <a href="https://go.gitcoin.co/blog/a-community-based-roadmap-for-sybil-detection-across-web-3" rel="noopener nofollow ugc">the “Humanity” of a Gitcoin Passport should have a QF whose voting power increases or decreases depending on the linked accounts</a>.<br>
+We hypothesize that given a user A and the project they are donating to, the oracle interface could easily adjust voting power by returning “how far away from the existing donors this user is in the cluster (deviation)”.</p>
+<p>What might we do<br>
+First, use the API to get the list of voters from the previous Gitcoin Grants<br>
+Add them to the PoC target address group and plot them to the most intermediate point once they have been rated by (say) 10 or more different people)<br>
+This allows one account to be answered “is this address similar or not” from at least 10 different interpretations with a Yes, No, or None and plotted on a 2-dimensional graph</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/3
+        Sat, 19 Nov 2022 01:43:16 +0000
+gov.gitcoin.co-post-11927-3
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+      
+
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+DisruptionJoe
+
+            <p>I love this paper and your description. This really gets to the heart of the often overlooked part of the Decentralized Society paper by <a class="mention" href="https://gov.gitcoin.co/u/glenweyl">@GlenWeyl</a> Puja &amp; <a class="mention" href="https://gov.gitcoin.co/u/vbuterin">@vbuterin</a> . Without worrying about SBTs &amp; VCs, this paper directly deals with the k coefficient used to dampen collusion. Better stated, it encourages outgroup collaboration.</p>
+<aside class="quote no-group" data-username="tkgshn" data-post="1" data-topic="11927">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tkgshn/48/6258_2.png" class="avatar"> tkgshn:</div>
+<blockquote>
+<p>I don’t know if the concept of “distance” is used in the current Gitcoin Grants for Pairwise coordination subsidies, but by establishing a contrasting position with “services that automatically create social graphs from transactions,” the Gitcoin FDD team is able to create a social graph that is more personalized, more relevant to the needs of the community, and more effective. I think we can provide data to Gitcoin’s FDD team.</p>
+</blockquote>
+</aside>
+<p>This is really great work. It is only the second serious attempt at deriving a k value which I have seen next to <a class="mention" href="https://gov.gitcoin.co/u/erich">@erich</a> work on the subject.</p>
+<p>I really hope this project can receive great funding as a grant and perhaps from the DAO (via FDD) directly. The more I look at it, the more I realize that as open source software it will definitely be a public good. I don’t know what immediate business model might fund it, so it is likely up to us.</p>
+<p>I would love to know if the software can be used only with inputs from publicly available data such as onchain donations made in Gitcoin rounds and/or passport stamps?</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/2
+        Fri, 18 Nov 2022 13:19:45 +0000
+gov.gitcoin.co-post-11927-2
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+      
+
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+tkgshn
+
+            <p>Aura is a countermeasure against Sybil attacks, but the only other weakness of Quadratic Funding, resistance to collusion, is currently <a href="https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553" rel="noopener nofollow ugc">Pairwise coordination subsidies</a> by Vitalik.</p>
+<p>Others, such as <a href="https://medium.com/block-science/how-to-attack-and-defend-quadratic-funding-a10f0152f069" rel="noopener nofollow ugc">How to Attack and Defend Quadratic Funding</a> There is also a pattern of using data science, led by BlockScience, as shown in , but I propose a new layer.</p>
+<p>We have published a draft of a white paper on a protocol called <strong>DeCartography</strong> that outputs data from the Plurality social graph as an oracle.</p>
+<p>A longer version can be read here</p><aside class="onebox googledocs" data-onebox-src="https://docs.google.com/document/d/1i4rPj1qlvV9RhfP9jwaI_ESEMZ-7tvBLbftDdOmEWWk/edit#">
+  <header class="source">
+
+      <a href="https://docs.google.com/document/d/1i4rPj1qlvV9RhfP9jwaI_ESEMZ-7tvBLbftDdOmEWWk/edit#" target="_blank" rel="noopener nofollow ugc">docs.google.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <a href="https://docs.google.com/document/d/1i4rPj1qlvV9RhfP9jwaI_ESEMZ-7tvBLbftDdOmEWWk/edit#" target="_blank" rel="noopener nofollow ugc"><span class="googledocs-onebox-logo g-docs-logo"></span></a>
+
+<h3><a href="https://docs.google.com/document/d/1i4rPj1qlvV9RhfP9jwaI_ESEMZ-7tvBLbftDdOmEWWk/edit#" target="_blank" rel="noopener nofollow ugc">DeCartography Whitepaper (draft)</a></h3>
+
+<p>This Doc is private</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Here is a summary</p>
+<p>This prevents collusion, or perhaps it would be better to call it "Plurality Quadratic Funding.<br>
+<strong>Precisely, it reduces voting power from similar clusters.</strong></p>
+<p>This ideology is based on “Plurality” which coordinates across the following differences</p>
+<ul>
+<li><a href="https://gov.gitcoin.co/t/how-soulbound-tokens-can-make-gitcoin-grants-more-pluralistic/10077">How Soulbound Tokens Can Make Gitcoin Grants More Pluralistic</a></li>
+<li><a href="https://twitter.com/VitalikButerin/status/1580313964067508224?s=20&amp;t=hx_luOMMPz6k808SXzmGog" rel="noopener nofollow ugc">50 actually independent thinkers are worth more than 1000 NPCs who all consume the same media and vote the same way</a></li>
+<li><a href="https://docs.google.com/presentation/d/1NY17vw1fOFgp9WR40c0hsDkTnafSGkEPT2Pmemr4Rdo/edit#slide=id.g134bebec90a_1_106" rel="noopener nofollow ugc">Regenerative Society</a></li>
+<li><a href="https://www.radicalxchange.org/media/blog/why-i-am-a-pluralist/" class="inline-onebox" rel="noopener nofollow ugc">Why I Am a Pluralist - RadicalxChange</a></li>
+</ul>
+<p>I don’t know if the concept of “distance” is used in the current Gitcoin Grants for Pairwise coordination subsidies, but by establishing a contrasting position with “services that automatically create social graphs from transactions,” the Gitcoin FDD team is able to create a social graph that is more personalized, more relevant to the needs of the community, and more effective. I think we can provide data to Gitcoin’s FDD team.</p>
+
+service that automatically creates social graphs from transactions <a href="https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/1">(click for more details)</a>
+<p>Simply put, we ask people to answer “Is this wallet address similar?” by comparing two transactions <img src="https://gov.gitcoin.co/images/emoji/twitter/o.png?v=12" title=":o:" class="emoji" alt=":o:" loading="lazy" width="20" height="20"> or <img src="https://gov.gitcoin.co/images/emoji/twitter/x.png?v=12" title=":x:" class="emoji" alt=":x:" loading="lazy" width="20" height="20">.</p>
+<p>To draw this into a two-dimensional map like a social graph, when n people vote on each simple question, each opinion is tied to an n-dimensional value. By clustering them, the Assumpution can be dropped into a single social graph.</p>
+<p><strong>Generate the coordinates of the consensus on the Assumption</strong>.<br>
+Assumption" here refers to the decision "Is this wallet similar (similar community)?<br>
+In this case, there are only two options, Yes or No, but I think this alone will prevent some degree of collusion.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4a040a20a4ac5d091d8d7d1c5c3d1308c205f643.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/4a040a20a4ac5d091d8d7d1c5c3d1308c205f643" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4a040a20a4ac5d091d8d7d1c5c3d1308c205f643_2_690x447.jpeg" alt="image" data-base62-sha1="ayLZe4v3HO9OFI3w1wVqOvMwtOj" width="690" height="447" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4a040a20a4ac5d091d8d7d1c5c3d1308c205f643_2_690x447.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/4/4a040a20a4ac5d091d8d7d1c5c3d1308c205f643.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/4a040a20a4ac5d091d8d7d1c5c3d1308c205f643.jpeg 2x" data-dominant-color="D3D0D4"></a></div><br>
+<em>The image is an earlier prototype, with the tags as choices. This is how the two addresses are lined up, with the question, “Are these two similar?” would be a good question to ask</em>.<p></p>
+<p>If more than 51% of the respondents give the same answer, we will simply use that answer as the decision. Actual adjustments would need to be made. For Civil Attack, we of course recommend using Gitcoin Passport.</p>
+<p>This is because, as you may know if you are familiar with consensus systems as well as PoS, I believe it will settle at <strong>Schelling Point</strong>.</p>
+<p>In this case, I expect that the Assumpution will settle on “roughly like this” and when they are separated, we can create coordinates with some accuracy</p>
+<ul>
+<li><a href="https://www.lesswrong.com/posts/yJfBzcDL9fBHJfZ6P/nash-equilibria-and-schelling-points" rel="noopener nofollow ugc">Nash Equilibria and Schelling Points</a></li>
+<li><a href="https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed" class="inline-onebox" rel="noopener nofollow ugc">SchellingCoin: A Minimal-Trust Universal Data Feed | Ethereum Foundation Blog</a></li>
+</ul>
+<p>As for aggregation, I wonder if <strong>Pol.is</strong> could adopt a method to help find consensus.</p>
+<ul>
+<li><a href="https://compdemocracy.org/algorithms/" class="inline-onebox" rel="noopener nofollow ugc">The Computational Democracy Project | The Computational Democracy Project</a></li>
+<li><a href="https://blog.pol.is/pol-is-in-taiwan-da7570d372b5" rel="noopener nofollow ugc">https://blog.pol.is/pol-is-in-taiwan-da7570d372b5</a></li>
+<li><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0aed709395fac07cc62b63f7d6efaa598becacb8.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/0aed709395fac07cc62b63f7d6efaa598becacb8" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0aed709395fac07cc62b63f7d6efaa598becacb8_2_525x500.png" alt="image" data-base62-sha1="1yFuc89VkCV99bB14huKjRNqI2I" width="525" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0aed709395fac07cc62b63f7d6efaa598becacb8_2_525x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0aed709395fac07cc62b63f7d6efaa598becacb8_2_787x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/0/0aed709395fac07cc62b63f7d6efaa598becacb8.png 2x" data-dominant-color="FAFAFA"></a></div></li>
+<li><strong>If n people interpret an opinion, n dimensional values are tied to the opinion (clustering with dimensionality reduction)</strong></li>
+<li><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d52b7a12f8b8e8c16ce5ec5a43907bc6d3124980.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/d52b7a12f8b8e8c16ce5ec5a43907bc6d3124980" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d52b7a12f8b8e8c16ce5ec5a43907bc6d3124980_2_498x500.png" alt="image" data-base62-sha1="upMQH8sjms3OqXxFWyo7b5oxXDa" width="498" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d52b7a12f8b8e8c16ce5ec5a43907bc6d3124980_2_498x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d52b7a12f8b8e8c16ce5ec5a43907bc6d3124980_2_747x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/d/d52b7a12f8b8e8c16ce5ec5a43907bc6d3124980.png 2x" data-dominant-color="F4F5F4"></a></div></li>
+<li>
+<blockquote>
+<p>The machine learning that’s done, in pol.is, is done in real-time, and we do clustering, just like you would have in a recommender engine, Except that pol.is visualizes the groups</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>The data that DeCartography can provide as Oracle should look something like this</strong>!</p>
+<ul>
+<li><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1e5fa945f5d79536e0ba99e01144f4c7683f7480.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/1e5fa945f5d79536e0ba99e01144f4c7683f7480" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1e5fa945f5d79536e0ba99e01144f4c7683f7480_2_690x266.jpeg" alt="image" data-base62-sha1="4kHhc5V8qlkX6nnUvn5Xxn9y6oU" width="690" height="266" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1e5fa945f5d79536e0ba99e01144f4c7683f7480_2_690x266.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/1/1e5fa945f5d79536e0ba99e01144f4c7683f7480.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/1/1e5fa945f5d79536e0ba99e01144f4c7683f7480.jpeg 2x" data-dominant-color="EBEEEF"></a></div></li>
+</ul>
+<p>As for what attributes people are donating with Gitcoin Grants, <a href="https://docs.google.com/presentation/u/1/d/1eINBNP9Ikbs1Melr_g4KDjeNSjAsc-NPyBz4XPo9L8k/edit#slide=id.g13c284ad96c_0_1" rel="noopener nofollow ugc">Towards a Pluralism Passport Built from DeSoc Legos</a>, but we may be able to map this.</p>
+<p>Then we could incorporate the concept of Social Distance.</p>
+<p>This may be a promise of Quadratic Land, but I think many people may not understand this Plurality Quadratic Funding at first, so it would be good to have an educational site like this.<br>
+<img src="https://gov.gitcoin.co/uploads/db4391/original/2X/e/eada2dcdbeaf3c8bb7fbe096d4aa1da863f819e7.png" alt="image" data-base62-sha1="xvBaNSElfP7tACO3RFwAOtM2yTZ" width="552" height="396"></p>
+<p><strong>Concepts like this Relation Oracle, and Weight Oracle could become the new Plurality identity.</strong></p>
+<p>Thanks to <a href="https://twitter.com/DisruptionJoe" rel="noopener nofollow ugc">DisruptionJoe</a>, <a href="https://twitter.com/_sgtn" rel="noopener nofollow ugc">_sgtn</a> for their reviews.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927/1
+        Sun, 13 Nov 2022 01:11:34 +0000
+gov.gitcoin.co-post-11927-1
+Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality
+      
+
+

@@ -1,0 +1,286 @@
+
+
+
+Plural Passports without literally plural passports?
+https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341
+    One of the great things about Gitcoin's Passport vision is that passports can draw legitimacy from multiple credentials ([pluralism](https://www.radicalxchange.org/media/blog/why-i-am-a-pluralist/)), rather than de-duping via a single-point-of-failure such as the USA's [Social Security Number (SSN)](https://www.ssa.gov/ssnumber/).
+
+That said, "dual citizenship" presents a challenge if the end-user considers every "citizenship" as independently legitimate. (arguably, dual citizenship IRL is already overpowered even without this, but to a much smaller degree)
+
+The fundamental choice is: if I have stamps from all of {PoH, Worldcoin, Idena, Bright ID, KYC, Web2}, what is the incentive for me to put all of these on the same passport, versus creating multiple passports?
+
+The toy model I'll assume here is:
+* There are a number of "personhood score" algorithms `personhood(credential1, credential2, ..., credentialN)` each developer can use.
+* Each end-user application delivers a payoff of `payoff(personhood)` for a given personhood score.
+* Composing these functions implies a payoff function `payoff(credential1, credential2, ..., credentialN)` for the application.
+* If every application has their own passport registry, one may choose a different distribution of stamps across passports per app. If every applications checks the Gitcoin registry to dedup stamps, then users must use a consistent set of passports across all apps. In the latter case, each passport has a `total_payoff(credential1, credential2, ..., credentialN)`.
+* WLOG, we'll just work with one `payoff` function.
+
+## When to split and when to merge?
+If there is some partition of my set of credentials such that `sum(payoff(credentials_i)) > payoff(credentials)`, then it is in my self-interest to maintain multiple passports along this partition.
+
+If `payoff` is convex, then this will never hold, due to [multivariate Jensen's inequality](https://math.stackexchange.com/questions/2190473/generalizing-jensens-inequality-to-several-variables) (in fact, the opposite would hold - if there is someone with an orthogonal set of credentials, I should merge with them). However, personhood is explicitly meant to support concave payoffs - the problem of splitting credentials mirrors the problem of splitting tokens across wallets, in that 2x the personhood shouldn't give 2x the payoff.
+
+In most cases (for example, cutoff-based systems where you get the max payoff for having a sufficient number of credentials), we'll be incentivized to split.
+
+## Cross-credential linkability?
+A natural way to approach this (other than accepting only one type of credential), would be to have e.g. a Worldcoin ID linkable to a Bright ID. That way, split passports can be detected and penalized.
+
+Not only do we need to be able to detect this link, but we should be able to detect it *post-anonymization*. i.e. in the following diagram, the application must be able to deduce B without knowing C or D:
+
+![image|414x297](upload://4ZqXrQg1Bd8vHW0w7XAum0a5QOR.png)
+
+There are possibly some clever cryptographic ways this could be done, but at some point *someone* must know A. In practice this means that information linking a face, iris, social graph, Web2 handles, etc together would be out there somewhere.
+
+One could argue that forming this profile is both inevitable (and presents no real harm) and a necessary precondition for Sybil resistance (otherwise, how do we prevent someone from using their iris for one account and their face for another?), and it is sufficient privacy to just not link this profile to any actual activity.
+
+Another viewpoint could be that it is unviable for communities to accept outside credentials (especially anonymized credentials) without having their own additional screens.
+
+I'm curious to hear thoughts on these viewpoints.
+Sun, 13 Nov 2022 18:14:43 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Plural Passports without literally plural passports?
+chaselb
+
+            <p>With this considered, I could imagine organizations/platforms who might use Passport for sybil resistance might not use it as we imagine. Instead of computing some “trust score” as a function of all of the credentials within a passport, they choose 1 really robust/secure credential for their ecosystem. In this case, they don’t technically NEED Passport, but Passport creates a common interface for these credentials, so a platform/org does not need to research how to integrate with a specific credential’s SDK. Also, if they want to switch to a different credential, they can do that with ease without needing to deal with the different integration process of a separate credential. Also, from an end-user perspective, I can keep all of my credentials in one Passport. So if PlatformA requires BrightID and PlatformB requires KYC, then I have all of that in one place.</p>
+          <p><a href="https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/9
+        Sun, 13 Nov 2022 18:14:43 +0000
+gov.gitcoin.co-post-11341-9
+Plural Passports without literally plural passports?
+      
+
+Plural Passports without literally plural passports?
+ccerv1
+
+            <p>Your post <s>nerd-sniped</s> inspired me to do some analysis on dual citizenship in real life.</p>
+<aside class="quote no-group" data-username="llllvvuu" data-post="1" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/llllvvuu/48/6936_2.png" class="avatar"> llllvvuu:</div>
+<blockquote>
+<p>That said, “dual citizenship” presents a challenge if the end-user considers every “citizenship” as independently legitimate. (arguably, dual citizenship IRL is already overpowered even without this, but to a much smaller degree)</p>
+</blockquote>
+</aside>
+<p>My question: If you could have any two passports, which combination would afford you the greatest freedom to travel around the world with minimal overlap &amp; reliance on a single passport?</p>
+<p>The answer: Ghana &amp; United Arab Emirates. Those passports enable visa-free travel to 131 countries, with only 14 cases of overlap.</p>
+<p>Runner-up combos include: Andorra &amp; Gambia, Cote d’Ivoire &amp; Japan, Guinea &amp; Malaysia.</p>
+<p>(If you have a US passport, dual citizenship in Ghana or Mali would offer the most visa-tree travel optionality.)</p>
+<p>h/t: <a href="https://github.com/ilyankou/passport-index-dataset" class="inline-onebox" rel="noopener nofollow ugc">GitHub - ilyankou/passport-index-dataset: Passport Index 2024: visa requirements for 199 countries, in .csv</a></p>
+          <p><a href="https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/8
+        Wed, 24 Aug 2022 20:56:40 +0000
+gov.gitcoin.co-post-11341-8
+Plural Passports without literally plural passports?
+      
+
+Plural Passports without literally plural passports?
+owocki
+
+            <aside class="quote no-group" data-username="llllvvuu" data-post="6" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/llllvvuu/48/6936_2.png" class="avatar"> llllvvuu:</div>
+<blockquote>
+<p>This is the spreadsheet I was referring to - at any given aggregate match amount it tapers at 100%, once I hit 100% I should start over with a new account, basically getting 100% per <code>aggregate_match_amount</code> in <code>cost_of_forgery</code> I’m able to accrue.</p>
+</blockquote>
+</aside>
+<p>i agree. <a href="https://docs.google.com/spreadsheets/d/1e2j2qzQcZlz4Col5qqF3yxKr-NQ5SxVrFuGX7k-xyek/edit#gid=0">here</a> is a better model<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/fafa8e413875b561620c1a76cc243056a72322f3.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/fafa8e413875b561620c1a76cc243056a72322f3" title="Screen Shot 2022-08-23 at 2.03.52 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fafa8e413875b561620c1a76cc243056a72322f3_2_690x275.png" alt="Screen Shot 2022-08-23 at 2.03.52 PM" data-base62-sha1="zOgbcyGR2qnHOrreXKlSYgEIdeX" width="690" height="275" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fafa8e413875b561620c1a76cc243056a72322f3_2_690x275.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fafa8e413875b561620c1a76cc243056a72322f3_2_1035x412.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fafa8e413875b561620c1a76cc243056a72322f3_2_1380x550.png 2x" data-dominant-color="C6CFC8"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/7
+        Tue, 23 Aug 2022 20:04:22 +0000
+gov.gitcoin.co-post-11341-7
+Plural Passports without literally plural passports?
+      
+
+Plural Passports without literally plural passports?
+llllvvuu
+
+            <aside class="quote no-group" data-username="owocki" data-post="5" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/054ceea98a4e8213e24151d60adf570483117ee5.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/054ceea98a4e8213e24151d60adf570483117ee5" title="7P7PubyhFs-9yHGdGjiWpVSYZr6vV5N40_o5gJfB88YOS0oXMHdKBAKxPiFkOlSf37ZiVwMxl77smW-EWEkNdKlszYzQLTIAMyuWWh_gt0pRMetn5vvEe95xgz1V0lfkee9Q56LL7yE6XGlsYlm7rXA"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_690x288.jpeg" alt="7P7PubyhFs-9yHGdGjiWpVSYZr6vV5N40_o5gJfB88YOS0oXMHdKBAKxPiFkOlSf37ZiVwMxl77smW-EWEkNdKlszYzQLTIAMyuWWh_gt0pRMetn5vvEe95xgz1V0lfkee9Q56LL7yE6XGlsYlm7rXA" data-base62-sha1="KTdgzQgZoF79CQBFxwloAhBJdz" width="690" height="288" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_690x288.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_1035x432.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_1380x576.jpeg 2x" data-dominant-color="CAD0CA"></a></div><p></p>
+</blockquote>
+</aside>
+<p>This is the spreadsheet I was referring to - at any given aggregate match amount it tapers at 100%, once I hit 100% I should start over with a new account, basically getting 100% per <code>aggregate_match_amount</code> in <code>cost_of_forgery</code> I’m able to accrue.</p>
+<aside class="quote no-group" data-username="owocki" data-post="5" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Perhaps whomever at the FDD (or similar) is designing the scoring algorithms for a grants 2.0 world</p>
+</blockquote>
+</aside>
+<p>Agreed, very important workstream!</p>
+<p>Oddly the FDD design space reminds me a lot of <a href="https://www.palantir.com/" rel="noopener nofollow ugc">Palantir</a> (similar skillset and probably some tech that can be taken - though their ideology couldn’t be any more different than ours)</p>
+          <p><a href="https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/6
+        Tue, 23 Aug 2022 17:56:14 +0000
+gov.gitcoin.co-post-11341-6
+Plural Passports without literally plural passports?
+      
+
+Plural Passports without literally plural passports?
+owocki
+
+            <aside class="quote no-group" data-username="llllvvuu" data-post="4" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/llllvvuu/48/6936_2.png" class="avatar"> llllvvuu:</div>
+<blockquote>
+<p>For example for a voting app, would you get 2x the voting power for having 2 credentials?</p>
+</blockquote>
+</aside>
+<p>thats up to whomever is writing the scoring algorithm + the weight they assign to each stamp.</p>
+<aside class="quote no-group" data-username="llllvvuu" data-post="4" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/llllvvuu/48/6936_2.png" class="avatar"> llllvvuu:</div>
+<blockquote>
+<p>Even in QF I’d argue that the match amount shouldn’t equal the personhood score. For example, let’s say we updated the “legacy” <a href="https://gitcoin.co/blog/trust-bonus">trust score</a> to be linear in personhood score. That would require removing the 150% cap, allowing me to get 250% or more in trust bonus if I used all of the verification methods. This number would only go up the more verification methods get added.</p>
+</blockquote>
+</aside>
+<p>i dont think trustbonus scales in a personhoodscore world.</p>
+<p>IMO cGrants is architected backwards. It makes more sense to start with the personhood score + guide the user to either increasing it or muting their contributions by computing their trustbonus.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/054ceea98a4e8213e24151d60adf570483117ee5.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/054ceea98a4e8213e24151d60adf570483117ee5" title="7P7PubyhFs-9yHGdGjiWpVSYZr6vV5N40_o5gJfB88YOS0oXMHdKBAKxPiFkOlSf37ZiVwMxl77smW-EWEkNdKlszYzQLTIAMyuWWh_gt0pRMetn5vvEe95xgz1V0lfkee9Q56LL7yE6XGlsYlm7rXA"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_690x288.jpeg" alt="7P7PubyhFs-9yHGdGjiWpVSYZr6vV5N40_o5gJfB88YOS0oXMHdKBAKxPiFkOlSf37ZiVwMxl77smW-EWEkNdKlszYzQLTIAMyuWWh_gt0pRMetn5vvEe95xgz1V0lfkee9Q56LL7yE6XGlsYlm7rXA" data-base62-sha1="KTdgzQgZoF79CQBFxwloAhBJdz" width="690" height="288" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_690x288.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_1035x432.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_1380x576.jpeg 2x" data-dominant-color="CAD0CA"></a></div><p></p>
+<aside class="quote no-group" data-username="llllvvuu" data-post="4" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/llllvvuu/48/6936_2.png" class="avatar"> llllvvuu:</div>
+<blockquote>
+<p>The math here is actually important.</p>
+</blockquote>
+</aside>
+<p>I agree. Especially about your point about convex/concave designs.  Perhaps whomever at the FDD (or similar) is designing the scoring algorithms for a grants 2.0 world can chime in from here about how those are being designed <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/5
+        Tue, 23 Aug 2022 17:47:58 +0000
+gov.gitcoin.co-post-11341-5
+Plural Passports without literally plural passports?
+      
+
+Plural Passports without literally plural passports?
+llllvvuu
+
+            <aside class="quote no-group" data-username="owocki" data-post="3" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>if you can get $10 in matching from identity 1 and $100 in matching from identity 2, or if you combined the passports + get $110 in matching, then there is no incentive to sybil attack the system.</p>
+</blockquote>
+</aside>
+<p>This might not be realistic though. For example for a voting app, would you get 2x the voting power for having 2 credentials? Even in QF I’d argue that the match amount shouldn’t equal the personhood score. For example, let’s say we updated the “legacy” <a href="https://gitcoin.co/blog/trust-bonus" rel="noopener nofollow ugc">trust score</a> to be linear in personhood score. That would require removing the 150% cap, allowing me to get 250% or more in trust bonus if I used all of the verification methods. This number would only go up the more verification methods get added.</p>
+<p>So in this system, indeed there would be no incentive to “Sybil”, but that’s because we would just be handing excess power to the user directly.</p>
+<aside class="quote no-group" data-username="owocki" data-post="3" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I think this is what you already said in different words tho <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+</aside>
+<p>The math here is actually important. Any system with a cap or tapering will be concave. For example the spreadsheets in the <a href="https://gov.gitcoin.co/t/characterizing-the-sybil-resistance-problem/11235">post you linked</a> (where you link to <a href="https://gov.gitcoin.co/t/establishing-a-new-process-for-identify-verification-scoring-and-removing-troubled-id-methods/7506/3">this</a>) are concave (e.g. if the aggregate match was $100k and I was capable of getting $1m cost-of-forgery then I would want to split into 10 passports). And indeed they should be concave: in a world where there are hundreds of verification mechanisms, someone shouldn’t get double the match because they had the tenacity to sign up with 20 verification methods instead of 10 (otherwise you get farming captchas all over again).</p>
+<p>Another point to note is that forgeries themselves are not independent events. So it’s unclear if the assumption <code>cost_of_forgery(methods) == sum(cost_of_forgery(methods[i]))</code> is ideal.</p>
+          <p><a href="https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/4
+        Tue, 23 Aug 2022 17:38:23 +0000
+gov.gitcoin.co-post-11341-4
+Plural Passports without literally plural passports?
+      
+
+Plural Passports without literally plural passports?
+owocki
+
+            <aside class="quote no-group" data-username="llllvvuu" data-post="1" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/llllvvuu/48/6936_2.png" class="avatar"> llllvvuu:</div>
+<blockquote>
+<p>The fundamental choice is: if I have stamps from all of {PoH, Worldcoin, Idena, Bright ID, KYC, Web2}, what is the incentive for me to put all of these on the same passport, versus creating multiple passports?</p>
+</blockquote>
+</aside>
+<p>One of the reasons I liked the idea of using a PersonhoodScore in <a href="https://gov.gitcoin.co/t/characterizing-the-sybil-resistance-problem/11235">this post</a> was that it allows the system to scale against different sophistication levels of attackers, including handling dual passports elegantly.</p>
+<p>assuming cost of forgery = personhood score, if the cost of forgery of identity 1 is $10, and the cost of forgery for identity 2 is $100, then the combined identity for these two is $110.</p>
+<p>if you can get $10 in matching from identity 1 and $100 in matching from identity 2, or if you combined the passports + get $110 in matching, then there is no incentive to sybil attack the system.</p>
+<aside class="quote no-group" data-username="llllvvuu" data-post="1" data-topic="11341">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/llllvvuu/48/6936_2.png" class="avatar"> llllvvuu:</div>
+<blockquote>
+<p>If there is some partition of my set of credentials such that <code>sum(payoff(credentials_i)) &gt; payoff(credentials)</code>, then it is in my self-interest to maintain multiple passports along this partition.</p>
+</blockquote>
+</aside>
+<p>I think this is what you already said in different words tho <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/3
+        Tue, 23 Aug 2022 17:08:27 +0000
+gov.gitcoin.co-post-11341-3
+Plural Passports without literally plural passports?
+      
+
+Plural Passports without literally plural passports?
+ccerv1
+
+            <p>This is a wonderful, well-articulated post. It triggered some late night thoughts.</p>
+<p>I think I’m ok with people having multiple passports or identities — provided they don’t engage in Sybil behavior.</p>
+<p>Borrowing your dual citizenship analogy: dual citizens IRL can choose which passport to use, however they can’t use their passports to be registered in two countries at once or to count as two people in one country. Once they’ve entered a country with a given passport, they can only leave by showing the same passport.</p>
+<p>The primary issue Gitcoin cares about is stopping n sock puppets from getting match funds for funding the same project n times.</p>
+<p>We need to learn to better detect Sybil behavior. We need to increase the price / diminish the benefit of Sybil behavior. We need to create positive network effects for reputation building behavior. Cross linking credentials could definitely be one of those ways!</p>
+          <p><a href="https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/2
+        Tue, 23 Aug 2022 04:02:58 +0000
+gov.gitcoin.co-post-11341-2
+Plural Passports without literally plural passports?
+      
+
+Plural Passports without literally plural passports?
+llllvvuu
+
+            <p>One of the great things about Gitcoin’s Passport vision is that passports can draw legitimacy from multiple credentials (<a href="https://www.radicalxchange.org/media/blog/why-i-am-a-pluralist/" rel="noopener nofollow ugc">pluralism</a>), rather than de-duping via a single-point-of-failure such as the USA’s <a href="https://www.ssa.gov/ssnumber/" rel="noopener nofollow ugc">Social Security Number (SSN)</a>.</p>
+<p>That said, “dual citizenship” presents a challenge if the end-user considers every “citizenship” as independently legitimate. (arguably, dual citizenship IRL is already overpowered even without this, but to a much smaller degree)</p>
+<p>The fundamental choice is: if I have stamps from all of {PoH, Worldcoin, Idena, Bright ID, KYC, Web2}, what is the incentive for me to put all of these on the same passport, versus creating multiple passports?</p>
+<p>The toy model I’ll assume here is:</p>
+<ul>
+<li>There are a number of “personhood score” algorithms <code>personhood(credential1, credential2, ..., credentialN)</code> each developer can use.</li>
+<li>Each end-user application delivers a payoff of <code>payoff(personhood)</code> for a given personhood score.</li>
+<li>Composing these functions implies a payoff function <code>payoff(credential1, credential2, ..., credentialN)</code> for the application.</li>
+<li>If every application has their own passport registry, one may choose a different distribution of stamps across passports per app. If every applications checks the Gitcoin registry to dedup stamps, then users must use a consistent set of passports across all apps. In the latter case, each passport has a <code>total_payoff(credential1, credential2, ..., credentialN)</code>.</li>
+<li>WLOG, we’ll just work with one <code>payoff</code> function.</li>
+</ul>
+<h2>
+<a name="when-to-split-and-when-to-merge-1" class="anchor" href="https://gov.gitcoin.co#when-to-split-and-when-to-merge-1"></a>When to split and when to merge?</h2>
+<p>If there is some partition of my set of credentials such that <code>sum(payoff(credentials_i)) &gt; payoff(credentials)</code>, then it is in my self-interest to maintain multiple passports along this partition.</p>
+<p>If <code>payoff</code> is convex, then this will never hold, due to <a href="https://math.stackexchange.com/questions/2190473/generalizing-jensens-inequality-to-several-variables" rel="noopener nofollow ugc">multivariate Jensen’s inequality</a> (in fact, the opposite would hold - if there is someone with an orthogonal set of credentials, I should merge with them). However, personhood is explicitly meant to support concave payoffs - the problem of splitting credentials mirrors the problem of splitting tokens across wallets, in that 2x the personhood shouldn’t give 2x the payoff.</p>
+<p>In most cases (for example, cutoff-based systems where you get the max payoff for having a sufficient number of credentials), we’ll be incentivized to split.</p>
+<h2>
+<a name="cross-credential-linkability-2" class="anchor" href="https://gov.gitcoin.co#cross-credential-linkability-2"></a>Cross-credential linkability?</h2>
+<p>A natural way to approach this (other than accepting only one type of credential), would be to have e.g. a Worldcoin ID linkable to a Bright ID. That way, split passports can be detected and penalized.</p>
+<p>Not only do we need to be able to detect this link, but we should be able to detect it <em>post-anonymization</em>. i.e. in the following diagram, the application must be able to deduce B without knowing C or D:</p>
+<p><img src="/uploads/db4391/original/2X/2/22fa83b6e1c3b7f5d803008e3d6d1998abed7919.png" alt="image" data-base62-sha1="4ZqXrQg1Bd8vHW0w7XAum0a5QOR" width="414" height="297"></p>
+<p>There are possibly some clever cryptographic ways this could be done, but at some point <em>someone</em> must know A. In practice this means that information linking a face, iris, social graph, Web2 handles, etc together would be out there somewhere.</p>
+<p>One could argue that forming this profile is both inevitable (and presents no real harm) and a necessary precondition for Sybil resistance (otherwise, how do we prevent someone from using their iris for one account and their face for another?), and it is sufficient privacy to just not link this profile to any actual activity.</p>
+<p>Another viewpoint could be that it is unviable for communities to accept outside credentials (especially anonymized credentials) without having their own additional screens.</p>
+<p>I’m curious to hear thoughts on these viewpoints.</p>
+          <p><a href="https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/plural-passports-without-literally-plural-passports/11341/1
+        Tue, 23 Aug 2022 00:06:58 +0000
+gov.gitcoin.co-post-11341-1
+Plural Passports without literally plural passports?
+      
+
+

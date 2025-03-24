@@ -1,0 +1,121 @@
+
+
+
+Introducing: Checker
+https://gov.gitcoin.co/t/introducing-checker/17292
+    Initially envisioned in the [GG19 - Outline and Strategy](https://gov.gitcoin.co/t/gg19-outline-and-strategy/16682/1#open-source-software-oss-22) and in development since Checker is a tool developed by the GPT Team to improve the process of grantee evaluation and application reviews. Checker is poised to revolutionize our grant review process in several ways:
+
+* **Automated Review**: Checker automates the evaluation of grant applications at scale, ensuring a more efficient and consistent review.
+* **Enhanced Transparency**: Utilizing AI/LLM technology, Checker allows for a transparent review process where community members and applicants can better understand how evaluations are conducted.
+* **Dynamic Application System**: With Checker, we're moving towards a system where grantees can self-service their reviews, breaking free from the constraints of predefined application windows.
+
+@giliomeejg has been leading the development, with feedback from the rest of the GPT Workstream, including @sejalrekhan , @M0nkeyFl0wer , @jon-spark-eco , @umarkhaneth , and myself. The goal is to use Checker and actively contribute to its evolution and growth.
+
+@giliomeejg created a video to show a sneak preview of the tool. You can check that out [here](https://www.youtube.com/watch?v=Mf-wj1FKSY8).
+
+# Futures
+
+In addition to the current work on Checker, we have a larger vision that includes the following:
+
+* **Integrations**: Checker could integrate with platforms like GitHub to analyze project metrics, offering a deeper insight into each project's development activity and community engagement.
+* **Enhanced Customization**: Checker will allow round organizers to customize evaluation criteria to suit the specific goals of different funding rounds.
+* **Integration with Other Gitcoin Tools**: Checker is being designed to integrate with other Gitcoin tools like Grants Stack, enhancing its functionality and user experience.
+
+# Conclusion
+
+Checker is not just a tool; it's a vision for a more efficient, objective, and transparent future in grant application reviews. As we test and refine Checker internally, we are excited about its possibilities for our community and the broader ecosystem of grantees we support.
+
+We invite your feedback, suggestions, and collaborations to ensure Checker evolves in a direction that aligns with our collective needs and aspirations.
+Fri, 29 Mar 2024 14:53:25 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Introducing: Checker
+machuche1
+
+            <p>Excited for this! Especially for the GitHub analyzing of project metrics. Would it be open tp customization of different languages?</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-checker/17292/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-checker/17292/5
+        Fri, 29 Mar 2024 14:53:25 +0000
+gov.gitcoin.co-post-17292-5
+Introducing: Checker
+      
+
+Introducing: Checker
+giliomeejg
+
+            <p>Currently only the internal Gitcoin team has access to use the tool to assist with evaluating round applications, however if we do roll this out to give near real-time feedback for users that create projects, e.g. via <a href="http://builder.gitcoin.co" rel="noopener nofollow ugc">builder.gitcoin.co</a>, we might open up possibilities for malicious actors, e.g. I create a malicious project which is initially rejected, but I get told which parts of my project need attention, so fixing these would lead to a greater probability of my project being included.</p>
+<p>One potential way around this when we cross that bridge, is to have distinctly different GPT responses for round operators vs. the general public, so if I’m a round operator, I get a high level of detail on how a project scores against all the eligibility criteria, but if I’m a member of the public, I get a toned down version of this.  An example might be instead of “no active Github commits in the past 3 months” for the round operator, the public response might be “no recent meaningful Github activity”.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-checker/17292/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-checker/17292/4
+        Wed, 03 Jan 2024 06:38:57 +0000
+gov.gitcoin.co-post-17292-4
+Introducing: Checker
+      
+
+Introducing: Checker
+Sov
+
+            <p>Thanks for the comment and show of support.</p>
+<p>Maybe I should have been more clear that Checker is just a tool that helps humans make decisions and is not intended to replace human actors in decision making.  Ultimately it will still be members of the GPT Team for our program rounds (or anyone using Grants Stack once enabled) that will allow grantees to enter rounds.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-checker/17292/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-checker/17292/3
+        Mon, 18 Dec 2023 12:40:52 +0000
+gov.gitcoin.co-post-17292-3
+Introducing: Checker
+      
+
+Introducing: Checker
+CoachJonathan
+
+            <aside class="quote no-group" data-username="Sov" data-post="1" data-topic="17292">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sov/48/7688_2.png" class="avatar"> Sov:</div>
+<blockquote>
+<p>Checker is poised to revolutionize our grant review process in several ways:</p>
+</blockquote>
+</aside>
+<p>I’m very excited about this tool and to test out its potential for the Gitcoin ecosystem and eventually the web3 ecosystem as a whole. Kudos to everyone who helped create this (esp. <a class="mention" href="https://gov.gitcoin.co/u/giliomeejg">@giliomeejg</a> for all the time and effort!).</p>
+<p>I think the one thing that I heard flagged (and was probably already discussed but maybe I missed it) was the idea of malicious actors getting access to the tool and using it in order to game the review process. Any ideas on how to mitigate this behaviour? Or maybe that is a v2 issue we’ll address in the future?</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-checker/17292/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-checker/17292/2
+        Mon, 18 Dec 2023 12:08:43 +0000
+gov.gitcoin.co-post-17292-2
+Introducing: Checker
+      
+
+Introducing: Checker
+Sov
+
+            <p>Initially envisioned in the <a href="https://gov.gitcoin.co/t/gg19-outline-and-strategy/16682/1#open-source-software-oss-22">GG19 - Outline and Strategy</a> and in development since Checker is a tool developed by the GPT Team to improve the process of grantee evaluation and application reviews. Checker is poised to revolutionize our grant review process in several ways:</p>
+<ul>
+<li><strong>Automated Review</strong>: Checker automates the evaluation of grant applications at scale, ensuring a more efficient and consistent review.</li>
+<li><strong>Enhanced Transparency</strong>: Utilizing AI/LLM technology, Checker allows for a transparent review process where community members and applicants can better understand how evaluations are conducted.</li>
+<li><strong>Dynamic Application System</strong>: With Checker, we’re moving towards a system where grantees can self-service their reviews, breaking free from the constraints of predefined application windows.</li>
+</ul>
+<p><a class="mention" href="https://gov.gitcoin.co/u/giliomeejg">@giliomeejg</a> has been leading the development, with feedback from the rest of the GPT Workstream, including <a class="mention" href="https://gov.gitcoin.co/u/sejalrekhan">@sejalrekhan</a> , <a class="mention" href="https://gov.gitcoin.co/u/m0nkeyfl0wer">@M0nkeyFl0wer</a> , <a class="mention" href="https://gov.gitcoin.co/u/jon-spark-eco">@jon-spark-eco</a> , <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> , and myself. The goal is to use Checker and actively contribute to its evolution and growth.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/giliomeejg">@giliomeejg</a> created a video to show a sneak preview of the tool. You can check that out <a href="https://www.youtube.com/watch?v=Mf-wj1FKSY8" rel="noopener nofollow ugc">here</a>.</p>
+<h1><a name="futures-1" class="anchor" href="https://gov.gitcoin.co#futures-1"></a>Futures</h1>
+<p>In addition to the current work on Checker, we have a larger vision that includes the following:</p>
+<ul>
+<li><strong>Integrations</strong>: Checker could integrate with platforms like GitHub to analyze project metrics, offering a deeper insight into each project’s development activity and community engagement.</li>
+<li><strong>Enhanced Customization</strong>: Checker will allow round organizers to customize evaluation criteria to suit the specific goals of different funding rounds.</li>
+<li><strong>Integration with Other Gitcoin Tools</strong>: Checker is being designed to integrate with other Gitcoin tools like Grants Stack, enhancing its functionality and user experience.</li>
+</ul>
+<h1><a name="conclusion-2" class="anchor" href="https://gov.gitcoin.co#conclusion-2"></a>Conclusion</h1>
+<p>Checker is not just a tool; it’s a vision for a more efficient, objective, and transparent future in grant application reviews. As we test and refine Checker internally, we are excited about its possibilities for our community and the broader ecosystem of grantees we support.</p>
+<p>We invite your feedback, suggestions, and collaborations to ensure Checker evolves in a direction that aligns with our collective needs and aspirations.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-checker/17292/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-checker/17292/1
+        Mon, 18 Dec 2023 11:35:52 +0000
+gov.gitcoin.co-post-17292-1
+Introducing: Checker
+      
+
+

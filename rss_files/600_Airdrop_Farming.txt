@@ -1,0 +1,205 @@
+
+
+
+Airdrop Farming
+https://gov.gitcoin.co/t/airdrop-farming/10938
+    # Airdrop Farming
+
+## Purpose
+
+Inform stakeholders of the current mitigation efforts and current plans for future mitigation. Align our understanding and definitions internally and externally. Discuss the potential solutions.
+
+## Overview
+
+Quadratic Funding grants rounds run on Gitcoin are an experiment in a new form of democratic decision making. The legitimacy of Gitcoin’s Grants protocol still depends on ensuring a few key factors:
+
+* Sybil attacks are detected and mitigated
+* Collusion is thwarted and not allowed
+* Matching pool funds continue to be bountiful
+* The community shows up to fund and offer their opinion (via donations) on how matching pool funds should be allocated
+
+These factors rely on a decision-making policy that has transparent and rigorously followed guidelines and an effective anti-fraud program.
+
+Lately, we have seen a substantial behavior increase which we believe threatens the integrity of the Gitcoin Grants system. We call it “airdrop farming”; users whose donations are driven primarily by the promise of an airdrop. This post highlights the findings of our internal discussions about how to define, recognize, and respond to this behavior.
+
+### Definitions
+
+**Airdrop Farming** - The act of donating with the intention of getting an airdrop, not for the intention of signaling support for that public good in a QF round
+
+**Sybil Attack** - Anytime a single actor donates to a single grant using multiple user accounts within a single QF round
+
+**Sybil Account** - One of multiple accounts controlled by a single actor
+
+**Sybil Behavior** - Known common actions of sybil accounts
+
+**Sybil Donation** - A donation by a sybil account
+
+**Actor** - An individual human who may control one or multiple accounts
+
+**User Account or Account** - A unique user account which logs into Gitcoin for participation in a QF round
+
+**Squelching** - Squelching is a function which disables the accounts eligibility to affect matching pool allocations
+
+**Squelched Account** - Donations from a squelched account do not affect matching pool allocations
+
+**Sybil Account Detection** - A combination of manual and algorithmic processes used to detect & squelch sybil accounts
+
+### Current State
+
+***It is always unacceptable for a user to make donations from different/multiple user accounts to a single grant within a QF round***
+
+Airdrop farming with multiple accounts is almost always a [sybil attack](https://en.m.wikipedia.org/wiki/Sybil_attack) on [quadratic funding](https://qf.gitcoin.co/) grants rounds.
+
+* It distorts how the matching pool is distributed, whether intentionally or unintentionally
+* It encourages sybil attacks
+* It creates misaligned incentives for projects to not share or talk about their future plans
+
+This behavior is a sybil attack in that calculations in the modified quadratic funding algorithm are affected in the same way as any other sybil attack, though the motivation may be different.
+
+Although the damage may be unintentional on the part of the donor, the effect is the same. If grants receive donations from more unique user accounts than unique actors, it directs matching pool funds away from grants which do not engage in this behavior.
+
+***Accounts which participate in a sybil attack, sybil donations, or known sybil behaviors may be squelched***
+
+Sybil accounts will lose their ability to affect matching pool allocations. The community has consented to QF rounds without fraud. By participating in a sybil attack, the account is signaling an intent to participate in a way that has not been consented to by the Gitcoin community.
+
+User accounts may be squelched manually or algorithmically. This allows airdrop farmers to continue farming/donating (their intended action) without diverting matching funds from the intended outcomes of the community.
+
+Any account which is squelched algorithmically is reassessed every time the Sybil Account Detection process is run.
+
+***Airdrop farming by a single actor using a single account is not a sybil behavior***
+
+A single actor is not considered a sybil attack, however, there is reason to state that a single actor using a single account to donate could be considered part of a sybil attack in the future. For example, if a grant was to pay an influencer who then offers to reimburse followers who donate, this would be considered a sybil attack in addition to QUID PRO QUO.
+
+***Ignorance should not be allowed to be used as an excuse.***
+
+All sybil donations should be removed from eligibility to affect the matching pool; this means that the original user's intent would be preserved, but no other grant would be harmed by the signal distortion. We need to bolster our training efforts to ensure donors are aware of this issue. This policy also would help our user education process by incentivizing grants to actively discourage this behavior, since grants with only legitimate one-account-per-user donations will be advantaged in the matching pool allocations.
+
+### Conclusion
+
+There may be edge case circumstances where a user may have legitimate reasons for creating an additional account and giving donations from both accounts. An example would be a young programmer who wants to give money to a cause which is illegal in the country where her parents still live, but also wants to make publicly identifiable donations to other causes. However, **we should never allow any person to make donations from multiple accounts to a single grant. If we do not enforce "one person, one donation", we will quickly see the legitimacy of the system overrun with behaviors that exploit it, whether knowingly or unknowingly.**
+
+## Next Steps
+
+FDD will perform a data analysis to understand how much airdrop farming has impacted matching allocations in the past and how to best mitigate the negative effects and promote positive externalities.
+
+* Develop a data model which can reliability identify airdrop farming separate from sybil behavior
+* Understand an airdrop tax amount, how much the average grant has lost due to illegitimate grants
+* An understanding of methods for regulation such as:
+  * taxing the recipients the “airdrop tax” to return
+  * Gradual sanctions applied to trust bonus
+  * Sybil stories which may be added to passport
+  * Methods for incentivizing desirable behavior; signaling for public goods funding
+
+Shout out to @kyle @annika @octopus @nollied @Sirlupinwatson @tjayrush @danlessa @kylin and @connor
+Tue, 27 Sep 2022 21:34:46 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Airdrop Farming
+ccerv1
+
+            <p>Great post!</p>
+<p>I think we can be more precise in differentiating between a user operating <em>multiple usernames</em> + multiple wallet addresses and a user with a <em>single username</em> + multiple wallet addresses.</p>
+<p>Of course, both are Sybil attacks if they are cycling accounts to fund the same grant(s).</p>
+<p>However, the more benign attack is a user with a <em>single username</em> + multiple wallet addresses. This is much more likely to be airdrop farming and, like you say, allows airdrop farmers to continue farming/donating (their intended action) without diverting matching funds from the intended outcomes of the community.</p>
+<p>(Whether this type of quid pro quo behavior violates the community’s grant eligibility requirements is a separate matter.)</p>
+          <p><a href="https://gov.gitcoin.co/t/airdrop-farming/10938/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/airdrop-farming/10938/3
+        Tue, 27 Sep 2022 21:34:46 +0000
+gov.gitcoin.co-post-10938-3
+Airdrop Farming
+      
+
+Airdrop Farming
+tjayrush
+
+            <p>Kudos to Joe and anyone else involved in putting this together. It’s very well done, clear, and moves the conversation forward.</p>
+<p>I agree with much of this – especially the idea of <code>squelching</code> and also the idea that some people are doing things that are totally natural and justified but that doesn’t mean those donations should be matched.</p>
+<p>The other thing that comes forward is the need to educate people about the rules, but this feels like a user flow issue on the website. Are users notified on the website when they’ve been squelched? Is there any chance of identifying potential <code>squelchees</code> prior to them making the donations?</p>
+          <p><a href="https://gov.gitcoin.co/t/airdrop-farming/10938/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/airdrop-farming/10938/2
+        Fri, 17 Jun 2022 11:16:35 +0000
+gov.gitcoin.co-post-10938-2
+Airdrop Farming
+      
+
+Airdrop Farming
+DisruptionJoe
+
+            <h1>
+<a name="airdrop-farming-1" class="anchor" href="https://gov.gitcoin.co#airdrop-farming-1"></a>Airdrop Farming</h1>
+<h2>
+<a name="purpose-2" class="anchor" href="https://gov.gitcoin.co#purpose-2"></a>Purpose</h2>
+<p>Inform stakeholders of the current mitigation efforts and current plans for future mitigation. Align our understanding and definitions internally and externally. Discuss the potential solutions.</p>
+<h2>
+<a name="overview-3" class="anchor" href="https://gov.gitcoin.co#overview-3"></a>Overview</h2>
+<p>Quadratic Funding grants rounds run on Gitcoin are an experiment in a new form of democratic decision making. The legitimacy of Gitcoin’s Grants protocol still depends on ensuring a few key factors:</p>
+<ul>
+<li>Sybil attacks are detected and mitigated</li>
+<li>Collusion is thwarted and not allowed</li>
+<li>Matching pool funds continue to be bountiful</li>
+<li>The community shows up to fund and offer their opinion (via donations) on how matching pool funds should be allocated</li>
+</ul>
+<p>These factors rely on a decision-making policy that has transparent and rigorously followed guidelines and an effective anti-fraud program.</p>
+<p>Lately, we have seen a substantial behavior increase which we believe threatens the integrity of the Gitcoin Grants system. We call it “airdrop farming”; users whose donations are driven primarily by the promise of an airdrop. This post highlights the findings of our internal discussions about how to define, recognize, and respond to this behavior.</p>
+<h3>
+<a name="definitions-4" class="anchor" href="https://gov.gitcoin.co#definitions-4"></a>Definitions</h3>
+<p><strong>Airdrop Farming</strong> - The act of donating with the intention of getting an airdrop, not for the intention of signaling support for that public good in a QF round</p>
+<p><strong>Sybil Attack</strong> - Anytime a single actor donates to a single grant using multiple user accounts within a single QF round</p>
+<p><strong>Sybil Account</strong> - One of multiple accounts controlled by a single actor</p>
+<p><strong>Sybil Behavior</strong> - Known common actions of sybil accounts</p>
+<p><strong>Sybil Donation</strong> - A donation by a sybil account</p>
+<p><strong>Actor</strong> - An individual human who may control one or multiple accounts</p>
+<p><strong>User Account or Account</strong> - A unique user account which logs into Gitcoin for participation in a QF round</p>
+<p><strong>Squelching</strong> - Squelching is a function which disables the accounts eligibility to affect matching pool allocations</p>
+<p><strong>Squelched Account</strong> - Donations from a squelched account do not affect matching pool allocations</p>
+<p><strong>Sybil Account Detection</strong> - A combination of manual and algorithmic processes used to detect &amp; squelch sybil accounts</p>
+<h3>
+<a name="current-state-5" class="anchor" href="https://gov.gitcoin.co#current-state-5"></a>Current State</h3>
+<p><em><strong>It is always unacceptable for a user to make donations from different/multiple user accounts to a single grant within a QF round</strong></em></p>
+<p>Airdrop farming with multiple accounts is almost always a <a href="https://en.m.wikipedia.org/wiki/Sybil_attack">sybil attack</a> on <a href="https://qf.gitcoin.co/">quadratic funding</a> grants rounds.</p>
+<ul>
+<li>It distorts how the matching pool is distributed, whether intentionally or unintentionally</li>
+<li>It encourages sybil attacks</li>
+<li>It creates misaligned incentives for projects to not share or talk about their future plans</li>
+</ul>
+<p>This behavior is a sybil attack in that calculations in the modified quadratic funding algorithm are affected in the same way as any other sybil attack, though the motivation may be different.</p>
+<p>Although the damage may be unintentional on the part of the donor, the effect is the same. If grants receive donations from more unique user accounts than unique actors, it directs matching pool funds away from grants which do not engage in this behavior.</p>
+<p><em><strong>Accounts which participate in a sybil attack, sybil donations, or known sybil behaviors may be squelched</strong></em></p>
+<p>Sybil accounts will lose their ability to affect matching pool allocations. The community has consented to QF rounds without fraud. By participating in a sybil attack, the account is signaling an intent to participate in a way that has not been consented to by the Gitcoin community.</p>
+<p>User accounts may be squelched manually or algorithmically. This allows airdrop farmers to continue farming/donating (their intended action) without diverting matching funds from the intended outcomes of the community.</p>
+<p>Any account which is squelched algorithmically is reassessed every time the Sybil Account Detection process is run.</p>
+<p><em><strong>Airdrop farming by a single actor using a single account is not a sybil behavior</strong></em></p>
+<p>A single actor is not considered a sybil attack, however, there is reason to state that a single actor using a single account to donate could be considered part of a sybil attack in the future. For example, if a grant was to pay an influencer who then offers to reimburse followers who donate, this would be considered a sybil attack in addition to QUID PRO QUO.</p>
+<p><em><strong>Ignorance should not be allowed to be used as an excuse.</strong></em></p>
+<p>All sybil donations should be removed from eligibility to affect the matching pool; this means that the original user’s intent would be preserved, but no other grant would be harmed by the signal distortion. We need to bolster our training efforts to ensure donors are aware of this issue. This policy also would help our user education process by incentivizing grants to actively discourage this behavior, since grants with only legitimate one-account-per-user donations will be advantaged in the matching pool allocations.</p>
+<h3>
+<a name="conclusion-6" class="anchor" href="https://gov.gitcoin.co#conclusion-6"></a>Conclusion</h3>
+<p>There may be edge case circumstances where a user may have legitimate reasons for creating an additional account and giving donations from both accounts. An example would be a young programmer who wants to give money to a cause which is illegal in the country where her parents still live, but also wants to make publicly identifiable donations to other causes. However, <strong>we should never allow any person to make donations from multiple accounts to a single grant. If we do not enforce “one person, one donation”, we will quickly see the legitimacy of the system overrun with behaviors that exploit it, whether knowingly or unknowingly.</strong></p>
+<h2>
+<a name="next-steps-7" class="anchor" href="https://gov.gitcoin.co#next-steps-7"></a>Next Steps</h2>
+<p>FDD will perform a data analysis to understand how much airdrop farming has impacted matching allocations in the past and how to best mitigate the negative effects and promote positive externalities.</p>
+<ul>
+<li>Develop a data model which can reliability identify airdrop farming separate from sybil behavior</li>
+<li>Understand an airdrop tax amount, how much the average grant has lost due to illegitimate grants</li>
+<li>An understanding of methods for regulation such as:
+<ul>
+<li>taxing the recipients the “airdrop tax” to return</li>
+<li>Gradual sanctions applied to trust bonus</li>
+<li>Sybil stories which may be added to passport</li>
+<li>Methods for incentivizing desirable behavior; signaling for public goods funding</li>
+</ul>
+</li>
+</ul>
+<p>Shout out to <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a> <a class="mention" href="https://gov.gitcoin.co/u/octopus">@octopus</a> <a class="mention" href="https://gov.gitcoin.co/u/nollied">@nollied</a> <a class="mention" href="https://gov.gitcoin.co/u/sirlupinwatson">@Sirlupinwatson</a> <a class="mention" href="https://gov.gitcoin.co/u/tjayrush">@tjayrush</a> <a class="mention" href="https://gov.gitcoin.co/u/danlessa">@danlessa</a> <a class="mention" href="https://gov.gitcoin.co/u/kylin">@kylin</a> and <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a></p>
+          <p><a href="https://gov.gitcoin.co/t/airdrop-farming/10938/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/airdrop-farming/10938/1
+        Wed, 15 Jun 2022 10:41:24 +0000
+gov.gitcoin.co-post-10938-1
+Airdrop Farming
+      
+
+

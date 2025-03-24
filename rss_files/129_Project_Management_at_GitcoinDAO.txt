@@ -1,0 +1,426 @@
+
+
+
+Project Management at GitcoinDAO
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523
+    # Intro
+
+@tigress , @june , and @puncar-dev would like to present our suggestions for the standardization of our project/task management process within GitcoinDAO. We genuinely believe that flexibility within workstreams and initiatives is essential, but we should all speak the same language. Here we’ll focus only on core principles and keep space for specific workstream needs.
+
+**This initial proposal is a request for comments – we would appreciate your view on this so we can prepare a final recommendation for the DAO (CSDO).**
+
+# Problem statement
+
+The Action Items DB (Notion Database ([Link](https://www.notion.so/gitcoin/b349e7d525064335b4f8f6ae34b2cd6c?v=58412819cbbc4d89bc31c963d53c5866))) is the centerpiece of all our project and/or task management activities at GitcoinDAO.
+
+This database should contain all the tasks and projects we are executing on. For this reason, this database must be in good shape and well maintained in terms of structure and content. Currently, every workstream uses it slightly differently, increasing the database's complexity and making it harder to set up individual instances.
+
+Therefore, we need to find an alignment between workstreams to use the database similarly and ensure consistency in the naming (the same word should mean the same across the workstreams), but keep the flexibility to ensure that the database works well for each workstream.
+
+From the DAOops perspective, all initiatives need to be able to record their tasks and projects on their board and then report on successful project completion on weekly DAOops calls. But MMM might need something slightly different; thus, we must find a flexible solution for everyone.
+
+# Project Management Structure
+
+Through analyzing the project management systems at DAOops, FDD, and MMM, we have concluded that there are two general workflows: the execution workflow, and the reporting workflow. The execution workflow refers to actions for completing work, and the reporting workflow refers to how the completed work relates to achieving objectives and key results.
+
+We suggest using the Action Items DB and the Initiatives DB (Notion Database ([Link](https://www.notion.so/gitcoin/c797e0f0cf43404fb9770e59e3dfae50?v=e9f5014af06241fda400226da70e64b1))) to manage these two workflows. Below is the overall structure:
+
+![|624x765](upload://oXd9xVbmZTd55LfRwr4rAPSgdXR.jpeg)
+
+The Action Items DB will contain tasks, projects, and key results. The Initiatives DB will contain initiatives and their related objectives, and are also directly linked to projects and key results from the Action Items DB.
+
+It’s up to each workstream to decide how many steps they want to have in their project management process, and if they want to introduce a new tag or subcategory. However, it is vital to keep alignment on the basic structure.
+
+## Action Items DB
+
+### Action Item
+
+An Action Item is the centerpiece of the Action Items DB. This field can be used to represent tasks, projects, or both – this distinction will vary across workstreams.
+
+If used to represent a project, the field can still be used to incorporate tasks as another level of granularity. Using this field for both projects and tasks is possible by making use of filters and establishing clear relations between tasks and projects.
+
+Or, the Action Item field can be used mainly as tasks, and bundled together into projects.
+
+Alternatively Action Items can also directly relate to an Initiative. There is a lot of flexibility for WorkStreams but its important to keep the same flow:
+
+1. Key Results - represents what Initiatives promised to accomplish for the budget they have been given, usually a seasonal initiative
+2. Project - break down of key results to a smaller initiatives that takes couple of weeks to complete
+3. Task - smallest piece of work that doesnt take more than couple days to complete
+
+### Templates
+
+The templates we have created will represent the various ways that Action Items can be used in the Action Items DB. Currently, there are three templates that can be used when creating an Action Item:
+
+![|222x107](upload://yFL5qkfREFavqECKLHksMF7ydxG.png)
+
+1. Project Template
+
+A project is an Action Item within the Action Items DB that represents a multiple-week effort to be achieved. A project can contribute to successfully completing a Key Result of an Initiative. Additionally, some projects may also stand on their own (e.g. research projects), thus enabling autonomy within workstreams.
+
+Projects may contain multiple tasks; therefore, the project template enables seamless task creation from within it.
+
+![|624x119](upload://5QezEwoYJDLBAPZTY3JkDA8QNjv.png)
+
+2. Task Template
+
+A Task functions like a Project, but is used as an additional level of granularity. A Task can roll up and relate to a separate, larger Action Item. This can be done by marking Tasks as dependencies on a Project or Key Result.
+
+A task can be created from a project’s Notion page or separately in the Action Items DB and then tagged to a project.
+
+![|624x125](upload://cnoJbsaOzvoe2IPvViJIycgqnm8.png)
+
+3. Key Results Template
+
+A Key Result is the third type besides Tasks and Projects for which the Action Items DB can be used. The set of Key Results represents what Initiatives promised to accomplish for the budget they have been given and always relates to an objective. It's important to keep that in mind when executing on projects or tasks. Majority projects should contribute partially or fully to accomplishing those key results.
+
+All initiative leads should create the key results at the beginning of the season and then they can track all projects and tasks there on top of there.
+
+![|624x363](upload://61Ua8pZhRUIaJsQvGlls0E0L7ZZ.jpeg)
+
+## Initiatives DB
+
+### Initiatives
+
+An Initiative is a structure in the Initiatives DB. It represents a grouping element to gather a group of people (=squad or team) around a specific objective and set of key results. An initiative has a "lead person" which is the Initiative Owner, and others are contributors. Large initiatives are executed as a set of projects to achieve key results. Smaller initiatives might not use projects to bundle tasks and instead directly execute tasks to achieve the key results.
+
+Below, you can see an example of an initiative wide view divided by projects.
+
+![|624x239](upload://yfhPtAlejuUDFL5KChG6T9aKQZy.jpeg)
+
+### Objective
+
+An objective is a precise sentence describing what we intend to achieve by the end of the season for a given Initiative(s), and the overarching goal for an initiative. To realize and deliver option the objective a set of key results is defined.
+
+### Gitcoin Essential Intent (EI)
+
+The Gitcoin EI is situated at DAO level and represents long term “30 year” objectives. The EI outlineswhat we are all trying to accomplish together as a DAO, and all our activities should directly or indirectly contribute to that.
+
+# Recommendation for project & task workflow
+
+Every project or task can be in various stages, and to align on naming conventions, June and the MMM team have prepared this great workflow. FDD also uses this workflow.
+
+It is highly recommended to use these same statuses when dealing with projects and tasks, even though you might not use all of them. Creating additional statuses for a single initiative or project can create confusion in the DAO and add up to increase complexity of the Notion databases, which is to be refrained from!
+
+### Happy Path![|624x188](upload://sth0yATLcd5x7nb4RquNvjiqSfJ.png)
+
+### Unhappy Path
+
+![|624x351](upload://hRSZvlcB7mKKcvUOl9P6HnYOG15.png)
+
+|Status|Description|
+| --- | --- |
+|Future|Backlog for all projects or tasks related to the initiative(s)|
+|Next up|Prioritized projects/tasks to be started within the next two weeks|
+|In progress|Projects/Tasks that are actively being worked on|
+|In review|Projects/Tasks being reviewed (optional, only if project requires review)|
+|Blocked|Projects/Tasks that are currently blocked|
+|On hold|Deprioritized Projects/Tasks before they get back to “future” or dropped to “won’t do”|
+|Done|Completed Projects/Tasks (woo!)|
+|Won’t do|Dropped Projects/Tasks|
+
+**We would leave this proposal up whole next week for discussion and then propose a final version in about 2 weeks from now to CSDO. If ratified we would like to work with workstreams during October to incorporate those standards.**
+
+**Please let us know if there is anything unclear from this proposal or if you would suggest any modifications.**
+Tue, 27 Sep 2022 19:47:14 +0000
+🤖 DAO Governance and Vision
+
+
+Project Management at GitcoinDAO
+puncar
+
+            <p>Good point Kris, I think we should have an objective as a guiding NorthStar for every initiative, but I agree that it doesn’t necessarily need to be within the initiative database.</p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/11
+        Tue, 27 Sep 2022 19:47:14 +0000
+gov.gitcoin.co-post-11523-11
+Project Management at GitcoinDAO
+      
+
+Project Management at GitcoinDAO
+puncar
+
+            <p>Great point Bob and I admit those partial screenshots might not give the best sense of how the templates will look, let me repost it here in full.</p>
+<h3>
+<a name="innitiative-page-1" class="anchor" href="https://gov.gitcoin.co#innitiative-page-1"></a>Innitiative page</h3>
+<p>It will display all project and its task on the board<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/40ebd9882aca89351314e125b7f77496b7a8e22d.jpeg" data-download-href="/uploads/short-url/9gjRyzGhhpGhZeBQ5zC3DnSdiiN.jpeg?dl=1" title="Screen Shot 2022-09-27 at 3.34.55 PM"><img src="/uploads/db4391/optimized/2X/4/40ebd9882aca89351314e125b7f77496b7a8e22d_2_690x303.jpeg" alt="Screen Shot 2022-09-27 at 3.34.55 PM" data-base62-sha1="9gjRyzGhhpGhZeBQ5zC3DnSdiiN" width="690" height="303" srcset="/uploads/db4391/optimized/2X/4/40ebd9882aca89351314e125b7f77496b7a8e22d_2_690x303.jpeg, /uploads/db4391/optimized/2X/4/40ebd9882aca89351314e125b7f77496b7a8e22d_2_1035x454.jpeg 1.5x, /uploads/db4391/optimized/2X/4/40ebd9882aca89351314e125b7f77496b7a8e22d_2_1380x606.jpeg 2x" data-dominant-color="F9F9F7"></a></div><p></p>
+<h3>
+<a name="project-page-template-2" class="anchor" href="https://gov.gitcoin.co#project-page-template-2"></a>Project page (template)</h3>
+<p>That will show a description of the project, any additional details, and all the tasks that belong to that project</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/df26b51c9e7776fcca94212a5a4adc7cf09c6d88.png" data-download-href="/uploads/short-url/vQ5pbJmhIXLTUL4iEFWtozYfuf6.png?dl=1" title="Screen Shot 2022-09-27 at 3.35.53 PM"><img src="/uploads/db4391/optimized/2X/d/df26b51c9e7776fcca94212a5a4adc7cf09c6d88_2_690x242.png" alt="Screen Shot 2022-09-27 at 3.35.53 PM" data-base62-sha1="vQ5pbJmhIXLTUL4iEFWtozYfuf6" width="690" height="242" srcset="/uploads/db4391/optimized/2X/d/df26b51c9e7776fcca94212a5a4adc7cf09c6d88_2_690x242.png, /uploads/db4391/optimized/2X/d/df26b51c9e7776fcca94212a5a4adc7cf09c6d88_2_1035x363.png 1.5x, /uploads/db4391/optimized/2X/d/df26b51c9e7776fcca94212a5a4adc7cf09c6d88_2_1380x484.png 2x" data-dominant-color="FAFAF9"></a></div><p></p>
+<h3>
+<a name="task-page-template-3" class="anchor" href="https://gov.gitcoin.co#task-page-template-3"></a>Task page (template)</h3>
+<p>Similar to the project page (template), but does not have subtasks, instead shows the project to which this task belongs and additional details of the project itself.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/542ce817052bd412d44ca95b80d5f61338ff8ded.png" data-download-href="/uploads/short-url/c0EjO1YD2QFK4S6somOxucMGOgl.png?dl=1" title="Screen Shot 2022-09-27 at 3.37.48 PM"><img src="/uploads/db4391/optimized/2X/5/542ce817052bd412d44ca95b80d5f61338ff8ded_2_690x258.png" alt="Screen Shot 2022-09-27 at 3.37.48 PM" data-base62-sha1="c0EjO1YD2QFK4S6somOxucMGOgl" width="690" height="258" srcset="/uploads/db4391/optimized/2X/5/542ce817052bd412d44ca95b80d5f61338ff8ded_2_690x258.png, /uploads/db4391/optimized/2X/5/542ce817052bd412d44ca95b80d5f61338ff8ded_2_1035x387.png 1.5x, /uploads/db4391/optimized/2X/5/542ce817052bd412d44ca95b80d5f61338ff8ded_2_1380x516.png 2x" data-dominant-color="FAFAF9"></a></div><p></p>
+<p>Hope this makes it more clear, and we will provide support to anyone who would be struggling with the setup.</p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/10
+        Tue, 27 Sep 2022 19:44:08 +0000
+gov.gitcoin.co-post-11523-10
+Project Management at GitcoinDAO
+      
+
+Project Management at GitcoinDAO
+bobjiang
+
+            <p>Thanks a lot, <a class="mention" href="https://gov.gitcoin.co/u/puncar">@puncar</a> and your team for this initiative!</p>
+<p>one comment is in the area <code>template</code> - <a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523#templates-6" class="inline-onebox">Project Management at GitcoinDAO</a></p>
+<p>I didn’t get it clear for Project Template and Task Template with the screenshots. (e.g in project template, the screenshot says “task 5”. Is it task or project? In task template, nothing shows it is a task but some details and key dates and documents)</p>
+<p>The last comment is whether you could have demo or good practice for how to use this guide (once it is approved).</p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/9
+        Tue, 27 Sep 2022 06:48:56 +0000
+gov.gitcoin.co-post-11523-9
+Project Management at GitcoinDAO
+      
+
+Project Management at GitcoinDAO
+krrisis
+
+            <p>Great overview, thanks for all your hard work on this Puncar!</p>
+<p>Only thing I wonder is if we need ‘objectives’ in the initiatives database, this might be an unnecessary layer, but maybe I’m missing something here?</p>
+<p>If each initiative has one objective (which seems to be the case reading your description), what’s the use of adding this layer here? It might be enough to just directly link to the key results per initiative?</p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/8
+        Mon, 26 Sep 2022 18:06:11 +0000
+gov.gitcoin.co-post-11523-8
+Project Management at GitcoinDAO
+      
+
+Project Management at GitcoinDAO
+puncar
+
+            <aside class="quote no-group" data-username="shawn16400" data-post="6" data-topic="11523">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar"> shawn16400:</div>
+<blockquote>
+<p>Looking forward - how do you see an executive level board review using the database(s)? Would there be a view that can be shown to illustrate the overall health of the season?</p>
+</blockquote>
+</aside>
+<p>Hey Shawn, yes that’s a great point, and yes it will be possible as all data will live in the same database in the same structure, it will be a dream for any data analyst to run reports on it.  We have not planned reporting dashboards as part of this project, but its definitely a feature of this concept.</p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/7
+        Sun, 25 Sep 2022 19:32:45 +0000
+gov.gitcoin.co-post-11523-7
+Project Management at GitcoinDAO
+      
+
+Project Management at GitcoinDAO
+shawn16400
+
+            <p>Team, This is great work and if implemented, can make results reporting and budgeting much more simple.  The project framework makes sense: an Initiative may hold several projects which may hold many tasks.  Yes there can be projects / tasks which do not ladder up to an initiative, but those should be the exception.<br>
+I had to diagram it out - starting with the budget proposal to see if it made sense.  Initially the relationships between key results, objectives, and Initiatives felt a bit clunky, but it seems to work in my relatively simple domain.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d78374e1a6498899e0c5b50834b9872db1f08de8.png" data-download-href="/uploads/short-url/uKwiDifKqTg4pUsEgKGsUCQVeVG.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/d/d78374e1a6498899e0c5b50834b9872db1f08de8_2_690x420.png" alt="image" data-base62-sha1="uKwiDifKqTg4pUsEgKGsUCQVeVG" width="690" height="420" srcset="/uploads/db4391/optimized/2X/d/d78374e1a6498899e0c5b50834b9872db1f08de8_2_690x420.png, /uploads/db4391/optimized/2X/d/d78374e1a6498899e0c5b50834b9872db1f08de8_2_1035x630.png 1.5x, /uploads/db4391/original/2X/d/d78374e1a6498899e0c5b50834b9872db1f08de8.png 2x" data-small-upload="/uploads/db4391/optimized/2X/d/d78374e1a6498899e0c5b50834b9872db1f08de8_2_10x10.png"></a></div><p></p>
+<p>Looking forward - how do you see an executive level board review using the database(s)? Would there be a view that can be shown to illustrate the overall health of the season?</p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/6
+        Thu, 22 Sep 2022 00:37:18 +0000
+gov.gitcoin.co-post-11523-6
+Project Management at GitcoinDAO
+      
+
+Project Management at GitcoinDAO
+tigress
+
+            <aside class="quote no-group" data-username="safder" data-post="4" data-topic="11523">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/safder/48/5934_2.png" class="avatar"> safder:</div>
+<blockquote>
+<p>what’s the “Why”</p>
+</blockquote>
+</aside>
+<p>The bigger WHY behind the proposed approach has several answers to it.</p>
+<p>TLDR: it’s all about coordination <img src="https://gov.gitcoin.co/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/puncar">@puncar</a>’s take is: if you need to track your todo only for yourself, you can and probably should track it in the tool of your choice. But when we need to cooperate or share information with each other, we need to speak the same language, otherwise, we are creating friction or we just won’t understand each other.</p>
+<p>And that’s why we are creating those standards, to try to establish the common language, but also to not restrict individual flexibility</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/june">@june</a> agrees with that and adds: we’re striving for easier and better collaboration &amp; it gets that much harder to do if we’re not creating the same level of transparency &amp; using the same tools/process</p>
+<p>we’re def not trying to restrict individual and even workstream flexibility - just setting the foundations for each workstream to expand upon</p>
+<p>And <strong>my stance</strong> is: our ideas are borrowed from basic Kanban as a methodology to manage work in progress and enable transparency. of course there is a whole lot more which can be done with Kanban. we are touching the tip of the iceberg.</p>
+<p>and we reuse the tools, such as Notion, which are already in place and adopted by the DAO</p>
+<p>Hope I am not embarrassing you - the WHY is not that spectacular <img src="https://gov.gitcoin.co/images/emoji/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/5
+        Tue, 20 Sep 2022 17:14:05 +0000
+gov.gitcoin.co-post-11523-5
+Project Management at GitcoinDAO
+      
+
+Project Management at GitcoinDAO
+safder
+
+            <p>Really happy to see this conversation started! Would love to arrive at a consistent understanding of how things are done in the DAO - <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a> led a great discussion on the importance of documenting “how we work” in addition to just “what we work on”, and I’m convinced that better processes and documentation in that realm will prevent balls from being dropped and reduce coordination failures.</p>
+<p>I’d love to hear why this way of documenting and managing tasks is being suggested - in other words, what’s the “Why” for each of the elements of this model? Personally, I’ve tried and struggled with using Notion for task management, and have created my own personal workflow that works for me (currently using a combination of Asana + Sunsama). With all process adoption proposals within a self-managing organization, I think there needs to be a strong “why” for people to switch from tools/structures/processes they are currently using. Fortunately there’s a ton of research on this topic so I think we can come up with something that has been demonstrated to lead to better team and individual contributor health.</p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/4
+        Mon, 19 Sep 2022 23:34:13 +0000
+gov.gitcoin.co-post-11523-4
+Project Management at GitcoinDAO
+      
+
+Project Management at GitcoinDAO
+tigress
+
+            <p>Yes, and what I am seeing also is that the level of freedom and autonomy of workstreams and contributors is not yet made visible in this document.</p>
+<p>For example, I personally believe that not 100% of all the work must be aligned and traceable to a strategic element. Workstreams should have the authority of e.g. running their own research projects. The Pareto Principle of 80% working towards achieving Initiatives and 20% explorative, emergent work seems to be feasible to me.</p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/3
+        Mon, 19 Sep 2022 10:47:37 +0000
+gov.gitcoin.co-post-11523-3
+Project Management at GitcoinDAO
+      
+
+Project Management at GitcoinDAO
+DisruptionJoe
+
+            <p>This is a great start. You have my consider suggestions on the original doc. I do think it is impactful to point out that you formatted this in a way that workstream reps in CSDO can set STRATEGY level objectives and initiatives together, but the workstreams would be empowered to solve what the best opportunities, features, user stories, projects, and tasks would be in a bottom up way if preferred.</p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/2
+        Sun, 18 Sep 2022 16:34:03 +0000
+gov.gitcoin.co-post-11523-2
+Project Management at GitcoinDAO
+      
+
+Project Management at GitcoinDAO
+puncar
+
+            <h1>
+<a name="intro-1" class="anchor" href="https://gov.gitcoin.co#intro-1"></a>Intro</h1>
+<p><a class="mention" href="https://gov.gitcoin.co/u/tigress">@tigress</a> , <a class="mention" href="https://gov.gitcoin.co/u/june">@june</a> , and <a class="mention" href="https://gov.gitcoin.co/u/puncar-dev">@puncar-dev</a> would like to present our suggestions for the standardization of our project/task management process within GitcoinDAO. We genuinely believe that flexibility within workstreams and initiatives is essential, but we should all speak the same language. Here we’ll focus only on core principles and keep space for specific workstream needs.</p>
+<p><strong>This initial proposal is a request for comments – we would appreciate your view on this so we can prepare a final recommendation for the DAO (CSDO).</strong></p>
+<h1>
+<a name="problem-statement-2" class="anchor" href="https://gov.gitcoin.co#problem-statement-2"></a>Problem statement</h1>
+<p>The Action Items DB (Notion Database (<a href="https://www.notion.so/gitcoin/b349e7d525064335b4f8f6ae34b2cd6c?v=58412819cbbc4d89bc31c963d53c5866">Link</a>)) is the centerpiece of all our project and/or task management activities at GitcoinDAO.</p>
+<p>This database should contain all the tasks and projects we are executing on. For this reason, this database must be in good shape and well maintained in terms of structure and content. Currently, every workstream uses it slightly differently, increasing the database’s complexity and making it harder to set up individual instances.</p>
+<p>Therefore, we need to find an alignment between workstreams to use the database similarly and ensure consistency in the naming (the same word should mean the same across the workstreams), but keep the flexibility to ensure that the database works well for each workstream.</p>
+<p>From the DAOops perspective, all initiatives need to be able to record their tasks and projects on their board and then report on successful project completion on weekly DAOops calls. But MMM might need something slightly different; thus, we must find a flexible solution for everyone.</p>
+<h1>
+<a name="project-management-structure-3" class="anchor" href="https://gov.gitcoin.co#project-management-structure-3"></a>Project Management Structure</h1>
+<p>Through analyzing the project management systems at DAOops, FDD, and MMM, we have concluded that there are two general workflows: the execution workflow, and the reporting workflow. The execution workflow refers to actions for completing work, and the reporting workflow refers to how the completed work relates to achieving objectives and key results.</p>
+<p>We suggest using the Action Items DB and the Initiatives DB (Notion Database (<a href="https://www.notion.so/gitcoin/c797e0f0cf43404fb9770e59e3dfae50?v=e9f5014af06241fda400226da70e64b1">Link</a>)) to manage these two workflows. Below is the overall structure:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/aee5ac86bf2634c27df88aafd1eddfe2de918bb3.jpeg" data-download-href="/uploads/short-url/oXd9xVbmZTd55LfRwr4rAPSgdXR.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/a/aee5ac86bf2634c27df88aafd1eddfe2de918bb3_2_407x500.jpeg" alt="" data-base62-sha1="oXd9xVbmZTd55LfRwr4rAPSgdXR" width="407" height="500" srcset="/uploads/db4391/optimized/2X/a/aee5ac86bf2634c27df88aafd1eddfe2de918bb3_2_407x500.jpeg, /uploads/db4391/optimized/2X/a/aee5ac86bf2634c27df88aafd1eddfe2de918bb3_2_610x750.jpeg 1.5x, /uploads/db4391/optimized/2X/a/aee5ac86bf2634c27df88aafd1eddfe2de918bb3_2_814x1000.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/a/aee5ac86bf2634c27df88aafd1eddfe2de918bb3_2_10x10.png"></a></div><p></p>
+<p>The Action Items DB will contain tasks, projects, and key results. The Initiatives DB will contain initiatives and their related objectives, and are also directly linked to projects and key results from the Action Items DB.</p>
+<p>It’s up to each workstream to decide how many steps they want to have in their project management process, and if they want to introduce a new tag or subcategory. However, it is vital to keep alignment on the basic structure.</p>
+<h2>
+<a name="action-items-db-4" class="anchor" href="https://gov.gitcoin.co#action-items-db-4"></a>Action Items DB</h2>
+<h3>
+<a name="action-item-5" class="anchor" href="https://gov.gitcoin.co#action-item-5"></a>Action Item</h3>
+<p>An Action Item is the centerpiece of the Action Items DB. This field can be used to represent tasks, projects, or both – this distinction will vary across workstreams.</p>
+<p>If used to represent a project, the field can still be used to incorporate tasks as another level of granularity. Using this field for both projects and tasks is possible by making use of filters and establishing clear relations between tasks and projects.</p>
+<p>Or, the Action Item field can be used mainly as tasks, and bundled together into projects.</p>
+<p>Alternatively Action Items can also directly relate to an Initiative. There is a lot of flexibility for WorkStreams but its important to keep the same flow:</p>
+<ol>
+<li>Key Results - represents what Initiatives promised to accomplish for the budget they have been given, usually a seasonal initiative</li>
+<li>Project - break down of key results to a smaller initiatives that takes couple of weeks to complete</li>
+<li>Task - smallest piece of work that doesnt take more than couple days to complete</li>
+</ol>
+<h3>
+<a name="templates-6" class="anchor" href="https://gov.gitcoin.co#templates-6"></a>Templates</h3>
+<p>The templates we have created will represent the various ways that Action Items can be used in the Action Items DB. Currently, there are three templates that can be used when creating an Action Item:</p>
+<p><img src="/uploads/db4391/original/2X/f/f3025cdd60608fd5926f21994d70e00366f74f9c.png" alt="" data-base62-sha1="yFL5qkfREFavqECKLHksMF7ydxG" width="222" height="107"></p>
+<ol>
+<li>Project Template</li>
+</ol>
+<p>A project is an Action Item within the Action Items DB that represents a multiple-week effort to be achieved. A project can contribute to successfully completing a Key Result of an Initiative. Additionally, some projects may also stand on their own (e.g. research projects), thus enabling autonomy within workstreams.</p>
+<p>Projects may contain multiple tasks; therefore, the project template enables seamless task creation from within it.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/28f276b9e43cd20603c163227b1577750a94099d.png" data-download-href="/uploads/short-url/5QezEwoYJDLBAPZTY3JkDA8QNjv.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/2/28f276b9e43cd20603c163227b1577750a94099d_2_624x119.png" alt="" data-base62-sha1="5QezEwoYJDLBAPZTY3JkDA8QNjv" width="624" height="119" srcset="/uploads/db4391/optimized/2X/2/28f276b9e43cd20603c163227b1577750a94099d_2_624x119.png, /uploads/db4391/optimized/2X/2/28f276b9e43cd20603c163227b1577750a94099d_2_936x178.png 1.5x, /uploads/db4391/optimized/2X/2/28f276b9e43cd20603c163227b1577750a94099d_2_1248x238.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/28f276b9e43cd20603c163227b1577750a94099d_2_10x10.png"></a></div><p></p>
+<ol start="2">
+<li>Task Template</li>
+</ol>
+<p>A Task functions like a Project, but is used as an additional level of granularity. A Task can roll up and relate to a separate, larger Action Item. This can be done by marking Tasks as dependencies on a Project or Key Result.</p>
+<p>A task can be created from a project’s Notion page or separately in the Action Items DB and then tagged to a project.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/56bf35dac95bbecac973953241241b508037d2e8.png" data-download-href="/uploads/short-url/cnoJbsaOzvoe2IPvViJIycgqnm8.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/5/56bf35dac95bbecac973953241241b508037d2e8_2_624x125.png" alt="" data-base62-sha1="cnoJbsaOzvoe2IPvViJIycgqnm8" width="624" height="125" srcset="/uploads/db4391/optimized/2X/5/56bf35dac95bbecac973953241241b508037d2e8_2_624x125.png, /uploads/db4391/optimized/2X/5/56bf35dac95bbecac973953241241b508037d2e8_2_936x187.png 1.5x, /uploads/db4391/optimized/2X/5/56bf35dac95bbecac973953241241b508037d2e8_2_1248x250.png 2x" data-small-upload="/uploads/db4391/optimized/2X/5/56bf35dac95bbecac973953241241b508037d2e8_2_10x10.png"></a></div><p></p>
+<ol start="3">
+<li>Key Results Template</li>
+</ol>
+<p>A Key Result is the third type besides Tasks and Projects for which the Action Items DB can be used. The set of Key Results represents what Initiatives promised to accomplish for the budget they have been given and always relates to an objective. It’s important to keep that in mind when executing on projects or tasks. Majority projects should contribute partially or fully to accomplishing those key results.</p>
+<p>All initiative leads should create the key results at the beginning of the season and then they can track all projects and tasks there on top of there.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2a44323b4bb34ffd73905d18230ef8c30bc58ba7.jpeg" data-download-href="/uploads/short-url/61Ua8pZhRUIaJsQvGlls0E0L7ZZ.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/2/2a44323b4bb34ffd73905d18230ef8c30bc58ba7_2_624x363.jpeg" alt="" data-base62-sha1="61Ua8pZhRUIaJsQvGlls0E0L7ZZ" width="624" height="363" srcset="/uploads/db4391/optimized/2X/2/2a44323b4bb34ffd73905d18230ef8c30bc58ba7_2_624x363.jpeg, /uploads/db4391/optimized/2X/2/2a44323b4bb34ffd73905d18230ef8c30bc58ba7_2_936x544.jpeg 1.5x, /uploads/db4391/optimized/2X/2/2a44323b4bb34ffd73905d18230ef8c30bc58ba7_2_1248x726.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/2/2a44323b4bb34ffd73905d18230ef8c30bc58ba7_2_10x10.png"></a></div><p></p>
+<h2>
+<a name="initiatives-db-7" class="anchor" href="https://gov.gitcoin.co#initiatives-db-7"></a>Initiatives DB</h2>
+<h3>
+<a name="initiatives-8" class="anchor" href="https://gov.gitcoin.co#initiatives-8"></a>Initiatives</h3>
+<p>An Initiative is a structure in the Initiatives DB. It represents a grouping element to gather a group of people (=squad or team) around a specific objective and set of key results. An initiative has a “lead person” which is the Initiative Owner, and others are contributors. Large initiatives are executed as a set of projects to achieve key results. Smaller initiatives might not use projects to bundle tasks and instead directly execute tasks to achieve the key results.</p>
+<p>Below, you can see an example of an initiative wide view divided by projects.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f0044fbf2e531a9f48efdfb6641b21cc5f46c288.jpeg" data-download-href="/uploads/short-url/yfhPtAlejuUDFL5KChG6T9aKQZy.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/f/f0044fbf2e531a9f48efdfb6641b21cc5f46c288_2_624x239.jpeg" alt="" data-base62-sha1="yfhPtAlejuUDFL5KChG6T9aKQZy" width="624" height="239" srcset="/uploads/db4391/optimized/2X/f/f0044fbf2e531a9f48efdfb6641b21cc5f46c288_2_624x239.jpeg, /uploads/db4391/optimized/2X/f/f0044fbf2e531a9f48efdfb6641b21cc5f46c288_2_936x358.jpeg 1.5x, /uploads/db4391/optimized/2X/f/f0044fbf2e531a9f48efdfb6641b21cc5f46c288_2_1248x478.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/f/f0044fbf2e531a9f48efdfb6641b21cc5f46c288_2_10x10.png"></a></div><p></p>
+<h3>
+<a name="objective-9" class="anchor" href="https://gov.gitcoin.co#objective-9"></a>Objective</h3>
+<p>An objective is a precise sentence describing what we intend to achieve by the end of the season for a given Initiative(s), and the overarching goal for an initiative. To realize and deliver option the objective a set of key results is defined.</p>
+<h3>
+<a name="gitcoin-essential-intent-ei-10" class="anchor" href="https://gov.gitcoin.co#gitcoin-essential-intent-ei-10"></a>Gitcoin Essential Intent (EI)</h3>
+<p>The Gitcoin EI is situated at DAO level and represents long term “30 year” objectives. The EI outlineswhat we are all trying to accomplish together as a DAO, and all our activities should directly or indirectly contribute to that.</p>
+<h1>
+<a name="recommendation-for-project-task-workflow-11" class="anchor" href="https://gov.gitcoin.co#recommendation-for-project-task-workflow-11"></a>Recommendation for project &amp; task workflow</h1>
+<p>Every project or task can be in various stages, and to align on naming conventions, June and the MMM team have prepared this great workflow. FDD also uses this workflow.</p>
+<p>It is highly recommended to use these same statuses when dealing with projects and tasks, even though you might not use all of them. Creating additional statuses for a single initiative or project can create confusion in the DAO and add up to increase complexity of the Notion databases, which is to be refrained from!</p>
+<h3>
+<a name="happy-path624x188uploadsth0yatlcd5x7nb4rqunvjiqsfjpng-12" class="anchor" href="https://gov.gitcoin.co#happy-path624x188uploadsth0yatlcd5x7nb4rqunvjiqsfjpng-12"></a>Happy Path<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c78c053aad4d39c255100149b2a150888dcb63d7.png" data-download-href="/uploads/short-url/sth0yATLcd5x7nb4RquNvjiqSfJ.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/c/c78c053aad4d39c255100149b2a150888dcb63d7_2_624x188.png" alt="" data-base62-sha1="sth0yATLcd5x7nb4RquNvjiqSfJ" width="624" height="188" srcset="/uploads/db4391/optimized/2X/c/c78c053aad4d39c255100149b2a150888dcb63d7_2_624x188.png, /uploads/db4391/optimized/2X/c/c78c053aad4d39c255100149b2a150888dcb63d7_2_936x282.png 1.5x, /uploads/db4391/original/2X/c/c78c053aad4d39c255100149b2a150888dcb63d7.png 2x" data-small-upload="/uploads/db4391/optimized/2X/c/c78c053aad4d39c255100149b2a150888dcb63d7_2_10x10.png"></a></div>
+</h3>
+<h3>
+<a name="unhappy-path-13" class="anchor" href="https://gov.gitcoin.co#unhappy-path-13"></a>Unhappy Path</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7d3c5aab0d5250b837f67b57fb4cb0e2f2cd94fb.png" data-download-href="/uploads/short-url/hRSZvlcB7mKKcvUOl9P6HnYOG15.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/7/7d3c5aab0d5250b837f67b57fb4cb0e2f2cd94fb_2_624x351.png" alt="" data-base62-sha1="hRSZvlcB7mKKcvUOl9P6HnYOG15" width="624" height="351" srcset="/uploads/db4391/optimized/2X/7/7d3c5aab0d5250b837f67b57fb4cb0e2f2cd94fb_2_624x351.png, /uploads/db4391/optimized/2X/7/7d3c5aab0d5250b837f67b57fb4cb0e2f2cd94fb_2_936x526.png 1.5x, /uploads/db4391/original/2X/7/7d3c5aab0d5250b837f67b57fb4cb0e2f2cd94fb.png 2x" data-small-upload="/uploads/db4391/optimized/2X/7/7d3c5aab0d5250b837f67b57fb4cb0e2f2cd94fb_2_10x10.png"></a></div><p></p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Future</td>
+<td>Backlog for all projects or tasks related to the initiative(s)</td>
+</tr>
+<tr>
+<td>Next up</td>
+<td>Prioritized projects/tasks to be started within the next two weeks</td>
+</tr>
+<tr>
+<td>In progress</td>
+<td>Projects/Tasks that are actively being worked on</td>
+</tr>
+<tr>
+<td>In review</td>
+<td>Projects/Tasks being reviewed (optional, only if project requires review)</td>
+</tr>
+<tr>
+<td>Blocked</td>
+<td>Projects/Tasks that are currently blocked</td>
+</tr>
+<tr>
+<td>On hold</td>
+<td>Deprioritized Projects/Tasks before they get back to “future” or dropped to “won’t do”</td>
+</tr>
+<tr>
+<td>Done</td>
+<td>Completed Projects/Tasks (woo!)</td>
+</tr>
+<tr>
+<td>Won’t do</td>
+<td>Dropped Projects/Tasks</td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>We would leave this proposal up whole next week for discussion and then propose a final version in about 2 weeks from now to CSDO. If ratified we would like to work with workstreams during October to incorporate those standards.</strong></p>
+<p><strong>Please let us know if there is anything unclear from this proposal or if you would suggest any modifications.</strong></p>
+          <p><a href="https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/project-management-at-gitcoindao/11523/1
+        Sat, 17 Sep 2022 00:13:32 +0000
+gov.gitcoin.co-post-11523-1
+Project Management at GitcoinDAO
+      
+
+

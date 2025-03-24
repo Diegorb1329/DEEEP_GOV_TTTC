@@ -1,0 +1,107 @@
+
+
+
+Request for Proposal: Decentralized Gitcoin Avatar Builder
+https://gov.gitcoin.co/t/request-for-proposal-decentralized-gitcoin-avatar-builder/8117
+    Hello DAOfrens, 
+
+This is request for someone to come up with a new decentralized experience for creating [Gitcoin-style avatars](https://gitcoin.co/onboard/profile?steps=avatar).
+
+As we progressively decentralize Gitcoin, the Gitcoin Holdings company is interested in decentralizing the avatar builder.  
+
+We build the avatar builder so that users could celebrate their uniqueness and have a cool way of showing off their individuality on the site.  As  
+
+We also feel that there was a missed oipportunity here to leverage our [art assets](https://github.com/gitcoinco/web/tree/master/app/assets/v2/images/avatar3d) to ride the PFP boom, and perhaps fund public goods with the ETH received.
+
+An ideal candidate would be have the following principles:
+1. Simplicity - products that do ONE THING and do it WELL.
+2. Antifragility - Well-documented Decentralized products that our community can run without the centralized company.
+3. Modularity - products that easily unix-style interoperate with each other.
+
+An ideal proposal would 
+
+1. (at a minimum) 1:1 replicate the centralized experience at `https://gitcoin.co/onboard/profile?steps=avatar` but store the code/avatars in a decentralize way.
+2. (at a maximum) create a new novel way to make these avatar's into PFPs and fund public goods with them.
+
+Please include
+
+1. Who are you
+2. What is your proposal to build this
+3. What is your timeline to build this
+4. What do you need (funding, etc)
+
+Please submit your proposal as a comment on the gov forum thread.
+Sat, 14 Aug 2021 18:08:18 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Request for Proposal: Decentralized Gitcoin Avatar Builder
+polats
+
+            <h3>
+<a name="who-are-you-1" class="anchor" href="https://gov.gitcoin.co#who-are-you-1"></a>Who Are You</h3>
+<p>Heyo <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> and fellow Gitcoiners! I’m Paul Gadi, co-founder and CTO at <a href="https://opgames.org" rel="noopener nofollow ugc">OPGames</a>. We’re bridging game developers to Web 3.0 by building the open-source tools to make it as simple as possible for them to start integrating with the blockchain.</p>
+<p>We’re calling these tools <a href="https://youtu.be/9EF_hrmVMqM?t=224" rel="noopener nofollow ugc">Game Legos</a>: in the same way that Money Legos was able to bring about the DeFi renaissance, we feel these Game Legos will be instrumental in bringing about the coming NFT Game revolution.</p>
+<p>Game Legos are also perfectly in sync with the goals of this RFP. We’re building them open-source and as simple, robust, and composable as we can.</p>
+<h3>
+<a name="what-is-your-proposal-to-build-this-2" class="anchor" href="https://gov.gitcoin.co#what-is-your-proposal-to-build-this-2"></a>What Is Your Proposal to Build This</h3>
+<p>OPGames has already started building an open-source PFP creator over at <a href="https://github.com/alto-io/game-legos/tree/avatar" class="inline-onebox" rel="noopener nofollow ugc">GitHub - alto-io/game-legos at avatar</a></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5503893c6c1ef27a91bbfe35a92e075e6cdc3dd7.jpeg" data-download-href="/uploads/short-url/c849YT0cPf927cuVKwRZnKtlW19.jpeg?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/5/5503893c6c1ef27a91bbfe35a92e075e6cdc3dd7_2_690x423.jpeg" alt="image" data-base62-sha1="c849YT0cPf927cuVKwRZnKtlW19" width="690" height="423" srcset="/uploads/db4391/optimized/2X/5/5503893c6c1ef27a91bbfe35a92e075e6cdc3dd7_2_690x423.jpeg, /uploads/db4391/optimized/2X/5/5503893c6c1ef27a91bbfe35a92e075e6cdc3dd7_2_1035x634.jpeg 1.5x, /uploads/db4391/optimized/2X/5/5503893c6c1ef27a91bbfe35a92e075e6cdc3dd7_2_1380x846.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/5/5503893c6c1ef27a91bbfe35a92e075e6cdc3dd7_2_10x10.png"></a></div><p></p>
+<p>We’ve been building it on top of <a class="mention" href="https://gov.gitcoin.co/u/austingriffith">@austingriffith</a>’s scaffold-eth. We believe Scaffold-eth is not only the framework with the most solid foundation but is also the fastest way for developers to get started in Web 3.0. It also has a strong community of builders behind it that we could tap to continue improving the project.</p>
+<p>We’ve used some of the scaffold-eth code already to achieve some of the requirements in the RFP. It already stores the avatars in a decentralized manner via IPFS, and uses the example smart contracts to mint them as NFTs.</p>
+<h3>
+<a name="what-is-your-timeline-to-build-this-3" class="anchor" href="https://gov.gitcoin.co#what-is-your-timeline-to-build-this-3"></a>What Is Your Timeline To Build This</h3>
+<p>A lot of the initial effort will be migrating over the frontend to scaffold-eth. After that we’ll integrate the PFP generation with the NFT minting contracts. Finally, properly documenting the project would also take some time.</p>
+<p>An estimate would be <strong>1 to 1.5 months</strong>, depending on the code complexity.</p>
+<h3>
+<a name="what-do-you-need-4" class="anchor" href="https://gov.gitcoin.co#what-do-you-need-4"></a>What Do You Need</h3>
+<ol>
+<li>Being able to consult with the original developer of the frontend would be great, so we can more easily address any issues with migrating over the code and also write solid documentation</li>
+<li>OPGames can assign a team of developers on it for 5 ETH to build the initial version</li>
+<li>We’d be interested in collaborating and exploring how to make the project sustainable even after the RFP. Perhaps we can build a DAO where all projects using it would donate a portion of their PFP sale to the DAO?</li>
+</ol>
+<p>Thanks for reading, we’re open to suggestions and comments!</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-proposal-decentralized-gitcoin-avatar-builder/8117/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-proposal-decentralized-gitcoin-avatar-builder/8117/3
+        Sat, 14 Aug 2021 18:08:18 +0000
+gov.gitcoin.co-post-8117-3
+Request for Proposal: Decentralized Gitcoin Avatar Builder
+      
+
+Request for Proposal: Decentralized Gitcoin Avatar Builder
+owocki
+
+            <p>Hello DAOfrens,</p>
+<p>This is request for someone to come up with a new decentralized experience for creating <a href="https://gitcoin.co/onboard/profile?steps=avatar">Gitcoin-style avatars</a>.</p>
+<p>As we progressively decentralize Gitcoin, the Gitcoin Holdings company is interested in decentralizing the avatar builder.</p>
+<p>We build the avatar builder so that users could celebrate their uniqueness and have a cool way of showing off their individuality on the site.  As</p>
+<p>We also feel that there was a missed oipportunity here to leverage our <a href="https://github.com/gitcoinco/web/tree/master/app/assets/v2/images/avatar3d">art assets</a> to ride the PFP boom, and perhaps fund public goods with the ETH received.</p>
+<p>An ideal candidate would be have the following principles:</p>
+<ol>
+<li>Simplicity - products that do ONE THING and do it WELL.</li>
+<li>Antifragility - Well-documented Decentralized products that our community can run without the centralized company.</li>
+<li>Modularity - products that easily unix-style interoperate with each other.</li>
+</ol>
+<p>An ideal proposal would</p>
+<ol>
+<li>(at a minimum) 1:1 replicate the centralized experience at <code>https://gitcoin.co/onboard/profile?steps=avatar</code> but store the code/avatars in a decentralize way.</li>
+<li>(at a maximum) create a new novel way to make these avatar’s into PFPs and fund public goods with them.</li>
+</ol>
+<p>Please include</p>
+<ol>
+<li>Who are you</li>
+<li>What is your proposal to build this</li>
+<li>What is your timeline to build this</li>
+<li>What do you need (funding, etc)</li>
+</ol>
+<p>Please submit your proposal as a comment on the gov forum thread.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-proposal-decentralized-gitcoin-avatar-builder/8117/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-proposal-decentralized-gitcoin-avatar-builder/8117/1
+        Mon, 02 Aug 2021 19:37:43 +0000
+gov.gitcoin.co-post-8117-1
+Request for Proposal: Decentralized Gitcoin Avatar Builder
+      
+
+

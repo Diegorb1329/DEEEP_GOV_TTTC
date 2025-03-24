@@ -1,0 +1,529 @@
+
+
+
+GR15 Fraud Report
+https://gov.gitcoin.co/t/gr15-fraud-report/11609
+    The Fraud Detection & Defense workstream (FDD) aims to minimize the impact of fraud on our community. In this post, we highlight the quantitative data behind GR15 and the qualitative decisions made. We also link to reasoning behind any subjective judgments along with making recommendations to the Grants Operations team and Stewards for new policy revisions to match changing circumstances.
+
+# TL:DR
+
+* Contributor Fraud (Sybil Donations) Prevented
+  * Fraud Tax (Squelched) = $285k
+    * Contributors = 23% (9,176 / 39,758)
+    * Contributions = 33.46% (155,683 / 465267)
+    * $ Value of Sybil Donations = 17.5% ($225k / $1.3m)
+  * Trust Bonus Analysis & Identity Staking Analysis
+    * Deep Dive coming to DAOvibes on 10/19
+* Grant Fraud (FDD is responsible for Platform & Main Round Eligibility)
+  * New Applications
+    * Total Applications = 1150
+      * Platform approved = 700
+      * Main Round approved = 300
+    * Total Disputes = 70
+    * Total Appeals = 32
+  * Grant Investigations
+    * GO Sybil Ring = 33 Grants / 250k $ in total matching
+    * Other Disputes = 37 Grants / >250k $ in total matching
+    * Over $700k in “FALSE” transactions. These are testnet transactions
+      * Is there a reason for them?
+  * Main Round Policy Update Recommendations
+    * Need clarity on Quid Pro Quo including Discord Roles & SBTs
+    * Need clarity on “Has Token” or “NFT sales” as automatic disqualification
+      * Surge Women’s group / Lobby3DAO and Pooly NFTs were given exemptions by FDD in judgment of disputes for being public goods
+* Other Insights
+  * New QF attack vulnerability
+  * Sybil Scoring Legos replaced Blockscience SAD model
+  * Grant side fraud mitigation
+
+# Contributor Fraud (Sybil Donations)
+
+Sybil defense for Gitcoin consists of prevention, detection & mitigation. Our best possible detection can be used to guide passport development (trust bonus preventative mitigation) in addition to “squelching” (retroactive mitigation). More can be learned about these two techniques in our FDD Review article on “Closing the Gap”.
+
+## Squelching (Reactive Mitigation)
+
+Overall
+
+||GR11|GR12|GR13|GR14|GR15|
+| --- | --- | --- | --- | --- | --- |
+|Total Sybil Donors Squelched|853|8100|2071|16073|9176|
+|Total Donors|16597|27260|16651|44736|39758|
+|% of total Donors Squelched|5.14%|29.71%|12.44%|35.93%|23.08%|
+|Total Sybil Donations|29300|115000|23,951|167988|155683|
+|Total Donations|441644|482293|306898|600869|465267|
+|% of donations that are sybil|6.63%|23.84%|7.80%|27.96%|33.46%|
+|$ Value of Sybil Donations||$710,139|$68,060|$337,143|$225,380|
+|Total $ Value of all Donations|$1,620,800|$3,214,587|$1,462,659|$1,735,349|$1,306,724|
+|% of total donation $ from sybil|0.00%|22.09%|4.65%|19.43%|17.25%|
+
+After squelching, we can see a clear pattern in the distribution and histogram of the delta (or change in funding the grants will receive). Here are some key takeaways:
+
+* The vast majority will only see a change of -$6 to $195.
+* There are fewer grants which are negatively affected than positively
+* A large number of positively impacted grants see substantial change, some are even close to doubling their match amount!
+
+![|306x182](upload://uUElX5cByL1C8Gs2ylaF2vL8lSZ.jpeg)![|293x175](upload://4sQaBxDAVd2KifyMg7kbQlb7ynl.jpeg)
+
+When we look at the grants that lost the most or the least, we can see that only a few grants are impacted for more than $1,000.
+
+* 26 Grants lost > $1,000
+* 33 Grants lost $100 > $1,000
+* 68 Grants gained > $1,000
+* 168 Grans gained $100 > $1,000
+
+This is consistent with the hypothesis that a few bad actors divert funds from many grants.
+
+## Trust Bonus (Proactive Mitigation)
+
+The trust bonus analysis will require a much deeper analysis which we will be presenting at our DAOvibes call on Wednesday, 10/19. Here are some highlights on what will be included:
+
+![|624x351](upload://tTQec3yzneyW13e0ezPOPkhyGAW.jpeg)
+
+# Grant Fraud & Eligibility
+
+FDD’s Grants Intelligence Agency (GIA) squadThe GIA handles all operations & execution of tasks relating to PLATFORM & MAIN ROUND eligibility except for policy. All aspects of the ecosystem and cause rounds belong to the Grants Operations squad.
+
+GIA responsibilities include:
+
+* New grant application assessment for Platform & Main Round eligibility
+* Disputes - Re-reviewing grants flagged by the community
+* Appeals - Re-reviewing grants denied eligibility and escalating when appropriate
+* Policy - Identifying gray areas and novel situations & recommending policy review
+* Investigations - Deep dives into suspicious grants to document types of fraud
+
+These responsibilities ensure that grants on the platform are not in violation of codes of conduct, policy, and or set precedents and norms.
+
+When the stewards ratify the round results, they are also approving the sanctions adjudicated by the FDD workstream.
+
+Full transparency to the community* is available at:
+
+* [Grant Approvals](https://www.notion.so/gitcoin/3940c8762a304e8c9630a05418ebd2a1?v=8fd78e98993e4dc29fd40a5b12a9ea75) - When new grant applications are received
+* [Grant Disputes](https://www.notion.so/gitcoin/e79f1dd9e5074a1d986ee3f91b12943e?v=74372375b4ba42ebb269be219f2c452d) - When a grant is “flagged” by a user
+* [Grant Appeals](https://www.notion.so/gitcoin/5627564cce204a0f8ae5af463873bb3d?v=2510b1a2634b4a0ea24cf2b81241d13a) - When a grant denied eligibility argues an incorrect judgment
+
+*User Actions & Reviews is currently in “open review” allowing for select participation to stewards due to sensitive Personal Identifiable Information (PII) data and potential vulnerability to counter-attacks.
+
+Additional transparency for all flags is provided at [@gitcoindisputes](https://twitter.com/GitcoinDisputes) Twitter.
+
+## ![|317x294](upload://pXu4tDVbR3EG13bepv8KbaThu5u.jpeg)
+
+### Platform Eligibility
+
+**New Grant Applications**: ~1150
+
+**Disputes**: 42 of 48 total disputes were found ineligible for the platform.
+
+**Appeals**: 24 total, 9 denied, 13 approved
+
+**Policy**: A clear understanding that sybil behavior, quid pro quo, and other behaviors not eligible for Main Round inclusion are NOT platform violations. Stricter or better defined policy around OS code or necessity of an MVP may help.
+
+**Investigations**: Streamline approval of grants before the round begins. Ensure brand ownership verification programmatically. Suggestion for GR16: Grant creators that can’t verify twitter on Gitcoin should DM us at GitcoinDisputes directly.
+
+### Main Round Eligibility
+
+**New Grant Applications**: ~300
+
+**Disputes**: 5 of 10 main round grants that were disputed were removed. (Not including the platform disputes which are ineligible for all rounds)
+
+**Appeals**: 12 out of 32 appeals were denied main round
+
+**Policy**: Stricter policy around OS code and MVP is needed. The main round decided to open up the criteria from the previous Ethereum/OSS community rules to allow all the ecosystem and cause round grants to be included. This could present a vulnerability if side rounds do not review grants with the same scrutiny as FDD historically did for the main round. While the technical decoupling of the main round and the platform eligibility offered more options, the decision made by Grants Operations created a main round with wider scope (and vulnerabilities) and removed a Gitcoin Community governed Ethereum & Open Source round.
+
+**Investigations**: We removed over 10 main round grants that all raised maximum matching <$120k
+
+### Cause Round Eligibility
+
+Execution of these reviews was transferred to Grants Operations.
+
+**New Grant Applications**: ~250
+
+**Disputes**: 1 of 5 grants that were disputed were removed
+
+**Appeals**: 1 appeal transferred out of FDD jurisdiction
+
+**Policy**: We need to clearly communicate that cause/ecosystem rounds are not subjected to main round eligibility, but are subject to platform eligibility. There is a tendency for grants in Climate round to also be included in DeSci, while the argument that climate work is also DeSci, we recommend evaluating whether grants should choose which cause round best represents their work. Alternatively, the DeSci round may want to narrow their eligibility from anything tangentially related to science, to groups specifically building the rails for DeSci to function.
+
+**Investigations**: Many grants which were removed were receiving matching from multiple rounds, even hitting caps.
+
+### Ecosystem Round Eligibility
+
+Execution of these reviews was transferred to Grants Operations.
+
+**New Grant Applications**: ~600
+
+**Disputes**: 6 of 27 grants that were disputed were removed
+
+**Appeals**: 1 of 7 grants that appealed were not eligible
+
+**Policy**: We need to clearly communicate that cause/ecosystem rounds are not subjected to main round eligibility, but are subject to platform eligibility. The ecosystem round owners will need to own more of the policy decisions which land in gray areas including disputes and appeals. They are the only ones who can decide how to evolve their community’s policy.
+
+**Investigations**: We investigated and removed multiple grants that received maximum matching from multiple ecosystem rounds.
+
+## Grants Review Metrics
+Grants were reviewed by FDD for platform and main round eligibility in a timely manner before and during the round. The total volume of grant applications was larger this season, but more evenly distributed.
+
+We had an average of 60 grants/day during the round and an average of 10 grants per day before the round started. In GR15, we had one person who served as an experienced reviewer that ensured platform and main round eligibility met QA standards. Two experienced reviewers assisted when the new applications were at the highest (see red zones in the chart).
+
+![|624x157](upload://bmoxKL9dWLElvFaOw8Kb0wStD6K.png)
+Grants submitted between 24 June and 25 September(after GR14 until the end of GR15)
+
+A birds eye view of the progress in grant reviews:
+
+GR15
+
+* One main reviewer/approver + 2 assistants for platform/main round
+* Reviewed over 1150 Grants for platform eligibility
+* Resolved over 30 appeals and over 70 disputes
+* Appeals/disputes were solved ASAP during the round. At the end of the round FDD + Gops closed all the open disputes.
+* Investigations saved over 150k in main round matching + another 100k in side round matching
+* Ensured brand ownership verification for over 300 grants
+* Started Ethelo Deep Data
+
+## Appeal & Dispute Process Improvement Needs
+
+The most time consuming part of the appeals is accumulating enough FDD votes to gain a clear signal. In the future, we will strive to grow/decentralize the group evaluating appeal requests. GR15 showed us the public will benefit from increased Grantee communication about the appeal process.
+
+The appeal process offered to Grantees has become efficient, credibly neutral and it happens in real time. Appeals are processed as soon as they are submitted. Voting still requires 1-2 days for a total processing time of up to 1 week in the longest cases. We are still researching and evaluating the best way to process appeals based on Novel Situations that will not require a Steward vote.
+
+![|435x251](upload://527N0ZWDH20dYS5w6xYsHdIKQCk.png)
+
+Here are some takeaways that will help us create better and safer rounds overall:
+
+* Mandatory twitter verification eliminates over 30% of bad actors and grants
+* Clearer policy will alleviate any double standards and also solve some vulnerabilities caused by eligibility
+* Our community is an invaluable resource of intelligence. Appeals/disputes/investigations should be community driven in an optimal protocol future.
+* The red team is continuing to evolve their strategies every round
+Fri, 18 Nov 2022 13:05:40 +0000
+🌱 Gitcoin Grants
+
+
+GR15 Fraud Report
+DisruptionJoe
+
+            <p>We actually have this now. Our “Thor” set is a data set with known non-sybil users. This is used for the purpose you describe and/or for regression modeling and other data science techniques.</p>
+<p>During season 16, our specific task or project related to this is to <em>document the QA process used to ensure the integrity of the Thor (and Loki) data sets.</em></p>
+          <p><a href="https://gov.gitcoin.co/t/gr15-fraud-report/11609/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gr15-fraud-report/11609/4
+        Fri, 18 Nov 2022 13:05:40 +0000
+gov.gitcoin.co-post-11609-4
+GR15 Fraud Report
+      
+
+GR15 Fraud Report
+tjayrush
+
+            <p>This is an idea that I just thought of now reading the above. I’ll drop it here in the hopes that some happy traveller one day stumbles upon it and it becomes useful.</p>
+<p>What if, in addition to all the specific measures used to find sibyls, there was the idea of “canneries in the coal mine,” that is, projects that are deemed with high certainty to not be sibyls.</p>
+<p>If a particular “solution” or “technique” or “system” incorrectly identified even a single “cannery” as sibyl, then back to the drawing board.</p>
+<p>In other words, removing real sibyls from the system is as important as keeping known non-sibyls in the system. In both cases, the percentage of good projects is increased.</p>
+          <p><a href="https://gov.gitcoin.co/t/gr15-fraud-report/11609/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gr15-fraud-report/11609/3
+        Thu, 17 Nov 2022 20:48:51 +0000
+gov.gitcoin.co-post-11609-3
+GR15 Fraud Report
+      
+
+GR15 Fraud Report
+ccerv1
+
+            <p>Thanks so much for the summary <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> !! There’s a lot to learn from FDD’s experiences in GR15. A few quick thoughts on where the DAO can focus.</p>
+<ul>
+<li>
+<p><strong>Have a hard deadline for grant submissions <em>at least several days before</em> the start of a round.</strong> As shown in your exhibit, there was a huge influx of grant applications in the final days before the round – and eligibility decisions were still being made once the round went live. In the short term, creating a hard cutoff can reduce the likelihood that FDD and Grants Ops get bottlenecked in making eligibility decisions and resolving appeals. Once the round starts, these teams have bigger fish to fry. In the longer term, I’d expect both matching round funders and grantees to appreciate knowing who is in their round before it goes live.</p>
+</li>
+<li>
+<p><strong>Encourage communities to come up with credibly neutral eligibility criteria for their rounds.</strong> Imagine an <a href="https://twitter.com/LefterisJP/status/1568983643632320512?s=20&amp;t=0C6YpY6LpSm1Um5y1z9PPA" rel="noopener nofollow ugc">OSS round</a> that uses <a href="https://www.gitpoap.io/" rel="noopener nofollow ugc">GitPOAP</a> to determine if a project is eligible: eg, the project needs to have at least one core contributor with a GitPOAP from a critical OSS project, like <a href="https://www.gitpoap.io/gp/486" rel="noopener nofollow ugc">this one</a>. This not only decentralizes eligibility decisions but also gives communities more autonomy to signal the types of contributions they’d like to see more of.</p>
+</li>
+<li>
+<p><strong>Engage the community in creating early warning systems for Sybil attacks.</strong> As <a href="https://gov.gitcoin.co/t/fileverse-grant-deactivation/11505">we learned</a> in GR15, it is important to identify Sybil attack vectors as early as possible in a round so as to minimize their impact on the QF allocation. In the short run, FDD should spend the first days of a round screening for Sybil attacks and doing exploratory data analysis, so that any suspicious activity around specific grants can be flagged and the grantee can be warned or delisted. In the medium term, I’d like to see the outputs of such analysis made visible to grantees and the wider community so they can self-report and take action. (This could be metrics on the grants/donation page or a separate dashboard.) In the long run, I’d like to see an incentivized community of Sybil defendooors doing the work of FDD and flagging suspicious grants. Like <a href="https://gov.gitcoin.co/t/sybil-attacks-on-gitcoin-and-grant-owners/11611">this contribution</a> by <a class="mention" href="https://gov.gitcoin.co/u/momonosukke">@Momonosukke</a> .</p>
+</li>
+<li>
+<p><strong>Assume all Sybil detection mechanisms have a half-life.</strong> “Sybil Scoring Legos replaced Blockscience SAD model.” This is a really important finding! I believe the <s>end game</s> infinite game of Sybil detection will be a stack of Sybil detection mechanisms, with each mechanism trained to combat a specific attack vector. (Sidenote: Sybil detection doesn’t strike me as a neural network problem, as the rules and dimensions of the game are always changing.) <a class="mention" href="https://gov.gitcoin.co/u/omnianalytics">@omnianalytics</a>’s Sybil Scoring Legos provide a preview of what this can look like: it enabled FDD to input a username and view a handful of independently derived Sybil probability scores. We should work from an assumption that, like SAD, each detection method will become less useful round to round and eventually be fully deprecated. IMO, this just underscores the need to engage the community in the analysis (rather than build up a bench of ML scientists continually churning out new scoring algorithms).</p>
+</li>
+</ul>
+<p>I’m looking forward to the Trust Bonus / Passport / Identity presentation on 10/19, where I expect some of these themes will resurface… the Sybil problem, the Trusted Contributor problem, and the Grant Eligibility problem are all just different flavors of the Identity problem… which is one of <a href="https://gov.gitcoin.co/t/passport-is-our-aws/10995">THE problems</a> we need to crack to open the gates of a regenerative society <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p><img src="/uploads/db4391/original/2X/5/53320ea945559a2b6359b4d62877ad87e3ed324c.jpeg" alt="image" data-base62-sha1="bRYSoai0xaHnNa9kOHe91qVhSAQ" width="690" height="387"></p>
+          <p><a href="https://gov.gitcoin.co/t/gr15-fraud-report/11609/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gr15-fraud-report/11609/2
+        Wed, 05 Oct 2022 23:16:07 +0000
+gov.gitcoin.co-post-11609-2
+GR15 Fraud Report
+      
+
+GR15 Fraud Report
+DisruptionJoe
+
+            <p>The Fraud Detection &amp; Defense workstream (FDD) aims to minimize the impact of fraud on our community. In this post, we highlight the quantitative data behind GR15 and the qualitative decisions made. We also link to reasoning behind any subjective judgments along with making recommendations to the Grants Operations team and Stewards for new policy revisions to match changing circumstances.</p>
+<h1>
+<a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TL:DR</h1>
+<ul>
+<li>Contributor Fraud (Sybil Donations) Prevented
+<ul>
+<li>Fraud Tax (Squelched) = $285k
+<ul>
+<li>Contributors = 23% (9,176 / 39,758)</li>
+<li>Contributions = 33.46% (155,683 / 465267)</li>
+<li>$ Value of Sybil Donations = 17.5% ($225k / $1.3m)</li>
+</ul>
+</li>
+<li>Trust Bonus Analysis &amp; Identity Staking Analysis
+<ul>
+<li>Deep Dive coming to DAOvibes on 10/19</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Grant Fraud (FDD is responsible for Platform &amp; Main Round Eligibility)
+<ul>
+<li>New Applications
+<ul>
+<li>Total Applications = 1150
+<ul>
+<li>Platform approved = 700</li>
+<li>Main Round approved = 300</li>
+</ul>
+</li>
+<li>Total Disputes = 70</li>
+<li>Total Appeals = 32</li>
+</ul>
+</li>
+<li>Grant Investigations
+<ul>
+<li>GO Sybil Ring = 33 Grants / 250k $ in total matching</li>
+<li>Other Disputes = 37 Grants / &gt;250k $ in total matching</li>
+<li>Over $700k in “FALSE” transactions. These are testnet transactions
+<ul>
+<li>Is there a reason for them?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Main Round Policy Update Recommendations
+<ul>
+<li>Need clarity on Quid Pro Quo including Discord Roles &amp; SBTs</li>
+<li>Need clarity on “Has Token” or “NFT sales” as automatic disqualification
+<ul>
+<li>Surge Women’s group / Lobby3DAO and Pooly NFTs were given exemptions by FDD in judgment of disputes for being public goods</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Other Insights
+<ul>
+<li>New QF attack vulnerability</li>
+<li>Sybil Scoring Legos replaced Blockscience SAD model</li>
+<li>Grant side fraud mitigation</li>
+</ul>
+</li>
+</ul>
+<h1>
+<a name="contributor-fraud-sybil-donations-2" class="anchor" href="https://gov.gitcoin.co#contributor-fraud-sybil-donations-2"></a>Contributor Fraud (Sybil Donations)</h1>
+<p>Sybil defense for Gitcoin consists of prevention, detection &amp; mitigation. Our best possible detection can be used to guide passport development (trust bonus preventative mitigation) in addition to “squelching” (retroactive mitigation). More can be learned about these two techniques in our FDD Review article on “Closing the Gap”.</p>
+<h2>
+<a name="squelching-reactive-mitigation-3" class="anchor" href="https://gov.gitcoin.co#squelching-reactive-mitigation-3"></a>Squelching (Reactive Mitigation)</h2>
+<p>Overall</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>GR11</th>
+<th>GR12</th>
+<th>GR13</th>
+<th>GR14</th>
+<th>GR15</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Total Sybil Donors Squelched</td>
+<td>853</td>
+<td>8100</td>
+<td>2071</td>
+<td>16073</td>
+<td>9176</td>
+</tr>
+<tr>
+<td>Total Donors</td>
+<td>16597</td>
+<td>27260</td>
+<td>16651</td>
+<td>44736</td>
+<td>39758</td>
+</tr>
+<tr>
+<td>% of total Donors Squelched</td>
+<td>5.14%</td>
+<td>29.71%</td>
+<td>12.44%</td>
+<td>35.93%</td>
+<td>23.08%</td>
+</tr>
+<tr>
+<td>Total Sybil Donations</td>
+<td>29300</td>
+<td>115000</td>
+<td>23,951</td>
+<td>167988</td>
+<td>155683</td>
+</tr>
+<tr>
+<td>Total Donations</td>
+<td>441644</td>
+<td>482293</td>
+<td>306898</td>
+<td>600869</td>
+<td>465267</td>
+</tr>
+<tr>
+<td>% of donations that are sybil</td>
+<td>6.63%</td>
+<td>23.84%</td>
+<td>7.80%</td>
+<td>27.96%</td>
+<td>33.46%</td>
+</tr>
+<tr>
+<td>$ Value of Sybil Donations</td>
+<td></td>
+<td>$710,139</td>
+<td>$68,060</td>
+<td>$337,143</td>
+<td>$225,380</td>
+</tr>
+<tr>
+<td>Total $ Value of all Donations</td>
+<td>$1,620,800</td>
+<td>$3,214,587</td>
+<td>$1,462,659</td>
+<td>$1,735,349</td>
+<td>$1,306,724</td>
+</tr>
+<tr>
+<td>% of total donation $ from sybil</td>
+<td>0.00%</td>
+<td>22.09%</td>
+<td>4.65%</td>
+<td>19.43%</td>
+<td>17.25%</td>
+</tr>
+</tbody>
+</table>
+</div><p>After squelching, we can see a clear pattern in the distribution and histogram of the delta (or change in funding the grants will receive). Here are some key takeaways:</p>
+<ul>
+<li>The vast majority will only see a change of -$6 to $195.</li>
+<li>There are fewer grants which are negatively affected than positively</li>
+<li>A large number of positively impacted grants see substantial change, some are even close to doubling their match amount!</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d8a899327cb8b66726e0ece445e4f5fe57c86775.jpeg" data-download-href="/uploads/short-url/uUElX5cByL1C8Gs2ylaF2vL8lSZ.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/d/d8a899327cb8b66726e0ece445e4f5fe57c86775_2_306x182.jpeg" alt="" data-base62-sha1="uUElX5cByL1C8Gs2ylaF2vL8lSZ" width="306" height="182" srcset="/uploads/db4391/optimized/2X/d/d8a899327cb8b66726e0ece445e4f5fe57c86775_2_306x182.jpeg, /uploads/db4391/optimized/2X/d/d8a899327cb8b66726e0ece445e4f5fe57c86775_2_459x273.jpeg 1.5x, /uploads/db4391/optimized/2X/d/d8a899327cb8b66726e0ece445e4f5fe57c86775_2_612x364.jpeg 2x" data-dominant-color="FCFBFA"></a></div><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1f4b51935694349a3fad5f75dd1830514b1da087.jpeg" data-download-href="/uploads/short-url/4sQaBxDAVd2KifyMg7kbQlb7ynl.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/1/1f4b51935694349a3fad5f75dd1830514b1da087_2_293x175.jpeg" alt="" data-base62-sha1="4sQaBxDAVd2KifyMg7kbQlb7ynl" width="293" height="175" srcset="/uploads/db4391/optimized/2X/1/1f4b51935694349a3fad5f75dd1830514b1da087_2_293x175.jpeg, /uploads/db4391/optimized/2X/1/1f4b51935694349a3fad5f75dd1830514b1da087_2_439x262.jpeg 1.5x, /uploads/db4391/optimized/2X/1/1f4b51935694349a3fad5f75dd1830514b1da087_2_586x350.jpeg 2x" data-dominant-color="E6EEFB"></a></div><p></p>
+<p>When we look at the grants that lost the most or the least, we can see that only a few grants are impacted for more than $1,000.</p>
+<ul>
+<li>26 Grants lost &gt; $1,000</li>
+<li>33 Grants lost $100 &gt; $1,000</li>
+<li>68 Grants gained &gt; $1,000</li>
+<li>168 Grans gained $100 &gt; $1,000</li>
+</ul>
+<p>This is consistent with the hypothesis that a few bad actors divert funds from many grants.</p>
+<h2>
+<a name="trust-bonus-proactive-mitigation-4" class="anchor" href="https://gov.gitcoin.co#trust-bonus-proactive-mitigation-4"></a>Trust Bonus (Proactive Mitigation)</h2>
+<p>The trust bonus analysis will require a much deeper analysis which we will be presenting at our DAOvibes call on Wednesday, 10/19. Here are some highlights on what will be included:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d18f075a3140d4d39bf78f537f71cdaea93993da.jpeg" data-download-href="/uploads/short-url/tTQec3yzneyW13e0ezPOPkhyGAW.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/d/d18f075a3140d4d39bf78f537f71cdaea93993da_2_624x351.jpeg" alt="" data-base62-sha1="tTQec3yzneyW13e0ezPOPkhyGAW" width="624" height="351" srcset="/uploads/db4391/optimized/2X/d/d18f075a3140d4d39bf78f537f71cdaea93993da_2_624x351.jpeg, /uploads/db4391/optimized/2X/d/d18f075a3140d4d39bf78f537f71cdaea93993da_2_936x526.jpeg 1.5x, /uploads/db4391/original/2X/d/d18f075a3140d4d39bf78f537f71cdaea93993da.jpeg 2x" data-dominant-color="D1CDD9"></a></div><p></p>
+<h1>
+<a name="grant-fraud-eligibility-5" class="anchor" href="https://gov.gitcoin.co#grant-fraud-eligibility-5"></a>Grant Fraud &amp; Eligibility</h1>
+<p>FDD’s Grants Intelligence Agency (GIA) squadThe GIA handles all operations &amp; execution of tasks relating to PLATFORM &amp; MAIN ROUND eligibility except for policy. All aspects of the ecosystem and cause rounds belong to the Grants Operations squad.</p>
+<p>GIA responsibilities include:</p>
+<ul>
+<li>New grant application assessment for Platform &amp; Main Round eligibility</li>
+<li>Disputes - Re-reviewing grants flagged by the community</li>
+<li>Appeals - Re-reviewing grants denied eligibility and escalating when appropriate</li>
+<li>Policy - Identifying gray areas and novel situations &amp; recommending policy review</li>
+<li>Investigations - Deep dives into suspicious grants to document types of fraud</li>
+</ul>
+<p>These responsibilities ensure that grants on the platform are not in violation of codes of conduct, policy, and or set precedents and norms.</p>
+<p>When the stewards ratify the round results, they are also approving the sanctions adjudicated by the FDD workstream.</p>
+<p>Full transparency to the community* is available at:</p>
+<ul>
+<li>
+<a href="https://www.notion.so/gitcoin/3940c8762a304e8c9630a05418ebd2a1?v=8fd78e98993e4dc29fd40a5b12a9ea75">Grant Approvals</a> - When new grant applications are received</li>
+<li>
+<a href="https://www.notion.so/gitcoin/e79f1dd9e5074a1d986ee3f91b12943e?v=74372375b4ba42ebb269be219f2c452d">Grant Disputes</a> - When a grant is “flagged” by a user</li>
+<li>
+<a href="https://www.notion.so/gitcoin/5627564cce204a0f8ae5af463873bb3d?v=2510b1a2634b4a0ea24cf2b81241d13a">Grant Appeals</a> - When a grant denied eligibility argues an incorrect judgment</li>
+</ul>
+<p>*User Actions &amp; Reviews is currently in “open review” allowing for select participation to stewards due to sensitive Personal Identifiable Information (PII) data and potential vulnerability to counter-attacks.</p>
+<p>Additional transparency for all flags is provided at <a href="https://twitter.com/GitcoinDisputes">@gitcoindisputes</a> Twitter.</p>
+<h2>
+<a name="h-317x294uploadpxu4tdvbr3eg13bepv8kbathu5ujpeg-6" class="anchor" href="https://gov.gitcoin.co#h-317x294uploadpxu4tdvbr3eg13bepv8kbathu5ujpeg-6"></a><img src="/uploads/db4391/original/2X/b/b5efbe93181ac7012f31bd315e468176f5323234.jpeg" alt="" data-base62-sha1="pXu4tDVbR3EG13bepv8KbaThu5u" width="317" height="294">
+</h2>
+<h3>
+<a name="platform-eligibility-7" class="anchor" href="https://gov.gitcoin.co#platform-eligibility-7"></a>Platform Eligibility</h3>
+<p><strong>New Grant Applications</strong>: ~1150</p>
+<p><strong>Disputes</strong>: 42 of 48 total disputes were found ineligible for the platform.</p>
+<p><strong>Appeals</strong>: 24 total, 9 denied, 13 approved</p>
+<p><strong>Policy</strong>: A clear understanding that sybil behavior, quid pro quo, and other behaviors not eligible for Main Round inclusion are NOT platform violations. Stricter or better defined policy around OS code or necessity of an MVP may help.</p>
+<p><strong>Investigations</strong>: Streamline approval of grants before the round begins. Ensure brand ownership verification programmatically. Suggestion for GR16: Grant creators that can’t verify twitter on Gitcoin should DM us at GitcoinDisputes directly.</p>
+<h3>
+<a name="main-round-eligibility-8" class="anchor" href="https://gov.gitcoin.co#main-round-eligibility-8"></a>Main Round Eligibility</h3>
+<p><strong>New Grant Applications</strong>: ~300</p>
+<p><strong>Disputes</strong>: 5 of 10 main round grants that were disputed were removed. (Not including the platform disputes which are ineligible for all rounds)</p>
+<p><strong>Appeals</strong>: 12 out of 32 appeals were denied main round</p>
+<p><strong>Policy</strong>: Stricter policy around OS code and MVP is needed. The main round decided to open up the criteria from the previous Ethereum/OSS community rules to allow all the ecosystem and cause round grants to be included. This could present a vulnerability if side rounds do not review grants with the same scrutiny as FDD historically did for the main round. While the technical decoupling of the main round and the platform eligibility offered more options, the decision made by Grants Operations created a main round with wider scope (and vulnerabilities) and removed a Gitcoin Community governed Ethereum &amp; Open Source round.</p>
+<p><strong>Investigations</strong>: We removed over 10 main round grants that all raised maximum matching &lt;$120k</p>
+<h3>
+<a name="cause-round-eligibility-9" class="anchor" href="https://gov.gitcoin.co#cause-round-eligibility-9"></a>Cause Round Eligibility</h3>
+<p>Execution of these reviews was transferred to Grants Operations.</p>
+<p><strong>New Grant Applications</strong>: ~250</p>
+<p><strong>Disputes</strong>: 1 of 5 grants that were disputed were removed</p>
+<p><strong>Appeals</strong>: 1 appeal transferred out of FDD jurisdiction</p>
+<p><strong>Policy</strong>: We need to clearly communicate that cause/ecosystem rounds are not subjected to main round eligibility, but are subject to platform eligibility. There is a tendency for grants in Climate round to also be included in DeSci, while the argument that climate work is also DeSci, we recommend evaluating whether grants should choose which cause round best represents their work. Alternatively, the DeSci round may want to narrow their eligibility from anything tangentially related to science, to groups specifically building the rails for DeSci to function.</p>
+<p><strong>Investigations</strong>: Many grants which were removed were receiving matching from multiple rounds, even hitting caps.</p>
+<h3>
+<a name="ecosystem-round-eligibility-10" class="anchor" href="https://gov.gitcoin.co#ecosystem-round-eligibility-10"></a>Ecosystem Round Eligibility</h3>
+<p>Execution of these reviews was transferred to Grants Operations.</p>
+<p><strong>New Grant Applications</strong>: ~600</p>
+<p><strong>Disputes</strong>: 6 of 27 grants that were disputed were removed</p>
+<p><strong>Appeals</strong>: 1 of 7 grants that appealed were not eligible</p>
+<p><strong>Policy</strong>: We need to clearly communicate that cause/ecosystem rounds are not subjected to main round eligibility, but are subject to platform eligibility. The ecosystem round owners will need to own more of the policy decisions which land in gray areas including disputes and appeals. They are the only ones who can decide how to evolve their community’s policy.</p>
+<p><strong>Investigations</strong>: We investigated and removed multiple grants that received maximum matching from multiple ecosystem rounds.</p>
+<h2>
+<a name="grants-review-metrics-11" class="anchor" href="https://gov.gitcoin.co#grants-review-metrics-11"></a>Grants Review Metrics</h2>
+<p>Grants were reviewed by FDD for platform and main round eligibility in a timely manner before and during the round. The total volume of grant applications was larger this season, but more evenly distributed.</p>
+<p>We had an average of 60 grants/day during the round and an average of 10 grants per day before the round started. In GR15, we had one person who served as an experienced reviewer that ensured platform and main round eligibility met QA standards. Two experienced reviewers assisted when the new applications were at the highest (see red zones in the chart).</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4fa003165a91716bb4c9012d67cc0b960dd42936.png" data-download-href="/uploads/short-url/bmoxKL9dWLElvFaOw8Kb0wStD6K.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/4/4fa003165a91716bb4c9012d67cc0b960dd42936_2_624x157.png" alt="" data-base62-sha1="bmoxKL9dWLElvFaOw8Kb0wStD6K" width="624" height="157" srcset="/uploads/db4391/optimized/2X/4/4fa003165a91716bb4c9012d67cc0b960dd42936_2_624x157.png, /uploads/db4391/optimized/2X/4/4fa003165a91716bb4c9012d67cc0b960dd42936_2_936x235.png 1.5x, /uploads/db4391/optimized/2X/4/4fa003165a91716bb4c9012d67cc0b960dd42936_2_1248x314.png 2x" data-dominant-color="F6EFEE"></a></div><br>
+Grants submitted between 24 June and 25 September(after GR14 until the end of GR15)<p></p>
+<p>A birds eye view of the progress in grant reviews:</p>
+<p>GR15</p>
+<ul>
+<li>One main reviewer/approver + 2 assistants for platform/main round</li>
+<li>Reviewed over 1150 Grants for platform eligibility</li>
+<li>Resolved over 30 appeals and over 70 disputes</li>
+<li>Appeals/disputes were solved ASAP during the round. At the end of the round FDD + Gops closed all the open disputes.</li>
+<li>Investigations saved over 150k in main round matching + another 100k in side round matching</li>
+<li>Ensured brand ownership verification for over 300 grants</li>
+<li>Started Ethelo Deep Data</li>
+</ul>
+<h2>
+<a name="appeal-dispute-process-improvement-needs-12" class="anchor" href="https://gov.gitcoin.co#appeal-dispute-process-improvement-needs-12"></a>Appeal &amp; Dispute Process Improvement Needs</h2>
+<p>The most time consuming part of the appeals is accumulating enough FDD votes to gain a clear signal. In the future, we will strive to grow/decentralize the group evaluating appeal requests. GR15 showed us the public will benefit from increased Grantee communication about the appeal process.</p>
+<p>The appeal process offered to Grantees has become efficient, credibly neutral and it happens in real time. Appeals are processed as soon as they are submitted. Voting still requires 1-2 days for a total processing time of up to 1 week in the longest cases. We are still researching and evaluating the best way to process appeals based on Novel Situations that will not require a Steward vote.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288.png" data-download-href="/uploads/short-url/527N0ZWDH20dYS5w6xYsHdIKQCk.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288_2_435x251.png" alt="" data-base62-sha1="527N0ZWDH20dYS5w6xYsHdIKQCk" width="435" height="251" srcset="/uploads/db4391/optimized/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288_2_435x251.png, /uploads/db4391/optimized/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288_2_652x376.png 1.5x, /uploads/db4391/optimized/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288_2_870x502.png 2x" data-dominant-color="C7CCC1"></a></div><p></p>
+<p>Here are some takeaways that will help us create better and safer rounds overall:</p>
+<ul>
+<li>Mandatory twitter verification eliminates over 30% of bad actors and grants</li>
+<li>Clearer policy will alleviate any double standards and also solve some vulnerabilities caused by eligibility</li>
+<li>Our community is an invaluable resource of intelligence. Appeals/disputes/investigations should be community driven in an optimal protocol future.</li>
+<li>The red team is continuing to evolve their strategies every round</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/gr15-fraud-report/11609/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gr15-fraud-report/11609/1
+        Wed, 05 Oct 2022 16:35:17 +0000
+gov.gitcoin.co-post-11609-1
+GR15 Fraud Report
+      
+
+

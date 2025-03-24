@@ -1,0 +1,391 @@
+
+
+
+Introducing Steward Health Cards 2.0
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418
+    Authored by @fred @sidcode
+
+## Summary
+The MMM-Workstream have released an update to the Steward Health Cards, live via both [DNS ](https://www.daostewards.xyz/)and [ENS](https://stewards.eth.limo/). The first version of the project was [launched in Q3 2021](https://gov.gitcoin.co/t/introducing-steward-report-cards/8712) and has been discussed further in the context of the [Steward Council](https://gov.gitcoin.co/t/introducing-the-steward-council/9485) spearheaded @Pop.
+
+This thread summarizes our newest update with features that make the cards even more comprehensive and powerful. We invite the community to continue to share feedback and help us improve this public good further!
+
+## Improvements
+Even though the look and feel of the site has stayed close to the original design, the backend and data infrastructure has been completely rewritten. The site is now able to deliver greater granularity of metrics and much improved automation. This has been possible due to our partnership with [Karma](https://www.showkarma.xyz/), a reputation system for DAO contributors. Both Stewards Health Cards and Karma share a common goal of aggregating information and engagement of DAO contributors to increase transparency and accountability. As a result of us being able to grab richer data the overall health calculation should provide an improved representation of each Steward’s engagement in GitcoinDAO.
+
+The way we calculate Stewards' health has also been adjusted based on feedback received from the community. Previously, all activity on the forum had the same weightage in the health calculation. With the new release, we are now differentiating between forum threads and forum posts with different weights. We are also differentiating between activities in the “[Proposal discussion](https://gov.gitcoin.co/c/governance-proposals/5)” section of the forum versus other sections. Activity in the Proposal discussion has a higher weight due to the higher level of conversation often found within this category.
+
+**Variables**:
+
+**`V`** = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vote participation on Snapshot (only proposals with >0.5M GTC are counted)
+**`F_t`** =&nbsp;&nbsp;&nbsp;&nbsp; Forum Topics initiated (excluding the “Proposal Discussion” category)
+**`F_t_p`** = Forum Topics initiated in the “Proposal Discussion” category
+**`F_p`** = &nbsp;&nbsp;&nbsp;&nbsp;Forum posts (excluding the “Proposal Discussion” category)
+**`F_p_p`** = Forum posts in the “Proposal Discussion” category
+**`W`** = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Workstream involvement. Lead role adds 5p and contributor adds 3p to health.
+
+Visitors of the site can now choose to display metrics and health for either Lifetime or the Last 30 days. The new health score calculations are as follows:
+
+**Lifetime health** : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `V*0.7 + F_t*1.1 + F_t_p*1.5 + F_p*0.6 + F_p_p*0.7 + W`
+
+**Last 30-days health** : &nbsp;&nbsp;&nbsp;`V*0.7 + F_t*1.1 + F_t_p*1.5 + F_p*0.7 + F_p_p*1 + W`
+
+[Tally participation](https://www.tally.xyz/governance/eip155:1:0xDbD27635A534A3d3169Ef0498beB56Fb9c937489) was previously used in the health calculation but has now been removed. Proposals that reach Tally have already passed GitcoinDAO governance on the forum and Snapshot. The on-chain nature of Tally voting results in gas costs. Therefore, Stewards might not vote after the quorum has been reached which makes it an unsuitable data point to use in this context.
+
+Please note that these formulas are our best attempt at fairly representing Steward engagement with the data available to us. We appreciate feedback and invite you all to help us improve further!
+
+## Looking ahead
+
+The vision of the Steward Health Cards has always been to provide the most valuable metrics for each Steward with the goal of improving the transparency and accountability of their work. The cards may function as a tool to assist delegators making informed decisions and to allow Stewards to compare their involvement relative to their peers. Steward Health Cards have been completely built in public and can be forked without permission by any community with a similar governance structure.
+
+We are continuously working on improving the site with new features and improvements. A couple of features we have in the pipeline for the upcoming season include:
+
+* Web3 login for Stewards to have control of their card and-
+   -  Change their picture
+   -  Add addresses
+   -  Add link to Twitter & Github
+   -  Ability to add additional Stewards to their Workstream
+   - Ability to opt-out and remove their card
+  
+* Introduction of Workstream cards
+* Minting “End of Season”-cards and allow users to scroll through Seasons
+* Introducing additional metrics to capture other types of engagement such as on-chain compensation, attendance to monthly Steward calls and involvement in working groups not tied to any specific Workstream
+
+We look forward to continuing working together with the community to map our collective health and make it available to the broader ecosystem as a public good!
+Wed, 04 Jan 2023 01:07:55 +0000
+🤖 DAO Governance and Vision
+
+
+Introducing Steward Health Cards 2.0
+mmurthy
+
+            <p>Chase - The frontend is open source, you can find the code here <a href="https://github.com/show-karma/dao-delegates-app" class="inline-onebox" rel="noopener nofollow ugc">GitHub - show-karma/dao-delegates-app: Whitelabel application to display delegate stats for DAOs</a>. The data comes from our backend where we index all the contributions and aggregate it.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/20
+        Wed, 04 Jan 2023 01:07:55 +0000
+gov.gitcoin.co-post-10418-20
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+chaselb
+
+            <p>I meant to say is the site open to forking/contribution. Like is it maintained openly on github or something similar? Or is it being worked on closed-source? Excited for the new site. Thanks shawn.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/19
+        Mon, 02 Jan 2023 20:41:00 +0000
+gov.gitcoin.co-post-10418-19
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+shawn16400
+
+            <p>Hey Chase - yes this is <a href="https://www.daostewards.xyz/">daostewards.xyz</a>.  But to note, the site has a number of issues and omissions and we are unit testing a new site now with help from <a class="mention" href="https://gov.gitcoin.co/u/mmurthy">@mmurthy</a> and the team at <a href="https://www.showkarma.xyz/"> showkarma.xyz</a>.  We will relaunch this new site in Jan and a list of planned improvements.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/18
+        Mon, 02 Jan 2023 13:26:41 +0000
+gov.gitcoin.co-post-10418-18
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+chaselb
+
+            <p>Is the stewards health card site open source? If so, can someone link it?</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/17
+        Sat, 31 Dec 2022 20:05:32 +0000
+gov.gitcoin.co-post-10418-17
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+epowell101
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/fred">@Fred</a> <a class="mention" href="https://gov.gitcoin.co/u/sidcode">@sidcode</a> erstwhile steward here.  Wondering when I might be listed on health cards?</p>
+<p>For ease of access, profile here:  <a href="https://gov.gitcoin.co/u/epowell101/summary" class="inline-onebox">Profile - epowell101 - Gitcoin Governance</a></p>
+<p>Please LMK if I’m missing something.  Gamification FTW!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/16
+        Tue, 16 Aug 2022 20:32:08 +0000
+gov.gitcoin.co-post-10418-16
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+Fred
+
+            <p>The site is functioning as intended with correct metrics for each Steward. We’re in close collaboration with Karma to make sure metrics are always correct and up to date.</p>
+<p>We’re also dedicated to make sure it straightforward to audit the metrics, both through the links on the card and through the repository.</p>
+<p>Your card was an edge case due to you changing your Discourse username from blazingthirdeye to David_Dyor. Your previous message in the Steward intro-thread also got removed due to the name change which resulted in the card displaying empty stats.</p>
+<p>This all resultet in your card having 0/10 health, but your role as Contributor to FDD gave you +3 which resulted in 3/10 overall health.</p>
+<p>I was not aware of the name change previous to you flagging it, we’ve pushed a fix to correct the name and your card is now correct. No other cards were affected.</p>
+<p>It’s incredibly important for us to make sure metrics on the site are up to date and correct.<br>
+When we realized some cards were displaying empty stats for 30 days we immediately removed that option until we had a fix deployed.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/15
+        Thu, 21 Jul 2022 07:38:19 +0000
+gov.gitcoin.co-post-10418-15
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+David_Dyor
+
+            <p>Considering some aspects of the Steward Health Cards 2.0 are under repair, can we not take any snapshots or base any elections until the cards are confirmed as correct?  For example my score changed from 3/10 to 10/10 over the last day.  It is possible others are also misrepresented.  I don’t want to see any active stewards excluded from any opportunities because of a glitch.  I thought I read recently the next Steward Council will be created soon.  No council elections, which require a minimum health score, should proceed until we confirm the cards are displaying accurate data.  (imho)</p>
+<p>Huge thanks to Fred for being on-top of this!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/14
+        Thu, 14 Jul 2022 15:34:51 +0000
+gov.gitcoin.co-post-10418-14
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+Fred
+
+            <p>Sorry about that, it seems like we had an issue with your forum handle in the backend. Will get this fixed asap. Thanks for flagging!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/13
+        Tue, 12 Jul 2022 11:11:43 +0000
+gov.gitcoin.co-post-10418-13
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+Fred
+
+            <p>Hey, yes unfortunately we ran into some issues with the 30days metrics.</p>
+<p>We pulled it down as we are working on a fix. Will be back up shortly!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/12
+        Sat, 09 Jul 2022 08:44:23 +0000
+gov.gitcoin.co-post-10418-12
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+David_Dyor
+
+            <p>I am having technical difficulty with my Steward Health card.  Made over 90 forum posts but I show 0.  Same with vote participation, did many but none show up.  Any suggestions about how to fix this?</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/11
+        Fri, 08 Jul 2022 16:34:06 +0000
+gov.gitcoin.co-post-10418-11
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+krrisis
+
+            <p>hey Fred &amp; <a class="mention" href="https://gov.gitcoin.co/u/sidcode">@sidcode</a> I see the 30 days has disappeared now, only lifetime is in there. Is that as planned?</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/10
+        Thu, 07 Jul 2022 18:04:51 +0000
+gov.gitcoin.co-post-10418-10
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+mmurthy
+
+            <aside class="quote no-group" data-username="owocki" data-post="5" data-topic="10418">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Is there a way to expose the raw data behind the steward report cards?</p>
+</blockquote>
+</aside>
+<p>If you are interested in more raw granular data that went into some of these calculations, you can find it <a href="https://api.showkarma.xyz/api/dao/delegates?name=gitcoin&amp;pageSize=100&amp;offset=0&amp;workstreamId=4,6,3,7,1,2,5" rel="noopener nofollow ugc">here</a></p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/9
+        Thu, 12 May 2022 18:26:12 +0000
+gov.gitcoin.co-post-10418-9
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+owocki
+
+            <aside class="quote no-group" data-username="Fred" data-post="7" data-topic="10418">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/fred/48/3799_2.png" class="avatar"> Fred:</div>
+<blockquote>
+<p>An indicator that display how many hours ago the data was last updated will be added to the site as well.</p>
+</blockquote>
+</aside>
+<p>nice; this would solve for my questions.</p>
+<aside class="quote no-group" data-username="Fred" data-post="7" data-topic="10418">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/fred/48/3799_2.png" class="avatar"> Fred:</div>
+<blockquote>
+<p>Raw data for the Stewards can be found in <a href="https://github.com/mmmgtc/stewards/blob/main/assets/json/stewards_data.json">this json</a>.</p>
+</blockquote>
+</aside>
+<p>thanks!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/8
+        Wed, 11 May 2022 19:24:04 +0000
+gov.gitcoin.co-post-10418-8
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+Fred
+
+            <p>“Last 30 days” display metrics and health based on the last 30 days.</p>
+<p>The daily update-script did lag for a couple of days but should now be up and running again.<br>
+An indicator that display how many hours ago the data was last updated will be added to the site as well.<br>
+Potentially we can also add information of the start- and end-dates when looking at “Last 30 days”. That indicator would for example today read: “April 11th - May 11th”.</p>
+<p>Raw data for the Stewards can be found in <a href="https://github.com/mmmgtc/stewards/blob/main/assets/json/stewards_data.json">this json</a>.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/krrisis">@krrisis</a>: We are looking into why the Twitter card has stopped working. Thanks for the heads up!</p>
+<p>We have a lot of ideas on how to improve the site further and are actively working on new features and optimizations. Looking forward to hear more feedback!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/7
+        Wed, 11 May 2022 15:39:21 +0000
+gov.gitcoin.co-post-10418-7
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+krrisis
+
+            <p>Will hopefully find the time to respond in more detail at a later point, but very happy that this exists and continues to evolve.</p>
+<p>Quick question for now, <a href="https://twitter.com/krrisis/status/1524026020373962754?s=20&amp;t=31PMJYasnA0LMlXyNinXpQ">could you fix the preview image,</a> so that it’s easily shareable on the socials?</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/6
+        Tue, 10 May 2022 14:00:18 +0000
+gov.gitcoin.co-post-10418-6
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+owocki
+
+            <p>Right now I’m sorting the data by “Last 30 days”.  Is that the last 30 days as of right now, or as of 13 days ago when this gov post was created?</p>
+<p>Would it be possible to make that more clear?</p>
+<p>Is there a way to expose the raw data behind the steward report cards?</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/5
+        Mon, 09 May 2022 18:08:42 +0000
+gov.gitcoin.co-post-10418-5
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+Pop
+
+            <p>SO excited to see this evolve and finally becoming an important, living DAO tool. As mentioned in all my conversations with <a class="mention" href="https://gov.gitcoin.co/u/fred">@Fred</a> and others in the DAO, building objective and dynamic engagement flows are key to evolving governance and making it sustainable.</p>
+<p>When discussing the variables and metrics involved, it was very important to me to capture FAR more than votes for a more complete and complex view into participation. It enabled me to determine the formation of the Steward Council and I hope it will enable a more fluid governance structure. Being able to undelegate from a steward who may have dropped in engagement to another who is in line with one’s values AND has a high engagement score is much more in line with the ebbs and flows or activity and daily life.</p>
+<p>My idea of expanding this model to workstreams and treasury health is in line with creating tooling that easily measures and quickly provides the context needed for informed, complete and  objective decision making.</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/4
+        Sun, 01 May 2022 10:09:58 +0000
+gov.gitcoin.co-post-10418-4
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+linda
+
+            <p>Thank you for your work on this!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/3
+        Wed, 27 Apr 2022 13:17:09 +0000
+gov.gitcoin.co-post-10418-3
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+seedphrase
+
+            <p>Kudos to yall and the Karma team! I know alot of work has gone into making this update happen.   Really looking forward to the new features that will be added in the next version. I love the minting of an “end of season” card-maybe we can tie this to some special token-gated merch in the schwag store? <img src="https://emoji.discourse-cdn.com/twitter/smile.png?v=12" title=":smile:" class="emoji" alt=":smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/2
+        Wed, 27 Apr 2022 11:46:05 +0000
+gov.gitcoin.co-post-10418-2
+Introducing Steward Health Cards 2.0
+      
+
+Introducing Steward Health Cards 2.0
+sidcode
+
+            <p>Authored by <a class="mention" href="https://gov.gitcoin.co/u/fred">@fred</a> <a class="mention" href="https://gov.gitcoin.co/u/sidcode">@sidcode</a></p>
+<h2>
+<a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary</h2>
+<p>The MMM-Workstream have released an update to the Steward Health Cards, live via both <a href="https://www.daostewards.xyz/" rel="noopener nofollow ugc">DNS </a>and <a href="https://stewards.eth.limo/" rel="noopener nofollow ugc">ENS</a>. The first version of the project was <a href="https://gov.gitcoin.co/t/introducing-steward-report-cards/8712">launched in Q3 2021</a> and has been discussed further in the context of the <a href="https://gov.gitcoin.co/t/introducing-the-steward-council/9485">Steward Council</a> spearheaded <a class="mention" href="https://gov.gitcoin.co/u/pop">@Pop</a>.</p>
+<p>This thread summarizes our newest update with features that make the cards even more comprehensive and powerful. We invite the community to continue to share feedback and help us improve this public good further!</p>
+<h2>
+<a name="improvements-2" class="anchor" href="https://gov.gitcoin.co#improvements-2"></a>Improvements</h2>
+<p>Even though the look and feel of the site has stayed close to the original design, the backend and data infrastructure has been completely rewritten. The site is now able to deliver greater granularity of metrics and much improved automation. This has been possible due to our partnership with <a href="https://www.showkarma.xyz/" rel="noopener nofollow ugc">Karma</a>, a reputation system for DAO contributors. Both Stewards Health Cards and Karma share a common goal of aggregating information and engagement of DAO contributors to increase transparency and accountability. As a result of us being able to grab richer data the overall health calculation should provide an improved representation of each Steward’s engagement in GitcoinDAO.</p>
+<p>The way we calculate Stewards’ health has also been adjusted based on feedback received from the community. Previously, all activity on the forum had the same weightage in the health calculation. With the new release, we are now differentiating between forum threads and forum posts with different weights. We are also differentiating between activities in the “<a href="https://gov.gitcoin.co/c/governance-proposals/5">Proposal discussion</a>” section of the forum versus other sections. Activity in the Proposal discussion has a higher weight due to the higher level of conversation often found within this category.</p>
+<p><strong>Variables</strong>:</p>
+<p><strong><code>V</code></strong> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vote participation on Snapshot (only proposals with &gt;0.5M GTC are counted)<br>
+<strong><code>F_t</code></strong> =&nbsp;&nbsp;&nbsp;&nbsp; Forum Topics initiated (excluding the “Proposal Discussion” category)<br>
+<strong><code>F_t_p</code></strong> = Forum Topics initiated in the “Proposal Discussion” category<br>
+<strong><code>F_p</code></strong> = &nbsp;&nbsp;&nbsp;&nbsp;Forum posts (excluding the “Proposal Discussion” category)<br>
+<strong><code>F_p_p</code></strong> = Forum posts in the “Proposal Discussion” category<br>
+<strong><code>W</code></strong> = &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Workstream involvement. Lead role adds 5p and contributor adds 3p to health.</p>
+<p>Visitors of the site can now choose to display metrics and health for either Lifetime or the Last 30 days. The new health score calculations are as follows:</p>
+<p><strong>Lifetime health</strong> : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <code>V*0.7 + F_t*1.1 + F_t_p*1.5 + F_p*0.6 + F_p_p*0.7 + W</code></p>
+<p><strong>Last 30-days health</strong> : &nbsp;&nbsp;&nbsp;<code>V*0.7 + F_t*1.1 + F_t_p*1.5 + F_p*0.7 + F_p_p*1 + W</code></p>
+<p><a href="https://www.tally.xyz/governance/eip155:1:0xDbD27635A534A3d3169Ef0498beB56Fb9c937489" rel="noopener nofollow ugc">Tally participation</a> was previously used in the health calculation but has now been removed. Proposals that reach Tally have already passed GitcoinDAO governance on the forum and Snapshot. The on-chain nature of Tally voting results in gas costs. Therefore, Stewards might not vote after the quorum has been reached which makes it an unsuitable data point to use in this context.</p>
+<p>Please note that these formulas are our best attempt at fairly representing Steward engagement with the data available to us. We appreciate feedback and invite you all to help us improve further!</p>
+<h2>
+<a name="looking-ahead-3" class="anchor" href="https://gov.gitcoin.co#looking-ahead-3"></a>Looking ahead</h2>
+<p>The vision of the Steward Health Cards has always been to provide the most valuable metrics for each Steward with the goal of improving the transparency and accountability of their work. The cards may function as a tool to assist delegators making informed decisions and to allow Stewards to compare their involvement relative to their peers. Steward Health Cards have been completely built in public and can be forked without permission by any community with a similar governance structure.</p>
+<p>We are continuously working on improving the site with new features and improvements. A couple of features we have in the pipeline for the upcoming season include:</p>
+<ul>
+<li>
+<p>Web3 login for Stewards to have control of their card and-</p>
+<ul>
+<li>Change their picture</li>
+<li>Add addresses</li>
+<li>Add link to Twitter &amp; Github</li>
+<li>Ability to add additional Stewards to their Workstream</li>
+<li>Ability to opt-out and remove their card</li>
+</ul>
+</li>
+<li>
+<p>Introduction of Workstream cards</p>
+</li>
+<li>
+<p>Minting “End of Season”-cards and allow users to scroll through Seasons</p>
+</li>
+<li>
+<p>Introducing additional metrics to capture other types of engagement such as on-chain compensation, attendance to monthly Steward calls and involvement in working groups not tied to any specific Workstream</p>
+</li>
+</ul>
+<p>We look forward to continuing working together with the community to map our collective health and make it available to the broader ecosystem as a public good!</p>
+          <p><a href="https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/introducing-steward-health-cards-2-0/10418/1
+        Tue, 26 Apr 2022 08:48:46 +0000
+gov.gitcoin.co-post-10418-1
+Introducing Steward Health Cards 2.0
+      
+
+

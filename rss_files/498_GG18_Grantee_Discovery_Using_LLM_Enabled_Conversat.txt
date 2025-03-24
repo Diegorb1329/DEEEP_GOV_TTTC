@@ -1,0 +1,308 @@
+
+
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192
+    **UPDATE 23-AUG-2023**: The application is live [here](https://gg18-llm.streamlit.app/). For now, it includes grantees in the Climate Round only and will be updated for other core rounds shortly. If you take it for a spin, please share inline feedback in the app (using :+1: or :-1:). As we understand the patterns of queries where there is room for improvement, we can get it to respond better over time.
+
+**tl;dr** This is a brainstorming post to help iterate on an existing [LLM-based prototype](https://gitcoin-citizens-round.streamlit.app/) for GG18. It was originially built as a (personal) side-project and deployed for donors as [Citizens GPT](https://twitter.com/GitcoinCitizens/status/1671617848551112706?s=20) for grantee discovery during the Gitcoin Citizens Round. *This project is undertaken in a personal capacity and does not involve any asks for resources or funding from Gitcoin.*
+
+### What?
+A conversational experience for GG18 donors to discover value and impact-aligned grantees.
+
+### Why? 
+An experience that matches the user's style and pace to discover content is more effective than relying solely on pre-defined information hierarchies. 
+
+### How?
+Prospective GG18 donors can ask more information about grantees they are aware of using this utility. Alternatively, users can share the description of work they are interested in funding to discover additional grantees. Additionally, users can ask questions about the round itself in case they need help with any aspect of participating in GG18.
+
+### What already exists?
+A [proof-of-concept](https://gitcoin-citizens-round.streamlit.app/) deployed during the Gitcoin Citizens Round for donors to ask questions about the grantees and the round. For example:
+
+![FzK8cVTWcAA5iT_|690x297, 100%](upload://kPZaDhtg8y7tZLeTZC2CURYf9FB.jpeg)
+
+
+### Features currently in development:
+- Add memory to facilitate conversations like ChatGPT
+- Re-direct user to single sources of truth (Gitcoin Explorer, Gitcoin Documentation, etc.) as appropriate for more information
+- Capture user feedback on relevancy of responses
+- Analytics and logging to inform content planning for future rounds
+- Code refactoring for granular control on the underlying abstractions to improve quality of responses (porting from GPT Index to Langchain)
+
+### What the product should NOT be able to do:
+- Pass algorithmic biases to influence donor for one grantee over another
+- Respond to any line of questioning that requires it to filter, sort or rank grantees
+- Utilize any information outside of what grantee has submitted in its responses
+![Screenshot 2023-08-08 at 1.30.48 PM|690x142](upload://68WlXpbbe8Yfr9iDDxhdAHuHcd8.jpeg)
+
+### Timeline:
+The chatbot will be available 24 hours after the start of GG18 i.e. August 16th and will be online through the end of the round
+
+### ASK: As a potential donor for GG18, what additional features would you find desirable in a "Gitcoin Grants GPT"?
+Wed, 23 Aug 2023 18:40:45 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+rohit
+
+            <aside class="quote no-group" data-username="garm" data-post="8" data-topic="16192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/garm/48/10620_2.png" class="avatar"> garm:</div>
+<blockquote>
+<p>I look forward to crafting prompts to achieve a jailbreak of what the product should NOT be able to do.</p>
+</blockquote>
+</aside>
+<p>Awesome, do let me know what you find. I look forward to learning.</p>
+<aside class="quote no-group" data-username="garm" data-post="8" data-topic="16192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/garm/48/10620_2.png" class="avatar"> garm:</div>
+<blockquote>
+<p>are you going to go through great lengths to try to prevent jailbreaks, or do you accept that if people <em>really want</em> to get an LLM ranked list, that’s fine?</p>
+</blockquote>
+</aside>
+<p>I see the problem space has two different challenges - information discovery and recommendation engine. Right now, I am actively trying to constrain the scope to information discovery alone. Here are a few reasons I am wary of jumping to solve for the recommendations feature for now:</p>
+<ul>
+<li>I am using the out-of-the-box Open AI models for performing a semantic search on curated content (i.e. grantee project details page). Any inherent biases in the base model will likely port over in responding to questions like ranking. Probably, fine-tuning a model might be able to address this.</li>
+<li>There is information asymmetry in the data ingested that will likely add noise to the AI recommendation. Grantee project details page with multimedia (images) and external references to richer data are ignored by LLM. A human interpreting this information manually will likely have more data points than LLM to derive inferences.</li>
+</ul>
+<aside class="quote no-group" data-username="garm" data-post="8" data-topic="16192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/garm/48/10620_2.png" class="avatar"> garm:</div>
+<blockquote>
+<p>A prompt like “Give me all climate related initiatives with a focus on animal welfare, ranked by the amount of positive impact they expect to generate per $ donated” may actually save me a <em>lot</em> of time!</p>
+</blockquote>
+</aside>
+<p>I agree! I am out of depth on the precision in data modeling required to ingest this information for high-quality inferences. “all climate related initiatives with a focus on animal welfare” is essentially a semantic search, and the app does that (it could be better). “positive impact they expect to generate” is an inference that will likely require domain-specific fine-tuning for accurate results. I will keep this in mind as I continue my explorations beyond what I have been able to code so far!</p>
+          <p><a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/10
+        Wed, 23 Aug 2023 18:40:45 +0000
+gov.gitcoin.co-post-16192-10
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+      
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+rohit
+
+            <p>The application is live <a href="https://gg18-llm.streamlit.app/" rel="noopener nofollow ugc">here</a>. For now, it includes grantees in the Climate Round only and will be updated for other core rounds shortly.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="2" data-topic="16192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>It would be great to have a few FAQs I can click on when the chat box opens</p>
+</blockquote>
+</aside>
+<p><a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> It isn’t as seamless as a click, but I have added a few queries that can be copied as a prompt.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d396ad99f71a705d2a9cf1829a18cc9eaf5b8946.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/d396ad99f71a705d2a9cf1829a18cc9eaf5b8946" title="Screenshot 2023-08-23 at 11.35.12 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d396ad99f71a705d2a9cf1829a18cc9eaf5b8946_2_517x285.png" alt="Screenshot 2023-08-23 at 11.35.12 PM" data-base62-sha1="ubNzvlrQN6L4w4r4V9KrpHuJQnc" width="517" height="285" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d396ad99f71a705d2a9cf1829a18cc9eaf5b8946_2_517x285.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d396ad99f71a705d2a9cf1829a18cc9eaf5b8946_2_775x427.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d396ad99f71a705d2a9cf1829a18cc9eaf5b8946_2_1034x570.png 2x" data-dominant-color="1B1D23"></a></div><p></p>
+<aside class="quote no-group" data-username="jengajojo" data-post="2" data-topic="16192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>can the bot be multi-lingual?</p>
+</blockquote>
+</aside>
+<p>It seems to be doing okay out-of-the-box, but I would love it if you could try a language you could offer feedback on (the question in Spanish was, “What projects are working to improve the health of the oceans?”, subject to Google Translare’s accuracy … haha!)</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/3f5a924552cc7323083bd7dff7ff17fbc6d26162.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/3f5a924552cc7323083bd7dff7ff17fbc6d26162" title="Screenshot 2023-08-23 at 11.40.25 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3f5a924552cc7323083bd7dff7ff17fbc6d26162_2_449x500.png" alt="Screenshot 2023-08-23 at 11.40.25 PM" data-base62-sha1="92s7ZvtL1fBWlBfZH14C9g4G190" width="449" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3f5a924552cc7323083bd7dff7ff17fbc6d26162_2_449x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3f5a924552cc7323083bd7dff7ff17fbc6d26162_2_673x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3f5a924552cc7323083bd7dff7ff17fbc6d26162_2_898x1000.png 2x" data-dominant-color="212329"></a></div><p></p>
+<aside class="quote no-group" data-username="koday" data-post="4" data-topic="16192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/koday/48/7280_2.png" class="avatar"> koday:</div>
+<blockquote>
+<p>For now, the first thing that came to mind is using this for grouping grants in a given round by the technology they’re using/building.</p>
+</blockquote>
+</aside>
+<p><a class="mention" href="https://gov.gitcoin.co/u/koday">@koday</a> This is a work in progress, and I am not content with the quality of responses yet (missing breadth). It requires the ability to accurately pick the right chunks of information across all the grantee data sets and still be able to fit in the limited context window for an LLM. Possibly, will have a better design for GG19. But with what I could do so far, here’s a response to the question you had:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/bdb702f141d58342a600d58bc54de228a55f2039.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/bdb702f141d58342a600d58bc54de228a55f2039" title="Screenshot 2023-08-23 at 11.47.37 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bdb702f141d58342a600d58bc54de228a55f2039_2_648x499.png" alt="Screenshot 2023-08-23 at 11.47.37 PM" data-base62-sha1="r4ildxsD3RlRDAp7z2HjmTTMPP3" width="648" height="499" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bdb702f141d58342a600d58bc54de228a55f2039_2_648x499.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bdb702f141d58342a600d58bc54de228a55f2039_2_972x748.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/b/bdb702f141d58342a600d58bc54de228a55f2039.png 2x" data-dominant-color="212328"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/9
+        Wed, 23 Aug 2023 18:22:46 +0000
+gov.gitcoin.co-post-16192-9
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+      
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+garm
+
+            <p>This is awesome!</p>
+<p>I look forward to crafting prompts to achieve a jailbreak of what the product should NOT be able to do.</p>
+<p>On that note, I do have some questions:</p>
+<ol>
+<li>are you going to go through great lengths to try to prevent jailbreaks, or do you accept that if people <em>really want</em> to get an LLM ranked list, that’s fine?</li>
+<li>arguably being able to ask the LLM to filter, sort and rank specific grantees based on things I care about might actually be the painpoint I’m trying to solve? A prompt like “Give me all climate related initiatives with a focus on animal welfare, ranked by the amount of positive impact they expect to generate per $ donated” may actually save me a <em>lot</em> of time!</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/8
+        Tue, 15 Aug 2023 12:21:51 +0000
+gov.gitcoin.co-post-16192-8
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+      
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+rohit
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/koday">@koday</a> ! Looking forward to your feedback!</p>
+<p>If the project detail submitted by the grantee has information about the attribute of interest (e.g. technology, domain, geography, partnerships, etc.), then the existing code should be able to respond to the type of questions you have shared. I will test this out before the code gets deployed once the grantee information is public. Here’s a preview based on the data from Citizens Round (it ain’t perfect, but close enough to the line of inquiry).</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/fad278ec118b30639a3b04652f3cad00c3d3c939.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/fad278ec118b30639a3b04652f3cad00c3d3c939" title="Screenshot 2023-08-09 at 5.19.03 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fad278ec118b30639a3b04652f3cad00c3d3c939_2_690x213.png" alt="Screenshot 2023-08-09 at 5.19.03 PM" data-base62-sha1="zMSiKZpZei9nF76O1JM5gQeQiI9" width="690" height="213" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fad278ec118b30639a3b04652f3cad00c3d3c939_2_690x213.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fad278ec118b30639a3b04652f3cad00c3d3c939_2_1035x319.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fad278ec118b30639a3b04652f3cad00c3d3c939_2_1380x426.png 2x" data-dominant-color="1B212B"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/7
+        Wed, 09 Aug 2023 11:54:15 +0000
+gov.gitcoin.co-post-16192-7
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+      
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+rohit
+
+            <p>That’s a great question and the <span class="hashtag">#1</span> risk from my standpoint from the time this was deployed for the Citizens Round. I classify this risk into two categories: (a) the need for accuracy and (b) avoiding response bias. Here are some proactive and reactive measures. This doesn’t guarantee 100% success but will help narrow down undesirable experiences.</p>
+<p>Proactive steps:</p>
+<ul>
+<li>The underlying architecture to respond to user queries is essentially a search (versus fine-tuning an AI  model) over curated and gated content (single sources of truth about Gitcoin products, round information, project details, etc.) The restricted content prevents the responses from being affected by information broadly available on the Internet.</li>
+<li>Predefined prompt templates that safeguard the neutrality of responses are embedded in the code before calls to the Open AI APIs. This will restrict the product from answering questions like, “Sort the grantees in climate round based on impact” or “Which project has the highest chances of succeeding in the long term?”</li>
+</ul>
+<p>Reactive steps:</p>
+<ul>
+<li>All responses will be logged to understand patterns in user questions and utilize it in informing changes, if any, needed in communications for future rounds by MMM team. This logging mechanism will also allow catching scenarios that haven’t been handled.</li>
+<li>There will be an opportunity for the user to provide feedback on every response to escalate any inappropriate responses.</li>
+</ul>
+<p>LLMs are an evolving technology and I anticipate this will be an iterative process over a few rounds to determine if this will be a useful utility for donors. If you anticipate any additional risks or concerns, please do share.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/6
+        Wed, 09 Aug 2023 11:42:02 +0000
+gov.gitcoin.co-post-16192-6
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+      
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+rohit
+
+            <aside class="quote no-group" data-username="jengajojo" data-post="2" data-topic="16192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>It would be great to have a few FAQs I can click on when the chat box opens</p>
+</blockquote>
+</aside>
+<p>This is a great suggestion. I might need to pick up some more frontend skills <img src="https://gov.gitcoin.co/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"> but I will give this a shot.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="2" data-topic="16192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>Is it too much to ask the bot to go online and cross reference the facts stated in the application with links/resources avaliable online?</p>
+</blockquote>
+</aside>
+<p>The short answer is yes. The current architecture is set up such that the responses are based on curated and gated content only i.e. project details as part of the grant application and not from anything else Open AI might have already scraped or other online information. However, if the project details submitted by the grantee include links and external references, the relevant responses will offer the same links inline in the response to the user to explore further.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="2" data-topic="16192">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>can the bot be multi-lingual?</p>
+</blockquote>
+</aside>
+<p>Mostly, yes. Behind the scenes, the product uses Open AI APIs for a semantic search for the user inquiries. The underlying models likely generate <a href="https://help.openai.com/en/articles/6742369-how-do-i-use-the-openai-api-in-different-languages" rel="noopener nofollow ugc">good results</a> out of the box for a variety of languages. Will test this out more. Here’s an example in Spanish on the data set for Citizens Round.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/aabedfb2b22b810bffd24078778f6a63d5c583fd.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/aabedfb2b22b810bffd24078778f6a63d5c583fd" title="Screenshot 2023-08-09 at 4.43.06 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aabedfb2b22b810bffd24078778f6a63d5c583fd_2_690x259.png" alt="Screenshot 2023-08-09 at 4.43.06 PM" data-base62-sha1="omu791rlPxNGik3mH23BQtN6nwx" width="690" height="259" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aabedfb2b22b810bffd24078778f6a63d5c583fd_2_690x259.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aabedfb2b22b810bffd24078778f6a63d5c583fd_2_1035x388.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aabedfb2b22b810bffd24078778f6a63d5c583fd_2_1380x518.png 2x" data-dominant-color="282C33"></a></div><p></p>
+<p>Thanks for all your suggestions!</p>
+          <p><a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/5
+        Wed, 09 Aug 2023 11:16:02 +0000
+gov.gitcoin.co-post-16192-5
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+      
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+koday
+
+            <p>Thanks for sharing <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a>, this is awesome!</p>
+<p>I’ll play around with this tool once the round goes live and try to give more feedback/ideas at that point.</p>
+<p>For now, the first thing that came to mind is using this for grouping grants in a given round by the technology they’re using/building. I.e. I would ask “Provide a list of all grants in the Web3 OSS round who are building on Optimism” or “Provide a list of all grants in the Climate Solutions round who are working with solar technology”, or something along those lines. I think this type of feature could be incredibly useful, especially for the larger rounds with 100+ grantees.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/4
+        Tue, 08 Aug 2023 22:36:03 +0000
+gov.gitcoin.co-post-16192-4
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+      
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+essemharris
+
+            <p>This is a really interesting idea, and thanks for putting it together. How will we audit the questions and responses to know whether the product is doing / is not doing what it should?</p>
+          <p><a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/3
+        Tue, 08 Aug 2023 16:09:10 +0000
+gov.gitcoin.co-post-16192-3
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+      
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+jengajojo
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> This is definitely a helpful upgrade to the donor experience.</p>
+<ul>
+<li>It would be great to have a few FAQs I can click on when the chat box opens</li>
+<li>Is it too much to ask the bot to go online and cross reference the facts stated in the application with links/resources avaliable online?</li>
+<li>can the bot be multi-lingual?</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/2
+        Tue, 08 Aug 2023 09:34:40 +0000
+gov.gitcoin.co-post-16192-2
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+      
+
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+rohit
+
+            <p><strong>UPDATE 23-AUG-2023</strong>: The application is live <a href="https://gg18-llm.streamlit.app/" rel="noopener nofollow ugc">here</a>. For now, it includes grantees in the Climate Round only and will be updated for other core rounds shortly. If you take it for a spin, please share inline feedback in the app (using <img src="https://gov.gitcoin.co/images/emoji/twitter/+1.png?v=12" title=":+1:" class="emoji" alt=":+1:" loading="lazy" width="20" height="20"> or <img src="https://gov.gitcoin.co/images/emoji/twitter/-1.png?v=12" title=":-1:" class="emoji" alt=":-1:" loading="lazy" width="20" height="20">). As we understand the patterns of queries where there is room for improvement, we can get it to respond better over time.</p>
+<p><strong>tl;dr</strong> This is a brainstorming post to help iterate on an existing <a href="https://gitcoin-citizens-round.streamlit.app/" rel="noopener nofollow ugc">LLM-based prototype</a> for GG18. It was originially built as a (personal) side-project and deployed for donors as <a href="https://twitter.com/GitcoinCitizens/status/1671617848551112706?s=20" rel="noopener nofollow ugc">Citizens GPT</a> for grantee discovery during the Gitcoin Citizens Round. <em>This project is undertaken in a personal capacity and does not involve any asks for resources or funding from Gitcoin.</em></p>
+<h3><a name="what-1" class="anchor" href="https://gov.gitcoin.co#what-1"></a>What?</h3>
+<p>A conversational experience for GG18 donors to discover value and impact-aligned grantees.</p>
+<h3><a name="why-2" class="anchor" href="https://gov.gitcoin.co#why-2"></a>Why?</h3>
+<p>An experience that matches the user’s style and pace to discover content is more effective than relying solely on pre-defined information hierarchies.</p>
+<h3><a name="how-3" class="anchor" href="https://gov.gitcoin.co#how-3"></a>How?</h3>
+<p>Prospective GG18 donors can ask more information about grantees they are aware of using this utility. Alternatively, users can share the description of work they are interested in funding to discover additional grantees. Additionally, users can ask questions about the round itself in case they need help with any aspect of participating in GG18.</p>
+<h3><a name="what-already-exists-4" class="anchor" href="https://gov.gitcoin.co#what-already-exists-4"></a>What already exists?</h3>
+<p>A <a href="https://gitcoin-citizens-round.streamlit.app/" rel="noopener nofollow ugc">proof-of-concept</a> deployed during the Gitcoin Citizens Round for donors to ask questions about the grantees and the round. For example:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/920be23da5e773bbc3ef3d15c42e3750d2d5abdf.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/920be23da5e773bbc3ef3d15c42e3750d2d5abdf" title="FzK8cVTWcAA5iT_"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/920be23da5e773bbc3ef3d15c42e3750d2d5abdf_2_690x297.jpeg" alt="FzK8cVTWcAA5iT_" data-base62-sha1="kPZaDhtg8y7tZLeTZC2CURYf9FB" width="690" height="297" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/920be23da5e773bbc3ef3d15c42e3750d2d5abdf_2_690x297.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/920be23da5e773bbc3ef3d15c42e3750d2d5abdf_2_1035x445.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/920be23da5e773bbc3ef3d15c42e3750d2d5abdf_2_1380x594.jpeg 2x" data-dominant-color="F0F0F0"></a></div><p></p>
+<h3><a name="features-currently-in-development-5" class="anchor" href="https://gov.gitcoin.co#features-currently-in-development-5"></a>Features currently in development:</h3>
+<ul>
+<li>Add memory to facilitate conversations like ChatGPT</li>
+<li>Re-direct user to single sources of truth (Gitcoin Explorer, Gitcoin Documentation, etc.) as appropriate for more information</li>
+<li>Capture user feedback on relevancy of responses</li>
+<li>Analytics and logging to inform content planning for future rounds</li>
+<li>Code refactoring for granular control on the underlying abstractions to improve quality of responses (porting from GPT Index to Langchain)</li>
+</ul>
+<h3><a name="what-the-product-should-not-be-able-to-do-6" class="anchor" href="https://gov.gitcoin.co#what-the-product-should-not-be-able-to-do-6"></a>What the product should NOT be able to do:</h3>
+<ul>
+<li>Pass algorithmic biases to influence donor for one grantee over another</li>
+<li>Respond to any line of questioning that requires it to filter, sort or rank grantees</li>
+<li>Utilize any information outside of what grantee has submitted in its responses<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2b0fc967cc259715af4ba254daa6f64004102506.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/2b0fc967cc259715af4ba254daa6f64004102506" title="Screenshot 2023-08-08 at 1.30.48 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2b0fc967cc259715af4ba254daa6f64004102506_2_690x142.jpeg" alt="Screenshot 2023-08-08 at 1.30.48 PM" data-base62-sha1="68WlXpbbe8Yfr9iDDxhdAHuHcd8" width="690" height="142" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2b0fc967cc259715af4ba254daa6f64004102506_2_690x142.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2b0fc967cc259715af4ba254daa6f64004102506_2_1035x213.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2b0fc967cc259715af4ba254daa6f64004102506_2_1380x284.jpeg 2x" data-dominant-color="F2F1F2"></a></div></li>
+</ul>
+<h3><a name="timeline-7" class="anchor" href="https://gov.gitcoin.co#timeline-7"></a>Timeline:</h3>
+<p>The chatbot will be available 24 hours after the start of GG18 i.e. August 16th and will be online through the end of the round</p>
+<h3><a name="ask-as-a-potential-donor-for-gg18-what-additional-features-would-you-find-desirable-in-a-gitcoin-grants-gpt-8" class="anchor" href="https://gov.gitcoin.co#ask-as-a-potential-donor-for-gg18-what-additional-features-would-you-find-desirable-in-a-gitcoin-grants-gpt-8"></a>ASK: As a potential donor for GG18, what additional features would you find desirable in a “Gitcoin Grants GPT”?</h3>
+          <p><a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192/1
+        Tue, 08 Aug 2023 08:14:06 +0000
+gov.gitcoin.co-post-16192-1
+GG18 Grantee Discovery Using LLM-Enabled Conversations
+      
+
+

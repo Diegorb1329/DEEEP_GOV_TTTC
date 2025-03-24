@@ -1,0 +1,228 @@
+
+
+
+Allo 2.1 => 2.2
+https://gov.gitcoin.co/t/allo-2-1-2-2/19724
+    # Future of Allo
+
+## Authors: Ed Fleming, Kevin Owocki 
+
+# Summary
+
+TLDR: Protocol First => Product First
+
+We collected a ton of feedback from partners over in our devrel channels, especially hackers from the devcon hacker house, and the message is pretty clear: There is conviction for design space, not conviction for Allo protocol 2.1.   Allo 2.1 isn't solving the problems that people have, and the purpose of this document is to talk about Allo 2.2 (which I define as whatever we ship by ETHDenver 2025)
+
+We're going through the journey of what to do with that information, and the conclusion we're trending towards is to pivot from/to:
+   1. Onchain always => Onchain when its needed  
+   1. Protocol First => Product First
+  3. Long development cycles => Faster OODA Loops which will mean faster iteration which will mean more success in market
+
+
+# Full Details
+
+1. **Where we’ve been**
+   1. QF => Multi Mechanism
+      1. The market is going multi-mechanism! We were aware of this already. In some ways we’re still playing catchup with “how” to do it.
+   2. Conviction for design space, not conviction for our solution
+      1. “I get the need for a protocol but I’m not gonna use yours”
+      2. DevEx subpar
+      3. While Allo is composable, we don't actually have modules for what ppl want to do.
+      4. Too much complexity, too much centralization through Allo.sol, not enough ROI.
+      5. Fee model is wrong. It shouldn't be “gitcoin takes $$$”. It should be Gitcoin gets paid when the Funding Infra provider gets paid.
+      6. Cool new things don't fit the model.
+      7. [Futarchy/Retro Funding provider] doesn't want to touch us.
+   3. The world has changed. What's winning in market is lean/narrow experiments with up & coming founders at the helm.
+      1. LottoPGF
+      2. Protocol Guild
+      3. Butter / Futarchy
+      4. Impact Metrics Funding
+      5. Dev Tooling Guilds
+      6. We can empower them through next-gen Allo tools. From a dev tooling perspective, thats our customer.
+2. **Where we’re going**
+   1. Protocol First => Product First
+      1. New emphasis is on solving for customer need first (main customer: round operator/funding deployer needs).
+      2. Simply build the Contracts we need for our products (if it needs contracts at all)
+      3. [Ed Direction/ Visuals](https://miro.com/app/board/uXjVKwZ03d0=/?moveToWidget=3458764608418435333&cot=14) => full stack app focus
+   2. Onchain always => Onchain when its needed
+        1. (Deploy a pool => fund a pool => payout pool all onchain) => (deploy in memory)
+        1. Only need onchain primitives for onchain things like staking or token transfers.
+        2. While Allo is composable, we don't actually have modules for what ppl want to do. Ex: Drips/superfluild payout, hats gating development
+      2. Use protocols that already exist
+       3. A la carte usage of allo protocols
+      4. Don’t design/force products to be onchain if they don’t need to be
+      5. Partners want to leverage a suite of protocols, it should be easy for Allo to fit in
+      6. Onchain fee switch was the wrong approach. We could share fees with operators first and get paid when they do. And get paid upon payouts or via services.
+  3. Faster OODA Loops => faster iteration => more success in market
+    1. Now that we dont need to do onchian primitives as often, no audit time/$$ cost = faster iteration baseline.
+    2. We should always be seeking ways to iterate faster. Some examples:
+      1. AI Augmented Software Develoment
+      2. beta.* subdomains to show work earlier in dev lifecycle.
+      3. Build our reusable app scaffolding for faster iteration.
+        1. See [Ed Visuals](https://miro.com/app/board/uXjVKwZ03d0=/?moveToWidget=3458764608418435333&cot=14)
+        2. Gitcoin Services w docs/DevEx
+          1. ([Checker](https://api.checker.gitcoin.co/api-docs/), SDK)
+      4. Build out modular components for faster iteration.
+        1. UI Kit
+          1. Modules for project view, checkout
+        2. Onchain
+          1. Custom Strategies/ Voting
+          2. Distribution modules
+Tue, 14 Jan 2025 17:59:20 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Allo 2.1 => 2.2
+paul2
+
+            <p>A few thoughts after a first readthrough:</p>
+<blockquote>
+<p>Onchain always =&gt; Onchain when its needed</p>
+</blockquote>
+<p>Is everyone on the same page about “when its needed” ?</p>
+<p>Prioritizing for UX/UI always runs the risk of the pendulum going the other way… i.e if a centralized org can do it already with Typeform and Zelle then it’s probably not worth building.</p>
+<p>As I see it, the goal of what we’re building is an order of magnitude improvement for public goods, and the 2 lowest hanging fruits for this are to:</p>
+<ol>
+<li>Increasing the amount of money going to fund a public good - significantly and sustainably.</li>
+<li>Fundamentally transitioning power away from broken structures to collectives more closely connected to a public good.</li>
+</ol>
+<blockquote>
+<p><strong>2. Where we’re going</strong></p>
+</blockquote>
+<p>This reads a bit like Allo becoming a service provider for grants? Personally would like to see Allo thinking bigger than that - I don’t see that setup as likely to solve 1 of the 2 issues above.</p>
+<blockquote>
+<ol start="3">
+<li>Faster OODA Loops =&gt; faster iteration =&gt; more success in market</li>
+</ol>
+</blockquote>
+<p>Yes! OK that’s a third low hanging fruit:</p>
+<ol start="3">
+<li>Significantly improve other orgs ability to solve <span class="hashtag-raw">#1</span> and <span class="hashtag-raw">#2</span></li>
+</ol>
+<p>But to reiterate the grants-as-a-service thing… if Allo is building custom builds for each client based on their needs, then it’s fully outsourcing the solution for <span class="hashtag-raw">#1</span> and <span class="hashtag-raw">#2</span>. One nice thing about Allo 2.1 is that it attempts to create a network effect that benefits more than just one-off clients.</p>
+<p>I agree 2.1 in its current state isn’t positioned great for network effects, but feel like that should still be a priority.</p>
+          <p><a href="https://gov.gitcoin.co/t/allo-2-1-2-2/19724/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/allo-2-1-2-2/19724/3
+        Tue, 14 Jan 2025 17:59:20 +0000
+gov.gitcoin.co-post-19724-3
+Allo 2.1 => 2.2
+      
+
+Allo 2.1 => 2.2
+gnomadic
+
+            <p>I’m really excited about this strategical shift and what it’s going to enable for Grants Lab Engineering.</p>
+<p>Historically, we’ve started with the protocol—a Solidity implementation of an allocation strategy—and worked backwards to build the product around it. With this shift, we’re flipping that approach. Now, we’ll focus on the <strong>product itself</strong>—and what it enables—rather than starting with how it works.</p>
+<p>Going forward, with this strategical shift, we are empowered to focus on the product itself, and what it enables, instead of “how” it enables.</p>
+<p>This diagram attempts to represent our new mindset:</p>
+<p>The vertical lines in the diagram represent our product offerings. <strong>Checker</strong> is green because it’s rolling out now (spoilers), and <strong>Retrofunding</strong> is light green because it’s next. What comes after that will depend on how the market evolves.</p>
+<p>The horizontal lines represent shared challenges we’ll always face, like UI design, poll-based services, push-based services, and on-chain operations.</p>
+<p>Instead of forcing every product to fit into a single framework, we’ll solve these challenges in ways that make sense for each product. This will let us build faster, more focused, and simpler solutions.</p>
+<p>Stay tuned for more on how this comes together.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/57f0a21f9c9543ce380c6a0549a15d5556699e0a.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/57f0a21f9c9543ce380c6a0549a15d5556699e0a" title="Screenshot 2024-12-04 at 10.19.31 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/57f0a21f9c9543ce380c6a0549a15d5556699e0a_2_690x358.png" alt="Screenshot 2024-12-04 at 10.19.31 AM" data-base62-sha1="cxX5QOJ6kmbh7XB5vU0JFcRWvZ8" width="690" height="358" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/57f0a21f9c9543ce380c6a0549a15d5556699e0a_2_690x358.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/57f0a21f9c9543ce380c6a0549a15d5556699e0a_2_1035x537.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/57f0a21f9c9543ce380c6a0549a15d5556699e0a_2_1380x716.png 2x" data-dominant-color="DCE1CD"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/allo-2-1-2-2/19724/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/allo-2-1-2-2/19724/2
+        Tue, 10 Dec 2024 16:48:16 +0000
+gov.gitcoin.co-post-19724-2
+Allo 2.1 => 2.2
+      
+
+Allo 2.1 => 2.2
+owocki
+
+            <h1><a name="future-of-allo-1" class="anchor" href="https://gov.gitcoin.co#future-of-allo-1"></a>Future of Allo</h1>
+<h2><a name="authors-ed-fleming-kevin-owocki-2" class="anchor" href="https://gov.gitcoin.co#authors-ed-fleming-kevin-owocki-2"></a>Authors: Ed Fleming, Kevin Owocki</h2>
+<h1><a name="summary-3" class="anchor" href="https://gov.gitcoin.co#summary-3"></a>Summary</h1>
+<p>TLDR: Protocol First =&gt; Product First</p>
+<p>We collected a ton of feedback from partners over in our devrel channels, especially hackers from the devcon hacker house, and the message is pretty clear: There is conviction for design space, not conviction for Allo protocol 2.1.   Allo 2.1 isn’t solving the problems that people have, and the purpose of this document is to talk about Allo 2.2 (which I define as whatever we ship by ETHDenver 2025)</p>
+<p>We’re going through the journey of what to do with that information, and the conclusion we’re trending towards is to pivot from/to:</p>
+<ol>
+<li>Onchain always =&gt; Onchain when its needed</li>
+<li>Protocol First =&gt; Product First</li>
+<li>Long development cycles =&gt; Faster OODA Loops which will mean faster iteration which will mean more success in market</li>
+</ol>
+<h1><a name="full-details-4" class="anchor" href="https://gov.gitcoin.co#full-details-4"></a>Full Details</h1>
+<ol>
+<li><strong>Where we’ve been</strong>
+<ol>
+<li>QF =&gt; Multi Mechanism
+<ol>
+<li>The market is going multi-mechanism! We were aware of this already. In some ways we’re still playing catchup with “how” to do it.</li>
+</ol>
+</li>
+<li>Conviction for design space, not conviction for our solution
+<ol>
+<li>“I get the need for a protocol but I’m not gonna use yours”</li>
+<li>DevEx subpar</li>
+<li>While Allo is composable, we don’t actually have modules for what ppl want to do.</li>
+<li>Too much complexity, too much centralization through Allo.sol, not enough ROI.</li>
+<li>Fee model is wrong. It shouldn’t be “gitcoin takes $$$”. It should be Gitcoin gets paid when the Funding Infra provider gets paid.</li>
+<li>Cool new things don’t fit the model.</li>
+<li>[Futarchy/Retro Funding provider] doesn’t want to touch us.</li>
+</ol>
+</li>
+<li>The world has changed. What’s winning in market is lean/narrow experiments with up &amp; coming founders at the helm.
+<ol>
+<li>LottoPGF</li>
+<li>Protocol Guild</li>
+<li>Butter / Futarchy</li>
+<li>Impact Metrics Funding</li>
+<li>Dev Tooling Guilds</li>
+<li>We can empower them through next-gen Allo tools. From a dev tooling perspective, thats our customer.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong>Where we’re going</strong>
+<ol>
+<li>Protocol First =&gt; Product First
+<ol>
+<li>New emphasis is on solving for customer need first (main customer: round operator/funding deployer needs).</li>
+<li>Simply build the Contracts we need for our products (if it needs contracts at all)</li>
+<li><a href="https://miro.com/app/board/uXjVKwZ03d0=/?moveToWidget=3458764608418435333&amp;cot=14">Ed Direction/ Visuals</a> =&gt; full stack app focus</li>
+</ol>
+</li>
+<li>Onchain always =&gt; Onchain when its needed
+<ol>
+<li>(Deploy a pool =&gt; fund a pool =&gt; payout pool all onchain) =&gt; (deploy in memory)</li>
+<li>Only need onchain primitives for onchain things like staking or token transfers.</li>
+<li>While Allo is composable, we don’t actually have modules for what ppl want to do. Ex: Drips/superfluild payout, hats gating development</li>
+<li>Use protocols that already exist</li>
+<li>A la carte usage of allo protocols</li>
+<li>Don’t design/force products to be onchain if they don’t need to be</li>
+<li>Partners want to leverage a suite of protocols, it should be easy for Allo to fit in</li>
+<li>Onchain fee switch was the wrong approach. We could share fees with operators first and get paid when they do. And get paid upon payouts or via services.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Faster OODA Loops =&gt; faster iteration =&gt; more success in market<br>
+1. Now that we dont need to do onchian primitives as often, no audit time/$$ cost = faster iteration baseline.<br>
+2. We should always be seeking ways to iterate faster. Some examples:
+<ol>
+<li>AI Augmented Software Develoment</li>
+<li>beta.* subdomains to show work earlier in dev lifecycle.</li>
+<li>Build our reusable app scaffolding for faster iteration.</li>
+<li>See <a href="https://miro.com/app/board/uXjVKwZ03d0=/?moveToWidget=3458764608418435333&amp;cot=14">Ed Visuals</a></li>
+<li>Gitcoin Services w docs/DevEx<br>
+1. (<a href="https://api.checker.gitcoin.co/api-docs/">Checker</a>, SDK)</li>
+<li>Build out modular components for faster iteration.</li>
+<li>UI Kit<br>
+1. Modules for project view, checkout</li>
+<li>Onchain<br>
+1. Custom Strategies/ Voting<br>
+2. Distribution modules</li>
+</ol>
+</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/allo-2-1-2-2/19724/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/allo-2-1-2-2/19724/1
+        Mon, 09 Dec 2024 22:04:40 +0000
+gov.gitcoin.co-post-19724-1
+Allo 2.1 => 2.2
+      
+
+

@@ -1,0 +1,987 @@
+
+
+
+[Discussion] Addressing immediate gaps in DAO governance
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620
+    # Summary
+
+Upgrade governance processes at Gitcoin DAO by fixing governance gaps and creating a DAO constitution.
+
+# Motivation
+
+Today, governance in the DAO works as following:
+
+* Proposers take guidance from the governance manual
+* In most cases the manual provides guidance for what the proposer wants to achieve
+* In some cases (eg [1](https://snapshot.org/#/gitcoindao.eth/proposal/0xb2094445891a515a6c58d8b44c4c2428e66d2e5f1f1e81a2741036eb97e6d6e8),[2](https://snapshot.org/#/gitcoindao.eth/proposal/0xd43f0a882b581e41bea6c0b162f2eab3b425a8cea5cbfa6da65e11a21ce364be)) there the proposal does not clearly fall into a given category so its combined into governance proposals
+
+This creates confusion and a lack of standardization when it comes to following procedure, documenting changes and following an iterative development process for evolving governance.
+
+# Specification
+
+As part of [DAOplomats engagement with Gitcoin](https://gov.gitcoin.co/t/empowering-gitcoins-governance-gitcoin-x-daoplomats/18615) we have analyzed key aspects of the DAO's governance and here are our suggestions. 
+
+**1. Differentiate between proposals based on how they are enforced.**
+
+Currently there are 4 types of proposals: funding, ratification, governance and reallocation and no difference between regular proposals and community proposals. However there is some overlap between the four categories and some proposals which do not fall in any of the other three categories are posted as governance proposals by default.
+
+In order to provide a clear distinction as well as guidelines for future proposers the following changes are suggested.
+
+Implement two master categories: Onchain and Offchain and two sub categories for each. The proposer can follow this flowchart to identify which type of proposal they are making irrespective of where they lie in the ecosystem orbit
+
+![Screenshot 2024-04-10 at 15.32.02|690x220](upload://oM4JgVDltjYv32CTDlxmmyWt9Qq.png)
+
+### Definations
+
+| Offchain | Offchain | Onchain | Onchain |
+|--------|-------|-------|-------|
+| **Social** | **Legal** | **Admin** | **Token** |
+| Agreements enforceable by peer pressure which do not require changes to any contracts. | Agreements enforced by the legal system and which involve updating the legal setup | Agreements enforced by the blockchain which involves Making changes onchain without changing token balance | Agreements enforced by the blockchain which requires changing token balance|
+
+Examples:
+
+|Social|Legal|Admin|Token|
+| --- | --- | --- | --- |
+| Establishing/modifying DAO cadence|Electing/removing foundation director|Updating governor contracts|Sending/receiving/depositing/withdrawing/staking/lending/borrowing tokens|
+| Modifying essential intents | Establishing/disbanding legal entities such as Grant Lab | Forming/disbanding multi-sigs |  |
+| Modifying/electing council members (CSDO/Grants council) | Dissolving the foundation | Adding/removing members to any multi-sig |  |
+| Modifying program or product policies |  | Delegating tokens |  |
+| Adding/removing partners |  | Adding/removing Hats to a member or a multi-sig | |
+| Establishing/modifying constitution |  |  |  |
+| Changing Governance policies, tooling or other mechanics |  |  |  |
+
+
+
+
+Based on what a proposal finally aims to achieve, the proposer can decide on a category and subcategory and proceed with the governance flow. The forum categories can be modified to reflect these changes.
+
+**2. Create a DAO constitution**
+
+In order to solidify the core principles of the DAO, a constitution which captures high level goals of the DAO should be created. This document should be rarely modified and should require significant consensus to be established and modified.
+
+**3. Implement a minimum threshold for Steward approval based on proposal type**
+
+In order to receive a higher quality signal from token holders and avoid spam, it is suggested that stewards should have a higher skin in the game for each consecutive change. Here is the minimum suggested threshold based on proposal types
+
+|Type|Social|Legal|Admin|Token|
+| --- | --- | --- | --- | --- |
+|Minimum Voting Weight|1|10|100|1000|
+
+**4. Improved proposal labelling**
+
+Based on which stage a proposal is in its life cycle, it is primarily the responsibility of the author to label the proposals as follows:
+
+* Initiating proposals as drafts for community feedback, marked as [DRAFT].
+* A “temperature check” phase to gauge community sentiment, indicated as [TEMP CHECK].
+* Finalising the proposal for voting, labelled as [READY]
+* After the final vote has concluded, labelled as [PASSED/FAILED]
+
+**5. Updating manual**
+
+1. Updating the DAO Structure: The governance manual currently does not include recent changes such as Ecosystem collective and other entities in the DAO orbit such as grants lab, passport, RPP etc.. It is suggested that the manual be updated to reflect these changes. This also includes removing older unexisting structure such as Workstreams
+
+2. Recategorise and organise governance roles from various types to three main types: Multi-sig signer, Pod Member and Governooor. Each of these categories can then include subcatgories to signal specific subroles such as matching pool guardian or CSDO member as MS signer. WS lead, Ecosystem contributor, core contributor as a pod member. Steward, delegator and governance coordinator as governooor.
+
+3. Delegate the responsibility for updating the manual to the governance coordinator: Since the manual only reflects changes made by gitcoin governance, updating it should not require a DAO vote.
+
+# Next Steps:
+
+* Collect feedback from the community
+* Submit a formal proposal
+Mon, 27 May 2024 18:00:04 +0000
+🤖 DAO Governance and Vision
+
+
+[Discussion] Addressing immediate gaps in DAO governance
+mars
+
+            <aside class="quote no-group quote-modified" data-username="jengajojo" data-post="11" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p><strong>Legal</strong></p>
+<p><a href="https://gov.gitcoin.co/t/proposal-the-gitcoin-foundation-a-proposal-to-represent-the-gitcoin-dao-irl-by-a-cayman-islands-foundation/9983/35" class="inline-onebox">[Proposal] The Gitcoin Foundation - A proposal to represent the Gitcoin DAO IRL by a Cayman Islands Foundation - #35 by kyle</a></p>
+</blockquote>
+</aside>
+<h3><a name="that-was-july-2022-1" class="anchor" href="https://gov.gitcoin.co#that-was-july-2022-1"></a>That was July 2022:</h3>
+<aside class="quote no-group" data-username="kyle" data-post="35" data-topic="9983" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/proposal-the-gitcoin-foundation-a-proposal-to-represent-the-gitcoin-dao-irl-by-a-cayman-islands-foundation/9983/35">[Proposal] The Gitcoin Foundation - A proposal to represent the Gitcoin DAO IRL by a Cayman Islands Foundation</a></div>
+<blockquote>
+<p>Hey all - I want to close the loop that this has now successfully closed! <img src="https://gov.gitcoin.co/images/emoji/twitter/partying_face.png?v=12" title=":partying_face:" class="emoji" alt=":partying_face:" loading="lazy" width="20" height="20"> This means, the DAO now formally owns a vast number of gitcoin assets, and we are continuing to unplug from Gitcoin Holdings (whom is now rebranding as the Web3 Events company).</p>
+<p>There are no immediate impacts for the DAO, but now that assets, the brand name, and other items are transferred, it means we can start to formalize the relationship between the DAO contributors and the newly created operating company within the foundation.</p>
+<p>Thank you all so much for the support and enabling the DAO to move forward. This is a huge step for us, and for other DAOs who are looking to us for guidance on how to navigate the real world legal entity status for DAOs.</p>
+</blockquote>
+</aside>
+<p>I’m genuinely curious what is the current legal status of Gitcoin / DAO / various related entities?</p>
+<p>Related resource: <a href="https://ecosystem.gitcoin.co/" rel="noopener nofollow ugc">https://ecosystem.gitcoin.co/</a> <em>(so many members of the ecosystem)</em></p>
+<p>Asking because if there is some existing legal structure IRL it means law / rules / compliance / regulation / accounting / annual reports / etc… And not everything that is on-chain is compatible with IRL.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/18
+        Mon, 27 May 2024 18:00:04 +0000
+gov.gitcoin.co-post-18620-18
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+jengajojo
+
+            <p>Thank you for the feedback everyone. Please check out the <a href="https://gov.gitcoin.co/t/proposal-streamlining-governance-processes/18873">proposal</a> post for next steps</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/17
+        Mon, 27 May 2024 13:08:33 +0000
+gov.gitcoin.co-post-18620-17
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+CoachJonathan
+
+            <p>Based on the conversation so far, I think what is missing for me is a more clear example of what is actually going to go into the constitution.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="1" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p><strong>2. Create a DAO constitution</strong></p>
+<p>In order to solidify the core principles of the DAO, a constitution which captures high level goals of the DAO should be created. This document should be rarely modified and should require significant consensus to be established and modified.</p>
+</blockquote>
+</aside>
+<p>Maybe for the sake of moving this convo forward, let’s make the word more clear that we’ll “explore the development of a constitution”.</p>
+<p>This way as we move forward, we have flexibility to decide on the best path for us in a separate convo.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/16
+        Sun, 19 May 2024 08:33:51 +0000
+gov.gitcoin.co-post-18620-16
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+jengajojo
+
+            <p>Thanks for the feedback <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a> &amp; <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a>.</p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="13" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>Changes:</p>
+<ul>
+<li>Removed:
+<ul>
+<li>Modifying program or product policies</li>
+<li>Adding/removing partners</li>
+</ul>
+</li>
+<li>Changed:
+<ul>
+<li>From: Modifying Essential Intents, To: Ratifying DAO-wide goals</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</aside>
+<p>I agree with the above changes.</p>
+<p>To clarify the topic further:</p>
+<p><strong>Constitution</strong>:</p>
+<p>A constitution typically refers to a fundamental set of principles or established precedents that govern an organization or a state. It often outlines the structure, functions, and powers of the various entities within the organization. Constitutions are usually formal documents, sometimes legally binding, and are often difficult to change. They often embody the core values and principles upon which the entity is founded and serve as the supreme law of that organization. Now in the context of DAOs, smart contracts are ideally the supreme way to govern, however, as an industry, we are not at a place yet where we can codify everything hence the closest we can get to having something enforced is to have it legally binding. Since there is no precedent here, individuals or orgs can use this document (Constitution) to fight for their rights in a court of law and it is ultimately for that court to decide the course of action.</p>
+<p><strong>Governance Manual</strong>:</p>
+<p>A governance handbook/manual, on the other hand, is more practical and operational in nature.It provides detailed guidelines, procedures, and best practices for governing the organization effectively. Unlike a constitution, a governance manual is typically more flexible and subject to periodic updates and revisions. It may cover a wide range of topics including decision-making processes, roles and responsibilities of stakeholders, codes of conduct, financial management protocols, and risk management strategies. The document serves as a manual or reference guide for those involved in the day-to-day operations and decision-making processes of the organization.</p>
+<p>In summary, while both documents aim to establish a framework for governance, a constitution focuses on fundamental principles and structures, often with enforcement mechanisms, while a governance handbook/manual provides practical guidance for implementing those principles &amp; managing the organization efficiently.</p>
+<aside class="quote no-group" data-username="Viriya" data-post="14" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/viriya/48/5193_2.png" class="avatar"> Viriya:</div>
+<blockquote>
+<p>I would also suggest that when things change (via proposals voted on) the conclusion of each post would state that this is now reflected either in the manual or constitution.</p>
+</blockquote>
+</aside>
+<p>In this context, changing the constitution can involve its own sub-category under legal proposals where in the main goal of the proposal is to exclusively modify the constitution. Whereas, any other proposal can indirectly affect governance procedures and the manual can be updated to reflect that change. As an example:</p>
+<p>The purpose of Gitcoin today is ‘to empower communities to fund their shared needs.’ Now if someone wants to change this mission, they have to put a proposal to exclusively change this mission, the proposal cannot have any other agenda. Vs. changing from a seasonal cadence to a quarterly one does not fundamentally alter the principles or structures but helps in managing the org efficiently, hence this can be included in the manual and does not necessarily need its own proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/15
+        Thu, 16 May 2024 08:57:24 +0000
+gov.gitcoin.co-post-18620-15
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+Viriya
+
+            <p>Thanks for this <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a></p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="13" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>I am also not clear if there is still a plan to maintain posts like the <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v2-updated/7860">Governance v2 </a> and <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358">Governance v3</a> post with a follow-up Governance v4 post. As I indicated in my original comment above, my vote is no since these posts are long, confusing and filled with gaps.</p>
+</blockquote>
+</aside>
+<p>I would say “no” to this as well. There should be a pinned post to easily access the manual though. I would also suggest that when things change (via proposals voted on) the conclusion of each post would state that this is now reflected either in the manual or constitution.</p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="13" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>I’m also still not 100% clear on this, though it seems like the gist is “things that will change ‘often’ go in the manual and things that ‘stay the same’ go in the constitution”. I’d love to codify this more concretely so that we’re clear on what goes where.</p>
+</blockquote>
+</aside>
+<p>Please do! I don’t think that blocker directly affects this proposal, does it?</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/14
+        Wed, 15 May 2024 18:29:42 +0000
+gov.gitcoin.co-post-18620-14
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+CoachJonathan
+
+            <p>I think that we are almost there with these suggestions. There are two items I want to address in this comment:</p>
+<ol>
+<li>Category examples</li>
+<li>Gitcoin constitution</li>
+</ol>
+<h2><a name="category-examples-1" class="anchor" href="https://gov.gitcoin.co#category-examples-1"></a>Category Examples</h2>
+<p>Based on the initial draft the <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> created, I want to offer some amendments to the tables:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Offchain</th>
+<th>Offchain</th>
+<th>Onchain</th>
+<th>Onchain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Social</strong></td>
+<td><strong>Legal</strong></td>
+<td><strong>Admin</strong></td>
+<td><strong>Token</strong></td>
+</tr>
+<tr>
+<td>Agreements enforceable by a social contract which do not require changes to any contracts</td>
+<td>Agreements enforced by the legal system and which involve updating the legal setup</td>
+<td>Agreements enforced by the blockchain which involves making changes onchain without changing a token balance</td>
+<td>Agreements enforced by the blockchain which requires changing a token balance</td>
+</tr>
+</tbody>
+</table>
+</div><p>Examples:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Social</th>
+<th>Legal</th>
+<th>Admin</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Establishing/modifying DAO cadence</td>
+<td>Electing/removing foundation director</td>
+<td>Updating governor contracts</td>
+<td>Sending/receiving/depositing/withdrawing/staking/lending/borrowing tokens</td>
+</tr>
+<tr>
+<td>Ratifying DAO-wide goals</td>
+<td>Establishing/disbanding legal entities such as Grant Lab</td>
+<td>Forming/disbanding multi-sigs</td>
+<td></td>
+</tr>
+<tr>
+<td>Modifying/electing council members <s>(CSDO/Grants council)</s>(ex: GG Community Council)</td>
+<td>Dissolving the foundation</td>
+<td>Adding/removing members to any multi-sig</td>
+<td></td>
+</tr>
+<tr>
+<td><s>Modifying program or product policies</s></td>
+<td></td>
+<td>Delegating tokens</td>
+<td></td>
+</tr>
+<tr>
+<td><s>Adding/removing partners</s></td>
+<td></td>
+<td>Adding/removing Hats to a member or a multi-sig</td>
+<td></td>
+</tr>
+<tr>
+<td>Establishing/modifying constitution</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Changing Governance policies, tooling or other mechanics</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div><p>Changes:</p>
+<ul>
+<li>Removed:
+<ul>
+<li>Modifying program or product policies</li>
+<li>Adding/removing partners</li>
+</ul>
+</li>
+<li>Changed:
+<ul>
+<li>From: Modifying Essential Intents, To: Ratifying DAO-wide goals</li>
+</ul>
+</li>
+</ul>
+<h2><a name="gitcoin-constitution-2" class="anchor" href="https://gov.gitcoin.co#gitcoin-constitution-2"></a>Gitcoin Constitution</h2>
+<p>I’m not 100% sure on what the next step is here.</p>
+<aside class="quote no-group" data-username="Sov" data-post="10" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sov/48/7688_2.png" class="avatar"> Sov:</div>
+<blockquote>
+<p>How will the Gitcoin decide what goes in the DAO constitution versus the governance manual?</p>
+</blockquote>
+</aside>
+<p>I’m also still not 100% clear on this, though it seems like the gist is “things that will change ‘often’ go in the manual and things that ‘stay the same’ go in the constitution”. I’d love to codify this more concretely so that we’re clear on what goes where.</p>
+<p>I am also not clear if there is still a plan to maintain posts like the <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v2-updated/7860">Governance v2</a> and <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358">Governance v3</a> post with a follow-up Governance v4 post. As I indicated in my original comment above, my vote is no since these posts are long, confusing and filled with gaps.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/13
+        Wed, 15 May 2024 14:17:55 +0000
+gov.gitcoin.co-post-18620-13
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+Sov
+
+            <p>Great, thanks for the explanation.  LFG.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/12
+        Thu, 09 May 2024 13:34:46 +0000
+gov.gitcoin.co-post-18620-12
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+jengajojo
+
+            <p>Thanks for the feedback and the questions.</p>
+<ul>
+<li>
+<p>The suggestion here is that: High level things about Gitcoin which are not going to change regularly shall be part of the constitution, however more operational aspects which evolve regularly shall be part of the manual. If the DAO approves going in the direction of forming a constitution, then we shall post a DRAFT first to collect feedback before we proceed to making a final proposal.</p>
+</li>
+<li>
+<p>Here are a few examples of each category:</p>
+</li>
+</ul>
+<p><strong>Social</strong></p><aside class="quote quote-modified" data-post="1" data-topic="17846">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/mathildadv/48/10198_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gg20-eligibility-criteria-community-rounds/17846">GG20 Eligibility Criteria - Community Rounds</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/gitcoin-grants/15"><span data-category-id="15" style="--category-badge-color: #0088CC; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Everything around Gitcoin Grants, our flagship product"><span class="badge-category__name">🌱 Gitcoin Grants</span></span></a>
+  </div>
+  <blockquote>
+    In the proposed new structure, we will create a dedicated pool of funds (up to $125K quarterly) available to support “matching on matching” pools. Communities with any amount raised for matching and meeting the round criteria can apply for up to $25K in funding from Gitcoin to go toward their matching pool. The GG20 Community Council (a Gitcoin DAO-elected external council) will proceed to review applications and vote on which communities to fund in the upcoming round. 
+The below outlines the mi…
+  </blockquote>
+</aside>
+<aside class="quote quote-modified" data-post="1" data-topic="15118">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/proposal-amendments-to-the-steward-council/15118">[Proposal] - Amendments to the Steward Council</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    <a name="proposal-amendments-to-the-steward-council-1" class="anchor" href="https://gov.gitcoin.co#proposal-amendments-to-the-steward-council-1"></a>Proposal: Amendments to the Steward Council
+
+<a name="preface-2" class="anchor" href="https://gov.gitcoin.co#preface-2"></a>Preface:
+This document seeks to amend (not replace) <a href="https://gov.gitcoin.co/t/proposal-v2-of-the-steward-council/11639">Proposal: V2 of the Steward Council </a>which was passed on <a href="https://snapshot.org/#/gitcoingov.eth/proposal/0x5543373d5748b4145b3a8a2cf8ecbf105fcb14d9b136f49134cd51bb4b8f6c75">Snapshot</a> on December 05, 2022. 
+For simplicity, this document will capture “amendments” which will update components of the <a href="https://gov.gitcoin.co/t/proposal-v2-of-the-steward-council/11639">Proposal: V2 of the Steward Council</a>. For transparency this document will list the relevant “Original wording” and ”Amended wording” segments of the proposal as well as “rational” for the change. 
+There are three amendments…
+  </blockquote>
+</aside>
+<aside class="quote quote-modified" data-post="1" data-topic="13165">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gcp-003-passed-post-vote-reconsider-process/13165">[GCP-003] - PASSED - Post-vote “reconsider” process</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    Title: [GCP-003] - Post-vote “reconsider” process 
+Author(s): Shawn16400, Gitcoin Steward Council, 
+Summary: 
+This proposal creates a mechanism for appealing a decision that has been ratified via the Gitcoin Governance process. This process is intended to be used sparingly and is not designed to be an alternative litigation process for dissatisfied users of the governance process. 
+Abstract: 
+This mechanism is designed as a stop-gap measure in cases where there is a material change in informatio…
+  </blockquote>
+</aside>
+<p><strong>Legal</strong></p><aside class="quote quote-modified" data-post="1" data-topic="9983">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/proposal-the-gitcoin-foundation-a-proposal-to-represent-the-gitcoin-dao-irl-by-a-cayman-islands-foundation/9983">[Proposal] The Gitcoin Foundation - A proposal to represent the Gitcoin DAO IRL by a Cayman Islands Foundation</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    <a name="introducing-the-gitcoin-foundation-a-proposal-to-represent-the-gitcoin-dao-irl-by-a-cayman-islands-foundation-1" class="anchor" href="https://gov.gitcoin.co#introducing-the-gitcoin-foundation-a-proposal-to-represent-the-gitcoin-dao-irl-by-a-cayman-islands-foundation-1"></a>Introducing The Gitcoin Foundation - A proposal to represent the Gitcoin DAO IRL by a Cayman Islands Foundation.
+TL;DR: This proposal outlines why a foundation is useful, how the Gitcoin Foundation is structured, and what powers the DAO has over the Gitcoin Foundation (spoiler, the DAO will have virtually all the control!). This proposal also calls for the community to execute a transfer of ownership of various Gitcoin Holdings assets, including our DAO Treasury timelock contract and public goo…
+  </blockquote>
+</aside>
+
+<p><strong>Admin</strong></p><aside class="quote quote-modified" data-post="1" data-topic="17935">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/a/d78d45/48.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/proposal-v2-adding-osnap-to-gitcoin-grants-safe/17935">[Proposal V2] Adding oSnap to Gitcoin Grants Safe</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/open-discussion/9"><span data-category-id="9" style="--category-badge-color: #12A89D; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Discuss, and even debate topics, that might be good ideas for us to explore or will spark a good conversation.  And some of them might turn into an official proposal eventually, but don’t need to."><span class="badge-category__name">🧙 🧙‍♀️ Ideas and Open Discussion</span></span></a>
+  </div>
+  <blockquote>
+    <a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary
+We propose adding oSnap, a governance tool developed by UMA, to the Gitcoin Grants Matching Pool Safe to allow for automatic Safe Tx execution of grant distributions after successful Snapshot votes. 
+This is an amended proposal that incorporates feedback from the Gitcoin team and community. The original proposal can be found <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xbba6d5e08ea0adb069fa2b1fcea02333e90b7c8cf387e31c0b77e61f4f29f5b8" rel="noopener nofollow ugc">here</a>. 
+<a name="abstract-2" class="anchor" href="https://gov.gitcoin.co#abstract-2"></a>Abstract
+The current grant process relies on multi-sig signers of the Gitcoin Grants Matching Pool Safe to govern and manage funds because grant funds are in …
+  </blockquote>
+</aside>
+<aside class="quote quote-modified" data-post="1" data-topic="17410">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410">[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/open-discussion/9"><span data-category-id="9" style="--category-badge-color: #12A89D; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Discuss, and even debate topics, that might be good ideas for us to explore or will spark a good conversation.  And some of them might turn into an official proposal eventually, but don’t need to."><span class="badge-category__name">🧙 🧙‍♀️ Ideas and Open Discussion</span></span></a>
+  </div>
+  <blockquote>
+    <a name="context-and-update-1" class="anchor" href="https://gov.gitcoin.co#context-and-update-1"></a>Context and Update
+In our continued efforts to evolve and democratize the governance process within the Gitcoin DAO, we previously proposed (<a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xa68b33484f5fe3e53f2f51335483057200d3fa08cdafc93c0904b29514cb9980">which passed</a>!) adjustments to the GTC voting thresholds. After valuable discussions and technical consultations, it’s clear that some proposed changes need refinement. Specifically, adjusting the 2.5M GTC quorum requirement presents technical challenges and may necessitate deploying a new contract, which we want to avoid. However, we can modify the 1M GTC r…
+  </blockquote>
+</aside>
+<aside class="quote quote-modified" data-post="1" data-topic="14010">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010">[GCP-009] - Upgrading Gitcoin’s Governance Contracts</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    <a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary
+Gitcoin has been working with <a href="https://scopelift.co">ScopeLift</a> for a number of months to develop, test and now implement new onchain governance contracts for the Gitcoin DAO. These new contracts are built on <a href="https://blog.openzeppelin.com/compound-governor-bravo-audit/">tested Open Zeppelin</a> contracts that bring <a href="https://blog.tally.xyz/understanding-governor-bravo-69b06f1875da">Governor Bravo</a> functionality to our DAO’s governance. These new contracts also have the <a href="https://www.scopelift.co/blog/how-scopelift-built-a-flex-voting-atoken-on-aave">Flexible Voting</a> extension which has been <a href="https://blog.openzeppelin.com/scopelift-flexible-voting-audit/">audited</a>. Flexible Voting provides a permissionless interface for integration and experimentation via voting contracts, enabling a host …
+  </blockquote>
+</aside>
+<p><strong>Token</strong></p><aside class="quote quote-modified" data-post="1" data-topic="18451">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/quaylawn/48/12069_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/passed-budget-request-for-the-gitcoin-ethcc-activation/18451">[PASSED] Budget Request for the Gitcoin EthCC Activation</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/open-discussion/9"><span data-category-id="9" style="--category-badge-color: #12A89D; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Discuss, and even debate topics, that might be good ideas for us to explore or will spark a good conversation.  And some of them might turn into an official proposal eventually, but don’t need to."><span class="badge-category__name">🧙 🧙‍♀️ Ideas and Open Discussion</span></span></a>
+  </div>
+  <blockquote>
+    <a name="introduction-1" class="anchor" href="https://gov.gitcoin.co#introduction-1"></a>Introduction
+As part of the <a href="https://gov.gitcoin.co/t/introducing-gitcoin-s-ecosystem-collective/17954">Ecosystem Collective’s mission to steward Gitcoin’s brand</a>, we are excited to announce our plans for an exciting and engaging EthCC activation. This proposal outlines the budget for the activation, including expenses for events, merchandise, and travel. 
+This proposal aims to be in line with our <a href="https://gov.gitcoin.co/t/gitcoin-s-2024-irl-events-plan/17322">2024 IRL Events Plan</a>. 
+<a name="events-2" class="anchor" href="https://gov.gitcoin.co#events-2"></a>Events
+Below is our scheduled events for the week: 
+July 10th - Schelling Point Sessions: Grants Program Design 
+
+250 pax event @ Jardin Brussels (half-d…
+  </blockquote>
+</aside>
+<aside class="quote quote-modified" data-post="1" data-topic="18240">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/ecosystem-collective-s21-22-budget-proposal/18240">Ecosystem Collective S21/22 Budget Proposal</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/open-discussion/9"><span data-category-id="9" style="--category-badge-color: #12A89D; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Discuss, and even debate topics, that might be good ideas for us to explore or will spark a good conversation.  And some of them might turn into an official proposal eventually, but don’t need to."><span class="badge-category__name">🧙 🧙‍♀️ Ideas and Open Discussion</span></span></a>
+  </div>
+  <blockquote>
+    This proposal is seeking a total of $1,801,672 of funding for the Ecosystem Collective’s 360 Team &amp; the work they will complete for the latter half of S21 and for the total of S22 (March 1 - July 31, 2024). 
+<a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TL;DR
+With the recent <a href="https://gov.gitcoin.co/t/gitcoin-entering-the-end-game/17560">reorganization of Gitcoin into several business units</a> and a community-focused subDAO, Gitcoin <a href="https://gov.gitcoin.co/t/introducing-gitcoin-s-ecosystem-collective/17954">introduced a new unit: the Ecosystem Collective</a>. This unit is dedicated to stewarding Gitcoin’s brand, community and governance in support of the overall growth and health of t…
+  </blockquote>
+</aside>
+<aside class="quote quote-modified" data-post="1" data-topic="14904">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/davidacasey/48/10008_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gcp-011-support-the-funding-the-commons-hackathon-residency-and-conference-series/14904">[GCP-011] - Support the Funding the Commons Hackathon, Residency and Conference Series</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    [GCP-011] - Support the Funding the Commons Hackathon and Conference Series 
+This proposal was put together with support and guidance from <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a> 
+Summary: This proposal seeks Gitcoin community approval for a grant to fund the “Funding the Commons” hackathon and conference series. The grant aims to: 
+
+Position Gitcoin’s Allo Protocol and Grants Stack at the forefront of an emerging EVM-based public goods funding ecosystem
+Integrate Gitcoin’s technologies with other public goods funding i…
+  </blockquote>
+</aside>
+
+<ul>
+<li>I have posted a suggestion for the minimum approval. If there are no comments against it, then it will be proposed as it is. However, if the community wants to discuss it further we can setup a offchain vote to determine these thresholds.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/11
+        Thu, 09 May 2024 13:04:30 +0000
+gov.gitcoin.co-post-18620-11
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+Sov
+
+            <p>Thanks for this.</p>
+<p>Directionally, I agree with what is outlined, but I have a few questions I would ask for clarity:</p>
+<ul>
+<li>How will the Gitcoin decide what goes in the DAO constitution versus the governance manual?</li>
+<li>Are there any specific examples of how proposals would be differentiated by enforcement type?</li>
+<li>How will the minimum approval threshold be determined?</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/10
+        Thu, 09 May 2024 12:38:28 +0000
+gov.gitcoin.co-post-18620-10
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+jengajojo
+
+            <p>Thank you for the feedback <a class="mention" href="https://gov.gitcoin.co/u/decentralizedceo">@Decentralizedceo</a>  The intention here is to get approval from stewards who have more skin in the game as the consequences of each tier can significantly alter the state of the DAO. Irrespective of their voting weight all stewards are free to comment and express their opinions on all matters.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/9
+        Thu, 09 May 2024 11:57:07 +0000
+gov.gitcoin.co-post-18620-9
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+Decentralizedceo
+
+            <p>Well said!! With <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> and <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a> reasoning towards a DAO structure, we are in good hands.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/8
+        Thu, 09 May 2024 08:03:35 +0000
+gov.gitcoin.co-post-18620-8
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+Decentralizedceo
+
+            <p>Thank you for this <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> This was very well thought out and would love to see it implemented further down the line.<br>
+I do have a question about this:</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="1" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Social</th>
+<th>Legal</th>
+<th>Admin</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum Voting Weight</td>
+<td>1</td>
+<td>10</td>
+<td>100</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</aside>
+<p>Would this not break down the votes into tiers and some may not have a voice in certain matters? Unless that is the actual intention. Please elaborate if possible.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/7
+        Thu, 09 May 2024 08:02:01 +0000
+gov.gitcoin.co-post-18620-7
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+Viriya
+
+            <p>I think reducing friction in governance with these proposed changes make sense and I appreciate the thinking being done by <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a> and <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> here. Posts like these won’t garner much interest and feedback here, even though they are fundamental to how our DAO ultimately operates.</p>
+<p>I’m aligned to the call outs by Jonathan and trust that, as a lead at EC, he is doing the due diligence to help steward this proposal in a way that makes sense for us.</p>
+<p>I think overall, if we can update/repurpose docs/tools that currently exist vs. creating net new things, that would be my preference!</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/6
+        Tue, 30 Apr 2024 14:58:44 +0000
+gov.gitcoin.co-post-18620-6
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+jengajojo
+
+            <p>Thanks for the feedback and support <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a></p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="4" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>where is the best place to capture the full extent of these examples</p>
+</blockquote>
+</aside>
+<p>If there won’t be much contention about this then a reply to this forum post will be sufficient, however if you think this will result in a long discussion, we can move this to a working doc.</p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="4" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>who did you envision were “Pod Members”?</p>
+</blockquote>
+</aside>
+<p>Refering to these posts on pods, <a href="https://gov.gitcoin.co/t/introducing-gitcoin-s-ecosystem-collective/17954" class="inline-onebox">Introducing Gitcoin’s Ecosystem Collective</a> if we were to adopt the ‘Pod structure’ DAOwide, then we can have separate pods for each group and have 3 master categories for overall roles in the DAO as mentioned earlier and several sub-categories inside the Pod category.</p>
+<p>Happy to change the Governoor suggestion to anything else the community feels makes sense.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/5
+        Fri, 26 Apr 2024 07:23:12 +0000
+gov.gitcoin.co-post-18620-5
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+CoachJonathan
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> for getting the ball rolling on some of these initiatives. Though conversations like these might seem mundane and unnecessary, I truly believe that they are critical aspects of Gitcoin’s legitimacy as a DAO and important pieces on Gitcoin’s path to decentralization.</p>
+<p>Additionally, I believe that more thorough documentation &amp; closed loopholes = more robust governance, which starts a network effect that leads to more legitimate governance.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b64e4f7d2f7b0ccc4ecbf1ae46aaa0201963f868.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/b64e4f7d2f7b0ccc4ecbf1ae46aaa0201963f868" title="Governance Flywheel"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b64e4f7d2f7b0ccc4ecbf1ae46aaa0201963f868_2_500x500.png" alt="Governance Flywheel" data-base62-sha1="q0KG6tag0iLffLbRTMdW1QLio7S" width="500" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b64e4f7d2f7b0ccc4ecbf1ae46aaa0201963f868_2_500x500.png, https://gov.gitcoin.co/uploads/db4391/original/2X/b/b64e4f7d2f7b0ccc4ecbf1ae46aaa0201963f868.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/b/b64e4f7d2f7b0ccc4ecbf1ae46aaa0201963f868.png 2x" data-dominant-color="D5E9ED"></a></div><p></p>
+<h2><a name="my-thoughts-on-some-of-the-proposals-1" class="anchor" href="https://gov.gitcoin.co#my-thoughts-on-some-of-the-proposals-1"></a>My thoughts on some of the proposals</h2>
+<aside class="quote no-group" data-username="jengajojo" data-post="1" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<ol>
+<li>Differentiate between proposals based on how they are enforced.</li>
+</ol>
+</blockquote>
+</aside>
+<p>I am a big fan of this thinking and this is the easiest aspect for me to say “yes” to. In terms of the examples just below, I think there is a bit of finessing we can do to capture real examples of what Gitcoin tokenholders should be voting on.</p>
+<p>When I read examples of voting on modifying the cadence, changing governance tooling, foundation director elections, and multisig actions, I tend to agree. When I read other things like product policies and adding/removing partners, I am less in agreement.</p>
+<p>I appreciate that these are all just examples to get the ball rolling. <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> where is the best place to capture the full extent of these examples - here in the governance forum or in some sort of working doc? I’d love to tease out these examples and create clear guidelines as to what does/doesn’t need to be voted on + what category it fits into.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="1" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<ol start="2">
+<li>Create a DAO constitution</li>
+</ol>
+</blockquote>
+</aside>
+<p>When I initially thought of a constitution, I think of examples like <a href="https://gov.optimism.io/t/working-constitution-of-the-optimism-collective/55">Working Constitution of the Optimism Collective</a> and ENS’ constitutions. These focus more on token holder rights and is a foundational document that any governance system would have.</p>
+<p>When I think of the <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358">Gov v3 post</a>, I see this as part constitution, part incomplete and hard to read governance manual.</p>
+<p>I am not overly concerned with the direction we head, though I would like to see us double down on the Governance Manual since this is the most comprehensive and clear document we have relating to governance (and has a decent UI compared to a long, drawn-out document).</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="1" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p><strong>3. Implement a minimum threshold for Steward approval based on proposal type</strong></p>
+</blockquote>
+</aside>
+<p>This seems fine and safe to try.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="1" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p><strong>4. Improved proposal labelling</strong></p>
+</blockquote>
+</aside>
+<p>Very supportive of creating some standards like this. Whether these are the final words, I don’t have a strong opinion, though the flow seems right.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="1" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p><strong>5. Updating manual</strong></p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="jengajojo" data-post="1" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>Updating the DAO Structure: The governance manual currently does not include recent changes such as Ecosystem collective and other entities in the DAO orbit such as grants lab, passport, RPP etc… It is suggested that the manual be updated to reflect these changes. This also includes removing older unexisting structure such as Workstreams</p>
+</blockquote>
+</aside>
+<p>Sounds good to me.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="1" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>Recategorise and organise governance roles from various types to three main types: Multi-sig signer, Pod Member and Governooor. Each of these categories can then include subcatgories to signal specific subroles such as matching pool guardian or CSDO member as MS signer. WS lead, Ecosystem contributor, core contributor as a pod member. Steward, delegator and governance coordinator as governooor.</p>
+</blockquote>
+</aside>
+<p>To <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a>’s point, not aligned to governooor language (let’s use something more clear here). <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> who did you envision were “Pod Members”? I’m not clear on who these people are.</p>
+<p>And to <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a>’s point about CSDO - this is another out-of-date aspect of the governance manual since this group no longer exists, and I’m happy to work with you to make sure that this gets accurately updated.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="1" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/13005_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>Delegate the responsibility for updating the manual to the governance coordinator: Since the manual only reflects changes made by gitcoin governance, updating it should not require a DAO vote.</p>
+</blockquote>
+</aside>
+<p>This works for me. To be clear, right now I am responsible for doing these updates, and I would like to see this responsibility moved to or shared with the DAOplomats team.</p>
+<hr>
+<p>I am mostly aligned to the suggestions above minus 1 or 2 things. Thanks for getting the ball rolling on these items!</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/4
+        Thu, 25 Apr 2024 16:19:07 +0000
+gov.gitcoin.co-post-18620-4
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+jengajojo
+
+            <p>This post is aimed at starting a discussion on the suggested changes and based on community input we will come back with an actual proposal.</p>
+<aside class="quote no-group" data-username="deltajuliet" data-post="2" data-topic="18620">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/deltajuliet/48/10158_2.png" class="avatar"> deltajuliet:</div>
+<blockquote>
+<p>Are these standard examples or are you suggesting that we create some of these policies for the org?</p>
+</blockquote>
+</aside>
+<p>The suggestion is to create these policies to replace the existing ones.</p>
+<p>The goal of the constitution is to capture high level consensus within the org. Currently these are documented as ‘North Stars’ in the gov manual. Here are some examples [<a href="https://gov.optimism.io/t/working-constitution-of-the-optimism-collective/55">1</a>,<a href="https://docs.ens.domains/dao/constitution">2</a>] which may help you understand the desired output</p>
+<p>These suggestions are intended to make it easier for</p>
+<ul>
+<li>future proposers to identify which domain of governance they want to access</li>
+<li>for admins to manage the forum efficiently</li>
+<li>make stewards more accountable to their role.</li>
+</ul>
+<p>This builds on some of the work which was started here <a href="https://gov.gitcoin.co/t/what-should-stewards-vote-on/17167/4">1</a> <a href="https://gov.gitcoin.co/t/governance-roadmap-s19-20-beyond/16645/15">2</a></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/3
+        Wed, 17 Apr 2024 12:39:53 +0000
+gov.gitcoin.co-post-18620-3
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+deltajuliet
+
+            <p>Sweet, thanks for this <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a>! Would love some clarification around a couple of things…</p>
+<blockquote>
+<p>we have analyzed key aspects of the DAO’s governance and here are our suggestions.</p>
+</blockquote>
+<p>Does this include community feedback or simply a DAOplomats audit?</p>
+<blockquote>
+<p>Based on what a proposal finally aims to achieve, the proposer can decide on a category and subcategory and proceed with the governance flow. The forum categories can be modified to reflect these changes.</p>
+</blockquote>
+<p>These definitions &amp; examples are great but look less tailored to Gitcoin as an org. Are these standard examples or are you suggesting that we create some of these policies for the org?</p>
+<blockquote>
+<p>Create a DAO constitution</p>
+</blockquote>
+<p>Is this different to our process <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358">outlined here</a> by simply a different name? This is also taking into consideration your notes on the DAO manual below (removing/updating the structure) which currently lives in Gitbook.</p>
+<blockquote>
+<p>Recategorise and organise governance roles from various types to three main types</p>
+</blockquote>
+<ul>
+<li>Governooor: Hard pass on this naming.</li>
+<li>Also worth noting there is no formal CSDO anymore.</li>
+<li>How does this tie into the <a href="https://gov.gitcoin.co/t/defining-community-at-gitcoin-part-1-creating-shared-mental-models/18341/3">defining community work</a> that <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a> is doing?</li>
+</ul>
+<p>In general I’m supportive of initiatives that improve our governance, including this one, but what I’m not seeing are the expected outcomes of this work or over-arching goals for these improvements. Would love to see those laid out!</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/2
+        Wed, 17 Apr 2024 11:36:06 +0000
+gov.gitcoin.co-post-18620-2
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+[Discussion] Addressing immediate gaps in DAO governance
+jengajojo
+
+            <h1><a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary</h1>
+<p>Upgrade governance processes at Gitcoin DAO by fixing governance gaps and creating a DAO constitution.</p>
+<h1><a name="motivation-2" class="anchor" href="https://gov.gitcoin.co#motivation-2"></a>Motivation</h1>
+<p>Today, governance in the DAO works as following:</p>
+<ul>
+<li>Proposers take guidance from the governance manual</li>
+<li>In most cases the manual provides guidance for what the proposer wants to achieve</li>
+<li>In some cases (eg <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xb2094445891a515a6c58d8b44c4c2428e66d2e5f1f1e81a2741036eb97e6d6e8">1</a>,<a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xd43f0a882b581e41bea6c0b162f2eab3b425a8cea5cbfa6da65e11a21ce364be">2</a>) there the proposal does not clearly fall into a given category so its combined into governance proposals</li>
+</ul>
+<p>This creates confusion and a lack of standardization when it comes to following procedure, documenting changes and following an iterative development process for evolving governance.</p>
+<h1><a name="specification-3" class="anchor" href="https://gov.gitcoin.co#specification-3"></a>Specification</h1>
+<p>As part of <a href="https://gov.gitcoin.co/t/empowering-gitcoins-governance-gitcoin-x-daoplomats/18615">DAOplomats engagement with Gitcoin</a> we have analyzed key aspects of the DAO’s governance and here are our suggestions.</p>
+<p><strong>1. Differentiate between proposals based on how they are enforced.</strong></p>
+<p>Currently there are 4 types of proposals: funding, ratification, governance and reallocation and no difference between regular proposals and community proposals. However there is some overlap between the four categories and some proposals which do not fall in any of the other three categories are posted as governance proposals by default.</p>
+<p>In order to provide a clear distinction as well as guidelines for future proposers the following changes are suggested.</p>
+<p>Implement two master categories: Onchain and Offchain and two sub categories for each. The proposer can follow this flowchart to identify which type of proposal they are making irrespective of where they lie in the ecosystem orbit</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/ada36bc4facbc311b91355ac12dbd8130f4fd6ce.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/ada36bc4facbc311b91355ac12dbd8130f4fd6ce" title="Screenshot 2024-04-10 at 15.32.02"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ada36bc4facbc311b91355ac12dbd8130f4fd6ce_2_690x220.png" alt="Screenshot 2024-04-10 at 15.32.02" data-base62-sha1="oM4JgVDltjYv32CTDlxmmyWt9Qq" width="690" height="220" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ada36bc4facbc311b91355ac12dbd8130f4fd6ce_2_690x220.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ada36bc4facbc311b91355ac12dbd8130f4fd6ce_2_1035x330.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ada36bc4facbc311b91355ac12dbd8130f4fd6ce_2_1380x440.png 2x" data-dominant-color="E9E9E9"></a></div><p></p>
+<h3><a name="definations-4" class="anchor" href="https://gov.gitcoin.co#definations-4"></a>Definations</h3>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Offchain</th>
+<th>Offchain</th>
+<th>Onchain</th>
+<th>Onchain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Social</strong></td>
+<td><strong>Legal</strong></td>
+<td><strong>Admin</strong></td>
+<td><strong>Token</strong></td>
+</tr>
+<tr>
+<td>Agreements enforceable by peer pressure which do not require changes to any contracts.</td>
+<td>Agreements enforced by the legal system and which involve updating the legal setup</td>
+<td>Agreements enforced by the blockchain which involves Making changes onchain without changing token balance</td>
+<td>Agreements enforced by the blockchain which requires changing token balance</td>
+</tr>
+</tbody>
+</table>
+</div><p>Examples:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Social</th>
+<th>Legal</th>
+<th>Admin</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Establishing/modifying DAO cadence</td>
+<td>Electing/removing foundation director</td>
+<td>Updating governor contracts</td>
+<td>Sending/receiving/depositing/withdrawing/staking/lending/borrowing tokens</td>
+</tr>
+<tr>
+<td>Modifying essential intents</td>
+<td>Establishing/disbanding legal entities such as Grant Lab</td>
+<td>Forming/disbanding multi-sigs</td>
+<td></td>
+</tr>
+<tr>
+<td>Modifying/electing council members (CSDO/Grants council)</td>
+<td>Dissolving the foundation</td>
+<td>Adding/removing members to any multi-sig</td>
+<td></td>
+</tr>
+<tr>
+<td>Modifying program or product policies</td>
+<td></td>
+<td>Delegating tokens</td>
+<td></td>
+</tr>
+<tr>
+<td>Adding/removing partners</td>
+<td></td>
+<td>Adding/removing Hats to a member or a multi-sig</td>
+<td></td>
+</tr>
+<tr>
+<td>Establishing/modifying constitution</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Changing Governance policies, tooling or other mechanics</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div><p>Based on what a proposal finally aims to achieve, the proposer can decide on a category and subcategory and proceed with the governance flow. The forum categories can be modified to reflect these changes.</p>
+<p><strong>2. Create a DAO constitution</strong></p>
+<p>In order to solidify the core principles of the DAO, a constitution which captures high level goals of the DAO should be created. This document should be rarely modified and should require significant consensus to be established and modified.</p>
+<p><strong>3. Implement a minimum threshold for Steward approval based on proposal type</strong></p>
+<p>In order to receive a higher quality signal from token holders and avoid spam, it is suggested that stewards should have a higher skin in the game for each consecutive change. Here is the minimum suggested threshold based on proposal types</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Social</th>
+<th>Legal</th>
+<th>Admin</th>
+<th>Token</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Minimum Voting Weight</td>
+<td>1</td>
+<td>10</td>
+<td>100</td>
+<td>1000</td>
+</tr>
+</tbody>
+</table>
+</div><p><strong>4. Improved proposal labelling</strong></p>
+<p>Based on which stage a proposal is in its life cycle, it is primarily the responsibility of the author to label the proposals as follows:</p>
+<ul>
+<li>Initiating proposals as drafts for community feedback, marked as [DRAFT].</li>
+<li>A “temperature check” phase to gauge community sentiment, indicated as [TEMP CHECK].</li>
+<li>Finalising the proposal for voting, labelled as [READY]</li>
+<li>After the final vote has concluded, labelled as [PASSED/FAILED]</li>
+</ul>
+<p><strong>5. Updating manual</strong></p>
+<ol>
+<li>
+<p>Updating the DAO Structure: The governance manual currently does not include recent changes such as Ecosystem collective and other entities in the DAO orbit such as grants lab, passport, RPP etc… It is suggested that the manual be updated to reflect these changes. This also includes removing older unexisting structure such as Workstreams</p>
+</li>
+<li>
+<p>Recategorise and organise governance roles from various types to three main types: Multi-sig signer, Pod Member and Governooor. Each of these categories can then include subcatgories to signal specific subroles such as matching pool guardian or CSDO member as MS signer. WS lead, Ecosystem contributor, core contributor as a pod member. Steward, delegator and governance coordinator as governooor.</p>
+</li>
+<li>
+<p>Delegate the responsibility for updating the manual to the governance coordinator: Since the manual only reflects changes made by gitcoin governance, updating it should not require a DAO vote.</p>
+</li>
+</ol>
+<h1><a name="next-steps-5" class="anchor" href="https://gov.gitcoin.co#next-steps-5"></a>Next Steps:</h1>
+<ul>
+<li>Collect feedback from the community</li>
+<li>Submit a formal proposal</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-addressing-immediate-gaps-in-dao-governance/18620/1
+        Wed, 17 Apr 2024 09:33:48 +0000
+gov.gitcoin.co-post-18620-1
+[Discussion] Addressing immediate gaps in DAO governance
+      
+
+

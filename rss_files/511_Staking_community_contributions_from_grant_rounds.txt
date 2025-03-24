@@ -1,0 +1,142 @@
+
+
+
+Staking community contributions from grant rounds
+https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766
+    I've been thinking for some time on how public goods projects can have perpetual funding streams. An idea I've been mulling around is letting projects allocate community contributions received during a gitcoin grant round into a staking pool. 
+
+Project expenditure = matching funds received + staking rewards earned on community contributions
+
+in traditional philanthropy, ensuring perpetuity of a project is done most famously by universities, through the endowment model. Basically, raise so much money that the interest earned is enough to let your institution survive. If over many rounds the rewards from staked community contributions are enough to pay a basic sustenance for the founding team, it could allow them to unleash their full potential.
+
+Some open Qs:
+
+1. What would it take for gitcoin to give projects the option of putting all community contributions they receive into a staking pool, from where they can receive a monthly stream of rewards? 
+
+Having one entity like gitcoin create the pool (rather than each project doing so individually) would enable higher rewards due to increased volume.
+
+2. Would it be ethical to inform prospective voters that in the event of a project winding up, funds can from the staking pool would be returned to them?
+
+3. Should we let voters decide whether their contribution goes to the project or into a staking pool that perpetually supports the project? Or should projects have the sole discretion of making this call?
+
+Would be curious to know of similar models that are there in web3 and whether this is an interesting avenue for gitcoin to pursue, possibly in collaboration with Aave, Lido & other staking services.
+
+EDIT: Mandatory locking of community contributions into a staked pool supporting a project can greatly improve Sybil defense. Since it locks up funds while the project is active, wash trading becomes more difficult
+Fri, 28 Jul 2023 14:15:17 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Staking community contributions from grant rounds
+thedevanshmehta
+
+            <p>Thanks Kevin! I got to chat with the Octant team in depth during FTC and SP. It seems their 100k staked eth gives 400 ETH every 90 days, which is a hefty amount indeed towards continuous public good funding.</p>
+<p>I do see some possible collaboration with Octant (joint staking pool?), while still keeping in mind our separate goals with community staking - improving sybil defense and providing a constant drip for projects to perpetually sustain themselves in low power mode.</p>
+          <p><a href="https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766/5
+        Fri, 28 Jul 2023 14:15:17 +0000
+gov.gitcoin.co-post-15766-5
+Staking community contributions from grant rounds
+      
+
+Staking community contributions from grant rounds
+owocki
+
+            <aside class="quote no-group" data-username="thedevanshmehta" data-post="1" data-topic="15766">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>staking rewards earned on community contributions</p>
+</blockquote>
+</aside>
+<p>Checkout what Octant is doing.  For Octant Phase 0, they have 100k ETH staked with the APR going to 10 diff public goods (gitcoin is one of them)   Its pretty similar:</p>
+<p><a href="https://www.youtube.com/watch?v=cdDmWEW3ElY">Octant: The Platform for Governance Experiments with Julian and James</a></p>
+
+          <p><a href="https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766/4
+        Wed, 12 Jul 2023 03:57:30 +0000
+gov.gitcoin.co-post-15766-4
+Staking community contributions from grant rounds
+      
+
+Staking community contributions from grant rounds
+thedevanshmehta
+
+            <p>Super interesting approach of using the carrot of a matching fund boost for enticing projects to stake their community contributions! I also appreciate the feedback on how its more useful as sybil defence than as a continuous revenue stream for projects.</p>
+<p>This could potentially address a major pain point in Sybil defence, that there is no * cost * to launching a sybil attack. At the worst you lose gas fees (&amp; your reputation if its something you value) but your capital remains intact. While the effort to identify sybil attacks is expensive for round managers. This would somewhat correct that imbalance by penalizing egregious sybil attackers both through cancelling matching fund payouts &amp; also locking up a % of their capital for a period of time without the corresponding reward that fair play participants receive.</p>
+<p>If we had to draw up a go-to-market strategy for the staking feature, what are the main questions to be addressed? Here are some i can think of;</p>
+<ol>
+<li>
+<p>Should there be a mandatory minimum (say 5%) of all community contributions that need to be entered into the staking pool? What is the % beyond which there is no additional matching boost for staking more contributions (maybe 50%?)</p>
+</li>
+<li>
+<p>How would projects (&amp; donors) interact with the staking feature? Would they need to enter the % of community contributions that will go into the staking pool before the round starts or after the round ends? How would this be displayed to donors?</p>
+</li>
+<li>
+<p>What should be the lock-up period for staked funds (maybe 9-12 months?) Can projects increase the staking period for additional matching fund boost? How would the staked funds (&amp; interest earned on them) be returned to projects after the lock-up period is over?</p>
+</li>
+</ol>
+<p>I’m glad this has prompted some thinking, excited to see where it leads !</p>
+          <p><a href="https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766/3
+        Wed, 12 Jul 2023 03:16:36 +0000
+gov.gitcoin.co-post-15766-3
+Staking community contributions from grant rounds
+      
+
+Staking community contributions from grant rounds
+koday
+
+            <p>Thanks for sharing your ideas! I’m particularly interested in this:</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="1" data-topic="15766">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Mandatory locking of community contributions into a staked pool supporting a project can greatly improve Sybil defense. Since it locks up funds while the project is active, wash trading becomes more difficult</p>
+</blockquote>
+</aside>
+<p>On the surface, I think this is a fantastic idea that’s worth exploring more. I don’t think we could require this for all donations, as there are a significant number of projects who rely on our grants rounds to keep their projects going and need relatively quick access to the funds they’ve earned.</p>
+<p>However, this could get interesting if we were to reward the projects who commit to locking up the funds for a certain amount of time. It doesn’t have to be a huge reward it would be interesting to see how many grants would commit to locking up their funds for X amount of time if we promise them a Y% higher matching funds payout. I do think this could work as a tool for Sybil defense considering projects are much less likely to use their own funds for spoofing donations or spin up/fund multiple wallets if it means they will lose access to those funds for a certain amount of time.</p>
+<p>Anyway, this definitely got me thinking and I think there are some ideas here that are worth brainstorming on further.</p>
+          <p><a href="https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766/2
+        Tue, 11 Jul 2023 21:20:52 +0000
+gov.gitcoin.co-post-15766-2
+Staking community contributions from grant rounds
+      
+
+Staking community contributions from grant rounds
+thedevanshmehta
+
+            <p>I’ve been thinking for some time on how public goods projects can have perpetual funding streams. An idea I’ve been mulling around is letting projects allocate community contributions received during a gitcoin grant round into a staking pool.</p>
+<p>Project expenditure = matching funds received + staking rewards earned on community contributions</p>
+<p>in traditional philanthropy, ensuring perpetuity of a project is done most famously by universities, through the endowment model. Basically, raise so much money that the interest earned is enough to let your institution survive. If over many rounds the rewards from staked community contributions are enough to pay a basic sustenance for the founding team, it could allow them to unleash their full potential.</p>
+<p>Some open Qs:</p>
+<ol>
+<li>What would it take for gitcoin to give projects the option of putting all community contributions they receive into a staking pool, from where they can receive a monthly stream of rewards?</li>
+</ol>
+<p>Having one entity like gitcoin create the pool (rather than each project doing so individually) would enable higher rewards due to increased volume.</p>
+<ol start="2">
+<li>
+<p>Would it be ethical to inform prospective voters that in the event of a project winding up, funds can from the staking pool would be returned to them?</p>
+</li>
+<li>
+<p>Should we let voters decide whether their contribution goes to the project or into a staking pool that perpetually supports the project? Or should projects have the sole discretion of making this call?</p>
+</li>
+</ol>
+<p>Would be curious to know of similar models that are there in web3 and whether this is an interesting avenue for gitcoin to pursue, possibly in collaboration with Aave, Lido &amp; other staking services.</p>
+<p>EDIT: Mandatory locking of community contributions into a staked pool supporting a project can greatly improve Sybil defense. Since it locks up funds while the project is active, wash trading becomes more difficult</p>
+          <p><a href="https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/staking-community-contributions-from-grant-rounds/15766/1
+        Tue, 11 Jul 2023 14:30:50 +0000
+gov.gitcoin.co-post-15766-1
+Staking community contributions from grant rounds
+      
+
+

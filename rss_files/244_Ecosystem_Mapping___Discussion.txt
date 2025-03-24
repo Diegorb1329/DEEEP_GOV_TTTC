@@ -1,0 +1,518 @@
+
+
+
+Ecosystem Mapping & Discussion
+https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123
+    # GitcoinDAO Ecosystem Mapping
+
+The goal of this document is to provide a preliminary mapping of the *critical operational functions* of the GitcoinDAO pursuant to GitcoinDAO’s stated **purpose**, and in particular the interplays between the various stakeholders. These are the functions that must be carried out in order for that purpose to be reliably fulfilled.
+
+This is a [mapping exercise](https://blockscience.github.io/cag-map/map/), to help the community better understand itself as a DAO.
+
+The reader is invited to participate in the mapping exercise as an iterative process. The processes of orienting and re-orienting ourselves, both as individuals and as an organization, is necessary to foster a [polycentric](https://www.jstor.org/stable/27871226) organizational structure, while facing an evolving collection of challenges and opportunities.
+
+Please use this as a tool to help coordinate in:
+
+* governing the gitcoin organization
+* maintaining the gitcoin platform
+* operating the gitcoin grants program, including matching rounds
+* balancing the needs of a multi-stakeholder participatory ecosystem
+* Identifying & responding to emergent challenges ([addressing vulnerabilities](https://kelsienabben.substack.com/p/resilience-of-the-commons-observing), both acute or systemic)
+
+
+> ### Reflexivity
+> Following [practices of Ethnographic research](https://methods.sagepub.com/book/handbook-of-qualitative-business-management-research-methods-v1/i2518.xml), I foreground this work by acknowledging my perspective formed through past experience and my position within the ecosystem being discussed. I am a stakeholder of the Gitcoin ecosystem: I’ve been using the platform since Grants Round 4, I manage the cadCAD grant, donate regularly, contribute to the DAO on both a paid and volunteer basis, and I am a holder of GTC. Outside of the scope of Gitcoin, I’ve participated in a range of community organizations since I was a teenager, including serving on the board of a non-profit. I’ve worked on multiagent coordination and dynamic resource allocation since 2005, on a wide range of topics in robotics, operations and economics, including but not limited to my PhD on [networked resource allocation](https://repository.upenn.edu/edissertations/1515/). Today, particular focus is digital civil infrastructure, and my focus is on better understanding (and measuring where possible) positive outcomes for a diverse group of stakeholders and how these outcomes relate to reliability and sustainability at the ecosystem level. The body of experience above is exceedingly helpful for both intuitive and formal understanding of DAOs, but I often find it difficult to communicate that understanding. This piece, and other works represent an effort to compress and translate this knowledge into a useful form.
+
+# The Purpose of Gitcoin DAO
+
+***The Purpose of the Gitcoin DAO is to build, maintain and operate a platform through which its community members can coordinate to fund (as well as build, maintain and operate) Ethereum public goods.***
+
+Governing GitcoinDAO consists of ensuring that this purpose is consistently and reliably achieved in the face of an ever changing landscape. This purpose is our north star, but to navigate, we must first understand the nature of our ship.
+
+This is incredibly challenging – there is nothing magical about a DAO that steers the ship for us. We need to know the ship and to know the ship is to know ourselves:
+
+*We’re sailing a ship made of each other*
+
+which is a shameless reference to
+
+> We live in a house made of each other
+> And if that sounds strange that’s because it is
+
+-Excerpt from [Tiny Glowing Screens Pt 2](https://www.youtube.com/watch?v=1SWZ7qWEjUs&t=121s), George Watsky; American Poet, Author & Musician
+
+### Ecosystem Stakeholders
+
+In this section, we will explore the different relationships people have within the Gitcoin Ecosystem. A community member may have any combination of these relationships, so there is a wide range of stakeholder groups with different experiences.
+
+#### Stakeholder Categories
+
+* **Community Member**
+  * anyone who is part of any of the groups below
+* **Platform User**
+  * anyone who interacts with the Gitcoin platform
+  * Includes hackathons, bounties and other Gitcoin programs
+* **Token Holder**
+  * anyone who holds GTC tokens
+  * note that token holder is proxy for all other forms of stakeholdership due to the voting model
+* **Steward**
+  * representative with delegated decision making power
+  * note that voting weight is based on delegated GTC (see token holder)
+* **Paid Contributor**
+  * anyone who works on the development, maintenance or operations of the gitcoin platform who is compensated financially (commensurate with the time, effort and expertise applied)
+* **Volunteer Contributor**
+  * anyone who works on the development, maintenance or operations of the gitcoin platform who is compensated through perks, reputation, etc (or financially but not commensurate with the time, effort and expertise applied)
+
+#### Stakeholder Relationships
+
+Although many of GitcoinDAO’s community members don’t fall cleanly into only one of these buckets, it is very helpful to understand how power is distributed within the organization. As an informed participant in Gitcoin governance, it is critical to understand this structure in order to exercise one’s voice in the Forums, in order to decide which stewards represent their interests, and much more.
+
+![|624x492](upload://1fqoW8LdOjaV91CxrCBMa8DAFgM.jpeg)
+
+The above diagram shows the interconnections between various stakeholder groups in the GitcoinDAO ecosystem.
+
+It is important to remember that a DAO isn’t the absence of an organizational structure. A DAO is an [emerging class of institution](https://medium.com/commonsstack/exploring-daos-as-a-new-kind-of-institution-8103e6b156d4); it is made up of people, resources, social norms, and code, forming a [gestalt](https://en.wikipedia.org/wiki/Gestalt) – a living thing. A DAO is greater than the sum of its parts, and thus must be understood holistically.
+
+# Ecosystem Functions
+
+Carrying forward the notion of the DAO as a living thing, it does not suffice to simply declare that GitcoinDAO has a purpose. In order to achieve that purpose, its critical functions must be fulfilled. For the purpose of this mapping, the focus is mission-critical (or purpose-critical) functions - those functions without which the DAO would fail in accomplishing its goal.
+
+For the sake of limiting scope (and because it is a function I am most familiar with) the focus here is the Gitcoin Grants rounds.
+
+![|624x319](upload://hPfZj96lNGKms2pfc5a5LKNq8Ea.png)
+
+Source: [Deterring Adversarial Behavior at Scale in Gitcoin Grants: A Framework for Community-Based Algorithmic Policy Making](https://medium.com/block-science/deterring-adversarial-behavior-at-scale-in-gitcoin-grants-a8a5cd7899ff)
+
+#### Function Mapping
+
+The Functional Map focuses on the various operational functions which must occur in order for the GitcoinDAO to achieve its purpose on an ongoing basis. Again, the emphasis here is on operational co-dependencies. The work itself may be divided or not amongst various working groups with accountability for and authority to fulfill these functions.
+
+![|624x413](upload://hNbiXbLVMH6BjllH3RJBMCyxIed.jpeg)
+
+#### Matching Stakeholders to Functions for Gitcoin Grants
+
+These stakeholder groups are defined in terms of modes of interaction, and many people are likely to fit multiple categories:
+
+* **Gitcoin Platform User**
+  * people submitting grants to be funded
+  * people donating to grants
+  * people posting bounties
+  * people solving bounties
+  * people interacting with social features (posts, kudos, etc)
+* **GTC Holders**
+  * anyone with a balance of Gitcoin tokens (GTC)
+  * whether exercised or not, this is the necessary criteria to have voting rights (optional delegation) at this time
+* **Stewards**
+  * anyone who has been elevated to the “role” of steward within the gitcoin DAO (see [this introductory Forum post](https://gov.gitcoin.co/t/introducing-stewards-governance/41))
+  * more details are needed on how the rotating cast of stewards are maintained over time
+    * selection committee?
+    * anyone with sufficient delegated GTC?
+    * how do we ensure the various stakeholder groups (not just GTC holders) are adequately represented?
+    * Discussions are ongoing in the [Meta Governance thread](https://gov.gitcoin.co/c/governance-meta/6) of the forum
+* **Contributors providing the Gitcoin Platform Governance related work**
+  * Handles operational governance work including voting
+  * Ensures stewards and stakeholders are informed about issues facing Gitcoin DAO
+  * Ensures stewards represent a diverse set of stakeholders and tracking distribution and delegated GTC
+  * Implements and supports the iteration and development of processes from the Meta Governance working group
+* **Contributors providing the Gitcoin Platform with Meta Governance related work**
+  * Handles institutional analysis and development work
+  * Ongoing refinement of proposal and other processes including steward selection, how voting power is counted to ensure inclusive stakeholder representation
+  * Ensures bilateral communication between Stewards and other working groups, supporting steward attention management
+* **Contributors providing the Gitcoin Platform Operations Work**
+  * develop and maintain the core platform logic
+    * software development
+    * resource provisioning and DevOps
+    * quality control processes (e.g. enforce the terms and conditions by removing grants from the platform that do not meet community standards, or marking grants as ineligible for matching)
+  * orchestrate across other stakeholder groups to ensure end users have a good experience
+    * user experience / product development
+    * community management / communications
+    * handling complaints and/or challenges (e.g. “I was excluded from matching incorrectly!”)
+* **Contributors reaching out to and retaining match funders**
+  * develop relationships with match funding organizations
+  * create consistent expectations about the size and distribution of the match pools for the funders, and fundees.
+  * represent the gitcoinDAO as a match funder, including making proposals to the DAO to run match programs
+* **Contributors doing treasury management for the DAO**
+  * multisig key holders who enact financial decisions made by the DAO
+  * treasury management proposal writers who apply their expertise to define and advocate for specific treasury management actions (or broad strategies) to be voted on by the DAO
+* **Contributors Providing Gitcoin with Community & Communications Management work**
+  * Manages and coordinates across communications platforms and admin and access accordingly
+  * Routes contributors to working groups
+  * Ensures critical information flows
+* **Contributors Providing Gitcoin with Data Science work**
+  * identify and defend against novel economic attacks (e.g. emergent collusion strategies)
+  * build, maintain and operate sybil detection pipeline
+    * data collection, cleaning and staging
+    * feature engineering
+    * model and metaparameter selection
+    * loss function selection
+    * maintaining human labeled training sets
+    * cross validation
+  * maintain process, documentation, code, data, microservices, and any other infrastructure required in order to reliably fulfill this function
+    * balance transparency with privacy (e.g. keep personally identifying information (PII) private while providing transparency about the process and any trade off decisions)
+  * provide advice (and data) to platform operations in support of real time interventions
+  * provide advice (and data) to stewards in support of real time interventions
+  * check out the call to action for the [Fraud Detection & Defense Workstream in this thread](https://gov.gitcoin.co/t/workstream-anti-fraud-workstream-assemble/158)
+  * An addition [ecosystem map focused on the fraud detection](https://gov.gitcoin.co/t/fraud-detection-defense-working-group-mapping/8122) work exists here.
+
+> This section on Data Science work is particularly detailed because this is the part of the GitcoinDAO to which I am currently a paid contributor. I’ve been working with Danilo Lessa Bernardineli, Jesse Tao, Jiajia H, Jessica Zartler, Jeff Emmett and others to bootstrap this functional unit. There is a lot more work to be done to establish a self-sufficient working group, but we’ve been thankful for members of the Token Engineering community who have stepped up to provide their data science expertise.
+
+# Progressive Decentralization
+
+Any organization of the size and complexity of Gitcoin DAO requires some organizational structure. A purposeful decentralized organization must have organizational structure – a formless blob of activity cannot fulfill its purpose over a long time horizon.
+
+A traditional corporate organizational structure is a [directed acyclic graph (DAG)](https://en.wikipedia.org/wiki/Directed_acyclic_graph), with power structures flowing from top to bottom in a hierarchy. In a DAO, the typical organizational structure is closer to a [“team of teams” model](https://beaugordon.medium.com/key-takeaways-from-team-of-teams-by-general-stanley-mcchrystal-eac0b37520b9). That is to say, there are functional units segmented by authority over, and responsibility for, their specific functions. These functions are interdependent, so the functional units must act as a team. However, each function is itself too complex for any one contributor, so the functional units are themselves teams, which may be further subdivided into subfunctions, projects and other substructures required to achieve their functions.
+
+Due to the large variation in size, scope, expertise intensiveness, etc across functional units, it is not realistic to force all functional units into the same organizational structure. That said, there are some expectations that these organizational substructures will include an openness to new participants and [subsidiarity](https://en.wikipedia.org/wiki/Subsidiarity) of the authority within the working groups.
+
+In practical terms, Progressive Decentralization means shifting authority and responsibility to a federation of functional units which receive their mandates and funding from the DAO.
+
+## Emergent Working Groups as Functional Units
+
+I will be the first to admit that most of what goes on in this map is pretty invisible to the stakeholders at large. It takes so much work to operate a platform like this that it is unrealistic to keep tabs on everything that is going on. Gitcoin is an [infrastructure](https://kelsienabben.substack.com/p/the-possibilities-of-ad-hoc-decentralised), which means most of the work that goes into making it safe and reliable happens behind the scenes. Fortunately, one doesn’t need to. Practically, a contributor will get involved in a specific project which is itself just a piece of one of these functional units.
+
+Below I have included a description of essential functional units that collectively cover the goings-on in GitcoinDAO. This is not guaranteed to be complete or correct, as it is just one perspective on the emerging organizational structure of GitcoinDAO. However, I hope that by expressing it in this way supports facilitation of the ongoing process of progressive decentralization.
+
+#### Platform Operations
+
+Platform operations is the front line of GitcoinDAO; this function ensures the platform is running and behaving as expected. Much of this work is the same as what the Gitcoin team provided prior to the launch of GitcoinDAO and which they continue to provide as paid contributors.
+
+As this is a critical function it must continue uninterrupted, but it is now possible for volunteer contributors to participate in subject vetting for appropriate capabilities. By transforming this into a workstream or working group within the DAO, over time the function will become less and less dependent on specific individuals historically associated with the platform, and more an evolving cast of paid and volunteer contributors who step up to keep the ship running.
+
+Those fulfilling this function must be capable of providing and maintaining a high quality software platform and thus is expected to comprise a range of technical and management skills found in a tech company. The proposal for the [Decentralize Gitcoin Working Group](https://gov.gitcoin.co/t/workstream-decentralize-gitcoin/180) is shifting responsibilities for Platform Operations. Given the breadth of this work, such a working group would effectively become a subDAO in order to achieve both decentralization and meet performance standards. A lot of what needs is still to be determined, this open-endedness is addressed by the [Moonshot Collective.](https://gov.gitcoin.co/t/prototyping-workstream-moonshot-budget-request/8074)
+
+#### Fraud Detection and Defense
+
+This function maintains the backline of the GitcoinDAO, primarily providing the functions of a research and data science team, including but not limited analyzing data from Gitcoin to detect new attack patterns, building and maintaining machine learning pipelines and feature sets from data maintained by Data Operations/Platform Operations to scale human reviewers capabilities, as well providing recommendations (with reports) regarding the final allocation of match funds at the end of a round.
+
+The sybil detection work is currently being provided by paid contributor [BlockScience](https://block.science/), but is being built out to support onboarding of other contributors; members of the [Token Engineering](https://tokenengineeringcommunity.github.io/website/) community have contributed to the research aspect of this workstream on a range of topics from improving algorithms, to identifying social challenges implicit in using algorithms to include or exclude users according to observed data.
+
+This workstream is an ongoing initiative which will require external communications (in collaboration with communication and community management); this workstream will have private data of users, as well as some private materials available only to group members. To learn more about the Fraud Detection and Defense Working Group and see a similar mapping exercise detailing its work and stakeholders, [see this link](https://gov.gitcoin.co/t/fraud-detection-defense-working-group-mapping/8122).
+
+#### Communication, Community Management & Onboarding
+
+Communication & Community Management is the lifeblood of any DAO, it ensures there are spaces available for all the necessary modes of interaction. This group keeps the github organization, discord servers, discourse server and more configured with the right roles and permissions for the other working groups. A close related function is moderating the various forums and helps route people to the appropriate working group to have their questions answered. This labor can go under-appreciated because it acts horizontally across functional units; as an organization grows in scope there is an increasing amount of soft skill work coordinating across the administrative and communication leads from different functional units. These [facilitators](https://zenodo.org/record/4579414) identify points of tension, resolve conflict and ensure critical information flows between groups which are otherwise focused on working on providing their primary function.
+
+A particular challenge of this group is to identify the wide range of stakeholders (made up of combinations of roles) and to ensure their needs are heard and accounted for. The communication function can be thought of as collecting information from across stakeholder groups (including working groups), and publishing it outward to everyone (high level updates), as well as facilitating information flow directly between stakeholders (non-broadcast). The latter is higher fidelity and requires more context to understand – in many cases it may still be public.
+
+#### Match Funder Relations
+
+Match funder relations is essentially a business development style group. In order for the Gitcoin grants program to continue to function as intended by the community there must be a continual stream of externally sourced match funds.
+
+Historically, this has been part of the function of the Gitcoin core team as it was a critical operation in the ongoing function of the platform. It is nonetheless quite distinct from the technical operations of the platform, albeit strongly dependent on the trust of those donors in the platform’s technical reliability and the fairness of its allocation policies in addition to the relationship building. Part of managing these relationships is to mitigate the use of Gitcoin Grants match funding as a form of reputation washing.
+
+This working group must understand the wants and needs of match donors to ensure the platform continues to provide for those wants and needs to keep the match funds flowing. Direct coordination with the platform operations will be required to execute round over round on distributions. Funders will also be particularly attuned to the public outputs of the fraud detection work stream as a source of confidence that their funds are being allocated as intended.
+
+#### Treasury Management
+
+This is a highly specialized function which must be able to respond in real-time to evolving conditions. It is prudent that a functional unit be provisioned to manage funds on behalf of the DAO with a strategic mandate from the stewards. Regardless of who has the authority to manage funds on behalf of the DAO it is critical that the high level strategy – priorities, timescales, and general approach to funds management be organized into a proposal and ratified by the stewards. The funds management function needs to have oversight from governance but still needs to operate day to day within its mandate. Financial reporting to the broader DAO is required for transparency.
+
+At this stage in GitcoinDAO’s progressive decentralization, there is a proposal under consideration to empower the [Public Goods Funding Working Group](https://gov.gitcoin.co/t/public-goods-funding-workstream-budget-request/7993) to take on the roles associated with treasury management and match funder relations. This is a great first step to creating reliable financial operations.
+
+#### Governance
+
+Taking governance to mean [structuring the field of action](https://paullaminie.com/Liberte-conditionnee), then the role of the Stewards is governance. The stewards ratify budgets and policies that define the actions available to the functional units that make up GitcoinDAO. The current state of Gitcoin’s governance processes are articulated in this [forum post](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v1/7860), providing transparency and fostering informed participation.
+
+Explicit decision making functions are fulfilled by the Stewards but there is also a dependence on support functions such as education and administrative resources (people, process and tools) ensuring that the stewards are well informed about the issues facing Gitcoin DAO, and about how solutions might affect the various stakeholder groups differently.
+
+As a group the Stewards should represent the diverse set of stakeholders in the Gitcoin Community. It is worthwhile to keep track of the distribution of Stewards - in particular the amounts of GTC delegate to those stewards - as a way to keep track of which groups of stakeholders are adequately being represented, and avoid risks of underrepresenting some segments of the community. Ultimately, the stewards bear responsibility for weighing trade-offs and making subjective decisions.
+
+You can read more discussions on Governance in this [Gitcoin DAO Governance Process v1 forum thread](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v1/7860).
+
+#### Meta Governance
+
+By its very nature, the Governance work of Stewards can get caught up in the politics of the specific issues at hand. The concept of “meta-governance” here speaks to structuring the field of action for those structuring the field of action. While it is a critical function for Stewards to govern GitcoinDAO, the organization itself will continue to go through changes in its power dynamics as it evolves. Thus the functional unit “metagovernance” should be thought more as a watching and advising function fulfilled by community members and outside expertise in [institutional analysis and development](http://www.eolss.net/Sample-Chapters/C04/E6-99A-34.pdf) (IAD). In self-governance systems, power concentrates naturally (often in subtle ways). Technical solutions which enable decentralization explicitly, can lead to narratives which actually hide implicit centralization. To this end, the metagovernance function can be thought of as an immune function.
+
+In practice, metagovernance looks like participation of experts in participatory governance within the Gitcoin Stewards, as well as funding for ethnographic research into the evolving balance of powers within the GitcoinDAO. It may be prudent in the future to have an explicit advisory board serving to monitor and report on the political health of the ecosystem, with the mandate to publish reports identifying both positive and negative findings, and where appropriate author proposals to update or improve the governance processes to maintain political health.
+
+Progress is already being made here with the roll out of this grant program. There is a [metagovernance category](https://gov.gitcoin.co/c/governance-meta/6) in Gitcoin Forums, with regular posts providing visibility into what’s going on (which overlaps with coordination and communication function mentioned above). Another key step is funding research, for example this program which effectively provides [an incentive for research articles](https://gitcoin.co/blog/seeking-a-new-kind-of-public-good/) through a collaboration with [Other Internet](https://otherinter.net/). This post is aimed at providing some grounding through which to examine how people, policies and software come together to form GitcoinDAO.
+
+Much Love,
+-Z
+
+> ### Acknowledgements
+> 
+> I would like to thank everyone who contributed both directly and indirectly to this mapping exercise:
+> 
+> * Gitcoin Stewards: Matt Stephenson, Nathan Schneider, Kelsie Nabben
+> * Collaborators from [the Metagovernance Project](http://metagov.org/): Ellie Rennie, Primavera de Filippi, Joshua Tan (also Kelsie and Nathan)
+> * Collaborators from [Token Engineering](https://tokenengineeringcommunity.github.io/website/docs/getting-started-welcome): Angela Kreitenweis, (also Jeff, Jess and Danilo)
+> * Collaborators [BlockScience](http://block.science): Burrrata, Jeff Emmett, Jessica Zartler, Danilo Lessa Bernardineli, Jesse Tao, Jiajia H, Nick Hirannet (also Matt)
+> 
+> Additional, thanks to Jim Hazard of [Common Accord](http://www.commonaccord.org/) and [Eric Alston](https://experts.colorado.edu/display/fisid_158159) of CU Boulder who provided relevant discussions and reading material pursuant to this research. Jim’s work on Prose Objects is extremely helpful for thinking about the modularity and composability of Policies, which are themselves objects of natural language. Eric’s work on constitutional constraints has helped improve the clarity with which I think about trade-offs between individual and group decision making within decentralized organizations.
+Wed, 04 Aug 2021 03:02:35 +0000
+🤖 DAO Governance and Vision
+
+
+Ecosystem Mapping & Discussion
+zyks678
+
+            <p>See the ecology is strong, it is a continuous development.</p>
+          <p><a href="https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123/3
+        Wed, 04 Aug 2021 03:02:35 +0000
+gov.gitcoin.co-post-8123-3
+Ecosystem Mapping & Discussion
+      
+
+Ecosystem Mapping & Discussion
+DisruptionJoe
+
+            <p>This is really helpful. Thanks!</p>
+          <p><a href="https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123/2
+        Tue, 03 Aug 2021 17:20:25 +0000
+gov.gitcoin.co-post-8123-2
+Ecosystem Mapping & Discussion
+      
+
+Ecosystem Mapping & Discussion
+Zargham
+
+            <h1><a name="gitcoindao-ecosystem-mapping-1" class="anchor" href="https://gov.gitcoin.co#gitcoindao-ecosystem-mapping-1"></a>GitcoinDAO Ecosystem Mapping</h1>
+<p>The goal of this document is to provide a preliminary mapping of the <em>critical operational functions</em> of the GitcoinDAO pursuant to GitcoinDAO’s stated <strong>purpose</strong>, and in particular the interplays between the various stakeholders. These are the functions that must be carried out in order for that purpose to be reliably fulfilled.</p>
+<p>This is a <a href="https://blockscience.github.io/cag-map/map/">mapping exercise</a>, to help the community better understand itself as a DAO.</p>
+<p>The reader is invited to participate in the mapping exercise as an iterative process. The processes of orienting and re-orienting ourselves, both as individuals and as an organization, is necessary to foster a <a href="https://www.jstor.org/stable/27871226">polycentric</a> organizational structure, while facing an evolving collection of challenges and opportunities.</p>
+<p>Please use this as a tool to help coordinate in:</p>
+<ul>
+<li>governing the gitcoin organization</li>
+<li>maintaining the gitcoin platform</li>
+<li>operating the gitcoin grants program, including matching rounds</li>
+<li>balancing the needs of a multi-stakeholder participatory ecosystem</li>
+<li>Identifying &amp; responding to emergent challenges (<a href="https://kelsienabben.substack.com/p/resilience-of-the-commons-observing">addressing vulnerabilities</a>, both acute or systemic)</li>
+</ul>
+<blockquote>
+<h3>Reflexivity</h3>
+<p>Following <a href="https://methods.sagepub.com/book/handbook-of-qualitative-business-management-research-methods-v1/i2518.xml">practices of Ethnographic research</a>, I foreground this work by acknowledging my perspective formed through past experience and my position within the ecosystem being discussed. I am a stakeholder of the Gitcoin ecosystem: I’ve been using the platform since Grants Round 4, I manage the cadCAD grant, donate regularly, contribute to the DAO on both a paid and volunteer basis, and I am a holder of GTC. Outside of the scope of Gitcoin, I’ve participated in a range of community organizations since I was a teenager, including serving on the board of a non-profit. I’ve worked on multiagent coordination and dynamic resource allocation since 2005, on a wide range of topics in robotics, operations and economics, including but not limited to my PhD on <a href="https://repository.upenn.edu/edissertations/1515/">networked resource allocation</a>. Today, particular focus is digital civil infrastructure, and my focus is on better understanding (and measuring where possible) positive outcomes for a diverse group of stakeholders and how these outcomes relate to reliability and sustainability at the ecosystem level. The body of experience above is exceedingly helpful for both intuitive and formal understanding of DAOs, but I often find it difficult to communicate that understanding. This piece, and other works represent an effort to compress and translate this knowledge into a useful form.</p>
+</blockquote>
+<h1><a name="the-purpose-of-gitcoin-dao-2" class="anchor" href="https://gov.gitcoin.co#the-purpose-of-gitcoin-dao-2"></a>The Purpose of Gitcoin DAO</h1>
+<p><em><strong>The Purpose of the Gitcoin DAO is to build, maintain and operate a platform through which its community members can coordinate to fund (as well as build, maintain and operate) Ethereum public goods.</strong></em></p>
+<p>Governing GitcoinDAO consists of ensuring that this purpose is consistently and reliably achieved in the face of an ever changing landscape. This purpose is our north star, but to navigate, we must first understand the nature of our ship.</p>
+<p>This is incredibly challenging – there is nothing magical about a DAO that steers the ship for us. We need to know the ship and to know the ship is to know ourselves:</p>
+<p><em>We’re sailing a ship made of each other</em></p>
+<p>which is a shameless reference to</p>
+<blockquote>
+<p>We live in a house made of each other<br>
+And if that sounds strange that’s because it is</p>
+</blockquote>
+<p>-Excerpt from <a href="https://www.youtube.com/watch?v=1SWZ7qWEjUs&amp;t=121s">Tiny Glowing Screens Pt 2</a>, George Watsky; American Poet, Author &amp; Musician</p>
+<h3><a name="ecosystem-stakeholders-3" class="anchor" href="https://gov.gitcoin.co#ecosystem-stakeholders-3"></a>Ecosystem Stakeholders</h3>
+<p>In this section, we will explore the different relationships people have within the Gitcoin Ecosystem. A community member may have any combination of these relationships, so there is a wide range of stakeholder groups with different experiences.</p>
+<h4><a name="stakeholder-categories-4" class="anchor" href="https://gov.gitcoin.co#stakeholder-categories-4"></a>Stakeholder Categories</h4>
+<ul>
+<li><strong>Community Member</strong>
+<ul>
+<li>anyone who is part of any of the groups below</li>
+</ul>
+</li>
+<li><strong>Platform User</strong>
+<ul>
+<li>anyone who interacts with the Gitcoin platform</li>
+<li>Includes hackathons, bounties and other Gitcoin programs</li>
+</ul>
+</li>
+<li><strong>Token Holder</strong>
+<ul>
+<li>anyone who holds GTC tokens</li>
+<li>note that token holder is proxy for all other forms of stakeholdership due to the voting model</li>
+</ul>
+</li>
+<li><strong>Steward</strong>
+<ul>
+<li>representative with delegated decision making power</li>
+<li>note that voting weight is based on delegated GTC (see token holder)</li>
+</ul>
+</li>
+<li><strong>Paid Contributor</strong>
+<ul>
+<li>anyone who works on the development, maintenance or operations of the gitcoin platform who is compensated financially (commensurate with the time, effort and expertise applied)</li>
+</ul>
+</li>
+<li><strong>Volunteer Contributor</strong>
+<ul>
+<li>anyone who works on the development, maintenance or operations of the gitcoin platform who is compensated through perks, reputation, etc (or financially but not commensurate with the time, effort and expertise applied)</li>
+</ul>
+</li>
+</ul>
+<h4><a name="stakeholder-relationships-5" class="anchor" href="https://gov.gitcoin.co#stakeholder-relationships-5"></a>Stakeholder Relationships</h4>
+<p>Although many of GitcoinDAO’s community members don’t fall cleanly into only one of these buckets, it is very helpful to understand how power is distributed within the organization. As an informed participant in Gitcoin governance, it is critical to understand this structure in order to exercise one’s voice in the Forums, in order to decide which stewards represent their interests, and much more.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/08c0924b73b54f98c212a1a1bcf95a793c940784.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/08c0924b73b54f98c212a1a1bcf95a793c940784" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/08c0924b73b54f98c212a1a1bcf95a793c940784_2_624x492.jpeg" alt="" data-base62-sha1="1fqoW8LdOjaV91CxrCBMa8DAFgM" width="624" height="492" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/08c0924b73b54f98c212a1a1bcf95a793c940784_2_624x492.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/08c0924b73b54f98c212a1a1bcf95a793c940784_2_936x738.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/08c0924b73b54f98c212a1a1bcf95a793c940784_2_1248x984.jpeg 2x" data-dominant-color="E7ECE7"></a></div><p></p>
+<p>The above diagram shows the interconnections between various stakeholder groups in the GitcoinDAO ecosystem.</p>
+<p>It is important to remember that a DAO isn’t the absence of an organizational structure. A DAO is an <a href="https://medium.com/commonsstack/exploring-daos-as-a-new-kind-of-institution-8103e6b156d4">emerging class of institution</a>; it is made up of people, resources, social norms, and code, forming a <a href="https://en.wikipedia.org/wiki/Gestalt">gestalt</a> – a living thing. A DAO is greater than the sum of its parts, and thus must be understood holistically.</p>
+<h1><a name="ecosystem-functions-6" class="anchor" href="https://gov.gitcoin.co#ecosystem-functions-6"></a>Ecosystem Functions</h1>
+<p>Carrying forward the notion of the DAO as a living thing, it does not suffice to simply declare that GitcoinDAO has a purpose. In order to achieve that purpose, its critical functions must be fulfilled. For the purpose of this mapping, the focus is mission-critical (or purpose-critical) functions - those functions without which the DAO would fail in accomplishing its goal.</p>
+<p>For the sake of limiting scope (and because it is a function I am most familiar with) the focus here is the Gitcoin Grants rounds.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7cf045e2f5329f1adf7b0d617affb4cb613a4d9a.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/7cf045e2f5329f1adf7b0d617affb4cb613a4d9a" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7cf045e2f5329f1adf7b0d617affb4cb613a4d9a_2_624x319.png" alt="" data-base62-sha1="hPfZj96lNGKms2pfc5a5LKNq8Ea" width="624" height="319" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7cf045e2f5329f1adf7b0d617affb4cb613a4d9a_2_624x319.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7cf045e2f5329f1adf7b0d617affb4cb613a4d9a_2_936x478.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7cf045e2f5329f1adf7b0d617affb4cb613a4d9a_2_1248x638.png 2x" data-dominant-color="D3DED3"></a></div><p></p>
+<p>Source: <a href="https://medium.com/block-science/deterring-adversarial-behavior-at-scale-in-gitcoin-grants-a8a5cd7899ff">Deterring Adversarial Behavior at Scale in Gitcoin Grants: A Framework for Community-Based Algorithmic Policy Making</a></p>
+<h4><a name="function-mapping-7" class="anchor" href="https://gov.gitcoin.co#function-mapping-7"></a>Function Mapping</h4>
+<p>The Functional Map focuses on the various operational functions which must occur in order for the GitcoinDAO to achieve its purpose on an ongoing basis. Again, the emphasis here is on operational co-dependencies. The work itself may be divided or not amongst various working groups with accountability for and authority to fulfill these functions.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7cb435e881ce07a3b888103adba874c830be4ff9.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/7cb435e881ce07a3b888103adba874c830be4ff9" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7cb435e881ce07a3b888103adba874c830be4ff9_2_624x413.jpeg" alt="" data-base62-sha1="hNbiXbLVMH6BjllH3RJBMCyxIed" width="624" height="413" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7cb435e881ce07a3b888103adba874c830be4ff9_2_624x413.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7cb435e881ce07a3b888103adba874c830be4ff9_2_936x619.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7cb435e881ce07a3b888103adba874c830be4ff9_2_1248x826.jpeg 2x" data-dominant-color="F0EDEB"></a></div><p></p>
+<h4><a name="matching-stakeholders-to-functions-for-gitcoin-grants-8" class="anchor" href="https://gov.gitcoin.co#matching-stakeholders-to-functions-for-gitcoin-grants-8"></a>Matching Stakeholders to Functions for Gitcoin Grants</h4>
+<p>These stakeholder groups are defined in terms of modes of interaction, and many people are likely to fit multiple categories:</p>
+<ul>
+<li><strong>Gitcoin Platform User</strong>
+<ul>
+<li>people submitting grants to be funded</li>
+<li>people donating to grants</li>
+<li>people posting bounties</li>
+<li>people solving bounties</li>
+<li>people interacting with social features (posts, kudos, etc)</li>
+</ul>
+</li>
+<li><strong>GTC Holders</strong>
+<ul>
+<li>anyone with a balance of Gitcoin tokens (GTC)</li>
+<li>whether exercised or not, this is the necessary criteria to have voting rights (optional delegation) at this time</li>
+</ul>
+</li>
+<li><strong>Stewards</strong>
+<ul>
+<li>anyone who has been elevated to the “role” of steward within the gitcoin DAO (see <a href="https://gov.gitcoin.co/t/introducing-stewards-governance/41">this introductory Forum post</a>)</li>
+<li>more details are needed on how the rotating cast of stewards are maintained over time
+<ul>
+<li>selection committee?</li>
+<li>anyone with sufficient delegated GTC?</li>
+<li>how do we ensure the various stakeholder groups (not just GTC holders) are adequately represented?</li>
+<li>Discussions are ongoing in the <a href="https://gov.gitcoin.co/c/governance-meta/6">Meta Governance thread</a> of the forum</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Contributors providing the Gitcoin Platform Governance related work</strong>
+<ul>
+<li>Handles operational governance work including voting</li>
+<li>Ensures stewards and stakeholders are informed about issues facing Gitcoin DAO</li>
+<li>Ensures stewards represent a diverse set of stakeholders and tracking distribution and delegated GTC</li>
+<li>Implements and supports the iteration and development of processes from the Meta Governance working group</li>
+</ul>
+</li>
+<li><strong>Contributors providing the Gitcoin Platform with Meta Governance related work</strong>
+<ul>
+<li>Handles institutional analysis and development work</li>
+<li>Ongoing refinement of proposal and other processes including steward selection, how voting power is counted to ensure inclusive stakeholder representation</li>
+<li>Ensures bilateral communication between Stewards and other working groups, supporting steward attention management</li>
+</ul>
+</li>
+<li><strong>Contributors providing the Gitcoin Platform Operations Work</strong>
+<ul>
+<li>develop and maintain the core platform logic
+<ul>
+<li>software development</li>
+<li>resource provisioning and DevOps</li>
+<li>quality control processes (e.g. enforce the terms and conditions by removing grants from the platform that do not meet community standards, or marking grants as ineligible for matching)</li>
+</ul>
+</li>
+<li>orchestrate across other stakeholder groups to ensure end users have a good experience
+<ul>
+<li>user experience / product development</li>
+<li>community management / communications</li>
+<li>handling complaints and/or challenges (e.g. “I was excluded from matching incorrectly!”)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Contributors reaching out to and retaining match funders</strong>
+<ul>
+<li>develop relationships with match funding organizations</li>
+<li>create consistent expectations about the size and distribution of the match pools for the funders, and fundees.</li>
+<li>represent the gitcoinDAO as a match funder, including making proposals to the DAO to run match programs</li>
+</ul>
+</li>
+<li><strong>Contributors doing treasury management for the DAO</strong>
+<ul>
+<li>multisig key holders who enact financial decisions made by the DAO</li>
+<li>treasury management proposal writers who apply their expertise to define and advocate for specific treasury management actions (or broad strategies) to be voted on by the DAO</li>
+</ul>
+</li>
+<li><strong>Contributors Providing Gitcoin with Community &amp; Communications Management work</strong>
+<ul>
+<li>Manages and coordinates across communications platforms and admin and access accordingly</li>
+<li>Routes contributors to working groups</li>
+<li>Ensures critical information flows</li>
+</ul>
+</li>
+<li><strong>Contributors Providing Gitcoin with Data Science work</strong>
+<ul>
+<li>identify and defend against novel economic attacks (e.g. emergent collusion strategies)</li>
+<li>build, maintain and operate sybil detection pipeline
+<ul>
+<li>data collection, cleaning and staging</li>
+<li>feature engineering</li>
+<li>model and metaparameter selection</li>
+<li>loss function selection</li>
+<li>maintaining human labeled training sets</li>
+<li>cross validation</li>
+</ul>
+</li>
+<li>maintain process, documentation, code, data, microservices, and any other infrastructure required in order to reliably fulfill this function
+<ul>
+<li>balance transparency with privacy (e.g. keep personally identifying information (PII) private while providing transparency about the process and any trade off decisions)</li>
+</ul>
+</li>
+<li>provide advice (and data) to platform operations in support of real time interventions</li>
+<li>provide advice (and data) to stewards in support of real time interventions</li>
+<li>check out the call to action for the <a href="https://gov.gitcoin.co/t/workstream-anti-fraud-workstream-assemble/158">Fraud Detection &amp; Defense Workstream in this thread</a></li>
+<li>An addition <a href="https://gov.gitcoin.co/t/fraud-detection-defense-working-group-mapping/8122">ecosystem map focused on the fraud detection</a> work exists here.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>This section on Data Science work is particularly detailed because this is the part of the GitcoinDAO to which I am currently a paid contributor. I’ve been working with Danilo Lessa Bernardineli, Jesse Tao, Jiajia H, Jessica Zartler, Jeff Emmett and others to bootstrap this functional unit. There is a lot more work to be done to establish a self-sufficient working group, but we’ve been thankful for members of the Token Engineering community who have stepped up to provide their data science expertise.</p>
+</blockquote>
+<h1><a name="progressive-decentralization-9" class="anchor" href="https://gov.gitcoin.co#progressive-decentralization-9"></a>Progressive Decentralization</h1>
+<p>Any organization of the size and complexity of Gitcoin DAO requires some organizational structure. A purposeful decentralized organization must have organizational structure – a formless blob of activity cannot fulfill its purpose over a long time horizon.</p>
+<p>A traditional corporate organizational structure is a <a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">directed acyclic graph (DAG)</a>, with power structures flowing from top to bottom in a hierarchy. In a DAO, the typical organizational structure is closer to a <a href="https://beaugordon.medium.com/key-takeaways-from-team-of-teams-by-general-stanley-mcchrystal-eac0b37520b9">“team of teams” model</a>. That is to say, there are functional units segmented by authority over, and responsibility for, their specific functions. These functions are interdependent, so the functional units must act as a team. However, each function is itself too complex for any one contributor, so the functional units are themselves teams, which may be further subdivided into subfunctions, projects and other substructures required to achieve their functions.</p>
+<p>Due to the large variation in size, scope, expertise intensiveness, etc across functional units, it is not realistic to force all functional units into the same organizational structure. That said, there are some expectations that these organizational substructures will include an openness to new participants and <a href="https://en.wikipedia.org/wiki/Subsidiarity">subsidiarity</a> of the authority within the working groups.</p>
+<p>In practical terms, Progressive Decentralization means shifting authority and responsibility to a federation of functional units which receive their mandates and funding from the DAO.</p>
+<h2><a name="emergent-working-groups-as-functional-units-10" class="anchor" href="https://gov.gitcoin.co#emergent-working-groups-as-functional-units-10"></a>Emergent Working Groups as Functional Units</h2>
+<p>I will be the first to admit that most of what goes on in this map is pretty invisible to the stakeholders at large. It takes so much work to operate a platform like this that it is unrealistic to keep tabs on everything that is going on. Gitcoin is an <a href="https://kelsienabben.substack.com/p/the-possibilities-of-ad-hoc-decentralised">infrastructure</a>, which means most of the work that goes into making it safe and reliable happens behind the scenes. Fortunately, one doesn’t need to. Practically, a contributor will get involved in a specific project which is itself just a piece of one of these functional units.</p>
+<p>Below I have included a description of essential functional units that collectively cover the goings-on in GitcoinDAO. This is not guaranteed to be complete or correct, as it is just one perspective on the emerging organizational structure of GitcoinDAO. However, I hope that by expressing it in this way supports facilitation of the ongoing process of progressive decentralization.</p>
+<h4><a name="platform-operations-11" class="anchor" href="https://gov.gitcoin.co#platform-operations-11"></a>Platform Operations</h4>
+<p>Platform operations is the front line of GitcoinDAO; this function ensures the platform is running and behaving as expected. Much of this work is the same as what the Gitcoin team provided prior to the launch of GitcoinDAO and which they continue to provide as paid contributors.</p>
+<p>As this is a critical function it must continue uninterrupted, but it is now possible for volunteer contributors to participate in subject vetting for appropriate capabilities. By transforming this into a workstream or working group within the DAO, over time the function will become less and less dependent on specific individuals historically associated with the platform, and more an evolving cast of paid and volunteer contributors who step up to keep the ship running.</p>
+<p>Those fulfilling this function must be capable of providing and maintaining a high quality software platform and thus is expected to comprise a range of technical and management skills found in a tech company. The proposal for the <a href="https://gov.gitcoin.co/t/workstream-decentralize-gitcoin/180">Decentralize Gitcoin Working Group</a> is shifting responsibilities for Platform Operations. Given the breadth of this work, such a working group would effectively become a subDAO in order to achieve both decentralization and meet performance standards. A lot of what needs is still to be determined, this open-endedness is addressed by the <a href="https://gov.gitcoin.co/t/prototyping-workstream-moonshot-budget-request/8074">Moonshot Collective.</a></p>
+<h4><a name="fraud-detection-and-defense-12" class="anchor" href="https://gov.gitcoin.co#fraud-detection-and-defense-12"></a>Fraud Detection and Defense</h4>
+<p>This function maintains the backline of the GitcoinDAO, primarily providing the functions of a research and data science team, including but not limited analyzing data from Gitcoin to detect new attack patterns, building and maintaining machine learning pipelines and feature sets from data maintained by Data Operations/Platform Operations to scale human reviewers capabilities, as well providing recommendations (with reports) regarding the final allocation of match funds at the end of a round.</p>
+<p>The sybil detection work is currently being provided by paid contributor <a href="https://block.science/">BlockScience</a>, but is being built out to support onboarding of other contributors; members of the <a href="https://tokenengineeringcommunity.github.io/website/">Token Engineering</a> community have contributed to the research aspect of this workstream on a range of topics from improving algorithms, to identifying social challenges implicit in using algorithms to include or exclude users according to observed data.</p>
+<p>This workstream is an ongoing initiative which will require external communications (in collaboration with communication and community management); this workstream will have private data of users, as well as some private materials available only to group members. To learn more about the Fraud Detection and Defense Working Group and see a similar mapping exercise detailing its work and stakeholders, <a href="https://gov.gitcoin.co/t/fraud-detection-defense-working-group-mapping/8122">see this link</a>.</p>
+<h4><a name="communication-community-management-onboarding-13" class="anchor" href="https://gov.gitcoin.co#communication-community-management-onboarding-13"></a>Communication, Community Management &amp; Onboarding</h4>
+<p>Communication &amp; Community Management is the lifeblood of any DAO, it ensures there are spaces available for all the necessary modes of interaction. This group keeps the github organization, discord servers, discourse server and more configured with the right roles and permissions for the other working groups. A close related function is moderating the various forums and helps route people to the appropriate working group to have their questions answered. This labor can go under-appreciated because it acts horizontally across functional units; as an organization grows in scope there is an increasing amount of soft skill work coordinating across the administrative and communication leads from different functional units. These <a href="https://zenodo.org/record/4579414">facilitators</a> identify points of tension, resolve conflict and ensure critical information flows between groups which are otherwise focused on working on providing their primary function.</p>
+<p>A particular challenge of this group is to identify the wide range of stakeholders (made up of combinations of roles) and to ensure their needs are heard and accounted for. The communication function can be thought of as collecting information from across stakeholder groups (including working groups), and publishing it outward to everyone (high level updates), as well as facilitating information flow directly between stakeholders (non-broadcast). The latter is higher fidelity and requires more context to understand – in many cases it may still be public.</p>
+<h4><a name="match-funder-relations-14" class="anchor" href="https://gov.gitcoin.co#match-funder-relations-14"></a>Match Funder Relations</h4>
+<p>Match funder relations is essentially a business development style group. In order for the Gitcoin grants program to continue to function as intended by the community there must be a continual stream of externally sourced match funds.</p>
+<p>Historically, this has been part of the function of the Gitcoin core team as it was a critical operation in the ongoing function of the platform. It is nonetheless quite distinct from the technical operations of the platform, albeit strongly dependent on the trust of those donors in the platform’s technical reliability and the fairness of its allocation policies in addition to the relationship building. Part of managing these relationships is to mitigate the use of Gitcoin Grants match funding as a form of reputation washing.</p>
+<p>This working group must understand the wants and needs of match donors to ensure the platform continues to provide for those wants and needs to keep the match funds flowing. Direct coordination with the platform operations will be required to execute round over round on distributions. Funders will also be particularly attuned to the public outputs of the fraud detection work stream as a source of confidence that their funds are being allocated as intended.</p>
+<h4><a name="treasury-management-15" class="anchor" href="https://gov.gitcoin.co#treasury-management-15"></a>Treasury Management</h4>
+<p>This is a highly specialized function which must be able to respond in real-time to evolving conditions. It is prudent that a functional unit be provisioned to manage funds on behalf of the DAO with a strategic mandate from the stewards. Regardless of who has the authority to manage funds on behalf of the DAO it is critical that the high level strategy – priorities, timescales, and general approach to funds management be organized into a proposal and ratified by the stewards. The funds management function needs to have oversight from governance but still needs to operate day to day within its mandate. Financial reporting to the broader DAO is required for transparency.</p>
+<p>At this stage in GitcoinDAO’s progressive decentralization, there is a proposal under consideration to empower the <a href="https://gov.gitcoin.co/t/public-goods-funding-workstream-budget-request/7993">Public Goods Funding Working Group</a> to take on the roles associated with treasury management and match funder relations. This is a great first step to creating reliable financial operations.</p>
+<h4><a name="governance-16" class="anchor" href="https://gov.gitcoin.co#governance-16"></a>Governance</h4>
+<p>Taking governance to mean <a href="https://paullaminie.com/Liberte-conditionnee">structuring the field of action</a>, then the role of the Stewards is governance. The stewards ratify budgets and policies that define the actions available to the functional units that make up GitcoinDAO. The current state of Gitcoin’s governance processes are articulated in this <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v1/7860">forum post</a>, providing transparency and fostering informed participation.</p>
+<p>Explicit decision making functions are fulfilled by the Stewards but there is also a dependence on support functions such as education and administrative resources (people, process and tools) ensuring that the stewards are well informed about the issues facing Gitcoin DAO, and about how solutions might affect the various stakeholder groups differently.</p>
+<p>As a group the Stewards should represent the diverse set of stakeholders in the Gitcoin Community. It is worthwhile to keep track of the distribution of Stewards - in particular the amounts of GTC delegate to those stewards - as a way to keep track of which groups of stakeholders are adequately being represented, and avoid risks of underrepresenting some segments of the community. Ultimately, the stewards bear responsibility for weighing trade-offs and making subjective decisions.</p>
+<p>You can read more discussions on Governance in this <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v1/7860">Gitcoin DAO Governance Process v1 forum thread</a>.</p>
+<h4><a name="meta-governance-17" class="anchor" href="https://gov.gitcoin.co#meta-governance-17"></a>Meta Governance</h4>
+<p>By its very nature, the Governance work of Stewards can get caught up in the politics of the specific issues at hand. The concept of “meta-governance” here speaks to structuring the field of action for those structuring the field of action. While it is a critical function for Stewards to govern GitcoinDAO, the organization itself will continue to go through changes in its power dynamics as it evolves. Thus the functional unit “metagovernance” should be thought more as a watching and advising function fulfilled by community members and outside expertise in <a href="http://www.eolss.net/Sample-Chapters/C04/E6-99A-34.pdf">institutional analysis and development</a> (IAD). In self-governance systems, power concentrates naturally (often in subtle ways). Technical solutions which enable decentralization explicitly, can lead to narratives which actually hide implicit centralization. To this end, the metagovernance function can be thought of as an immune function.</p>
+<p>In practice, metagovernance looks like participation of experts in participatory governance within the Gitcoin Stewards, as well as funding for ethnographic research into the evolving balance of powers within the GitcoinDAO. It may be prudent in the future to have an explicit advisory board serving to monitor and report on the political health of the ecosystem, with the mandate to publish reports identifying both positive and negative findings, and where appropriate author proposals to update or improve the governance processes to maintain political health.</p>
+<p>Progress is already being made here with the roll out of this grant program. There is a <a href="https://gov.gitcoin.co/c/governance-meta/6">metagovernance category</a> in Gitcoin Forums, with regular posts providing visibility into what’s going on (which overlaps with coordination and communication function mentioned above). Another key step is funding research, for example this program which effectively provides <a href="https://gitcoin.co/blog/seeking-a-new-kind-of-public-good/">an incentive for research articles</a> through a collaboration with <a href="https://otherinter.net/">Other Internet</a>. This post is aimed at providing some grounding through which to examine how people, policies and software come together to form GitcoinDAO.</p>
+<p>Much Love,<br>
+-Z</p>
+<blockquote>
+<h3>Acknowledgements</h3>
+<p>I would like to thank everyone who contributed both directly and indirectly to this mapping exercise:</p>
+<ul>
+<li>Gitcoin Stewards: Matt Stephenson, Nathan Schneider, Kelsie Nabben</li>
+<li>Collaborators from <a href="http://metagov.org/">the Metagovernance Project</a>: Ellie Rennie, Primavera de Filippi, Joshua Tan (also Kelsie and Nathan)</li>
+<li>Collaborators from <a href="https://tokenengineeringcommunity.github.io/website/docs/getting-started-welcome">Token Engineering</a>: Angela Kreitenweis, (also Jeff, Jess and Danilo)</li>
+<li>Collaborators <a href="http://block.science">BlockScience</a>: Burrrata, Jeff Emmett, Jessica Zartler, Danilo Lessa Bernardineli, Jesse Tao, Jiajia H, Nick Hirannet (also Matt)</li>
+</ul>
+<p>Additional, thanks to Jim Hazard of <a href="http://www.commonaccord.org/">Common Accord</a> and <a href="https://experts.colorado.edu/display/fisid_158159">Eric Alston</a> of CU Boulder who provided relevant discussions and reading material pursuant to this research. Jim’s work on Prose Objects is extremely helpful for thinking about the modularity and composability of Policies, which are themselves objects of natural language. Eric’s work on constitutional constraints has helped improve the clarity with which I think about trade-offs between individual and group decision making within decentralized organizations.</p>
+</blockquote>
+          <p><a href="https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123/1
+        Tue, 03 Aug 2021 03:11:18 +0000
+gov.gitcoin.co-post-8123-1
+Ecosystem Mapping & Discussion
+      
+
+

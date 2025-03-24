@@ -1,0 +1,315 @@
+
+
+
+[Proposal] GR15 Round Structure
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272
+    # Summary
+
+This proposal looks to finalize round structure for Grants Round 15, which will run from Sept 7-22, 2022.
+
+# TLDR
+
+* In GR15, we plan to decouple platform eligibility from Main Round eligibility. This marks a key milestone as we move towards [Grants 2.0](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981) – a world in which Ecosystems have sovereignty over their own eligibility criteria, without Grants having to meet what Gitcoin deems to be “public goods”. This means that grants will now be able to be approved into Ecosystem or Cause Rounds, without necessarily having to qualify for the Main Round.
+
+* Beyond this change, we plan to run GR15 with the same structure as GR14, in light of our cGrants platform being in Maintenance Mode as we build towards Grants 2.0.
+
+# Round Structure
+
+### GR14 Recap
+
+In [GR14](https://gitcoin.co/blog/gr14-results/), we kept largely the same structure as we had for GR12 and GR13 – one main round, as well as Ecosystem Rounds and Cause Rounds which continued to grow in size & scope.
+
+In GR14, we ran 14 Ecosystem Rounds and 3 Cause Rounds.
+
+![|624x344](upload://jTwa1RNgoA4S8yN7pEubobG6yey.png)
+
+Notable new rounds included a new $500K ETH Infra round, focused on protocol devs in the Ethereum ecosystem, as well as a $145K DEI round focused on Diversity, Equity, and Inclusion in Web3. We also brought back the Crypto Advocacy round, with $400K in funding distributed focused on building support for trailblazing organizations at the forefront of good crypto policy and in defense of the open web.
+
+In terms of QF and matching caps, we continued with a 2.5% cap on the Main Round, and – as we’d kicked off in GR13 – we continued to offer the option for Ecosystem & Cause rounds to set their own individual matching caps, allowing ecosystems themselves to test QF based on their own needs. This was a first step in starting to give ecosystems more agency over their QF implementations, as we move towards a permissionless Grants 2.0 world.
+
+As we look towards [Grants 2.0](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981), a world wherein anyone will be able to stand up their own grants program, we want to continue to enable ecosystems to successfully run & innovate on their own rounds on top of Gitcoin, rather than Gitcoin doing this work in a centralized way.
+
+This is largely informing the design for a change we will make in GR15, as outlined in the below proposal.
+
+## GR15 Proposal
+
+GR15, structurally speaking (assuming the DAO ratifies this proposal!), marks a significant milestone in our move to a protocol world with the Decoupling update proposed.
+
+**Decoupling & What It Means**
+
+Historically, there was no technical way to decouple platform eligibility from Main Round eligibility, meaning that every grant approved on the platform with an Ethereum payout address was automatically eligible for the Gitcoin Main Round. In practice, this also meant that all grants had to meet Main Round eligibility in order to be eligible for any round.
+
+In GR15, the Public Goods Funding workstream seeks to remove this forced link. What this means, tactically speaking for GR15, is that grantees could be eligible for a specific Ecosystem or Cause Round, as long as they meet that round’s eligibility criteria – even if they don’t meet the Gitcoin Main Round criteria.
+
+There will be no retroactive reviews of the thousands of grants already on the platform. The Main Round eligibility is not changing, so if a grant was approved for the platform in the past, that means it met the Main criteria and will remain in the Main Round with no further action needed. These criteria include not having raised VC funding over $500k, not having a token, not selling NFTs, being open source, not using a grant for advertising a token or NFT drop and generally being a public good.
+
+This change only impacts new grants applicants, who previously would have been denied for the platform as whole, but now have the opportunity to be approved for specific Ecosystem/Cause rounds only. We expect this change to only impact 1-2% of grants, and only in a positive way.
+
+Why make this change now? As we’ve experimented with many more and different types of rounds, certain themes often catered to projects that would not be approved for Main (ie. Climate Solutions projects that were tokenizing carbon credits, or Gaming/Web3 Social projects that used NFTs). This created friction where we either had to make exceptions for the Main Round, or deny the funder of an Ecosystem/Cause round from approving projects they want to support.
+
+Decoupling starts to move us in the direction of what living in a protocol world will look like – wherein anyone can stand up any sort of round permissionlessly and customize their own criteria. This is also an initial step towards considering what the future of the Main Round should be, and marks a big step in our journey to enable permissionless funding of shared needs more broadly than just what we as Gitcoin prescribe as “public goods” based on our (imperfect) working definition.
+
+All grants will still have to go through a platform eligibility review. Platform eligibility criteria include not being fraudulent or an impersonation, not including hateful content (racist, sexist, or otherwise hateful) and not deceiving users through malicious content that could cause hard or unintended consequences to users
+
+**Main Round Overview**
+
+The GR15 main pool will be a single matching pool fund/distribution of up to $1M in matching for the round. As in GR14, no individual grant’s matching contribution amount shall exceed 2.5% of the overall matching pool fund.
+
+**Ecosystem Rounds Overview**
+
+In GR15, we plan to run roughly fifteen Ecosystem Rounds. As in previous rounds, these are pass-through funds that are not drawn from the existing multisig balance, and once again we have a mix of new & returning ecosystem partners funding these rounds.
+
+GR15 is shaping up to have the most returning ecosystem rounds ever. This is exciting to see because our thesis is that hosting recurring QF rounds will provide much more value to a community than doing a single one off round (see [Gitcoin Aqueducts](https://gov.gitcoin.co/t/gitcoin-aqueduct/9684)). The number of projects will grow if they can rely on consistent funding, the number of donors will grow, marketing and operations become easier, and the returns are compounding.
+
+Returning Ecosystem Rounds likely will include: Eth Infra, Polygon, Unlock Protocol, Web3 Social, ENS, Aurora, Open Gaming, Lootverse, ZKTech, Celo, and possibly more. New rounds will likely include: a16z, Greater China Ecosystem, Cosmos, and a few more in the works!
+
+**Cause Rounds Overview**
+
+In GR15, we plan to run four Cause Rounds: a Climate Solutions Round, a Advocacy - Web3 Regulation round, a DEI Round and a new Decentralized Science (DeSci) round. As with Ecosystem Rounds, these are pass-through funds that are not drawn from the existing multisig balance.
+
+We are excited to see the continued growth of the size and scope of these cause rounds that are at the cutting edge of innovation and impact, and bring in substantial interest beyond just the Web3 community. We hope to continue to see these Cause Ronds grow into leading examples of how Web3 can be used as a force for good in the world.
+
+# Voting Options
+
+We will ask the stewards to vote on the following options:
+
+*Option 1: FOR GR15 Structure*
+
+You approve the GR15 structure as is, including the proposed decoupling of rounds.
+
+*Option 2: AGAINST GR15 Structure*
+
+You do not approve of the GR15 structure, and will be submitting an alternate proposal for consideration.
+
+Once we have feedback on both this and any other proposals, the Public Goods Funding workstream will gather all formal proposals and submit a Snapshot vote to decide which to move forward with.
+
+Please do not submit a snapshot vote for your proposal specifically! This just adds confusion and makes it harder for the community’s voice to be heard effectively.
+Tue, 23 Aug 2022 18:37:15 +0000
+🌱 Gitcoin Grants
+
+
+[Proposal] GR15 Round Structure
+azeem
+
+            <p>Yeah, couldn’t agree more <a class="mention" href="https://gov.gitcoin.co/u/lunacat">@Lunacat</a>. This is more so just a fund who’s interesting in helping the ecosystem as a whole flourish!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/12
+        Tue, 23 Aug 2022 18:37:15 +0000
+gov.gitcoin.co-post-11272-12
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+Lunacat
+
+            <p>Thank you <a class="mention" href="https://gov.gitcoin.co/u/azeem">@azeem</a> and others for the additional detail!  It would be disconcerting to see VC branded rounds becoming a thing (especially if said VC were to be doing something silly like giving Adam Neumann $350MM), but nothing wrong with some experimentation</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/11
+        Sat, 20 Aug 2022 22:31:09 +0000
+gov.gitcoin.co-post-11272-11
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+azeem
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a> ! Will respond here but please feel free to add anything, <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a>. <a class="mention" href="https://gov.gitcoin.co/u/lunacat">@Lunacat</a> to address Open Gaming and Lootverse, they’re definitely entirely different rounds.</p>
+<p>Lootverse is one sponsored by some key people in that ecosystem who are using parts of the treasury to help fund many of the projects people have been working on for free up to this point. If you go back and take a look based on the GR14 Ecosystem Round they did with us their grantees are much more creator focused projects.</p>
+<p>In speaking to the team with Loot, though there is no “official” team because they’re decentralized,  they made a great point that Loot serves as a public good for Ethereum in that they bring non web3 native people i.e more creatives into the space. Because of Loot many writers, painters, musicians etc came into the Ethereum ecosystem. They feel very strongly about helping to continue supporting those individuals and groups with what they can through the treasury they do have now.</p>
+<p>The Open Gaming round on the other hand is a collective effort to help accelerate the web3 gaming ecosystem through funding open source initiatives and research.</p>
+<p>Lastly, the a16z round is a new one we’re introducing this time. It has nothing to do with companies they have funded or even are looking to fund. It’s a traditional ecosystem round in that we worked on a round brief with them for the kinds of projects they’re looking to help put funds towards as part of an approach to help further the web3 ecosystem. As an organization who’s a leader in the space they want to make sure they’re doing everything they can to see web3 continue to flourish, and considering the track record of Gitcoin helping so many companies go from being grantees to very successful ones the partnership made a lot of sense.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/10
+        Fri, 19 Aug 2022 16:55:17 +0000
+gov.gitcoin.co-post-11272-10
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+annika
+
+            <blockquote>
+<p><em>15 separate ecosystem rounds is a lot (although nice synergy between this and GR15), and this seems to be doubling down on complexity.</em></p>
+</blockquote>
+<p>You’re right that it’s complex, and we don’t plan to continue to scale rounds up like this on the centralized platform long-term. That said, we have intentionally scaled up ecosystem rounds in the short-term as we work towards <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Grants 2.0</a> and being able to assess the needs of what ecosystems will want/require as we build out the protocol.</p>
+<blockquote>
+<p><em>Why is there a separate open gaming and lootverse round? What is the a16z round - is that just a place where people get to donate money to a16z funded projects? And why are some borderline L2s (Celo, Polygon, Cosmos) funding their own rounds – are these rounds becoming just another place where deep pockets throw a few bones out to encourage development that further their own interests?</em></p>
+</blockquote>
+<p>In short, Open Gaming &amp; Lootverse are funded by different partners and have different eligibility requirements. Will let <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> <a class="mention" href="https://gov.gitcoin.co/u/azeem">@azeem</a> who own most of these relationships elaborate further on the specific intentions for the different rounds.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/9
+        Fri, 19 Aug 2022 00:36:18 +0000
+gov.gitcoin.co-post-11272-9
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+nategosselin
+
+            <p>Thanks for laying all of this out <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a>. I’m excited to see us begin transitioning towards a protocol world and will be voting for this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/8
+        Thu, 18 Aug 2022 15:28:40 +0000
+gov.gitcoin.co-post-11272-8
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+lefterisjp
+
+            <aside class="quote no-group" data-username="Lunacat" data-post="6" data-topic="11272">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lunacat/48/4933_2.png" class="avatar"> Lunacat:</div>
+<blockquote>
+<p>What is the a16z round - is that just a place where people get to donate money to a16z funded projects?</p>
+</blockquote>
+</aside>
+<p>I also have the same question. It’s probably not that <img src="https://gov.gitcoin.co/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
+<p>Other than that looks nice and I will probably be voting for this.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/7
+        Thu, 18 Aug 2022 07:49:52 +0000
+gov.gitcoin.co-post-11272-7
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+Lunacat
+
+            <p>15 separate ecosystem rounds is a lot (although nice synergy between this and GR15), and this seems to be doubling down on complexity.  The UX last few rounds was pretty poor, and splitting projects up into fairly arbitrary and overlapping rounds made it difficult to both find past projects I supported without using direct search, and limited ability to stumble across new ones.</p>
+<p>Beyond that… Why is there a separate open gaming and lootverse round?   What is the a16z round - is that just a place where people get to donate money to a16z funded projects?  And why are some borderline L2s (Celo, Polygon, Cosmos) funding their own rounds – are these rounds becoming just another place where deep pockets throw a few bones out to encourage development that further their own interests?  What is being achieved by introducing this complexity?  Does it just boil down to the sponsors of these rounds throwing in cash to fund matching pools?  I could go on…</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/6
+        Wed, 17 Aug 2022 23:38:25 +0000
+gov.gitcoin.co-post-11272-6
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+linda
+
+            <p>Thanks for the additional info and context. I’m supportive of it and will be voting for the GR15 structure.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/5
+        Wed, 17 Aug 2022 22:01:17 +0000
+gov.gitcoin.co-post-11272-5
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+ceresstation
+
+            <p>Thanks so much for sharing this <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a>, biased but I’m fully in agreement with this structure and would encourage folks to vote FOR the proposal once it moves to Snapshot.</p>
+<p>Especially as we move to a protocol world, we will need to continue to decouple rounds, and for GR15 in particular this will also significantly reduce the operational overhead allowing the workstream to focus on making the round as successful as possible.</p>
+<p>Excited to push forward on this!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/4
+        Wed, 17 Aug 2022 18:01:50 +0000
+gov.gitcoin.co-post-11272-4
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+J9leger
+
+            <p>Thanks Annika for sharing this structure. This should be an exciting grants round and the high number of returning ecosystem partners allows us to support sustained funding for their communities.</p>
+<p>I’m a strong supporter of decoupling the main round from side rounds in GR15 as it is a closer step to how things will run in the protocol world and empowers ecosystem and cause rounds with more flexibility to run their grants programs how they please.</p>
+<p>We’re also excited to announce partners earlier this round and encourage as many grantees as possible to apply BEFORE the round begins so we can focus our efforts during the round on increase contributions from individual donors.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/3
+        Tue, 16 Aug 2022 00:00:58 +0000
+gov.gitcoin.co-post-11272-3
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+ZER8
+
+            <p>Thank you for creating this proposal and for the incredible clear style of communicating all the important issues and updates. <img src="https://emoji.discourse-cdn.com/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20">. It’s great to see that we will have a lot of new ecosystem and also new cause rounds(again) and that the decoupling could finally happen <img src="https://emoji.discourse-cdn.com/twitter/sparkles.png?v=12" title=":sparkles:" class="emoji" alt=":sparkles:" loading="lazy" width="20" height="20"></p>
+<p>It will only eliminate friction and could(and probly will) finally eliminate most of the “double standards” complaints that our grantees have been worrying about in past rounds.<br>
+Maintaining that “equlibrium” in prior rounds really took a lot of effort on behalf of all the people involved in reviews/approvals(FDD), gops(PG) and also support(DAOops).</p>
+<p>PS.Can’t w8 for GR15 to begin! <img src="https://emoji.discourse-cdn.com/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"> <img src="https://emoji.discourse-cdn.com/twitter/blue_heart.png?v=12" title=":blue_heart:" class="emoji" alt=":blue_heart:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/2
+        Fri, 12 Aug 2022 20:23:29 +0000
+gov.gitcoin.co-post-11272-2
+[Proposal] GR15 Round Structure
+      
+
+[Proposal] GR15 Round Structure
+annika
+
+            <h1>
+<a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary</h1>
+<p>This proposal looks to finalize round structure for Grants Round 15, which will run from Sept 7-22, 2022.</p>
+<h1>
+<a name="tldr-2" class="anchor" href="https://gov.gitcoin.co#tldr-2"></a>TLDR</h1>
+<ul>
+<li>
+<p>In GR15, we plan to decouple platform eligibility from Main Round eligibility. This marks a key milestone as we move towards <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Grants 2.0</a> – a world in which Ecosystems have sovereignty over their own eligibility criteria, without Grants having to meet what Gitcoin deems to be “public goods”. This means that grants will now be able to be approved into Ecosystem or Cause Rounds, without necessarily having to qualify for the Main Round.</p>
+</li>
+<li>
+<p>Beyond this change, we plan to run GR15 with the same structure as GR14, in light of our cGrants platform being in Maintenance Mode as we build towards Grants 2.0.</p>
+</li>
+</ul>
+<h1>
+<a name="round-structure-3" class="anchor" href="https://gov.gitcoin.co#round-structure-3"></a>Round Structure</h1>
+<h3>
+<a name="gr14-recap-4" class="anchor" href="https://gov.gitcoin.co#gr14-recap-4"></a>GR14 Recap</h3>
+<p>In <a href="https://gitcoin.co/blog/gr14-results/" rel="noopener nofollow ugc">GR14</a>, we kept largely the same structure as we had for GR12 and GR13 – one main round, as well as Ecosystem Rounds and Cause Rounds which continued to grow in size &amp; scope.</p>
+<p>In GR14, we ran 14 Ecosystem Rounds and 3 Cause Rounds.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8b6fec3946e3a9d8a1329fe158db59e806177b9e.png" data-download-href="/uploads/short-url/jTwa1RNgoA4S8yN7pEubobG6yey.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/8/8b6fec3946e3a9d8a1329fe158db59e806177b9e_2_624x344.png" alt="" data-base62-sha1="jTwa1RNgoA4S8yN7pEubobG6yey" width="624" height="344" srcset="/uploads/db4391/optimized/2X/8/8b6fec3946e3a9d8a1329fe158db59e806177b9e_2_624x344.png, /uploads/db4391/original/2X/8/8b6fec3946e3a9d8a1329fe158db59e806177b9e.png 1.5x, /uploads/db4391/original/2X/8/8b6fec3946e3a9d8a1329fe158db59e806177b9e.png 2x" data-small-upload="/uploads/db4391/optimized/2X/8/8b6fec3946e3a9d8a1329fe158db59e806177b9e_2_10x10.png"></a></div><p></p>
+<p>Notable new rounds included a new $500K ETH Infra round, focused on protocol devs in the Ethereum ecosystem, as well as a $145K DEI round focused on Diversity, Equity, and Inclusion in Web3. We also brought back the Crypto Advocacy round, with $400K in funding distributed focused on building support for trailblazing organizations at the forefront of good crypto policy and in defense of the open web.</p>
+<p>In terms of QF and matching caps, we continued with a 2.5% cap on the Main Round, and – as we’d kicked off in GR13 – we continued to offer the option for Ecosystem &amp; Cause rounds to set their own individual matching caps, allowing ecosystems themselves to test QF based on their own needs. This was a first step in starting to give ecosystems more agency over their QF implementations, as we move towards a permissionless Grants 2.0 world.</p>
+<p>As we look towards <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Grants 2.0</a>, a world wherein anyone will be able to stand up their own grants program, we want to continue to enable ecosystems to successfully run &amp; innovate on their own rounds on top of Gitcoin, rather than Gitcoin doing this work in a centralized way.</p>
+<p>This is largely informing the design for a change we will make in GR15, as outlined in the below proposal.</p>
+<h2>
+<a name="gr15-proposal-5" class="anchor" href="https://gov.gitcoin.co#gr15-proposal-5"></a>GR15 Proposal</h2>
+<p>GR15, structurally speaking (assuming the DAO ratifies this proposal!), marks a significant milestone in our move to a protocol world with the Decoupling update proposed.</p>
+<p><strong>Decoupling &amp; What It Means</strong></p>
+<p>Historically, there was no technical way to decouple platform eligibility from Main Round eligibility, meaning that every grant approved on the platform with an Ethereum payout address was automatically eligible for the Gitcoin Main Round. In practice, this also meant that all grants had to meet Main Round eligibility in order to be eligible for any round.</p>
+<p>In GR15, the Public Goods Funding workstream seeks to remove this forced link. What this means, tactically speaking for GR15, is that grantees could be eligible for a specific Ecosystem or Cause Round, as long as they meet that round’s eligibility criteria – even if they don’t meet the Gitcoin Main Round criteria.</p>
+<p>There will be no retroactive reviews of the thousands of grants already on the platform. The Main Round eligibility is not changing, so if a grant was approved for the platform in the past, that means it met the Main criteria and will remain in the Main Round with no further action needed. These criteria include not having raised VC funding over $500k, not having a token, not selling NFTs, being open source, not using a grant for advertising a token or NFT drop and generally being a public good.</p>
+<p>This change only impacts new grants applicants, who previously would have been denied for the platform as whole, but now have the opportunity to be approved for specific Ecosystem/Cause rounds only. We expect this change to only impact 1-2% of grants, and only in a positive way.</p>
+<p>Why make this change now? As we’ve experimented with many more and different types of rounds, certain themes often catered to projects that would not be approved for Main (ie. Climate Solutions projects that were tokenizing carbon credits, or Gaming/Web3 Social projects that used NFTs). This created friction where we either had to make exceptions for the Main Round, or deny the funder of an Ecosystem/Cause round from approving projects they want to support.</p>
+<p>Decoupling starts to move us in the direction of what living in a protocol world will look like – wherein anyone can stand up any sort of round permissionlessly and customize their own criteria. This is also an initial step towards considering what the future of the Main Round should be, and marks a big step in our journey to enable permissionless funding of shared needs more broadly than just what we as Gitcoin prescribe as “public goods” based on our (imperfect) working definition.</p>
+<p>All grants will still have to go through a platform eligibility review. Platform eligibility criteria include not being fraudulent or an impersonation, not including hateful content (racist, sexist, or otherwise hateful) and not deceiving users through malicious content that could cause hard or unintended consequences to users</p>
+<p><strong>Main Round Overview</strong></p>
+<p>The GR15 main pool will be a single matching pool fund/distribution of up to $1M in matching for the round. As in GR14, no individual grant’s matching contribution amount shall exceed 2.5% of the overall matching pool fund.</p>
+<p><strong>Ecosystem Rounds Overview</strong></p>
+<p>In GR15, we plan to run roughly fifteen Ecosystem Rounds. As in previous rounds, these are pass-through funds that are not drawn from the existing multisig balance, and once again we have a mix of new &amp; returning ecosystem partners funding these rounds.</p>
+<p>GR15 is shaping up to have the most returning ecosystem rounds ever. This is exciting to see because our thesis is that hosting recurring QF rounds will provide much more value to a community than doing a single one off round (see <a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684">Gitcoin Aqueducts</a>). The number of projects will grow if they can rely on consistent funding, the number of donors will grow, marketing and operations become easier, and the returns are compounding.</p>
+<p>Returning Ecosystem Rounds likely will include: Eth Infra, Polygon, Unlock Protocol, Web3 Social, ENS, Aurora, Open Gaming, Lootverse, ZKTech, Celo, and possibly more. New rounds will likely include: a16z, Greater China Ecosystem, Cosmos, and a few more in the works!</p>
+<p><strong>Cause Rounds Overview</strong></p>
+<p>In GR15, we plan to run four Cause Rounds: a Climate Solutions Round, a Advocacy - Web3 Regulation round, a DEI Round and a new Decentralized Science (DeSci) round. As with Ecosystem Rounds, these are pass-through funds that are not drawn from the existing multisig balance.</p>
+<p>We are excited to see the continued growth of the size and scope of these cause rounds that are at the cutting edge of innovation and impact, and bring in substantial interest beyond just the Web3 community. We hope to continue to see these Cause Ronds grow into leading examples of how Web3 can be used as a force for good in the world.</p>
+<h1>
+<a name="voting-options-6" class="anchor" href="https://gov.gitcoin.co#voting-options-6"></a>Voting Options</h1>
+<p>We will ask the stewards to vote on the following options:</p>
+<p><em>Option 1: FOR GR15 Structure</em></p>
+<p>You approve the GR15 structure as is, including the proposed decoupling of rounds.</p>
+<p><em>Option 2: AGAINST GR15 Structure</em></p>
+<p>You do not approve of the GR15 structure, and will be submitting an alternate proposal for consideration.</p>
+<p>Once we have feedback on both this and any other proposals, the Public Goods Funding workstream will gather all formal proposals and submit a Snapshot vote to decide which to move forward with.</p>
+<p>Please do not submit a snapshot vote for your proposal specifically! This just adds confusion and makes it harder for the community’s voice to be heard effectively.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gr15-round-structure/11272/1
+        Fri, 12 Aug 2022 17:51:56 +0000
+gov.gitcoin.co-post-11272-1
+[Proposal] GR15 Round Structure
+      
+
+

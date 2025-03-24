@@ -1,0 +1,482 @@
+
+
+
+RFP - Allo Yeeter Build
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277
+    Continuing from Mathilda’s [Updated Citizen Grants strategy](https://gov.gitcoin.co/t/citizen-grants-program-updated-strategy/19203) & Owocki’s [6.9M Citizen’s Fund Temp Check](https://gov.gitcoin.co/t/temp-check-6-9m-gtc-citizens-fund/19204) - Gitcoin presents the latest RFP for the community to weigh in on. We expect to have more as we march towards Devcon, and a backlog of ideas and projects we like to include our community in helping us build. For further context on previous initiatives like this, check out the [Citizen’s Grant Program Announcement](https://gov.gitcoin.co/t/proposal-gitcoin-s-citizen-grants-program/17470) - the initial version of our Citizen’s Grant program. 
+
+
+## TL:DR
+
+Allo Yeeter is a smart contract toolkit aimed at simplifying capital allocation within the Gitcoin ecosystem. This RFP seeks proposals to develop and integrate Allo Yeeter into our tool suite, focusing on transformative ideas that align with Gitcoin's vision for a regenerative web3 environment. You can learn more (and best) from @owocki's Loom and Figma below. 
+
+
+## Description
+
+Allo Yeeter is envisioned as a smart contract toolkit designed to facilitate very simple capital allocation. The goal is to leverage Gitcoin’s expertise in public goods funding to create a robust, simple, and user-friendly tool that will drive innovation in capital allocation mechanisms. We are looking for proposals that will help us turn this idea into a reality, integrating it with existing tools and ensuring it aligns with Gitcoin's broader strategic goals.
+
+
+## Motivation & Target Fundees
+
+
+
+* Allo GMV - Drive grants, innovate on capital allocation mechanisms, and expand educational outreach. 
+* Builders/Innovators 
+
+
+## Stakeholders
+
+
+
+* RFP Manager - @deltajuliet : Responsible for overseeing the entire process, evaluating proposals, and managing the project.
+* Internal Stakeholders @owocki: Gitcoin’s core team members, who will provide input and feedback throughout the project.
+* Community Stakeholders: Gitcoin community members, who will be engaged during testing and feedback phases.
+
+
+## Resources
+
+
+
+* [Loom Walkthrough](https://www.loom.com/share/52fef4d7674548fbb9cd4426e076c017)
+* [Figma Designs ](https://www.figma.com/design/ndyaRwScJSs9lIo02VQwEv/Allo-Yeeter?node-id=0-1&t=0TCOUnM8JGY61gdN-0)
+
+
+## Scope of Work
+
+
+
+* Creation of the Allo Yeeter smart contract toolkit, including all necessary components for capital allocation.
+* Testing - with iterations based on feedback from the community and internal stakeholders.
+* Demo - Live demo with the Gitcoin community 
+* Documentation for both developers and users, ensuring the toolkit is accessible and easy to understand
+* Light Design to polish shared Figma - Gitcoin branding will be shared. If you are a team that does not believe you have the design resources to apply, we still encourage you! We can work with you, the community and our internal resources to ship. 
+* Published Retrospective 
+
+
+## What tools/access will this RFP need
+
+
+
+* Allo Fork 
+    * 2.1 
+    * Allokit
+    * Indexer
+* Figma or other design consideration
+* Hosting
+
+
+## Selection Criteria
+
+Proposals will be evaluated based on the following criteria, there is an older RFP template [here](https://docs.google.com/document/d/1LxpAmQXNDOPKVouUYnUar1ZOb-4gvtXUmROiArZAL8s/edit?usp=sharing) for reference:
+
+
+
+* Competency of building the tool end to end. Especially React skills + smart contract dev xp will be prioritized.
+* Demonstrated ability to develop and deploy smart contracts and blockchain-based tools.
+* Proposals should have realistic timelines with clear milestones and deliverables.
+* Proposals should include a plan for engaging the Gitcoin community throughout the development process.
+* Proposals should link to Github, or other similar (published) work and testimonials 
+
+
+## Timeline
+
+This is a proposed submission timeline and is subject to change based on number of proposals submitted. Should a suitable proposal not be submitted within the 5 day period, the stakeholders (@@) will notify the community with reasoning and an updated timeframe. 
+
+
+
+* Proposal Submission Period: Open for 5 days following the RFP announcement which is suitable time for prospects to review the above Loom and Figma file for context/ask questions here in the forum. 
+* Evaluation Period: Winning bid selected within 3 days of submission period closure.
+* Project Commencement: Work begins immediately upon selection.
+* Milestones: Midway update, ¾ project progress presentation, final delivery, and retro publication.
+
+
+## What we (Gitcoin) think this is worth 
+
+For this initial RFP - we’d like to ask the community to weigh in on strategies to use for budgeting in the future. Including (but not limited to) hourly rates, cap sizes for proposals and locking GTC. For this specific project - we suspect ~2 weeks worth of time to implement but will consider all proposals based on the team, structure and quality. 
+
+
+## Evaluation & Announcement
+
+At the close of the submission period, the RFP manager and workstream will select the winning bid according to the criteria. Any adjustments to the criteria will be published.
+
+
+## Commencement of Work
+
+The winning proposer will commence work immediately, following the milestones and timelines specified in the RFP. Compensation will be disbursed upon the achievement of each milestone.
+
+
+## Evaluation and Lessons Learned (Retro)
+
+Upon conclusion, the project will be evaluated with an after-action report. Feedback from the RFP manager and community will be documented to refine future processes.
+
+
+
+
+
+## Hazards and Lessons Learned
+
+
+
+1. Allokit is still in its infancy
+2. Indexer v2 not ready yet, 2.1 contracts are in testnet.
+3. No Devrel/Documentation as of right now
+Sat, 26 Oct 2024 02:20:46 +0000
+📝 Citizen Grants
+
+
+RFP - Allo Yeeter Build
+Oba-One
+
+            <p><strong>Project Update</strong></p>
+<p>We have successfully created the prototype of Allo Yeeter! The last few weeks have been focused on completing designs, UI and the custom strategy. We’re now at a good point to polish and optimize Allo yeeter so the UI is crisp and users can yeet with minimal actions. Feel free to watch the Loom video by Julian demoing the app or try it out yourself.</p>
+<p><strong>Demo</strong> : <a href="https://www.loom.com/share/69392a5deead441a80dd9f082a0d255f?sid=e15d6980-c36b-4579-abb3-ba5ab035d289" class="inline-onebox" rel="noopener nofollow ugc">Allo Yeeter Demo 🚀 | Loom</a><br>
+<strong>Prototype</strong> : <a href="https://allo-yeeter.vercel.app/steps/recipients" class="inline-onebox" rel="noopener nofollow ugc">Allo Yeeter</a><br>
+<strong>Project Board</strong> : <a href="https://github.com/orgs/greenpill-dev-guild/projects/16" class="inline-onebox" rel="noopener nofollow ugc">Allo Yeeter · GitHub</a></p>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/11
+        Sat, 26 Oct 2024 02:20:46 +0000
+gov.gitcoin.co-post-19277-11
+RFP - Allo Yeeter Build
+      
+
+RFP - Allo Yeeter Build
+Oba-One
+
+            <p><strong>Project Update</strong></p>
+<p>We’re currently two weeks into building Allo Yeeter and are on track to have work completed in the specified timeline. We had a meeting with <a class="mention" href="https://gov.gitcoin.co/u/masterhw">@masterhw</a> last Friday to discuss the custom strategy we will build with Allo. The conversation was productive and afterwards our engineering team dove into the protocol and the Allo team provided a draft Yeeter strategy to build from.</p>
+<p>During our weekly call which is every <a href="https://meet.google.com/jkk-iybx-jft" rel="noopener nofollow ugc">Wednesday at 2:30pm PST</a> we set our tasks for the next 2 weeks which are in parallel to complete designs, app scaffolding, and the Yeeter strategy.</p>
+<p>After the completion of this sprint we will submit our 1st milestones.</p>
+<p>To stay up date with progress use these links.</p>
+<p><strong>Project Board</strong>: <a href="https://github.com/orgs/greenpill-dev-guild/projects/16" class="inline-onebox" rel="noopener nofollow ugc">Allo Yeeter · GitHub</a><br>
+<strong>Repo</strong>: <a href="https://github.com/greenpill-dev-guild/allo-yeeter" class="inline-onebox" rel="noopener nofollow ugc">GitHub - greenpill-dev-guild/allo-yeeter: Repo holding code for client and contract for Allo Yeeter RFP making a simple tool to distribute funds built on top of Allo.</a></p>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/10
+        Fri, 04 Oct 2024 02:56:53 +0000
+gov.gitcoin.co-post-19277-10
+RFP - Allo Yeeter Build
+      
+
+RFP - Allo Yeeter Build
+deltajuliet
+
+            <p>Thanks for all the thoughtful responses, convos and ideation on this. We’ve awarded this RFP to <a class="mention" href="https://gov.gitcoin.co/u/oba-one">@Oba-One</a> and the GP Dev Guild for $10,000 GTC from the Citizen’s Grant Fund.</p>
+<p>We’ve reviewed the RFP in a kickoff call, and they will update here with refined milestones, considerations and notes shortly.</p>
+<p>In the meantime, <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> reached out and has some ideas of crossover with the Atlantis team and their Impact Miner project that he’ll share here for consideration for further versions of this.</p>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/9
+        Sat, 21 Sep 2024 10:49:02 +0000
+gov.gitcoin.co-post-19277-9
+RFP - Allo Yeeter Build
+      
+
+RFP - Allo Yeeter Build
+Oba-One
+
+            <h1><a name="rfp-title-greenpill-dev-guild-allo-yeeter-proposal-1" class="anchor" href="https://gov.gitcoin.co#rfp-title-greenpill-dev-guild-allo-yeeter-proposal-1"></a>RFP Title: Greenpill Dev Guild Allo Yeeter Proposal</h1>
+<h2><a name="overview-2" class="anchor" href="https://gov.gitcoin.co#overview-2"></a>Overview</h2>
+<p>Allo Yeeter a quick, simple and user-friendly mechanism built on Allo Protocol for programmatically allocating capital directly to designated wallet addresses via a smart contract.</p>
+<h2><a name="scope-of-work-3" class="anchor" href="https://gov.gitcoin.co#scope-of-work-3"></a>Scope of Work</h2>
+<h3><a name="user-interface-4" class="anchor" href="https://gov.gitcoin.co#user-interface-4"></a>User interface</h3>
+<p>A simple user-friendly way to interact with the Allo Yeeter</p>
+<ul>
+<li>Built with NextJS, React, Tailwind, Typescript</li>
+<li>Simple web app deployed on Vercel</li>
+</ul>
+<h3><a name="yeeter-smart-contract-5" class="anchor" href="https://gov.gitcoin.co#yeeter-smart-contract-5"></a>Yeeter Smart contract</h3>
+<p>A mechanism for inputting addresses and weights for distribution and executing the distribution of tokens.</p>
+<h4><a name="distributefundswallets-address-weights-number-erc20-contract-address-amount-uint256-6" class="anchor" href="https://gov.gitcoin.co#distributefundswallets-address-weights-number-erc20-contract-address-amount-uint256-6"></a>distributeFunds(wallets: address<span class="chcklst-box fa fa-square-o fa-fw"></span>, weights: number<span class="chcklst-box fa fa-square-o fa-fw"></span>, <em>erc20</em> contract: address, amount: uint256)</h4>
+<p>Disburse funds to addresses according to their weight and the amount specified.</p>
+<h3><a name="greenpill-dev-guild-yeeter-workshop-7" class="anchor" href="https://gov.gitcoin.co#greenpill-dev-guild-yeeter-workshop-7"></a>Greenpill Dev Guild Yeeter Workshop</h3>
+<p>After completing the Allo Yeeter beta version, the Greenpill Dev Guild will invite the Greenpill community and interested developers to a workshop to learn about the building process, test the product and brainstorm use cases.</p>
+<h2><a name="selection-criteria-8" class="anchor" href="https://gov.gitcoin.co#selection-criteria-8"></a><strong>Selection Criteria</strong></h2>
+<p>The Greenpill Dev Guild will take responsibility for developing Allo Yeeter, utilizing previous work done by guild members in a similar project. Guild members have experience working with React and developing Solidity smart contracts and will approach the tasks together, meeting the milestones on time.</p>
+<h2><a name="timeline-9" class="anchor" href="https://gov.gitcoin.co#timeline-9"></a>Timeline</h2>
+<ul>
+<li>Initial design and wireframe: 2 weeks</li>
+<li>Yeeter smart contract, UI and Allo Protocol integration: 2 Weeks</li>
+<li>Community workshop, user testing and submission/ request for comment: 2 Weeks</li>
+</ul>
+<h2><a name="budget-10" class="anchor" href="https://gov.gitcoin.co#budget-10"></a>Budget</h2>
+<p>10,000 GTC</p>
+<ul>
+<li>App design, UI/UX</li>
+<li>Frontend and smart contract engineering/Allo protocol integration</li>
+<li>Greenpill Dev Guild Yeeter workshop</li>
+</ul>
+<p><a class="mention" href="https://gov.gitcoin.co/u/cauetomaz">@cauetomaz</a><br>
+<span class="mention">@Evan</span> Hudson<br>
+<span class="mention">@Kit</span> Blake<br>
+<a class="mention" href="https://gov.gitcoin.co/u/mattycompost">@MattyCompost</a><br>
+<a class="mention" href="https://gov.gitcoin.co/u/oba-one">@Oba-One</a></p>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/8
+        Sat, 07 Sep 2024 04:34:03 +0000
+gov.gitcoin.co-post-19277-8
+RFP - Allo Yeeter Build
+      
+
+RFP - Allo Yeeter Build
+tomislavmamic
+
+            <p>How does Allo Yeeter differentiate from disperse.app?</p>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/7
+        Wed, 04 Sep 2024 14:48:24 +0000
+gov.gitcoin.co-post-19277-7
+RFP - Allo Yeeter Build
+      
+
+RFP - Allo Yeeter Build
+noahchonlee
+
+            <p>Thank you for the encouraging responses!</p>
+<p>If I understand correctly, Allo is a collection of open source funding allocation protocols. What if crowdfunded prizes became one of the tools in Allo?</p>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/6
+        Thu, 29 Aug 2024 22:13:04 +0000
+gov.gitcoin.co-post-19277-6
+RFP - Allo Yeeter Build
+      
+
+RFP - Allo Yeeter Build
+Sov
+
+            <p>Thanks for this <a class="mention" href="https://gov.gitcoin.co/u/noahchonlee">@noahchonlee</a> awesome to see you here and the ongoing dedication to building that you and the team at ViaPrize has!</p>
+<p>I would be open to explore this.  I would like to make sure whatever we do that funds allocated traverse the Allo Protocol so that any value flows hit the north star we have for Allo GMV.</p>
+<p>Down to collaborate!  LFGTM!</p>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/5
+        Thu, 29 Aug 2024 21:39:33 +0000
+gov.gitcoin.co-post-19277-5
+RFP - Allo Yeeter Build
+      
+
+RFP - Allo Yeeter Build
+deltajuliet
+
+            <p>You’re fantastic <a class="mention" href="https://gov.gitcoin.co/u/noahchonlee">@noahchonlee</a>, really appreciate your enthusiasm and <a href="https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287">the work you’ve done to innovate donations.</a></p>
+<p>I’m 100% down to turn this into a prize, it means we can open up venues for running rfps on Grants Stack &amp; Allo, extending to Farcaster and having partners join in.</p>
+<p>In fact, this RFP already has a “Part 2” we’re considering. <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> would love you to weigh in here on some of the work we could continue on with, and potentially create a prize fund for this and future work?</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a> - wdyt?</p>
+<p>I’d also be curious what this is worth - and fund it to be compelling to future builders. Including but not limited to a referral program.</p>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/4
+        Thu, 29 Aug 2024 18:39:51 +0000
+gov.gitcoin.co-post-19277-4
+RFP - Allo Yeeter Build
+      
+
+RFP - Allo Yeeter Build
+noahchonlee
+
+            <p>Great call!</p>
+<p>Inspired me to write up a full RFP vs prizes comparison…</p>
+<p><strong>RFPs vs Prizes</strong></p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th><strong>Request for Proposals</strong></th>
+<th><strong>Crowdfunded Prizes</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Builders bid down</td>
+<td>1. Funders bid up</td>
+</tr>
+<tr>
+<td>2. Funder chooses who works on it</td>
+<td>2. Builders decide amongst themselves who works on it</td>
+</tr>
+<tr>
+<td>3. Guess who will do the best</td>
+<td>3. Choose who did the best</td>
+</tr>
+<tr>
+<td>4. One entity is chosen to build it</td>
+<td>4. Multiple entities can compete or merge into one team</td>
+</tr>
+<tr>
+<td>5. Pay per hour or in milestones</td>
+<td>5. Paid for how much demand is fulfilled</td>
+</tr>
+<tr>
+<td>6. Funds have been sent whether a failure or a success</td>
+<td>6. Funds awarded after evidence of success, or refunded if not</td>
+</tr>
+<tr>
+<td>7. Traditional and established</td>
+<td>7. Fun and engaging</td>
+</tr>
+</tbody>
+</table>
+</div><p>Let’s unpack that.</p>
+<p><strong>1. Who Bids + 2. Who Chooses the Pursuer + 3. How to Choose the Winner</strong></p>
+<p>A request for proposals (RFP) works like so:<br>
+-A company, community, or government releases a description of what they need built</p>
+<p>-Builders respond with a “bid” describing how much they would need to be paid, a time estimate, and why they should be trusted to do a good job. <strong>(1. Builders bid down)</strong><br>
+-The company chooses one of the builders to take the contract <strong>(2. Funder chooses who works on it)</strong> who they believe will do the best job at a reasonable price. <strong>(3. Guess who did it best)</strong></p>
+<p>A crowdfunded prize works like so:</p>
+<ol>
+<li>
+<p>A company, community, or government releases a description of what they need built and a deadline for when it should be done</p>
+</li>
+<li>
+<p>They and others may add funds to a prize for building it, and depending on whether capable builders respond with interest, they may add more to incentivize builders <strong>(1. Funders bid up)</strong></p>
+</li>
+<li>
+<p>Builders who expressed interest may communicate with one another to decide who will pursue the prize (<b>2. Builders decide amongst themselves who works on it)</b></p>
+</li>
+<li>
+<p>Funders choose the winner(s) (<strong>3. Choose who did the best)</strong></p>
+</li>
+</ol>
+<p><strong>4. One Pursuer or Multiple</strong></p>
+<p>Unlike in an RFP where one group or person is chosen to take the contract, prizes are open for multiple teams to pursue and submit evidence of their work.</p>
+<p>At viaPrize we have found that when multiple teams want to pursue a prize, about 1/3 of the time they decide that it would be fun to compete.<br>
+This could lead to a redundant duplication of effort and result in a disappointed builder who doesn’t win, but so far this has gone well because some builders just want the experience and they were informed if there were others also working on it. We also make it possible to split the prize amongst multiple winners.<br>
+However, most of the time builders don’t compete. Maybe a 1/3 of the time the builders decide to work together and around 1/3 of the time they decide amongst themselves who would be the single best person to work on it.</p>
+<p>In other words, a prize leaves it more open for interested builders to both decide to compete or collaborate by merging into a new team. Additional builders can also participate in the efforts and be added to the team throughout the process because who is working on something is not decided upfront by the group posting the idea.</p>
+<p><strong>5. Pay Style</strong></p>
+<p>RFP also tends to pay builders per hour or in milestones.</p>
+<p>A crowdfunded prize however is a pool of proven demand showing how much money people committed to an idea that they want to be turned into reality.<br>
+Whoever makes that happen collects the award and thus is paid for the amount of demand they fulfill rather than per hour, which is closer to an entrepreneurial model of work.</p>
+<p><strong>6. When Funds Are Sent</strong><br>
+Builders also take on more entrepreneurial risk because if they do not succeed, they will not receive the award because the funders have the guarantee that they will either receive what they asked for or they get their money back.</p>
+<p><strong>7. Motivation</strong></p>
+<p>We’ve found that the format is fun and celebrates builders while also providing guarantees to funders, and this often motivates incredible results. One of our earliest prizes consisted of 2 people each adding $50 to build a productivity app which someone from Ukraine built, donated the money, and it has now received over 10,000 downloads. (See Intenty in the Google Play store.)</p>
+<p>In the future we could add voting or quadratic funding to disburse matching funds into a prize, but it’s fascinating to note that a prize is already quadratic psychologically even if the amount of money added to it isn’t. We’ve found that a potential prize pursuer is far more motivated if they see that multiple people are supporting an idea. In other words, their motivation is quadratic.</p>
+<p>RFPs are more established and traditional than prizes, and both RFPS and prizes have their own strengths and weaknesses…</p>
+<p>What do you think?<br>
+Would you prefer to add money to an RFP or a prize?<br>
+Would you rather work on an RFP or a prize?</p>
+<p>At viaPrize we are not just founding a company. We are pioneering an entire new economic mechanism. However, anyone can do this. Just like how Gitcoin pioneered quadratic funding, we welcome anyone to join this endeavor and we will share what we discover along the way.</p>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/3
+        Wed, 28 Aug 2024 00:58:12 +0000
+gov.gitcoin.co-post-19277-3
+RFP - Allo Yeeter Build
+      
+
+RFP - Allo Yeeter Build
+deltajuliet
+
+            <p>Updating with some notes on <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a>’s X engagement!</p>
+<p>I’m chatting with <a class="mention" href="https://gov.gitcoin.co/u/noahchonlee">@noahchonlee</a> tomorrow on his idea to prize it up!</p>
+<blockquote>
+<p>Would this work better as a prize?<br>
+Rfp = looks for bids for lowest price<br>
+(Builders bid lower)<br>
+Prize = builders are hooked seeing an amount, and it can be crowdfunded<br>
+(Funders bid up until builder bites)</p>
+</blockquote>
+<p>and <a class="mention" href="https://gov.gitcoin.co/u/sophia">@sophia</a> suggested connecting Hypercerts.</p>
+<blockquote>
+<p>would be so cool to connect this to a hypercert. so as you mint it automatically yeets to all the addresses of owners</p>
+<p><a href="https://twitter.com/bitbeckers">@bitbeckers</a><br>
+<a href="https://twitter.com/holkexyz">@holkexyz</a></p>
+</blockquote>
+<p>Will give further context and info as it comes up. <img src="https://gov.gitcoin.co/images/emoji/twitter/black_heart.png?v=12" title=":black_heart:" class="emoji" alt=":black_heart:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/2
+        Mon, 26 Aug 2024 17:30:29 +0000
+gov.gitcoin.co-post-19277-2
+RFP - Allo Yeeter Build
+      
+
+RFP - Allo Yeeter Build
+deltajuliet
+
+            <p>Continuing from Mathilda’s <a href="https://gov.gitcoin.co/t/citizen-grants-program-updated-strategy/19203">Updated Citizen Grants strategy</a> &amp; Owocki’s <a href="https://gov.gitcoin.co/t/temp-check-6-9m-gtc-citizens-fund/19204">6.9M Citizen’s Fund Temp Check</a> - Gitcoin presents the latest RFP for the community to weigh in on. We expect to have more as we march towards Devcon, and a backlog of ideas and projects we like to include our community in helping us build. For further context on previous initiatives like this, check out the <a href="https://gov.gitcoin.co/t/proposal-gitcoin-s-citizen-grants-program/17470">Citizen’s Grant Program Announcement</a> - the initial version of our Citizen’s Grant program.</p>
+<h2><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TL:DR</h2>
+<p>Allo Yeeter is a smart contract toolkit aimed at simplifying capital allocation within the Gitcoin ecosystem. This RFP seeks proposals to develop and integrate Allo Yeeter into our tool suite, focusing on transformative ideas that align with Gitcoin’s vision for a regenerative web3 environment. You can learn more (and best) from <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a>’s Loom and Figma below.</p>
+<h2><a name="description-2" class="anchor" href="https://gov.gitcoin.co#description-2"></a>Description</h2>
+<p>Allo Yeeter is envisioned as a smart contract toolkit designed to facilitate very simple capital allocation. The goal is to leverage Gitcoin’s expertise in public goods funding to create a robust, simple, and user-friendly tool that will drive innovation in capital allocation mechanisms. We are looking for proposals that will help us turn this idea into a reality, integrating it with existing tools and ensuring it aligns with Gitcoin’s broader strategic goals.</p>
+<h2><a name="motivation-target-fundees-3" class="anchor" href="https://gov.gitcoin.co#motivation-target-fundees-3"></a>Motivation &amp; Target Fundees</h2>
+<ul>
+<li>Allo GMV - Drive grants, innovate on capital allocation mechanisms, and expand educational outreach.</li>
+<li>Builders/Innovators</li>
+</ul>
+<h2><a name="stakeholders-4" class="anchor" href="https://gov.gitcoin.co#stakeholders-4"></a>Stakeholders</h2>
+<ul>
+<li>RFP Manager - <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a> : Responsible for overseeing the entire process, evaluating proposals, and managing the project.</li>
+<li>Internal Stakeholders <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a>: Gitcoin’s core team members, who will provide input and feedback throughout the project.</li>
+<li>Community Stakeholders: Gitcoin community members, who will be engaged during testing and feedback phases.</li>
+</ul>
+<h2><a name="resources-5" class="anchor" href="https://gov.gitcoin.co#resources-5"></a>Resources</h2>
+<ul>
+<li><a href="https://www.loom.com/share/52fef4d7674548fbb9cd4426e076c017">Loom Walkthrough</a></li>
+<li><a href="https://www.figma.com/design/ndyaRwScJSs9lIo02VQwEv/Allo-Yeeter?node-id=0-1&amp;t=0TCOUnM8JGY61gdN-0">Figma Designs </a></li>
+</ul>
+<h2><a name="scope-of-work-6" class="anchor" href="https://gov.gitcoin.co#scope-of-work-6"></a>Scope of Work</h2>
+<ul>
+<li>Creation of the Allo Yeeter smart contract toolkit, including all necessary components for capital allocation.</li>
+<li>Testing - with iterations based on feedback from the community and internal stakeholders.</li>
+<li>Demo - Live demo with the Gitcoin community</li>
+<li>Documentation for both developers and users, ensuring the toolkit is accessible and easy to understand</li>
+<li>Light Design to polish shared Figma - Gitcoin branding will be shared. If you are a team that does not believe you have the design resources to apply, we still encourage you! We can work with you, the community and our internal resources to ship.</li>
+<li>Published Retrospective</li>
+</ul>
+<h2><a name="what-toolsaccess-will-this-rfp-need-7" class="anchor" href="https://gov.gitcoin.co#what-toolsaccess-will-this-rfp-need-7"></a>What tools/access will this RFP need</h2>
+<ul>
+<li>Allo Fork
+<ul>
+<li>2.1</li>
+<li>Allokit</li>
+<li>Indexer</li>
+</ul>
+</li>
+<li>Figma or other design consideration</li>
+<li>Hosting</li>
+</ul>
+<h2><a name="selection-criteria-8" class="anchor" href="https://gov.gitcoin.co#selection-criteria-8"></a>Selection Criteria</h2>
+<p>Proposals will be evaluated based on the following criteria, there is an older RFP template <a href="https://docs.google.com/document/d/1LxpAmQXNDOPKVouUYnUar1ZOb-4gvtXUmROiArZAL8s/edit?usp=sharing">here</a> for reference:</p>
+<ul>
+<li>Competency of building the tool end to end. Especially React skills + smart contract dev xp will be prioritized.</li>
+<li>Demonstrated ability to develop and deploy smart contracts and blockchain-based tools.</li>
+<li>Proposals should have realistic timelines with clear milestones and deliverables.</li>
+<li>Proposals should include a plan for engaging the Gitcoin community throughout the development process.</li>
+<li>Proposals should link to Github, or other similar (published) work and testimonials</li>
+</ul>
+<h2><a name="timeline-9" class="anchor" href="https://gov.gitcoin.co#timeline-9"></a>Timeline</h2>
+<p>This is a proposed submission timeline and is subject to change based on number of proposals submitted. Should a suitable proposal not be submitted within the 5 day period, the stakeholders (@@) will notify the community with reasoning and an updated timeframe.</p>
+<ul>
+<li>Proposal Submission Period: Open for 5 days following the RFP announcement which is suitable time for prospects to review the above Loom and Figma file for context/ask questions here in the forum.</li>
+<li>Evaluation Period: Winning bid selected within 3 days of submission period closure.</li>
+<li>Project Commencement: Work begins immediately upon selection.</li>
+<li>Milestones: Midway update, ¾ project progress presentation, final delivery, and retro publication.</li>
+</ul>
+<h2><a name="what-we-gitcoin-think-this-is-worth-10" class="anchor" href="https://gov.gitcoin.co#what-we-gitcoin-think-this-is-worth-10"></a>What we (Gitcoin) think this is worth</h2>
+<p>For this initial RFP - we’d like to ask the community to weigh in on strategies to use for budgeting in the future. Including (but not limited to) hourly rates, cap sizes for proposals and locking GTC. For this specific project - we suspect ~2 weeks worth of time to implement but will consider all proposals based on the team, structure and quality.</p>
+<h2><a name="evaluation-announcement-11" class="anchor" href="https://gov.gitcoin.co#evaluation-announcement-11"></a>Evaluation &amp; Announcement</h2>
+<p>At the close of the submission period, the RFP manager and workstream will select the winning bid according to the criteria. Any adjustments to the criteria will be published.</p>
+<h2><a name="commencement-of-work-12" class="anchor" href="https://gov.gitcoin.co#commencement-of-work-12"></a>Commencement of Work</h2>
+<p>The winning proposer will commence work immediately, following the milestones and timelines specified in the RFP. Compensation will be disbursed upon the achievement of each milestone.</p>
+<h2><a name="evaluation-and-lessons-learned-retro-13" class="anchor" href="https://gov.gitcoin.co#evaluation-and-lessons-learned-retro-13"></a>Evaluation and Lessons Learned (Retro)</h2>
+<p>Upon conclusion, the project will be evaluated with an after-action report. Feedback from the RFP manager and community will be documented to refine future processes.</p>
+<h2><a name="hazards-and-lessons-learned-14" class="anchor" href="https://gov.gitcoin.co#hazards-and-lessons-learned-14"></a>Hazards and Lessons Learned</h2>
+<ol>
+<li>Allokit is still in its infancy</li>
+<li>Indexer v2 not ready yet, 2.1 contracts are in testnet.</li>
+<li>No Devrel/Documentation as of right now</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/1
+        Thu, 22 Aug 2024 17:40:59 +0000
+gov.gitcoin.co-post-19277-1
+RFP - Allo Yeeter Build
+      
+
+

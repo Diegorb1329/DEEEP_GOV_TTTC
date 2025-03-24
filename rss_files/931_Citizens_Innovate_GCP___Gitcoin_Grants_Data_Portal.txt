@@ -1,0 +1,622 @@
+
+
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098
+    # Gitcoin Grants Data Portal
+
+This is a Request For Feedback for the Gitcoin Grants Data Portal [Gitcoin Citizens Innovate](https://gitcoin.notion.site/Citizens-Innovate-cf556fdb861143e78765410b368565c2) grant proposal.
+
+## :memo:  Proposal Description
+
+The proposal ask for $20k in funding over four months to enhance access to curated datasets on the [Gitcoin Grants Data Portal](https://davidgasquez.github.io/gitcoin-grants-data-portal/), aiming to foster community engagement, network effects, and cost efficiency in decision-making and analysis across the ecosystem.
+
+The Data Portal has had a significantly impact already through collaborations, better directories, analysis (e.g: clustering, visualizations), Sybil hunting, and supporting adjaccent communities (e.g: Arbitrum), enhancing data access and utility across multiple initiatives (see [Impact](###Impact)).
+
+For context, the [Gitcoin Data Portal](https://davidgasquez.github.io/gitcoin-grants-data-portal/) is an [open source](https://github.com/davidgasquez/gitcoin-grants-data-portal), serverless, and local-first open Data Platform for Gitcoin Grants Data. It has evolved into the schelling point for open and permissionless datasets around Gitcoin Grants and related areas. 
+
+![upload_4cc99155b3988601fc4273f66beb8204|690x306](upload://5fpoCl307EmU6ZEY6F6jieF1Bpl.png)
+
+### :bulb: Motivation 
+
+> **Frictionless access to Community Curated Gitcoin Grants Datasets :arrow_right: More analysis work gets done :arrow_right: Better decisions**
+
+Accessing and analyzing clean and curateed Gitcoin Grants data has been historically time-consuming and complex task. Gitcoin Data Portal removes those obstacles by providing a central hub where community curated Gitcoin Grants datasets are accessible to everybody!
+
+By lowering the barrier of entry and having more people look into the data, we expect to see more people re-using the curated datasets to make better decisions and produce interesting reports and tools!
+
+### 📑 Specifications
+
+Proposal is split into two stages. First we improve data portal by making it more accessible. Then, focus on increasing its utility and profile by opening it to relevant data from other communities.
+
+**Stage 1:** Provide Gitcoin with single place to get all interesting Gitcoin datasets in easy-to-consume format. We are already doing this, but we want to make the project better, easier to use and seen by more people!
+
+**Stage 2:** Extend **Gitcoin Data Portal** to become **Grants Data Portal** holding up-to-date information about multiple Web3 Grant communities (Arbitrum, Optimism, Giveth etc.) in a single place!
+
+### :wrench: Technical Details
+
+For a short overview on how the Gitcoin Grants Data Portal works, see the [about-page](https://davidgasquez.github.io/gitcoin-grants-data-portal/about.html#key-features). You can think of it as a lightweight data pipeline built using [Dagster](https://dagster.io/), [dbt](https://www.getdbt.com/), and [DuckDB](https://duckdb.org/), with additional module that allows us to publish website to Github pages and render Jupyer notebooks. 
+
+![image|690x208](upload://bdjAyDn9EQPujhjQsLP8gDPxZiG.jpeg)
+
+The pipeline fetches raw data from various sources, transforms it using `dagster` and `dbt` up and materializes the tables it into `.parquet` files which are then pushed to IPFS. 
+
+Example datasets for gitcoins include all Allo v1+v2 (`donations`, `projects`, `rounds`) as well as some more technical data taken from other sources (e.g. list of Allo Contract deployments or gas consumed by mainnet project registry)
+
+The scope of the technical work is to design and build:
+
+- Robust pipelines to ingest, clean and join new datasets
+- Notebooks and models to analyze and curate existing datasets
+- Multiple improvements on the DX side; CI, CD, Contributing Guides, ...
+- Tests to ensure data quality across datasets
+
+## :world_map: Roadmap
+
+### Stage 1
+
+> $8k, 2 months
+
+- Better documentation
+    - improve overall documentation
+    - add contributor guides
+- Better datasets
+    - evolve dbt models
+    - unify schemas
+    - add tests
+    - add new Gitcoin datasets to portal (e.g. Snapshot, Discourse stats)
+    - introduce basic support for `project profiles` data coming from other communities (e.g. Giveth, Drips, Octant)
+- Better UX
+    - add Jupyter and Obervable notebooks as examples showing how to use portal data 
+    - promote portal on X by publishing analysis, notebooks
+    - serve data in multiple formats to make it more accessible (e.g. checkout a spreadsheet via simple streamlit site)
+
+### Stage 2 
+
+> $12k, 2 months
+
+Extend scope of portal to serve multiple communities and become THE place to go to find open datasets about projects/donations in crypto-grants ecosystem. `Gitcoin Data Portal` => `Grants Data Portal`
+
+- Add more non-gitcoin datasets to the portal (e.g. Octant, Giveth, Drips)
+- Create shared tables by reconciling multiple schemas e.g. `all_project_profiles` (Giveth + Gitcoin + RetroPGF)
+- In addition to `project profiles` track `donations data` coming from other communities (tricky - everyone has different way of doing that)
+- Experiment with various forms of serving data (e.g. S3 bucket)
+
+**Stretch goals** we *may* implement, but it depends on collab with external actors:
+
+- Transfer data to/from OS-Observer, RegenData.xyz
+- Publish impact blog post(s) on OS-Observer 
+- Export (some) data to Dune/Flipside. [we can do this easily, just for some small datasets]
+- if there is interest from LLM groups, serve tokenized text/embeddings in a format that can be easily consumed by NLP/LLM models (but we need to know *which* models)
+
+## 💼 Budget & Milestones
+
+We ask for payments to be delivered in four monthly installments at end of each month. Expenses would cover development effort by @DistributedDoge and @davidgasquez. We will set aside some funds ($1000~) for maintenance and infrastructure costs (around $20/month currently for the IPFS pinning service). 
+
+| Month | Payout   | Milestone              |
+|-------|----------|------------------------|
+| 1     | $4000    | Better pipeline        |
+| 2     | $4000    | Better UX              |
+| --    | --       | REVIEW                 |
+| 3     | $6000    | More data              |
+| 4     | $6000    | **Grants Data Portal** |
+
+Between milestones 2 and 3, we can review the state of the portal and evaluate the best way to continue with further funding.
+
+### Essential Intents & Benefits
+
+In this combined section, we map each community intent to percieved benefits of funding this proposal. Some of those can be used as KPIs. 
+
+#### Community Engagement
+1. Make Gitcoin data easier to access and use.
+3. Attract new analysts interested in working with Gitcoin Data.
+4. Save time for existing analysts and developers in Gitcoin Community .
+
+#### Network Effects
+1. Support other Citizen and Core initiatives. 
+2. Support Gitcoin adjacent communities.
+3. Help Gitcoin identify high-potential grantees from other ecosystems.
+4. Help Gitcoin understand current market trends.
+5. Let community collaborate on curated models ala [Dune Spellbok](https://github.com/duneanalytics/spellbook), but for Grants data.
+
+#### Cost Efficiency 
+
+- Assume average analyst is paid 50$/h
+- Assume portal turns 5 hour of data preparation and cleaning into 1 hour
+- Saves 200$ per single use of portal
+
+> 10 users ==> $2k savings
+> 100 users ==> $20k saving
+> 1000 users ==> $200k savings
+
+On top of that:
+- Community is incentivized to work on shared datasets instead of re-building the same data pipelines over and over for each project.
+- Thanks to the project modularity other Python codebases can borrow our data-fetching pipelines
+- The final curated datasets are available for free to anyone!
+
+### 🤔 Drawbacks
+
+#### Portal may publish incorrect data
+Mitigating this by writing `dbt models` to ensure data quality + improving CI-pipelines. For Gitcoin we have `RegenData.xyz` to spot check our datasets for inconsistency. Exposing datasets to as many users as we can will also make them more resilient.
+
+#### Portal may become more costly to run due to changes
+One of the portal tenets is to be "lean" and "cheap". At the moment we need no long-running server so the only cost for public version is $20/month Filebase subscription to publish data on IPFS. Running local stack on local machine (within Github codespace) will always stay completely free.
+
+#### Portal may be hard to use
+The only thing you need to use the portal is knowing which datasets will cover your needs and be able to read/use them. We are actively  (1) talking to anyone interested in using Gitcoin data and (2) publishing datasets in open and standard formats to make sure things move in the right direction!
+
+Developing (e.g: pipeline for a very large dataset) might become more complex in the future. At that point we'll evaluate the best approach to keep things lean.
+
+#### Portal won't be maintained once funding runs out
+At the end of the day, the portal is "*just*" a batch processing pipeline that generates some static files. That means that you press button, get the data and then forget it exists untill next time you need data. No long lived servers to maintain! If at a certain point the portal is not maintained and someone needs it, it'll only need to clone and run it from their computer to get up to date datasets.
+
+That said, some maintenance will be needed to deal with changing models and the natural evolution of APIs but we are already doing that with no funding for last 4 months so it is not that time consuming.
+
+### :boom: Impact
+
+List of collaborations using Gitcoin Data Portal or data coming from it:
+- Providing data for OS-Observer impact-tracking [research](https://docs.opensource.observer/blog/gitcoin-grants-impact)
+- Growing OS-Observer grantee [directory](https://github.com/opensource-observer/oss-directory) (~30% of Github projects imported using)
+- [Providing data for Grantee-clustering POC](https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469)
+- Providing data for Gitcoin-end-of-year [visualization](https://twitter.com/RohitMalekar/status/1742196496152642030?s=20)
+- Sybil hunting in Citizens#2 round
+- Arbitrum-led Open Data Community [hackathon](https://github.com/OpenDataforWeb3/DataGrantsforARB)
+
+Data Portal positions itself in a strategic place as smoothing access to quality and curated datasets can support many different iniatives in very cost-efficient manner.
+
+## :speech_balloon: Conclusions
+
+**We are asking for $20k funding over the period of four months to improve the Gitcoin Grants Data Portal**.  Funding will be used in the development and iteration of existing data-platform. **First stage of the proposal requires $8k over two months**.
+
+This proposal now enters community feedback period until end of the month, so we encourage everyone to share feedback here, or on the [project Github](https://github.com/davidgasquez/gitcoin-grants-data-portal)! Thanks for reading. :raised_hands:
+Thu, 25 Jul 2024 12:53:02 +0000
+📝 Citizen Grants
+
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+rohit
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/davidgasquez">@davidgasquez</a> <a class="mention" href="https://gov.gitcoin.co/u/distributeddoge">@DistributedDoge</a> congrats on the new website for Gitcoin Grants Data Portal - <a href="https://grantsdataportal.xyz/">https://grantsdataportal.xyz/</a></p>
+<p>Summarizing the features I was able to test successfully here - accessing data based on the latest Allo model, updates to the latest models for Passport Score, features for improved developer experience (abstracting IPNS gateway with static URL, the case for addresses always trips me <img src="https://gov.gitcoin.co/images/emoji/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> great to see it consistent now), and datasets beyond Gitcoin donations (Giveth, Karma, Discourse). I have verified these milestones on Karma GAP as well.</p>
+<p>As we discussed, some scope from the original proposal (contributor guides, reference Jupyter notebooks, optionality in data formats) is pending development.</p>
+<p>As the next step, I will proceed with a prorated Citizen Grants payment of $16K in parity with completed milestones. Looking forward to the adoption of the portal for data analysis, reporting and insights - All the best!</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/16
+        Thu, 25 Jul 2024 12:53:02 +0000
+gov.gitcoin.co-post-18098-16
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+meglister
+
+            <p>Awesome, thanks for your reply <a class="mention" href="https://gov.gitcoin.co/u/davidgasquez">@davidgasquez</a> ! Maybe we can start a group chat with some of the core data folks in Grants Labs/citizen’s community. Mind sending me a message on discord or tg and we can take it from there?</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/15
+        Thu, 07 Mar 2024 19:42:08 +0000
+gov.gitcoin.co-post-18098-15
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+davidgasquez
+
+            <p>Thanks for the kind words!</p>
+<blockquote>
+<p>There’s a few things we think would make this data set much more useful, based on our experience with other users of the Grants Stack Indexer. These include passport scores and more historical data (which we are happy to help with!)</p>
+</blockquote>
+<p>Let’s chat! If you’re up for it, feel free to <a href="https://github.com/davidgasquez/gitcoin-grants-data-portal/issues/new" rel="noopener nofollow ugc">just open issues</a> there and we can take it from there.</p>
+<blockquote>
+<p>There are definitely easier ways to just access the raw data, so we should focus on enriching this data set and making it maximally useful for rich analysis.</p>
+</blockquote>
+<p>That’s our hope with the next iterations. Making better datasets and mke them easier to consume for different types of analysis.  <img src="https://gov.gitcoin.co/images/emoji/twitter/100.png?v=12" title=":100:" class="emoji" alt=":100:" loading="lazy" width="20" height="20"></p>
+<blockquote>
+<p>(RegenData + Grants Portal) Would love to discuss if/how we might bring these efforts closer together to maximize data usage and collaboration.</p>
+</blockquote>
+<p>Agree! Would love to chat about that. Personally, I have started to think of the Grants Data Portal as potentially downstream from the RegenData database and models. Those are probably more advanced and battle-tested, so we could totally reuse the public ones and avoid duplication.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/14
+        Thu, 07 Mar 2024 18:49:11 +0000
+gov.gitcoin.co-post-18098-14
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+meglister
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/davidgasquez">@davidgasquez</a> and <a class="mention" href="https://gov.gitcoin.co/u/distributeddoge">@DistributedDoge</a> , thanks so much for this thoughtful proposal! I’m broadly in support of it. I’ve also chatted with a few of our data folks internally at Grants Lab and am copying some feedback and ideas here for your consideration.</p>
+<ul>
+<li>First of all, the tech stack and usage of IPFS is really cool! Kudos on this setup.</li>
+<li>There’s a few things we think would make this data set much more useful, based on our experience with other users of the Grants Stack Indexer. These include passport scores and more historical data (which we are happy to help with!)</li>
+<li>From my perspective, these kinds of additional data, custom models, and non-Gitcoin data sources are key to making the project useful. There are definitely easier ways to just access the raw data, so we should focus on enriching this data set and making it maximally useful for rich analysis.</li>
+<li>Pushing fresh labels to Dune that are generated through this project would also be awesome.</li>
+</ul>
+<p>One thing to consider for the future: we have a project that we maintain internally (RegenData) that provides nearly identical functionality (though is gitcoin grants only + hosted on cloud server instead of ipfs). I think there’s value in rewarding your historical efforts and the improvements noted through this proposal, though I’d want to reevaluate if we should continue supporting both in the future. Would love to discuss if/how we might bring these efforts closer together to maximize data usage and collaboration.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/13
+        Wed, 06 Mar 2024 18:34:27 +0000
+gov.gitcoin.co-post-18098-13
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+KarlaGod
+
+            <p>Data is an important part of <em>“on-chain feedback &amp; analysis”</em>, it’d be great to have <em>a kind of</em> one-stop-shop where everyone can go and get historical data on Projects and Gitcoin grants rounds and even predict outcomes for the next round, and have accurate data to work with for growth.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/12
+        Tue, 05 Mar 2024 07:07:39 +0000
+gov.gitcoin.co-post-18098-12
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+Viriya
+
+            <p>I’m sorry to be slow to respond here. Somehow I missed this proposal. Thanks for the poke <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"><br>
+I really appreciate the notes and bodes of confidence outlined by others who have been deep in Gitcoin’s data. I plan to vote yes on this proposal. I think it will set amazing foundation for some of the things we’re trying to accomplish as an ecosystem and it will unlock opportunities for better and easier impact reporting in the future.<br>
+I’m particularly interested in Stage 2 <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>I appreciate the call out about the maintenance issue (which we all know is a challenge). Once stage 2 is complete, there may be an opportunity for RPGF within the Gitcoin Citizen Grants fund and perhaps other programs that can cover the maintenance costs.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/11
+        Mon, 04 Mar 2024 15:26:40 +0000
+gov.gitcoin.co-post-18098-11
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+rohit
+
+            <p>I am going to wear two “hats” to respond <img src="https://gov.gitcoin.co/images/emoji/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20"></p>
+<p>As a user of the portal, it’s been an absolute blessing to access the data in familiar realms of SQL over having to learn GraphQL or building pipelines to get data from Indexer. I look forward to iterating on the next version of GrantsScope to include recommendations for the upcoming Citizens Round using this portal (and setting split funding/drips to reflect this dependency).</p>
+<p>As the program manager for Citizens Innovate, I recommend tracking the adoption of the effort (unless already in place) using metrics that make the most sense (view counts, trends in spikes, etc.). While not a show-stopper for this roadmap, it will help establish a baseline against which you can capture trends over time.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/10
+        Tue, 27 Feb 2024 13:07:42 +0000
+gov.gitcoin.co-post-18098-10
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+DistributedDoge
+
+            <p>Thanks to everyone for the kind feedback so far!</p>
+<p>Noted down actionable items from the suggestions:</p>
+<ul>
+<li>move some logic from Github-actions to Dagster</li>
+<li>look into passport data (so far we serve <code>passport_scores</code> from indexer_v1)</li>
+<li>add docs explaining how to share data with Gitcoin Portal</li>
+</ul>
+<p>To give more context to DAO members thinking about spending, current funding pool for Citizen Innovate proposals is about 450k GTC.</p>
+<p>Regarding suggestion that <code>there should be funding available</code> - there really is! The better job we do indexing Web3 Grants the more future funding opportunities open ahead of the portal (e.g. Octant, Optimism Retro). But for now let’s gather enough resources to build the thing without distractions!</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/9
+        Tue, 27 Feb 2024 09:38:08 +0000
+gov.gitcoin.co-post-18098-9
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+umarkhaneth
+
+            <p>I love this proposal. Having data backed up to IPFS and openly accessible for community analysis is a design pattern I think will proliferate in Web3. I’m glad to see <a class="mention" href="https://gov.gitcoin.co/u/davidgasquez">@davidgasquez</a> and <a class="mention" href="https://gov.gitcoin.co/u/distributeddoge">@DistributedDoge</a> buidling.</p>
+<p>I’d like to add more of Gitcoin’s historic data to the portal. The Allo indexer picks up data from the Beta/GG17 forward. I have a dataset of all donations and matching information from GR1 through Alpha/GG16 we should add. DMing to see what the best way to do this is</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/8
+        Mon, 26 Feb 2024 22:53:21 +0000
+gov.gitcoin.co-post-18098-8
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+Jeremy
+
+            <p>I support this as well, the more we can have open data in the ecosystem for others to review, use, and make recommendations, the better it will be for us to improve the systems. I think <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> was doing some work on this and could provide some data flows and/or data pipelines.</p>
+<p>We can also provide data that is publicly available either directly from Passport (indexer or APIs) and also from our Ceramic node.</p>
+<p>I’m a huge fan of the work <a class="mention" href="https://gov.gitcoin.co/u/distributeddoge">@DistributedDoge</a> has already done for the DAO!</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/7
+        Mon, 26 Feb 2024 15:17:57 +0000
+gov.gitcoin.co-post-18098-7
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+skyfoxx
+
+            <p>It’s a really good proposal, but I’m curious, why not update it to use a dashboard from Dune or Bitquery?</p>
+<p>That would remove the complexity of maintaining the stack/ documentation, and make it about maintaining just queries over time.</p>
+<p>I would assume easier to build the UX and users to access the data?</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/6
+        Mon, 26 Feb 2024 02:11:30 +0000
+gov.gitcoin.co-post-18098-6
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+owocki
+
+            <p>I support this proposal.  I will be voting yes on this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/5
+        Sun, 25 Feb 2024 23:57:07 +0000
+gov.gitcoin.co-post-18098-5
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+ccerv1
+
+            <p>Full disclosure: I am a data nerd and therefore I probably do not represent the typical Gitcoin community member.</p>
+<p>But … as a frequent user and collaborator of the Gitcoin Grants Data Portal, I’d love to see these types of improvements. I’ll also add that I’ve only had good experiences working with <a class="mention" href="https://gov.gitcoin.co/u/davidgasquez">@davidgasquez</a> and <a class="mention" href="https://gov.gitcoin.co/u/distributeddoge">@DistributedDoge</a>.</p>
+<p>Finally, I realize that it’s hard to review these types of proposals without considering other ways of spending $20K or the overall financial targets for the DAO. Assuming Gitcoin has appetite for a small-scale data GCP, then I enthusiastically support this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/4
+        Sun, 25 Feb 2024 23:21:08 +0000
+gov.gitcoin.co-post-18098-4
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+epowell101
+
+            <p>Just a quick note to say that I think it would be a great idea for the Gitcoin Grants Portal to be supported in this way.</p>
+<p>This is exactly the sort of work that by its nature should be independent from Gitcoin for the sake of credibility.</p>
+<p>Most importantly, I’ve seen both <a class="mention" href="https://gov.gitcoin.co/u/distributeddoge">@DistributedDoge</a> and <a class="mention" href="https://gov.gitcoin.co/u/davidgasquez">@davidgasquez</a> collaborate with me and others in the OpenData Community.  They ship, they comment, they listen, they dig in, they volunteer their time to help others in the OpenData Community.</p>
+<p>Lastly, it is worth emphasizing that the architecture of the Grants Data Portal is itself distributed and open, using systems such as IPFS and leading open-source projects such as DBT.   I’m willing to look the other way on the reliance on GitHub here and there since much of the open-source world is similarly dependent.</p>
+<p>Anyway - I’m strongly supportive of this project as a data nerd, one of the founders of the OpenData Community, and as a collaborator with <a class="mention" href="https://gov.gitcoin.co/u/davidgasquez">@davidgasquez</a> and <a class="mention" href="https://gov.gitcoin.co/u/distributeddoge">@DistributedDoge</a></p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/3
+        Sun, 25 Feb 2024 20:32:35 +0000
+gov.gitcoin.co-post-18098-3
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+Pfed-prog
+
+            <aside class="quote no-group" data-username="davidgasquez" data-post="1" data-topic="18098">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/davidgasquez/48/12057_2.png" class="avatar"> davidgasquez:</div>
+<blockquote>
+<h4>Portal won’t be maintained once funding runs out</h4>
+<p>At the end of the day, the portal is “<em>just</em>” a batch processing pipeline that generates some static files. That means that you press button, get the data and then forget it exists untill next time you need data. No long lived servers to maintain! If at a certain point the portal is not maintained and someone needs it, it’ll only need to clone and run it from their computer to get up to date datasets.</p>
+<p>That said, some maintenance will be needed to deal with changing models and the natural evolution of APIs but we are already doing that with no funding for last 4 months so it is not that time consuming.</p>
+</blockquote>
+</aside>
+<p>There should be funding available, I hope.</p>
+<p>Definitely, take a look at OpenData Community available funding</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/OpenDataforWeb3/DataGrantsforARB">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/OpenDataforWeb3/DataGrantsforARB" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/344;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f97989fa8a5baced106e08c97f0780286bab2dec_2_690x345.png" class="thumbnail" data-dominant-color="F2F2F3" width="690" height="345"></div>
+
+<h3><a href="https://github.com/OpenDataforWeb3/DataGrantsforARB" target="_blank" rel="noopener nofollow ugc">GitHub - OpenDataforWeb3/DataGrantsforARB: Organizing work as outlined in the...</a></h3>
+
+  <p>Organizing work as outlined in the Data Grants proposal to ThankARB and the ARB DAO in Q4 of 2023 - OpenDataforWeb3/DataGrantsforARB</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/2
+        Sun, 25 Feb 2024 18:25:39 +0000
+gov.gitcoin.co-post-18098-2
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+davidgasquez
+
+            <h1><a name="gitcoin-grants-data-portal-1" class="anchor" href="https://gov.gitcoin.co#gitcoin-grants-data-portal-1"></a>Gitcoin Grants Data Portal</h1>
+<p>This is a Request For Feedback for the Gitcoin Grants Data Portal <a href="https://gitcoin.notion.site/Citizens-Innovate-cf556fdb861143e78765410b368565c2" rel="noopener nofollow ugc">Gitcoin Citizens Innovate</a> grant proposal.</p>
+<h2><a name="memo-proposal-description-2" class="anchor" href="https://gov.gitcoin.co#memo-proposal-description-2"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/memo.png?v=12" title=":memo:" class="emoji" alt=":memo:" loading="lazy" width="20" height="20">  Proposal Description</h2>
+<p>The proposal ask for $20k in funding over four months to enhance access to curated datasets on the <a href="https://davidgasquez.github.io/gitcoin-grants-data-portal/" rel="noopener nofollow ugc">Gitcoin Grants Data Portal</a>, aiming to foster community engagement, network effects, and cost efficiency in decision-making and analysis across the ecosystem.</p>
+<p>The Data Portal has had a significantly impact already through collaborations, better directories, analysis (e.g: clustering, visualizations), Sybil hunting, and supporting adjaccent communities (e.g: Arbitrum), enhancing data access and utility across multiple initiatives (see <a href="https://gov.gitcoin.co">Impact</a>).</p>
+<p>For context, the <a href="https://davidgasquez.github.io/gitcoin-grants-data-portal/" rel="noopener nofollow ugc">Gitcoin Data Portal</a> is an <a href="https://github.com/davidgasquez/gitcoin-grants-data-portal" rel="noopener nofollow ugc">open source</a>, serverless, and local-first open Data Platform for Gitcoin Grants Data. It has evolved into the schelling point for open and permissionless datasets around Gitcoin Grants and related areas.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/24c8cc56128350109ae239c9de378c2649d29c7f.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/24c8cc56128350109ae239c9de378c2649d29c7f" title="upload_4cc99155b3988601fc4273f66beb8204"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/24c8cc56128350109ae239c9de378c2649d29c7f_2_690x306.png" alt="upload_4cc99155b3988601fc4273f66beb8204" data-base62-sha1="5fpoCl307EmU6ZEY6F6jieF1Bpl" width="690" height="306" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/24c8cc56128350109ae239c9de378c2649d29c7f_2_690x306.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/24c8cc56128350109ae239c9de378c2649d29c7f_2_1035x459.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/24c8cc56128350109ae239c9de378c2649d29c7f.png 2x" data-dominant-color="F0F0F9"></a></div><p></p>
+<h3><a name="bulb-motivation-3" class="anchor" href="https://gov.gitcoin.co#bulb-motivation-3"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/bulb.png?v=12" title=":bulb:" class="emoji" alt=":bulb:" loading="lazy" width="20" height="20"> Motivation</h3>
+<blockquote>
+<p><strong>Frictionless access to Community Curated Gitcoin Grants Datasets <img src="https://gov.gitcoin.co/images/emoji/twitter/arrow_right.png?v=12" title=":arrow_right:" class="emoji" alt=":arrow_right:" loading="lazy" width="20" height="20"> More analysis work gets done <img src="https://gov.gitcoin.co/images/emoji/twitter/arrow_right.png?v=12" title=":arrow_right:" class="emoji" alt=":arrow_right:" loading="lazy" width="20" height="20"> Better decisions</strong></p>
+</blockquote>
+<p>Accessing and analyzing clean and curateed Gitcoin Grants data has been historically time-consuming and complex task. Gitcoin Data Portal removes those obstacles by providing a central hub where community curated Gitcoin Grants datasets are accessible to everybody!</p>
+<p>By lowering the barrier of entry and having more people look into the data, we expect to see more people re-using the curated datasets to make better decisions and produce interesting reports and tools!</p>
+<h3><a name="specifications-4" class="anchor" href="https://gov.gitcoin.co#specifications-4"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/bookmark_tabs.png?v=12" title=":bookmark_tabs:" class="emoji" alt=":bookmark_tabs:" loading="lazy" width="20" height="20"> Specifications</h3>
+<p>Proposal is split into two stages. First we improve data portal by making it more accessible. Then, focus on increasing its utility and profile by opening it to relevant data from other communities.</p>
+<p><strong>Stage 1:</strong> Provide Gitcoin with single place to get all interesting Gitcoin datasets in easy-to-consume format. We are already doing this, but we want to make the project better, easier to use and seen by more people!</p>
+<p><strong>Stage 2:</strong> Extend <strong>Gitcoin Data Portal</strong> to become <strong>Grants Data Portal</strong> holding up-to-date information about multiple Web3 Grant communities (Arbitrum, Optimism, Giveth etc.) in a single place!</p>
+<h3><a name="wrench-technical-details-5" class="anchor" href="https://gov.gitcoin.co#wrench-technical-details-5"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/wrench.png?v=12" title=":wrench:" class="emoji" alt=":wrench:" loading="lazy" width="20" height="20"> Technical Details</h3>
+<p>For a short overview on how the Gitcoin Grants Data Portal works, see the <a href="https://davidgasquez.github.io/gitcoin-grants-data-portal/about.html#key-features" rel="noopener nofollow ugc">about-page</a>. You can think of it as a lightweight data pipeline built using <a href="https://dagster.io/" rel="noopener nofollow ugc">Dagster</a>, <a href="https://www.getdbt.com/" rel="noopener nofollow ugc">dbt</a>, and <a href="https://duckdb.org/" rel="noopener nofollow ugc">DuckDB</a>, with additional module that allows us to publish website to Github pages and render Jupyer notebooks.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4e99413c94730a194080640e3e15b684f46041c2.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/4e99413c94730a194080640e3e15b684f46041c2" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4e99413c94730a194080640e3e15b684f46041c2_2_690x208.jpeg" alt="image" data-base62-sha1="bdjAyDn9EQPujhjQsLP8gDPxZiG" width="690" height="208" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4e99413c94730a194080640e3e15b684f46041c2_2_690x208.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4e99413c94730a194080640e3e15b684f46041c2_2_1035x312.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4e99413c94730a194080640e3e15b684f46041c2_2_1380x416.jpeg 2x" data-dominant-color="DFE8DF"></a></div><p></p>
+<p>The pipeline fetches raw data from various sources, transforms it using <code>dagster</code> and <code>dbt</code> up and materializes the tables it into <code>.parquet</code> files which are then pushed to IPFS.</p>
+<p>Example datasets for gitcoins include all Allo v1+v2 (<code>donations</code>, <code>projects</code>, <code>rounds</code>) as well as some more technical data taken from other sources (e.g. list of Allo Contract deployments or gas consumed by mainnet project registry)</p>
+<p>The scope of the technical work is to design and build:</p>
+<ul>
+<li>Robust pipelines to ingest, clean and join new datasets</li>
+<li>Notebooks and models to analyze and curate existing datasets</li>
+<li>Multiple improvements on the DX side; CI, CD, Contributing Guides, …</li>
+<li>Tests to ensure data quality across datasets</li>
+</ul>
+<h2><a name="world_map-roadmap-6" class="anchor" href="https://gov.gitcoin.co#world_map-roadmap-6"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/world_map.png?v=12" title=":world_map:" class="emoji" alt=":world_map:" loading="lazy" width="20" height="20"> Roadmap</h2>
+<h3><a name="stage-1-7" class="anchor" href="https://gov.gitcoin.co#stage-1-7"></a>Stage 1</h3>
+<blockquote>
+<p>$8k, 2 months</p>
+</blockquote>
+<ul>
+<li>Better documentation
+<ul>
+<li>improve overall documentation</li>
+<li>add contributor guides</li>
+</ul>
+</li>
+<li>Better datasets
+<ul>
+<li>evolve dbt models</li>
+<li>unify schemas</li>
+<li>add tests</li>
+<li>add new Gitcoin datasets to portal (e.g. Snapshot, Discourse stats)</li>
+<li>introduce basic support for <code>project profiles</code> data coming from other communities (e.g. Giveth, Drips, Octant)</li>
+</ul>
+</li>
+<li>Better UX
+<ul>
+<li>add Jupyter and Obervable notebooks as examples showing how to use portal data</li>
+<li>promote portal on X by publishing analysis, notebooks</li>
+<li>serve data in multiple formats to make it more accessible (e.g. checkout a spreadsheet via simple streamlit site)</li>
+</ul>
+</li>
+</ul>
+<h3><a name="stage-2-8" class="anchor" href="https://gov.gitcoin.co#stage-2-8"></a>Stage 2</h3>
+<blockquote>
+<p>$12k, 2 months</p>
+</blockquote>
+<p>Extend scope of portal to serve multiple communities and become THE place to go to find open datasets about projects/donations in crypto-grants ecosystem. <code>Gitcoin Data Portal</code> =&gt; <code>Grants Data Portal</code></p>
+<ul>
+<li>Add more non-gitcoin datasets to the portal (e.g. Octant, Giveth, Drips)</li>
+<li>Create shared tables by reconciling multiple schemas e.g. <code>all_project_profiles</code> (Giveth + Gitcoin + RetroPGF)</li>
+<li>In addition to <code>project profiles</code> track <code>donations data</code> coming from other communities (tricky - everyone has different way of doing that)</li>
+<li>Experiment with various forms of serving data (e.g. S3 bucket)</li>
+</ul>
+<p><strong>Stretch goals</strong> we <em>may</em> implement, but it depends on collab with external actors:</p>
+<ul>
+<li>Transfer data to/from OS-Observer, RegenData.xyz</li>
+<li>Publish impact blog post(s) on OS-Observer</li>
+<li>Export (some) data to Dune/Flipside. [we can do this easily, just for some small datasets]</li>
+<li>if there is interest from LLM groups, serve tokenized text/embeddings in a format that can be easily consumed by NLP/LLM models (but we need to know <em>which</em> models)</li>
+</ul>
+<h2><a name="budget-milestones-9" class="anchor" href="https://gov.gitcoin.co#budget-milestones-9"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/briefcase.png?v=12" title=":briefcase:" class="emoji" alt=":briefcase:" loading="lazy" width="20" height="20"> Budget &amp; Milestones</h2>
+<p>We ask for payments to be delivered in four monthly installments at end of each month. Expenses would cover development effort by <a class="mention" href="https://gov.gitcoin.co/u/distributeddoge">@DistributedDoge</a> and <a class="mention" href="https://gov.gitcoin.co/u/davidgasquez">@davidgasquez</a>. We will set aside some funds ($1000~) for maintenance and infrastructure costs (around $20/month currently for the IPFS pinning service).</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Payout</th>
+<th>Milestone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>$4000</td>
+<td>Better pipeline</td>
+</tr>
+<tr>
+<td>2</td>
+<td>$4000</td>
+<td>Better UX</td>
+</tr>
+<tr>
+<td>–</td>
+<td>–</td>
+<td>REVIEW</td>
+</tr>
+<tr>
+<td>3</td>
+<td>$6000</td>
+<td>More data</td>
+</tr>
+<tr>
+<td>4</td>
+<td>$6000</td>
+<td><strong>Grants Data Portal</strong></td>
+</tr>
+</tbody>
+</table>
+</div><p>Between milestones 2 and 3, we can review the state of the portal and evaluate the best way to continue with further funding.</p>
+<h3><a name="essential-intents-benefits-10" class="anchor" href="https://gov.gitcoin.co#essential-intents-benefits-10"></a>Essential Intents &amp; Benefits</h3>
+<p>In this combined section, we map each community intent to percieved benefits of funding this proposal. Some of those can be used as KPIs.</p>
+<h4><a name="community-engagement-11" class="anchor" href="https://gov.gitcoin.co#community-engagement-11"></a>Community Engagement</h4>
+<ol>
+<li>Make Gitcoin data easier to access and use.</li>
+<li>Attract new analysts interested in working with Gitcoin Data.</li>
+<li>Save time for existing analysts and developers in Gitcoin Community .</li>
+</ol>
+<h4><a name="network-effects-12" class="anchor" href="https://gov.gitcoin.co#network-effects-12"></a>Network Effects</h4>
+<ol>
+<li>Support other Citizen and Core initiatives.</li>
+<li>Support Gitcoin adjacent communities.</li>
+<li>Help Gitcoin identify high-potential grantees from other ecosystems.</li>
+<li>Help Gitcoin understand current market trends.</li>
+<li>Let community collaborate on curated models ala <a href="https://github.com/duneanalytics/spellbook" rel="noopener nofollow ugc">Dune Spellbok</a>, but for Grants data.</li>
+</ol>
+<h4><a name="cost-efficiency-13" class="anchor" href="https://gov.gitcoin.co#cost-efficiency-13"></a>Cost Efficiency</h4>
+<ul>
+<li>Assume average analyst is paid 50$/h</li>
+<li>Assume portal turns 5 hour of data preparation and cleaning into 1 hour</li>
+<li>Saves 200$ per single use of portal</li>
+</ul>
+<blockquote>
+<p>10 users ==&gt; $2k savings<br>
+100 users ==&gt; $20k saving<br>
+1000 users ==&gt; $200k savings</p>
+</blockquote>
+<p>On top of that:</p>
+<ul>
+<li>Community is incentivized to work on shared datasets instead of re-building the same data pipelines over and over for each project.</li>
+<li>Thanks to the project modularity other Python codebases can borrow our data-fetching pipelines</li>
+<li>The final curated datasets are available for free to anyone!</li>
+</ul>
+<h3><a name="drawbacks-14" class="anchor" href="https://gov.gitcoin.co#drawbacks-14"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/thinking.png?v=12" title=":thinking:" class="emoji" alt=":thinking:" loading="lazy" width="20" height="20"> Drawbacks</h3>
+<h4><a name="portal-may-publish-incorrect-data-15" class="anchor" href="https://gov.gitcoin.co#portal-may-publish-incorrect-data-15"></a>Portal may publish incorrect data</h4>
+<p>Mitigating this by writing <code>dbt models</code> to ensure data quality + improving CI-pipelines. For Gitcoin we have <code>RegenData.xyz</code> to spot check our datasets for inconsistency. Exposing datasets to as many users as we can will also make them more resilient.</p>
+<h4><a name="portal-may-become-more-costly-to-run-due-to-changes-16" class="anchor" href="https://gov.gitcoin.co#portal-may-become-more-costly-to-run-due-to-changes-16"></a>Portal may become more costly to run due to changes</h4>
+<p>One of the portal tenets is to be “lean” and “cheap”. At the moment we need no long-running server so the only cost for public version is $20/month Filebase subscription to publish data on IPFS. Running local stack on local machine (within Github codespace) will always stay completely free.</p>
+<h4><a name="portal-may-be-hard-to-use-17" class="anchor" href="https://gov.gitcoin.co#portal-may-be-hard-to-use-17"></a>Portal may be hard to use</h4>
+<p>The only thing you need to use the portal is knowing which datasets will cover your needs and be able to read/use them. We are actively  (1) talking to anyone interested in using Gitcoin data and (2) publishing datasets in open and standard formats to make sure things move in the right direction!</p>
+<p>Developing (e.g: pipeline for a very large dataset) might become more complex in the future. At that point we’ll evaluate the best approach to keep things lean.</p>
+<h4><a name="portal-wont-be-maintained-once-funding-runs-out-18" class="anchor" href="https://gov.gitcoin.co#portal-wont-be-maintained-once-funding-runs-out-18"></a>Portal won’t be maintained once funding runs out</h4>
+<p>At the end of the day, the portal is “<em>just</em>” a batch processing pipeline that generates some static files. That means that you press button, get the data and then forget it exists untill next time you need data. No long lived servers to maintain! If at a certain point the portal is not maintained and someone needs it, it’ll only need to clone and run it from their computer to get up to date datasets.</p>
+<p>That said, some maintenance will be needed to deal with changing models and the natural evolution of APIs but we are already doing that with no funding for last 4 months so it is not that time consuming.</p>
+<h3><a name="boom-impact-19" class="anchor" href="https://gov.gitcoin.co#boom-impact-19"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/boom.png?v=12" title=":boom:" class="emoji" alt=":boom:" loading="lazy" width="20" height="20"> Impact</h3>
+<p>List of collaborations using Gitcoin Data Portal or data coming from it:</p>
+<ul>
+<li>Providing data for OS-Observer impact-tracking <a href="https://docs.opensource.observer/blog/gitcoin-grants-impact" rel="noopener nofollow ugc">research</a></li>
+<li>Growing OS-Observer grantee <a href="https://github.com/opensource-observer/oss-directory" rel="noopener nofollow ugc">directory</a> (~30% of Github projects imported using)</li>
+<li><a href="https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469">Providing data for Grantee-clustering POC</a></li>
+<li>Providing data for Gitcoin-end-of-year <a href="https://twitter.com/RohitMalekar/status/1742196496152642030?s=20" rel="noopener nofollow ugc">visualization</a></li>
+<li>Sybil hunting in Citizens#2 round</li>
+<li>Arbitrum-led Open Data Community <a href="https://github.com/OpenDataforWeb3/DataGrantsforARB" rel="noopener nofollow ugc">hackathon</a></li>
+</ul>
+<p>Data Portal positions itself in a strategic place as smoothing access to quality and curated datasets can support many different iniatives in very cost-efficient manner.</p>
+<h2><a name="speech_balloon-conclusions-20" class="anchor" href="https://gov.gitcoin.co#speech_balloon-conclusions-20"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/speech_balloon.png?v=12" title=":speech_balloon:" class="emoji" alt=":speech_balloon:" loading="lazy" width="20" height="20"> Conclusions</h2>
+<p><strong>We are asking for $20k funding over the period of four months to improve the Gitcoin Grants Data Portal</strong>.  Funding will be used in the development and iteration of existing data-platform. <strong>First stage of the proposal requires $8k over two months</strong>.</p>
+<p>This proposal now enters community feedback period until end of the month, so we encourage everyone to share feedback here, or on the <a href="https://github.com/davidgasquez/gitcoin-grants-data-portal" rel="noopener nofollow ugc">project Github</a>! Thanks for reading. <img src="https://gov.gitcoin.co/images/emoji/twitter/raised_hands.png?v=12" title=":raised_hands:" class="emoji" alt=":raised_hands:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-grants-data-portal/18098/1
+        Sun, 25 Feb 2024 17:27:12 +0000
+gov.gitcoin.co-post-18098-1
+Citizens Innovate GCP - Gitcoin Grants Data Portal
+      
+
+

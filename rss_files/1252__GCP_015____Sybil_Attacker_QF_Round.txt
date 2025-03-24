@@ -1,0 +1,376 @@
+
+
+
+[GCP-015] - Sybil Attacker QF Round
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525
+    # GCP-015: Sybil Attacker QF Round
+
+
+**Co-authors:**  @Jeremy & Umar
+
+Thank you to @owocki , @meglister , @azeem , @MathildaDV , @CoachJonathan, @Sov , @connor , @M0nkeyFl0wer , @epowell101 for feedback on this GCP and/or conversations about the idea 
+## This has been posted on [snapshot](https://snapshot.org/#/gitcoindao.eth/proposal/0xc8afbc5dcc6ee94434e5b828ff9c92ce020861a3a6604ed8090cb077d6b919ce)
+## Summary:
+
+Create a $5k quadratic funding round specifically for individuals with the skills to launch a sybil attack to come and claim the funding if they share information on how they do it.
+
+## Abstract:
+
+Sybil Defense is one of the largest problems facing Web3 and the reason for the existence of Gitcoin Passport. Sybil Resistance enables UBI, more effective airdrops, better quadratic funding, and much more.
+
+Over the years, Sybil Attackers could have stolen millions of dollars from Gitcoin and the Ethereum ecosystem. Gitcoin’s unique position is similar to a bank holding funds on behalf of the ecosystem and every quarter we open the vault to give out money to the people placed in line by our community. Yet among those people there are some wearing disguises, impersonating honest actors, in order to steal from the bank.
+
+While we’ve developed defense mechanisms against these robbers (such as asking to see their passport) we haven’t implemented one of the most common techniques banks use to defend against robbers both in-person and online. Trying to break into your own bank.
+
+When you try to break in yourself you learn exactly where the weaknesses in the system are and can then design new methods to strengthen those locations. With this round, we’re offering an incentive for hackers to try to break into our system and tell us where our weaknesses are. Once we’ve shored them up we’ll then be in a better position to implement quadratic funding and aid the web3 ecosystem at large with sybil defense.
+
+## Motivation:
+
+“[In a red team/blue team exercise, the red team is made up of offensive security experts who try to attack an organization’s cybersecurity defenses. The blue team defends against and responds to the red team attack](https://www.crowdstrike.com/cybersecurity-101/red-team-vs-blue-team/).”
+
+So far, Gitcoin and its community have played the role of the blue team. We defend from sybils and we often do so in an open-source way that reveals how we work to our adversary.
+
+Our lack of knowledge about how the red team operates and attacks our system limits our ability to defend against them. Yet in our ecosystem we have people with the technical ability to break into our system who may have resisted doing so only because of their moral concerns. Let’s invite them to do what they’re good at and work with us.
+
+The best part? No squelching.
+
+## Specification:
+
+Grants Stack makes it extremely easy to spin up a QF round. We will start one with the following rules:
+
+* All non-offensive applications are accepted
+* Grants must get at least 100 unique contributions above a 20 passport score to receive any matching payout
+* Grants must share a detailed document on how they attacked the system via email before payouts and be available to answer questions (and preferably, but not required: hop on an anonymous voice call)
+* 80% matching cap: if a single attacker drastically outcompetes the others they can claim up to $4k
+* All donors will be labeled as Sybils in the Passport data sets and may not be able to receive scores or reuse credentials in the future
+
+This will also require support from the MMM team to communicate about the round to draw in participants. This would involve:
+
+* One design asset
+* One or two emails
+* Several tweets
+
+Something similar to what Yearn did: 
+https://twitter.com/yearnfi/status/1683892836393943048
+
+
+
+## Benefits
+
+* Insights into how sybil attacks are conducted
+* Insights into how to improve our sybil defense
+* Possibility to create new partnerships with proven experts
+
+## Drawbacks
+
+* Costs $5k
+* Creates pressure to rapidly shore up our defenses after identifying key learnings
+
+## Vote (tbd on Snapshot)
+
+**Yes:** Pilot the Sybil Attacker QF Round and allocate $5k from the matching pool
+
+**No:** Do not fund this work and do not move forward
+
+**Abstain:** I am missing context or this proposal needs more refinement
+
+## Temperature Check
+
+[poll type=multiple results=always min=1 max=2 chartType=bar]
+* Yes - Pilot the round for $5k
+* No - Do not fund
+* Abstain
+[/poll]
+Tue, 07 Nov 2023 16:37:04 +0000
+📜 Proposals
+
+
+[GCP-015] - Sybil Attacker QF Round
+umarkhaneth
+
+            <p>Thank you to everyone who voted! This proposal <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xc8afbc5dcc6ee94434e5b828ff9c92ce020861a3a6604ed8090cb077d6b919ce" rel="noopener nofollow ugc">passed on snapshot</a> and we will be running the round next month! Stay tuned <img src="https://gov.gitcoin.co/images/emoji/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"></p>
+<p>Metrics:<br>
+2,695 unique votes<br>
+~6.4M GTC tokens cast.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/15
+        Tue, 07 Nov 2023 16:37:04 +0000
+gov.gitcoin.co-post-16525-15
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+FractalVisions
+
+            <aside class="quote no-group" data-username="panpanpan" data-post="13" data-topic="16525">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/panpanpan/48/11450_2.png" class="avatar"> panpanpan:</div>
+<blockquote>
+<p>Perhaps new rules need to be considered to ensure that projects are held accountable to a different standard once they have raised a substantial amount of funding.</p>
+</blockquote>
+</aside>
+<p>Standards on accountability are beginning to form with <a href="https://gov.gitcoin.co/t/karma-gap-for-gitcoin-grantees/16936">Karma GAP</a> which is a Grantee Accountability Protocol. I would suggest this to be utilized as a way for future rounds to become curated with projects that have a strong track record for how the funds were allocated from their grant.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/14
+        Tue, 07 Nov 2023 15:24:57 +0000
+gov.gitcoin.co-post-16525-14
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+panpanpan
+
+            <p>Sybil defence is never going to be perfect when exchanges can essentially be used as giant mixers to obfuscate connections between addresses. Using on chain analysis on its own will not show this. Perhaps new rules need to be considered to ensure that projects are held accountable to a different standard once they have raised a substantial amount of funding.</p>
+<p>The Gitcoin Passport system is great for mitigating sybil attacks by individuals. As an effective barrier to individual collusion is raised however it shouldn’t come as a surprise that other vectors emerge. ‘Sybil attack’ by individual projects that are collaborating for example. Bundles seem to be underrated as a means for ensuring that associated projects do not absorb more funding than they otherwise might if donors would see the connections between them especially when it comes to matching.</p>
+<p>In a sense sybil resistance is meant to provide protection against greed - maybe it’s more useful to frame it in this way.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/13
+        Tue, 07 Nov 2023 14:26:45 +0000
+gov.gitcoin.co-post-16525-13
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+Donny_Jerri
+
+            <p>I think the Gitcoin passport system is a goldmine.  It is one of the most necessary features in the current environment and will only become more useful in the future.  I am currently working with projects to get them to utilize this asset for themselves and of course this onboards them into Gitcoin ecosystem.  This type of red team/blue team hacker idea is wonderful!  I am concerned the bounty is too small to get the “better” hackers to participate but this is a first iteration.  Let’s see what comes of it.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/12
+        Sun, 22 Oct 2023 16:43:40 +0000
+gov.gitcoin.co-post-16525-12
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+umarkhaneth
+
+            <p>This has been posted on <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x54016ff5337de45ee1fe8a36bb9cf332194b37022866610229a34b53e8e6d50f" rel="noopener nofollow ugc">snapshot</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/11
+        Tue, 17 Oct 2023 18:40:32 +0000
+gov.gitcoin.co-post-16525-11
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+M0nkeyFl0wer
+
+            <p>Perhaps a bug bounty model would work for this?</p>
+<p>I’m generally in favor of this idea. Might be more direct to just offer rewards to those who can help identify specific weaknesses in our processes and tools.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/10
+        Tue, 17 Oct 2023 15:03:37 +0000
+gov.gitcoin.co-post-16525-10
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+umarkhaneth
+
+            <p>I’m glad to hear all the support for this proposal and that people think we should actually be spending <em>more</em> on this. That’s a rare thing to hear!</p>
+<p>In terms of incentive to attack the round, I think $5k will definitely be sufficient for some attackers. It feels like an iterative approach would be best here where we run a small, test round and if we find it valuable then we could scale to larger sums.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/9
+        Thu, 05 Oct 2023 20:41:42 +0000
+gov.gitcoin.co-post-16525-9
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+0xZakk
+
+            <p>I’m very in support of this proposal. I think this will lead to a lot of interesting data for the Passport team.</p>
+<p>I’ll also add concern that $5k might be too small to attract much attention from “professional” sybil attackers.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/8
+        Fri, 22 Sep 2023 18:12:46 +0000
+gov.gitcoin.co-post-16525-8
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+carlosjmelgar
+
+            <aside class="quote no-group" data-username="umarkhaneth" data-post="1" data-topic="16525">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<h2>Benefits</h2>
+<ul>
+<li>Insights into how sybil attacks are conducted</li>
+<li>Insights into how to improve our sybil defense</li>
+<li>Possibility to create new partnerships with proven experts</li>
+</ul>
+<h2>Drawbacks</h2>
+<ul>
+<li>Costs $5k</li>
+<li>Creates pressure to rapidly shore up our defenses after identifying key learnings</li>
+</ul>
+</blockquote>
+</aside>
+<p>Voted yes, but also agree with <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> on the matching amount. I’d like to see something closer to the minimum for featured rounds to motivate participation. $5K doesn’t commensurate with the long term value this brings to Gitcoin.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/7
+        Tue, 19 Sep 2023 05:33:21 +0000
+gov.gitcoin.co-post-16525-7
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+umarkhaneth
+
+            <aside class="quote no-group" data-username="antonkulaga" data-post="5" data-topic="16525">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/antonkulaga/48/9348_2.png" class="avatar"> antonkulaga:</div>
+<blockquote>
+<p>Gitcoin passport is the reason people hate Gitcoin. 3/4 of people who wanted to donate to our projects could not get enough points to donate as you made passport even more restrictive.</p>
+</blockquote>
+</aside>
+<p>3/4 wallets were able to reach a passport score &gt;20 in GG18. There’s a tension between making it hard for sybils and easy for humans that’s still being explored on a relatively new product. That tension gets better with every round</p>
+<aside class="quote no-group" data-username="antonkulaga" data-post="5" data-topic="16525">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/antonkulaga/48/9348_2.png" class="avatar"> antonkulaga:</div>
+<blockquote>
+<p>For example, at some point UI did’t allow to make donations if the user didn’t register brightid,</p>
+</blockquote>
+</aside>
+<p>When was this the case? Do you have any more specific information?</p>
+<p>Passport lets you have your choice of any stamps to verify with as long as you make it over 20. I know I’m not verified with BrightID and I’m well over a 20 passport score + able to make donations.</p>
+<p>Your comments here are off-topic. If you wish to continue this convo, please dm me :]</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/6
+        Mon, 18 Sep 2023 17:38:04 +0000
+gov.gitcoin.co-post-16525-6
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+antonkulaga
+
+            <p>Gitcoin passport is the reason people hate Gitcoin. 3/4 of people who wanted to donate to our projects could not get enough points to donate as you made passport even more restrictive. Also, you agressively push your partners in a way that make users hate you (that is what some people told me). For example, at some point UI did’t allow to make donations if the user didn’t register brightid, even though often headache with brightid is higher than number of points you can get (unless it was a ui bug and it was not mandatory)Please, find a way to make gitcoin usable again!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/5
+        Sat, 16 Sep 2023 20:33:32 +0000
+gov.gitcoin.co-post-16525-5
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+Jeremy
+
+            <p>Good feedback <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a>.</p>
+<blockquote>
+<p>i do worry that $5k is a pittance to the most sophisticated sybil attackers/red team people, who likely make millions of $$$ per year in yield farming operations.</p>
+</blockquote>
+<p>I think it’s OK to start small to see what value we can glean and make sure we have the full close loop in place before we ramp up the type of funding we’d put on the attacking side.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/4
+        Fri, 15 Sep 2023 21:04:49 +0000
+gov.gitcoin.co-post-16525-4
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+owocki
+
+            <p>is gitcoin passport a cost center for gitcoin?  or is it a billion dollar opportunity to bootstrap an ecosystem of sybil resistent dapps that uniquely gitcoin can do?</p>
+<p>if the former, then ppl likely will want to skimp on spending to improve this data set.  if the latter, then its worth doubling down on probably.</p>
+<p>another point: i do worry that $5k is a pittance to the most sophisticated sybil attackers/red team people, who likely make millions of $$$ per year in yield farming operations.  i wonder if we might encourage the red team to cooperate instead of defect in other ways and/or increase the funding for these types of operations (this GCP, but also Upala style campaigns) in the future</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/3
+        Fri, 15 Sep 2023 03:25:29 +0000
+gov.gitcoin.co-post-16525-3
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+Sov
+
+            <p>I support this proposal and the amazing work <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> is doing here at Gitcoin.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/2
+        Fri, 15 Sep 2023 00:55:42 +0000
+gov.gitcoin.co-post-16525-2
+[GCP-015] - Sybil Attacker QF Round
+      
+
+[GCP-015] - Sybil Attacker QF Round
+umarkhaneth
+
+            <h1><a name="gcp-015-sybil-attacker-qf-round-1" class="anchor" href="https://gov.gitcoin.co#gcp-015-sybil-attacker-qf-round-1"></a>GCP-015: Sybil Attacker QF Round</h1>
+<p><strong>Co-authors:</strong>  <a class="mention" href="https://gov.gitcoin.co/u/jeremy">@Jeremy</a> &amp; Umar</p>
+<p>Thank you to <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> , <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> , <a class="mention" href="https://gov.gitcoin.co/u/azeem">@azeem</a> , <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a> , <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a>, <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> , <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> , <a class="mention" href="https://gov.gitcoin.co/u/m0nkeyfl0wer">@M0nkeyFl0wer</a> , <a class="mention" href="https://gov.gitcoin.co/u/epowell101">@epowell101</a> for feedback on this GCP and/or conversations about the idea</p>
+<h2><a name="this-has-been-posted-on-snapshothttpssnapshotorggitcoindaoethproposal0xc8afbc5dcc6ee94434e5b828ff9c92ce020861a3a6604ed8090cb077d6b919ce-2" class="anchor" href="https://gov.gitcoin.co#this-has-been-posted-on-snapshothttpssnapshotorggitcoindaoethproposal0xc8afbc5dcc6ee94434e5b828ff9c92ce020861a3a6604ed8090cb077d6b919ce-2"></a>This has been posted on <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xc8afbc5dcc6ee94434e5b828ff9c92ce020861a3a6604ed8090cb077d6b919ce" rel="noopener nofollow ugc">snapshot</a></h2>
+<h2><a name="summary-3" class="anchor" href="https://gov.gitcoin.co#summary-3"></a>Summary:</h2>
+<p>Create a $5k quadratic funding round specifically for individuals with the skills to launch a sybil attack to come and claim the funding if they share information on how they do it.</p>
+<h2><a name="abstract-4" class="anchor" href="https://gov.gitcoin.co#abstract-4"></a>Abstract:</h2>
+<p>Sybil Defense is one of the largest problems facing Web3 and the reason for the existence of Gitcoin Passport. Sybil Resistance enables UBI, more effective airdrops, better quadratic funding, and much more.</p>
+<p>Over the years, Sybil Attackers could have stolen millions of dollars from Gitcoin and the Ethereum ecosystem. Gitcoin’s unique position is similar to a bank holding funds on behalf of the ecosystem and every quarter we open the vault to give out money to the people placed in line by our community. Yet among those people there are some wearing disguises, impersonating honest actors, in order to steal from the bank.</p>
+<p>While we’ve developed defense mechanisms against these robbers (such as asking to see their passport) we haven’t implemented one of the most common techniques banks use to defend against robbers both in-person and online. Trying to break into your own bank.</p>
+<p>When you try to break in yourself you learn exactly where the weaknesses in the system are and can then design new methods to strengthen those locations. With this round, we’re offering an incentive for hackers to try to break into our system and tell us where our weaknesses are. Once we’ve shored them up we’ll then be in a better position to implement quadratic funding and aid the web3 ecosystem at large with sybil defense.</p>
+<h2><a name="motivation-5" class="anchor" href="https://gov.gitcoin.co#motivation-5"></a>Motivation:</h2>
+<p>“<a href="https://www.crowdstrike.com/cybersecurity-101/red-team-vs-blue-team/" rel="noopener nofollow ugc">In a red team/blue team exercise, the red team is made up of offensive security experts who try to attack an organization’s cybersecurity defenses. The blue team defends against and responds to the red team attack</a>.”</p>
+<p>So far, Gitcoin and its community have played the role of the blue team. We defend from sybils and we often do so in an open-source way that reveals how we work to our adversary.</p>
+<p>Our lack of knowledge about how the red team operates and attacks our system limits our ability to defend against them. Yet in our ecosystem we have people with the technical ability to break into our system who may have resisted doing so only because of their moral concerns. Let’s invite them to do what they’re good at and work with us.</p>
+<p>The best part? No squelching.</p>
+<h2><a name="specification-6" class="anchor" href="https://gov.gitcoin.co#specification-6"></a>Specification:</h2>
+<p>Grants Stack makes it extremely easy to spin up a QF round. We will start one with the following rules:</p>
+<ul>
+<li>All non-offensive applications are accepted</li>
+<li>Grants must get at least 100 unique contributions above a 20 passport score to receive any matching payout</li>
+<li>Grants must share a detailed document on how they attacked the system via email before payouts and be available to answer questions (and preferably, but not required: hop on an anonymous voice call)</li>
+<li>80% matching cap: if a single attacker drastically outcompetes the others they can claim up to $4k</li>
+<li>All donors will be labeled as Sybils in the Passport data sets and may not be able to receive scores or reuse credentials in the future</li>
+</ul>
+<p>This will also require support from the MMM team to communicate about the round to draw in participants. This would involve:</p>
+<ul>
+<li>One design asset</li>
+<li>One or two emails</li>
+<li>Several tweets</li>
+</ul>
+<p>Something similar to what Yearn did:<br>
+<a href="https://twitter.com/yearnfi/status/1683892836393943048" class="onebox" target="_blank" rel="noopener nofollow ugc">https://twitter.com/yearnfi/status/1683892836393943048</a></p>
+<h2><a name="benefits-7" class="anchor" href="https://gov.gitcoin.co#benefits-7"></a>Benefits</h2>
+<ul>
+<li>Insights into how sybil attacks are conducted</li>
+<li>Insights into how to improve our sybil defense</li>
+<li>Possibility to create new partnerships with proven experts</li>
+</ul>
+<h2><a name="drawbacks-8" class="anchor" href="https://gov.gitcoin.co#drawbacks-8"></a>Drawbacks</h2>
+<ul>
+<li>Costs $5k</li>
+<li>Creates pressure to rapidly shore up our defenses after identifying key learnings</li>
+</ul>
+<h2><a name="vote-tbd-on-snapshot-9" class="anchor" href="https://gov.gitcoin.co#vote-tbd-on-snapshot-9"></a>Vote (tbd on Snapshot)</h2>
+<p><strong>Yes:</strong> Pilot the Sybil Attacker QF Round and allocate $5k from the matching pool</p>
+<p><strong>No:</strong> Do not fund this work and do not move forward</p>
+<p><strong>Abstain:</strong> I am missing context or this proposal needs more refinement</p>
+<h2><a name="temperature-check-10" class="anchor" href="https://gov.gitcoin.co#temperature-check-10"></a>Temperature Check</h2>
+<p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/1">Click to view the poll.</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-015-sybil-attacker-qf-round/16525/1
+        Fri, 15 Sep 2023 00:16:43 +0000
+gov.gitcoin.co-post-16525-1
+[GCP-015] - Sybil Attacker QF Round
+      
+
+

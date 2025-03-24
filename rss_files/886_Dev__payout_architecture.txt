@@ -1,0 +1,221 @@
+
+
+
+Dev: payout architecture
+https://gov.gitcoin.co/t/dev-payout-architecture/13198
+    Hey, 
+
+thelostone-mc (Aditya) here who's a team lead on the Allo Protocol team. 
+Based on recent feedback from the governance post, I'd like to experiment by bring the community into the dicussion / sharing our thoughts as we build out milestones. Consider this a quick checkin from the Allo team with the community and keeping you in loop as we brainstorm and build feature. Would love feedback on this so that we can improve on this.
+
+
+TLDR: We are building the payout layer onto the allo protocol and would love to share how we are going about it in an effort to be more vocal about how are progressing the protocol. All our discussion / code / issues are open source and on Github, so if you'd like to be more involved -> that's the place I'd encourage you to checkout 
+
+
+# Payout Flow Architecure
+This document aims to outline the design for 
+
+- Payout architecture
+- Protocol + Round Fee architecure 
+
+
+## Payout Architecture 
+
+The payout contract like the voting contract can come in variations of flavours such as:
+
+- Bulk Transfer Payout
+- Merkle Claim
+- Drip Transfer
+
+### What are we building
+
+The Allo team will focus on defining the interface of the PayoutStrategy (called IPayoutStrategy) via an abstract contract. Any flavour of PayoutStrategy being built would have import this abstract interface contract and that would be able to leverage :  
+
+- core function defined in the IPayoutStrategy
+-modifiers which may be useful for the actual implementation
+- virtual functions which would have to be implemented by the implementation
+
+We will be using the IPayoutStrategy to build the MerklePayoutStrategy as our first flavour of payout
+This would be used as the initial payout mechanism for the rounds run on Allo and would serve as an example for other flavours to be built.
+
+
+### How are these contracts deployed?
+
+The actual PayoutStrategy itself would follow a factory pattern.
+This means every payout strategy would comprise of 2 contracts maintained by the Allo Team 
+
+- **PayoutStrategyFactory contract** (creates PayoutStrategyImplementation for every round)
+- **PayoutStrategyImplementation contract** (containing the actual payout implementation)
+
+This is similar to the design of the Round, Program, and QFVotingStrategy is built.
+This allows us the benefits of :
+
+- Isolate payout contracts per round
+- Creating clones of the payout contract (making deployment cheaper for round operator)
+- Give us room to upgrade our contracts as the protocol evolves
+
+
+### Functions offered by the IPayoutStrategy
+
+- **isReadyForPayout** : function which prevents updating the distribution and signals it's ready for payout
+- **withdrawFunds**: function which enables an operator to withdraw pot money. 
+- **updateDistribution**: TBD by the actual PayoutStrategyImplementation
+- **payout**: : TBD by the actual PayoutStrategyImplementation
+
+
+## Fee Architecture 
+
+This while a separate feature goes hand in hand with payout and hence is being together.
+The v1 iteration aims to build the foundation which allows 
+
+- Protocol to set fee percentage (initially set to 0). This would be updatable by the DAO 
+- Operator to add round fee percentage which can be updated till the round ends (we will make the update timeline stricter after we launch this feature )
+- Both fees are collected at the time of payout
+- funds would be kept in the round contract and sent to the payout contract at the time of payout (this is solely done to support native token payouts as well )
+
+Once we've built this layer out, and run a test, we'll evolve this feature and add restrictions in terms of updating fee percentage. 
+
+### Are the current contracts being upgraded?
+
+Yes, the following contracts would need to be updated to build out the flow : 
+
+- **RoundFactory** - to set the protocol treasury address
+- **RoundImplementation** - to charge the protocol fee and invoke PayoutStrategy payout function
+
+Any changes will be documented and will be backward compatible:
+
+**The overall flow:** 
+
+![image|690x308](upload://7Nmb3DJsCDA15209M7dHQ0DR38h.jpeg)
+
+**High level overview of the payout interface:**
+
+![image|690x362](upload://uHNvCgHdlKSlNqDSciNIOhA9gTO.jpeg)
+
+
+
+The actual flow which we've brainstormed can be found here:
+https://miro.com/app/board/uXjVPsZg30I=/?share_link_id=561484071436
+Tue, 07 Mar 2023 14:52:44 +0000
+🌱 Gitcoin Grants
+
+
+Dev: payout architecture
+thelostone-mc
+
+            <p>Hey,</p>
+<p>thelostone-mc (Aditya) here who’s a team lead on the Allo Protocol team.<br>
+Based on recent feedback from the governance post, I’d like to experiment by bring the community into the dicussion / sharing our thoughts as we build out milestones. Consider this a quick checkin from the Allo team with the community and keeping you in loop as we brainstorm and build feature. Would love feedback on this so that we can improve on this.</p>
+<p>TLDR: We are building the payout layer onto the allo protocol and would love to share how we are going about it in an effort to be more vocal about how are progressing the protocol. All our discussion / code / issues are open source and on Github, so if you’d like to be more involved → that’s the place I’d encourage you to checkout</p>
+<h1>
+<a name="payout-flow-architecure-1" class="anchor" href="https://gov.gitcoin.co#payout-flow-architecure-1"></a>Payout Flow Architecure</h1>
+<p>This document aims to outline the design for</p>
+<ul>
+<li>Payout architecture</li>
+<li>Protocol + Round Fee architecure</li>
+</ul>
+<h2>
+<a name="payout-architecture-2" class="anchor" href="https://gov.gitcoin.co#payout-architecture-2"></a>Payout Architecture</h2>
+<p>The payout contract like the voting contract can come in variations of flavours such as:</p>
+<ul>
+<li>Bulk Transfer Payout</li>
+<li>Merkle Claim</li>
+<li>Drip Transfer</li>
+</ul>
+<h3>
+<a name="what-are-we-building-3" class="anchor" href="https://gov.gitcoin.co#what-are-we-building-3"></a>What are we building</h3>
+<p>The Allo team will focus on defining the interface of the PayoutStrategy (called IPayoutStrategy) via an abstract contract. Any flavour of PayoutStrategy being built would have import this abstract interface contract and that would be able to leverage :</p>
+<ul>
+<li>core function defined in the IPayoutStrategy<br>
+-modifiers which may be useful for the actual implementation</li>
+<li>virtual functions which would have to be implemented by the implementation</li>
+</ul>
+<p>We will be using the IPayoutStrategy to build the MerklePayoutStrategy as our first flavour of payout<br>
+This would be used as the initial payout mechanism for the rounds run on Allo and would serve as an example for other flavours to be built.</p>
+<h3>
+<a name="how-are-these-contracts-deployed-4" class="anchor" href="https://gov.gitcoin.co#how-are-these-contracts-deployed-4"></a>How are these contracts deployed?</h3>
+<p>The actual PayoutStrategy itself would follow a factory pattern.<br>
+This means every payout strategy would comprise of 2 contracts maintained by the Allo Team</p>
+<ul>
+<li>
+<strong>PayoutStrategyFactory contract</strong> (creates PayoutStrategyImplementation for every round)</li>
+<li>
+<strong>PayoutStrategyImplementation contract</strong> (containing the actual payout implementation)</li>
+</ul>
+<p>This is similar to the design of the Round, Program, and QFVotingStrategy is built.<br>
+This allows us the benefits of :</p>
+<ul>
+<li>Isolate payout contracts per round</li>
+<li>Creating clones of the payout contract (making deployment cheaper for round operator)</li>
+<li>Give us room to upgrade our contracts as the protocol evolves</li>
+</ul>
+<h3>
+<a name="functions-offered-by-the-ipayoutstrategy-5" class="anchor" href="https://gov.gitcoin.co#functions-offered-by-the-ipayoutstrategy-5"></a>Functions offered by the IPayoutStrategy</h3>
+<ul>
+<li>
+<strong>isReadyForPayout</strong> : function which prevents updating the distribution and signals it’s ready for payout</li>
+<li>
+<strong>withdrawFunds</strong>: function which enables an operator to withdraw pot money.</li>
+<li>
+<strong>updateDistribution</strong>: TBD by the actual PayoutStrategyImplementation</li>
+<li>
+<strong>payout</strong>: : TBD by the actual PayoutStrategyImplementation</li>
+</ul>
+<h2>
+<a name="fee-architecture-6" class="anchor" href="https://gov.gitcoin.co#fee-architecture-6"></a>Fee Architecture</h2>
+<p>This while a separate feature goes hand in hand with payout and hence is being together.<br>
+The v1 iteration aims to build the foundation which allows</p>
+<ul>
+<li>Protocol to set fee percentage (initially set to 0). This would be updatable by the DAO</li>
+<li>Operator to add round fee percentage which can be updated till the round ends (we will make the update timeline stricter after we launch this feature )</li>
+<li>Both fees are collected at the time of payout</li>
+<li>funds would be kept in the round contract and sent to the payout contract at the time of payout (this is solely done to support native token payouts as well )</li>
+</ul>
+<p>Once we’ve built this layer out, and run a test, we’ll evolve this feature and add restrictions in terms of updating fee percentage.</p>
+<h3>
+<a name="are-the-current-contracts-being-upgraded-7" class="anchor" href="https://gov.gitcoin.co#are-the-current-contracts-being-upgraded-7"></a>Are the current contracts being upgraded?</h3>
+<p>Yes, the following contracts would need to be updated to build out the flow :</p>
+<ul>
+<li>
+<strong>RoundFactory</strong> - to set the protocol treasury address</li>
+<li>
+<strong>RoundImplementation</strong> - to charge the protocol fee and invoke PayoutStrategy payout function</li>
+</ul>
+<p>Any changes will be documented and will be backward compatible:</p>
+<p><strong>The overall flow:</strong></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/36a38bb06d1a924985d0c3628aa1b9faa66df555.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/36a38bb06d1a924985d0c3628aa1b9faa66df555" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/36a38bb06d1a924985d0c3628aa1b9faa66df555_2_690x308.jpeg" alt="image" data-base62-sha1="7Nmb3DJsCDA15209M7dHQ0DR38h" width="690" height="308" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/36a38bb06d1a924985d0c3628aa1b9faa66df555_2_690x308.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/36a38bb06d1a924985d0c3628aa1b9faa66df555_2_1035x462.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/36a38bb06d1a924985d0c3628aa1b9faa66df555_2_1380x616.jpeg 2x" data-dominant-color="EFEFE9"></a></div><p></p>
+<p><strong>High level overview of the payout interface:</strong></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d734ac93f79a998e6733a2541db40e20d2f5c01c.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/d734ac93f79a998e6733a2541db40e20d2f5c01c" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d734ac93f79a998e6733a2541db40e20d2f5c01c_2_690x362.jpeg" alt="image" data-base62-sha1="uHNvCgHdlKSlNqDSciNIOhA9gTO" width="690" height="362" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d734ac93f79a998e6733a2541db40e20d2f5c01c_2_690x362.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d734ac93f79a998e6733a2541db40e20d2f5c01c_2_1035x543.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d734ac93f79a998e6733a2541db40e20d2f5c01c_2_1380x724.jpeg 2x" data-dominant-color="EAEBE4"></a></div><p></p>
+<p>The actual flow which we’ve brainstormed can be found here:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://miro.com/app/board/uXjVPsZg30I=/?share_link_id=561484071436">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1d5be9ec8cffa79619e6de16783a890bb55ecb37.png" class="site-icon" width="32" height="32">
+
+      <a href="https://miro.com/app/board/uXjVPsZg30I=/?share_link_id=561484071436" target="_blank" rel="noopener">miro.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/9/98be7ded81eeecfd40bebff8b3af9d4952e16301.png" class="thumbnail onebox-avatar" width="420" height="420">
+
+<h3><a href="https://miro.com/app/board/uXjVPsZg30I=/?share_link_id=561484071436" target="_blank" rel="noopener">Payout Milestone</a></h3>
+
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/dev-payout-architecture/13198/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/dev-payout-architecture/13198/1
+        Tue, 07 Mar 2023 14:49:01 +0000
+gov.gitcoin.co-post-13198-1
+Dev: payout architecture
+      
+
+

@@ -1,0 +1,275 @@
+
+
+
+# OpenData Community Hackathon Results
+https://gov.gitcoin.co/t/opendata-community-hackathon-results/11943
+    ## Why
+
+Centralization risks exist everywhere. The FTX debacle highlights again the risks of an opaque centralized entity taking custody of people's assets. But centralization isn't only a problem for money. It is a big problem for data too. When data is held opaquely by some centralized actors they have the power of insight - to see how people behave, to forecast people's actions, to gain a competitive edge, to gatekeep, and to paywall.
+
+Web3 is largely a reaction to the data centralization of web2. Web3 is building itself out of composable open-source software "legos"  that allow free access to the internet of apps along with the cryptographic tools to do so in a permissionless way where you keep possession of your own data and assets. However, we are currently observing a recentralization of Web3. Just as users are too often choosing to hand custody of their assets to new centralized power players, so too is data concentrating in the hands of a few organizations. Even in the Ethereum ecosystem, where the base layer is highly decentralized and the cypherpunk ethos is strong, access to Ethereum is often via a few centralized portals such as exchanges, wallets with default RPC providers, etc rather than using self-hosted nodes. Because syncing an archive node and scraping it for data is slow and expensive, one or two indexing providers dominate access to historical data. Most of the stack above the base layer protocol is too centralized.
+
+Many projects try to fight this centralization by building tools and solutions independently, but a lack of sharing culture and infrastructure means lots of operators are reinventing the wheel. To fight recentralization, sharing data, insights, and tools must be the norm. Composability is a massive unlock, but only if developers and analysts can share their composable tools roughly frictionlessly. The Open Data Community (ODC) is an initiative that aims to decentralize all the way up the stack by building software and a decentralized community around it!
+
+## Gitcoin
+
+Gitcoin is decentralizing itself by migrating its public good funding system to a protocol, such that it can be deployed by communities without requiring Gitcoin to act as a centralized manager for grant-giving. Gitcoin has been active for several years and has facilitated almost $70 million in public goods funding. However, until now Gitcoin has relied on a small group of trusted contributors to run grant rounds and analyze data about them. With Gitcoin decentralizing grant management and fraud detection and defense, it is also essential to decentralize Gitcoin's data collection and analysis. This creates immediate demand for an OpenData Community building decentralized tools and a community of analysts.
+
+## OpenData Community
+
+The OpenData Community is an independent DAO started by GitCoin. The purpose of ODC is to create and curate useful decentralized tools and data that can be used by decentralized Gitcoin and the web3 software stack at large. The ODC will be a credible hub or commons where analysts and devs can come together to develop, improve and share decentralized software, data sets, dashboards, and visualizations.
+
+Read more about the ODC in this recent Gitcoin forum post:: [https://gov.gitcoin.co/t/gitcoin-starts-and-supports-the-opendata-community/11886](https://gov.gitcoin.co/t/gitcoin-starts-and-supports-the-opendata-community/11886)
+
+## Hackathon
+
+To kick things off and bootstrap the ODC community, Gitcoin hosted an OpenData Community Hackathon! There were three areas of focus that are high-priority areas for ODC:
+
+1) Sybil slayers: detecting and defending against Sybil attacks
+
+2) Human Incentives: analyzing and optimizing human grant reviews
+
+3) Dune Detectives: building useful dashboards and insights using Dune dashboards
+
+We were delighted to have a lot of enthusiastic participants and some great projects in the inaugural hackathon - let's dive into some of the winners to showcase some of what was done.
+
+### Dune detectives
+
+The top Dune Detective was user Ataraxiae who pulled together a very [detailed dashboard](https://dune.com/ataraxiae/gitcoin-gr15) on Gitcoin's GR15 data. Starting from a fairly large raw dataset comprising all of Gitcoin's data on GR15 grants, Ataraxiae created an easy-to-access dashboard summarizing all the need-to-know information that allows anyone to quickly understand GR15. We think this dashboard will be helpful to future users of the Gitcoin Grants protocol as well.
+
+![|624x260](upload://qLEopD5E5OlkU5hD2obt35o5v1W.png)
+
+Another entry that impressed us was by user [jennifertran](https://dune.com/jennifertran/gitcoin-gr15-analysis), who also created a dashboard about GR15 and also included analysis with key takeaways in plain language as well as data.
+
+![|624x161](upload://y6mmOG2EJjdst46IEKhMsG1VRdM.png)
+
+There were seven individual dashboards that were awarded prizes totaling $1500 - they are all great examples of the kind of shareable insights that can help to understand and operate Grant rounds.
+
+### Human incentives
+
+The top entry in the Human Incentive category was an app that scraped the Github repository for each contributor and generated a score for account quality. This was then correlated against several metrics of their performance in the grants round. This approach could be used as a simple Lego that can be added to the Gitcoin grant review process by Gitcoin and other public goods funders, with particular relevance to grants rounds where the applicants have a technical track record. The submitted version could easily be developed for production and seems likely to improve the assessment of Gitcoin grants. The creator of this approach will join us in the upcoming Twitter Space on Wednesday the 16th.
+
+Other top entries created an app for automating grant reviewing and predicting grant outcomes from the grant description. These could also become components of Gitcoin's review protocol.
+
+There were six projects awarded a prize in the Human Incentives category - each one contributed some novel idea for how to improve Gitcoin grant reviewing! The total prizes totaled $7500.
+
+### Sybil Slayers
+
+The [top Sybil Slayer](https://github.com/0x9simon/slaysybil) team created an algorithmic Sybil-detection composed of four distinct approaches:
+
+1. Bulk transfers pattern mining
+2. Bulk donations pattern mining
+3. Sequential behavior pattern mining
+4. Asset-transfer graph mining for slaying Sybil.
+
+They synthesized these components into a single tool that can be used to detect Sybils. They also extended their work to contribute to detecting grant fraud. It was great to see an independent group of analysts create something that can plug into the Gitcoin defenses - this is exactly what we mean by "composable tools" that will support Gitcoin's protocol transition. One highlight of this analysis was the detection of a 188-node "snake" network of Sybils, whereby 188 seemingly independent wallets were revealed to have coordinated their activities in order to manipulate quadratic voting. Members of this team will also be joining us in the Twitter Space on Wednesday the 16th.
+![|624x248](upload://pAY3KbwevbltzMN5llp92AlSYSb.png)
+
+Another [highly rated Sybil Slayer](https://github.com/poupou-web3/GC-ODS-Sybil) created a pipeline for investigating the time series properties of grant contributions using clever data collection and analysis techniques. They created a notebook to easily share the data analysis with other analysts in a way that can be applied to other datasets in the future. It was great to see the user analyzing the correctness of their own approach and proposing alternatives - this is just the kind of ethos that will boost the OpenData community.
+
+Ten Sybil Slayers were awarded prizes totaling $10,000.
+
+### Voting for Winners
+
+Quadratic Voting was used to choose the winners and to allocate how much of the prize money they would receive. Our judges consisted of 5 members of FDD for this first event. Each received an allocation of quadratic vote credits for each competition category. The number of votes each judge was asked to allocate was just shy of being able to put all their votes onto any one winner, thus pushing them to consider 2nd and 3rd favorites as they used the remainder of credits. This forced an effect similar to ranked-choice voting. The output of this was a list of preferred projects and the votes received.
+
+![|624x409](upload://lDbO1px3EQm8t8SSEblm5IWpvGc.png)
+
+Next, a threshold was set for each category. The basic principle used was that any project with a quality and effort level we wanted to encourage to participate in future rounds would receive something. The amount received would be proportional to the number of vote credits they received over the threshold. We then made some quick rounding and subjective decisions to finalize the final payouts.
+
+![|624x247](upload://wZ4vbTH3TqtstFkwXLOJJWcVyZm.png)
+
+## What's next?
+
+The hackathon was a great way to kick off the OpenData Community. It demonstrated unambiguously that high-quality data and software tools can emerge from a decentralized community of data analysts and software developers. So from here, we will be supporting the already growing community and will collaborate with the community to build some structure in the DAO. We are committed to fighting recentralization in all its forms and need your help.
+
+Whether you are a data scientist, a community builder, a discord degen, a project developer, or someone who wants to make sense out of web3 data with recommended solutions that respect the decentralization ethos of Ethereum and web3 - please drop in and help build a more open data future.
+
+There are at least a couple of ways to get involved with the OpenData Community:
+
+* Join our Twitter Spaces on 16th November at 7am (Pacific time): https://twitter.com/i/spaces/1MnxnpbqmdkGO
+
+* Please drop into the Discord : https://discord.gg/EdN7puUG
+
+* Or check out and add to our landscape and plan here: https://github.com/OpenDataforWeb3
+
+You can also be one of the first to follow the community on Twitter:
+
+* https://twitter.com/OpenDataforWeb3
+
+There will be **more hackathons** coming up in the future too!
+
+Many thanks to @DisruptionJoe @j-cook for their work on this write-up, to the FDD for their enthusiasm as we begin to decentralize ourselves, and of course to all the hackathon contestants.
+Tue, 15 Nov 2022 16:53:20 +0000
+🤖 DAO Governance and Vision
+
+
+# OpenData Community Hackathon Results
+epowell101
+
+            <p>Great question.  We didn’t really know ahead of time that we’d end up w/ something like 5-7 “legos” that we think can be used by gitcoin and other users of the grants protocol in the future.</p>
+<p>Now that we do know that - the hard ROI is basically the costs of developing them ourselves vs the community developing them.  At first blush given our spending and pace of of Lego development the hard ROI is positive.  That said - to really achieve those benefits we would have to show we have spent less internally.  That’s not the case afaik today - it’s more that we will not need to spend as much going forward because now we know the community can develop useful algorithms.</p>
+<p>The soft ROI is inherently hard to measure.  It includes any second order benefits of the community such as resisting centralization at the data layer, improving the confidence of grant protocol teams to embrace the protocol, and accelerating the identification and development of useful tools and data sets.</p>
+          <p><a href="https://gov.gitcoin.co/t/opendata-community-hackathon-results/11943/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/opendata-community-hackathon-results/11943/4
+        Tue, 15 Nov 2022 16:53:20 +0000
+gov.gitcoin.co-post-11943-4
+# OpenData Community Hackathon Results
+      
+
+# OpenData Community Hackathon Results
+DisruptionJoe
+
+            <p>Here are the full results:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/43817c29f06d4ef2ca708cf7be47ee005bfb0bbe.jpeg" data-download-href="/uploads/short-url/9Dbptrr0GDZqZy7suRnQZSt0htA.jpeg?dl=1" title="Image 2022-11-11 at 9.55.13 AM"><img src="/uploads/db4391/optimized/2X/4/43817c29f06d4ef2ca708cf7be47ee005bfb0bbe_2_690x275.jpeg" alt="Image 2022-11-11 at 9.55.13 AM" data-base62-sha1="9Dbptrr0GDZqZy7suRnQZSt0htA" width="690" height="275" srcset="/uploads/db4391/optimized/2X/4/43817c29f06d4ef2ca708cf7be47ee005bfb0bbe_2_690x275.jpeg, /uploads/db4391/optimized/2X/4/43817c29f06d4ef2ca708cf7be47ee005bfb0bbe_2_1035x412.jpeg 1.5x, /uploads/db4391/optimized/2X/4/43817c29f06d4ef2ca708cf7be47ee005bfb0bbe_2_1380x550.jpeg 2x" data-dominant-color="F2F3F2"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/43d19671e321068c910f7bb482fb171c7caff3df.jpeg" data-download-href="/uploads/short-url/9FX1RubN0PeIkkX7q6Ex1jk9SvJ.jpeg?dl=1" title="Image 2022-11-11 at 9.50.07 AM"><img src="/uploads/db4391/optimized/2X/4/43d19671e321068c910f7bb482fb171c7caff3df_2_690x470.jpeg" alt="Image 2022-11-11 at 9.50.07 AM" data-base62-sha1="9FX1RubN0PeIkkX7q6Ex1jk9SvJ" width="690" height="470" srcset="/uploads/db4391/optimized/2X/4/43d19671e321068c910f7bb482fb171c7caff3df_2_690x470.jpeg, /uploads/db4391/optimized/2X/4/43d19671e321068c910f7bb482fb171c7caff3df_2_1035x705.jpeg 1.5x, /uploads/db4391/optimized/2X/4/43d19671e321068c910f7bb482fb171c7caff3df_2_1380x940.jpeg 2x" data-dominant-color="F3F4F2"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/opendata-community-hackathon-results/11943/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/opendata-community-hackathon-results/11943/3
+        Tue, 15 Nov 2022 16:33:13 +0000
+gov.gitcoin.co-post-11943-3
+# OpenData Community Hackathon Results
+      
+
+# OpenData Community Hackathon Results
+shawn16400
+
+            <p>I am excited about the ODC initiative - and love how you experimented with QV to select winners in each round - especially as your mechanism encouraged multiple votes.</p>
+<aside class="quote no-group" data-username="epowell101" data-post="1" data-topic="11943">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<p>The number of votes each judge was asked to allocate was just shy of being able to put all their votes onto any one winner, thus pushing them to consider 2nd and 3rd favorites as they used the remainder of credits. This forced an effect similar to ranked-choice voting</p>
+</blockquote>
+</aside>
+<p>Question on the ROI - I suspect hackathon output is directional at best, and linking that output to a ROI would be difficult.  Given the prize money was ~$19K and operations of the event had a cost as well, how effective was a this as a use of these funds?  I am not challenging the spend, it appears to have been rocket fuel to the ODC initiative, but I want to understand a bit more how the results will support FDD learnings or initiatives on a strategic level.</p>
+<p><strong>Dune Detectives:</strong></p>
+<aside class="quote no-group" data-username="epowell101" data-post="1" data-topic="11943">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<p>We think this dashboard will be helpful to future users of the Gitcoin Grants protocol as well.</p>
+</blockquote>
+</aside>
+<p><strong>Human inventives:</strong></p>
+<aside class="quote no-group" data-username="epowell101" data-post="1" data-topic="11943">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<p>It was great to see an independent group of analysts create something that can plug into the Gitcoin defenses - this is exactly what we mean by “composable tools” that will support Gitcoin’s protocol transition</p>
+</blockquote>
+</aside>
+<p><strong>Sybil Slayers</strong></p>
+<aside class="quote no-group" data-username="epowell101" data-post="1" data-topic="11943">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<p>This approach could be used as a simple Lego that can be added to the Gitcoin grant review process by Gitcoin and other public goods funders,</p>
+</blockquote>
+</aside>
+<p>Said another way, if you give me a car freshener, I will put it in my car.  But I am not going to go buy one.  Although my wife may have another opinion.</p>
+          <p><a href="https://gov.gitcoin.co/t/opendata-community-hackathon-results/11943/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/opendata-community-hackathon-results/11943/2
+        Tue, 15 Nov 2022 11:28:54 +0000
+gov.gitcoin.co-post-11943-2
+# OpenData Community Hackathon Results
+      
+
+# OpenData Community Hackathon Results
+epowell101
+
+            <h2>
+<a name="why-1" class="anchor" href="https://gov.gitcoin.co#why-1"></a>Why</h2>
+<p>Centralization risks exist everywhere. The FTX debacle highlights again the risks of an opaque centralized entity taking custody of people’s assets. But centralization isn’t only a problem for money. It is a big problem for data too. When data is held opaquely by some centralized actors they have the power of insight - to see how people behave, to forecast people’s actions, to gain a competitive edge, to gatekeep, and to paywall.</p>
+<p>Web3 is largely a reaction to the data centralization of web2. Web3 is building itself out of composable open-source software “legos”  that allow free access to the internet of apps along with the cryptographic tools to do so in a permissionless way where you keep possession of your own data and assets. However, we are currently observing a recentralization of Web3. Just as users are too often choosing to hand custody of their assets to new centralized power players, so too is data concentrating in the hands of a few organizations. Even in the Ethereum ecosystem, where the base layer is highly decentralized and the cypherpunk ethos is strong, access to Ethereum is often via a few centralized portals such as exchanges, wallets with default RPC providers, etc rather than using self-hosted nodes. Because syncing an archive node and scraping it for data is slow and expensive, one or two indexing providers dominate access to historical data. Most of the stack above the base layer protocol is too centralized.</p>
+<p>Many projects try to fight this centralization by building tools and solutions independently, but a lack of sharing culture and infrastructure means lots of operators are reinventing the wheel. To fight recentralization, sharing data, insights, and tools must be the norm. Composability is a massive unlock, but only if developers and analysts can share their composable tools roughly frictionlessly. The Open Data Community (ODC) is an initiative that aims to decentralize all the way up the stack by building software and a decentralized community around it!</p>
+<h2>
+<a name="gitcoin-2" class="anchor" href="https://gov.gitcoin.co#gitcoin-2"></a>Gitcoin</h2>
+<p>Gitcoin is decentralizing itself by migrating its public good funding system to a protocol, such that it can be deployed by communities without requiring Gitcoin to act as a centralized manager for grant-giving. Gitcoin has been active for several years and has facilitated almost $70 million in public goods funding. However, until now Gitcoin has relied on a small group of trusted contributors to run grant rounds and analyze data about them. With Gitcoin decentralizing grant management and fraud detection and defense, it is also essential to decentralize Gitcoin’s data collection and analysis. This creates immediate demand for an OpenData Community building decentralized tools and a community of analysts.</p>
+<h2>
+<a name="opendata-community-3" class="anchor" href="https://gov.gitcoin.co#opendata-community-3"></a>OpenData Community</h2>
+<p>The OpenData Community is an independent DAO started by GitCoin. The purpose of ODC is to create and curate useful decentralized tools and data that can be used by decentralized Gitcoin and the web3 software stack at large. The ODC will be a credible hub or commons where analysts and devs can come together to develop, improve and share decentralized software, data sets, dashboards, and visualizations.</p>
+<p>Read more about the ODC in this recent Gitcoin forum post:: <a href="https://gov.gitcoin.co/t/gitcoin-starts-and-supports-the-opendata-community/11886">https://gov.gitcoin.co/t/gitcoin-starts-and-supports-the-opendata-community/11886</a></p>
+<h2>
+<a name="hackathon-4" class="anchor" href="https://gov.gitcoin.co#hackathon-4"></a>Hackathon</h2>
+<p>To kick things off and bootstrap the ODC community, Gitcoin hosted an OpenData Community Hackathon! There were three areas of focus that are high-priority areas for ODC:</p>
+<ol>
+<li>
+<p>Sybil slayers: detecting and defending against Sybil attacks</p>
+</li>
+<li>
+<p>Human Incentives: analyzing and optimizing human grant reviews</p>
+</li>
+<li>
+<p>Dune Detectives: building useful dashboards and insights using Dune dashboards</p>
+</li>
+</ol>
+<p>We were delighted to have a lot of enthusiastic participants and some great projects in the inaugural hackathon - let’s dive into some of the winners to showcase some of what was done.</p>
+<h3>
+<a name="dune-detectives-5" class="anchor" href="https://gov.gitcoin.co#dune-detectives-5"></a>Dune detectives</h3>
+<p>The top Dune Detective was user Ataraxiae who pulled together a very <a href="https://dune.com/ataraxiae/gitcoin-gr15" rel="noopener nofollow ugc">detailed dashboard</a> on Gitcoin’s GR15 data. Starting from a fairly large raw dataset comprising all of Gitcoin’s data on GR15 grants, Ataraxiae created an easy-to-access dashboard summarizing all the need-to-know information that allows anyone to quickly understand GR15. We think this dashboard will be helpful to future users of the Gitcoin Grants protocol as well.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/bb9b79f99ff0fe5aabb0109a2f0953d59ff7d2ec.png" data-download-href="/uploads/short-url/qLEopD5E5OlkU5hD2obt35o5v1W.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/b/bb9b79f99ff0fe5aabb0109a2f0953d59ff7d2ec_2_624x260.png" alt="" data-base62-sha1="qLEopD5E5OlkU5hD2obt35o5v1W" width="624" height="260" role="presentation" srcset="/uploads/db4391/optimized/2X/b/bb9b79f99ff0fe5aabb0109a2f0953d59ff7d2ec_2_624x260.png, /uploads/db4391/optimized/2X/b/bb9b79f99ff0fe5aabb0109a2f0953d59ff7d2ec_2_936x390.png 1.5x, /uploads/db4391/optimized/2X/b/bb9b79f99ff0fe5aabb0109a2f0953d59ff7d2ec_2_1248x520.png 2x" data-dominant-color="E1EBE9"></a></div><p></p>
+<p>Another entry that impressed us was by user <a href="https://dune.com/jennifertran/gitcoin-gr15-analysis" rel="noopener nofollow ugc">jennifertran</a>, who also created a dashboard about GR15 and also included analysis with key takeaways in plain language as well as data.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/ef01fc2112efea1bb0e5289d0c504c6bbd5e6732.png" data-download-href="/uploads/short-url/y6mmOG2EJjdst46IEKhMsG1VRdM.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/e/ef01fc2112efea1bb0e5289d0c504c6bbd5e6732_2_624x161.png" alt="" data-base62-sha1="y6mmOG2EJjdst46IEKhMsG1VRdM" width="624" height="161" role="presentation" srcset="/uploads/db4391/optimized/2X/e/ef01fc2112efea1bb0e5289d0c504c6bbd5e6732_2_624x161.png, /uploads/db4391/optimized/2X/e/ef01fc2112efea1bb0e5289d0c504c6bbd5e6732_2_936x241.png 1.5x, /uploads/db4391/optimized/2X/e/ef01fc2112efea1bb0e5289d0c504c6bbd5e6732_2_1248x322.png 2x" data-dominant-color="F4E4E4"></a></div><p></p>
+<p>There were seven individual dashboards that were awarded prizes totaling $1500 - they are all great examples of the kind of shareable insights that can help to understand and operate Grant rounds.</p>
+<h3>
+<a name="human-incentives-6" class="anchor" href="https://gov.gitcoin.co#human-incentives-6"></a>Human incentives</h3>
+<p>The top entry in the Human Incentive category was an app that scraped the Github repository for each contributor and generated a score for account quality. This was then correlated against several metrics of their performance in the grants round. This approach could be used as a simple Lego that can be added to the Gitcoin grant review process by Gitcoin and other public goods funders, with particular relevance to grants rounds where the applicants have a technical track record. The submitted version could easily be developed for production and seems likely to improve the assessment of Gitcoin grants. The creator of this approach will join us in the upcoming Twitter Space on Wednesday the 16th.</p>
+<p>Other top entries created an app for automating grant reviewing and predicting grant outcomes from the grant description. These could also become components of Gitcoin’s review protocol.</p>
+<p>There were six projects awarded a prize in the Human Incentives category - each one contributed some novel idea for how to improve Gitcoin grant reviewing! The total prizes totaled $7500.</p>
+<h3>
+<a name="sybil-slayers-7" class="anchor" href="https://gov.gitcoin.co#sybil-slayers-7"></a>Sybil Slayers</h3>
+<p>The <a href="https://github.com/0x9simon/slaysybil" rel="noopener nofollow ugc">top Sybil Slayer</a> team created an algorithmic Sybil-detection composed of four distinct approaches:</p>
+<ol>
+<li>Bulk transfers pattern mining</li>
+<li>Bulk donations pattern mining</li>
+<li>Sequential behavior pattern mining</li>
+<li>Asset-transfer graph mining for slaying Sybil.</li>
+</ol>
+<p>They synthesized these components into a single tool that can be used to detect Sybils. They also extended their work to contribute to detecting grant fraud. It was great to see an independent group of analysts create something that can plug into the Gitcoin defenses - this is exactly what we mean by “composable tools” that will support Gitcoin’s protocol transition. One highlight of this analysis was the detection of a 188-node “snake” network of Sybils, whereby 188 seemingly independent wallets were revealed to have coordinated their activities in order to manipulate quadratic voting. Members of this team will also be joining us in the Twitter Space on Wednesday the 16th.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b36429200438755bd07202493e66ca84984bce2f.png" data-download-href="/uploads/short-url/pAY3KbwevbltzMN5llp92AlSYSb.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/b/b36429200438755bd07202493e66ca84984bce2f_2_624x248.png" alt="" data-base62-sha1="pAY3KbwevbltzMN5llp92AlSYSb" width="624" height="248" role="presentation" srcset="/uploads/db4391/optimized/2X/b/b36429200438755bd07202493e66ca84984bce2f_2_624x248.png, /uploads/db4391/optimized/2X/b/b36429200438755bd07202493e66ca84984bce2f_2_936x372.png 1.5x, /uploads/db4391/original/2X/b/b36429200438755bd07202493e66ca84984bce2f.png 2x" data-dominant-color="E2E4E3"></a></div><p></p>
+<p>Another <a href="https://github.com/poupou-web3/GC-ODS-Sybil" rel="noopener nofollow ugc">highly rated Sybil Slayer</a> created a pipeline for investigating the time series properties of grant contributions using clever data collection and analysis techniques. They created a notebook to easily share the data analysis with other analysts in a way that can be applied to other datasets in the future. It was great to see the user analyzing the correctness of their own approach and proposing alternatives - this is just the kind of ethos that will boost the OpenData community.</p>
+<p>Ten Sybil Slayers were awarded prizes totaling $10,000.</p>
+<h3>
+<a name="voting-for-winners-8" class="anchor" href="https://gov.gitcoin.co#voting-for-winners-8"></a>Voting for Winners</h3>
+<p>Quadratic Voting was used to choose the winners and to allocate how much of the prize money they would receive. Our judges consisted of 5 members of FDD for this first event. Each received an allocation of quadratic vote credits for each competition category. The number of votes each judge was asked to allocate was just shy of being able to put all their votes onto any one winner, thus pushing them to consider 2nd and 3rd favorites as they used the remainder of credits. This forced an effect similar to ranked-choice voting. The output of this was a list of preferred projects and the votes received.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/979bc1e7bd211a106ee202b0dba11aeed539594c.png" data-download-href="/uploads/short-url/lDbO1px3EQm8t8SSEblm5IWpvGc.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/9/979bc1e7bd211a106ee202b0dba11aeed539594c_2_624x409.png" alt="" data-base62-sha1="lDbO1px3EQm8t8SSEblm5IWpvGc" width="624" height="409" role="presentation" srcset="/uploads/db4391/optimized/2X/9/979bc1e7bd211a106ee202b0dba11aeed539594c_2_624x409.png, /uploads/db4391/original/2X/9/979bc1e7bd211a106ee202b0dba11aeed539594c.png 1.5x, /uploads/db4391/original/2X/9/979bc1e7bd211a106ee202b0dba11aeed539594c.png 2x" data-dominant-color="D3D3D3"></a></div><p></p>
+<p>Next, a threshold was set for each category. The basic principle used was that any project with a quality and effort level we wanted to encourage to participate in future rounds would receive something. The amount received would be proportional to the number of vote credits they received over the threshold. We then made some quick rounding and subjective decisions to finalize the final payouts.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e72ce78c84620dc329dec0bbe58f6def34a88cdc.png" data-download-href="/uploads/short-url/wZ4vbTH3TqtstFkwXLOJJWcVyZm.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/e/e72ce78c84620dc329dec0bbe58f6def34a88cdc_2_624x247.png" alt="" data-base62-sha1="wZ4vbTH3TqtstFkwXLOJJWcVyZm" width="624" height="247" role="presentation" srcset="/uploads/db4391/optimized/2X/e/e72ce78c84620dc329dec0bbe58f6def34a88cdc_2_624x247.png, /uploads/db4391/optimized/2X/e/e72ce78c84620dc329dec0bbe58f6def34a88cdc_2_936x370.png 1.5x, /uploads/db4391/original/2X/e/e72ce78c84620dc329dec0bbe58f6def34a88cdc.png 2x" data-dominant-color="F2F3F2"></a></div><p></p>
+<h2>
+<a name="whats-next-9" class="anchor" href="https://gov.gitcoin.co#whats-next-9"></a>What’s next?</h2>
+<p>The hackathon was a great way to kick off the OpenData Community. It demonstrated unambiguously that high-quality data and software tools can emerge from a decentralized community of data analysts and software developers. So from here, we will be supporting the already growing community and will collaborate with the community to build some structure in the DAO. We are committed to fighting recentralization in all its forms and need your help.</p>
+<p>Whether you are a data scientist, a community builder, a discord degen, a project developer, or someone who wants to make sense out of web3 data with recommended solutions that respect the decentralization ethos of Ethereum and web3 - please drop in and help build a more open data future.</p>
+<p>There are at least a couple of ways to get involved with the OpenData Community:</p>
+<ul>
+<li>
+<p>Join our Twitter Spaces on 16th November at 7am (Pacific time): <a href="https://twitter.com/i/spaces/1MnxnpbqmdkGO" rel="noopener nofollow ugc">https://twitter.com/i/spaces/1MnxnpbqmdkGO</a></p>
+</li>
+<li>
+<p>Please drop into the Discord : <a href="https://discord.gg/EdN7puUG" class="inline-onebox" rel="noopener nofollow ugc">OpenData Community</a></p>
+</li>
+<li>
+<p>Or check out and add to our landscape and plan here: <a href="https://github.com/OpenDataforWeb3" class="inline-onebox" rel="noopener nofollow ugc">Open Data Community · GitHub</a></p>
+</li>
+</ul>
+<p>You can also be one of the first to follow the community on Twitter:</p>
+<ul>
+<li><a href="https://twitter.com/OpenDataforWeb3" rel="noopener nofollow ugc">https://twitter.com/OpenDataforWeb3</a></li>
+</ul>
+<p>There will be <strong>more hackathons</strong> coming up in the future too!</p>
+<p>Many thanks to <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> <a class="mention" href="https://gov.gitcoin.co/u/j-cook">@j-cook</a> for their work on this write-up, to the FDD for their enthusiasm as we begin to decentralize ourselves, and of course to all the hackathon contestants.</p>
+          <p><a href="https://gov.gitcoin.co/t/opendata-community-hackathon-results/11943/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/opendata-community-hackathon-results/11943/1
+        Tue, 15 Nov 2022 01:44:15 +0000
+gov.gitcoin.co-post-11943-1
+# OpenData Community Hackathon Results
+      
+
+

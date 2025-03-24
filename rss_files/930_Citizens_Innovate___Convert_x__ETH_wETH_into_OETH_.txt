@@ -1,0 +1,436 @@
+
+
+
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268
+    # Title: Convert  x% ETH/wETH into OETH for Passive Yield Generation
+
+# Summary
+
+Convert x% of the idle ETH/wETH from the Gitcoin treasury into Origin Ether for treasury diversification and yield generation.
+
+# Abstract 
+
+At the moment, more than 20% of the Gitcoin DAO treasury is made up of ETH. On its own, ETH does not earn yield, it will only accrue value from positive price movement. Rather than sitting idle, converting a portion of the ETH into OETH will diversify the treasury, help fund grants, donations, and social causes, and will help cover other Gitcoin DAO expenses, extending the runway of Gitcoin passively.
+
+# Specification
+
+*Origin Ether (OETH)*
+
+[Origin Ether](https://www.oeth.com/) was launched in May 2023 and is an ERC20 LST aggregator that generates yield while sitting in your wallet by tapping into blue-chip protocols. OETH is backed 1:1 by stETH, rETH, frxETH, ETH, and WETH at all times; holders can go in and out of OETH as they please. Similar to stETH, OETH yield is paid out daily and automatically (sometimes multiple times per day) through a positive rebase in the form of additional OETH, proportional to the amount of OETH held.
+
+OETH yield comes from a combination of:
+
+1. Deploying collateral across Curve, Convex, Morpho, Balancer, and Aura
+2. LST validator rewards
+3. A 50bip exit fee is charged to those who choose to exit OETH via the [dapp](https://app.oeth.com/) (completely avoidable if using a DEX), this fee goes back to OETH holders
+4. OETH sitting in non-upgradable contracts does not rebase, instead the interest generated from those tokens is provided to those that can rebase
+
+These 4 yield generating functions combined enable OETH to generate higher yields than holding any single LST or farming ETH manually. The current collateral allocation and yield strategies can be seen on-chain at all times via the [OETH analytics page](https://www.oeth.com/analytics). Future OETH collateral and yield strategies are governed by [OGV stakers](https://governance.ousd.com/stake). More information on OETH and its mechanics can be found in the [OETH docs](https://docs.oeth.com/).
+
+There is no set emission schedule for OETH - as with stETH, OETH is minted on demand when users lock their ETH or LSTs into the protocol, and burned on demand when users exit OETH for the collateral ETH or LSTs. OETH is completely non-custodial, there are no lock-ups, terms, or conditions. Any web3 wallet should be able to support OETH and its rebasing function, including hardware wallets and multi-sigs. There’s no need to ever again give up the keys to a 3rd party platform, such as Celsius, Blockfi, or FTX, to earn yield.
+
+## Performance & Growth 
+
+The OETH TVL, now over $170m (44,467 ETH), has been trending upwards and has been well received by users with the yield OETH is generating. OETH yield is currently at 7.24% APY, whereas native staking yield on ethereum has ranged from 3.03% - 4.03% APY over the last few months. 
+
+![Screenshot 2024-03-07 at 3.04.05 PM|690x328](upload://qEsdVylWodPc1fciySdpGU61Dby.jpeg)
+
+Origin has managed to integrate OETH to a range of verticals across Defi, including vaults, restaking, and money markets:
+
+Eigenlayer - [Eigenlayer](https://app.eigenlayer.xyz/token/oETH)
+Pendle - [Pendle](https://app.pendle.finance/trade/markets/0x62187066fd9c24559ffb54b0495a304ade26d50b/swap?view=pt&chain=ethereum)
+Harvest - [Harvest App](https://app.harvest.finance/ethereum/0x924e022Ef8636FfA5971215e6Aac2652f7e9606e)
+Beefy - [Beefy](https://app.beefy.com/vault/convex-oeth)
+Yearn - [Yearn Vaults ](https://yearn.fi/vaults/1/0x79F4a9ed7a6196c67a2D6BCE8eC55E9F18802018)
+Teahouse - [Teahouse ETH Vault](https://vault.teahouse.finance/ethereum/0xE1B3c128c0d0a9e41aB3fF8f0984e5d5bEf81677/)
+Timeswap - [Timeswap](https://app.timeswap.io/#/borrow/ethereum/36b184ba-6601-47d2-afaa-5a9838f15ea4)
+Interest Protocol - [Interest Protocol](https://interestprotocol.io/)
+Tai - [Money God](https://app.tai.money/#/)
+Myso - [Myso](https://app.myso.finance/)
+Metastreet - [MetaStreet](https://app.metastreet.xyz/home)
+Davos - [Davos Protocol](https://davos.xyz/app/loans/collateral/?network=eth&token=wOETH)
+Locus - [Locus Finance](https://app.locus.finance/vault/xETH)
+
+## Estimated Return
+
+OETH rebasing happens at least once per day, but often multiple times per day. Yield earned from OETH is always subject to compounding interest. Please use [this calculator](https://docs.google.com/spreadsheets/d/1PB_xOT1SJvnvnJ4SeDy6aM8cninNJ4gNFvLLaahkwzg/edit?usp=sharing) to estimate the OETH return over four years. The calculations assume the investment is held within a rebase-capable EOA wallet, or that the smart contract wallet has opted-in for yield. On the calculator, cells in green are investments made at the beginning of the month, while cells in orange are months with no OETH investment. Some DAOs prefer to start with an initial test transaction. Parameters you may want to change and explore in the calculator are cells B70 - B73, B76 - E79, and B81 (outlined in bold boxes). To change the OETH APY or investment amount, select File > Make a Copy.
+
+OETH vs the underlying LSTs - Please see the [30](https://ipfs.io/ipfs/bafkreihopcixhvpcyvrhpsl5i3ya4ii6ckqw5vlhf2e4xeut7aywnspv3m), [60](https://ipfs.io/ipfs/bafkreihxw4u6j4gle5j2hb5mhfubfwp6vusphknkdzsvp5e4dvtwcosk7u), and [90](https://ipfs.io/ipfs/bafybeibbav6wbcmpdwvlu3wovwdl5nlkqngw4rv7npm2u5jl57ztjq4rtq)-day reports to the Lil Nouns DAO on OETH performance vs stETH, rETH, and frxETH.
+
+## Monitoring and Reporting
+
+Occasionally, DAOs choose to appoint a delegated treasury team to help keep track of the OETH investment, participate in the collateral allocation votes, and initiate the investments into OETH. While there is no need to actively manage an OETH position due to the automated features of OETH, Gitcoin may want to appoint a similar treasury team.
+
+Monitoring of the current OETH APY, strategies, and backing collateral, is always available in real time on the [OETH Analytics](https://www.oeth.com/analytics) page. A day-to-day OETH APY can be seen on [Proof of Yield](https://www.oeth.com/proof-of-yield), which is updated daily. Proof of Yield breaks down how much each yield strategy is contributing to the yield distribution:
+
+![Screenshot 2024-03-07 at 3.23.00 PM|601x500](upload://n2hl3dcc38hdrniZFLA4XITj1ys.png)
+
+
+
+API endpoints containing OETH data are also available via the [API page of the OETH docs](https://docs.oeth.com/data/api). To assist with reporting and decision making, the core team and community can use [this link to join](https://analytics.ousd.com/reports/subscribe) the distribution list that will receive a weekly OETH analytics report. Here is an example analytics report from the week ending August 06, 2023: [OETH Analytics Report](https://analytics.ousd.com/reports/weekly/2023/31).
+
+## Benefits of Using OETH 
+
+There are a few reasons for why Gitcoin would choose to use OETH over of attempting to utilize the same yield strategies: 
+
+The yield will always be higher with OETH than if you were to use any of the same yield strategies, since not all OETH is opted-in for yield, and because of the exit fee. At the time of writing 34,168 OETH is opted-in for yield and 10,294 OETH is not, so Gitcoin would receive this boost in yield from the OETH opted-out. With the exit fee Gitcoin would get paid each time there's an exit - sometimes there’s a large exit that brings the combined yield into the 100s!
+
+The Curve/Convex strategy would be very difficult (if not impossible) to replicate without having a Curve pool with a gauge + millions in TVL - Gitcoin would essentially need its own stablecoin and voting power and would be competing for yield incentives against the other large flywheel token holders, such as Frax, Alchemix, Convex, and Origin. 
+
+The OETH protocol chases not just the highest yields but also the safest. During the weekend of March 10 when USDC and DAI depegged, it took the Origin strategists/Origin engineers about 4 minutes to notice the depeg, and 16 minutes to start the process of moving the funds to a safer strategy. $0 were lost! 
+
+The OETH protocol covers all gas costs for sending yield to holders, and for moving funds between yield strategies, which is happening weekly but eventually will happen daily. With the price of gas on Ethereum, this could get costly for Gitcoin if Gitcoin were to follow the same harvest and reallocation schedule. 
+
+The cost for security - Origin has OpenZeppelin on retainer! Every new OETH contract is audited before going live. OETH security is prioritized over new feature development. The same level of security would cost Gitcoin millions of dollars in audit and development costs. 
+
+Top-notch development team - OETH shares 95% of the same code as OUSD, which has been live on mainnet for more than 2 years - longer than many projects today! The battle-tested code that has seen over $400m combined has been and continues to be developed by a team of 11 full-time engineers. This level of talent required to maintain the smart contracts would be extremely expensive for Gitcoin, if Gitcoin were to try and replicate the OETH strategies. 
+
+With the extra funds Gitcoin will generate from OETH for the treasury, here are several ways to use these funds:
+
+* Subsidizing public goods spend
+* Subsidizing grant spend
+* Subsidizing Gitcoin infrastructure, admin, and Passport expenses
+* Subsidizing Gitcoin marketing, promotions, conference expenses, and swag
+* Subsidizing cost for collaboration with other projects
+* Rewards to those holding GTC over time
+* Funding large team efforts for less
+* Extending the Gitcoin DAO runway
+
+## Contracts/Technical Requirements
+
+Very little work is necessary to implement this proposal. The required steps are:
+
+1. Gitcoin will convert the ETH/wETH into OETH via any of the following methods:
+
+* Minting on [OETH.com](https://app.oeth.com/)
+* Swapping on [Curve](https://curve.fi/#/ethereum/pools/factory-v2-298/deposit)
+* Swapping on [Uniswap](https://app.uniswap.org/#/swap?inputCurrency=0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3&outputCurrency=ETH)
+* Swapping on [Maverick](https://app.mav.xyz/pool?chain=1&tokenA=0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3&tokenB=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2&fee=0.0004&width=0.001)
+
+
+2. Gitcoin will “Opt in” by calling the 'rebaseOptIn()' function
+
+Yield generation for Gitcoin will begin within 24 hours of holding the OETH within the treasury wallet. There are no KYC, KYB, or partnership requirements to earn yield, all that is necessary is to hold the tokens in a rebase-capable wallet.
+
+If using a Gnosis Safe-connected wallet, Gitcoin will convert the ETH/wETH into OETH using the OETH dApp within Gnosis, and then will “Opt in” to yield generation by clicking the Opt in button within Gnosis or by calling the 'rebaseOptIn()' function.
+
+A screenshot of the Opt in button on Gnosis can be seen here:
+
+**![Gnosis|624x409.27458256029684](upload://j0PbN7Z5glSK7zsgo4cifdeptQM.png)**
+
+##  Marketing Support
+
+Origin’s marketing team will gladly provide support for co-marketing, should Gitcoin pass this proposal. Co-marketing can include long form Tweets and threads on [Origin's Twitter](https://twitter.com/OriginProtocol), live Twitter Spaces, features in Origin’s monthly investor email, announcements to [Origin’s Discord](https://discord.com/invite/ogn) audience, and an addition to [Origin’s ecosystem page](https://www.oeth.com/ecosystem). A Telegram group between the Origin and Gitcoin marketing teams can also be set up to discuss additional co-marketing ideas and efforts.
+
+## Potential Risks and Mitigation
+
+There are six possible risks when using OETH, and Origin is making sure to reduce each risk as much as possible:
+
+*New token risk* - Given OETH is a relatively new token, some may be worried that OETH is prone to new attack surfaces. While this may be true for other new tokens, OETH was built reusing 95% of the [OUSD](https://ousd.com/) code, of which 10+ audits have been done since 2020. Not that long ago, [OUSD reached a market cap of $300m](https://defillama.com/protocol/origin-dollar) without breaking, and without diminishing the APY it was capable of generating. Origin continues to work on OUSD, despite the lower market cap.
+
+*Counterparty risk* - OETH is governed by OGV stakeholders around the world. Everything from yield generation to fee collection and distribution is managed by a set of smart contracts on the Ethereum blockchain. These contracts are upgradeable with a timelock and are controlled by hundreds of governance token holders. While the initial contracts and yield-earning strategies were developed by the Origin team, anyone can shape the future of OETH by creating or voting on proposals, submitting new strategies, or contributing code improvements. We intend for all important decisions to be made through community governance and limited powers to be delegated to trusted contributors who are more actively involved in the day-to-day management of the protocol.
+
+*Smart contract risk of the yield strategies* - Origin is only using platforms for yield generation that have a proven track record, have been audited, have billions in TVL, maintain a bug bounty program, and provide over-collateralized loans. Over-collateralization in itself, combined with liquidations, provides a reasonable level of security for lenders.
+
+*Collateral risk* - Origin has chosen 3 of the largest LSTs to ever exist to back OETH, and they have maintained their peg quite well since launch. They have also demonstrated significant growth in circulating supply, so the Origin team is confident that the 3 LSTs will maintain their peg and that OETH will remain stable to ETH. To ensure accurate pricing at all times, OETH is using Chainlink oracles for pricing data for rETH and stETH, and a dual oracle for frxETH that combines two sources: the Curve frxETH/ETH EMA oracle and the Uniswap frxETH/FRAX TWAP oracle. In situations where any OETH collateral falls below peg, [OIP-4 disables minting](https://github.com/OriginProtocol/origin-dollar/issues/1000) of additional OETH tokens using the de-pegged asset.
+
+*Slashing risk* - Since OETH is collateralized by multiple LSTs at the same time, OETH is protected from slashing from any individual collateral LST. If there is a small slash, the OETH yield will simply decrease, as income will likely exceed the size of the slash. During a major slashing event, both the slashed LST and OETH will experience a drop in value relative to ETH, but OETH should not fall as low and for as long as the slashed LST, as the remaining un-slashed OETH collateral LSTs will soften the blow. There will never be a negative OETH rebase.
+
+*Smart contract risk of OETH* - Origin is taking every step possible to be proactive and lessen the chance of losing funds. Security reviews are prioritized over new feature development, with regular audits being done, and multiple engineers are required to review each code change with a detailed checklist. There are timelocks before protocol upgrades are launched, and deep dives into the exploits of other protocols are constantly being done to make sure the same exploits don’t exist on Origin contracts. Security is extremely important to the Origin team. OETH was built reusing 95% of the OUSD code, of which 10+ audits have been done since 2020. All audits can be seen on [Audits - OUSD ](https://docs.oeth.com/security-and-risks/audits), and OpenZeppelin is now on retainer. On-chain insurance protocol InsurAce awarded OETH and OUSD the [highest possible security rating of AAA](https://app.insurace.io/coverage/buycovers), of which only 2 other projects on the InsurAce platform have received. Optional OETH cover is currently available for both OETH and OUSD on InsurAce. Origin Defi also maintains a $1m bug bounty through [Immunefi](https://immunefi.com/explore/), with a resolution time of 5 hours.
+
+External OETH analysis:
+
+[Llama Risk](https://cryptorisks.substack.com/p/asset-risk-assessment-origin-ether) - Asset Risk Assessment: Origin Ether (OETH)
+[Auxo](https://mirror.xyz/auxo.eth/1NXxHhJmj44EfHmvA5pEH7mpSLtg-CbYRqmuEkaTRRk) - OETH - Protocol Analysis
+
+OETH in the news:
+
+[Coindesk](https://www.coindesk.com/tech/2023/05/16/origin-protocol-enters-competitive-ether-yield-market-with-oeth-offering/) - Origin Protocol Enters Competitive Ether Yield Market With OETH Offering
+[TokenInsight](https://tokeninsight.com/en/news/origin-protocol-launches-yield-aggregating-eth-derivative-called-oeth) - Origin Protocol Launches Yield Aggregating $ETH Derivative Called $OETH
+[Blockster](https://blockster.com/maximize-eth-staking-yields-with-oeth-a-yield-bearing-ether-pegged-token-by-origin-protocol) - Maximize ETH Staking Yields with OETH: A Yield-Bearing, Ether-Pegged Token by Origin Protocol
+
+## References/Useful links
+
+* Website/dapp: https://oeth.com/
+* OETH Docs/Litepaper: https://docs.oeth.com/
+* OETH Contract: [Etherscan](https://etherscan.io/address/0x856c4Efb76C1D1AE02e20CEB03A2A6a08b0b8dC3)
+* Audits: https://docs.oeth.com/security-and-risks/audits
+* CoinGecko: https://www.coingecko.com/en/coins/origin-ether
+* Communities
+* Github: https://github.com/originprotocol
+* Twitter: https://twitter.com/OriginProtocol
+* Twitter: https://twitter.com/OriginDeFi
+* Telegram: https://t.me/originprotocol
+* Discord: https://discord.com/invite/ogn
+* Medium (blog): https://blog.originprotocol.com/
+
+## Disclosure
+
+Peter is a core member of Origin Protocol and is joined by the fully doxxed [Origin team](https://www.originprotocol.com/community) and community, which includes hundreds of thousands of members and open-source contributors. Many members of the Origin team, including both founders, are holding a significant portion of their personal wealth in OETH. Origin Protocol’s corporate treasury is also holding millions of dollars in OETH. We have skin in the game and are willing to put our own money at risk with the code we have written.
+
+
+## Vote
+
+We propose the vote to be a yes / no vote.
+Convert x% ETH/wETH into OETH, or do not convert. 
+
+1 - Yes to convert ETH/wETH into OETH
+2 - No do not convert ETH/wETH into OETH
+Thu, 25 Jul 2024 19:44:31 +0000
+📝 Citizen Grants
+
+
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+pete
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a>, there are some updates to share on OETH! As of the morning of 7/15/24, following a <a href="https://snapshot.org/#/ousdgov.eth/proposal/0x76f64251d37310c5d241ec84a892751c7a34874faff7af848db193141ea24a6f" rel="noopener nofollow ugc">proposal</a> to convert OETH from an aggregator into a true LST, OETH no longer has exposure to other LSTs or yield strategies, as all OETH collateral LSTs have been divested back to ETH. That ETH will very soon be staked through SSV/P2p native DVT staking, so OETH can now be officially considered an LST. An additional <a href="https://github.com/OriginProtocol/security/blob/master/audits/OpenZeppelin%20-%20Origin%20SSV%20Native%20Staking%20-%20June%202024.pdf" rel="noopener nofollow ugc">OpenZeppelin audit</a> for this new version of OETH was completed several weeks ago. Redemptions back to ETH are currently available at a 1:0.999 rate, and the addition of an <a href="https://www.originprotocol.com/arm-announcement" rel="noopener nofollow ugc">OETH ARM</a> will soon enable instant exit liquidity at a 1:1 rate. 1. OETH will achieve the tightest peg to ETH of any LST with the combination of the ARM and <a href="https://www.oeth.com/oeth-amo-improvements" rel="noopener nofollow ugc">AMO</a>, and will also be the highest yielding when considering the additional yield from DVT staking.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/9
+        Thu, 25 Jul 2024 19:44:31 +0000
+gov.gitcoin.co-post-18268-9
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+      
+
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+meglister
+
+            <p>Thanks for pinging. I don’t think this is an appropriate proposal for the Citizen’s Innovate program or the Grants Council. This sits outside our current remit of funding initiatives that advance our product development and adoption and Essential Intents. I think this is best considered through a treasury diversification lens being led by <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a>  (which also covers the matching pool.)</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/8
+        Fri, 12 Apr 2024 21:20:42 +0000
+gov.gitcoin.co-post-18268-8
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+      
+
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+pete
+
+            <aside class="quote no-group" data-username="CoachJonathan" data-post="6" data-topic="18268">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>I also wonder how this ladders (or competes?) with the work being done by <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a> in her <a href="https://gov.gitcoin.co/t/temp-check-sgtm-000-treasury-management-strategy-for-gitcoin-v1/18564">treasury diversification</a> post.</p>
+</blockquote>
+</aside>
+<p>As far as treasury diversification goes, OETH would be a great fit, but diversification does not need to be exclusive to OETH - spreading the ETH across multiple aggregators, LSTs, and LRTs would also be a great idea.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a> I would also recommend taking a look at <a href="https://ousd.com/" rel="noopener nofollow ugc">OUSD</a> for the stablecoin half of the treasury management strategy - the OUSD <a href="https://analytics.ousd.com/apy?rows=120" rel="noopener nofollow ugc">yields</a> have been stellar lately!</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/7
+        Fri, 12 Apr 2024 18:59:35 +0000
+gov.gitcoin.co-post-18268-7
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+      
+
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+CoachJonathan
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/pete">@pete</a> thanks for the ping.</p>
+<p>The current Grants Council of <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> (who is OOO for the next 2 weeks) and <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a> should take a look at this and comment. I imagine that they will rely on the expertise of <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> to help suss out the opportunity here.</p>
+<p>I also wonder how this ladders (or competes?) with the work being done by <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a> in her <a href="https://gov.gitcoin.co/t/temp-check-sgtm-000-treasury-management-strategy-for-gitcoin-v1/18564">treasury diversification</a> post.</p>
+<p>Lastly a couple of points for <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> (our program manager) that are worth flagging:</p>
+<ul>
+<li>I think it’s worth pondering how to further decentralize the Grants Council roles in the coming months</li>
+<li>We also discussed making some amendments to the categories of submissions that might impact a proposal like this and am wondering when we can get more information about this upcoming shift.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/6
+        Fri, 12 Apr 2024 08:21:06 +0000
+gov.gitcoin.co-post-18268-6
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+      
+
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+pete
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a>,</p>
+<p>The goal and intention of this proposal is to earn yield for Gitcoin by converting a portion of Gitcoin’s idle ETH into OETH. The ETH can come from the matching pool or from any of the Gitcoin wallets (Ex: <a href="https://etherscan.io/tokenholdings?a=0x19e50fa5623895d5a2976693eaff5c2f879510ed" rel="noopener nofollow ugc">wallet 1</a>, <a href="https://etherscan.io/tokenholdings?a=0x57a8865cfb1ecef7253c27da6b4bc3daee5be518" rel="noopener nofollow ugc">wallet 2</a>, <a href="https://etherscan.io/tokenholdings?a=0xde21f729137c5af1b01d73af1dc21effa2b8a0d6" rel="noopener nofollow ugc">wallet 3</a>), or from both - the OETH yield to Gitcoin will be the same.</p>
+<p>The APY you are seeing is a trailing number - it has been as high as 7.49% APY over the last month, Origin’s Proof of Yield confirms this: <a href="https://www.oeth.com/proof-of-yield/2024-03-18" class="inline-onebox" rel="noopener nofollow ugc">Proof of Yield</a></p>
+<p>OETH is similar to Index Coop’s dsETH, just with less assets used as collateral (3 vs 6), a higher yield (4.01% trailing vs 3.62%), and a much higher market cap ($156m vs $2.51m).</p>
+<p>The above yield is real yield, coming from the mix of heavily audited strategies. There is no leverage, points, or speculated assets involved to reach the stated APYs. Although, if Gitcoin was interested in taking on the additional slashing and smart contract risk of restaking/liquid restaking for point farming, OETH is currently supported on <a href="https://app.eigenlayer.xyz/restake/oETH" rel="noopener nofollow ugc">Eigenlayer</a>, <a href="https://www.inceptionlrt.com/app/restaking/restake/?token=oETH" rel="noopener nofollow ugc">InceptionLRT</a>,  and <a href="https://www.eigenlayer.magpiexyz.io/restake" rel="noopener nofollow ugc">Eigenpie</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/5
+        Tue, 09 Apr 2024 20:40:40 +0000
+gov.gitcoin.co-post-18268-5
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+      
+
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+kyle
+
+            <p>Thanks for the post!</p>
+<p>I want to confirm my understanding:</p>
+<ol>
+<li>The goal/intention of the proposal is to move some amount of Eth from the matching pool into oEth.</li>
+<li>The expected APY is currently 4% (and is based on a combination of other staking tokens from lido, rocket pool, etc)</li>
+</ol>
+<p>This seems to be an okay option, and not much different from dsEth or options from IndexCoop. It does seem to be a worse option than to leverage EtherFi or other options that have a much higher yield.</p>
+<p>Do I have the details right though?</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/4
+        Tue, 09 Apr 2024 18:12:50 +0000
+gov.gitcoin.co-post-18268-4
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+      
+
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+pete
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a>, do you have any recommendations for ways to get more eyes on the prop, since there haven’t been any questions or comments on it?</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/3
+        Mon, 08 Apr 2024 15:33:16 +0000
+gov.gitcoin.co-post-18268-3
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+      
+
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+CoachJonathan
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/pete">@pete</a>, just an FYI that I’ve moved this into the Citizen Grants section of the governance forum and have also changed the title since we are no longer using a numbering system for GCPs.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/2
+        Fri, 08 Mar 2024 13:00:27 +0000
+gov.gitcoin.co-post-18268-2
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+      
+
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+pete
+
+            <h1><a name="title-convert-x-ethweth-into-oeth-for-passive-yield-generation-1" class="anchor" href="https://gov.gitcoin.co#title-convert-x-ethweth-into-oeth-for-passive-yield-generation-1"></a>Title: Convert  x% ETH/wETH into OETH for Passive Yield Generation</h1>
+<h1><a name="summary-2" class="anchor" href="https://gov.gitcoin.co#summary-2"></a>Summary</h1>
+<p>Convert x% of the idle ETH/wETH from the Gitcoin treasury into Origin Ether for treasury diversification and yield generation.</p>
+<h1><a name="abstract-3" class="anchor" href="https://gov.gitcoin.co#abstract-3"></a>Abstract</h1>
+<p>At the moment, more than 20% of the Gitcoin DAO treasury is made up of ETH. On its own, ETH does not earn yield, it will only accrue value from positive price movement. Rather than sitting idle, converting a portion of the ETH into OETH will diversify the treasury, help fund grants, donations, and social causes, and will help cover other Gitcoin DAO expenses, extending the runway of Gitcoin passively.</p>
+<h1><a name="specification-4" class="anchor" href="https://gov.gitcoin.co#specification-4"></a>Specification</h1>
+<p><em>Origin Ether (OETH)</em></p>
+<p><a href="https://www.oeth.com/" rel="noopener nofollow ugc">Origin Ether</a> was launched in May 2023 and is an ERC20 LST aggregator that generates yield while sitting in your wallet by tapping into blue-chip protocols. OETH is backed 1:1 by stETH, rETH, frxETH, ETH, and WETH at all times; holders can go in and out of OETH as they please. Similar to stETH, OETH yield is paid out daily and automatically (sometimes multiple times per day) through a positive rebase in the form of additional OETH, proportional to the amount of OETH held.</p>
+<p>OETH yield comes from a combination of:</p>
+<ol>
+<li>Deploying collateral across Curve, Convex, Morpho, Balancer, and Aura</li>
+<li>LST validator rewards</li>
+<li>A 50bip exit fee is charged to those who choose to exit OETH via the <a href="https://app.oeth.com/" rel="noopener nofollow ugc">dapp</a> (completely avoidable if using a DEX), this fee goes back to OETH holders</li>
+<li>OETH sitting in non-upgradable contracts does not rebase, instead the interest generated from those tokens is provided to those that can rebase</li>
+</ol>
+<p>These 4 yield generating functions combined enable OETH to generate higher yields than holding any single LST or farming ETH manually. The current collateral allocation and yield strategies can be seen on-chain at all times via the <a href="https://www.oeth.com/analytics" rel="noopener nofollow ugc">OETH analytics page</a>. Future OETH collateral and yield strategies are governed by <a href="https://governance.ousd.com/stake" rel="noopener nofollow ugc">OGV stakers</a>. More information on OETH and its mechanics can be found in the <a href="https://docs.oeth.com/" rel="noopener nofollow ugc">OETH docs</a>.</p>
+<p>There is no set emission schedule for OETH - as with stETH, OETH is minted on demand when users lock their ETH or LSTs into the protocol, and burned on demand when users exit OETH for the collateral ETH or LSTs. OETH is completely non-custodial, there are no lock-ups, terms, or conditions. Any web3 wallet should be able to support OETH and its rebasing function, including hardware wallets and multi-sigs. There’s no need to ever again give up the keys to a 3rd party platform, such as Celsius, Blockfi, or FTX, to earn yield.</p>
+<h2><a name="performance-growth-5" class="anchor" href="https://gov.gitcoin.co#performance-growth-5"></a>Performance &amp; Growth</h2>
+<p>The OETH TVL, now over $170m (44,467 ETH), has been trending upwards and has been well received by users with the yield OETH is generating. OETH yield is currently at 7.24% APY, whereas native staking yield on ethereum has ranged from 3.03% - 4.03% APY over the last few months.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/bacb3a81d3bca2b8c79066b98268fdab74205fc0.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/bacb3a81d3bca2b8c79066b98268fdab74205fc0" title="Screenshot 2024-03-07 at 3.04.05 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bacb3a81d3bca2b8c79066b98268fdab74205fc0_2_690x328.jpeg" alt="Screenshot 2024-03-07 at 3.04.05 PM" data-base62-sha1="qEsdVylWodPc1fciySdpGU61Dby" width="690" height="328" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bacb3a81d3bca2b8c79066b98268fdab74205fc0_2_690x328.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bacb3a81d3bca2b8c79066b98268fdab74205fc0_2_1035x492.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bacb3a81d3bca2b8c79066b98268fdab74205fc0_2_1380x656.jpeg 2x" data-dominant-color="3F446A"></a></div><p></p>
+<p>Origin has managed to integrate OETH to a range of verticals across Defi, including vaults, restaking, and money markets:</p>
+<p>Eigenlayer - <a href="https://app.eigenlayer.xyz/token/oETH" rel="noopener nofollow ugc">Eigenlayer</a><br>
+Pendle - <a href="https://app.pendle.finance/trade/markets/0x62187066fd9c24559ffb54b0495a304ade26d50b/swap?view=pt&amp;chain=ethereum" rel="noopener nofollow ugc">Pendle</a><br>
+Harvest - <a href="https://app.harvest.finance/ethereum/0x924e022Ef8636FfA5971215e6Aac2652f7e9606e" rel="noopener nofollow ugc">Harvest App</a><br>
+Beefy - <a href="https://app.beefy.com/vault/convex-oeth" rel="noopener nofollow ugc">Beefy</a><br>
+Yearn - <a href="https://yearn.fi/vaults/1/0x79F4a9ed7a6196c67a2D6BCE8eC55E9F18802018" rel="noopener nofollow ugc">Yearn Vaults </a><br>
+Teahouse - <a href="https://vault.teahouse.finance/ethereum/0xE1B3c128c0d0a9e41aB3fF8f0984e5d5bEf81677/" rel="noopener nofollow ugc">Teahouse ETH Vault</a><br>
+Timeswap - <a href="https://app.timeswap.io/#/borrow/ethereum/36b184ba-6601-47d2-afaa-5a9838f15ea4" rel="noopener nofollow ugc">Timeswap</a><br>
+Interest Protocol - <a href="https://interestprotocol.io/" rel="noopener nofollow ugc">Interest Protocol</a><br>
+Tai - <a href="https://app.tai.money/#/" rel="noopener nofollow ugc">Money God</a><br>
+Myso - <a href="https://app.myso.finance/" rel="noopener nofollow ugc">Myso</a><br>
+Metastreet - <a href="https://app.metastreet.xyz/home" rel="noopener nofollow ugc">MetaStreet</a><br>
+Davos - <a href="https://davos.xyz/app/loans/collateral/?network=eth&amp;token=wOETH" rel="noopener nofollow ugc">Davos Protocol</a><br>
+Locus - <a href="https://app.locus.finance/vault/xETH" rel="noopener nofollow ugc">Locus Finance</a></p>
+<h2><a name="estimated-return-6" class="anchor" href="https://gov.gitcoin.co#estimated-return-6"></a>Estimated Return</h2>
+<p>OETH rebasing happens at least once per day, but often multiple times per day. Yield earned from OETH is always subject to compounding interest. Please use <a href="https://docs.google.com/spreadsheets/d/1PB_xOT1SJvnvnJ4SeDy6aM8cninNJ4gNFvLLaahkwzg/edit?usp=sharing" rel="noopener nofollow ugc">this calculator</a> to estimate the OETH return over four years. The calculations assume the investment is held within a rebase-capable EOA wallet, or that the smart contract wallet has opted-in for yield. On the calculator, cells in green are investments made at the beginning of the month, while cells in orange are months with no OETH investment. Some DAOs prefer to start with an initial test transaction. Parameters you may want to change and explore in the calculator are cells B70 - B73, B76 - E79, and B81 (outlined in bold boxes). To change the OETH APY or investment amount, select File &gt; Make a Copy.</p>
+<p>OETH vs the underlying LSTs - Please see the <a href="https://ipfs.io/ipfs/bafkreihopcixhvpcyvrhpsl5i3ya4ii6ckqw5vlhf2e4xeut7aywnspv3m" rel="noopener nofollow ugc">30</a>, <a href="https://ipfs.io/ipfs/bafkreihxw4u6j4gle5j2hb5mhfubfwp6vusphknkdzsvp5e4dvtwcosk7u" rel="noopener nofollow ugc">60</a>, and <a href="https://ipfs.io/ipfs/bafybeibbav6wbcmpdwvlu3wovwdl5nlkqngw4rv7npm2u5jl57ztjq4rtq" rel="noopener nofollow ugc">90</a>-day reports to the Lil Nouns DAO on OETH performance vs stETH, rETH, and frxETH.</p>
+<h2><a name="monitoring-and-reporting-7" class="anchor" href="https://gov.gitcoin.co#monitoring-and-reporting-7"></a>Monitoring and Reporting</h2>
+<p>Occasionally, DAOs choose to appoint a delegated treasury team to help keep track of the OETH investment, participate in the collateral allocation votes, and initiate the investments into OETH. While there is no need to actively manage an OETH position due to the automated features of OETH, Gitcoin may want to appoint a similar treasury team.</p>
+<p>Monitoring of the current OETH APY, strategies, and backing collateral, is always available in real time on the <a href="https://www.oeth.com/analytics" rel="noopener nofollow ugc">OETH Analytics</a> page. A day-to-day OETH APY can be seen on <a href="https://www.oeth.com/proof-of-yield" rel="noopener nofollow ugc">Proof of Yield</a>, which is updated daily. Proof of Yield breaks down how much each yield strategy is contributing to the yield distribution:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a173f895f3c30a4d5085601f58996805cbeee474.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/a173f895f3c30a4d5085601f58996805cbeee474" title="Screenshot 2024-03-07 at 3.23.00 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a173f895f3c30a4d5085601f58996805cbeee474_2_601x500.png" alt="Screenshot 2024-03-07 at 3.23.00 PM" data-base62-sha1="n2hl3dcc38hdrniZFLA4XITj1ys" width="601" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a173f895f3c30a4d5085601f58996805cbeee474_2_601x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a173f895f3c30a4d5085601f58996805cbeee474_2_901x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a173f895f3c30a4d5085601f58996805cbeee474_2_1202x1000.png 2x" data-dominant-color="222329"></a></div><p></p>
+<p>API endpoints containing OETH data are also available via the <a href="https://docs.oeth.com/data/api" rel="noopener nofollow ugc">API page of the OETH docs</a>. To assist with reporting and decision making, the core team and community can use <a href="https://analytics.ousd.com/reports/subscribe" rel="noopener nofollow ugc">this link to join</a> the distribution list that will receive a weekly OETH analytics report. Here is an example analytics report from the week ending August 06, 2023: <a href="https://analytics.ousd.com/reports/weekly/2023/31" rel="noopener nofollow ugc">OETH Analytics Report</a>.</p>
+<h2><a name="benefits-of-using-oeth-8" class="anchor" href="https://gov.gitcoin.co#benefits-of-using-oeth-8"></a>Benefits of Using OETH</h2>
+<p>There are a few reasons for why Gitcoin would choose to use OETH over of attempting to utilize the same yield strategies:</p>
+<p>The yield will always be higher with OETH than if you were to use any of the same yield strategies, since not all OETH is opted-in for yield, and because of the exit fee. At the time of writing 34,168 OETH is opted-in for yield and 10,294 OETH is not, so Gitcoin would receive this boost in yield from the OETH opted-out. With the exit fee Gitcoin would get paid each time there’s an exit - sometimes there’s a large exit that brings the combined yield into the 100s!</p>
+<p>The Curve/Convex strategy would be very difficult (if not impossible) to replicate without having a Curve pool with a gauge + millions in TVL - Gitcoin would essentially need its own stablecoin and voting power and would be competing for yield incentives against the other large flywheel token holders, such as Frax, Alchemix, Convex, and Origin.</p>
+<p>The OETH protocol chases not just the highest yields but also the safest. During the weekend of March 10 when USDC and DAI depegged, it took the Origin strategists/Origin engineers about 4 minutes to notice the depeg, and 16 minutes to start the process of moving the funds to a safer strategy. $0 were lost!</p>
+<p>The OETH protocol covers all gas costs for sending yield to holders, and for moving funds between yield strategies, which is happening weekly but eventually will happen daily. With the price of gas on Ethereum, this could get costly for Gitcoin if Gitcoin were to follow the same harvest and reallocation schedule.</p>
+<p>The cost for security - Origin has OpenZeppelin on retainer! Every new OETH contract is audited before going live. OETH security is prioritized over new feature development. The same level of security would cost Gitcoin millions of dollars in audit and development costs.</p>
+<p>Top-notch development team - OETH shares 95% of the same code as OUSD, which has been live on mainnet for more than 2 years - longer than many projects today! The battle-tested code that has seen over $400m combined has been and continues to be developed by a team of 11 full-time engineers. This level of talent required to maintain the smart contracts would be extremely expensive for Gitcoin, if Gitcoin were to try and replicate the OETH strategies.</p>
+<p>With the extra funds Gitcoin will generate from OETH for the treasury, here are several ways to use these funds:</p>
+<ul>
+<li>Subsidizing public goods spend</li>
+<li>Subsidizing grant spend</li>
+<li>Subsidizing Gitcoin infrastructure, admin, and Passport expenses</li>
+<li>Subsidizing Gitcoin marketing, promotions, conference expenses, and swag</li>
+<li>Subsidizing cost for collaboration with other projects</li>
+<li>Rewards to those holding GTC over time</li>
+<li>Funding large team efforts for less</li>
+<li>Extending the Gitcoin DAO runway</li>
+</ul>
+<h2><a name="contractstechnical-requirements-9" class="anchor" href="https://gov.gitcoin.co#contractstechnical-requirements-9"></a>Contracts/Technical Requirements</h2>
+<p>Very little work is necessary to implement this proposal. The required steps are:</p>
+<ol>
+<li>Gitcoin will convert the ETH/wETH into OETH via any of the following methods:</li>
+</ol>
+<ul>
+<li>Minting on <a href="https://app.oeth.com/" rel="noopener nofollow ugc">OETH.com</a></li>
+<li>Swapping on <a href="https://curve.fi/#/ethereum/pools/factory-v2-298/deposit" rel="noopener nofollow ugc">Curve</a></li>
+<li>Swapping on <a href="https://app.uniswap.org/#/swap?inputCurrency=0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3&amp;outputCurrency=ETH" rel="noopener nofollow ugc">Uniswap</a></li>
+<li>Swapping on <a href="https://app.mav.xyz/pool?chain=1&amp;tokenA=0x856c4efb76c1d1ae02e20ceb03a2a6a08b0b8dc3&amp;tokenB=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2&amp;fee=0.0004&amp;width=0.001" rel="noopener nofollow ugc">Maverick</a></li>
+</ul>
+<ol start="2">
+<li>Gitcoin will “Opt in” by calling the ‘rebaseOptIn()’ function</li>
+</ol>
+<p>Yield generation for Gitcoin will begin within 24 hours of holding the OETH within the treasury wallet. There are no KYC, KYB, or partnership requirements to earn yield, all that is necessary is to hold the tokens in a rebase-capable wallet.</p>
+<p>If using a Gnosis Safe-connected wallet, Gitcoin will convert the ETH/wETH into OETH using the OETH dApp within Gnosis, and then will “Opt in” to yield generation by clicking the Opt in button within Gnosis or by calling the ‘rebaseOptIn()’ function.</p>
+<p>A screenshot of the Opt in button on Gnosis can be seen here:</p>
+<p><strong></strong></p><div class="lightbox-wrapper"><strong><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/854132c13e0c159f09ba0bd502c237e782804c74.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/854132c13e0c159f09ba0bd502c237e782804c74" title="Gnosis|624x409.27458256029684"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/854132c13e0c159f09ba0bd502c237e782804c74_2_690x452.png" alt="Gnosis|624x409.27458256029684" data-base62-sha1="j0PbN7Z5glSK7zsgo4cifdeptQM" width="690" height="452" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/854132c13e0c159f09ba0bd502c237e782804c74_2_690x452.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/854132c13e0c159f09ba0bd502c237e782804c74_2_1035x678.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/854132c13e0c159f09ba0bd502c237e782804c74_2_1380x904.png 2x" data-dominant-color="4C4E58"></a></strong></div><p></p>
+<h2><a name="marketing-support-10" class="anchor" href="https://gov.gitcoin.co#marketing-support-10"></a>Marketing Support</h2>
+<p>Origin’s marketing team will gladly provide support for co-marketing, should Gitcoin pass this proposal. Co-marketing can include long form Tweets and threads on <a href="https://twitter.com/OriginProtocol" rel="noopener nofollow ugc">Origin’s Twitter</a>, live Twitter Spaces, features in Origin’s monthly investor email, announcements to <a href="https://discord.com/invite/ogn" rel="noopener nofollow ugc">Origin’s Discord</a> audience, and an addition to <a href="https://www.oeth.com/ecosystem" rel="noopener nofollow ugc">Origin’s ecosystem page</a>. A Telegram group between the Origin and Gitcoin marketing teams can also be set up to discuss additional co-marketing ideas and efforts.</p>
+<h2><a name="potential-risks-and-mitigation-11" class="anchor" href="https://gov.gitcoin.co#potential-risks-and-mitigation-11"></a>Potential Risks and Mitigation</h2>
+<p>There are six possible risks when using OETH, and Origin is making sure to reduce each risk as much as possible:</p>
+<p><em>New token risk</em> - Given OETH is a relatively new token, some may be worried that OETH is prone to new attack surfaces. While this may be true for other new tokens, OETH was built reusing 95% of the <a href="https://ousd.com/" rel="noopener nofollow ugc">OUSD</a> code, of which 10+ audits have been done since 2020. Not that long ago, <a href="https://defillama.com/protocol/origin-dollar" rel="noopener nofollow ugc">OUSD reached a market cap of $300m</a> without breaking, and without diminishing the APY it was capable of generating. Origin continues to work on OUSD, despite the lower market cap.</p>
+<p><em>Counterparty risk</em> - OETH is governed by OGV stakeholders around the world. Everything from yield generation to fee collection and distribution is managed by a set of smart contracts on the Ethereum blockchain. These contracts are upgradeable with a timelock and are controlled by hundreds of governance token holders. While the initial contracts and yield-earning strategies were developed by the Origin team, anyone can shape the future of OETH by creating or voting on proposals, submitting new strategies, or contributing code improvements. We intend for all important decisions to be made through community governance and limited powers to be delegated to trusted contributors who are more actively involved in the day-to-day management of the protocol.</p>
+<p><em>Smart contract risk of the yield strategies</em> - Origin is only using platforms for yield generation that have a proven track record, have been audited, have billions in TVL, maintain a bug bounty program, and provide over-collateralized loans. Over-collateralization in itself, combined with liquidations, provides a reasonable level of security for lenders.</p>
+<p><em>Collateral risk</em> - Origin has chosen 3 of the largest LSTs to ever exist to back OETH, and they have maintained their peg quite well since launch. They have also demonstrated significant growth in circulating supply, so the Origin team is confident that the 3 LSTs will maintain their peg and that OETH will remain stable to ETH. To ensure accurate pricing at all times, OETH is using Chainlink oracles for pricing data for rETH and stETH, and a dual oracle for frxETH that combines two sources: the Curve frxETH/ETH EMA oracle and the Uniswap frxETH/FRAX TWAP oracle. In situations where any OETH collateral falls below peg, <a href="https://github.com/OriginProtocol/origin-dollar/issues/1000" rel="noopener nofollow ugc">OIP-4 disables minting</a> of additional OETH tokens using the de-pegged asset.</p>
+<p><em>Slashing risk</em> - Since OETH is collateralized by multiple LSTs at the same time, OETH is protected from slashing from any individual collateral LST. If there is a small slash, the OETH yield will simply decrease, as income will likely exceed the size of the slash. During a major slashing event, both the slashed LST and OETH will experience a drop in value relative to ETH, but OETH should not fall as low and for as long as the slashed LST, as the remaining un-slashed OETH collateral LSTs will soften the blow. There will never be a negative OETH rebase.</p>
+<p><em>Smart contract risk of OETH</em> - Origin is taking every step possible to be proactive and lessen the chance of losing funds. Security reviews are prioritized over new feature development, with regular audits being done, and multiple engineers are required to review each code change with a detailed checklist. There are timelocks before protocol upgrades are launched, and deep dives into the exploits of other protocols are constantly being done to make sure the same exploits don’t exist on Origin contracts. Security is extremely important to the Origin team. OETH was built reusing 95% of the OUSD code, of which 10+ audits have been done since 2020. All audits can be seen on <a href="https://docs.oeth.com/security-and-risks/audits" rel="noopener nofollow ugc">Audits - OUSD </a>, and OpenZeppelin is now on retainer. On-chain insurance protocol InsurAce awarded OETH and OUSD the <a href="https://app.insurace.io/coverage/buycovers" rel="noopener nofollow ugc">highest possible security rating of AAA</a>, of which only 2 other projects on the InsurAce platform have received. Optional OETH cover is currently available for both OETH and OUSD on InsurAce. Origin Defi also maintains a $1m bug bounty through <a href="https://immunefi.com/explore/" rel="noopener nofollow ugc">Immunefi</a>, with a resolution time of 5 hours.</p>
+<p>External OETH analysis:</p>
+<p><a href="https://cryptorisks.substack.com/p/asset-risk-assessment-origin-ether" rel="noopener nofollow ugc">Llama Risk</a> - Asset Risk Assessment: Origin Ether (OETH)<br>
+<a href="https://mirror.xyz/auxo.eth/1NXxHhJmj44EfHmvA5pEH7mpSLtg-CbYRqmuEkaTRRk" rel="noopener nofollow ugc">Auxo</a> - OETH - Protocol Analysis</p>
+<p>OETH in the news:</p>
+<p><a href="https://www.coindesk.com/tech/2023/05/16/origin-protocol-enters-competitive-ether-yield-market-with-oeth-offering/" rel="noopener nofollow ugc">Coindesk</a> - Origin Protocol Enters Competitive Ether Yield Market With OETH Offering<br>
+<a href="https://tokeninsight.com/en/news/origin-protocol-launches-yield-aggregating-eth-derivative-called-oeth" rel="noopener nofollow ugc">TokenInsight</a> - Origin Protocol Launches Yield Aggregating $ETH Derivative Called $OETH<br>
+<a href="https://blockster.com/maximize-eth-staking-yields-with-oeth-a-yield-bearing-ether-pegged-token-by-origin-protocol" rel="noopener nofollow ugc">Blockster</a> - Maximize ETH Staking Yields with OETH: A Yield-Bearing, Ether-Pegged Token by Origin Protocol</p>
+<h2><a name="referencesuseful-links-12" class="anchor" href="https://gov.gitcoin.co#referencesuseful-links-12"></a>References/Useful links</h2>
+<ul>
+<li>Website/dapp: <a href="https://oeth.com/" rel="noopener nofollow ugc">https://oeth.com/</a></li>
+<li>OETH Docs/Litepaper: <a href="https://docs.oeth.com/" rel="noopener nofollow ugc">https://docs.oeth.com/</a></li>
+<li>OETH Contract: <a href="https://etherscan.io/address/0x856c4Efb76C1D1AE02e20CEB03A2A6a08b0b8dC3" rel="noopener nofollow ugc">Etherscan</a></li>
+<li>Audits: <a href="https://docs.oeth.com/security-and-risks/audits" class="inline-onebox" rel="noopener nofollow ugc">Audits - Origin DeFi Docs</a></li>
+<li>CoinGecko: <a href="https://www.coingecko.com/en/coins/origin-ether" rel="noopener nofollow ugc">https://www.coingecko.com/en/coins/origin-ether</a></li>
+<li>Communities</li>
+<li>Github: <a href="https://github.com/originprotocol" class="inline-onebox" rel="noopener nofollow ugc">Origin Protocol · GitHub</a></li>
+<li>Twitter: <a href="https://twitter.com/OriginProtocol" rel="noopener nofollow ugc">https://twitter.com/OriginProtocol</a></li>
+<li>Twitter: <a href="https://twitter.com/OriginDeFi" rel="noopener nofollow ugc">https://twitter.com/OriginDeFi</a></li>
+<li>Telegram: <a href="https://t.me/originprotocol" class="inline-onebox" rel="noopener nofollow ugc">Telegram: Contact @originprotocol</a></li>
+<li>Discord: <a href="https://discord.com/invite/ogn" class="inline-onebox" rel="noopener nofollow ugc">Origin Protocol (OGN, OGV, OUSD, OETH)</a></li>
+<li>Medium (blog): <a href="https://blog.originprotocol.com/" rel="noopener nofollow ugc">https://blog.originprotocol.com/</a></li>
+</ul>
+<h2><a name="disclosure-13" class="anchor" href="https://gov.gitcoin.co#disclosure-13"></a>Disclosure</h2>
+<p>Peter is a core member of Origin Protocol and is joined by the fully doxxed <a href="https://www.originprotocol.com/community" rel="noopener nofollow ugc">Origin team</a> and community, which includes hundreds of thousands of members and open-source contributors. Many members of the Origin team, including both founders, are holding a significant portion of their personal wealth in OETH. Origin Protocol’s corporate treasury is also holding millions of dollars in OETH. We have skin in the game and are willing to put our own money at risk with the code we have written.</p>
+<h2><a name="vote-14" class="anchor" href="https://gov.gitcoin.co#vote-14"></a>Vote</h2>
+<p>We propose the vote to be a yes / no vote.<br>
+Convert x% ETH/wETH into OETH, or do not convert.</p>
+<p>1 - Yes to convert ETH/wETH into OETH<br>
+2 - No do not convert ETH/wETH into OETH</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-convert-x-eth-weth-into-oeth-for-passive-yield-generation/18268/1
+        Thu, 07 Mar 2024 22:59:28 +0000
+gov.gitcoin.co-post-18268-1
+Citizens Innovate - Convert x% ETH/wETH into OETH for Passive Yield Generation
+      
+
+

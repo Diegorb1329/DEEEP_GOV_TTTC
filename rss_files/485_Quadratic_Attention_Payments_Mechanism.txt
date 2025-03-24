@@ -1,0 +1,223 @@
+
+
+
+Quadratic Attention Payments Mechanism
+https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247
+    I've been developing a mechanism around the Quadratic Attention Payments (QAP) concept, which aims to rethink public advertising in important ways. By leveraging quadratic voting principles, this mechanism empowers users to influence the ads they view, incentivizes advertisers to produce higher-quality and more relevant content, offers more accurate — but private — data for publishers, and boosts revenue and rewards for all parties.
+
+### Genesis
+
+For greater context into its origin, the initial idea was proposed by Vitalik Buterin on his essay *Quadratic Payments: A Primer*. In it, he argues that public ads, as a subsector of public goods, are a non-optimal good as the public does not have an efficient way to coordinate in selecting the ads that interest them. Consequently, we end up with a lot of ads we actually don’t want to see.
+
+This is the problem this mechanism tries to solve. Across several iterations, including with Vitalik’s direct feedback, I have matured the mechanism to its current version.
+
+### How QAP Can Work
+
+This mechanism empowers:
+
+- **Users** to upvote or downvote ads by how many degrees of preference (*D*) they want. The fee required for voting is equal to *D^2*, thus quadratic. Users benefit from the gradual improvement in relevance of and better content in ads they see, and earn rewards for their voting participation.
+
+- **Advertisers** submit their ads and pool an initial deposit (*ID*) for their campaign spend. Based on the % of user downvotes on their ad and the quadratic fees (*QF*), their reimbursement would be calculated as:
+    
+![Image 12-08-2023 at 10.22|690x57](upload://6AnRAyHnPd6nIKoQfDcwK9794nm.jpeg)
+
+   Therefore, the actual campaign cost (or amount that stays locked) would be:
+    
+![Image 12-08-2023 at 10.23|690x59](upload://qk5a07hZseS418kJCtShDU5P1WC.jpeg)
+    
+Or:
+    
+![Image 12-08-2023 at 10.23|690x56](upload://dDFrEQ2vMrEklKb8tFrL8qBdyTQ.jpeg)
+    
+Out of the *Final Campaign Cost* effectively paid by Advertisers, the platform that implements this mechanism can derive a % for itself and another to be rewarded to participating users. In this system, the monetary and engagement value advertisers get is increased for the same ad expenditure.
+
+    
+- **Publishers** collect the users' degrees of preference recorded. This helps them assess the users that the ads most resonated with, and, as a result, how to better instruct Advertisers on how and which users to tailor subsequent ads to. The more efficient the Advertisers’ ads are at generating sustained user attention, the greater the Publishers's revenue likely becomes.
+
+
+At the end of the Advertiser’s campaign and after all the user preferences recorded, the ad gets extended or reduced according to the sum of the degrees of preference (*D*) — positive for upvotes, negative for downvotes:
+
+![Image 12-08-2023 at 10.26|690x53](upload://6ResD52ZwZHscdJA2HLoz0dT8lo.jpeg)
+
+Looking at the example below, the original duration of Advertiser A’s ad was 60 seconds and the *Ad Duration Variance* = +10, therefore A’s ad gets extended to a total of 70 seconds.
+
+![Image 07-08-2023 at 00.59|690x282](upload://iKEOaH8ExQaplSsB9BesDXrKMHS.jpeg)
+
+Users will get to see more of the ads that they value most and advertisers become incentivized to put up better and more valuable ads. The public good is improved through effective public coordination.
+
+**Future Roadmap**
+
+Experimenting with auction-related Harberger taxation systems, funds pooling and redeeming mechanism, and ZK proofs for secure and unique voting submissions.
+
+### In sum
+
+In essence, the Quadratic Attention Payment's public coordination and compensation system centers around an improved advertising experience for all stakeholders, whilst furthering a user-centric ethos. Particular use cases can include decentralized social networks and platforms with ad-driven products, like the Brave browser.
+Thu, 28 Sep 2023 16:08:18 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Quadratic Attention Payments Mechanism
+Decentralizedceo
+
+            <p>Off Prima Facie, I would think that QAPM is similar to a Web2 algorithms now, until I read further. Instead of pushing out ads via popular demand and persuading, QAPM allows the individual the free will to go towards their own interests. That is an illuminated way to satisfy all parties involved. Great BM!<br>
+As we are building  a platform called SoundView, we have been looking for ways to reward engaged users and I think this could be easily implemented. I would like to read more on the “Auction-related Harberger taxation System.”</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/8
+        Thu, 28 Sep 2023 16:08:18 +0000
+gov.gitcoin.co-post-16247-8
+Quadratic Attention Payments Mechanism
+      
+
+Quadratic Attention Payments Mechanism
+thelostone-mc
+
+            <p>Ah okie this makes sense !<br>
+A use case different from the grant ecosystem!<br>
+Would love to see this implementation on allo and have some run a pool with this</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/7
+        Thu, 28 Sep 2023 10:33:45 +0000
+gov.gitcoin.co-post-16247-7
+Quadratic Attention Payments Mechanism
+      
+
+Quadratic Attention Payments Mechanism
+bernardovic
+
+            <p>The main value proposition on users’ side is the improvement in ad content being shown and better rewards vs. the quadratic fees they’ve submitted.</p>
+<p>My first hunch was proportionately based on the number of users that voted, but based on the weight of quadratic fees submitted per user would make more sense, actually. A reputation system, more down the line, could be useful to implement as well, where we’d reward for loyalty and/or activity.</p>
+<p>There’s also been a slight correction to the mechanism where additional funds would be at the disposal of the pool to do whatever interesting; open question right now.</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/6
+        Thu, 28 Sep 2023 10:22:50 +0000
+gov.gitcoin.co-post-16247-6
+Quadratic Attention Payments Mechanism
+      
+
+Quadratic Attention Payments Mechanism
+thelostone-mc
+
+            <p>Ah just read though the post!<br>
+This is def something which can be easily built as an Allo v2 Strategy.</p>
+<p>Just going through the post, it looks like</p>
+<ul>
+<li>We’d have 1 pool</li>
+<li>Publishers can create a profile on registry</li>
+<li>Publishers can register to the pool</li>
+<li>Publishers would be able submit ads for duration (during which they pay the initial deposit )</li>
+<li>Users could then upvote/downvote based on a specific AD token ( like BAT )</li>
+<li>Once the ad duration ends, the publisher can withdraw the reimbursed amount.</li>
+</ul>
+<p>This makes sense and I think new strategy would need some logic to handle the</p>
+<ul>
+<li>submit ads</li>
+<li>update the reimbursed amount based on downvotes</li>
+</ul>
+<p>Everything else we requires is already in base interface \m/</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/bernardovic">@bernardovic</a> Would love to hear your thoughts on<br>
+How would we incentivize the user to participate?<br>
+Is it as simple as the ads campaign cost is distributed to all the voters proportionally?</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/5
+        Tue, 26 Sep 2023 09:17:28 +0000
+gov.gitcoin.co-post-16247-5
+Quadratic Attention Payments Mechanism
+      
+
+Quadratic Attention Payments Mechanism
+quaylawn
+
+            <p>defo keep us updated! I’d be keen to see this go live at some stage</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/4
+        Fri, 01 Sep 2023 18:51:55 +0000
+gov.gitcoin.co-post-16247-4
+Quadratic Attention Payments Mechanism
+      
+
+Quadratic Attention Payments Mechanism
+bernardovic
+
+            <p>Something interesting could be done on the Brave Ads/BAT ecosystem level. Drafting it up.<br>
+Also Lens’ Fee Collect feature looks promising, from a glance.</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/3
+        Fri, 01 Sep 2023 17:33:53 +0000
+gov.gitcoin.co-post-16247-3
+Quadratic Attention Payments Mechanism
+      
+
+Quadratic Attention Payments Mechanism
+quaylawn
+
+            <aside class="quote no-group" data-username="bernardovic" data-post="1" data-topic="16247">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bernardovic/48/10967_2.png" class="avatar"> bernardovic:</div>
+<blockquote>
+<p>In essence, the Quadratic Attention Payment’s public coordination and compensation system centers around an improved advertising experience for all stakeholders, whilst furthering a user-centric ethos. Particular use cases can include decentralized social networks and platforms with ad-driven products, like the Brave browser.</p>
+</blockquote>
+</aside>
+<p>Love this idea <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> what does moving this forward look like?</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/2
+        Fri, 01 Sep 2023 16:15:13 +0000
+gov.gitcoin.co-post-16247-2
+Quadratic Attention Payments Mechanism
+      
+
+Quadratic Attention Payments Mechanism
+bernardovic
+
+            <p>I’ve been developing a mechanism around the Quadratic Attention Payments (QAP) concept, which aims to rethink public advertising in important ways. By leveraging quadratic voting principles, this mechanism empowers users to influence the ads they view, incentivizes advertisers to produce higher-quality and more relevant content, offers more accurate — but private — data for publishers, and boosts revenue and rewards for all parties.</p>
+<h3>
+<a name="genesis-1" class="anchor" href="https://gov.gitcoin.co#genesis-1"></a>Genesis</h3>
+<p>For greater context into its origin, the initial idea was proposed by Vitalik Buterin on his essay <em>Quadratic Payments: A Primer</em>. In it, he argues that public ads, as a subsector of public goods, are a non-optimal good as the public does not have an efficient way to coordinate in selecting the ads that interest them. Consequently, we end up with a lot of ads we actually don’t want to see.</p>
+<p>This is the problem this mechanism tries to solve. Across several iterations, including with Vitalik’s direct feedback, I have matured the mechanism to its current version.</p>
+<h3>
+<a name="how-qap-can-work-2" class="anchor" href="https://gov.gitcoin.co#how-qap-can-work-2"></a>How QAP Can Work</h3>
+<p>This mechanism empowers:</p>
+<ul>
+<li>
+<p><strong>Users</strong> to upvote or downvote ads by how many degrees of preference (<em>D</em>) they want. The fee required for voting is equal to <em>D^2</em>, thus quadratic. Users benefit from the gradual improvement in relevance of and better content in ads they see, and earn rewards for their voting participation.</p>
+</li>
+<li>
+<p><strong>Advertisers</strong> submit their ads and pool an initial deposit (<em>ID</em>) for their campaign spend. Based on the % of user downvotes on their ad and the quadratic fees (<em>QF</em>), their reimbursement would be calculated as:</p>
+</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2e29f5fa56af79051371ce48a7b8007f6b14ad40.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/2e29f5fa56af79051371ce48a7b8007f6b14ad40" title="Image 12-08-2023 at 10.22"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2e29f5fa56af79051371ce48a7b8007f6b14ad40_2_690x57.jpeg" alt="Image 12-08-2023 at 10.22" data-base62-sha1="6AnRAyHnPd6nIKoQfDcwK9794nm" width="690" height="57" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2e29f5fa56af79051371ce48a7b8007f6b14ad40_2_690x57.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/2/2e29f5fa56af79051371ce48a7b8007f6b14ad40.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/2e29f5fa56af79051371ce48a7b8007f6b14ad40.jpeg 2x" data-dominant-color="F2F2F1"></a></div><p></p>
+<p>Therefore, the actual campaign cost (or amount that stays locked) would be:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b87db2b1354f33a5a05bbd765cd6896b48e8532e.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/b87db2b1354f33a5a05bbd765cd6896b48e8532e" title="Image 12-08-2023 at 10.23"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b87db2b1354f33a5a05bbd765cd6896b48e8532e_2_690x59.jpeg" alt="Image 12-08-2023 at 10.23" data-base62-sha1="qk5a07hZseS418kJCtShDU5P1WC" width="690" height="59" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b87db2b1354f33a5a05bbd765cd6896b48e8532e_2_690x59.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/b/b87db2b1354f33a5a05bbd765cd6896b48e8532e.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/b/b87db2b1354f33a5a05bbd765cd6896b48e8532e.jpeg 2x" data-dominant-color="F1F1F1"></a></div><p></p>
+<p>Or:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5f9833216fd859d1c986c01b05fc86b995d51936.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/5f9833216fd859d1c986c01b05fc86b995d51936" title="Image 12-08-2023 at 10.23"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5f9833216fd859d1c986c01b05fc86b995d51936_2_690x56.jpeg" alt="Image 12-08-2023 at 10.23" data-base62-sha1="dDFrEQ2vMrEklKb8tFrL8qBdyTQ" width="690" height="56" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5f9833216fd859d1c986c01b05fc86b995d51936_2_690x56.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/5/5f9833216fd859d1c986c01b05fc86b995d51936.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/5/5f9833216fd859d1c986c01b05fc86b995d51936.jpeg 2x" data-dominant-color="F0F0F0"></a></div><p></p>
+<p>Out of the <em>Final Campaign Cost</em> effectively paid by Advertisers, the platform that implements this mechanism can derive a % for itself and another to be rewarded to participating users. In this system, the monetary and engagement value advertisers get is increased for the same ad expenditure.</p>
+<ul>
+<li>
+<strong>Publishers</strong> collect the users’ degrees of preference recorded. This helps them assess the users that the ads most resonated with, and, as a result, how to better instruct Advertisers on how and which users to tailor subsequent ads to. The more efficient the Advertisers’ ads are at generating sustained user attention, the greater the Publishers’s revenue likely becomes.</li>
+</ul>
+<p>At the end of the Advertiser’s campaign and after all the user preferences recorded, the ad gets extended or reduced according to the sum of the degrees of preference (<em>D</em>) — positive for upvotes, negative for downvotes:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/301185edd89ecdbd6d55a8ce56714cb74d8a3726.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/301185edd89ecdbd6d55a8ce56714cb74d8a3726" title="Image 12-08-2023 at 10.26"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/301185edd89ecdbd6d55a8ce56714cb74d8a3726_2_690x53.jpeg" alt="Image 12-08-2023 at 10.26" data-base62-sha1="6ResD52ZwZHscdJA2HLoz0dT8lo" width="690" height="53" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/301185edd89ecdbd6d55a8ce56714cb74d8a3726_2_690x53.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/3/301185edd89ecdbd6d55a8ce56714cb74d8a3726.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/3/301185edd89ecdbd6d55a8ce56714cb74d8a3726.jpeg 2x" data-dominant-color="F3F3F3"></a></div><p></p>
+<p>Looking at the example below, the original duration of Advertiser A’s ad was 60 seconds and the <em>Ad Duration Variance</em> = +10, therefore A’s ad gets extended to a total of 70 seconds.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/836d5720be15cefe07cc668429318c8e27950e00.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/836d5720be15cefe07cc668429318c8e27950e00" title="Image 07-08-2023 at 00.59"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/836d5720be15cefe07cc668429318c8e27950e00_2_690x282.jpeg" alt="Image 07-08-2023 at 00.59" data-base62-sha1="iKEOaH8ExQaplSsB9BesDXrKMHS" width="690" height="282" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/836d5720be15cefe07cc668429318c8e27950e00_2_690x282.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/836d5720be15cefe07cc668429318c8e27950e00_2_1035x423.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/836d5720be15cefe07cc668429318c8e27950e00_2_1380x564.jpeg 2x" data-dominant-color="F4F5F4"></a></div><p></p>
+<p>Users will get to see more of the ads that they value most and advertisers become incentivized to put up better and more valuable ads. The public good is improved through effective public coordination.</p>
+<p><strong>Future Roadmap</strong></p>
+<p>Experimenting with auction-related Harberger taxation systems, funds pooling and redeeming mechanism, and ZK proofs for secure and unique voting submissions.</p>
+<h3>
+<a name="in-sum-3" class="anchor" href="https://gov.gitcoin.co#in-sum-3"></a>In sum</h3>
+<p>In essence, the Quadratic Attention Payment’s public coordination and compensation system centers around an improved advertising experience for all stakeholders, whilst furthering a user-centric ethos. Particular use cases can include decentralized social networks and platforms with ad-driven products, like the Brave browser.</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-attention-payments-mechanism/16247/1
+        Sat, 12 Aug 2023 09:30:34 +0000
+gov.gitcoin.co-post-16247-1
+Quadratic Attention Payments Mechanism
+      
+
+

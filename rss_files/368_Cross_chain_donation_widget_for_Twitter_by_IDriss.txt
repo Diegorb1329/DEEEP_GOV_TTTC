@@ -1,0 +1,157 @@
+
+
+
+Cross-chain donation widget for Twitter by IDriss
+https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658
+    ## TLDR
+
+- IDriss is back with the Twitter donation widget for GG20, now enabling **cross-chain** donations.
+- Donate from 6 major EVM chains in seconds, with a bridge fee as low as $0.05.
+- We've proposed a technical solution to the Gitcoin team for including these donations in the matching calculations with minimal effort and no changes to the Allo protocol.
+
+This post aims to document our work, share context with the broader community, and possibly spark a conversation about the composability of the Allo protocol with regard to matching donations made via frontends built by external dev teams.
+
+## Context
+
+During the Gitcoin GG18 round, we've [onboarded](https://twitter.com/IDriss_xyz/status/1692567346886455507)  grantees to receive donations via our browser extension for Twitter. A total of 377 unique donors made impressive 1,186 donations to 155 grantees. Take a look at the [Twitter love board](https://idriss.xyz/gg18) with reactions from grantees and [Dune dashboard](https://dune.com/idriss/pg-donations)  with stats.
+
+![Donation widget for GG18](upload://nUlYwl22s2HqLUWiSAtabslyuZs.jpeg)
+
+
+
+During ETHDenver 2024, we developed a prototype that expands the functionality of the donation widget and enables cross-chain Gitcoin donations, receiving [the first prize from the Across Protocol team](https://twitter.com/AcrossProtocol/status/1765054760577556589). Over the past two months, we've been focused on incorporating the prototype into the live product for GG20.
+
+## Cross-chain widget for GG20
+
+Today, we're happy to share that the cross-chain component powered by [Across Protocol](https://across.to/) is live, together with the the start of GG20. Watch the demo below, or check out the [announcement thread](https://twitter.com/IDriss_xyz/status/1782779173196701708).
+
+https://www.youtube.com/watch?v=RKo4-tp5aE0
+
+Specification:
+- We support donations in ETH on 6 major EVM chains: Arbitrum, Base, Ethereum, Linea, Optimism, zkSync Era.
+- The test round in the demo above is deployed on Optimism, so what you're seeing is an Arbitrum to Optimism cross-chain donation.
+- The $0.24 you see on the demo is a fee necessary to perform the bridging operation. This fee varies, and it's often as low as $0.05. You can find more information about the bridge fees in the [Across Protocol's documentation](https://docs.across.to/reference/fees-in-the-system#relayer-fees).
+- We didn't have to compromise on speed; it's comparable to regular transfers. Across has consistently maintained its reputation as the fastest and lowest-cost bridge for end-users. Their recent milestone of [crossing $7B in all-time volume](https://twitter.com/AcrossProtocol/status/1778770155218370694) attests to its reliability.
+- We set a minimum donation amount of $1. This ensures that bridging relayers can process transactions smoothly, without significantly limiting donors (usually $1 was the minimum amount eligible for matching).
+- If for any reason the bridge transaction cannot be processed (e.g. donation is sent just before the round end), the donor receives back their funds after 6 hours.
+
+All the code is open-source and can be verified here: [browser extension](https://github.com/idriss-crypto/browser-extensions), [smart contract](https://github.com/idriss-crypto/contracts/blob/DonationWrapper/src/contracts/DonationWrapper.sol).  No user funds are stored, and there are no token approvals. The contract code has undergone a sanity check by an independent smart contract developer.
+
+## Matching
+
+The question that naturally comes to mind is: will these donations be matched?
+
+Unlike the same-chain donations we built for GG18, where all the donations fell into the Gitcoin indexer pipeline and were therefore automatically included for matching and showed up in the history page, the cross-chain donation component required us to introduce a wrapper smart contract, consequently obfuscating the original donor.
+
+We've developed and proposed a non-invasive solution for including these donations in the matching calculations with minimal effort and no changes to the Allo protocol. Donations made through our extension issue onchain attestations via the [Ethereum Attestation Service](https://twitter.com/eas_eth). These attestations are issued in a decentralized manner, making them immune to spoofing or alteration. You can read the complete technical explanation of the solution [here](https://github.com/idriss-crypto/browser-extensions/blob/master/CONTRACTS.md).
+
+Knowing about the plans to make Allo the ultimate composable funding allocation protocol, we think this is something worth solving not only for GG20 but also for any future dev teams building independent frontends.
+
+## About Us
+
+For those of you who don't know us yet, you can follow our work on the channels listed below.
+
+[Gitcoin Grant](https://www.idriss.xyz/gitcoin)  - [Website](https://www.idriss.xyz/)  -  [Twitter](https://twitter.com/IDriss_xyz)  -  [Farcaster](https://warpcast.com/idriss)  -  [Discord](https://discord.gg/RJhJKamjw5)  -  [Mirror Blog](https://idriss.mirror.xyz/)  -  [Docs](https://docs.idriss.xyz/)  -  [GitHub](https://github.com/idriss-crypto)
+
+Feedback and ideas are very welcome. Tagging relevant folks for visibility: @meglister @sov @umarkhaneth @owocki @kyle @jeremy @carlosjmelgar @thedevanshmehta.
+Mon, 06 May 2024 12:49:47 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Cross-chain donation widget for Twitter by IDriss
+ccerv1
+
+            <p>I’d love to see a pilot of this, eg, for a community round that is less OSS focused. I this this is a cool experiment, although I am also nervous of things that could further amp up the “popularity contest” aspect of GG. (This is not a reason against, just something to be mindful of.)</p>
+          <p><a href="https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658/5
+        Mon, 06 May 2024 12:49:47 +0000
+gov.gitcoin.co-post-18658-5
+Cross-chain donation widget for Twitter by IDriss
+      
+
+Cross-chain donation widget for Twitter by IDriss
+thedevanshmehta
+
+            <p>Great to see this tool built! I see it as an important innovation for chain abstraction in general. It’s also heartening to see the IDriss team respond to the <a href="https://twitter.com/owocki/status/1727353788787261452">call</a> put out by <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> after GG19 for having something exactly like this built out.</p>
+<p>As Gitcoin has doubled down on Arbitrum as the chain to run GG20 on, we probably won’t see much uptake in this round. I would like to hear from the team on whether it can be absorbed natively into the Gitcoin grants stack so that we can auction off round hosting to the highest sponsoring chain without having it affect the UX for donors.</p>
+          <p><a href="https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658/4
+        Mon, 06 May 2024 11:13:57 +0000
+gov.gitcoin.co-post-18658-4
+Cross-chain donation widget for Twitter by IDriss
+      
+
+Cross-chain donation widget for Twitter by IDriss
+Sov
+
+            <p>Amazing work, as always.  Appreciate the continued dedication to building!</p>
+          <p><a href="https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658/3
+        Tue, 23 Apr 2024 22:00:20 +0000
+gov.gitcoin.co-post-18658-3
+Cross-chain donation widget for Twitter by IDriss
+      
+
+Cross-chain donation widget for Twitter by IDriss
+carlosjmelgar
+
+            <p>IDriss always brings rizz to Gitcoin Grants. You truly are public greats. I love that this pragmatic approach front runs the superchain, orbit and agg layer visions.</p>
+<p>Already looking forward to the GG21 alpha.</p>
+<p>If there’s ever a plan to incubate Gitcoin ecosystem projects and help them GTM through the DAOs network, this is a great candidate.</p>
+          <p><a href="https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658/2
+        Tue, 23 Apr 2024 14:48:42 +0000
+gov.gitcoin.co-post-18658-2
+Cross-chain donation widget for Twitter by IDriss
+      
+
+Cross-chain donation widget for Twitter by IDriss
+geoist
+
+            <h2><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR</h2>
+<ul>
+<li>IDriss is back with the Twitter donation widget for GG20, now enabling <strong>cross-chain</strong> donations.</li>
+<li>Donate from 6 major EVM chains in seconds, with a bridge fee as low as $0.05.</li>
+<li>We’ve proposed a technical solution to the Gitcoin team for including these donations in the matching calculations with minimal effort and no changes to the Allo protocol.</li>
+</ul>
+<p>This post aims to document our work, share context with the broader community, and possibly spark a conversation about the composability of the Allo protocol with regard to matching donations made via frontends built by external dev teams.</p>
+<h2><a name="context-2" class="anchor" href="https://gov.gitcoin.co#context-2"></a>Context</h2>
+<p>During the Gitcoin GG18 round, we’ve <a href="https://twitter.com/IDriss_xyz/status/1692567346886455507" rel="noopener nofollow ugc">onboarded</a>  grantees to receive donations via our browser extension for Twitter. A total of 377 unique donors made impressive 1,186 donations to 155 grantees. Take a look at the <a href="https://idriss.xyz/gg18" rel="noopener nofollow ugc">Twitter love board</a> with reactions from grantees and <a href="https://dune.com/idriss/pg-donations" rel="noopener nofollow ugc">Dune dashboard</a>  with stats.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a790cd84f6a2c24c9f8921f455c6bdd6d07446da.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/a790cd84f6a2c24c9f8921f455c6bdd6d07446da" title="Donation widget for GG18"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a790cd84f6a2c24c9f8921f455c6bdd6d07446da_2_690x386.jpeg" alt="Donation widget for GG18" data-base62-sha1="nUlYwl22s2HqLUWiSAtabslyuZs" width="690" height="386" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a790cd84f6a2c24c9f8921f455c6bdd6d07446da_2_690x386.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a790cd84f6a2c24c9f8921f455c6bdd6d07446da_2_1035x579.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a790cd84f6a2c24c9f8921f455c6bdd6d07446da_2_1380x772.jpeg 2x" data-dominant-color="DFE2EC"></a></div><p></p>
+<p>During ETHDenver 2024, we developed a prototype that expands the functionality of the donation widget and enables cross-chain Gitcoin donations, receiving <a href="https://twitter.com/AcrossProtocol/status/1765054760577556589" rel="noopener nofollow ugc">the first prize from the Across Protocol team</a>. Over the past two months, we’ve been focused on incorporating the prototype into the live product for GG20.</p>
+<h2><a name="cross-chain-widget-for-gg20-3" class="anchor" href="https://gov.gitcoin.co#cross-chain-widget-for-gg20-3"></a>Cross-chain widget for GG20</h2>
+<p>Today, we’re happy to share that the cross-chain component powered by <a href="https://across.to/" rel="noopener nofollow ugc">Across Protocol</a> is live, together with the the start of GG20. Watch the demo below, or check out the <a href="https://twitter.com/IDriss_xyz/status/1782779173196701708" rel="noopener nofollow ugc">announcement thread</a>.</p>
+<p><a href="https://www.youtube.com/watch?v=RKo4-tp5aE0">Gitcoin cross-chain donation widget for Twitter by IDriss</a></p>
+
+<p>Specification:</p>
+<ul>
+<li>We support donations in ETH on 6 major EVM chains: Arbitrum, Base, Ethereum, Linea, Optimism, zkSync Era.</li>
+<li>The test round in the demo above is deployed on Optimism, so what you’re seeing is an Arbitrum to Optimism cross-chain donation.</li>
+<li>The $0.24 you see on the demo is a fee necessary to perform the bridging operation. This fee varies, and it’s often as low as $0.05. You can find more information about the bridge fees in the <a href="https://docs.across.to/reference/fees-in-the-system#relayer-fees" rel="noopener nofollow ugc">Across Protocol’s documentation</a>.</li>
+<li>We didn’t have to compromise on speed; it’s comparable to regular transfers. Across has consistently maintained its reputation as the fastest and lowest-cost bridge for end-users. Their recent milestone of <a href="https://twitter.com/AcrossProtocol/status/1778770155218370694" rel="noopener nofollow ugc">crossing $7B in all-time volume</a> attests to its reliability.</li>
+<li>We set a minimum donation amount of $1. This ensures that bridging relayers can process transactions smoothly, without significantly limiting donors (usually $1 was the minimum amount eligible for matching).</li>
+<li>If for any reason the bridge transaction cannot be processed (e.g. donation is sent just before the round end), the donor receives back their funds after 6 hours.</li>
+</ul>
+<p>All the code is open-source and can be verified here: <a href="https://github.com/idriss-crypto/browser-extensions" rel="noopener nofollow ugc">browser extension</a>, <a href="https://github.com/idriss-crypto/contracts/blob/DonationWrapper/src/contracts/DonationWrapper.sol" rel="noopener nofollow ugc">smart contract</a>.  No user funds are stored, and there are no token approvals. The contract code has undergone a sanity check by an independent smart contract developer.</p>
+<h2><a name="matching-4" class="anchor" href="https://gov.gitcoin.co#matching-4"></a>Matching</h2>
+<p>The question that naturally comes to mind is: will these donations be matched?</p>
+<p>Unlike the same-chain donations we built for GG18, where all the donations fell into the Gitcoin indexer pipeline and were therefore automatically included for matching and showed up in the history page, the cross-chain donation component required us to introduce a wrapper smart contract, consequently obfuscating the original donor.</p>
+<p>We’ve developed and proposed a non-invasive solution for including these donations in the matching calculations with minimal effort and no changes to the Allo protocol. Donations made through our extension issue onchain attestations via the <a href="https://twitter.com/eas_eth" rel="noopener nofollow ugc">Ethereum Attestation Service</a>. These attestations are issued in a decentralized manner, making them immune to spoofing or alteration. You can read the complete technical explanation of the solution <a href="https://github.com/idriss-crypto/browser-extensions/blob/master/CONTRACTS.md" rel="noopener nofollow ugc">here</a>.</p>
+<p>Knowing about the plans to make Allo the ultimate composable funding allocation protocol, we think this is something worth solving not only for GG20 but also for any future dev teams building independent frontends.</p>
+<h2><a name="about-us-5" class="anchor" href="https://gov.gitcoin.co#about-us-5"></a>About Us</h2>
+<p>For those of you who don’t know us yet, you can follow our work on the channels listed below.</p>
+<p><a href="https://www.idriss.xyz/gitcoin" rel="noopener nofollow ugc">Gitcoin Grant</a>  - <a href="https://www.idriss.xyz/" rel="noopener nofollow ugc">Website</a>  -  <a href="https://twitter.com/IDriss_xyz" rel="noopener nofollow ugc">Twitter</a>  -  <a href="https://warpcast.com/idriss" rel="noopener nofollow ugc">Farcaster</a>  -  <a href="https://discord.gg/RJhJKamjw5" rel="noopener nofollow ugc">Discord</a>  -  <a href="https://idriss.mirror.xyz/" rel="noopener nofollow ugc">Mirror Blog</a>  -  <a href="https://docs.idriss.xyz/" rel="noopener nofollow ugc">Docs</a>  -  <a href="https://github.com/idriss-crypto" rel="noopener nofollow ugc">GitHub</a></p>
+<p>Feedback and ideas are very welcome. Tagging relevant folks for visibility: <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> <a class="mention" href="https://gov.gitcoin.co/u/sov">@sov</a> <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> <a class="mention" href="https://gov.gitcoin.co/u/jeremy">@jeremy</a> <a class="mention" href="https://gov.gitcoin.co/u/carlosjmelgar">@carlosjmelgar</a> <a class="mention" href="https://gov.gitcoin.co/u/thedevanshmehta">@thedevanshmehta</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cross-chain-donation-widget-for-twitter-by-idriss/18658/1
+        Tue, 23 Apr 2024 14:26:28 +0000
+gov.gitcoin.co-post-18658-1
+Cross-chain donation widget for Twitter by IDriss
+      
+
+

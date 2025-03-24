@@ -1,0 +1,432 @@
+
+
+
+Discussion: dGrant solution
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023
+    **Decentralized Grants Verification**
+***Challenges we are facing now:***
+- Grants review manually is becoming unrealistic by a small team
+- Community is not encouraged to be involved in the grants verification process
+
+***Decentralising Grants Verification:***
+- Grants legality is governed by the whole community 
+- Community is incentivized with GTC to be involved in the grants verification process
+
+***Possible process:***
+- Community members are promoted to "Watcher" once they have any of DID verified (POH, POAP, BrightID and so on)
+- Any "Watcher" has the right to "Flag" a suspicious grant submission with X*GTC deposit and detailed reasons
+- The challenge details are sent to "Gitcoin Grant Court" in Kleros (decentralized dispute resolution) to get the challenge result
+- If "Watcher" is flagging a malicious grant submission successfully he will get the deposit back and Y*GTC rewards
+- If "Watcher" is flagging a legit grant submission as suspicious he will lose the staked X*GTC
+- The grant will be removed if it is successfully identified by "Watcher"
+
+***The effects we get from this solution:***
+- Grants are governed by the whole community in realtime globally
+- Community is incentivized with Y*GTC each time flagging malicious grants submission
+- It is an effective deterrent security protection from spam/scam grants submission
+
+***Future expansion:***
+- It could be applied to dBounty as well
+- It could be expanded to any modules of GitcoinDAO which requires monitoring and curation
+
+***Support needed from GitcoinDAO:***
+- Detailed grants policy documents 
+- GTC funds to be rewarded to successful "Watcher" and to be sent to "Gitcoin Grant Court" as arbitration fees
+- GitcoinDAO members tier implementation for "Watcher"
+
+***Possible difficulties:***
+- Gas fee keeps high on Mainnet 
+- Often adjustment of X*GTC and Y*GTC if the price of GTC is changing too much
+Sun, 01 May 2022 08:42:42 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Discussion: dGrant solution
+shahid1956
+
+            <p>Well thought proposal. Involving   Gitcoin community in verification is a good idea.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/19
+        Sun, 01 May 2022 08:42:42 +0000
+gov.gitcoin.co-post-9023-19
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+wkarshat
+
+            <p>The ratio of the reward and punishment needs to be compared to the prevalent rates of false negatives [faulty grant application getting approved].</p>
+<p>For example, you propose a ratio of 30:1, and if the rate of false negatives is 5%, it may pay to simply flag every grant.</p>
+<p>Unfortunately we may not have very precise empirical numbers for false negatives, and not only because the criteria are somewhat vague, given the entire range of grant applicant and subject matter possibilities, and the judgements are inherently subjective.</p>
+<p>With various grant subtypes and a range of possible failing criteria, somewhat unevenly distributed over time, it is not immediate how to map any set of secondary evaluations to the entire population of the grant applications.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/18
+        Fri, 04 Mar 2022 06:41:40 +0000
+gov.gitcoin.co-post-9023-18
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+lanlan3322
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/willjgriff">@willjgriff</a> , I am glad to join this task if there are any needs. I think independent dispute resolution is more logical in DAO. The guardians of the constitution are not affected by governing voting power.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/17
+        Sun, 28 Nov 2021 07:50:02 +0000
+gov.gitcoin.co-post-9023-17
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+willjgriff
+
+            <p>That’s correct. If between us we build an interface for the Gitcoin DAO proposal process with Celeste, it should interface fairly easily with Aragon Court too. However, note that Celeste lives on xDai and soon Polygon and Arbitrum, where as Aragon Court lives on the Ethereum mainnet so depending on where the Gitcoin DAO proposal process lives (I believe it is on Ethereum mainnet), there may also be bridging infrastructure necessary.</p>
+<p>For reference I work at 1Hive and on the Celeste Smart Contracts fork from Aragon Court.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/16
+        Thu, 25 Nov 2021 14:09:17 +0000
+gov.gitcoin.co-post-9023-16
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+lanlan3322
+
+            <p>Just had a quick check on Celeste and it is using Aragon Court actually:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://1hive.gitbook.io/celeste/developers/documentation">
+  <header class="source">
+      
+
+      <a href="https://1hive.gitbook.io/celeste/developers/documentation" target="_blank" rel="noopener nofollow ugc">1hive.gitbook.io</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/362;"><img src="https://app.gitbook.com/share/space/thumbnail/-MUp61V_lEJc8ddVgiC1-887967055.png?color=%23533AA6&amp;logo=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fgitbook-28427.appspot.com%2Fo%2Fspaces%252F-MUp61V_lEJc8ddVgiC1%252Favatar-rectangle-1628787658369.png%3Fgeneration%3D1628787658691348%26alt%3Dmedia&amp;theme=bold" class="thumbnail" width="690" height="362"></div>
+
+<h3><a href="https://1hive.gitbook.io/celeste/developers/documentation" target="_blank" rel="noopener nofollow ugc">Documentation</a></h3>
+
+  <p>Developer documentation</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/1Hive/celeste-backend">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/1Hive/celeste-backend" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="/uploads/db4391/optimized/2X/7/767265b4fc3ccd9e5a8f248dc9c5fcccc422d5df_2_690x345.png" class="thumbnail" width="690" height="345" srcset="/uploads/db4391/optimized/2X/7/767265b4fc3ccd9e5a8f248dc9c5fcccc422d5df_2_690x345.png, /uploads/db4391/optimized/2X/7/767265b4fc3ccd9e5a8f248dc9c5fcccc422d5df_2_1035x517.png 1.5x, /uploads/db4391/original/2X/7/767265b4fc3ccd9e5a8f248dc9c5fcccc422d5df.png 2x" data-small-upload="/uploads/db4391/optimized/2X/7/767265b4fc3ccd9e5a8f248dc9c5fcccc422d5df_2_10x10.png"></div>
+
+<h3><a href="https://github.com/1Hive/celeste-backend" target="_blank" rel="noopener nofollow ugc">GitHub - 1Hive/celeste-backend: Backend services for Celeste 🪐</a></h3>
+
+  <p>Backend services for Celeste 🪐. Contribute to 1Hive/celeste-backend development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/15
+        Thu, 25 Nov 2021 03:45:27 +0000
+gov.gitcoin.co-post-9023-15
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+lanlan3322
+
+            <p>Thanks, but I don’t have access to dGrant-feedback channel.<br>
+yap, More options provide more resilience for the system, just like uniswap provides options for users to choose which token list to show.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/14
+        Tue, 23 Nov 2021 01:01:42 +0000
+gov.gitcoin.co-post-9023-14
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+David_Dyor
+
+            <p>I propose we use the dgrants-feedback channel.  <a href="https://discord.gg/xuZxzvfn" class="inline-onebox" rel="noopener nofollow ugc">Gitcoin</a></p>
+<p>Started a discussion there.  Note we are planning to use Celeste for the external conflict resolution step, not Kleros, however the goal is to enable any similar project to be used.  Aragon Court is another possibility.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/13
+        Mon, 22 Nov 2021 18:37:13 +0000
+gov.gitcoin.co-post-9023-13
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+lanlan3322
+
+            <p>Thanks, which channel should i join for dGrant discussion?</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/12
+        Mon, 22 Nov 2021 02:29:57 +0000
+gov.gitcoin.co-post-9023-12
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+lanlan3322
+
+            <p>In order to keep the discussion record I copied Joe’s comments from discord here:</p>
+<p>//Start of msg from discord<br>
+So we have a manual review process now, but it needs to be better than that.</p>
+<p>There was a curation interface made for this which could be lightly adjusted.</p>
+<p>I’m not sure if all these steps are necessary, but I think they are at first glance</p>
+<ol>
+<li>
+<p>update and plug in the curation game interface but only so whitelisted reviewers and leave reviews</p>
+</li>
+<li>
+<p>Open up to anyone to review (maybe staking) and compare results of whitelist to the open one</p>
+</li>
+<li>
+<p>add in functionality to better create thresholds for participation and test them.</p>
+</li>
+<li>
+<p>connect the outcome of reviews to directly activating ir shutting off grants match eligibility for rounds. (Previously done manually based on reviews done in the game)</p>
+</li>
+</ol>
+<p>//End of msg from discord</p>
+<p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/11
+        Mon, 22 Nov 2021 02:17:47 +0000
+gov.gitcoin.co-post-9023-11
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+lanlan3322
+
+            <p>Thanks, I am looking forward to working out a gamified module on this. FDD is the first perfect place to realize this DAO-like component. Internet of jobs should be incentivized based on valuable contributions and there should be certain penalization on hostile actions.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/10
+        Fri, 19 Nov 2021 03:29:28 +0000
+gov.gitcoin.co-post-9023-10
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+lanlan3322
+
+            <p>Exactly, totally agree with you.<br>
+We need to work out a better way and put the managing factors in DAO process which could be discussed and then applied via smart contract forcefully without human interaction.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/9
+        Fri, 19 Nov 2021 03:21:28 +0000
+gov.gitcoin.co-post-9023-9
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+lanlan3322
+
+            <p>Thanks for your detailed clarifications.<br>
+We are perfectly ok right now but if we see the future when there are 100+ or even 1000+ submissions (who knows it is not happening?! <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=10" title=":slight_smile:" class="emoji" alt=":slight_smile:">  ) the review pressure will be hard to handle by dedicated members. Instead, it will be easier to hand over to all members in the system.</p>
+<p>For now, the community is basically involved by “Goodwill” and there could be a more sustainable way to keep encouraging members to join the mission with a proper incentives system established.</p>
+<p>The present “Flag” function is easily attacked without any protection. Malicious actors would do irresponsible flagging to overload our review teams.</p>
+<p>To align with GitcoinDAO concept we could build these small DAO components which will eventually stack up a whole DAO system.</p>
+<p><img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=10" title=":slight_smile:" class="emoji only-emoji" alt=":slight_smile:"></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/8
+        Fri, 19 Nov 2021 03:15:40 +0000
+gov.gitcoin.co-post-9023-8
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+David_Dyor
+
+            <p>I agree this general direction is desirable.   There is some progress already and I look forward to continuing the discussion.  We (the Fdd) have been talking to a project already (Celeste) but the goal is to have a modular system where a variety of court-like systems can fit in.  As for policy, all docs are migrating to Gitbook where current versions will be accessible to everyone.</p>
+<p>The FDD also developed an appeals procedure intended to be used with the future iteration of the grants program.  I can see being used after the ‘marking’ process you describe.  In the legacy version of grants what you call marking was called flagging.</p>
+<p>Would like to see a short gamified training quest for the ‘Markers’ much like the Grant Evaluation Squads receive a small amount of training.  In the legacy system anybody had the ability to mark/flag a grant.  Even members of the public.  Sometimes industry folks like to squeal on each other.  I would like to see that preserved somehow.  Lots to discuss and I look forward to meeting you.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/7
+        Thu, 18 Nov 2021 04:28:49 +0000
+gov.gitcoin.co-post-9023-7
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+tjayrush
+
+            <p>Unless Y is very significantly larger than X, I for one would not participate due to a natural human tendency to prefer pain avoidance over reward.</p>
+<p>A slightly different way to state this so that it’s very clear would be to change Y to 3 * X and change the amount lost due to an incorrect identification to .1 * X.</p>
+<p>Summary “Watcher stakes X GTC and, if correct, receives 3 * X reward. If incorrect the Watcher forfeits .1 * X and received .9 * X refund.”</p>
+<p>This sounds simultaneously more rewarding on correct identification and less punishing on incorrect identification.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/6
+        Wed, 17 Nov 2021 14:39:31 +0000
+gov.gitcoin.co-post-9023-6
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+Sirlupinwatson
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/lanlan3322">@lanlan3322</a>!</p>
+<p>Thanks for your feedback, highly valuable!</p>
+<aside class="quote no-group" data-username="lanlan3322" data-post="1" data-topic="9023">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lanlan3322/48/4362_2.png" class="avatar"> lanlan3322:</div>
+<blockquote>
+<p>Grants review manually is becoming unrealistic by a small team</p>
+</blockquote>
+</aside>
+<p>Right now we have 2 separate decentralized squads working on to review each grants under 24/48 hours delay. We had the first “Splitting Squad” on the first of November I think.</p>
+<aside class="quote no-group" data-username="lanlan3322" data-post="1" data-topic="9023">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lanlan3322/48/4362_2.png" class="avatar"> lanlan3322:</div>
+<blockquote>
+<p>Community is not encouraged to be involved in the grants verification process</p>
+</blockquote>
+</aside>
+<p>I think the community is highly encouraged to be involved in the grants verification process, we are actively getting more user and contributors involved in that part only.</p>
+<aside class="quote no-group" data-username="lanlan3322" data-post="1" data-topic="9023">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lanlan3322/48/4362_2.png" class="avatar"> lanlan3322:</div>
+<blockquote>
+<p>Any “Watcher” has the right to “Flag” a suspicious grant submission with X*GTC deposit and detailed reasons</p>
+</blockquote>
+</aside>
+<p>This is already possible to “Flag” a grant, once a grant has been “Flagged” we will carefully review it. Any member of the community can “Flag” a grant. <a class="mention" href="https://gov.gitcoin.co/u/david_dyor">@David_Dyor</a> can tell you more about that process since he’s building up the policy’s.</p>
+<p>We are also planning on creating an interface UX-UI to review these grants, either on dGrants or on Gitcoin. Feel free to jump in the conversation on Discord or we can keep this post up.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/5
+        Tue, 16 Nov 2021 20:11:27 +0000
+gov.gitcoin.co-post-9023-5
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+DisruptionJoe
+
+            <p>Can you ping me on discord Ianian ?</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/4
+        Tue, 16 Nov 2021 20:08:25 +0000
+gov.gitcoin.co-post-9023-4
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+DisruptionJoe
+
+            <p>The FDD workstream is currently managing the policy and evaluation of grants for approval to different rounds. The dGrants product needs to be integrated to our current process as well as these forward looking solutions.</p>
+<p>There are multiple options for how we prioritize. Let’s connect with <a class="mention" href="https://gov.gitcoin.co/u/phutchins">@phutchins</a> and <a class="mention" href="https://gov.gitcoin.co/u/sirlupinwatson">@Sirlupinwatson</a> around how to move this forward.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/3
+        Tue, 16 Nov 2021 20:07:08 +0000
+gov.gitcoin.co-post-9023-3
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+bobjiang
+
+            <p>I love this proposal, although the name should be changed bc dGrant is used for decentralized grant in workstream.</p>
+<p>Maybe we could integrate this proposal in Decentralized Gitcoin stream, so <a class="mention" href="https://gov.gitcoin.co/u/phutchins">@phutchins</a> and <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> what are your thoughts?</p>
+<p>I heard that Gitcoin Core team has collaborated with PoH team before, while in this proposal we could use GTC as staking and incentive for GitcoinDAO users (community members).<br>
+<a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> any insight for this proposal?</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/2
+        Mon, 15 Nov 2021 01:44:11 +0000
+gov.gitcoin.co-post-9023-2
+Discussion: dGrant solution
+      
+
+Discussion: dGrant solution
+lanlan3322
+
+            <p><strong>Decentralized Grants Verification</strong><br>
+<em><strong>Challenges we are facing now:</strong></em></p>
+<ul>
+<li>Grants review manually is becoming unrealistic by a small team</li>
+<li>Community is not encouraged to be involved in the grants verification process</li>
+</ul>
+<p><em><strong>Decentralising Grants Verification:</strong></em></p>
+<ul>
+<li>Grants legality is governed by the whole community</li>
+<li>Community is incentivized with GTC to be involved in the grants verification process</li>
+</ul>
+<p><em><strong>Possible process:</strong></em></p>
+<ul>
+<li>Community members are promoted to “Watcher” once they have any of DID verified (POH, POAP, BrightID and so on)</li>
+<li>Any “Watcher” has the right to “Flag” a suspicious grant submission with X*GTC deposit and detailed reasons</li>
+<li>The challenge details are sent to “Gitcoin Grant Court” in Kleros (decentralized dispute resolution) to get the challenge result</li>
+<li>If “Watcher” is flagging a malicious grant submission successfully he will get the deposit back and Y*GTC rewards</li>
+<li>If “Watcher” is flagging a legit grant submission as suspicious he will lose the staked X*GTC</li>
+<li>The grant will be removed if it is successfully identified by “Watcher”</li>
+</ul>
+<p><em><strong>The effects we get from this solution:</strong></em></p>
+<ul>
+<li>Grants are governed by the whole community in realtime globally</li>
+<li>Community is incentivized with Y*GTC each time flagging malicious grants submission</li>
+<li>It is an effective deterrent security protection from spam/scam grants submission</li>
+</ul>
+<p><em><strong>Future expansion:</strong></em></p>
+<ul>
+<li>It could be applied to dBounty as well</li>
+<li>It could be expanded to any modules of GitcoinDAO which requires monitoring and curation</li>
+</ul>
+<p><em><strong>Support needed from GitcoinDAO:</strong></em></p>
+<ul>
+<li>Detailed grants policy documents</li>
+<li>GTC funds to be rewarded to successful “Watcher” and to be sent to “Gitcoin Grant Court” as arbitration fees</li>
+<li>GitcoinDAO members tier implementation for “Watcher”</li>
+</ul>
+<p><em><strong>Possible difficulties:</strong></em></p>
+<ul>
+<li>Gas fee keeps high on Mainnet</li>
+<li>Often adjustment of X<em>GTC and Y</em>GTC if the price of GTC is changing too much</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-dgrant-solution/9023/1
+        Sat, 13 Nov 2021 05:31:12 +0000
+gov.gitcoin.co-post-9023-1
+Discussion: dGrant solution
+      
+
+

@@ -1,0 +1,560 @@
+
+
+
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712
+    # Proposal Title
+
+Baking Impact Into The Quadratic Funding Matching Formula (ImpactQF)
+
+# Description
+
+This proposal seeks funding to create an **Impact Passport framework**. We expect use of this passport to augment the Quadratic Funding mechanism, serve as training data for AI allocation agents, and other use cases as they arise.
+
+Projects can collect passport stamps from a selection of Impact Evaluators to demonstrate the impact of their project. Examples of existing Impact Evaluators are Open Source Observer for software contributions, Karma GAP for output based evaluation, Metrics Garden for outcome based evaluation, or GainForest for climate projects.
+
+The first application of impact passport that we would like to see is a new mechanism, Impact Quadratic Funding (ImpactQF), where we bake impact into the quadratic funding matching formula. Projects with a higher impact score will obtain a higher matching fund. Through these verified impact measurements, ImpactQF ensures that matching funds are efficiently allocated based on *outcomes* rather than a popularity contest.
+
+We hope that Gitcoin will also integrate the Impact Passport and ImpactQF mechanism in its future funding rounds. Through this implementation, we aim to support Gitcoin in more efficient allocation of capital. It would also position Gitcoin as the centerstage for evaluation providers to be included as a stamp, similar to the role Gitcoin passport played for identity solutions.
+
+# Motivation
+
+*Based on the 2025 trends to watch by Gitcoin: https://gov.gitcoin.co/t/2025-trends-to-watch-gitcoin/19362*
+
+“Grants are not dying, but they are entering their Reputation era.” There is a rising demand for verifiable impact. We need to quickly capture this market segment of efficiently allocating ecosystem incentives to the most impactful projects.
+
+Currently, Gitcoin primarily allocates funds based on Quadratic Funding, which does not have an impact metric baked into its formula. As more matching funds are allocated to projects that have the most “votes", projects that invest a considerable amount of time and resources in community outreach and marketing tend to capture more matching funds than those creating genuine impact. One potential downside of this formula is that projects may be incentivized to value promotion over delivering real value. This creates a self-reinforcing cycle where funding is driven by community outreach rather than actual impact, ultimately incentivizing projects to prioritize promotion, or direct their funds into capturing more funds rather than doing work.
+
+IQF addresses this by incorporating verified impact scores from specialized evaluators into the quadratic funding formula, creating an equitable mechanism that rewards actual outcomes across different domains of public goods.
+
+It also positions Gitcoin as the central platform where every evaluator in the space tries to get included as a stamp. 
+
+# Specifications
+
+1. **Core Protocol Development**
+
+* Implement the impact-weighted quadratic funding formula:![|567x232](upload://wDMYNQ18CujnW4F83Bgr5dvMU7O.png)
+* Develop standardized impact verification framework
+* Create impact passport system for project evaluation
+* Build integration layer with existing QF infrastructure
+
+
+2. **Impact Verification System**
+
+* Design a three-layer verification architecture:
+  * Layer 1: Data collection and submission protocols
+  * Layer 2: Proof of claims verification
+  * Layer 3: Automated impact monitoring
+* Implement API endpoints for verification services
+* Create standardized impact scoring mechanism
+
+
+3. **Impact Passport Hub (Frontend)**
+
+Our technical stack includes:
+
+* Impact passport system for standardized project evaluation
+* Integration with impact evaluators
+* Hypercerts integration for impact claims
+* Allo integration for automated matching fund distribution
+
+# Roadmap and Milestones
+### Project Plan
+
+|Month|Phase|Deliverables|
+| --- | --- | --- |
+|Month 1|Technical Foundation|1. Adjust allo protocol to deploy the adjusted matching equation.   <br/>2. Create impact passport standard specification and technical documentation|
+|Month 2|Creation of Impact Passport Hub|1. Launch alpha version of the Impact Passport Hub - a platform where projects can connect their wallet and track their impact.|
+|Month 3-4|Integration & Testing|1. Integrate 3+ impact evaluators, such as (Metrics Garden, Open Source Observer, Karma Gap, etc) tracking into impact passport <br/> 2. Assign weightages to the different stamps<br/>3. Deploy automated impact scoring system|
+|Month 5|Pilot Preparation and Launch|1. Onboard projects to Impact Passport<br/>2. Launch public interface for donors|
+
+### Technical Integration Milestones
+
+**1. Impact Verification System**
+
+* Integration with Impact Evaluators such as Open Source Observer, Karma GAP, Metrics Garden, and more
+
+**2. User Interface**
+
+* Users can sign in with their project wallet, and have the ability to collect impact passport stamps.
+
+**3. Documentation & Open Source**
+
+* Technical specifications
+* API documentation
+* Code repository publication
+* Integration guides
+* Developer workshops focused on impact verification integration
+* Monthly technical updates on Gitcoin Discord/Forum
+
+
+**4. Education**
+* Comprehensive technical whitepaper explaining IQF's solution to the QF marketing problem
+* Open-source repository with detailed implementation guides
+
+
+**5. Content & Knowledge Sharing:**
+
+* Blog post series explaining:
+  * IQF's mathematics and implementation
+  * Impact verification methodology
+  * Case studies from pilot projects
+  * Integration guides for developers
+* Live demo at Gitcoin-aligned events
+* Virtual workshops with projects
+* Regular progress updates on Gitcoin Forum
+* Regular community calls demonstrating impact verification tools
+* Community presentation showcasing IQF's first funding round results
+
+
+We'll maintain continuous engagement through the full development cycle, ensuring the Gitcoin community understands both the technical innovation and practical impact of IQF.
+
+# Benefits
+**Impact Passport**
+
+* Can be used in any mechanism, not just in Impact Quadratic Funding
+* Reduces over-reliance in any one kind of metric, as different impact evaluators have different metrics that they evaluate for
+* Positions Gitcoin as the central platform where every evaluator in the space tries to get included as a stamp
+
+**Impact Quadratic Funding**
+
+* Bakes in impact directly into the funding mechanism
+* Allows donors or grant operators to measure the impact of their capital allocation
+* Allocates ecosystem incentives to the most impactful projects
+
+
+# Drawbacks
+
+**Technical Challenges**
+
+* Risk: Scalability issues with impact verification
+Mitigation: Implementing batch processing and optimized data pipelines
+
+* Risk: Smart contract limitations with Allo protocol
+Mitigation: Working closely with Gitcoin/Allo team
+
+**Adoption Challenges**
+
+* Risk: Complex onboarding for projects
+Mitigation: Creating simplified mobile-first interfaces and local language support
+
+* Risk: Impact verification delays
+Mitigation: Building redundant verification pathways and automated monitoring
+
+**Market Challenges**
+
+* Risk: Insufficient matching pool
+* Risk: Project quality variation
+Mitigation: Standardized impact metrics and tiered verification system
+
+
+
+# Budget Overview
+
+* Smart Contract Development: $10K
+* Impact Passport Hub Platform: $10k
+* Impact Passport Stamp Integrations: $10k
+* Technical Documentation, Education, Community Building: $5k
+
+Total budget requested: $35k
+
+# **Measures of success and KPIs**
+Success Criteria
+
+* Technical
+  * Successful processing of all impact verifications
+* Impact
+  * 10+ active projects
+  * $10K+ in contributions processed
+  * 3+ successful impact verification cycles
+* Community
+  * 4+ technical integrations
+  * Published case studies from pilot projects
+
+|Month|Phase|Success Metrics|
+| --- | --- | --- |
+|Month 1|Technical Foundation|* Documentation of impact verification API<br/>* Published technical specification for impact passport|
+|Month 2|Creation of Impact Passport Hub|* Open-sourced Github Repo of our Impact Passport Hub<br/>* Users can sign in with their wallet, view their Gitcoin project on the portal, and view possible impact stamps to verify with|
+|Month 3|Integration & Testing|* Successful processing of test transactions<br/>* Open-source repository with technical documentation|
+|Month 4|Pilot Preparation|* 10 completed impact passports<br/>* Published API documentation<br/>* Completed UI/UX testing|
+|Month 5|Launch & Validation|* Minimum $10K total contributions processed<br/>* Successfully executed matching calculations<br/>* 100% of funds distributed correctly<br/>* Published transparency report|
+
+# The Team
+
+David Dao (@[dwddao](https://x.com/dwddao))
+Sejal (@[sejal_rekhan](https://x.com/sejal_rekhan)) (will not be paid due to conflict of interest)
+Sharfy (@[sharfyae](https://x.com/sharfyae))
+Shuhei (@[shutanaka_jp)
+](https://x.com/shutanaka_jp)Devansh (@[TheDevanshMehta](https://x.com/TheDevanshMehta))
+Carl Barrdahl ([@carlbarrdahl](https://x.com/carlbarrdahl))
+
+# Advisors
+LauNaMu | Metrics Garden (@[0xyNaMu](https://x.com/0xyNaMu))
+Mahesh | Karma GAP (@[mvmurthy](https://x.com/mvmurthy))
+Mon, 06 Jan 2025 00:51:40 +0000
+📝 Citizen Grants
+
+
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+owocki
+
+            <p>Is there a pilot identified for this product?  How big and for whom?  Id be more keen to vote yes if there is a pilot that will deliver some GMV/results in a real world scenario vs a building for a hypothetical end user.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/7
+        Mon, 06 Jan 2025 00:51:40 +0000
+gov.gitcoin.co-post-19712-7
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+      
+
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+meglister
+
+            <p>Appreciate the thought behind the proposal – verifiable impact is a huge initiative for Gitcoin and for the grants space generally. Also love to see the collaboration with our friends/valued partners at OSO, Karma, Metrics Garden, etc.</p>
+<p>I’ll echo <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> and <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> 's comments around funding a brand-new initiative – it’s generally safe/nice to invest in teams with some proven traction. I’m also having a hard time conceptualizing the user journey for projects who participate in this… I’m worried it’s a little onerous? One way to address this could be the simulations <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> mentioned or even some mockups / wireframes.</p>
+<p>One thought-starter for you all: how should QF donors think of their role in allocating funding with this algorithm in place? What do they add to the equation that is not accounted for in the impact algorithm? And if the impact measurement efforts are successful, could donors actually have a negative impact on allocations?</p>
+          <p><a href="https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/6
+        Thu, 12 Dec 2024 02:54:41 +0000
+gov.gitcoin.co-post-19712-6
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+      
+
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+ccerv1
+
+            <p>Happy to see this proposal and can personally vouch for the team as being values-aligned, long-term oriented. Also appreciate the opportunity to integrate with OSO &amp; KarmaGAP <img src="https://gov.gitcoin.co/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"></p>
+<p>Putting my steward hat on, I would say:</p>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/white_check_mark.png?v=12" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> High caliber team<br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/white_check_mark.png?v=12" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> Budget is very reasonable<br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/white_check_mark.png?v=12" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> This feels like an important complement to Gitcoin’s growth strategy<br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/question.png?v=12" title=":question:" class="emoji" alt=":question:" loading="lazy" width="20" height="20"> Generally, I like to see teams come with a PoC or some traction <strong>first</strong> before getting funded (see my comments on <a href="https://gov.gitcoin.co/t/gcp-xxx-community-knowledge-base-for-llm/19523">another recent GCP</a>). In this case, that could be accomplished via a simulation (mock data) or a very basic impact framework on a subset of historic project submissions.</p>
+<p>If this moves to a vote, I would likely abstain given OSO is a (indirect) dependency, but will hereby register my support for this in principle</p>
+          <p><a href="https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/5
+        Fri, 06 Dec 2024 16:00:35 +0000
+gov.gitcoin.co-post-19712-5
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+      
+
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+umarkhaneth
+
+            <p>Hello!</p>
+<ul>
+<li>I think this is an interesting experiment to run and I’m in favor of this great team executing on it.</li>
+<li>I’d be interested to see simulations of results based on past rounds data!</li>
+<li>I appreciate the reasonable budget as well.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/4
+        Fri, 06 Dec 2024 07:43:24 +0000
+gov.gitcoin.co-post-19712-4
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+      
+
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+Sov
+
+            <p>I support exploring this Impact Passport framework, particularly its potential to shift funding allocation from pure marketing effectiveness to verified impact. The multi-evaluator approach using established tools like Open Source Observer and Karma GAP could provide valuable signals for decision-making.</p>
+<p>Two suggestions:</p>
+<ul>
+<li>Could you share a concrete mock-up showing how impact scores would be calculated and how the modified quadratic funding formula would work in practice?</li>
+<li>Consider structuring as 50% upfront for infrastructure and 50% retroactive based on specific success metrics like number of projects onboarded and funding allocated through ImpactQF.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/3
+        Thu, 05 Dec 2024 21:13:37 +0000
+gov.gitcoin.co-post-19712-3
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+      
+
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+owocki
+
+            <aside class="quote no-group" data-username="sharfy" data-post="1" data-topic="19712">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sharfy/48/14002_2.png" class="avatar"> sharfy:</div>
+<blockquote>
+<p><strong>1. Impact Verification System</strong></p>
+</blockquote>
+</aside>
+<p>i am curious what types of impact data we should be ingesting to start. i think this is coupled with the question of “what GG community round would be a good pilot for this campaign?”</p>
+<p>perhaps OSS is the best place to start due to it (1) having heat, ppl care about it (2) lots of good data available for that.</p>
+<p>wdyt <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a> ?</p>
+<aside class="quote no-group" data-username="sharfy" data-post="1" data-topic="19712">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sharfy/48/14002_2.png" class="avatar"> sharfy:</div>
+<blockquote>
+<ul>
+<li>Smart Contract Development: $10K</li>
+</ul>
+</blockquote>
+</aside>
+<p>is there a component of this that will be built with smart contracts? most of the QF calcs are offchain, so wondering if we can reallocate this budget to something else.  personally i think marketing this mechanism and what makes it special would be a good use of funds.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/2
+        Thu, 05 Dec 2024 21:06:59 +0000
+gov.gitcoin.co-post-19712-2
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+      
+
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+sharfy
+
+            <h1><a name="proposal-title-1" class="anchor" href="https://gov.gitcoin.co#proposal-title-1"></a>Proposal Title</h1>
+<p>Baking Impact Into The Quadratic Funding Matching Formula (ImpactQF)</p>
+<h1><a name="description-2" class="anchor" href="https://gov.gitcoin.co#description-2"></a>Description</h1>
+<p>This proposal seeks funding to create an <strong>Impact Passport framework</strong>. We expect use of this passport to augment the Quadratic Funding mechanism, serve as training data for AI allocation agents, and other use cases as they arise.</p>
+<p>Projects can collect passport stamps from a selection of Impact Evaluators to demonstrate the impact of their project. Examples of existing Impact Evaluators are Open Source Observer for software contributions, Karma GAP for output based evaluation, Metrics Garden for outcome based evaluation, or GainForest for climate projects.</p>
+<p>The first application of impact passport that we would like to see is a new mechanism, Impact Quadratic Funding (ImpactQF), where we bake impact into the quadratic funding matching formula. Projects with a higher impact score will obtain a higher matching fund. Through these verified impact measurements, ImpactQF ensures that matching funds are efficiently allocated based on <em>outcomes</em> rather than a popularity contest.</p>
+<p>We hope that Gitcoin will also integrate the Impact Passport and ImpactQF mechanism in its future funding rounds. Through this implementation, we aim to support Gitcoin in more efficient allocation of capital. It would also position Gitcoin as the centerstage for evaluation providers to be included as a stamp, similar to the role Gitcoin passport played for identity solutions.</p>
+<h1><a name="motivation-3" class="anchor" href="https://gov.gitcoin.co#motivation-3"></a>Motivation</h1>
+<p><em>Based on the 2025 trends to watch by Gitcoin: <a href="https://gov.gitcoin.co/t/2025-trends-to-watch-gitcoin/19362" class="inline-onebox">2025 Trends to Watch :: Gitcoin</a></em></p>
+<p>“Grants are not dying, but they are entering their Reputation era.” There is a rising demand for verifiable impact. We need to quickly capture this market segment of efficiently allocating ecosystem incentives to the most impactful projects.</p>
+<p>Currently, Gitcoin primarily allocates funds based on Quadratic Funding, which does not have an impact metric baked into its formula. As more matching funds are allocated to projects that have the most “votes", projects that invest a considerable amount of time and resources in community outreach and marketing tend to capture more matching funds than those creating genuine impact. One potential downside of this formula is that projects may be incentivized to value promotion over delivering real value. This creates a self-reinforcing cycle where funding is driven by community outreach rather than actual impact, ultimately incentivizing projects to prioritize promotion, or direct their funds into capturing more funds rather than doing work.</p>
+<p>IQF addresses this by incorporating verified impact scores from specialized evaluators into the quadratic funding formula, creating an equitable mechanism that rewards actual outcomes across different domains of public goods.</p>
+<p>It also positions Gitcoin as the central platform where every evaluator in the space tries to get included as a stamp.</p>
+<h1><a name="specifications-4" class="anchor" href="https://gov.gitcoin.co#specifications-4"></a>Specifications</h1>
+<ol>
+<li><strong>Core Protocol Development</strong></li>
+</ol>
+<ul>
+<li>Implement the impact-weighted quadratic funding formula:<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e4c5059a59d992e9a86a0f0489e1c251c40f1b54.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/e4c5059a59d992e9a86a0f0489e1c251c40f1b54" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e4c5059a59d992e9a86a0f0489e1c251c40f1b54_2_567x232.png" alt="" data-base62-sha1="wDMYNQ18CujnW4F83Bgr5dvMU7O" width="567" height="232" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e4c5059a59d992e9a86a0f0489e1c251c40f1b54_2_567x232.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e4c5059a59d992e9a86a0f0489e1c251c40f1b54_2_850x348.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e4c5059a59d992e9a86a0f0489e1c251c40f1b54_2_1134x464.png 2x" data-dominant-color="F6F6F6"></a></div></li>
+<li>Develop standardized impact verification framework</li>
+<li>Create impact passport system for project evaluation</li>
+<li>Build integration layer with existing QF infrastructure</li>
+</ul>
+<ol start="2">
+<li><strong>Impact Verification System</strong></li>
+</ol>
+<ul>
+<li>Design a three-layer verification architecture:
+<ul>
+<li>Layer 1: Data collection and submission protocols</li>
+<li>Layer 2: Proof of claims verification</li>
+<li>Layer 3: Automated impact monitoring</li>
+</ul>
+</li>
+<li>Implement API endpoints for verification services</li>
+<li>Create standardized impact scoring mechanism</li>
+</ul>
+<ol start="3">
+<li><strong>Impact Passport Hub (Frontend)</strong></li>
+</ol>
+<p>Our technical stack includes:</p>
+<ul>
+<li>Impact passport system for standardized project evaluation</li>
+<li>Integration with impact evaluators</li>
+<li>Hypercerts integration for impact claims</li>
+<li>Allo integration for automated matching fund distribution</li>
+</ul>
+<h1><a name="roadmap-and-milestones-5" class="anchor" href="https://gov.gitcoin.co#roadmap-and-milestones-5"></a>Roadmap and Milestones</h1>
+<h3><a name="project-plan-6" class="anchor" href="https://gov.gitcoin.co#project-plan-6"></a>Project Plan</h3>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Phase</th>
+<th>Deliverables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Month 1</td>
+<td>Technical Foundation</td>
+<td>1. Adjust allo protocol to deploy the adjusted matching equation.   <br>2. Create impact passport standard specification and technical documentation</td>
+</tr>
+<tr>
+<td>Month 2</td>
+<td>Creation of Impact Passport Hub</td>
+<td>1. Launch alpha version of the Impact Passport Hub - a platform where projects can connect their wallet and track their impact.</td>
+</tr>
+<tr>
+<td>Month 3-4</td>
+<td>Integration &amp; Testing</td>
+<td>1. Integrate 3+ impact evaluators, such as (Metrics Garden, Open Source Observer, Karma Gap, etc) tracking into impact passport <br> 2. Assign weightages to the different stamps<br>3. Deploy automated impact scoring system</td>
+</tr>
+<tr>
+<td>Month 5</td>
+<td>Pilot Preparation and Launch</td>
+<td>1. Onboard projects to Impact Passport<br>2. Launch public interface for donors</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="technical-integration-milestones-7" class="anchor" href="https://gov.gitcoin.co#technical-integration-milestones-7"></a>Technical Integration Milestones</h3>
+<p><strong>1. Impact Verification System</strong></p>
+<ul>
+<li>Integration with Impact Evaluators such as Open Source Observer, Karma GAP, Metrics Garden, and more</li>
+</ul>
+<p><strong>2. User Interface</strong></p>
+<ul>
+<li>Users can sign in with their project wallet, and have the ability to collect impact passport stamps.</li>
+</ul>
+<p><strong>3. Documentation &amp; Open Source</strong></p>
+<ul>
+<li>Technical specifications</li>
+<li>API documentation</li>
+<li>Code repository publication</li>
+<li>Integration guides</li>
+<li>Developer workshops focused on impact verification integration</li>
+<li>Monthly technical updates on Gitcoin Discord/Forum</li>
+</ul>
+<p><strong>4. Education</strong></p>
+<ul>
+<li>Comprehensive technical whitepaper explaining IQF’s solution to the QF marketing problem</li>
+<li>Open-source repository with detailed implementation guides</li>
+</ul>
+<p><strong>5. Content &amp; Knowledge Sharing:</strong></p>
+<ul>
+<li>Blog post series explaining:
+<ul>
+<li>IQF’s mathematics and implementation</li>
+<li>Impact verification methodology</li>
+<li>Case studies from pilot projects</li>
+<li>Integration guides for developers</li>
+</ul>
+</li>
+<li>Live demo at Gitcoin-aligned events</li>
+<li>Virtual workshops with projects</li>
+<li>Regular progress updates on Gitcoin Forum</li>
+<li>Regular community calls demonstrating impact verification tools</li>
+<li>Community presentation showcasing IQF’s first funding round results</li>
+</ul>
+<p>We’ll maintain continuous engagement through the full development cycle, ensuring the Gitcoin community understands both the technical innovation and practical impact of IQF.</p>
+<h1><a name="benefits-8" class="anchor" href="https://gov.gitcoin.co#benefits-8"></a>Benefits</h1>
+<p><strong>Impact Passport</strong></p>
+<ul>
+<li>Can be used in any mechanism, not just in Impact Quadratic Funding</li>
+<li>Reduces over-reliance in any one kind of metric, as different impact evaluators have different metrics that they evaluate for</li>
+<li>Positions Gitcoin as the central platform where every evaluator in the space tries to get included as a stamp</li>
+</ul>
+<p><strong>Impact Quadratic Funding</strong></p>
+<ul>
+<li>Bakes in impact directly into the funding mechanism</li>
+<li>Allows donors or grant operators to measure the impact of their capital allocation</li>
+<li>Allocates ecosystem incentives to the most impactful projects</li>
+</ul>
+<h1><a name="drawbacks-9" class="anchor" href="https://gov.gitcoin.co#drawbacks-9"></a>Drawbacks</h1>
+<p><strong>Technical Challenges</strong></p>
+<ul>
+<li>
+<p>Risk: Scalability issues with impact verification<br>
+Mitigation: Implementing batch processing and optimized data pipelines</p>
+</li>
+<li>
+<p>Risk: Smart contract limitations with Allo protocol<br>
+Mitigation: Working closely with Gitcoin/Allo team</p>
+</li>
+</ul>
+<p><strong>Adoption Challenges</strong></p>
+<ul>
+<li>
+<p>Risk: Complex onboarding for projects<br>
+Mitigation: Creating simplified mobile-first interfaces and local language support</p>
+</li>
+<li>
+<p>Risk: Impact verification delays<br>
+Mitigation: Building redundant verification pathways and automated monitoring</p>
+</li>
+</ul>
+<p><strong>Market Challenges</strong></p>
+<ul>
+<li>Risk: Insufficient matching pool</li>
+<li>Risk: Project quality variation<br>
+Mitigation: Standardized impact metrics and tiered verification system</li>
+</ul>
+<h1><a name="budget-overview-10" class="anchor" href="https://gov.gitcoin.co#budget-overview-10"></a>Budget Overview</h1>
+<ul>
+<li>Smart Contract Development: $10K</li>
+<li>Impact Passport Hub Platform: $10k</li>
+<li>Impact Passport Stamp Integrations: $10k</li>
+<li>Technical Documentation, Education, Community Building: $5k</li>
+</ul>
+<p>Total budget requested: $35k</p>
+<h1><a name="measures-of-success-and-kpis-11" class="anchor" href="https://gov.gitcoin.co#measures-of-success-and-kpis-11"></a><strong>Measures of success and KPIs</strong></h1>
+<p>Success Criteria</p>
+<ul>
+<li>Technical
+<ul>
+<li>Successful processing of all impact verifications</li>
+</ul>
+</li>
+<li>Impact
+<ul>
+<li>10+ active projects</li>
+<li>$10K+ in contributions processed</li>
+<li>3+ successful impact verification cycles</li>
+</ul>
+</li>
+<li>Community
+<ul>
+<li>4+ technical integrations</li>
+<li>Published case studies from pilot projects</li>
+</ul>
+</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Phase</th>
+<th>Success Metrics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Month 1</td>
+<td>Technical Foundation</td>
+<td>* Documentation of impact verification API<br>* Published technical specification for impact passport</td>
+</tr>
+<tr>
+<td>Month 2</td>
+<td>Creation of Impact Passport Hub</td>
+<td>* Open-sourced Github Repo of our Impact Passport Hub<br>* Users can sign in with their wallet, view their Gitcoin project on the portal, and view possible impact stamps to verify with</td>
+</tr>
+<tr>
+<td>Month 3</td>
+<td>Integration &amp; Testing</td>
+<td>* Successful processing of test transactions<br>* Open-source repository with technical documentation</td>
+</tr>
+<tr>
+<td>Month 4</td>
+<td>Pilot Preparation</td>
+<td>* 10 completed impact passports<br>* Published API documentation<br>* Completed UI/UX testing</td>
+</tr>
+<tr>
+<td>Month 5</td>
+<td>Launch &amp; Validation</td>
+<td>* Minimum $10K total contributions processed<br>* Successfully executed matching calculations<br>* 100% of funds distributed correctly<br>* Published transparency report</td>
+</tr>
+</tbody>
+</table>
+</div><h1><a name="the-team-12" class="anchor" href="https://gov.gitcoin.co#the-team-12"></a>The Team</h1>
+<p>David Dao (@<a href="https://x.com/dwddao" rel="noopener nofollow ugc">dwddao</a>)<br>
+Sejal (@<a href="https://x.com/sejal_rekhan" rel="noopener nofollow ugc">sejal_rekhan</a>) (will not be paid due to conflict of interest)<br>
+Sharfy (@<a href="https://x.com/sharfyae" rel="noopener nofollow ugc">sharfyae</a>)<br>
+Shuhei (@<a href="https://x.com/shutanaka_jp" rel="noopener nofollow ugc">shutanaka_jp)<br>
+</a>Devansh (@<a href="https://x.com/TheDevanshMehta" rel="noopener nofollow ugc">TheDevanshMehta</a>)<br>
+Carl Barrdahl (<a href="https://x.com/carlbarrdahl" rel="noopener nofollow ugc">@carlbarrdahl</a>)</p>
+<h1><a name="advisors-13" class="anchor" href="https://gov.gitcoin.co#advisors-13"></a>Advisors</h1>
+<p>LauNaMu | Metrics Garden (@<a href="https://x.com/0xyNaMu" rel="noopener nofollow ugc">0xyNaMu</a>)<br>
+Mahesh | Karma GAP (@<a href="https://x.com/mvmurthy" rel="noopener nofollow ugc">mvmurthy</a>)</p>
+          <p><a href="https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizen-grants-gcp-impact-passports-and-impact-quadratic-funding-impactqf/19712/1
+        Thu, 05 Dec 2024 19:10:17 +0000
+gov.gitcoin.co-post-19712-1
+Citizen Grants GCP - Impact Passports and Impact Quadratic Funding (ImpactQF)
+      
+
+

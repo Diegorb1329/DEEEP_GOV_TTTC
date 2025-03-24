@@ -1,0 +1,293 @@
+
+
+
+Grants Stack Product Reflections: GG18
+https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423
+    Hi all -- I recently posted a twitter thread about Grants Stack product during GG18 that I wanted to capture on the forum as well!
+
+Setting the stage: I joined Gitcoin ~3 months ago to lead product for Grants Stack. Grants Stack launched publicly in May as a new dApp for grants managers that Gitcoin's PGF team also used to run GG18.
+
+**TL;DR**: lots of work to do and things to build, but I feel pretty good about Grants Stack during GG18!
+
+Why?
+- Number of donations almost 3x beta round & 2x alpha
+- Team addressed top 3 pieces of feedback from beta
+- Big increase in product performance/stability from beta
+
+**Improvements from Beta Round**
+We addressed the top pieces of feedback we got during the beta round: gas fees, checkout UX, and donation history. We built features/workflows to address each of these. 
+
+We dramatically improved product stability and decreased the number of high-impact bugs (~10 -> 3)!
+
+We also strengthened our internal support processes with clear escalation guidelines, communication channels, and a bug priority matrix that helped our teams be more efficient in resolving bugs and better communicate with users who were impacted by them.
+
+**Feedback from GG18**
+We received some great feedback during GG18 & I’m SO grateful to the people who took the time to engage and share. Thank you all!!
+
+On the grantee side, we heard two primary frustrations: an inability to edit applications after submission, as well as lack of visibility into rejection rationale.
+
+Making applications un-editable was purposeful to reduce fraud, but ultimately not the right decision! it's caused too much friction and we plan to change. The timeline is still TBD because there's some contract work to read from the project registry directly instead of capturing a snapshot.
+
+On rejection rationale, we've been discussing two paths forward...
+`1` Continue review process as-is & provide comments or criteria fields for rejection transparency
+`2` Move reviews process to "filter out spam only" and require applicants to stake GTC (which is then slashed if found to be spam/fraud)
+*Would love to hear what you would do in our shoes!*
+
+Donor feedback primarily centered around better discovery and browsing. We hear you :) We're already working on a redesign and looking forward to your feedback as we roll it out. We're planning to start with branding updates, search, sort/filter, and ability to browse all projects (vs select round first). We're also considering how we might use ML to auto-tag or categorize grants since we have a relatively rich text library to build on. If you're interesting in contributing to this project, please let us know!
+
+Finally, we also heard frustration with the Passport experience -- which the awesome Passport team is constantly digesting and adjusting to solve for! In Grants Stack, we're exploring changing the default score or evolving to a sliding scale vs binary passing threshold.
+
+**Finally...**
+I'd be remiss not to note, again, how grateful I am to our community for engaging, supporting, and giving feedback during this round! I'm attaching a screenshot from an internal tool (Productboard) where we tag and categorize all of the feedback we receive. It's one of our greatest assets as a product/dev squad!
+![F44dslmaMAAGyfY|481x500](upload://x8HRzU8PsfzGQrSNnDm95uOOslh.jpeg)
+
+
+We know we have a lot to build and improve, but we're committed to continually improving the product so that communities can invest in what matters to them. Public goods are good :revolving_hearts:
+Wed, 06 Sep 2023 15:07:36 +0000
+⚙️ Grants Lab
+
+
+Grants Stack Product Reflections: GG18
+meglister
+
+            <p>Thanks, <a class="mention" href="https://gov.gitcoin.co/u/fractalvisions">@FractalVisions</a> ! Appreciate the thorough response. Since your feedback is centered on how the PGF team (acting as a grants manager who uses Grants Stack) configures rounds, so I’m tagging PGF leads <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> and <a class="mention" href="https://gov.gitcoin.co/u/m0nkeyfl0wer">@M0nkeyFl0wer</a> so they can review!</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/8
+        Wed, 06 Sep 2023 15:07:36 +0000
+gov.gitcoin.co-post-16423-8
+Grants Stack Product Reflections: GG18
+      
+
+Grants Stack Product Reflections: GG18
+FractalVisions
+
+            <aside class="quote no-group" data-username="meglister" data-post="1" data-topic="16423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/meglister/48/9618_2.png" class="avatar"> meglister:</div>
+<blockquote>
+<p>On rejection rationale, we’ve been discussing two paths forward…<br>
+<code>1</code> Continue review process as-is &amp; provide comments or criteria fields for rejection transparency<br>
+<code>2</code> Move reviews process to “filter out spam only” and require applicants to stake GTC (which is then slashed if found to be spam/fraud)<br>
+<em>Would love to hear what you would do in our shoes!</em></p>
+</blockquote>
+</aside>
+<p>Hello <img src="https://gov.gitcoin.co/images/emoji/twitter/wave.png?v=12" title=":wave:" class="emoji" alt=":wave:" loading="lazy" width="20" height="20"> Meg…!</p>
+<ol>
+<li>The process of applying for a grant comes with a lack of understanding about the category that one may or may not fall into.</li>
+</ol>
+<p>For ourselves we found it difficult to decide whether to choose Open Source Software due to the fact that we have no intention to share our product prior to deployment.</p>
+<ol start="2">
+<li>There is also a lack of transparency within the grant application process from the decision made by the elected grant council.</li>
+</ol>
+<p>In order to provide a fair and unbiased review for grantees it is crucial to rotate review council members during the intake process.</p>
+<p>This will prevent any outside coordination efforts to eliminate certain groups or individuals from participating in the grant cycle with ill intent.</p>
+<p>It is also important to note <img src="https://gov.gitcoin.co/images/emoji/twitter/memo.png?v=12" title=":memo:" class="emoji" alt=":memo:" loading="lazy" width="20" height="20"> who the review committee is when a grant is reviewed. That way the transparency of who was involved with the process is not hidden from the public. It will also assist the grantees in determining who they need to speak with to provide additional information if a denial decision has been made.</p>
+<p>This also prevents a council member from making biased judgments over and over again.<br>
+Which could be detrimental to the overall health and growth of the ecosystem.</p>
+<ol start="3">
+<li>A scoring rubric will allow grantees who received a denial from Gitcoin the opportunity to view their strengths &amp; weaknesses for the next grant application opportunity.</li>
+</ol>
+<p>I have included a link to the Scoring Rubric from the Optimism Grants ecosystem to provide an example for Gitcoin.</p>
+<p>This type of information is crucial to the development growth of a team especially when an applicant is denied &amp; required to increase their score in order to qualify for the next proposal application.</p>
+<aside class="onebox googledocs" data-onebox-src="https://docs.google.com/spreadsheets/d/1ozeet5kgLOOXZZp9GJ2HOfUr1BjSJ3_FXzo3LTdmCek/edit">
+  <header class="source">
+
+      <a href="https://docs.google.com/spreadsheets/d/1ozeet5kgLOOXZZp9GJ2HOfUr1BjSJ3_FXzo3LTdmCek/edit" target="_blank" rel="noopener nofollow ugc">docs.google.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <a href="https://docs.google.com/spreadsheets/d/1ozeet5kgLOOXZZp9GJ2HOfUr1BjSJ3_FXzo3LTdmCek/edit" target="_blank" rel="noopener nofollow ugc"><span class="googledocs-onebox-logo g-sheets-logo"></span></a>
+
+<h3><a href="https://docs.google.com/spreadsheets/d/1ozeet5kgLOOXZZp9GJ2HOfUr1BjSJ3_FXzo3LTdmCek/edit" target="_blank" rel="noopener nofollow ugc">Rubrics S4C14</a></h3>
+
+<p>Experiments Rubric
+
+Experiments Rubric
+Score,0,1,2,3,4,5
+Reach,Reaches a low or insignificant number of OP users,Reaches a moderate number of OP users,Reaches a large number of prospective OP users,Reaches an expansive set of prospective OP...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<ol start="4">
+<li>Allowing a review phase with additional feedback from the review council to help determine whether or not a project should be considered will improve the overall experience of the applicants.</li>
+</ol>
+<p>Being able to work through the bumps or kinks of an application with guidance from the review committee ensures that participants are well aware of the guidelines they must follow when applying for a grant.</p>
+<p>This type of transparency increases the trust of community members and builds a stronger alignment of the vision &amp; mission that Gitcoin has provided in order to help fuel the movement of public goods funding.</p>
+<p>That’s my two cents for the morning…!</p>
+<p>Have a great day Gitcoin family.</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/7
+        Wed, 06 Sep 2023 13:23:03 +0000
+gov.gitcoin.co-post-16423-7
+Grants Stack Product Reflections: GG18
+      
+
+Grants Stack Product Reflections: GG18
+Viriya
+
+            <p>This is super helpful info <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a>. Pulled some key CTAs and bits of info to communicate on Twitter from this so thanks for that.</p>
+<p>Super interested to further understand how grantee staking might work. Would love to involve grantees from the global south in that design process as I think they’ll probably be the hardest hit by the move (even if necessary <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> )</p>
+<p>+1 on discoverability functions. Lists were incredibly useful on cgrants for marketing purposes.</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/6
+        Tue, 05 Sep 2023 15:27:55 +0000
+gov.gitcoin.co-post-16423-6
+Grants Stack Product Reflections: GG18
+      
+
+Grants Stack Product Reflections: GG18
+meglister
+
+            <p>Thanks for the kind words <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> and <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> !</p>
+<p>I’m personally leaning towards the 2nd (create transparent decision criteria) vs staking. Grantees are worried about the friction that staking creates, plus I’m mindful that we’re trying to support and grow direct grants that have a clear precedent for decision matrixes (and not a strong use case for staking.)</p>
+<p>Will keep you posted, roadmap is always publicly available: <a href="https://docs.google.com/spreadsheets/d/1ckMnZWXeJzMfrg8C1g305OE1cRFWaULnu2rpKhnbTdE/edit#gid=0" class="inline-onebox" rel="noopener nofollow ugc">Grants Stack Roadmap - Google Sheets</a></p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/5
+        Mon, 04 Sep 2023 22:22:33 +0000
+gov.gitcoin.co-post-16423-5
+Grants Stack Product Reflections: GG18
+      
+
+Grants Stack Product Reflections: GG18
+wasabi
+
+            <aside class="quote no-group" data-username="meglister" data-post="1" data-topic="16423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/meglister/48/9618_2.png" class="avatar"> meglister:</div>
+<blockquote>
+<p>Finally, we also heard frustration with the Passport experience – which the awesome Passport team is constantly digesting and adjusting to solve for! In Grants Stack, we’re exploring changing the default score or evolving to a sliding scale vs binary passing threshold.</p>
+</blockquote>
+</aside>
+<p>Yes!!! Dynamic Matching is coming!</p>
+<p>Higher passport score = higher matching until it reaches the Matching Cap.</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/4
+        Fri, 01 Sep 2023 14:17:44 +0000
+gov.gitcoin.co-post-16423-4
+Grants Stack Product Reflections: GG18
+      
+
+Grants Stack Product Reflections: GG18
+owocki
+
+            <aside class="quote no-group" data-username="meglister" data-post="1" data-topic="16423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/meglister/48/9618_2.png" class="avatar"> meglister:</div>
+<blockquote>
+<p>I’m attaching a screenshot from an internal tool (Productboard) where we tag and categorize all of the feedback we receive. It’s one of our greatest assets as a product/dev squad!</p>
+</blockquote>
+</aside>
+<p>wow, very decisive data  to see that discoverability is far and away the winning item!</p>
+<aside class="quote no-group" data-username="meglister" data-post="1" data-topic="16423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/meglister/48/9618_2.png" class="avatar"> meglister:</div>
+<blockquote>
+<p>. We’re planning to start with branding updates, search, sort/filter, and ability to browse all projects (vs select round first)</p>
+</blockquote>
+</aside>
+<p>I think these changes would be a huge win for discoverability.</p>
+<p>Of course I’d also like to be able to share collections of grants that I recommend to my friends.</p>
+<p>I’d be interested in helping the community build tools for discoverability that aren’t in grants stack that help with this.  Apps like funding.social that provide new ways of discovering grants.   I bet there is a bunch of different innovative ways we could help people navigate the grants registry.</p>
+<aside class="quote no-group" data-username="meglister" data-post="1" data-topic="16423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/meglister/48/9618_2.png" class="avatar"> meglister:</div>
+<blockquote>
+<p>On rejection rationale, we’ve been discussing two paths forward…</p>
+</blockquote>
+</aside>
+<p>It seems like the primary feedback from the community is “the rejection decisions seem arbitrary or qualitative”.  I think that both path forwards seem like a good step forward, but I tend to lean towards the second.</p>
+<aside class="quote no-group" data-username="meglister" data-post="1" data-topic="16423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/meglister/48/9618_2.png" class="avatar"> meglister:</div>
+<blockquote>
+<p>I’d be remiss not to note, again, how grateful I am to our community for engaging, supporting, and giving feedback during this round!</p>
+</blockquote>
+</aside>
+<p>I heard from many people that they really appreciated hearing directly from you on twitter (where the conversation lives) about their feedback. There were a number of situations where someone posted a frustration with Gitcoin and you calmy, empathetically, and rationally dug into it and defused thte situation.  I think it was great “work in public” style leadership, kudos.</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/3
+        Fri, 01 Sep 2023 13:28:52 +0000
+gov.gitcoin.co-post-16423-3
+Grants Stack Product Reflections: GG18
+      
+
+Grants Stack Product Reflections: GG18
+jengajojo
+
+            <p>Thanks for all your hardwork <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a></p>
+<aside class="quote no-group" data-username="meglister" data-post="1" data-topic="16423">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/meglister/48/9618_2.png" class="avatar"> meglister:</div>
+<blockquote>
+<p>Move reviews process to “filter out spam only” and require applicants to stake GTC (which is then slashed if found to be spam/fraud)</p>
+</blockquote>
+</aside>
+<p>this approach is great at aligning incentives and reducing the overhead for reviews as compared to option 1</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/2
+        Fri, 01 Sep 2023 07:55:01 +0000
+gov.gitcoin.co-post-16423-2
+Grants Stack Product Reflections: GG18
+      
+
+Grants Stack Product Reflections: GG18
+meglister
+
+            <p>Hi all – I recently posted a twitter thread about Grants Stack product during GG18 that I wanted to capture on the forum as well!</p>
+<p>Setting the stage: I joined Gitcoin ~3 months ago to lead product for Grants Stack. Grants Stack launched publicly in May as a new dApp for grants managers that Gitcoin’s PGF team also used to run GG18.</p>
+<p><strong>TL;DR</strong>: lots of work to do and things to build, but I feel pretty good about Grants Stack during GG18!</p>
+<p>Why?</p>
+<ul>
+<li>Number of donations almost 3x beta round &amp; 2x alpha</li>
+<li>Team addressed top 3 pieces of feedback from beta</li>
+<li>Big increase in product performance/stability from beta</li>
+</ul>
+<p><strong>Improvements from Beta Round</strong><br>
+We addressed the top pieces of feedback we got during the beta round: gas fees, checkout UX, and donation history. We built features/workflows to address each of these.</p>
+<p>We dramatically improved product stability and decreased the number of high-impact bugs (~10 → 3)!</p>
+<p>We also strengthened our internal support processes with clear escalation guidelines, communication channels, and a bug priority matrix that helped our teams be more efficient in resolving bugs and better communicate with users who were impacted by them.</p>
+<p><strong>Feedback from GG18</strong><br>
+We received some great feedback during GG18 &amp; I’m SO grateful to the people who took the time to engage and share. Thank you all!!</p>
+<p>On the grantee side, we heard two primary frustrations: an inability to edit applications after submission, as well as lack of visibility into rejection rationale.</p>
+<p>Making applications un-editable was purposeful to reduce fraud, but ultimately not the right decision! it’s caused too much friction and we plan to change. The timeline is still TBD because there’s some contract work to read from the project registry directly instead of capturing a snapshot.</p>
+<p>On rejection rationale, we’ve been discussing two paths forward…<br>
+<code>1</code> Continue review process as-is &amp; provide comments or criteria fields for rejection transparency<br>
+<code>2</code> Move reviews process to “filter out spam only” and require applicants to stake GTC (which is then slashed if found to be spam/fraud)<br>
+<em>Would love to hear what you would do in our shoes!</em></p>
+<p>Donor feedback primarily centered around better discovery and browsing. We hear you <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> We’re already working on a redesign and looking forward to your feedback as we roll it out. We’re planning to start with branding updates, search, sort/filter, and ability to browse all projects (vs select round first). We’re also considering how we might use ML to auto-tag or categorize grants since we have a relatively rich text library to build on. If you’re interesting in contributing to this project, please let us know!</p>
+<p>Finally, we also heard frustration with the Passport experience – which the awesome Passport team is constantly digesting and adjusting to solve for! In Grants Stack, we’re exploring changing the default score or evolving to a sliding scale vs binary passing threshold.</p>
+<p><strong>Finally…</strong><br>
+I’d be remiss not to note, again, how grateful I am to our community for engaging, supporting, and giving feedback during this round! I’m attaching a screenshot from an internal tool (Productboard) where we tag and categorize all of the feedback we receive. It’s one of our greatest assets as a product/dev squad!<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e843b882fea6748bb66dd04bb4e4bf6002da9e27.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/e843b882fea6748bb66dd04bb4e4bf6002da9e27" title="F44dslmaMAAGyfY"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e843b882fea6748bb66dd04bb4e4bf6002da9e27_2_481x500.jpeg" alt="F44dslmaMAAGyfY" data-base62-sha1="x8HRzU8PsfzGQrSNnDm95uOOslh" width="481" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e843b882fea6748bb66dd04bb4e4bf6002da9e27_2_481x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e843b882fea6748bb66dd04bb4e4bf6002da9e27_2_721x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e843b882fea6748bb66dd04bb4e4bf6002da9e27_2_962x1000.jpeg 2x" data-dominant-color="F0F2F4"></a></div><p></p>
+<p>We know we have a lot to build and improve, but we’re committed to continually improving the product so that communities can invest in what matters to them. Public goods are good <img src="https://gov.gitcoin.co/images/emoji/twitter/revolving_hearts.png?v=12" title=":revolving_hearts:" class="emoji" alt=":revolving_hearts:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423/1
+        Thu, 31 Aug 2023 19:28:53 +0000
+gov.gitcoin.co-post-16423-1
+Grants Stack Product Reflections: GG18
+      
+
+

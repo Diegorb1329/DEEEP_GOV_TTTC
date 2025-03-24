@@ -1,0 +1,626 @@
+
+
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224
+    This is the integrated funding proposal for the Fraud Detection & Defense (FDD) Workstream requesting funding for Season 15 (1 August 2022 through 31 October 2022).
+# Essential Intents
+
+In S15, FDD has components of our work that focus on all four of the DAO's Essential Intents - though our priorities will be on the following EIs in the given order:
+
+* Grant Program Success
+* Protocol Adoption
+* DAO Organization & Financial Sustainability
+
+More Information on the Essential Intents can be found in this [post](https://gov.gitcoin.co/t/update-gitcoindaos-adopted-purpose-and-essential-intents/10984).
+
+# TL;DR
+
+In Season 15, FDD aims to provide the Gitcoin community with the knowledge that matching funds are allocated as optimally as possible within the given set of assumptions and constraints. One focus will be operationally executing the fraud detection & defense needs of the Gitcoin main/Ethereum round & any other community moderated rounds. The second is assisting Gitcoin Product Collective with operational insights, quantitative analysis, and algorithmic/mechanism design research. 
+
+**Based on what we learned in Season 14**, we will improve our communication during the season to remove confusion regarding FDD priorities, purpose, and alignment with GitcoinDAO.
+
+> 💡For more context regarding our vision, the current state of FDD and more please refer to the [📄supplement document](https://docs.google.com/document/d/1727t0mGF8GxndFwcUH8b04ct3ACWRRqufSTrQ0bAMOE/edit?usp=sharing).
+
+# Amount
+
+FDD is requesting **$349,500**. This budget does not include the additional 60 days of reserves. Breakdown of the budget per budget category and initiative can be found at the end.
+
+|Gitcoin Season|Season 15|Season 14|Season 13|
+|---|---|---|---|
+|FDD Season Budget|$349,500|$330,000|$596,295|
+|FDD Season Reserves|$233,000|$220,000|$596,295|
+|Unspent Reserves % ***1)***|100%|100%|100%|
+|Treasury Request ***2)***|$362,500|$281,041|$879,590|
+
+***1)** The amount of GTC requested and the value of the reserves will be adjusted based on the current market value at the time this proposal is moved to Tally using the lower of the current price or the 20 day moving average, whichever is lower.*
+
+***2)** The Season 15 treasury request amount is an estimate using the price of $2.99 GTC to calculate the total of the reserves rolled over from Season 14.*
+
+
+
+
+# Milestone Report
+
+
+**Legend**
+:green_circle: Success
+:yellow_circle: Incomplete, will hit goal or priority change
+:red_circle: Incomplete, will not hit goal
+:black_circle: Canceled - out of workstream's control
+
+
+|Initiative|Objectives Past Season<br>|Value Delivered|
+|---|---|---|
+|**Grant Eligibility**<br><br>Executes the critical functions associated with grant eligibility reviews, disputes, and appeals.<br>|🟢 Reviews and approve/deny new grant applications in under 48 hours<br><br>🟢 Ensures all disputes and appeals are heard and executed<br><br>🟢 In depth review of suspect grants to ensure minimal improper matching allocation<br><br>🟢 Ensure a proper functioning integration from Grants 1.0 backend to Ethelo<br><br>🟢 Provide data to be used in evaluating reviewer decision making issues at scale|Over 3,000 evaluations at a 39% lower cost of review<br><br>Over $80k reallocated/squelched based on suspected Sybil/Fraud investigations<br><br>Average time for appeals was brought below 96 hours allowing for in-round results<br><br>We used Ethelo to acquire over 400 reviews of the main round disputes to compare to our results with 3 “classes” of reviewers including anyone, DAO Contributors, and trusted reviewers|
+|**Data Operations**<br><br>Data center which handles access control, ETL, and process automation.|🟢 Runs the end-to-end process used in production to detect sybil accounts<br><br>🟢 Supports other FDD dev ops needs & liason with Gitcoin DevOps team<br><br>🟢 Executes post round data analysis for grants round governance brief<br><br>🟢 Identifies continually evolving sybil behavior to be codified in the detection system<br><br>🟢 Statistically validates the algorithm and directly squelching sybil users<br><br>🟢 Continually trains the ml algorithm to think like the community, not the engineers<br><br>🟡 Builds containers and automations to make processes consistent and easy to learn|Identified multiple new signals<br><br>It was run every 24 hours throughout the round keeping estimations more in line with final results to improve UX<br><br>Supported Ethelo integration, Community Intelligence, and helped Grants Ops round partner experiment with Ethelo (Not advised by FDD, but supported with DevOps help)<br><br>GR 14 Governance Brief|
+|**Community Intelligence**<br><br>Data analysis, model prototyping & validation, and sybil strategy center.|🟢 Data analysis to find the best models for passport sybil defense<br><br>🟢 Identifies new opportunities (low hanging fruit} for additional data-driven sybil detection strategies which leverage the data already collected<br><br>🟢 Fulfills opportunities & requests for further collection and organizing of data<br><br>⚫ Prototyping new features and models before pushing them into production<br>Kyle/Joe agreement to put community model on hold<br><br>⚫ Open source feature engineering pipeline turns behavior patterns into <br>passport stamps<br>Kyle/Joe agreement to put community model on hold|Analysis of onchain behavior<br><br>Done. Presentation for GPC on 8/3<br><br>Identified 3 new models to lower human evaluator time to insight<br><br>Designed contributor DNA<br><br>Provided recommendations to GPC Passport team for high signal stamp opportunities<br><br>Ran data analysis for GR14 contribution insights across rounds|
+|**FDD OS**<br><br>Core operations & communications supporting FDD squads and contributors.|🟢 Funds and directs the roles requested by DAOops<br><br>🟢 DAO facing collaboration point to help communicate FDD role in the DAO<br><br>🟢 Building on last season deep dive understanding of Is FDD successful in it’s mandate<br><br>🟢 Facilitates and synthesizes bottoms-up and top-down input to draft FDD outcomes<br><br>🟢 Ensures that contributors are able to focus on the primary problems to be solved<br><br>🟢 Creates accountability for outcome owners via strategic cadence and collaborative decision making processes which are seen as legitimate<br><br>🟡 Building dashboards for stewards & FDD with FDD round over round metrics<br>Put on the backburner due to delay of Kyle/Joe alignment.<br><br>⚫ Removes key person issues from the workstream: <br>Not realistic this season with the even/overs from CSDO|Roles were implemented and executed peer reviews, compensation evaluation, and onboarding training. <br><br>FDD Review is a series of posts started to provide honest critique <br><br>WS Retros, Outcome Discovery, and Budget Discovery brought bottoms-up ideas together with GitcoinOS budget planning.<br><br>Async working agreement lowered the required meeting hours while Work-in-Public sessions gained voluntary participation helping to spread context and share methodologies.<br><br>A decision making process agreement was passed and used.|
+|**Passport Truthseekers**<br><br>Pure research finding insights & sybil stories.|⚫ Creates patterns to be engineered for Passport to allow for specific GitcoinDAO uses<br><br>⚫ Provides model for grant review stamps to be sent to user passports: <br>Kyle/Joe agreement to hold this budget until fully aligned with GPC. Ended up not starting this squad. Moved work to Community Intelligence and Data Operations.||
+
+
+# S15 Objectives
+Based on the streamlining and aligning efforts of our work preceding S14, we consolidated our initiatives once more and will focus on 5 key objectives for Season 15.
+
+In addition we are outlining our **Always-on  Commitments** as well as **Shared S15 Commitments** with other workstreams and/or teams of GitcoinDAO in the [📄supplement doc](https://docs.google.com/document/d/1727t0mGF8GxndFwcUH8b04ct3ACWRRqufSTrQ0bAMOE/edit).
+## List of S15 Objectives
+
+|Initiative<br>(Essential Intent)|S15 Objective|Metrics|Key Results <br>Likely Deliverables / Projects|
+|---|---|---|---|
+|**Grants Eligibility**<br>(EI: Grants Program Success)|The Gitcoin community can reliably expect that the platform is free of fraudulent grants and that main round eligibility approvals, disputes and appeals are consistently and fairly executed in a reasonable time frame.|* Average Time to Review < 48 hrs<br>* Average Time to Appeal Resolution < 96 hours<br>* Benchmark Appeal Success Rate<br>* Amount Saved by Investigations<br>* Output an FDD eligibility score for every new grant application<br>|- Gather data for scoring experimentation<br>- Partner with Grants ops to improve flow<br>- Create a a transparent and priortized backlog of observations for GPC|
+|**Contributor Fraud**<br><br>(EI: Grants Program Success)|The Gitcoin community will have confidence that matching funds are not misallocated because of sybil accounts during GR15.<br><br>|* Provide understanding of sybil impact<br>** Fraud Tax Estimate<br>** Fraud Tax without Trust Bonus<br>** Fraud Tax without Squelching<br>* Average Passport Score of Sybil Acct<br>* Estimated Sybil Incidence / Flagging Sybil Incidence<br>* Inter-reviewer Reliability <br>|- Add heuristic escape hatches to SAD algorithm<br>- Improve the accuracy of the SAD algorithm<br>- Create framework of reports which can expedite behavior classification<br>- Execution of always on functions|
+|**Data Empowerment**<br><br>(EI: Protocol Adoption)| FDD will empower the community by enabling the crowdsourcing of raw, anonymized data and approaches to data analysis, increasing the insight discovery rate, and resulting in a plurality of Sybil detection mechanisms  <br>|* Open API Endpoint<br>* Useful Insights from the Community<br>* Data Coverage: available / existing data<br>* Data availability: failed/total requests<br>* Ease of access and usage<br>* Data Contest/Hackathon Participation<br>* Number of useful data sets<br>* Number of users requesting data<br><br><br>|- Finish cloud setup including querying & processing for ETL pipelines, ML ops flow, and a well documented data repo<br>- Create a plan to improve the  community access to data without being a service provider<br>- Build a front end for participatory data science <br>- Build an API for dashboarding and automated reporting<br>- Host a post grant round data hackathon rewarding analysis deemed useful by judges across other workstreams & FDD|
+|**Protocol Research**<br><br>(EI: Protocol Adoption)|Insights from processes, analysis, algorithmic research, & mechanism design research provided by FDD will aid in the acceleration of development and adoption of Grant & identity protocols.|* Passport Stamp Recommendations Approved by GPC Passport<br>* Trust Bonus to SAD Gap<br>* Number of Valuable Insights Generated for GPC/MC<br>* Key Partner Satisfaction Score<br>** Passport - Leon<br>** Grant Hub - Michelle<br>** Identity Staking - Brent<br>|- Passport Collaboration: Recommendations for high signal stamps, a scoring algorithm for S15, and a post round analysis<br>- Identity Staking Collaboration: Specifying collaboration now with Moonshot team<br>- Cost of Forgery Discovery: Design a scoring algorithm which can provide sybil guarantees up to a $ amount of goods received and supporting math proofs<br>- Grant Hub/Round Manager Collaboration: Provide at minimum 3 scoring outputs from FDD grant reviews<br>- Review Protocol: Identify incentive mechanisms for sustainable sybil hunting|
+|**FDD OS**<br><br>(EI: DAO Organization, Financial Sustainability)|FDD will seamlessly interface with Gitcoin OS in a way that increases cross workstream collaboration, executes on deliverables, and provides a rewarding contributor experience.|* Execution Health: # of healthy OKRs<br>* Compensation/Happiness Ratio<br>* Initiative Velocity: Task/Initiative by Weeks Passed<br>|- Build FDD Contributor Dashboard with metrics<br>- Build FDD House of Tasks to better track progress<br>- Establish mid-season OKR health check-ins<br>- Regulary post new articles on Gitcoin's Gov Forum<br>- Have a seasonal, vibey, shared and celebrational ritual to help facilitate L.E.A.R.Ning from our mistakes<br>- Run CX Survey / Satisfaction Review<br>- Conduct a facilitated process with Stewards to guide FDD priorities<br>- Create visualized product/FDD roadmap for upcoming seasons<br><br><br><br><br>|
+
+
+
+
+# Budget Breakdown
+
+
+## View: USD per Initiative
+
+|Initiative|Amount USD|%|
+|---|---|---|
+|Grants Eligibility<br>(Grants Program Success)|$63,000|18.0%|
+|Contributor Fraud<br>(Grants Program Success)|$84,250|24.1%|
+|Data Empowerment<br>(Protocol Adoption)|$80,000|22.9%|
+|Protocol Research<br>(Protocol Adoption)|$54,250|15.5%|
+|FDD OS<br>(DAO Organization, Financial Sustainability)|$68,000|19.5%|
+|**Total**|**$349,500**|**100.0%**|
+
+
+## View: USD per Category
+
+|Budget Category|Description|Amount USD|
+|---|---|---|
+|Core Contributors|2 WS Leads<br>Product Manager (Joe)<br>Project Manager (Tigress)<br><br>4 Initiative Leads<br>Grants Eligibility (Zer8)<br>Contributor Fraud (SirL)<br>Protocol Research (Kish)<br>Data Empowerment (Zen) <br><br>1 Technical Lead<br>Data Science (Omni)<br><br>1 Data Analyst (Adebola)<br>|$238,500|
+|Trusted Contributors|Technial Writer & Science SME (J-Cook)<br>DeSoc SME (Carl)<br>Data Science SME (Takuya) <br>Analyst (Sorana)<br>SWE (Eric & Yogeesh)|$52,000|
+|Hiring, Bounties, HIT Roles|Data engineer New Hire - $25k<br>Bounties & SaaS - $7,5k<br>Human Evaluations (SAD) - $5k<br>Grant Reviews - $15k<br>Accounting - $6,5k|$59,000|
+|**Total**||**$349,500**|
+Mon, 22 Aug 2022 14:40:35 +0000
+📜 Proposals
+
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+Jodi_GitcoinDAO
+
+            <p>I was referring to FDD’s GIA OKR this season:</p>
+<aside class="quote no-group" data-username="tigress" data-post="1" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/t/a587f6/48.png" class="avatar"> tigress:</div>
+<blockquote>
+<ul>
+<li>Partner with Grants ops to improve flow</li>
+</ul>
+</blockquote>
+</aside>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/28
+        Mon, 22 Aug 2022 14:40:35 +0000
+gov.gitcoin.co-post-11224-28
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+ZER8
+
+            <p>Thank you for the kind words Jodi! <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="Jodi_GitcoinDAO" data-post="26" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jodi_gitcoindao/48/5712_2.png" class="avatar"> Jodi_GitcoinDAO:</div>
+<blockquote>
+<p>Also excited to see how the Grants Eligibility flow changes for the better!</p>
+</blockquote>
+</aside>
+<p>Hmm, can you detail more please? We are always looking for feedback and if we can improve in any way I would love to hear your opinions <img src="https://gov.gitcoin.co/images/emoji/twitter/sparkles.png?v=12" title=":sparkles:" class="emoji" alt=":sparkles:" loading="lazy" width="20" height="20"></p>
+<p>FYI. The main obstacle of GE has been the fact that the rounds were coupled and we had to “balance” everything as objectively as we could(from a review, appeal, dispute standpoint + the fact that we had to “filter” through a lot of old grants that started to game the system + the grant investigations which are “complex” at times to say the least).</p>
+<p>All of this + the big DAO shifts = FDD love <img src="https://gov.gitcoin.co/images/emoji/twitter/rofl.png?v=12" title=":rofl:" class="emoji" alt=":rofl:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/blue_heart.png?v=12" title=":blue_heart:" class="emoji" alt=":blue_heart:" loading="lazy" width="20" height="20"></p>
+<p>PS. I agree that we can always improve, in fact if we don’t constantly innovate, we will become obsoleteee</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/27">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/27
+        Mon, 22 Aug 2022 11:54:35 +0000
+gov.gitcoin.co-post-11224-27
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+Jodi_GitcoinDAO
+
+            <p>I’m always impressed by the willingness and speed that FDD receives and integrates feedback. That’s abundantly evident in the clarity of this proposal.</p>
+<p>As the data insights experts, I’m most excited to see the recommendations and discoveries that the team makes under protocol research.  Also excited to see how the Grants Eligibility flow changes for the better!</p>
+<p>I’ll be voting yes on this budget.</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/26">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/26
+        Wed, 17 Aug 2022 23:31:06 +0000
+gov.gitcoin.co-post-11224-26
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+ZER8
+
+            <p>Thank you Annika! <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="annika" data-post="24" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>To continue to increase collaboration with PGF as we look to jointly define how we manage policy &amp; eligibility in a protocol world</p>
+</blockquote>
+</aside>
+<p>We will surely continue and improve coordination on those areas, it will not be a simple task, but we will again have even more observations/insights/data that will allow us to better define how we should approach this. In a protocol future ideally policy should  be just an “update” and maybe also a crowdsourced/community one.</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/25">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/25
+        Wed, 17 Aug 2022 14:49:54 +0000
+gov.gitcoin.co-post-11224-25
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+annika
+
+            <p>I echo others’ feedback on this proposal and will be voting yes.</p>
+<p>FDD has come leaps &amp; bounds since even last season on its communication of the budget. The simplicity and clarity of this request is a breath of fresh air and one that other workstreams (mine included!) can learn from.</p>
+<p>I hope for two things for FDD for S15:</p>
+<ul>
+<li>To continue this simplification/communication effort, in all its other facets beyond just the budget (IMO the FDD Discord norms, team structures, and often the slides/visuals shared are still often hard-to-understand and slightly overwhelming)</li>
+<li>To continue to increase collaboration with PGF as we look to jointly define how we manage policy &amp; eligibility in a protocol world</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/24
+        Wed, 17 Aug 2022 14:16:06 +0000
+gov.gitcoin.co-post-11224-24
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+linda
+
+            <p>I’m supportive of this budget after reviewing it at a high level and seeing the positive comments from stewards especially those who worked closely with the workstream on feedback. I also appreciate the clear breakdown and info in the budget request.</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/23
+        Tue, 16 Aug 2022 23:41:00 +0000
+gov.gitcoin.co-post-11224-23
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+Sirlupinwatson
+
+            <p>Hi everyone!</p>
+<p>Proposal is up on <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x8a9aecd06894687d7c527d1ec2fff09bdbcb2ed82ef3e761413f84a3e0c6d767" rel="noopener nofollow ugc">Snapshot</a></p>
+<p>You have until the 20 August to cast your vote!</p>
+<p>Thank you for your time, we really appreciate it!</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/krrisis">@krrisis</a> <a class="mention" href="https://gov.gitcoin.co/u/pop">@Pop</a> <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> <a class="mention" href="https://gov.gitcoin.co/u/tjayrush">@tjayrush</a> <a class="mention" href="https://gov.gitcoin.co/u/fishbiscuit">@Fishbiscuit</a></p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/22
+        Mon, 15 Aug 2022 20:46:34 +0000
+gov.gitcoin.co-post-11224-22
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+krrisis
+
+            <p>I have not reviewed this budget in-depth on the forum, but I’ve read the positive reviews by the other Stewards under this proposal, and I’ve also read the initial proposal during the CSDO planning meetings. Based on this I will vote yes on this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/21
+        Mon, 15 Aug 2022 17:22:25 +0000
+gov.gitcoin.co-post-11224-21
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+nategosselin
+
+            <p>I want to echo the other comments here: this is a well-written proposal that makes it really easy to see how FDD’s work aligns with the rest of the DAO — thank you! I appreciate all the effort that went into driving that alignment and am supportive of the budget as proposed.</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/20
+        Mon, 15 Aug 2022 16:29:11 +0000
+gov.gitcoin.co-post-11224-20
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+sidcode
+
+            <p>The infographic and the original post are quite comprehensive, as is echoed in other comments! The budget allocation for different objectives also seems aligned with the goals of the DAO while keeping a long-term view of the treasury.</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/19
+        Mon, 15 Aug 2022 16:18:52 +0000
+gov.gitcoin.co-post-11224-19
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+Fishbiscuit
+
+            <p>I’ve followed FDD’s budget ever since FDD was first formed and I found that reading this current iteration was a breeze. So kudos to the team!</p>
+<p><strong>Good</strong></p>
+<ul>
+<li>great job for S14, executing on everything and even going the extra mile with lowering the cost of reviews</li>
+<li>liked how y’all engaged <a class="mention" href="https://gov.gitcoin.co/u/epowell101">@epowell101</a> and gave them a warm welcome to Gitcoin’s governance forum and process</li>
+<li>liked how you involved some of your reviewers! Thank you for your service <a class="mention" href="https://gov.gitcoin.co/u/annanna96">@AnnAnna96</a> ( I see a fellow person born in '96) and <a class="mention" href="https://gov.gitcoin.co/u/romeonebun">@romeonebun</a>
+</li>
+</ul>
+<p><strong>Could improve</strong></p>
+<ul>
+<li>would really like to see FDD take on some thought leadership about its data operations. What is being done here is truly unique and could definitely benefit the ecosystem at large</li>
+<li>I think during one of our calls we reframed FDD’s role as ensuring efficient capital allocation. I hope to see more of this in your thinking about FDD’s value not just within Gitcoin but to the ecosystem at large especially when looking at the future of Gitcoin as a protocol</li>
+</ul>
+<p><strong>Looking forward</strong></p>
+<ul>
+<li>we’re working on grantee engagement next season over at PGF and grantees always tend to have issues about reviews, appeals etc. Looking forward to improving this user experience!</li>
+</ul>
+<p>Overall, thank you for your hard work and forward to S15</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/18
+        Mon, 15 Aug 2022 16:18:20 +0000
+gov.gitcoin.co-post-11224-18
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+romeonebun
+
+            <p>Amazing to see that the FDD budget request is getting good feedback. As a random web3 dude, grant reviewing was an amazing experience and I was just happy to use the skills I developed when investing in crypto to help allocate matching. It felt that we had an impact overall, I was a little confused when I heard that we could no longer continue reviewing. I was one of the newest reviewers, but people like <a class="mention" href="https://gov.gitcoin.co/u/annanna96">@AnnAnna96</a> <a class="mention" href="https://gov.gitcoin.co/u/ijeblowrider">@ijeblowrider</a> emmanuel were really working hard and when comparing the result with their review it seemed that their reviews were accurate <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/17
+        Sat, 13 Aug 2022 15:38:02 +0000
+gov.gitcoin.co-post-11224-17
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+kyle
+
+            <p>I will echo the appreciation and sentiment on the clarity of the budget and clear division of work across the four key areas.</p>
+<p>I know there are already conversations happening around how might we further embed some of the work FDD is doing with other teams (PGF, Passport dev, etc.) and I love the idea of exploring this as part of S15. Specifically to make sure collaboration is strong and we are focused on the protocol future.</p>
+<p>I am supportive of the budget as proposed. I think throughout S15 I would want to confirm ownership of specific areas are well defined (ie, where Grants review lives, where protocol research lives). This could leave more room in the FDD mandate to support data research, data access and developing integration with other tools (perhaps aura).</p>
+<p>Thanks again for the work to get us to this point!</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/16
+        Wed, 10 Aug 2022 15:24:09 +0000
+gov.gitcoin.co-post-11224-16
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+ZER8
+
+            <p>Thank you Simona, as a initiative lead in the FDD it is very comforting to know that the FDD is seen as properly aligned with the rest of the DAO and it’s EI. <img src="https://emoji.discourse-cdn.com/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/15
+        Tue, 09 Aug 2022 16:48:58 +0000
+gov.gitcoin.co-post-11224-15
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+Pop
+
+            <aside class="quote no-group" data-username="tjayrush" data-post="4" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tjayrush/48/41_2.png" class="avatar"> tjayrush:</div>
+<blockquote>
+<p>This budget is by far the best (i.e. most easily understood) budget I’ve seen and I’ve been looking for a long time. Huge thanks to everyone involved.</p>
+</blockquote>
+</aside>
+<p>Fully echoing this by <a class="mention" href="https://gov.gitcoin.co/u/tjayrush">@tjayrush</a> and I am delighted to see FDD not only embracing the new budget template but really working to expand on the clarity and transparency aspects of budget proposals. Having discussed this with the reviewing stewards, I am supportive of this ask and feel it in line with delivering on the EIs listed for S15.</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/14
+        Tue, 09 Aug 2022 15:58:47 +0000
+gov.gitcoin.co-post-11224-14
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+tigress
+
+            <blockquote>
+<p><em>A big <strong>thank you</strong> to all who have invested their energy in supporting us to make our proposal better.</em> <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+<p>Since we were able to receive feedback early in the process, we came in already with great alignment. Based on the most recent conversations and your comments we decided that there weren’t any (major) changes to be integrated.</p>
+<p>We are moving straight forward to the integrated state of the budget request.</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/13
+        Tue, 09 Aug 2022 11:04:13 +0000
+gov.gitcoin.co-post-11224-13
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+AnnAnna96
+
+            <p>Hello, <a class="mention" href="https://gov.gitcoin.co/u/tigress">@tigress</a> I’m glad to see the FDD budget posted here<br>
+First I just wanna say I love to be a grant reviewer and part of the FDD and Gitcoin. The vibes are awesome, I love to catch bad projects, bad actors/ sybils <img src="https://emoji.discourse-cdn.com/twitter/blue_heart.png?v=12" title=":blue_heart:" class="emoji" alt=":blue_heart:" loading="lazy" width="20" height="20"><br>
+One aspect I really don’t understand is why we got so much push back on grant reviews when we were very effective as a group and managed to protect Gitcoin for 4 seasons. <img src="https://emoji.discourse-cdn.com/twitter/innocent.png?v=12" title=":innocent:" class="emoji" alt=":innocent:" loading="lazy" width="20" height="20"><br>
+I agree that maybe we should have been more proactive or maybe more involved in the DAO as a whole, but we are still here <img src="https://emoji.discourse-cdn.com/twitter/100.png?v=12" title=":100:" class="emoji" alt=":100:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/12
+        Mon, 08 Aug 2022 14:54:43 +0000
+gov.gitcoin.co-post-11224-12
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+ZER8
+
+            <p>Hello epowell. I’m glad to see that our cool FDD NFT has landed in your hands <img src="https://emoji.discourse-cdn.com/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/11
+        Mon, 08 Aug 2022 10:41:15 +0000
+gov.gitcoin.co-post-11224-11
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="epowell101" data-post="9" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<p>I’m a big believer in a sure sign of a good org being some people are “disagreeing and committing.” That’s the sense I got from your post which speaks highly IMO both of FDD’s quality and that the overall DAO is making tough decisions (setting aside whether or not they are correct :)).</p>
+</blockquote>
+</aside>
+<p>This is exactly what has happened. We had disagreements, but have committed to alignment with CSDO, the other workstream leads, rather than go our own way. This doesn’t mean the conversation is over though! You can see more of this thinking in public and pushing to sway the overton window here <a href="https://gov.gitcoin.co/t/characterizing-the-sybil-resistance-problem/11235/6" class="inline-onebox">Knowledge Transfer: Characterizing the Sybil Resistance Problem - #6 by DisruptionJoe</a></p>
+<p>There is something particularly magical about rewarding passionate and dedicated contrarians of simple majorities.</p>
+<aside class="quote no-group" data-username="epowell101" data-post="9" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<p>I’m super curious about the 4 listed areas and overall the notion of relevant digital public infrastructure.</p>
+</blockquote>
+</aside>
+<p>I think these are the genuine areas of difference of opinion. A couple may be “too early” and others may be misunderstood or poorly explained. Overall, I hope people will understand that we wanted to answer your question honestly, but they shouldn’t over-index on that answer.</p>
+<p>I think this part says more about the bigger context story than anything else:</p>
+<aside class="quote no-group" data-username="tigress" data-post="8" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/t/a587f6/48.png" class="avatar"> tigress:</div>
+<blockquote>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/raised_hands.png?v=12" title=":raised_hands:" class="emoji" alt=":raised_hands:" loading="lazy" width="20" height="20"> We like to highlight that alignment efforts made by other workstreams, especially GPC, since last budget season have made <strong>drastic improvements</strong> for us in all the mentioned areas. We do feel the results of better communication about these issues. <img src="https://gov.gitcoin.co/images/emoji/twitter/blue_heart.png?v=12" title=":blue_heart:" class="emoji" alt=":blue_heart:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+</aside>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/10
+        Mon, 08 Aug 2022 10:16:52 +0000
+gov.gitcoin.co-post-11224-10
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+epowell101
+
+            <p>I seem to have stepped in it a bit w/ my <img src="https://emoji.discourse-cdn.com/twitter/hot_pepper.png?v=12" title=":hot_pepper:" class="emoji" alt=":hot_pepper:" loading="lazy" width="20" height="20"> question.</p>
+<p>I’m a big believer in a sure sign of a good org being some people are “disagreeing and committing.”  That’s the sense I got from your post which speaks highly IMO both of FDD’s quality and that the overall DAO is making tough decisions (setting aside whether or not they are correct :)).</p>
+<p>That said, as someone w/ too much experience in the old open source world &amp; starting stuff &amp; now DAO metagovernance largely via Wildfire - I’m super curious about the 4 listed areas and overall the notion of relevant digital public infrastructure. If I could be useful as a volunteer in listening, helping to further crystalize, and so on please count me in.  I’ll ping you on the channels as well.</p>
+<p>BTW thanks all for the NFT.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7be23d741f644e433d8c0a226178686455606dd3.jpeg" data-download-href="/uploads/short-url/hFVrEcQpD7ECbxZYTR7Jj4w0d7J.jpeg?dl=1" title="fdd epowell101" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/7/7be23d741f644e433d8c0a226178686455606dd3_2_353x500.jpeg" alt="fdd epowell101" data-base62-sha1="hFVrEcQpD7ECbxZYTR7Jj4w0d7J" width="353" height="500" srcset="/uploads/db4391/optimized/2X/7/7be23d741f644e433d8c0a226178686455606dd3_2_353x500.jpeg, /uploads/db4391/optimized/2X/7/7be23d741f644e433d8c0a226178686455606dd3_2_529x750.jpeg 1.5x, /uploads/db4391/optimized/2X/7/7be23d741f644e433d8c0a226178686455606dd3_2_706x1000.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/7/7be23d741f644e433d8c0a226178686455606dd3_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/9
+        Sun, 07 Aug 2022 22:53:01 +0000
+gov.gitcoin.co-post-11224-9
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+tigress
+
+            <p>Thank you <a class="mention" href="https://gov.gitcoin.co/u/epowell101">@epowell101</a> for your feedback.</p>
+<p>Here are our answers to your questions:</p>
+<p><strong>Question <img src="https://gov.gitcoin.co/images/emoji/twitter/one.png?v=12" title=":one:" class="emoji" alt=":one:" loading="lazy" width="20" height="20"></strong></p>
+<aside class="quote no-group" data-username="epowell101" data-post="7" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<ul>
+<li>where does cloud or data center spending show up?</li>
+</ul>
+</blockquote>
+</aside>
+<p>Spendings for software as a service does show up in the budget breakdown. However, the visibility of SaaS expenses could have been outlined more clearly.</p>
+<aside class="quote no-group" data-username="tigress" data-post="1" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/t/a587f6/48.png" class="avatar"> tigress:</div>
+<blockquote>
+<p>Bounties &amp; SaaS - $7,5k</p>
+</blockquote>
+</aside>
+<p>SaaS expenses for cloud / data center are considered to be part of the initiative <strong>Data Empowerment</strong> in our percentage split estimates. The current cost is &lt; $250/month for Google Cloud Platform &amp; Github.</p>
+<p>At some point we might look into and explore decentralized cloud solutions.</p>
+<p><strong>Question <img src="https://gov.gitcoin.co/images/emoji/twitter/two.png?v=12" title=":two:" class="emoji" alt=":two:" loading="lazy" width="20" height="20"></strong></p>
+<aside class="quote no-group" data-username="epowell101" data-post="7" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<ul>
+<li>do we anticipate it growing as we gather more data?</li>
+</ul>
+</blockquote>
+</aside>
+<p>Yes, but not a significantly (&lt; $1,000 monthly) anytime in the next 3-6 months. Much of what we are doing is making</p>
+<ul>
+<li>great documentation for which subgraphs and open web3 APIs are best</li>
+<li>keeping current data sets clean for crowdsourced analysis.</li>
+</ul>
+<p>Neither FDD nor our initiative Data Empowerment is intended to be a data services organization.</p>
+<p><strong>Question <img src="https://gov.gitcoin.co/images/emoji/twitter/three.png?v=12" title=":three:" class="emoji" alt=":three:" loading="lazy" width="20" height="20"></strong></p>
+<aside class="quote no-group" data-username="epowell101" data-post="7" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<p>would FDD potentially generate revenues in the future as other platforms embrace Grants 2.0 and need “our” / your protective services?</p>
+</blockquote>
+</aside>
+<p><em>This is a spicy <img src="https://gov.gitcoin.co/images/emoji/twitter/hot_pepper.png?v=12" title=":hot_pepper:" class="emoji" alt=":hot_pepper:" loading="lazy" width="20" height="20">question.</em></p>
+<p>Our current answer is:  We highlight that FDD is aiming to protocolize solutions, not to be a services company of any sort. That said, there are definitely avenues for monetization including spinning out a service DAO or even building and owning digital public infrastructure for sharing data, feature and model engineering for ML, and crowdsourcing data science insights.</p>
+<p>However, one could argue and ask: why does protocolizing seem to be at odds with generating revenue? Which one applies:</p>
+<ol>
+<li>Revenue XOR Protocolizing</li>
+<li>Revenue OR Protocolizing</li>
+</ol>
+<p>The need is for buy in from the rest of the DAO and stewards to give us the freedom to discover where the value is.</p>
+<p>To make that happen, the stewards community would have to reconsider their decision, because they voted DOWN a discovery for a revenue-generating sybil detection DAO. We understood that the driver behind this decision was continually viewing attempts of revenue generation as “defecting”.</p>
+<p><strong>Question <img src="https://gov.gitcoin.co/images/emoji/twitter/four.png?v=12" title=":four:" class="emoji" alt=":four:" loading="lazy" width="20" height="20"></strong></p>
+<aside class="quote no-group" data-username="epowell101" data-post="7" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<p>What have been the most difficult areas of responsibility to clarify between FDD and other workstreams?</p>
+</blockquote>
+</aside>
+<p><a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> has been leading most of alignment conversions and he outlines:</p>
+<p>One area is our work toward solutions which decentralize the moderation inputs to a grant round. User and grant moderation is one of our core competencies. Our bottoms up suggestions all recommend that we build digital public infrastructure to sustainably serve these needs in a credibly neutral way that is equally accessible to all the communities that will run their own rounds in the future.</p>
+<p>The stewards, guided by a few strong opinions, however, have pushed us to centralize our efforts for efficiency and simply execute until a time when the other workstreams can design protocol-based solutions. One of our strengths is Protocol Research. We believe our research could be much better utilized to align roadmaps and context awareness across the DAO.</p>
+<p>Here are some hands-on examples:<br>
+Example 1 - Using Ethelo for scaling grant reviews<br>
+Example 2 - Discovery for Sybil Detection DAO<br>
+Example 3 - Shutting down the community model only to be wowed by a presentation of on-chain features.</p>
+<p>And …</p>
+<p>The best example - We couldn’t get our contributors’ Data Access to cGrants database until last season for all but Blockscience. We couldn’t tinker with data to improve rounds over rounds.</p>
+<p>So then we literally moved the whole SAD model to be run by the DAO with no way to get or check data other than requesting it from Blockscience and scraping it. (We didn’t have any access to data prior to season 14.)</p>
+<blockquote>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/raised_hands.png?v=12" title=":raised_hands:" class="emoji" alt=":raised_hands:" loading="lazy" width="20" height="20"> We like to highlight that alignment efforts made by other workstreams, especially GPC, since last budget season have made <strong>drastic improvements</strong> for us in all the mentioned areas. We do feel the results of better communication about these issues. <img src="https://gov.gitcoin.co/images/emoji/twitter/blue_heart.png?v=12" title=":blue_heart:" class="emoji" alt=":blue_heart:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+<p>Hope this helps <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/8
+        Fri, 05 Aug 2022 13:36:10 +0000
+gov.gitcoin.co-post-11224-8
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+epowell101
+
+            <p>At the risk of being repetitive this season - what a great write-up!  Thank you for this clear write-up and for all the work you do to secure the credibility of Gitcoin et al</p>
+<p>Just a couple of quick ones:</p>
+<ul>
+<li>where does cloud or data center spending show up?</li>
+<li>do we anticipate it growing as we gather more data?</li>
+<li>would FDD potentially generate revenues in the future as other platforms embrace Grants 2.0 and need “our” / your protective services?</li>
+</ul>
+<p>What have been the most difficult areas of responsibility to clarify between FDD and other workstreams?</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/7
+        Thu, 04 Aug 2022 21:59:12 +0000
+gov.gitcoin.co-post-11224-7
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="Fred" data-post="5" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/fred/48/3799_2.png" class="avatar"> Fred:</div>
+<blockquote>
+<p>FDD for example does not present a list of full time and part time contributors so that information can’t be added to this visual at this time. Also a bit tricky as WS use the term “core contributors” differently.</p>
+</blockquote>
+</aside>
+<p>For the record, we have been pushing to get a definition of the term core contributors at CSDO. How do you see the other streams defining it differently?</p>
+<p>Currently, the 8 core contributors listed can be compared to a full time salary.</p>
+<p>The trusted contributors are hourly ranging from $20/hr to $75 hr.</p>
+<aside class="quote no-group" data-username="Fred" data-post="5" data-topic="11224">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/fred/48/3799_2.png" class="avatar"> Fred:</div>
+<blockquote>
+<p>The recent changes in workstream composition resulted in quite a bit of changes, somehow Zen didn’t make it in my edit earlier, he/she has now been added.</p>
+</blockquote>
+</aside>
+<p>Thanks! I can confirm this is an accurate update of the 8 core contributors for FDD.</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/6
+        Thu, 04 Aug 2022 09:55:02 +0000
+gov.gitcoin.co-post-11224-6
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+Fred
+
+            <p>Thanks for the feedback regarding the visual. Every S15 budget proposal follow a structure that takes care of the broader strokes, but there are still a couple of differences when you really dig into the details. FDD for example does not present a list of full time and part time contributors so that information can’t be added to this visual at this time. Also a bit tricky as WS use the term “core contributors” differently. I hope we can get some unifying rules in place for the non-draft budget proposals.</p>
+<p>The recent changes in workstream composition resulted in quite a bit of changes, somehow Zen didn’t make it in my edit earlier, he/she has now been added.</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/5
+        Wed, 03 Aug 2022 18:48:19 +0000
+gov.gitcoin.co-post-11224-5
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+[S15 Proposal - INTEGRATED] FDD Budget Request
+tjayrush
+
+            <p>This budget is by far the best (i.e. most easily understood) budget I’ve seen and I’ve been looking for a long time. Huge thanks to everyone involved.</p>
+<p>The info-graphic is amazing. Thanks so much for that.</p>
+<p>Request: Can you include the number of full and part time contributors on the info-graphic as this would allow me to do a quick estimate of per hour rates, which, while perhaps somewhat distasteful, are undeniably useful from a “reasonableness” perspective.</p>
+<p>Those numbers appear in the budget doc, but can they be added to the info-graphic? Is the list of contributors at the bottom complete (there are seven)? Is that indicative of the number of contributors?</p>
+          <p><a href="https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s15-proposal-integrated-fdd-budget-request/11224/4
+        Wed, 03 Aug 2022 17:03:11 +0000
+gov.gitcoin.co-post-11224-4
+[S15 Proposal - INTEGRATED] FDD Budget Request
+      
+
+

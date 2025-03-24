@@ -1,0 +1,48 @@
+
+
+
+IRP Research for Gitcoin
+https://gov.gitcoin.co/t/irp-research-for-gitcoin/10340
+    Hello guys,
+
+After @David_Dyor  comment in the [DAO Design Best Practices](https://gov.gitcoin.co/t/dao-design-best-practices/10219) thread, I decided to investigate a little bit more about Incident Response Plan (IRP), to see if it may be interesting for Gitcoin.
+
+My conclusion is that it makes more sense for protocols where smart contracts keep some assets. The best example that I found is from MakerDAO, they call it [Emergency Shutdown](https://docs.makerdao.com/smart-contract-modules/shutdown), which actually is the only one that I found with a clear and well documented IRP.
+
+If I understood properly, Gitcoin doesn't have any protocol that works automatically and has the risk to be exploited. Only one scenario comes to my mind where we could need an IRP for a non-propotol DAO, and also it depends on the kind of DAO's governance (mostly those where 1 token = 1 vote). Which is a person or group of people who get a majority or enough votes to propose and approve an initiative that goes against the DAO mission. Could I, with enough tokens, vote something that hurts the DAO but benefits me?
+
+I checked how the governance works in Gitcoin, and it's not yet clear to me if anyone could make a proposal or proposal should comes always from workstreams. Could a workstream, or individual with enough votes propose to fund a non-open-source project? It doesn't benefit me (at least directly or to your knowledge).
+
+I found an entry in the thread [Gitcoin DAO Governance Process v2 - updated](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v2-updated/7860)  addressing this concern:
+
+![image|690x180](upload://ic8bXY77bOWbZsDvFAIgcP6rat2.png)
+
+
+But is very vague and subject to interpretation, or not addressing all possible scenarios (I may not look for benefiting myself, but just to hurt the DAO...) I would expand that point, protecting the DAO for anything that doesn't align with our mission (whitelisting instead of blacklisting). So anything that is not clear on behalf of the public goods, is not allowed, not even to propose. 
+
+Do we have anybody with a laws background/experience who could redefine this point, making more clear what can be proposed/voted?
+Mon, 11 Apr 2022 15:05:17 +0000
+🤖 DAO Governance and Vision
+
+
+IRP Research for Gitcoin
+Layn
+
+            <p>Hello guys,</p>
+<p>After <a class="mention" href="https://gov.gitcoin.co/u/david_dyor">@David_Dyor</a>  comment in the <a href="https://gov.gitcoin.co/t/dao-design-best-practices/10219">DAO Design Best Practices</a> thread, I decided to investigate a little bit more about Incident Response Plan (IRP), to see if it may be interesting for Gitcoin.</p>
+<p>My conclusion is that it makes more sense for protocols where smart contracts keep some assets. The best example that I found is from MakerDAO, they call it <a href="https://docs.makerdao.com/smart-contract-modules/shutdown" rel="noopener nofollow ugc">Emergency Shutdown</a>, which actually is the only one that I found with a clear and well documented IRP.</p>
+<p>If I understood properly, Gitcoin doesn’t have any protocol that works automatically and has the risk to be exploited. Only one scenario comes to my mind where we could need an IRP for a non-propotol DAO, and also it depends on the kind of DAO’s governance (mostly those where 1 token = 1 vote). Which is a person or group of people who get a majority or enough votes to propose and approve an initiative that goes against the DAO mission. Could I, with enough tokens, vote something that hurts the DAO but benefits me?</p>
+<p>I checked how the governance works in Gitcoin, and it’s not yet clear to me if anyone could make a proposal or proposal should comes always from workstreams. Could a workstream, or individual with enough votes propose to fund a non-open-source project? It doesn’t benefit me (at least directly or to your knowledge).</p>
+<p>I found an entry in the thread <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v2-updated/7860">Gitcoin DAO Governance Process v2 - updated</a>  addressing this concern:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7f86370912a2e12e80b7934c660584e686f08e58.png" data-download-href="/uploads/short-url/ic8bXY77bOWbZsDvFAIgcP6rat2.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/original/2X/7/7f86370912a2e12e80b7934c660584e686f08e58.png" alt="image" data-base62-sha1="ic8bXY77bOWbZsDvFAIgcP6rat2" width="690" height="180" data-small-upload="/uploads/db4391/optimized/2X/7/7f86370912a2e12e80b7934c660584e686f08e58_2_10x10.png"></a></div><p></p>
+<p>But is very vague and subject to interpretation, or not addressing all possible scenarios (I may not look for benefiting myself, but just to hurt the DAO…) I would expand that point, protecting the DAO for anything that doesn’t align with our mission (whitelisting instead of blacklisting). So anything that is not clear on behalf of the public goods, is not allowed, not even to propose.</p>
+<p>Do we have anybody with a laws background/experience who could redefine this point, making more clear what can be proposed/voted?</p>
+          <p><a href="https://gov.gitcoin.co/t/irp-research-for-gitcoin/10340/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/irp-research-for-gitcoin/10340/1
+        Mon, 11 Apr 2022 15:05:17 +0000
+gov.gitcoin.co-post-10340-1
+IRP Research for Gitcoin
+      
+
+

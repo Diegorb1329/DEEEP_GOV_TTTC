@@ -1,0 +1,334 @@
+
+
+
+viaPrize Proposal for Allo Protocol
+https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348
+    This is a proposal that crowdfunded prizes built by viaPrize become one of the funding mechanisms in Allo Protocol.
+
+## TLDR: viaPrize Proposal for Allo Protocol
+
+* Integrate viaPrize's crowdfunded prize system into Allo Protocol
+* Introduce a middle-ground funding option between upfront grants and retroactive funding
+* Implement a three-sided marketplace: idea creators, funders, and builders
+* Aim to increase Allo GMV and attract new funders
+
+viaPrize as a Product of the Gitcoin Community
+
+100% of external funding for viaPrize to date that has supported a full time team of 5 is thanks to over 2,000 donors through several Gitcoin rounds. See more on that [here](https://gov.gitcoin.co/t/gitcoin-appreciations-thread/18332?u=noahchonlee).
+
+We believe this is because we match the values of the community:
+
+-Fully open-source
+-Exploring mechanisms for funding public goods and sharing what we learn
+-Funding worthwhile social and open-source projects
+
+Our Origins
+
+A researcher Noah Chon Lee met in Oxford had a list of ideas that could help the world, but found it too difficult to recruit, negotiate, and manage people to build this. He bet Noah $1000 that he would fail to make a place where he could simply let an idea go and let it grow.
+
+Noah and a friend each adding $50 to prize for building a productivity app that asks you why you are opening your phone and adds a time-out feature to make sure you don’t lose hours of your week thoughtlessly. A random developer won this with Intenty which now has 10,000+ downloads.
+
+During Zuzalu which was funded and partially organized by Gitcoin community members, many people added $20 each to a prize to make an AI voice for a river. Within 5 days, the prize incentivized an impromptu team of 12 to build the first ever AI voice for a nature entity [airiverchat.com](http://airiverchat.com) and presented it to the Prime Minister of Montenegro.
+
+In June, Noah crowdfunded a prize for delivering medical supplies to medics in Ukraine. After driving to the front-lines and narrowly avoiding a kamikaze drone, the successful delivery resulted in the treatment of 45 injured and undoubtedly at least one life saved.
+
+The Team
+
+Using funds donated through Gitcoin, Noah launched “meta-prizes” which motivated 30+ developers worldwide to build features for the platform. From these contributors, we formed a full-time team of 5 people at the start of 2024:
+[Noah Chon Lee](https://x.com/noahchonlee) - CEO
+[Dipanshu Singh](https://github.com/dipanshuhappy) - CTO
+
+[Nithin Varma](http://github.com/Nithin-Varma) - Smart contract developer
+
+[Swaraj Bachu](http://github.com/swarajbachu) - Senior developer
+
+[Aryan Tiwari](http://github.com/arrytiwari) - Senior developer
+
+Our Impact
+
+>$50,000 in funds processed
+>30 prizes won by >70 winners spanning every continent (see open-source projects that won prizes [here](https://github.com/viaprize/winners))
+7 prizes refunded
+
+Advantages of Crowdfunded Prizes
+
+-Prizes balance funder confidence and builder security
+
+![|624x349](upload://xoaLlUcio60nnbwIbaxOaRdZQ6I.png)
+Upfront funding - Paid before built | Prizes - Paid when built | RetroPGF - Paid when impact
+
+Upfront funding with grants maximizes builder security because they already have funds, but lacks any guarantees to funders that what they funded will become reality. This is partially solved by recurring grant rounds with projects that share their progress, but as a donor contributes they can’t be certain that their funds will result in a successfully created project.
+
+OP style Retro PGF maximizes funder confidence because they only fund things once they’ve seen an impact, but builders have no guarantees of funds while they are building.
+
+Crowdfunded prizes find a middle ground where builders know how much money is waiting for them if they succeed and funders know they can be refunded if no one does. In user interviews we have found a segment of previous funders of Gitcoin who would prefer to fund projects in this way. Each has different strengths and weaknesses, and prizes offers a complementary option that will appeal more to certain groups.
+
+-Crowdfunded prizes allow the best ideas to rise to the top
+An idea may gain momentum in a crowdfunded prize marketplace as more people contribute. This allows the incentive for building the idea to grow until a builder decides to pursue it.
+
+-Crowdfunded prizes empower freelancing like an entrepreneur
+Builders may see which ideas have more proven demand in terms of dollar value and from how many people. We’ve found that crowdfunded prizes are quadratic psychologically because the more funders supported a prize the more motivated the builder is.
+In this new model for freelancing, prizes don’t pay builders per hour. They pay them for how much demand the builder fulfills, which is closer to how entrepreneurship works.
+
+-Prizes are an open invitation that welcomes new collaborators
+Prizes fund an idea instead of a particular team.
+Multiple teams may pursue a prize at once, and we ensure that builders are aware of their competition. Builders are self-directed and have fluidity in forming teams.
+A ¼ of the time we’ve found that they enjoy the challenge and compete.
+Roughly ⅜ of the time they talk and decide amongst themselves who will continue because they have the best chance of succeeding.
+Another ⅜ of the time they decide to work together.
+
+An RFP process is less open. Builders bid down until the funder chooses one team upfront based on their reputation and their price.
+In a crowdfunded prize, funders bid up until builders pursue the prize. If there are multiple submissions, judges will choose the best. Choosing who wins is therefore more merit-based than reputation-based. It’s based on any builder who wants to prove themselves showing evidence of their work instead of funders guessing upfront who they think will do the best.
+More on RFP vs Prizes [here](https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/3?u=noahchonlee)
+
+-Prizes are hyper-efficient (because they’re fun)
+In academic literature, prizes are known as inducement prize contests and are labeled a “hyper-efficient” economic system. This basically means that people are more motivated to accomplish something for the same amount of money because it is presented in a way that is more fun. Prizes motivated Charles Lindbergh to cross the ocean (Orteigh Prize), resulted in the first non-government flight to space (Ansari XPrize), and we’ve all seen how hackathon prizes motivate intense effort. Imagine you have $10,000 and one weekend to build something.
+If you hired programmers in the Bay Area at their usual per hour rate, you might afford 3-10 hackers for a couple days.
+Now add that $10,000 to a prize that brings 100 hackers for a weekend. They will work far harder and be much more motivated.
+
+-Weaknesses of Prizes
+
+No upfront funding. If a builder needs a certain amount of capital to even get started on a project, prizes alone will not work.
+We look forward to seeing a future with multiple funding mechanisms working in conjunction such as a team receiving a QF grant, using the funds to recruit team members through prizes, and receiving retroPGF as their impact is seen.
+
+Theoretically, upset builders from wasted or duplicated efforts. However, we actually have yet to see any builders who were upset that they did not win or that someone else won. In fact, we’ve found this creates a playful environment where anyone can sharpen their skills by trying to build something helpful and not worry about following through on a hard commitment such as in an RFP.
+
+Time spent judging and communicating. If there are many submissions, then reviewing these may take time.
+
+The Mechanism
+
+Prizes are a 3 sided marketplace:
+-Person who adds the idea
+-Funders of the idea
+-Builders of the idea
+
+The same individual can fill 1, 2, or all 3 of the roles.
+
+![|624x352](upload://rRWKHX2BX5oKjyi6d0ZgD2zHX1E.jpeg)
+See this [thread](https://x.com/viaprize/status/1798655359424344244) for more info and feel free to ask questions to our chatbot in [viaprize.org
+](http://viaprize.org)1. Someone adds an prize proposal including a submission deadline, a voting deadline, and either “custom judges” or “funders are judges.”
+2. Admins review the idea and make sure it has a clear end-state, giving feedback as necessary
+3. The idea is posted as a prize that is ready to accept funds
+4. Submissions are open until the deadline. If there are none, the prize is refunded. If there are >0, voting begins.
+5. Either custom judges or the funders are notified to vote on winners or vote on a refund. Voting is directly proportional, meaning that if someone added 10% of the funds then they have 10% of the voting power. Unused votes are allocated according to used votes. If a submission or if “refund” receives 10% of the used votes, it will receive 10% of the prize pool. If all votes are used, then each funder is simply directing where their own money goes.
+6. A 48 hour dispute window begins at the end of voting. If no builder disputes the results, funds are automatically disbursed. If there is a dispute, the funds are frozen until admins review the results. We can assign admins for all prizes or for individual prizes.
+
+Whoever wins a viaPrize is who did the best, rather than who did it first.
+
+Note this difference from bounties.
+![image|500x500](upload://1x2LEPxMdLowPIBPi3WxmrZQDFQ.jpeg)
+
+
+See our crowdfunded prize smart contract [here
+](https://github.com/viaprize/viaprize/blob/new-contracts/apps/contracts/contracts/v2/prizes/prizesNew.sol)Strategic Value
+
+The north star metric for Gitcoin is Allo GMV. Adding crowdfunded prizes as a part of Allo helps increase this number. While $50,000 is not a lot right now, the rate of this number is accelerating. Prizes offer different strengths and weaknesses compared to other available mechanisms and therefore appeal to different funders.
+
+This also strengthens a partnership with the viaPrize team who have built a system for [fiat contributions both for QF](https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287) and for crowdfunded prizes which makes these mechanisms accessible to 1000x more users.
+
+As well as this, viaPrize is proof that you can create an impactful project funded solely through Allo.
+Wed, 18 Sep 2024 14:05:42 +0000
+🤝 Partnerships
+
+
+viaPrize Proposal for Allo Protocol
+katalunia
+
+            <p>Thanks Noah! Should have a checkout bridging flow to demo in the next couple of weeks <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>As Meg said, a true multichain/fiat solution will come after 2.1</p>
+          <p><a href="https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/9
+        Wed, 18 Sep 2024 13:56:01 +0000
+gov.gitcoin.co-post-19348-9
+viaPrize Proposal for Allo Protocol
+      
+
+viaPrize Proposal for Allo Protocol
+noahchonlee
+
+            <p>Oh sweet! Would love to chat with <a class="mention" href="https://gov.gitcoin.co/u/katalunia">@katalunia</a> to know the approach for multi-chain</p>
+          <p><a href="https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/8
+        Wed, 18 Sep 2024 12:58:14 +0000
+gov.gitcoin.co-post-19348-8
+viaPrize Proposal for Allo Protocol
+      
+
+viaPrize Proposal for Allo Protocol
+meglister
+
+            <p>Great to hear! I know <a class="mention" href="https://gov.gitcoin.co/u/katalunia">@katalunia</a> is working with the team on multi-chain and we have a MVP working that she might be able to show you. Improved version of multi-chain + fiat checkout is likely unlocked post-Allo 2.1 upgrade!</p>
+          <p><a href="https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/7
+        Tue, 17 Sep 2024 12:14:56 +0000
+gov.gitcoin.co-post-19348-7
+viaPrize Proposal for Allo Protocol
+      
+
+viaPrize Proposal for Allo Protocol
+noahchonlee
+
+            <p>Ok super helpful call with Henry</p>
+<p>For context, basically in the yeeter RFP thread (<a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/3" class="inline-onebox">RFP - Allo Yeeter Build - #3 by noahchonlee</a>) I asked if it would be a good idea to get builders interested in that project through a prize. Rena responded that sounds great and Sov brought up that it would be best if this matches Gitcoin’s north star of having more volume through Allo.</p>
+<p>So I wondered if we could align viaPrize goal of having people launch prizes and Gitcoin’s goal of more volume through allo if we added crowdfunded prizes as one of the mechanisms in allo.</p>
+<p>However this would require much more dev work than simply adding the crowdfunded prize smart contract to the github as one of the allocation strategies as v 2.1 of allo is meant to be more modular and interoperable.</p>
+<p>In conclusion, great idea and thankful for the help understanding it but it’s not something we’re prioritizing right now. If people want to launch prizes with viaprize that’s awesome and it supports our project which exists thanks to the Gitcoin ecosystem, but we’re not going to be a mechanism in Allo right now.</p>
+<p>In part this is because we’re seeing how much demand there is for building out multi-chain and fiat capabilities to existing platforms, so we’re looking at if that is the most helpful way to use our time with the Gitcoin ecosystem.</p>
+<p>I plan to make another thread focused on showing estimated impact of adding fiat and multi-chain to grants stack and our plan on how this could be implemented</p>
+          <p><a href="https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/6
+        Fri, 13 Sep 2024 17:53:07 +0000
+gov.gitcoin.co-post-19348-6
+viaPrize Proposal for Allo Protocol
+      
+
+viaPrize Proposal for Allo Protocol
+noahchonlee
+
+            <p>Ah sounds like I’ll ask during that call for clarification</p>
+          <p><a href="https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/5
+        Thu, 12 Sep 2024 23:13:39 +0000
+gov.gitcoin.co-post-19348-5
+viaPrize Proposal for Allo Protocol
+      
+
+viaPrize Proposal for Allo Protocol
+meglister
+
+            <p>awesome! FWIW the same applies to new mechanisms – you don’t need permission from Gitcoin, though we’re happy to help you get started. Sounds like you’re already on that track with Henry!</p>
+          <p><a href="https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/4
+        Thu, 12 Sep 2024 22:56:15 +0000
+gov.gitcoin.co-post-19348-4
+viaPrize Proposal for Allo Protocol
+      
+
+viaPrize Proposal for Allo Protocol
+noahchonlee
+
+            <p>Hi Meg thank you!! The idea isn’t just to build it on existing Allo mechanisms but to add the crowdfunded prize smart contract as one of the mechanisms<br>
+For other updates thank you to Sov and Owocki who added some comments to the draft of this post so we made some adjustments, posted here, and calling with Henry tomorrow</p>
+          <p><a href="https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/3
+        Thu, 12 Sep 2024 20:30:37 +0000
+gov.gitcoin.co-post-19348-3
+viaPrize Proposal for Allo Protocol
+      
+
+viaPrize Proposal for Allo Protocol
+meglister
+
+            <p>hey <a class="mention" href="https://gov.gitcoin.co/u/noahchonlee">@noahchonlee</a> , thanks for the proposal! I’m a fan of viaPrize and so excited to see the grantee → builder evolution you all are demonstrating.</p>
+<p>Trying to wrap my head around what the ask is, exactly. It is permissionless to build this strategy on Allo – so if you’re looking for permission or encouragement, you’ve got it! <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> If there are other resources requested, would be helpful to understand what they are and make the business case for GMV accrued thru the strategy and match investment to that.</p>
+          <p><a href="https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/2
+        Thu, 12 Sep 2024 16:12:01 +0000
+gov.gitcoin.co-post-19348-2
+viaPrize Proposal for Allo Protocol
+      
+
+viaPrize Proposal for Allo Protocol
+noahchonlee
+
+            <p>This is a proposal that crowdfunded prizes built by viaPrize become one of the funding mechanisms in Allo Protocol.</p>
+<h2><a name="tldr-viaprize-proposal-for-allo-protocol-1" class="anchor" href="https://gov.gitcoin.co#tldr-viaprize-proposal-for-allo-protocol-1"></a>TLDR: viaPrize Proposal for Allo Protocol</h2>
+<ul>
+<li>Integrate viaPrize’s crowdfunded prize system into Allo Protocol</li>
+<li>Introduce a middle-ground funding option between upfront grants and retroactive funding</li>
+<li>Implement a three-sided marketplace: idea creators, funders, and builders</li>
+<li>Aim to increase Allo GMV and attract new funders</li>
+</ul>
+<p>viaPrize as a Product of the Gitcoin Community</p>
+<p>100% of external funding for viaPrize to date that has supported a full time team of 5 is thanks to over 2,000 donors through several Gitcoin rounds. See more on that <a href="https://gov.gitcoin.co/t/gitcoin-appreciations-thread/18332">here</a>.</p>
+<p>We believe this is because we match the values of the community:</p>
+<p>-Fully open-source<br>
+-Exploring mechanisms for funding public goods and sharing what we learn<br>
+-Funding worthwhile social and open-source projects</p>
+<p>Our Origins</p>
+<p>A researcher Noah Chon Lee met in Oxford had a list of ideas that could help the world, but found it too difficult to recruit, negotiate, and manage people to build this. He bet Noah $1000 that he would fail to make a place where he could simply let an idea go and let it grow.</p>
+<p>Noah and a friend each adding $50 to prize for building a productivity app that asks you why you are opening your phone and adds a time-out feature to make sure you don’t lose hours of your week thoughtlessly. A random developer won this with Intenty which now has 10,000+ downloads.</p>
+<p>During Zuzalu which was funded and partially organized by Gitcoin community members, many people added $20 each to a prize to make an AI voice for a river. Within 5 days, the prize incentivized an impromptu team of 12 to build the first ever AI voice for a nature entity <a href="http://airiverchat.com" rel="noopener nofollow ugc">airiverchat.com</a> and presented it to the Prime Minister of Montenegro.</p>
+<p>In June, Noah crowdfunded a prize for delivering medical supplies to medics in Ukraine. After driving to the front-lines and narrowly avoiding a kamikaze drone, the successful delivery resulted in the treatment of 45 injured and undoubtedly at least one life saved.</p>
+<p>The Team</p>
+<p>Using funds donated through Gitcoin, Noah launched “meta-prizes” which motivated 30+ developers worldwide to build features for the platform. From these contributors, we formed a full-time team of 5 people at the start of 2024:<br>
+<a href="https://x.com/noahchonlee" rel="noopener nofollow ugc">Noah Chon Lee</a> - CEO<br>
+<a href="https://github.com/dipanshuhappy" rel="noopener nofollow ugc">Dipanshu Singh</a> - CTO</p>
+<p><a href="http://github.com/Nithin-Varma" rel="noopener nofollow ugc">Nithin Varma</a> - Smart contract developer</p>
+<p><a href="http://github.com/swarajbachu" rel="noopener nofollow ugc">Swaraj Bachu</a> - Senior developer</p>
+<p><a href="http://github.com/arrytiwari" rel="noopener nofollow ugc">Aryan Tiwari</a> - Senior developer</p>
+<p>Our Impact</p>
+<blockquote>
+<p>$50,000 in funds processed<br>
+30 prizes won by &gt;70 winners spanning every continent (see open-source projects that won prizes <a href="https://github.com/viaprize/winners" rel="noopener nofollow ugc">here</a>)<br>
+7 prizes refunded</p>
+</blockquote>
+<p>Advantages of Crowdfunded Prizes</p>
+<p>-Prizes balance funder confidence and builder security</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/ea0348ac4b3978840fe94ba5237d343892213c38.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/ea0348ac4b3978840fe94ba5237d343892213c38" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/ea0348ac4b3978840fe94ba5237d343892213c38_2_624x349.png" alt="" data-base62-sha1="xoaLlUcio60nnbwIbaxOaRdZQ6I" width="624" height="349" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/ea0348ac4b3978840fe94ba5237d343892213c38_2_624x349.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/ea0348ac4b3978840fe94ba5237d343892213c38_2_936x523.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/e/ea0348ac4b3978840fe94ba5237d343892213c38.png 2x" data-dominant-color="3A4A64"></a></div><br>
+Upfront funding - Paid before built | Prizes - Paid when built | RetroPGF - Paid when impact<p></p>
+<p>Upfront funding with grants maximizes builder security because they already have funds, but lacks any guarantees to funders that what they funded will become reality. This is partially solved by recurring grant rounds with projects that share their progress, but as a donor contributes they can’t be certain that their funds will result in a successfully created project.</p>
+<p>OP style Retro PGF maximizes funder confidence because they only fund things once they’ve seen an impact, but builders have no guarantees of funds while they are building.</p>
+<p>Crowdfunded prizes find a middle ground where builders know how much money is waiting for them if they succeed and funders know they can be refunded if no one does. In user interviews we have found a segment of previous funders of Gitcoin who would prefer to fund projects in this way. Each has different strengths and weaknesses, and prizes offers a complementary option that will appeal more to certain groups.</p>
+<p>-Crowdfunded prizes allow the best ideas to rise to the top<br>
+An idea may gain momentum in a crowdfunded prize marketplace as more people contribute. This allows the incentive for building the idea to grow until a builder decides to pursue it.</p>
+<p>-Crowdfunded prizes empower freelancing like an entrepreneur<br>
+Builders may see which ideas have more proven demand in terms of dollar value and from how many people. We’ve found that crowdfunded prizes are quadratic psychologically because the more funders supported a prize the more motivated the builder is.<br>
+In this new model for freelancing, prizes don’t pay builders per hour. They pay them for how much demand the builder fulfills, which is closer to how entrepreneurship works.</p>
+<p>-Prizes are an open invitation that welcomes new collaborators<br>
+Prizes fund an idea instead of a particular team.<br>
+Multiple teams may pursue a prize at once, and we ensure that builders are aware of their competition. Builders are self-directed and have fluidity in forming teams.<br>
+A ¼ of the time we’ve found that they enjoy the challenge and compete.<br>
+Roughly ⅜ of the time they talk and decide amongst themselves who will continue because they have the best chance of succeeding.<br>
+Another ⅜ of the time they decide to work together.</p>
+<p>An RFP process is less open. Builders bid down until the funder chooses one team upfront based on their reputation and their price.<br>
+In a crowdfunded prize, funders bid up until builders pursue the prize. If there are multiple submissions, judges will choose the best. Choosing who wins is therefore more merit-based than reputation-based. It’s based on any builder who wants to prove themselves showing evidence of their work instead of funders guessing upfront who they think will do the best.<br>
+More on RFP vs Prizes <a href="https://gov.gitcoin.co/t/rfp-allo-yeeter-build/19277/3">here</a></p>
+<p>-Prizes are hyper-efficient (because they’re fun)<br>
+In academic literature, prizes are known as inducement prize contests and are labeled a “hyper-efficient” economic system. This basically means that people are more motivated to accomplish something for the same amount of money because it is presented in a way that is more fun. Prizes motivated Charles Lindbergh to cross the ocean (Orteigh Prize), resulted in the first non-government flight to space (Ansari XPrize), and we’ve all seen how hackathon prizes motivate intense effort. Imagine you have $10,000 and one weekend to build something.<br>
+If you hired programmers in the Bay Area at their usual per hour rate, you might afford 3-10 hackers for a couple days.<br>
+Now add that $10,000 to a prize that brings 100 hackers for a weekend. They will work far harder and be much more motivated.</p>
+<p>-Weaknesses of Prizes</p>
+<p>No upfront funding. If a builder needs a certain amount of capital to even get started on a project, prizes alone will not work.<br>
+We look forward to seeing a future with multiple funding mechanisms working in conjunction such as a team receiving a QF grant, using the funds to recruit team members through prizes, and receiving retroPGF as their impact is seen.</p>
+<p>Theoretically, upset builders from wasted or duplicated efforts. However, we actually have yet to see any builders who were upset that they did not win or that someone else won. In fact, we’ve found this creates a playful environment where anyone can sharpen their skills by trying to build something helpful and not worry about following through on a hard commitment such as in an RFP.</p>
+<p>Time spent judging and communicating. If there are many submissions, then reviewing these may take time.</p>
+<p>The Mechanism</p>
+<p>Prizes are a 3 sided marketplace:<br>
+-Person who adds the idea<br>
+-Funders of the idea<br>
+-Builders of the idea</p>
+<p>The same individual can fill 1, 2, or all 3 of the roles.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c353d975fa4de09b22cf06916db5fa9b3a1afaaa.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/c353d975fa4de09b22cf06916db5fa9b3a1afaaa" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c353d975fa4de09b22cf06916db5fa9b3a1afaaa_2_624x352.jpeg" alt="" data-base62-sha1="rRWKHX2BX5oKjyi6d0ZgD2zHX1E" width="624" height="352" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c353d975fa4de09b22cf06916db5fa9b3a1afaaa_2_624x352.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c353d975fa4de09b22cf06916db5fa9b3a1afaaa_2_936x528.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c353d975fa4de09b22cf06916db5fa9b3a1afaaa_2_1248x704.jpeg 2x" data-dominant-color="394B60"></a></div><br>
+See this <a href="https://x.com/viaprize/status/1798655359424344244" rel="noopener nofollow ugc">thread</a> for more info and feel free to ask questions to our chatbot in <a href="http://viaprize.org" rel="noopener nofollow ugc">viaprize.org<br>
+</a>1. Someone adds an prize proposal including a submission deadline, a voting deadline, and either “custom judges” or “funders are judges.”<br>
+2. Admins review the idea and make sure it has a clear end-state, giving feedback as necessary<br>
+3. The idea is posted as a prize that is ready to accept funds<br>
+4. Submissions are open until the deadline. If there are none, the prize is refunded. If there are &gt;0, voting begins.<br>
+5. Either custom judges or the funders are notified to vote on winners or vote on a refund. Voting is directly proportional, meaning that if someone added 10% of the funds then they have 10% of the voting power. Unused votes are allocated according to used votes. If a submission or if “refund” receives 10% of the used votes, it will receive 10% of the prize pool. If all votes are used, then each funder is simply directing where their own money goes.<br>
+6. A 48 hour dispute window begins at the end of voting. If no builder disputes the results, funds are automatically disbursed. If there is a dispute, the funds are frozen until admins review the results. We can assign admins for all prizes or for individual prizes.<p></p>
+<p>Whoever wins a viaPrize is who did the best, rather than who did it first.</p>
+<p>Note this difference from bounties.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0abe6e07e6bb82b7bd9e4685ff8212ae2e209b8e.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/0abe6e07e6bb82b7bd9e4685ff8212ae2e209b8e" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0abe6e07e6bb82b7bd9e4685ff8212ae2e209b8e_2_500x500.jpeg" alt="image" data-base62-sha1="1x2LEPxMdLowPIBPi3WxmrZQDFQ" width="500" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0abe6e07e6bb82b7bd9e4685ff8212ae2e209b8e_2_500x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0abe6e07e6bb82b7bd9e4685ff8212ae2e209b8e_2_750x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0abe6e07e6bb82b7bd9e4685ff8212ae2e209b8e_2_1000x1000.jpeg 2x" data-dominant-color="729593"></a></div><p></p>
+<p>See our crowdfunded prize smart contract <a href="https://github.com/viaprize/viaprize/blob/new-contracts/apps/contracts/contracts/v2/prizes/prizesNew.sol" rel="noopener nofollow ugc">here<br>
+</a>Strategic Value</p>
+<p>The north star metric for Gitcoin is Allo GMV. Adding crowdfunded prizes as a part of Allo helps increase this number. While $50,000 is not a lot right now, the rate of this number is accelerating. Prizes offer different strengths and weaknesses compared to other available mechanisms and therefore appeal to different funders.</p>
+<p>This also strengthens a partnership with the viaPrize team who have built a system for <a href="https://gov.gitcoin.co/t/we-donated-to-gitcoin-projects-with-credit-card-review-of-paypal-fiat-payments-in-gg21/19287">fiat contributions both for QF</a> and for crowdfunded prizes which makes these mechanisms accessible to 1000x more users.</p>
+<p>As well as this, viaPrize is proof that you can create an impactful project funded solely through Allo.</p>
+          <p><a href="https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/viaprize-proposal-for-allo-protocol/19348/1
+        Thu, 12 Sep 2024 14:07:51 +0000
+gov.gitcoin.co-post-19348-1
+viaPrize Proposal for Allo Protocol
+      
+
+

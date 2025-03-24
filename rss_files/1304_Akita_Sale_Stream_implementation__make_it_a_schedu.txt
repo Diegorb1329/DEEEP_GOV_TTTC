@@ -1,0 +1,374 @@
+
+
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717
+    
+This proposal came too late to be one of the options in the *Akita, a path forward poll*, which at the moment is leading with "Sell 10%, stream 90%" and "Liquidate 100%" so I will propose it as a further discussion on the merits of how to implement it. This was posted on June 1st as a [twitter thread](https://twitter.com/avsa/status/1399892313007083522?s=21) and gathered some positive feedback from many of the community representatives.
+
+## The issue with the two main proposals
+
+* There's not enough market depth to liquidate all Akita tokens without losing a lot of value for Gitcoin. Even if there are serious doubts about the long term viability of the Akita community, we have a responsibility to maximize the value gained for Gitcoin.
+
+* Locking Akita on Sablier doesn't put that capital to good use, and if the market crashes and recovers and crashes again during before the stream is over, then there was a missed opportunity.
+
+## The Proposed Implementation
+
+1) Sell 10% of Akita in any exchange, put it in the Gitcoin treasury
+
+2) Sell yet another 10% into ETH.
+
+3) Create a Scheduled Balancer pool with the 10% ETH obtained in step 2 and all the remaining Akita.
+
+4) Set up the pool controller to programmatically change the ratio over a period P so that it inverts from a 10% ETH 90% AKITA into a 90% ETH and 10% AKITA
+
+Those types of pools are usually called **Liquidity Bootstrapping Pools** and are often used to launch new tokens that don't have liquidity. In this case, the token has launched but it would still bootstrap the liquidity. You can read more about LBPs on this article about [Radicle](https://medium.com/balancer-protocol/radicles-new-record-lbp-sale-shows-that-lbps-are-here-to-stay-4c81e15a4d4d).
+
+## The end result is that:
+
+* At the end of the period, Gitcoin will have sold most of their Akita, at a fairer market price, similarly to a Dollar Cost Averaging strategy
+
+* Akita community gets a much more liquid market, a "billion" dollars deep (emphasis on the air quotes). This will reduce the impact any single seller can have on the final price.
+
+* All trades that are executed against this pool will earn fees for Gitcoin, so in periods of high volatility Gitcoin is leveraging its massive Akita Holdings to generate Yield
+
+* There will be a constant sell pressure on Akita, but it's one that is scheduled and known
+
+## Variants and Risks
+
+Balancer Pools are quite flexible and we could do other options like having a pool that starts at 91% Akita, 3% GTC, 3% ETH and 3% DAI. Or we could add all the dog tokens into a big billion dollar pile of dog ~~poo~~ money.
+
+Pools also don't necessarily need to be locked: we can add a smart controller so that Gitcoin DAO can accelerate the schedule at a later vote, or simply change it completely and use the **Pie DAO** so that ratios can be changed at the will of GTC holders. Also, at any point, Gitcoin could vote to take the liquidity out of its own pool and receive it in either token of the pool.
+
+It's also important to note that **LBPs are different than just selling a token**: the pool wants to keep a constant ratio at all times to reach its target, be it 10%, 25% or 90%. So it means that *the pool will both sell and buy akita for ETH* to keep the target ratio–that's how AMMs work. A LBP changes that target ratio slowly over time, but it also is reacting to the market in real time. It means that, if akita drops to near 0, then the pool will automatically be buying akita with ETH until it reaches the desired balance, so almost ETH would be drained from the pool. But that ETH came from the Akita sale in the step 2, and the end result would be the same if the strategy was to stream or liquidate it anyway. On the other hand, if the market goes up again, that will mean the pool will start selling the cheap akita it bought back to ETH (plus the fees it got during the period) which is why pools make money from volatility.
+
+Disclaimer: I work for Balancer labs, but if the community wants to they can use other solutions. Balancer also has a "LBP referral program" but I am perfectly willing to either not claim it or to donate the BAL gained to Gitcoin.
+
+## Period P
+
+This proposal leaves the P period open. The ending date of this poll is after the resolution of the "Akita - a path forward" poll so votes should take this in consideration.
+
+1) Long stream: a LBP of duration of 2 years
+
+2) Intermediary: make the LBP last 1 year
+
+3) Liquidation: a short LBP over 1 week
+
+4) LBP in another platform or other configuration
+
+5) No LBP: just use sablier or dump it all in uniswap, depending on the results
+Thu, 12 May 2022 15:02:56 +0000
+📜 Proposals
+
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+AvsA
+
+            <aside class="quote no-group" data-username="Klemah" data-post="6" data-topic="4717">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/klemah/48/1091_2.png" class="avatar"> Klemah:</div>
+<blockquote>
+<p>If AKITA’s value increases, a whale will automatically sell until it gets back to its old price. However, if AKITA’s value decreases, the whale will certainly not buy to get it back to its old price.</p>
+</blockquote>
+</aside>
+<p>Just wanted to reply to <a class="mention" href="https://gov.gitcoin.co/u/klemah">@klemah</a>’s point here: this is the opposite of how a pool works. If the pool 90:10 pool has 1 million dollars in ether and 9 million in Akita, it means that if Akita starts going down, the pool will start buying Akita until the equilibrium is back at 9:1. In other words, a pool that has 1 million in the other token is one that is willing to use all that money to buy Akita as it drops down, and if Akita goes to 0 then so will the ether side.</p>
+<p>That’s the main difference between a smart pool and a stream: the latter only sells, while the former sells and buys.</p>
+          <p><a href="https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/10
+        Wed, 09 Jun 2021 12:59:15 +0000
+gov.gitcoin.co-post-4717-10
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+      
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+FABSCO
+
+            <p>AGRRED, 100%. Whatever i get free , i should use it for for the betterment of those people who are the owner. not to destroy them.</p>
+          <p><a href="https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/9
+        Mon, 07 Jun 2021 09:17:54 +0000
+gov.gitcoin.co-post-4717-9
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+      
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+ceresstation
+
+            <p>Now that we have a final decision to sell all of the AKITA the community holds, <a class="mention" href="https://gov.gitcoin.co/u/avsa">@AvsA</a> I’d like to ask that you and <a class="mention" href="https://gov.gitcoin.co/u/androolloyd">@androolloyd</a> try to take some time to put together the details of how the LBP will work.</p>
+<p>Similar to what was mentioned on Twitter, I think a buyback program is the most sensible way to frame this, and with that framing in mind I think we should consider offering some good faith measures in how we sell such that price isn’t crushed and True Akita Believers TM can participate in taking the project to where the core team ostensibly wants it to be.</p>
+<p>Some options:</p>
+<ul>
+<li>
+<p>Let Akita supply liquidity to the LBP and we will give them equivalent tokens to double what they provide in good faith (facilitates selling)</p>
+</li>
+<li>
+<p>Set a discount to market such that participants who help us help themselves</p>
+</li>
+<li>
+<p>Offer some kind of intangible olive branch to any devs in their community to get involved in and educated on Ethereum cc <a class="mention" href="https://gov.gitcoin.co/u/austingriffith">@austingriffith</a></p>
+</li>
+</ul>
+<p>Would love to hear any thoughts / feedback on whether these could be part of how participation in the LBP works!</p>
+          <p><a href="https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/8
+        Mon, 07 Jun 2021 00:30:46 +0000
+gov.gitcoin.co-post-4717-8
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+      
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+Velucxa
+
+            <p>This thread special for Akita Inu or other Akita?</p>
+          <p><a href="https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/7
+        Fri, 04 Jun 2021 09:00:11 +0000
+gov.gitcoin.co-post-4717-7
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+      
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+Klemah
+
+            <p>Hello!</p>
+<p>I am the lead dev for the AKITA community. I’d like to speak on behalf of my dear colleagues and all the members of our community who put their trust in us.</p>
+<aside class="quote no-group" data-username="AvsA" data-post="1" data-topic="4717">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/avsa/48/5850_2.png" class="avatar"> AvsA:</div>
+<blockquote>
+<p>Locking Akita on Sablier doesn’t put that capital to good use, and if the market crashes and recovers and crashes again during before the stream is over, then there was a missed opportunity.</p>
+</blockquote>
+</aside>
+<p>I could not disagree with this more. You seem to completely forget about the fact that the market could also go up, increasing Gitcoin’s gains significantly. AKITA has seen a big increase in price (20x +) twice in just five months. We are working hard on releasing products for AKITA, which are expected to go live at the beginning of July. I expect those releases to increase the price of AKITA again over the next months and years.</p>
+<p>Although the sablier proposal is not the one we wanted originally and we still think other options are better (like Relic’s proposal or Vitalik’s original proposal), we are ready to accept a compromise there.</p>
+<p>The reason why is because the sablier option does not kill our project.</p>
+<p>Unless I misunderstood something - the scheduled balancer would kill AKITA. Just like <a class="mention" href="https://gov.gitcoin.co/u/mantarochen">@Mantarochen</a> explained in his answer above, people will start selling as soon as news of this becomes public.</p>
+<p><strong>This is bad for AKITA</strong> - for obvious reasons. It might seem like a meme coin to you, but to us, it’s a family of 45,000 holders.  It has been our lives for the past few months. This proposal would hurt all holders, many of whom would lose all their investments. We never asked to be a part of this and would like to seek a more peaceful solution.</p>
+<p><strong>This is also bad for Gitcoin</strong> - I understand your goal is to try to take as much money from our project as possible. I do not like it one bit - no point pretending I do. We find it extremely unfair. <strong>SHIB’s tokens were burned - why not ours?</strong></p>
+<p>I can however put myself in your shoes, and I do not understand why you would go ahead with this proposal.<br>
+You would get a moderate sum of money from the initial sell - just like with <a class="mention" href="https://gov.gitcoin.co/u/helloshreyas">@HelloShreyas</a>’s proposal - <strong>but contrary to his proposal, yours just will not bring any money to Gitcoin whatsoever after that initial sell.</strong></p>
+<hr>
+<p>Let me elaborate on this last point.</p>
+<p>In the AKITA community, we have a pledge of trust, honesty and openness. We are open about everything we do, and always let the community know about where we are going.<br>
+<strong>This means we will be honest with the community about the future of the coin.</strong></p>
+<p>After a proposal is decided on, we will be issuing an official announcement in all our groups, letting people know about the decision that was made.</p>
+<p>Try to put yourself in an AKITA holder’s shoes. He or she will read something like this:</p>
+<p><em>If AKITA’s value increases, a whale will automatically sell until it gets back to its old price. However, if AKITA’s value decreases, the whale will certainly not buy to get it back to its old price.</em></p>
+<p>How could an investor not sell after reading this? This is a stablecoin but without the benefits of stability. <strong>It will just never increase in value.</strong></p>
+<p><strong>AKITA investors will dump massively if such a proposal were to pass.</strong></p>
+<p>It would kill the AKITA project. The team is strong, and I trust we would be able to move on to another project together.</p>
+<p>What worries me more is the 45,000 holders of our token who would lose a lot of their money for some and all of their money for most.</p>
+<p>It would not give much money to Gitcoin either. I bet your scheduled liquidity pool will wait a long time with its trillions of AKITA tokens, waiting for the token, now dead, to go back up in value, which it never will.</p>
+<hr>
+<p>I sincerely hope you will consider the concern I share with this message. This concern is shared by the whole AKITA team.</p>
+<p>The AKITA community supports <a class="mention" href="https://gov.gitcoin.co/u/helloshreyas">@HelloShreyas</a>’s proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/6
+        Wed, 02 Jun 2021 18:51:06 +0000
+gov.gitcoin.co-post-4717-6
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+      
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+Mantarochen
+
+            <p>Here my reply from Twitter:</p>
+<p>This approach would cause Akita to literally gain no more price increases until Gitcoins entire Akita amount is gone. It would make Akita almost a stablecoin until day X.</p>
+<p>As soon as all investors find out about this, they will leave the token instantly and dump the price right away.</p>
+<p>Beside the fact that this approach would still severely damage the investment of 46,000+ holders who are not willing to start Daytrading EVEN if this idea worked… It would obviously dump Gitcoins Akitatokens as well instantly.</p>
+<p>TL;DR it would not work anyways. The news would spread fast. The entire community already knows about Gitcoin and the current process of finalizing a decision.</p>
+          <p><a href="https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/5
+        Wed, 02 Jun 2021 17:42:09 +0000
+gov.gitcoin.co-post-4717-5
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+      
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+lefterisjp
+
+            <p>I also like this proposal a lot. It is a more concrete plan on how we can sell 100% in a constructive way. With such an implementation I am also inclined to go for the sell 100% with the period being up for discussion.</p>
+<aside class="onebox twitterstatus">
+  <header class="source">
+
+      <a href="https://twitter.com/LefterisJP/status/1400124946127462400" target="_blank" rel="noopener nofollow ugc">twitter.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="/uploads/db4391/original/2X/5/5085ac862a05f06ed6cb46086f87e7b004c1289c.png" class="thumbnail onebox-avatar" width="400" height="400">
+<h4><a href="https://twitter.com/LefterisJP/status/1400124946127462400" target="_blank" rel="noopener nofollow ugc">Lefteris Karapetsas | Hiring for @rotkiapp</a></h4>
+<div class="twitter-screen-name"><a href="https://twitter.com/LefterisJP/status/1400124946127462400" target="_blank" rel="noopener nofollow ugc">@LefterisJP</a></div>
+
+<div class="tweet">
+  @avsa @HelloShreyas @ljxie @owocki @austingriffith @hudsonjameson @androolloyd @AndreCronjeTech As mentioned earlier today, after some back&amp;forth I also like this proposal a lot. It is a more concrete plan on how we can sell 100% in a constructive way. With such an implementation I am also inclined to go for the sell 100% with the period being up for discussion.
+    <div class="quoted">
+      <a class="quoted-link" href="https://twitter.com/avsa/status/1399887361518018563" rel="noopener nofollow ugc">
+        <p class="quoted-title">Alex Van de Sande (avsa.eth) <span>@avsa</span></p>
+      </a>
+
+      <div>But even if gitcoin wanted to sell it there’s no liquidity for it. They’d need to sell it slowly, something preprogrammed, something that increases the liquidity of the token. 
+
+Shit I figured it out: they need an LBP!</div>
+    </div>
+</div>
+
+<div class="date">
+  <a href="https://twitter.com/LefterisJP/status/1400124946127462400" target="_blank" rel="noopener nofollow ugc">5:55 PM - 1 Jun 2021</a>
+
+    <span class="like">
+      <svg viewBox="0 0 512 512" width="14px" height="16px" aria-hidden="true">
+        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+      </svg>
+      1
+    </span>
+
+</div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/4
+        Wed, 02 Jun 2021 16:20:22 +0000
+gov.gitcoin.co-post-4717-4
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+      
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+linda
+
+            <p>Shared my thoughts on Twitter <a href="https://twitter.com/ljxie/status/1400116505581428743" rel="noopener nofollow ugc">https://twitter.com/ljxie/status/1400116505581428743</a></p>
+<blockquote>
+<p>I like this approach a lot more than just liquidating or burning all of the tokens. It’s up there for me along with <a class="mention" href="https://gov.gitcoin.co/u/helloshreyas">@HelloShreyas</a>’ proposal. Definitely think it’s worth putting into a formal proposal</p>
+</blockquote>
+          <p><a href="https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/3
+        Wed, 02 Jun 2021 15:47:43 +0000
+gov.gitcoin.co-post-4717-3
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+      
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+ceresstation
+
+            <p>Thanks for writing this up <a class="mention" href="https://gov.gitcoin.co/u/avsa">@AvsA</a>! By the way, if you haven’t signed up already we’d love to have you formally as a steward <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+<aside class="quote quote-modified" data-post="1" data-topic="41">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ceresstation/48/11042_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/introducing-stewards-governance/41">Introducing Stewards Governance</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governancevision/6"><span data-category-id="6" style="--category-badge-color: #652D90; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Discussions around the coordination, and the overall plans, goals, and vision of GitcoinDAO"><span class="badge-category__name">🤖 DAO Governance and Vision</span></span></a>
+  </div>
+  <blockquote>
+    Over the last <a href="https://gitcoin.co/blog/gitcoin-grants-round-8-governance-brief/" rel="noopener nofollow ugc">two</a> <a href="https://gitcoin.co/blog/gitcoin-grants-round-9-governance-brief/" rel="noopener nofollow ugc">rounds</a> of Gitcoin Grants, we’ve brought in a number of grantees and contributors in the community to help us think about how to better fund digital public goods and serve the web3 community, whether by stopping <a href="https://en.wikipedia.org/wiki/Sybil_attack" rel="noopener nofollow ugc">sybil attacks</a>, improving grants discoverability, or more precisely defining the kinds of <a href="https://en.wikipedia.org/wiki/Public_good_(economics)" rel="noopener nofollow ugc">public goods</a> that can be funded. 
+Through those conversations, we’ve learned a lot about what we’re doing well, and what we could improve on. One comment that came up frequently was …
+  </blockquote>
+</aside>
+
+<p><a class="mention" href="https://gov.gitcoin.co/u/helloshreyas">@HelloShreyas</a> <a class="mention" href="https://gov.gitcoin.co/u/androolloyd">@androolloyd</a> curious to get your thoughts on how these would intersect with your proposals!</p>
+          <p><a href="https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/2
+        Wed, 02 Jun 2021 15:29:01 +0000
+gov.gitcoin.co-post-4717-2
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+      
+
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+AvsA
+
+            <p>This proposal came too late to be one of the options in the <em>Akita, a path forward poll</em>, which at the moment is leading with “Sell 10%, stream 90%” and “Liquidate 100%” so I will propose it as a further discussion on the merits of how to implement it. This was posted on June 1st as a <a href="https://twitter.com/avsa/status/1399892313007083522?s=21" rel="noopener nofollow ugc">twitter thread</a> and gathered some positive feedback from many of the community representatives.</p>
+<h2>
+<a name="the-issue-with-the-two-main-proposals-1" class="anchor" href="https://gov.gitcoin.co#the-issue-with-the-two-main-proposals-1"></a>The issue with the two main proposals</h2>
+<ul>
+<li>
+<p>There’s not enough market depth to liquidate all Akita tokens without losing a lot of value for Gitcoin. Even if there are serious doubts about the long term viability of the Akita community, we have a responsibility to maximize the value gained for Gitcoin.</p>
+</li>
+<li>
+<p>Locking Akita on Sablier doesn’t put that capital to good use, and if the market crashes and recovers and crashes again during before the stream is over, then there was a missed opportunity.</p>
+</li>
+</ul>
+<h2>
+<a name="the-proposed-implementation-2" class="anchor" href="https://gov.gitcoin.co#the-proposed-implementation-2"></a>The Proposed Implementation</h2>
+<ol>
+<li>
+<p>Sell 10% of Akita in any exchange, put it in the Gitcoin treasury</p>
+</li>
+<li>
+<p>Sell yet another 10% into ETH.</p>
+</li>
+<li>
+<p>Create a Scheduled Balancer pool with the 10% ETH obtained in step 2 and all the remaining Akita.</p>
+</li>
+<li>
+<p>Set up the pool controller to programmatically change the ratio over a period P so that it inverts from a 10% ETH 90% AKITA into a 90% ETH and 10% AKITA</p>
+</li>
+</ol>
+<p>Those types of pools are usually called <strong>Liquidity Bootstrapping Pools</strong> and are often used to launch new tokens that don’t have liquidity. In this case, the token has launched but it would still bootstrap the liquidity. You can read more about LBPs on this article about <a href="https://medium.com/balancer-protocol/radicles-new-record-lbp-sale-shows-that-lbps-are-here-to-stay-4c81e15a4d4d" rel="noopener nofollow ugc">Radicle</a>.</p>
+<h2>
+<a name="the-end-result-is-that-3" class="anchor" href="https://gov.gitcoin.co#the-end-result-is-that-3"></a>The end result is that:</h2>
+<ul>
+<li>
+<p>At the end of the period, Gitcoin will have sold most of their Akita, at a fairer market price, similarly to a Dollar Cost Averaging strategy</p>
+</li>
+<li>
+<p>Akita community gets a much more liquid market, a “billion” dollars deep (emphasis on the air quotes). This will reduce the impact any single seller can have on the final price.</p>
+</li>
+<li>
+<p>All trades that are executed against this pool will earn fees for Gitcoin, so in periods of high volatility Gitcoin is leveraging its massive Akita Holdings to generate Yield</p>
+</li>
+<li>
+<p>There will be a constant sell pressure on Akita, but it’s one that is scheduled and known</p>
+</li>
+</ul>
+<h2>
+<a name="variants-and-risks-4" class="anchor" href="https://gov.gitcoin.co#variants-and-risks-4"></a>Variants and Risks</h2>
+<p>Balancer Pools are quite flexible and we could do other options like having a pool that starts at 91% Akita, 3% GTC, 3% ETH and 3% DAI. Or we could add all the dog tokens into a big billion dollar pile of dog <s>poo</s> money.</p>
+<p>Pools also don’t necessarily need to be locked: we can add a smart controller so that Gitcoin DAO can accelerate the schedule at a later vote, or simply change it completely and use the <strong>Pie DAO</strong> so that ratios can be changed at the will of GTC holders. Also, at any point, Gitcoin could vote to take the liquidity out of its own pool and receive it in either token of the pool.</p>
+<p>It’s also important to note that <strong>LBPs are different than just selling a token</strong>: the pool wants to keep a constant ratio at all times to reach its target, be it 10%, 25% or 90%. So it means that <em>the pool will both sell and buy akita for ETH</em> to keep the target ratio–that’s how AMMs work. A LBP changes that target ratio slowly over time, but it also is reacting to the market in real time. It means that, if akita drops to near 0, then the pool will automatically be buying akita with ETH until it reaches the desired balance, so almost ETH would be drained from the pool. But that ETH came from the Akita sale in the step 2, and the end result would be the same if the strategy was to stream or liquidate it anyway. On the other hand, if the market goes up again, that will mean the pool will start selling the cheap akita it bought back to ETH (plus the fees it got during the period) which is why pools make money from volatility.</p>
+<p>Disclaimer: I work for Balancer labs, but if the community wants to they can use other solutions. Balancer also has a “LBP referral program” but I am perfectly willing to either not claim it or to donate the BAL gained to Gitcoin.</p>
+<h2>
+<a name="period-p-5" class="anchor" href="https://gov.gitcoin.co#period-p-5"></a>Period P</h2>
+<p>This proposal leaves the P period open. The ending date of this poll is after the resolution of the “Akita - a path forward” poll so votes should take this in consideration.</p>
+<ol>
+<li>
+<p>Long stream: a LBP of duration of 2 years</p>
+</li>
+<li>
+<p>Intermediary: make the LBP last 1 year</p>
+</li>
+<li>
+<p>Liquidation: a short LBP over 1 week</p>
+</li>
+<li>
+<p>LBP in another platform or other configuration</p>
+</li>
+<li>
+<p>No LBP: just use sablier or dump it all in uniswap, depending on the results</p>
+</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/akita-sale-stream-implementation-make-it-a-scheduled-liquidity-pool/4717/1
+        Wed, 02 Jun 2021 15:00:24 +0000
+gov.gitcoin.co-post-4717-1
+Akita Sale/Stream implementation: make it a scheduled liquidity pool!
+      
+
+

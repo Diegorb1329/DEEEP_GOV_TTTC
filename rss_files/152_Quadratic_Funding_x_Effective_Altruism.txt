@@ -1,0 +1,417 @@
+
+
+
+Quadratic Funding x Effective Altruism
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016
+    
+# Abstract
+
+In this post, I explore the intersection of Effective Altruism and web3.0. I explore a proposed extension to [Gitcoin Grants 2.0](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981) such that [Gitcoin Grants Results](https://gitcoin.co/results) are increasingly steered towards the most effective causes via (1) the introduction of a data layer that allows for the aggregation of attestations of effectiveness & (2) the introduction of social norms introduced by Effective Altruism.
+
+# Effective Altruism
+
+I’ve been learning about & increasingly getting excited about Effective Altruism.
+
+> Effective altruism (EA) is a philosophical and social movement that advocates "using evidence and reason to figure out how to benefit others as much as possible, and taking action on that basis". [[Wikipedia]](https://en.wikipedia.org/wiki/Effective_altruism)
+
+The primary thing that appeals to me about Effective Altruism is how evidence based it is.
+
+The giver in me is deeply excited that when giving to a cause based in effective altruism, the evidence-driven-basis for the giving means that one is doing the most good possible per dollar spent. It is not going to administrative overhead. It’s not going to dead-end-initiatives. That is deeply cool & profoundly impactful.
+
+The scientist in me is deeply excited about the idea of having an evidence based approach to giving. Science and the scientific method is deeply based in the seeking of relevant evidence to prove or disprove various hypotheses.
+
+The web3 builder in me is excited about the intersection of these ideas with the [data set we have at Gitcoin](https://docs.google.com/spreadsheets/d/1OsJ_nmN9mN-i_9h3Yj2mDfjvtsP1qvv3B1zcpER62dk/edit#gid=1223173410). Imagine if we could measure the impacts each Gitcoin Grant had on the world, across all [8 forms of capital](http://www.appleseedpermaculture.com/8-forms-of-capital/), and provided that information via the [Grants 2.0 protocol](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981), so that people across the world could easily make better-informed decisions about which grants were the most effective when funding them!
+
+## Measuring Impact
+
+The devil is in the details. How does one measure which projects are doing the most good? Back to [Wikipedia](https://en.wikipedia.org/wiki/Effective_altruism):
+
+### Cost-effectiveness
+
+> Some charities are far more effective than others, as charities may spend different amounts of money to achieve the same goal, and some charities may not achieve the goal at all.
+
+> Effective altruists seek to identify charities that are highly cost-effective.
+
+> For example, health interventions are selected based on their impact as measured by lives extended per dollar, quality-adjusted life years (QALY) added per dollar, or disability-adjusted life years (DALY) reduced per dollar.
+
+We have now quantified the impact for health-based outcomes into a KPI: quality-adjusted life years (QALY)
+
+### Room for more funding
+
+Another important criteria is room for more funding. Back to [Wikipedia](https://en.wikipedia.org/wiki/Effective_altruism):
+
+> Effective altruist organizations consider the expected impact of a funding increase rather than evaluating the average value of all donations to the charity. This avoids donations to organizations that lack "room" for more funding because they face bottlenecks other than lack of money. For example, a medical charity might not be able to hire enough doctors or nurses to distribute more medical supplies, or it might already be serving all of the potential patients in its market
+
+## Learn more about Effective Altruism
+
+I plan to use the rest of this post to talk about the intersection of Effective Altruism x web3.
+
+You can learn more about [Effective Altruism in this handbook](https://forum.effectivealtruism.org/posts/cN9Zu7dowefAfmNnH/the-effective-altruism-handbook).
+
+# Effective DAOltruism = Effective Altruism x web3
+
+I would like to explore how we could bring more of an Effective Altruist mindset to Gitcoin Grants.
+
+This means bringing more evidence of effectiveness into the Gitcoin Grants dataset.
+
+For those of you reading this post who may be new to Gitcoin: [Gitcoin Grants](https://gitcoin.co/grants) is a project oriented around our [mission](https://gitcoin.co/mission) of building & funding digital public goods. So far [we’ve funded $52mm](https://gitcoin.co/results) worth of public goods, mostly using [a matching formula called Quadratic Funding](https://wtfisqf.com/).
+
+Every quarter, about 500k transactions happen on Gitcoin Grants to allocate about $6mm/quarter to various projects. The data for last quarter looks like this:
+
+[![|624x275](upload://2rbxNrwvD3d4HMthXR4mQTB9gKb.jpeg)](https://docs.google.com/spreadsheets/d/1OsJ_nmN9mN-i_9h3Yj2mDfjvtsP1qvv3B1zcpER62dk/edit#gid=1223173410)
+
+The decisions on Gitcoin Grants are based upon the preferences of a community of 30k funders. There are 500k transactions per quarter, which constitute an expression of support for 1k different projects in the ecosystem.
+
+When these funders make a decision about which projects to fund, they are given the following data:
+
+1. Grant name
+2. Grant Description [(see this example)](https://gitcoin.co/grants/1668/coin-center-is-educating-policy-makers-about-publ)
+3. What geographical region they are from.
+4. Their website
+5. Their twitter
+6. Who their team is
+
+What is deeply interesting to me is starting to take Effective Altruist data and co-mingling it with the above data. Imagine if you could browse each grant + see its impact on the world right next to the above information about the grant.
+
+What if you could see attestations about this grants impact, placed & quantified on each of the following vectors, as you browsed the grants registry?
+
+![|624x391](upload://ywatn67gj8e8Nzgsyug85u0x5V3.png)
+
+I imagine that the data layer of the system could look something like this
+
+![|432x321](upload://qaD1wFS2NIqMALHYtMZhZsUqUOH.png)
+
+How would it change the Gitcoin Grants experience to be able to browse/filter grants by their impact? What if you could choose Grants that have the most total impact? What if you could filter grant based on those who have attestations from people you yourself trust? How would you filter out spam? How can governance create consensus about which attestations are legitimate?
+
+On a systemic level, how would the introduction of such a dataset change the preference map of each grants round?
+
+Here is what the preference map for Gitcoin Grants Round 12 looked like. Each node in the network is a user or a grant, and each edge is a transaction.
+
+![|380x250](upload://ttcbvHY4KruPlI9wwUPxJvPK6TG.gif)
+
+If we were to introduce Effective Altruist data layer into Gitcoin Grants, would each individual agent in the system make more-informed decisions? If so, how does that change what the dataset in aggregate looks like for each Grants round? How would that change the [Quadratic Funding](https://wtfisqf.com/) results?
+
+Right now there are more questions than answers, but I am deeply excited about the questions that are coming up when I think about Effective DAOtruism.
+
+If you are too, I’d love to hear about it. Leave a comment below.
+Mon, 06 Jun 2022 15:51:36 +0000
+🤖 DAO Governance and Vision
+
+
+Quadratic Funding x Effective Altruism
+owocki
+
+            <p>Heads up there is some action in the EA forums about this topic!</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://forum.effectivealtruism.org/posts/9kcMNim6R2Lvh4FAf/optimizing-public-goods-funding-with-blockchain-tech-and">
+  <header class="source">
+      <img src="/uploads/db4391/original/2X/c/cd0881b86ababfd78dd17fe0231aa899c9574bd8.png" class="site-icon" width="50" height="50">
+
+      <a href="https://forum.effectivealtruism.org/posts/9kcMNim6R2Lvh4FAf/optimizing-public-goods-funding-with-blockchain-tech-and" target="_blank" rel="noopener">forum.effectivealtruism.org</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/362;"><img src="/uploads/db4391/optimized/2X/f/f2565a7968a5a6a74a8fee2f513f568690c1e121_2_690x362.png" class="thumbnail" width="690" height="362" srcset="/uploads/db4391/optimized/2X/f/f2565a7968a5a6a74a8fee2f513f568690c1e121_2_690x362.png, /uploads/db4391/optimized/2X/f/f2565a7968a5a6a74a8fee2f513f568690c1e121_2_1035x543.png 1.5x, /uploads/db4391/original/2X/f/f2565a7968a5a6a74a8fee2f513f568690c1e121.png 2x" data-small-upload="/uploads/db4391/optimized/2X/f/f2565a7968a5a6a74a8fee2f513f568690c1e121_2_10x10.png"></div>
+
+<h3><a href="https://forum.effectivealtruism.org/posts/9kcMNim6R2Lvh4FAf/optimizing-public-goods-funding-with-blockchain-tech-and" target="_blank" rel="noopener">Optimizing Public Goods Funding with blockchain tech and clever incentive...</a></h3>
+
+  <p>TLDR: •  * blockchain technology might in principle be useful for EA and long-termism from a research and technology perspective
+ * optimizing the funding of public goods plays an role in building a…</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/12
+        Mon, 06 Jun 2022 15:51:36 +0000
+gov.gitcoin.co-post-10016-12
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+upper-left-k
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> thanks for leaving such an interesting trail of ideas. I’m new here and have an idea on how web3 tech could be applied to make the Fair Trade system more effective.  My background comes from hands on experience with international trade and sustainable manufacturing.</p>
+<p>Is there a way I could connect with someone who is coming at this from a tech background to discuss?</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/11
+        Wed, 27 Apr 2022 04:15:27 +0000
+gov.gitcoin.co-post-10016-11
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+Colton
+
+            <p>Wow I’m late to the party but I can’t miss the opportunity to comment on this thread.</p>
+<p>I took the Giving What We Can pledge (effective altruism) a year and a half ago after hearing Sam Harris’s conversations with Will MacAskill. Seeing EA talked about here makes me very happy.</p>
+<p>Leon and fleurdelys bring up a good point: Who gets to decide what is considered effective?</p>
+<p>A good data set to start with would be how well projects do based on the goals they outline in their grants.</p>
+<p>But going a step further, it may be true that the EA movement is not fully appreciating the 8 forms of capital mentioned in Owocki’s post. Two ways we could shift the conversation toward this more holistic view of societal wealth:</p>
+<ol>
+<li>
+<p>Web3 may allow us to more accurately price in capital like Cultural, Social, Experiential</p>
+</li>
+<li>
+<p>This may be a place for Gitcoin’s lore to play a role in shifting consciousness towards valuing more than money.</p>
+</li>
+</ol>
+<p>So glad to see this conversation taking place &lt;3</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/10
+        Mon, 21 Mar 2022 05:26:58 +0000
+gov.gitcoin.co-post-10016-10
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+pandeyanujk
+
+            <p>Yes! Thinking a bit more on the metrics governance &amp; orchestration - this may also tie well into the impact DAOs project:</p>
+<ul>
+<li>
+<p>A framework of metrics to measure the impact.</p>
+</li>
+<li>
+<p>A reference architecture for upcoming DAOs to measure their <em>outcome to impact</em>.</p>
+</li>
+</ul>
+<p>Happy to setup brainstorming sessions to list out the possibilities. Exciting stuff!</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/9
+        Mon, 14 Mar 2022 05:59:39 +0000
+gov.gitcoin.co-post-10016-9
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+fleurdelys
+
+            <ol>
+<li>How to define effectiveness (a set of standards or matrix, weighting)</li>
+<li>Who will evaluate?</li>
+<li>Once the standards are set, who will continue to check whether the set is effective, i.e. achieve the original proposed goal?</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/8
+        Sat, 12 Mar 2022 04:14:36 +0000
+gov.gitcoin.co-post-10016-8
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+tigress
+
+            <p>The preference maps and what is meant by Effective Altruism are interesting to study and contemplate. With my post here I d like to offer an additional perspective that may complement the 8 forms of capital very well.</p>
+<p>To me, I d prefer to focus on a well-balanced preference map, because I feel like all 8 forms of capital are equally important to make my life and the life of others truly better. Based on the samples it would mean that each type of capital could be no less than ~ 60 and no more than ~70 to achieve balance.</p>
+<p>In addition… I’d zoom out a little bit and ask:</p>
+<ol>
+<li>
+<p>Given Grants 2.0 what is <strong>the bigger change we intend to facilitate</strong>? From where … to where … do we want to move?</p>
+</li>
+<li>
+<p>What could be meant when we intended to focus on “<strong>regenerative decision making</strong>” and therefore <strong>doing good better</strong> in this context?</p>
+</li>
+</ol>
+<p>One answer may be this: I would look into these scales based on developmental frameworks or Levels of Consciousness. In essence, there is several of these frameworks out there and they all converge to very similar developmental stages and tiers. Only their authors, naming and colours differentiate. Spiral Dynamics by Beck/Cowan based on Graves’ work, Ken Wilber and Robert Kegan… just to name a few.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/bd55732750aefd615e14a1adb981db0ee34143b6.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/bd55732750aefd615e14a1adb981db0ee34143b6" title="Levels of Consciousness"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bd55732750aefd615e14a1adb981db0ee34143b6_2_517x325.jpeg" alt="Levels of Consciousness" data-base62-sha1="r0VjFJ8OHBGWg3JxdnrwhmlfQY6" width="517" height="325" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bd55732750aefd615e14a1adb981db0ee34143b6_2_517x325.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bd55732750aefd615e14a1adb981db0ee34143b6_2_775x487.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/b/bd55732750aefd615e14a1adb981db0ee34143b6.jpeg 2x" data-dominant-color="151414"></a></div><p></p>
+<p>So, my personal opinion would be:</p>
+<blockquote>
+<p><em>YES, I think I would be <strong>doing good better</strong> if 30% or more of the projects I were to found would contribute to help more people like us make the move from the 1st Tier to the 2nd Tier.</em></p>
+</blockquote>
+<p>That is from orange/green to yellow/teal colours according to Spiral Dynamics (… which is fortunately mentioned in GreenPilled <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> on page 75 )</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/34b2519ee1096f9fd2ab7d4759bbebecb5e7aad0.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/34b2519ee1096f9fd2ab7d4759bbebecb5e7aad0" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34b2519ee1096f9fd2ab7d4759bbebecb5e7aad0_2_398x500.jpeg" alt="image" data-base62-sha1="7waSeIl6EylNh4Qa7vANRrhCh9u" width="398" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34b2519ee1096f9fd2ab7d4759bbebecb5e7aad0_2_398x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34b2519ee1096f9fd2ab7d4759bbebecb5e7aad0_2_597x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34b2519ee1096f9fd2ab7d4759bbebecb5e7aad0_2_796x1000.jpeg 2x" data-dominant-color="C6C9B8"></a></div><p></p>
+<p>According to several studies by Loevinger or Wilber the population of the 1st tier make up roughly 85%.</p>
+<p>This idea, that “<strong>regeneration</strong>” can also be seen and understood as an increase in the Level of Consciousness of the population would change Quadratic Funding in a way that may look like this</p>
+<ul>
+<li>
+<p>Current: <em>Number of contributors</em> matters more than <em>amount funded</em> .</p>
+</li>
+<li>
+<p>Future: <em>Number of contributors</em> multiplied by <em><strong>Regenerative Factor</strong></em> matters more than <em>amount funded</em>.</p>
+</li>
+</ul>
+<p>I hope I was able to explain this very abstract idea and make it understandable.</p>
+<p>Thanks for the inspiration to think about this, connect the dots and come up with this work.</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/7
+        Fri, 11 Mar 2022 14:42:26 +0000
+gov.gitcoin.co-post-10016-7
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+erich
+
+            <p>The Effective Altruism community is highly rationalist and somewhat contrarian to collaborative, bottoms-up governance as in Gitcoin Grants. Therefore, we should be careful in sorting / prioritizing grants and nudging the community given some technocratic metrics of GPG or other centralized entities.</p>
+<p>Many critical contexts can’t be formalized and simplified into one or two metrics. So how would we measure “impact” really in a reasonably universal manner?</p>
+<p>Here are some interesting thoughts on the issues of technocracy and the Effective Altruism movement: <a href="https://www.radicalxchange.org/media/blog/2019-08-19-bv61r6/" class="inline-onebox" rel="noopener nofollow ugc">Why I Am Not A Technocrat - RadicalxChange</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/6
+        Fri, 11 Mar 2022 10:29:34 +0000
+gov.gitcoin.co-post-10016-6
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+lthrift
+
+            <p>This is a really interesting idea <a class="mention" href="https://gov.gitcoin.co/u/pandeyanujk">@pandeyanujk</a>! We don’t currently collect impact metrics, but what you’ve outlined could be the basis of an initial experiment in doing so off-platform for grantees who were open to it.</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/5
+        Thu, 10 Mar 2022 22:27:30 +0000
+gov.gitcoin.co-post-10016-5
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+pandeyanujk
+
+            <p>This is super interesting. I am enjoying this post and holding some of these questions. Oversimplifying a bit, it seems that the tradeoff is - how to optimize between <em>the popular projects</em> &amp; the project that may <em>yield a high outcome to impact ratio</em> regardless of it’s popularity/presence. Would be curious to put a list of projects that did great in the past grant rounds (were popular) but didn’t meet the expected outcome to impact.</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/4
+        Wed, 09 Mar 2022 07:38:22 +0000
+gov.gitcoin.co-post-10016-4
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+lthrift
+
+            <p>Thanks for surfacing Effective Altruism, Owocki. I haven’t gone so far as to read the linked handbook yet, but look forward to doing so.</p>
+<p>In working on the vision and strategy for Grants 2.0, it is apparent that grants who come back round after round for on-going funding are on a spectrum of being able to avoid accountability for how they are using the money they raise to completely missing the opportunity to showcase their impact for increased funding and community support over time. Effective Altruism seems to hold some foundational theory for building a mechanism for showcasing impact delivered.</p>
+<p>Conversely from the potential significantly positive impact, I wonder if this model would negatively impact projects who are just getting started. Maybe the mechanism could be designed to account for the lifecycle of a project - expecting that the impact of a project should increase with age and maturity of a project? What about accounting for steadiness of impact versus volatility of impact?</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/3
+        Tue, 08 Mar 2022 05:21:01 +0000
+gov.gitcoin.co-post-10016-3
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+owocki
+
+            <p>One thing I think would be interesting to discover in the data of a hypothetical Effective Altruist Grants experiment would be to map the the preferences of communities utilizing that Grants program across multiple different types of capital.</p>
+<p>For example, one could imagine a world in which blockchain-based grants programs optimize for Financial &amp; Intellectual capital, but never meaningfully have a positive impact on other vectors.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/6f25eecb9736560e9c8d30233a6ccdee73a7c5d1.png" data-download-href="/uploads/short-url/fRggJkiZaw6GJkntBvJ4AgyAiHv.png?dl=1" title="Screen Shot 2022-03-06 at 5.56.53 PM"><img src="/uploads/db4391/optimized/2X/6/6f25eecb9736560e9c8d30233a6ccdee73a7c5d1_2_690x385.png" alt="Screen Shot 2022-03-06 at 5.56.53 PM" data-base62-sha1="fRggJkiZaw6GJkntBvJ4AgyAiHv" width="690" height="385" srcset="/uploads/db4391/optimized/2X/6/6f25eecb9736560e9c8d30233a6ccdee73a7c5d1_2_690x385.png, /uploads/db4391/optimized/2X/6/6f25eecb9736560e9c8d30233a6ccdee73a7c5d1_2_1035x577.png 1.5x, /uploads/db4391/optimized/2X/6/6f25eecb9736560e9c8d30233a6ccdee73a7c5d1_2_1380x770.png 2x" data-small-upload="/uploads/db4391/optimized/2X/6/6f25eecb9736560e9c8d30233a6ccdee73a7c5d1_2_10x10.png"></a></div><br>
+(<em>X axis: the preferences of 10 people</em>, <em>Y axis: the 8 forms of capital</em><br>
+<em>each cell is how much person X cares about Y form of capital.<br>
+all data is random + for demonstration purposes only</em>)<p></p>
+<p>Personally I’d rather live in a world where the consensus of at least some of our grants programs is on creating positive impact on Material Capital (causes like climate change + biodiversity loss are deeply disheartening to me.</p>
+<p>A world where the community preferences look a bit more like this would give me more comfort.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/bcfb7195afff66735dbfc0a5c47557c5423763a7.png" data-download-href="/uploads/short-url/qXOtLnfPxWM9d2OD64jLnjdTiqr.png?dl=1" title="Screen Shot 2022-03-06 at 5.57.21 PM"><img src="/uploads/db4391/optimized/2X/b/bcfb7195afff66735dbfc0a5c47557c5423763a7_2_690x421.png" alt="Screen Shot 2022-03-06 at 5.57.21 PM" data-base62-sha1="qXOtLnfPxWM9d2OD64jLnjdTiqr" width="690" height="421" srcset="/uploads/db4391/optimized/2X/b/bcfb7195afff66735dbfc0a5c47557c5423763a7_2_690x421.png, /uploads/db4391/optimized/2X/b/bcfb7195afff66735dbfc0a5c47557c5423763a7_2_1035x631.png 1.5x, /uploads/db4391/optimized/2X/b/bcfb7195afff66735dbfc0a5c47557c5423763a7_2_1380x842.png 2x" data-small-upload="/uploads/db4391/optimized/2X/b/bcfb7195afff66735dbfc0a5c47557c5423763a7_2_10x10.png"></a></div><p></p>
+<p>If we chop off the individaul preferences, and just look at the aggregated preferences:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/845708eebdfe423cbd5ad8d8f0fb48adbaad752b.png" data-download-href="/uploads/short-url/iSJuQny1iBZZvtOuPOKx1k8AjCb.png?dl=1" title="Screen Shot 2022-03-06 at 6.01.14 PM"><img src="/uploads/db4391/optimized/2X/8/845708eebdfe423cbd5ad8d8f0fb48adbaad752b_2_517x123.png" alt="Screen Shot 2022-03-06 at 6.01.14 PM" data-base62-sha1="iSJuQny1iBZZvtOuPOKx1k8AjCb" width="517" height="123" srcset="/uploads/db4391/optimized/2X/8/845708eebdfe423cbd5ad8d8f0fb48adbaad752b_2_517x123.png, /uploads/db4391/optimized/2X/8/845708eebdfe423cbd5ad8d8f0fb48adbaad752b_2_775x184.png 1.5x, /uploads/db4391/optimized/2X/8/845708eebdfe423cbd5ad8d8f0fb48adbaad752b_2_1034x246.png 2x" data-small-upload="/uploads/db4391/optimized/2X/8/845708eebdfe423cbd5ad8d8f0fb48adbaad752b_2_10x10.png"></a></div><p></p>
+<p>Here are a few more randomly generate preference maps.  I invite you to ponder what the communities underneath them would be like:</p>
+<h1>
+<a name="a-community-that-cares-about-social-material-intellectual-capital-1" class="anchor" href="https://gov.gitcoin.co#a-community-that-cares-about-social-material-intellectual-capital-1"></a>a community that cares about social, material, &amp; intellectual capital</h1>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cef12646185b28a255af3c89b7205af92af4ca6a.png" data-download-href="/uploads/short-url/twH1cnjaBNPyTSUjxxUuRz2o0K6.png?dl=1" title="Screen Shot 2022-03-06 at 6.02.26 PM"><img src="/uploads/db4391/optimized/2X/c/cef12646185b28a255af3c89b7205af92af4ca6a_2_345x104.png" alt="Screen Shot 2022-03-06 at 6.02.26 PM" data-base62-sha1="twH1cnjaBNPyTSUjxxUuRz2o0K6" width="345" height="104" srcset="/uploads/db4391/optimized/2X/c/cef12646185b28a255af3c89b7205af92af4ca6a_2_345x104.png, /uploads/db4391/optimized/2X/c/cef12646185b28a255af3c89b7205af92af4ca6a_2_517x156.png 1.5x, /uploads/db4391/optimized/2X/c/cef12646185b28a255af3c89b7205af92af4ca6a_2_690x208.png 2x" data-small-upload="/uploads/db4391/optimized/2X/c/cef12646185b28a255af3c89b7205af92af4ca6a_2_10x10.png"></a></div><p></p>
+<h1>
+<a name="a-community-that-cares-about-social-experiential-capital-2" class="anchor" href="https://gov.gitcoin.co#a-community-that-cares-about-social-experiential-capital-2"></a>a community that cares about social &amp; experiential capital</h1>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cd82d51e00f2837aaa80d0fcf5e4e223dc1b850a.png" data-download-href="/uploads/short-url/tk2bHA6HC7JplIcvkQMjn69w5Zw.png?dl=1" title="Screen Shot 2022-03-06 at 6.02.22 PM"><img src="/uploads/db4391/optimized/2X/c/cd82d51e00f2837aaa80d0fcf5e4e223dc1b850a_2_345x106.png" alt="Screen Shot 2022-03-06 at 6.02.22 PM" data-base62-sha1="tk2bHA6HC7JplIcvkQMjn69w5Zw" width="345" height="106" srcset="/uploads/db4391/optimized/2X/c/cd82d51e00f2837aaa80d0fcf5e4e223dc1b850a_2_345x106.png, /uploads/db4391/optimized/2X/c/cd82d51e00f2837aaa80d0fcf5e4e223dc1b850a_2_517x159.png 1.5x, /uploads/db4391/optimized/2X/c/cd82d51e00f2837aaa80d0fcf5e4e223dc1b850a_2_690x212.png 2x" data-small-upload="/uploads/db4391/optimized/2X/c/cd82d51e00f2837aaa80d0fcf5e4e223dc1b850a_2_10x10.png"></a></div><p></p>
+<h1>
+<a name="a-community-that-cares-about-material-experiential-capital-3" class="anchor" href="https://gov.gitcoin.co#a-community-that-cares-about-material-experiential-capital-3"></a>a community that cares about material &amp; experiential capital</h1>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2d7991ad6400718e33f44e360558eb1459c76e9d.png" data-download-href="/uploads/short-url/6uhWGYghZzY0MHUom87wXnReTBb.png?dl=1" title="Screen Shot 2022-03-06 at 6.02.18 PM"><img src="/uploads/db4391/optimized/2X/2/2d7991ad6400718e33f44e360558eb1459c76e9d_2_345x105.png" alt="Screen Shot 2022-03-06 at 6.02.18 PM" data-base62-sha1="6uhWGYghZzY0MHUom87wXnReTBb" width="345" height="105" srcset="/uploads/db4391/optimized/2X/2/2d7991ad6400718e33f44e360558eb1459c76e9d_2_345x105.png, /uploads/db4391/optimized/2X/2/2d7991ad6400718e33f44e360558eb1459c76e9d_2_517x157.png 1.5x, /uploads/db4391/optimized/2X/2/2d7991ad6400718e33f44e360558eb1459c76e9d_2_690x210.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/2d7991ad6400718e33f44e360558eb1459c76e9d_2_10x10.png"></a></div><p></p>
+<h1>
+<a name="a-community-that-cares-about-financial-intellectual-capital-4" class="anchor" href="https://gov.gitcoin.co#a-community-that-cares-about-financial-intellectual-capital-4"></a>a community that cares about financial, intellectual capital</h1>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/ae9e1d50fff52f02049af18129886063a63970dd.png" data-download-href="/uploads/short-url/oUJPZLwbTbNzhnGkTXuRECiwNGd.png?dl=1" title="Screen Shot 2022-03-06 at 6.02.08 PM"><img src="/uploads/db4391/optimized/2X/a/ae9e1d50fff52f02049af18129886063a63970dd_2_345x107.png" alt="Screen Shot 2022-03-06 at 6.02.08 PM" data-base62-sha1="oUJPZLwbTbNzhnGkTXuRECiwNGd" width="345" height="107" srcset="/uploads/db4391/optimized/2X/a/ae9e1d50fff52f02049af18129886063a63970dd_2_345x107.png, /uploads/db4391/optimized/2X/a/ae9e1d50fff52f02049af18129886063a63970dd_2_517x160.png 1.5x, /uploads/db4391/optimized/2X/a/ae9e1d50fff52f02049af18129886063a63970dd_2_690x214.png 2x" data-small-upload="/uploads/db4391/optimized/2X/a/ae9e1d50fff52f02049af18129886063a63970dd_2_10x10.png"></a></div><p></p>
+<h1>
+<a name="a-community-that-doesnt-care-about-much-of-anything-at-all-except-financial-capital-5" class="anchor" href="https://gov.gitcoin.co#a-community-that-doesnt-care-about-much-of-anything-at-all-except-financial-capital-5"></a>a community that doesnt care about much of anything at all except financial capital</h1>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/002733f48ab01a243a8051f9182060066dfb0c19.png" data-download-href="/uploads/short-url/1lZuZuw464hdse7UyvDeFslvzH.png?dl=1" title="Screen Shot 2022-03-06 at 6.07.23 PM"><img src="/uploads/db4391/optimized/2X/0/002733f48ab01a243a8051f9182060066dfb0c19_2_345x103.png" alt="Screen Shot 2022-03-06 at 6.07.23 PM" data-base62-sha1="1lZuZuw464hdse7UyvDeFslvzH" width="345" height="103" srcset="/uploads/db4391/optimized/2X/0/002733f48ab01a243a8051f9182060066dfb0c19_2_345x103.png, /uploads/db4391/optimized/2X/0/002733f48ab01a243a8051f9182060066dfb0c19_2_517x154.png 1.5x, /uploads/db4391/optimized/2X/0/002733f48ab01a243a8051f9182060066dfb0c19_2_690x206.png 2x" data-small-upload="/uploads/db4391/optimized/2X/0/002733f48ab01a243a8051f9182060066dfb0c19_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/2
+        Mon, 07 Mar 2022 01:06:42 +0000
+gov.gitcoin.co-post-10016-2
+Quadratic Funding x Effective Altruism
+      
+
+Quadratic Funding x Effective Altruism
+owocki
+
+            <h1><a name="abstract-1" class="anchor" href="https://gov.gitcoin.co#abstract-1"></a>Abstract</h1>
+<p>In this post, I explore the intersection of Effective Altruism and web3.0. I explore a proposed extension to <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Gitcoin Grants 2.0</a> such that <a href="https://gitcoin.co/results">Gitcoin Grants Results</a> are increasingly steered towards the most effective causes via (1) the introduction of a data layer that allows for the aggregation of attestations of effectiveness &amp; (2) the introduction of social norms introduced by Effective Altruism.</p>
+<h1><a name="effective-altruism-2" class="anchor" href="https://gov.gitcoin.co#effective-altruism-2"></a>Effective Altruism</h1>
+<p>I’ve been learning about &amp; increasingly getting excited about Effective Altruism.</p>
+<blockquote>
+<p>Effective altruism (EA) is a philosophical and social movement that advocates “using evidence and reason to figure out how to benefit others as much as possible, and taking action on that basis”. <a href="https://en.wikipedia.org/wiki/Effective_altruism">[Wikipedia]</a></p>
+</blockquote>
+<p>The primary thing that appeals to me about Effective Altruism is how evidence based it is.</p>
+<p>The giver in me is deeply excited that when giving to a cause based in effective altruism, the evidence-driven-basis for the giving means that one is doing the most good possible per dollar spent. It is not going to administrative overhead. It’s not going to dead-end-initiatives. That is deeply cool &amp; profoundly impactful.</p>
+<p>The scientist in me is deeply excited about the idea of having an evidence based approach to giving. Science and the scientific method is deeply based in the seeking of relevant evidence to prove or disprove various hypotheses.</p>
+<p>The web3 builder in me is excited about the intersection of these ideas with the <a href="https://docs.google.com/spreadsheets/d/1OsJ_nmN9mN-i_9h3Yj2mDfjvtsP1qvv3B1zcpER62dk/edit#gid=1223173410">data set we have at Gitcoin</a>. Imagine if we could measure the impacts each Gitcoin Grant had on the world, across all <a href="http://www.appleseedpermaculture.com/8-forms-of-capital/">8 forms of capital</a>, and provided that information via the <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Grants 2.0 protocol</a>, so that people across the world could easily make better-informed decisions about which grants were the most effective when funding them!</p>
+<h2><a name="measuring-impact-3" class="anchor" href="https://gov.gitcoin.co#measuring-impact-3"></a>Measuring Impact</h2>
+<p>The devil is in the details. How does one measure which projects are doing the most good? Back to <a href="https://en.wikipedia.org/wiki/Effective_altruism">Wikipedia</a>:</p>
+<h3><a name="cost-effectiveness-4" class="anchor" href="https://gov.gitcoin.co#cost-effectiveness-4"></a>Cost-effectiveness</h3>
+<blockquote>
+<p>Some charities are far more effective than others, as charities may spend different amounts of money to achieve the same goal, and some charities may not achieve the goal at all.</p>
+</blockquote>
+<blockquote>
+<p>Effective altruists seek to identify charities that are highly cost-effective.</p>
+</blockquote>
+<blockquote>
+<p>For example, health interventions are selected based on their impact as measured by lives extended per dollar, quality-adjusted life years (QALY) added per dollar, or disability-adjusted life years (DALY) reduced per dollar.</p>
+</blockquote>
+<p>We have now quantified the impact for health-based outcomes into a KPI: quality-adjusted life years (QALY)</p>
+<h3><a name="room-for-more-funding-5" class="anchor" href="https://gov.gitcoin.co#room-for-more-funding-5"></a>Room for more funding</h3>
+<p>Another important criteria is room for more funding. Back to <a href="https://en.wikipedia.org/wiki/Effective_altruism">Wikipedia</a>:</p>
+<blockquote>
+<p>Effective altruist organizations consider the expected impact of a funding increase rather than evaluating the average value of all donations to the charity. This avoids donations to organizations that lack “room” for more funding because they face bottlenecks other than lack of money. For example, a medical charity might not be able to hire enough doctors or nurses to distribute more medical supplies, or it might already be serving all of the potential patients in its market</p>
+</blockquote>
+<h2><a name="learn-more-about-effective-altruism-6" class="anchor" href="https://gov.gitcoin.co#learn-more-about-effective-altruism-6"></a>Learn more about Effective Altruism</h2>
+<p>I plan to use the rest of this post to talk about the intersection of Effective Altruism x web3.</p>
+<p>You can learn more about <a href="https://forum.effectivealtruism.org/posts/cN9Zu7dowefAfmNnH/the-effective-altruism-handbook">Effective Altruism in this handbook</a>.</p>
+<h1><a name="effective-daoltruism-effective-altruism-x-web3-7" class="anchor" href="https://gov.gitcoin.co#effective-daoltruism-effective-altruism-x-web3-7"></a>Effective DAOltruism = Effective Altruism x web3</h1>
+<p>I would like to explore how we could bring more of an Effective Altruist mindset to Gitcoin Grants.</p>
+<p>This means bringing more evidence of effectiveness into the Gitcoin Grants dataset.</p>
+<p>For those of you reading this post who may be new to Gitcoin: <a href="https://gitcoin.co/grants">Gitcoin Grants</a> is a project oriented around our <a href="https://gitcoin.co/mission">mission</a> of building &amp; funding digital public goods. So far <a href="https://gitcoin.co/results">we’ve funded $52mm</a> worth of public goods, mostly using <a href="https://wtfisqf.com/">a matching formula called Quadratic Funding</a>.</p>
+<p>Every quarter, about 500k transactions happen on Gitcoin Grants to allocate about $6mm/quarter to various projects. The data for last quarter looks like this:</p>
+<p><a href="https://docs.google.com/spreadsheets/d/1OsJ_nmN9mN-i_9h3Yj2mDfjvtsP1qvv3B1zcpER62dk/edit#gid=1223173410"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1117120650ef0eafab71979de7b1cf2d94780597.jpeg" alt="" data-base62-sha1="2rbxNrwvD3d4HMthXR4mQTB9gKb" width="624" height="275" role="presentation"></a></p>
+<p>The decisions on Gitcoin Grants are based upon the preferences of a community of 30k funders. There are 500k transactions per quarter, which constitute an expression of support for 1k different projects in the ecosystem.</p>
+<p>When these funders make a decision about which projects to fund, they are given the following data:</p>
+<ol>
+<li>Grant name</li>
+<li>Grant Description <a href="https://gitcoin.co/grants/1668/coin-center-is-educating-policy-makers-about-publ">(see this example)</a></li>
+<li>What geographical region they are from.</li>
+<li>Their website</li>
+<li>Their twitter</li>
+<li>Who their team is</li>
+</ol>
+<p>What is deeply interesting to me is starting to take Effective Altruist data and co-mingling it with the above data. Imagine if you could browse each grant + see its impact on the world right next to the above information about the grant.</p>
+<p>What if you could see attestations about this grants impact, placed &amp; quantified on each of the following vectors, as you browsed the grants registry?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f1ecd42c81ed43dea60af72768e3099021aa185d.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/f1ecd42c81ed43dea60af72768e3099021aa185d" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f1ecd42c81ed43dea60af72768e3099021aa185d_2_624x391.png" alt="" data-base62-sha1="ywatn67gj8e8Nzgsyug85u0x5V3" width="624" height="391" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f1ecd42c81ed43dea60af72768e3099021aa185d_2_624x391.png, https://gov.gitcoin.co/uploads/db4391/original/2X/f/f1ecd42c81ed43dea60af72768e3099021aa185d.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/f/f1ecd42c81ed43dea60af72768e3099021aa185d.png 2x" data-dominant-color="D7D7A5"></a></div><p></p>
+<p>I imagine that the data layer of the system could look something like this</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b76c1ee65f6b1d4a86697d0168b1f6f810079a17.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/b76c1ee65f6b1d4a86697d0168b1f6f810079a17" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b76c1ee65f6b1d4a86697d0168b1f6f810079a17_2_432x321.png" alt="" data-base62-sha1="qaD1wFS2NIqMALHYtMZhZsUqUOH" width="432" height="321" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b76c1ee65f6b1d4a86697d0168b1f6f810079a17_2_432x321.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b76c1ee65f6b1d4a86697d0168b1f6f810079a17_2_648x481.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b76c1ee65f6b1d4a86697d0168b1f6f810079a17_2_864x642.png 2x" data-dominant-color="EDEDED"></a></div><p></p>
+<p>How would it change the Gitcoin Grants experience to be able to browse/filter grants by their impact? What if you could choose Grants that have the most total impact? What if you could filter grant based on those who have attestations from people you yourself trust? How would you filter out spam? How can governance create consensus about which attestations are legitimate?</p>
+<p>On a systemic level, how would the introduction of such a dataset change the preference map of each grants round?</p>
+<p>Here is what the preference map for Gitcoin Grants Round 12 looked like. Each node in the network is a user or a grant, and each edge is a transaction.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/c/ce8bf1706f9a2d04bba41079f246bb8f46321134.gif" alt="" data-base62-sha1="ttcbvHY4KruPlI9wwUPxJvPK6TG" width="380" height="250" role="presentation" class="animated"></p>
+<p>If we were to introduce Effective Altruist data layer into Gitcoin Grants, would each individual agent in the system make more-informed decisions? If so, how does that change what the dataset in aggregate looks like for each Grants round? How would that change the <a href="https://wtfisqf.com/">Quadratic Funding</a> results?</p>
+<p>Right now there are more questions than answers, but I am deeply excited about the questions that are coming up when I think about Effective DAOtruism.</p>
+<p>If you are too, I’d love to hear about it. Leave a comment below.</p>
+          <p><a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/1
+        Sun, 06 Mar 2022 21:07:50 +0000
+gov.gitcoin.co-post-10016-1
+Quadratic Funding x Effective Altruism
+      
+
+

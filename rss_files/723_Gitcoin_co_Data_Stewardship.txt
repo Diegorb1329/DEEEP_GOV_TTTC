@@ -1,0 +1,95 @@
+
+
+
+Gitcoin.co Data Stewardship
+https://gov.gitcoin.co/t/gitcoin-co-data-stewardship/7663
+    Hi all,
+
+I wanted to daylight something thats been keeping me up at night - data stewardship.
+
+As you know we are focused on [decentralizing Gitcoin](https://gov.gitcoin.co/t/workstream-suggestion-decentralize-gitcoin/180) in the next several years.  When that is done, the Grants platform will be provably credibly neutral, permissionless, transparent, forkable, composable, and secure and -- on the subject of user data -- the user data will be self sovereign owned by the users that use the platform, perhaps in a 3box/DID type architecture.
+
+Until then, I wanted to open up a discussion with the community about what responsible data stewardship on the existing Gitcoin.co marketplace looks like. 
+
+Why do this now?  I am reminded of the [hippocratic oath](https://en.wikipedia.org/wiki/Hippocratic_Oath) which is basically 'first do no harm".  stated more bluntly.... until we decentralize Gitcoin, I'd love to make sure that we dont do anything awful -- like dox an end user or have a data leak of some sort.
+
+So Id put this question to you all , the community - What does responsible data stewardship look like to you?  Both in the short, medium, and long term.
+
+For reference, [Here is the current gitcoin.co data privacy policy for reference](https://gitcoin.co/terms/privacy)
+Sun, 04 Jul 2021 06:55:08 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Gitcoin.co Data Stewardship
+hankthebldr
+
+            <p>The first rule about being a doctor, is that you’re gonna have to touch some dead bodies. Most breaches are caused by human error, so ask yourself - how can you limit the human while still providing a service?</p>
+<p>Data stewardship is a very critical question, who the is steering the ship  (outside of Gitcoin) now. Outside of education, the best way to keep users data safe is implementing a source based solution, where the transaction network plausibly would be separated from any PII or data that could assume a level decent criticality of risk.  Think about a bilateral service call, ie ack or etb that would set the parameters for the transactions on a multiplexed protocol i.e node peer status on one, however transactions on another</p>
+<p>For Gitcoin</p>
+<p>First step is to acknowledge that its a asymmetric game, P2P will be dependent on some type of connection protocol whether its based in TCIP/FIPS/TLS/or other state-full/stateless connections there is always a risk of packet forensics, and data capture. Using UEM, ifconfig, sep, any derrivative from the pcap library you can build a forensic profile on the source to source, or per to per relationship of of anyone supporting a future distributed node.</p>
+<p>Also, you’re going to have to accept the same responsibility any enterprise IT organization does, you’re gonna have admin that will know all data but he’ll be able to capture critical data in a KV store and use hashi/vault protect the data, and able to provide automated re-cription if bad node is recognized by the peer, hashi/vault</p>
+<p>Normally when large orgs are gong for PCI, SOX, HIPPA, HITRust Compliances a game of streaming the data to the coldest S3 bucket and checking a box. Decentralizing doesn’t assume the same WAN/LAN dynamics that most organizations are health with — meaning there can be a a replicated, hidden data repository on the host node. This would be similar to a netboot, where part of the disk is formatted in an away that unacceable to the core node it bloomed. i.e move and alias the file.</p>
+<p>Implement staff IAM/Least Privledge User and internal integrity checks.<br>
+long story short<br>
+1.identify and tag each type of data associated with a peer, and transaction state (create internal self generated handshake token to pass coin to wallet account in segregated volume)<br>
+2. Create local and global controls  1. use non traditional id signing or external keygen site thats Gitcoin managed 2. create separation layers between the data link and network transport that omits, or encrypts PII with tools like hashi vault etc, this might be done through some of the allied projects regarding identity ownership.</p>
+<p>I think that we’ve all realized that data is the one thing that is only becoming more abundant, but as a network operator that can provide services and public goods, ask yourself - do you worry about data stewardship when using cash? `I think that would be the ideal to strive for</p>
+<p>Dont collect data than you need. Dont provide any data that would hurt you, set up robust automation if the shit hits the fan.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-co-data-stewardship/7663/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-co-data-stewardship/7663/3
+        Sun, 04 Jul 2021 06:55:08 +0000
+gov.gitcoin.co-post-7663-3
+Gitcoin.co Data Stewardship
+      
+
+Gitcoin.co Data Stewardship
+octavioamu
+
+            <p>Thanks Owocki to open this topic, been already looking some alternatives and want to share my thinking and discoveries around it.</p>
+<h1>
+<a name="mastodont-1" class="anchor" href="https://gov.gitcoin.co#mastodont-1"></a>Mastodont</h1>
+<p>Been reading about it for long time and seems a very nice way to decentralize an open source project.<br>
+How it works can be read here <a href="https://savjee.be/videos/simply-explained/mastodon-and-fediverse-explained/" class="inline-onebox" rel="noopener nofollow ugc">Mastodon &amp; The Fediverse Explained |&nbsp;Savjee.be</a> but basically this runs under the <a href="https://www.w3.org/TR/activitypub/" rel="noopener nofollow ugc">activityPub</a> protocol that make possible different instances communicate with each other. (if you want to see how that data looks like check this <a href="https://mstdn.social/users/stux/statuses/106506229806664176/activity" rel="noopener nofollow ugc">real life example</a> of a twitter like data)</p>
+<p>Mastodont is a twitter like app but there are many diff apps like reedit like, youtube like, medium like <a href="https://fediverse.party/" rel="noopener nofollow ugc">etc</a>… all built on activityPub, I only bring mastodont as one of the most successfully and popular apps using it.</p>
+<h2>
+<a name="in-practice-2" class="anchor" href="https://gov.gitcoin.co#in-practice-2"></a>In practice</h2>
+<p>Lets talk for example about bounties, what if someone want to run his own bounties instance? well will be just them going and run the repo on their own servers and then decide which others servers data want to share with.</p>
+<h1>
+<a name="data-3" class="anchor" href="https://gov.gitcoin.co#data-3"></a>Data</h1>
+<p>The other part of it is data owning  as you can actually see the data on others instances you actually can walk away with it. Lets say Polkadot folks decide to run his own bounties platform, some user original from Gitcoin can decide start only using polkadot instance instead, so even if gitcoin is turned off the user lives on the “<a href="https://simple.wikipedia.org/wiki/Fediverse" rel="noopener nofollow ugc">Fediverse</a>”</p>
+<h1>
+<a name="innovation-4" class="anchor" href="https://gov.gitcoin.co#innovation-4"></a>Innovation</h1>
+<p>Something I really feel could be explored and not aware nobody is doing, is mixing the best part of 2 worlds web3 and activitypub protocol. So going further seems there is a lot to be explored where we could be, for example, using decentralize DBs to store the data instead of instances DB.</p>
+<p>What are the wins? Well we could be providing good way to people run his own instances of “bounties” but at the same time using a well funded protocol like activitypub we provide a solid architecture foundation for makers, where someone could just grab the backend and rebuilt all the product with a diff UI, or even extend the functionality.</p>
+<h1>
+<a name="today-5" class="anchor" href="https://gov.gitcoin.co#today-5"></a>Today</h1>
+<p>As a core dev member this could be a nice way to start thinking a way to build and rebuild things on Gitcoin but in a way we are attached to a pattern that scales and is <strong>open by default</strong> so as our intention to be more REST like application under json data endpoints and deciding how to open that data from the time the feature / product is build and not something to figure out later, making it more secure.</p>
+<p>Im curious to know if there are some others already looking at it and share their ideas, opinions or anything.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-co-data-stewardship/7663/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-co-data-stewardship/7663/2
+        Fri, 02 Jul 2021 22:01:04 +0000
+gov.gitcoin.co-post-7663-2
+Gitcoin.co Data Stewardship
+      
+
+Gitcoin.co Data Stewardship
+owocki
+
+            <p>Hi all,</p>
+<p>I wanted to daylight something thats been keeping me up at night - data stewardship.</p>
+<p>As you know we are focused on <a href="https://gov.gitcoin.co/t/workstream-suggestion-decentralize-gitcoin/180">decentralizing Gitcoin</a> in the next several years.  When that is done, the Grants platform will be provably credibly neutral, permissionless, transparent, forkable, composable, and secure and – on the subject of user data – the user data will be self sovereign owned by the users that use the platform, perhaps in a 3box/DID type architecture.</p>
+<p>Until then, I wanted to open up a discussion with the community about what responsible data stewardship on the existing <a href="http://Gitcoin.co">Gitcoin.co</a> marketplace looks like.</p>
+<p>Why do this now?  I am reminded of the <a href="https://en.wikipedia.org/wiki/Hippocratic_Oath">hippocratic oath</a> which is basically 'first do no harm".  stated more bluntly… until we decentralize Gitcoin, I’d love to make sure that we dont do anything awful – like dox an end user or have a data leak of some sort.</p>
+<p>So Id put this question to you all , the community - What does responsible data stewardship look like to you?  Both in the short, medium, and long term.</p>
+<p>For reference, <a href="https://gitcoin.co/terms/privacy">Here is the current gitcoin.co data privacy policy for reference</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-co-data-stewardship/7663/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-co-data-stewardship/7663/1
+        Fri, 02 Jul 2021 19:14:39 +0000
+gov.gitcoin.co-post-7663-1
+Gitcoin.co Data Stewardship
+      
+
+

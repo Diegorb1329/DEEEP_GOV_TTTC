@@ -1,0 +1,409 @@
+
+
+
+[GG22 Retrospective] - Allo Builders Advancement Round
+https://gov.gitcoin.co/t/gg22-retrospective-allo-builders-advancement-round/19677
+    ## GM Builders! 
+
+The **GG22 Allo Builders Advancement Round** has concluded, and we’re excited to share the outcomes, insights, and lessons learned. This round not only distributed funding to outstanding projects but also furthered our mission to enhance grant infrastructure and enable equitable resource allocation in the Allo ecosystem.
+    [![Captura-de-tela-de-2024-11-22-05-18-07.png](upload://hWSZIpaDrDy9wfkPJeV233wK9L2.png)](https://postimg.cc/YLpDKhHp)
+
+---
+
+## **Round Overview**
+
+### **Key Metrics**
+- **Total Donations:** $5,273.06  
+- **Matching Funds Available:** $25,000 USDGLO  
+- **Unique Contributors:** 333  
+- **Number of Contributions:** 934  
+- **Participating Projects:** 17  
+- **Average Contribution:** $15.84  
+
+---
+
+### **Passport Usage**
+- **100%** of contributor addresses were scored using the **Passport Model-Based Detection System**.  
+- **110 Users (33.0%)** received **full matching** (passport model score over 50).  
+- **21 Users (6.3%)** received **partial matching** (passport model score between 25 and 50).  
+  -  **Full Matching:** Contributions matched at 100% of the calculated amount.  
+  - **Partial Matching:** Contributions matched between 50-100% based on the score.  
+
+This system effectively incentivized legitimate users to strengthen their digital identities, ensuring fairer distribution while protecting matching funds from Sybil attacks and airdrop farmers.
+
+---
+
+Explore the full results in detail:  
+[https://qf-calculator.fly.dev/?round_id=636&chain_id=42161](https://qf-calculator.fly.dev/?round_id=636&chain_id=42161)
+
+
+
+---
+
+## **COCM: Improving Fairness in Matching**
+
+### **COCM vs. QF**
+The adoption of **COCM** over traditional **Quadratic Funding (QF)** highlighted the value of filtering connections and weighting contributions based on relationships, leading to more equitable outcomes for ecosystem grant programs. 
+
+Balancing between mechanisms (e.g., COCM and QF) can provide flexibility for future rounds depending on goals. 
+
+
+[![Captura-de-tela-de-2024-11-21-17-31-06.png](upload://s20Nq11AlmsajkjhDnL5lhIXo3V.png)](https://postimg.cc/2bQVzcQm)
+
+### Key Takeaways from COCM Results
+**1.** Balancing Over-Concentrated Networks: Amplifying contributions from high-context donors and mitigating bot-like behavior on grants for, the COCM model mitigated the influence of isolated wallets and ensured fair matching allocations.
+
+**2.** Projects like Giveth and VoiceDeck saw reduced matching under COCM compared to QF due to contributions coming from wallets that donated to just one project. This reduction highlights COCM's ability to discourage over-concentrated support and encourage a more diverse backing.
+
+**3.** Projects such as Open Source Observer, 1Hive Gardens, and Karma GAP received significant boosts in matching through COCM due to their support coming from wallets with a diversity of connections.
+
+## **Matching Models Breakdown**
+
+The **COCM model** was used to calculate matching funds. Below are the top 10 projects based on COCM results:
+
+| Project Name                                                                          | Matching Amount (COCM) | Matching Amount (QF) | Δ Match  |
+|--------------------------------------------------------------------------------------|------------------------:|----------------------:|---------:|
+| viaPrize Gitcoin Fiat Integration                                                     |               $4,438.77 |            $3,500.45  |  $938.32 |
+| Atlantis                                                                              |               $3,694.93 |            $3,373.39  |  $321.54 |
+| VoiceDeck: A Marketplace for Impact Certificates                                      |               $3,138.43 |            $5,000.00  | -$1,861.57 |
+| Open Source Observer                                                                  |               $2,447.41 |              $871.77  | $1,575.64 |
+| Giveth                                                                                |               $2,077.76 |            $4,109.78  | -$2,032.02 |
+| 1Hive Gardens                                                                         |               $2,061.28 |              $946.32  | $1,114.96 |
+| Karma GAP - Funding Map on Allo                                                       |               $2,059.52 |              $993.49  | $1,066.03 |
+| Flow State (Streaming Quadratic Funding)                                              |               $1,223.86 |              $758.18  |   $465.68 |
+| DAOIP-5 Grants Standard by DAOstar - Improving the web3 grants ecosystem for everyone |                $761.56  |              $341.96  |   $419.60 |
+| Allo Hacker Abode                                                                     |                $612.28  |            $1,722.62  | -$1,110.34 |
+
+These results reflect how matching was distributed, with the COCM model ensuring contributions from high-context donors were prioritized while managing coordination effects.
+
+
+This approach resulted in a more equitable distribution of funds, aligned with the ethos of decentralized public goods funding.
+
+---
+
+
+
+## **Key Round Insights**
+
+### **1. Enhanced Sybil Resistance**
+- **Gitcoin Passport Integration:**  
+   - 100% of contributor addresses were verified using Gitcoin Passport, ensuring credibility and reducing fraudulent activity.
+
+
+### **2. Improving Matching Mechanism**
+
+- **COCM vs. Quadratic Funding:**  
+   - COCM outperformed traditional QF by focusing on meaningful relationships between wallets, aligning resources with high-context donors who provided stronger signaling.
+      - further prioritized wallets backed by diversified connections, amplifying contributions impact  and mitigating bot-like behavior.
+      
+- **Matching Cap:**  
+    We could have achieved even greater equity within the round with a Matching Cap set at 18% instead of 20%. Since none of the projects reached this value, and only 3 projects received over 10% of the funds, while 4 projects secured between 5% and 10%, and 9 projects received between 0% and 5%.
+   
+[![fundsfrompool.png](upload://vYdcmKuiVmsSoib7QlalsDbg6bO.png)](https://postimg.cc/VJ4M3qMd)
+
+[![allo-percentages.png](upload://18ubF3kbxZuebFIYor7Ywp7N8kc.png)](https://postimg.cc/N2hr1phP)
+
+### **3. Community Engagement**
+- The round attracted a diverse set of projects and contributors, emphasizing the ecosystem’s growing vibrancy.  
+- **17 Participating Projects:** Spanning a range of impact areas, from fiat integrations to reputation systems and impact tracking tools.
+
+---
+
+## **User Experience Enhancements**
+
+The updated **Grantstack Dashboard** simplified round management and transparency:
+- Provided clear visualizations of wallet connections, donor behaviors, and matching allocations.
+- Enabled quick comparisons between COCM and QF models for informed decision-making.
+- Streamlined payout processes with integrated features like member addition and fund distribution.
+
+---
+
+## **Lessons Learned**
+
+### **1. Matching Mechanisms Matter**
+- COCM proved effective for this grant type, but balancing between mechanisms (e.g., COCM and QF) can provide flexibility for future rounds depending on goals.
+
+### **2. Transparency is Key**
+- The dashboard visualizations and Passport integration demonstrated the importance of clear, accessible data in fostering trust and fairness.
+
+### **3. Future Opportunities**
+- Continue scaling the matching cap to maintain balance across larger matching pools.
+- Explore ways to onboard more diverse contributors and projects into the ecosystem.
+
+---
+
+## **Next Steps**
+
+### **1. Grant Tracking**
+- Track how the matching funds are creating impact, using milestones on https://gap.karmahq.xyz
+
+### **2. Expand Engagement**
+- We aim to enhance education and outreach to onboard more projects and contributors for future rounds.
+
+### **3. Build on Success**
+- Use insights from this round to refine matching mechanisms and grow the Allo ecosystem with innovative, impactful projects.
+
+---
+
+## **Thank You, Builders!**
+
+A massive thank you to everyone who participated, contributed, or supported this round. Together, we are shaping the future of decentralized funding and public goods. Your work inspires us to keep pushing the boundaries of what’s possible.
+
+For questions, feedback, or ideas for future rounds, feel free to reach out. Let’s keep building!
+
+Stay awesome,  
+**The Allo Builders Team**
+Sat, 30 Nov 2024 09:39:45 +0000
+🌱 Gitcoin Grants
+
+
+[GG22 Retrospective] - Allo Builders Advancement Round
+tomislavmamic
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/cauetomaz">@cauetomaz</a> .</p>
+<p>I should have been more specific about my question. In your graphic that you created (and which is awesome!) I can see that projects are positioned at different distance from the center. The center has donors that donate to multiple projects, and projects that are closer to the center have higher % of their donors also from the center. Then there are some “outliers” like giveth which have many outside donors that donate just to them.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/309b597e9f971ce161f2a590852a8b3990858dcc.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/309b597e9f971ce161f2a590852a8b3990858dcc" title="CleanShot 2024-11-30 at 10.36.04@2x"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/3/309b597e9f971ce161f2a590852a8b3990858dcc.jpeg" alt="CleanShot 2024-11-30 at 10.36.04@2x" data-base62-sha1="6VZKIBAAAM3f6jJNJrU1FXDKCfO" width="567" height="500" data-dominant-color="D8ECDD"></a></div><p></p>
+<p>Obviously, COCM decreased the multiplier for these voters, but I wonder did it do enough? Maybe I am misled by this graphic, how can I see the individual multipliers for donors or clusters?</p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-retrospective-allo-builders-advancement-round/19677/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-retrospective-allo-builders-advancement-round/19677/4
+        Sat, 30 Nov 2024 09:39:45 +0000
+gov.gitcoin.co-post-19677-4
+[GG22 Retrospective] - Allo Builders Advancement Round
+      
+
+[GG22 Retrospective] - Allo Builders Advancement Round
+cauetomaz
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/tomislavmamic">@tomislavmamic</a> thx for your question.</p>
+<p>In few words, the difference between COCM matching and QF matching is,</p>
+<ul>
+<li>COCM recognizes the diversity of contributors connections, giving higher matching to projects supported by independent contributors (who usually donate to a lot of projects). While QF treats all contributions equally, regardless of context.</li>
+</ul>
+<p>So in my opinion COCM ensures a more balanced and equitable distribution for rounds aiming to amplify genuine web3 community-driven support, while QF could have better use for rounds where we can expect to have a bunch of wallet onboardings and newly contributions, like on citzens rounds.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-retrospective-allo-builders-advancement-round/19677/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-retrospective-allo-builders-advancement-round/19677/3
+        Wed, 27 Nov 2024 16:04:13 +0000
+gov.gitcoin.co-post-19677-3
+[GG22 Retrospective] - Allo Builders Advancement Round
+      
+
+[GG22 Retrospective] - Allo Builders Advancement Round
+tomislavmamic
+
+            <p>What do the differences between COCM matching and QF matching in projects tell us?</p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-retrospective-allo-builders-advancement-round/19677/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-retrospective-allo-builders-advancement-round/19677/2
+        Tue, 26 Nov 2024 14:41:44 +0000
+gov.gitcoin.co-post-19677-2
+[GG22 Retrospective] - Allo Builders Advancement Round
+      
+
+[GG22 Retrospective] - Allo Builders Advancement Round
+cauetomaz
+
+            <h2><a name="gm-builders-1" class="anchor" href="https://gov.gitcoin.co#gm-builders-1"></a>GM Builders!</h2>
+<p>The <strong>GG22 Allo Builders Advancement Round</strong> has concluded, and we’re excited to share the outcomes, insights, and lessons learned. This round not only distributed funding to outstanding projects but also furthered our mission to enhance grant infrastructure and enable equitable resource allocation in the Allo ecosystem.<br>
+<a href="https://postimg.cc/YLpDKhHp" rel="noopener nofollow ugc"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7dcd0c15d14cdc0e749f93549ccd31e7423e0178.png" alt="Captura-de-tela-de-2024-11-22-05-18-07.png" data-base62-sha1="hWSZIpaDrDy9wfkPJeV233wK9L2" width="666" height="422"></a></p>
+<hr>
+<h2><a name="round-overview-2" class="anchor" href="https://gov.gitcoin.co#round-overview-2"></a><strong>Round Overview</strong></h2>
+<h3><a name="key-metrics-3" class="anchor" href="https://gov.gitcoin.co#key-metrics-3"></a><strong>Key Metrics</strong></h3>
+<ul>
+<li><strong>Total Donations:</strong> $5,273.06</li>
+<li><strong>Matching Funds Available:</strong> $25,000 USDGLO</li>
+<li><strong>Unique Contributors:</strong> 333</li>
+<li><strong>Number of Contributions:</strong> 934</li>
+<li><strong>Participating Projects:</strong> 17</li>
+<li><strong>Average Contribution:</strong> $15.84</li>
+</ul>
+<hr>
+<h3><a name="passport-usage-4" class="anchor" href="https://gov.gitcoin.co#passport-usage-4"></a><strong>Passport Usage</strong></h3>
+<ul>
+<li><strong>100%</strong> of contributor addresses were scored using the <strong>Passport Model-Based Detection System</strong>.</li>
+<li><strong>110 Users (33.0%)</strong> received <strong>full matching</strong> (passport model score over 50).</li>
+<li><strong>21 Users (6.3%)</strong> received <strong>partial matching</strong> (passport model score between 25 and 50).
+<ul>
+<li><strong>Full Matching:</strong> Contributions matched at 100% of the calculated amount.</li>
+<li><strong>Partial Matching:</strong> Contributions matched between 50-100% based on the score.</li>
+</ul>
+</li>
+</ul>
+<p>This system effectively incentivized legitimate users to strengthen their digital identities, ensuring fairer distribution while protecting matching funds from Sybil attacks and airdrop farmers.</p>
+<hr>
+<p>Explore the full results in detail:<br>
+<a href="https://qf-calculator.fly.dev/?round_id=636&amp;chain_id=42161" rel="noopener nofollow ugc">https://qf-calculator.fly.dev/?round_id=636&amp;chain_id=42161</a></p>
+<hr>
+<h2><a name="cocm-improving-fairness-in-matching-5" class="anchor" href="https://gov.gitcoin.co#cocm-improving-fairness-in-matching-5"></a><strong>COCM: Improving Fairness in Matching</strong></h2>
+<h3><a name="cocm-vs-qf-6" class="anchor" href="https://gov.gitcoin.co#cocm-vs-qf-6"></a><strong>COCM vs. QF</strong></h3>
+<p>The adoption of <strong>COCM</strong> over traditional <strong>Quadratic Funding (QF)</strong> highlighted the value of filtering connections and weighting contributions based on relationships, leading to more equitable outcomes for ecosystem grant programs.</p>
+<p>Balancing between mechanisms (e.g., COCM and QF) can provide flexibility for future rounds depending on goals.</p>
+<p><a href="https://postimg.cc/2bQVzcQm" rel="noopener nofollow ugc"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c4771ea7cae6c0bf356c23f37d72b2b6ca7374db.png" alt="Captura-de-tela-de-2024-11-21-17-31-06.png" data-base62-sha1="s20Nq11AlmsajkjhDnL5lhIXo3V" width="658" height="500"></a></p>
+<h3><a name="key-takeaways-from-cocm-results-7" class="anchor" href="https://gov.gitcoin.co#key-takeaways-from-cocm-results-7"></a>Key Takeaways from COCM Results</h3>
+<p><strong>1.</strong> Balancing Over-Concentrated Networks: Amplifying contributions from high-context donors and mitigating bot-like behavior on grants for, the COCM model mitigated the influence of isolated wallets and ensured fair matching allocations.</p>
+<p><strong>2.</strong> Projects like Giveth and VoiceDeck saw reduced matching under COCM compared to QF due to contributions coming from wallets that donated to just one project. This reduction highlights COCM’s ability to discourage over-concentrated support and encourage a more diverse backing.</p>
+<p><strong>3.</strong> Projects such as Open Source Observer, 1Hive Gardens, and Karma GAP received significant boosts in matching through COCM due to their support coming from wallets with a diversity of connections.</p>
+<h2><a name="matching-models-breakdown-8" class="anchor" href="https://gov.gitcoin.co#matching-models-breakdown-8"></a><strong>Matching Models Breakdown</strong></h2>
+<p>The <strong>COCM model</strong> was used to calculate matching funds. Below are the top 10 projects based on COCM results:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Project Name</th>
+<th style="text-align:right">Matching Amount (COCM)</th>
+<th style="text-align:right">Matching Amount (QF)</th>
+<th style="text-align:right">Δ Match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>viaPrize Gitcoin Fiat Integration</td>
+<td style="text-align:right">$4,438.77</td>
+<td style="text-align:right">$3,500.45</td>
+<td style="text-align:right">$938.32</td>
+</tr>
+<tr>
+<td>Atlantis</td>
+<td style="text-align:right">$3,694.93</td>
+<td style="text-align:right">$3,373.39</td>
+<td style="text-align:right">$321.54</td>
+</tr>
+<tr>
+<td>VoiceDeck: A Marketplace for Impact Certificates</td>
+<td style="text-align:right">$3,138.43</td>
+<td style="text-align:right">$5,000.00</td>
+<td style="text-align:right">-$1,861.57</td>
+</tr>
+<tr>
+<td>Open Source Observer</td>
+<td style="text-align:right">$2,447.41</td>
+<td style="text-align:right">$871.77</td>
+<td style="text-align:right">$1,575.64</td>
+</tr>
+<tr>
+<td>Giveth</td>
+<td style="text-align:right">$2,077.76</td>
+<td style="text-align:right">$4,109.78</td>
+<td style="text-align:right">-$2,032.02</td>
+</tr>
+<tr>
+<td>1Hive Gardens</td>
+<td style="text-align:right">$2,061.28</td>
+<td style="text-align:right">$946.32</td>
+<td style="text-align:right">$1,114.96</td>
+</tr>
+<tr>
+<td>Karma GAP - Funding Map on Allo</td>
+<td style="text-align:right">$2,059.52</td>
+<td style="text-align:right">$993.49</td>
+<td style="text-align:right">$1,066.03</td>
+</tr>
+<tr>
+<td>Flow State (Streaming Quadratic Funding)</td>
+<td style="text-align:right">$1,223.86</td>
+<td style="text-align:right">$758.18</td>
+<td style="text-align:right">$465.68</td>
+</tr>
+<tr>
+<td>DAOIP-5 Grants Standard by DAOstar - Improving the web3 grants ecosystem for everyone</td>
+<td style="text-align:right">$761.56</td>
+<td style="text-align:right">$341.96</td>
+<td style="text-align:right">$419.60</td>
+</tr>
+<tr>
+<td>Allo Hacker Abode</td>
+<td style="text-align:right">$612.28</td>
+<td style="text-align:right">$1,722.62</td>
+<td style="text-align:right">-$1,110.34</td>
+</tr>
+</tbody>
+</table>
+</div><p>These results reflect how matching was distributed, with the COCM model ensuring contributions from high-context donors were prioritized while managing coordination effects.</p>
+<p>This approach resulted in a more equitable distribution of funds, aligned with the ethos of decentralized public goods funding.</p>
+<hr>
+<h2><a name="key-round-insights-9" class="anchor" href="https://gov.gitcoin.co#key-round-insights-9"></a><strong>Key Round Insights</strong></h2>
+<h3><a name="h-1-enhanced-sybil-resistance-10" class="anchor" href="https://gov.gitcoin.co#h-1-enhanced-sybil-resistance-10"></a><strong>1. Enhanced Sybil Resistance</strong></h3>
+<ul>
+<li><strong>Gitcoin Passport Integration:</strong>
+<ul>
+<li>100% of contributor addresses were verified using Gitcoin Passport, ensuring credibility and reducing fraudulent activity.</li>
+</ul>
+</li>
+</ul>
+<h3><a name="h-2-improving-matching-mechanism-11" class="anchor" href="https://gov.gitcoin.co#h-2-improving-matching-mechanism-11"></a><strong>2. Improving Matching Mechanism</strong></h3>
+<ul>
+<li>
+<p><strong>COCM vs. Quadratic Funding:</strong></p>
+<ul>
+<li>COCM outperformed traditional QF by focusing on meaningful relationships between wallets, aligning resources with high-context donors who provided stronger signaling.
+<ul>
+<li>further prioritized wallets backed by diversified connections, amplifying contributions impact  and mitigating bot-like behavior.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Matching Cap:</strong><br>
+We could have achieved even greater equity within the round with a Matching Cap set at 18% instead of 20%. Since none of the projects reached this value, and only 3 projects received over 10% of the funds, while 4 projects secured between 5% and 10%, and 9 projects received between 0% and 5%.</p>
+</li>
+</ul>
+<p><a href="https://postimg.cc/VJ4M3qMd" rel="noopener nofollow ugc"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e011d9ea46a69e4ecc2c8390d7518046275cd0c4.png" alt="fundsfrompool.png" data-base62-sha1="vYdcmKuiVmsSoib7QlalsDbg6bO" width="566" height="500"></a></p>
+<p><a href="https://postimg.cc/N2hr1phP" rel="noopener nofollow ugc"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/0/07f7c53e35005f91353d67a56cd3b8f50a4b82cc.png" alt="allo-percentages.png" data-base62-sha1="18ubF3kbxZuebFIYor7Ywp7N8kc" width="605" height="340"></a></p>
+<h3><a name="h-3-community-engagement-12" class="anchor" href="https://gov.gitcoin.co#h-3-community-engagement-12"></a><strong>3. Community Engagement</strong></h3>
+<ul>
+<li>The round attracted a diverse set of projects and contributors, emphasizing the ecosystem’s growing vibrancy.</li>
+<li><strong>17 Participating Projects:</strong> Spanning a range of impact areas, from fiat integrations to reputation systems and impact tracking tools.</li>
+</ul>
+<hr>
+<h2><a name="user-experience-enhancements-13" class="anchor" href="https://gov.gitcoin.co#user-experience-enhancements-13"></a><strong>User Experience Enhancements</strong></h2>
+<p>The updated <strong>Grantstack Dashboard</strong> simplified round management and transparency:</p>
+<ul>
+<li>Provided clear visualizations of wallet connections, donor behaviors, and matching allocations.</li>
+<li>Enabled quick comparisons between COCM and QF models for informed decision-making.</li>
+<li>Streamlined payout processes with integrated features like member addition and fund distribution.</li>
+</ul>
+<hr>
+<h2><a name="lessons-learned-14" class="anchor" href="https://gov.gitcoin.co#lessons-learned-14"></a><strong>Lessons Learned</strong></h2>
+<h3><a name="h-1-matching-mechanisms-matter-15" class="anchor" href="https://gov.gitcoin.co#h-1-matching-mechanisms-matter-15"></a><strong>1. Matching Mechanisms Matter</strong></h3>
+<ul>
+<li>COCM proved effective for this grant type, but balancing between mechanisms (e.g., COCM and QF) can provide flexibility for future rounds depending on goals.</li>
+</ul>
+<h3><a name="h-2-transparency-is-key-16" class="anchor" href="https://gov.gitcoin.co#h-2-transparency-is-key-16"></a><strong>2. Transparency is Key</strong></h3>
+<ul>
+<li>The dashboard visualizations and Passport integration demonstrated the importance of clear, accessible data in fostering trust and fairness.</li>
+</ul>
+<h3><a name="h-3-future-opportunities-17" class="anchor" href="https://gov.gitcoin.co#h-3-future-opportunities-17"></a><strong>3. Future Opportunities</strong></h3>
+<ul>
+<li>Continue scaling the matching cap to maintain balance across larger matching pools.</li>
+<li>Explore ways to onboard more diverse contributors and projects into the ecosystem.</li>
+</ul>
+<hr>
+<h2><a name="next-steps-18" class="anchor" href="https://gov.gitcoin.co#next-steps-18"></a><strong>Next Steps</strong></h2>
+<h3><a name="h-1-grant-tracking-19" class="anchor" href="https://gov.gitcoin.co#h-1-grant-tracking-19"></a><strong>1. Grant Tracking</strong></h3>
+<ul>
+<li>Track how the matching funds are creating impact, using milestones on <a href="https://gap.karmahq.xyz" rel="noopener nofollow ugc">https://gap.karmahq.xyz</a></li>
+</ul>
+<h3><a name="h-2-expand-engagement-20" class="anchor" href="https://gov.gitcoin.co#h-2-expand-engagement-20"></a><strong>2. Expand Engagement</strong></h3>
+<ul>
+<li>We aim to enhance education and outreach to onboard more projects and contributors for future rounds.</li>
+</ul>
+<h3><a name="h-3-build-on-success-21" class="anchor" href="https://gov.gitcoin.co#h-3-build-on-success-21"></a><strong>3. Build on Success</strong></h3>
+<ul>
+<li>Use insights from this round to refine matching mechanisms and grow the Allo ecosystem with innovative, impactful projects.</li>
+</ul>
+<hr>
+<h2><a name="thank-you-builders-22" class="anchor" href="https://gov.gitcoin.co#thank-you-builders-22"></a><strong>Thank You, Builders!</strong></h2>
+<p>A massive thank you to everyone who participated, contributed, or supported this round. Together, we are shaping the future of decentralized funding and public goods. Your work inspires us to keep pushing the boundaries of what’s possible.</p>
+<p>For questions, feedback, or ideas for future rounds, feel free to reach out. Let’s keep building!</p>
+<p>Stay awesome,<br>
+<strong>The Allo Builders Team</strong></p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-retrospective-allo-builders-advancement-round/19677/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-retrospective-allo-builders-advancement-round/19677/1
+        Fri, 22 Nov 2024 22:29:26 +0000
+gov.gitcoin.co-post-19677-1
+[GG22 Retrospective] - Allo Builders Advancement Round
+      
+
+

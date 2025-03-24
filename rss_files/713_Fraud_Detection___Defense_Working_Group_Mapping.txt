@@ -1,0 +1,424 @@
+
+
+
+Fraud Detection & Defense Working Group Mapping
+https://gov.gitcoin.co/t/fraud-detection-defense-working-group-mapping/8122
+    *The goal of this post is to provide a preliminary mapping of the Fraud Detection & Defense Working Group of the Gitcoin DAO, explaining its purpose and the interplays between the various stakeholders and the functions that must be fulfilled. In order for that purpose to be reliably fulfilled, the Gitcoin DAO and its stakeholders must understand not only the functions, but the effort, skills and resources - including but not limited to human, financial, access & permission, technical infrastructure - required to maintain Fraud Detection & Defense for the Gitcoin Grants ecosystem.*
+
+*Following a similar exercise at the [ecosystem level](https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123), this map, fashioned in the spirit of [this Computer-Aided Governance Map & Process,](https://blockscience.github.io/cag-map/map/) serves many purposes:* *i) A focal point and tool for further coordination and iteration of this working group and its associated processes ii) Transparent communications to the Gitcoin DAO iii) Onboarding and orientation tool for the Fraud Detection & Defense Working Group.*
+
+# **Fraud Detection & Defense Working Group Mapping**
+
+The Fraud Detection & Defense working group (FDD-WG for short; formerly known as Anti-Fraud & Collusion, Anti-Sybil workstream) is analyzing Gitcoin data and exploring mechanism, process and policy design solutions for sybil-resistance with the stated goal of identifying and defending against economic attacks such as collusion strategies by bots and fraudulent accounts. *(For context on the aims of the group, see [here](https://gitcoin.co/grants/3130/gitcoin-dao-anti-fraud-workstream-round-10).)*
+
+The FDD-WG uses the data from Grant rounds and a machine learning pipeline to [define, detect, evaluate, and sanction](https://medium.com/block-science/deterring-adversarial-behavior-at-scale-in-gitcoin-grants-a8a5cd7899ff) fraud and other attacks on the Gitcoin platform, and also to scale the monitoring capabilities of human reviewers.
+
+![|591x225.52487736510162](upload://adpgJA0UtdAgPph2hWmfgmeqU49.png)
+
+## Computer-Aided Sybil Defense: Human / Machine Learning Pipeline
+
+The working group has come a long way since its tasking: It began with two workstreams (tech and education) to catalyse the working group. Those working on the FDD-WG quickly realized the functions and workstreams of the group needed to be expanded to match a complex web of stakeholders and functions.
+
+This required, and requires, [institutional design](https://www.researchgate.net/publication/220007310_Institutional_Design) work - the choice of rules for collective decision making (which will be iterative and ongoing) - to fulfill the plans of Gitcoin Holdings and Gitcoin DAO to “progressively decentralize” the Fraud Detection and Defense work of the Gitcoin platform.
+
+## Workstream (sub working group) Functions within FDD
+
+At the highest level, the FDD-WG is split into five main workstreams at this point in time:
+
+![|512x202](upload://avM6skmXlDy1t6YddW2EnsDysf2.png)
+*Figure 1.1: FDD Working Group by Workstream (BlockScience: Emmett, Zartler)*
+
+### Admin, Ops & Education Workstream
+
+This workstream is responsible for the administrative and operational functions of the working group, along with communications and educational responsibilities both within the workstream and with external stakeholders. Some main tasks include, but are not limited to:
+
+* Working group operations and coordination, ensuring efficient functioning
+* Internal & external communications, documentation and repository management
+* Maintenance and mapping of communications channels i.e. Discord, Notion
+* Transparency and monitoring operations i.e. note taking, recording and uploading call recordings
+* Orientation to the group and onboarding contributors
+* Community management & education
+* Initiating and maintaining fundraising, reward and incentive systems and payments to contributors and/or contracted subject matter experts
+* Supporting other workstreams with admin, operational, communications and educational work
+
+### Grant Verification Workstream
+
+This workstream is responsible for reviewing and accepting or rejecting incoming grant submission for the Gitcoin platform and is also responsible for creating processes and transparent documentation for those processes.
+
+It also interfaces with Gitcoin DAO governance bodies on policy creation, iteration and implementation in regards to Grant Verification. This workstream group also interacts quite heavily with the Appeals & Sanctions workstream to ensure quality control processes are being met.
+
+Major tasks of FDD-WG include, but are not limited to:
+
+* Reviewing and verifying grant submissions, and documenting actions
+* Ensuring adequate resources and staffing for review input
+* Onboarding and training contributors for tasks specifically related to Grant Verification work
+* Enforcing terms and conditions e.g. removing grants from the platform that do not meet community standards, or marking grants as ineligible for matching
+* Communicating outcomes to internal & external stakeholders i.e. Stewards, wider DAO community
+* Maintenance and documentation of communications channels i.e. Discord, Notion
+* Creating, documenting, iterating and maintaining FD processes
+* Technical, product and UI/UX development where necessary
+* Supporting and enforcing PII standards and access control
+* Ongoing research and development to improve the FD function and ourselves as a working group.
+
+### ML Sybil Detection
+
+The ML Sybil Detection workstream is in charge of building and maintaining the sybil detection machine learning algorithm. This group coordinates closely with platform operations to operationalize the ML pipeline in each Gitcoin round, providing data, reports and advice in support of real-time intervention or other requests to FDD, and coordinates in between rounds for any necessary process improvements. Major tasks include but are not limited to:
+
+* Feature engineering within the data pipeline, model and metaparameter selection, loss function selection & maintaining human labeled training sets cross validation
+* Conducting testing to improve the accuracy of the algorithm in fraud detection
+* ML model upgrades
+* Ongoing data science R&D
+* Upholding Personally Identifiable Information (PII) standards, access control and policies created and maintained by the Platform Operations Working Group
+  * Balancing transparency with privacy (e.g. keep PII private while providing transparency about the process and any trade off decisions)
+
+* Builds on data operations infrastructure and documents processes, code, data, microservices, and any other infrastructure required in order to reliably fulfill this function to report and file with *Platform Operations/Data Operations *(see below "Additional Working Groups Needed")*
+* Onboarding and training contributors for tasks specifically related to ML Sybil Detection stream work.
+
+### Flag Evaluation
+
+This workstream is the human part of the sybil defense pipeline and is responsible for the *Define* & *Evaluation* sections of the pipeline. This group supports in continuing to refine definitions of sybil patterns, and participates in evaluating the actions flagged by the machine learning algorithm to match patterns deemed fraudulent.
+
+The evaluations by this group are also used by the ML Sybil Detection group to further tune the algorithm. The Flag Evaluation workstream also provides suggestions, data, reports and advice surrounding processes and further actions or improvements necessary in policymaking via communications with the other FDD workstreams.
+
+* Onboarding and training contributors for tasks specifically related to evaluation work
+* Evaluate flagging outputs to confirm accuracy of the machine learning algorithm
+* Report to appropriate stakeholders
+* Ongoing research and development
+
+### Appeals & Sanctions
+
+The Appeals & Sanctions group is responsible for making sure community feedback is heard and integrated in developing, enforcing, and iterating policies surrounding the appeals and sanctions processes within FDD and the [wider Gitcoin ecosystem](https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123) in meeting the terms and conditions of the platform. Responsibilities can be expanded but include the following:
+
+* Develop, iterate and maintain appeals and sanctions policy processes, documentation and implementation
+* Liaise with appropriate stakeholder groups and Gitcoin DAO governance bodies regarding policymaking and implementation
+* Explore Restorative/Transformative Justice and other measures via R&D to inform and improve policymaking and community well being and growth
+* Supporting and enforcing Personally Identifiable Information standards and access control.
+
+## Participant Groups, Recommended Responsibilities & Funding
+
+To this point, the FDD Working Group has been made up of Gitcoin Holdings (Gitcoin’s core team), [BlockScience](https://block.science/) as paid contractor/subject matter expert/advisor, and unpaid volunteers from the Gitcoin community, [Token Engineering community](https://tokenengineeringcommunity.github.io/website/), and other ecosystem volunteers.
+
+Going forward and to meet the goals of progressive decentralization, it is important to understand the current roles fulfilled, and the other that must be taken on by paid and/or volunteer contributors, coordinators and/or stewards. The following is a map of current resources and recommendations for roles and tasks to be fulfilled:
+
+![|610x352](upload://ghtliCXlZORBsgl25vLoloR46nF.png)
+*Figure 1.2: FDD Working Group Participant Groups (BlockScience: Zartler)*
+
+
+For now, we are identifying three main categories of participants:
+
+**Coordinators**
+  * Can be anyone who has been elevated to the “role” of steward within the gitcoin DAO *(see [this introductory Forum post](https://gov.gitcoin.co/t/introducing-stewards-governance/41))* - or community members
+
+     *Coordinators can serve in multiple workstreams as needed, until workloads expand.*
+
+**SMEs (subject matter experts)**
+  * Domain experts in areas including but not limited to advising, strategy, scientific documentation, process engineering and technical development (as appropriate)
+
+**Contributors**
+  * Anyone contributing work or participating in the FDD Working Group
+  * Can be community members or stewards
+
+Participants in all categories can be compensated or volunteer. Currently, there is no rewards system in place for this working group. Until this point, Gitcoin Holdings has been contracting the functioning of this group and there was a [Gitcoin Grant submitted](https://gitcoin.co/grants/3130/gitcoin-dao-anti-fraud-workstream-round-10) to fund the previous Gitcoin Round (Round 10) only. Going forward, that grant could be revived to support contributors, but more sustainable funding is required from GitcoinDAO to fund key operational functions of this working group and/or recruit volunteers in order to decentralize responsibilities. Work is underway by some participants of the FDD-WG to submit proposals to the DAO to fund FDD-WG operations *(see the [FDD-WG forum thread](https://gitcoin.co/grants/3130/gitcoin-dao-anti-fraud-workstream-round-10) for updates)*.
+
+Currently there are no rules or policies around onboarding contributors, decisions around participation, proposals and requests for participants to engage at the working group level. There is also no tracking system for those processes or funding systems. Participation and contributor processes need further institutional design. Many DAOs operate under models of [do-ocracy](https://communitywiki.org/wiki/DoOcracy). Discussion at the DAO level on governance and metagovernance are happening on the [Gitcoin DAO forum](https://gov.gitcoin.co/) under the [MetaGovernance](https://gov.gitcoin.co/c/governance-meta/6) and [Proposal Discussion](https://gov.gitcoin.co/c/governance-proposals/5) threads. Any participant can submit a proposal to the DAO via those threads.
+
+The following is a recommendation for tasks and responsibilities by participant group:
+
+## Workstream Roles and Responsibility Recommendations
+
+**Coordinators (paid/volunteer):** Community and contributor management, organizing and setting calls/calendar invites, making sure communications are flowing inside of the workstream with the community, SMEs, advisors and DAO.
+
+**SMEs/Domain Experts (paid):** Advising, strategy, scientific documentation, process engineering, technical development (as appropriate)
+
+**Contributors (paid):** Supporting grant verification, appeals & sanctions, evaluation panel flag judging, process mapping, governance policy making, data science for ML workstream, workstream operations, payroll management and contributor rewards tracking.
+
+**Contributors (volunteer/education through participation):** Supporting admin such as note taking, recording calls, uploading videos, community communications (forum/Discord comms), orientation/onboarding to the group.
+
+***NOTE ABOUT DAO FUNDING & REWARDS SYSTEMS:*** Funding proposal and incentive/rewards systems for DAOs are nascent, relatively underdeveloped and require further research and development. One example of a functioning funding proposal system is [Conviction Voting](https://twitter.com/commonsstack/status/1309211776425365510). Some examples of reward and incentive systems being explored in multiple DAOs includes [SourceCred](https://sourcecred.io/), [Coordinape](https://coordinape.com/), [Praise]((https://wiki.commonsstack.org/contributors-guide)) and UBI (Universal Basic Income) models, but ongoing work is nascent and exploratory. Yet another model to handle rewards and incentives is a Proposal Inverter, read more about in [this research article](https://medium.com/primedao/exploring-dao2dao-collaboration-mechanisms-c37218a17a21). Feel free to post/discuss other systems in the [MetaGovernance section](https://gov.gitcoin.co/c/governance-meta/6) of the GitcoinDAO forum.
+
+## FDD Functions & Interdependencies with External Stakeholders & Working Groups
+
+The FDD Working Group has several interdependencies in order to carry out its best work in defending the Gitcoin platform from Sybil attacks, collusion, and fraudulent actions. In order to protect ecosystem funding and ensure grants are distributed to legitimate projects contributing to Ethereum public goods, it requires coordination with many external stakeholders and working groups:
+
+![|624x408](upload://2ErSsMKCxe6cJcuHKN9QSQzygEp.jpeg)
+*Figure 2: FDD Interactions Map (BlockScience: Zargham, Emmett, Zartler)*
+
+## Interactions with other Gitcoin DAO working groups
+*(see [ecosystem map](https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123) for further detail of working groups mentioned below)*
+
+Interdependencies and coordination needs include, but are not limited to, the following:
+
+**Platform Operations**
+  * Initiates calls for service to FDD and the ML Sybil Detection sub working group for operational needs regarding flags and intervention
+  * Requests ad hoc analysis to various FDD workstreams and updates/reports on research and development
+  * Coordinates with FDD to ensure platform data and API needs are being met and code/database repos are being maintained, along with access and version control and PII requirements
+
+**Communication & Community Management**
+  * Supports the flow of communications and community feedback to and from the FDD Working Group with other working groups, stewards and stakeholders
+  * Supports contributor and community management with FDD needs and requests
+  * Support research communications, documentation and publications in FDD
+
+**Treasury Management**
+  * Supports rewards/incentives and funding proposal management needed for FDD Working Group
+  * Supports contracts/payments for SMEs and organization level proposals
+  * Coordinates with FDD Working Group regarding grant matching totals and calculations i.e. Fraud Tax data
+
+**Governance**
+  * Coordinates with FDD in policymaking for Grant Verification, Evaluation and Appeals & Sanctions processes
+  * Supports the flow of communication to and from FDD regarding community and stakeholder feedback in policymaking
+  * Supports documentation and maintenance of policy repo and communication to the community about rules, processes and corresponding communication channels
+
+**Meta Governance**
+  * Coordination with FDD for continuing institutional design and analysis regarding FDD functions and operations
+  * Support in FDD process engineering, refinement and updating documentation
+  * Supports in ensuring stakeholder representation within FDD, and managing policymaking involving FDD functions at the ecosystem level
+
+### Recommendations for Additional Working Groups / Functions Needed for FDD-WG and the Gitcoin DAO:
+
+The FDD-WG is privy to privileged data on behaviours of people who use the Gitcoin platform, as well as some private materials available only to group members, and is under [PIIs](https://digitalguardian.com/blog/how-secure-personally-identifiable-information-against-loss-or-compromise) as such through Gitcoin.co’s existing [data privacy policy](https://gitcoin.co/terms/privacy). In order to manage and balance any liability or privacy issues with transparent operations, it is critical the Gitcoin DAO maintain spaces and permissioned access levels specific to this working group.
+
+This mapping exercise has surfaced the following functional needs which are not currently met and remain unclear in the emerging Gitcoin DAO structure:
+
+**Data & Technical Infrastructure Operations**
+  * Consists of data engineers, development operations experts and data analysts
+  * Building, maintaining and operating data warehouse i.e. data collection, cleaning, curation, analytics and staging (maintained by data engineers to assure data consistency and availability for various use cases)
+  * Maintains data infrastructure and operations, corresponding standards, policies and data privacy access & control standards to meet legal requirements
+  * Supports FDD-WG in upholding and enforcing PII standards, policies and compliance
+
+*This working group could be a workstream of Platform Operations, or its own stand alone working group.*
+
+**Legal & Advisory Support**
+  * Advising on liability and legal requirements and considerations for DAO operations and stakeholders
+  * For Platform Ops/Data Ops & FDD-WG: Guidance on PII requirements, considerations for Appeals & Sanctions and other needs as they arise
+
+***NOTE**:* There has been some discussion around PII, in [this Gitcoin DAO forum post](https://gov.gitcoin.co/t/gitcoin-co-data-stewardship/7663/2).
+
+While access to some materials is limited, membership in the working group is still open to qualified volunteers.
+
+## In Closing
+
+As mentioned, FDD-WG is at a complex cross section of stakeholders and organizations in the journey to “progressively decentralize” the working group functions. It is challenging to pass responsibility to GitcoinDAO and the community without first understanding the landscape and functions of Fraud Detection and Defense, setting up funding and rewards mechanisms, and a minimum viable institutional shell to which can be passed said responsibilities.
+
+We hope this map will serve as a compass for further development of FDD and the Gitcoin DAO and look forward to continuing to serve as SME participants. I invite you to participate in the mapping exercise as a (continuously) ongoing process and participate in the Fraud Detection & Defense of the Gitcoin platform.
+
+
+*🙏Thank you to everyone who contributed ideas and feedback to this mapping exercise: @Zargham, @jeffemmett, @kelsien, Danilo Lessa Bernardineli, burrrata, @DisruptionJoe and @ceresstation 🙏*
+#
+
+----
+#
+***Disclosure:*** I am a paid contractor of BlockScience for subject matter expertise in the Fraud Detection and Defense Working Group and have been volunteering in the role of FDD co-coordinator along with my colleague Jeff Emmett and Disruption Joe of Gitcoin core team, although we are actively seeking new coordinators for the aforementioned workstreams. We’ve been working with Dr. Michael Zargham, Danilo Lessa Bernardineli, Jesse Tao, Jiajia H, Kyle Weiss, Scott Moore, Kevin Owocki, Dr. Andrew Penland, David Moss, Varun Bhargava, Dong Data, William Xuan, Kelsie Nabben and others to bootstrap this functional unit.
+
+There is a lot more work to be done to establish a self-sufficient working group, but we’ve been thankful for the contributions of named (and some unnamed) participants in this group. We would also like to thank volunteers of the Token Engineering community who have stepped up to provide their data science expertise and expand the work of this group to serve the wider Gitcoin community and open source, public goods ecosystems. We would also like to thank Commons Stack, Token Engineering Commons, 1Hive, MetaGov, Token Engineering Academy, Prime DAO, Curve Labs, NEAR Protocol and other pioneers in supporting continued research and development in the DAO and Commons space.
+Tue, 03 Aug 2021 18:40:24 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Fraud Detection & Defense Working Group Mapping
+JessicaZartler
+
+            <p><em>The goal of this post is to provide a preliminary mapping of the Fraud Detection &amp; Defense Working Group of the Gitcoin DAO, explaining its purpose and the interplays between the various stakeholders and the functions that must be fulfilled. In order for that purpose to be reliably fulfilled, the Gitcoin DAO and its stakeholders must understand not only the functions, but the effort, skills and resources - including but not limited to human, financial, access &amp; permission, technical infrastructure - required to maintain Fraud Detection &amp; Defense for the Gitcoin Grants ecosystem.</em></p>
+<p><em>Following a similar exercise at the <a href="https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123">ecosystem level</a>, this map, fashioned in the spirit of <a href="https://blockscience.github.io/cag-map/map/">this Computer-Aided Governance Map &amp; Process,</a> serves many purposes:</em> <em>i) A focal point and tool for further coordination and iteration of this working group and its associated processes ii) Transparent communications to the Gitcoin DAO iii) Onboarding and orientation tool for the Fraud Detection &amp; Defense Working Group.</em></p>
+<h1>
+<a name="fraud-detection-defense-working-group-mapping-1" class="anchor" href="https://gov.gitcoin.co#fraud-detection-defense-working-group-mapping-1"></a><strong>Fraud Detection &amp; Defense Working Group Mapping</strong>
+</h1>
+<p>The Fraud Detection &amp; Defense working group (FDD-WG for short; formerly known as Anti-Fraud &amp; Collusion, Anti-Sybil workstream) is analyzing Gitcoin data and exploring mechanism, process and policy design solutions for sybil-resistance with the stated goal of identifying and defending against economic attacks such as collusion strategies by bots and fraudulent accounts. <em>(For context on the aims of the group, see <a href="https://gitcoin.co/grants/3130/gitcoin-dao-anti-fraud-workstream-round-10">here</a>.)</em></p>
+<p>The FDD-WG uses the data from Grant rounds and a machine learning pipeline to <a href="https://medium.com/block-science/deterring-adversarial-behavior-at-scale-in-gitcoin-grants-a8a5cd7899ff">define, detect, evaluate, and sanction</a> fraud and other attacks on the Gitcoin platform, and also to scale the monitoring capabilities of human reviewers.</p>
+<p><img src="/uploads/db4391/original/2X/4/4799bb6b5dfd7cf2fbb59478ee8085c61fd1afb1.png" alt="|591x225.52487736510162" data-base62-sha1="adpgJA0UtdAgPph2hWmfgmeqU49" width="591" height="226"></p>
+<h2>
+<a name="computer-aided-sybil-defense-human-machine-learning-pipeline-2" class="anchor" href="https://gov.gitcoin.co#computer-aided-sybil-defense-human-machine-learning-pipeline-2"></a>Computer-Aided Sybil Defense: Human / Machine Learning Pipeline</h2>
+<p>The working group has come a long way since its tasking: It began with two workstreams (tech and education) to catalyse the working group. Those working on the FDD-WG quickly realized the functions and workstreams of the group needed to be expanded to match a complex web of stakeholders and functions.</p>
+<p>This required, and requires, <a href="https://www.researchgate.net/publication/220007310_Institutional_Design">institutional design</a> work - the choice of rules for collective decision making (which will be iterative and ongoing) - to fulfill the plans of Gitcoin Holdings and Gitcoin DAO to “progressively decentralize” the Fraud Detection and Defense work of the Gitcoin platform.</p>
+<h2>
+<a name="workstream-sub-working-group-functions-within-fdd-3" class="anchor" href="https://gov.gitcoin.co#workstream-sub-working-group-functions-within-fdd-3"></a>Workstream (sub working group) Functions within FDD</h2>
+<p>At the highest level, the FDD-WG is split into five main workstreams at this point in time:</p>
+<p><img src="/uploads/db4391/original/2X/4/49ad47745d21d93516e95b7ec9b8ab9cc0927fb4.png" alt="" data-base62-sha1="avM6skmXlDy1t6YddW2EnsDysf2" width="512" height="202"><br>
+<em>Figure 1.1: FDD Working Group by Workstream (BlockScience: Emmett, Zartler)</em></p>
+<h3>
+<a name="admin-ops-education-workstream-4" class="anchor" href="https://gov.gitcoin.co#admin-ops-education-workstream-4"></a>Admin, Ops &amp; Education Workstream</h3>
+<p>This workstream is responsible for the administrative and operational functions of the working group, along with communications and educational responsibilities both within the workstream and with external stakeholders. Some main tasks include, but are not limited to:</p>
+<ul>
+<li>Working group operations and coordination, ensuring efficient functioning</li>
+<li>Internal &amp; external communications, documentation and repository management</li>
+<li>Maintenance and mapping of communications channels i.e. Discord, Notion</li>
+<li>Transparency and monitoring operations i.e. note taking, recording and uploading call recordings</li>
+<li>Orientation to the group and onboarding contributors</li>
+<li>Community management &amp; education</li>
+<li>Initiating and maintaining fundraising, reward and incentive systems and payments to contributors and/or contracted subject matter experts</li>
+<li>Supporting other workstreams with admin, operational, communications and educational work</li>
+</ul>
+<h3>
+<a name="grant-verification-workstream-5" class="anchor" href="https://gov.gitcoin.co#grant-verification-workstream-5"></a>Grant Verification Workstream</h3>
+<p>This workstream is responsible for reviewing and accepting or rejecting incoming grant submission for the Gitcoin platform and is also responsible for creating processes and transparent documentation for those processes.</p>
+<p>It also interfaces with Gitcoin DAO governance bodies on policy creation, iteration and implementation in regards to Grant Verification. This workstream group also interacts quite heavily with the Appeals &amp; Sanctions workstream to ensure quality control processes are being met.</p>
+<p>Major tasks of FDD-WG include, but are not limited to:</p>
+<ul>
+<li>Reviewing and verifying grant submissions, and documenting actions</li>
+<li>Ensuring adequate resources and staffing for review input</li>
+<li>Onboarding and training contributors for tasks specifically related to Grant Verification work</li>
+<li>Enforcing terms and conditions e.g. removing grants from the platform that do not meet community standards, or marking grants as ineligible for matching</li>
+<li>Communicating outcomes to internal &amp; external stakeholders i.e. Stewards, wider DAO community</li>
+<li>Maintenance and documentation of communications channels i.e. Discord, Notion</li>
+<li>Creating, documenting, iterating and maintaining FD processes</li>
+<li>Technical, product and UI/UX development where necessary</li>
+<li>Supporting and enforcing PII standards and access control</li>
+<li>Ongoing research and development to improve the FD function and ourselves as a working group.</li>
+</ul>
+<h3>
+<a name="ml-sybil-detection-6" class="anchor" href="https://gov.gitcoin.co#ml-sybil-detection-6"></a>ML Sybil Detection</h3>
+<p>The ML Sybil Detection workstream is in charge of building and maintaining the sybil detection machine learning algorithm. This group coordinates closely with platform operations to operationalize the ML pipeline in each Gitcoin round, providing data, reports and advice in support of real-time intervention or other requests to FDD, and coordinates in between rounds for any necessary process improvements. Major tasks include but are not limited to:</p>
+<ul>
+<li>
+<p>Feature engineering within the data pipeline, model and metaparameter selection, loss function selection &amp; maintaining human labeled training sets cross validation</p>
+</li>
+<li>
+<p>Conducting testing to improve the accuracy of the algorithm in fraud detection</p>
+</li>
+<li>
+<p>ML model upgrades</p>
+</li>
+<li>
+<p>Ongoing data science R&amp;D</p>
+</li>
+<li>
+<p>Upholding Personally Identifiable Information (PII) standards, access control and policies created and maintained by the Platform Operations Working Group</p>
+<ul>
+<li>Balancing transparency with privacy (e.g. keep PII private while providing transparency about the process and any trade off decisions)</li>
+</ul>
+</li>
+<li>
+<p>Builds on data operations infrastructure and documents processes, code, data, microservices, and any other infrastructure required in order to reliably fulfill this function to report and file with *Platform Operations/Data Operations <em>(see below “Additional Working Groups Needed”)</em></p>
+</li>
+<li>
+<p>Onboarding and training contributors for tasks specifically related to ML Sybil Detection stream work.</p>
+</li>
+</ul>
+<h3>
+<a name="flag-evaluation-7" class="anchor" href="https://gov.gitcoin.co#flag-evaluation-7"></a>Flag Evaluation</h3>
+<p>This workstream is the human part of the sybil defense pipeline and is responsible for the <em>Define</em> &amp; <em>Evaluation</em> sections of the pipeline. This group supports in continuing to refine definitions of sybil patterns, and participates in evaluating the actions flagged by the machine learning algorithm to match patterns deemed fraudulent.</p>
+<p>The evaluations by this group are also used by the ML Sybil Detection group to further tune the algorithm. The Flag Evaluation workstream also provides suggestions, data, reports and advice surrounding processes and further actions or improvements necessary in policymaking via communications with the other FDD workstreams.</p>
+<ul>
+<li>Onboarding and training contributors for tasks specifically related to evaluation work</li>
+<li>Evaluate flagging outputs to confirm accuracy of the machine learning algorithm</li>
+<li>Report to appropriate stakeholders</li>
+<li>Ongoing research and development</li>
+</ul>
+<h3>
+<a name="appeals-sanctions-8" class="anchor" href="https://gov.gitcoin.co#appeals-sanctions-8"></a>Appeals &amp; Sanctions</h3>
+<p>The Appeals &amp; Sanctions group is responsible for making sure community feedback is heard and integrated in developing, enforcing, and iterating policies surrounding the appeals and sanctions processes within FDD and the <a href="https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123">wider Gitcoin ecosystem</a> in meeting the terms and conditions of the platform. Responsibilities can be expanded but include the following:</p>
+<ul>
+<li>Develop, iterate and maintain appeals and sanctions policy processes, documentation and implementation</li>
+<li>Liaise with appropriate stakeholder groups and Gitcoin DAO governance bodies regarding policymaking and implementation</li>
+<li>Explore Restorative/Transformative Justice and other measures via R&amp;D to inform and improve policymaking and community well being and growth</li>
+<li>Supporting and enforcing Personally Identifiable Information standards and access control.</li>
+</ul>
+<h2>
+<a name="participant-groups-recommended-responsibilities-funding-9" class="anchor" href="https://gov.gitcoin.co#participant-groups-recommended-responsibilities-funding-9"></a>Participant Groups, Recommended Responsibilities &amp; Funding</h2>
+<p>To this point, the FDD Working Group has been made up of Gitcoin Holdings (Gitcoin’s core team), <a href="https://block.science/">BlockScience</a> as paid contractor/subject matter expert/advisor, and unpaid volunteers from the Gitcoin community, <a href="https://tokenengineeringcommunity.github.io/website/">Token Engineering community</a>, and other ecosystem volunteers.</p>
+<p>Going forward and to meet the goals of progressive decentralization, it is important to understand the current roles fulfilled, and the other that must be taken on by paid and/or volunteer contributors, coordinators and/or stewards. The following is a map of current resources and recommendations for roles and tasks to be fulfilled:</p>
+<p><img src="/uploads/db4391/original/2X/7/721c6e30f140ff813298ae2510c258cd0ae4b243.png" alt="" data-base62-sha1="ghtliCXlZORBsgl25vLoloR46nF" width="610" height="352"><br>
+<em>Figure 1.2: FDD Working Group Participant Groups (BlockScience: Zartler)</em></p>
+<p>For now, we are identifying three main categories of participants:</p>
+<p><strong>Coordinators</strong></p>
+<ul>
+<li>
+<p>Can be anyone who has been elevated to the “role” of steward within the gitcoin DAO <em>(see <a href="https://gov.gitcoin.co/t/introducing-stewards-governance/41">this introductory Forum post</a>)</em> - or community members</p>
+<p><em>Coordinators can serve in multiple workstreams as needed, until workloads expand.</em></p>
+</li>
+</ul>
+<p><strong>SMEs (subject matter experts)</strong></p>
+<ul>
+<li>Domain experts in areas including but not limited to advising, strategy, scientific documentation, process engineering and technical development (as appropriate)</li>
+</ul>
+<p><strong>Contributors</strong></p>
+<ul>
+<li>Anyone contributing work or participating in the FDD Working Group</li>
+<li>Can be community members or stewards</li>
+</ul>
+<p>Participants in all categories can be compensated or volunteer. Currently, there is no rewards system in place for this working group. Until this point, Gitcoin Holdings has been contracting the functioning of this group and there was a <a href="https://gitcoin.co/grants/3130/gitcoin-dao-anti-fraud-workstream-round-10">Gitcoin Grant submitted</a> to fund the previous Gitcoin Round (Round 10) only. Going forward, that grant could be revived to support contributors, but more sustainable funding is required from GitcoinDAO to fund key operational functions of this working group and/or recruit volunteers in order to decentralize responsibilities. Work is underway by some participants of the FDD-WG to submit proposals to the DAO to fund FDD-WG operations <em>(see the <a href="https://gitcoin.co/grants/3130/gitcoin-dao-anti-fraud-workstream-round-10">FDD-WG forum thread</a> for updates)</em>.</p>
+<p>Currently there are no rules or policies around onboarding contributors, decisions around participation, proposals and requests for participants to engage at the working group level. There is also no tracking system for those processes or funding systems. Participation and contributor processes need further institutional design. Many DAOs operate under models of <a href="https://communitywiki.org/wiki/DoOcracy">do-ocracy</a>. Discussion at the DAO level on governance and metagovernance are happening on the <a href="https://gov.gitcoin.co/">Gitcoin DAO forum</a> under the <a href="https://gov.gitcoin.co/c/governance-meta/6">MetaGovernance</a> and <a href="https://gov.gitcoin.co/c/governance-proposals/5">Proposal Discussion</a> threads. Any participant can submit a proposal to the DAO via those threads.</p>
+<p>The following is a recommendation for tasks and responsibilities by participant group:</p>
+<h2>
+<a name="workstream-roles-and-responsibility-recommendations-10" class="anchor" href="https://gov.gitcoin.co#workstream-roles-and-responsibility-recommendations-10"></a>Workstream Roles and Responsibility Recommendations</h2>
+<p><strong>Coordinators (paid/volunteer):</strong> Community and contributor management, organizing and setting calls/calendar invites, making sure communications are flowing inside of the workstream with the community, SMEs, advisors and DAO.</p>
+<p><strong>SMEs/Domain Experts (paid):</strong> Advising, strategy, scientific documentation, process engineering, technical development (as appropriate)</p>
+<p><strong>Contributors (paid):</strong> Supporting grant verification, appeals &amp; sanctions, evaluation panel flag judging, process mapping, governance policy making, data science for ML workstream, workstream operations, payroll management and contributor rewards tracking.</p>
+<p><strong>Contributors (volunteer/education through participation):</strong> Supporting admin such as note taking, recording calls, uploading videos, community communications (forum/Discord comms), orientation/onboarding to the group.</p>
+<p><em><strong>NOTE ABOUT DAO FUNDING &amp; REWARDS SYSTEMS:</strong></em> Funding proposal and incentive/rewards systems for DAOs are nascent, relatively underdeveloped and require further research and development. One example of a functioning funding proposal system is <a href="https://twitter.com/commonsstack/status/1309211776425365510">Conviction Voting</a>. Some examples of reward and incentive systems being explored in multiple DAOs includes <a href="https://sourcecred.io/">SourceCred</a>, <a href="https://coordinape.com/">Coordinape</a>, <a href="https://gov.gitcoin.co">Praise</a> and UBI (Universal Basic Income) models, but ongoing work is nascent and exploratory. Yet another model to handle rewards and incentives is a Proposal Inverter, read more about in <a href="https://medium.com/primedao/exploring-dao2dao-collaboration-mechanisms-c37218a17a21">this research article</a>. Feel free to post/discuss other systems in the <a href="https://gov.gitcoin.co/c/governance-meta/6">MetaGovernance section</a> of the GitcoinDAO forum.</p>
+<h2>
+<a name="fdd-functions-interdependencies-with-external-stakeholders-working-groups-11" class="anchor" href="https://gov.gitcoin.co#fdd-functions-interdependencies-with-external-stakeholders-working-groups-11"></a>FDD Functions &amp; Interdependencies with External Stakeholders &amp; Working Groups</h2>
+<p>The FDD Working Group has several interdependencies in order to carry out its best work in defending the Gitcoin platform from Sybil attacks, collusion, and fraudulent actions. In order to protect ecosystem funding and ensure grants are distributed to legitimate projects contributing to Ethereum public goods, it requires coordination with many external stakeholders and working groups:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1296e446d199e715242ec438067395c562398d29.jpeg" data-download-href="/uploads/short-url/2ErSsMKCxe6cJcuHKN9QSQzygEp.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/1/1296e446d199e715242ec438067395c562398d29_2_624x408.jpeg" alt="" data-base62-sha1="2ErSsMKCxe6cJcuHKN9QSQzygEp" width="624" height="408" srcset="/uploads/db4391/optimized/2X/1/1296e446d199e715242ec438067395c562398d29_2_624x408.jpeg, /uploads/db4391/optimized/2X/1/1296e446d199e715242ec438067395c562398d29_2_936x612.jpeg 1.5x, /uploads/db4391/optimized/2X/1/1296e446d199e715242ec438067395c562398d29_2_1248x816.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/1/1296e446d199e715242ec438067395c562398d29_2_10x10.png"></a></div><br>
+<em>Figure 2: FDD Interactions Map (BlockScience: Zargham, Emmett, Zartler)</em><p></p>
+<h2>
+<a name="interactions-with-other-gitcoin-dao-working-groups-12" class="anchor" href="https://gov.gitcoin.co#interactions-with-other-gitcoin-dao-working-groups-12"></a>Interactions with other Gitcoin DAO working groups</h2>
+<p><em>(see <a href="https://gov.gitcoin.co/t/ecosystem-mapping-discussion/8123">ecosystem map</a> for further detail of working groups mentioned below)</em></p>
+<p>Interdependencies and coordination needs include, but are not limited to, the following:</p>
+<p><strong>Platform Operations</strong></p>
+<ul>
+<li>Initiates calls for service to FDD and the ML Sybil Detection sub working group for operational needs regarding flags and intervention</li>
+<li>Requests ad hoc analysis to various FDD workstreams and updates/reports on research and development</li>
+<li>Coordinates with FDD to ensure platform data and API needs are being met and code/database repos are being maintained, along with access and version control and PII requirements</li>
+</ul>
+<p><strong>Communication &amp; Community Management</strong></p>
+<ul>
+<li>Supports the flow of communications and community feedback to and from the FDD Working Group with other working groups, stewards and stakeholders</li>
+<li>Supports contributor and community management with FDD needs and requests</li>
+<li>Support research communications, documentation and publications in FDD</li>
+</ul>
+<p><strong>Treasury Management</strong></p>
+<ul>
+<li>Supports rewards/incentives and funding proposal management needed for FDD Working Group</li>
+<li>Supports contracts/payments for SMEs and organization level proposals</li>
+<li>Coordinates with FDD Working Group regarding grant matching totals and calculations i.e. Fraud Tax data</li>
+</ul>
+<p><strong>Governance</strong></p>
+<ul>
+<li>Coordinates with FDD in policymaking for Grant Verification, Evaluation and Appeals &amp; Sanctions processes</li>
+<li>Supports the flow of communication to and from FDD regarding community and stakeholder feedback in policymaking</li>
+<li>Supports documentation and maintenance of policy repo and communication to the community about rules, processes and corresponding communication channels</li>
+</ul>
+<p><strong>Meta Governance</strong></p>
+<ul>
+<li>Coordination with FDD for continuing institutional design and analysis regarding FDD functions and operations</li>
+<li>Support in FDD process engineering, refinement and updating documentation</li>
+<li>Supports in ensuring stakeholder representation within FDD, and managing policymaking involving FDD functions at the ecosystem level</li>
+</ul>
+<h3>
+<a name="recommendations-for-additional-working-groups-functions-needed-for-fdd-wg-and-the-gitcoin-dao-13" class="anchor" href="https://gov.gitcoin.co#recommendations-for-additional-working-groups-functions-needed-for-fdd-wg-and-the-gitcoin-dao-13"></a>Recommendations for Additional Working Groups / Functions Needed for FDD-WG and the Gitcoin DAO:</h3>
+<p>The FDD-WG is privy to privileged data on behaviours of people who use the Gitcoin platform, as well as some private materials available only to group members, and is under <a href="https://digitalguardian.com/blog/how-secure-personally-identifiable-information-against-loss-or-compromise">PIIs</a> as such through <a href="http://Gitcoin.co">Gitcoin.co</a>’s existing <a href="https://gitcoin.co/terms/privacy">data privacy policy</a>. In order to manage and balance any liability or privacy issues with transparent operations, it is critical the Gitcoin DAO maintain spaces and permissioned access levels specific to this working group.</p>
+<p>This mapping exercise has surfaced the following functional needs which are not currently met and remain unclear in the emerging Gitcoin DAO structure:</p>
+<p><strong>Data &amp; Technical Infrastructure Operations</strong></p>
+<ul>
+<li>Consists of data engineers, development operations experts and data analysts</li>
+<li>Building, maintaining and operating data warehouse i.e. data collection, cleaning, curation, analytics and staging (maintained by data engineers to assure data consistency and availability for various use cases)</li>
+<li>Maintains data infrastructure and operations, corresponding standards, policies and data privacy access &amp; control standards to meet legal requirements</li>
+<li>Supports FDD-WG in upholding and enforcing PII standards, policies and compliance</li>
+</ul>
+<p><em>This working group could be a workstream of Platform Operations, or its own stand alone working group.</em></p>
+<p><strong>Legal &amp; Advisory Support</strong></p>
+<ul>
+<li>Advising on liability and legal requirements and considerations for DAO operations and stakeholders</li>
+<li>For Platform Ops/Data Ops &amp; FDD-WG: Guidance on PII requirements, considerations for Appeals &amp; Sanctions and other needs as they arise</li>
+</ul>
+<p><em><strong>NOTE</strong>:</em> There has been some discussion around PII, in <a href="https://gov.gitcoin.co/t/gitcoin-co-data-stewardship/7663/2">this Gitcoin DAO forum post</a>.</p>
+<p>While access to some materials is limited, membership in the working group is still open to qualified volunteers.</p>
+<h2>
+<a name="in-closing-14" class="anchor" href="https://gov.gitcoin.co#in-closing-14"></a>In Closing</h2>
+<p>As mentioned, FDD-WG is at a complex cross section of stakeholders and organizations in the journey to “progressively decentralize” the working group functions. It is challenging to pass responsibility to GitcoinDAO and the community without first understanding the landscape and functions of Fraud Detection and Defense, setting up funding and rewards mechanisms, and a minimum viable institutional shell to which can be passed said responsibilities.</p>
+<p>We hope this map will serve as a compass for further development of FDD and the Gitcoin DAO and look forward to continuing to serve as SME participants. I invite you to participate in the mapping exercise as a (continuously) ongoing process and participate in the Fraud Detection &amp; Defense of the Gitcoin platform.</p>
+<p><em><img src="https://emoji.discourse-cdn.com/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20">Thank you to everyone who contributed ideas and feedback to this mapping exercise: <a class="mention" href="https://gov.gitcoin.co/u/zargham">@Zargham</a>, <a class="mention" href="https://gov.gitcoin.co/u/jeffemmett">@jeffemmett</a>, <a class="mention" href="https://gov.gitcoin.co/u/kelsien">@kelsien</a>, Danilo Lessa Bernardineli, burrrata, <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> and <a class="mention" href="https://gov.gitcoin.co/u/ceresstation">@ceresstation</a> <img src="https://emoji.discourse-cdn.com/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></em></p>
+<h1><a name="h-15" class="anchor" href="https://gov.gitcoin.co#h-15"></a></h1>
+<hr>
+<h1><a name="h-16" class="anchor" href="https://gov.gitcoin.co#h-16"></a></h1>
+<p><em><strong>Disclosure:</strong></em> I am a paid contractor of BlockScience for subject matter expertise in the Fraud Detection and Defense Working Group and have been volunteering in the role of FDD co-coordinator along with my colleague Jeff Emmett and Disruption Joe of Gitcoin core team, although we are actively seeking new coordinators for the aforementioned workstreams. We’ve been working with Dr. Michael Zargham, Danilo Lessa Bernardineli, Jesse Tao, Jiajia H, Kyle Weiss, Scott Moore, Kevin Owocki, Dr. Andrew Penland, David Moss, Varun Bhargava, Dong Data, William Xuan, Kelsie Nabben and others to bootstrap this functional unit.</p>
+<p>There is a lot more work to be done to establish a self-sufficient working group, but we’ve been thankful for the contributions of named (and some unnamed) participants in this group. We would also like to thank volunteers of the Token Engineering community who have stepped up to provide their data science expertise and expand the work of this group to serve the wider Gitcoin community and open source, public goods ecosystems. We would also like to thank Commons Stack, Token Engineering Commons, 1Hive, MetaGov, Token Engineering Academy, Prime DAO, Curve Labs, NEAR Protocol and other pioneers in supporting continued research and development in the DAO and Commons space.</p>
+          <p><a href="https://gov.gitcoin.co/t/fraud-detection-defense-working-group-mapping/8122/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/fraud-detection-defense-working-group-mapping/8122/1
+        Mon, 02 Aug 2021 21:28:32 +0000
+gov.gitcoin.co-post-8122-1
+Fraud Detection & Defense Working Group Mapping
+      
+
+

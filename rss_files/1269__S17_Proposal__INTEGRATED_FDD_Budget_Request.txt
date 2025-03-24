@@ -1,0 +1,785 @@
+
+
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738
+    <br><br>
+# TL;DR
+
+**FDD as a workstream is dissolving after Season 17, but the need for fraud detection and prevention services is far from done.** 
+
+* S17 Budget is almost $10k lower than Season 16
+* FDD is not requesting any reserves as this is the last season for us as a workstream
+* The Contributor Transition process has already started partially with an intention for clear transfer roles after EthDenver
+* Embedding fraud & data analyst/science knowledge and expertise across the workstreams will help the DAO realize the value of trust & risk management as well as increase awareness for fast-paced, data-driven “build-measure-learn” culture
+* Open Data Community continues data infrastructure innovation with hackathons and provides data transparency, provenance, and reproducibility for algorithmic policy decisions
+
+**3 key themes this season:**
+  * 1️⃣ **Continued Trust in Gitcoin’s Ability to Prevent Fraud**
+  * 2️⃣ **Empowering the DAO with Open Data Infrastructure & Processes**
+  * 3️⃣ **FDD Workstream Dissolution Success**
+
+<br><br>
+# Amount
+
+FDD is requesting **$123,694** from the treasury to complete a budget of $340,314 for S17. A breakdown of the budget can be found at the end of this document.
+
+
+|Gitcoin Season|Season 15|Season 16|Season 17|
+|---|---|---|---|
+|Season Budget|$349,500|$349,500|$340,314
+|Season Reserves| $233,000|$172,615|$216,620 1*|
+|Unspent Reserves %|100%|100%|100%|
+|Treasury Request USD|$362,500| $409,885| **$123,694** 2**
+
+
+1*) *FDD received $233,000 in reserves which were requested at a GTC price of $1.65 in S15. These were received in January at a GTC price of $1.37 making the received total of $193,461. 60% was converted to stables ($116,077) leaving a 40% exposure of GTC to upward price movement from $1.37 to $1.78 ($77,384 to $100,543) leaving a total of $216,620 in unspent reserves*
+
+2**) *Since FDD intends to dissolve as a workstream, **we will request the full season budget less 100% rolled over reserves from S16**. The amount of GTC requested and the value of the reserves will be adjusted based on the current market value at the time this proposal is moved to Tally using the lower of the current price or the 20 day moving average, whichever is lower.*
+
+
+
+<br><br>
+# Milestone Report S16
+
+Season 16 has been a very dynamic and the most unusual season for us. We set out with likely projects ([S16 budget request]([https:/](https://gov.gitcoin.co/t/s16-proposal-integrated-fdd-budget-request/11890)/)) and needed to respond to the changing circumstances of the DAO during the season. The changes include the decision not to host GR16 in December, to deprecate the cGrants product, the decision by GPC/PGF that sybil defense services wouldn’t be needed during UNICEF/Fantom/Alpha rounds, and subsequent findings that these did indeed need services. 
+
+Our assessment on what we completed and why can be found here: https://miro.com/app/board/uXjVP0ptO3k=/
+
+|Objectives Past Season|Initiative / Outcome|Key Result|
+|---|---|---|
+|Continuous analysis & validation of passport scores made available for round owners & technical users in partnership with the Passport team.|🟢 Everything the Passport team asked for was delivered on time and extra work was done |<br>* Created 4 scores including the one in use for Alpha rounds and Passport Scoring as a Service <br>* Built a passport scoring application mvp<br>* Delivered stamp topology research and stamp prioritization requests|
+|Build reliable composable, open source software tools for round owners to prevent fraud.|🟡 Documentation and understanding were massively improved, but actual building was slower than expected. Results of hackathon could make this green. |<br>* Designed a user interface for legos to be used by an fdd fraud consultant & eventually a round owner<br>* 5 Packages wallet legos in FDD github<br>* Created documentation for the person of a fraud consultant or round operator<br>* Created & updated readme files for all legos and applications and general getting started<br>* Created FAQ for Open Data Community to build and interact with legos<br>* Posted 3 articles discussing Sybil Scoring Legos<br>* Building custom aura implementation for gitcoin grants and an gitcoin/fdd team to participate|
+|To empower a regen data community with infrastructure, tools, and shared learnings which provides 50% of impactful insights into optimal capital allocation using Gitcoin grants.|🟢 Community growth and participation were a huge success with non-gitcoin community members driving many efforts.|<br>* Enabled the community led curation of data sources for quality and usefulness.<br>* Collaboratively authored the landscape of useful tools and guides for Open Data Community.<br>* Catalyzed & lead creation of a platform to host the open data community including collaboration about tools, data sources and methodologies especially non-gitcoin participation documentation & bounties to create new analysis and turn validated analysis into legos<br>* Over 100 in Discord with 6 active (non-fdd)  contributors on Github<br>* Built a public facing data & research hub with all past grant round datasets with FDD|
+|Find a sustainable strategy to engage ODC members and contributors to service decentralized grants rounds & maintain quality processes.|🟡 While we lowered the % of ODC costs which Gitcoin pays, we did not establish governance to run a grants round yet. This is partly because the protocol wasn’t ready this season. |<br>* Doubled prize total from $19k to $40k while Gitcoin/FDD is only paying 39% of it! (paid 100% last round)<br>* Added 6 sponsor orgs<br>* Contests hosted for unicef, fantom, and gitcoin alpha<br>* One previous hackathon participant was funded and returned as a Sponsor to the 2nd hackathon - They also provided services to the Fantom round outside of the hackathon.|
+|Continuously iterate, test & innovate on algorithmic solution quality and availability.|🟢 We deprioritized much of the grant eligibility work due to the decision to have closed alpha rounds, but had multiple useful outputs from FDD research.|<br>* Bankless & Snapshot Analysis leading to 6 new legos<br>* Created a topology of stamps with recommendations<br>* Designed Cost of Forgery stamp weighting model<br>* Trial use of rhaphorty open source graphdb for graph analysis<br>* Building custom aura implementation for gitcoin grants and an gitcoin/fdd team to participate<br>* cadCAD round simulator - can be used to find optimality gap analysis and optimal red team strategies<br>* Design workflow pipelines for legos from ideation or behavioral observation through building|
+|The right work gets done and the tools and access needed to do it is in order. We build plans for the future|🟡 The lego process was more difficult to scope and start but now since it is going it is moving well, we worked through many models for the future, but ended up needing the last week of the season to realize dissolution was the best answer. |<br>* Created a custom moloch DAO (on testnet) for a multisig allowing for true decentralization and potential spin out capability while separating Gitcoin funds to NOT be accessible by a ragequit<br>* Analyzed at all past FDD contributors pay, membership status, and contribution weeks to design a share splitting model<br>* Received a grant for sybil study of Aave onchain activity which overlaps with needs for Gitcoin<br>* Posted 5 FDD review articles<br>* Taught and/or transferred responsibility to Tigress treasury management and how to pay contributors|
+
+
+
+**Legend**
+🟢 Success
+🟡 Incomplete, will hit goal or priority change
+🔴 Incomplete, will not hit goal
+⚫ Canceled - out of workstream's control
+
+
+<br><br>
+# Moving to a Protocol Future
+The launch of the Allo Protocol will shift the needs of the Gitcoin community away from the historic goals of the Fraud Detection and Defense workstream. 
+
+> *In pivoting into a new structure, FDD is preparing to support the break out into smaller and more end-to-end accountable workstreams, **without sacrificing the unified intention of the FDD: fraud defense, risk mitigation, and trust building.*** 
+
+These smaller functional units eliminate any “I have 2 bosses” conflicts of interest. Individuals safe-guarding risk and trust priorities are embedded in end-to-end accountable working groups.
+
+The core promise of the Fraud Detection & Defense workstream has been providing legitimacy & trust to the outcomes of Gitcoin’s quadratic funding rounds. This has been done by keeping quadratic funding rounds free from stolen and misallocated funds caused by sybil attacks and illegitimate grants. The continued improvement of our ability for clients using Passport & Allo protocols the ability to access and share this trust with their communities belongs **as a function** that is accountable with the program, product or engineering teams providing the trust. 
+
+These functions of the current “centralized” organizational FDD structure will have moved over to other end-to-end accountable workstreams by the course of Season 17 to better reflect the future structure desired by stewards & Gitcoin leadership. We anticipate beginning to make these operational changes gradually with clear accountability shifts only happening after EthDenver, concurrently with the GPC workstream splitting into Passport & Allo streams. These changes are being made with the prior consent and partnership of the other workstreams involved. 
+
+**This last season FDD has 3 key themes:**
+
+**1️⃣ Continued Trust in Gitcoin’s Ability to Prevent Fraud**: Data informed recommendations to mitigate fraud are made continuously available.
+
+* Fantom & Gitcoin Alpha Round Recommendations
+* A Scalable Mitigation Sybil Solution Exists
+* Sybil Defense Innovation & Insights Continue after FDD
+* Passport has Analysis & Data Science Support
+* Recommendations to Correct Web2 Vulnerabilities are Followed Through
+
+**2️⃣ Empowering the DAO with Open Data, Infrastructure, & Processes**: Data processes & pipelines are reliably available & maintained.
+
+* An On-chain Data Extraction Solutions that Meets the Needs of Real-Time Anomaly Detection
+* Open and Decentralized Data Repository for the Community
+* Gitcoin Analytic DB & Query Interface
+
+**3️⃣ FDD Workstream Dissolution Success**: FDD contributors and work is smoothly transitioned and/or shut down.
+
+* Successful Transition of Contributors
+* Clearly Documented Closing of Accounts & Obligations
+* A Proposal for a Ratified Process to Spin-Out “Investible Workstreams”
+
+# List of S17 Outcomes
+## 1️⃣ Continued Trust in Gitcoin’s Ability to Prevent Fraud
+
+|Outcome Description|Essential Intent Connection|Likely Projects/Tasks|
+|---|---|---|
+|“What outcome or impact will we see?”|“How does this align with our most important work?”|“What will the work likely look like?”|
+|Final recommendations are provided to the Fantom & Gitcoin Alpha rounds|Programs<br><br>Growth|Data extraction & cleaning<br><br>Computation of all sybil scoring legos available<br><br>Analysis of potential fraudulent behavior is drafted<br><br>Final recommendations for retroactive Sybil discounting|
+|The tools & processes for a scalable sybil mitigation solution is available for program managers during the beta rounds.|Programs<br><br>Growth|Conduct historical analysis<br><br>Design dashboard essentials & highest impact visualizations<br><br>Finish building a round dashboard MVP<br><br>Earn consensus on policy shifts as needed<br><br>Collect user feedback on round dashboards<br><br>“Trusted Vendor” process solidified<br><br>Monitor April rounds and define opportunities for improvement|
+|A flywheel of insight and innovation in sybil defense brings continued innovation & insights from the Open Data Community which reduces sybil behavior and improves Program Manager feedback.|Financial Sustainability|Insights are documented and included in fraud runbooks<br><br>Analyze ODC 2nd Hackathon submissions (e.g. www.grantlooker.xyz) and use potentially good submissions as inspiration for the further development<br><br>Builds are documented in Github for future use<br><br>Lowercost of iterative innovation for data infrastructure & innovation from the FDD workstream budget to bounties & membership costs.<br><br>ODC synthesizes learnings from the first three hackathons and provides documentation towards data standards and good practices in ongoing resource updates, useful to Gitcoin and the entire web3 community. <br><br>Freshly built legos get tested and applied to beta rounds<br><br>Testing reports including metrics on fraud tax are written in co-creation (ODC, Gitcoin Fraud Analyst) and shared with Gitcoin’s product & engineering teams.|
+|Passport is supported with analysis & data science needs as they work to hire a new data analyst/scientist.|Protocols<br><br>Passport|Assistance in hiring and training of a data scientist to join the GPC workstream in S18<br><br>Updated score is provided<br><br>Retraining schedule is created for PSaaS<br><br>Update & adjust weighting before next season<br><br>Testing reports including metrics on fraud tax are written in co-creation (ODC, Gitcoin Fraud Analyst) and shared with Gitcoin’s product & engineering teams. <br><br>In case of success, stakeholders discuss how and when to implement legos.|
+|Recommendations to correct web 2 vulnerabilities are made to respective product units.|Protocols|Define Opportunities & additional data pull needs<br><br>Monitor Google Analytics events during alpha round & analysis<br><br>Get feedback on recommendations<br><br>Correct web 2 vulnerabilities<br><br>Monitor core metrics for change with implementation|
+
+## 2️⃣ Empowering the DAO with Open Fraud Data, Infrastructure & Processes
+
+|Outcome Description|Essential Intent Connection|Likely Projects/Tasks|
+|---|---|---|
+|“What outcome or impact will we see?”|“How does this align with our most important work?”|“What will the work likely look like?”|
+|An on-chain data extraction solution is developed providing speed, transparency, reliability, cost efficiency, and auditability gains.|Programs|Settle on tech stack<br><br>Erigon archival node for ethereum chain data<br><br>Trueblocks node with custom Chifra Server<br><br>Define core heuristics<br><br>Share with partners for testing<br><br>Define contract/protocol anomalies<br><br>Set up a Service Leasing Agreement (SLA) with Open Data Community to run the Gitcoin Open Data Stack<br><br>Begin serving up chain data via Rounds Dashboard & GitcoinDB|
+|An open & decentralized data repository with all round data is consistently updated for the entire Gitcoin community.|Programs<br><br>Growth|Discovering scope of repository project in co-creation with Gitcoin<br><br>Builds an MVP similar to the fddhub.io but hosted by the open data community and updated with new round data<br><br>To ensure continued support and availability a service agreement for continued data infrastructure support is defined and agreed upon between Open Data Community and Gitcoin.|
+|A Gitcoin Analytic DB & query environment empowers analysts across all of GitcoinDAO to become more data driven||DB design discovery - Tech stack / tooling research<br><br>Continue build in progress<br><br>Metric discovery in partnership with all workstreams<br><br>Financial Dashboards w/ DAOops<br><br>Partnership health w/ PGF Partnerships<br><br>Product Goals w/ Allo & Passport<br><br>DevRel Goals w/ DevRel<br><br>User Activity w/ MMM<br><br>Modeling for GTC utility to design a more costly to attack than defend system<br><br>Solve hosting questions - gain home for SaaS charges<br><br>Begin surfacing key on-chain signals in query environment|
+
+## 3️⃣ FDD Workstream Dissolution Success
+
+|Outcome Description|Essential Intent Connection|Likely Projects/Tasks|
+|---|---|---|
+|“What outcome or impact will we see?”|“How does this align with our most important work?”|“What will the work likely look like?”|
+|Successful transition of contributors with offered and accepted roles to other workstreams allows the completion of FDD work and the smooth assimilation to new roles.|DAO Organization|Transfers are communicated with other workstream leads, introductions are made, and formal transition dates & compensation agreements are set.<br><br>Data Analyst > Allo<br><br>Fraud Analyst > Program Readiness (PGF)<br><br>Data Analyst hiring support > Passport<br><br>Other TBD = Data Engineering, Technical Writer, Financial Analyst<br><br>Successful handover: FDD work is either completed or transitioned to new workstreams|
+|Clearly documented accounting winddown of all FDD wallets and financial obligations.|DAO Organization|All FDD multisig wallets are closed<br><br>Severance is paid where necessary<br><br>Exit interviews are conducted in partnership with DAOops<br><br>Transparent budget is available for review w/ audit|
+|Proposal to create a CSDO-ratified process for spinning out “investable workstreams” exists to help Gitcoin avoid the “services trap”.|Financial Sustainability|In cooperation with DAOops create a positive sum model / process for de-risked, legally viable, and minimally disruptive investible spinout of workstreams.<br><br>Discovery around unanswered or uncertain aspects of workstream dissolution is conducted leading to ratified solutions which are safe to try.<br><br>Recommend a “spinout architecture” including literature research on legal wrappers and tech solutions<br><br>Craft a “spinout process” to transfer ownership and funds|
+
+
+
+
+
+<br><br>
+# Budget Breakdown
+The FDD Season 17 budget is almost $10k lower than Season 16. Additionally we will not be requesting reserves for S17.
+
+|Budget Category|Description|Amount USD|
+|---|---|---|
+|7 Core Contributors|**WS Leads**<br>Product / Strategy (Joe)<br>Operations (Tigress)<br>**Full Time Contributors**<br>Data Scientist (Omni)<br>Sr. Fraud Detection Analyst (Alex)<br>Data/DevOps Engineer (Zen)<br>Data Analyst (Bella)<br>OpenData Community Project Lead (EPowell) |$241,639|
+|3 Trusted Contributors|FDD Review & Science SME (J-Cook)<br>Data Analyst (Adebola)<br>Analyst (Sorana)|$27,300|
+|2 Regular Contributors|Software Engineers (Eric & Yogeesh)|$24,375|
+|Open Data Hackathon|Bounties / Prizes|$30,000|
+|SaaS, Fees, etc.||$3,000|
+|Travel & other expenses*)||$14,000|
+|Other Bounties||$0|
+|**Total**||**$340,314**|
+
+*) *Includes Gitcoin Retreat, EthDenver or similar events & travel reimbursements.*
+
+<br><br>
+# Footnotes in Conclusion and Looking Forward
+
+With the DAO Data-related outcomes described above, we intend to provide data insights for protocol-based and transparent DAO operations. We have the skills and the opportunity to codify certain best practices. We also believe past learnings from best-in-class sybil defense have led to several key opportunities for automation, tooling, and experimentation.  
+
+> *As we prepare to better utilize data for FDD aims, we see a necessity of building out the data capacities of the whole DAO alongside us, and it no longer seems efficient for FDD’s data resources to operate in silo.*
+
+Can Gitcoin be the new, more secure, and more trusted GoFundMe?  Can we correct the issues inherent in early web2 projects like Kickstarter & co?  We believe so.  But to be ready for the new challenges which come from a wider audience, we have to invest in tooling and the necessary infrastructure now in order to carry out the promise inherent in an on-chain, trustless grants system.
+
+It is, of course, the case that Gitcoin is not alone in these essential needs to secure our protocol and protect our governance practices.  We have heard repeatedly from our partners – new and long-standing – that it is necessary for other DAOs in the ecosystem to have the tools and the knowledge available to protect their own environments. Because of the growing demand for such services, it is thought to be well-validated that the DAOs Growth unit can spinout and begin seeking payment for more generalized “trust-as-a-service” as an a la carte consulting product, as well as providing this service which can be added to the most vulnerable grants rounds ad hoc.
+
+
+
+---
+
+***Authors of this Document***
+|Section|Author(s)|
+|---|---|
+|Milestone Report|Joe|
+|TL;DR|Joe|
+|FDD Outcomes|Joe in collaboration with Stewards and FDD contributors|
+|Amount, Budget Breakdown|Tigress with support from Joe|
+|Footnotes in Conclusion and Looking Forward|Alex|
+Sat, 01 Apr 2023 17:06:08 +0000
+📜 Proposals
+
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+DisruptionJoe
+
+            <p>I delayed posting a FAQ about this as I was trying to gather all the details. You beat me to it! My intention is to get it up this Monday.</p>
+<p>TL;DR</p>
+<ul>
+<li>We are planning to execute on almost everything in the Season 17 budget as <a href="https://share.getcloudapp.com/YEueP80r">posted</a>.  It seemed that we had alignment on the work to be done, just not if FDD should be given more funds to do it.</li>
+<li>We have $30-60k left which FDD will vote on how to use to further its mission. These will likely be used dogfooding Allo protocol.</li>
+<li>5/10 have transfer plans which will be outlined on the FAQ - Most of these are paid by FDD through 4/28 although they transfer accountability on 4/3 - Its a hand held process</li>
+<li>Those who aren’t moving on had final dates set according to work they are responsible for and severence based on time/postition with Gitcoin.</li>
+<li>ODC will still conduct the hackathon 4/25-5/30! Checkout Evan post here: <a href="https://gov.gitcoin.co/t/gitcoin-founded-opendata-community-regen-rangers-hackathon-is-approaching/13421" class="inline-onebox">Gitcoin founded OpenData Community Regen Rangers hackathon is approaching!</a>
+</li>
+<li>We do hope for other opportunities for individuals to participate in the ecosystem through GCPs and building some of the first service orgs on the protocol! More details TBD.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/52">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/52
+        Sat, 01 Apr 2023 15:12:53 +0000
+gov.gitcoin.co-post-12738-52
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+kyle
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="50" data-topic="12738">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>I will not be posting the budget again as <strong>FDD does have the funds to finish the season</strong> and we are already well down that path.</p>
+</blockquote>
+</aside>
+<p>Hey Joe - Do whats does this actually mean? I think we discovered FDD does have “grey funds” and those cold be used to finish out the season (not saying they have to be, but want to get a bit of context)?</p>
+<p>Where do those “grey funds” go once FDD dissolves?</p>
+<p>IIRC, dCompass kept their excess funds after spinning down as a workstream as they were working to finish up the product they were building and felt they may still have a go to market path without additional WS funds. What are you thinking for FDD’s case?</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/51">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/51
+        Sat, 01 Apr 2023 12:51:55 +0000
+gov.gitcoin.co-post-12738-51
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+DisruptionJoe
+
+            <p>Thank you for all your hard work to make this happen. While I still disagree with the outcome, I do feel that the process for making the decision was fair and legitimate.</p>
+<p>I will not be posting the budget again as FDD does have the funds to finish the season and we are already well down that path.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/50">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/50
+        Tue, 28 Mar 2023 15:24:41 +0000
+gov.gitcoin.co-post-12738-50
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+shawn16400
+
+            <p>Quick update:<br>
+The steward council met on 3.27 and voted to reconsider the vote on the S17 FDD budget.  This effectively means the snapshot vote for the  S17 FDD budget is <strong>null and void</strong>.  FDD budget owner <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> does comment on his intentions moving forward and you can see the discussion in the recording below (starting at about 3:13.</p>
+<p>you can see a recording of the meeting `<a href="https://www.youtube.com/live/zwrQpyzc5pM?feature=share">here</a><br>
+And you can see the notes of the meeting <a href="https://www.notion.so/gitcoin/Steward-Council-Mar-2-92aa72f9fe064dd8b26f966d0bb31d5e?pvs=4">here</a></p>
+<p>Thank you to the Gitcoin Steward council members who were present, and cast their vote.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/06e2dd3d850ad8265ad9fc12017b4e1470ba7da7.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/06e2dd3d850ad8265ad9fc12017b4e1470ba7da7" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/0/06e2dd3d850ad8265ad9fc12017b4e1470ba7da7.png" alt="image" data-base62-sha1="YUUZiuWepK1m5Fb5oveec9zxvF" width="690" height="205" data-dominant-color="F9F9F9"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/49">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/49
+        Tue, 28 Mar 2023 12:42:26 +0000
+gov.gitcoin.co-post-12738-49
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+shawn16400
+
+            <p>On 3.20 this proposal was referred to the Steward Council for a reconsideration by <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a>, a member of CSDO.  Following the newly defined process, it will be reviewed in the next Steward Council meeting for consideration.  I will post the outcome of that discussion in this thread.</p>
+<aside class="quote quote-modified" data-post="1" data-topic="13165">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gcp-003-passed-post-vote-reconsider-process/13165">[GCP-003] - PASSED - Post-vote “reconsider” process</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    Title: [GCP-003] - Post-vote “reconsider” process 
+Author(s): Shawn16400, Gitcoin Steward Council, 
+Summary: 
+This proposal creates a mechanism for appealing a decision that has been ratified via the Gitcoin Governance process. This process is intended to be used sparingly and is not designed to be an alternative litigation process for dissatisfied users of the governance process. 
+Abstract: 
+This mechanism is designed as a stop-gap measure in cases where there is a material change in informatio…
+  </blockquote>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/48">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/48
+        Tue, 21 Mar 2023 13:42:14 +0000
+gov.gitcoin.co-post-12738-48
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+lefterisjp
+
+            <p>I will keep it short. I also was not aware of the extra funds when voting in favour of this, and since the workgroup is dissolving and has enough funds to dissolve I don’t understand why more was needed.</p>
+<p>Questions about Intent to deceive and pages and pages of drama is not something I am going to go in.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/47">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/47
+        Tue, 14 Mar 2023 20:30:23 +0000
+gov.gitcoin.co-post-12738-47
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+ccerv1
+
+            <p>Just want to come back to this (after reading comments) and provide a bit more context regarding my position:</p>
+<ul>
+<li>
+<p>I have full confidence in Joe’s integrity, that he has been acting in good faith, and that he is deeply committed to serving Gitcoin DAO and its community. I hope no one see this process as a referendum on one person’s intentions.</p>
+</li>
+<li>
+<p>I have deep respect for the work FDD has provided to the DAO over the years and the impact it has had on Sybil defense (both practically, by preventing attacks during rounds, and through its thought leadership / experimentation) and in the data community. I also hope no one sees this as a referendum on the value or legitimacy of FDD’s work.</p>
+</li>
+<li>
+<p>It is normal for organizations to refactor / reorg. Given the market conditions PLUS the fact that the DAO is transitioning from cGrants to a protocol stack, it makes sense to examine the role of “service” workstreams like FDD and question whether the current structure is optimal. As a Steward looking in, my impression is that this could have been communicated / executed better. However, since learning of the plan to dissolve FDD after S17, my position has been to advocate for an orderly  and full season-long transition.</p>
+</li>
+</ul>
+<aside class="quote no-group" data-username="ccerv1" data-post="3" data-topic="12738">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ccerv1/48/6966_2.png" class="avatar"> ccerv1:</div>
+<blockquote>
+<p>First off, let me say that I deeply admire this team’s intention to work itself out of a job this season and to distribute itself across the DAO and the broader ecosystem. This is admirable and a clear sign of true mission-alignment.</p>
+<p>Second, given the intention to dissolve, I am highly supportive of a transition season that not only enables the services provided by FDD to be refactored / relocated but also gives the people reasonable time to find their footing elsewhere in the DAO or the broader ecosystem.</p>
+</blockquote>
+</aside>
+<ul>
+<li>
+<p>I don’t have a strong opinion (yet) on whether workstreams <em>should</em> have “gray funds” or what happens to those funds in the event of a workstream dissolving. It appears the DAO is divided on this issue. As Joe and others have said, this should be clarified and made more explicit. That work feels urgent. But I wouldn’t make a decision and then try to apply it retroactively to FDD’s case. From my perspective, FDD can do what it wants to with those funds – but they should be exhausted or at least fully earmarked by the end of S17.</p>
+</li>
+<li>
+<p>I do believe the presence of those funds was material information to Stewards. Sure, the funds were not hidden, but the salient issue is that they were not mentioned as a source FDD could draw upon for completing its S17 budget. In effect, FDD had the choice of funding a full S17 by tapping its gray fund OR requesting an allocation from the treasury and preserving the gray fund so it could be used for something else at the end of the season (eg, a Joke Race).</p>
+</li>
+<li>
+<p>Finally, on the question of the revote, I am happy to see that this is moving towards a resolution <a href="https://gov.gitcoin.co/t/gitcoin-community-proposal-post-vote-appeal-process-aka-to-reconsider-a-vote/13165">here</a>. Hopefully there are important communication and governance lessons we all gain from this. I would hate to see revotes become a common thing or a new layer of bureaucracy added to decision-making.</p>
+</li>
+</ul>
+<p>I hope people find my comments constructive. I appreciate all of the commentary in this thread and hope this ends up being a net positive in the long run for GTC governance.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/46">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/46
+        Thu, 09 Mar 2023 15:59:29 +0000
+gov.gitcoin.co-post-12738-46
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+shawn16400
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="44" data-topic="12738">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>CSDO doesn’t have any legitimacy in this context.</p>
+</blockquote>
+</aside>
+<p>Hey Joe, thanks for the comment.  With everyone I am in touch with regarding this situation, I try to draw a line between this example, and the proposed process to deal with this example.  I find doing that places a layer of abstraction between contention and good governance design.  This being the case, I moved responses to this to the proposal thread.</p>
+<aside class="quote quote-modified" data-post="3" data-topic="13165">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gitcoin-community-proposal-post-vote-appeal-process-aka-to-reconsider-a-vote/13165/3">[GCP-003] - PASSED - Post-vote “reconsider” process</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    Picking comments up here from the FDD thread: 
+<a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/44" class="onebox" target="_blank" rel="noopener">https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/44?u=shawn16400</a> 
+
+I agree there are two options here for this review, CSDO and the Steward Council and both have advantages and disadvantages.  Lets hit the highlights: 
+CSDO has greater history, it has better internal context, and is likely to continue for the foreseeable future.  However, it is not an elected body, it is comprised of Gitcoin insiders, and the CSDO charters s…
+  </blockquote>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/45">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/45
+        Mon, 06 Mar 2023 15:25:36 +0000
+gov.gitcoin.co-post-12738-45
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+DisruptionJoe
+
+            <p>This is really great work. One suggestion: CSDO doesn’t have any legitimacy in this context. The steward council would serve as a better appellate court because their legitimacy comes from the token holders.</p>
+<p>I would like for us to take the time to do this right. The nature of the problem also allows us to take time without immediate financial worries for FDD.</p>
+<p>I’d echo Octopus sentiment. Our governance says that a snapshot vote is final. If you look at Uniswap, 100% of their snapshot votes are enacted on Tally. Do we want to be the ones to change this precedent for the ecosystem based on a few posts on the forum rather than a legitimate process? How do we remain leaders in legitimacy after that?</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/44">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/44
+        Sun, 05 Mar 2023 17:16:51 +0000
+gov.gitcoin.co-post-12738-44
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+octopus
+
+            <p>Really appreciate your writing this. I appreciate that you posted it on Twitter.</p>
+<p>This is more than a single issue. It sets a precedent for the GitCoin DAO. that will likely influence other DAOs in the future.</p>
+<p>I would encourage that the discussion be publicized widely, at least within GitCoin DAO. My guess is that relatively few people realize a major governance question is emerging in a forum discussion on a vote that was already settled.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/43">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/43
+        Sat, 04 Mar 2023 22:33:16 +0000
+gov.gitcoin.co-post-12738-43
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+shawn16400
+
+            <p>As described above, this case illustrates a gap in our governance processes.  Finding such gaps are not uncommon and this will not be the last time we find new challenges to deal with.<br>
+Using existing tools, and leaning heavily on Robert’s Rules of Order NR, I built a reconsideration process that can help Gitcoin navigate cases like this.</p>
+<p>I do not presume my proposed path is perfect for this and all future circumstances, but it could give us a framework from which to start.  I welcome any and all input in on that draft post so that we can find an equitable and non-acrimonious solution to this and future cases.</p>
+<aside class="quote quote-modified" data-post="1" data-topic="13165">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gitcoin-community-proposal-post-vote-appeal-process-aka-to-reconsider-a-vote/13165">[GCP-003] - PASSED - Post-vote “reconsider” process</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    Title: [GCP-003] - Post-vote “reconsider” process 
+Author(s): Shawn16400, Gitcoin Steward Council, 
+Summary: 
+This proposal creates a mechanism for appealing a decision that has been ratified via the Gitcoin Governance process. This process is intended to be used sparingly and is not designed to be an alternative litigation process for dissatisfied users of the governance process. 
+Abstract: 
+This mechanism is designed as a stop-gap measure in cases where there is a material change in informatio…
+  </blockquote>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/42">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/42
+        Sat, 04 Mar 2023 19:33:41 +0000
+gov.gitcoin.co-post-12738-42
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+octopus
+
+            <p>I want to request clarification on some key points. Is it correct that:</p>
+<ol>
+<li>The existence of the “surplus” FDD funds was made publicly known in a public and recorded Stewards council meeting.</li>
+<li>Many Stewards voted on FDD funding without doing due diligence and information-gathering, i.e. attending the meeting or reading the transcript.</li>
+<li>An unprecedented revote is being enacted on sentiment analysis of the basis of about ten forum posts, absent any provision in any existing GitCoin governance document.</li>
+</ol>
+<p>If these are the facts, then my personal view is that a revote is completely illegitimate and sets a terrible precedent regarding the ability of individuals to simply assert decisions through personal will. It borders on the Tyranny of Structurelessness.</p>
+<p>Is there a clear model of the desired information flow in GitCoin governance, and of who bears what responsibility for that flow?</p>
+<p>Specifically, what are the official records that Stewards are expected to be familiar with before voting? Are Stewards expected to know what has occurred in meetings relevant to their votes?</p>
+<p>I understand that some Stewards have expressed that they have little bandwidth. But, I don’t understand how this is possible: all human beings are equal in the fact that we all have 24 hours of bandwidth per day.</p>
+<p>I think ultimately that there need to be clear standards and expectations regarding what constitutes effective disclosure of relevant information, so that we can determine whether a standard of clear information availability has been met.</p>
+<p>Additionally, I’m not sure if I have standing to raise points in this discussion, since I sold my all of my GitCoin this week. But, as a DAO and mechanism researcher,  I am still interested in the answers to the above questions, and clarity regarding the situation.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/41">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/41
+        Fri, 03 Mar 2023 18:42:37 +0000
+gov.gitcoin.co-post-12738-41
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+annika
+
+            <p>I am catching up on this conversation and, while it is certainly a challenging &amp; uncomfortable situation, my overarching sentiment is that there is so much to learn from this and a great opportunity for the DAO to really build more clarity &amp; specificity in budget request templates looking ahead.</p>
+<p>I am in favour of a revote. I strongly echo <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> 's sentiment:</p>
+<blockquote>
+<p>Personally, I’m in favor of a revote because the $123K treasury request was presented as a requirement to meet the S17 budget of $340K. Had I known that the workstream already had $445K and was therefore projected to dissolve in three months with a net balance $228K [$445 + $123 - $340], then I would have voted differently.</p>
+</blockquote>
+<p>I think getting caught up in the “what constitutes a re-vote?” discourse is unnecessarily distracting. Yes, that is 100% something that should be outlined and agreed-upon in the aftermath of all this, but I think having a huge debate &amp; discussion around that just stifles progress in getting to an outcome here.</p>
+<p>To me it’s directionally pretty clear that this is a re-vote situation, and then the re-vote specifics on guidelines/process can be figured out post-mortem.</p>
+<p>I also selfishly would <em>love</em> to see a TLDR recap of all this after the fact either in Steward Council or on a monthly steward call – what happened, what we learned, what we’ll change in the future as a result. If resolved effectively, I think this moment might end up being a big milestone we look back on in productively moving forward governance processes.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/40">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/40
+        Fri, 03 Mar 2023 16:56:04 +0000
+gov.gitcoin.co-post-12738-40
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+octopus
+
+            <p>I’m sad to see FDD go. I enjoyed my brief time working there and am proud of the contributions I was able to make. I regret that I wasn’t able to stick around to finish getting the simulation results from the Agent-Based Model. In the end, I had too many commitments to do them all well.</p>
+<p>FDD saved a quantifiable chunk of GitCoin’s funds from sybils (many of whom had developed really smart strategies to game Quadratic Funding). In addition, FDD proactively prevented both new attacks and repeat attacks by people who would have come back. I thank you <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> for being the person who could lead this difficult effort through crucial times. There’s no doubt in my mind that your work and the work of FDD literally saved GitCoin from becoming a scammer’s paradise.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/39">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/39
+        Fri, 03 Mar 2023 00:18:46 +0000
+gov.gitcoin.co-post-12738-39
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+ZER8
+
+            <p>I would like to start by manifesting deep appreciation for all the people that worked to build Gitcoin into what it is today. I deeply appreciate the work of  <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a> <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> <a class="mention" href="https://gov.gitcoin.co/u/griff">@griff</a> and others… without them Gitcoin would not be what be what it is today and I have so say I can’t wait to see what it evolves into <img src="https://gov.gitcoin.co/images/emoji/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/evergreen_tree.png?v=12" title=":evergreen_tree:" class="emoji" alt=":evergreen_tree:" loading="lazy" width="20" height="20"></p>
+<p>I would like to share my honest thought around the “issue” discussed in the last 20 or so comments and hope that by this I can provide additional clarity for those who seek it.  At first sight this appears to be a complicated subject because the more far away a Steward/Key decision maker is from the actual “action zone” the more inclined it would be to believe that Joe has omitted the existence of the “gray funds” , but this is a false premise because:</p>
+<p>-as a formed team lead in the FDD I have always been informed of the existence of these funds, also every FDD member was aware of the existence of these funds, more so at certain points we were included and informed in all the decision making around them<br>
+-I have been in numerous public meetings(with other WS) in which Joe has proudly talked about them and the way that FDD managed to be very wise via good treasury management decision making<br>
+-<strong>if he didn’t care about the DAO and Gitcoin’s mission so much he wouldn’t have made the effort to protect funds via wise treasury management</strong></p>
+<p>I respect that a lot of the Stewards have a limited amount of time(because they are doing valuable  work for all of web3) and it’s hard for them to understand what’s actually going on. The past two years have been filled with experimentation for the common-good, decentralization at almost every decision making level and also empowerment with the goal of growing the Gitcoin DAO. As the bull market ended, the macro has changed and it resulted in a relatively accelerated shift toward a more sustainable future for the DAO, it’s is understandable, because ofc the biggest vulnerability a DAO  is…surprize…“human nature” <img src="https://gov.gitcoin.co/images/emoji/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> , but this should not create dissonance between all the great people working towards our collective PG future.</p>
+<p>IMO the concrete fair way forward would be to continue to fund the FDD as indented because the information was not hidden and people voted yes to the budget, but unfortunately seeing how the conversation here took place and what the current state of affairs is I am worried that this would lead to dissonance between stewards and this is not the point, so  +1 to <a class="mention" href="https://gov.gitcoin.co/u/chaselb">@chaselb</a> viewpoint:</p>
+<aside class="quote no-group" data-username="chaselb" data-post="36" data-topic="12738">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/chaselb/48/7505_2.png" class="avatar"> chaselb:</div>
+<blockquote>
+<p>do not believe these funds are material information, and I do not believe we should conduct a revote. I DO believe, in the absence of a formal process for deciding whether or not to revote, we should create some temporary mechanism for doing so (such as pushing it to the Steward Council), and then workshop a more thoughtful mechanism for deciding whether or not to revote.</p>
+</blockquote>
+</aside>
+<p>As in life these challenges appear and can lead to an even stronger DAO, it will be very interesting to see how Gitcoin DAO handles this particular one as it seems to be quite complex and provoking at first <img src="https://gov.gitcoin.co/images/emoji/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"></p>
+<p>I also know for a fact that the last 2 years have not been easy for all the Gitcoin WS leads, more so for the ones that always pushed forward and maintained their position as Joe did. I also know for a fact that Joes intentions are always positive towards GitcoinDAO and its future.  He is one of the most value aligned persons I’ve met in web3 and worked with in web3.  If someone doubts that he can just search DisruptionJoe in Gitcoins Discord and will be amazed by the level of engagement and value addition most of his messages lead 2.</p>
+<p>I really hope the situation is handled in the best way possible for all the parties involved, but I would add that a certain level of kudos should be awarded to the FDD leadership, who managed to be one of the WS who protected funds and generated profits via great treasury decision making.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/38">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/38
+        Thu, 02 Mar 2023 10:57:10 +0000
+gov.gitcoin.co-post-12738-38
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+epowell101
+
+            <p>Thank you Chase and everyone for your insights here.</p>
+<p>I’ve been on the sidelines (for once!) in this discussion because I have a clear conflict of interest as I am very active as a founder of the OpenData Community which itself will likely be requesting resources from the DAO in the future and, more importantly, was started with the support and inspiration from FDD and from Joe specifically.</p>
+<p>That said - I would just like to state for the record that I think Joe has acted in good faith and that I have been in a number of conversations in which he freely shared that FDD has generated additional funds.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/37">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/37
+        Thu, 02 Mar 2023 04:28:49 +0000
+gov.gitcoin.co-post-12738-37
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+chaselb
+
+            <p>I’m putting my support behind Joe on this one. I both agree with the need to create a governance process for these situations, as well as the argument that FDD has full autonomy and discretion over the funds they acquired outside of GitcoinDAO’s involvement. I do not believe these funds are material information, and I do not believe we should conduct a revote. I DO believe, in the absence of a formal process for deciding whether or not to revote, we should create some temporary mechanism for doing so (such as pushing it to the Steward Council), and then workshop a more thoughtful mechanism for deciding whether or not to revote.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/36">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/36
+        Thu, 02 Mar 2023 02:21:32 +0000
+gov.gitcoin.co-post-12738-36
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+DisruptionJoe
+
+            <h1><a name="lets-revote-1" class="anchor" href="https://gov.gitcoin.co#lets-revote-1"></a>Let’s Revote</h1>
+<p>First, I am seeing broader sentiment that requests the revote. I’m quite disappointed that there isn’t more enthusiasm around finding a legitimate way to determine if a revote will happen. We have an opportunity to find a more legitimate solution - <em><strong>a solution EVERY ALLO PROGRAM MANGER NEEDS</strong></em>.</p>
+<p>We could direct power for revote to the steward council. For example, a Snapshot vote with the following options:</p>
+<ol>
+<li>Revote</li>
+<li>Have steward council decide if a revote should happen and set precedent for how revotes are made legitimate</li>
+<li>Keep the results of the first vote</li>
+</ol>
+<p>I believe that either 1 or 2 would end up with the same results for this budget, however, 2 would be the better decision for the DAO.</p>
+<h1><a name="clarifications-2" class="anchor" href="https://gov.gitcoin.co#clarifications-2"></a>Clarifications</h1>
+<h3><a name="regarding-my-intent-to-deceive-3" class="anchor" href="https://gov.gitcoin.co#regarding-my-intent-to-deceive-3"></a>Regarding my Intent to deceive</h3>
+<aside class="quote no-group" data-username="kyle" data-post="21" data-topic="12738">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Hey <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> - I wanted to confirm this is the amount in total FDD needs to operate for this season?</p>
+<p>I see that based on currently market values, FDD has two gnosis safes:<br>
+1 - <a href="https://www.tally.xyz/safe/eip155:1:0xD4567069C5a1c1fc8261d8Ff5C0B1d98f069Cf47">Gitcoin Fraud Detection &amp; Defense (Main)</a> starting with (0xD45) and has a balance of 361.72K USD<br>
+2 - <a href="https://www.tally.xyz/safe/eip155:1:0xbc4C3D4c6cCA25d5704b6d6841BA75882b8F061B">Fraud Detection &amp; Defense (ops) </a> starting with (0xbc4) and has 83.16K USD</p>
+</blockquote>
+</aside>
+<p>This felt misleading to me. I had a specific one on one session with <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> in December where we discussed that FDD has these funds AND that we were applying for an Aave grant. I suggested we should think about the Governance issues that would come up when we dissolved FDD. At the time, we both thought it wouldn’t happen this soon, but it was explicitly discussed.</p>
+<p>Additionally, I did bring this up at a recent Stewards call and a Steward Council call. Yes, I didn’t put this as material info on the budget request, however, no other workstream puts that info on their budgets nor is there an established norm across most DAOs. In fact, the norm is that everyone knows the info is public and proposers never put up how much they are currently holding.</p>
+<aside class="quote no-group" data-username="J9leger" data-post="27" data-topic="12738">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j9leger/48/7629_2.png" class="avatar"> J9leger:</div>
+<blockquote>
+<p>No other workstream has gray funds and this is something we’ve never heard about before. Could we have full transparency about these gray funds?</p>
+</blockquote>
+</aside>
+<p>Is this implying that I have been lying by omission? I don’t know why you don’t know about them.<br>
+I have spoken about them at both CSDO and steward meetings in the past. Not only have I brought it up, I’ve called it out as a potential issue and that we should be prepared.</p>
+<aside class="quote no-group" data-username="ccerv1" data-post="34" data-topic="12738">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ccerv1/48/6966_2.png" class="avatar"> ccerv1:</div>
+<blockquote>
+<p>Personally, I’m in favor of a revote because the $123K treasury request was presented as a requirement to meet the S17 budget of $340K.</p>
+</blockquote>
+</aside>
+<p>As I understand, the budget request was only presented as a request for the DAO to fully fund our Season 17.</p>
+<p>If one believes that the DAO should control how the $228k in gray funds (That wouldn’t have existed) are spent, then it is reasonable for them to think we should have reported them.</p>
+<p>If you believe those funds should be autonomously spent by the workstream (In line with the workstream’s mandate), then you might not consider it as relevant to a seasonal budget request.</p>
+<p>Whichever of these opinions are right is up to the DAO. Hopefully, this helps clarify that this wasn’t a deceitful thing to do on our part.</p>
+<p>I’m also quite surprised you didn’t have previous knowledge that FDD had these funds. We do speak pretty freely about them in FDD and always have!</p>
+<h3><a name="legitimacy-of-workstream-autonomy-4" class="anchor" href="https://gov.gitcoin.co#legitimacy-of-workstream-autonomy-4"></a>Legitimacy of workstream autonomy</h3>
+<p>In August 2021, I put up the first FDD proposal. It involved personal risk as I left the company and had little clarity on what the future would hold. The message from Gitcoin to the public at the launch of the DAO was that workstreams would be autonomous (DAO of DAOs). I was even told that it was 100% up to me if we incorporated, but they recommended we did. We pushed back, hired legal help, and defined FDD as an unincorporated non-profit association and designed contributor agreements.</p>
+<p>We’ve discussed workstream treasury management many times with the CSDO group. It was necessary! I remember <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a> asking what she would do if the price of GTC dropped and PGF couldn’t follow through on dollar based commitments to pay contributors. <em><strong>WE WERE EXPECTED TO DO OUR OWN TREASURY MANAGEMENT!</strong></em></p>
+<p>Some of our workstreams had leadership that was hired by Gitcoin Holdings and paid to create proposals and create a workstream. GPC was transferred from the company to the DAO less than a year ago. I understand that many people would view our workstreams as departments in a corporation. I’m not here to say that they are wrong.</p>
+<p><em><strong>I am here to say that it shouldn’t be unreasonable to consider my viewpoint legitimate considering the early risk I took and the experience I had.</strong></em></p>
+<p>If it is a legitimate viewpoint, then our governance should have a process to solve the issue in which those with both viewpoints would consider legitimate - even if the result isn’t in their favor.</p>
+<h1><a name="suggestion-for-next-steps-5" class="anchor" href="https://gov.gitcoin.co#suggestion-for-next-steps-5"></a>Suggestion for next steps</h1>
+<p><em><strong>I could post the vote suggested at the top.</strong></em> This might be more legitimate than someone else posting it, but I don’t feel too strongly about that detail.</p>
+<p>Mostly, I’d like every Gitcoin Stakeholder to know that we were proud to bring extra value to the DAO. This seems like a great decision to have to make!</p>
+<p>If we moved forward without a revote, we were excited to do governance experimentation dogfooding the protocol and/or testing other allocation mechanisms to spend the last of the funds we would have had. Specifically, ideas like a QV round, a JokeRace, or Moloch implementations where the DAO would have ragequit capabilities if it didn’t like the decisions made.</p>
+<p>It could help fund things like:</p>
+<ul>
+<li>Decartography PoC - Using DeSoc collusion dampening</li>
+<li>BrightID Aura Implementation</li>
+<li>Open Data Community Sandbox Sponsorship - Another node pinning relevant data from trueblocks</li>
+<li>Sybil detection legos built using our findings from this last season with Pometry and their Raphorty open source time-series graph database.</li>
+<li>And many other great ideas!</li>
+</ul>
+<p>Rather than push for this vote to go the way I think it should, I’m pushing for it to be handled in the best way possible for the future of the DAO, even if it is against my personal opinion.</p>
+<p>I’d love to see people establish the steward council as having the power to call for a revote, followed by voting their fully informed present opinion on the topic.</p>
+<p>Perhaps, we could compromise by writing a new GCP for us to do the planned innovation experiments if the DAO were to give us the explicit approval?</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/35">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/35
+        Tue, 28 Feb 2023 21:01:03 +0000
+gov.gitcoin.co-post-12738-35
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+ccerv1
+
+            <p>Just catching up on things here, but want to share several reactions.</p>
+<p>As a steward, I am primarily focused on the question: “is this budget proposal a good use of DAO resources”.</p>
+<p>I have not been concerned with the question “where will the funding coming from”. To me, that feels like more of an implementation detail. It was my impression (perhaps incorrectly) that funding could be moved around across different multisigs if it needed to be.</p>
+<p>Coming to <a class="mention" href="https://gov.gitcoin.co/u/chaselb">@chaselb</a>’s two questions:</p>
+<aside class="quote no-group" data-username="chaselb" data-post="28" data-topic="12738">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/chaselb/48/7505_2.png" class="avatar"> chaselb:</div>
+<blockquote>
+<ul>
+<li>What is the Workstream-GitcoinDAO relationship and expectation?</li>
+<li>What constitutes grounds for a revote?</li>
+</ul>
+</blockquote>
+</aside>
+<p><strong>1. What is the Workstream-GitcoinDAO relationship and expectation?</strong></p>
+<p>I have viewed each workstream as a pod within the DAO that’s granted a multisig and the autonomy to figure out how best to get things done. I have not viewed workstreams as service providers to the DAO. Personally, I don’t like the idea of each workstream having its own P&amp;L or the ability to accumulate a surplus that is then controlled by … who? the workstream lead? current contributors?</p>
+<p>This could also create an incentive for workstreams to overestimate what they request from the treasury so they can build up their own reserves. That does not feel like something we should be messing with at a time when neither the DAO nor any of its workstreams has a revenue model.</p>
+<p>Others may feel differently about this issue and I respect that.</p>
+<p><strong>2. What constitutes grounds for a revote?</strong></p>
+<p>We should revote if we feel we were not given an accurate picture of what’s at stake in the original proposal. Proposal-generation and Snapshot voting are social coordination mechanisms. I don’t see a reason to be rigid on this issue, but if revotes start happening regularly, it will definitely erode confidence in the DAO.</p>
+<p>Judging from the comments here, a number of people appear in favor of a revote.</p>
+<p>Personally, I’m in favor of a revote because the $123K treasury request was presented as a requirement to meet the S17 budget of $340K. Had I known that the workstream already had $445K and was therefore projected to dissolve in three months with a net balance $228K [$445 + $123 - $340], then I would have voted differently.</p>
+<hr>
+<p>Finally, let’s not conflate the issues. It’s important to articulate the intended financial relationship between workstreams and the DAO. It’s also important to determine if / when a revote is on the table.</p>
+<p>To Shawn’s question:</p>
+<aside class="quote no-group" data-username="shawn16400" data-post="32" data-topic="12738">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar"> shawn16400:</div>
+<blockquote>
+<p>What happens when a proposal has legitimately passed, but new information surfaces and voters no longer feel the information was symmetric?</p>
+</blockquote>
+</aside>
+<p>We revote. Regardless of the explanation for why the information was presented a certain way the first time. And we vow to do better so it hopefully doesn’t happen again.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/34">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/34
+        Tue, 28 Feb 2023 14:37:27 +0000
+gov.gitcoin.co-post-12738-34
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+chaselb
+
+            <aside class="quote no-group" data-username="shawn16400" data-post="32" data-topic="12738">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar"> shawn16400:</div>
+<blockquote>
+<p>I am happy to coordinate and welcome any and all contributors to the process in an active, passive, or observational sense. I have created a thread in discord under “Cross Stream Pods” &gt; “DAO success” where we can hash it out.</p>
+</blockquote>
+</aside>
+<p>Is this channel only open to contributors?</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/33">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/33
+        Mon, 27 Feb 2023 18:23:14 +0000
+gov.gitcoin.co-post-12738-33
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+shawn16400
+
+            <p>This is an interesting case which I think our current structure does not address.  What happens when a proposal has legitimately passed, but new information surfaces and voters no longer feel the information was symmetric?</p>
+<p>We have to be careful here.  Good governance is about protecting against bad actions, but any incremental governance process is always at risk of increasing bloat, bureaucracy, and unintended consequences.   Unintended consequence I see popping up here is creating an appeal process that can be manipulated by actors who are simply unhappy with legitimate votes.  We must avoid this.</p>
+<p>This case is important, but I think it is more important to get the response right.  My sense is FDD does not need the funding right away, and I would propose we take a couple days to draft a process (based on a bit of research), bring it to the Steward Council for a quick review, and we trial the process with this case.  If the process proves to be just, we adopt it as part of our governance structure.</p>
+<p>I am happy to coordinate and welcome any and all contributors to the process in an active, passive, or observational sense.  I have created a thread in discord under “Cross Stream Pods” &gt; “DAO success”  where we can hash it out.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/32">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/32
+        Mon, 27 Feb 2023 14:58:50 +0000
+gov.gitcoin.co-post-12738-32
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+disruptionjoe1
+
+            <p>I appreciate your engaging. I do agree with your assessment. Then, I think who has a right to call a revote in the future? Do we have a legitimate process for determining if a revote request is valid? Could someone DDoS our governance by requesting a devote on everything?</p>
+<p>A clear and legitimate appeal process is a need of every grants round. I’d love for the conversation to be in good faith that we have two different positions presented that both might be legitimate. Who act as an appellate court in our system? Hopefully it’s not the person presenting the other side of the argument. Maybe it’s the steward council, with the people who are presenting each side committed to abstain.</p>
+<p>I was approached by multiple people saying there was some “heat” on the forum.</p>
+<p>It would be nice to have this conversation in the light-hearted fun way our leadership described governance could be at our retreat. It would be nice to hear “Great job, Joe. We have this money that wouldn’t have existed without your pushing boundaries and innovating in a responsible way. AND we are glad it is you and not someone actually testing our governance structure for malicious reasons.”</p>
+<p>Really happy you chimed in here Linda.</p>
+<p>How might you suggest we make the decision whether a recite is acceptable or not?</p>
+<p>Did you know that this is a pain point for program managers every single round since I have been a part of Gitcoin?</p>
+<p>These program managers are coming to us and literally requesting to use the protocol the way Gitcoin does because we get trusted results. I have been the person that handled these appeal situations since round 8.</p>
+<p>Can our process here be something that doesn’t open the door to more problems AND is a step towards solving one of the primary problems our round managers have?</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/31">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/31
+        Mon, 27 Feb 2023 05:54:53 +0000
+gov.gitcoin.co-post-12738-31
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+linda
+
+            <p>Echoing this sentiment. I think it’s important to have full transparency around the workstream finances so all stewards are able to make an informed vote. A major difference in understanding the financial situation seems reasonable to me to have a revote (applies to any workstream, not just this situation).</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/30">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/30
+        Mon, 27 Feb 2023 05:18:01 +0000
+gov.gitcoin.co-post-12738-30
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+disruptionjoe1
+
+            <p>Sorry for the short phone reply, but I want to clarify the WHY here. It is important.</p>
+<p>I do believe that Chase 2 questions are spot on. I am doing this because I believe there is an insecure gap in our governance. We need to be in challenging governance situations to learn if there is a delta between how secure we think we are, and what the onchain portion of the governance plays out.</p>
+<p>There is soft power that can say “I believe we should revote”.</p>
+<p>I’m saying “show me how governance actually enforces whatever it decides here”</p>
+<p>AND “whichever way this goes, let’s see if the DAO governance we have today leads us to a smart decision for tomorrow.”</p>
+<p>I do believe my claim is legitimate. Others don’t. Ok Governance, what happens next. Do people with soft power get to say we must revote. How does our governance today decide this in a fair way?</p>
+<p>I led the grants reviews for 5 or 6 seasons. These are the type of questions that come up in grant disputes and appeals. Our next 100 ALLO program managers will need to help their communities solve this problem.  Not the specific law, but how does governance handle the process.</p>
+<ol>
+<li>Let’s look up the current state of our agreements. 2. Let’s have a thoughtful, careful debate on how and why this decision should go each way</li>
+<li>Let’s make sure we get a great outcome (like we did with the Akita Balancer pool - A governance mega-win that was super inspirational)</li>
+<li>Share the learnings of our practical governance problems in how WE allocate funds across our DAO and the ecosystem to help them fund what matters.</li>
+</ol>
+<p>All I’m asking is how do we find a legitimate outcome?</p>
+<p>I do believe that my understanding is both legitimate, and the better decision for the DAO long term.</p>
+<p>Either way it turns out the funds will be spent in a way that pushes forward the DAO goals. My word and reputation is behind that. This isn’t that large of a sum. This low stakes way of testing governance seems like a good idea for us to learn our weaknesses.</p>
+<p>Worst case scenario, I wasted some time pushing the subject. Best case scenario, we truly learn if we have weaknesses in our current system and if we can learn from our experience about how to solve a problem that EVERY grant round has!</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/29">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/29
+        Mon, 27 Feb 2023 00:09:53 +0000
+gov.gitcoin.co-post-12738-29
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+[S17 Proposal] INTEGRATED FDD Budget Request
+chaselb
+
+            <p>Here’s what I <em>think</em> is going on (hopefully Joe can clarify further):</p>
+<p>Through smart treasury management and other means independent of the work of Gitcoin, the FDD workstream was able to amass some funds extra to that given to them by the GitcoinDAO. I believe Joe is arguing that these “gray funds” should be used at the discretion of the FDD Workstream, and should not be included as pertinent information in FDD’s budget request from GitcoinDAO.</p>
+<p>Whether or not one agrees with Joe on this is a function of how they view the workstream-DAO relationship (which is currently ill-defined, and is something we should try to define better in the future to prevent problems like these).</p>
+<p>For example, if the “Workstream” is an autonomous unit that GitcoinDAO grants money in exchange for some future work, then Joe’s point is valid. We should not expect the “Workstream” to do work on behalf of GitcoinDAO with funds that were not given by GitcoinDAO. In the context of this budget, under this assumption of a “Workstream,” then FDD should receive DAO funds because they are doing DAO work. If they do not receive DAO Funds, then we should only expect from them work that can be compensated by the DAO Funds they have in reserve (NOT their “gray funds”).</p>
+<p>However, if the “Workstream” is bound to GitcoinDAO in the way a corporate division is bound to the larger corporation, then Joe’s point is invalid. All funds made by a corporate division belongs to the corporation itself, and is relevant to all funding decisions of that corporation. To be honest, I don’t think anyone in GitcoinDAO thinks of a workstream like this.</p>
+<p>Another possibility (and perhaps the most likely) is that the “Workstream” is somewhere in-between, without a clear precedent. However, even if we do not explicitly state it, we are defining this precedent by choosing to revote or not.</p>
+<p>Another important precedent we are setting is that of revotes. What constitutes a revote and what doesn’t? There do not seem to be clear guidelines for this, which is unfortunate considering that our voting process is largely social (no automatic execution on snapshot, and automatic execution on-chain has to be pushed through by large delegates willing to pay the gas cost).</p>
+<p>TL;DR:<br>
+We are setting two important precedents through the decision to revote and not fund FDD’s treasury request:</p>
+<ol>
+<li>What is the Workstream-GitcoinDAO relationship and expectation?</li>
+<li>What constitutes grounds for a revote?</li>
+</ol>
+<p>All stewards should carefully think about their answer to these questions before making a decision.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-integrated-fdd-budget-request/12738/28
+        Sun, 26 Feb 2023 22:44:35 +0000
+gov.gitcoin.co-post-12738-28
+[S17 Proposal] INTEGRATED FDD Budget Request
+      
+
+

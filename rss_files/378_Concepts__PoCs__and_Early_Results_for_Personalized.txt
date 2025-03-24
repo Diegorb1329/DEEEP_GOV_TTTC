@@ -1,0 +1,317 @@
+
+
+
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469
+    tl;dr Over 4 different rounds, [GrantsScope](http://grantsscope.xyz/) (more [context](https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192)) has helped donors discover grantees through LLM-assisted conversations. As the next iteration in the quest to reduce information asymmetry for donors, the post explores two options to drive grantee recommendations in future Gitcoin Grants Rounds.
+
+### Ask
+GrantsScope started as a bunch of Python scripts I used to make my decisions about contributions to Gitcoin Grants. As it found relevance and support in the community, I would love to incorporate your feedback on which direction the effort should evolve next. All feedback on the relevance and utility of the following features is welcome!
+
+### Motivation
+While the use of LLMs to explore projects through questions and conversations is impactful in a variety of ways to find out about value-aligned grantees (latest examples [here](https://x.com/RohitMalekar/status/1726662662803820789?s=20), [here](https://x.com/RohitMalekar/status/1727055572686782631?s=20), and [here](https://x.com/RohitMalekar/status/1727420457379676430?s=20)), the onus to ask the relevant question is still on the user.
+
+>  **How might we further reduce the donor's cognitive load when helping them discover grantees and the work they care about for rounds with a large (>100) number of participants?**
+
+### OPTION 1: Personalized recommendations by tapping into historical donation data
+**Approach:** Find the most supported projects by people who contribute to projects you most support
+1. Lookup user's favorite projects based on who they contributed the most over the last year
+2. Tag all the voters who also supported the projects the user supported the most
+3. Find out what other projects this cluster of community contributed to that the user hasn't donated for
+4. Sort these projects based on dollars contributed and the number of votes by the user's cluster of community
+
+**Working Prototype:** Enter your ETH address (you don't need to sign anything) to view your personalized recommendations - https://2023-wrapped-gitcoin.streamlit.app/
+**Code:** https://github.com/rohitmalekar/2023wrapped
+**Sample:** These are personalized recommendations for me based on how contributors who also support my favorite projects have donated through 2023.
+
+<div align="center">
+
+![Screenshot 2024-01-23 at 4.38.31 PM|561x500, 50%](upload://msnX7qtApHz1SVKTRp0fo2O91AX.jpeg)
+</div>
+
+<div align="center">
+
+![Screenshot 2024-01-23 at 4.38.41 PM|552x500, 50%](upload://veFh6gIwUEQ7yayRCCCCIoAVCyC.jpeg)
+</div>
+
+**Next Steps:** Deploy a round-specific personalized recommendation list for GG20 donors
+
+**Limitations:**
+- Since the recommendations are based on existing signals in data, they amplify existing biases too
+- Does not factor impact in sorting recommendations
+
+### OPTION 2: Interactive visualization to discover similar projects based on clustering
+**Approach:** One approach to exclude existing biases in contribution data for discovering new grantees is to limit the scope of data discovery to the grantee-submitted project description (and, in the future, impact). By classifying the nature of work and clustering related projects, donors can visually navigate through a crowded round based on their preferences.
+
+As a donor, you can then overlay your investments on such a visual and choose to:
+1. Double down on investments in specific domains that you care about by discovering peer projects to teams you are already aware of
+2. Spread your funds across different clusters for a more diversified strategy
+
+**Code:** For a sample set of Climate Round grantees https://github.com/rohitmalekar/grantee-clustering
+
+**Samples:** Here are some algorithmically determined organic groupings of projects (a) saving water bodies, (b) protecting forests, (c) utilizing solar power, respectively
+
+<div align="center">
+
+![TSNE 0|690x361, 75%](upload://lpXKke22z9cxraMSdSTV1WbXjQN.png)
+</div>
+<div align="center">
+
+![TSNE 1|690x361, 75%](upload://iEbO5xh4zoRMc1F2KVyAW2twrgx.png)
+</div>
+<div align="center">
+
+![TSNE 3|690x361, 75%](upload://qd5YmxWNV13xNpCRkgCdYrMm4P4.png)
+</div>
+
+**Next Steps:**
+- Abstract the complexity of the clustering algorithm for an intuitive interactive user experience
+- Fine-tune the clustering method to suit the data and context
+
+**Limitations:**
+- Clustering cannot be 100% automated and requires human-in-the-loop to finalize results
+- Does not factor impact yet. However, once impact data can be captured in a structured manner across grantees, performing clustering based on verified impact is worth a shot in the future.
+Tue, 09 Apr 2024 17:33:46 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+rohit
+
+            <p><strong>Update:</strong> Both methods have been deployed in the app below to offer a seamless experience for one-click personalized grantee recommendations for the Citizens Retro Round <span class="hashtag-raw">#3</span>.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://gitcoin-cr3.streamlit.app/">
+  <header class="source">
+      
+
+      <a href="https://gitcoin-cr3.streamlit.app/" target="_blank" rel="noopener">Streamlit</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/361;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d865eec6ad435d2e6f58ad2aea912711faa742d6_2_690x362.png" class="thumbnail" data-dominant-color="395055" width="690" height="362"></div>
+
+<h3><a href="https://gitcoin-cr3.streamlit.app/" target="_blank" rel="noopener">cr3 recommendations</a></h3>
+
+  <p>Personalized recommendations for donating to citizens round 3</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>The tool will help you:</p>
+<ol>
+<li>Re-discover the grantees you’ve supported in the past</li>
+<li>Explore grantees backed by the community who also champion your favorite projects on Gitcoin</li>
+<li>Introduce you to grantees similar to the list in <span class="hashtag-raw">#1</span> and <span class="hashtag-raw">#2</span> using clustering algorithms</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/7
+        Tue, 09 Apr 2024 17:33:46 +0000
+gov.gitcoin.co-post-17469-7
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+      
+
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+rohit
+
+            <aside class="quote no-group" data-username="buildingweb4" data-post="5" data-topic="17469">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/buildingweb4/48/7196_2.png" class="avatar"> buildingweb4:</div>
+<blockquote>
+<p>why not actually do the opposite; from time to time surface a project that is outside of your “comfort zone.”</p>
+</blockquote>
+</aside>
+<p>Love the anti-pattern here! Will run a few tests on this. Thanks for the suggestion!</p>
+          <p><a href="https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/6
+        Tue, 30 Jan 2024 08:28:12 +0000
+gov.gitcoin.co-post-17469-6
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+      
+
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+buildingweb4
+
+            <p>This is really great! Integrating impact data would be definitely a game changer since that’s one aspect of QF that’s not as robust.<br>
+But regarding your Option 1 question on recommendations; I was wondering if its also possible to integrate into the algorithm a check on confirmation bias. In other words, instead of only surfacing projects based on what you already like, what your friends/people with similar interests support, etc. why not actually do the opposite; from time to time surface a project that is outside of your “comfort zone.” That may help you (and the algorithm) get a better sense of the landscape of projects out there, and will prevent “echo chambers” from forming within the wider community.</p>
+          <p><a href="https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/5
+        Tue, 30 Jan 2024 06:58:37 +0000
+gov.gitcoin.co-post-17469-5
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+      
+
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+krrisis
+
+            <p>This is sooo epic - just tagging <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> for visibility.</p>
+<p>Hopefully at some point we can get a link to useful ‘add-ons’ like these on grants stack (for the ones that are not integrated in GS ofc)</p>
+<p>In any case agree, grant discoverability is key, and this is great work to be retroactively rewarded.</p>
+          <p><a href="https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/4
+        Mon, 29 Jan 2024 19:36:57 +0000
+gov.gitcoin.co-post-17469-4
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+      
+
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+rohit
+
+            <aside class="quote no-group" data-username="umarkhaneth" data-post="2" data-topic="17469">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>I wonder how you may account for the extremely-popular and skew the results toward the more niche projects.</p>
+</blockquote>
+</aside>
+<p>My hunch is that the popular projects are propping up also because the analysis is on the entirety of the 2023 data. A round-specific recommendation list (by Eth Infra, Climate etc.) should make it more interesting.</p>
+<p>Also, there are multiple ways to bell the recommendation logic, and it will need some experimentation. For example, the default flow is below, and with other alternative levers in brackets.</p>
+<ol>
+<li>Lookup my favorite projects (only in this round | over the last 6 months | by # of votes only, not amount)</li>
+<li>Collate all voters who also supported these projects (pick the top X percentile by donation amount | pick the top X percentile by number of votes | pick only first-time voters)</li>
+<li>Sort and recommend other projects supported by these voters (filter only first-time grantees | exclude if already leading in top 10)</li>
+</ol>
+<p>Now you can get niche project recommendations to an inquiry like:</p>
+<ul>
+<li><em>“In Climate Round, which first-time grantees are being most supported by veteran voters with donation history similar to mine?”</em></li>
+<li><em>"Which projects outside of the top 10 list in web3 community round are getting most support by first-time voters with voting preferences similar to mine</em>?"</li>
+</ul>
+<p>We will have to pick a couple of options that resonate most without overloading the user with too many choices.</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="2" data-topic="17469">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>I liked just receiving a list of projects to check out (in option 1) and the graphs aren’t doing too much for me.</p>
+</blockquote>
+</aside>
+<p>This makes a lot of sense (thinking about Amazon and Netflix).</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="2" data-topic="17469">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>BTW if we were to A/B test the recommendations from option 1 and option 2, my personal guess is option 1 would be more likely to convert. Curious what you think</p>
+</blockquote>
+</aside>
+<p>Yes, I think so, too. Option 2 requires a predisposition, similar to the cognitive effort involved in the conversation with LLM. Might be relevant for a smaller set of advanced users. An ideal workflow would be to populate recommendations, make tweaks, bulk checkout, and be done.</p>
+          <p><a href="https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/3
+        Thu, 25 Jan 2024 18:10:25 +0000
+gov.gitcoin.co-post-17469-3
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+      
+
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+umarkhaneth
+
+            <p>This is lit!</p>
+<p>Grantee discovery remains an unsolved problem and I dig your prototype for solving it.</p>
+<p>I tried out some of your builds here and wanted to offer reflections from my experience using them for when you take these to the next level.</p>
+<p>For option 1 I think this really shined in helping me discover lesser-known projects that I may like. In particular, Common Stack, Praise, and Giveth seemed like great recommendations for me. I agree with this limitation you point out.</p>
+<aside class="quote no-group" data-username="rohit" data-post="1" data-topic="17469">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/rohit/48/11353_2.png" class="avatar"> rohit:</div>
+<blockquote>
+<p>Since the recommendations are based on existing signals in data, they amplify existing biases too</p>
+</blockquote>
+</aside>
+<p>Some of my top recommendations were for projects I know are extremely popular/common in the data (like Jediswap, L2Beat, DefiLlama). I wonder how you may account for the extremely-popular and skew the results toward the more niche projects.</p>
+<p>I would love to try using this during a live round to help me discover projects to donate to.</p>
+<p>For option 2, I’m a fan of HDBSCAN clustering and like your approach to clustering on project descriptions. I could see the results from running this being most useful for grantees to find others working on similar problems to collaborate with.</p>
+<p>But tbh I’m not sure I completely appreciate the visualization. I liked just receiving a list of projects to check out (in option 1) and the graphs aren’t doing too much for me.</p>
+<p>As a grantee, it could be cool to view a list of similar projects and for each project also maybe provide a ‘distance score’ based on the result of the description embeddings.</p>
+<p>BTW if we were to A/B test the recommendations from option 1 and option 2, my personal guess is option 1 would be more likely to convert. Curious what you think</p>
+          <p><a href="https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/2
+        Thu, 25 Jan 2024 13:18:20 +0000
+gov.gitcoin.co-post-17469-2
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+      
+
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+rohit
+
+            <p>tl;dr Over 4 different rounds, <a href="http://grantsscope.xyz/" rel="noopener nofollow ugc">GrantsScope</a> (more <a href="https://gov.gitcoin.co/t/gg18-grantee-discovery-using-llm-enabled-conversations/16192">context</a>) has helped donors discover grantees through LLM-assisted conversations. As the next iteration in the quest to reduce information asymmetry for donors, the post explores two options to drive grantee recommendations in future Gitcoin Grants Rounds.</p>
+<h3><a name="ask-1" class="anchor" href="https://gov.gitcoin.co#ask-1"></a>Ask</h3>
+<p>GrantsScope started as a bunch of Python scripts I used to make my decisions about contributions to Gitcoin Grants. As it found relevance and support in the community, I would love to incorporate your feedback on which direction the effort should evolve next. All feedback on the relevance and utility of the following features is welcome!</p>
+<h3><a name="motivation-2" class="anchor" href="https://gov.gitcoin.co#motivation-2"></a>Motivation</h3>
+<p>While the use of LLMs to explore projects through questions and conversations is impactful in a variety of ways to find out about value-aligned grantees (latest examples <a href="https://x.com/RohitMalekar/status/1726662662803820789?s=20" rel="noopener nofollow ugc">here</a>, <a href="https://x.com/RohitMalekar/status/1727055572686782631?s=20" rel="noopener nofollow ugc">here</a>, and <a href="https://x.com/RohitMalekar/status/1727420457379676430?s=20" rel="noopener nofollow ugc">here</a>), the onus to ask the relevant question is still on the user.</p>
+<blockquote>
+<p><strong>How might we further reduce the donor’s cognitive load when helping them discover grantees and the work they care about for rounds with a large (&gt;100) number of participants?</strong></p>
+</blockquote>
+<h3><a name="option-1-personalized-recommendations-by-tapping-into-historical-donation-data-3" class="anchor" href="https://gov.gitcoin.co#option-1-personalized-recommendations-by-tapping-into-historical-donation-data-3"></a>OPTION 1: Personalized recommendations by tapping into historical donation data</h3>
+<p><strong>Approach:</strong> Find the most supported projects by people who contribute to projects you most support</p>
+<ol>
+<li>Lookup user’s favorite projects based on who they contributed the most over the last year</li>
+<li>Tag all the voters who also supported the projects the user supported the most</li>
+<li>Find out what other projects this cluster of community contributed to that the user hasn’t donated for</li>
+<li>Sort these projects based on dollars contributed and the number of votes by the user’s cluster of community</li>
+</ol>
+<p><strong>Working Prototype:</strong> Enter your ETH address (you don’t need to sign anything) to view your personalized recommendations - <a href="https://2023-wrapped-gitcoin.streamlit.app/" rel="noopener nofollow ugc">https://2023-wrapped-gitcoin.streamlit.app/</a><br>
+<strong>Code:</strong> <a href="https://github.com/rohitmalekar/2023wrapped" class="inline-onebox" rel="noopener nofollow ugc">GitHub - rohitmalekar/2023wrapped: 2023 Wrapped for Gitcoin Donors</a><br>
+<strong>Sample:</strong> These are personalized recommendations for me based on how contributors who also support my favorite projects have donated through 2023.</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9d65479837a532cef6c7120bb37fe4bb652d660f.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/9d65479837a532cef6c7120bb37fe4bb652d660f" title="Screenshot 2024-01-23 at 4.38.31 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9d65479837a532cef6c7120bb37fe4bb652d660f_2_280x250.jpeg" alt="Screenshot 2024-01-23 at 4.38.31 PM" data-base62-sha1="msnX7qtApHz1SVKTRp0fo2O91AX" width="280" height="250" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9d65479837a532cef6c7120bb37fe4bb652d660f_2_280x250.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9d65479837a532cef6c7120bb37fe4bb652d660f_2_420x375.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9d65479837a532cef6c7120bb37fe4bb652d660f_2_560x500.jpeg 2x" data-dominant-color="1B1E24"></a></div><p></p>
+</div>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/daebcb60b0fb3b861b051bd0fe7ff26c6a19cd72.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/daebcb60b0fb3b861b051bd0fe7ff26c6a19cd72" title="Screenshot 2024-01-23 at 4.38.41 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/daebcb60b0fb3b861b051bd0fe7ff26c6a19cd72_2_276x250.jpeg" alt="Screenshot 2024-01-23 at 4.38.41 PM" data-base62-sha1="veFh6gIwUEQ7yayRCCCCIoAVCyC" width="276" height="250" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/daebcb60b0fb3b861b051bd0fe7ff26c6a19cd72_2_276x250.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/daebcb60b0fb3b861b051bd0fe7ff26c6a19cd72_2_414x375.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/daebcb60b0fb3b861b051bd0fe7ff26c6a19cd72_2_552x500.jpeg 2x" data-dominant-color="1A1D23"></a></div><p></p>
+</div>
+<p><strong>Next Steps:</strong> Deploy a round-specific personalized recommendation list for GG20 donors</p>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Since the recommendations are based on existing signals in data, they amplify existing biases too</li>
+<li>Does not factor impact in sorting recommendations</li>
+</ul>
+<h3><a name="option-2-interactive-visualization-to-discover-similar-projects-based-on-clustering-4" class="anchor" href="https://gov.gitcoin.co#option-2-interactive-visualization-to-discover-similar-projects-based-on-clustering-4"></a>OPTION 2: Interactive visualization to discover similar projects based on clustering</h3>
+<p><strong>Approach:</strong> One approach to exclude existing biases in contribution data for discovering new grantees is to limit the scope of data discovery to the grantee-submitted project description (and, in the future, impact). By classifying the nature of work and clustering related projects, donors can visually navigate through a crowded round based on their preferences.</p>
+<p>As a donor, you can then overlay your investments on such a visual and choose to:</p>
+<ol>
+<li>Double down on investments in specific domains that you care about by discovering peer projects to teams you are already aware of</li>
+<li>Spread your funds across different clusters for a more diversified strategy</li>
+</ol>
+<p><strong>Code:</strong> For a sample set of Climate Round grantees <a href="https://github.com/rohitmalekar/grantee-clustering" class="inline-onebox" rel="noopener nofollow ugc">GitHub - rohitmalekar/grantee-clustering: Use of HDBSCAN clustering to visualize the multi-dimensional public good space into well-defined groups of related projects in two dimensions.</a></p>
+<p><strong>Samples:</strong> Here are some algorithmically determined organic groupings of projects (a) saving water bodies, (b) protecting forests, (c) utilizing solar power, respectively</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/961cff553502c84f317bec5d4fed2113a45fd56d.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/961cff553502c84f317bec5d4fed2113a45fd56d" title="TSNE 0"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/961cff553502c84f317bec5d4fed2113a45fd56d_2_517x270.png" alt="TSNE 0" data-base62-sha1="lpXKke22z9cxraMSdSTV1WbXjQN" width="517" height="270" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/961cff553502c84f317bec5d4fed2113a45fd56d_2_517x270.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/961cff553502c84f317bec5d4fed2113a45fd56d_2_775x405.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/961cff553502c84f317bec5d4fed2113a45fd56d_2_1034x540.png 2x" data-dominant-color="FBFAFA"></a></div><p></p>
+</div>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/82b22ca0a648f57cd0b1467e2ba4abf7d3d29e7d.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/82b22ca0a648f57cd0b1467e2ba4abf7d3d29e7d" title="TSNE 1"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/82b22ca0a648f57cd0b1467e2ba4abf7d3d29e7d_2_517x270.png" alt="TSNE 1" data-base62-sha1="iEbO5xh4zoRMc1F2KVyAW2twrgx" width="517" height="270" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/82b22ca0a648f57cd0b1467e2ba4abf7d3d29e7d_2_517x270.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/82b22ca0a648f57cd0b1467e2ba4abf7d3d29e7d_2_775x405.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/82b22ca0a648f57cd0b1467e2ba4abf7d3d29e7d_2_1034x540.png 2x" data-dominant-color="FAFAF9"></a></div><p></p>
+</div>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b7b38255acac142014cea5e5433baa9ca00a0bde.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/b7b38255acac142014cea5e5433baa9ca00a0bde" title="TSNE 3"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b7b38255acac142014cea5e5433baa9ca00a0bde_2_517x270.png" alt="TSNE 3" data-base62-sha1="qd5YmxWNV13xNpCRkgCdYrMm4P4" width="517" height="270" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b7b38255acac142014cea5e5433baa9ca00a0bde_2_517x270.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b7b38255acac142014cea5e5433baa9ca00a0bde_2_775x405.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b7b38255acac142014cea5e5433baa9ca00a0bde_2_1034x540.png 2x" data-dominant-color="FAFAF9"></a></div><p></p>
+</div>
+<p><strong>Next Steps:</strong></p>
+<ul>
+<li>Abstract the complexity of the clustering algorithm for an intuitive interactive user experience</li>
+<li>Fine-tune the clustering method to suit the data and context</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Clustering cannot be 100% automated and requires human-in-the-loop to finalize results</li>
+<li>Does not factor impact yet. However, once impact data can be captured in a structured manner across grantees, performing clustering based on verified impact is worth a shot in the future.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/concepts-pocs-and-early-results-for-personalized-grantee-recommendations/17469/1
+        Tue, 23 Jan 2024 12:22:58 +0000
+gov.gitcoin.co-post-17469-1
+Concepts, PoCs, and Early Results for Personalized Grantee Recommendations
+      
+
+

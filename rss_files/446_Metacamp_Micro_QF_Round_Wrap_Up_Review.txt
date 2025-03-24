@@ -1,0 +1,581 @@
+
+
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068
+    ![5qr7Drg|690x303](upload://qeEQctYUG1umn7fIiMvXKjpVadj.jpeg)
+
+A couple weeks ago I attended [MetaCamp](https://mirror.xyz/yalor.eth/dDiyLhld5PDfhSHoI30mVRUvSE7QQMm8g6DH9UjJX6g) - MetaCamp is “an unconference event organized by members of MetaCartel key players of the DAO ecosystem, hosted in Costa Rica..”
+
+The event was an opportunity to chill out in the beauty of natural Costa Rica and also to nerd out on mechanism design and DAOs while we were doing it. In typical unconference style, the ~40 members of the community self-organized around what it wanted to do. This meant hiking, surfing, yoga, a boat trip, trips to the beach, and unconference sessions - but also more mundane activities like running to the local town to pick up supplies, supporting the food/drink of the event, logistics, etc.
+
+The event was a fantastic opportunity to reconnect with the beauty of nature and also an opportunity to connect with a lot of cerebral ideas. “Coordination” is a buzzword with this group; so I know I had found my people. :)
+
+I decided to take the opportunity to test out Gitcoin’s new Grants [round manager](https://round-manager.gitcoin.co/). What would it look like to run a small [quadratic funding](http://wtfisqf.com) (QF) round for ppl to support the people who made the event great?  So far, Gitcoin Grants has been used to support projects that create public good, could it be deployed on a micro-scale to support *people* who created public good for a small unconference?
+
+This felt like an opportunity to reward the people who contributed to the vibes( eerr.. the public goods) of the event.
+
+Another result of the round would be a mapping of the web of trust of the metacamp community. By seeing who in the community had contributed the most to the public good of metacamp, we could reinforce that behavior.
+
+![Screenshot 2023-05-17 at 8.04.22 AM|438x400](upload://1pOrGIW26VBs2jjCMKx0TL1JM4L.png)
+
+Of course, QF is not a perfect mechanism - nor the only mechanism we could have used. QF can sometimes be a Keynesian beauty contest (a mechanism that selects for the most visible/popular ppl, instead of those who contributed to the public goods).. Running this experiment would be an opportunity to find out what types of behavior ppl would fund.
+
+Maybe next year, if there are more voting strategy/payout strategies in Gitcoin stack, we can experiment with other mechanisms for supporting public goods - things like Quadratic Voting, gift circles, NFTs, or other mechanisms for measuring and funding what matters.
+
+This round was also an opportunity to take Gitcoin’s tech stack for a spin on the L2. The most recent main Gitcoin round, the [Beta Round](https://www.gitcoin.co/blog/announcing-the-gitcoin-grants-beta-round) was run on a L1 and had very high gas fees. What would contributions look like on a L2?
+
+I used https://round-manager.gitcoin.co/ to spin up a Metacamp Program and a Metacamp Round. A program has a one-to-many relationship with a round. E.g, I could reuse the Metacamp Program again in 2024 and create a Metacamp 2024 round if I chose to.
+
+One hiccup we ran into is that the Gitcoin UI on round-manager forces two date ranges,
+
+1. Application date - when Grants can apply to the round
+2. Round (which maybe should be named ‘Crowdfund’) - when ppl can fund those grants.
+
+The UI will only allow the crowdfund to begin after the applications end. This forced us to try and decide who could be in the round before the crowdfund started… when we would have preferred to have some overlap between the two periods.
+
+![Screenshot 2023-05-17 at 8.04.55 AM|690x197](upload://hfp9yUerWtAc3nnVw2uZpcOVQeK.png)
+
+Another wrinkle was that we did not feel like an “application period” was the right fit for an unconference style social community like Metacamp at all.
+
+1. People were busy surfing and hiking, they were not checking telegram often. So they could not be relied upon to submit a grant.
+2. While most people would feel fine receiving funding for contributing to the public goods of the event, people would likely not want to be seen seeking funding for it.
+
+For this reason, we figured that if we accepted applications for the round, we would have had about ¼ of the participation as if we just loaded all of the attendees into the round (100% participation).
+
+But what were the privacy implications of loading everyone into the round? The event itself was ticketed via NFTs, so everyone's information was on chain already. But we felt that we could not proceed without allowing attendees the opportunity to opt out.
+
+After giving attendees the opportunity to opt out, we proceeded to ingest the attendee database into the granting system. But we hit another wrinkle, Gitcoin’s system expected everyone to submit their own grant application. And there is no bulk uploader for a round manager to simply create the grants on behalf of their attendees.
+
+We worked around this by assembling a crack team of DAO nerds that was in charge of ingesting all of the grants into the system and then transferring the grants to the users themselves. This ride or ride crew took about 45 minutes to clean and ingest the 40 participants to the event (plus 4 locals who were helping out) into the Grants system.
+
+In addition to the attendees, we also decided to include locals who helped out with the event into the QF round. The babysitters who watched the children, a woman who taught us a cooking class, and the staff from the hotel we stayed at, were all included. For those locals who were not crypto native, we decided that we would use addresses that one of us controlled for each of their grants, and that we’d settle up with the locals in cash after the round. This goal was to minimize the complexity of onboarding the locals to using crypto. In my opinion, more projects should be focused on providing value to people first and then onboarding them to crypto second - not the other way around. I’m sure they’ll be more interested in crypto if we [give first](https://www.techstars.com/the-line/podcasts/what-is-give-first). Lets not confuse the means (crypto) with the end (reward people who contribute to public goods).
+
+At this point, the QF round had momentum within the social commons of the group. I put 3 ETH in myself, and was happy to see that I was matched with 3 ETH from [Metacartel’s Ethos project](https://www.metacartel.org/ethos), and .26 ETH from other participants, bringing the total pool of funding to 6.26 ETH.
+
+Did I mention that this was on a L2? It cost about $4 to launch the round, $2 to apply to the round, and each contribution cost about $.50 in gas fees.
+
+Over the next few days, contributions to the round began to roll in.
+
+The contributor experience was similar to the typical Gitcoin Grants contribution experience.
+
+1. Go to the round explorer.
+2. Add grants to cart.
+3. Checkout
+
+I even printed out these fun little promotional fliers for the round using the hotels printer.
+![IMAGE 2023-05-18 23:10:43|666x500](upload://gmF1c3iS5gTxnKbXGCE1sqPqAuV.jpeg)
+
+After all was said and done, the round stats looked like this:
+
+* 4 ETH in crowdfund contributions
+* 6.28 ETH in matching funds
+* Total funding: 10.28 ETH
+* 41 grants
+* Average earnings per grant: 0.25 ETH.
+* 31 ppl contributed to the round
+* 529 contributions were created
+* An average of 17 contributions per person.
+
+This is what the social structure of the round looked like. Each gray circle is a “grant”, and each blue/red contribution is a contribution to the grant.
+
+![Screenshot 2023-05-17 at 8.05.51 AM|502x500](upload://hnEC95WeSjbYpipwvASvvNLU63R.jpeg)
+
+
+All in all, I’m proud of the experiment that we ran. Especially the fact that the hotel staff, babysitters, and organizers are all going to get $300+ bonuses each from the round (some will receive over $1000).
+
+Next time around, I’d be interested to explore a different funding mechanism (like Quadratic Voting, a giving circle, etc) for the round… And I’d like to be able to accept applications to the round during the round because theres a few organizers/locals we forgot to add the first time around.
+
+I don’t think people realized that the new Gitcoin Grants tooling can be used in this way (or even that anyone can self-serve create a round at all). So I was happy to take the new tooling off the beaten path a little bit and experiment with a new form of social coordination.
+
+Pura Vida 🌊🌈
+
+—-----------------------------------—-----------------------------------—-----------------------------------—--------
+
+Some assorted feedback I got during the round:
+
+> Would be really nice to see who made the most donations or how many each person made but not on the receiving side.
+
+> never seen a private qf round that turned out to be an observation for emerging connections and contributions from a group (or a past event), this was a really cool new use case for the mechanism, thank you for setting this up!
+
+> I noticed the random sorting on refresh or page load as well. It would be great to either have a static loading or sorting options selected by the user. Alphabetical, most interest/signaling, etc. This randomness may have been their way of not giving priority to a single project, etc. however it is a bit distracting/interrupting to the end user experience.
+
+> the page navigation is really weird on this site. Everytime I click into a grant and "Add to my cart" it should take me back to the section I was browsing before, but it appears that all the grants are shuffled at random instead ?
+
+> I think it went really well for yolo test case of a new platform, education is key for this kind of thing to work and we can get ahead of it early for the next one ☝🏼
+
+> i did it yesterday it's super easy, i like the shopping cart method
+
+It was hard to explain how Quadratic Funding works to people in a concise way. We did lean on https://wtfisqf.com/ but it was still hard.
+
+A handful of people were wondering how much match they were getttng for a contribution and tried to do the math. It would have been nice if the UI showed the answer so ppl dont have to do the match.
+
+I turned off Gitcoin Passport in the round manager UI for the round, but during the contribution experience, the UI still prompted people to sign up for passport or their contributions wouldnt be matched. I think if Passport is off for the round, then the contributors should not get that prompt.
+
+It’d be nice to have other sybil defense mechanisms available. I this case, I had the addresses of everyone who could participate. Rather than using Passport or nothing, the round manager could have allowed me to upload everyones address (into a merkle tree for gas efficiency of course) and just use that for anti-sybil.
+
+A few folks had trouble finding their funds for the round and needed to be reminded to switch their wallets to optimism. (and this was a pretty crypto-native crew).
+
+There is no way to see who you contributed to or who contributed to you without sleuthing on Etherscan, which is kind of clunky.
+
+There were a few small UX issues during the round (eg you cant input .1 into the amount field on the checkout page, only 0.1…. On metamask mobile the ‘amount’ page doesnt accept decimals at all. The dates/times in the UI are all UTC instead of localized to our timezone, which means ppl were confused about the start/end dates, etc)
+
+—-----------------------------------—-----------------------------------—-----------------------------------—--------
+
+Disclaimers:
+
+* I cofounded gitcoin but I have been disaffiliated from leadership of the DAO for about a year.
+* The DAO is now in charge 100 pct.
+* I am passing along "consider" feedback.  None of the feedback is directing any work in the DAO.
+* I hold GTC.
+* All of the information about Gitcoin in this post is public information.
+* Nothing in this post is financial advice.
+Sun, 10 Dec 2023 06:38:31 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+sophia
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Would be really nice to see who made the most donations or how many each person made but not on the receiving side.</p>
+</blockquote>
+</aside>
+<p>Hypercerts ran something similar to this for Zuzalu. Think it would’ve been really interesting to build upon Gitcoin Grants rather than building the whole marketplace from scratch.</p>
+<p>One nice thing about using Hypercerts is the ability to clearly see who made the most donations for the entire collection of grants or for each individual grant in a digital billboard UI -  like [this].(<a href="http://bafybeic7ewuxfegbqjyh7thgitkppbboc7dvgwawutcejqm4gly6rjwa2i.ipfs.localhost:8080/app/zuzalu/billboard/">http://bafybeic7ewuxfegbqjyh7thgitkppbboc7dvgwawutcejqm4gly6rjwa2i.ipfs.localhost:8080/app/zuzalu/billboard/</a>)</p>
+<p>A quick flow could be:</p>
+<ol>
+<li>Hypercerts automatically created for each grantee</li>
+<li>As people donate they automatically get a fraction of that specific Hypercert correlated to their donation amount</li>
+</ol>
+<p>What this enables:</p>
+<ul>
+<li>the ability to easily see who made the most donations for a specific hypercert or across an entire collection of hypercerts</li>
+<li>grantees can make collections of all the Hypercerts they’ve ever gotten (say the babysitter got a Hypercert at Metacamp and then later on for some other impact at another event - they can make a collection representing all the impact they’ve done to make a visual representation of their impact, reputation, social graph of people who’ve donated to them)</li>
+<li>starts building out the data layer for retroactive rewards (say someone reads this post and wants to allocate even more tips to the grantees and maybe even gift those who donated with a nice lil tip too - they can now do that)</li>
+<li>new incentives for donating (right now there’s social pressure and other intrinsic incentives to donate. but the potential for retroactive rewards because you were an early donors might open up a whole new range of new incentives that incentivize people to donate even more…)</li>
+</ul>
+<p>Would love to hear your thoughts on this</p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/14
+        Sun, 10 Dec 2023 06:38:31 +0000
+gov.gitcoin.co-post-15068-14
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+FractalVisions
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>The UI will only allow the crowdfund to begin after the applications end. This forced us to try and decide who could be in the round before the crowdfund started… when we would have preferred to have some overlap between the two periods.</p>
+</blockquote>
+</aside>
+<p>We ran into similar issues when trying to set up our own formula for a mini grants round.</p>
+<p>For instance, the crowd fund that we are currently running as our pilot program had to be set up as a quadratic funding module instead of the direct grants… Which actually do not function the way that we intended them to after setting up a round with the direct grants option because we wanted the perpetual cycle to last throughout the future in case we wanted to run future round on the same program… Little did we know the direct grants was for capital that was already allocated upfront and not for crowd sourcing direct grant donations.</p>
+<p>This caused us to also shift to the quadratic funding model and have to close the cycle for crowdfunding halfway through the first quadratic funding round in order to deposit the funds into the QF matching pool. I’m not certain if there’s a way to distribute funds from a QF matching pool in portions and keep the direct donations coming in after the fact. It was not clear according to the UI.</p>
+<p>Alternatively this method allows us to reiterate and improve upon the pilot program in subsequent rounds quarter to quarter.<br>
+We made it work!</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>But what were the privacy implications of loading everyone into the round? The event itself was ticketed via NFTs, so everyone’s information was on chain already. But we felt that we could not proceed without allowing attendees the opportunity to opt out.</p>
+</blockquote>
+</aside>
+<p>This is great that you took the time to let folks decide how they wanted to be included. Perhaps in the future off chain attestations could be provided to help verify human identification with account abstraction.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I even printed out these fun little promotional fliers for the round using the hotels printer.</p>
+</blockquote>
+</aside>
+<p>This is wonderful. Please let us know if you would like us to provide some printing services in the future for anything along these lines. Of course some proper prior planning would be needed for us to produce the materials.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I don’t think people realized that the new Gitcoin Grants tooling can be used in this way (or even that anyone can self-serve create a round at all). So I was happy to take the new tooling off the beaten path a little bit and experiment with a new form of social coordination.</p>
+</blockquote>
+</aside>
+<p>We have been a part of many events and festivals before and think this is a great way to incentivize the folks who set up the grounds prior to and after the event.</p>
+<p>Another role I have served at a concert before is something called a “illuminator” for a musician on tour who would incentivize the core members of their fan group to work during certain shows over the course the tour. I would get a free ticket but in order to do so I would have to put down a deposit when I would show up for my role.<br>
+Then, after the show everyone that was serving these duties would have to show up and serve a sobriety test to receive their deposit back for the work they did.</p>
+<p>The duties of these members included walking around and giving people water, snacks, and free merchandise or art. You are also encouraged to help people if you saw that they were intoxicated just to check on them, and if there was a medical emergency or you saw somebody that needed assistance you became the first line of communication to medics arriving in the middle of a crowd.</p>
+<p>Kudos to you for giving us a great case of study here.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>It was hard to explain how Quadratic Funding works to people in a concise way. We did lean on <a href="https://wtfisqf.com/" rel="noopener nofollow ugc">https://wtfisqf.com/ </a> but it was still hard.</p>
+</blockquote>
+</aside>
+<p>This is always a difficult term to explain. Something that comes to mind is that a small replica of quadratic funding with a finite amount of funds could be used to display quadratic funding with an app that’s shared on a screen live for people by having presets and models that show funds being redistributed back-and-forth to the same addresses, along with a gasless transaction mechanism to keep the funds available in the app for example. Maybe then they could see how it works with a visual representation in real time onchain.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I turned off Gitcoin Passport in the round manager UI for the round, but during the contribution experience, the UI still prompted people to sign up for passport or their contributions wouldnt be matched. I think if Passport is off for the round, then the contributors should not get that prompt.</p>
+</blockquote>
+</aside>
+<p>This is something we also were aware of when setting up our crowd funding round. We shut off the passport for that aspect.<br>
+When we set up the quadratic funding round that is crowdfunded we set up a completely separate round so that way we could implement the passport when people are contributing to each project.</p>
+<p>The crowdfunding round actually goes all the way up halfway through the quadratic funding round so it serves as a funnel for direct donations to the quadratic funding without having to choose any project and allows an alternate source for folks to direct people to contribute towards besides their own grant in the round. Creating a synergy of crowdfunding through the participants of the round themselves.</p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/13
+        Sat, 09 Dec 2023 01:03:37 +0000
+gov.gitcoin.co-post-15068-13
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+KarlaGod
+
+            <p>This is so insightful, I’d like to replicate what you’ve done in my community, so first I’m going to read the Green Pill book, and then I’m going to listen to all the content on the podcast, and I’m going to come up with a strategy to Green Pill my community.</p>
+<p>Will post my updates as I progress <img src="https://gov.gitcoin.co/images/emoji/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/12
+        Wed, 06 Dec 2023 13:08:06 +0000
+gov.gitcoin.co-post-15068-12
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+owocki
+
+            <p>Just wanted to circle back and share this testimonial that <a class="mention" href="https://gov.gitcoin.co/u/yalor">@Yalor</a> shared (with permission) with the group:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a0d9f2734f140d3e37922658838c5ee178f0defc.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/a0d9f2734f140d3e37922658838c5ee178f0defc" title="Screenshot 2023-07-26 at 11.09.15 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a0d9f2734f140d3e37922658838c5ee178f0defc_2_224x500.jpeg" alt="Screenshot 2023-07-26 at 11.09.15 AM" data-base62-sha1="mWXln6qCMFwkGidNFAVWtGvHctK" width="224" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a0d9f2734f140d3e37922658838c5ee178f0defc_2_224x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a0d9f2734f140d3e37922658838c5ee178f0defc_2_336x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a0d9f2734f140d3e37922658838c5ee178f0defc_2_448x1000.jpeg 2x" data-dominant-color="494848"></a></div><p></p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/b/bc56203dba87b52744bfbd2f0d1bfcefba098adf.png" alt="Screenshot 2023-07-26 at 11.08.04 AM" data-base62-sha1="qS6hSHuZuTZd6vrnQztO6WyehvF" width="312" height="211"></p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/11
+        Wed, 26 Jul 2023 17:09:44 +0000
+gov.gitcoin.co-post-15068-11
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+Supreme
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> I have a few questions:</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>For those locals who were not crypto native, we decided that we would use addresses that one of us controlled for each of their grants, and that we’d settle up with the locals in cash after the round.</p>
+</blockquote>
+</aside>
+<p>There are so many thing I find concerning with this statement and questions that  I have -<br>
+Looking at the <a href="https://docs.google.com/document/d/1YUvoAMFs69g-AL7WCfiKvhgwPcOXnbNIBdlmr3MJS7g/edit#" rel="noopener nofollow ugc">round eligibility</a>:</p>
+<ol>
+<li>Using an address that you control for someone else - seems to be falsification/fraud/impersonation</li>
+<li>Why not choose to take this opportunity to educate the non-crypto natives?</li>
+<li>What did  you “settle up” on, and why in cash?</li>
+</ol>
+<aside class="quote no-group quote-modified" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>the babysitters who watched the children, a woman who taught us a cooking class, and the staff from the hotel we stayed at, were all included.</p>
+</blockquote>
+</aside>
+<p>4.)  It sounds like “participants” were given a vacation and a babysitter for their    donation -   would you consider this to fall in the scope of bribery?</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>In my opinion, more projects should be focused on providing value to people first</p>
+</blockquote>
+</aside>
+<ol start="5">
+<li>What value did this Metacamp provide?</li>
+</ol>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I put 3 ETH in myself, and was happy to see that I was matched with 3 ETH from <a href="https://www.metacartel.org/ethos" rel="noopener nofollow ugc">Metacartel’s Ethos project </a>, and .26 ETH from other participants, bringing the total pool of funding to 6.26 ETH.</p>
+</blockquote>
+</aside>
+<ol start="6">
+<li>Are there tx hash’s for these donations?</li>
+</ol>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>assembling a crack team of DAO nerds that was in charge of ingesting all of the grants into the system and then transferring the grants to the users themselves. This ride or ride crew took about 45 minutes to clean and ingest the 40 participants to the event (plus 4 locals who were helping out) into the Grants system.</p>
+</blockquote>
+</aside>
+<p>7.) Were those that gave their information aware that someone else would have access to their info?<br>
+8.) Do you vote with the GTC that you hold?</p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/10
+        Tue, 30 May 2023 06:56:23 +0000
+gov.gitcoin.co-post-15068-10
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+ccerv1
+
+            <p>Personally, I think sorting / shuffling are fine, the problem is when you are in a session, if you click a grant link to view it, and then go back to the explorer, you lose your bearings.</p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/9
+        Fri, 26 May 2023 18:29:26 +0000
+gov.gitcoin.co-post-15068-9
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+kevin.olsen
+
+            <p>+1 to considering sorting a design choice of the round operator. Having a round configuration amplifying trending grants isn’t necessarily bad. Popularity is a great signal and creates certain kinds of results. But it could drive sub-optimal outcomes in other contexts.</p>
+<p>Love the plugin idea. Also easy to start out by having a variety of sort mechanisms that round operators can select from in the explorer view for their round.</p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/8
+        Thu, 25 May 2023 11:27:58 +0000
+gov.gitcoin.co-post-15068-8
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+llllvvuu
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>A handful of people were wondering how much match they were getttng for a contribution and tried to do the math. It would have been nice if the UI showed the answer so ppl dont have to do the match.</p>
+</blockquote>
+</aside>
+<p>IMO this should be configurable by the round owner. The use case is clear, but there is also a use case for hiding this information and even hiding all current stats (how many people have donated so far etc) so as not to bias or add undue momentum to the results. Whether a project is looking hot at the time of the user logging in and voting is not necessarily an accurate indicator of anything and can be manipulated.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I noticed the random sorting on refresh or page load as well. It would be great to either have a static loading or sorting options selected by the user. Alphabetical, most interest/signaling, etc.</p>
+</blockquote>
+</aside>
+<p>I’m a fan of alphabetical provided that the list is short enough to scroll through to the end. Trending may encourage users to stop browsing early. But of course it would be great to implement all the things (or even roll a custom feed plugin system like Bluesky) and let operators set defaults/recommendations and users choose.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>It was hard to explain how Quadratic Funding works to people in a concise way. We did lean on <a href="https://wtfisqf.com/" rel="noopener nofollow ugc">https://wtfisqf.com/ </a> but it was still hard.</p>
+</blockquote>
+</aside>
+<p>I wonder if people care that it’s QF behind the scenes, or that it’s sqrt and square, versus something more handwavy like - your match is multiplied by roughly the number of people who donated, in order to emphasize applicants with a broad/public impact.</p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/7
+        Sat, 20 May 2023 21:03:36 +0000
+gov.gitcoin.co-post-15068-7
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+owocki
+
+            <aside class="quote no-group" data-username="koday" data-post="5" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/koday/48/7280_2.png" class="avatar"> koday:</div>
+<blockquote>
+<p>Also, I found this super interesting - the need for something like this has never crossed my mind but as we try to onboard more non-Web3-native users to the ecosystem I definitely see the value in it. I’m also curious how much it would save in gas (moreso for mainnet rounds) to collect applications off-chain and submit them in a batch through a single transaction. Would love to hear some more thoughts around this from product and ops folks as Grants Stack development continues.</p>
+</blockquote>
+</aside>
+<p>One of the hackers in the supermodular ecosystem has been working on a batch grant upload tool.  <a href="https://www.loom.com/share/89e75de8c54f49e3bf23b392e14b9238">Here is a demo.</a>.</p>
+<p>This tool is more for the convenience of uploading a batch of participants vs saving gas (gas was p cheap on optimism) tho.</p>
+<p>Permissionless protocols ftw!</p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/6
+        Thu, 18 May 2023 15:06:51 +0000
+gov.gitcoin.co-post-15068-6
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+koday
+
+            <p>Great experiment and writeup - as far as I know, you’re the first one to spin up and complete a fully self-serve QF round on Grants Stack which seems fitting <img src="https://gov.gitcoin.co/images/emoji/twitter/grinning.png?v=12" title=":grinning:" class="emoji" alt=":grinning:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15068">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>After giving attendees the opportunity to opt out, we proceeded to ingest the attendee database into the granting system. But we hit another wrinkle, Gitcoin’s system expected everyone to submit their own grant application. And there is no bulk uploader for a round manager to simply create the grants on behalf of their attendees.</p>
+</blockquote>
+</aside>
+<p>Also, I found this super interesting - the need for something like this has never crossed my mind but as we try to onboard more non-Web3-native users to the ecosystem I definitely see the value in it. I’m also curious how much it would save in gas (moreso for mainnet rounds) to collect applications off-chain and submit them in a batch through a single transaction. Would love to hear some more thoughts around this from product and ops folks as Grants Stack development continues.</p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/5
+        Thu, 18 May 2023 13:34:04 +0000
+gov.gitcoin.co-post-15068-5
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+meglister
+
+            <p>thanks <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> – great feedback! putting it into product board <img src="https://gov.gitcoin.co/images/emoji/twitter/rocket.png?v=12" title=":rocket:" class="emoji" alt=":rocket:" loading="lazy" width="20" height="20"></p>
+<p>as a newbie to the Quadratic Lands, I have to say it makes me feel “less dumb” that you still have trouble explaining QF. <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> that said, points to a bigger opportunity to reframe QF using values-oriented language, perhaps something like Nike talking about NFTs: <a href="https://twitter.com/patrickxrivera/status/1658511903382204417" rel="noopener nofollow ugc">https://twitter.com/patrickxrivera/status/1658511903382204417</a></p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/4
+        Wed, 17 May 2023 16:31:26 +0000
+gov.gitcoin.co-post-15068-4
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+ccerv1
+
+            <p>Very cool!</p>
+<blockquote>
+<p>Did I mention that this was on a L2? It cost about $4 to launch the round, $2 to apply to the round, and each contribution cost about $.50 in gas fees.</p>
+</blockquote>
+<p>In the future, would love to see a round manager be able to offer gasless applications + voting/contributions on a L2 with strict passport eligibility requirements and/or allowlisting to prevent attacks</p>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/2
+        Wed, 17 May 2023 15:32:28 +0000
+gov.gitcoin.co-post-15068-2
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+owocki
+
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b7e0b8db2059b3a2d084d30eb417d63d00a4aac9.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/b7e0b8db2059b3a2d084d30eb417d63d00a4aac9" title="5qr7Drg"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b7e0b8db2059b3a2d084d30eb417d63d00a4aac9_2_690x303.jpeg" alt="5qr7Drg" data-base62-sha1="qeEQctYUG1umn7fIiMvXKjpVadj" width="690" height="303" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b7e0b8db2059b3a2d084d30eb417d63d00a4aac9_2_690x303.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b7e0b8db2059b3a2d084d30eb417d63d00a4aac9_2_1035x454.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b7e0b8db2059b3a2d084d30eb417d63d00a4aac9_2_1380x606.jpeg 2x" data-dominant-color="847260"></a></div><p></p>
+<p>A couple weeks ago I attended <a href="https://mirror.xyz/yalor.eth/dDiyLhld5PDfhSHoI30mVRUvSE7QQMm8g6DH9UjJX6g">MetaCamp</a> - MetaCamp is “an unconference event organized by members of MetaCartel key players of the DAO ecosystem, hosted in Costa Rica…”</p>
+<p>The event was an opportunity to chill out in the beauty of natural Costa Rica and also to nerd out on mechanism design and DAOs while we were doing it. In typical unconference style, the ~40 members of the community self-organized around what it wanted to do. This meant hiking, surfing, yoga, a boat trip, trips to the beach, and unconference sessions - but also more mundane activities like running to the local town to pick up supplies, supporting the food/drink of the event, logistics, etc.</p>
+<p>The event was a fantastic opportunity to reconnect with the beauty of nature and also an opportunity to connect with a lot of cerebral ideas. “Coordination” is a buzzword with this group; so I know I had found my people. <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>I decided to take the opportunity to test out Gitcoin’s new Grants <a href="https://round-manager.gitcoin.co/">round manager</a>. What would it look like to run a small <a href="http://wtfisqf.com">quadratic funding</a> (QF) round for ppl to support the people who made the event great?  So far, Gitcoin Grants has been used to support projects that create public good, could it be deployed on a micro-scale to support <em>people</em> who created public good for a small unconference?</p>
+<p>This felt like an opportunity to reward the people who contributed to the vibes( eerr… the public goods) of the event.</p>
+<p>Another result of the round would be a mapping of the web of trust of the metacamp community. By seeing who in the community had contributed the most to the public good of metacamp, we could reinforce that behavior.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/0/09ed2d4f6e1de58040387a776f24581b2c17786f.png" alt="Screenshot 2023-05-17 at 8.04.22 AM" data-base62-sha1="1pOrGIW26VBs2jjCMKx0TL1JM4L" width="438" height="400"></p>
+<p>Of course, QF is not a perfect mechanism - nor the only mechanism we could have used. QF can sometimes be a Keynesian beauty contest (a mechanism that selects for the most visible/popular ppl, instead of those who contributed to the public goods)… Running this experiment would be an opportunity to find out what types of behavior ppl would fund.</p>
+<p>Maybe next year, if there are more voting strategy/payout strategies in Gitcoin stack, we can experiment with other mechanisms for supporting public goods - things like Quadratic Voting, gift circles, NFTs, or other mechanisms for measuring and funding what matters.</p>
+<p>This round was also an opportunity to take Gitcoin’s tech stack for a spin on the L2. The most recent main Gitcoin round, the <a href="https://www.gitcoin.co/blog/announcing-the-gitcoin-grants-beta-round">Beta Round</a> was run on a L1 and had very high gas fees. What would contributions look like on a L2?</p>
+<p>I used <a href="https://round-manager.gitcoin.co/">https://round-manager.gitcoin.co/</a> to spin up a Metacamp Program and a Metacamp Round. A program has a one-to-many relationship with a round. E.g, I could reuse the Metacamp Program again in 2024 and create a Metacamp 2024 round if I chose to.</p>
+<p>One hiccup we ran into is that the Gitcoin UI on round-manager forces two date ranges,</p>
+<ol>
+<li>Application date - when Grants can apply to the round</li>
+<li>Round (which maybe should be named ‘Crowdfund’) - when ppl can fund those grants.</li>
+</ol>
+<p>The UI will only allow the crowdfund to begin after the applications end. This forced us to try and decide who could be in the round before the crowdfund started… when we would have preferred to have some overlap between the two periods.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/78e2c5c0f6a84ff93a6093c63eac853608ab44fa.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/78e2c5c0f6a84ff93a6093c63eac853608ab44fa" title="Screenshot 2023-05-17 at 8.04.55 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/78e2c5c0f6a84ff93a6093c63eac853608ab44fa_2_690x197.png" alt="Screenshot 2023-05-17 at 8.04.55 AM" data-base62-sha1="hfp9yUerWtAc3nnVw2uZpcOVQeK" width="690" height="197" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/78e2c5c0f6a84ff93a6093c63eac853608ab44fa_2_690x197.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/78e2c5c0f6a84ff93a6093c63eac853608ab44fa_2_1035x295.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/7/78e2c5c0f6a84ff93a6093c63eac853608ab44fa.png 2x" data-dominant-color="CCCBCC"></a></div><p></p>
+<p>Another wrinkle was that we did not feel like an “application period” was the right fit for an unconference style social community like Metacamp at all.</p>
+<ol>
+<li>People were busy surfing and hiking, they were not checking telegram often. So they could not be relied upon to submit a grant.</li>
+<li>While most people would feel fine receiving funding for contributing to the public goods of the event, people would likely not want to be seen seeking funding for it.</li>
+</ol>
+<p>For this reason, we figured that if we accepted applications for the round, we would have had about ¼ of the participation as if we just loaded all of the attendees into the round (100% participation).</p>
+<p>But what were the privacy implications of loading everyone into the round? The event itself was ticketed via NFTs, so everyone’s information was on chain already. But we felt that we could not proceed without allowing attendees the opportunity to opt out.</p>
+<p>After giving attendees the opportunity to opt out, we proceeded to ingest the attendee database into the granting system. But we hit another wrinkle, Gitcoin’s system expected everyone to submit their own grant application. And there is no bulk uploader for a round manager to simply create the grants on behalf of their attendees.</p>
+<p>We worked around this by assembling a crack team of DAO nerds that was in charge of ingesting all of the grants into the system and then transferring the grants to the users themselves. This ride or ride crew took about 45 minutes to clean and ingest the 40 participants to the event (plus 4 locals who were helping out) into the Grants system.</p>
+<p>In addition to the attendees, we also decided to include locals who helped out with the event into the QF round. The babysitters who watched the children, a woman who taught us a cooking class, and the staff from the hotel we stayed at, were all included. For those locals who were not crypto native, we decided that we would use addresses that one of us controlled for each of their grants, and that we’d settle up with the locals in cash after the round. This goal was to minimize the complexity of onboarding the locals to using crypto. In my opinion, more projects should be focused on providing value to people first and then onboarding them to crypto second - not the other way around. I’m sure they’ll be more interested in crypto if we <a href="https://www.techstars.com/the-line/podcasts/what-is-give-first">give first</a>. Lets not confuse the means (crypto) with the end (reward people who contribute to public goods).</p>
+<p>At this point, the QF round had momentum within the social commons of the group. I put 3 ETH in myself, and was happy to see that I was matched with 3 ETH from <a href="https://www.metacartel.org/ethos">Metacartel’s Ethos project</a>, and .26 ETH from other participants, bringing the total pool of funding to 6.26 ETH.</p>
+<p>Did I mention that this was on a L2? It cost about $4 to launch the round, $2 to apply to the round, and each contribution cost about $.50 in gas fees.</p>
+<p>Over the next few days, contributions to the round began to roll in.</p>
+<p>The contributor experience was similar to the typical Gitcoin Grants contribution experience.</p>
+<ol>
+<li>Go to the round explorer.</li>
+<li>Add grants to cart.</li>
+<li>Checkout</li>
+</ol>
+<p>I even printed out these fun little promotional fliers for the round using the hotels printer.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/72b2924c9348d3409eaab8194fb7454c53bf33ad.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/72b2924c9348d3409eaab8194fb7454c53bf33ad" title="IMAGE 2023-05-18 23:10:43"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/72b2924c9348d3409eaab8194fb7454c53bf33ad_2_666x500.jpeg" alt="IMAGE 2023-05-18 23:10:43" data-base62-sha1="gmF1c3iS5gTxnKbXGCE1sqPqAuV" width="666" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/72b2924c9348d3409eaab8194fb7454c53bf33ad_2_666x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/72b2924c9348d3409eaab8194fb7454c53bf33ad_2_999x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/7/72b2924c9348d3409eaab8194fb7454c53bf33ad.jpeg 2x" data-dominant-color="987E5B"></a></div><p></p>
+<p>After all was said and done, the round stats looked like this:</p>
+<ul>
+<li>4 ETH in crowdfund contributions</li>
+<li>6.28 ETH in matching funds</li>
+<li>Total funding: 10.28 ETH</li>
+<li>41 grants</li>
+<li>Average earnings per grant: 0.25 ETH.</li>
+<li>31 ppl contributed to the round</li>
+<li>529 contributions were created</li>
+<li>An average of 17 contributions per person.</li>
+</ul>
+<p>This is what the social structure of the round looked like. Each gray circle is a “grant”, and each blue/red contribution is a contribution to the grant.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/79d17ec3df3984e00ce0b5f40fa26e7ea6e68c57.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/79d17ec3df3984e00ce0b5f40fa26e7ea6e68c57" title="Screenshot 2023-05-17 at 8.05.51 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/79d17ec3df3984e00ce0b5f40fa26e7ea6e68c57_2_502x500.jpeg" alt="Screenshot 2023-05-17 at 8.05.51 AM" data-base62-sha1="hnEC95WeSjbYpipwvASvvNLU63R" width="502" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/79d17ec3df3984e00ce0b5f40fa26e7ea6e68c57_2_502x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/79d17ec3df3984e00ce0b5f40fa26e7ea6e68c57_2_753x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/79d17ec3df3984e00ce0b5f40fa26e7ea6e68c57_2_1004x1000.jpeg 2x" data-dominant-color="A4AAB1"></a></div><p></p>
+<p>All in all, I’m proud of the experiment that we ran. Especially the fact that the hotel staff, babysitters, and organizers are all going to get $300+ bonuses each from the round (some will receive over $1000).</p>
+<p>Next time around, I’d be interested to explore a different funding mechanism (like Quadratic Voting, a giving circle, etc) for the round… And I’d like to be able to accept applications to the round during the round because theres a few organizers/locals we forgot to add the first time around.</p>
+<p>I don’t think people realized that the new Gitcoin Grants tooling can be used in this way (or even that anyone can self-serve create a round at all). So I was happy to take the new tooling off the beaten path a little bit and experiment with a new form of social coordination.</p>
+<p>Pura Vida <img src="https://gov.gitcoin.co/images/emoji/twitter/ocean.png?v=12" title=":ocean:" class="emoji" alt=":ocean:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/rainbow.png?v=12" title=":rainbow:" class="emoji" alt=":rainbow:" loading="lazy" width="20" height="20"></p>
+<p>—-----------------------------------—-----------------------------------—-----------------------------------—--------</p>
+<p>Some assorted feedback I got during the round:</p>
+<blockquote>
+<p>Would be really nice to see who made the most donations or how many each person made but not on the receiving side.</p>
+</blockquote>
+<blockquote>
+<p>never seen a private qf round that turned out to be an observation for emerging connections and contributions from a group (or a past event), this was a really cool new use case for the mechanism, thank you for setting this up!</p>
+</blockquote>
+<blockquote>
+<p>I noticed the random sorting on refresh or page load as well. It would be great to either have a static loading or sorting options selected by the user. Alphabetical, most interest/signaling, etc. This randomness may have been their way of not giving priority to a single project, etc. however it is a bit distracting/interrupting to the end user experience.</p>
+</blockquote>
+<blockquote>
+<p>the page navigation is really weird on this site. Everytime I click into a grant and “Add to my cart” it should take me back to the section I was browsing before, but it appears that all the grants are shuffled at random instead ?</p>
+</blockquote>
+<blockquote>
+<p>I think it went really well for yolo test case of a new platform, education is key for this kind of thing to work and we can get ahead of it early for the next one <img src="https://gov.gitcoin.co/images/emoji/twitter/point_up/3.png?v=12" title=":point_up:t3:" class="emoji" alt=":point_up:t3:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+<blockquote>
+<p>i did it yesterday it’s super easy, i like the shopping cart method</p>
+</blockquote>
+<p>It was hard to explain how Quadratic Funding works to people in a concise way. We did lean on <a href="https://wtfisqf.com/">https://wtfisqf.com/</a> but it was still hard.</p>
+<p>A handful of people were wondering how much match they were getttng for a contribution and tried to do the math. It would have been nice if the UI showed the answer so ppl dont have to do the match.</p>
+<p>I turned off Gitcoin Passport in the round manager UI for the round, but during the contribution experience, the UI still prompted people to sign up for passport or their contributions wouldnt be matched. I think if Passport is off for the round, then the contributors should not get that prompt.</p>
+<p>It’d be nice to have other sybil defense mechanisms available. I this case, I had the addresses of everyone who could participate. Rather than using Passport or nothing, the round manager could have allowed me to upload everyones address (into a merkle tree for gas efficiency of course) and just use that for anti-sybil.</p>
+<p>A few folks had trouble finding their funds for the round and needed to be reminded to switch their wallets to optimism. (and this was a pretty crypto-native crew).</p>
+<p>There is no way to see who you contributed to or who contributed to you without sleuthing on Etherscan, which is kind of clunky.</p>
+<p>There were a few small UX issues during the round (eg you cant input .1 into the amount field on the checkout page, only 0.1…. On metamask mobile the ‘amount’ page doesnt accept decimals at all. The dates/times in the UI are all UTC instead of localized to our timezone, which means ppl were confused about the start/end dates, etc)</p>
+<p>—-----------------------------------—-----------------------------------—-----------------------------------—--------</p>
+<p>Disclaimers:</p>
+<ul>
+<li>I cofounded gitcoin but I have been disaffiliated from leadership of the DAO for about a year.</li>
+<li>The DAO is now in charge 100 pct.</li>
+<li>I am passing along “consider” feedback.  None of the feedback is directing any work in the DAO.</li>
+<li>I hold GTC.</li>
+<li>All of the information about Gitcoin in this post is public information.</li>
+<li>Nothing in this post is financial advice.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068/1
+        Wed, 17 May 2023 14:14:05 +0000
+gov.gitcoin.co-post-15068-1
+Metacamp Micro-QF Round Wrap-Up/Review 🌊
+      
+
+

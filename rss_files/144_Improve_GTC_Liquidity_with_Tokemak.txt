@@ -1,0 +1,328 @@
+
+
+
+Improve GTC Liquidity with Tokemak
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725
+    Authors: @schlabach, @HelloShreyas from [Llama](http://llama.xyz)
+
+## Gitcoin’s Current Liquidity Situation
+
+Gitcoin’s current volume is around $5m/day, mostly on off-chain CEXs (most notably Binance) [1]. At the time of writing, there is $680k (GTC @ $2.64) worth of TVL in the [Uniswap v3 pool](https://info.uniswap.org/#/tokens/0xde30da39c46104798bb5aa3fe8b9e0e1f348163f). Gitcoin does not pay liquidity mining rewards.
+
+## Overview of Tokemak
+
+Tokemak is a novel protocol designed to generate deep, sustainable liquidity for DeFi and future tokenized applications that will arise throughout the growth and evolution of web3.
+
+An example of how Gitcoin can use a Tokemak reactor:
+
+* Gitcoin creates a Tokemak reactor.
+* Gitcoin deposits GTC in the reactor in exchange for tGTC.
+  * This tGTC can only be withdrawn at the end of the cycle [2]. However, smaller depositors in the pool will be able to swap tGTC for regular GTC at any time on a normal DEX (assuming a liquidity pool is created).
+* Gitcoin will earn TOKE, which it can stake and then use to 1) direct TOKE rewards to the pool and 2) direct GTC liquidity to different exchanges.
+* Other TOKE holders (Liquidity Directors) are incentivized to direct GTC liquidity to the appropriate exchanges.
+
+![image|690x286](upload://uO1TZyDzUdPJjlZnHIRR5qDqU1H.png)
+
+@Willy and @kyle had a [discussion](https://gov.gitcoin.co/t/discussion-securing-a-gtc-token-reactor/9976) in March exploring setting up a Tokemak reactor. We would like to take this discussion to the next stage of execution.
+
+### Benefits of Gitcoin using Tokemak:
+* Provide liquidity for GTC
+  * Gitcoin can ensure that GTC has plenty of liquidity without relying on any costly liquidity mining incentives.
+  * No need to provide USDC or ETH (as those come from Tokemak).
+  * Allow GTC holders to become LPs without having to manage a complex LP position or take on risk of impermanent loss. [3]
+  * Sustainable, deep liquidity (avoid mercenary capital).
+  * Platform/DEX agnostic; Tokemak sits above the exchange layer and can seamlessly route liquidity wherever it’s needed.
+* Earn revenue for the DAO
+  * Gitcoin DAO will earn TOKE rewards, which they can either sell or use to direct liquidity on Tokemak. As the Tokemak protocol becomes more widely used, it will have a large treasury of [Protocol Controlled Assets](https://docs.tokemak.xyz/protocol-information/key-terminology), making it strategically valuable to hold TOKE.
+  * Allows Gitcoin to take advantage of its un-utilized GTC
+* Allow the Gitcoin team & community to focus on their core competencies instead of managing GTC liquidity on DEXs
+* Philosophically, it would be best for Gitcoin (with its focus on driving public goods) to have liquidity for its token available on-chain as opposed to on CEXs.
+
+### Process of setting up a token reactor
+Gitcoin will need to enter and win a token reactor through Tokemak’s [Collateralization of Reactors Event (C.o.R.E)](https://www.tokemak.xyz/core). In a C.o.R.E., different DeFi projects compete with one another to secure one of five token reactors. The projects with the most TOKE votes are rewarded with a reactor for their token.
+
+In C.o.R.E. 2, there were 45 candidates and 5 were selected, so the process is competitive. C.o.R.E. 3 saw 5/52 candidates selected for reactors. Even well-recognized names like Aave and Curve did not win reactors in the last two C.o.R.E.s.
+
+In the last C.o.R.E., Gitcoin would have needed 6,717,153.36 votes to win (if the original LUNA vote is counted). Voting power is different depending on which token is used:
+
+* 1 liquid staked TOKE = 6 votes
+* 1 staked LP token = 69 votes
+* 1 locked (vesting) TOKE = 1 vote
+
+Tokemak’s introduction of the vote-locked token model might make it more difficult to win a reactor, as token holders may lock their tokens in exchange for boosted voting power.
+
+We can also improve Gitcoin’s odds by bribing voters on [Hidden Hand](https://hiddenhand.finance/tokemak), though it can be quite expensive to purchase votes, and there’s no guarantee that we’d win.
+
+![image|690x248](upload://oVWH7KYo1aXUGMpkwwPWqfjNkdW.jpeg)
+
+
+C.o.R.E.s last 1 week. The next C.o.R.E., C.o.R.E. 4 will begin in the next ~1.5 months.
+
+While it will be challenging to secure a reactor through C.o.R.E., winning a reactor would be hugely beneficial to Gitcoin and the liquidity of GTC. 
+
+Llama will work to secure a reactor by advocating on behalf of Gitcoin, securing votes for the GTC reactor, managing any technical requirements needed to enter C.o.R.E. or spin up a reactor, and evaluating any terms of using Tokemak (e.g. a mutual grant for TOKE).
+
+### Ongoing Maintenance
+
+Once Gitcoin has won a reactor, Gitcoin will need to deposit GTC into the reactor. There won’t be ongoing maintenance (other than directing liquidity with TOKE, which Llama can handle, or selling earned TOKE).
+
+## About Llama
+
+Llama is building economic infrastructure for DAOs. We have worked with some of the leading DAOs, including Aave, Uniswap, dYdX, Gitcoin, Radicle, PoolTogether, FWB, Harvest Finance, and Fei Protocol, among others. Llama has implemented on-chain proposals, constructed treasury strategies, designed liquidity incentive programs and on-chain indices, and built analytics dashboards and financial reports. Llama’s 45 contributors are among the most active in the DeFi and DAO ecosystem and include engineers, DeFi strategists, data analysts, quants, and accountants.
+
+---
+
+*[1] - Source: [CoinGecko](https://www.coingecko.com/en/coins/gitcoin)*
+*[2] - [Cycles](https://docs.tokemak.xyz/protocol-information/cycles) now last 7 days, ending every Wednesday.*
+*[3] - Read more on Tokemak’s approach to impermanent loss [here](https://docs.tokemak.xyz/mechanics-and-functionality/guardrails-and-impermanent-loss-mitigation).*
+Sat, 02 Jul 2022 00:11:27 +0000
+🤖 DAO Governance and Vision
+
+
+Improve GTC Liquidity with Tokemak
+schlabach
+
+            <p>Nothing immediate for now other than voting for Gitcoin in C.o.R.E. 4 and wrangling as many votes as you can!</p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/12
+        Sat, 02 Jul 2022 00:11:27 +0000
+gov.gitcoin.co-post-10725-12
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+epowell101
+
+            <p>Is there anything we can do as small holders &amp; friends to be helpful?</p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/11
+        Fri, 01 Jul 2022 21:31:20 +0000
+gov.gitcoin.co-post-10725-11
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+schlabach
+
+            <p>Hi everyone, just to provide a quick update here:</p>
+<p>We’ve spoken with the Tokemak team and have confirmed that GTC will be entered into the upcoming C.o.R.E. 4. There are no updates on timing of C.o.R.E. 4 at the moment, but we expect it to come within the next 1-2 months.</p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/10
+        Tue, 14 Jun 2022 22:25:54 +0000
+gov.gitcoin.co-post-10725-10
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+keneeze.eth
+
+            <p>I am in support of this initiative!</p>
+<p>Token liquidity is very important for any project that has a token, considering the good work that Gitcoin is doing, leveraging Tokenmak, Gitcoin will be able to build deep liquidity for the token, I advise that the treasury management team look into this as soon as possible.<br>
+It is important to note that upon further research, Tokenmak may not be the best protocol for Gitcoin DAO to start building deep liquidity with, but definitely this is a starting point for much deeper research and analysis.<br>
+However in the search for liquidity it is important for the Gitcoin team to decide on these two things before seeking to build deeper liquidity.</p>
+<ol>
+<li>
+<p>How much is Gitcoin willing to pay for liquidity? I believe this answer will determine the protocol that Gitcoin would partner with, and the strategy that will be used for capturing this liquidity.</p>
+</li>
+<li>
+<p>How much liquidity does Gitcoin really need? Being able to Cap the Total Value needed on any protocol chosen for liquidity building is important, by defining a target the team will have definite goals that ensure that Gitcoin does not end up overpaying for more liquidity that the GTC token needs.</p>
+</li>
+</ol>
+<p>keneeze.eth <img src="https://emoji.discourse-cdn.com/twitter/fire.png?v=12" title=":fire:" class="emoji" alt=":fire:" loading="lazy" width="20" height="20">_​:seedling: (Wildfire, Public Goods Operator)</p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/9
+        Mon, 06 Jun 2022 12:08:42 +0000
+gov.gitcoin.co-post-10725-9
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+Lunacat
+
+            <p>Looks like i misread Tokemak’s documentation - I had thought that pools would be with TOKE, not a stable/eth.  I do have reservations on how Tokemak is able to source that stable liquidity to support new pairs, and how sustainable that process may be.  Fei having direct control over its own stable is a strong selling point, imo, and inherently reduces operational risk.  But I am still familiarizing myself with Tokemak and do not want to give impression of endorsing one over the other at this point.</p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/8
+        Fri, 03 Jun 2022 20:59:59 +0000
+gov.gitcoin.co-post-10725-8
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+schlabach
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/lunacat">@Lunacat</a> - can you say a little more about this? Want to make sure I’m understanding your point properly. For both Tokemak/LaaS, the pair assets (ETH/stables) would be provided by another party (either Tokemak LPs or Fei).</p>
+<blockquote>
+<p>although there are clear tradeoffs with Fei’s use of matching in setting up LaaS pools</p>
+</blockquote>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/7
+        Fri, 03 Jun 2022 14:20:06 +0000
+gov.gitcoin.co-post-10725-7
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+Lunacat
+
+            <p>Thank you both for replies, <a class="mention" href="https://gov.gitcoin.co/u/schlabach">@schlabach</a> and <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> !  Agreed that impermanent loss is strong selling point for Tokemak, although there are clear tradeoffs with Fei’s use of matching in setting up LaaS pools.  If Tokemak is more naturally suited to address some of the governance rights ideas that have sprouted, that is also a big selling point, imo.</p>
+<p>Bumping overall discussion to see if any others chime in <img src="https://emoji.discourse-cdn.com/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/6
+        Thu, 02 Jun 2022 22:43:01 +0000
+gov.gitcoin.co-post-10725-6
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+kyle
+
+            <aside class="quote no-group" data-username="Lunacat" data-post="3" data-topic="10725">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lunacat/48/4933_2.png" class="avatar"> Lunacat:</div>
+<blockquote>
+<p>One other thought – it would be fantastic if there was a way for contributors and stewards to be able to add liquidity to the pool/reactor without sacrificing their governance rights. Just a separate consideration in broader context of <a href="https://gov.gitcoin.co/t/dao-compensation-sustainability/10604/8">DAO Compensation Stability thread</a>.</p>
+</blockquote>
+</aside>
+<p>The governor we use looks at GTC in LPs (on Uni and Balancer today) - its a nifty voting strategy that Snapshot supports at least. I suspect this is straight forward to extend to a Token Reactor too (once it’s set up).</p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/5
+        Fri, 27 May 2022 19:32:46 +0000
+gov.gitcoin.co-post-10725-5
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+schlabach
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/lunacat">@Lunacat</a> - thanks for the question.</p>
+<p>There are a few ways to think about the tradeoffs. <a href="https://medium.com/fei-protocol/new-approaches-to-liquidity-in-defi-624f2e50937b" rel="noopener nofollow ugc">This article</a> does a nice job of encapsulating the differences, and it includes this chart:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5a1514ceea6593a579ca8e35be4835c19751ebb8.png" data-download-href="/uploads/short-url/cQU8Bt10O1u8nEWykWtwUuTlAFO.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/5/5a1514ceea6593a579ca8e35be4835c19751ebb8_2_517x285.png" alt="image" data-base62-sha1="cQU8Bt10O1u8nEWykWtwUuTlAFO" width="517" height="285" srcset="/uploads/db4391/optimized/2X/5/5a1514ceea6593a579ca8e35be4835c19751ebb8_2_517x285.png, /uploads/db4391/optimized/2X/5/5a1514ceea6593a579ca8e35be4835c19751ebb8_2_775x427.png 1.5x, /uploads/db4391/original/2X/5/5a1514ceea6593a579ca8e35be4835c19751ebb8.png 2x" data-small-upload="/uploads/db4391/optimized/2X/5/5a1514ceea6593a579ca8e35be4835c19751ebb8_2_10x10.png"></a></div><p></p>
+<p>I would note that, while the Tokemak option doesn’t allow Gitcoin to earn trading fees directly from the liquidity pools, it <em>does</em> allow Gitcoin to earn revenue through the form of TOKE; arguably this is better than simple LP fee revenue as it has the ability to direct TOKE rewards to Gitcoin reactors/direct GTC liquidity and has governance power over the Tokemak protocol.</p>
+<p>I think one of the most important benefits of the Tokemak model is the impermanent loss (IL) protection it provides, which LaaS does not. There are a couple of llamas who are active in PoolTogether’s treasury group, which ran LaaS; PT did end up suffering from IL and had to bear those costs as part of the program. You can read more about that on <a href="https://gov.pooltogether.com/t/ptip-68-otc-settlement-for-ondo-fei-laas-program/2164" rel="noopener nofollow ugc">PoolTogether’s forum</a>.</p>
+<p>You can read more about Tokemak’s impermanent loss protection <a href="https://docs.tokemak.xyz/mechanics-and-functionality/guardrails-and-impermanent-loss-mitigation" rel="noopener nofollow ugc">here</a>.</p>
+<p>On your second point, I agree; we can do more work on the feasibility of this from the technical side, but this would require GitcoinDAO’s governance framework to allow voting from both GTC as well as tGTC.</p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/4
+        Fri, 27 May 2022 18:05:38 +0000
+gov.gitcoin.co-post-10725-4
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+Lunacat
+
+            <p>Fantastic proposal!  This is first I’ve learned of Tokemak and looking into it more.  But just curious – <a class="mention" href="https://gov.gitcoin.co/u/schlabach">@schlabach</a> how would you assess trade-offs of setting up a token reactor against leveraging something like Fei’s <a href="https://medium.com/fei-protocol/if-you-are-part-of-a-dao-or-protocol-that-wants-to-create-liquidity-for-your-token-without-f49a01f02863" rel="noopener nofollow ugc">liquidity-as-a-service</a>?</p>
+<p>One other thought – it would be fantastic if there was a way for contributors and stewards to be able to add liquidity to the pool/reactor without sacrificing their governance rights.  Just a separate consideration in broader context of <a href="https://gov.gitcoin.co/t/dao-compensation-sustainability/10604/8">DAO Compensation Stability thread</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/3
+        Fri, 27 May 2022 13:38:36 +0000
+gov.gitcoin.co-post-10725-3
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+kyle
+
+            <p>Yasss!</p>
+<p>I am a big fan of this and would love to see us explore this for the CoRE4 season. We (a couple of the Tokemak leaders and I) tried to get this together for CoRE3 but couldn’t pull it off in a way that respected the desire to bring the community along with us.</p>
+<p>This is a great overview on how token reactors work, and as mentioned you can read up on some of the ELI5 questions I had <a href="https://gov.gitcoin.co/t/discussion-securing-a-gtc-token-reactor/9976">here</a>. I love the idea of Llama helping us direct the TOKE tokens (in both votes and treasury management).</p>
+<p>I could see us contributing the max amount of GTC ($1-$5M worth) to the reactor to deepen liquidity, but also offer a larger sum to generate swap fees. We have a pretty active pool and so there are opportunities to harvest from the swap fees.</p>
+<p>Huge thanks to Llama for leading here and helping us partner with the folks at Tokemak. The tokemech pilots are great and I am interested in getting closer to that community!</p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/2
+        Thu, 26 May 2022 18:20:11 +0000
+gov.gitcoin.co-post-10725-2
+Improve GTC Liquidity with Tokemak
+      
+
+Improve GTC Liquidity with Tokemak
+schlabach
+
+            <p>Authors: <a class="mention" href="https://gov.gitcoin.co/u/schlabach">@schlabach</a>, <a class="mention" href="https://gov.gitcoin.co/u/helloshreyas">@HelloShreyas</a> from <a href="http://llama.xyz" rel="noopener nofollow ugc">Llama</a></p>
+<h2>
+<a name="gitcoins-current-liquidity-situation-1" class="anchor" href="https://gov.gitcoin.co#gitcoins-current-liquidity-situation-1"></a>Gitcoin’s Current Liquidity Situation</h2>
+<p>Gitcoin’s current volume is around $5m/day, mostly on off-chain CEXs (most notably Binance) [1]. At the time of writing, there is $680k (GTC @ $2.64) worth of TVL in the <a href="https://info.uniswap.org/#/tokens/0xde30da39c46104798bb5aa3fe8b9e0e1f348163f" rel="noopener nofollow ugc">Uniswap v3 pool</a>. Gitcoin does not pay liquidity mining rewards.</p>
+<h2>
+<a name="overview-of-tokemak-2" class="anchor" href="https://gov.gitcoin.co#overview-of-tokemak-2"></a>Overview of Tokemak</h2>
+<p>Tokemak is a novel protocol designed to generate deep, sustainable liquidity for DeFi and future tokenized applications that will arise throughout the growth and evolution of web3.</p>
+<p>An example of how Gitcoin can use a Tokemak reactor:</p>
+<ul>
+<li>Gitcoin creates a Tokemak reactor.</li>
+<li>Gitcoin deposits GTC in the reactor in exchange for tGTC.
+<ul>
+<li>This tGTC can only be withdrawn at the end of the cycle [2]. However, smaller depositors in the pool will be able to swap tGTC for regular GTC at any time on a normal DEX (assuming a liquidity pool is created).</li>
+</ul>
+</li>
+<li>Gitcoin will earn TOKE, which it can stake and then use to 1) direct TOKE rewards to the pool and 2) direct GTC liquidity to different exchanges.</li>
+<li>Other TOKE holders (Liquidity Directors) are incentivized to direct GTC liquidity to the appropriate exchanges.</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d7e9059688b7dce6830b71ea6d1ff86cba2a8d69.png" data-download-href="/uploads/short-url/uO1TZyDzUdPJjlZnHIRR5qDqU1H.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/d/d7e9059688b7dce6830b71ea6d1ff86cba2a8d69_2_690x286.png" alt="image" data-base62-sha1="uO1TZyDzUdPJjlZnHIRR5qDqU1H" width="690" height="286" srcset="/uploads/db4391/optimized/2X/d/d7e9059688b7dce6830b71ea6d1ff86cba2a8d69_2_690x286.png, /uploads/db4391/original/2X/d/d7e9059688b7dce6830b71ea6d1ff86cba2a8d69.png 1.5x, /uploads/db4391/original/2X/d/d7e9059688b7dce6830b71ea6d1ff86cba2a8d69.png 2x" data-small-upload="/uploads/db4391/optimized/2X/d/d7e9059688b7dce6830b71ea6d1ff86cba2a8d69_2_10x10.png"></a></div><p></p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/willy">@Willy</a> and <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> had a <a href="https://gov.gitcoin.co/t/discussion-securing-a-gtc-token-reactor/9976">discussion</a> in March exploring setting up a Tokemak reactor. We would like to take this discussion to the next stage of execution.</p>
+<h3>
+<a name="benefits-of-gitcoin-using-tokemak-3" class="anchor" href="https://gov.gitcoin.co#benefits-of-gitcoin-using-tokemak-3"></a>Benefits of Gitcoin using Tokemak:</h3>
+<ul>
+<li>Provide liquidity for GTC
+<ul>
+<li>Gitcoin can ensure that GTC has plenty of liquidity without relying on any costly liquidity mining incentives.</li>
+<li>No need to provide USDC or ETH (as those come from Tokemak).</li>
+<li>Allow GTC holders to become LPs without having to manage a complex LP position or take on risk of impermanent loss. [3]</li>
+<li>Sustainable, deep liquidity (avoid mercenary capital).</li>
+<li>Platform/DEX agnostic; Tokemak sits above the exchange layer and can seamlessly route liquidity wherever it’s needed.</li>
+</ul>
+</li>
+<li>Earn revenue for the DAO
+<ul>
+<li>Gitcoin DAO will earn TOKE rewards, which they can either sell or use to direct liquidity on Tokemak. As the Tokemak protocol becomes more widely used, it will have a large treasury of <a href="https://docs.tokemak.xyz/protocol-information/key-terminology" rel="noopener nofollow ugc">Protocol Controlled Assets</a>, making it strategically valuable to hold TOKE.</li>
+<li>Allows Gitcoin to take advantage of its un-utilized GTC</li>
+</ul>
+</li>
+<li>Allow the Gitcoin team &amp; community to focus on their core competencies instead of managing GTC liquidity on DEXs</li>
+<li>Philosophically, it would be best for Gitcoin (with its focus on driving public goods) to have liquidity for its token available on-chain as opposed to on CEXs.</li>
+</ul>
+<h3>
+<a name="process-of-setting-up-a-token-reactor-4" class="anchor" href="https://gov.gitcoin.co#process-of-setting-up-a-token-reactor-4"></a>Process of setting up a token reactor</h3>
+<p>Gitcoin will need to enter and win a token reactor through Tokemak’s <a href="https://www.tokemak.xyz/core" rel="noopener nofollow ugc">Collateralization of Reactors Event (C.o.R.E)</a>. In a C.o.R.E., different DeFi projects compete with one another to secure one of five token reactors. The projects with the most TOKE votes are rewarded with a reactor for their token.</p>
+<p>In C.o.R.E. 2, there were 45 candidates and 5 were selected, so the process is competitive. C.o.R.E. 3 saw 5/52 candidates selected for reactors. Even well-recognized names like Aave and Curve did not win reactors in the last two C.o.R.E.s.</p>
+<p>In the last C.o.R.E., Gitcoin would have needed 6,717,153.36 votes to win (if the original LUNA vote is counted). Voting power is different depending on which token is used:</p>
+<ul>
+<li>1 liquid staked TOKE = 6 votes</li>
+<li>1 staked LP token = 69 votes</li>
+<li>1 locked (vesting) TOKE = 1 vote</li>
+</ul>
+<p>Tokemak’s introduction of the vote-locked token model might make it more difficult to win a reactor, as token holders may lock their tokens in exchange for boosted voting power.</p>
+<p>We can also improve Gitcoin’s odds by bribing voters on <a href="https://hiddenhand.finance/tokemak" rel="noopener nofollow ugc">Hidden Hand</a>, though it can be quite expensive to purchase votes, and there’s no guarantee that we’d win.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/aec10dc13b45f59ee973e91650caea7abf59c0f8.jpeg" data-download-href="/uploads/short-url/oVWH7KYo1aXUGMpkwwPWqfjNkdW.jpeg?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/a/aec10dc13b45f59ee973e91650caea7abf59c0f8_2_690x248.jpeg" alt="image" data-base62-sha1="oVWH7KYo1aXUGMpkwwPWqfjNkdW" width="690" height="248" srcset="/uploads/db4391/optimized/2X/a/aec10dc13b45f59ee973e91650caea7abf59c0f8_2_690x248.jpeg, /uploads/db4391/optimized/2X/a/aec10dc13b45f59ee973e91650caea7abf59c0f8_2_1035x372.jpeg 1.5x, /uploads/db4391/optimized/2X/a/aec10dc13b45f59ee973e91650caea7abf59c0f8_2_1380x496.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/a/aec10dc13b45f59ee973e91650caea7abf59c0f8_2_10x10.png"></a></div><p></p>
+<p>C.o.R.E.s last 1 week. The next C.o.R.E., C.o.R.E. 4 will begin in the next ~1.5 months.</p>
+<p>While it will be challenging to secure a reactor through C.o.R.E., winning a reactor would be hugely beneficial to Gitcoin and the liquidity of GTC.</p>
+<p>Llama will work to secure a reactor by advocating on behalf of Gitcoin, securing votes for the GTC reactor, managing any technical requirements needed to enter C.o.R.E. or spin up a reactor, and evaluating any terms of using Tokemak (e.g. a mutual grant for TOKE).</p>
+<h3>
+<a name="ongoing-maintenance-5" class="anchor" href="https://gov.gitcoin.co#ongoing-maintenance-5"></a>Ongoing Maintenance</h3>
+<p>Once Gitcoin has won a reactor, Gitcoin will need to deposit GTC into the reactor. There won’t be ongoing maintenance (other than directing liquidity with TOKE, which Llama can handle, or selling earned TOKE).</p>
+<h2>
+<a name="about-llama-6" class="anchor" href="https://gov.gitcoin.co#about-llama-6"></a>About Llama</h2>
+<p>Llama is building economic infrastructure for DAOs. We have worked with some of the leading DAOs, including Aave, Uniswap, dYdX, Gitcoin, Radicle, PoolTogether, FWB, Harvest Finance, and Fei Protocol, among others. Llama has implemented on-chain proposals, constructed treasury strategies, designed liquidity incentive programs and on-chain indices, and built analytics dashboards and financial reports. Llama’s 45 contributors are among the most active in the DeFi and DAO ecosystem and include engineers, DeFi strategists, data analysts, quants, and accountants.</p>
+<hr>
+<p><em>[1] - Source: <a href="https://www.coingecko.com/en/coins/gitcoin" rel="noopener nofollow ugc">CoinGecko</a></em><br>
+<em>[2] - <a href="https://docs.tokemak.xyz/protocol-information/cycles" rel="noopener nofollow ugc">Cycles</a> now last 7 days, ending every Wednesday.</em><br>
+<em>[3] - Read more on Tokemak’s approach to impermanent loss <a href="https://docs.tokemak.xyz/mechanics-and-functionality/guardrails-and-impermanent-loss-mitigation" rel="noopener nofollow ugc">here</a>.</em></p>
+          <p><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725/1
+        Thu, 26 May 2022 17:26:34 +0000
+gov.gitcoin.co-post-10725-1
+Improve GTC Liquidity with Tokemak
+      
+
+

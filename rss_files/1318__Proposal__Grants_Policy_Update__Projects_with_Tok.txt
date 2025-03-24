@@ -1,0 +1,715 @@
+
+
+
+[Proposal] Grants Policy Update: Projects with Tokens
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125
+    ## Abstract
+
+This post is intended to provide context on, and guide the community to a decision around, grant eligibility criteria as it pertains to projects with tokens.
+
+This post is a Part III follow-up & summary of existing discussions outlined in these two recent governance posts: [Novel Situation #1](https://gov.gitcoin.co/t/novel-situation-1-project-should-not-have-a-token-or-raised-vc-funding/10029), and [Proposed Revision to Grant Eligibility Criteria](https://gov.gitcoin.co/t/proposed-revision-to-grant-eligibility-criteria/10098).
+
+We acknowledge this is a net new policy evaluation happening in the middle of a grants round, seeking to bring near-term resolution to a policy ambiguity, which is not ideal. In doing this evaluation, we have identified the need to craft a longer-term, more deliberate & community-involved process for grants policy definition that spans across workstreams.
+
+## Context: Existing Policy
+
+One of Gitcoin’s legacy eligibility criteria reads that, to be eligible for a grant on the Gitcoin platform, a project *“should not have its own token or have raised over $500k in VC funding”*.
+
+This criteria was put into place in early 2021 before the DAO provided a strong governance model for Gitcoin Grants. The Web3 space has evolved substantially since then, and many early-stage projects now launch governance tokens at inception.
+
+These tokens often have little-to-no economic value at the onset – and, as such, questions have been raised about whether this eligibility criteria should be revised to be more inclusive to these types of projects. Currently, FDD is declining all grant applications that have their own token of any sort.
+
+This includes:
+
+* Projects which currently have a token
+* Projects which have any mention of an airdrop or sale on their grant page or any of the links on the grant page including their Twitter, Website, or github.
+
+## Bright ID Case
+
+BrightID grant #191 was flagged by a user during GR12 as having a token. This dispute was escalated to the review team which determined that they are ineligible because they do have a token. After GR12, an appeal was raised by the BrightID team on this topic. This appeal relates to [their existing grant](https://gitcoin.co/grants/191/brightid-universal-proof-of-uniqueness-panvala-le), which has raised over $150K in Gitcoin Grants funding in prior rounds.
+
+The email outlining the appeal, which can be read in full [in this post](https://gov.gitcoin.co/t/novel-situation-1-project-should-not-have-a-token-or-raised-vc-funding/10029), served as a catalyst for revisiting & re-evaluating this eligibility criteria, as well as for more clearly defining the [FDD Appeals process](https://docs.google.com/document/d/1y9lFdlfgTf3GvATmgVbPUaK5WWMuQ44uICvBGuhaB6A/edit) as a whole (future post to come on this).
+
+## Proposed Policy Amendment
+
+After extensive cross-workstream dialogue, as well as public discourse in the comments on the posts mentioned above, PGF & FDD propose revising the criteria as follows:
+
+*A project in the Main Round cannot:*
+
+* *Have a token with a fully-diluted market cap of greater than $20 million*
+* *Have raised over $500k in VC funding*
+
+We recognize that these criteria are somewhat arbitrary, but we believe creating an objective starting-point threshold from which we can iterate, rather than maintaining the status quo of nebulous criteria, is a) more scalable for the program long-term, and b) much clearer to current & prospective grantees.
+
+Finally, the verbiage “in the Main Round” was specifically included to give us the flexibility to de-couple Ecosystem & Cause Rounds from this logic in the future. Today, all QF-eligible projects on the Gitcoin Grants platform are in the main round – so this applies to all grants for the immediate term – but we may de-couple ecosystem/cause rounds in the future, such that the funding partners of those rounds can make their own decisions around eligibility for their pools.
+
+## Grants Policy Definition Process (Longer-Term)
+
+This discourse has led us to the realization that there is not clear accountability or process as to "who defines grants policy, and how?" – whether it’s PGF, FDD, the community-at-large, or a combination thereof, and how we collaborate and govern policy definition. We certainly want to make this a joint, community-heavy domain, and that is something we need to improve on as we continue to progressively decentralize the running of our grants programs.
+
+As a next step, PGF & FDD will come back to the forum prior to Grants Round 14 with a proposed policy definition process for discussion.
+
+## Snapshot Vote
+
+In the interim, on the ‘Projects with Tokens’ policy, we propose moving to a Snapshot Vote with two options:
+
+**1. Maintain “no token” status quo**
+
+This would mean that we continue with the ambiguous policy (“a grant should not have its own token”), and leave case-by-case decisions in the hands of FDD.
+
+In this case, the Bright ID decision would be handled centrally by that group and would not continue further through governance.
+
+**2. Adopt new $20M market cap threshold**
+
+This would mean that we would adopt the new policy to be implemented for all grants as of GR13. Grants previously denied in GR13 for having a token would have an option to either submit a new grant (preferred) or appeal their old grant’s denial.
+
+In this case, the Bright ID decision would be made by this criteria. Given that BrightID’s FD market cap is $7.6M at the time of writing, and they confirm to have not raised VC funding, they would continue on as a grantee eligible for QF in GR13.
+
+Allowing projects with tokens to not be immediately disqualified does not mean that ALL projects with tokens having a market cap under $20 million will qualify. These grants must still pass all other platform eligibility criteria.
+
+**Wrap-Up**
+
+Given that this post is a “Part III” follow-on post and that community discussions on this topic started [ten days ago](https://gov.gitcoin.co/t/novel-situation-1-project-should-not-have-a-token-or-raised-vc-funding/10029), we plan to move this to a Snapshot vote on Tuesday, March 22nd. This will allow us to have the decision ratified prior to the end of the GR13 dispute period.
+
+Thanks to @DisruptionJoe, @David_Dyor, @connor, @seanmac, @M0nkeyFl0wer for your collaboration & input.
+Tue, 29 Mar 2022 16:00:25 +0000
+📜 Proposals
+
+
+[Proposal] Grants Policy Update: Projects with Tokens
+David_Dyor
+
+            <aside class="quote no-group" data-username="bestape" data-post="31" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bestape/48/4987_2.png" class="avatar"> bestape:</div>
+<blockquote>
+<p>Is FDD appeals a tribunal or a court? What I mean by this is can appeals revisit facts established at trial or just application of the law?</p>
+</blockquote>
+</aside>
+<p>Great Q.</p>
+<p>imo FDD Appeals is more like a tribunal.  We will revisit facts.  A common example relates to broken website links.  Eg:   When grantees apply the website is broken so the grant gets denied.  The grantee then fixes the website link and requests an appeal.  In these conditions the FDD Appeals absolutely revisits the ‘fact’ and upon finding a working website link recommends the appeal succeed.  Assuming no other eligibility criteria violations exist ofc.</p>
+<p>We are not so refined as to use and define ourselves by a single model.  Rather we are trying to be comprehensive, fair, and fast.  And do so in a manner approved/vetted by the Steward group &amp; every workstream.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/33">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/33
+        Tue, 29 Mar 2022 16:00:25 +0000
+gov.gitcoin.co-post-10125-33
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+DisruptionJoe
+
+            <p>Thank you for your choice in how and when to engage with this topic.</p>
+<p>I’m digging in and learning more here, but overall I think our policy will need expert opinions to help guide the process. It must also be a joint effort between the all the teams which interact with Grants.</p>
+<p>I think we learned a lot and made great progress on our system overall. We now need to vet the processes and bring in subject matter experts to help us get to the next level. This will definitely be an outcome we shoot for before GR14.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/32">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/32
+        Sun, 27 Mar 2022 02:29:26 +0000
+gov.gitcoin.co-post-10125-32
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+bestape
+
+            <p>I’m purposefully posting this after the fact because my comments are about policy not the matter at hand. I learned a lot about DAO governance from reading this “case study.” Thank you all for publishing your reasoning here.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="3" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<ul>
+<li>Option 1 - A separation of judicial and legislative branches where the judicial branch judges on a case by case basis setting precedents which the legislative branch can turn into policy in the future.</li>
+<li>Option 2 - A system where the policy is continually fine tuned by the votes of the community. In this model FDD uses a letter of law approach and an appeals system guides us to refine and redefine policy as we see the letter of law interpretations diverging from the community’s interest.</li>
+</ul>
+</blockquote>
+</aside>
+<p>This is very good. You should think about applying for LEETH certification in LexDAO given your multidisciplinary abilities! <img src="https://gov.gitcoin.co/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+<p>I believe spirit of the law is much more important than letter of the law. Compare common law with equity. <a href="https://en.wikipedia.org/wiki/Court_of_Chancery" class="inline-onebox" rel="noopener nofollow ugc">Court of Chancery - Wikipedia</a> and <a href="https://en.wikipedia.org/wiki/Estoppel#Promissory_estoppel_2" class="inline-onebox" rel="noopener nofollow ugc">Estoppel - Wikipedia</a> (especially regarding consideration and <em>quid pro quo</em>)</p>
+<p>Is FDD appeals a tribunal or a court? What I mean by this is can appeals revisit facts established at trial or just application of the law?</p>
+<p>Importantly, letter of the law is wet code and not dry code so interpretations will most likely include some variation between interpreters. The community should contemplate how much variation is reasonable.</p>
+<p>One if the issues that arises trying too much to avoid variation in interpretation of the law is policy cannot develop with sufficient complexity to handle matters. For instance, negligence has a ~6 element test: duty, breach of duty, cause, in fact, proximate cause, and harm.</p>
+<p>Moreover, how much judicial activism is included in application of the law, understanding no judicial activism is dysfunctional because, among other reasons, Natural language is imprecise? <a href="https://en.wikipedia.org/wiki/Statutory_interpretation#Meaning" class="inline-onebox" rel="noopener nofollow ugc">Statutory interpretation - Wikipedia</a></p>
+<p>Doesn’t the “T” in NFT stand for token? if I make 20,000,001 “$1 bills” each with a unique generative art design, can I circumvent the under $20,000,000 policy’s letter of the law? <a href="https://rarest.org/stuff/dollar-bills#:~:text=Solid%20serial%20numbers%20are%20extremely,than%20one%20with%20repeated%20twos" class="inline-onebox" rel="noopener nofollow ugc">10 Rarest Types of Dollar Bills - Rarest.org</a></p>
+<p>I hope Gitcoin considers a final appeal that is conducted by arms-length parties outside of Gitcoin, for instance a reputable ODR service. Considering Gitcoin could be served without an agreement to arbitrate, it might be a smart move. Further, if the community perceives the impartiality of Gitcoin’s Snapshot as relatively low now or in the future, ODR final appeal could help bolster confidence.</p>
+<p>This is not legal advice.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/31">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/31
+        Fri, 25 Mar 2022 23:43:10 +0000
+gov.gitcoin.co-post-10125-31
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+castall
+
+            <p>Good question. Since it launched in September, BrightDAO has funded the following initiatives:</p>
+<ol>
+<li>Build a <a href="https://github.com/BrightID/BrightID-Soulbound-NFT" rel="noopener nofollow ugc">Soulbound NFT standard</a> and an example (free) soulbound NFT that was given away to 10,000 unique people.</li>
+<li>Translations of the documentation into Chinese and Spanish.</li>
+<li>Upgrades to <a href="https://github.com/ShenaniganDApp/brightid-discord-bot" rel="noopener nofollow ugc">BrightID unique bot</a> which is used in 1300 discord servers.</li>
+<li>Funding <a href="https://meet.brightid.org/#/" rel="noopener nofollow ugc">“meets” parties</a> and discord mods.</li>
+<li><a href="https://forum.1hive.org/t/1hive-crypto-trivia-game-update-season-1/4524/10" rel="noopener nofollow ugc">A Trivia event on 1hive TV</a></li>
+<li>Integration of tip.cc so helpful people in the discord can be tipped in $Bright.</li>
+<li>Fund the <a href="https://forum.brightid.org/t/build-and-fund-a-dao-coordination-cluster/217/11" rel="noopener nofollow ugc">“coordination cluster”</a> to share what’s happening in BrightID within the different teams, and PR.</li>
+<li><a href="https://forum.brightid.org/t/brightid-gatekeeper-for-aragon-permissions/131/9" rel="noopener nofollow ugc">BrightID gatekeeper for Aragon permissions</a> (for Aragon and Gardens DAOs)</li>
+</ol>
+<p>I consider this a great success based on the <a href="https://dao.brightid.org/covenant" rel="noopener nofollow ugc">mission of Bright DAO</a> and I hope these kinds of grants will accelerate.</p>
+<p>As I mentioned in the appeal, we’re also trying to reduce the size and responsibility of the core team so that it doesn’t need as much funding as it currently does (about $30k per month).  We could probably cut that down to $10k / month.  We’ve had a hiring freeze since last year and one dev has left the team.</p>
+<aside class="quote no-group" data-username="lefterisjp" data-post="29" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lefterisjp/48/24_2.png" class="avatar"> lefterisjp:</div>
+<blockquote>
+<p>what is the purpose of the DAO and its treasury?</p>
+</blockquote>
+</aside>
+<p>I encourage you to read this.  I hope I’ve been able to clear up some assumptions you may have had about the story behind Bright DAO and why BrightID core still asks for donations.</p>
+<blockquote>
+<p>The goal of BrightDAO is to broaden the community that supports BrightID.</p>
+</blockquote>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://brightid.gitbook.io/brightid/brightdao/bright-dao">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/6/6269fc5d08879ea4e773557212f06cebc525a3dd.png" class="site-icon" data-dominant-color="FB8A61" width="500" height="500">
+
+      <a href="https://brightid.gitbook.io/brightid/brightdao/bright-dao" target="_blank" rel="noopener nofollow ugc">brightid.gitbook.io</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/362;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aebaa007e90248953201c6b1c6321c3232e52094_2_690x362.png" class="thumbnail" data-dominant-color="1B1C20" width="690" height="362"></div>
+
+<h3><a href="https://brightid.gitbook.io/brightid/brightdao/bright-dao" target="_blank" rel="noopener nofollow ugc">About</a></h3>
+
+  <p>What is BrightDAO?</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/30">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/30
+        Thu, 24 Mar 2022 19:24:07 +0000
+gov.gitcoin.co-post-10125-30
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+lefterisjp
+
+            <blockquote>
+<p>10 million $Bright went to the DAO treasury. That treasury could certainly be used to fund BrightID core, but it hasn’t yet, and we need Gitcoin and other grants.</p>
+</blockquote>
+<p>At current prices that seems to be ~$3,057,240.</p>
+<p>If the DAO’s treasury is not used to fund development of the BrightID core then what is the purpose of the DAO and its treasury?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/29">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/29
+        Thu, 24 Mar 2022 08:56:35 +0000
+gov.gitcoin.co-post-10125-29
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+bobjiang
+
+            <p>sorry sir, I misunderstand you ;(</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/28
+        Thu, 24 Mar 2022 04:05:08 +0000
+gov.gitcoin.co-post-10125-28
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+castall
+
+            <aside class="quote no-group" data-username="kyle" data-post="20" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>was optimistically positioned as a way to fund development. Now that the markets have cooled and that is not sustainable as once hoped</p>
+</blockquote>
+</aside>
+<p>This isn’t the right narrative. $Bright token is performing much better than we ever expected, but we never expected it to cover BrightID core development. If one day it could cover the costs, great, but we never anticipated that.  That would be very optimistic indeed.</p>
+<p>Whether there is a possibility of a token or DAO treasury being used to fund core development at some future time (I hope it can, but we need other options, like Gitcoin grants) is different than saying the core team received tokens, which they didn’t.</p>
+<p>I’m not trying to paint us in a more positive light, I’m trying to dispel misinformation, so that if there’s any use for this token launch to set a precedent, it can be done so accurately.</p>
+<aside class="quote no-group" data-username="kyle" data-post="20" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>As Lefteris mentioned, this just isn’t true in spirit and I don’t feel like this would stand up in any real evaluation.</p>
+</blockquote>
+</aside>
+<p>I think <a class="mention" href="https://gov.gitcoin.co/u/lefterisjp">@lefterisjp</a> was making the point that the same people can control multiple entities and pretend to not be related.  Very true, but not the case here.  United in purpose, but not the same people.  The $Bright token airdrop was meant to be much more spread out to avoid being just the same people.  The link you shared has the right information.</p>
+<p>10 million $Bright went to the DAO treasury. That treasury could certainly be used to fund BrightID core, but it hasn’t yet, and we need Gitcoin and other grants.</p>
+<p>Most projects do take some tokens for the core team or dev team, so I’m sorry we can’t be of more help setting a precedent for that with regard to Gitcoin grants.  My personal feeling is that should be OK if a project does that.</p>
+<p>I don’t know if these will factor in at all to the updating the token guidelines, but in case you all don’t know there’s another token (actually two tokens) that BrightID has had since before it first applied to Gitcoin Grants in round four.  These have been used to raise funds almost exclusively for the core team. Should a grants project be allowed to charge a fee for its services and sell rights to those services?–because that’s what we’ve done.  You can read about <a href="https://medium.com/brightid/brightid-sponsorships-5327a8d39f1e" rel="noopener nofollow ugc">Sponsorships tokens</a> and <a href="https://medium.com/p/49b7602aa228" rel="noopener nofollow ugc">Subscriptions tokens</a>.  Gitcoin has purchased sponsorships tokens to use in the trust bonus.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/27">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/27
+        Thu, 24 Mar 2022 02:15:24 +0000
+gov.gitcoin.co-post-10125-27
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+castall
+
+            <aside class="quote no-group" data-username="bobjiang" data-post="21" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bobjiang/48/676_2.png" class="avatar"> bobjiang:</div>
+<blockquote>
+<p>Brightid team reserved about 15% token.</p>
+</blockquote>
+</aside>
+<p>Sorry that’s not correct.  I was just pointing out 15% as an example of a typical amount.</p>
+<aside class="quote no-group" data-username="bobjiang" data-post="21" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bobjiang/48/676_2.png" class="avatar"> bobjiang:</div>
+<blockquote>
+<p>so would you share the team multi-sig address?</p>
+</blockquote>
+</aside>
+<p>There is no team multisig.  The team didn’t receive any tokens.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/26">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/26
+        Thu, 24 Mar 2022 01:52:44 +0000
+gov.gitcoin.co-post-10125-26
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+David_Dyor
+
+            <p>I never get tired of watching you tie-together seemingly disparate concepts and individuals/groups.  Thank you Joe for bringing closure to this incredible 3 part process in a way that clearly describes what has happened as well as what is happening next in the world of grant appeals.  I am optimistic the lessons taken from running this actual appeal will make future appeals leaner and faster.  And thanks to all who contributed to these talks.  i think it is worth noting we came very close to moving to steward vote.  It is a bit murky but  I think I saw at least 3 supportive steward comments maybe 4.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/25">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/25
+        Wed, 23 Mar 2022 18:23:37 +0000
+gov.gitcoin.co-post-10125-25
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+DisruptionJoe
+
+            <h1><a name="moving-forward-with-input-from-this-thread-1" class="anchor" href="https://gov.gitcoin.co#moving-forward-with-input-from-this-thread-1"></a>Moving Forward with Input from this Thread</h1>
+<p>Based on the feedback from the community, and given we did not receive at least 5 steward comments in favor of moving this motion to a snapshot vote, FDD is moving forward with Option 0 for the BrightID appeal.</p>
+<h2><a name="fdd-judgement-of-brightid-appeal-2" class="anchor" href="https://gov.gitcoin.co#fdd-judgement-of-brightid-appeal-2"></a>FDD Judgement of BrightID Appeal</h2>
+<p><strong>After judging this case, FDD made the decision to uphold BrightID’s appeal, for two primary reasons:</strong></p>
+<ol>
+<li>The changing nature of how web 3 is using tokens such as governance tokens creates a divergence between the intentions of the community and the policy as written today. “Cannot have a token”</li>
+<li>BrightID clearly fits the definition of a public good as infrastructure which supports digital democracy. Our <a href="https://pol.is/report/r2dxjrdwef2ybx2w9n3ja">Polis report</a> which received 138 responses from the community overwhelmingly shows that the community wants us to “fund public goods” before worrying about the semantics of policy. While their launch of a token hoped (and still does) hope to give them a sustainable funding model, they have not achieved this status yet.</li>
+</ol>
+<p><strong>As a result of this decision, the BrightID grant will be included in GR13 and eligible for matching funds in the round.</strong></p>
+<p>As discussed above, policy will be re-evaluated post-round, and we welcome input on that process.</p>
+<p>Thank you to <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a> <a class="mention" href="https://gov.gitcoin.co/u/david_dyor">@David_Dyor</a>, the stewards &amp; community members who took their time to weigh in, and <a class="mention" href="https://gov.gitcoin.co/u/castall">@castall</a> and the BrightID team for going through the experience of being the first appeal to go through the full Gitcoin appeals process.</p>
+<h2><a name="situational-context-3" class="anchor" href="https://gov.gitcoin.co#situational-context-3"></a>Situational Context</h2>
+<p>1 - FDD source council voted as the “appellate court” to decide if the appeal had merit to be heard.</p>
+<p>2 - FDD put it to the community on the governance forum saying “we would like this to be a vote to determine precedent on how we deal with appeals at this level because it is the first case to get to this level.”</p>
+<p>3 - Because it did not get enough positive steward attention to put it to a snapshot vote, Option 0 has been selected.</p>
+<p>4 - This post serves as communication of FDD’s justification for it’s decision to uphold BrightID’s appeal, include them in GR13, and informs the community on potential next steps.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="15" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>Not deciding is a decision! We might call this <strong>OPTION 0 - Maintain the status quo and DO NOT explicitly agree to FDDs authority in this domain and set clear boundaries</strong></p>
+<p>If we maintain course, this is what the outcome might be:</p>
+<ol>
+<li>FDD source council makes a decision and writes it up on the gov forum.</li>
+<li>PGF &amp; FDD Policy writes up policy recommendations based on the gov forum conversation</li>
+<li>FDD Grant Reviewers &amp; Approver follows these policy recommendations for initial approval of new grants</li>
+<li>PGF writes up a policy update between rounds to be ratified (has the problem of bundling many policy decisions into one vote)</li>
+</ol>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="3" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p><em><strong>How it would affect the Gitcoin Ecosystem moving forward</strong></em></p>
+<p>This would set a precedent for many other appeals to be judged case by case by FDD which would act as the judicial branch of the system.</p>
+<p>Once a pattern was seen, then it would be appropriate for the legislative branch (Stewards) to create policy which would “hard code” the bottoms up norms created by the community.</p>
+<p>I think it might help to say that option 1, letting FDD decide on a case by case basis is similar to English common law allowing the high courts to adjudicate on a case by case basis. The results of these cases comprise our legal canon which can all be used as relevant examples used to determine precedent.</p>
+<p>FDD has continued to advance how decentralized and transparent our processes are. While not near perfect yet, we have come a long way from Kevin or Joe deciding. For GR13 &amp; 14, FDD would be deciding most cases while building a system for the community to decide in the future.</p>
+<p>In this scenario, I would push for FDD to create a tiered appeals system with the following characteristics</p>
+<ul>
+<li>Creation of oversight mechanisms at “appellate court” level</li>
+<li>Implementation of external appeals panel (Jury duty!)</li>
+<li>High quality documentation of cases and processes to make FDD appeals process “forkable”</li>
+</ul>
+</blockquote>
+</aside>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/24
+        Wed, 23 Mar 2022 16:08:25 +0000
+gov.gitcoin.co-post-10125-24
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+DisruptionJoe
+
+            <p>This needs to either go to a vote tomorrow or be left as is… which is a vote for option 0.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="15" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>A snapshot would need to start tomorrow or Wednesday by the latest to be able to pass in time for this round.</p>
+<p>If we get positive approval from 5 stewards by Wednesday, I would advocate for us to put it up for a vote and not let our community be guided by inaction.</p>
+</blockquote>
+</aside>
+<p>Do we currently have comments from 5 or more stewards <a class="mention" href="https://gov.gitcoin.co/u/pop">@Pop</a>? What is the process for us moving this forward in the most legitimate way?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/23
+        Tue, 22 Mar 2022 20:56:53 +0000
+gov.gitcoin.co-post-10125-23
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+David_Dyor
+
+            <aside class="quote no-group" data-username="kyle" data-post="20" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>isn’t true in spirit</p>
+</blockquote>
+</aside>
+<p>I agree it is a weak argument and I explained why in my post.  I am simply trying to pull all information into this discussion and ensure nothing gets ignored.</p>
+<aside class="quote no-group" data-username="kyle" data-post="20" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>This makes me a bit weary</p>
+</blockquote>
+</aside>
+<p>Yeah daos have a funny way of making me weary too.  Full empathy with you on this!  In all seriousness, I see the FDD decision making as a feature not a bug.  We are learning which types of decisions require various methods and info preservation.  The ability of the fdd to rapidly signal on simple matters has helped us adapt and pivot along the way.  And this is not the topic of this post.  We are discussing projects with tokens and somebody asked how the fdd would likely make the next decision.  My response was specifically to answer her question, not table fdd decision-making for inspection and critique.</p>
+<p>At risk of irritating y’all, I want to point out that it can be difficult and time-consuming to achieve Dao consensus.  We are so close to actually making a beneficial policy change derived from an appropriate process it would be sad and counter-productive to cancel it, in the hopes that maybe in some hypothetical future we will sit down to address the issue again.</p>
+<p>Procrastination is the enemy and we have a great simple modification here that had been created by a PG/FDD co-lead process which involved ample public discussion.  Do we really think more pages of debate will create changes to the proposed changes?  I suggest it is unlikely and we move ahead with the suggested changes.  However, I will support the community majority position.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/22
+        Tue, 22 Mar 2022 16:56:01 +0000
+gov.gitcoin.co-post-10125-22
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+bobjiang
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/castall">@castall</a></p>
+<p>From what you said, I can get following info (please correct me if I am wrong):</p>
+<ol>
+<li>Brightid team reserved about 15% token.</li>
+<li>0 token sold from the team</li>
+</ol>
+<p>so would you share the team multi-sig address? (not sure if it is sensitive to be public, if yes, please find a proper channel to share in Gitcoin discord).</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/21
+        Tue, 22 Mar 2022 14:26:41 +0000
+gov.gitcoin.co-post-10125-21
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+kyle
+
+            <aside class="quote no-group" data-username="lefterisjp" data-post="4" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lefterisjp/48/24_2.png" class="avatar"> lefterisjp:</div>
+<blockquote>
+<p>I see you are trying to solve 2 different problems here in a misguided way.</p>
+<p><strong>Problem 1</strong> : BrightID not having sufficient funding from the token so they should still be eligible for gitcoin grants.</p>
+<p><strong>Problem 2</strong> : Figure out a way to judge which projects with tokens should be eligible for a gitcoin grant and which ones should not.</p>
+<p>The proposed solution seems to try and address both which it should not.</p>
+</blockquote>
+</aside>
+<p>This is so well stated. <img src="https://gov.gitcoin.co/images/emoji/twitter/raised_hands.png?v=12" title=":raised_hands:" class="emoji" alt=":raised_hands:" loading="lazy" width="20" height="20"> I agree that we are conflating a few problems together and love that we are starting to tease them apart. Thank you Lefteris!</p>
+<aside class="quote no-group" data-username="David_Dyor" data-post="11" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/david_dyor/48/5317_2.png" class="avatar"> David_Dyor:</div>
+<blockquote>
+<p>The FDD has not needed Snapshot yet and has been able to use discussion, emoji-signalling, and polls to make group decisions</p>
+</blockquote>
+</aside>
+<p>This makes me a bit weary. I will trust the intention of this comment, but for policy making, bringing these items to the community and not just leveraging emoji reactions would likely be more credible. Once again, I dont have the context here, just would caution making any larger decisions on this mechanism (ie, who is invited to emote, how much information and time do they have to decide, etc.)</p>
+<aside class="quote no-group" data-username="David_Dyor" data-post="11" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/david_dyor/48/5317_2.png" class="avatar"> David_Dyor:</div>
+<blockquote>
+<p>it became clear that the BrightID entity that created the grant actually doesn’t have a token</p>
+</blockquote>
+</aside>
+<p>As Lefteris mentioned, this just isn’t true in spirit and I don’t feel like this would stand up in any real evaluation.</p>
+<aside class="quote no-group" data-username="castall" data-post="18" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/castall/48/45_2.png" class="avatar"> castall:</div>
+<blockquote>
+<p>no tokens were given to the team</p>
+</blockquote>
+</aside>
+<p>I am really surprised to hear this. I assume the team participated in the fair launch? <a href="https://brightid.gitbook.io/brightid/bright/getting-bright/fairdrop/eligibility">Eligibility criteria here</a> would likely favor the team doing development (rightfully so!). It feels dishonest to say the team was given no tokens though <img src="https://gov.gitcoin.co/images/emoji/twitter/thinking.png?v=12" title=":thinking:" class="emoji" alt=":thinking:" loading="lazy" width="20" height="20"></p>
+<hr>
+<p>This may be the pessimist in me, but I feel like a token was launched, and was optimistically positioned as a way to fund development. Now that the markets have cooled and that is not sustainable as once hoped  the question becomes, should BrightID be allowed to receive matching  funds again.</p>
+<p>Interested in seeing the vote options as they come up <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/20
+        Tue, 22 Mar 2022 04:12:46 +0000
+gov.gitcoin.co-post-10125-20
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+connor
+
+            <p>I generally agree with the sentiment that many of these situations will be unique cases and it’s hard to put a blanket policy down. I also feel that setting a policy like this going forward should take time and deliberation, and not be rushed for GR13 or to close a specific case (like BrightID). But I do feel the urgency to make a call on BrightID and I think I’d encourage FDD to make the final call for now.</p>
+<p>Regarding the $20m threshold - I think we should focus on a project’s treasury and not the market cap - what if the token is 100% owned by community members? This is naturally hard to measure and verify, so it’s maybe not the best metric, but I struggle to think of something better.</p>
+<p>It seems like these unique 1 off cases will continue to be raised, and it’s likely not possible to set a policy across the board that is fair to all, but it’s also not possible to scale governance votes for each and every dispute. So given that, I’d like to throw out the idea of setting a “loose” policy on funding/tokens for grants between GR13 and 14, with plenty of time to debate. And then maybe using governance to elect a “board” of decision-makers who have the final say, independent of FDD. Governance can then vote to tweak the general policy or board members in the future when they see fit.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/19
+        Tue, 22 Mar 2022 03:30:45 +0000
+gov.gitcoin.co-post-10125-19
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+castall
+
+            <p>If we’re talking about changing to rules to this,</p>
+<aside class="quote no-group" data-username="annika" data-post="1" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p><em>A project in the Main Round cannot:</em></p>
+<ul>
+<li><em>Have a token with a fully-diluted market cap of greater than $20 million</em></li>
+<li><em>Have raised over $500k in VC funding</em></li>
+</ul>
+</blockquote>
+</aside>
+<p>Then, yes, BrightID would fit within those rules.</p>
+<p>If we’re thinking of including other rules about the value of tokens sold, or the value of tokens given to the team, and we want to look at BrightID as an example, no tokens were sold and no tokens were given to the team.  I think this is unusual for community token launches. I normally see around 15% reserved for the team.</p>
+<p>Unfortunately, BrightID’s token model is not likely to be used by other projects, so the decision isn’t likely to be of much help.  I didn’t think about this when we agreed to be a test case for a new appeal process in December.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/18
+        Tue, 22 Mar 2022 01:40:25 +0000
+gov.gitcoin.co-post-10125-18
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+DisruptionJoe
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/castall">@castall</a> can you share the info <a class="mention" href="https://gov.gitcoin.co/u/lefterisjp">@lefterisjp</a> and <a class="mention" href="https://gov.gitcoin.co/u/bobjiang">@bobjiang</a> requested here?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/17
+        Mon, 21 Mar 2022 21:23:55 +0000
+gov.gitcoin.co-post-10125-17
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="lefterisjp" data-post="13" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lefterisjp/48/24_2.png" class="avatar"> lefterisjp:</div>
+<blockquote>
+<p>I have to comment here that 2 different entities is not a reason to automatically reverse decisions.</p>
+</blockquote>
+</aside>
+<p>I also agree with your sentiment here, Lefteris. <a class="mention" href="https://gov.gitcoin.co/u/david_dyor">@David_Dyor</a> is making sure the entire surface area of the problem is in view, but it seems to me that his interpretation is that he agrees with you that we should do a case by case analysis and is informing of the DOWNSIDE to pushing for a letter of the law interpretation. (Which you aren’t pushing for, but some might)</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/16
+        Mon, 21 Mar 2022 21:17:07 +0000
+gov.gitcoin.co-post-10125-16
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+DisruptionJoe
+
+            <p>I am comfortable making the case by case decisions in FDD as has been done in the past, but would like the process to be explicit because this is the first appeal to get to this level.</p>
+<p>Not deciding is a decision! We might call this <strong>OPTION 0 - Maintain the status quo and DO NOT explicitly agree to FDDs authority in this domain and set clear boundaries</strong></p>
+<p>If we maintain course, this is what the outcome might be:</p>
+<ol>
+<li>FDD source council makes a decision and writes it up on the gov forum.</li>
+<li>PGF &amp; FDD Policy writes up policy recommendations based on the gov forum conversation</li>
+<li>FDD Grant Reviewers &amp; Approver follows these policy recommendations for initial approval of new grants</li>
+<li>PGF writes up a policy update between rounds to be ratified (has the problem of bundling many policy decisions into one vote)</li>
+</ol>
+<p>If we go with Option 1 or Option 2 via snapshot vote, then the decisions of FDD or the snapshot vote will have more legitimacy. (Option 1 &amp; 2 as outlined here: <a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/12" class="inline-onebox">[Proposal] Grants Policy Update: Projects with Tokens - #12 by DisruptionJoe</a>)</p>
+<p>I would like to see us start the appeals system in a legitimate way rather than leaving it as is.</p>
+<p>A snapshot would need to start tomorrow or Wednesday by the latest to be able to pass in time for this round.</p>
+<p>If we get positive approval from 5 stewards by Wednesday, I would advocate for us to put it up for a vote and not let our community be guided by inaction.</p>
+<p>I’d also like to refrain from thinking we can find the BEST ANSWER and instead think “Is the recommendation of the people closest to the work SAFE TO TRY”</p>
+<p>The complexity of the situation is high, therefore a sensing and responding methodology is practical.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/15
+        Mon, 21 Mar 2022 21:14:05 +0000
+gov.gitcoin.co-post-10125-15
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+lefterisjp
+
+            <blockquote>
+<p>The token and funding info is all on the original post about the BrightID appeal: <a href="https://gov.gitcoin.co/t/novel-situation-1-project-should-not-have-a-token-or-raised-vc-funding/10029">Novel Situation #1 - Project should not have a token or raised VC funding</a></p>
+</blockquote>
+<p>I read that post and I still can’t find out how much has the DAO/team kept for itself. What is their treasury situation?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/14
+        Mon, 21 Mar 2022 20:57:46 +0000
+gov.gitcoin.co-post-10125-14
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+lefterisjp
+
+            <p>I have to comment here that 2 different entities is not a reason to automatically reverse decisions.</p>
+<p>In BrighID’s case I don’t have all the facts so can’t speak from factual knowledge but my interactions with them have been very positive so I don’t think they would appeal without a reason and try to cheat Gitcoin.</p>
+<p>BUT, if for example I(Lefteris) have 2 different entities, both of which I have major control of. Say Rotki Germany and “Opensource software Cayman Islands”, and the latter creates and sells a token, but the rotki Germany entity still wants to keep the grant matching … I hope you would challenge me there.</p>
+<p>What I am trying to say is that it’s hard to have blanket rules and unfortunately I am afraid we would need case by case decisions after reviewing all the facts.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/13
+        Mon, 21 Mar 2022 20:55:52 +0000
+gov.gitcoin.co-post-10125-13
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="annika" data-post="10" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>Based on FDD’s current process, how will that decision be handled? Is done in isolation by the policy squad, without community input, or does it go to a full Snapshot vote of its own? I assume others may not have clarity here either so I want to have this discussion on next steps in public <img src="https://gov.gitcoin.co/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+</aside>
+<p>I believe I outlined what I think will happen if we decide not to do a snapshot vote here:</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="3" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p><strong>OPTION 1 - MAINTAIN “NO TOKEN” STATUS QUO</strong></p>
+<p><em><strong>How it would play out for BrightID</strong></em></p>
+<p>BrightID appeal would most likely be upheld and they would be allowed to participate in GR13.</p>
+<p>Unless there was significant objection, FDD is currently in favor of ruling to uphold their appeal for the following reasons.</p>
+<p>FDD has already found through our Polis surveys that the community overwhelmingly wants us to fund public goods over following the letter of the law. In this case, BrightID is clearly building a public infrastructure needed for digital democracy. Their token was an opportunity to let the community drive it’s governance.</p>
+<p>The token has not provided sufficient funding to allow BrightID to continue building.</p>
+</blockquote>
+</aside>
+<p>I am ok with moving forward and having FDD make the call on the BrightID case without a snapshot vote. This is what has been done in the past.</p>
+<p>The reason this case is different is because we built out an appeals process and found a legitimate case where the appeal serves as guidance to future policy. (as opposed to being a reviewer error or poor interpretation of current policy)</p>
+<aside class="quote no-group" data-username="lefterisjp" data-post="4" data-topic="10125">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lefterisjp/48/24_2.png" class="avatar"> lefterisjp:</div>
+<blockquote>
+<p>The proposed solution seems to try and address both which it should not. The 20m marketcap is arbitrary for the reason I explained <a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/2">above</a>. It does not really address problem 2.</p>
+</blockquote>
+</aside>
+<p>Because this situation is a “first” to make it this far in the appeals process FDD has built out to decentralize the decision making process, I do believe it is fair to judge both together. By saying we want FDD to make the decision or not, we establish a precedent which will be used for future appeals.</p>
+<p>I don’t see how the decision here can not set a precedent, therefore there is no way to handle these separately.</p>
+<p>However, because these types of calls (grant eligibility decisions) have always happened in FDD, the way forward that does not include a snapshot vote would be for FDD to make a call and write up the reasoning for it.</p>
+<p>Then perhaps PGF could be responsible for updating policy in between rounds?</p>
+<p>The token and funding info is all on the original post about the BrightID appeal: <a href="https://gov.gitcoin.co/t/novel-situation-1-project-should-not-have-a-token-or-raised-vc-funding/10029" class="inline-onebox">Novel Situation #1 - Project should not have a token or raised VC funding</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/12
+        Mon, 21 Mar 2022 20:06:09 +0000
+gov.gitcoin.co-post-10125-12
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+David_Dyor
+
+            <p>The FDD has not needed Snapshot yet and has been able to use discussion, emoji-signalling, and polls to make group decisions.  I would guess this won’t change anytime soon.</p>
+<p>I appreciate your statement to delay the snapshot vote pending further discussion because it is sensitive to obtaining full participation.  But I am still in favor of voting on the change because I believe it is a positive change.  It will help both reviewers and grantees absorb both the letter &amp; spirit of Gitcoin laws (briefings/policies/documentation).</p>
+<p>Joe and Annika have been foundational to getting this murky issue clarified.  Thanks so much you two!  I bias towards community-cohesion over independence.  If the community feels we should discuss this more before taking action than so be it.  I support the community vision…I just hope we can get quick results and not disappear into endless debates.</p>
+<p>As a reminder, during the three part progression of this topic it became clear that the BrightID entity that created the grant actually doesn’t have a token.  Thus a technicality would enable us to immediately reverse the BrightID grant denial.  The entity that created and manages the $BRIGHT token is legally separate from BrightID Dao.   This quickly resolves Q2 however it may not be the best way forward as even though the 2 bright organizations are not legally linked they are connected in theory through name and actions.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/11
+        Mon, 21 Mar 2022 19:39:08 +0000
+gov.gitcoin.co-post-10125-11
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+annika
+
+            <p>Sounds good, thanks everyone for your feedback.</p>
+<p>What I am hearing pretty universally is that we should expedite the BrightID decision as a one-off and hold off on broader policy definition.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> - in light of the community comments here, I don’t think we should move to a Snapshot vote tomorrow on the whole proposal, but rather move forward on BrightID alone.</p>
+<p>Based on FDD’s current process, how will that decision be handled? Is done in isolation by the policy squad, without community input, or does it go to a full Snapshot vote of its own? I assume others may not have clarity here either so I want to have this discussion on next steps in public <img src="https://emoji.discourse-cdn.com/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/10
+        Mon, 21 Mar 2022 16:41:14 +0000
+gov.gitcoin.co-post-10125-10
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+[Proposal] Grants Policy Update: Projects with Tokens
+polarpunklabs
+
+            <p>I think the sense of being overwhelmed is what I was trying to get at.</p>
+<p>Vote 2 should happen soon. Vote 1 should be deferred until after the round as it seems unwise to adopt such a change in the middle of a round or just after.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125/9
+        Mon, 21 Mar 2022 15:26:22 +0000
+gov.gitcoin.co-post-10125-9
+[Proposal] Grants Policy Update: Projects with Tokens
+      
+
+

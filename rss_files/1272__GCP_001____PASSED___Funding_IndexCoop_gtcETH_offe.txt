@@ -1,0 +1,633 @@
+
+
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013
+    # [Gitcoin Community Proposal] - Funding IndexCoop gtcETH offering
+
+A HUGE thank you to @c-squared.eth, @funkmasterflex from the Index Coop community for drafting the majority of this GCP. You can find [the full details of the IIP](https://gov.indexcoop.com/t/iip-xyz-launch-the-gitcoin-staked-eth-index-gtceth/4508) (Index Improvement Protocol) on their forums.
+
+## Summary
+
+In partnership with Index Coop, we would like to propose the Gitcoin Staked ETH Index (gtcETH), which will provide diversified exposure to the top liquid staking tokens and share a portion of staking rewards with the DAO in support of public goods funding.
+
+As part of this proposal, I am requesting we seed initial liquidity pool requirements to ensure this asset is available to those who would like to take advantage of it. That seed funding should come from the Matching Pool as the yield accrued will be used in the matching pool in the future (and we can always sell the LP position and recover our assets if we need them in the short term).
+
+## Abstract
+
+gtcETH will enable token holders to access the top ETH liquid staking tokens through a single token while simultaneously contributing to public goods funding. gtcETH will employ the [dsETH methodology](https://gov.indexcoop.com/t/iip-171-launch-the-diversified-staked-eth-index-dseth/4389#h-60-methodology-15), which promotes decentralization and competition amongst liquid staking protocols.
+
+## Motivation
+
+Public goods are an integral part of Ethereum’s past, present, and future. Ethereum itself is built on the premise that a wide variety of stakeholders can come together to build, and ultimately depend on, public goods that serve the collective interests of the community. No single organization embodies this mission as much as Gitcoin DAO. Since 2017, we have provided over [$50m](https://gitcoin.co/results) in grants and bounties funding to thousands of teams and developers. Raising funds for public goods, however, can be unpredictable and inconsistent because of the donation-dependent models in place today. DeFi–specifically liquid staking, streaming fees, and Index Coop–can help with this.
+
+gtcETH gives token holders the ability to earn and share diversified staking rewards with the Gitcoin DAO by holding an index of the top liquid staking tokens and enabling a streaming fee. For gtcETH token holders, the annualized streaming fee of 2.00% (1.75% for the Gitcoin DAO and 0.25% for Index Coop) is collected in a passive fashion, so aside from buying and holding the token, gtcETH holders don’t have to do anything to earn staking rewards for themselves and fund public goods. For Gitcoin, gtcETH provides a consistent, subscription-like revenue stream for funding grants and/or bounties as well as a low-friction access point for contributions. gtcETH also provides a positive-sum option for those considering donations because token holders retain price exposure to ETH and earn some staking rewards while simultaneously donating to public goods (versus an outright donation where the user must forfeit their ETH).
+
+gtcETH will utilize the dsETH methodology and technology, so users can effectively distribute their stake across the top liquid staking protocols and earn an aggregate staking return (minus the streaming fee). Rather than selecting a single liquid staking token and concentrating risk, gtcETH token holders benefit from its innate diversification - both at the asset and the protocol layer. The methodology is also weighted towards protocols with more node operators and balanced distribution of stake, with the objective of encouraging decentralization and competition in the on-chain liquid staking market.
+
+## Specification
+
+gtcETH will be built on Index Protocol and contain Rocket Pool, Lido, and StakeWise liquid staking tokens. Lido’s stETH will be wrapped in order to accommodate its rebasing nature, and StakeWise rewards will be reinvested on a periodic basis into sETH2.
+
+Flash Minting (and Redeeming) will be enabled at launch, allowing users to deposit ETH or ERC20s and receive gtcETH tokens in return.
+
+Though there are many different liquid staking tokens in the DeFi ecosystem today, there are no on-chain offerings that enable users to earn staking rewards and contribute to public goods simultaneously. However, this table presents the liquid staking tokens that will be present in gtcETH and their respective yields:
+
+|token|Issuing Protocol|Protocol Fees|APR ([sources](https://www.rated.network/dseth?network=mainnet))|
+| --- | --- | --- | --- |
+|wstETH|Lido|10% of rewards|5.2%|
+|rETH|Rocket Pool|15% of rewards|4.7%|
+|sETH2|StakeWise|10% of rewards|5.3%|
+
+As a result, the initial composition for gtcETH will yield a 2.99% Net APR after accounting for the streaming fee (2.00% in total). This is a simple projection, and it is worth noting that a variety of factors - percentage of ETH staked, network fees, fee burn - fundamentally affect reward rates (thus yield is subject to change over time).
+
+## Example composition
+
+dsETH will have the following composition at launch:
+
+* Rocket Pool rETH: 43.9%
+* Lido (w)stETH: 29.7%
+* StakeWise sETH2: 26.4%
+
+![|624x387](upload://noA9Ulx8bPwT5xY7QyYjhkIavbA.png)
+
+Rewards earned by the underlying assets will gradually accrue to the token’s value and be realized in the form of price appreciation. The annualized streaming fee is captured block-by-block via inflation.
+
+## Backtest results
+
+![|624x387](upload://dJ4MK4i4YsmDZJjqquqrlAivBjr.png)
+
+Backtest calculations are shown for March - August 2022. The former is the earliest date for which complete price history is available for all constituents. This plot is shown with dsEth, but gtcETH will be the same given its 1:1 pair with dsETH.
+
+The green plot shows the price history of gtcETH in USD terms, the blue plot gtcETH spot price in ETH terms, and the red plot gtcETH “NAV” price in ETH terms. It is important to note that the gtcETH “NAV” price (red) assumes 1:1 exchangeability between the underlyings and ETH. The gtcETH spot price in ETH terms (blue) can decrease due to decoupling between the underlying staked ETH tokens and ETH; an example would be the discounted exchange rate for stETH relative to ETH. Historical data on node operators were not available so we assumed a uniform allocation across the constituents.
+
+## Size of Opportunity
+
+Over $50m has been donated to and distributed by Gitcoin since 2017 in support of public goods. The Gitcoin Grants program accounts for $32m of that sum, with a median value of $1.14 and an average value of $14.26. In simple terms, if a user were to hold 1 gtcETH token for a year and earn a 5% gross staking APR during that time, their gtcETH token would ≈ 1.03 ETH and they will have contributed ~0.0175 ETH to Gitcoin over that period; applying a constant ETH price of $1,700, that contribution would be worth $29.75, or double the average historical contribution.
+
+Additionally, at a TVL of $1m, gtcETH would contribute ~$17,500 annually to Gitcoin Grants. On a quarterly basis, this would earn gtcETH a top ten spot in Gitcoin’s [Funders Leaderboard](https://gitcoin.co/leaderboard/payers?cadence=quarterly&keyword=&product=all) while also earning gtcETH holders the net staking rate themselves.
+
+## Benefits
+
+Given the size of the opportunity, and the simple rebalancing, this initiative would yield an always on source of funding for our Matching Pool. The product is based on the dsETH product and benefits from the security and contract audits to ensure users funds are secure and able to participate in the yield from the collection of underlying assets.
+
+This is also Gitcoin’s first opportunity to partner with Index Coop on a novel mechanism for funding public goods. Index has been a leader in the index fund creation and management having created multiple index funds to enable exposure to a basket of tokens without requiring users to be experts in selecting those tokens. In our case, we receive the upside and knowledge of the product while offering users the ability to fund public goods in a way that grows the value of their investment, and our funding for public goods.
+
+gtcETH will offer a funding option to those who dont always know which grants to select themselves. The yield from both the index, and the liquidity pool position will yield funding results for the DAO and the matching pool.
+
+## Drawbacks
+
+This product (gtcETH) will be tied hand in hand to dsETH – while this has many benefits, it also has the drawbacks that any negative outcomes of dsETH will also affect gtcETH. It is worth noting, that while the majority of fees for gtcETH will be going to public goods, not 100% of the fees will be going to public goods as Index Coop will retain their same 0.25% fee.
+
+We will be withdrawing a modest amount of ETH to help seed the liquidity pool and ensure future gtcETH holders are able to swap into the position. This ETH is just sitting in our matching pool today, not “working” for us, but by moving it to an LP there is always the risk of impermanent loss.
+
+## Vote
+
+I am requesting a vote that will accomplish the following (a yes vote would do…):
+
+1. Formalize the relationship between us and Index Coop and enable co-branding and marketing of the new gtcETH product (if it passes the Index Coop governance)
+2. Move 100 ETH from the matching pool multi sig to fund two LP positions (50ETH each LP):
+2.1 pair gtcETH against dsETH in a 1bp pool
+ 2.2 pair gtcETH against ETH in a 5bps pool
+(The two pools ensure deeper liquidity and reduce swapping fees for moving into gtcETH while also ensuring arb opportunities exist between dsETH and gtcETH to ensure they stay near parity in price)
+
+3. Work with Index Coop to rebalance the product on a ~quarterly/monthly cadence as needed.
+
+A no vote would prevent us from funding the initial liquidity, but may not materially change Index Coop’s decision to build and launch the product for us.
+
+## Revision history
+
+[2022.02.20] Made some updates to the impact results Gitcoin has had. Thanks @umarkhaneth for the suggestions.
+Wed, 08 Mar 2023 20:26:42 +0000
+📜 Proposals
+
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+koday
+
+            <p>Love this idea and I’m glad the vote passed - excited to allocate some ETH into gtcETH.</p>
+<p>Can’t wait to see more experiments with sustainable, regen-focused public good funding models!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/23
+        Wed, 08 Mar 2023 20:26:42 +0000
+gov.gitcoin.co-post-13013-23
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+kyle
+
+            <p>Hey all - This product is live! And the 100 Eth has been transferred. We now have the LP positions in the Grants Matching Pool.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/67d18dffe88526eeed4000035243c3c1e0ef69e0.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/67d18dffe88526eeed4000035243c3c1e0ef69e0" title="Screenshot 2023-03-07 at 3.52.10 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/67d18dffe88526eeed4000035243c3c1e0ef69e0_2_653x500.jpeg" alt="Screenshot 2023-03-07 at 3.52.10 PM" data-base62-sha1="eOq9c4bvgxJjcxSTXkextaCRCxi" width="653" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/67d18dffe88526eeed4000035243c3c1e0ef69e0_2_653x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/67d18dffe88526eeed4000035243c3c1e0ef69e0_2_979x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/67d18dffe88526eeed4000035243c3c1e0ef69e0_2_1306x1000.jpeg 2x" data-dominant-color="F8F4F8"></a></div><p></p>
+<p>Definitely pumped for this product to be live and to offer folks the ability to continuously fund public goods with their Eth.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/21
+        Tue, 07 Mar 2023 20:55:08 +0000
+gov.gitcoin.co-post-13013-21
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+c-squared.eth
+
+            <p>The <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x6f1fa6b220417aa52ad566cfeb83c7e820f146a02eb04c754389a615035502df" rel="noopener nofollow ugc">Snapshot vote</a> has passed in favor of funding the gtcETH pools!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0d7ac20c37e4add7e283d05d372ae4352220cdfd.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/0d7ac20c37e4add7e283d05d372ae4352220cdfd" title="Screenshot 2023-03-06 at 2.41.25 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0d7ac20c37e4add7e283d05d372ae4352220cdfd_2_690x391.png" alt="Screenshot 2023-03-06 at 2.41.25 PM" data-base62-sha1="1Vfdk8oQ20wM9a0SEPnNy8cFilD" width="690" height="391" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0d7ac20c37e4add7e283d05d372ae4352220cdfd_2_690x391.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0d7ac20c37e4add7e283d05d372ae4352220cdfd_2_1035x586.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0d7ac20c37e4add7e283d05d372ae4352220cdfd_2_1380x782.png 2x" data-dominant-color="2C2B31"></a></div><p></p>
+<p>gtcETH coming soon to a DEX near you <img src="https://gov.gitcoin.co/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/20
+        Mon, 06 Mar 2023 19:43:16 +0000
+gov.gitcoin.co-post-13013-20
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+jaxcoder
+
+            <p>Love to see these income systems getting proposed and put in place.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/19
+        Fri, 03 Mar 2023 20:08:52 +0000
+gov.gitcoin.co-post-13013-19
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+kyle
+
+            <p>We have not really marketed this yet, but we hope to encourage folks to do this once the pools and things are live. Every little bit of participation helps though!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/18
+        Fri, 03 Mar 2023 03:44:05 +0000
+gov.gitcoin.co-post-13013-18
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+ccerv1
+
+            <p>In general I’m in favor of novel funding mechanisms. This is a cool idea and a product that I would use.</p>
+<p>It has my vote.</p>
+<p>That said, this also feels like an initiative in the “low impact / easy to implement” corner of the matrix. I hope it doesn’t distract from more audacious initiatives to create sustaining funding for Gitcoin.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/17
+        Tue, 28 Feb 2023 13:30:00 +0000
+gov.gitcoin.co-post-13013-17
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+lefterisjp
+
+            <p>Hey this seems like an interesting idea. Not totally sure it would work, as it seems to depend on enough people swapping their ETH for gtcETH to get to the 1MM. Do you guys have any commitments from any whales on this?</p>
+<p>If it ends up not working would it affect Gitcoin in any way?</p>
+<p>In general sounds like a nice experiment.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/16
+        Mon, 27 Feb 2023 21:54:34 +0000
+gov.gitcoin.co-post-13013-16
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+kyle
+
+            <p>Hey all I numbered this proposal, and moved it to the Proposals section given the quorum and five day duration.</p>
+<p>I have also moved this to Snapshot! - <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x6f1fa6b220417aa52ad566cfeb83c7e820f146a02eb04c754389a615035502df" class="inline-onebox">Snapshot</a></p>
+<p>I would love to have folks go vote. This will not need a vote on Tally as we will not be withdrawing funds from the Treasury, but the multi-sig instead.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/15
+        Sun, 26 Feb 2023 05:44:44 +0000
+gov.gitcoin.co-post-13013-15
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+epowell101
+
+            <p>Seems like a great experiment.</p>
+<p>It looks like there may be some operational and reputational risk as well, unless I’m missing something.</p>
+<p>Operational:</p>
+<ul>
+<li>the nuts and bolts are being handled by Index -
+<ul>
+<li>if somehow we are hacked or they are - this could impact our reputation w/ some of our largest supporters (the stakers)</li>
+</ul>
+</li>
+<li>marketing -
+<ul>
+<li>we have a marketing team that, while large, seems to be fairly stretched</li>
+</ul>
+</li>
+<li>general management
+<ul>
+<li>we only have so many cycles per day to consider something - c/d this distract us from other priorities</li>
+</ul>
+</li>
+</ul>
+<p>Reputation risk</p>
+<ul>
+<li>if this does not go well - not a hack but otherwise - would it somehow undermine the valuable Gitcoin brand?</li>
+</ul>
+<p>Again, overall I’m very supportive of this sort of experimentation.  It reminds me of the Aqueduct idea which also seems to have a lot of potential (we are hoping to build it into some work the OpenData Community is doing in supporting projects for eg).  If we can have a range of ways to passively generate funds for the matching pool that build over time somewhat organically - amazing.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/14
+        Thu, 23 Feb 2023 15:17:14 +0000
+gov.gitcoin.co-post-13013-14
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+kyle
+
+            <aside class="quote no-group" data-username="shawn16400" data-post="10" data-topic="13013">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar"> shawn16400:</div>
+<blockquote>
+<p>Two questions:</p>
+<ol>
+<li>Is my understanding correct on the annual income of $17K at $1M in the matching pool?</li>
+<li>How does the pool get to $1M? Will Index market this, does Gitcoin market this, will it happen automatically?</li>
+</ol>
+</blockquote>
+</aside>
+<p>Great questions!</p>
+<p>1 - The index fund will need to have $1MM in total locked value for us the generate the $17k in revenue. That revenue will be emitted back to the matching pool.</p>
+<p>2 - The current plan is to have both ecosystems market this product and encourage folks to earn a yield and fund public goods by buying gtcETH. If we can convince folks to buy and hold gtcETH (and lock up $1MM+ in TVL) we will realize the projection of $17k. Ideally we convince a few large Eth holders to swap in gtcETH. them swapping a few thousand Eth would be a terrific outcome for Gitcoin. But, we need a product available for them to take advantage of this <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="azeem" data-post="12" data-topic="13013">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/azeem/48/6195_2.png" class="avatar"> azeem:</div>
+<blockquote>
+<p>Worked with Kyle on helping make this happen.</p>
+</blockquote>
+</aside>
+<p>Yes! Azeem has been immensely valuable in making sure these GCP’s come to fruition. Much respect and appreciation for the partnership on these <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/13
+        Thu, 23 Feb 2023 02:10:34 +0000
+gov.gitcoin.co-post-13013-13
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+azeem
+
+            <p>Worked with Kyle on helping make this happen. Creating self sustaining funding for Gitcoin is one of the most imperative things for us to be working on and so I’m entirely in favor of this!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/12
+        Wed, 22 Feb 2023 17:51:57 +0000
+gov.gitcoin.co-post-13013-12
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+kindeagle
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/tigress">@tigress</a>  -</p>
+<p>Here’s the video: <a href="https://twitter.com/indexcoop/status/1617932168428421121?s=20">https://twitter.com/indexcoop/status/1617932168428421121?s=20</a></p>
+<p>gtcETH is an index of the top ETH liquid staking tokens, so it’s accessible by purchasing on a DEX or minting via the Index Coop app. You don’t have to stake anything yourself. The staking yield will automatically accrue and be reflected in an increasing price of the token vs. ETH.</p>
+<p>And a lot more resources are available on our blog:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://indexcoop.com/blog/faq-the-diversified-staked-eth-index-dseth">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/d/dbb0326f9781baf6ea4020bc8a780085724a0310.png" class="site-icon" width="32" height="32">
+
+      <a href="https://indexcoop.com/blog/faq-the-diversified-staked-eth-index-dseth" target="_blank" rel="noopener">Index Coop Blog</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e2e95d721c4687a7de7c293358ef7df0f4c8da2f_2_690x345.png" class="thumbnail" width="690" height="345" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e2e95d721c4687a7de7c293358ef7df0f4c8da2f_2_690x345.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e2e95d721c4687a7de7c293358ef7df0f4c8da2f_2_1035x517.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e2e95d721c4687a7de7c293358ef7df0f4c8da2f_2_1380x690.png 2x" data-dominant-color="C5DADB"></div>
+
+<h3><a href="https://indexcoop.com/blog/faq-the-diversified-staked-eth-index-dseth" target="_blank" rel="noopener">FAQ: The Diversified Staked ETH Index (dsETH)</a></h3>
+
+  <p>How does dsETH diversify a portfolio and decentralize a network? We're here to answer any questions you may have about the Diversified Staked ETH Index (dsETH).</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://indexcoop.com/blog/understanding-the-diversified-staked-eth-index-dseth">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/d/dbb0326f9781baf6ea4020bc8a780085724a0310.png" class="site-icon" width="32" height="32">
+
+      <a href="https://indexcoop.com/blog/understanding-the-diversified-staked-eth-index-dseth" target="_blank" rel="noopener">Index Coop Blog</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34815f345ce865b5a2b6499774406d4d155d18c4_2_690x345.jpeg" class="thumbnail" width="690" height="345" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34815f345ce865b5a2b6499774406d4d155d18c4_2_690x345.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34815f345ce865b5a2b6499774406d4d155d18c4_2_1035x517.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34815f345ce865b5a2b6499774406d4d155d18c4_2_1380x690.jpeg 2x" data-dominant-color="E3ECEC"></div>
+
+<h3><a href="https://indexcoop.com/blog/understanding-the-diversified-staked-eth-index-dseth" target="_blank" rel="noopener">Understanding the Diversified Staked ETH Index (dsETH)</a></h3>
+
+  <p>The Diversified Staked ETH Index (dsETH) provides diversified exposure to the top liquid staking tokens in the Ethereum ecosystem and promotes decentralization.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/11
+        Wed, 22 Feb 2023 16:23:15 +0000
+gov.gitcoin.co-post-13013-11
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+shawn16400
+
+            <aside class="quote no-group" data-username="kyle" data-post="1" data-topic="13013">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Additionally, at a TVL of $1m, gtcETH would contribute ~$17,500 annually to Gitcoin Grants. On a quarterly basis, this would earn gtcETH a top ten spot in Gitcoin’s <a href="https://gitcoin.co/leaderboard/payers?cadence=quarterly&amp;keyword=&amp;product=all" rel="noopener nofollow ugc">Funders Leaderboard </a> while also earning gtcETH holders the net staking rate themselves.</p>
+</blockquote>
+</aside>
+<p>hey <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> can you help me understand this?</p>
+<ul>
+<li>Gitcoin is contributing 100ETH to the staked pool ($~160,000)</li>
+<li>If the staked pool reaches $1M, Gitcoin Matching pool stands to receive ~ $17K annually</li>
+</ul>
+<p>Two questions:</p>
+<ol>
+<li>Is my understanding correct on the annual income of $17K at $1M in the matching pool?</li>
+<li>How does the pool get to $1M? Will Index market this, does Gitcoin market this, will it happen automatically?</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/10
+        Wed, 22 Feb 2023 11:17:31 +0000
+gov.gitcoin.co-post-13013-10
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+kevin.olsen
+
+            <p>Amazing stuff. I’m supportive of this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/9
+        Wed, 22 Feb 2023 07:47:13 +0000
+gov.gitcoin.co-post-13013-9
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+vikrant6661
+
+            <p>Very well laid down proposal. I vote in favour.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/8
+        Wed, 22 Feb 2023 03:01:24 +0000
+gov.gitcoin.co-post-13013-8
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+DisruptionJoe
+
+            <p>I’m fully in support of the direction because I love the idea of continuous funding for public goods. It seems like a very positive sum idea.</p>
+<p>I would like to understand risks in rebalancing and other potential risks are in this proposal.</p>
+<p>I would vote yes today.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/7
+        Tue, 21 Feb 2023 16:28:26 +0000
+gov.gitcoin.co-post-13013-7
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+tigress
+
+            <aside class="quote no-group" data-username="c-squared.eth" data-post="3" data-topic="13013">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/c-squared.eth/48/8571_2.png" class="avatar"> c-squared.eth:</div>
+<blockquote>
+<p>With gtcETH, contributors can…</p>
+<ol>
+<li>keep their ETH and maintain price exposure</li>
+</ol>
+</blockquote>
+</aside>
+<p>I have not fully understood the mechanics of this from a dumb user perspective.</p>
+<p>Could you possible point me towards a video which shows the flow / steps in the process of staking using dsETH? The <a href="https://gov.indexcoop.com/t/iip-171-launch-the-diversified-staked-eth-index-dseth/4389#h-60-methodology-15" rel="noopener nofollow ugc">linked forum post</a> did not really inform me well so I can run through it in my brain.</p>
+<p>Moreover I was wondering: With this product can I stake GTC and / or ETH and contribute towards Gitcoin Grants funding?</p>
+<p>Thanks <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/6
+        Tue, 21 Feb 2023 11:15:10 +0000
+gov.gitcoin.co-post-13013-6
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+0xDev
+
+            <p>Great job, <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a>! We (the Index Coop) really hope we can bring this idea to reality with Gitcoin - and that the product grows huge and throws off a nice revenue stream for Gitcoin.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/5
+        Mon, 20 Feb 2023 20:32:00 +0000
+gov.gitcoin.co-post-13013-5
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+c-squared.eth
+
+            <p>Howdy <img src="https://gov.gitcoin.co/images/emoji/twitter/wave.png?v=12" title=":wave:" class="emoji" alt=":wave:" loading="lazy" width="20" height="20"> long time supporter, first time commenter.</p>
+<p>I wanted to share a couple of comments and express Index Coop’s excitement for gtcETH!</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="13013">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>This is also Gitcoin’s first opportunity to partner with Index Coop on a novel mechanism for funding public goods.</p>
+</blockquote>
+</aside>
+<p>The streaming fee mechanism in place for gtcETH accrues on a block-by-block basis, creating a kind of real-time subscription revenue for the Gitcoin Grants program. Gitcoin can collect these fees at any time too!</p>
+<p>In addition to the consistent stream of contributions, gtcETH enables a positive-sum donation path for token holders. Previously, contributors would have to part ways with their assets - every gwei given to Gitcoin was one less gwei kept by the contributor. For this reason, it can be difficult for potential contributors to part ways with their ETH (even though they would ultimately benefit from the proliferation of public goods). With gtcETH, contributors can…</p>
+<ol>
+<li>keep their ETH and maintain price exposure</li>
+<li>earn staking and execution layer rewards</li>
+<li>contribute to Gitcoin Grants funding</li>
+</ol>
+<p>… all by buying and holding the token. Because gtcETH uses the dsETH methodology, it also…</p>
+<ol start="4">
+<li>diversifies your portfolio with multiple liquid staking tokens</li>
+<li>promotes decentralization within the liquid staking ecosystem</li>
+</ol>
+<p>Next:</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="13013">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>This product (gtcETH) will be tied hand in hand to dsETH – while this has many benefits, it also has the drawbacks that any negative outcomes of dsETH will also affect gtcETH.</p>
+</blockquote>
+</aside>
+<p>Though gtcETH will utilize the dsETH methodology at launch, it is possible to deviate from that methodology if that is the community’s preference. For example, if Gitcoin would like to expand or contract the current inclusion criteria to allow for more or less liquid staking tokens in the future, that could be enacted through the standard governance process.</p>
+<p>Anyone can learn more about the dsETH methodology in the forum post cited above!</p>
+<p>Overall, the Index Coop is very excited to bring this product to market and experiment with a new public goods funding mechanism! <img src="https://gov.gitcoin.co/images/emoji/twitter/owl.png?v=12" title=":owl:" class="emoji" alt=":owl:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/3
+        Mon, 20 Feb 2023 19:27:04 +0000
+gov.gitcoin.co-post-13013-3
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+ceresstation
+
+            <p>I don’t have a ton to add here right now but just wanted to say this is awesome to see, this initiative has been a long time coming with efforts across multiple workstreams including PGF / GPC.</p>
+<p>Also, I like the idea of actually starting to use the GCP framework that Cooper and I drafted lol.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/2
+        Mon, 20 Feb 2023 16:36:13 +0000
+gov.gitcoin.co-post-13013-2
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+kyle
+
+            <h1>
+<a name="gitcoin-community-proposal-funding-indexcoop-gtceth-offering-1" class="anchor" href="https://gov.gitcoin.co#gitcoin-community-proposal-funding-indexcoop-gtceth-offering-1"></a>[Gitcoin Community Proposal] - Funding IndexCoop gtcETH offering</h1>
+<p>A HUGE thank you to <a class="mention" href="https://gov.gitcoin.co/u/c-squared.eth">@c-squared.eth</a>, <a class="mention" href="https://gov.gitcoin.co/u/funkmasterflex">@funkmasterflex</a> from the Index Coop community for drafting the majority of this GCP. You can find <a href="https://gov.indexcoop.com/t/iip-xyz-launch-the-gitcoin-staked-eth-index-gtceth/4508">the full details of the IIP</a> (Index Improvement Protocol) on their forums.</p>
+<h2>
+<a name="summary-2" class="anchor" href="https://gov.gitcoin.co#summary-2"></a>Summary</h2>
+<p>In partnership with Index Coop, we would like to propose the Gitcoin Staked ETH Index (gtcETH), which will provide diversified exposure to the top liquid staking tokens and share a portion of staking rewards with the DAO in support of public goods funding.</p>
+<p>As part of this proposal, I am requesting we seed initial liquidity pool requirements to ensure this asset is available to those who would like to take advantage of it. That seed funding should come from the Matching Pool as the yield accrued will be used in the matching pool in the future (and we can always sell the LP position and recover our assets if we need them in the short term).</p>
+<h2>
+<a name="abstract-3" class="anchor" href="https://gov.gitcoin.co#abstract-3"></a>Abstract</h2>
+<p>gtcETH will enable token holders to access the top ETH liquid staking tokens through a single token while simultaneously contributing to public goods funding. gtcETH will employ the <a href="https://gov.indexcoop.com/t/iip-171-launch-the-diversified-staked-eth-index-dseth/4389#h-60-methodology-15">dsETH methodology</a>, which promotes decentralization and competition amongst liquid staking protocols.</p>
+<h2>
+<a name="motivation-4" class="anchor" href="https://gov.gitcoin.co#motivation-4"></a>Motivation</h2>
+<p>Public goods are an integral part of Ethereum’s past, present, and future. Ethereum itself is built on the premise that a wide variety of stakeholders can come together to build, and ultimately depend on, public goods that serve the collective interests of the community. No single organization embodies this mission as much as Gitcoin DAO. Since 2017, we have provided over <a href="https://gitcoin.co/results">$50m</a> in grants and bounties funding to thousands of teams and developers. Raising funds for public goods, however, can be unpredictable and inconsistent because of the donation-dependent models in place today. DeFi–specifically liquid staking, streaming fees, and Index Coop–can help with this.</p>
+<p>gtcETH gives token holders the ability to earn and share diversified staking rewards with the Gitcoin DAO by holding an index of the top liquid staking tokens and enabling a streaming fee. For gtcETH token holders, the annualized streaming fee of 2.00% (1.75% for the Gitcoin DAO and 0.25% for Index Coop) is collected in a passive fashion, so aside from buying and holding the token, gtcETH holders don’t have to do anything to earn staking rewards for themselves and fund public goods. For Gitcoin, gtcETH provides a consistent, subscription-like revenue stream for funding grants and/or bounties as well as a low-friction access point for contributions. gtcETH also provides a positive-sum option for those considering donations because token holders retain price exposure to ETH and earn some staking rewards while simultaneously donating to public goods (versus an outright donation where the user must forfeit their ETH).</p>
+<p>gtcETH will utilize the dsETH methodology and technology, so users can effectively distribute their stake across the top liquid staking protocols and earn an aggregate staking return (minus the streaming fee). Rather than selecting a single liquid staking token and concentrating risk, gtcETH token holders benefit from its innate diversification - both at the asset and the protocol layer. The methodology is also weighted towards protocols with more node operators and balanced distribution of stake, with the objective of encouraging decentralization and competition in the on-chain liquid staking market.</p>
+<h2>
+<a name="specification-5" class="anchor" href="https://gov.gitcoin.co#specification-5"></a>Specification</h2>
+<p>gtcETH will be built on Index Protocol and contain Rocket Pool, Lido, and StakeWise liquid staking tokens. Lido’s stETH will be wrapped in order to accommodate its rebasing nature, and StakeWise rewards will be reinvested on a periodic basis into sETH2.</p>
+<p>Flash Minting (and Redeeming) will be enabled at launch, allowing users to deposit ETH or ERC20s and receive gtcETH tokens in return.</p>
+<p>Though there are many different liquid staking tokens in the DeFi ecosystem today, there are no on-chain offerings that enable users to earn staking rewards and contribute to public goods simultaneously. However, this table presents the liquid staking tokens that will be present in gtcETH and their respective yields:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>token</th>
+<th>Issuing Protocol</th>
+<th>Protocol Fees</th>
+<th>APR (<a href="https://www.rated.network/dseth?network=mainnet">sources</a>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wstETH</td>
+<td>Lido</td>
+<td>10% of rewards</td>
+<td>5.2%</td>
+</tr>
+<tr>
+<td>rETH</td>
+<td>Rocket Pool</td>
+<td>15% of rewards</td>
+<td>4.7%</td>
+</tr>
+<tr>
+<td>sETH2</td>
+<td>StakeWise</td>
+<td>10% of rewards</td>
+<td>5.3%</td>
+</tr>
+</tbody>
+</table>
+</div><p>As a result, the initial composition for gtcETH will yield a 2.99% Net APR after accounting for the streaming fee (2.00% in total). This is a simple projection, and it is worth noting that a variety of factors - percentage of ETH staked, network fees, fee burn - fundamentally affect reward rates (thus yield is subject to change over time).</p>
+<h2>
+<a name="example-composition-6" class="anchor" href="https://gov.gitcoin.co#example-composition-6"></a>Example composition</h2>
+<p>dsETH will have the following composition at launch:</p>
+<ul>
+<li>Rocket Pool rETH: 43.9%</li>
+<li>Lido (w)stETH: 29.7%</li>
+<li>StakeWise sETH2: 26.4%</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a3f965d08b53b20b1d3bb63b82e0cb1a66d3ecfa.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/a3f965d08b53b20b1d3bb63b82e0cb1a66d3ecfa" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a3f965d08b53b20b1d3bb63b82e0cb1a66d3ecfa_2_624x387.png" alt="" data-base62-sha1="noA9Ulx8bPwT5xY7QyYjhkIavbA" width="624" height="387" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a3f965d08b53b20b1d3bb63b82e0cb1a66d3ecfa_2_624x387.png, https://gov.gitcoin.co/uploads/db4391/original/2X/a/a3f965d08b53b20b1d3bb63b82e0cb1a66d3ecfa.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/a/a3f965d08b53b20b1d3bb63b82e0cb1a66d3ecfa.png 2x" data-dominant-color="D5CDBE"></a></div><p></p>
+<p>Rewards earned by the underlying assets will gradually accrue to the token’s value and be realized in the form of price appreciation. The annualized streaming fee is captured block-by-block via inflation.</p>
+<h2>
+<a name="backtest-results-7" class="anchor" href="https://gov.gitcoin.co#backtest-results-7"></a>Backtest results</h2>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/6/6034b7f432d55f7d93141d67cb395e54cdf746b1.png" alt="" data-base62-sha1="dJ4MK4i4YsmDZJjqquqrlAivBjr" width="624" height="387" role="presentation"></p>
+<p>Backtest calculations are shown for March - August 2022. The former is the earliest date for which complete price history is available for all constituents. This plot is shown with dsEth, but gtcETH will be the same given its 1:1 pair with dsETH.</p>
+<p>The green plot shows the price history of gtcETH in USD terms, the blue plot gtcETH spot price in ETH terms, and the red plot gtcETH “NAV” price in ETH terms. It is important to note that the gtcETH “NAV” price (red) assumes 1:1 exchangeability between the underlyings and ETH. The gtcETH spot price in ETH terms (blue) can decrease due to decoupling between the underlying staked ETH tokens and ETH; an example would be the discounted exchange rate for stETH relative to ETH. Historical data on node operators were not available so we assumed a uniform allocation across the constituents.</p>
+<h2>
+<a name="size-of-opportunity-8" class="anchor" href="https://gov.gitcoin.co#size-of-opportunity-8"></a>Size of Opportunity</h2>
+<p>Over $50m has been donated to and distributed by Gitcoin since 2017 in support of public goods. The Gitcoin Grants program accounts for $32m of that sum, with a median value of $1.14 and an average value of $14.26. In simple terms, if a user were to hold 1 gtcETH token for a year and earn a 5% gross staking APR during that time, their gtcETH token would ≈ 1.03 ETH and they will have contributed ~0.0175 ETH to Gitcoin over that period; applying a constant ETH price of $1,700, that contribution would be worth $29.75, or double the average historical contribution.</p>
+<p>Additionally, at a TVL of $1m, gtcETH would contribute ~$17,500 annually to Gitcoin Grants. On a quarterly basis, this would earn gtcETH a top ten spot in Gitcoin’s <a href="https://gitcoin.co/leaderboard/payers?cadence=quarterly&amp;keyword=&amp;product=all">Funders Leaderboard</a> while also earning gtcETH holders the net staking rate themselves.</p>
+<h2>
+<a name="benefits-9" class="anchor" href="https://gov.gitcoin.co#benefits-9"></a>Benefits</h2>
+<p>Given the size of the opportunity, and the simple rebalancing, this initiative would yield an always on source of funding for our Matching Pool. The product is based on the dsETH product and benefits from the security and contract audits to ensure users funds are secure and able to participate in the yield from the collection of underlying assets.</p>
+<p>This is also Gitcoin’s first opportunity to partner with Index Coop on a novel mechanism for funding public goods. Index has been a leader in the index fund creation and management having created multiple index funds to enable exposure to a basket of tokens without requiring users to be experts in selecting those tokens. In our case, we receive the upside and knowledge of the product while offering users the ability to fund public goods in a way that grows the value of their investment, and our funding for public goods.</p>
+<p>gtcETH will offer a funding option to those who dont always know which grants to select themselves. The yield from both the index, and the liquidity pool position will yield funding results for the DAO and the matching pool.</p>
+<h2>
+<a name="drawbacks-10" class="anchor" href="https://gov.gitcoin.co#drawbacks-10"></a>Drawbacks</h2>
+<p>This product (gtcETH) will be tied hand in hand to dsETH – while this has many benefits, it also has the drawbacks that any negative outcomes of dsETH will also affect gtcETH. It is worth noting, that while the majority of fees for gtcETH will be going to public goods, not 100% of the fees will be going to public goods as Index Coop will retain their same 0.25% fee.</p>
+<p>We will be withdrawing a modest amount of ETH to help seed the liquidity pool and ensure future gtcETH holders are able to swap into the position. This ETH is just sitting in our matching pool today, not “working” for us, but by moving it to an LP there is always the risk of impermanent loss.</p>
+<h2>
+<a name="vote-11" class="anchor" href="https://gov.gitcoin.co#vote-11"></a>Vote</h2>
+<p>I am requesting a vote that will accomplish the following (a yes vote would do…):</p>
+<ol>
+<li>
+<p>Formalize the relationship between us and Index Coop and enable co-branding and marketing of the new gtcETH product (if it passes the Index Coop governance)</p>
+</li>
+<li>
+<p>Move 100 ETH from the matching pool multi sig to fund two LP positions (50ETH each LP):<br>
+2.1 pair gtcETH against dsETH in a 1bp pool<br>
+2.2 pair gtcETH against ETH in a 5bps pool<br>
+(The two pools ensure deeper liquidity and reduce swapping fees for moving into gtcETH while also ensuring arb opportunities exist between dsETH and gtcETH to ensure they stay near parity in price)</p>
+</li>
+<li>
+<p>Work with Index Coop to rebalance the product on a ~quarterly/monthly cadence as needed.</p>
+</li>
+</ol>
+<p>A no vote would prevent us from funding the initial liquidity, but may not materially change Index Coop’s decision to build and launch the product for us.</p>
+<h2>
+<a name="revision-history-12" class="anchor" href="https://gov.gitcoin.co#revision-history-12"></a>Revision history</h2>
+<p>[2022.02.20] Made some updates to the impact results Gitcoin has had. Thanks <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> for the suggestions.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-001-passed-funding-indexcoop-gtceth-offering/13013/1
+        Mon, 20 Feb 2023 16:02:33 +0000
+gov.gitcoin.co-post-13013-1
+[GCP-001] - PASSED - Funding IndexCoop gtcETH offering
+      
+
+

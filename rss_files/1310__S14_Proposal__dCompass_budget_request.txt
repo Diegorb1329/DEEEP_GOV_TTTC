@@ -1,0 +1,608 @@
+
+
+
+[S14 Proposal] dCompass budget request
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412
+    **TLDR**
+
+The dCompass workstream is requesting a total of 110 200$ (19k GTC - $5.8/GTC) for Season 14, which is 2 times less than our previous budget request and it will be the last season that dCompass receives recurrent funding from Gitcoin DAO's treasury.
+
+The focus for this season will be on:
+- Season 13 catch up:
+  * Beta release & deployment on Polygon
+  * Onboarding new projects, DAOs and protocols
+- Season 14 goals:
+  * Gitcoin quests migration over dCompass
+  * Build incentives for quest creators
+
+**Milestone Report**
+
+**Contributors** : 
+- 3 full-time devs
+- 6 part-time (Alp moving from FT to PT, adding 2 new PT contributors)
+  - 1 new dev
+  - 1 new token engineer
+  - 1 scrum master/PM
+  - 1 designer
+  - 1 business dev
+  - 1 content creator/quest migrator
+
+**Funds spent**: 16 291 GTC (April spendings included but not yet executed)
+**Funds carrying over the next quarter**: 26 691 GTC
+**Have the actions of the workstream brought back value into the DAO/treasury** ?
+Not yet but we do expect to generate value and revenue by the end of Season 14.
+
+**Season 13 retrospective**
+[v] = success [x] = failure
+
+**Main goals:**
+- [v] Rewarding users going through pathways & quests
+- [v] [Alpha release](http://alpha.dcompass.xyz/) on the Rinkeby testnet and Schelling Point live demo
+- [x] Beta release & deployment on mainnet and Polygon
+- [x] Onboarding new projects, DAOs and protocols
+
+**Product goals:**
+* [v] Project Sponsor Pass (stake required to submit a project for review)
+* ~~If any, display all the smart contracts of a project~~
+* [v] ERC20 allocation and distribution for pathway and quest creation
+* [v] Claim ERC20, ERC701 and ERC1155 rewards
+* [v] Public profile page & browse profiles by pathway & quests progress(eg: query all users that completed the Gitcoin Grants 101 pathway)
+* [v] Performance, additional datastore to act as a caching layer such as ThreadDB or PostgreSQL
+* [v] [Website](https://dcompass.framer.website/) (about, features, values, go to dapp)
+* [v] Allow users to ~~choose between~~ use markdown ~~or use the Gitbook integration~~ for pathway & quest guides
+* [x] Smart contract audits, mandatory before going to production and we’d appreciate any advice from the community on our [contracts ](https://github.com/Discovery-Labs/dCompass/tree/main/packages/hardhat/contracts).
+* [x] Beta launch on mainnet and Polygon + research and potential deployment on other scaling solutions
+* [WIP] Responsiveness
+
+**Proposal Body**
+
+***Season 14 Roadmap***
+
+* [As a pathway or quest creator, I want the option to create a pathway or quest for free](https://trello.com/c/Bsa0GnoW)
+* [As a quest creator I want an incentive to create quests (tip creator and/or give % on the reward allocation fee)](https://trello.com/c/B4pV7aZI)
+* Edit [project](https://trello.com/c/MhrBt9gW), [pathway](https://alpha.dcompass.xyz/profile) & [quest](https://trello.com/c/KbSsztsm)
+* [As an adventurer I will get rate limited on my answer submition for a quiz](https://trello.com/c/WdpmDMIy)
+* [Skill tree (progress per project & pathway)](https://trello.com/c/Jo8PP67t)
+* User testing and user feedback improvements
+* New quest type "open challenge" (design contest, bug bounty, etc)
+* Security audits by [code4rena](https://code4rena.com/)
+* Beta release on Polygon
+* Tokenomics draft for the v1 of our token
+* Documentation and engineering wiki
+* Gitcoin quests migration over dCompass
+
+***Budget distribution***
+![Capture d’écran 2022-04-26 à 20.21.02|690x343](upload://2sdNJ2m0mAAY5ZdswhOaGD09Fl3.png)
+
+## **Vote**
+
+**FOR** - If you vote “yes”, the **dCompass Workstream** will get funded for a last season, and the proposed budget above will be allocated to the multisig of the dCompass Workstream `0x756239E5B7D2aa6F3DA0594B296952121Fb71606` and we would work towards a mutual grant agreement post Season 14.
+
+**AGAINST** - If you vote “no”, the dCompass Workstream won’t be funded by the Gitcoin DAO anymore and the requested budget won’t be allocated.
+Mon, 09 May 2022 18:15:56 +0000
+📜 Proposals
+
+
+[S14 Proposal] dCompass budget request
+owocki
+
+            <aside class="quote no-group" data-username="Huxwell" data-post="19" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"> Huxwell:</div>
+<blockquote>
+<p>I’ve never said that and it seems clear on the conclusion of the same post that you quote above</p>
+</blockquote>
+</aside>
+<p>OK - Sounds Good.  Maybe I misread. Thanks for clarifying.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/20
+        Mon, 09 May 2022 18:15:56 +0000
+gov.gitcoin.co-post-10412-20
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Huxwell
+
+            <p>No that’s not what I’m saying! I mean that in the worst case scenario, if we were not able to deliver the MVP in production after season 14, I thought that it would be considered as a failure for Gitcoin DAO and that the community wouldn’t even consider our mutual grant proposal.</p>
+<aside class="quote no-group quote-modified" data-username="owocki" data-post="18" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<aside class="quote no-group" data-username="Huxwell" data-post="4" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"> Huxwell:</div>
+<blockquote>
+<p>Sorry it was a clumsy statement coming from <a href="https://gov.gitcoin.co/t/constructing-a-mutual-grants-committee/10347">this post</a>, in the context of a failure, why would Gitcoin even bother for a mutual grant ?</p>
+</blockquote>
+</aside>
+<p>Are you saying that dCompass has no funding options other than GitcoinDAO?</p>
+<p>I believe that we shouldn’t be investing in teams that won’t invest in themselves. If dCompass isn’t going to continue without funding from GitcoinDAO, that’s a pretty negative signal to me.</p>
+</blockquote>
+</aside>
+<p>I’ve never said that and it seems clear on the conclusion of the same post that you quote above</p>
+<aside class="quote no-group" data-username="Huxwell" data-post="4" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"> Huxwell:</div>
+<blockquote>
+<p><strong>But even if we stop getting funded by Gitcoin</strong>, <strong>we’ll continue to work on the product anyway</strong> and I’m confident that we’ll get better and better. So having a mutual grant agreement regardless the outcome of this proposal makes a lot of sense.</p>
+</blockquote>
+</aside>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/19
+        Mon, 09 May 2022 18:14:35 +0000
+gov.gitcoin.co-post-10412-19
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+owocki
+
+            <aside class="quote no-group quote-modified" data-username="Huxwell" data-post="1" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"> Huxwell:</div>
+<blockquote>
+<p>If you vote “no”, the dCompass Workstream won’t be funded or supported by the Gitcoin DAO … no mutual grant agreement would be created.</p>
+</blockquote>
+</aside>
+<p>Did I read this right?  dCompass will be renegging on the previously offered governance rights if this proposal is not funded? (see below)</p>
+<aside class="quote no-group" data-username="Huxwell" data-post="7" data-topic="10356">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/discussion-dcompass-release-plan-and-beyond/10356/7">[Discussion] dCompass - release plan and beyond</a></div>
+<blockquote>
+<p>Yes Gitcoin DAO should have a say in the governance of the dCompass DAO. Gitcoin is the biggest funder so far and it makes sense if it’s one of the main governing entity of the dCompass DAO.</p>
+<p>I’m open to negotiate regarding the amount but we can offer 2 seats in our council, which is currently a 3/5 multisig that we can update to be 5/8 so by owning 2 seats, Gitcoin DAO would have 25% of the governance rights.</p>
+<p>If Gitcoin DAO continues to fund us (through GTC or any other token), we’re open to make a mutual grant agreement to make a swap between GTC and the DCOMP token for a maximum of 5% of our total supply.</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="Huxwell" data-post="4" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"> Huxwell:</div>
+<blockquote>
+<p>Sorry it was a clumsy statement coming from <a href="https://gov.gitcoin.co/t/constructing-a-mutual-grants-committee/10347">this post</a>, in the context of a failure, why would Gitcoin even bother for a mutual grant ?</p>
+</blockquote>
+</aside>
+<p>Are you saying that dCompass has no funding options other than GitcoinDAO?</p>
+<p>I believe that we shouldn’t be investing in teams that won’t invest in themselves.  If dCompass isn’t going to continue without funding from GitcoinDAO, that’s a pretty negative signal to me.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/18
+        Mon, 09 May 2022 17:45:06 +0000
+gov.gitcoin.co-post-10412-18
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Huxwell
+
+            <aside class="quote no-group" data-username="bobjiang" data-post="14" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bobjiang/48/676_2.png" class="avatar"> bobjiang:</div>
+<blockquote>
+<p>what is the goal (could benefit Gitcoin)? - maybe I missed some context.</p>
+</blockquote>
+</aside>
+<p>dCompass’ primary mission is to onboard, guide and educate users about trustworthy Web3 protocols and DAOs.</p>
+<aside class="quote no-group" data-username="bobjiang" data-post="14" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bobjiang/48/676_2.png" class="avatar"> bobjiang:</div>
+<blockquote>
+<ul>
+<li>what is the business model (revenue) after season 14 (or without funding from Gitcoin)?</li>
+</ul>
+</blockquote>
+</aside>
+<p>For the recurring revenue, there is a fee for the creation of quests with ERC20 tokens as rewards.</p>
+<p>We’re also working on a sponsor pass that might act as a partnership deal.</p>
+<aside class="quote no-group" data-username="bobjiang" data-post="14" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bobjiang/48/676_2.png" class="avatar"> bobjiang:</div>
+<blockquote>
+<p>what is the growth plan? (how to get more projects in and get more quests)</p>
+</blockquote>
+</aside>
+<p>The growth plan is to reach out to projects with some quests already built for their community and get feedback as well as users.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/17
+        Mon, 09 May 2022 17:23:43 +0000
+gov.gitcoin.co-post-10412-17
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+griff
+
+            <p>This is a great proposal, and a great project… but I have to vote no on this proposal as is… sadly given the current market conditions I don’t think the DAO can take on revitalizing quests :-/</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/16
+        Mon, 09 May 2022 15:09:07 +0000
+gov.gitcoin.co-post-10412-16
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Pop
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/huxwell">@Huxwell</a> it would be great to have these addressed before the council call happening this afternoon CET</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/15
+        Mon, 09 May 2022 09:35:45 +0000
+gov.gitcoin.co-post-10412-15
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+bobjiang
+
+            <p>for dCompass,<br>
+I have some questions:</p>
+<ol>
+<li>what is the goal (could benefit Gitcoin)? - maybe I missed some context.</li>
+<li>what is the business model (revenue) after season 14 (or without funding from Gitcoin)?</li>
+<li>what is the growth plan? (how to get more projects in and get more quests)</li>
+</ol>
+<p>Thanks</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/14
+        Mon, 09 May 2022 06:59:26 +0000
+gov.gitcoin.co-post-10412-14
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+annika
+
+            <p>Jumping in to provide my two cents as I go through all the proposals.</p>
+<p>At a macro level, I very much also echo the questions raised about whether dCompass should continue to exist as a workstream in the context of the DAO. While the Trello links are helpful to dive into some of the specific objectives, I believe this budget request lacks context as to the ‘why’ of dCompass &amp; the broader vision it is setting out to accomplish, and how that fits into the rest of the work the DAO does.</p>
+<p>Given our focus on Grants 2.0 &amp; becoming a Protocol DAO and my lack of clarity as to how dCompass fits into that, I plan to vote ‘no’ on this budget request. That said, I am eager to explore <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a>’s suggestion of evaluating dCompass in a Mutual Grants context.</p>
+<p>Finally, if this budget request is indeed pushed forward as a workstream funding request as proposed - to <a class="mention" href="https://gov.gitcoin.co/u/fishbiscuit">@fishbiscuit</a>’s point, in keeping consistent with the approach of all the other workstreams, I believe the requested amount should be 3.5K GTC, not 19K GTC.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/13
+        Mon, 09 May 2022 04:43:45 +0000
+gov.gitcoin.co-post-10412-13
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Sirlupinwatson
+
+            <p>Last conversation that we had was to meet up with <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> and start to plan/design a business plan/roadmap that could be sustainable in the future, have you guys work on that part?</p>
+<p>I would personally love to see this project come to life, I do not wish to put any blockers on that but we should look back in time on what is working and what is not at this point and decide if a mutual grant or still being funded by the organization is the right fit.</p>
+<p>The gitcoin Flywheel: Learning while earning/meeting and creating more leaders… In that retrospective I am still supporting this project</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/12
+        Thu, 05 May 2022 12:11:51 +0000
+gov.gitcoin.co-post-10412-12
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+DisruptionJoe
+
+            <p>I think dCompass should be moved to a mutual grant. Gitcoin should see upside in the product, but not run it.</p>
+<p>That also means not being a workstream which participates in CSDO.</p>
+<p>Overall, I’m very supportive of dCompass. I’d like to see them get the funding they need via the mutual grant structure rather than the workstream structure.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/11
+        Wed, 04 May 2022 11:40:54 +0000
+gov.gitcoin.co-post-10412-11
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Huxwell
+
+            <aside class="quote no-group" data-username="lefterisjp" data-post="9" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lefterisjp/48/24_2.png" class="avatar"> lefterisjp:</div>
+<blockquote>
+<p>What are some of the bullet points? Any link for more information/explanation?</p>
+<p>What is <code>Free quest creation</code> , what is reward alocation etc. ?</p>
+</blockquote>
+</aside>
+<p>Sorry about the lack of context, I’ve updated the Season 14 goals with a link to the respective Trello cards with more informations.</p>
+<p>I hope that it can help for now but we’ll work on official documentation during S14.</p>
+<aside class="quote no-group" data-username="lefterisjp" data-post="9" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lefterisjp/48/24_2.png" class="avatar"> lefterisjp:</div>
+<blockquote>
+<p><strong>Budget</strong></p>
+<p>As I am writing to the other workstreams I would like to generally tighen the belt for everyone as we are in a bear and we need to ensure the continuing existence of Gitcoin DAO and the completion of its main goals.</p>
+<p>But looking at your budget it seems pretty logical. With $6 per GTC and 9 people for 3 months it seems to amount to $3,555 per person per month. Which is a normal salary for us in Europe.</p>
+<p>But compared to the other budgets I have seen it’s much smaller. Do I misunderstand something? Is it not 9 people who will be paid their salaries through this?</p>
+</blockquote>
+</aside>
+<p>Yes the calculation is pretty much right as an average for the PT &amp; FT contributors. I’d even say that we’re underpaying ourselves if we were to compare with the dev salaries of other workstreams/in the space. But we were fine with that as it reduces our burn rate and helps the project over the long run.</p>
+<p>Gitcoin DAO is doing a good job at incubating us!<br>
+However, we have bigger needs than what’s on our budget request and I don’t think that it would be healthy to stay as a workstream that keeps requesting more GTC over time while the focus of the DAO seems to be around funding other initiatives.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/10
+        Tue, 03 May 2022 12:15:21 +0000
+gov.gitcoin.co-post-10412-10
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+lefterisjp
+
+            <p><strong>Roadmap</strong></p>
+<p>I would like some clarification on the goals.</p>
+<p>What are some of the bullet points? Any link for more information/explanation?</p>
+<p>What is <code>Free quest creation</code>, what is reward alocation etc. ?</p>
+<p><strong>Budget</strong></p>
+<p>As I am writing to the other workstreams I would like to generally tighen the belt for everyone as we are in a bear and we need to ensure the continuing existence of Gitcoin DAO and the completion of its main goals.</p>
+<p>But looking at your budget it seems pretty logical. With $6 per GTC and 9 people for 3 months it seems to amount to $3,555 per person per month. Which is a normal salary for us in Europe.</p>
+<p>But compared to the other budgets I have seen it’s much smaller. Do I misunderstand something? Is it not 9 people who will be paid their salaries through this?</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/9
+        Tue, 03 May 2022 09:07:51 +0000
+gov.gitcoin.co-post-10412-9
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Fishbiscuit
+
+            <p>Yes, hence the format that most workstreams have followed thus far is:</p>
+<p>Requested Budget + 60-days reserve - current reserves</p>
+<p>This will probably suffice for this workstream.</p>
+<p>Which would be<br>
+19k + 11.4k - 26.9k = 3.5k GTC</p>
+<p>*as another note, I don’t think 3000 GTC is enough for smart contract audits</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/8
+        Mon, 02 May 2022 21:16:15 +0000
+gov.gitcoin.co-post-10412-8
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Huxwell
+
+            <aside class="quote no-group" data-username="Fishbiscuit" data-post="6" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/fishbiscuit/48/3739_2.png" class="avatar"> Fishbiscuit:</div>
+<blockquote>
+<p>I’d like a clarification on the need to fund dCompass for this quarter as there’s currently more funds carried over this quarter than the requested budget itself.</p>
+</blockquote>
+</aside>
+<p>Yes we could eventually use the funds carrying over this season but then it means that we wouldn’t have any reserve at all when Season 14 ends.<br>
+So if the mutual grant agreement isn’t set up by then it means we will be without funds during our product launch… and I think that no one in our workstream would be comfortable with that.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/7
+        Mon, 02 May 2022 21:00:54 +0000
+gov.gitcoin.co-post-10412-7
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Fishbiscuit
+
+            <p>I’d like a clarification on the need to fund dCompass for this quarter as there’s currently more funds carried over this quarter than the requested budget itself.</p>
+<p>Can dCompass sustain itself this quarter without requesting for more budget? It does seem possible based on the budget breakdown hence for now there isn’t much need to get funding either.</p>
+<p>Thank you!</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/6
+        Mon, 02 May 2022 20:15:52 +0000
+gov.gitcoin.co-post-10412-6
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+kyle
+
+            <aside class="quote no-group" data-username="Huxwell" data-post="4" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"> Huxwell:</div>
+<blockquote>
+<p>in the context of a failure, why would Gitcoin even bother for a mutual grant ?</p>
+</blockquote>
+</aside>
+<p>This is a great question and something I want to really make sure I spell out. A decision to not fund dCompass (IMO) is not because it is a failure. It would be because Gitcoin needs to focus on the most important thing and cover off spend in areas that are adjacent to its core protocol ambitions.</p>
+<p>The work you are doing, the product you are building and community you are growing is not something I would ever call a failure. It may be something that now longer fits where Gitcoin can spend resources though. Hopefully you don’t assume that a decision to not fund in S14 means failure. It could mean instead that its time for Gitcoin to refocus where it invests, and for you to continue to grow and launch to see if you can get traction.</p>
+<aside class="quote no-group" data-username="Huxwell" data-post="4" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"> Huxwell:</div>
+<blockquote>
+<p>But even if we stop getting funded by Gitcoin, we’ll continue to work on the product anyway and I’m confident that we’ll get better and better. So having a mutual grant agreement regardless the outcome of this proposal makes a lot of sense.</p>
+</blockquote>
+</aside>
+<p>This is great to hear. Thanks for calling that out.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/5
+        Mon, 02 May 2022 15:36:49 +0000
+gov.gitcoin.co-post-10412-5
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Huxwell
+
+            <aside class="quote no-group" data-username="kyle" data-post="2" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Hey Huxwell, I want to call out that this really rubbed me the wrong way - “no mutual grant agreement would be created.”</p>
+</blockquote>
+</aside>
+<p>Sorry it was a clumsy statement coming from <a href="https://gov.gitcoin.co/t/constructing-a-mutual-grants-committee/10347">this post</a>, in the context of a failure, why would Gitcoin even bother for a mutual grant ?</p>
+<aside class="quote no-group" data-username="Huxwell" data-post="8" data-topic="10347">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/constructing-a-mutual-grants-committee/10347/8">Constructing a Mutual Grants Committee</a></div>
+<blockquote>
+<p><strong>Pessimistic scenario:</strong><br>
+If dCompass was to fail again for accomplishing the Season 13 goals (going to production and hitting KPIs) then no mutual grant agreement would be created.</p>
+</blockquote>
+</aside>
+<p>But even if we stop getting funded by Gitcoin, we’ll continue to work on the product anyway and I’m confident that we’ll get better and better. So having a mutual grant agreement regardless the outcome of this proposal makes a lot of sense.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/4
+        Mon, 02 May 2022 15:21:36 +0000
+gov.gitcoin.co-post-10412-4
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Pop
+
+            <p>Echoing the intensity of the YES/NO vote dynamic in terms of relationship and work that has already been done together. As the past couple of seasons’ milestone reports show, the workstream can improve on delivery so a collaborative vs a split approach may be more constructive?</p>
+<p>And apologies if I missed this but wasn’t there a plan to work with <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> on a potential business plan? Or a finer delineation of structure, setup and mission?</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/3
+        Mon, 02 May 2022 10:05:59 +0000
+gov.gitcoin.co-post-10412-3
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+kyle
+
+            <aside class="quote no-group quote-modified" data-username="Huxwell" data-post="1" data-topic="10412">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"> Huxwell:</div>
+<blockquote>
+<p>If you vote “no”, the dCompass Workstream won’t be funded or supported by the Gitcoin DAO … no mutual grant agreement would be created.</p>
+</blockquote>
+</aside>
+<p>Hey Huxwell, I want to call out that this really rubbed me the wrong way - “no mutual grant agreement would be created.” Gitcoin has bootstrapped your entire development effort, extended its brand, conference and community for you test your ideas thus far (AFAIK). Putting the point in here that no funding for S14 would have you walk away from that support with no upside to Gitcoin is wild to me.</p>
+<p>I wonder if I am miss-understanding what you mean here?</p>
+<p>Asking for 19k GTC is relatively small, but dCompass has continually missed outcomes is has stated it would achieve and fails to attract traction (outside of those in Gitcoin trying to support your efforts with paths like Grants and FDD). I believe you are learning an immense amount about why it is so hard to start a project as a technical founder and still make progress on growing/testing your hypothesis, but largely defecting from the Gitcoin DAO does not seem to have paid off.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/2
+        Mon, 02 May 2022 05:16:55 +0000
+gov.gitcoin.co-post-10412-2
+[S14 Proposal] dCompass budget request
+      
+
+[S14 Proposal] dCompass budget request
+Huxwell
+
+            <p><strong>TLDR</strong></p>
+<p>The dCompass workstream is requesting a total of 110 200$ (19k GTC - $5.8/GTC) for Season 14, which is 2 times less than our previous budget request and it will be the last season that dCompass receives recurrent funding from Gitcoin DAO’s treasury.</p>
+<p>The focus for this season will be on:</p>
+<ul>
+<li>Season 13 catch up:
+<ul>
+<li>Beta release &amp; deployment on Polygon</li>
+<li>Onboarding new projects, DAOs and protocols</li>
+</ul>
+</li>
+<li>Season 14 goals:
+<ul>
+<li>Gitcoin quests migration over dCompass</li>
+<li>Build incentives for quest creators</li>
+</ul>
+</li>
+</ul>
+<p><strong>Milestone Report</strong></p>
+<p><strong>Contributors</strong> :</p>
+<ul>
+<li>3 full-time devs</li>
+<li>6 part-time (Alp moving from FT to PT, adding 2 new PT contributors)
+<ul>
+<li>1 new dev</li>
+<li>1 new token engineer</li>
+<li>1 scrum master/PM</li>
+<li>1 designer</li>
+<li>1 business dev</li>
+<li>1 content creator/quest migrator</li>
+</ul>
+</li>
+</ul>
+<p><strong>Funds spent</strong>: 16 291 GTC (April spendings included but not yet executed)<br>
+<strong>Funds carrying over the next quarter</strong>: 26 691 GTC<br>
+<strong>Have the actions of the workstream brought back value into the DAO/treasury</strong> ?<br>
+Not yet but we do expect to generate value and revenue by the end of Season 14.</p>
+<p><strong>Season 13 retrospective</strong><br>
+[v] = success [x] = failure</p>
+<p><strong>Main goals:</strong></p>
+<ul>
+<li>[v] Rewarding users going through pathways &amp; quests</li>
+<li>[v] <a href="http://alpha.dcompass.xyz/" rel="noopener nofollow ugc">Alpha release</a> on the Rinkeby testnet and Schelling Point live demo</li>
+<li>[x] Beta release &amp; deployment on mainnet and Polygon</li>
+<li>[x] Onboarding new projects, DAOs and protocols</li>
+</ul>
+<p><strong>Product goals:</strong></p>
+<ul>
+<li>[v] Project Sponsor Pass (stake required to submit a project for review)</li>
+<li><s>If any, display all the smart contracts of a project</s></li>
+<li>[v] ERC20 allocation and distribution for pathway and quest creation</li>
+<li>[v] Claim ERC20, ERC701 and ERC1155 rewards</li>
+<li>[v] Public profile page &amp; browse profiles by pathway &amp; quests progress(eg: query all users that completed the Gitcoin Grants 101 pathway)</li>
+<li>[v] Performance, additional datastore to act as a caching layer such as ThreadDB or PostgreSQL</li>
+<li>[v] <a href="https://dcompass.framer.website/" rel="noopener nofollow ugc">Website</a> (about, features, values, go to dapp)</li>
+<li>[v] Allow users to <s>choose between</s> use markdown <s>or use the Gitbook integration</s> for pathway &amp; quest guides</li>
+<li>[x] Smart contract audits, mandatory before going to production and we’d appreciate any advice from the community on our <a href="https://github.com/Discovery-Labs/dCompass/tree/main/packages/hardhat/contracts" rel="noopener nofollow ugc">contracts </a>.</li>
+<li>[x] Beta launch on mainnet and Polygon + research and potential deployment on other scaling solutions</li>
+<li>[WIP] Responsiveness</li>
+</ul>
+<p><strong>Proposal Body</strong></p>
+<p><em><strong>Season 14 Roadmap</strong></em></p>
+<ul>
+<li><a href="https://trello.com/c/Bsa0GnoW" rel="noopener nofollow ugc">As a pathway or quest creator, I want the option to create a pathway or quest for free</a></li>
+<li><a href="https://trello.com/c/B4pV7aZI" rel="noopener nofollow ugc">As a quest creator I want an incentive to create quests (tip creator and/or give % on the reward allocation fee)</a></li>
+<li>Edit <a href="https://trello.com/c/MhrBt9gW" rel="noopener nofollow ugc">project</a>, <a href="https://alpha.dcompass.xyz/profile" rel="noopener nofollow ugc">pathway</a> &amp; <a href="https://trello.com/c/KbSsztsm" rel="noopener nofollow ugc">quest</a>
+</li>
+<li><a href="https://trello.com/c/WdpmDMIy" rel="noopener nofollow ugc">As an adventurer I will get rate limited on my answer submition for a quiz</a></li>
+<li><a href="https://trello.com/c/Jo8PP67t" rel="noopener nofollow ugc">Skill tree (progress per project &amp; pathway)</a></li>
+<li>User testing and user feedback improvements</li>
+<li>New quest type “open challenge” (design contest, bug bounty, etc)</li>
+<li>Security audits by <a href="https://code4rena.com/" rel="noopener nofollow ugc">code4rena</a>
+</li>
+<li>Beta release on Polygon</li>
+<li>Tokenomics draft for the v1 of our token</li>
+<li>Documentation and engineering wiki</li>
+<li>Gitcoin quests migration over dCompass</li>
+</ul>
+<p><em><strong>Budget distribution</strong></em><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/11350fe649e01aa90a90093961b21042e1861415.png" data-download-href="/uploads/short-url/2sdNJ2m0mAAY5ZdswhOaGD09Fl3.png?dl=1" title="Capture d’écran 2022-04-26 à 20.21.02" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/1/11350fe649e01aa90a90093961b21042e1861415_2_690x343.png" alt="Capture d’écran 2022-04-26 à 20.21.02" data-base62-sha1="2sdNJ2m0mAAY5ZdswhOaGD09Fl3" width="690" height="343" srcset="/uploads/db4391/optimized/2X/1/11350fe649e01aa90a90093961b21042e1861415_2_690x343.png, /uploads/db4391/optimized/2X/1/11350fe649e01aa90a90093961b21042e1861415_2_1035x514.png 1.5x, /uploads/db4391/optimized/2X/1/11350fe649e01aa90a90093961b21042e1861415_2_1380x686.png 2x" data-small-upload="/uploads/db4391/optimized/2X/1/11350fe649e01aa90a90093961b21042e1861415_2_10x10.png"></a></div><p></p>
+<h2>
+<a name="vote-1" class="anchor" href="https://gov.gitcoin.co#vote-1"></a><strong>Vote</strong>
+</h2>
+<p><strong>FOR</strong> - If you vote “yes”, the <strong>dCompass Workstream</strong> will get funded for a last season, and the proposed budget above will be allocated to the multisig of the dCompass Workstream <code>0x756239E5B7D2aa6F3DA0594B296952121Fb71606</code> and we would work towards a mutual grant agreement post Season 14.</p>
+<p><strong>AGAINST</strong> - If you vote “no”, the dCompass Workstream won’t be funded by the Gitcoin DAO anymore and the requested budget won’t be allocated.</p>
+          <p><a href="https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s14-proposal-dcompass-budget-request/10412/1
+        Sun, 24 Apr 2022 17:20:32 +0000
+gov.gitcoin.co-post-10412-1
+[S14 Proposal] dCompass budget request
+      
+
+

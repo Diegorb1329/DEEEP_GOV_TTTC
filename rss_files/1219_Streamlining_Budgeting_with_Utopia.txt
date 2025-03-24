@@ -1,0 +1,219 @@
+
+
+
+Streamlining Budgeting with Utopia
+https://gov.gitcoin.co/t/streamlining-budgeting-with-utopia/11704
+    **Hello from Utopia**
+Hey Gitcoin, Utopia Labs’ Product team here! 👋 For those we haven’t met yet, we are a startup focused on enabling operational excellence for DAOs. We've been working with many of you to help streamline contributor payments and multi-sig management, and today we want to explore how we might also support Gitcoin’s seasonal budgeting process.
+
+**Context:**
+Many DAOs have been exploring budgeting as a means of scaling operations while maintaining decentralization. We believe Gitcoin is one of the furthest along in defining exactly what that process can look like, though we also think there may be an opportunity to help streamline that experience and relieve some of the manual work involved.
+
+In this post, we want to share our understanding of the budget approval process and explore some ideas for how we might streamline a few aspects of it. We'd love community feedback, especially as it pertains to a couple questions:
+
+1. What do you think is working well?
+2. What have we failed to consider or misunderstood?
+
+---
+
+**Our Understanding:**
+The Gitcoin forums have helped us develop an understanding of the budgeting process, in particular the [Workstream Accountability Flow](https://gov.gitcoin.co/t/gitcoin-dao-workstream-accountability-flow/9644) and [Budgeting Proposal Process v2](https://gov.gitcoin.co/t/budget-proposal-process-for-gitcoin-dao-v2/11168) posts. We’ve begun to think of a "budget lifecycle" as encompassing four general phases: planning, approval, execution, and evaluation.
+
+![|602x25](upload://k9GnrxiqNq3H1aa1MJpQemW2RJ.png)
+
+1. Planning Phase – New budget proposals are informally debated, per the DRAFT and INTEGRATED stages of the proposal process.
+2. Approval Phase – Budget proposals are moved to Snapshot and Tally, and ultimately approved or denied. Budgets in the ACTIVE, RATIFIED, and DENIED stages map to this phase of the larger budgeting process.
+3. Execution Phase – Where budgets live upon funding. This is when workstreams are actively spending against their budget, which includes work required to categorize spend against budget items.
+4. Evaluation Phase – Finally, at the end of the season, budgets and milestones are reviewed.
+
+The phases above take place across various surfaces and involve a range of tools such as Discord, Snapshot, Tally, Gnosis, Utopia, Google Sheets, etc.
+
+**A Potential Solution:**
+We believe the process can be streamlined by creating a live representation of a budget that reflects its health and status at all phases of the lifecycle. We’ll use [Moonshot Collective’s S14 Budget Request](https://gov.gitcoin.co/t/s14-proposal-amended-moonshot-collective-budget-request/10446) to demonstrate what this could look like:
+
+*Planning: Drafting the Budget*
+First, workstream operators can draft their budget proposal in Utopia and use our custom categories to outline individual budget items. If a budget is approved, we’ll automatically track spending against those categories to monitor budget health—more on that later.
+
+![|602x428](upload://dVOL0XybdKlz4nAAfELeEuPzy1.jpeg)
+
+Here’s what Moonshot Collective’s initial S14 budget could look like in Utopia:
+
+![|602x428](upload://xVAbT2efciqR2LohW3GI6leRXM3.jpeg)
+Once this draft has been created, we imagine it could be embedded or shared as a live preview anywhere the budget needs to be discussed. As the budget changes during planning, the live preview could automatically update to reflect the most recent proposal.
+
+![|602x429](upload://x1sQjwye1O3LCmrwPG0p1IBjSLY.jpeg)
+
+*Approval: Funding the Budget*
+Once a budget has been approved through governance, a workstream operator can “Request Funds” from the DAO Ops Safe. We imagine a future where funds might be requested from any safe, but for now we’ll assume the DAO Ops Safe is funding all workstream budgets.
+
+![|602x428](upload://cBBq19NMq9tTeRKHCOfhE5O2OcZ.jpeg)![|602x428](upload://90J4RXUwv1JIE7q6nhf8Hz2T5nZ.jpeg)
+Now let’s switch to the DAO Ops Safe Utopia account, where we can see this budget funding request alongside S14 requests from other workstreams.
+
+![|602x428](upload://tb2IkmbmvdtfhZ650yY8UeRdE7u.png)
+
+Since this budget has passed the Snapshot governance vote, we’ll go ahead and create a transaction to fund the budget from the Dao Ops Safe.
+
+![|602x428](upload://mXdJthtGqXRJn42sZ7hSIPKcGsk.jpeg)
+
+*Execution: Spending the Budget*
+If we switch back to the Moonshot Collective Safe, we can see that this budget was successfully funded. We’re now in the execution stage of the budget.
+
+S14 has begun, and the workstream is executing its objectives and spending funds as necessary.
+
+![|602x428](upload://ewR7oqm4Gz5AZdsj17VLrkoRwxr.png)
+
+When workstream members create new payments in the Moonshot Collective Safe, they are prompted to categorize those payments. Note that these categories are the same ones we used to define our budget items, enabling us to seamlessly track real-time spend against each budget category.
+
+![|602x428](upload://5ni6AJNAREct0rVGFZrSKRyHXqm.jpeg)
+
+Because this budget is now live, Moonshot Collective members can track the budget health in real-time from their payments page in Utopia. This is an easy way to understand how we’ve spent the budget and if we’re at risk of going over-budget in any given category. In the example below, we’re over-budget in the OP Partnership Initiative budget item.
+
+![|602x428](upload://jxCDwtigSiig8nZYqktrV4jqJhz.jpeg)
+
+*Evaluation: Monitoring the Budget*
+But wait, there’s more. Because the DAO Ops workstream funded this budget from their Utopia account, they’re also able to monitor the health of the budget from their account in real-time. Their Budgets page in Utopia becomes an easy way to monitor real-time budget health of all workstreams, as determined by the payment categories used in those workstreams.
+
+![|602x428](upload://w4kcfStjPxSsjAIpSsbF8aOfswt.jpeg)
+
+From here, there’s a ton of data visualization we can do to help you draw insights about budget spend. Budget forecasting and variance analysis would be relatively easy to report in real-time. At Utopia, we are passionate about treasury transparency and community accountability and we see this as a step forward in making it easy for DAO members to understand how the treasury is being spent in real-time.
+
+---
+
+**Next Steps**
+
+Right now, this work is purely conceptual, and we’re looking for feedback from Gitcoin and others on whether productizing the budget process like this would be valuable. As far as we can tell, this process is already happening manually in spreadsheets, and our hope is to streamline the process and reduce the administrative burden on operators.
+
+We'd love to get a conversation going here to help inform our thinking. What about this is working well? What have we failed to consider or misunderstood?
+Wed, 16 Nov 2022 18:53:09 +0000
+🤝 Partnerships
+
+
+Streamlining Budgeting with Utopia
+Jodi_GitcoinDAO
+
+            <aside class="quote no-group" data-username="krrisis" data-post="3" data-topic="11704">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/krrisis/48/6203_2.png" class="avatar"> krrisis:</div>
+<blockquote>
+<p>One extra Q, what would be the timing to develop such dashboards? Would this be a heavy lift? (especially knowing we probably only need part of the suggestions offered here at this moment)</p>
+</blockquote>
+</aside>
+<p>There isn’t a timeline. Utopia’s offer is to design a solution with us as partners. I can loop you with Josiah and catch you up on our last converation.</p>
+          <p><a href="https://gov.gitcoin.co/t/streamlining-budgeting-with-utopia/11704/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/streamlining-budgeting-with-utopia/11704/4
+        Wed, 16 Nov 2022 18:53:09 +0000
+gov.gitcoin.co-post-11704-4
+Streamlining Budgeting with Utopia
+      
+
+Streamlining Budgeting with Utopia
+krrisis
+
+            <p>Hey, thank you so much for sharing your thoughts here on how Utopia could help make our lives easier! Apologies for the late reply, some thoughts while reading this through again, as we are now - post budgeting for S16 looking into reporting solutions.</p>
+<aside class="quote no-group" data-username="scatterbrained" data-post="1" data-topic="11704">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/scatterbrained/48/7319_2.png" class="avatar"> scatterbrained:</div>
+<blockquote>
+<p>The Gitcoin forums have helped us develop an understanding of the budgeting process, in particular the <a href="https://gov.gitcoin.co/t/gitcoin-dao-workstream-accountability-flow/9644">Workstream Accountability Flow </a> and <a href="https://gov.gitcoin.co/t/budget-proposal-process-for-gitcoin-dao-v2/11168">Budgeting Proposal Process v2 </a> posts. We’ve begun to think of a “budget lifecycle” as encompassing four general phases: planning, approval, execution, and evaluation.</p>
+</blockquote>
+</aside>
+<p>This is indeed how we do this, although we do not spend enough time as a team on evaluation and reporting of past budget spent, and we’d like to improve here in the future.  Some thoughts on where I think you could help out in our process:</p>
+<p><strong>Planning:</strong><br>
+I think we will not immediately move away from the planning phase outside of Google docs, because we have a lot of back and forths on these between workstreams and with Stewards. Updating an embedded budget live during planning is a nice to have, but as it lives on the forum and amounts are referenced elsewhere, this could cause more confusion than really bring useful solutions.</p>
+<p><strong>Approval:</strong><br>
+This would add another step in our process (as we now send funds directly via Tally to the workstreams’ multisig), so not sure if this is an improvement.<br>
+But I do see the added value in being able to have a unified overview on spending. I wonder if this could be simplified by just having one Utopia account that can get ‘view only’ access to all of the details of spending of the various other multisigs for evaluation?</p>
+<p><strong>Execution</strong>:<br>
+No doubts here, this is super valuable for us.</p>
+<p><strong>Evaluation</strong>:<br>
+See above, this is really useful. Note, this would indeed be people in the DAO Ops workstream focusing on this but we might do this from a separate CSDO/DAO Ops accounting dashboard, which we’d like to make available cross-workstream, and potentially even to other whitelisted addresses (=our stewards), for increased transparency. We’d give it a separate name to avoid confusion, in the sense that DAO Ops also has its own budget.</p>
+<p>We could probably use a number of other visualizations here, on eg how much is spent on expenses vs contributors, how much vs previous season on that budget line (if existing) etc etc.</p>
+<p>These are just some thoughts that pop up, but to be discussed further, looking into solutions for deeper reporting solutions with my colleagues <a class="mention" href="https://gov.gitcoin.co/u/shawn16400">@shawn16400</a> &amp; <a class="mention" href="https://gov.gitcoin.co/u/jodi_gitcoindao">@Jodi_GitcoinDAO</a> at the moment, so this post is super timely and very much appreciated!</p>
+<p>One extra Q, what would be the timing to develop such dashboards? Would this be a heavy lift? (especially knowing we probably only need part of the suggestions offered here at this moment)</p>
+          <p><a href="https://gov.gitcoin.co/t/streamlining-budgeting-with-utopia/11704/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/streamlining-budgeting-with-utopia/11704/3
+        Wed, 16 Nov 2022 14:19:11 +0000
+gov.gitcoin.co-post-11704-3
+Streamlining Budgeting with Utopia
+      
+
+Streamlining Budgeting with Utopia
+DisruptionJoe
+
+            <p>Very well written and helpful post. Thank you for taking the time to share this.</p>
+          <p><a href="https://gov.gitcoin.co/t/streamlining-budgeting-with-utopia/11704/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/streamlining-budgeting-with-utopia/11704/2
+        Fri, 21 Oct 2022 12:52:56 +0000
+gov.gitcoin.co-post-11704-2
+Streamlining Budgeting with Utopia
+      
+
+Streamlining Budgeting with Utopia
+scatterbrained
+
+            <p><strong>Hello from Utopia</strong><br>
+Hey Gitcoin, Utopia Labs’ Product team here! <img src="https://emoji.discourse-cdn.com/twitter/wave.png?v=12" title=":wave:" class="emoji" alt=":wave:" loading="lazy" width="20" height="20"> For those we haven’t met yet, we are a startup focused on enabling operational excellence for DAOs. We’ve been working with many of you to help streamline contributor payments and multi-sig management, and today we want to explore how we might also support Gitcoin’s seasonal budgeting process.</p>
+<p><strong>Context:</strong><br>
+Many DAOs have been exploring budgeting as a means of scaling operations while maintaining decentralization. We believe Gitcoin is one of the furthest along in defining exactly what that process can look like, though we also think there may be an opportunity to help streamline that experience and relieve some of the manual work involved.</p>
+<p>In this post, we want to share our understanding of the budget approval process and explore some ideas for how we might streamline a few aspects of it. We’d love community feedback, especially as it pertains to a couple questions:</p>
+<ol>
+<li>What do you think is working well?</li>
+<li>What have we failed to consider or misunderstood?</li>
+</ol>
+<hr>
+<p><strong>Our Understanding:</strong><br>
+The Gitcoin forums have helped us develop an understanding of the budgeting process, in particular the <a href="https://gov.gitcoin.co/t/gitcoin-dao-workstream-accountability-flow/9644">Workstream Accountability Flow</a> and <a href="https://gov.gitcoin.co/t/budget-proposal-process-for-gitcoin-dao-v2/11168">Budgeting Proposal Process v2</a> posts. We’ve begun to think of a “budget lifecycle” as encompassing four general phases: planning, approval, execution, and evaluation.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0247491986643f94242a6a234e1c3a900556f05b.png" data-download-href="/uploads/short-url/k9GnrxiqNq3H1aa1MJpQemW2RJ.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/0/0247491986643f94242a6a234e1c3a900556f05b_2_602x25.png" alt="" data-base62-sha1="k9GnrxiqNq3H1aa1MJpQemW2RJ" width="602" height="25" role="presentation" srcset="/uploads/db4391/optimized/2X/0/0247491986643f94242a6a234e1c3a900556f05b_2_602x25.png, /uploads/db4391/optimized/2X/0/0247491986643f94242a6a234e1c3a900556f05b_2_903x37.png 1.5x, /uploads/db4391/optimized/2X/0/0247491986643f94242a6a234e1c3a900556f05b_2_1204x50.png 2x" data-dominant-color="E1E1E4"></a></div><p></p>
+<ol>
+<li>Planning Phase – New budget proposals are informally debated, per the DRAFT and INTEGRATED stages of the proposal process.</li>
+<li>Approval Phase – Budget proposals are moved to Snapshot and Tally, and ultimately approved or denied. Budgets in the ACTIVE, RATIFIED, and DENIED stages map to this phase of the larger budgeting process.</li>
+<li>Execution Phase – Where budgets live upon funding. This is when workstreams are actively spending against their budget, which includes work required to categorize spend against budget items.</li>
+<li>Evaluation Phase – Finally, at the end of the season, budgets and milestones are reviewed.</li>
+</ol>
+<p>The phases above take place across various surfaces and involve a range of tools such as Discord, Snapshot, Tally, Gnosis, Utopia, Google Sheets, etc.</p>
+<p><strong>A Potential Solution:</strong><br>
+We believe the process can be streamlined by creating a live representation of a budget that reflects its health and status at all phases of the lifecycle. We’ll use <a href="https://gov.gitcoin.co/t/s14-proposal-amended-moonshot-collective-budget-request/10446">Moonshot Collective’s S14 Budget Request</a> to demonstrate what this could look like:</p>
+<p><em>Planning: Drafting the Budget</em><br>
+First, workstream operators can draft their budget proposal in Utopia and use our custom categories to outline individual budget items. If a budget is approved, we’ll automatically track spending against those categories to monitor budget health—more on that later.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/01932f37928772282d1651c892a97bf514690011.jpeg" data-download-href="/uploads/short-url/dVOL0XybdKlz4nAAfELeEuPzy1.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/0/01932f37928772282d1651c892a97bf514690011_2_602x428.jpeg" alt="" data-base62-sha1="dVOL0XybdKlz4nAAfELeEuPzy1" width="602" height="428" role="presentation" srcset="/uploads/db4391/optimized/2X/0/01932f37928772282d1651c892a97bf514690011_2_602x428.jpeg, /uploads/db4391/optimized/2X/0/01932f37928772282d1651c892a97bf514690011_2_903x642.jpeg 1.5x, /uploads/db4391/optimized/2X/0/01932f37928772282d1651c892a97bf514690011_2_1204x856.jpeg 2x" data-dominant-color="F8F9F9"></a></div><p></p>
+<p>Here’s what Moonshot Collective’s initial S14 budget could look like in Utopia:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/edca1da939edc4ae3457bb8170b71177a6c760a7.jpeg" data-download-href="/uploads/short-url/xVAbT2efciqR2LohW3GI6leRXM3.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/e/edca1da939edc4ae3457bb8170b71177a6c760a7_2_602x428.jpeg" alt="" data-base62-sha1="xVAbT2efciqR2LohW3GI6leRXM3" width="602" height="428" role="presentation" srcset="/uploads/db4391/optimized/2X/e/edca1da939edc4ae3457bb8170b71177a6c760a7_2_602x428.jpeg, /uploads/db4391/optimized/2X/e/edca1da939edc4ae3457bb8170b71177a6c760a7_2_903x642.jpeg 1.5x, /uploads/db4391/optimized/2X/e/edca1da939edc4ae3457bb8170b71177a6c760a7_2_1204x856.jpeg 2x" data-dominant-color="F4F6F6"></a></div><br>
+Once this draft has been created, we imagine it could be embedded or shared as a live preview anywhere the budget needs to be discussed. As the budget changes during planning, the live preview could automatically update to reflect the most recent proposal.<p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e772245a5c6fe5c36cca493e10021d067318af6e.jpeg" data-download-href="/uploads/short-url/x1sQjwye1O3LCmrwPG0p1IBjSLY.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/e/e772245a5c6fe5c36cca493e10021d067318af6e_2_602x429.jpeg" alt="" data-base62-sha1="x1sQjwye1O3LCmrwPG0p1IBjSLY" width="602" height="429" role="presentation" srcset="/uploads/db4391/optimized/2X/e/e772245a5c6fe5c36cca493e10021d067318af6e_2_602x429.jpeg, /uploads/db4391/optimized/2X/e/e772245a5c6fe5c36cca493e10021d067318af6e_2_903x643.jpeg 1.5x, /uploads/db4391/optimized/2X/e/e772245a5c6fe5c36cca493e10021d067318af6e_2_1204x858.jpeg 2x" data-dominant-color="F8F8F9"></a></div><p></p>
+<p><em>Approval: Funding the Budget</em><br>
+Once a budget has been approved through governance, a workstream operator can “Request Funds” from the DAO Ops Safe. We imagine a future where funds might be requested from any safe, but for now we’ll assume the DAO Ops Safe is funding all workstream budgets.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/585a4514bc161e7d7e13f3080adf9670c99faadd.jpeg" data-download-href="/uploads/short-url/cBBq19NMq9tTeRKHCOfhE5O2OcZ.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/5/585a4514bc161e7d7e13f3080adf9670c99faadd_2_602x428.jpeg" alt="" data-base62-sha1="cBBq19NMq9tTeRKHCOfhE5O2OcZ" width="602" height="428" role="presentation" srcset="/uploads/db4391/optimized/2X/5/585a4514bc161e7d7e13f3080adf9670c99faadd_2_602x428.jpeg, /uploads/db4391/optimized/2X/5/585a4514bc161e7d7e13f3080adf9670c99faadd_2_903x642.jpeg 1.5x, /uploads/db4391/optimized/2X/5/585a4514bc161e7d7e13f3080adf9670c99faadd_2_1204x856.jpeg 2x" data-dominant-color="F7F8F8"></a></div><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/3f289b21b0847d6ccbb348de7fca5370e62d8bab.jpeg" data-download-href="/uploads/short-url/90J4RXUwv1JIE7q6nhf8Hz2T5nZ.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/3/3f289b21b0847d6ccbb348de7fca5370e62d8bab_2_602x428.jpeg" alt="" data-base62-sha1="90J4RXUwv1JIE7q6nhf8Hz2T5nZ" width="602" height="428" role="presentation" srcset="/uploads/db4391/optimized/2X/3/3f289b21b0847d6ccbb348de7fca5370e62d8bab_2_602x428.jpeg, /uploads/db4391/optimized/2X/3/3f289b21b0847d6ccbb348de7fca5370e62d8bab_2_903x642.jpeg 1.5x, /uploads/db4391/optimized/2X/3/3f289b21b0847d6ccbb348de7fca5370e62d8bab_2_1204x856.jpeg 2x" data-dominant-color="F9FAFA"></a></div><br>
+Now let’s switch to the DAO Ops Safe Utopia account, where we can see this budget funding request alongside S14 requests from other workstreams.<p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cc7ea22c6c7595eccd7f715295493714c19b6c98.png" data-download-href="/uploads/short-url/tb2IkmbmvdtfhZ650yY8UeRdE7u.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/c/cc7ea22c6c7595eccd7f715295493714c19b6c98_2_602x428.png" alt="" data-base62-sha1="tb2IkmbmvdtfhZ650yY8UeRdE7u" width="602" height="428" role="presentation" srcset="/uploads/db4391/optimized/2X/c/cc7ea22c6c7595eccd7f715295493714c19b6c98_2_602x428.png, /uploads/db4391/optimized/2X/c/cc7ea22c6c7595eccd7f715295493714c19b6c98_2_903x642.png 1.5x, /uploads/db4391/optimized/2X/c/cc7ea22c6c7595eccd7f715295493714c19b6c98_2_1204x856.png 2x" data-dominant-color="FDFCFC"></a></div><p></p>
+<p>Since this budget has passed the Snapshot governance vote, we’ll go ahead and create a transaction to fund the budget from the Dao Ops Safe.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a0e198b08e0b82e22d3a5a5b23f403f3c035b0a4.jpeg" data-download-href="/uploads/short-url/mXdJthtGqXRJn42sZ7hSIPKcGsk.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/a/a0e198b08e0b82e22d3a5a5b23f403f3c035b0a4_2_602x428.jpeg" alt="" data-base62-sha1="mXdJthtGqXRJn42sZ7hSIPKcGsk" width="602" height="428" role="presentation" srcset="/uploads/db4391/optimized/2X/a/a0e198b08e0b82e22d3a5a5b23f403f3c035b0a4_2_602x428.jpeg, /uploads/db4391/optimized/2X/a/a0e198b08e0b82e22d3a5a5b23f403f3c035b0a4_2_903x642.jpeg 1.5x, /uploads/db4391/optimized/2X/a/a0e198b08e0b82e22d3a5a5b23f403f3c035b0a4_2_1204x856.jpeg 2x" data-dominant-color="F3F5F5"></a></div><p></p>
+<p><em>Execution: Spending the Budget</em><br>
+If we switch back to the Moonshot Collective Safe, we can see that this budget was successfully funded. We’re now in the execution stage of the budget.</p>
+<p>S14 has begun, and the workstream is executing its objectives and spending funds as necessary.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/65d5410adbd06b432d46de51cb55cfd7394c9b31.png" data-download-href="/uploads/short-url/ewR7oqm4Gz5AZdsj17VLrkoRwxr.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/6/65d5410adbd06b432d46de51cb55cfd7394c9b31_2_602x428.png" alt="" data-base62-sha1="ewR7oqm4Gz5AZdsj17VLrkoRwxr" width="602" height="428" role="presentation" srcset="/uploads/db4391/optimized/2X/6/65d5410adbd06b432d46de51cb55cfd7394c9b31_2_602x428.png, /uploads/db4391/optimized/2X/6/65d5410adbd06b432d46de51cb55cfd7394c9b31_2_903x642.png 1.5x, /uploads/db4391/optimized/2X/6/65d5410adbd06b432d46de51cb55cfd7394c9b31_2_1204x856.png 2x" data-dominant-color="F9F9F9"></a></div><p></p>
+<p>When workstream members create new payments in the Moonshot Collective Safe, they are prompted to categorize those payments. Note that these categories are the same ones we used to define our budget items, enabling us to seamlessly track real-time spend against each budget category.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/25ace6cde50dca45e7a9b84b22e3c3c62fe5c0f6.jpeg" data-download-href="/uploads/short-url/5ni6AJNAREct0rVGFZrSKRyHXqm.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/2/25ace6cde50dca45e7a9b84b22e3c3c62fe5c0f6_2_602x428.jpeg" alt="" data-base62-sha1="5ni6AJNAREct0rVGFZrSKRyHXqm" width="602" height="428" role="presentation" srcset="/uploads/db4391/optimized/2X/2/25ace6cde50dca45e7a9b84b22e3c3c62fe5c0f6_2_602x428.jpeg, /uploads/db4391/optimized/2X/2/25ace6cde50dca45e7a9b84b22e3c3c62fe5c0f6_2_903x642.jpeg 1.5x, /uploads/db4391/optimized/2X/2/25ace6cde50dca45e7a9b84b22e3c3c62fe5c0f6_2_1204x856.jpeg 2x" data-dominant-color="FAFBFB"></a></div><p></p>
+<p>Because this budget is now live, Moonshot Collective members can track the budget health in real-time from their payments page in Utopia. This is an easy way to understand how we’ve spent the budget and if we’re at risk of going over-budget in any given category. In the example below, we’re over-budget in the OP Partnership Initiative budget item.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/88f64d89e9edeb9afa408af95c2311427dd8fb95.jpeg" data-download-href="/uploads/short-url/jxCDwtigSiig8nZYqktrV4jqJhz.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/8/88f64d89e9edeb9afa408af95c2311427dd8fb95_2_602x428.jpeg" alt="" data-base62-sha1="jxCDwtigSiig8nZYqktrV4jqJhz" width="602" height="428" role="presentation" srcset="/uploads/db4391/optimized/2X/8/88f64d89e9edeb9afa408af95c2311427dd8fb95_2_602x428.jpeg, /uploads/db4391/optimized/2X/8/88f64d89e9edeb9afa408af95c2311427dd8fb95_2_903x642.jpeg 1.5x, /uploads/db4391/optimized/2X/8/88f64d89e9edeb9afa408af95c2311427dd8fb95_2_1204x856.jpeg 2x" data-dominant-color="F9F9F9"></a></div><p></p>
+<p><em>Evaluation: Monitoring the Budget</em><br>
+But wait, there’s more. Because the DAO Ops workstream funded this budget from their Utopia account, they’re also able to monitor the health of the budget from their account in real-time. Their Budgets page in Utopia becomes an easy way to monitor real-time budget health of all workstreams, as determined by the payment categories used in those workstreams.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e0c2bf531bebc35b745eaf4b4be27bd78fb4b335.jpeg" data-download-href="/uploads/short-url/w4kcfStjPxSsjAIpSsbF8aOfswt.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/e/e0c2bf531bebc35b745eaf4b4be27bd78fb4b335_2_602x428.jpeg" alt="" data-base62-sha1="w4kcfStjPxSsjAIpSsbF8aOfswt" width="602" height="428" role="presentation" srcset="/uploads/db4391/optimized/2X/e/e0c2bf531bebc35b745eaf4b4be27bd78fb4b335_2_602x428.jpeg, /uploads/db4391/optimized/2X/e/e0c2bf531bebc35b745eaf4b4be27bd78fb4b335_2_903x642.jpeg 1.5x, /uploads/db4391/optimized/2X/e/e0c2bf531bebc35b745eaf4b4be27bd78fb4b335_2_1204x856.jpeg 2x" data-dominant-color="F9F9F9"></a></div><p></p>
+<p>From here, there’s a ton of data visualization we can do to help you draw insights about budget spend. Budget forecasting and variance analysis would be relatively easy to report in real-time. At Utopia, we are passionate about treasury transparency and community accountability and we see this as a step forward in making it easy for DAO members to understand how the treasury is being spent in real-time.</p>
+<hr>
+<p><strong>Next Steps</strong></p>
+<p>Right now, this work is purely conceptual, and we’re looking for feedback from Gitcoin and others on whether productizing the budget process like this would be valuable. As far as we can tell, this process is already happening manually in spreadsheets, and our hope is to streamline the process and reduce the administrative burden on operators.</p>
+<p>We’d love to get a conversation going here to help inform our thinking. What about this is working well? What have we failed to consider or misunderstood?</p>
+          <p><a href="https://gov.gitcoin.co/t/streamlining-budgeting-with-utopia/11704/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/streamlining-budgeting-with-utopia/11704/1
+        Thu, 20 Oct 2022 15:39:27 +0000
+gov.gitcoin.co-post-11704-1
+Streamlining Budgeting with Utopia
+      
+
+

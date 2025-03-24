@@ -1,0 +1,638 @@
+
+
+
+Data Science @ GitcoinDAO
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088
+    I think there is so much potential in investing data science at Gitcoin.
+
+This is informed by a few things
+- [Prior Experience](https://www.linkedin.com/in/owocki/). A few years ago, I was the Director of Engineering at a clean energy startup that set up a fairly robust data warehouse ETL/snowflake schema system to run advanced analytics on time series data.  I've also been in a few different product oriented positions at various web2 startups that had mission critical ecommerce checkout flows with A/B testing, marketing emails to optimize those funnels.  This one time, when i was CTO of an online dating site (a double sided marketplace, just like Gitcoin), I built a matching engine that matched users on 20 dimensions.
+- Per [gitcoin.co/results](https://gitcoin.co/results), Gitcoin has helped 66,712 funders reach an audience of 292,817 earners. Gitcoin has facilitated 1,740,075 complete transactions to 10,247 unique earners.  Understanding the [4 years of data](https://gitcoin.co/results) at Gitcoin, particularly the [Grants Rounds data](https://twitter.com/owocki/status/1441415242009886723), gives me a hunch that there are interesting opportunities in understanding the data.
+
+The objective of this thread is to start a conversation. **What should the data science practice at Gitcoin look like?**
+
+Here are the data science opportunities matters I'm aware of at GitcoinDAO
+
+- **Product Analytics &  Data Science**
+  - Responsible for understanding how users use the platfrom.
+- **Marketing Analytics & Data Science**
+  - Responsible for understanding how to drive more core actions (like Grants checkouts)
+- **Complex Systems Insights**
+  - Responsible for guiding the QF matching engine with deep analytical insights (perhaps one day even simulating agent-based contributor behaviour)
+  - Responsible for  publishing advanced analytics-based insights from our datasets.  [Heres an example of what this could look like.](https://www.gwern.net/docs/psychology/okcupid/themathematicsofbeauty.html)
+- **Fraud insights**
+  - Responsible for (Joe, correct me if I'm wrong) surfacing fraud on the Gitcoin Grants network (whether sybil or collusion) and partnering with Governance to remediate in a legitimate way.
+
+An assortment of tools are used in these practices at Gitcoin.  Here are the ones I'm aware of:
+- Etherscan
+- Dune Analytics
+- The Graph
+- PostgresSQL
+- Google Analytics
+- Metabase
+- Google spreadsheets
+- Google presentations
+- Acquia
+- CADCAD
+- Machine Learning Tools (not sure which ones)
+
+ I'd welcome corrections from any workstream leads on the above.  The above is just my best approximation of the tools/roles as they currently stand int he DAO.
+
+I'd be curious if people in the community would be interested in putting forward a proposal to the DAO to formalize a data science practice at GitcoinDAO (which currently resides in multiple different groups at varying levels of coordination)
+
+I'd like to end on this questions: 
+1. **What should the data science practice at Gitcoin look like?**
+2. If Data Science was an *area of practice* at Gitcoin, what would it look like?  
+3. How could it span multiple workstreams or squads(teams) & cross-pollinate between them?
+
+![Screen Shot 2022-03-15 at 3.58.14 PM|690x448, 50%](upload://6Y5bwATL6fQ1cP4RniJ4lGk5n7b.jpeg)
+Sun, 22 Oct 2023 10:04:08 +0000
+🤖 DAO Governance and Vision
+
+
+Data Science @ GitcoinDAO
+mixmore
+
+            <p>I will try to be as short and simple as possible.</p>
+<p>Data science is a very broad field with multiple areas, like data analysis, statistics, mathematics such as differentiation and integration, linear algebra, dealing with databases, SQL, big data, business intelligence, machine learning, deep learning, artificial intelligence, dealing with natural languages, image classification, reinforcement learning, and simulation. There are also other areas under data science.</p>
+<p>But initially, let’s try to choose some tools that can benefit us in Gitcoin.</p>
+<p>There are many other tools, but let us now mention only these tools.</p>
+<p>One of the tools of data science is the use of programming languages and their various libraries. The most famous programming languages used in data science are Python and R, but the majority depend on Python.</p>
+<p>There are many libraries related to data science, but let us mention some of them. TensorFlow Keras Scikit-learn PyTorch NumPy Pandas Seaborn Matplotlib</p>
+<p>And other tools, such as Excel</p>
+<p>Statistical programs can be useful. There are free, open-source, and powerful programs like JASP.</p>
+<p>Business intelligence programs such as Microsoft Power BI, Tableau, and Google Data Studio are very useful in building a control dashboard that summarizes data, tracks it, and does other things.</p>
+<p>Statistics and mathematics are essential in data science. It can be used by statistics programs or by the Python programming language, and some of the libraries associated with it Statistics is a very broad field and is fundamental to data science.</p>
+<p>dealing with databases and the SQL language</p>
+<p>Data visualization</p>
+<p>Machine learning and deep learning help predict, classify, and cluster.</p>
+<p>Tools that help in the field of crypto</p>
+<p>There are also many tools here, but let us mention some of them.</p>
+<p>Blockchain network browsers</p>
+<p>Dune Analytics, Flipside Crypto, and Footprint Analytics</p>
+<p>The Graph</p>
+<p>Tools like Defillama,Token Terminal, Coin Market Cap, Coingecko, Glassnode, Debank, Tradingview, Messari, and other tools</p>
+<p>Data science is useful in any department and in anything, as long as there is data related to it.</p>
+<p>Like any crypto project, data science will help in these departments.</p>
+<p><strong>Products Department:</strong><br>
+For any product, we will find that there is data related to it, and by analyzing it, the performance of these products can be greatly improved and also developed.</p>
+<p><strong>Financial Department:</strong><br>
+Analyzing financial data is very useful in developing future financial plans, improving current financial performance, and finding solutions to financial problems.</p>
+<p><strong>Marketing department:</strong><br>
+I think it is essential that the use of data science is very beneficial to the marketing department, and the use of data science is a long explanation that requires a separate topic.<br>
+Governance and community management:<br>
+Data science is very useful when analyzing data in forums. Snapshot, Discore, and other governance tools will be very useful in improving decentralization and decision-making processes.</p>
+<p><strong>External environment:</strong><br>
+Analyzing competitor data and crypto market data in general may sometimes be more important than data analysis for the project itself.</p>
+<p><strong>Research and development:</strong><br>
+Data science helps with the reports and insights extracted in the research and development department, if there is such a department in any crypto project.</p>
+<p>Machine learning and deep learning tools related to classification and clustering can be used to build tools that contribute to increasing security in products, but this is a complex topic that would take a long time to explain.</p>
+<p>Simulation can also be used to develop some decisions and some products, and some machine learning, deep learning, and artificial intelligence tools can help in this.</p>
+<p>Providing data analysis reports to the community helps increase transparency and decentralization.</p>
+<p>Public management benefits from all reports generated by all departments.</p>
+<p><strong>Now, how will things go?</strong></p>
+<p>The first step is to determine the data sources. Where can the required data be obtained?<br>
+The most difficult point is how to deal with it, meaning that if the required data is stored in databases, then it is easy to deal with, but if they are, for example, on a website, then we will need to write code to scrape data from this website. There are other cases in which data is stored, and each case has different solutions.<br>
+Sometimes it is not possible to extract data.</p>
+<p>It is important to know the goals of each department.</p>
+<p>What is the goal?</p>
+<p>After defining the goal, we can know the questions related to achieving it.</p>
+<p>We will use data science to find answers to these questions.</p>
+<p>I will give a very simple example. To explain it,<br>
+If I had a goal, for example, to write topics on this forum that would receive a lot of interaction,</p>
+<p>This is the goal.</p>
+<p>Therefore, there are questions related to this goal: What are the topics and trends that can achieve interaction? How can I know that?</p>
+<p>Using data science, I will analyze the data on this forum to find which topics have the most interaction and, therefore, know what direction I should write about.</p>
+<p>This is how things work. Every department has goals, and these goals produce questions. By analyzing the data, we try to find answers to these questions.</p>
+<p>If we can organize the data extraction process, the rest of the steps will be easy.</p>
+<p>Data science and how to use it I can write several topics about it and publish them here on the forum if this is allowed.</p>
+<p>I am open to discussion.</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/29">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/29
+        Sun, 22 Oct 2023 10:04:08 +0000
+gov.gitcoin.co-post-10088-29
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+keneeze.eth
+
+            <p>Thank you for all the good work you do, I agree that Data Science should be one of the priorities of the Gitcoin DAO, the insights that can be gleamed from a well done data analysis model could be a big help in further optimizing the entire grants system.<br>
+There is a popular saying where I come from, it goes this way.<br>
+“In God we trust, everyone else should bring data” I believe that at the heart of everything Gitcoin is trying to achieve with public goods, being able to keep track of the true impact of Gitcoin’s operations both within the Gitcoin Ecosystem and to the wider ethereum community could give the leadership a true sense of where the DAO is and precisely where it should be going, the results of a good data culture could serve as the best possible compass for Gitcoin DAO, the answers are all in the numbers.</p>
+<ul>
+<li>keneeze.eth🔥_🌱 (Wildfire DAO, Public Goods Operator)</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/28
+        Mon, 06 Jun 2022 11:09:20 +0000
+gov.gitcoin.co-post-10088-28
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+Fred
+
+            <p>Late reply here, but we’ve been hard at work getting data from off-chain CEXs added to the dashboard. This has proven to be harder than we anticipated, however we are now able to track sales from contributor addresses across all of the major CEXs which has been a big milestone.</p>
+<aside class="quote no-group" data-username="myceliumcoordinator" data-post="23" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/myceliumcoordinator/48/5584_2.png" class="avatar"> myceliumcoordinator:</div>
+<blockquote>
+<p>The inverse is also true! This analysis does not show that selling tokens to market DOES not create downward price.</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="myceliumcoordinator" data-post="23" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/myceliumcoordinator/48/5584_2.png" class="avatar"> myceliumcoordinator:</div>
+<blockquote>
+<p>How can you draw that conclusion from that graph? You just showed a bunch of data that has a bunch of outflows and a large decline in price. There’s no rigor to this analysis method. There’s no control group, nor is there any analysis of the liquidity of the market in this analysis.</p>
+</blockquote>
+</aside>
+<p>I think you misunderstood my previous post; we could not <em>find</em> a correlation with our current data and methodology. Not being able to prove a hypothesis does not necessarily mean that the opposite is true.</p>
+<p>Circling back to sell pressure from contributors;<br>
+We’ve recently added a graph over relative GTC price vs daily total contributor sales (DEX+CEX).<br>
+(A correlation analysis has not yet been initiatied at this point):</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/6e70dc6e14b19b4858dbb633eda053a148fc2863.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/6e70dc6e14b19b4858dbb633eda053a148fc2863" title="bild"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6e70dc6e14b19b4858dbb633eda053a148fc2863_2_690x239.png" alt="bild" data-base62-sha1="fL0kb0otNYF5HzhQJnh5PaJ5LkD" width="690" height="239" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6e70dc6e14b19b4858dbb633eda053a148fc2863_2_690x239.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6e70dc6e14b19b4858dbb633eda053a148fc2863_2_1035x358.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6e70dc6e14b19b4858dbb633eda053a148fc2863_2_1380x478.png 2x" data-dominant-color="FBF7F9"></a></div><p></p>
+<p>Even though we are now able to track <em>contributor</em> sales on CEXs we’ve yet to find a way to get accurate <em>total</em> CEX volume into the dashboard. Until we have this data available natively in Dune I’ve grabbed the daily volume (CEX+DEX) from Coinmarketcap and Coingecko and plotted this graph:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9fd19e4bc5f3f5f5975f60a46d088674101114c1.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/9fd19e4bc5f3f5f5975f60a46d088674101114c1" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9fd19e4bc5f3f5f5975f60a46d088674101114c1_2_624x476.png" alt="" data-base62-sha1="mNP1qx3OD1rLElHt14DGU3T5C13" width="624" height="476" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9fd19e4bc5f3f5f5975f60a46d088674101114c1_2_624x476.png, https://gov.gitcoin.co/uploads/db4391/original/2X/9/9fd19e4bc5f3f5f5975f60a46d088674101114c1.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/9fd19e4bc5f3f5f5975f60a46d088674101114c1.png 2x" data-dominant-color="F3F7FC"></a></div><p></p>
+<p>The volume has stayed between 1M - 10M GTC per day for the majority of GTC’s history.<br>
+Median GTC volume according to Coinmarketcap = <strong>2.7M GTC/day</strong>.<br>
+Median GTC volume according to Coingecko = <strong>2M GTC/day</strong>.</p>
+<p>This is the graph of total GTC sales from contributors on DEX &amp; CEX:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a416ec5d9ce445e1fbef71d24ec357b279f33e5d.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/a416ec5d9ce445e1fbef71d24ec357b279f33e5d" title="bild"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a416ec5d9ce445e1fbef71d24ec357b279f33e5d_2_690x189.png" alt="bild" data-base62-sha1="npBpVc3IR75AEqU5qruptg8baq1" width="690" height="189" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a416ec5d9ce445e1fbef71d24ec357b279f33e5d_2_690x189.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a416ec5d9ce445e1fbef71d24ec357b279f33e5d_2_1035x283.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a416ec5d9ce445e1fbef71d24ec357b279f33e5d_2_1380x378.png 2x" data-dominant-color="F8F9FA"></a></div><p></p>
+<p>Even on days of relatively large GTC sales from contributors, <strong>10k GTC/day</strong>, contributor sell pressure is still <strong>less than half a percent</strong> of the median daily volume.</p>
+<p>(10k GTC/day is roughly equivalent to the 90-95th percentile. A normal distribution graph of contributor sell pressure is in the works. This will allow you to grab any percentile of contributor sell pressure and compare that to the total daily volume.)</p>
+<aside class="quote no-group" data-username="myceliumcoordinator" data-post="23" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/myceliumcoordinator/48/5584_2.png" class="avatar"> myceliumcoordinator:</div>
+<blockquote>
+<p>GTC is down 50% vs ETH over the last 30 days, so I dont think you can say the outflows are in line with the rest of the market decline.</p>
+</blockquote>
+</aside>
+<p>I think you’ve misunderstood the governance token part of the dashboard as well. We are comparing GTC to other <em>governance tokens</em>, which are <em>all</em> down vs ETH.</p>
+<p>For convenience we’ve now grouped together other governance tokens into a basket on the graph. Although we haven’t initiated a proper correlation analysis to define the strength of the association, a correlation is clear:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/13bac354507c29e0a1072d5d81e4d42d2aac79cd.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/13bac354507c29e0a1072d5d81e4d42d2aac79cd" title="bild"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/13bac354507c29e0a1072d5d81e4d42d2aac79cd_2_690x239.png" alt="bild" data-base62-sha1="2Oxd0APfAbKowe02BSbiL2srhJX" width="690" height="239" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/13bac354507c29e0a1072d5d81e4d42d2aac79cd_2_690x239.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/13bac354507c29e0a1072d5d81e4d42d2aac79cd_2_1035x358.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/13bac354507c29e0a1072d5d81e4d42d2aac79cd_2_1380x478.png 2x" data-dominant-color="FBFCFB"></a></div><p></p>
+<aside class="quote no-group" data-username="myceliumcoordinator" data-post="23" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/myceliumcoordinator/48/5584_2.png" class="avatar"> myceliumcoordinator:</div>
+<blockquote>
+<p>I think doing an analysis about this could be important, but more rigor is needed to be able to form conclusions backed by data in my opinion.</p>
+</blockquote>
+</aside>
+<p>As stated earlier, the dashboard will receive continuous updates as we are able to track more data. I’d be happy to continue the conversation and discuss things further if you are interested in helping out!</p>
+<p>(Please note that Dune is performing internal upgrades at the moment and some graphs will not load properly until this work has been completed. The dashboard may also be slower to load)</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/27">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/27
+        Wed, 01 Jun 2022 08:16:11 +0000
+gov.gitcoin.co-post-10088-27
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+David_Dyor
+
+            <p>What an interesting and unexpected find.  Thanks for this work!</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/26">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/26
+        Tue, 24 May 2022 22:25:12 +0000
+gov.gitcoin.co-post-10088-26
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+php
+
+            <p>Maybe this way:</p>
+<p>the practise only deal with data anonymisation, and data infrastructure, and model performance evaluation.</p>
+<p>With anonymised data, all the rest can be put as bounty so be publicly worked on by any contributors</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/25">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/25
+        Mon, 16 May 2022 21:38:08 +0000
+gov.gitcoin.co-post-10088-25
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+umarkhaneth
+
+            <p>Hey! I really enjoy the discussion here. I would love to get an hour on the calendar to pull together various people with data backgrounds or interest within the DAO. We could do some introductions and share projects we’re working on.</p>
+<p>Please fill out this lettuce meet if you’re interested: <a href="https://lettucemeet.com/l/XDZrr" class="inline-onebox" rel="noopener nofollow ugc">LettuceMeet - Easy Group Scheduling</a></p>
+<p>All are welcome!</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/24
+        Mon, 16 May 2022 17:57:48 +0000
+gov.gitcoin.co-post-10088-24
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+myceliumcoordinator
+
+            <aside class="quote no-group" data-username="Fred" data-post="16" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/fred/48/3799_2.png" class="avatar"> Fred:</div>
+<blockquote>
+<p>In conclusion; the hypothesis that sending GTC to Workstreams who then pay contributors would negatively impact GTC price can <strong>not</strong> be proven through the data.</p>
+</blockquote>
+</aside>
+<p>The inverse is also true!   This analysis does not show that selling tokens to market DOES not create downward price.</p>
+<aside class="quote no-group" data-username="Fred" data-post="16" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/fred/48/3799_2.png" class="avatar"> Fred:</div>
+<blockquote>
+<p>We could not find a correlation between GTC outflow from Workstreams and GTC price movement:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/74f3dcd137f819f4112e937baa7b4ef678b2bd0d" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d_2_690x200.png" alt="" data-base62-sha1="gGBRiJIIlDYEKH0KIG5LakuhAaV" role="presentation" width="690" height="200" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d_2_690x200.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d_2_1035x300.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d_2_1380x400.png 2x" data-dominant-color="FBFCFC"></a></div><p></p>
+</blockquote>
+</aside>
+<p>How can you draw that conclusion from that graph?  You just showed a bunch of data that has a bunch of outflows and a large decline in price.  There’s no rigor to this analysis method.  There’s no control group, nor is there any analysis of the liquidity of the market in this analysis.</p>
+<aside class="quote no-group" data-username="Fred" data-post="16" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/fred/48/3799_2.png" class="avatar"> Fred:</div>
+<blockquote>
+<p>In general, GTC seems to be following the movements of the market sector.</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="Fred" data-post="16" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/fred/48/3799_2.png" class="avatar"> Fred:</div>
+<blockquote>
+<p>GTC <em>is</em> however correlated to similar tokens in the sector.</p>
+</blockquote>
+</aside>
+<p>GTC is down 50% vs ETH over the last 30 days, so I dont think you can say the outflows are in line with the rest of the market decline.</p>
+<p>This chart is from <a href="https://www.coingecko.com/en/coins/gitcoin/eth" rel="noopener nofollow ugc">coingecko</a>:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/3407fd3f6ddd778808a925e2116dd9e9024f124f.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/3407fd3f6ddd778808a925e2116dd9e9024f124f" title="foto.jpeg"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3407fd3f6ddd778808a925e2116dd9e9024f124f_2_690x130.png" alt="foto.jpeg" data-base62-sha1="7qhWBVwfvPmyn70uUM7qg274lRl" width="690" height="130" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3407fd3f6ddd778808a925e2116dd9e9024f124f_2_690x130.png, https://gov.gitcoin.co/uploads/db4391/original/2X/3/3407fd3f6ddd778808a925e2116dd9e9024f124f.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/3/3407fd3f6ddd778808a925e2116dd9e9024f124f.png 2x" data-dominant-color="F6F5F6"></a></div><p></p>
+<p>I think doing an analysis about this could be important, but more rigor is needed to be able to form conclusions backed by data in my opinion.</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/23
+        Mon, 16 May 2022 15:34:35 +0000
+gov.gitcoin.co-post-10088-23
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+Pop
+
+            <p>Great work <a class="mention" href="https://gov.gitcoin.co/u/fred">@Fred</a> and <a class="mention" href="https://gov.gitcoin.co/u/ivanmolto">@ivanmolto</a> - It is always important to look towards data, especially in a highly charged dynamic like a market downturn. It’s easy to make assumptions yet we must always keep ourselves in check to ensure governance decisions are not made emotionally but rather objectively and from a fully informed place of intention.</p>
+<p>When we were discussing this and even though I had an inkling the contributor sell could not affect things as much, I really did not grasp just how much hodling was actually going on. The same with the pattern of other gov tokens which is why I made the suggestion to add that chart in order to give place this analysis against the broader market background.</p>
+<p>I am keen to see these analyses progress and become a tool in the gov process. Perhaps, something we look to include in the improved versions of workstream accountability flow or in any voter matrix we may choose to adopt - provided they achieve balance between objectivity and personal takes.</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/22
+        Fri, 13 May 2022 08:05:49 +0000
+gov.gitcoin.co-post-10088-22
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+Pop
+
+            <p>Totally missed this in March - what an interesting insight into representation</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/21
+        Fri, 13 May 2022 07:57:15 +0000
+gov.gitcoin.co-post-10088-21
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+kishoraditya
+
+            <p>This is great <a class="mention" href="https://gov.gitcoin.co/u/fred">@Fred</a> and <a class="mention" href="https://gov.gitcoin.co/u/ivanmolto">@ivanmolto</a><br>
+It would also be great to see if or not rounds exhibit any trend in pricing of GTC!</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/20
+        Fri, 13 May 2022 07:10:22 +0000
+gov.gitcoin.co-post-10088-20
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+Fred
+
+            <p>I could have clarified the “269” number a bit better.<br>
+269 is the current number of total contributors we are able to identify on-chain.</p>
+<p>On May 25th 2021, when GitcoinDAO launched, we had 0 on-chain contributors. Now we’ve reached 269. A visual for the number of total contributors over time can potentially be added to the dashboard for clarity!</p>
+<p>In my opinion we have seen some pretty big market turmoil in the last months but I absolutely agree, it will be very interesting to see how things evolve. Thanks!</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/19
+        Fri, 13 May 2022 05:54:44 +0000
+gov.gitcoin.co-post-10088-19
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+Lunacat
+
+            <p>Great to see some data!  Thanks for taking effort and time to put together.</p>
+<blockquote>
+<p>After analyzing 269 unique contributors over time we can see that this is far from the truth.</p>
+</blockquote>
+<p>Does this mean data set is limited to these 269 individuals over the entire time frame?  So any contributor that may have joined in Feb 2022 would not be counted?</p>
+<blockquote>
+<p>In conclusion; the hypothesis that sending GTC to Workstreams who then pay contributors would negatively impact GTC price can <strong>not</strong> be proven through the data.</p>
+</blockquote>
+<p>Assuming the population is constant throughout the period, the conclusion is undeniable.  But concerns right now are more forward looking – it’s easy to hold an appreciating asset, especially given most contributors have likely been sitting pretty from wider market during this time.  Will be interesting to revisit this after each round and see how trend develops in response to wider market turmoil</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/18
+        Thu, 12 May 2022 23:42:21 +0000
+gov.gitcoin.co-post-10088-18
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+ivanmolto
+
+            <p>The same to you <a class="mention" href="https://gov.gitcoin.co/u/fred">@Fred</a> It has been an amazing job side by side with you. Please all you enjoy the insights!</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/17
+        Thu, 12 May 2022 22:08:31 +0000
+gov.gitcoin.co-post-10088-17
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+Fred
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/ivanmolto">@ivanmolto</a>  and I have been looking into the correlation between <strong>GTC outflow from GitcoinDAO</strong> and <strong>GTC spot price</strong>. A common belief is that Workstreams compensating contributors with GTC would somehow negatively impact the price of GTC. We put this theory to the test through a number of queries in this <a href="https://dune.com/ivanmolto/Interaction">Dune Dashboard</a> to see if it holds any water.</p>
+<p>In order to produce a meaningful analysis we couldn’t just track GTC outflow from <em>Workstreams</em> and compare that to GTC price. To accurately test this hypothesis we need to take one step further and track GTC outflow from <em>contributors</em> in relation to price.</p>
+<p>A common conception about contributors receiving compensation in GTC is that they will immediately sell their tokens for other assets, causing a massive sell wall and negative price movement as a result.</p>
+<p>After analyzing 269 unique contributors over time we can see that this is far from the truth. The data show that contributors of GitcoinDAO are likely to hold their GTC and the average amount of GTC held by this group is <em>increasing</em>. The first figure below shows the number of contributors who hold more than 0, 100 and 1000 GTC respectively. The second figure displays the amount of GTC held (x100) in total by this group as well as their average GTC holdings. These metrics are all increasing.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/245e454148f3c0a4b02a67fa53e7e065d6021eb2.png" data-download-href="/uploads/short-url/5bJa54r7gBIMde4m9lSFeVGyal4.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/2/245e454148f3c0a4b02a67fa53e7e065d6021eb2_2_624x437.png" alt="" data-base62-sha1="5bJa54r7gBIMde4m9lSFeVGyal4" width="624" height="437" srcset="/uploads/db4391/optimized/2X/2/245e454148f3c0a4b02a67fa53e7e065d6021eb2_2_624x437.png, /uploads/db4391/optimized/2X/2/245e454148f3c0a4b02a67fa53e7e065d6021eb2_2_936x655.png 1.5x, /uploads/db4391/optimized/2X/2/245e454148f3c0a4b02a67fa53e7e065d6021eb2_2_1248x874.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/245e454148f3c0a4b02a67fa53e7e065d6021eb2_2_10x10.png"></a></div><p></p>
+<p>We could not find a correlation between GTC outflow from Workstreams and GTC price movement:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d.png" data-download-href="/uploads/short-url/gGBRiJIIlDYEKH0KIG5LakuhAaV.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d_2_624x181.png" alt="" data-base62-sha1="gGBRiJIIlDYEKH0KIG5LakuhAaV" width="624" height="181" srcset="/uploads/db4391/optimized/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d_2_624x181.png, /uploads/db4391/optimized/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d_2_936x271.png 1.5x, /uploads/db4391/optimized/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d_2_1248x362.png 2x" data-small-upload="/uploads/db4391/optimized/2X/7/74f3dcd137f819f4112e937baa7b4ef678b2bd0d_2_10x10.png"></a></div><p></p>
+<p>As we looked further into what could impact GTC we found a correlation between GTC and other governance tokens. In general, GTC seems to be following the movements of the market sector. The figure below show the price movement of other governance tokens and GTC, relative to their price on May 25th 2021:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e0fdc113db728e0bf4b57118c22f355681b55774.png" data-download-href="/uploads/short-url/w6mCosysDZK7Mja4dL0PmepI3oE.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/e/e0fdc113db728e0bf4b57118c22f355681b55774_2_624x195.png" alt="" data-base62-sha1="w6mCosysDZK7Mja4dL0PmepI3oE" width="624" height="195" srcset="/uploads/db4391/optimized/2X/e/e0fdc113db728e0bf4b57118c22f355681b55774_2_624x195.png, /uploads/db4391/optimized/2X/e/e0fdc113db728e0bf4b57118c22f355681b55774_2_936x292.png 1.5x, /uploads/db4391/optimized/2X/e/e0fdc113db728e0bf4b57118c22f355681b55774_2_1248x390.png 2x" data-small-upload="/uploads/db4391/optimized/2X/e/e0fdc113db728e0bf4b57118c22f355681b55774_2_10x10.png"></a></div><p></p>
+<p>In conclusion; the hypothesis that sending GTC to Workstreams who then pay contributors would negatively impact GTC price can <strong>not</strong> be proven through the data. GTC <em>is</em> however correlated to similar tokens in the sector.</p>
+<p>We encourage you all to look through the <a href="https://dune.com/ivanmolto/Interaction">dashboard</a> and we welcome feedback on ways to improve these further. A couple of additional visuals and tweaks will be added to the dashboard in the coming days.</p>
+<p>Enormous shoutout to <a class="mention" href="https://gov.gitcoin.co/u/ivanmolto">@ivanmolto</a> for the amazing job.</p>
+<p>Our two previous dashboards can be found here:<br>
+<a href="https://dune.com/ivanmolto/Gitcoin-DAO">GitcoinDAO: Governance &amp; Financial overview<br>
+</a><a href="https://dune.com/ivanmolto/GitcoinDAO:-The-case-for-Governor-Alpha">GitcoinDAO: Governor Alpha &amp; Timelock</a></p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/16
+        Thu, 12 May 2022 21:18:49 +0000
+gov.gitcoin.co-post-10088-16
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+Pop
+
+            <p>this is great - I would love to use some of this for the workstream and treasury health dashboard to be added as DAO tools alongside the steward health cards</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/15
+        Sun, 01 May 2022 09:55:21 +0000
+gov.gitcoin.co-post-10088-15
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+ivanmolto
+
+            <p>Yes, of course. I would love it. I didn’t know about this tool. It is a result outstanding visually!</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/14
+        Wed, 20 Apr 2022 21:22:54 +0000
+gov.gitcoin.co-post-10088-14
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+Fred
+
+            <p>This is cool! We have discussed creating a subgraph for the Steward Health Card-project as a potential metric of engagement. The theory being that Stewards receiving GTC less than 4 hops from the multisig is a strong indicator of engagement. Especially if it’s occurring month after month.</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/13
+        Sun, 17 Apr 2022 19:22:18 +0000
+gov.gitcoin.co-post-10088-13
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+owocki
+
+            <aside class="quote no-group" data-username="Fred" data-post="8" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/fred/48/3799_2.png" class="avatar"> Fred:</div>
+<blockquote>
+<p>These visuals greatly increase the transparency of our DAO - and they look super cool!</p>
+</blockquote>
+</aside>
+<p>was just messing around with breadcrumbs.app tonight and was able to come up with <a href="https://www.breadcrumbs.app/reports/1360">this sankey diagram</a> that allows ppl to follow the flow of GTC out of the timelock + to the workstreams + to their contributors. pretty neat!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4cca4018fec1ecab8a21a81a32c589fdcfd5060a.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/4cca4018fec1ecab8a21a81a32c589fdcfd5060a" title="screenshot_1650165792123"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4cca4018fec1ecab8a21a81a32c589fdcfd5060a_2_589x500.jpeg" alt="screenshot_1650165792123" data-base62-sha1="aXjBE4f0Np2trYP348YJI2khStQ" width="589" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4cca4018fec1ecab8a21a81a32c589fdcfd5060a_2_589x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4cca4018fec1ecab8a21a81a32c589fdcfd5060a_2_883x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4cca4018fec1ecab8a21a81a32c589fdcfd5060a_2_1178x1000.jpeg 2x" data-dominant-color="FCFBFA"></a></div><p></p>
+<p>ivan, would love to show u breadcrumbs.app sometime.</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/12
+        Sun, 17 Apr 2022 03:24:52 +0000
+gov.gitcoin.co-post-10088-12
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+Fred
+
+            <p>Number of delegators has been added to the table. <a class="mention" href="https://gov.gitcoin.co/u/ivanmolto">@ivanmolto</a> have also been working hard on an additional deep dive into our Governor Alpha set up.</p>
+<p>Some very interesting data can be found here: <a href="https://dune.xyz/ivanmolto/GitcoinDAO:-The-case-for-Governor-Alpha" class="inline-onebox">Dune Analytics</a></p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/11
+        Fri, 15 Apr 2022 09:35:47 +0000
+gov.gitcoin.co-post-10088-11
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+DisruptionJoe
+
+            <p>Great work here. I’d love to see the number of delegators each steward has delegating to them as well. Something like this:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9709ee17d3dcfce026f23310b67303886d7c480b.jpeg" data-download-href="/uploads/short-url/ly9n860EnH1z0rBGbkG8t4Jp9JV.jpeg?dl=1" title="Image 2022-03-08 at 9.43.32 AM"><img src="/uploads/db4391/optimized/2X/9/9709ee17d3dcfce026f23310b67303886d7c480b_2_326x500.jpeg" alt="Image 2022-03-08 at 9.43.32 AM" data-base62-sha1="ly9n860EnH1z0rBGbkG8t4Jp9JV" width="326" height="500" srcset="/uploads/db4391/optimized/2X/9/9709ee17d3dcfce026f23310b67303886d7c480b_2_326x500.jpeg, /uploads/db4391/optimized/2X/9/9709ee17d3dcfce026f23310b67303886d7c480b_2_489x750.jpeg 1.5x, /uploads/db4391/original/2X/9/9709ee17d3dcfce026f23310b67303886d7c480b.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/9/9709ee17d3dcfce026f23310b67303886d7c480b_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/10
+        Wed, 30 Mar 2022 18:24:17 +0000
+gov.gitcoin.co-post-10088-10
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+umarkhaneth
+
+            <p>100% support this</p>
+<p>Giving people access to quality data, with a data dictionary, and the ability to use tools like SQL and Python will probably drive them to generate insights on their own. Data-savvy contributors who want answers will look for them – they just might need the infrastructure/access to do so.</p>
+<p>This is what AWS is really good at – although a centralized technology – it makes it easy to have your data somewhere people can find and run more advanced analytics on using tools like SQL, &amp; Jupyter Notebooks. It also allows for granular role-based access control. I don’t know what the decentralized alternative is but would love to</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/9
+        Tue, 29 Mar 2022 02:48:15 +0000
+gov.gitcoin.co-post-10088-9
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+Fred
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/ivanmolto">@ivanmolto</a> from Builderband helped the MMM Workstream create a <a href="https://dune.xyz/ivanmolto/Gitcoin-DAO">Dune Dashboard</a> with an overview of the GitcoinDAO governance and finances. These visuals greatly increase the transparency of our DAO - and they look super cool!<br>
+Feel free to reach out with feedback.</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/8
+        Mon, 28 Mar 2022 11:31:52 +0000
+gov.gitcoin.co-post-10088-8
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+tigress
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<ol>
+<li><strong>What should the data science practice at Gitcoin look like?</strong></li>
+<li>If Data Science was an <em>area of practice</em> at Gitcoin, what would it look like?</li>
+<li>How could it span multiple workstreams or squads(teams) &amp; cross-pollinate between them?</li>
+</ol>
+</blockquote>
+</aside>
+<p>Having Data Science as an Area of Practise or sometimes also called Community of Practise in larger web2 IT organizations is a common pattern. However, this DS-Area would not do any particular work for projects, OKRs or initiatives. Their goal is to reflect upon and improve their craftmanship by ways of learning from each other and presenting or socialising at events. If they get really productive they might develop and provide trainings for other Areas. For example: enabling developers so they learn from Data Scientists.</p>
+<p>There is this idea of “Team Topologies” out there that could be helping us design and visualize how we work together. And also discuss several options how Data Science could look like and interacts with others.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e1d816c23c2b0883e1b250c4c10a5c8966e837c3.png" alt="image" data-base62-sha1="wdUoKtpgBRIcQGw3t9Vlj1Erzqz" width="474" height="362"></p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.slideshare.net/matthewskelton/beyond-the-spotify-model-team-topologies-devtestnorth-20190925-matthew-skelton">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7211fb21eb4b16cbe5fe41372932c052b6f14492.png" class="site-icon" data-dominant-color="949981" width="16" height="16">
+
+      <a href="https://www.slideshare.net/matthewskelton/beyond-the-spotify-model-team-topologies-devtestnorth-20190925-matthew-skelton" target="_blank" rel="noopener nofollow ugc">SlideShare</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:640/360;"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9ae457da017da483db0f9ff8e2e73b4541472674.jpeg" class="thumbnail" data-dominant-color="6C6492" width="640" height="360"></div>
+
+<h3><a href="https://www.slideshare.net/matthewskelton/beyond-the-spotify-model-team-topologies-devtestnorth-20190925-matthew-skelton" target="_blank" rel="noopener nofollow ugc">Beyond the Spotify model - Team Topologies - DevTestNorth - 2019-09-25 -...</a></h3>
+
+  <p>Beyond the Spotify model - Team Topologies - DevTestNorth - 2019-09-25 - Matthew Skelton - Download as a PDF or view online for free</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/7
+        Wed, 23 Mar 2022 20:01:54 +0000
+gov.gitcoin.co-post-10088-7
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+nollied
+
+            <p>it’s interesting you post about this, i was just thinking about the feasibility of launching an AI workstream, similar to moonshot collective.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>perhaps one day even simulating agent-based contributor behaviour</p>
+</blockquote>
+</aside>
+<p>this is what the matrix squad in FDD is working on btw.</p>
+<aside class="quote no-group" data-username="simba-sandy" data-post="2" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/simba-sandy/48/5627_2.png" class="avatar"> simba-sandy:</div>
+<blockquote>
+<p>Have a dedicated analytics person working with every team- MMM, DAOops. While central teams have their advantages, core teams will either always be stuck in prioritization queue or forever unaware of how data can help and wont be as impactful as they could have been with data.</p>
+</blockquote>
+</aside>
+<p>i think this point should be wrestled with a little more. one interesting benefit of having a dedicated AI workstream would be that these services could be provided, with the goal of creating data unions/revenue streams (carefully of course to avoid negative incentivizations).</p>
+<p>if we did have an AI workstream, it should play a supportive role, facilitating collaborations and acting as a service to the DAO.</p>
+<aside class="quote no-group" data-username="jonas" data-post="4" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jonas/48/5800_2.png" class="avatar"> jonas:</div>
+<blockquote>
+<p>A powerful link would be data to be set in comparison with grants data from Metabase to compare and identify new opportunities for growth.</p>
+</blockquote>
+</aside>
+<p>this is another benefit, the ability to cross-correlate data for insights.</p>
+<aside class="quote no-group" data-username="jonas" data-post="4" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jonas/48/5800_2.png" class="avatar"> jonas:</div>
+<blockquote>
+<p>This also needs to align with the Web 3.0 ethos to collect as little data as possible</p>
+</blockquote>
+</aside>
+<p>and for the data that we do collect, the reports should be openly available.</p>
+<aside class="quote no-group" data-username="nategosselin" data-post="5" data-topic="10088">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/nategosselin/48/7217_2.png" class="avatar"> nategosselin:</div>
+<blockquote>
+<p>In my mind, <span class="hashtag-raw">#1</span> should be a data-focused product team with the remit to build a scalable data warehouse/system that can make data more easily available to analyst-level data users. In other words, how do we knit all of our data sources together and let SQL users get value out of it (given they have the business context)?</p>
+</blockquote>
+</aside>
+<p>beautifully put.</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/6
+        Tue, 22 Mar 2022 00:23:29 +0000
+gov.gitcoin.co-post-10088-6
+Data Science @ GitcoinDAO
+      
+
+Data Science @ GitcoinDAO
+nategosselin
+
+            <p>I’d love to see us invest more in this area. My .02 gwei would be to separate the idea into two pieces:</p>
+<ol>
+<li>How do we build a scalable, modular, anti-fragile data backbone across GitcoinDAO?</li>
+<li>How do we encourage a culture of using data across the opportunities within the DAO?</li>
+</ol>
+<p>In my mind, <span class="hashtag">#1</span> should be a data-focused product team with the remit to build a scalable data warehouse/system that can make data more easily available to analyst-level data users. In other words, how do we knit all of our data sources together and let SQL users get value out of it (given they have the business context)?</p>
+<p><span class="hashtag">#2</span> feels like building a group of analysts and scientists (i.e. more advanced data users) that can be embedded on specific workstreams. Maybe it lends itself to a guild model like the Gitcoin Product Collective?</p>
+          <p><a href="https://gov.gitcoin.co/t/data-science-gitcoindao/10088/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/data-science-gitcoindao/10088/5
+        Mon, 21 Mar 2022 21:29:32 +0000
+gov.gitcoin.co-post-10088-5
+Data Science @ GitcoinDAO
+      
+
+

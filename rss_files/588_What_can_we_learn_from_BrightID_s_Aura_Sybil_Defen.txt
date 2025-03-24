@@ -1,0 +1,657 @@
+
+
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159
+    I think it's interesting how BrightID has designed their Fraud Defense ecosystem, and think there are some things that are worth learning from as Gitcoin [moves more into Grants 2.0 and into Passport](https://gov.gitcoin.co/t/passport-is-our-aws/10995).
+
+BrightID has designed [Aura](https://forum.brightid.org/t/aura-a-new-verification-for-brightid/393), a scalable and decentralized fraud defense software system that rewards users who traverse the BrightID graph and look for sybil attackers.  
+
+Aura is a Sybil battleground game.  This game creates sybil resistence for BrightID.  It's a place where the best motivated, best equipped, and most capable sybil defenders are found and enabled to help the system find sybil attackors.
+
+Here's how it works:
+1. BrightID founders and other high trust users designate users who they think are "honest" (this is the trusted seed).
+2. Those honest users then get a unit of currency called "Energy".
+   - Anyone can create their own system of "trust" and it can be retroactively empowered with energy from these users too.  This enables great ideas and great sybil hunters to come from anywhere.
+2. Those users are then able to traverse the BrightID social graph (pictured below) either via the app or via the API and get rewarded with more energy for finding sybil attackors.
+3. For example, a user who found the below sybil attackor would receive a lot of energy.
+
+![57b4c815df89342b646257d90c1124df6638e77d|690x335](upload://cvSRuadyrbXivWvE3Sq3caW3Yfz.jpeg)
+(Yellow nodes represent a sybil attack. Green nodes represent seeds, which help to identify the honest part of the graph (blue nodes).)
+
+Here's what the App UI looks like.  In the app (or using the API), you can mark ay user as sybil or trusted.
+![f7c7eb69345ce1437c56e338c92bd4e62952ef9b_2_1248x1000|624x500](upload://d5w65ycmmsMOArlXUnN5463yCRv.jpeg)
+
+What I find most striking about Aura is how *scalable* and *decentralized* and *modular* it is.  As Gitcoin Grants moves from 1.0 to 2.0, it will be interesting to see if the DAO is able to come up with less centralized, more effective, and more scalable ways of finding & routing sybil attackers.
+
+[Read more about Aura here](https://forum.brightid.org/t/aura-a-new-verification-for-brightid/393).
+Tue, 29 Nov 2022 11:46:58 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+DisruptionJoe
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/adebola">@Adebola</a> <a class="mention" href="https://gov.gitcoin.co/u/kishoraditya">@kishoraditya</a> Let’s make sure this is on backlog, not sure how to prioritize, but it should be on there.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/19
+        Tue, 29 Nov 2022 11:46:58 +0000
+gov.gitcoin.co-post-11159-19
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+castall
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="7" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>Do you have a backlog of the tools which need to be built?</p>
+</blockquote>
+</aside>
+<p>I really want the known identifier tool</p>
+<aside class="onebox discoursetopic" data-onebox-src="https://forum.brightid.org/t/fighting-small-scale-sybil-attacks-with-known-identifiers/503">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/3/318622c5d35b1884998767e241b8d2486803acf4.png" class="site-icon" data-dominant-color="FDCFBE" width="32" height="32">
+
+      <a href="https://forum.brightid.org/t/fighting-small-scale-sybil-attacks-with-known-identifiers/503" target="_blank" rel="noopener nofollow ugc" title="06:01AM - 21 April 2022">BrightID – 21 Apr 22</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3433139b7e7cf86fb05faa7a706c01fbbff5efa1_2_500x500.png" class="thumbnail onebox-avatar" data-dominant-color="FDCFBF" width="500" height="500">
+
+<div class="title-wrapper">
+  <h3><a href="https://forum.brightid.org/t/fighting-small-scale-sybil-attacks-with-known-identifiers/503" target="_blank" rel="noopener nofollow ugc">Fighting small-scale sybil attacks with known identifiers</a></h3>
+</div>
+
+  <p>Fighting small-scale sybil attacks with known identifiers In this post, I’ll talk about how we can leverage existing, known, unique identifiers to drastically reduce small scale sybil attacks in a privacy preserving, decentralized way.  Background...</p>
+
+  <p>
+    <span class="label1">Reading time: 2 mins 🕑</span>
+      <span class="label2">Likes: 6 ❤</span>
+  </p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>We’ve recently created a graph labeling tool where you can draw a lasso around any number of nodes in a graph and leave a comment (and other people can respond to your comment).  Try <a href="https://explorer.brightid.org/?aura=aura" rel="noopener nofollow ugc">going to the aura graph explorer</a> and holding down the shift key and drawing a region with your mouse.  You will need energy in Aura to be able to leave a comment.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/18
+        Thu, 24 Nov 2022 05:13:40 +0000
+gov.gitcoin.co-post-11159-18
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+tkgshn
+
+            <p>I wrote about this</p><aside class="quote quote-modified" data-post="1" data-topic="11927">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tkgshn/48/6258_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/decentralized-social-graph-as-an-oracle-powered-by-the-wisdom-of-the-crowd-for-the-era-of-plurality/11927">Decentralized social graph as an oracle powered by the wisdom of the crowd for the era of Plurality</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/open-discussion/9"><span data-category-id="9" style="--category-badge-color: #12A89D; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Discuss, and even debate topics, that might be good ideas for us to explore or will spark a good conversation.  And some of them might turn into an official proposal eventually, but don’t need to."><span class="badge-category__name">🧙 🧙‍♀️ Ideas and Open Discussion</span></span></a>
+  </div>
+  <blockquote>
+    Aura is a countermeasure against Sybil attacks, but the only other weakness of Quadratic Funding, resistance to collusion, is currently <a href="https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553" rel="noopener nofollow ugc">Pairwise coordination subsidies</a> by Vitalik. 
+Others, such as <a href="https://medium.com/block-science/how-to-attack-and-defend-quadratic-funding-a10f0152f069" rel="noopener nofollow ugc">How to Attack and Defend Quadratic Funding</a> There is also a pattern of using data science, led by BlockScience, as shown in , but I propose a new layer. 
+We have published a draft of a white paper on a protocol called DeCartography that outputs data from the Plurality social graph as an oracle. 
+A longe…
+  </blockquote>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/17
+        Sun, 13 Nov 2022 01:28:58 +0000
+gov.gitcoin.co-post-11159-17
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+castall
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="16" data-topic="11235" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/16">Knowledge Transfer: Characterizing the Sybil Resistance Problem</a></div>
+<blockquote>
+<p>The current implementation of aura uses graph analysis. Would it be possible to use other types of analysis in the future?</p>
+</blockquote>
+</aside>
+<p>Yes.</p>
+<p>At its core Aura is a way for experts to designate other experts in a decentralized way that is resilient to failures like corruption and collusion.</p>
+<p>Aura players send each other “energy” (that represents how good they are at the game, aka their expertise).  This forms the inner graph.</p>
+<p>In the case of BrightID verification, the outer graph is the last hop where Aura players rate the honesty of BrightID users.</p>
+<p>You can see the current graph of <a href="https://explorer.brightid.org?aura=aura" rel="noopener nofollow ugc">Aura here</a>, with some explanation in <a href="https://brightid.gitbook.io/aura" rel="noopener nofollow ugc">the documentation</a> that is still being improved.</p>
+<p>Right now there is only one energy team which produces an energy “flavor” that selects experts at verifying people in BrightID. The data they see in Aura is tailored for BrightID verification. Other energy teams can join to increase resilience. If the original energy team’s “flavor” of energy becomes flawed or corrupt, the other energy flavors will continue to work and Aura will continue to function.  Apps consuming verifications and individual Aura players decide which energy flavors to use.</p>
+<p>What I would like to see are energy teams that look at other sources of information than the BrightID graph.  There will be some tools that help only with BrightID; some that help only with Gitcoin, and some that help with both (not to mention other applications that generate evidence of sybil attacks).</p>
+<p>Gitcoin’s “outer graph” of verified projects and users could look much different than BrightID and that’s great.</p>
+<p>Just like there should be more than one energy team analyzing BrightID data, there should be more than one energy team analyzing Gitcoin data.  Aura players can adjust their team affiliations: each player can choose up to 5 energy flavors to send and receive and change this choice as needed.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/16
+        Fri, 28 Oct 2022 23:10:54 +0000
+gov.gitcoin.co-post-11159-16
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+castall
+
+            <p>Aura had a big update last week and is now usable by apps as a verification tool.</p>
+<p>We’re not publicizing the beta until we’ve created some better guides for new users, but if you’d like to join our discord and try it out, I think there are enough people there that can help walk you through it.</p>
+<p>Discord:  <a href="https://discord.gg/e2ShH4kN3S" class="inline-onebox" rel="noopener nofollow ugc">Aura</a><br>
+Guide (in progress): <a href="https://brightid.gitbook.io/aura" class="inline-onebox" rel="noopener nofollow ugc">Why Aura? - Aura</a></p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/15
+        Wed, 19 Oct 2022 07:15:06 +0000
+gov.gitcoin.co-post-11159-15
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+owocki
+
+            <p>if anyone wants to checkout the aura software that brightid uses, this greenpill episode (which just aired last week) is a good tour of it <a href="https://www.youtube.com/watch?v=82SNLVQk_KA" class="inline-onebox">BrightID with Adam Stallard | Green Pill #35 - YouTube</a></p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/14
+        Mon, 15 Aug 2022 17:12:13 +0000
+gov.gitcoin.co-post-11159-14
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="castall" data-post="12" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/castall/48/45_2.png" class="avatar"> castall:</div>
+<blockquote>
+<p>I don’t think Aura is ready for this. I think we should wait for it to exit closed beta first. I think if Gitcoin FDD (or others reading this) joined the <a href="https://discord.gg/e2ShH4kN3S">Aura discord</a> and the beta, that could be beneficial later on.</p>
+</blockquote>
+</aside>
+<p>Sounds good. We will get two of our sybil hunters to join.</p>
+<aside class="quote no-group" data-username="castall" data-post="12" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/castall/48/45_2.png" class="avatar"> castall:</div>
+<blockquote>
+<p>I like where you’re going with your outline for <a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/7#a-review-protocol-2">A Review Protocol</a> <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a></p>
+</blockquote>
+</aside>
+<p>I’m shocked that I’m only now understanding the specific roles of each system to build a greater whole! The intuition was there, but the articulation is forming now. I’m in awe of the Aura design. Nice work.</p>
+<aside class="quote no-group" data-username="castall" data-post="12" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/castall/48/45_2.png" class="avatar"> castall:</div>
+<blockquote>
+<p>We haven’t yet built tools like this one <a href="https://forum.brightid.org/t/fighting-small-scale-sybil-attacks-with-known-identifiers/503">(known identifiers tool)</a> that allow Aura players to justify their actions to other Aura players.</p>
+</blockquote>
+</aside>
+<p>Joining now!</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/13
+        Mon, 01 Aug 2022 08:18:26 +0000
+gov.gitcoin.co-post-11159-13
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+castall
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="7" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>Perhaps we could put a small amount of our sybil hunting budget towards “retroactive rewards” for top energy groups or players.</p>
+</blockquote>
+</aside>
+<p>I don’t think Aura is ready for this.  I think we should wait for it to exit closed beta first.  I think if Gitcoin FDD (or others reading this) joined the <a href="https://discord.gg/e2ShH4kN3S" rel="noopener nofollow ugc">Aura discord</a> and the beta, that could be beneficial later on.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="7" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>Would it be better to set deliverables for the BrightID/Aura team to build a grants graph (maybe in collaboration) or should FDD build it?</p>
+</blockquote>
+</aside>
+<p>I think FDD should build it, but Aura can be used to analyze any set of data.  Aura identifies experts and gives them tools to compare answers about a set of data.  The first use case happens to involve a graph of connections (i.e. the BrightID graph), but Gitcoin grants data doesn’t have to be in the form of a graph–just in a form (or multiple forms) that allows experts (Aura players) to compare answers.</p>
+<p>I like where you’re going with your outline for <a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/7#a-review-protocol-2">A Review Protocol</a> <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> .</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="7" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>What data could we look at to get an understanding of how well the system is working now?</p>
+</blockquote>
+</aside>
+<p>I would say that it isn’t working well yet. We have a closed group of players who are mostly there to give feedback about the interface. We haven’t yet built tools like this one <a href="https://forum.brightid.org/t/fighting-small-scale-sybil-attacks-with-known-identifiers/503" rel="noopener nofollow ugc">(known identifiers tool)</a> that allow Aura players to justify their actions to other Aura players. (By the way, we would want to use a different set of tools for Gitcoin data than for BrightID graph analysis.)</p>
+<p>Anyone reading this is welcome to join the Aura beta (<a href="https://discord.gg/e2ShH4kN3S" rel="noopener nofollow ugc">through our discord</a>) and try it out.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/12
+        Sat, 30 Jul 2022 16:06:48 +0000
+gov.gitcoin.co-post-11159-12
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+bitsikka
+
+            <aside class="quote no-group" data-username="gmkung" data-post="6" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/gmkung/48/6336_2.png" class="avatar"> gmkung:</div>
+<blockquote>
+<p>Also if the malicious accounts are dormant</p>
+</blockquote>
+</aside>
+<p>Not sure whether it is unintentionally ignored but one of the recurring pattern about most sybil resistant solution efforts known so far, is, by default, assuming <em><strong>static</strong></em> binary sybil/not-sybil character of agents.</p>
+<p>It is obvious that being non-sybil implies that the limited number of key(s) used by the agent will characteristically have a good liveliness or heart-beat, and that the liveliness is essential to be accounted for in a good sybil resistant system.</p>
+<p>It is not enough that the key(s) used by agent is old.</p>
+<p>It is clear that one of the patterns that a good Aura player will look for in determining whether an agent is sybil is to look for pattern of usage of the agent’s key(s).</p>
+<ul>
+<li>A fresh key with hardly any txn is obviously to be rated low</li>
+<li>A key with “natural” history of txn with “reasonable” characteristics of txn, preferably recent, to be rated higher</li>
+<li>A key with natural history but dormant for a long time is to be rated with suspicion especially if the sybil resistant system is only accounting for singular key. If multi-keys are allowed, there must be other keys that are livelier.</li>
+</ul>
+<p>Aside:<br>
+If we take the dynamic/emergent nature of agent’s sociality as one of the key design principles of sybil resistant solution, then:</p>
+<ul>
+<li>to scale, it has to be decentralized in the manner BrightID/Aura and FDD aspires.</li>
+<li>it affords agents the autonomy to freely use multiple keys for them to be safe(to the extent pseudonymity can provide) from global/external legibility.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/11
+        Fri, 29 Jul 2022 06:36:40 +0000
+gov.gitcoin.co-post-11159-11
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+castall
+
+            <aside class="quote no-group" data-username="gmkung" data-post="6" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/gmkung/48/6336_2.png" class="avatar"> gmkung:</div>
+<blockquote>
+<p>Also if the malicious accounts are dormant (not exhibiting suspicious activities) it can be hard to ‘prosecute’ them, allowing them to ambush airdrops/governance votes in the future when it is already too late to stop them.</p>
+</blockquote>
+</aside>
+<p>This is a good point.  The main thing that comes to mind here is gating participation on having an Aura verification BrightID passport stamp. This type of verification is harder to get than the basic “meets” verification stamp currently used in Gitcoin Passport.</p>
+<p>Aura research can take time.  (It can take longer for someone to be Aura verified rather than meets verified, for example.)  Even if the research couldn’t provide evidence quickly enough to stop an attack in progress, Aura could be used to identify which set of experts has “first response” defensive powers to be able to stop such an attack (shut off a grant, etc.)</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="7" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>How might we define “collaborative fact checking”?</p>
+</blockquote>
+</aside>
+<p>I’m not sure exactly how it might look for Gitcoin grants data, but a vague example would be: an Aura player provides an interpretation of the data, and other Aura players update how much energy they allocate to that player based on how they view the usefulness and correctness of that interpretation.</p>
+<p>A more concrete example from BrightID graph analysis in Aura is:  an Aura player already knows the phone number of a person they’re researching (and that person’s BrightID, since they’ve connected with them).  The Aura player anonymously checks (using <a href="https://forum.brightid.org/t/fighting-small-scale-sybil-attacks-with-known-identifiers/503#known-identifiers-tool-7" rel="noopener nofollow ugc">the known identifiers Aura tool</a>) that the other Aura players that know that phone number are associating it with same BrightID–in a way that doesn’t reveal the BrightID (or phone number) to anyone that doesn’t already know it.  This makes small-scale sybil attacks getting different BrightIDs verified with different Aura players very hard to pull off.</p>
+<p>Basically what we’re looking for are ways to compare answers with other Aura players.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/10
+        Thu, 28 Jul 2022 19:21:57 +0000
+gov.gitcoin.co-post-11159-10
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+kishoraditya
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="7" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>I think there is a lot of value in combining the aura game mechanics with the reward modeling work we have done</p>
+</blockquote>
+</aside>
+<p>This is really interesting, we will be distributing the power of authority into the hands of the community(ies) and in turn, taking it out of the procedural flow and rewarding it! I think more than unit Sybil authentication, this can be a better cluster Sybil level detection!</p>
+<p>Just a couple of thoughts/questions:</p>
+<ol>
+<li>Instead of open sourcing data at this point, we can create competitive analysis flow through grants itself, rewarding top Sybil hunters with say 0.01 or 0.1% of all the allocated funds in the round. Ecosystems will be happy to do it because it helps them reduce Sybils, their “policies” can act as multiple “energies” in our case. For starters, we can provide datasets through anonymization data protocol to maintain transparency and privacy as we understand it more and improvise it later. The scoring methods by gitcoinDAO itself can be open to all to give a head start whereas data analysts can create on top of it. (top of the mind experimental thoughts)</li>
+<li></li>
+</ol>
+<aside class="quote no-group" data-username="gmkung" data-post="6" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/gmkung/48/6336_2.png" class="avatar"> gmkung:</div>
+<blockquote>
+<p>if the malicious accounts are dormant</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="kyle" data-post="2" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>can this tech be used for multiple graphs?</p>
+</blockquote>
+</aside>
+<p>Will this system indirectly create lower average social distancing between the oldest and newest members? I think it will create a range for us, that helps us understand Sybil and non-Sybil associations and emergence in all social clusters. This, IMO, should be a solution for dormant malicious accounts. And associating the reward to grant rounds itself should also create a balance between which system should Sybil try to trick for maximum output for them with the least resources and capital. To be honest more than actual monetary rewards, the gamification part brings in a wider scope of reinforced learning, if planned accordingly.<br>
+3.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="7" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>What data could we look at to get an understanding of how well the system is working now?</p>
+</blockquote>
+</aside>
+<p>I am seeing this more as an "aura score (or score as a stamp for passport) " instead of as a whole system because this flow makes it necessary to grow socially for any user, which is a possibility for non-sybil users as well. and such different scores should show a pattern when compared against known and unknown sybils. We can actually input intentional sybils for the betterment of system flow in the experimental flow.<br>
+The best points will be to run initially across older datasets or probabilistic outcomes vs experimental outputs.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/9
+        Thu, 28 Jul 2022 16:30:43 +0000
+gov.gitcoin.co-post-11159-9
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+tjayrush
+
+            <aside class="quote no-group" data-username="owocki" data-post="3" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>instead of having one large, monolithic, fraud analysis team doing the analysis,</p>
+</blockquote>
+</aside>
+<p>This is exactly right. There should not be one large monolithic fraud analysis team.</p>
+<aside class="quote no-group">
+<blockquote>
+<p>the DAO could release the data publicly</p>
+</blockquote>
+</aside>
+<p>If the data is on-chain, there does not need to be any “releasing…” Yes the cost of smart contracts is high, but is it higher than building an off-chain solution. I think the answer is no if the smart contract system is designed on purpose to be a bit less gas-efficient and a bit more data-exposing.</p>
+<hr>
+A meager effort to expose and encourage "community data access", is here: https://gitcoin.tokenomics.io/.
+<p>Of particular interest is the neighbors column where every address appearing in the same transactions as any of the grants has been extracted. If there’s sybil happening, it’s happening in that list of addresses.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/8
+        Wed, 27 Jul 2022 17:58:42 +0000
+gov.gitcoin.co-post-11159-8
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="castall" data-post="5" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/castall/48/45_2.png" class="avatar"> castall:</div>
+<blockquote>
+<p>We haven’t nailed down any specific incentive model, but you can imagine that energy flavors can be branded and receive sponsorships from apps that use them. The best sybil hunters will receive large amounts of energy in elite flavors. If apps are generous and willing to pay back the value they receive from Aura to energy holders, we hope it will be enough that the best sybil hunters can do it professionally.</p>
+</blockquote>
+</aside>
+<p>Short Term - Season 15</p>
+<p>Perhaps we could put a small amount of our sybil hunting budget towards “retroactive rewards” for top energy groups or players.</p>
+<p>Long Term - Project to complete for the full launch of Grants 2</p>
+<p>This incentive model outlined by <a class="mention" href="https://gov.gitcoin.co/u/octopus">@octopus</a> &amp; <a class="mention" href="https://gov.gitcoin.co/u/j-cook">@j-cook</a> could be a good starting point, but it would need to be specifically optimized to generate trusted outcomes for Aura participation. It could then be used to reward sybil hunters.</p>
+<p>A “Review Protocol” could allow for any community to reward reviewers by paying a minimal amount per epoch and simply “turn the knob” up and down to fine tune the system to the optimal decentralization needed to maintain credible neutrality.</p>
+<aside class="quote no-group" data-username="castall" data-post="5" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/castall/48/45_2.png" class="avatar"> castall:</div>
+<blockquote>
+<p>Right now, the BrightID connection graph is the subject of analysis, and the research tools allow an Aura player to privately and anonymously check facts with other players, but the same Aura game and graph could be used with other graphs or data sets (such as Gitcoin grants data), as long as collaborative fact checking is possible, and Aura players can judge other Aura players’ effectiveness.</p>
+</blockquote>
+</aside>
+<p>How might we define “collaborative fact checking”?</p>
+<aside class="quote no-group" data-username="castall" data-post="5" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/castall/48/45_2.png" class="avatar"> castall:</div>
+<blockquote>
+<p>I want Aura to grow its toolset to include specialized tools to work with a variety of data sets. An Aura player could be a BrightID specialist, or a Gitcoin grants specialist, or both.</p>
+</blockquote>
+</aside>
+<p>Would these be different energies or just different games?</p>
+<p>Another way to phrase this might be “Would aura be a review tool which gives an interface for users to review a specific question and the system would provide a trusted outcome?”</p>
+<p>OR</p>
+<p>“Does aura have any math proofs giving reasonable probalistic guarantees of a trusted outcome with minimal reasonable assumptions?” (if not, could we define some that would get us there?)</p>
+<aside class="quote no-group" data-username="castall" data-post="5" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/castall/48/45_2.png" class="avatar"> castall:</div>
+<blockquote>
+<p>I want Aura to grow its toolset to include specialized tools to work with a variety of data sets. An Aura player could be a BrightID specialist, or a Gitcoin grants specialist, or both.</p>
+</blockquote>
+</aside>
+<p>Do you have a backlog of the tools which need to be built?</p>
+<h2><a name="here-are-some-quick-win-starting-points-i-see-1" class="anchor" href="https://gov.gitcoin.co#here-are-some-quick-win-starting-points-i-see-1"></a>Here are some quick win starting points I see:</h2>
+<p><em><strong>I think there is a lot of value in combining the aura game mechanics with the reward modeling work we have done.</strong></em></p>
+<p><em><strong>There are a few things we could do this season. Would it be better to set deliverables for the BrightID/Aura team to build a grants graph (maybe in collaboration) or should FDD build it?</strong></em></p>
+<p><em><strong>What data could we look at to get an understanding of how well the system is working now?</strong></em></p>
+<p>I’d really love some quick feedback here from <a class="mention" href="https://gov.gitcoin.co/u/erich">@erich</a> <a class="mention" href="https://gov.gitcoin.co/u/brent">@brent</a> <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a> <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a>  <a class="mention" href="https://gov.gitcoin.co/u/sirlupinwatson">@Sirlupinwatson</a> <a class="mention" href="https://gov.gitcoin.co/u/kishoraditya">@kishoraditya</a> <a class="mention" href="https://gov.gitcoin.co/u/omnianalytics">@omnianalytics</a> <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> in addition to those mentioned above</p>
+<h2><a name="a-review-protocol-2" class="anchor" href="https://gov.gitcoin.co#a-review-protocol-2"></a>A Review Protocol</h2>
+<p>Allows a community to retroactively reward the reviewers who participated in a review round if they exceed a certain accuracy/consensus threshold. Scoring may include “gold stars” &amp; “poison pills”. (<a href="https://gov.gitcoin.co/t/gia-rewards-okr-report/10438">Rewards Modeling</a>)</p>
+<p>Gamifies participation in a way that changes the optimal incentive structure in a way that attempting to attack any one round would be less advantageous than being continued to be invited back to play. (Aura)</p>
+<p>Allows anyone to create a scoring system for how trusted a reviewer is. Similar to passport and reader. (FDD can be a first “vendor” of a scoring mechanism)</p>
+<aside class="quote no-group" data-username="castall" data-post="5" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/castall/48/45_2.png" class="avatar"> castall:</div>
+<blockquote>
+<p>In fact, I think the Aura game could be used for fact-checking in other domains (besides sybil hunting) where experts help to determine who else is an expert in a decentralized manner.</p>
+</blockquote>
+</aside>
+<p>Another use case could be grant reviews. Our collaboration with Ethelo tool provided a probabilistic score as an output. This can be used to predetermine eligibility or to provide community reviews of whether or not they are effective with the grants they have received. Grant round owners could elect to show these scores (or others!) and/or use them to programmatically filter grants for eligibility.</p>
+<p>A continued partnership with Ethelo could use this gamification and trust model to scale and decentralize execution of grant application reviews for any community-curated grant round*, but would have to build out the ability to dynamically change the weighting applied to each of the reviewers based on a stamp, NFT, or token they hold.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/7
+        Wed, 27 Jul 2022 09:21:35 +0000
+gov.gitcoin.co-post-11159-7
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+gmkung
+
+            <p>Interesting idea, but I do wonder if the incentives in Aura are strong enough to incentivise people to take out Sybil attackers in a short enough amount of time. Also if the malicious accounts are dormant (not exhibiting suspicious activities) it can be hard to ‘prosecute’ them, allowing them to ambush airdrops/governance votes in the future when it is already too late to stop them.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/6
+        Tue, 26 Jul 2022 08:38:54 +0000
+gov.gitcoin.co-post-11159-6
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+castall
+
+            <aside class="quote no-group" data-username="kyle" data-post="2" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>I wonder how they are incentivizing folks to participate. ie, does Energy get turned into a real world reward?</p>
+</blockquote>
+</aside>
+<p>So far there are no monetary incentives, but the energy overlay allows anyone who wants to reward helpful behavior to identify whom to reward and how much. For example, an app that uses BrightID/Aura to verify uniqueness could periodically drop rewards to any Aura player who helps verify its users.</p>
+<p><strong>More on “Energy”</strong></p>
+<p>Energy is a measure of a sybil hunter / human verifier’s effectiveness as judged by other Aura players.  Energy also determines the capacity of an Aura player to provide expert help: i.e. verify regular BrightID users. The more energy someone has, the more verification power they have.</p>
+<p>BrightID has long had “seed groups” (pre-trusted people in the graph), but the current process of seed group selection is slow and clunky and done by a seed DAO that hasn’t changed much over the years.</p>
+<p>Aura will speed this up and make it more resilient to corruption through the use of energy “flavors.”  If an energy team (the source of an energy flavor) is found by the public to be corrupt, apps will naturally stop using that energy flavor.  At the same time, new energy teams can form and create new flavors without centralized control.  They just need to convince Aura players to use their energy.  (Each Aura players can pick at most five energy flavors to receive and pass on.) If a flavor needs to be discontinued, Aura falls back on other flavors and continues to operate.</p>
+<p>We haven’t nailed down any specific incentive model, but you can imagine that energy flavors can be branded and receive sponsorships from apps that use them. The best sybil hunters will receive large amounts of energy in elite flavors. If apps are generous and willing to pay back the value they receive from Aura to energy holders, we hope it will be enough that the best sybil hunters can do it professionally.</p>
+<aside class="quote no-group" data-username="kyle" data-post="2" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Also, can this tech be used for multiple graphs?</p>
+</blockquote>
+</aside>
+<p>Yes.  Aura has its own internal graph which is the energy graph.  The nodes in this graph are all Aura players.  The Aura toolbox then provides tools to analyze the BrightID graph and provide assessments about whether its nodes are unique people or sybils.  Right now, the BrightID connection graph is the subject of analysis, and the research tools allow an Aura player to privately and anonymously check facts with other players, but the same Aura game and graph could be used with other graphs or data sets (such as Gitcoin grants data), as long as collaborative fact checking is possible, and Aura players can judge other Aura players’ effectiveness.</p>
+<p>I want Aura to grow its toolset to include specialized tools to work with a variety of data sets.  An Aura player could be a BrightID specialist, or a Gitcoin grants specialist, or both.</p>
+<p>In fact, I think the Aura game could be used for fact-checking in other domains (besides sybil hunting) where experts help to determine who else is an expert in a decentralized manner.</p>
+<p>BrightID is useful as a tool to create the expert graph (experts vouching for experts) that is at the core of Aura, but a separate question is what will the experts research?  The BrightID graph itself forms the first subject of research.  Gitcoin grants data could be the second.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/5
+        Mon, 25 Jul 2022 23:32:43 +0000
+gov.gitcoin.co-post-11159-5
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+ccerv1
+
+            <aside class="quote no-group" data-username="owocki" data-post="3" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>IMO the big opportunity is to decentralize the analysis + gamify the creation of results.</p>
+</blockquote>
+</aside>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/100.png?v=12" title=":100:" class="emoji only-emoji" alt=":100:" loading="lazy" width="20" height="20"><br>
+This could be accomplished by exposing a grants subgraph that shows contributions from each wallet address and the desoc data associated with that wallet.</p>
+<p>For example:</p>
+<pre><code class="lang-auto">query {
+  donors(
+    where: {
+      grantRound_in: ["GR14"]
+    }
+  ) {
+    id
+    contributions {
+      grant
+      amount
+    }
+    desoc {
+      credentials {
+        name
+        verificationDate
+      }
+      nfts {
+        id
+        mintDate
+      }
+      poaps {
+        id
+        mintDate
+      }
+      lens {
+        numFollowers
+        numFollowing
+      }
+      poh {
+        profileCreatedDate
+      }
+    }
+  }
+}
+</code></pre>
+<p>Critically, the API does not show an actual score, just the underlying data needed to build a scoring model.</p>
+<p>Developers in the community could create their own scoring algorithms from this data, resulting in a common output, eg, <code>{​"wallet": "0x..", "sybilScore": 0.87, "squelch":  true}</code> for a list of wallets.</p>
+<p>Developers could also complement the Gitcoin graph with other desoc data from on-chain sources. For example, verses.xyz signatures on Arweave.</p>
+<p>FDD could backcheck a proportion of the cases where community algorithms do not achieve consensus. This may require some calibration of the <code>sybilScore</code> threshold that triggers a squelch, eg, a more promiscuous algorithm might squelch only 1% of accounts, whereas a tougher one might squelch 10%.</p>
+<p>The community’s actual Sybil scores + data from past rounds could be exposed (perhaps hiding wallet addresses) for Kaggle style competitions. This would be a great way for data scientists to learn about the shape of the data and test the performance of their models against others.</p>
+<p>FWIW, I’m doing some work with FDD on this at the moment. It’s a fun dataset and there are some pretty clear signals. For example, the chart below shows a cluster of grants that are strongly preferred by wallets that have no on-chain credentials.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2d6aca0f91e6af768ad5a73eda654a7f84e80838.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/2d6aca0f91e6af768ad5a73eda654a7f84e80838" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2d6aca0f91e6af768ad5a73eda654a7f84e80838_2_689x375.png" alt="image" data-base62-sha1="6tMhqTykjCQiXUFzAQylBb34XbO" width="689" height="375" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2d6aca0f91e6af768ad5a73eda654a7f84e80838_2_689x375.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2d6aca0f91e6af768ad5a73eda654a7f84e80838_2_1033x562.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/2d6aca0f91e6af768ad5a73eda654a7f84e80838.png 2x" data-dominant-color="F7F7F7"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/4
+        Mon, 25 Jul 2022 19:43:29 +0000
+gov.gitcoin.co-post-11159-4
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+owocki
+
+            <aside class="quote no-group" data-username="kyle" data-post="2" data-topic="11159">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Identifying Sybils in this graph, and the comparing to “similar” account by Grants donated to, would be really interesting.</p>
+</blockquote>
+</aside>
+<p>IMO the big opportunity is to decentralize the analysis + gamify the creation of results.</p>
+<p>eg instead of having one large, monolithic, fraud analysis team doing the analysis, the DAO could release the data publicly and let different teams of data analyst’s compete to do the best analysis.  the plurality of all of the data analysis’s creates a stronger result, the system avoids capture by one group of analysts, and there is permissionless and transparent innovation coming from the crowd.</p>
+<p><a href="https://numer.ai/">Numerai</a> has been really successful with this approach to doing data analysis (but in a very different context).</p>
+<p>i am not clued into the latest approaches by the FDD and GPC, but i wonder what they think.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/3
+        Mon, 25 Jul 2022 18:21:50 +0000
+gov.gitcoin.co-post-11159-3
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+kyle
+
+            <p>I love this. It’s so much of what we have been talking about wanting to see from an anti sybil solution. I wonder how they are incentivizing folks to participate. ie, does Energy get turned into a real world reward?</p>
+<p>Also, can this tech be used for multiple graphs? (ie, Gitcoin’s donation graph)? Here is a snippet of the last month (not include GR14):<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/530505e8ca34db6e00ffb959b9f8f47939a02afc.jpeg" data-download-href="/uploads/short-url/bQqoiFxwCgwb0JiarFQU7LOLv40.jpeg?dl=1" title="Screen Shot 2022-07-25 at 1.50.06 PM"><img src="/uploads/db4391/optimized/2X/5/530505e8ca34db6e00ffb959b9f8f47939a02afc_2_690x396.jpeg" alt="Screen Shot 2022-07-25 at 1.50.06 PM" data-base62-sha1="bQqoiFxwCgwb0JiarFQU7LOLv40" width="690" height="396" srcset="/uploads/db4391/optimized/2X/5/530505e8ca34db6e00ffb959b9f8f47939a02afc_2_690x396.jpeg, /uploads/db4391/optimized/2X/5/530505e8ca34db6e00ffb959b9f8f47939a02afc_2_1035x594.jpeg 1.5x, /uploads/db4391/optimized/2X/5/530505e8ca34db6e00ffb959b9f8f47939a02afc_2_1380x792.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/5/530505e8ca34db6e00ffb959b9f8f47939a02afc_2_10x10.png"></a></div><p></p>
+<p>Identifying Sybils in this graph, and the comparing to “similar” account by Grants donated to, would be really interesting.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/2
+        Mon, 25 Jul 2022 17:51:25 +0000
+gov.gitcoin.co-post-11159-2
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+What can we learn from BrightID's Aura Sybil Defense Software?
+owocki
+
+            <p>I think it’s interesting how BrightID has designed their Fraud Defense ecosystem, and think there are some things that are worth learning from as Gitcoin <a href="https://gov.gitcoin.co/t/passport-is-our-aws/10995">moves more into Grants 2.0 and into Passport</a>.</p>
+<p>BrightID has designed <a href="https://forum.brightid.org/t/aura-a-new-verification-for-brightid/393">Aura</a>, a scalable and decentralized fraud defense software system that rewards users who traverse the BrightID graph and look for sybil attackers.</p>
+<p>Aura is a Sybil battleground game.  This game creates sybil resistence for BrightID.  It’s a place where the best motivated, best equipped, and most capable sybil defenders are found and enabled to help the system find sybil attackors.</p>
+<p>Here’s how it works:</p>
+<ol>
+<li>BrightID founders and other high trust users designate users who they think are “honest” (this is the trusted seed).</li>
+<li>Those honest users then get a unit of currency called “Energy”.
+<ul>
+<li>Anyone can create their own system of “trust” and it can be retroactively empowered with energy from these users too.  This enables great ideas and great sybil hunters to come from anywhere.</li>
+</ul>
+</li>
+<li>Those users are then able to traverse the BrightID social graph (pictured below) either via the app or via the API and get rewarded with more energy for finding sybil attackors.</li>
+<li>For example, a user who found the below sybil attackor would receive a lot of energy.</li>
+</ol>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/57b4c815df89342b646257d90c1124df6638e77d.jpeg" data-download-href="/uploads/short-url/cvSRuadyrbXivWvE3Sq3caW3Yfz.jpeg?dl=1" title="57b4c815df89342b646257d90c1124df6638e77d"><img src="/uploads/db4391/optimized/2X/5/57b4c815df89342b646257d90c1124df6638e77d_2_690x335.jpeg" alt="57b4c815df89342b646257d90c1124df6638e77d" data-base62-sha1="cvSRuadyrbXivWvE3Sq3caW3Yfz" width="690" height="335" srcset="/uploads/db4391/optimized/2X/5/57b4c815df89342b646257d90c1124df6638e77d_2_690x335.jpeg, /uploads/db4391/optimized/2X/5/57b4c815df89342b646257d90c1124df6638e77d_2_1035x502.jpeg 1.5x, /uploads/db4391/optimized/2X/5/57b4c815df89342b646257d90c1124df6638e77d_2_1380x670.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/5/57b4c815df89342b646257d90c1124df6638e77d_2_10x10.png"></a></div><br>
+(Yellow nodes represent a sybil attack. Green nodes represent seeds, which help to identify the honest part of the graph (blue nodes).)<p></p>
+<p>Here’s what the App UI looks like.  In the app (or using the API), you can mark ay user as sybil or trusted.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5bbbef4db170f6a63d6e5bbed30869e1cc44f56d.jpeg" data-download-href="/uploads/short-url/d5w65ycmmsMOArlXUnN5463yCRv.jpeg?dl=1" title="f7c7eb69345ce1437c56e338c92bd4e62952ef9b_2_1248x1000"><img src="/uploads/db4391/optimized/2X/5/5bbbef4db170f6a63d6e5bbed30869e1cc44f56d_2_624x500.jpeg" alt="f7c7eb69345ce1437c56e338c92bd4e62952ef9b_2_1248x1000" data-base62-sha1="d5w65ycmmsMOArlXUnN5463yCRv" width="624" height="500" srcset="/uploads/db4391/optimized/2X/5/5bbbef4db170f6a63d6e5bbed30869e1cc44f56d_2_624x500.jpeg, /uploads/db4391/optimized/2X/5/5bbbef4db170f6a63d6e5bbed30869e1cc44f56d_2_936x750.jpeg 1.5x, /uploads/db4391/optimized/2X/5/5bbbef4db170f6a63d6e5bbed30869e1cc44f56d_2_1248x1000.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/5/5bbbef4db170f6a63d6e5bbed30869e1cc44f56d_2_10x10.png"></a></div><p></p>
+<p>What I find most striking about Aura is how <em>scalable</em> and <em>decentralized</em> and <em>modular</em> it is.  As Gitcoin Grants moves from 1.0 to 2.0, it will be interesting to see if the DAO is able to come up with less centralized, more effective, and more scalable ways of finding &amp; routing sybil attackers.</p>
+<p><a href="https://forum.brightid.org/t/aura-a-new-verification-for-brightid/393">Read more about Aura here</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/1
+        Sun, 24 Jul 2022 21:22:10 +0000
+gov.gitcoin.co-post-11159-1
+What can we learn from BrightID's Aura Sybil Defense Software?
+      
+
+

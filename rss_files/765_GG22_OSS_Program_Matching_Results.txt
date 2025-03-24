@@ -1,0 +1,516 @@
+
+
+
+GG22 OSS Program Matching Results
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645
+    Our GG22 OSS program round matching results are live [here](https://docs.google.com/spreadsheets/d/1WMFW6YrLIodpKoGcE79Vgf9vgBXXnC-JXw2w1Veds8s/edit?gid=1613004131#gid=1613004131)! We’ll have five days for review and feedback then, barring any major issues, will proceed with payouts by November 22.
+
+Special thanks to @umarkhaneth for your partnership in crafting this post.
+
+## TLDR
+
+* GG22 saw a number of exciting new product features, such as Quick Bridge and [Mint Attestations](https://www.gitcoin.co/blog/mint-attestations-capturing-your-impact).
+* We implemented the same two-pronged [sybil resistance strategy](https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524) as we’ve been using since GG20. We used a [pluralistic variant of QF](https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding) and we used Passport’s model based detection system. We did not do any closed-source silencing of sybils/donors. Instead, we’re solely relying on our mechanism and Gitcoin Passport.
+* Discussion will be open for five days before payouts are concluded next week. A [GG22 pre-ratification](https://gov.gitcoin.co/t/proposal-gg22-pre-ratification/19501) was passed through governance, speeding up the process of payouts to grantees.
+
+[Full Matching Results](https://docs.google.com/spreadsheets/d/1WMFW6YrLIodpKoGcE79Vgf9vgBXXnC-JXw2w1Veds8s/edit?gid=982062096#gid=982062096)
+
+## Round Overview
+
+Every round sees new developments. Some of the most exciting in GG22 included:
+
+* Returning to our Open Source Software Program after GG21 was a fully [community-led round.](https://www.gitcoin.co/blog/gg21-results-retrospective)
+* 7 Community Rounds. Read the [GG22 announcement post](https://gov.gitcoin.co/t/gg22-community-rounds-announced/19450) for those selected to run during this round.
+* Providing the same sybil resistance tooling we use for our rounds to every community using Grants Stack by creating a [cluster-matching calculator ](http://github.com/gitcoinco/qf-calculator)and integrating with [Passport’s model based detection](https://support.passport.xyz/passport-knowledge-base/stamps/guide-to-model-based-detection).
+* Expanding our product features to include Quick Bridge and Mint Attestations.
+* Consolidating all of our program rounds onto Arbitrum.
+
+## Key Metrics
+
+### Overall
+
+![|624x291](upload://5opg4n33SkzDHGnULNEYZ6iCoXN.png)
+
+### OSS Program
+
+4 Program Rounds
+$1M Matching
+$215k Total Crowdfunded
+25,688 Unique Donors
+283 Projects
+
+## ![:bulb:|20x20](upload://bNudgaxRbqz4WF1KdbpGfTxjBaq.png ":bulb:") Project Spotlight
+
+Here are the top five projects by total matching funding (gleaned from the [overall matching results](https://docs.google.com/spreadsheets/d/1WMFW6YrLIodpKoGcE79Vgf9vgBXXnC-JXw2w1Veds8s/edit?gid=982062096#gid=982062096)). The projects on this list are the ones with the most diverse bases of support, regardless of the size of the base.
+
+### GG22 OSS Developer Tooling & Libraries
+
+|Project Name|Matching Funds (USDC)|Matching Funds (USD)|
+| --- | --- | --- |
+|DefiLlama|$30,000|$29,862.54|
+|Passport XYZ (formerly Gitcoin Passport)|$30,000|$29,862.54|
+|Blockscout Open-Source Block Explorer|$27,280.78|$27,155.78|
+|ethers.js|$18,686.91|$18,601.28|
+|Viem|$17,077.67|$16,999.42|
+
+### GG22 OSS dApps & Apps
+
+|Project Name|Matching Funds (USDC)|Matching Funds (USD)|
+| --- | --- | --- |
+|Revoke.cash|$15,000|$14,931.27|
+|Superchain Eco dApps|$15,000|$14,931.27|
+|Hey.xyz (formerly Lenster)|$15,000|$14,931.27|
+|The Tor Project|$15,000|$14,931.27|
+|Giveth|$15,000|$14,931.27|
+
+### GG22 Hackathon Alumni
+
+Here’s an overview of additional projects that received matching funds in this round:
+
+|Project Name|Matching Funds (USDC)|Matching Funds (USD)|
+| --- | --- | --- |
+|Geist dApp Kit|$10,000|$9,954.18|
+|Warp Ads|$10,000|$9,954.18|
+|UpStore🛡️|$10,000|$9,954.18|
+|Realize It|$10,000|$9,954.18|
+|Postino|$10,000|$9,954.18|
+
+### GG22 OSS Web3 Infrastructure
+
+Here’s an overview of more projects that received significant matching funds this round:
+
+|Project Name|Matching Funds (USDC)|Matching Funds (USD)|
+| --- | --- | --- |
+|L2BEAT|$30,000|$29,862.54|
+|eth.limo|$30,000|$29,862.54|
+|Dappnode|$30,000|$29,862.54|
+|Ethereum Attestation Service (EAS)|$30,000|$29,862.54|
+|EthStaker|$25,711.66|$25,593.85|
+
+## ![:abacus:|20x20](upload://mkuUumpgcCNkv6O1f7MLCaNML3J.png ":abacus:") Round and Results Calculation Details
+
+Before GG20 began, we proposed a two-pronged [sybil resistance strategy](https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524). To recap it briefly, we would continue to use COCM (Connection-Oriented Cluster Matching) as we had in GG20 & GG22.
+
+As explained in the post, and the [paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507) which introduced this mechanism to the world, COCM is much less vulnerable to Sybil Attacks than ordinary QF because it reduces the matching of donors who look similar.
+
+In addition, over the past few rounds, Passport’s Model-Based Detection system has yielded greater sybil resistance than the stamp-based system without any of the user friction. When used together, we believe these two tools produce the most sybil-resistant results we’ve ever had.
+
+There were some major updates made to Passport’s MBD system, which you can read more about [here](https://docs.passport.xyz/building-with-passport/model-based-detection/available-models).
+
+### Connection-Oriented Cluster Matching (COCM)
+
+COCM is an approach within Gitcoin Grants that enhances Quadratic Funding by prioritizing projects with diverse support bases, helping to counteract sybil attacks and coordinated groups trying to unfairly influence funding distribution. Key elements include:
+
+* Diversity Bonus: COCM increases matching funds for projects supported by a wide array of "tribes" or distinct groups, rewarding cross-group support and broad appeal.
+* Markov Chain Enhancement: Recent updates to COCM use a Markov chain approach to gauge connection strength between users and projects, providing stronger sybil resistance by analyzing indirect connections.
+* Funding Distribution: COCM’s design inherently shifts some funds from top projects to those in the "long tail," enhancing the reach of smaller or niche projects.
+
+### Gitcoin Passport’s Model-Based Detection System
+
+The Gitcoin Passport team has implemented a model that evaluates on-chain activity to detect potential sybil accounts, enhancing funding fairness by:
+
+* Address Probability Scoring: The model assigns each address a probability score, indicating whether it likely belongs to a genuine user or a sybil account.
+* Continuous Improvement: While the model sometimes mistakenly flags new users with limited on-chain history, the team is refining the dataset and expanding to include Layer 2 networks, effectively reducing sybil influence on funding results.
+
+These efforts together strengthen Gitcoin’s defenses against manipulation, helping to ensure fair distribution of funds to genuine community-supported projects.
+
+## Code of Conduct Reminder
+
+As a reminder to all projects, [quid pro quo ](https://support.gitcoin.co/gitcoin-knowledge-base/about-gitcoin/policy/understanding-potential-attack-vectors/bribery-quid-pro-quo)is explicitly against [our agreement](https://grants-portal.gitcoin.co/gitcoin-grants-grantee-portal/gg19-eligibility). Providing an incentive or reward for individuals to donate to specific projects can affect your ability to participate in future rounds. If you see someone engaging in this type of behavior, please [let us know.](https://forms.gle/gjnz7mtCcd6aRTFw6)
+
+*We have removed Pheasant Network from matching distribution calculations, as this project clearly participated in Quid Pro Quo.*
+
+## Next Steps
+
+We plan to distribute the matching by November 22, after the [results](https://docs.google.com/spreadsheets/d/1WMFW6YrLIodpKoGcE79Vgf9vgBXXnC-JXw2w1Veds8s/edit?gid=1613004131#gid=1613004131) are open for discussion for five days.
+
+It’s worth noting that GG22 [pre-approved the matching fund](https://gov.gitcoin.co/t/proposal-gg22-pre-ratification/19501) to be paid out before results were posted. This means that the payout process to grantees will occur faster, after this post has been left open for community input.
+
+We are also hosting an internal retro in the following weeks and will publish further results and learnings. And as always, a detailed blog post will be published on the day that payouts are distributed.
+
+We’re also always looking for direct feedback from the community on which improvements would make GG23 even better. Please don’t hesitate to let us know!
+Mon, 25 Nov 2024 12:42:26 +0000
+🌱 Gitcoin Grants
+
+
+GG22 OSS Program Matching Results
+MathildaDV
+
+            <p>Yes! We are busy processing payouts rn but we are encountering a slight delay (comms were sent out end of last week). Apologies about that – will process as soon as possible, latest tomorrow.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/12
+        Mon, 25 Nov 2024 12:42:26 +0000
+gov.gitcoin.co-post-19645-12
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+Maaz
+
+            <p>Do you mean the payouts will start from Monday? <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/11
+        Sat, 23 Nov 2024 03:14:30 +0000
+gov.gitcoin.co-post-19645-11
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+MathildaDV
+
+            <p>[UPDATE]: This post has been open for community feedback for 5+ days, and due to no conflicts with results, and the pre-ratification of the matching pool funds, we will proceed to payouts by end of this week.</p>
+<p>Thank you all for all your efforts making this round successful!</p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/10
+        Thu, 21 Nov 2024 18:02:08 +0000
+gov.gitcoin.co-post-19645-10
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+MathildaDV
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/chain_l">@chain_l</a>! Thank you for your comment. There are a few reasons why matching is 0:</p>
+<ul>
+<li>minimum donation amount not reached</li>
+<li>donors only donated to their project</li>
+<li>not enough activity on their wallets</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/9
+        Fri, 15 Nov 2024 02:57:40 +0000
+gov.gitcoin.co-post-19645-9
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+CeciSakura
+
+            <p>Hello <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a>!<br>
+Thank you for such an amazing recap of the GG22 round and its results. The level of transparency you bring to all of Gitcoin’s work is simply outstanding!  <img src="https://gov.gitcoin.co/images/emoji/twitter/clap.png?v=12" title=":clap:" class="emoji" alt=":clap:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/clap.png?v=12" title=":clap:" class="emoji" alt=":clap:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/clap.png?v=12" title=":clap:" class="emoji" alt=":clap:" loading="lazy" width="20" height="20"></p>
+<p>I think it would be incredibly insightful to see a comparative data analysis spanning rounds GG20 through GG22, especially focusing on donor behavior and trends in the OSS rounds. It would be fascinating to look at things like which types of projects attracted the most donations, how donation amounts have evolved across rounds, and any shifts in project categories that are gaining interest. Plus, examining whether donor participation has increased or decreased over time would give a clearer picture of community engagement.</p>
+<p>This kind of analysis could give both the Gitcoin team and the community a richer understanding of the dynamics within OSS funding and how it’s growing or changing with each round. Just some ideas that could shed light on how we’re collectively making an impact over time!</p>
+<p>Best regards,<br>
+<a class="mention" href="https://gov.gitcoin.co/u/cecisakura">@CeciSakura</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/8
+        Wed, 13 Nov 2024 15:32:50 +0000
+gov.gitcoin.co-post-19645-8
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+KMLLC
+
+            <p>In a former life as a business strategist, I always found cycle over cycle comparisons useful. Typically when they can be visualized side by side and charted, it can lead to some learnings of opportunities. Might just be me, but I would find value in having this type of analytical view.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/7
+        Wed, 13 Nov 2024 14:45:56 +0000
+gov.gitcoin.co-post-19645-7
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+chain_l
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a></p>
+<p>Congratulations on one more successful round!</p>
+<p>Can we learn about the calculation sheet that concluded the final matching funds? I see Hackathon Alumni Category has most % of approved projects being allotted 0 Matching funds. I would love dive deep and understand with the data, if it is accessible.</p>
+<p>Thanks.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/6
+        Wed, 13 Nov 2024 07:15:06 +0000
+gov.gitcoin.co-post-19645-6
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+ValentineCodes
+
+            <p>Hi! <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a></p>
+<p>Great results and fairly distributed!. Thanks for aiding the growth of Scaffold-ETH-Mobile!</p>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/handshake.png?v=12" title=":handshake:" class="emoji only-emoji" alt=":handshake:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/5
+        Wed, 13 Nov 2024 04:42:02 +0000
+gov.gitcoin.co-post-19645-5
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+MathildaDV
+
+            <p>Hey Will T! Thanks for your feedback. Regarding your question, you can view the results of GG20 <a href="https://gov.gitcoin.co/t/passed-gg20-program-round-matching-results/18816">here</a>. We generally don’t do comparisons ourselves, but ff to have a look yourself! Curious though, would comparisons be helpful (and if so, why?)</p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/4
+        Wed, 13 Nov 2024 01:55:25 +0000
+gov.gitcoin.co-post-19645-4
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+KMLLC
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a>,</p>
+<p>Thanks for sharing the results. Hopefully these matched funds will aid in the effort of making these projects sustainable through time. Gitcoin product team definitely listens to community feedback and executes timely to address challenges, as is evident with every subsequent iteration to streamline the user experience.</p>
+<p>One query I would have as a Gitcoin Steward, is there a simplified compare and contrast with these results &amp; GG20 since both focused on OSS rounds?</p>
+<p>If not no stress, just a nicety for an apples to apples comparison.</p>
+<p>All my best,</p>
+<p>Will T<br>
+Founder <a class="mention" href="https://gov.gitcoin.co/u/kmllc">@KMLLC</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/3
+        Tue, 12 Nov 2024 17:22:35 +0000
+gov.gitcoin.co-post-19645-3
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+free2ride19
+
+            <p>Hi MathildaDV,</p>
+<p>Thanks for sharing the GG22 OSS Program Matching Results! I’ve reviewed the updates on Quick Bridge, Mint Attestations, and the sybil resistance strategy. Impressive work!</p>
+<p>Appreciate the transparency on using a pluralistic variant of QF and Passport’s model-based detection system. The open-source approach to sybil resistance is commendable.</p>
+<p>Looking forward to the discussion over the next five days. The governance pre-ratification approval should indeed expedite the payout process.</p>
+<p>Best regards,<br>
+<a class="mention" href="https://gov.gitcoin.co/u/free2ride19">@free2ride19</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/2
+        Tue, 12 Nov 2024 15:36:20 +0000
+gov.gitcoin.co-post-19645-2
+GG22 OSS Program Matching Results
+      
+
+GG22 OSS Program Matching Results
+MathildaDV
+
+            <p>Our GG22 OSS program round matching results are live <a href="https://docs.google.com/spreadsheets/d/1WMFW6YrLIodpKoGcE79Vgf9vgBXXnC-JXw2w1Veds8s/edit?gid=1613004131#gid=1613004131" rel="noopener nofollow ugc">here</a>! We’ll have five days for review and feedback then, barring any major issues, will proceed with payouts by November 22.</p>
+<p>Special thanks to <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> for your partnership in crafting this post.</p>
+<h2><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR</h2>
+<ul>
+<li>GG22 saw a number of exciting new product features, such as Quick Bridge and <a href="https://www.gitcoin.co/blog/mint-attestations-capturing-your-impact" rel="noopener nofollow ugc">Mint Attestations</a>.</li>
+<li>We implemented the same two-pronged <a href="https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524">sybil resistance strategy</a> as we’ve been using since GG20. We used a <a href="https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding" rel="noopener nofollow ugc">pluralistic variant of QF</a> and we used Passport’s model based detection system. We did not do any closed-source silencing of sybils/donors. Instead, we’re solely relying on our mechanism and Gitcoin Passport.</li>
+<li>Discussion will be open for five days before payouts are concluded next week. A <a href="https://gov.gitcoin.co/t/proposal-gg22-pre-ratification/19501">GG22 pre-ratification</a> was passed through governance, speeding up the process of payouts to grantees.</li>
+</ul>
+<p><a href="https://docs.google.com/spreadsheets/d/1WMFW6YrLIodpKoGcE79Vgf9vgBXXnC-JXw2w1Veds8s/edit?gid=982062096#gid=982062096" rel="noopener nofollow ugc">Full Matching Results</a></p>
+<h2><a name="round-overview-2" class="anchor" href="https://gov.gitcoin.co#round-overview-2"></a>Round Overview</h2>
+<p>Every round sees new developments. Some of the most exciting in GG22 included:</p>
+<ul>
+<li>Returning to our Open Source Software Program after GG21 was a fully <a href="https://www.gitcoin.co/blog/gg21-results-retrospective" rel="noopener nofollow ugc">community-led round.</a></li>
+<li>7 Community Rounds. Read the <a href="https://gov.gitcoin.co/t/gg22-community-rounds-announced/19450">GG22 announcement post</a> for those selected to run during this round.</li>
+<li>Providing the same sybil resistance tooling we use for our rounds to every community using Grants Stack by creating a <a href="http://github.com/gitcoinco/qf-calculator" rel="noopener nofollow ugc">cluster-matching calculator </a>and integrating with <a href="https://support.passport.xyz/passport-knowledge-base/stamps/guide-to-model-based-detection" rel="noopener nofollow ugc">Passport’s model based detection</a>.</li>
+<li>Expanding our product features to include Quick Bridge and Mint Attestations.</li>
+<li>Consolidating all of our program rounds onto Arbitrum.</li>
+</ul>
+<h2><a name="key-metrics-3" class="anchor" href="https://gov.gitcoin.co#key-metrics-3"></a>Key Metrics</h2>
+<h3><a name="overall-4" class="anchor" href="https://gov.gitcoin.co#overall-4"></a>Overall</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/25cd2daeb2eb90b0beccd0beff4462a1f842c34b.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/25cd2daeb2eb90b0beccd0beff4462a1f842c34b" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/25cd2daeb2eb90b0beccd0beff4462a1f842c34b_2_624x291.png" alt="" data-base62-sha1="5opg4n33SkzDHGnULNEYZ6iCoXN" width="624" height="291" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/25cd2daeb2eb90b0beccd0beff4462a1f842c34b_2_624x291.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/25cd2daeb2eb90b0beccd0beff4462a1f842c34b_2_936x436.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/25cd2daeb2eb90b0beccd0beff4462a1f842c34b_2_1248x582.png 2x" data-dominant-color="F0F2F9"></a></div><p></p>
+<h3><a name="oss-program-5" class="anchor" href="https://gov.gitcoin.co#oss-program-5"></a>OSS Program</h3>
+<p>4 Program Rounds<br>
+$1M Matching<br>
+$215k Total Crowdfunded<br>
+25,688 Unique Donors<br>
+283 Projects</p>
+<h2><a name="bulb20x20uploadbnudgaxrbqz4wf1kdbpgftxjbaqpng-bulb-project-spotlight-6" class="anchor" href="https://gov.gitcoin.co#bulb20x20uploadbnudgaxrbqz4wf1kdbpgftxjbaqpng-bulb-project-spotlight-6"></a><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/5/52affdf968146781fea64029b8a261ba34b37b72.png" alt=":bulb:" title=":bulb:" data-base62-sha1="bNudgaxRbqz4WF1KdbpGfTxjBaq" width="20" height="20"> Project Spotlight</h2>
+<p>Here are the top five projects by total matching funding (gleaned from the <a href="https://docs.google.com/spreadsheets/d/1WMFW6YrLIodpKoGcE79Vgf9vgBXXnC-JXw2w1Veds8s/edit?gid=982062096#gid=982062096" rel="noopener nofollow ugc">overall matching results</a>). The projects on this list are the ones with the most diverse bases of support, regardless of the size of the base.</p>
+<h3><a name="gg22-oss-developer-tooling-libraries-7" class="anchor" href="https://gov.gitcoin.co#gg22-oss-developer-tooling-libraries-7"></a>GG22 OSS Developer Tooling &amp; Libraries</h3>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Project Name</th>
+<th>Matching Funds (USDC)</th>
+<th>Matching Funds (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DefiLlama</td>
+<td>$30,000</td>
+<td>$29,862.54</td>
+</tr>
+<tr>
+<td>Passport XYZ (formerly Gitcoin Passport)</td>
+<td>$30,000</td>
+<td>$29,862.54</td>
+</tr>
+<tr>
+<td>Blockscout Open-Source Block Explorer</td>
+<td>$27,280.78</td>
+<td>$27,155.78</td>
+</tr>
+<tr>
+<td>ethers.js</td>
+<td>$18,686.91</td>
+<td>$18,601.28</td>
+</tr>
+<tr>
+<td>Viem</td>
+<td>$17,077.67</td>
+<td>$16,999.42</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="gg22-oss-dapps-apps-8" class="anchor" href="https://gov.gitcoin.co#gg22-oss-dapps-apps-8"></a>GG22 OSS dApps &amp; Apps</h3>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Project Name</th>
+<th>Matching Funds (USDC)</th>
+<th>Matching Funds (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revoke.cash</td>
+<td>$15,000</td>
+<td>$14,931.27</td>
+</tr>
+<tr>
+<td>Superchain Eco dApps</td>
+<td>$15,000</td>
+<td>$14,931.27</td>
+</tr>
+<tr>
+<td>Hey.xyz (formerly Lenster)</td>
+<td>$15,000</td>
+<td>$14,931.27</td>
+</tr>
+<tr>
+<td>The Tor Project</td>
+<td>$15,000</td>
+<td>$14,931.27</td>
+</tr>
+<tr>
+<td>Giveth</td>
+<td>$15,000</td>
+<td>$14,931.27</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="gg22-hackathon-alumni-9" class="anchor" href="https://gov.gitcoin.co#gg22-hackathon-alumni-9"></a>GG22 Hackathon Alumni</h3>
+<p>Here’s an overview of additional projects that received matching funds in this round:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Project Name</th>
+<th>Matching Funds (USDC)</th>
+<th>Matching Funds (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geist dApp Kit</td>
+<td>$10,000</td>
+<td>$9,954.18</td>
+</tr>
+<tr>
+<td>Warp Ads</td>
+<td>$10,000</td>
+<td>$9,954.18</td>
+</tr>
+<tr>
+<td>UpStore🛡️</td>
+<td>$10,000</td>
+<td>$9,954.18</td>
+</tr>
+<tr>
+<td>Realize It</td>
+<td>$10,000</td>
+<td>$9,954.18</td>
+</tr>
+<tr>
+<td>Postino</td>
+<td>$10,000</td>
+<td>$9,954.18</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="gg22-oss-web3-infrastructure-10" class="anchor" href="https://gov.gitcoin.co#gg22-oss-web3-infrastructure-10"></a>GG22 OSS Web3 Infrastructure</h3>
+<p>Here’s an overview of more projects that received significant matching funds this round:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Project Name</th>
+<th>Matching Funds (USDC)</th>
+<th>Matching Funds (USD)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>L2BEAT</td>
+<td>$30,000</td>
+<td>$29,862.54</td>
+</tr>
+<tr>
+<td>eth.limo</td>
+<td>$30,000</td>
+<td>$29,862.54</td>
+</tr>
+<tr>
+<td>Dappnode</td>
+<td>$30,000</td>
+<td>$29,862.54</td>
+</tr>
+<tr>
+<td>Ethereum Attestation Service (EAS)</td>
+<td>$30,000</td>
+<td>$29,862.54</td>
+</tr>
+<tr>
+<td>EthStaker</td>
+<td>$25,711.66</td>
+<td>$25,593.85</td>
+</tr>
+</tbody>
+</table>
+</div><h2><a name="abacus20x20uploadmkuuumpgccnkv6o1f7mlcanml3jpng-abacus-round-and-results-calculation-details-11" class="anchor" href="https://gov.gitcoin.co#abacus20x20uploadmkuuumpgccnkv6o1f7mlcanml3jpng-abacus-round-and-results-calculation-details-11"></a><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9c810551777381cf512d9592b5609878fde6aaf3.png" alt=":abacus:" title=":abacus:" data-base62-sha1="mkuUumpgcCNkv6O1f7MLCaNML3J" width="20" height="20"> Round and Results Calculation Details</h2>
+<p>Before GG20 began, we proposed a two-pronged <a href="https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524">sybil resistance strategy</a>. To recap it briefly, we would continue to use COCM (Connection-Oriented Cluster Matching) as we had in GG20 &amp; GG22.</p>
+<p>As explained in the post, and the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507" rel="noopener nofollow ugc">paper</a> which introduced this mechanism to the world, COCM is much less vulnerable to Sybil Attacks than ordinary QF because it reduces the matching of donors who look similar.</p>
+<p>In addition, over the past few rounds, Passport’s Model-Based Detection system has yielded greater sybil resistance than the stamp-based system without any of the user friction. When used together, we believe these two tools produce the most sybil-resistant results we’ve ever had.</p>
+<p>There were some major updates made to Passport’s MBD system, which you can read more about <a href="https://docs.passport.xyz/building-with-passport/model-based-detection/available-models" rel="noopener nofollow ugc">here</a>.</p>
+<h3><a name="connection-oriented-cluster-matching-cocm-12" class="anchor" href="https://gov.gitcoin.co#connection-oriented-cluster-matching-cocm-12"></a>Connection-Oriented Cluster Matching (COCM)</h3>
+<p>COCM is an approach within Gitcoin Grants that enhances Quadratic Funding by prioritizing projects with diverse support bases, helping to counteract sybil attacks and coordinated groups trying to unfairly influence funding distribution. Key elements include:</p>
+<ul>
+<li>Diversity Bonus: COCM increases matching funds for projects supported by a wide array of “tribes” or distinct groups, rewarding cross-group support and broad appeal.</li>
+<li>Markov Chain Enhancement: Recent updates to COCM use a Markov chain approach to gauge connection strength between users and projects, providing stronger sybil resistance by analyzing indirect connections.</li>
+<li>Funding Distribution: COCM’s design inherently shifts some funds from top projects to those in the “long tail,” enhancing the reach of smaller or niche projects.</li>
+</ul>
+<h3><a name="gitcoin-passports-model-based-detection-system-13" class="anchor" href="https://gov.gitcoin.co#gitcoin-passports-model-based-detection-system-13"></a>Gitcoin Passport’s Model-Based Detection System</h3>
+<p>The Gitcoin Passport team has implemented a model that evaluates on-chain activity to detect potential sybil accounts, enhancing funding fairness by:</p>
+<ul>
+<li>Address Probability Scoring: The model assigns each address a probability score, indicating whether it likely belongs to a genuine user or a sybil account.</li>
+<li>Continuous Improvement: While the model sometimes mistakenly flags new users with limited on-chain history, the team is refining the dataset and expanding to include Layer 2 networks, effectively reducing sybil influence on funding results.</li>
+</ul>
+<p>These efforts together strengthen Gitcoin’s defenses against manipulation, helping to ensure fair distribution of funds to genuine community-supported projects.</p>
+<h2><a name="code-of-conduct-reminder-14" class="anchor" href="https://gov.gitcoin.co#code-of-conduct-reminder-14"></a>Code of Conduct Reminder</h2>
+<p>As a reminder to all projects, <a href="https://support.gitcoin.co/gitcoin-knowledge-base/about-gitcoin/policy/understanding-potential-attack-vectors/bribery-quid-pro-quo" rel="noopener nofollow ugc">quid pro quo </a>is explicitly against <a href="https://grants-portal.gitcoin.co/gitcoin-grants-grantee-portal/gg19-eligibility" rel="noopener nofollow ugc">our agreement</a>. Providing an incentive or reward for individuals to donate to specific projects can affect your ability to participate in future rounds. If you see someone engaging in this type of behavior, please <a href="https://forms.gle/gjnz7mtCcd6aRTFw6" rel="noopener nofollow ugc">let us know.</a></p>
+<p><em>We have removed Pheasant Network from matching distribution calculations, as this project clearly participated in Quid Pro Quo.</em></p>
+<h2><a name="next-steps-15" class="anchor" href="https://gov.gitcoin.co#next-steps-15"></a>Next Steps</h2>
+<p>We plan to distribute the matching by November 22, after the <a href="https://docs.google.com/spreadsheets/d/1WMFW6YrLIodpKoGcE79Vgf9vgBXXnC-JXw2w1Veds8s/edit?gid=1613004131#gid=1613004131" rel="noopener nofollow ugc">results</a> are open for discussion for five days.</p>
+<p>It’s worth noting that GG22 <a href="https://gov.gitcoin.co/t/proposal-gg22-pre-ratification/19501">pre-approved the matching fund</a> to be paid out before results were posted. This means that the payout process to grantees will occur faster, after this post has been left open for community input.</p>
+<p>We are also hosting an internal retro in the following weeks and will publish further results and learnings. And as always, a detailed blog post will be published on the day that payouts are distributed.</p>
+<p>We’re also always looking for direct feedback from the community on which improvements would make GG23 even better. Please don’t hesitate to let us know!</p>
+          <p><a href="https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg22-oss-program-matching-results/19645/1
+        Tue, 12 Nov 2024 15:17:36 +0000
+gov.gitcoin.co-post-19645-1
+GG22 OSS Program Matching Results
+      
+
+

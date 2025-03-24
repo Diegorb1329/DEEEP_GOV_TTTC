@@ -1,0 +1,152 @@
+
+
+
+The Path to Allo v2
+https://gov.gitcoin.co/t/the-path-to-allo-v2/16555
+    I’m happy to announce that the submission portion of our Allo v2 audit wrapped this past Wednesday, September 20th. It's the first major stage of our audit and we've been thrilled to see the responses so far. Getting here has been a tremendous effort from the Allo team (@0xZakk @thelostone-mc @jaxcoder@ @0xKurt ), and we’re excited to share a bit more about our path to this moment. This post will refresh on why we pursued Allo v2, share an overview of the protocol and process, and outline what’s coming next for builders.
+
+
+If you rewind back to March 2022, Gitcoin had just wrapped GR13 and announced our plans for “Grants 2.0”. The decision to begin the move to a decentralized allocation protocol (and away from our centralized platform) was informed by a few key beliefs that we still hold today:
+- Public goods funding will best be served by a vast palette of mechanisms, and we need an open design space to iterate on that meta problem
+- Every community is different, and they need the freedom and flexibility to fit their capital allocation system to their specific needs
+- A system that serves these needs should not have Gitcoin as a gatekeeper, and instead be open and permissionless
+
+
+The [Grants 2.0 project kicked off](https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981) in summer 2022 and at the same time the DAO published our [updated Essential Intents](https://gov.gitcoin.co/t/update-gitcoindaos-adopted-purpose-and-essential-intents/10984). We embedded our beliefs about the fledgling protocol in the first essential intent: 
+> Build a widely adopted, modular Grants protocol that creates a flourishing ecosystem of funding mechanisms. 
+
+By spring 2023, we had sprinted to support the Gitcoin Grants Program by running a set of alpha and beta rounds on the newly-christened Allo Protocol v1. Around this time we also began DevRel efforts to seed adoption. Unfortunately, discussions with our potential integrators surfaced that there were [key technical barriers to adoption](https://gov.gitcoin.co/t/allo-grants-stack-mid-season-update/15278) — especially around developing new allocation mechanisms. Given our intent of building a widely adopted protocol with a flourishing ecosystem of mechanisms, we opted to immediately shift into developing a v2 that could better serve a wider ecosystem of builders. While frustrating, this is [common territory in protocol development](https://x.com/transmissions11/status/1446293172519256064?s=20):
+
+![](upload://sdR4zJtYSpw2PiEYCwn4tCooMcX.png)
+
+
+
+To set ourselves up for v2 success we split out a separate protocol team, brought in a protocol expert as a consultant, and allowed ourselves to rethink the architecture from first principles. We essentially locked ourselves in a room and, once we deploy to mainnet in October, will have gone from a blank whiteboard to fully audited protocol in **four months**. This is a huge accomplishment for the team, as [fully-featured protocols often take up to a year of focused development](https://blog.uniswap.org/uniswap-history). What’s more, integration partners who have previewed v2 have been able to develop new mechanisms in a matter of **days**. 
+
+
+Allo v2 consists of a few key concepts that provide a powerful foundation:
+- **Pools** are the atomic unit. Single contracts (as opposed to 3 in v1) that hold funds and the rules for how they will be allocated. 
+- **Allo Core** orchestrates the overall protocol. Builders are able to build virtually all of their interactions with this core contract, greatly simplifying their overall integration and surface area. 
+- the **Registry** is a repository for profiles, which is every user’s pass for interacting with the protocol. It creates a simple, unique address for each profile, which allows Allo profiles to be compatible both with the world of DeFi and the burgeoning reputation space (SBTs, Hypercerts, EAS, and more).
+
+
+Over the next few weeks we will be sharing more about Allo v2 and our plans for the future. In the meantime, we want to invite builders to begin playing on the new protocol! You can get involved by:
+- Reading up on our [docs](https://docs.allo.gitcoin.co/)
+- Joining our Allo Devs Telegram group and our bi-weekly Core Devs call (comment below if you want invites!)
+- Building! We’ve begun [curating a list of community build ideas](https://docs.google.com/spreadsheets/d/1VqyyhEcYQUBRmcwbB9Qog81q4S5hSP_Ej14w4ohciqE/edit?usp=sharing) that are ripe for development
+Mon, 25 Sep 2023 15:59:47 +0000
+⚙️ Grants Lab
+
+
+The Path to Allo v2
+nategosselin
+
+            <blockquote>
+<p>I think this is for development of smart contracts right? I’d be interested in finding a way to get to a launch of usable webapps for Allo v2 mechanisms down as close to a matter of days as possible…</p>
+</blockquote>
+<p>Yes that’s right — and agreed! That’s part of where we’re trying to dig in now with Octant, Questbook, and Impact Stream.</p>
+<p>We’ve put together an <a href="https://github.com/allo-protocol/allo-v2-sdk" rel="noopener nofollow ugc">initial SDK here</a>, but I’m sure there’s more functionality we can add.</p>
+<p>cc: <a class="mention" href="https://gov.gitcoin.co/u/0xzakk">@0xZakk</a> <a class="mention" href="https://gov.gitcoin.co/u/thelostone-mc">@thelostone-mc</a> <a class="mention" href="https://gov.gitcoin.co/u/jaxcoder">@jaxcoder</a> <a class="mention" href="https://gov.gitcoin.co/u/0xkurt">@0xKurt</a></p>
+          <p><a href="https://gov.gitcoin.co/t/the-path-to-allo-v2/16555/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-path-to-allo-v2/16555/5
+        Mon, 25 Sep 2023 15:27:59 +0000
+gov.gitcoin.co-post-16555-5
+The Path to Allo v2
+      
+
+The Path to Allo v2
+owocki
+
+            <aside class="quote no-group" data-username="nategosselin" data-post="1" data-topic="16555">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/nategosselin/48/7217_2.png" class="avatar"> nategosselin:</div>
+<blockquote>
+<ul>
+<li>Public goods funding will best be served by a vast palette of mechanisms, and we need an open design space to iterate on that meta problem</li>
+</ul>
+</blockquote>
+</aside>
+<p>i think this post ( <a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616" class="inline-onebox">Systematic Exploration of the Coordination Mechanism Design Space</a> ) is a good overview/refresher on this idea set.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-path-to-allo-v2/16555/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-path-to-allo-v2/16555/4
+        Sat, 23 Sep 2023 12:56:38 +0000
+gov.gitcoin.co-post-16555-4
+The Path to Allo v2
+      
+
+The Path to Allo v2
+owocki
+
+            <aside class="quote no-group" data-username="nategosselin" data-post="1" data-topic="16555">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/nategosselin/48/7217_2.png" class="avatar"> nategosselin:</div>
+<blockquote>
+<p>What’s more, integration partners who have previewed v2 have been able to develop new mechanisms in a matter of <strong>days</strong>.</p>
+</blockquote>
+</aside>
+<p>I think this is for development of smart contracts right?  I’d be interested in finding a way to get to a launch of usable webapps for Allo v2 mechanisms down as close to a matter of days as possible…</p>
+<p>The faster we get the OODA loop spinning on the market testing of new mechanisms, the faster (and with more agility) we get to the local/global maximas of what each of these mechanisms can do.<br>
+<img src="https://gov.gitcoin.co/uploads/db4391/original/2X/3/30eedadeec9c0c55a581f57fe9f99abb2dbbd949.webp" alt="ooda_480x480" data-base62-sha1="6YSF6v9kmjyeUeoe8SzkDPoeZVn" width="480" height="407"></p>
+          <p><a href="https://gov.gitcoin.co/t/the-path-to-allo-v2/16555/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-path-to-allo-v2/16555/3
+        Sat, 23 Sep 2023 12:53:42 +0000
+gov.gitcoin.co-post-16555-3
+The Path to Allo v2
+      
+
+The Path to Allo v2
+annika
+
+            <p>Awesome update — super clear rundown, extremely helpful context-wise for those of us who aren’t in the day-to-day</p>
+<p>(also excellent tweet reference <img src="https://gov.gitcoin.co/images/emoji/twitter/100.png?v=12" title=":100:" class="emoji" alt=":100:" loading="lazy" width="20" height="20">)</p>
+          <p><a href="https://gov.gitcoin.co/t/the-path-to-allo-v2/16555/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-path-to-allo-v2/16555/2
+        Fri, 22 Sep 2023 22:28:44 +0000
+gov.gitcoin.co-post-16555-2
+The Path to Allo v2
+      
+
+The Path to Allo v2
+nategosselin
+
+            <p>I’m happy to announce that the submission portion of our Allo v2 audit wrapped this past Wednesday, September 20th. It’s the first major stage of our audit and we’ve been thrilled to see the responses so far. Getting here has been a tremendous effort from the Allo team (<a class="mention" href="https://gov.gitcoin.co/u/0xzakk">@0xZakk</a> <a class="mention" href="https://gov.gitcoin.co/u/thelostone-mc">@thelostone-mc</a> <a class="mention" href="https://gov.gitcoin.co/u/jaxcoder">@jaxcoder</a>@ <a class="mention" href="https://gov.gitcoin.co/u/0xkurt">@0xKurt</a> ), and we’re excited to share a bit more about our path to this moment. This post will refresh on why we pursued Allo v2, share an overview of the protocol and process, and outline what’s coming next for builders.</p>
+<p>If you rewind back to March 2022, Gitcoin had just wrapped GR13 and announced our plans for “Grants 2.0”. The decision to begin the move to a decentralized allocation protocol (and away from our centralized platform) was informed by a few key beliefs that we still hold today:</p>
+<ul>
+<li>Public goods funding will best be served by a vast palette of mechanisms, and we need an open design space to iterate on that meta problem</li>
+<li>Every community is different, and they need the freedom and flexibility to fit their capital allocation system to their specific needs</li>
+<li>A system that serves these needs should not have Gitcoin as a gatekeeper, and instead be open and permissionless</li>
+</ul>
+<p>The <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Grants 2.0 project kicked off</a> in summer 2022 and at the same time the DAO published our <a href="https://gov.gitcoin.co/t/update-gitcoindaos-adopted-purpose-and-essential-intents/10984">updated Essential Intents</a>. We embedded our beliefs about the fledgling protocol in the first essential intent:</p>
+<blockquote>
+<p>Build a widely adopted, modular Grants protocol that creates a flourishing ecosystem of funding mechanisms.</p>
+</blockquote>
+<p>By spring 2023, we had sprinted to support the Gitcoin Grants Program by running a set of alpha and beta rounds on the newly-christened Allo Protocol v1. Around this time we also began DevRel efforts to seed adoption. Unfortunately, discussions with our potential integrators surfaced that there were <a href="https://gov.gitcoin.co/t/allo-grants-stack-mid-season-update/15278">key technical barriers to adoption</a> — especially around developing new allocation mechanisms. Given our intent of building a widely adopted protocol with a flourishing ecosystem of mechanisms, we opted to immediately shift into developing a v2 that could better serve a wider ecosystem of builders. While frustrating, this is <a href="https://x.com/transmissions11/status/1446293172519256064?s=20" rel="noopener nofollow ugc">common territory in protocol development</a>:</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c5cdd7466c901b0049b9f53c0c8c7a816a193423.png" alt="" data-base62-sha1="sdR4zJtYSpw2PiEYCwn4tCooMcX" role="presentation" width="592" height="233"></p>
+<p>To set ourselves up for v2 success we split out a separate protocol team, brought in a protocol expert as a consultant, and allowed ourselves to rethink the architecture from first principles. We essentially locked ourselves in a room and, once we deploy to mainnet in October, will have gone from a blank whiteboard to fully audited protocol in <strong>four months</strong>. This is a huge accomplishment for the team, as <a href="https://blog.uniswap.org/uniswap-history" rel="noopener nofollow ugc">fully-featured protocols often take up to a year of focused development</a>. What’s more, integration partners who have previewed v2 have been able to develop new mechanisms in a matter of <strong>days</strong>.</p>
+<p>Allo v2 consists of a few key concepts that provide a powerful foundation:</p>
+<ul>
+<li><strong>Pools</strong> are the atomic unit. Single contracts (as opposed to 3 in v1) that hold funds and the rules for how they will be allocated.</li>
+<li><strong>Allo Core</strong> orchestrates the overall protocol. Builders are able to build virtually all of their interactions with this core contract, greatly simplifying their overall integration and surface area.</li>
+<li>the <strong>Registry</strong> is a repository for profiles, which is every user’s pass for interacting with the protocol. It creates a simple, unique address for each profile, which allows Allo profiles to be compatible both with the world of DeFi and the burgeoning reputation space (SBTs, Hypercerts, EAS, and more).</li>
+</ul>
+<p>Over the next few weeks we will be sharing more about Allo v2 and our plans for the future. In the meantime, we want to invite builders to begin playing on the new protocol! You can get involved by:</p>
+<ul>
+<li>Reading up on our <a href="https://docs.allo.gitcoin.co/" rel="noopener nofollow ugc">docs</a></li>
+<li>Joining our Allo Devs Telegram group and our bi-weekly Core Devs call (comment below if you want invites!)</li>
+<li>Building! We’ve begun <a href="https://docs.google.com/spreadsheets/d/1VqyyhEcYQUBRmcwbB9Qog81q4S5hSP_Ej14w4ohciqE/edit?usp=sharing" rel="noopener nofollow ugc">curating a list of community build ideas</a> that are ripe for development</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/the-path-to-allo-v2/16555/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-path-to-allo-v2/16555/1
+        Fri, 22 Sep 2023 20:28:57 +0000
+gov.gitcoin.co-post-16555-1
+The Path to Allo v2
+      
+
+

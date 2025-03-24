@@ -1,0 +1,441 @@
+
+
+
+Contributor Compensation Audit
+https://gov.gitcoin.co/t/contributor-compensation-audit/12750
+    ## Context
+
+Gitcoin DAO’s Stewards have been pushing for increased transparency and accountability on spending for several seasons now, and with increasing urgency as markets continue to trend bearish. As approximately 95% of the DAO’s spending comes from contributor compensation, the goal for this audit is to provide transparency on the DAO’s compensation rates, and how they compare to the market.
+
+Gitcoin DAO remains committed to responsible spending of its treasury funds, and the DAO Ops team has conducted research and developed frameworks and best practices to ensure fairness in compensation. You can find the DAO compensation research we completed during the summer [here](https://gitcoin.notion.site/Compensation-Research-86f0ab9affbd4553967f91f431099a51).
+
+As the next best thing to fully transparent compensation - which has been met with resistance due to contributor privacy concerns - we’ve completed an objective, facts-based audit of DAO-wide compensation.
+
+## Methodology
+
+Salary data was shared with the auditor (Safder Raza of DAO Operations), including data on roles, responsibilities, and experience level of each contributor across the DAO. This data was then compared to the corresponding compensation data from OpenComp, a compensation intelligence solution. This ensured that salaries are as accurately-matched as possible, based not on internally-used titles but actual responsibilities and levels based on experience.
+
+### Why OpenComp?
+
+OpenComp gets its data from thousands of verified employers across the US, and provides accurate matching and consistent updates to its data. This provides us with much more reliable and accurate benchmarking compared to public salary surveys/role title + google search results, which often leads to out-of-date and/or wrongly reported data that is not verifiable. For more information on how OpenComp provides industry-leading data, click [here](https://www.opencomp.com/best-compensation-data).
+
+### Why US-based data?
+
+As this is currently where a large majority (~80%) of our contributors are currently based. In addition, many of our non-US-based contributors are “digital nomads” who frequently change location - it would be unfeasible and a breach of privacy in a DAO context to request everyone to provide regular updates and proof of their residence address to determine salaries (not to mention this could easily be gamed).
+
+**Below**, you can find the OpenComp roles + levels benchmarked for each workstream. In order to preserve privacy and avoid unnecessary internal or external discussions we’ve decided to not share the Market Salary data itself in this doc, although this is available freely on OpenComp.
+The compensation was compared to *Total Compensation* on OpenComp, which includes things like equity, bonuses, commissions for sales roles, and 401k matching etc seen in traditional organizations (again, averaged out over thousands of data points).
+
+The data consisted of: OpenComp roles + levels benchmarked for each workstream, OpenComp's Total Compensation at the 50th percentile of the market (rounded to nearest $500), and the **Total Variance (%)** of the total compensation spent by the workstream compared to OpenComp data. This was calculated as: 
+
+![Screenshot 2023-02-01 at 9.35.43 PM|690x49](upload://pYMjK472sTMvd6gbhxFoSOhN4kg.png)
+
+
+We focussed on the total variance from OpenComp only per workstream to indicate trends. A negative variance indicates that a workstream is spending less than median market rates on compensation by the given percentage. 
+
+## Data
+
+### DAO Ops
+
+**Open Comp Roles + Levels:**
+Support Technician L1
+Support Technician L3
+Support Technician L4
+Technical Writer L3
+Customer Service Mgmt L2
+Systems Administrator L2
+Systems Administrator L3
+HR Generalist L3
+Partnerships/Alliance Specialist L3
+Business Operations Mgmt L3
+Project/Program Mgmt (incl. people management) L4
+
+**Total Variance from OpenComp: -0.53%**
+
+### FDD
+
+**Open Comp Roles + Levels:**
+Operations Mgmt L5
+Product Mgmt L5
+Operations Specialist L2
+Operations Specialist L3
+Market Research Analyst L4
+Data Scientist L4
+DevOps Engineer L4
+Data Analyst L4
+Data Analyst L2
+Project/Program Manager (not incl. people management) L5
+Technical Writer L4
+Machine Learning Engineer L4
+
+**Total Variance from OpenComp: -2.68%**
+
+### MMM
+
+**Open Comp Roles + Levels:**
+Brand Manager L4
+Social Media Specialist L3
+Content Management L3
+Content Producer L3
+Project/Program Manager (not incl. people management) L3
+Data Analyst L2
+Copywriter L2
+Graphic Arts Mgmt L4
+Marketing Mgmt L4
+Product Marketing Manager L1
+Software Engineer L4
+Graphic Designer L3
+Community Mgmt L3
+Growth Marketing Mgmt L2
+Web UX Designer L3
+Marketing Communications Mgmt L3
+Marketing Communications Specialist L3
+
+**Total Variance from OpenComp: +1.70%**
+
+### PGF
+
+**Open Comp Roles + Levels**
+Business Development Mgmt L6
+*(Alliance/Partnership Specialist + Account Manager) L3
+Alliance/Partnership Specialist L4
+Alliance/Partnership Specialist L2
+*(PR Representative + Sales Support) L2
+Data Analyst L2
+*(Sales Operations Analyst + Alliance/Partnership Specialist) L2
+Account Manager Mgmt L5
+Account Manager L4
+Account Manager L3
+IT Systems Engineer L4
+IT Systems Engineer L2
+Chief of Staff L2
+
+\* For these positions, we’ve used a combination of roles to more accurately reflect contributor roles at PGF, and the Market Salary is calculated using the average of comps for the 2 roles
+
+**Total Variance from OpenComp: -6.40%**
+
+### GPC
+
+**Open Comp Roles + Levels:**
+Blockchain Engineer L3
+Blockchain Engineer L4
+Blockchain Engineer L5
+Operations Specialist L3
+Product/UI Designer L5
+Product/UI Designer L3
+Product/UI Designer L2
+Product Manager L1
+Product Manager L3
+Product Manager L5
+VP Engineering
+Chief Product Officer / SVP Product / Founder
+
+**Total Variance from OpenComp: +7.81%**
+
+## Conclusions
+
+This analysis demonstrates that the DAO’s spending on compensation is very much in line with market rates. OpenComp’s data is publicly available via a free account, and workstreams’ spending on compensation can also be verified and tracked on-chain. We are looking into dashboards that would make tracking working spending even more accessible.
+
+This is no surprise, as most workstreams already use OpenComp to benchmark salaries, which explains how close most of the variance values are.
+
+What this doesn’t show, however, is how **effectively** the DAO is deploying its contributor resources, or efficiency/accountability. These have normally been tracked by Stewards via our seasonal budgeting process, and we are continuing to work on ways to increase context-sharing with Stewards so that they have greater context to assess these metrics.
+
+We continue to remain committed to improving access to information for our community, and this is one of many steps we are taking to provide increased accountability and transparency in spending. As always, questions and feedback are very welcome.
+Mon, 06 Feb 2023 20:07:26 +0000
+🤖 DAO Governance and Vision
+
+
+Contributor Compensation Audit
+Vega
+
+            <p>Thank you for engaging with my questions.</p>
+<aside class="quote no-group" data-username="safder" data-post="3" data-topic="12750">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/safder/48/5934_2.png" class="avatar"> safder:</div>
+<blockquote>
+<p>What gives your position of paying contributors non-profit wages legitimacy?</p>
+</blockquote>
+</aside>
+<p>You claimed “This analysis demonstrates that the DAO’s spending on compensation is very much in line with market rates.” by picking a band of market rates that suited the conclusion that you wanted to get to.</p>
+<p>In conducting the analysis, you were not concerned with actually engaging the community to determine what market rates where applicable to Gitcoin.  If you were concerned with creating a legitimate compensation audit, you would be asking the stewards to set the bands that you compare Gitcoin contributor data to on OpenComp.</p>
+<p>Here is an example of a post you could have written to give your compensation analysis legitimacy:</p>
+<h1><a name="title-legitimate-foundation-for-a-compensation-audit-1" class="anchor" href="https://gov.gitcoin.co#title-legitimate-foundation-for-a-compensation-audit-1"></a>Title: Legitimate Foundation for a Compensation Audit</h1>
+<h2><a name="description-2" class="anchor" href="https://gov.gitcoin.co#description-2"></a>Description</h2>
+<p>There has been some recent discussion on the forum about how much we should be spending on workstreams.</p>
+<p>This post is meant to illuminate some of the tradeoffs and trigger a discussion among the stewards about what type of compensation policy best suits Gitcoin and it’s contributors.</p>
+<p>My personal view is that Gitcoin is not a non-profit in any sense of the term; we are a VC-funded startup that, <a href="https://www.zippia.com/advice/start-up-profitability-statistics/#:~:text=Only%2040%25%20of%20startups%20actually,fail%20within%20the%20first%20year." rel="noopener nofollow ugc">like many other for-profit startups </a>, has yet to turn a profit.   I personally think that Gitcoin needs to attract and retain top talent.  I think that Gitcoin’s talent is top tier and that the ROI of the DAO is very high. Therefore my personal belief is that we should be comparing our compensation bands to other pre-revenue VC-funded startups.  To simplify the analysis, we should use US based compensation data.  We should also pay a premium to compensate for the risk associated with working for a DAO.</p>
+<p>However, I respect that there might be other opinions.</p>
+<p>There have been others in the forums that have been proposing that:</p>
+<ol>
+<li>We compare Gitcoin to other DAOs.</li>
+<li>We compare Gitcoin to other public goods DAOs.</li>
+<li>We compare Gitcoin to international startups.</li>
+<li>Compensation at Gitcoin should be variable + tied to performance.</li>
+</ol>
+<h2><a name="voting-3" class="anchor" href="https://gov.gitcoin.co#voting-3"></a>Voting</h2>
+<p>This post is meant to gauge steward sentiment on what our compensation policy should be. Once I have a solid understanding of what different constituencies want, I can formulate a compensation policy from that foundation of legitimacy.  If you are a steward or contributor, please select as many of the following options as you agree with:</p>
+<h3><a name="base-comparison-policies-4" class="anchor" href="https://gov.gitcoin.co#base-comparison-policies-4"></a>Base Comparison Policies</h3>
+<ol>
+<li>We should compensate contributors like other pre-revenue VC-funded startups.</li>
+<li>We should compensate contributors like other pre-revenue VC-funded startups based in the US.</li>
+<li>We should compensate contributors like other pre-revenue VC-funded startups based on the locale of the contributors.</li>
+<li>We should compensate contributors Gitcoin like other DAOs.</li>
+<li>We should compensate contributors Gitcoin like other public goods DAOs.</li>
+</ol>
+<h3><a name="performance-policies-5" class="anchor" href="https://gov.gitcoin.co#performance-policies-5"></a>Performance Policies</h3>
+<ol>
+<li>Compensation at Gitcoin should be variable + tied to DAO performance.</li>
+<li>Compensation at Gitcoin should be variable + tied to workstream performance.</li>
+<li>Compensation at Gitcoin should be variable + tied to personal performance.</li>
+<li>Compensation at Gitcoin should be higher in the bull and lower in the bear market.</li>
+<li>Compensation at Gitcoin should be higher as Gitcoin gets closer to profitability.</li>
+<li>Gitcoin is getting a high ROI from it’s current spend.</li>
+</ol>
+<h3><a name="risk-policies-6" class="anchor" href="https://gov.gitcoin.co#risk-policies-6"></a>Risk Policies</h3>
+<ol>
+<li>Compensation at Gitcoin should have an added premium to compensate for risk associated with the DAO.</li>
+<li>Compensation at Gitcoin should be in stables.</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/contributor-compensation-audit/12750/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/contributor-compensation-audit/12750/4
+        Mon, 06 Feb 2023 20:07:26 +0000
+gov.gitcoin.co-post-12750-4
+Contributor Compensation Audit
+      
+
+Contributor Compensation Audit
+safder
+
+            <p>To address these questions again:</p>
+<aside class="quote no-group quote-modified" data-username="Vega" data-post="2" data-topic="12750">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/vega/48/7978_2.png" class="avatar"> Vega:</div>
+<blockquote>
+<aside class="quote no-group" data-username="Vega" data-post="2" data-topic="12338">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/vega/48/7978_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/november-csdo-digest/12338/2">November CSDO Digest</a></div>
+<blockquote>
+<p>Does OpenComp have a large dataset of public goods DAO compensation data on it?</p>
+</blockquote>
+</aside>
+</blockquote>
+</aside>
+<p>No, a “large dataset of Public Goods DAO” compensations does not exist. Comparing ourselves to ~5 other DAOs with very different structures and funding models does not feel very representative.</p>
+<aside class="quote no-group quote-modified" data-username="Vega" data-post="2" data-topic="12750">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/vega/48/7978_2.png" class="avatar"> Vega:</div>
+<blockquote>
+<aside class="quote no-group" data-username="Vega" data-post="2" data-topic="12338">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/vega/48/7978_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/november-csdo-digest/12338/2">November CSDO Digest</a></div>
+<blockquote>
+<p>Will you be comparing compensation data to massively profitable for-profit orgs, or to non-profits?</p>
+</blockquote>
+</aside>
+</blockquote>
+</aside>
+<p>Gitcoin is not a non-profit in any sense of the term; we are a VC-funded startup that, <a href="https://www.zippia.com/advice/start-up-profitability-statistics/#:~:text=Only%2040%25%20of%20startups%20actually,fail%20within%20the%20first%20year." rel="noopener nofollow ugc">like many other for-profit startups</a>, has yet to turn a profit. What gives your position of paying contributors non-profit wages legitimacy?</p>
+          <p><a href="https://gov.gitcoin.co/t/contributor-compensation-audit/12750/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/contributor-compensation-audit/12750/3
+        Thu, 02 Feb 2023 19:39:21 +0000
+gov.gitcoin.co-post-12750-3
+Contributor Compensation Audit
+      
+
+Contributor Compensation Audit
+Vega
+
+            <aside class="quote no-group" data-username="safder" data-post="1" data-topic="12750">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/safder/48/5934_2.png" class="avatar"> safder:</div>
+<blockquote>
+<p>This analysis demonstrates that the DAO’s spending on compensation is very much in line with market rates.</p>
+</blockquote>
+</aside>
+<p>This analysis does NOT show that.</p>
+<p>This analysis was designed from the start to justify the status quo and the current rates.  Because of that, feedback exploring other ways of deriving what a “market rate” was for Gitcoin ignored.</p>
+<p>I invite Stewards who are interested in holding insiders accountable to read <a href="https://gov.gitcoin.co/t/november-csdo-digest/12338/2">this string of posts</a>.</p>
+<p>Especially this part, which was never actually really responded to effectively by <a class="mention" href="https://gov.gitcoin.co/u/safder">@safder</a> ( They technically responded in form.  But not in substance.  In substance their response was just stonewalling &amp; more justification for the status quo)</p>
+<aside class="quote no-group" data-username="Vega" data-post="2" data-topic="12338">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/vega/48/7978_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/november-csdo-digest/12338/2">November CSDO Digest</a></div>
+<blockquote>
+<p>Does OpenComp have a large dataset of public goods DAO compensation data on it?</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="Vega" data-post="2" data-topic="12338">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/vega/48/7978_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/november-csdo-digest/12338/2">November CSDO Digest</a></div>
+<blockquote>
+<p>Will you be comparing compensation data to massively profitable for-profit orgs, or to non-profits?</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="Vega" data-post="10" data-topic="12338">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/vega/48/7978_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/november-csdo-digest/12338/10">November CSDO Digest</a></div>
+<blockquote>
+<p>According to <a href="https://gov.gitcoin.co/t/web3-crowdfunding-tool-competitive-landscape/12266">this post </a> it looks like there are plenty of other public goods funding DAOs! And many of them are WAY more capital efficient than GitcoinDAO. I hope you include those in your analysis.</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="Vega" data-post="2" data-topic="12338">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/vega/48/7978_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/november-csdo-digest/12338/2">November CSDO Digest</a></div>
+<blockquote>
+<p>If financial stability of the DAO is the primary concern of the Stewards, do you have any plans to actually address the financial stability of the DAO?</p>
+</blockquote>
+</aside>
+<p>So since my initial feedback was ignored, I’ll ask again <a class="mention" href="https://gov.gitcoin.co/u/safder">@safder</a>: Who decided that comparisons for the audit (US Based companies with business models vs non-profits &amp; public goods DAOs)?   Who decided that non-profit pay models are exploitative?  Is that a position of Gitcoin? Was the community of GTC holders consulted on this decision? If not, what give this position legitimacy?</p>
+<aside class="quote no-group" data-username="Vega" data-post="10" data-topic="12338">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/vega/48/7978_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/november-csdo-digest/12338/10">November CSDO Digest</a></div>
+<blockquote>
+<p>I hope this analysis is scrapped altogether or reworked to be legitimate.</p>
+</blockquote>
+</aside>
+<p>I wish you had responded to these concerns 2 months ago so we could have achieved alignment then!</p>
+          <p><a href="https://gov.gitcoin.co/t/contributor-compensation-audit/12750/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/contributor-compensation-audit/12750/2
+        Thu, 02 Feb 2023 15:01:40 +0000
+gov.gitcoin.co-post-12750-2
+Contributor Compensation Audit
+      
+
+Contributor Compensation Audit
+safder
+
+            <h2>
+<a name="context-1" class="anchor" href="https://gov.gitcoin.co#context-1"></a>Context</h2>
+<p>Gitcoin DAO’s Stewards have been pushing for increased transparency and accountability on spending for several seasons now, and with increasing urgency as markets continue to trend bearish. As approximately 95% of the DAO’s spending comes from contributor compensation, the goal for this audit is to provide transparency on the DAO’s compensation rates, and how they compare to the market.</p>
+<p>Gitcoin DAO remains committed to responsible spending of its treasury funds, and the DAO Ops team has conducted research and developed frameworks and best practices to ensure fairness in compensation. You can find the DAO compensation research we completed during the summer <a href="https://gitcoin.notion.site/Compensation-Research-86f0ab9affbd4553967f91f431099a51" rel="noopener nofollow ugc">here</a>.</p>
+<p>As the next best thing to fully transparent compensation - which has been met with resistance due to contributor privacy concerns - we’ve completed an objective, facts-based audit of DAO-wide compensation.</p>
+<h2>
+<a name="methodology-2" class="anchor" href="https://gov.gitcoin.co#methodology-2"></a>Methodology</h2>
+<p>Salary data was shared with the auditor (Safder Raza of DAO Operations), including data on roles, responsibilities, and experience level of each contributor across the DAO. This data was then compared to the corresponding compensation data from OpenComp, a compensation intelligence solution. This ensured that salaries are as accurately-matched as possible, based not on internally-used titles but actual responsibilities and levels based on experience.</p>
+<h3>
+<a name="why-opencomp-3" class="anchor" href="https://gov.gitcoin.co#why-opencomp-3"></a>Why OpenComp?</h3>
+<p>OpenComp gets its data from thousands of verified employers across the US, and provides accurate matching and consistent updates to its data. This provides us with much more reliable and accurate benchmarking compared to public salary surveys/role title + google search results, which often leads to out-of-date and/or wrongly reported data that is not verifiable. For more information on how OpenComp provides industry-leading data, click <a href="https://www.opencomp.com/best-compensation-data" rel="noopener nofollow ugc">here</a>.</p>
+<h3>
+<a name="why-us-based-data-4" class="anchor" href="https://gov.gitcoin.co#why-us-based-data-4"></a>Why US-based data?</h3>
+<p>As this is currently where a large majority (~80%) of our contributors are currently based. In addition, many of our non-US-based contributors are “digital nomads” who frequently change location - it would be unfeasible and a breach of privacy in a DAO context to request everyone to provide regular updates and proof of their residence address to determine salaries (not to mention this could easily be gamed).</p>
+<p><strong>Below</strong>, you can find the OpenComp roles + levels benchmarked for each workstream. In order to preserve privacy and avoid unnecessary internal or external discussions we’ve decided to not share the Market Salary data itself in this doc, although this is available freely on OpenComp.<br>
+The compensation was compared to <em>Total Compensation</em> on OpenComp, which includes things like equity, bonuses, commissions for sales roles, and 401k matching etc seen in traditional organizations (again, averaged out over thousands of data points).</p>
+<p>The data consisted of: OpenComp roles + levels benchmarked for each workstream, OpenComp’s Total Compensation at the 50th percentile of the market (rounded to nearest $500), and the <strong>Total Variance (%)</strong> of the total compensation spent by the workstream compared to OpenComp data. This was calculated as:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b61532f6bc6f40c4000ed7e214abfb020152c1c0.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/b61532f6bc6f40c4000ed7e214abfb020152c1c0" title="Screenshot 2023-02-01 at 9.35.43 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b61532f6bc6f40c4000ed7e214abfb020152c1c0_2_690x49.png" alt="Screenshot 2023-02-01 at 9.35.43 PM" data-base62-sha1="pYMjK472sTMvd6gbhxFoSOhN4kg" width="690" height="49" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b61532f6bc6f40c4000ed7e214abfb020152c1c0_2_690x49.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b61532f6bc6f40c4000ed7e214abfb020152c1c0_2_1035x73.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/b/b61532f6bc6f40c4000ed7e214abfb020152c1c0.png 2x" data-dominant-color="E4E4E4"></a></div><p></p>
+<p>We focussed on the total variance from OpenComp only per workstream to indicate trends. A negative variance indicates that a workstream is spending less than median market rates on compensation by the given percentage.</p>
+<h2>
+<a name="data-5" class="anchor" href="https://gov.gitcoin.co#data-5"></a>Data</h2>
+<h3>
+<a name="dao-ops-6" class="anchor" href="https://gov.gitcoin.co#dao-ops-6"></a>DAO Ops</h3>
+<p><strong>Open Comp Roles + Levels:</strong><br>
+Support Technician L1<br>
+Support Technician L3<br>
+Support Technician L4<br>
+Technical Writer L3<br>
+Customer Service Mgmt L2<br>
+Systems Administrator L2<br>
+Systems Administrator L3<br>
+HR Generalist L3<br>
+Partnerships/Alliance Specialist L3<br>
+Business Operations Mgmt L3<br>
+Project/Program Mgmt (incl. people management) L4</p>
+<p><strong>Total Variance from OpenComp: -0.53%</strong></p>
+<h3>
+<a name="fdd-7" class="anchor" href="https://gov.gitcoin.co#fdd-7"></a>FDD</h3>
+<p><strong>Open Comp Roles + Levels:</strong><br>
+Operations Mgmt L5<br>
+Product Mgmt L5<br>
+Operations Specialist L2<br>
+Operations Specialist L3<br>
+Market Research Analyst L4<br>
+Data Scientist L4<br>
+DevOps Engineer L4<br>
+Data Analyst L4<br>
+Data Analyst L2<br>
+Project/Program Manager (not incl. people management) L5<br>
+Technical Writer L4<br>
+Machine Learning Engineer L4</p>
+<p><strong>Total Variance from OpenComp: -2.68%</strong></p>
+<h3>
+<a name="mmm-8" class="anchor" href="https://gov.gitcoin.co#mmm-8"></a>MMM</h3>
+<p><strong>Open Comp Roles + Levels:</strong><br>
+Brand Manager L4<br>
+Social Media Specialist L3<br>
+Content Management L3<br>
+Content Producer L3<br>
+Project/Program Manager (not incl. people management) L3<br>
+Data Analyst L2<br>
+Copywriter L2<br>
+Graphic Arts Mgmt L4<br>
+Marketing Mgmt L4<br>
+Product Marketing Manager L1<br>
+Software Engineer L4<br>
+Graphic Designer L3<br>
+Community Mgmt L3<br>
+Growth Marketing Mgmt L2<br>
+Web UX Designer L3<br>
+Marketing Communications Mgmt L3<br>
+Marketing Communications Specialist L3</p>
+<p><strong>Total Variance from OpenComp: +1.70%</strong></p>
+<h3>
+<a name="pgf-9" class="anchor" href="https://gov.gitcoin.co#pgf-9"></a>PGF</h3>
+<p><strong>Open Comp Roles + Levels</strong><br>
+Business Development Mgmt L6<br>
+*(Alliance/Partnership Specialist + Account Manager) L3<br>
+Alliance/Partnership Specialist L4<br>
+Alliance/Partnership Specialist L2<br>
+*(PR Representative + Sales Support) L2<br>
+Data Analyst L2<br>
+*(Sales Operations Analyst + Alliance/Partnership Specialist) L2<br>
+Account Manager Mgmt L5<br>
+Account Manager L4<br>
+Account Manager L3<br>
+IT Systems Engineer L4<br>
+IT Systems Engineer L2<br>
+Chief of Staff L2</p>
+<p>* For these positions, we’ve used a combination of roles to more accurately reflect contributor roles at PGF, and the Market Salary is calculated using the average of comps for the 2 roles</p>
+<p><strong>Total Variance from OpenComp: -6.40%</strong></p>
+<h3>
+<a name="gpc-10" class="anchor" href="https://gov.gitcoin.co#gpc-10"></a>GPC</h3>
+<p><strong>Open Comp Roles + Levels:</strong><br>
+Blockchain Engineer L3<br>
+Blockchain Engineer L4<br>
+Blockchain Engineer L5<br>
+Operations Specialist L3<br>
+Product/UI Designer L5<br>
+Product/UI Designer L3<br>
+Product/UI Designer L2<br>
+Product Manager L1<br>
+Product Manager L3<br>
+Product Manager L5<br>
+VP Engineering<br>
+Chief Product Officer / SVP Product / Founder</p>
+<p><strong>Total Variance from OpenComp: +7.81%</strong></p>
+<h2>
+<a name="conclusions-11" class="anchor" href="https://gov.gitcoin.co#conclusions-11"></a>Conclusions</h2>
+<p>This analysis demonstrates that the DAO’s spending on compensation is very much in line with market rates. OpenComp’s data is publicly available via a free account, and workstreams’ spending on compensation can also be verified and tracked on-chain. We are looking into dashboards that would make tracking working spending even more accessible.</p>
+<p>This is no surprise, as most workstreams already use OpenComp to benchmark salaries, which explains how close most of the variance values are.</p>
+<p>What this doesn’t show, however, is how <strong>effectively</strong> the DAO is deploying its contributor resources, or efficiency/accountability. These have normally been tracked by Stewards via our seasonal budgeting process, and we are continuing to work on ways to increase context-sharing with Stewards so that they have greater context to assess these metrics.</p>
+<p>We continue to remain committed to improving access to information for our community, and this is one of many steps we are taking to provide increased accountability and transparency in spending. As always, questions and feedback are very welcome.</p>
+          <p><a href="https://gov.gitcoin.co/t/contributor-compensation-audit/12750/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/contributor-compensation-audit/12750/1
+        Thu, 02 Feb 2023 05:50:23 +0000
+gov.gitcoin.co-post-12750-1
+Contributor Compensation Audit
+      
+
+

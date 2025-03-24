@@ -1,0 +1,312 @@
+
+
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292
+    # Decentralized Bounty Platform Proposal to Gitcoin
+
+Bounty boards are centralized repositories of discrete tasks with an associated price tag for each job. De-bounty Platform (DB) is an interface to monitor the off-chain development progress of freelancers, and react to pre-set milestones with on-chain logic set by bounty providers. Bounties will be automatically delivered via a smart-escrow.
+
+## Abstract & Motivation 
+Bounty boards have the potential to become the de facto form of labor organization in the cryptosphere by creating open labor markets. This is as DAOs are proliferating at an unprecedented rate and are able to derive high value from bounty boards: Opposed to hiring, DAOs typically utilize bounties to incentivize the community to complete various tasks in the form of tech development, design, PR content, metaverse building, etc. DAOs require platforms to manage these bounty interactions to help build trust between two, previously unfamiliar, people/entities.
+
+This proposal outlines a plan for Gitcoin to implement a decentralized bounty platform parallel to their existing bounty platform. This "de-bounty" platform (DB) will utilize Gitcoin bounty platform's frontend and EthSign Smart Agreement's backend to automatically fulfill the agreement outlined in bounties in a trustless manner. 
+
+The intention of this proposal is to provide freelancers and bounty issuers with a decentralized means of issuing job bounties and automating compensation once the job is complete —opposed to Gitcoin's existing centralized workflow. The reduction of potential bias from centralized entities —repo owners & maintainers— via pre-set job terms and smart escrow enables freelancers and bounty issuers to enjoy more frictionless, trustless interactions. 
+
+This proposal is in-line with the directives outlined in the following [Progressive Decentralization](https://gov.gitcoin.co/t/workstream-suggestion-decentralize-gitcoin/180/2) governance workstream.
+
+DB Features Include:
+- Decentralized escrow service of bounty rewards
+- Automated payment execution triggered by API
+- Project milestones management dashboard
+- On-chain records that provide a solid foundation for an identity verification & credit system
+- Diverse bounty categories (technical development, operational tasks, DAO-related etc.)
+
+## De-Bounty Platform (DB) Specifications
+See [Gitcoin Proposal: De-Bounty Platform Specifications](https://www.notion.so/0465799913564578aa627e13e9e7221e) for details on DB's workflow and features.
+
+## Road Map For this Development
+
+Phase 1 - 1.5 months, 4000 GTC
+
+Functionality 
+
+- Front End
+    - DID Integration (Torus, Metamask, etc)
+    - Project Management Dashboard
+    - IPFS + Arweave website
+    - Adapt Gitcoin front-end and UX to accommodate interaction with smart-escrow
+- Back End
+    - Integrate Ethsign Smart Agreement
+    - Credit score for users based on on-chain record
+
+Phase 2 - 1.5 months, 2000 GTC
+
+- User testing using Gitcoin DAO's and EthSign's communities
+- Creation of Moderator DAO to be a jury-based dispute resolution system
+
+Additional Features:
+
+- Multi-user claiming from the same bounty
+- Integration of **Discord Bot Plugin,** a plug-and-play bot that facilitates issuer-freelancer communication, and allows for bounty creation, editing, listing, claiming, removal within Discord communities. Users are linked to their respective bounty URL to manage the bounty.
+
+### Drawbacks
+
+The largest drawback of DB is the issue of resolving disputes as bounty issuers must close the job repo determining whether the pre-set job term was met; this is especially true for complicated or non-binary jobs. 
+
+DB includes a Moderator DAO to act as a jury-based dispute resolution system. Additionally, DB will assign credit scores, based on past job interactions pulled from on-chain records, to both bounty issuers and freelancers to discourage bad actors.
+
+### **Implementation**
+
+**Budget & Timeline:** 6000 GTC from Gitcoin DAO. Use of funds: 2 contracted frontend developers and 1 smart contract developer over 3 months to integrate Gitcoin's frontend with EthSign Smart Agreement's existing backend, and to test the platform. 
+
+**Requests from Gitcoin:** Access to code and design assets pertaining to Gitcoin bounty platform's frontend to create a Gitcoin-EthSign co-branded frontend. Assistance in creating and distributing PR materials relating to overviewing DB. Access to Gitcoin's DAO community for user testing.
+
+### Voting
+
+**Yes** - I agree to the above proposal to implement a decentralized bounty platform parallel to Gitcoin's existing bounty platform interface that monitor's the off-chain development progress of freelancers and reacts to a pre-set milestones with on-chain logic set by bounty providers. This proposal will be executed by EthSign's development team, and funded according to the "Budget and Timeline" above.
+
+**No** - I disagree to the above proposal and do not support the implementation of a decentralized bounty platform.
+Sun, 05 Dec 2021 18:44:52 +0000
+📜 Proposals
+
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+Xin
+
+            <p>Technical walkthrough for EthSign Smart Agreement: <a href="https://docsend.com/view/ipjahgt8e2wskjjx" class="inline-onebox" rel="noopener nofollow ugc">DocSend</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/11
+        Sun, 05 Dec 2021 18:44:52 +0000
+gov.gitcoin.co-post-9292-11
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+jxu
+
+            <p>We have some basic documentation here (sorry, can’t send links):<br>
+<code>https://docs.ethsign.xyz/about-ethsign-smart-agreement/introduction</code></p>
+<p>It’s by no means complete but should provide a decent overview.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/10
+        Sun, 05 Dec 2021 08:29:06 +0000
+gov.gitcoin.co-post-9292-10
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+jxu
+
+            <p>This is correct, we are able to accommodate staged (for the lack of a better term) data sources and payouts.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/9
+        Sun, 05 Dec 2021 08:27:15 +0000
+gov.gitcoin.co-post-9292-9
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+jxu
+
+            <p>Hey, I’m Jack, the co-founder and tech lead of EthSign.</p>
+<blockquote>
+<p>funders could remove funds the same way they can today. i wonder if you have considered how to combat this?</p>
+</blockquote>
+<p>If we are referring to the funders being able to withdraw funds, we have a system in place where withdraws by the funder before the job deadline requires explicit authorization from the freelancer in the form of an ECDSA signature, which can be transmitted off-chain.</p>
+<blockquote>
+<p>gas fees</p>
+</blockquote>
+<p>We can be present on any L2 network with Chainlink presence. We are also able to function on L2s without Chainlink but that would take away the automated execution (will require manual triggers) and off-chain data acquisition capabilities.</p>
+<p>On a second thought, we can also pivot to Gelato if necessary but that will require some rewrites.</p>
+<blockquote>
+<p>do you have any other organizations that are interested in using this beyond Gitcoin?</p>
+</blockquote>
+<p>We are working on integrating both our smart agreement product (what’s said here) and our PDF signing product with a few finance platforms and DAOs.</p>
+<blockquote>
+<p>Any thoughts yet of audits and review of the smart contracts escrow setup?</p>
+</blockquote>
+<p>Yes, an audit is most definitely required, especially when we deal with money. However, we would like to request an audit after we can get a preliminary code-lock as any change in code requires a new audit.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/8
+        Sun, 05 Dec 2021 08:23:26 +0000
+gov.gitcoin.co-post-9292-8
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+kyle
+
+            <aside class="quote no-group" data-username="ethanl" data-post="1" data-topic="9292">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/e/3e96dc/48.png" class="avatar"> ethanl:</div>
+<blockquote>
+<p>This “de-bounty” platform (DB) will utilize Gitcoin bounty platform’s frontend and EthSign Smart Agreement’s backend to automatically fulfill the agreement outlined in bounties in a trustless manner.</p>
+</blockquote>
+</aside>
+<p>thanks for the proposal. i appreciate the thought in the system design. Gitcoin used to use the bounties.network protocol in a similar approach, but ultimately abandoned the flow as the gas fees and legitimacy of simply have funds in escrow were highly discouraging. funders could remove funds the same way they can today. i wonder if you have considered how to combat this? ie, which L2 you would propose?</p>
+<aside class="quote no-group" data-username="ethanl" data-post="1" data-topic="9292">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/e/3e96dc/48.png" class="avatar"> ethanl:</div>
+<blockquote>
+<p>opposed to Gitcoin’s existing centralized workflow</p>
+</blockquote>
+</aside>
+<p>you also mention that this approach would offer a decentralized alternative, do you have any other organizations that are interested in using this beyond Gitcoin? Any thoughts yet of audits and review of the smart contracts escrow setup?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/7
+        Fri, 03 Dec 2021 03:21:20 +0000
+gov.gitcoin.co-post-9292-7
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+bobjiang
+
+            <p>you’re right.</p>
+<p>The goal for this proposal is to split huge bounty to small ones, and submission with payment step by step.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/6
+        Fri, 03 Dec 2021 02:50:51 +0000
+gov.gitcoin.co-post-9292-6
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+connor
+
+            <p>Hey all! Connor from Gitcoin Core here. Quick disclaimer and for context: I’ve been part of a few discussions between Gitcoin and EthSign, the first back before GitcoinDAO was launched. Initially we spoke about using their Web3 enabled agreement signing product, and that evolved into discussions around how their tooling could be used to build a decentralized bounties platform. While we have not partnered together yet on anything officially, I’ve watched the EthSign team and platform grow significantly over the past year.</p>
+<p>Gitcoin’s first product launched in 2017 was bounties, and it remains a core part of the platform (+ backbone of hackathons and virtual events). The DAO is primarily focused on Gitcoin Grants, and I believe most of us agree the top priority is launching a permissionless decentralized quadratic funding platform, and turning cGrants into dGrants. I think the same should be done for cBounties to dBounties, but currently our teams and workstreams don’t have the bandwidth to focus on it yet.</p>
+<p>With the explosion of DAOs, there is a great opportunity for the first (or best) open and decentralized bounty protocol to get widely adopted. Something that can integrate with Discord, gov forms, snapshot/tally, etc. With trustless escrow, verifiable milestones, arbitration, little to no fees. The current Gitcoin bounty platform is a bit outdated and sluggish, but the brand name and community are powerful.</p>
+<p>I believe this will take some time and warrants more discussion and fine-tuning, but if the DAO thinks it’s worth funding, I’d love to see what the EthSign team can build in collaboration with Gitcoin.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/5
+        Fri, 03 Dec 2021 02:19:38 +0000
+gov.gitcoin.co-post-9292-5
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+php
+
+            <p>Hi,</p>
+<p>The idea is great and the design is feasible. Will you also be able to provide some document link of EthSign backend, or some details about the contracted developers?  So the roadmap details can be easier to understand.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/4
+        Thu, 02 Dec 2021 22:09:55 +0000
+gov.gitcoin.co-post-9292-4
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+Pfed-prog
+
+            <p>Personally, I have encountered bounties which are impossible to accomplish. The goal of the issuer is to say that the final product is not completed, hence, you will not receive a payment at all.</p>
+<p>I think establishing milestones would help to some extent, especially for organizations with low-med reputation.<br>
+But, yes from a position of a developer that has received bounties from Ceramic, Badger, Parsiq and Reflexer, I am for this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/3
+        Thu, 02 Dec 2021 17:40:07 +0000
+gov.gitcoin.co-post-9292-3
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+Xin
+
+            <p>Hi there, this is Xin, founder of EthSign. We are building operating system for DAOs, bounty board is one of the most important part in DAO toolkits. Onchain escrow contract eliminate security concerns, which will be a big help in scaling Gitcoin bounty board, make it to be a common good that adopted by other projects and DAOs.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/2
+        Thu, 02 Dec 2021 17:33:23 +0000
+gov.gitcoin.co-post-9292-2
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+ethanl
+
+            <h1>
+<a name="decentralized-bounty-platform-proposal-to-gitcoin-1" class="anchor" href="https://gov.gitcoin.co#decentralized-bounty-platform-proposal-to-gitcoin-1"></a>Decentralized Bounty Platform Proposal to Gitcoin</h1>
+<p>Bounty boards are centralized repositories of discrete tasks with an associated price tag for each job. De-bounty Platform (DB) is an interface to monitor the off-chain development progress of freelancers, and react to pre-set milestones with on-chain logic set by bounty providers. Bounties will be automatically delivered via a smart-escrow.</p>
+<h2>
+<a name="abstract-motivation-2" class="anchor" href="https://gov.gitcoin.co#abstract-motivation-2"></a>Abstract &amp; Motivation</h2>
+<p>Bounty boards have the potential to become the de facto form of labor organization in the cryptosphere by creating open labor markets. This is as DAOs are proliferating at an unprecedented rate and are able to derive high value from bounty boards: Opposed to hiring, DAOs typically utilize bounties to incentivize the community to complete various tasks in the form of tech development, design, PR content, metaverse building, etc. DAOs require platforms to manage these bounty interactions to help build trust between two, previously unfamiliar, people/entities.</p>
+<p>This proposal outlines a plan for Gitcoin to implement a decentralized bounty platform parallel to their existing bounty platform. This “de-bounty” platform (DB) will utilize Gitcoin bounty platform’s frontend and EthSign Smart Agreement’s backend to automatically fulfill the agreement outlined in bounties in a trustless manner.</p>
+<p>The intention of this proposal is to provide freelancers and bounty issuers with a decentralized means of issuing job bounties and automating compensation once the job is complete —opposed to Gitcoin’s existing centralized workflow. The reduction of potential bias from centralized entities —repo owners &amp; maintainers— via pre-set job terms and smart escrow enables freelancers and bounty issuers to enjoy more frictionless, trustless interactions.</p>
+<p>This proposal is in-line with the directives outlined in the following <a href="https://gov.gitcoin.co/t/workstream-suggestion-decentralize-gitcoin/180/2">Progressive Decentralization</a> governance workstream.</p>
+<p>DB Features Include:</p>
+<ul>
+<li>Decentralized escrow service of bounty rewards</li>
+<li>Automated payment execution triggered by API</li>
+<li>Project milestones management dashboard</li>
+<li>On-chain records that provide a solid foundation for an identity verification &amp; credit system</li>
+<li>Diverse bounty categories (technical development, operational tasks, DAO-related etc.)</li>
+</ul>
+<h2>
+<a name="de-bounty-platform-db-specifications-3" class="anchor" href="https://gov.gitcoin.co#de-bounty-platform-db-specifications-3"></a>De-Bounty Platform (DB) Specifications</h2>
+<p>See <a href="https://www.notion.so/0465799913564578aa627e13e9e7221e" rel="noopener nofollow ugc">Gitcoin Proposal: De-Bounty Platform Specifications</a> for details on DB’s workflow and features.</p>
+<h2>
+<a name="road-map-for-this-development-4" class="anchor" href="https://gov.gitcoin.co#road-map-for-this-development-4"></a>Road Map For this Development</h2>
+<p>Phase 1 - 1.5 months, 4000 GTC</p>
+<p>Functionality</p>
+<ul>
+<li>Front End
+<ul>
+<li>DID Integration (Torus, Metamask, etc)</li>
+<li>Project Management Dashboard</li>
+<li>IPFS + Arweave website</li>
+<li>Adapt Gitcoin front-end and UX to accommodate interaction with smart-escrow</li>
+</ul>
+</li>
+<li>Back End
+<ul>
+<li>Integrate Ethsign Smart Agreement</li>
+<li>Credit score for users based on on-chain record</li>
+</ul>
+</li>
+</ul>
+<p>Phase 2 - 1.5 months, 2000 GTC</p>
+<ul>
+<li>User testing using Gitcoin DAO’s and EthSign’s communities</li>
+<li>Creation of Moderator DAO to be a jury-based dispute resolution system</li>
+</ul>
+<p>Additional Features:</p>
+<ul>
+<li>Multi-user claiming from the same bounty</li>
+<li>Integration of <strong>Discord Bot Plugin,</strong> a plug-and-play bot that facilitates issuer-freelancer communication, and allows for bounty creation, editing, listing, claiming, removal within Discord communities. Users are linked to their respective bounty URL to manage the bounty.</li>
+</ul>
+<h3>
+<a name="drawbacks-5" class="anchor" href="https://gov.gitcoin.co#drawbacks-5"></a>Drawbacks</h3>
+<p>The largest drawback of DB is the issue of resolving disputes as bounty issuers must close the job repo determining whether the pre-set job term was met; this is especially true for complicated or non-binary jobs.</p>
+<p>DB includes a Moderator DAO to act as a jury-based dispute resolution system. Additionally, DB will assign credit scores, based on past job interactions pulled from on-chain records, to both bounty issuers and freelancers to discourage bad actors.</p>
+<h3>
+<a name="implementation-6" class="anchor" href="https://gov.gitcoin.co#implementation-6"></a><strong>Implementation</strong>
+</h3>
+<p><strong>Budget &amp; Timeline:</strong> 6000 GTC from Gitcoin DAO. Use of funds: 2 contracted frontend developers and 1 smart contract developer over 3 months to integrate Gitcoin’s frontend with EthSign Smart Agreement’s existing backend, and to test the platform.</p>
+<p><strong>Requests from Gitcoin:</strong> Access to code and design assets pertaining to Gitcoin bounty platform’s frontend to create a Gitcoin-EthSign co-branded frontend. Assistance in creating and distributing PR materials relating to overviewing DB. Access to Gitcoin’s DAO community for user testing.</p>
+<h3>
+<a name="voting-7" class="anchor" href="https://gov.gitcoin.co#voting-7"></a>Voting</h3>
+<p><strong>Yes</strong> - I agree to the above proposal to implement a decentralized bounty platform parallel to Gitcoin’s existing bounty platform interface that monitor’s the off-chain development progress of freelancers and reacts to a pre-set milestones with on-chain logic set by bounty providers. This proposal will be executed by EthSign’s development team, and funded according to the “Budget and Timeline” above.</p>
+<p><strong>No</strong> - I disagree to the above proposal and do not support the implementation of a decentralized bounty platform.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-implementation-of-a-decentralized-bounty-platform-progressive-decentralization-workstream/9292/1
+        Thu, 02 Dec 2021 06:30:53 +0000
+gov.gitcoin.co-post-9292-1
+[Proposal] Implementation of a Decentralized Bounty Platform - Progressive Decentralization Workstream
+      
+
+

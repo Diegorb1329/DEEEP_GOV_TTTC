@@ -1,0 +1,435 @@
+
+
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050
+    ### THE PROBLEM:
+Over the past month, web3 (Gitcoin included) has experienced a series of “fake” or scam Snapshot proposals that have been posted to various DAO snapshot sites. Last week, SnapshotLabs responded with this guidance: [Snap the scams out!](https://snapshot.mirror.xyz/-uSylOUP82hGAyWUlVn4lCg9ESzKX9QCvsUgvv-ng84)
+
+### TENSION:
+The social contract governing the proposal/vote process at Gitcoin was defined in [Gitcoin DAO Governance Process v3. ](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358)Generally speaking, anyone can make a proposal on the forum and it has to 1) be available for comment for five days and 2) receive comments from five stewards.  With those two conditions met, and given the formatting of the proposal was correct, the proposal could move to snapshot for vote.
+
+Here is the relevant section from the Governance process v3 listed above: 
+
+> ### Proposal Discussion
+> Before a proposal can go to a vote, it must be posted in the appropriate category on the forum for review and comment by the community.
+> 
+> Proposals brought to the forum must be in the format required by the and address the considerations set out in Table 2: Required Information, above.
+> 
+> Once it has been posted in the forum, a proposal must:
+> 
+> * Be available for review and comment for at least 5 days, and
+> * Receive input from at least 5 stewards not connected to or working with the proposal/with workstream (any stewards part of the proposal should also be disclosed).
+> 
+> A proposal that does not meet the requirements for formatting, required information, length of review, or input from stewards will be removed from Snapshot voting if an attempt is made to hold a vote.
+
+*From https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358*
+
+Previously, the Gitcoin Snapshot voting site was pretty wide open. Nearly anyone could make a proposal on snapshot with, or without following the social convention outlined above.
+
+On four occasions, scam proposals were posted to the Gitcoin snapshot accounts suggesting or proposing Gitcoin airdrops. 
+
+To quickly lock down the proposal capability, the snapshot account was locked using Gitcoin Passport, limiting posters to those who had donated to past grants rounds.  This approach had issues given that database updates were no all ways 100%, thus the account was updated to allow posting only from those with a balance of at least 100GTC, or those who had greater than 1000 Twitter followers.
+
+### PROPOSAL:
+The initial movement to lock down the snapshot account was necessary, but it is important to ensure that any major change in governance should be ratified by voters. This is especially important when putting controls and limitations around who can and who cannot make bonafide proposals for Gitcoin.
+
+This being the case, this proposal attempts to do three things:
+1. Explores options for gating proposals
+2. Articulated pros and cons for each case
+3. Set the draft governance proposal for change
+
+### OPTION ASSESSMENT:
+
+To rectify the issue, we identified three options below to gate our Snapshot account. Please provide feedback on those options - or suggest additional options I may have missed.
+
+**Option 1: establish a manual review process & whitelist proposers**
+
+This option would lock down snapshot to “a few” people who would be responsible for 1) reviewing the completeness of the proposal, 2) determining if the process was followed and 3) posting the vote if it passes the check
+![image|690x147](upload://9iPAfyMb4BJYOe2GULuAJDh0sVa.png)
+.
+
+
+**Option 2: Continue to use Passport as a control, using at least GTC = 100 **or** twitter followers = 1000**
+This option would gate proposals via Gitcoin Passport connected to Snapshot using the existing stamps, which are at least 100GTC tokens held OR 1000 Twitter followers.
+![image|690x96](upload://D4yXyOnFYI7uhy9P1RdM3129q0.png)
+.
+
+**Option 3: Continue to use Passport as a control, but explore other stamps**
+This option would gate proposals via Gitcoin Passport connected to Snapshot but explore using other stamps to gate the community. See the appendix below for a complete list of Passport stamps.
+![image|690x115](upload://5As3U1Tv21XXkFB3gr8iis5o5W5.png)
+
+Leading stamp options: 
+* GTC staking 100GTC (gold) (drives GTC utility - we use it to make proposals)
+  * Stamp seems to unstake after each grant round - not ideal for ongoing votes.
+* Github: illustrates open source contributions (but not validated)
+* Snapshot - voted on 2 or more DAO proposals: illustrates participation with Web3 Governance
+
+**Recommendation: Option 2**.  
+Current best thinking is that a pluralistic passport score is the best option as it will us to add/remove/change stamps as the value changes in response to Sybil actions while providing the most robust defense.  However as the scoring is not available on Snapshot yet, but there is effort under way, it makes the most sense to ratify our current settings Option #2) and adjust when the new scoring methodology is in place. 
+
+In closing, this is not "wow" work that anyone is going to be excited about.  But part of operational excellence is paying attention to governance detail that can come back and bite us in the butt later on.  Going back and cleaning up work that was done on the fly is necessary, however often not very exciting.
+Tue, 27 Jun 2023 10:55:20 +0000
+📜 Proposals
+
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+shawn16400
+
+            <p>fyi - this snapshot vote has passed with ~99% approval rate.<br>
+Metrics:<br>
+1891 unique votes<br>
+~2.8M GTC tokens cast.</p>
+<p>Thank you to all the voters for participating in our governance.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/15
+        Tue, 27 Jun 2023 10:55:20 +0000
+gov.gitcoin.co-post-15050-15
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+shawn16400
+
+            <p>This proposal has been moved to snapshot for vote.  The vote will close on 06.26.</p>
+<p><a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xa18926b9dc9592bdf02acc3cef5a41021cebe51f73a2a3d6b007d7c38685b296" class="onebox" target="_blank" rel="noopener">https://snapshot.org/#/gitcoindao.eth/proposal/0xa18926b9dc9592bdf02acc3cef5a41021cebe51f73a2a3d6b007d7c38685b296</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/14
+        Mon, 19 Jun 2023 14:27:52 +0000
+gov.gitcoin.co-post-15050-14
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+shawn16400
+
+            <p>Quick update, we do not yet have a target date for implementing the Gitcoin Passport score with<br>
+Snapshot.  Given this is the preferred method for Snapshot gating, so we will move forward with a a proposal to ratifying our current methodology which is outlined as <strong>Option <span class="hashtag">#2</span></strong> above.  Specifically, the gating is  &gt; 1000 twitter followers or GTC at least 100.  When the scoring capability comes on line, or we find that the current controls are not enough to curb our-of-process proposals, we will adjust via a new proposal.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/e/ee6450d583049f3c49e311e1d249c59830908759.png" alt="image" data-base62-sha1="y0UyW2Jum5QiIYgxxHX1gn1RWTn" width="363" height="41"><br>
+<img src="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5803565f00c33ae74450f7857c457a0db074f71b.png" alt="image" data-base62-sha1="cyBaoI0pPCaMDGue7FUatb16JHZ" width="360" height="43"></p>
+<p>For clarity, we are adjusting the body of the proposal above to change the recommendation from option <span class="hashtag">#3</span>, to option <span class="hashtag">#2</span>,</p>
+<p><strong>FROM:</strong><br>
+<strong>Recommendation: Option 3 with any of the following stamps:</strong><br>
+Implement the following stamps</p>
+<ul>
+<li>Staking 100GTC (gold)</li>
+<li>At least 100GTC held in the wallet</li>
+</ul>
+<p><strong>To:</strong><br>
+<strong>Recommendation: Option 2</strong>.<br>
+Current best thinking is that a pluralistic passport score is the best option as it will us to add/remove/change stamps as the value changes in response to Sybil actions while providing the most robust defense.  However as the scoring is not available on Snapshot yet, but there is effort under way, it makes the most sense to ratify our current settings Option <span class="hashtag">#2</span>) and adjust when the new scoring methodology is in place.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/13
+        Mon, 19 Jun 2023 14:13:07 +0000
+gov.gitcoin.co-post-15050-13
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+shawn16400
+
+            <p>Quick update on this proposal - the Snapshot team is working with our Passport team to see if / when we will be able to use the Passport score as a gating mechanism.  I am hopeful we can get a target date, but if not, we will move forward with a vote using the current gating mechanism applied on snapshot today.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/12
+        Tue, 13 Jun 2023 14:25:08 +0000
+gov.gitcoin.co-post-15050-12
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+shawn16400
+
+            <aside class="quote no-group" data-username="Supreme" data-post="10" data-topic="15050">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/supreme/48/10031_2.png" class="avatar"> Supreme:</div>
+<blockquote>
+<p>This seems to exclude many. It also seems to centralize the governance even more by limiting who can submit proposal. If the proposal was out of left field, couldn’t voters just vote NO?</p>
+</blockquote>
+</aside>
+<p>You are partially correct, and perhaps a bit of nuance for clarification on decentralization.</p>
+<p>Adding a gating mechanism like this by design limits who can make proposals; our intent is to filter out spam.  I should have saved a screen shot the prior examples before we deleted them but in essence the intent of those snapshot proposals was not to get a proposal passed, but to create false-legitimacy for twitter/airdrop farming campaigns.  Those twitter campaigns pointed to our snapshot account and said “look Gitcoin is going to do xyz!! Sign up now to be the first to get the airdrop!!” followed by some evil link.</p>
+<p>Yes, we could leave them up on our snapshot, but if Snapshot is anything like Discord or our Forum, it would quicky be overrun by spambots &amp; trash.   The tension is to set the bar high enough to make the cost of spam higher than the return on the investment, while keeping the costs low enough that any legitimate user can participate.  See this article here by <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> <a href="https://www.gitcoin.co/blog/cost-of-forgery" class="inline-onebox" rel="noopener nofollow ugc">Building Sybil Resistance using Cost of Forgery | Gitcoin Blog</a>.</p>
+<p>Related to decentralization, this design does not rely on a person or team to decide what can or cannot be posted, but hands the responsiblity for setting the threshold over to the community.  Going one step further, by using the Passport scoring methodology instead of Passport stamps we are opening up the proposal process to anyone who meets the minimum score, not just holders of GTC.   Which I am on the fence about, but its good we dogfood our new scoring technology.</p>
+<p>Thank you for the questions and engagement and I appreciate challenges to our assumptions and logic!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/11
+        Tue, 30 May 2023 13:49:44 +0000
+gov.gitcoin.co-post-15050-11
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+Supreme
+
+            <p>This seems to exclude many. It also seems to centralize the governance even more by limiting who can submit proposal.  If the proposal was out of left  field, couldn’t voters just vote NO?</p>
+<p>Also consider auditing hypercerts more thoroughly -</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/AnonWLAJFA/hypercerts_audit">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/AnonWLAJFA/hypercerts_audit" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad8a0ebdc51cf3d6a6a22b639cd5df6726c9b24c_2_690x345.png" class="thumbnail" width="690" height="345" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad8a0ebdc51cf3d6a6a22b639cd5df6726c9b24c_2_690x345.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad8a0ebdc51cf3d6a6a22b639cd5df6726c9b24c_2_1035x517.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/a/ad8a0ebdc51cf3d6a6a22b639cd5df6726c9b24c.png 2x" data-dominant-color="F8F8F6"></div>
+
+<h3><a href="https://github.com/AnonWLAJFA/hypercerts_audit" target="_blank" rel="noopener nofollow ugc">GitHub - AnonWLAJFA/hypercerts_audit</a></h3>
+
+  <p>Contribute to AnonWLAJFA/hypercerts_audit development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/10
+        Tue, 30 May 2023 07:03:14 +0000
+gov.gitcoin.co-post-15050-10
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+Jeremy
+
+            <aside class="quote no-group" data-username="shawn16400" data-post="4" data-topic="15050">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar"> shawn16400:</div>
+<blockquote>
+<p>What I appreciate about Gitcoin Passport team is their thinking about the sum total of reputational value, or score. It’s less about an individual hypercert or passport stamp. Each of those certs or stamps have a dynamic anti sybil value - as scammers learn how to circumvent a stamp, that stamp degrades in value, and as such so does the governance strategy designed around individual stamps or hypercerts.</p>
+<p>For this reason, I intend to change the paper above from “exploring options” to a proposal using the Gitcoin Passport “score” as opposed to individual stamps. I hope to have this strategy tested shortly so we can update this proposal and get on with it.</p>
+</blockquote>
+</aside>
+<p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/shawn16400">@shawn16400</a>. We’re still finalizing the Snapshot integration which will enable this, but I agree, moving to a pluralistic passport score is the best option as it will us to add/remove/change stamps as the value changes in response to Sybil actions while providing the most robust defense.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/9
+        Wed, 24 May 2023 22:57:15 +0000
+gov.gitcoin.co-post-15050-9
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+ZER8
+
+            <p>This is an important issue, but imo staking 100 GTC &amp; holding 100 GTC is not enough. I would also increase the Snapshot stamp option to - voted on 5(ideally 10) or more Dao proposals. Nowadays people spam vote on snapshot for airdrops a lot. Hope this at least tangentially helps…</p>
+<p>So I would opt for a hybrid between option 2 &amp; option 3. Curious to see what others think <img src="https://gov.gitcoin.co/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/8
+        Wed, 24 May 2023 21:09:22 +0000
+gov.gitcoin.co-post-15050-8
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+shawn16400
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a>!</p>
+<aside class="quote no-group" data-username="kyle" data-post="6" data-topic="15050">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Are you thinking we want to have a passport score for voting in addition to the score for posting proposals? Perhaps this is just on the sub domain snapshot voting?</p>
+</blockquote>
+</aside>
+<p>You are correct, to keep our proposals clean, this proposal is limited to the <em>creation</em> of proposals on snapshot, gated by passport.  Extending the gating of actual voters using passport would be a separate proposal, and a bit more work to be done. <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/7
+        Wed, 24 May 2023 11:46:55 +0000
+gov.gitcoin.co-post-15050-7
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+kyle
+
+            <p>Thanks Shawn - I appreciate you calling this out and also working to get a viable alternative in place for the current implementation. the Passport Scoring seems like a great option. I don’t quite understand this step as it doesn’t seem related to gating <em>creation</em> of Snapshot proposals.</p>
+<aside class="quote no-group" data-username="shawn16400" data-post="2" data-topic="15050">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar"> shawn16400:</div>
+<blockquote>
+<p>The next exciting challenge will be to implement QV on DAO votes using Snapshot + a Passport score. More work analytical to be done first.</p>
+</blockquote>
+</aside>
+<p>Are you thinking we want to have a passport score for voting in addition to the score for posting proposals? Perhaps this is just on the sub domain snapshot voting?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/6
+        Wed, 24 May 2023 01:34:30 +0000
+gov.gitcoin.co-post-15050-6
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+juanna
+
+            <p>1,000 Twitter followers sounds a little steep for some of our valued contributors who aren’t as active on social media (also easily bought), but staking 100GTC + Passport sounds like it could be the way. It doesn’t sound like the staking utility is available yet, so until then, agreed with Passport gating w/ a higher score than our typical donor min.</p>
+<p>As someone newer to Gitcoin governance, I’m hesitant to put too many history-based limitations at risk of accidentally barring out myself haha. However, also foresee myself voting more on proposals, versus creating actual them in the actual near future, so even with history-based–it probably wouldn’t be an issue. Looking forward to seeing how our experimentations in governance pan out!</p>
+<p>Appreciate everyone putting their brilliant minds together to jam on making governance better for all <img src="https://gov.gitcoin.co/images/emoji/twitter/heart_hands.png?v=12" title=":heart_hands:" class="emoji" alt=":heart_hands:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/5
+        Mon, 22 May 2023 16:41:24 +0000
+gov.gitcoin.co-post-15050-5
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+shawn16400
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> for the engagement on this one.  I really appreciate your feedback.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="3" data-topic="15050">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/shawn16400">@shawn16400</a> This is a good start and I would be in favor of using passport and adding other offchain or onchain features. * Staking 100GTC (gold) is a great add-on too!</p>
+</blockquote>
+</aside>
+<p>I really like this option given it feeds into GTC utility - or using the governance token for something other than just voting.  However at the moment the GTC staking stamp is limited to staking during Gitcoin rounds and it not yet an always-on feature.  Once it is, I think this can be a powerful governance feature.  Here I think about granting sliding governance influence linked to the duration and quantity of staked GTC.  But that is for another proposal once the capability is in place.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="3" data-topic="15050">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>Governance history:<br>
+if the wallet has voted on atleast ‘x’ proposal in the past (in gitcoinDAO or other whitelisted DAOs)<br>
+if the wallet has created proposals on snapshot in other whitelisted DAOs<br>
+if the wallet holds atleast ‘x’ hypercerts</p>
+</blockquote>
+</aside>
+<p>This is one reason why I am bullish  web3 governance.  We are developing the capability to craft infinitely customizable governance mechanism that can (for the first time ever) attempt to balance differing stakeholder incentives (contributors vs. investors vs. users vs. ecosystem vs partners).  The challenge for governance architects is to 1) limit bureaucracy 2) credibly evaluate outcomes 3) watch for unintended consequences.</p>
+<p>What I like about your suggestions is it provides early thinking for cross-dao integration which is where I hope Gitcoin goes.  This kind of thinking will lead us to antifragile networks and stronger linkages between nodes - especially as attacks get more sophisticated.</p>
+<p>What I appreciate about Gitcoin Passport team is their thinking about the sum total of reputational value, or score.  It’s less about an individual hypercert or passport stamp.  Each of those certs or stamps have a dynamic anti sybil value - as scammers learn how to circumvent a stamp, that stamp degrades in value, and as such so does the governance strategy designed around individual stamps or hypercerts.</p>
+<p>For this reason, I intend to change the paper above from “exploring options” to a proposal using the Gitcoin Passport “score” as opposed to individual stamps.   I hope to have this strategy tested shortly so we can update this proposal and get on with it.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/4
+        Sun, 21 May 2023 14:04:40 +0000
+gov.gitcoin.co-post-15050-4
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+jengajojo
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/shawn16400">@shawn16400</a> This is a good start and I would be in favor of using passport and adding other offchain or onchain features. * Staking 100GTC (gold) is a great add-on too!</p>
+<ul>
+<li>Using ‘minimum status’ according to discourse rules <a href="https://blog.discourse.org/2018/06/understanding-discourse-trust-levels/" class="inline-onebox" rel="noopener nofollow ugc">Understanding Discourse Trust Levels</a> could be a useful filter</li>
+<li>Governance history:<br>
+if the wallet has voted on atleast ‘x’ proposal in the past (in gitcoinDAO or other whitelisted DAOs)<br>
+if the wallet has created proposals on snapshot in other whitelisted DAOs<br>
+if the wallet holds atleast ‘x’ hypercerts</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/3
+        Fri, 19 May 2023 08:52:07 +0000
+gov.gitcoin.co-post-15050-3
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+shawn16400
+
+            <p>We had a great talk last night with Jeremy, Sophia and <a class="mention" href="https://gov.gitcoin.co/u/0xzakk">@0xZakk</a> discussing this concept.</p>
+<p>In short:</p>
+<ol>
+<li>Passport gating is the right path to protect snapshot</li>
+<li>A minimum passport score should be the gate, not specific stamps.  Specific stamps depreciate over time whereas a score allows for greater voter autonomy and consistency of protection.</li>
+<li>GTC staking could be a great option as it continues to be developed</li>
+<li>We should to connect this to the Passport plan the MMM team is developing</li>
+<li>The next exciting challenge will be to implement QV on DAO votes using Snapshot + a Passport score.  More work analytical to be done first.  (hint - <a class="mention" href="https://gov.gitcoin.co/u/ale.k">@ale.k</a> )</li>
+</ol>
+<p>Thanks for the engagement!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/2
+        Thu, 18 May 2023 14:07:45 +0000
+gov.gitcoin.co-post-15050-2
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+[Proposal] - Gating who can make a Snapshot governance proposals
+shawn16400
+
+            <h3><a name="the-problem-1" class="anchor" href="https://gov.gitcoin.co#the-problem-1"></a>THE PROBLEM:</h3>
+<p>Over the past month, web3 (Gitcoin included) has experienced a series of “fake” or scam Snapshot proposals that have been posted to various DAO snapshot sites. Last week, SnapshotLabs responded with this guidance: <a href="https://snapshot.mirror.xyz/-uSylOUP82hGAyWUlVn4lCg9ESzKX9QCvsUgvv-ng84" rel="noopener nofollow ugc">Snap the scams out!</a></p>
+<h3><a name="tension-2" class="anchor" href="https://gov.gitcoin.co#tension-2"></a>TENSION:</h3>
+<p>The social contract governing the proposal/vote process at Gitcoin was defined in <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358">Gitcoin DAO Governance Process v3. </a>Generally speaking, anyone can make a proposal on the forum and it has to 1) be available for comment for five days and 2) receive comments from five stewards.  With those two conditions met, and given the formatting of the proposal was correct, the proposal could move to snapshot for vote.</p>
+<p>Here is the relevant section from the Governance process v3 listed above:</p>
+<blockquote>
+<h3>Proposal Discussion</h3>
+<p>Before a proposal can go to a vote, it must be posted in the appropriate category on the forum for review and comment by the community.</p>
+<p>Proposals brought to the forum must be in the format required by the and address the considerations set out in Table 2: Required Information, above.</p>
+<p>Once it has been posted in the forum, a proposal must:</p>
+<ul>
+<li>Be available for review and comment for at least 5 days, and</li>
+<li>Receive input from at least 5 stewards not connected to or working with the proposal/with workstream (any stewards part of the proposal should also be disclosed).</li>
+</ul>
+<p>A proposal that does not meet the requirements for formatting, required information, length of review, or input from stewards will be removed from Snapshot voting if an attempt is made to hold a vote.</p>
+</blockquote>
+<p><em>From <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358" class="inline-onebox">Gitcoin DAO Governance Process v3</a></em></p>
+<p>Previously, the Gitcoin Snapshot voting site was pretty wide open. Nearly anyone could make a proposal on snapshot with, or without following the social convention outlined above.</p>
+<p>On four occasions, scam proposals were posted to the Gitcoin snapshot accounts suggesting or proposing Gitcoin airdrops.</p>
+<p>To quickly lock down the proposal capability, the snapshot account was locked using Gitcoin Passport, limiting posters to those who had donated to past grants rounds.  This approach had issues given that database updates were no all ways 100%, thus the account was updated to allow posting only from those with a balance of at least 100GTC, or those who had greater than 1000 Twitter followers.</p>
+<h3><a name="proposal-3" class="anchor" href="https://gov.gitcoin.co#proposal-3"></a>PROPOSAL:</h3>
+<p>The initial movement to lock down the snapshot account was necessary, but it is important to ensure that any major change in governance should be ratified by voters. This is especially important when putting controls and limitations around who can and who cannot make bonafide proposals for Gitcoin.</p>
+<p>This being the case, this proposal attempts to do three things:</p>
+<ol>
+<li>Explores options for gating proposals</li>
+<li>Articulated pros and cons for each case</li>
+<li>Set the draft governance proposal for change</li>
+</ol>
+<h3><a name="option-assessment-4" class="anchor" href="https://gov.gitcoin.co#option-assessment-4"></a>OPTION ASSESSMENT:</h3>
+<p>To rectify the issue, we identified three options below to gate our Snapshot account. Please provide feedback on those options - or suggest additional options I may have missed.</p>
+<p><strong>Option 1: establish a manual review process &amp; whitelist proposers</strong></p>
+<p>This option would lock down snapshot to “a few” people who would be responsible for 1) reviewing the completeness of the proposal, 2) determining if the process was followed and 3) posting the vote if it passes the check<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4134882bbe0ee60ba6cd13a616d64f76b32debb8.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/4134882bbe0ee60ba6cd13a616d64f76b32debb8" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4134882bbe0ee60ba6cd13a616d64f76b32debb8_2_690x147.png" alt="image" data-base62-sha1="9iPAfyMb4BJYOe2GULuAJDh0sVa" width="690" height="147" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4134882bbe0ee60ba6cd13a616d64f76b32debb8_2_690x147.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4134882bbe0ee60ba6cd13a616d64f76b32debb8_2_1035x220.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/4134882bbe0ee60ba6cd13a616d64f76b32debb8.png 2x" data-dominant-color="DEDEDE"></a></div><br>
+.<p></p>
+<p><strong>Option 2: Continue to use Passport as a control, using at least GTC = 100 <strong>or</strong> twitter followers = 1000</strong><br>
+This option would gate proposals via Gitcoin Passport connected to Snapshot using the existing stamps, which are at least 100GTC tokens held OR 1000 Twitter followers.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/046ab935f152945c5117589055ee87c16eef3390.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/046ab935f152945c5117589055ee87c16eef3390" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/046ab935f152945c5117589055ee87c16eef3390_2_690x96.png" alt="image" data-base62-sha1="D4yXyOnFYI7uhy9P1RdM3129q0" width="690" height="96" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/046ab935f152945c5117589055ee87c16eef3390_2_690x96.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/046ab935f152945c5117589055ee87c16eef3390_2_1035x144.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/0/046ab935f152945c5117589055ee87c16eef3390.png 2x" data-dominant-color="CFCFCF"></a></div><br>
+.<p></p>
+<p><strong>Option 3: Continue to use Passport as a control, but explore other stamps</strong><br>
+This option would gate proposals via Gitcoin Passport connected to Snapshot but explore using other stamps to gate the community. See the appendix below for a complete list of Passport stamps.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2729bf1f4591960e04a04a303ca88e29e3030ab5.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/2729bf1f4591960e04a04a303ca88e29e3030ab5" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2729bf1f4591960e04a04a303ca88e29e3030ab5_2_690x115.png" alt="image" data-base62-sha1="5As3U1Tv21XXkFB3gr8iis5o5W5" width="690" height="115" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2729bf1f4591960e04a04a303ca88e29e3030ab5_2_690x115.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2729bf1f4591960e04a04a303ca88e29e3030ab5_2_1035x172.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/2729bf1f4591960e04a04a303ca88e29e3030ab5.png 2x" data-dominant-color="D8D8D8"></a></div><p></p>
+<p>Leading stamp options:</p>
+<ul>
+<li>GTC staking 100GTC (gold) (drives GTC utility - we use it to make proposals)
+<ul>
+<li>Stamp seems to unstake after each grant round - not ideal for ongoing votes.</li>
+</ul>
+</li>
+<li>Github: illustrates open source contributions (but not validated)</li>
+<li>Snapshot - voted on 2 or more DAO proposals: illustrates participation with Web3 Governance</li>
+</ul>
+<p><strong>Recommendation: Option 2</strong>.<br>
+Current best thinking is that a pluralistic passport score is the best option as it will us to add/remove/change stamps as the value changes in response to Sybil actions while providing the most robust defense.  However as the scoring is not available on Snapshot yet, but there is effort under way, it makes the most sense to ratify our current settings Option <span class="hashtag-raw">#2</span>) and adjust when the new scoring methodology is in place.</p>
+<p>In closing, this is not “wow” work that anyone is going to be excited about.  But part of operational excellence is paying attention to governance detail that can come back and bite us in the butt later on.  Going back and cleaning up work that was done on the fly is necessary, however often not very exciting.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050/1
+        Mon, 15 May 2023 18:49:51 +0000
+gov.gitcoin.co-post-15050-1
+[Proposal] - Gating who can make a Snapshot governance proposals
+      
+
+

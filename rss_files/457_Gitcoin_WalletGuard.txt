@@ -1,0 +1,201 @@
+
+
+
+Gitcoin WalletGuard 🛡️
+https://gov.gitcoin.co/t/gitcoin-walletguard/16772
+    There was recently an [incident in which Treasury Funds were mistransfered from the Gitcoin TimeLock](https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683) (Treasury) to a dead address. As a result, 521.44K GTC was lost.
+
+I propose a new scheme to avoid having such issues in the future.
+
+## Gitcoin WalletGuard
+
+Introducing the Gitcoin WalletGuard, a decentralized group of individuals who are responsible for making sure the code on Gitcoin Treasury proposals match the textual description of the proposal.
+
+What is expected of a member of the Gitcoin WalletGuard?
+
+1. Monitor https://www.tally.xyz/gov/gitcoin/proposals
+2. For any new proposal, click to the ‘executable code’ tab, and verify that the code matches the intent of the proposer.
+3. After you’ve verified this, post the SUCCESS TEXT (see below) on the gov.gitcoin.co post for the proposal.
+4. If the code does not match the intent, then post the FAIL TEXT (see below) on the gov.gitcoin.co post for the proposal.
+
+In return for this vigilance, the Gitcoin WalletGuard will be rewarded with a POAP. A new POAP will be issued every quarter.
+
+It is POSSIBLE (but not guaranteed) that active membership in the Gitcoin WalletGuard will lead to future participation in Gitcoin Citizens rounds and/or other rewards.
+
+I will monitor the number of people who participate, and will advise CSDO the gov forums if the level is healthy or not. In the future, this responsibility could be decentralized to someone else.
+
+-----
+
+## POAP
+
+![|624x273](upload://5UNPvF94ENjVj6Xi0D685DGy8Ci.jpeg)
+
+## SUCCESS TEXT
+
+**(bolded text to be replaced with custom text from writer)**
+
+I **(owocki.eth)** am a member of the [Gitcoin WalletGuard](https://gov.gitcoin.co/t/gitcoin-walletguard/16772). 🛡️🛡️🛡️
+
+I’ve verified that the code on this proposal matches the intent of the proposal.
+
+If you are interested in joining the Gitcoin WalletGuard [click here](https://gov.gitcoin.co/t/gitcoin-walletguard/16772).
+
+## FAIL TEXT
+
+**(bolded text to be replaced with custom text from writer)**
+
+I **(owocki.eth)** am a member of the [Gitcoin WalletGuard](https://gov.gitcoin.co/t/gitcoin-walletguard/16772). 🛡️🛡️🛡️
+
+The code on this proposal does not match the intent. **It will send tokens to a dead address** ❌❌❌
+
+If you are interested in joining the Gitcoin WalletGuard [click here](https://gov.gitcoin.co/t/gitcoin-walletguard/16772).
+Sun, 12 Nov 2023 19:07:57 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Gitcoin WalletGuard 🛡️
+jon-spark-eco
+
+            <p>Dig the idea. One possible issue: I got this when verifying my 3rd tally/gov post.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/16fced0910ed19899db3b35a2f30b4b9ee25394a.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/16fced0910ed19899db3b35a2f30b4b9ee25394a" title="Screenshot 2023-11-12 at 2.06.00 PM"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/1/16fced0910ed19899db3b35a2f30b4b9ee25394a.png" alt="Screenshot 2023-11-12 at 2.06.00 PM" data-base62-sha1="3hmowOwm4JOsfwrtnajBe1D940O" width="690" height="131" data-dominant-color="141415"></a></div><p></p>
+<p>I will try again later.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-walletguard/16772/8
+        Sun, 12 Nov 2023 19:07:57 +0000
+gov.gitcoin.co-post-16772-8
+Gitcoin WalletGuard 🛡️
+      
+
+Gitcoin WalletGuard 🛡️
+gravityblast
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="16772">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Introducing the Gitcoin WalletGuard, a decentralized group of individuals who are responsible for making sure the code on Gitcoin Treasury proposals match the textual description of the proposal.</p>
+</blockquote>
+</aside>
+<p>Great idea!<br>
+I think we should automate part of the process, not only checking that the address is correct, but also that the keys used for those accounts/multisigs are still in use.</p>
+<p>For workstreams budgets proposals the recipient address will probably remain the same, so we can have a script with hardcoded addresses and automate the check.</p>
+<p>If the recipient is an EOA, we can have a webapp that let the proposer sign a random message with the recipient key to prove ownership of the account.</p>
+<p>The same process can be used to prove you still have ownership of a key that is part of a multisig.</p>
+<p>And everything can be automatically posted here in the forum. I’m happy to help if anyone wants to do it.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-walletguard/16772/7
+        Wed, 08 Nov 2023 22:03:20 +0000
+gov.gitcoin.co-post-16772-7
+Gitcoin WalletGuard 🛡️
+      
+
+Gitcoin WalletGuard 🛡️
+carlosjmelgar
+
+            <p>Cool way to gamify community participation and position participants for retro rewards. My only suggestion is to use NFTs on PGN instead of POAPs.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-walletguard/16772/6
+        Thu, 19 Oct 2023 20:23:56 +0000
+gov.gitcoin.co-post-16772-6
+Gitcoin WalletGuard 🛡️
+      
+
+Gitcoin WalletGuard 🛡️
+owocki
+
+            <p>the first step would be to validate any proposals (eg check the execution code matches the intent of the proposal, and then comment on the gov post for it) on tally for s20 budgets as they come in!</p>
+<p>i will distribute the POAPs after budgeting season!</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-walletguard/16772/5
+        Tue, 17 Oct 2023 18:59:12 +0000
+gov.gitcoin.co-post-16772-5
+Gitcoin WalletGuard 🛡️
+      
+
+Gitcoin WalletGuard 🛡️
+jaxcoder
+
+            <p>Happy to volunteer <img src="https://gov.gitcoin.co/images/emoji/twitter/eyes.png?v=12" title=":eyes:" class="emoji" alt=":eyes:" loading="lazy" width="20" height="20"> Let me know how I can help.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-walletguard/16772/4
+        Tue, 17 Oct 2023 18:56:09 +0000
+gov.gitcoin.co-post-16772-4
+Gitcoin WalletGuard 🛡️
+      
+
+Gitcoin WalletGuard 🛡️
+owocki
+
+            <blockquote>
+<p>how would the members of the guard be selected, just whoever volunteers?</p>
+</blockquote>
+<p>just whoever volunteers for cohort 1.</p>
+<blockquote>
+<p>isn’t this something that the signers should all be doing before signing anyway?</p>
+</blockquote>
+<p>yes ideally the voters are also checking this.   we are following the philosophy of ethereum, whereas anyone with 32 eth can run a full validating node, constant vigilence is expected from many members of the community (even those without 32 eth) to validate/check blocks.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-walletguard/16772/3
+        Tue, 17 Oct 2023 18:43:09 +0000
+gov.gitcoin.co-post-16772-3
+Gitcoin WalletGuard 🛡️
+      
+
+Gitcoin WalletGuard 🛡️
+QuickMythril
+
+            <p>seems like an interesting and positive idea.  i would probably be willing to help with this.  i do have some questions though.  how would the members of the guard be selected, just whoever volunteers?  isn’t this something that the signers should all be doing before signing anyway?</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-walletguard/16772/2
+        Tue, 17 Oct 2023 15:47:06 +0000
+gov.gitcoin.co-post-16772-2
+Gitcoin WalletGuard 🛡️
+      
+
+Gitcoin WalletGuard 🛡️
+owocki
+
+            <p>There was recently an <a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683">incident in which Treasury Funds were mistransfered from the Gitcoin TimeLock</a> (Treasury) to a dead address. As a result, 521.44K GTC was lost.</p>
+<p>I propose a new scheme to avoid having such issues in the future.</p>
+<h2><a name="gitcoin-walletguard-1" class="anchor" href="https://gov.gitcoin.co#gitcoin-walletguard-1"></a>Gitcoin WalletGuard</h2>
+<p>Introducing the Gitcoin WalletGuard, a decentralized group of individuals who are responsible for making sure the code on Gitcoin Treasury proposals match the textual description of the proposal.</p>
+<p>What is expected of a member of the Gitcoin WalletGuard?</p>
+<ol>
+<li>Monitor <a href="https://www.tally.xyz/gov/gitcoin/proposals" class="inline-onebox">Tally | Gitcoin Proposals</a></li>
+<li>For any new proposal, click to the ‘executable code’ tab, and verify that the code matches the intent of the proposer.</li>
+<li>After you’ve verified this, post the SUCCESS TEXT (see below) on the <a href="http://gov.gitcoin.co">gov.gitcoin.co</a> post for the proposal.</li>
+<li>If the code does not match the intent, then post the FAIL TEXT (see below) on the <a href="http://gov.gitcoin.co">gov.gitcoin.co</a> post for the proposal.</li>
+</ol>
+<p>In return for this vigilance, the Gitcoin WalletGuard will be rewarded with a POAP. A new POAP will be issued every quarter.</p>
+<p>It is POSSIBLE (but not guaranteed) that active membership in the Gitcoin WalletGuard will lead to future participation in Gitcoin Citizens rounds and/or other rewards.</p>
+<p>I will monitor the number of people who participate, and will advise CSDO the gov forums if the level is healthy or not. In the future, this responsibility could be decentralized to someone else.</p>
+<hr>
+<h2><a name="poap-2" class="anchor" href="https://gov.gitcoin.co#poap-2"></a>POAP</h2>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2976ac2501b01fbd3ad778ea2dfe19ba280a8556.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/2976ac2501b01fbd3ad778ea2dfe19ba280a8556" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2976ac2501b01fbd3ad778ea2dfe19ba280a8556_2_624x273.jpeg" alt="" data-base62-sha1="5UNPvF94ENjVj6Xi0D685DGy8Ci" width="624" height="273" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2976ac2501b01fbd3ad778ea2dfe19ba280a8556_2_624x273.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2976ac2501b01fbd3ad778ea2dfe19ba280a8556_2_936x409.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2976ac2501b01fbd3ad778ea2dfe19ba280a8556_2_1248x546.jpeg 2x" data-dominant-color="D9DADC"></a></div><p></p>
+<h2><a name="success-text-3" class="anchor" href="https://gov.gitcoin.co#success-text-3"></a>SUCCESS TEXT</h2>
+<p><strong>(bolded text to be replaced with custom text from writer)</strong></p>
+<p>I <strong>(owocki.eth)</strong> am a member of the <a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772">Gitcoin WalletGuard</a>. <img src="https://gov.gitcoin.co/images/emoji/twitter/shield.png?v=12" title=":shield:" class="emoji" alt=":shield:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/shield.png?v=12" title=":shield:" class="emoji" alt=":shield:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/shield.png?v=12" title=":shield:" class="emoji" alt=":shield:" loading="lazy" width="20" height="20"></p>
+<p>I’ve verified that the code on this proposal matches the intent of the proposal.</p>
+<p>If you are interested in joining the Gitcoin WalletGuard <a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772">click here</a>.</p>
+<h2><a name="fail-text-4" class="anchor" href="https://gov.gitcoin.co#fail-text-4"></a>FAIL TEXT</h2>
+<p><strong>(bolded text to be replaced with custom text from writer)</strong></p>
+<p>I <strong>(owocki.eth)</strong> am a member of the <a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772">Gitcoin WalletGuard</a>. <img src="https://gov.gitcoin.co/images/emoji/twitter/shield.png?v=12" title=":shield:" class="emoji" alt=":shield:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/shield.png?v=12" title=":shield:" class="emoji" alt=":shield:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/shield.png?v=12" title=":shield:" class="emoji" alt=":shield:" loading="lazy" width="20" height="20"></p>
+<p>The code on this proposal does not match the intent. <strong>It will send tokens to a dead address</strong> <img src="https://gov.gitcoin.co/images/emoji/twitter/x.png?v=12" title=":x:" class="emoji" alt=":x:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/x.png?v=12" title=":x:" class="emoji" alt=":x:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/x.png?v=12" title=":x:" class="emoji" alt=":x:" loading="lazy" width="20" height="20"></p>
+<p>If you are interested in joining the Gitcoin WalletGuard <a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772">click here</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-walletguard/16772/1
+        Tue, 17 Oct 2023 15:32:09 +0000
+gov.gitcoin.co-post-16772-1
+Gitcoin WalletGuard 🛡️
+      
+
+

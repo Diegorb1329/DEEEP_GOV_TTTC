@@ -1,0 +1,457 @@
+
+
+
+8 Ideas for DAO Work @ Maximum Coordination ™️
+https://gov.gitcoin.co/t/8-ideas-for-dao-work-maximum-coordination/10483
+    
+As it is S14 budgeting season, I have been thinking a bit about the DAO's steward governance surface area.  Specifically:
+
+1. Workstreams have very large budgets that are hard to disambiguate which part of a workstream is being effective and which isn’t. For example, if the Operations crew in the DAO Ops workstream is not doing well, as a steward I can advocate to change that budget, but while we debate another sub-workstream is left in limbo with their fate tied to whole proposal.
+2. Workstreams proposals are all-or-nothing, there is no forkability.
+2. Sometimes a Y/N vote is not high enough resolution to convey signal, at the voting stage, about a workstream proposal.
+3. Theres a few patterns in workstream proposals that I think lead to unnecessary miscommunications or misalignments..  
+4. The governance proposals system does not encourage enough bottoms-up emergence and does not favor small asks.
+5. not enough sharing of context/skills between workstreams
+
+As I have been reading budget proposals & pondering these problems, I have been doing market research on how other DAOs organize their work - in some cases mitigating these issues. 
+
+I want to jot down a few architectures that are on the market which could be a way of thinking about refactoring the way work is organized here for increased visibility/feedback from the stewards.  
+
+Some of these architectures allow the ability to create more granular, or high resolution, feedback mechanisms for stewards/workstreams.  Others allow scaling much closer to **Maximum Coordination** :tm:.
+
+![Screen Shot 2022-05-03 at 1.06.24 AM|690x378](upload://iQyI2kJiAiar59KEW8S685ywyn5.jpeg)
+
+Here they are:
+
+# 1. Thin Workstreams
+
+This is from a proposal by @kyle entitled https://gov.gitcoin.co/t/discussion-a-hypothesis-thin-workstreams-lead-to-better-outcomes/9975 , he proposes breaking out the workstreams that exist into thinner workstreams.  From @kyle's post:
+
+> 1. DAO Ops has two potential sub-workstreams: community experience and operations
+> 2. FDD has three potential sub-workstreams: sybil, ground control, Grants Investigation Agency
+> 3. dGitcoin has two named sub-workstreams: dCompass and dGrants
+> 4. MSC has two (likely more) sub-workstreams: prototypes and products
+> 5. MMM has potentially four sub-workstreams: marketing, in-person events, Merch, Design/Memes
+
+The idea is that having more workstreams would make it easier to 
+
+0. avoid cliques culturally
+1. do onboarding into smaller workstreams
+2. disambiguate business units that are performant form their bundled peers
+4. keep governance proposals more small & manageable
+
+Read more in @kyle 's post [here](https://gov.gitcoin.co/t/discussion-a-hypothesis-thin-workstreams-lead-to-better-outcomes/9975).
+
+#  2. Supply and demand Sub DAOs 
+ 
+This is an architecture by @pet3rpan that is described in this tweet thread:
+
+https://twitter.com/pet3rpan_/status/1505977368099233793
+
+https://twitter.com/pet3rpan_/status/1505977369407856646
+
+Peter than continues to visually lay out this architecture:
+
+![FOZLaBqVkAE1A_u|690x385](upload://lnLjWeJv9IBpoxuZYEwgCCc3usR.jpeg)
+
+https://twitter.com/pet3rpan_/status/1505996607929544710
+
+What I think is neat about this is how organically similar it is to the thin workstream proposal above, though in this scenario each of the sub-DAOs competes with each other.  
+
+Imagine a world where MMM is not just one workstream, but is many demand subDAOs.  MMM also competes agains a MMM-black in order to effectively market Gitcoin.  Maybe each one has different specialties, eg. MMM is good at memes + swag, MMM-black is good at lore, and MMM-purple ends up being really good at documenting customer case studies.
+
+Read more in [Peter's post here](https://twitter.com/pet3rpan_/status/1505977368099233793
+).
+
+# 3. Orca Pods
+
+Orca [Pods](https://orca.mirror.xyz/Y2xvPmB4cJH51srGqY6Mm_g38lV-7cwvtyDePnyzfAE) are:
+
+> Pods are small working groups, usually centered around one expertise. In place of—or in addition to—one massive, centralized DAO treasury, each pod has its own multi-sig wallet that is controlled by the pod members. So pods can be thought of as mini-DAOs within a larger DAO.
+
+![Screen Shot 2022-05-02 at 7.49.26 PM|690x350](upload://sunAdp9zwyoEgVhVbYFYVpj9i5M.jpeg)
+
+> In the image above, the circles represent pods, each with a handful of members and its own multi-sig wallet. The people at the bottom are stakeholders that do not yet have membership to a pod, for example governance token holders or users. To gain membership to a pod, the claimant must meet a set of rules—maybe they have to hold a certain amount of an ERC-20 asset or perhaps they must be voted on to a whitelist of candidates for membership. A future could even exist where membership hinges on a custom reputation system. These restrictions can be almost anything and should be formed around the gravity of the pod’s responsibilities. Membership can also be slashed at any time if the member fails to comply with membership rules. In other words, pods can grow, shrink and extend to the needs of the DAO.
+
+What I think is cool about Pods is how they scale.  From the post above:
+
+>  DAO of one pod can easily add another pod when it becomes large enough, and it can continue to add pods as it grows. Any hierarchies that form in this process are localized, deliberate and impermanent. The DAO just grows organically from day one.
+
+Learn more about [Orca Pods](https://www.orcaprotocol.org/#learn-more) here.
+
+# An Aside: Problems with the workstream model, sub DAO model, and Pod model.
+
+One problem I see with the above model is that there is a lack of prenegotiated terms for governance rights if the workstream decides to become a sub DAO (or Pod) that is independent of the main DAO.  
+
+We've seen this [with KERNEL](https://gov.gitcoin.co/t/kernel-evolves-a-new-leaf-for-gitcoin-dao/9912), and dCompass/FDD are flirting with creating their own DAOs now.
+
+In that scenario that an independent side DAO is created, how does the primary DAO get governance rights in return for their tokens being used to launch the Pod or side DAO?  What terms are fair?  When are they decided and by whom?
+
+1. Right now there is no mutual understanding that there should be a correlation between the GTC governance rights that GitcoinDAO gives to these workstreams to get them off the ground + the eventual governance rights of their independently governed project that GitcoinDAO gets back.
+2. This incentivizes the workstreams to keep requesting more GTC ad infinitum from GitcoinDAO. I would venture to say that if a workstream consumes more GTC, it should give up more governance rights in its eventual departure (or be shut down if its just not working). 
+3. Not having this understood upfront increases the risk of misunderstandings + hurt feelings down the road. 
+
+With the workstream model, sub DAO model, and Pod model, a set of standard terms that are fair to both parties is needed in case of eventual independence.  I hope to see the [PGF workstream spearhead these negotiations in the future](https://gov.gitcoin.co/t/constructing-a-mutual-grants-committee/10347/7)
+
+# 4. Conviction Voting
+
+There has been some action lately in [Moonshot Collective about Conviction Voting](https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027), with a proposed tool to do CV as part of their S14 budget.  I think this is deeply exciting because using Conviction voting, proposals can "charge up" over time, allowing smaller proposals to require a smaller support base, and larger proposals require a larger support base.  
+
+![image|606x431](upload://6ej0ziC9PFO2IMHXYcfy6SN510O.png)
+
+This allows DAO worksterams to evolve more emergently, they can "charge up" as people gain more conviction in their execution.
+
+![image|688x375](upload://uS85COsqbTmnHlaAZl1ZHyMLV0J.png)
+
+CV allows workstream creation to become more emergent. I imagine a world where dozens of new mini-workstreams could emerge from the promordial soup of Governance as stewards organically get more conviction on their ability to deliver.
+
+I believe this emergence would encourage more cross-workstream collaboration.  As members of different areas of the DAO discover they can request budget together in a lightweight way, that will create more collaboration among them.
+
+Learn more about conviction voting  [here](https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027).
+
+# 5. Mutual Grants
+
+This is an idea by @ceresstation to align Gitcoin with groups external to GitcoinDAO (but with shared goals or values): https://gov.gitcoin.co/t/constructing-a-mutual-grants-committee/10347
+
+From his post:
+
+> PGF has been pursuing small scale [mutual grant agreements ](https://snapshot.org/#/devdao.eth/proposal/0xfafbac6a39f5991497856ac2c4b941c0b020d442280eea8eeebe0b88bd6f913c) as opportunities emerge. Mutual grants as the name suggests are reciprocal grants of tokens for shared governance, with partners that are committed to working with Gitcoin via aqueducts, side rounds, or, more broadly, shared public goods related missions.
+
+Mutual Grants allow GitcoinDAO to signal to the market that they are aligned with other ecosystem entities - mostly DAOs - towards shared goals.
+
+I think that in a world of [Practical Pluralism](https://gov.gitcoin.co/t/practical-pluralism-essay-draft/10462), that Mutual Grants are a really cool way of increasing coordination across the ecosystem.
+
+Learn more about Mutual Grants [here](https://gov.gitcoin.co/t/constructing-a-mutual-grants-committee/103470).
+
+# 6. Scaled Agile
+
+This one is a bit web2, but I think there is some good ideas in it: [Scaled Agile](https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf)
+
+![Screen Shot 2022-05-02 at 8.19.49 PM|690x416](upload://tQXwyNIIaeeIowLDG3qSpHlc2Iw.jpeg)
+
+The things I think are interesting primitives are
+
+1. The basic unit of development at Spotify is the **Squad**.  A Squad is similar to a Scrum team, and is designed to feel like a mini-startup. They sit together, and they have all the skills and tools needed to design, develop, test, and release to production. They are a self-organizing team and decide their own way of working – some use Scrum sprints, some use Kanban, some use a mix of these approaches.
+1. The **chapter** is your small family of people having similar skills and working within the same general competency area, within the same tribe.
+2. A **Guild** is a more organic and wide-reaching “community of interest”, a group of people that want to share knowledge, tools, code, and practices. Chapters are always local to a Tribe, while a guild usually cuts across the whole organization. Some examples are: the web technology guild, the tester guild, the agile coach guild, etc
+3. A **tribe** is a collection of squads that work in related areas – such as the music player, or backend infrastructure.
+
+Read more about Scaled Agile [here](https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf).
+
+# 7. A higher fidelity steward voting in Gitcoin's governance process
+
+This is GitcoinDAO's [existing governance process](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358):
+
+![bild|690x444](upload://9Y8EW5n9ddIYEKZSAlsqRZoIHz1.png)
+
+One thing that I think is an extremely low hanging fruit improvement to this is to allow stewards to vote in more fidelity than just binary yes or no.  
+
+If a workstream is requesting 50k tokens, and the steward consensus is that they are doing a good enough job to receive 25k tokens for their work, they should be able to input that information into the governance system.  Such a voting flow could be enabled by extending the current vote options beyond just yes or no to also allow voting for an option entitled "yes but with up to X less/more tokens"
+
+Such a governance process would look like this:
+
+![Screen Shot 2022-05-02 at 8.39.18 PM|690x442](upload://ihUZ8wwzfOTavoxLJQqb9CBLPf3.jpeg)
+
+or this
+
+![Screen Shot 2022-05-02 at 9.10.00 PM|690x443](upload://zzpwJAz2JYh4iSXLjhcPeJOnn59.jpeg)
+
+
+If you think this is a good idea, feel free to comment on the [Governance process](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358) and say so!
+
+# 8. CoordinAPE
+
+[CoordinAPE](https://coordinape.com/) is a tool to scale your community with tools to reward contributors, incentivize participation and manage resources.
+
+Basically CoordinAPE allows DAOs to vote on who is providing the most value, thereby measuring who the value creators are.
+
+![graph-card.90c67e9481e5354aeb5a|384x500](upload://uSwMizz0s98Z5hltGMQxAmeggWD.png)
+
+From there, tokens can be distributed, on a regular interval - say monthly.  These tokens are distributed according to the value creation in the DAO.
+
+Whats nice about this model is it scales up to 100s of contributors.  And it's completely bottoms-up.
+
+![FNpV0tRWUAcm6Fq|690x361](upload://s6Fnf24ENQgmM34msxx7dptmTKr.jpeg)
+
+CoordinAPE allows collaboration to become more emergent. Image a world where dozens of new mini-projects or guilds could emerge from the promordial soup of the DAO as contributors get to signal who is providing the most value.
+
+I believe this emergence would encourage more cross-workstream collaboration.  As members of different areas of the DAO discover they can earn budget in a workstream agnostic way, that will create more collaboration among them.
+
+Read more about [CoordinAPE here](https://coordinape.com/).
+
+# Mix & Match 🤝
+
+What I think is fun about the ideas above is how you can mix and match them.  Some obvious ones to me are:
+
+1. As a workstream lead, I might decide to break my workstream into 3 *thin-workstreams*, each of which are structured as a *supply or demo sub-DAO*.
+2. I may decide to use *conviction voting* to form a *guild* of other public speakers at GitcoinDAO.
+3. As a workstream lead, I may decide to scale my own workstream with *Orca Pods*, with pre-negotiated *Mutual Grants* back to the workstream/Pod.
+
+# Feedback welcome
+
+I hope that this post created more awareness of different organizational methodologies out there.  Hopefully having a shared vocabulary of these primitives will create more understanding of what's possible as we go from season to season.
+
+To be clear, these are just ideas.  None of these ideas have been ratified as things GitcoinDAO needs to do.  To become legitimate experiments that GitcoinDAO is working with, the stewards and/or CSDO would need to ratify these through their respective governance processes.
+
+I'd love if I missed an organizational paradigm, if you'd comment below and tell us about it.
+
+What resources are people excited about for scaling coordination?  How would you mix & match the ideas above?  Which of the above ideas are most relevant to Gitcoin today? Comment below and let us know
+Tue, 03 May 2022 19:25:37 +0000
+🤖 DAO Governance and Vision
+
+
+8 Ideas for DAO Work @ Maximum Coordination ™️
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10483">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<h1>1. Thin Workstreams</h1>
+</blockquote>
+</aside>
+<p>I like this with a slightly different take.</p>
+<ol>
+<li>Give CSDO a budget that funds any work that affects all workstreams. In theory, this should only be things passed by CSDO.</li>
+<li>Eliminate DAOops as a workstream and move the budget to the governance workstreams and CSDO (The people are great and don’t lose jobs)</li>
+<li>Have each Top Level Goal or “Thin Workstream” be ratified by CSDO.</li>
+<li>Workstreams are optionality for metagovernance which is suited best for attracting the right talent and executing the function a “thin workstream” serves.</li>
+<li>Thin workstream choose their meta-governance stream. Each meta-gov stream such as FDD, MMM, MC/GPC, PGF has the same amount of operational funds each season. (Maybe a formula based on total funds in thin workstreams they manage.</li>
+<li>Thin workstreams apply for budget as part of X meta-gov stream. (Sybil defenders asking for $200k as part of FDD Metagov.</li>
+</ol>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10483">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<h1>Supply and demand Sub DAOs</h1>
+<p>This is an architecture by <a class="mention" href="https://gov.gitcoin.co/u/pet3rpan">@pet3rpan</a> that is described in this tweet thread:</p>
+</blockquote>
+</aside>
+<p>Yes! We want to implement this with the sybil detection DAO and all its microservice supply protocols. Where SDD is the contributions of 5-6 protocols which supply it and SDD sells the demand for the service. GitcoinDAO would be the initial grant giver and own a huge stake in every one. It could also recieve aqueducts from every one.</p>
+<p>They need to be legitimate digital public infrastructure. All content moderation for web 3, be it sybil defense or grant eligibility fall into this category. Lots of opportunity.</p>
+<p>FDD itself is a supply subDAO for the demand created by Grants, dPoPP, etc.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10483">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Orca Pods</p>
+</blockquote>
+</aside>
+<p>Love it cause it takes the ambiguity out, though I prefer if every collective level in GitcoinDAO was a DAOhaus moloch DAO with a vault/minion so the contributors couldn’t rage quit DAO granted funds, but are effectively a multisig owning shares of their collaborative effort.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10483">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Conviction Voting</p>
+</blockquote>
+</aside>
+<p>I think this would be better within workstreams, but maybe also for continuous funding to thin workstreams. We should do an experiment. I do think osmotic voting is better. I’ve had Quadratic Weighted Staking pinned to the top of my Twitter since before being employed by Gitcoin, so I’m definitely a fan.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10483">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Mutual Grants</p>
+</blockquote>
+</aside>
+<p>I think every workstream, substream, initiative, squad, and pod should be a moloch DAO from the start. Mutual grant frameworks would be incredibly easy to facilitate.</p>
+<p>Imagine, I as an FDD contributor have a bunch of shares in FDD, but FDD has no treasury. It only has a minion/vault which acts as a multisig for the entire stream to send funds as agreed upon. However, I also get new shares in FDD every week which I could turn in for GTC or $, but I might want to keep. Now when FDD launch SDD, maybe FDD treasury gets a portion of tokens for it’s contributions, GitcoinDAO gets some for its past contributions. Now we have a fully bottoms-up built public digital infrastructure for sybil detection that not only makes our work for FDD &amp; GitcoinDAO better, but also rewards contributors who supported it early along with GitcoinDAO with governance in the new infra.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10483">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Scaled Agile</p>
+</blockquote>
+</aside>
+<p>I think <a class="mention" href="https://gov.gitcoin.co/u/tigress">@tigress</a> has ideas here.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10483">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<h1>7. A higher fidelity steward voting in Gitcoin’s governance process</h1>
+</blockquote>
+</aside>
+<p>My favorite part of this much needed post.</p>
+<p>I imagine that CSDO ratifies and passes budgets to be reviewed by stewards. If it doesn’t pass CSDO, it is not a workstream, but still could be funded.</p>
+<p>CSDO would provide their budgets for feedback and the Ethelo tool would be used for review, convesation, and finding inter-subjective consensus.</p>
+<p>Then we would all tweak our requests.</p>
+<p>I should add that this is all just quick off the top of my head feedback!</p>
+          <p><a href="https://gov.gitcoin.co/t/8-ideas-for-dao-work-maximum-coordination/10483/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/8-ideas-for-dao-work-maximum-coordination/10483/3
+        Tue, 03 May 2022 19:25:37 +0000
+gov.gitcoin.co-post-10483-3
+8 Ideas for DAO Work @ Maximum Coordination ™️
+      
+
+8 Ideas for DAO Work @ Maximum Coordination ™️
+DisruptionJoe
+
+            <p>I think my suggestion from the other thread is very relevant here as well.</p>
+<aside class="quote quote-modified" data-post="2" data-topic="10488">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/s14-voter-guide-template/10488/2">S14 Voter Guide Template</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    I love that we are thinking in the same concepts here. My approach was to work with the Ethelo tool to not only surface the reviews (which we have evidence that reviewers are more likely to use and finish reviews), but also to find the true intersubjective consensus. 
+THIS IS A TEST 
+We worked to have this ready for this budget review time. <a href="https://gitcoinbudget.ethelo.net/">https://gitcoinbudget.ethelo.net/</a> 
+It uses the tool we use to review grants in FDD. They tool will find the least polarizing, highest consensus answers to al…
+  </blockquote>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/8-ideas-for-dao-work-maximum-coordination/10483/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/8-ideas-for-dao-work-maximum-coordination/10483/2
+        Tue, 03 May 2022 17:55:41 +0000
+gov.gitcoin.co-post-10483-2
+8 Ideas for DAO Work @ Maximum Coordination ™️
+      
+
+8 Ideas for DAO Work @ Maximum Coordination ™️
+owocki
+
+            <p>As it is S14 budgeting season, I have been thinking a bit about the DAO’s steward governance surface area.  Specifically:</p>
+<ol>
+<li>Workstreams have very large budgets that are hard to disambiguate which part of a workstream is being effective and which isn’t. For example, if the Operations crew in the DAO Ops workstream is not doing well, as a steward I can advocate to change that budget, but while we debate another sub-workstream is left in limbo with their fate tied to whole proposal.</li>
+<li>Workstreams proposals are all-or-nothing, there is no forkability.</li>
+<li>Sometimes a Y/N vote is not high enough resolution to convey signal, at the voting stage, about a workstream proposal.</li>
+<li>Theres a few patterns in workstream proposals that I think lead to unnecessary miscommunications or misalignments…</li>
+<li>The governance proposals system does not encourage enough bottoms-up emergence and does not favor small asks.</li>
+<li>not enough sharing of context/skills between workstreams</li>
+</ol>
+<p>As I have been reading budget proposals &amp; pondering these problems, I have been doing market research on how other DAOs organize their work - in some cases mitigating these issues.</p>
+<p>I want to jot down a few architectures that are on the market which could be a way of thinking about refactoring the way work is organized here for increased visibility/feedback from the stewards.</p>
+<p>Some of these architectures allow the ability to create more granular, or high resolution, feedback mechanisms for stewards/workstreams.  Others allow scaling much closer to <strong>Maximum Coordination</strong> <img src="https://gov.gitcoin.co/images/emoji/twitter/tm.png?v=12" title=":tm:" class="emoji" alt=":tm:" loading="lazy" width="20" height="20">.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/84181f985813b12d387edfd83f7c9664836e259f.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/84181f985813b12d387edfd83f7c9664836e259f" title="Screen Shot 2022-05-03 at 1.06.24 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/84181f985813b12d387edfd83f7c9664836e259f_2_690x378.jpeg" alt="Screen Shot 2022-05-03 at 1.06.24 AM" data-base62-sha1="iQyI2kJiAiar59KEW8S685ywyn5" width="690" height="378" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/84181f985813b12d387edfd83f7c9664836e259f_2_690x378.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/84181f985813b12d387edfd83f7c9664836e259f_2_1035x567.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/8/84181f985813b12d387edfd83f7c9664836e259f.jpeg 2x" data-dominant-color="675E5E"></a></div><p></p>
+<p>Here they are:</p>
+<h1><a name="h-1-thin-workstreams-1" class="anchor" href="https://gov.gitcoin.co#h-1-thin-workstreams-1"></a>1. Thin Workstreams</h1>
+<p>This is from a proposal by <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> entitled <a href="https://gov.gitcoin.co/t/discussion-a-hypothesis-thin-workstreams-lead-to-better-outcomes/9975" class="inline-onebox">[Discussion] A hypothesis: Thin workstreams lead to better outcomes</a> , he proposes breaking out the workstreams that exist into thinner workstreams.  From <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a>’s post:</p>
+<blockquote>
+<ol>
+<li>DAO Ops has two potential sub-workstreams: community experience and operations</li>
+<li>FDD has three potential sub-workstreams: sybil, ground control, Grants Investigation Agency</li>
+<li>dGitcoin has two named sub-workstreams: dCompass and dGrants</li>
+<li>MSC has two (likely more) sub-workstreams: prototypes and products</li>
+<li>MMM has potentially four sub-workstreams: marketing, in-person events, Merch, Design/Memes</li>
+</ol>
+</blockquote>
+<p>The idea is that having more workstreams would make it easier to</p>
+<ol start="0">
+<li>avoid cliques culturally</li>
+<li>do onboarding into smaller workstreams</li>
+<li>disambiguate business units that are performant form their bundled peers</li>
+<li>keep governance proposals more small &amp; manageable</li>
+</ol>
+<p>Read more in <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> 's post <a href="https://gov.gitcoin.co/t/discussion-a-hypothesis-thin-workstreams-lead-to-better-outcomes/9975">here</a>.</p>
+<h1><a name="h-2-supply-and-demand-sub-daos-2" class="anchor" href="https://gov.gitcoin.co#h-2-supply-and-demand-sub-daos-2"></a>2. Supply and demand Sub DAOs</h1>
+<p>This is an architecture by <a class="mention" href="https://gov.gitcoin.co/u/pet3rpan">@pet3rpan</a> that is described in this tweet thread:</p>
+<p><a href="https://twitter.com/pet3rpan_/status/1505977368099233793" class="onebox" target="_blank" rel="noopener">https://twitter.com/pet3rpan_/status/1505977368099233793</a></p>
+<p><a href="https://twitter.com/pet3rpan_/status/1505977369407856646" class="onebox" target="_blank" rel="noopener">https://twitter.com/pet3rpan_/status/1505977369407856646</a></p>
+<p>Peter than continues to visually lay out this architecture:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/95dd523acd273a8e035f9b0d98c686417c1d3fdd.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/95dd523acd273a8e035f9b0d98c686417c1d3fdd" title="FOZLaBqVkAE1A_u"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/95dd523acd273a8e035f9b0d98c686417c1d3fdd_2_690x385.jpeg" alt="FOZLaBqVkAE1A_u" data-base62-sha1="lnLjWeJv9IBpoxuZYEwgCCc3usR" width="690" height="385" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/95dd523acd273a8e035f9b0d98c686417c1d3fdd_2_690x385.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/95dd523acd273a8e035f9b0d98c686417c1d3fdd_2_1035x577.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/95dd523acd273a8e035f9b0d98c686417c1d3fdd.jpeg 2x" data-dominant-color="EFF0EF"></a></div><p></p>
+<p><a href="https://twitter.com/pet3rpan_/status/1505996607929544710" class="onebox" target="_blank" rel="noopener">https://twitter.com/pet3rpan_/status/1505996607929544710</a></p>
+<p>What I think is neat about this is how organically similar it is to the thin workstream proposal above, though in this scenario each of the sub-DAOs competes with each other.</p>
+<p>Imagine a world where MMM is not just one workstream, but is many demand subDAOs.  MMM also competes agains a MMM-black in order to effectively market Gitcoin.  Maybe each one has different specialties, eg. MMM is good at memes + swag, MMM-black is good at lore, and MMM-purple ends up being really good at documenting customer case studies.</p>
+<p>Read more in <a href="https://twitter.com/pet3rpan_/status/1505977368099233793">Peter’s post here</a>.</p>
+<h1><a name="h-3-orca-pods-3" class="anchor" href="https://gov.gitcoin.co#h-3-orca-pods-3"></a>3. Orca Pods</h1>
+<p>Orca <a href="https://orca.mirror.xyz/Y2xvPmB4cJH51srGqY6Mm_g38lV-7cwvtyDePnyzfAE">Pods</a> are:</p>
+<blockquote>
+<p>Pods are small working groups, usually centered around one expertise. In place of—or in addition to—one massive, centralized DAO treasury, each pod has its own multi-sig wallet that is controlled by the pod members. So pods can be thought of as mini-DAOs within a larger DAO.</p>
+</blockquote>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c7ac07133e09f0a189031406bfe820053a7b29b6.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/c7ac07133e09f0a189031406bfe820053a7b29b6" title="Screen Shot 2022-05-02 at 7.49.26 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c7ac07133e09f0a189031406bfe820053a7b29b6_2_690x350.jpeg" alt="Screen Shot 2022-05-02 at 7.49.26 PM" data-base62-sha1="sunAdp9zwyoEgVhVbYFYVpj9i5M" width="690" height="350" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c7ac07133e09f0a189031406bfe820053a7b29b6_2_690x350.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c7ac07133e09f0a189031406bfe820053a7b29b6_2_1035x525.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c7ac07133e09f0a189031406bfe820053a7b29b6_2_1380x700.jpeg 2x" data-dominant-color="382451"></a></div><p></p>
+<blockquote>
+<p>In the image above, the circles represent pods, each with a handful of members and its own multi-sig wallet. The people at the bottom are stakeholders that do not yet have membership to a pod, for example governance token holders or users. To gain membership to a pod, the claimant must meet a set of rules—maybe they have to hold a certain amount of an ERC-20 asset or perhaps they must be voted on to a whitelist of candidates for membership. A future could even exist where membership hinges on a custom reputation system. These restrictions can be almost anything and should be formed around the gravity of the pod’s responsibilities. Membership can also be slashed at any time if the member fails to comply with membership rules. In other words, pods can grow, shrink and extend to the needs of the DAO.</p>
+</blockquote>
+<p>What I think is cool about Pods is how they scale.  From the post above:</p>
+<blockquote>
+<p>DAO of one pod can easily add another pod when it becomes large enough, and it can continue to add pods as it grows. Any hierarchies that form in this process are localized, deliberate and impermanent. The DAO just grows organically from day one.</p>
+</blockquote>
+<p>Learn more about <a href="https://www.orcaprotocol.org/#learn-more">Orca Pods</a> here.</p>
+<h1><a name="an-aside-problems-with-the-workstream-model-sub-dao-model-and-pod-model-4" class="anchor" href="https://gov.gitcoin.co#an-aside-problems-with-the-workstream-model-sub-dao-model-and-pod-model-4"></a>An Aside: Problems with the workstream model, sub DAO model, and Pod model.</h1>
+<p>One problem I see with the above model is that there is a lack of prenegotiated terms for governance rights if the workstream decides to become a sub DAO (or Pod) that is independent of the main DAO.</p>
+<p>We’ve seen this <a href="https://gov.gitcoin.co/t/kernel-evolves-a-new-leaf-for-gitcoin-dao/9912">with KERNEL</a>, and dCompass/FDD are flirting with creating their own DAOs now.</p>
+<p>In that scenario that an independent side DAO is created, how does the primary DAO get governance rights in return for their tokens being used to launch the Pod or side DAO?  What terms are fair?  When are they decided and by whom?</p>
+<ol>
+<li>Right now there is no mutual understanding that there should be a correlation between the GTC governance rights that GitcoinDAO gives to these workstreams to get them off the ground + the eventual governance rights of their independently governed project that GitcoinDAO gets back.</li>
+<li>This incentivizes the workstreams to keep requesting more GTC ad infinitum from GitcoinDAO. I would venture to say that if a workstream consumes more GTC, it should give up more governance rights in its eventual departure (or be shut down if its just not working).</li>
+<li>Not having this understood upfront increases the risk of misunderstandings + hurt feelings down the road.</li>
+</ol>
+<p>With the workstream model, sub DAO model, and Pod model, a set of standard terms that are fair to both parties is needed in case of eventual independence.  I hope to see the <a href="https://gov.gitcoin.co/t/constructing-a-mutual-grants-committee/10347/7">PGF workstream spearhead these negotiations in the future</a></p>
+<h1><a name="h-4-conviction-voting-5" class="anchor" href="https://gov.gitcoin.co#h-4-conviction-voting-5"></a>4. Conviction Voting</h1>
+<p>There has been some action lately in <a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027">Moonshot Collective about Conviction Voting</a>, with a proposed tool to do CV as part of their S14 budget.  I think this is deeply exciting because using Conviction voting, proposals can “charge up” over time, allowing smaller proposals to require a smaller support base, and larger proposals require a larger support base.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2bab0d66538b23a30562ff72f526b28a973ed9de.png" alt="image" data-base62-sha1="6ej0ziC9PFO2IMHXYcfy6SN510O" width="606" height="431"></p>
+<p>This allows DAO worksterams to evolve more emergently, they can “charge up” as people gain more conviction in their execution.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d85fa9bd37cf50cb1b2f7fe4bc149ccab9212199.png" alt="image" data-base62-sha1="uS85COsqbTmnHlaAZl1ZHyMLV0J" width="688" height="375"></p>
+<p>CV allows workstream creation to become more emergent. I imagine a world where dozens of new mini-workstreams could emerge from the promordial soup of Governance as stewards organically get more conviction on their ability to deliver.</p>
+<p>I believe this emergence would encourage more cross-workstream collaboration.  As members of different areas of the DAO discover they can request budget together in a lightweight way, that will create more collaboration among them.</p>
+<p>Learn more about conviction voting  <a href="https://gov.gitcoin.co/t/dear-moonshot-collective-help-daos-level-up-gov-tooling-buidl-request-for-chain-agnostic-conviction-voting/10027">here</a>.</p>
+<h1><a name="h-5-mutual-grants-6" class="anchor" href="https://gov.gitcoin.co#h-5-mutual-grants-6"></a>5. Mutual Grants</h1>
+<p>This is an idea by <a class="mention" href="https://gov.gitcoin.co/u/ceresstation">@ceresstation</a> to align Gitcoin with groups external to GitcoinDAO (but with shared goals or values): <a href="https://gov.gitcoin.co/t/constructing-a-mutual-grants-committee/10347" class="inline-onebox">Constructing a Mutual Grants Committee</a></p>
+<p>From his post:</p>
+<blockquote>
+<p>PGF has been pursuing small scale <a href="https://snapshot.org/#/devdao.eth/proposal/0xfafbac6a39f5991497856ac2c4b941c0b020d442280eea8eeebe0b88bd6f913c">mutual grant agreements </a> as opportunities emerge. Mutual grants as the name suggests are reciprocal grants of tokens for shared governance, with partners that are committed to working with Gitcoin via aqueducts, side rounds, or, more broadly, shared public goods related missions.</p>
+</blockquote>
+<p>Mutual Grants allow GitcoinDAO to signal to the market that they are aligned with other ecosystem entities - mostly DAOs - towards shared goals.</p>
+<p>I think that in a world of <a href="https://gov.gitcoin.co/t/practical-pluralism-essay-draft/10462">Practical Pluralism</a>, that Mutual Grants are a really cool way of increasing coordination across the ecosystem.</p>
+<p>Learn more about Mutual Grants <a href="https://gov.gitcoin.co/t/constructing-a-mutual-grants-committee/103470">here</a>.</p>
+<h1><a name="h-6-scaled-agile-7" class="anchor" href="https://gov.gitcoin.co#h-6-scaled-agile-7"></a>6. Scaled Agile</h1>
+<p>This one is a bit web2, but I think there is some good ideas in it: <a href="https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf">Scaled Agile</a></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d13b9e8d6e39a62b2a0e992c37d525ac70cd0ba0.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/d13b9e8d6e39a62b2a0e992c37d525ac70cd0ba0" title="Screen Shot 2022-05-02 at 8.19.49 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d13b9e8d6e39a62b2a0e992c37d525ac70cd0ba0_2_690x416.jpeg" alt="Screen Shot 2022-05-02 at 8.19.49 PM" data-base62-sha1="tQXwyNIIaeeIowLDG3qSpHlc2Iw" width="690" height="416" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d13b9e8d6e39a62b2a0e992c37d525ac70cd0ba0_2_690x416.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d13b9e8d6e39a62b2a0e992c37d525ac70cd0ba0_2_1035x624.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/d/d13b9e8d6e39a62b2a0e992c37d525ac70cd0ba0.jpeg 2x" data-dominant-color="E4E8E6"></a></div><p></p>
+<p>The things I think are interesting primitives are</p>
+<ol>
+<li>The basic unit of development at Spotify is the <strong>Squad</strong>.  A Squad is similar to a Scrum team, and is designed to feel like a mini-startup. They sit together, and they have all the skills and tools needed to design, develop, test, and release to production. They are a self-organizing team and decide their own way of working – some use Scrum sprints, some use Kanban, some use a mix of these approaches.</li>
+<li>The <strong>chapter</strong> is your small family of people having similar skills and working within the same general competency area, within the same tribe.</li>
+<li>A <strong>Guild</strong> is a more organic and wide-reaching “community of interest”, a group of people that want to share knowledge, tools, code, and practices. Chapters are always local to a Tribe, while a guild usually cuts across the whole organization. Some examples are: the web technology guild, the tester guild, the agile coach guild, etc</li>
+<li>A <strong>tribe</strong> is a collection of squads that work in related areas – such as the music player, or backend infrastructure.</li>
+</ol>
+<p>Read more about Scaled Agile <a href="https://blog.crisp.se/wp-content/uploads/2012/11/SpotifyScaling.pdf">here</a>.</p>
+<h1><a name="h-7-a-higher-fidelity-steward-voting-in-gitcoins-governance-process-8" class="anchor" href="https://gov.gitcoin.co#h-7-a-higher-fidelity-steward-voting-in-gitcoins-governance-process-8"></a>7. A higher fidelity steward voting in Gitcoin’s governance process</h1>
+<p>This is GitcoinDAO’s <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358">existing governance process</a>:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/45dfe7bf3f3a5061a0c7668561e3bc7b7e3a20e7.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/45dfe7bf3f3a5061a0c7668561e3bc7b7e3a20e7" title="bild"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/45dfe7bf3f3a5061a0c7668561e3bc7b7e3a20e7_2_690x444.png" alt="bild" data-base62-sha1="9Y8EW5n9ddIYEKZSAlsqRZoIHz1" width="690" height="444" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/45dfe7bf3f3a5061a0c7668561e3bc7b7e3a20e7_2_690x444.png, https://gov.gitcoin.co/uploads/db4391/original/2X/4/45dfe7bf3f3a5061a0c7668561e3bc7b7e3a20e7.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/45dfe7bf3f3a5061a0c7668561e3bc7b7e3a20e7.png 2x" data-dominant-color="F9FBFA"></a></div><p></p>
+<p>One thing that I think is an extremely low hanging fruit improvement to this is to allow stewards to vote in more fidelity than just binary yes or no.</p>
+<p>If a workstream is requesting 50k tokens, and the steward consensus is that they are doing a good enough job to receive 25k tokens for their work, they should be able to input that information into the governance system.  Such a voting flow could be enabled by extending the current vote options beyond just yes or no to also allow voting for an option entitled “yes but with up to X less/more tokens”</p>
+<p>Such a governance process would look like this:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/802dae30b2a97606ccf7e8ec204d785d18a41549.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/802dae30b2a97606ccf7e8ec204d785d18a41549" title="Screen Shot 2022-05-02 at 8.39.18 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/802dae30b2a97606ccf7e8ec204d785d18a41549_2_690x442.jpeg" alt="Screen Shot 2022-05-02 at 8.39.18 PM" data-base62-sha1="ihUZ8wwzfOTavoxLJQqb9CBLPf3" width="690" height="442" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/802dae30b2a97606ccf7e8ec204d785d18a41549_2_690x442.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/802dae30b2a97606ccf7e8ec204d785d18a41549_2_1035x663.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/802dae30b2a97606ccf7e8ec204d785d18a41549_2_1380x884.jpeg 2x" data-dominant-color="F7F8F7"></a></div><p></p>
+<p>or this</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f94cd81aad51f87e60ded0e7a10a92e4d093f863.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/f94cd81aad51f87e60ded0e7a10a92e4d093f863" title="Screen Shot 2022-05-02 at 9.10.00 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f94cd81aad51f87e60ded0e7a10a92e4d093f863_2_690x443.jpeg" alt="Screen Shot 2022-05-02 at 9.10.00 PM" data-base62-sha1="zzpwJAz2JYh4iSXLjhcPeJOnn59" width="690" height="443" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f94cd81aad51f87e60ded0e7a10a92e4d093f863_2_690x443.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f94cd81aad51f87e60ded0e7a10a92e4d093f863_2_1035x664.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f94cd81aad51f87e60ded0e7a10a92e4d093f863_2_1380x886.jpeg 2x" data-dominant-color="F8FAF9"></a></div><p></p>
+<p>If you think this is a good idea, feel free to comment on the <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358">Governance process</a> and say so!</p>
+<h1><a name="h-8-coordinape-9" class="anchor" href="https://gov.gitcoin.co#h-8-coordinape-9"></a>8. CoordinAPE</h1>
+<p><a href="https://coordinape.com/">CoordinAPE</a> is a tool to scale your community with tools to reward contributors, incentivize participation and manage resources.</p>
+<p>Basically CoordinAPE allows DAOs to vote on who is providing the most value, thereby measuring who the value creators are.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d86b2fabd7f8e8279f1f9aba2fdfc6192b55a093.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/d86b2fabd7f8e8279f1f9aba2fdfc6192b55a093" title="graph-card.90c67e9481e5354aeb5a"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d86b2fabd7f8e8279f1f9aba2fdfc6192b55a093_2_384x500.png" alt="graph-card.90c67e9481e5354aeb5a" data-base62-sha1="uSwMizz0s98Z5hltGMQxAmeggWD" width="384" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d86b2fabd7f8e8279f1f9aba2fdfc6192b55a093_2_384x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d86b2fabd7f8e8279f1f9aba2fdfc6192b55a093_2_576x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/d/d86b2fabd7f8e8279f1f9aba2fdfc6192b55a093.png 2x" data-dominant-color="D6DDDE"></a></div><p></p>
+<p>From there, tokens can be distributed, on a regular interval - say monthly.  These tokens are distributed according to the value creation in the DAO.</p>
+<p>Whats nice about this model is it scales up to 100s of contributors.  And it’s completely bottoms-up.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c4fdcffcdbd53cda205a39d33c414149aa082fdb.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/c4fdcffcdbd53cda205a39d33c414149aa082fdb" title="FNpV0tRWUAcm6Fq"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c4fdcffcdbd53cda205a39d33c414149aa082fdb_2_690x361.jpeg" alt="FNpV0tRWUAcm6Fq" data-base62-sha1="s6Fnf24ENQgmM34msxx7dptmTKr" width="690" height="361" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c4fdcffcdbd53cda205a39d33c414149aa082fdb_2_690x361.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c4fdcffcdbd53cda205a39d33c414149aa082fdb_2_1035x541.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/c/c4fdcffcdbd53cda205a39d33c414149aa082fdb.jpeg 2x" data-dominant-color="E6E7E3"></a></div><p></p>
+<p>CoordinAPE allows collaboration to become more emergent. Image a world where dozens of new mini-projects or guilds could emerge from the promordial soup of the DAO as contributors get to signal who is providing the most value.</p>
+<p>I believe this emergence would encourage more cross-workstream collaboration.  As members of different areas of the DAO discover they can earn budget in a workstream agnostic way, that will create more collaboration among them.</p>
+<p>Read more about <a href="https://coordinape.com/">CoordinAPE here</a>.</p>
+<h1><a name="mix-match-10" class="anchor" href="https://gov.gitcoin.co#mix-match-10"></a>Mix &amp; Match <img src="https://gov.gitcoin.co/images/emoji/twitter/handshake.png?v=12" title=":handshake:" class="emoji" alt=":handshake:" loading="lazy" width="20" height="20"></h1>
+<p>What I think is fun about the ideas above is how you can mix and match them.  Some obvious ones to me are:</p>
+<ol>
+<li>As a workstream lead, I might decide to break my workstream into 3 <em>thin-workstreams</em>, each of which are structured as a <em>supply or demo sub-DAO</em>.</li>
+<li>I may decide to use <em>conviction voting</em> to form a <em>guild</em> of other public speakers at GitcoinDAO.</li>
+<li>As a workstream lead, I may decide to scale my own workstream with <em>Orca Pods</em>, with pre-negotiated <em>Mutual Grants</em> back to the workstream/Pod.</li>
+</ol>
+<h1><a name="feedback-welcome-11" class="anchor" href="https://gov.gitcoin.co#feedback-welcome-11"></a>Feedback welcome</h1>
+<p>I hope that this post created more awareness of different organizational methodologies out there.  Hopefully having a shared vocabulary of these primitives will create more understanding of what’s possible as we go from season to season.</p>
+<p>To be clear, these are just ideas.  None of these ideas have been ratified as things GitcoinDAO needs to do.  To become legitimate experiments that GitcoinDAO is working with, the stewards and/or CSDO would need to ratify these through their respective governance processes.</p>
+<p>I’d love if I missed an organizational paradigm, if you’d comment below and tell us about it.</p>
+<p>What resources are people excited about for scaling coordination?  How would you mix &amp; match the ideas above?  Which of the above ideas are most relevant to Gitcoin today? Comment below and let us know</p>
+          <p><a href="https://gov.gitcoin.co/t/8-ideas-for-dao-work-maximum-coordination/10483/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/8-ideas-for-dao-work-maximum-coordination/10483/1
+        Tue, 03 May 2022 02:42:12 +0000
+gov.gitcoin.co-post-10483-1
+8 Ideas for DAO Work @ Maximum Coordination ™️
+      
+
+

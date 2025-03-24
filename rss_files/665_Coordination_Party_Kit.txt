@@ -1,0 +1,405 @@
+
+
+
+Coordination.Party Kit
+https://gov.gitcoin.co/t/coordination-party-kit/9231
+    Hey everyone, I wanted to give ya'll a heads up about a tool that [Moonshot Collective](https://moonshotcollective.space/) is working on right now, we are aiming to launch in February at [Schelling Point](http://schellingpoint.gitcoin.co/).
+
+It's called Coordination Party Kit.
+
+The objective of this post is to 
+1. share the deep strategic context for the build out of this toolkit.
+2. invite you to join us in it's build out or marketing.
+
+# Coordination.Party Kit
+
+## North star opportunity: Coordination Tooling for DAOs
+
+The Moonshot Collective is building built [Coordination.Party Kit](https://Coordination.Party) (hereforth CPK) - a tool suite that helps recruit, recognize, reward, and retain contributors to DAOs.  We believe that web3-native coordination technology is a massive game-changer for how tokens + talent combine to push forward the mission of GitcoinDAO, and also other DAOs.
+
+The Coordination.Party Kit is like a toolbox.  You might buy it because you want a screwdriver, but its useful to have a wrench + pliars + a hammer when you need it too.
+
+The Coordination.Party Kit augments Gitcoin's existing product suite (Grants + Hackathons) in the following ways.
+1. The existing products are high TTV (cost $10k+ + take weeks to realize value) whereas the CPK is low TTV (costs $10+ + takes minutes to realize value)
+2. The existing products are monolithic + laden with tech debt, making them costly + difficult to maintain.  The CPK is a series of Simple, Antifragile, and Modular tools, making them easy to maintain (if they are successful) or easy to throw away (if they are not successful).  The Coordination.Party kit is bottoms up collection of tools, not a top down monolith.
+
+## Tools in coordination party kit
+
+Lets get into the specifics of each Coordination.Party Kit tool.  
+
+
+### Tip.Party
+
+The hypothesis with tip.party is that by recognizing+ rewarding participants in calls or other live events in a lightweight way, we can create deeper engagement between the call hosts + attendees.
+
+The core use cases that need to work great are:
+1. Call hosts can reward participants to call without a lot of UX or financial overhead.
+2. Call attendees can easily participate
+3. Call atteendees are aware of their rewards when they are received.
+4. It needs to be easy to add my own DAO's token to the tool.
+
+What success looks like at Schelling Point:  10 tip.parties with aggregate 100+ participants have been held, and at least 10% of those participants take tip.party back to their own DAOs.
+
+Play with the alpha at https://tip.party/
+
+### Pay.Party
+
+The hypothesis for pay.party is that we can decentralize the recognition + rewarding + retainment of participants of teams in a lightweight way.  And that by decentralizing this process, we can push power to the edges, away from "bosses", creating higher morale.
+
+The core use cases that need to work great are.
+1. Hosting a pay party is easy, not a lot of UX or financial overhead.
+2. Participating in a pay party is easy, not a lot of UX or financial overhead.
+3. Participants are aware of their rewards when they are received.
+4. It needs to be easy to add my own DAO's token to the tool.
+
+What success looks like at Schelling Point:  1 pay.party with aggregate 25+ participants have been held, and at least 10% of those participants take pay.party back to their own DAOs.
+
+Play with the alpha at https://pay.party/
+
+### Recruiter.party
+
+The hypothesis for recruiter.party is that DAO-native talent is the scarcest resource in the space, and that by giving talent upside in the process recruitment, we can build a better candidate tracking + candidate system than those that have existed in the past.
+
+To accomplish success in the long term for recruiter.party we will need to create network effects for the tool
+To accomplsih success in the short term, we need to make it easy to upload a resume or to search for a resume.
+
+The core use cases that need to work great are.
+1. Searching for + contacting talent in bulk needs to be easy + high ROI (eg I'm finding candidates I'd actually want to work with.)
+2. Uploading my information to the system is easy + high ROI (eg I make connections I want or make $$$ from the connections)
+3. There are no major friction points in the funnel where 60% or more of the traffic falls off.
+
+What success looks like at Schelling Point: 50 people upload their resume to recruiter.party, and at least 50% of those participants make $$$ from doing so (and are aware they made $$$).
+
+### TokenStream.party
+
+The hypothesis for tokenstream.party is that DAO contributors want a steady source of income, but DAO administrators want downside protection if thet DAO contributor goes away for a while.   The way TSP solves this is by creating streams of tokenized payments which only continue to flow if they are withdrawn (and a status report is submitted once a week).
+
+The core use cases that need to work great are.
+1. Setting up a stream is easy, low overhead, and high ROI.
+2. Receiving a stream is easy, low overhead, and high ROI.
+3. It needs to be easy to add my own DAO's token to the tool.
+
+What success looks like at Schelling Point: We get 100 participants to agree to help GitcoinDAO's mission + put them on token streams.  At least 50% of them withdraw within 1 month and at least 25% of them are still contributing to GitcoinDAO within 3 months.
+
+Play with the alpha at https://tokenstream.party/
+
+### publicgoods.party
+
+PGP is a fork of Gitcoin's dGrants product.  The hypothesis for PGP is that DAO's want to run their own Quadratic Funding rounds.  The meta-hypothesis is that Moonshot Collective running experiments + submitting upstream PRs to dGrants will make the QF tool even more successful (eg more $$$ raised for more DAOs)
+
+The core use cases that need to work great are:
+1. setting up a round is easy / high ROI
+2. seeing how a round is going easy / high ROI
+3. creating a grant is easy / high ROI
+4. contributing to a grant is easy  / high ROI
+5. It needs to be easy to add my own DAO's token to the tool.
+
+(note: most of the UX of this is handled upstream by dGrants already - but its possible by forking these tools + marketing them ourselves well discover upstream issues )
+
+What success looks like at Schelling Point: We run a one day QF round at SP, in which at least 50 participants have contributed to speakers.  At least 5 people take dGrants back to their own DAOs to run QF rounds.
+
+### fund.party
+
+fund.party is Moonshot Collectives' Retroactive Public Goods Funding starter kit.  The hypothesis for FP is that as more and more public goods in the Ethereum space are well funded (by Quadratic Funding, Retroactive Public Goods Funding, or similar), projects will want to be oriented to receive those rewards.  Fund.Party provides an easy way of tracking who has contributed to what, so that future retroactive distributions are easy.
+
+The core use cases that need to work great are:
+1. setting up a fund.party is easy / high ROI
+2. awarding contributors via a fund.party is easy  / high ROI
+3. future retroactive distributions to fund.party users is easy + baked into the Optimism RGPF process
+
+What success looks like at Schelling Point:  Karl Flouresch is really excited about fund.party + shills it on stage at SP.
+
+### greenpill.party
+
+GreenPill.Party is a simple tool that allows anyone to pledge a portion of their wealth to public goods.
+
+The core use cases that need to work great are:
+1. its easy to make a giving pledge via GPP
+2. when someone sees a giving pledge, they go to greenpill.party + find it easy/compelling to complete a giving pledge themselves.
+
+What success looks like at Schelling Point: 5 Tier A DAO contributors complete a giving pledge.
+
+Play with the alpha at https://greenpill.party
+
+### Consistency across tools.
+
+We are aiming to make the whole of these tools greater than the sum of their parts.  Each tool could be:
+1. Listed on coordination.party to allow easy discoverability.
+2. Have a backlink to coordination.party somewhere prominent (perhaps in its header) in order to allow cross-discovery between tools.
+3. Have a common color scheme to create brand consistency.
+4. Have a "built by the Gitcoin community" button in the footer.
+5. Have a navigation & onboarding structure oriented around educating the end-user about how it solves for the users' JTBD (Job to be done).
+6. Consistent network deployment.  Each tool in the CPK should support the same L1s/L2s + it should be easy/clear which ones are supported.
+
+### Where things stand now
+
+recruiter.party and fund.party are still in active development.
+
+Given that greenpill.party pay.party publicgoods.party tokenstream.party and tip.party are already built technology wise I hope the technology risk for these tools is minimal. 
+
+Ux love needed tho, just because the major dev lift is done doesn’t mean it solves the customer needs (yet). We really need people who can think like product managers and iron out these kinks by trialing them with customers and working with designers to write clear tickets about how to tweak the products. 
+
+## Go to market strategy
+
+### Dogfooding
+
+We are presently dogfooding these tools within the moonshot collective, and have begun sharing them with other GitcoinDAO workstreams (specifically the FDD and MMM).  As part of this dogofooding, we are going through an iterative cycle of `hypothesis => experiment => results => learning (repeat if success is within sight, shut down the tool if not).`.
+
+The goal of dogfooding is to make the tools as useful for our own needs (but keep in the back of our minds the need to generalizable to others' needs)
+
+### The 2/17/2022 launch
+
+We are launching Coordination Party Kit at Schelling Point on 2/17/2022; a one day GitcoinDAO conference about coordionation.  GitcoinDAO is putting on this event and has sourced prominent speakers across the industry (Vitalik Buterin, Santi Siri, and others) to create a "Schelling Point for the Hopeful" - a contingent of Ethereans who want to build a better world with coordination technology.  There is an opportunity to imbue the CPK into the event in ways that SHOW not TELL how powerful coordination technology can be.  There is an opportunity to market our tools to the top DAOs in the space at this event. 
+
+The criteria for success of this launch is simply the following:  10 attendees at schelling point take home the CPK + trial them in 10 unique DAOs.
+
+Some proposed experiments of how this could be done:
+1. a Tip.party for every talk could reward attendees for coming to talks of speakers they love.
+2. run a one day QF round for the Schelling Point event (publicgoods.party) could help fund causes that speakers & attendees care about.
+3. ask everyone at the event to "take the green pill" (greenpill.party) creating lots of funding for public goods.
+4. launch recruiter.party, gathering 100s of resumes of web3 native talent + creating income for the top contributors in the space.
+5. run a pay.party at the end of the event to reward those who made the vent great.
+6. we put talks from the moonshot collective members on stage during the day to give demos.
+
+Of course, these are all just experiments we could do.  They are not canon, I'd love to see more ideas bottoms up.  
+
+## How to get involved 
+
+If you are a dev, designer, or PM who wants to help would with the launch say hi in the [coordination.party 2/17 launch telegram group](https://t.me/+fN8W3Vv1tGthYjEx).
+
+If you would like too try out the CPKP in your own DAO, please also join the [coordination.party 2/17 launch telegram group](https://t.me/+fN8W3Vv1tGthYjEx).
+Thu, 10 Feb 2022 22:43:34 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Coordination.Party Kit
+emudoteth
+
+            <p>In the month of January, 100% of moonshot pay was made using moonshot built products. This is a major milestone; all of our payment products are in a working state!</p>
+<p>At the Collective we currently have 16 active contributor <a href="http://tokenstream.party" rel="noopener nofollow ugc">tokenstreams</a>. While our compensation policy has not been completely ratified (see OKR’s and planned accomplishments <a href="https://gov.gitcoin.co/t/moonshot-collective-workstream-budget-request-q2-2022/9824">here</a>) these streams serve as basic income for our contributors. We target ~20% of total compensation with these streams. The other 80% of contributor pay comes from another product: <a href="http://pay.party" rel="noopener nofollow ugc">Pay.party</a>.</p>
+<p>We have successfully coordinated and held many pay party elections, or voting periods where contributors select candidates and cast their votes. These votes serve as the peer to peer voting mechanics of Pay.party and determine what the payout will be to any given contributor in that election.</p>
+<p>One property that was baked in is the ability to add voters that are not candidates, i.e. they can only vote on other candidates and not themselves. This allows us to add voters that may not be contributing to that product but have great insight into who did what work in the specified time period.</p>
+<p>These elections can be tricky in an async, dao native environment. What makes this difficult? One major hurdle to overcome was the differing time zones of our contributors, it was hard to get everyone in the same place at the same time to nominate the ‘candidates’ to be voted on. As a workaround, we leveraged another one of our products, <a href="http://tip.party" rel="noopener nofollow ugc">tip party</a>, to aggregate all the appropriate contributors on a per project basis.</p>
+<p>Elections can be created by any EOA (externally owned account; not contract wallet) rather than having to use the multisig and dealing with the complexities of asynchronous message signing.</p>
+<p>Once everyone votes, which is usually capped at around 24 hours, we then connect the treasury multisig or the ‘baby sig’ and distribute the funds. It’s important to note that the description of the election should contain how the payout will be distributed i.e. quadratic vs linear. We have chosen to use linear payouts as quadratic tends to tighten the pack and that is not the intended outcome when looking to identify and compensate the ‘damage dealers’ of any given project.</p>
+<p>In December, as we first started to form what our compensation would look like, a gap was exposed in that we would have to batch send transactions to settle up where the elections and streams fell short of total compensation commitments.</p>
+<p>At moonshot we don’t target hourly rates per se, but behind the scenes we use spreadsheets to track how much USD our contributors are being ‘paid’ for their time. This is done to ensure that we are rewarding them fairly. To get these payments out, we had to use multisender(dot)app, the same app we had to use to fill streams.</p>
+<p>Every transaction using this app has an added fee of .09 ETH, which our multisig does not natively own. While swapping into ETH has been done for this process specifically, anyone who has ever done this knows the challenges this poses.</p>
+<p>It was realized that many had this need for an app which can bundle multiple transactions and send varying amounts of tokens to each user, however; no one had built it yet. Leveraging our connections to scaffold-eth the <a href="https://multidrop.surge.sh/" rel="noopener nofollow ugc">multidropper</a> was quickly prototyped. This was the final piece in having all our contributors paid using only MC products.</p>
+<p>As the person currently overseeing compensation and contributor success, this milestone was not only awesome, but for the team morale to validate that we can ship at this pace while also standing up a healthy workstream of a DAO was a major success from my point of view.</p>
+<p>As we move into Season 13 it is becoming apparent that other workstreams in the DAO are starting to uncover the same needs that Moonshot had when starting to pay contributors. We are deploying resources now to bring these products and ideas to you and really dive deep into usability tests.</p>
+<p>In these test sessions, we will uncover how these products could improve to suit your workstream needs while you are helping us to validate our products. Much of these needs will be fulfilled through our prototype budget to ship solutions as fast/safe as possible to meet the ever-increasing needs of other workstreams and DAO’s.</p>
+<p>In addition to all of this, as we transform into our <a href="https://gov.gitcoin.co/t/moonshot-collective-target-state/9648">Target state</a> we have a pipeline of talent coming up through <a href="http://speedrunethereum.com" rel="noopener nofollow ugc">Speedrun Ethereum</a> and natively through GitcoinDAO. To attract and retain this talent we need to be quick to pay our contributors. The starting stream for contributors at moonshot is 120 gtc at a 4 week drip rate. We plan to bring on new contributors in the design, product and developer space. The intent of this budget is to do just that, while simultaneously being held accountable to our ratified OKRs.</p>
+          <p><a href="https://gov.gitcoin.co/t/coordination-party-kit/9231/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/coordination-party-kit/9231/7
+        Thu, 10 Feb 2022 22:43:34 +0000
+gov.gitcoin.co-post-9231-7
+Coordination.Party Kit
+      
+
+Coordination.Party Kit
+Alex-moore2021
+
+            <p>Really awesome tools here. These are fantastic.</p>
+          <p><a href="https://gov.gitcoin.co/t/coordination-party-kit/9231/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/coordination-party-kit/9231/6
+        Wed, 01 Dec 2021 17:16:48 +0000
+gov.gitcoin.co-post-9231-6
+Coordination.Party Kit
+      
+
+Coordination.Party Kit
+huwangtao123
+
+            <p>Will these tools plan to launch in Matic or other EVM supported Chain? Or Will it allow participate choose different token/chain they prefer.</p>
+          <p><a href="https://gov.gitcoin.co/t/coordination-party-kit/9231/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/coordination-party-kit/9231/5
+        Tue, 30 Nov 2021 03:56:18 +0000
+gov.gitcoin.co-post-9231-5
+Coordination.Party Kit
+      
+
+Coordination.Party Kit
+lanlan3322
+
+            <p>Looks really great!<br>
+Looking forward to it!</p>
+          <p><a href="https://gov.gitcoin.co/t/coordination-party-kit/9231/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/coordination-party-kit/9231/3
+        Sun, 28 Nov 2021 08:04:41 +0000
+gov.gitcoin.co-post-9231-3
+Coordination.Party Kit
+      
+
+Coordination.Party Kit
+Sirlupinwatson
+
+            <p>Amazing!!!</p>
+<p>The <a href="https://greenpill.party/">GreenPill.Party</a> look so great!</p>
+<p>And I really like  <a href="https://coordination.party/">Coordination.Party Kit</a>!</p>
+<p><img src="https://emoji.discourse-cdn.com/twitter/heart_eyes.png?v=10" title=":heart_eyes:" class="emoji only-emoji" alt=":heart_eyes:"> <img src="https://emoji.discourse-cdn.com/twitter/star_struck.png?v=10" title=":star_struck:" class="emoji only-emoji" alt=":star_struck:"></p>
+          <p><a href="https://gov.gitcoin.co/t/coordination-party-kit/9231/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/coordination-party-kit/9231/2
+        Sat, 27 Nov 2021 04:44:09 +0000
+gov.gitcoin.co-post-9231-2
+Coordination.Party Kit
+      
+
+Coordination.Party Kit
+owocki
+
+            <p>Hey everyone, I wanted to give ya’ll a heads up about a tool that <a href="https://moonshotcollective.space/">Moonshot Collective</a> is working on right now, we are aiming to launch in February at <a href="http://schellingpoint.gitcoin.co/">Schelling Point</a>.</p>
+<p>It’s called Coordination Party Kit.</p>
+<p>The objective of this post is to</p>
+<ol>
+<li>share the deep strategic context for the build out of this toolkit.</li>
+<li>invite you to join us in it’s build out or marketing.</li>
+</ol>
+<h1>
+<a name="coordinationparty-kit-1" class="anchor" href="https://gov.gitcoin.co#coordinationparty-kit-1"></a>Coordination.Party Kit</h1>
+<h2>
+<a name="north-star-opportunity-coordination-tooling-for-daos-2" class="anchor" href="https://gov.gitcoin.co#north-star-opportunity-coordination-tooling-for-daos-2"></a>North star opportunity: Coordination Tooling for DAOs</h2>
+<p>The Moonshot Collective is building built <a href="https://Coordination.Party">Coordination.Party Kit</a> (hereforth CPK) - a tool suite that helps recruit, recognize, reward, and retain contributors to DAOs.  We believe that web3-native coordination technology is a massive game-changer for how tokens + talent combine to push forward the mission of GitcoinDAO, and also other DAOs.</p>
+<p>The Coordination.Party Kit is like a toolbox.  You might buy it because you want a screwdriver, but its useful to have a wrench + pliars + a hammer when you need it too.</p>
+<p>The Coordination.Party Kit augments Gitcoin’s existing product suite (Grants + Hackathons) in the following ways.</p>
+<ol>
+<li>The existing products are high TTV (cost $10k+ + take weeks to realize value) whereas the CPK is low TTV (costs $10+ + takes minutes to realize value)</li>
+<li>The existing products are monolithic + laden with tech debt, making them costly + difficult to maintain.  The CPK is a series of Simple, Antifragile, and Modular tools, making them easy to maintain (if they are successful) or easy to throw away (if they are not successful).  The Coordination.Party kit is bottoms up collection of tools, not a top down monolith.</li>
+</ol>
+<h2>
+<a name="tools-in-coordination-party-kit-3" class="anchor" href="https://gov.gitcoin.co#tools-in-coordination-party-kit-3"></a>Tools in coordination party kit</h2>
+<p>Lets get into the specifics of each Coordination.Party Kit tool.</p>
+<h3>
+<a name="tipparty-4" class="anchor" href="https://gov.gitcoin.co#tipparty-4"></a>Tip.Party</h3>
+<p>The hypothesis with tip.party is that by recognizing+ rewarding participants in calls or other live events in a lightweight way, we can create deeper engagement between the call hosts + attendees.</p>
+<p>The core use cases that need to work great are:</p>
+<ol>
+<li>Call hosts can reward participants to call without a lot of UX or financial overhead.</li>
+<li>Call attendees can easily participate</li>
+<li>Call atteendees are aware of their rewards when they are received.</li>
+<li>It needs to be easy to add my own DAO’s token to the tool.</li>
+</ol>
+<p>What success looks like at Schelling Point:  10 tip.parties with aggregate 100+ participants have been held, and at least 10% of those participants take tip.party back to their own DAOs.</p>
+<p>Play with the alpha at <a href="https://tip.party/">https://tip.party/</a></p>
+<h3>
+<a name="payparty-5" class="anchor" href="https://gov.gitcoin.co#payparty-5"></a>Pay.Party</h3>
+<p>The hypothesis for pay.party is that we can decentralize the recognition + rewarding + retainment of participants of teams in a lightweight way.  And that by decentralizing this process, we can push power to the edges, away from “bosses”, creating higher morale.</p>
+<p>The core use cases that need to work great are.</p>
+<ol>
+<li>Hosting a pay party is easy, not a lot of UX or financial overhead.</li>
+<li>Participating in a pay party is easy, not a lot of UX or financial overhead.</li>
+<li>Participants are aware of their rewards when they are received.</li>
+<li>It needs to be easy to add my own DAO’s token to the tool.</li>
+</ol>
+<p>What success looks like at Schelling Point:  1 pay.party with aggregate 25+ participants have been held, and at least 10% of those participants take pay.party back to their own DAOs.</p>
+<p>Play with the alpha at <a href="https://pay.party/">https://pay.party/</a></p>
+<h3>
+<a name="recruiterparty-6" class="anchor" href="https://gov.gitcoin.co#recruiterparty-6"></a>Recruiter.party</h3>
+<p>The hypothesis for recruiter.party is that DAO-native talent is the scarcest resource in the space, and that by giving talent upside in the process recruitment, we can build a better candidate tracking + candidate system than those that have existed in the past.</p>
+<p>To accomplish success in the long term for recruiter.party we will need to create network effects for the tool<br>
+To accomplsih success in the short term, we need to make it easy to upload a resume or to search for a resume.</p>
+<p>The core use cases that need to work great are.</p>
+<ol>
+<li>Searching for + contacting talent in bulk needs to be easy + high ROI (eg I’m finding candidates I’d actually want to work with.)</li>
+<li>Uploading my information to the system is easy + high ROI (eg I make connections I want or make $$$ from the connections)</li>
+<li>There are no major friction points in the funnel where 60% or more of the traffic falls off.</li>
+</ol>
+<p>What success looks like at Schelling Point: 50 people upload their resume to recruiter.party, and at least 50% of those participants make $$$ from doing so (and are aware they made $$$).</p>
+<h3>
+<a name="tokenstreamparty-7" class="anchor" href="https://gov.gitcoin.co#tokenstreamparty-7"></a>TokenStream.party</h3>
+<p>The hypothesis for tokenstream.party is that DAO contributors want a steady source of income, but DAO administrators want downside protection if thet DAO contributor goes away for a while.   The way TSP solves this is by creating streams of tokenized payments which only continue to flow if they are withdrawn (and a status report is submitted once a week).</p>
+<p>The core use cases that need to work great are.</p>
+<ol>
+<li>Setting up a stream is easy, low overhead, and high ROI.</li>
+<li>Receiving a stream is easy, low overhead, and high ROI.</li>
+<li>It needs to be easy to add my own DAO’s token to the tool.</li>
+</ol>
+<p>What success looks like at Schelling Point: We get 100 participants to agree to help GitcoinDAO’s mission + put them on token streams.  At least 50% of them withdraw within 1 month and at least 25% of them are still contributing to GitcoinDAO within 3 months.</p>
+<p>Play with the alpha at <a href="https://tokenstream.party/">https://tokenstream.party/</a></p>
+<h3>
+<a name="publicgoodsparty-8" class="anchor" href="https://gov.gitcoin.co#publicgoodsparty-8"></a>publicgoods.party</h3>
+<p>PGP is a fork of Gitcoin’s dGrants product.  The hypothesis for PGP is that DAO’s want to run their own Quadratic Funding rounds.  The meta-hypothesis is that Moonshot Collective running experiments + submitting upstream PRs to dGrants will make the QF tool even more successful (eg more $$$ raised for more DAOs)</p>
+<p>The core use cases that need to work great are:</p>
+<ol>
+<li>setting up a round is easy / high ROI</li>
+<li>seeing how a round is going easy / high ROI</li>
+<li>creating a grant is easy / high ROI</li>
+<li>contributing to a grant is easy  / high ROI</li>
+<li>It needs to be easy to add my own DAO’s token to the tool.</li>
+</ol>
+<p>(note: most of the UX of this is handled upstream by dGrants already - but its possible by forking these tools + marketing them ourselves well discover upstream issues )</p>
+<p>What success looks like at Schelling Point: We run a one day QF round at SP, in which at least 50 participants have contributed to speakers.  At least 5 people take dGrants back to their own DAOs to run QF rounds.</p>
+<h3>
+<a name="fundparty-9" class="anchor" href="https://gov.gitcoin.co#fundparty-9"></a>fund.party</h3>
+<p>fund.party is Moonshot Collectives’ Retroactive Public Goods Funding starter kit.  The hypothesis for FP is that as more and more public goods in the Ethereum space are well funded (by Quadratic Funding, Retroactive Public Goods Funding, or similar), projects will want to be oriented to receive those rewards.  Fund.Party provides an easy way of tracking who has contributed to what, so that future retroactive distributions are easy.</p>
+<p>The core use cases that need to work great are:</p>
+<ol>
+<li>setting up a fund.party is easy / high ROI</li>
+<li>awarding contributors via a fund.party is easy  / high ROI</li>
+<li>future retroactive distributions to fund.party users is easy + baked into the Optimism RGPF process</li>
+</ol>
+<p>What success looks like at Schelling Point:  Karl Flouresch is really excited about fund.party + shills it on stage at SP.</p>
+<h3>
+<a name="greenpillparty-10" class="anchor" href="https://gov.gitcoin.co#greenpillparty-10"></a>greenpill.party</h3>
+<p>GreenPill.Party is a simple tool that allows anyone to pledge a portion of their wealth to public goods.</p>
+<p>The core use cases that need to work great are:</p>
+<ol>
+<li>its easy to make a giving pledge via GPP</li>
+<li>when someone sees a giving pledge, they go to greenpill.party + find it easy/compelling to complete a giving pledge themselves.</li>
+</ol>
+<p>What success looks like at Schelling Point: 5 Tier A DAO contributors complete a giving pledge.</p>
+<p>Play with the alpha at <a href="https://greenpill.party">https://greenpill.party</a></p>
+<h3>
+<a name="consistency-across-tools-11" class="anchor" href="https://gov.gitcoin.co#consistency-across-tools-11"></a>Consistency across tools.</h3>
+<p>We are aiming to make the whole of these tools greater than the sum of their parts.  Each tool could be:</p>
+<ol>
+<li>Listed on coordination.party to allow easy discoverability.</li>
+<li>Have a backlink to coordination.party somewhere prominent (perhaps in its header) in order to allow cross-discovery between tools.</li>
+<li>Have a common color scheme to create brand consistency.</li>
+<li>Have a “built by the Gitcoin community” button in the footer.</li>
+<li>Have a navigation &amp; onboarding structure oriented around educating the end-user about how it solves for the users’ JTBD (Job to be done).</li>
+<li>Consistent network deployment.  Each tool in the CPK should support the same L1s/L2s + it should be easy/clear which ones are supported.</li>
+</ol>
+<h3>
+<a name="where-things-stand-now-12" class="anchor" href="https://gov.gitcoin.co#where-things-stand-now-12"></a>Where things stand now</h3>
+<p>recruiter.party and fund.party are still in active development.</p>
+<p>Given that greenpill.party pay.party publicgoods.party tokenstream.party and tip.party are already built technology wise I hope the technology risk for these tools is minimal.</p>
+<p>Ux love needed tho, just because the major dev lift is done doesn’t mean it solves the customer needs (yet). We really need people who can think like product managers and iron out these kinks by trialing them with customers and working with designers to write clear tickets about how to tweak the products.</p>
+<h2>
+<a name="go-to-market-strategy-13" class="anchor" href="https://gov.gitcoin.co#go-to-market-strategy-13"></a>Go to market strategy</h2>
+<h3>
+<a name="dogfooding-14" class="anchor" href="https://gov.gitcoin.co#dogfooding-14"></a>Dogfooding</h3>
+<p>We are presently dogfooding these tools within the moonshot collective, and have begun sharing them with other GitcoinDAO workstreams (specifically the FDD and MMM).  As part of this dogofooding, we are going through an iterative cycle of <code>hypothesis =&gt; experiment =&gt; results =&gt; learning (repeat if success is within sight, shut down the tool if not).</code>.</p>
+<p>The goal of dogfooding is to make the tools as useful for our own needs (but keep in the back of our minds the need to generalizable to others’ needs)</p>
+<h3>
+<a name="the-2172022-launch-15" class="anchor" href="https://gov.gitcoin.co#the-2172022-launch-15"></a>The 2/17/2022 launch</h3>
+<p>We are launching Coordination Party Kit at Schelling Point on 2/17/2022; a one day GitcoinDAO conference about coordionation.  GitcoinDAO is putting on this event and has sourced prominent speakers across the industry (Vitalik Buterin, Santi Siri, and others) to create a “Schelling Point for the Hopeful” - a contingent of Ethereans who want to build a better world with coordination technology.  There is an opportunity to imbue the CPK into the event in ways that SHOW not TELL how powerful coordination technology can be.  There is an opportunity to market our tools to the top DAOs in the space at this event.</p>
+<p>The criteria for success of this launch is simply the following:  10 attendees at schelling point take home the CPK + trial them in 10 unique DAOs.</p>
+<p>Some proposed experiments of how this could be done:</p>
+<ol>
+<li>a Tip.party for every talk could reward attendees for coming to talks of speakers they love.</li>
+<li>run a one day QF round for the Schelling Point event (publicgoods.party) could help fund causes that speakers &amp; attendees care about.</li>
+<li>ask everyone at the event to “take the green pill” (greenpill.party) creating lots of funding for public goods.</li>
+<li>launch recruiter.party, gathering 100s of resumes of web3 native talent + creating income for the top contributors in the space.</li>
+<li>run a pay.party at the end of the event to reward those who made the vent great.</li>
+<li>we put talks from the moonshot collective members on stage during the day to give demos.</li>
+</ol>
+<p>Of course, these are all just experiments we could do.  They are not canon, I’d love to see more ideas bottoms up.</p>
+<h2>
+<a name="how-to-get-involved-16" class="anchor" href="https://gov.gitcoin.co#how-to-get-involved-16"></a>How to get involved</h2>
+<p>If you are a dev, designer, or PM who wants to help would with the launch say hi in the <a href="https://t.me/+fN8W3Vv1tGthYjEx">coordination.party 2/17 launch telegram group</a>.</p>
+<p>If you would like too try out the CPKP in your own DAO, please also join the <a href="https://t.me/+fN8W3Vv1tGthYjEx">coordination.party 2/17 launch telegram group</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/coordination-party-kit/9231/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/coordination-party-kit/9231/1
+        Fri, 26 Nov 2021 15:23:21 +0000
+gov.gitcoin.co-post-9231-1
+Coordination.Party Kit
+      
+
+

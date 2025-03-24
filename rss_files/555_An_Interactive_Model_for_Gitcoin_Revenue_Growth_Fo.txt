@@ -1,0 +1,388 @@
+
+
+
+An Interactive Model for Gitcoin Revenue Growth Forecasting
+https://gov.gitcoin.co/t/an-interactive-model-for-gitcoin-revenue-growth-forecasting/12625
+    # TL;DR
+
+This post will:
+
+1. Share the results of our [revenue survey](http://v)
+2. Share an [interactive model](https://docs.google.com/spreadsheets/d/1EPvpC1jsU-VUI9ojyNnQiKTXu2KoxCGTvIXmsMCDteo/edit?usp=sharing) for forecasting revenue growth (w/ raw survey data)
+3. Discuss the high and low ranges for revenue growth
+4. Discuss the variables with the highest impact for the lowest effort
+
+![|624x385](upload://jI8YN1QTAbJ0KorP98bRpjEgFxO.jpeg)
+
+Sustainability of Gitcoin is a hot topic. There is discussion around protocol fees, service offerings, and even mutual grants or investment potential. Then there is the gnarly conversation around GTC utility.
+
+@nategosselin , a product manager and workstream lead in GPC, had a great presentation at the community call a few weeks back discussing how the entire DAO should be focusing on protocol growth to maximize fees, thus bringing us to a point of sustainability.
+
+PGF is considering service fees as a way for program managers to become self-serviced if not willing to pay for white glove service levels. @kyle  has written about MMM & FDD potentially spinning out service entities in this article: https://gov.gitcoin.co/t/discussion-gitcoin-2023-future-essential-intents-and-organization/12533/9. Scott laid out guidance by suggesting we all remember a subtraction mindset [here](https://gov.gitcoin.co/t/thought-experiment-dao-strategy-and-subtraction/12534). The community has sparked some great conversations with these must read gems: https://gov.gitcoin.co/t/a-bull-bear-case-for-gitcoin-gtc-in-2023/12442 & https://gov.gitcoin.co/t/gtc-tam-sam-som-analysis/12603 & https://gov.gitcoin.co/t/gtc-financial-model/12574
+
+I've participated in this sensemaking as well hosting a community call where we worked on a [Miro](https://miro.com/app/board/uXjVP1yGiAY=/?share_link_id=250965219588) to dig into the areas of disagreement. You don't have to look at my past post for long to find discussions about our business strategy and sustainability. I have also suggested that one option for DAO sustainability is to invest in workstreams that provide services. While these workstreams wind down their reliance on Gitcoin and become sustained by profit, they would have generous agreements for continued funding of the protocol of which they are dependent. Maybe through Aqueducts? These are all ideas. 
+
+With all of these divergent thoughts and ideas, we decided to release a new survey to build upon our understanding of revenue and sustainability which started with this [Polis survey](https://pol.is/report/r4eyjezmskknhxmnfhc3a). We wanted to find out what reasonable growth would be for protocol usage. Forecasting of revenue derived from protocol fees and services would make it possible to find a range for expected revenue.
+
+# Revenue Survey Results
+
+The survey we conducted polled Gitcoin core contributors asking for their opinions on a few questions about potential growth & revenue. This was only polled internally for the purpose of limiting the responses to known entities possessing experience working on quadratic funding.
+
+As we share the results we will also set a number that seems reasonable to use for projections based on our survey results. These are the numbers reflected in the image at the top of the article.
+
+![|624x297](upload://gYoDvDK3gJXksXvMG1u5587k4og.jpeg)
+
+It seems safe to say the average matching pool will be $100k
+
+![|624x305](upload://9xjtLgxNq6vHlsGLidMoGmVQv8R.jpeg)
+
+While most people think the donations will continue to outpace the matching funds, we will use 120%. This means if a matching pool is $100k, then the individual donations for that round would be $120k adding up to a total Gross Marketplace Value (GMV) of $220k for the round.
+
+![|624x300](upload://onPoONHIgf9sGSpwxYTEGDwqVkA.jpeg)
+
+If we have 10 rounds in season 1, then how many rounds do we expect in season 2? Here it shows that a reasonable expectation might be 40%. (In the model this is entered as 140%)
+
+![|624x327](upload://ji7KoyRpefayfxmUFd3Gt1aJZqi.jpeg)
+
+The best part of this graphic is that the waves behind each question show how many people set their marker at each position. We can see that “Protocol Fees - Paid by program manager had slightly more people vote in the “kind of agree” than in the “strongly agree” area. You can also see that many more people were neutral or kind of in support of “GTC Utility - Staking to Review Grants / Users” than were against it though less were strongly in agreement.
+
+FYI - I am making up the “Kind of” agree terminology as the markers could be set in 5 places. Strongly disagree being the 1 spot and strongly agree is the 5 spot. 3 is neutral. Therefore, I’m calling spots 2 and 4 “kind of” disagree and agree respectively.
+
+This and another question you can see in the results presentation aren’t used to set parameters for the model in discussion.
+
+![|624x300](upload://75mY6Vc5mEOuVvC3XgYQZbdncUJ.jpeg)
+
+Some people being against a protocol fee for donors makes me stay in the lower range of the most popular answer. We will set 3% in our example model.
+
+![|624x328](upload://3rsArg9BcGEeVRONgwKuibg2p9r.jpeg)
+
+How about we split it down the middle at 3%?
+
+![|624x301](upload://3f1gYFsCjC7ZlXwatN93tBsYucn.jpeg)
+
+For our last variable, let’s go ahead and set it at 7%.
+
+Now, just for fun, you can take a look at the word cloud that came out of the exercise!
+
+![|624x285](upload://z0fCQfdjplp7VWZgeYKtEfKgBVH.jpeg)
+
+# An Interactive Revenue Growth Forecasting Model
+
+Here is a [link to the model](https://docs.google.com/spreadsheets/d/1EPvpC1jsU-VUI9ojyNnQiKTXu2KoxCGTvIXmsMCDteo/edit?usp=sharing) which you are welcome to copy.
+
+![|624x303](upload://yYBgMZ1Y3exrm3fB56qJ6vye7ah.jpeg)
+
+# High and Low Ranges for Revenue Growth
+
+To start, the variables were set using these numbers in our survey results above. The model named "Mid-100k" uses the values in the image below.
+
+![|524x394](upload://k26PblRRERlu529MjD2nfW5VSE4.jpeg)
+
+For this range evaluation we will return to the survey results. We will adjust all the variables to unrealistic levels where ALL the variables deliver at a lower or higher rate. In reality, it is unlikely for all of them to be low or high as some will be a point of focus and are likely to improve while others will wane.
+
+These comparisons are on the “Range Forecast” sheet. This first image shows seasonal revenue growth over 5 seasons without changing the assumption that we have an average matching pool size of $100,000 with 10 rounds to start.
+
+![|624x345](upload://xXNjF5ioDSPMmrYYzAy0uFgFtcM.jpeg)
+
+This shows the potential for Gitcoin to be sustainable while maintaining the current burn rate by mid 2024 in a high growth environment. Is that likely? I don’t know! That is why I made the model so you can input variables the way you see the potential.
+
+The "Low-100k" model uses a randomly (read: closest whole number I chose) variable levels in the bottom quartile of responses while the "High-100k" sets the variables in the top quartile using the most optimistic responses. No adjustments are made to the baseline assumptions of 10 rounds to start with an average matching pool of $100k. 
+
+When we adjust the average matching pool size along with the low and high growth scenarios, it gets quite out of control quickly!
+
+![|624x663](upload://dYuGP5FVpPdrf7E630QrH19B0IR.jpeg)
+
+This is showing the seasonal revenue potential, not the cumulative earned at that point. For example, in our high growth scenario keeping the baseline at $100k for the average matching pot, we could bring in $44 million in the July season of 2025, then follow that with $77 million 3 months later another $135 million! 
+
+Obviously, this is a fairly naive model which purely looks exponential growth without any flattening of the growth curve. Don’t @ me for this an other trivial issues like “hey Joe, we aren’t going to get that revenue in the first beta round!” Feel free to just push the start dates back!
+
+# Which Levers Have the Highest Impact Potential for the Lowest Effort & Risk
+
+Lastly, I’d like to present a framework for thinking through where our efforts are best spent. To do this, I will baseline using the same growth variables and baselines. For each variable, I will assess the impact in seasonal revenue potential when we get to July of 2025.
+
+![|619x697](upload://hBNpfiTP3AJtjbRjv4ybUOOWwQ7.jpeg)
+
+This naive representation gives me a $ value Impact Expectation for a controlled change in a variable. I then can sort them vertically in an Impact x Feasibility matrix.
+
+![|624x463](upload://x03cfVFHw63eZJIQ5qVAGxyUi5e.jpeg)
+
+I then assessed the feasibility of each and thought a bit about the risk as well.
+
+* **Cost vs Revenue Scaling:** Linear vs non-linear
+* **Risk:** Likelihood of increases to lose GMV
+* **Risk Volatility:** Can we gently approach the risk level through experimentation
+
+DAO warning - these were all my own subjective opinions! Here are some of the ways I thought about each lever.
+
+## Donor Funds as a % of Matching Funds
+
+* **Cost vs Revenue Scaling:** Maybe scales non-linearly through branding and tools to help program managers market their rounds better
+* **Risk:** Mostly opportunity cost of not improving higher impact levers
+* **Risk Volatility:** Very Little
+
+## Service Fee Revenue %
+
+* **Cost vs Revenue Scaling:** Linear
+* **Risk:** As we depend on service revenue, more DAO funds are allocated to the services growth than Gitcoin ecosystem public goods - open source software, data, analysis, research, and education.
+* **Risk Volatility:** Moderately high - Once the path is set, it is hard to convince people to vote against their own interest
+
+## Growth Rate of # of Rounds
+
+* **Cost vs Revenue Scaling:** Non-linear - Plus, more rounds means more donors!
+* **Risk:** Lower average round size - The round size distribution is likely to resemble a Pareto curve more and more as the ecosystem develops. MetaQF could be an answer for not only positive-sum round growth, but also bending economic gravity in a way that increases average round size.
+* **Risk Volatility:** Very little
+
+## Program Fee Revenue %
+
+* **Cost vs Revenue Scaling:** Non-linear
+* **Risk:** Forking! The program fee may be part of the UI or the protocol. Either way, the higher it is, the more likely someone is to fork.
+* **Risk Volatility:** HIGH! Once one org forks the UI and/or protocol, it will make it exponentially easier for other matching pool funders (program managers) to choose to use a non-Gitcoin option. This creates an event horizon where there is no turning back from this decision!
+
+## Donor Fee Revenue %
+
+* **Cost vs Revenue Scaling:** Non-linear
+* **Risk:** Very low - Donors are not likely to have the resources and expertise to fork the UI or protocol. (Although our users are more likely than most out there!) I also assume that most wouldn’t mind a small percentage being given to support Gitcoin!
+* **Risk Volatility:** Low - Experimentation at the UI level with individual rounds and/or within programs allows us to test how much is reasonable before broader application of fees at the protocol level.
+
+# Conclusion
+
+I hope this tool and analysis is helpful. As we move forward, I would love to see more data-driven growth techniques used to make decisions. High level metrics based on highest potential levers can catalyze a symbiotic relationship between contributors and token holders. They can also paint a picture of what is possible and why we are doing what we are doing.
+
+
+Special thanks to FDD's @SoD for thinking through some of this with me. Also, to everyone who has been participating on the forums and in community calls and keeping an open mind while we explore possibilities.
+
+PS: I'd love to add the baseline averages for each metric from the last 4 rounds, but I got tired...
+Fri, 03 Feb 2023 16:34:14 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+An Interactive Model for Gitcoin Revenue Growth Forecasting
+DisruptionJoe
+
+            <p>I’ve updated this model per <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a> request to add costs and Tiers of service.</p>
+<p>Feel free to make a copy and do whatever you like!</p>
+<aside class="onebox googledocs" data-onebox-src="https://docs.google.com/spreadsheets/d/1CxksYS025y7yBK1mwc5PJ7dL6KNe2yFVj8eEBmphTHA/edit?usp=sharing">
+  <header class="source">
+
+      <a href="https://docs.google.com/spreadsheets/d/1CxksYS025y7yBK1mwc5PJ7dL6KNe2yFVj8eEBmphTHA/edit?usp=sharing" target="_blank" rel="noopener">docs.google.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <a href="https://docs.google.com/spreadsheets/d/1CxksYS025y7yBK1mwc5PJ7dL6KNe2yFVj8eEBmphTHA/edit?usp=sharing" target="_blank" rel="noopener"><span class="googledocs-onebox-logo g-sheets-logo"></span></a>
+
+<h3><a href="https://docs.google.com/spreadsheets/d/1CxksYS025y7yBK1mwc5PJ7dL6KNe2yFVj8eEBmphTHA/edit?usp=sharing" target="_blank" rel="noopener">Gitcoin Revenue Forecasting Model V1.1</a></h3>
+
+<p>Readme
+
+
+To best utilize this forecasting model:
+
+1. Begin with the Forecasting page to set the protocol / UI fee levels, service fee rates, and service fee costs which are the same across all round sizes. 
+
+2. Adjust the baselines, purchase rates,...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/an-interactive-model-for-gitcoin-revenue-growth-forecasting/12625/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/an-interactive-model-for-gitcoin-revenue-growth-forecasting/12625/4
+        Fri, 03 Feb 2023 16:34:14 +0000
+gov.gitcoin.co-post-12625-4
+An Interactive Model for Gitcoin Revenue Growth Forecasting
+      
+
+An Interactive Model for Gitcoin Revenue Growth Forecasting
+picciobellina335
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> .</p>
+<p>This is interesting.  Much simpler than the model I put together, and arguably more accurate because it’s based off the data from the Polis survey.  All of that makes it more solid foundation to tune assumptions for revenue!</p>
+<p>I went ahead and made a copy of the model with some new metrics and also tuned some parameters.   You can get my copy <a href="https://docs.google.com/spreadsheets/d/1xLWi3BksEP5ujGKjKAlesKy9cEtxXuVX9esu6CXU6wk/edit#gid=0" rel="noopener nofollow ugc">here</a>.</p>
+<p>Changelog:</p>
+<ul>
+<li>All of my changes are tracked in red and blue (</li>
+<li>Added the ability to track spend (GTC and stables spend) and the size of the treasury (I think this is important bc if the treasury hits 0 that is a sign of trouble).</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2af4bb0c85dcbaf2a9404bf02d756115d8e1e925.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/2af4bb0c85dcbaf2a9404bf02d756115d8e1e925" title="changes"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2af4bb0c85dcbaf2a9404bf02d756115d8e1e925_2_517x119.png" alt="changes" data-base62-sha1="680nYMlJTnvYLHYrw37xdXAAyS9" width="517" height="119" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2af4bb0c85dcbaf2a9404bf02d756115d8e1e925_2_517x119.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2af4bb0c85dcbaf2a9404bf02d756115d8e1e925_2_775x178.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2af4bb0c85dcbaf2a9404bf02d756115d8e1e925_2_1034x238.png 2x" data-dominant-color="9F8594"></a></div><p></p>
+<ul>
+<li>Updated Growth %s to be more realistic and revenue % to be more realistic.</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/3c011ff8ec8a16ef232fee4fb08773a8777347a4.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/3c011ff8ec8a16ef232fee4fb08773a8777347a4" title="parameters"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3c011ff8ec8a16ef232fee4fb08773a8777347a4_2_446x375.png" alt="parameters" data-base62-sha1="8yP3C5O2XvJxvhGS9uUKqw5g6Gg" width="446" height="375" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3c011ff8ec8a16ef232fee4fb08773a8777347a4_2_446x375.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3c011ff8ec8a16ef232fee4fb08773a8777347a4_2_669x562.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/3c011ff8ec8a16ef232fee4fb08773a8777347a4_2_892x750.png 2x" data-dominant-color="94929A"></a></div><p></p>
+<p>These are the core KPIs in my forked model.</p>
+<ol>
+<li>Assumes $3million/season in spend, 30% from stables and 70% from GTC.</li>
+<li>Stablecoin Treasury <em>(total revenue - total expenses in stablecoins &gt; $0)</em> reaches all-time-low of $2.6 million in mid-2025 with 60 rounds/season at total $13,411,045 in seasonal GMV.</li>
+<li>Profitable <em>(total revenue - total expenses in all tokens &gt; $0)</em> in mid-2026 with 227 rounds/season at total $51,159,077 in seasonal GMV and $3,296,918 in seasonal revenue.</li>
+</ol>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/92200ad76146c9f8e8c28c752f9663655bc43c78.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/92200ad76146c9f8e8c28c752f9663655bc43c78" title="model"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/92200ad76146c9f8e8c28c752f9663655bc43c78_2_690x420.png" alt="model" data-base62-sha1="kQGmo4BOlMOlhpfyT0vRFkfZfks" width="690" height="420" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/92200ad76146c9f8e8c28c752f9663655bc43c78_2_690x420.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/92200ad76146c9f8e8c28c752f9663655bc43c78_2_1035x630.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/92200ad76146c9f8e8c28c752f9663655bc43c78.png 2x" data-dominant-color="E0E0E0"></a></div><p></p>
+<p>Future changes to make the model more complete:</p>
+<ol>
+<li>Track Mutual Grants</li>
+<li>Track GTC in treasury, on market, and locked in staking.</li>
+<li>Passport Considerations</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/an-interactive-model-for-gitcoin-revenue-growth-forecasting/12625/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/an-interactive-model-for-gitcoin-revenue-growth-forecasting/12625/3
+        Sun, 22 Jan 2023 01:23:15 +0000
+gov.gitcoin.co-post-12625-3
+An Interactive Model for Gitcoin Revenue Growth Forecasting
+      
+
+An Interactive Model for Gitcoin Revenue Growth Forecasting
+Adebola
+
+            <p>Awesome analysis. kudos <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> and <a class="mention" href="https://gov.gitcoin.co/u/sor03">@Sor03</a></p>
+          <p><a href="https://gov.gitcoin.co/t/an-interactive-model-for-gitcoin-revenue-growth-forecasting/12625/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/an-interactive-model-for-gitcoin-revenue-growth-forecasting/12625/2
+        Sat, 21 Jan 2023 22:21:10 +0000
+gov.gitcoin.co-post-12625-2
+An Interactive Model for Gitcoin Revenue Growth Forecasting
+      
+
+An Interactive Model for Gitcoin Revenue Growth Forecasting
+DisruptionJoe
+
+            <h1>
+<a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TL;DR</h1>
+<p>This post will:</p>
+<ol>
+<li>Share the results of our <a href="http://v">revenue survey</a>
+</li>
+<li>Share an <a href="https://docs.google.com/spreadsheets/d/1EPvpC1jsU-VUI9ojyNnQiKTXu2KoxCGTvIXmsMCDteo/edit?usp=sharing">interactive model</a> for forecasting revenue growth (w/ raw survey data)</li>
+<li>Discuss the high and low ranges for revenue growth</li>
+<li>Discuss the variables with the highest impact for the lowest effort</li>
+</ol>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8a26c82290596316d720905989c7d5d9c36bfe34.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/8a26c82290596316d720905989c7d5d9c36bfe34" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8a26c82290596316d720905989c7d5d9c36bfe34_2_624x385.jpeg" alt="" data-base62-sha1="jI8YN1QTAbJ0KorP98bRpjEgFxO" width="624" height="385" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8a26c82290596316d720905989c7d5d9c36bfe34_2_624x385.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/8/8a26c82290596316d720905989c7d5d9c36bfe34.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/8/8a26c82290596316d720905989c7d5d9c36bfe34.jpeg 2x" data-dominant-color="ECE9E7"></a></div><p></p>
+<p>Sustainability of Gitcoin is a hot topic. There is discussion around protocol fees, service offerings, and even mutual grants or investment potential. Then there is the gnarly conversation around GTC utility.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> , a product manager and workstream lead in GPC, had a great presentation at the community call a few weeks back discussing how the entire DAO should be focusing on protocol growth to maximize fees, thus bringing us to a point of sustainability.</p>
+<p>PGF is considering service fees as a way for program managers to become self-serviced if not willing to pay for white glove service levels. <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a>  has written about MMM &amp; FDD potentially spinning out service entities in this article: <a href="https://gov.gitcoin.co/t/discussion-gitcoin-2023-future-essential-intents-and-organization/12533/9" class="inline-onebox">[Discussion] Gitcoin 2023 - Future Essential Intents and Organization - #9 by michaelgreen06</a>. Scott laid out guidance by suggesting we all remember a subtraction mindset <a href="https://gov.gitcoin.co/t/thought-experiment-dao-strategy-and-subtraction/12534">here</a>. The community has sparked some great conversations with these must read gems: <a href="https://gov.gitcoin.co/t/a-bull-bear-case-for-gitcoin-gtc-in-2023/12442" class="inline-onebox">A BULL/BEAR case for Gitcoin/GTC in 2023</a> &amp; <a href="https://gov.gitcoin.co/t/gtc-tam-sam-som-analysis/12603" class="inline-onebox">GTC TAM/SAM/SOM analysis</a> &amp; <a href="https://gov.gitcoin.co/t/gtc-financial-model/12574" class="inline-onebox">GTC Financial Model</a></p>
+<p>I’ve participated in this sensemaking as well hosting a community call where we worked on a <a href="https://miro.com/app/board/uXjVP1yGiAY=/?share_link_id=250965219588">Miro</a> to dig into the areas of disagreement. You don’t have to look at my past post for long to find discussions about our business strategy and sustainability. I have also suggested that one option for DAO sustainability is to invest in workstreams that provide services. While these workstreams wind down their reliance on Gitcoin and become sustained by profit, they would have generous agreements for continued funding of the protocol of which they are dependent. Maybe through Aqueducts? These are all ideas.</p>
+<p>With all of these divergent thoughts and ideas, we decided to release a new survey to build upon our understanding of revenue and sustainability which started with this <a href="https://pol.is/report/r4eyjezmskknhxmnfhc3a">Polis survey</a>. We wanted to find out what reasonable growth would be for protocol usage. Forecasting of revenue derived from protocol fees and services would make it possible to find a range for expected revenue.</p>
+<h1>
+<a name="revenue-survey-results-2" class="anchor" href="https://gov.gitcoin.co#revenue-survey-results-2"></a>Revenue Survey Results</h1>
+<p>The survey we conducted polled Gitcoin core contributors asking for their opinions on a few questions about potential growth &amp; revenue. This was only polled internally for the purpose of limiting the responses to known entities possessing experience working on quadratic funding.</p>
+<p>As we share the results we will also set a number that seems reasonable to use for projections based on our survey results. These are the numbers reflected in the image at the top of the article.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/76f6948b4e7af555c68abc8b9e7c606d31dc3780.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/76f6948b4e7af555c68abc8b9e7c606d31dc3780" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/76f6948b4e7af555c68abc8b9e7c606d31dc3780_2_624x297.jpeg" alt="" data-base62-sha1="gYoDvDK3gJXksXvMG1u5587k4og" width="624" height="297" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/76f6948b4e7af555c68abc8b9e7c606d31dc3780_2_624x297.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/76f6948b4e7af555c68abc8b9e7c606d31dc3780_2_936x445.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/76f6948b4e7af555c68abc8b9e7c606d31dc3780_2_1248x594.jpeg 2x" data-dominant-color="E3E0F0"></a></div><p></p>
+<p>It seems safe to say the average matching pool will be $100k</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/42d79f1c517330a24c0b1dc3d58ab9394bd80351.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/42d79f1c517330a24c0b1dc3d58ab9394bd80351" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/42d79f1c517330a24c0b1dc3d58ab9394bd80351_2_624x305.jpeg" alt="" data-base62-sha1="9xjtLgxNq6vHlsGLidMoGmVQv8R" width="624" height="305" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/42d79f1c517330a24c0b1dc3d58ab9394bd80351_2_624x305.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/42d79f1c517330a24c0b1dc3d58ab9394bd80351_2_936x457.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/42d79f1c517330a24c0b1dc3d58ab9394bd80351_2_1248x610.jpeg 2x" data-dominant-color="DFDCEB"></a></div><p></p>
+<p>While most people think the donations will continue to outpace the matching funds, we will use 120%. This means if a matching pool is $100k, then the individual donations for that round would be $120k adding up to a total Gross Marketplace Value (GMV) of $220k for the round.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/aae5bf30f574911616321effe3c9f97e911d1cb0.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/aae5bf30f574911616321effe3c9f97e911d1cb0" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aae5bf30f574911616321effe3c9f97e911d1cb0_2_624x300.jpeg" alt="" data-base62-sha1="onPoONHIgf9sGSpwxYTEGDwqVkA" width="624" height="300" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aae5bf30f574911616321effe3c9f97e911d1cb0_2_624x300.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aae5bf30f574911616321effe3c9f97e911d1cb0_2_936x450.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aae5bf30f574911616321effe3c9f97e911d1cb0_2_1248x600.jpeg 2x" data-dominant-color="E5E2F0"></a></div><p></p>
+<p>If we have 10 rounds in season 1, then how many rounds do we expect in season 2? Here it shows that a reasonable expectation might be 40%. (In the model this is entered as 140%)</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8735cfa639b617b6871ace7d4ffe55611cb0f3aa.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/8735cfa639b617b6871ace7d4ffe55611cb0f3aa" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8735cfa639b617b6871ace7d4ffe55611cb0f3aa_2_624x327.jpeg" alt="" data-base62-sha1="ji7KoyRpefayfxmUFd3Gt1aJZqi" width="624" height="327" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8735cfa639b617b6871ace7d4ffe55611cb0f3aa_2_624x327.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8735cfa639b617b6871ace7d4ffe55611cb0f3aa_2_936x490.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8735cfa639b617b6871ace7d4ffe55611cb0f3aa_2_1248x654.jpeg 2x" data-dominant-color="E3E0ED"></a></div><p></p>
+<p>The best part of this graphic is that the waves behind each question show how many people set their marker at each position. We can see that “Protocol Fees - Paid by program manager had slightly more people vote in the “kind of agree” than in the “strongly agree” area. You can also see that many more people were neutral or kind of in support of “GTC Utility - Staking to Review Grants / Users” than were against it though less were strongly in agreement.</p>
+<p>FYI - I am making up the “Kind of” agree terminology as the markers could be set in 5 places. Strongly disagree being the 1 spot and strongly agree is the 5 spot. 3 is neutral. Therefore, I’m calling spots 2 and 4 “kind of” disagree and agree respectively.</p>
+<p>This and another question you can see in the results presentation aren’t used to set parameters for the model in discussion.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/31aaa153f86baf14bb9da2b1258967af4d964ee5.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/31aaa153f86baf14bb9da2b1258967af4d964ee5" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/31aaa153f86baf14bb9da2b1258967af4d964ee5_2_624x300.jpeg" alt="" data-base62-sha1="75mY6Vc5mEOuVvC3XgYQZbdncUJ" width="624" height="300" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/31aaa153f86baf14bb9da2b1258967af4d964ee5_2_624x300.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/31aaa153f86baf14bb9da2b1258967af4d964ee5_2_936x450.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/31aaa153f86baf14bb9da2b1258967af4d964ee5_2_1248x600.jpeg 2x" data-dominant-color="E6E2F0"></a></div><p></p>
+<p>Some people being against a protocol fee for donors makes me stay in the lower range of the most popular answer. We will set 3% in our example model.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/182132ef1d3cd3ed40a1ed2767cc6177478d36bd.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/182132ef1d3cd3ed40a1ed2767cc6177478d36bd" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/182132ef1d3cd3ed40a1ed2767cc6177478d36bd_2_624x328.jpeg" alt="" data-base62-sha1="3rsArg9BcGEeVRONgwKuibg2p9r" width="624" height="328" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/182132ef1d3cd3ed40a1ed2767cc6177478d36bd_2_624x328.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/182132ef1d3cd3ed40a1ed2767cc6177478d36bd_2_936x492.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/182132ef1d3cd3ed40a1ed2767cc6177478d36bd_2_1248x656.jpeg 2x" data-dominant-color="E8E5F2"></a></div><p></p>
+<p>How about we split it down the middle at 3%?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/16b930d9702957fc1e92ffd27cbfef2ee7964977.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/16b930d9702957fc1e92ffd27cbfef2ee7964977" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/16b930d9702957fc1e92ffd27cbfef2ee7964977_2_624x301.jpeg" alt="" data-base62-sha1="3f1gYFsCjC7ZlXwatN93tBsYucn" width="624" height="301" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/16b930d9702957fc1e92ffd27cbfef2ee7964977_2_624x301.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/16b930d9702957fc1e92ffd27cbfef2ee7964977_2_936x451.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/16b930d9702957fc1e92ffd27cbfef2ee7964977_2_1248x602.jpeg 2x" data-dominant-color="E7E5F3"></a></div><p></p>
+<p>For our last variable, let’s go ahead and set it at 7%.</p>
+<p>Now, just for fun, you can take a look at the word cloud that came out of the exercise!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f55361ed1e829a0703f8dcc144f44798f6160f8d.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/f55361ed1e829a0703f8dcc144f44798f6160f8d" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f55361ed1e829a0703f8dcc144f44798f6160f8d_2_624x285.jpeg" alt="" data-base62-sha1="z0fCQfdjplp7VWZgeYKtEfKgBVH" width="624" height="285" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f55361ed1e829a0703f8dcc144f44798f6160f8d_2_624x285.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f55361ed1e829a0703f8dcc144f44798f6160f8d_2_936x427.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f55361ed1e829a0703f8dcc144f44798f6160f8d_2_1248x570.jpeg 2x" data-dominant-color="EEECF5"></a></div><p></p>
+<h1>
+<a name="an-interactive-revenue-growth-forecasting-model-3" class="anchor" href="https://gov.gitcoin.co#an-interactive-revenue-growth-forecasting-model-3"></a>An Interactive Revenue Growth Forecasting Model</h1>
+<p>Here is a <a href="https://docs.google.com/spreadsheets/d/1EPvpC1jsU-VUI9ojyNnQiKTXu2KoxCGTvIXmsMCDteo/edit?usp=sharing">link to the model</a> which you are welcome to copy.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f5239bbd1e1d33a682fe5bf02dc8786273f53469.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/f5239bbd1e1d33a682fe5bf02dc8786273f53469" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f5239bbd1e1d33a682fe5bf02dc8786273f53469_2_624x303.jpeg" alt="" data-base62-sha1="yYBgMZ1Y3exrm3fB56qJ6vye7ah" width="624" height="303" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f5239bbd1e1d33a682fe5bf02dc8786273f53469_2_624x303.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f5239bbd1e1d33a682fe5bf02dc8786273f53469_2_936x454.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f5239bbd1e1d33a682fe5bf02dc8786273f53469_2_1248x606.jpeg 2x" data-dominant-color="C5B8D2"></a></div><p></p>
+<h1>
+<a name="high-and-low-ranges-for-revenue-growth-4" class="anchor" href="https://gov.gitcoin.co#high-and-low-ranges-for-revenue-growth-4"></a>High and Low Ranges for Revenue Growth</h1>
+<p>To start, the variables were set using these numbers in our survey results above. The model named “Mid-100k” uses the values in the image below.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8c688ab045f2056907e80c99379bc95fa7795f14.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/8c688ab045f2056907e80c99379bc95fa7795f14" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8c688ab045f2056907e80c99379bc95fa7795f14_2_524x394.jpeg" alt="" data-base62-sha1="k26PblRRERlu529MjD2nfW5VSE4" width="524" height="394" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8c688ab045f2056907e80c99379bc95fa7795f14_2_524x394.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8c688ab045f2056907e80c99379bc95fa7795f14_2_786x591.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/8/8c688ab045f2056907e80c99379bc95fa7795f14.jpeg 2x" data-dominant-color="A9A6AF"></a></div><p></p>
+<p>For this range evaluation we will return to the survey results. We will adjust all the variables to unrealistic levels where ALL the variables deliver at a lower or higher rate. In reality, it is unlikely for all of them to be low or high as some will be a point of focus and are likely to improve while others will wane.</p>
+<p>These comparisons are on the “Range Forecast” sheet. This first image shows seasonal revenue growth over 5 seasons without changing the assumption that we have an average matching pool size of $100,000 with 10 rounds to start.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/ee0a1e61d7f99e181d5aee0da3031191d5304da4.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/ee0a1e61d7f99e181d5aee0da3031191d5304da4" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/ee0a1e61d7f99e181d5aee0da3031191d5304da4_2_624x345.jpeg" alt="" data-base62-sha1="xXNjF5ioDSPMmrYYzAy0uFgFtcM" width="624" height="345" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/ee0a1e61d7f99e181d5aee0da3031191d5304da4_2_624x345.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/ee0a1e61d7f99e181d5aee0da3031191d5304da4_2_936x517.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/e/ee0a1e61d7f99e181d5aee0da3031191d5304da4.jpeg 2x" data-dominant-color="FAF4E9"></a></div><p></p>
+<p>This shows the potential for Gitcoin to be sustainable while maintaining the current burn rate by mid 2024 in a high growth environment. Is that likely? I don’t know! That is why I made the model so you can input variables the way you see the potential.</p>
+<p>The “Low-100k” model uses a randomly (read: closest whole number I chose) variable levels in the bottom quartile of responses while the “High-100k” sets the variables in the top quartile using the most optimistic responses. No adjustments are made to the baseline assumptions of 10 rounds to start with an average matching pool of $100k.</p>
+<p>When we adjust the average matching pool size along with the low and high growth scenarios, it gets quite out of control quickly!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/61f2e23ebe5c35955a320e51f4c96ceb20ef9265.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/61f2e23ebe5c35955a320e51f4c96ceb20ef9265" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/61f2e23ebe5c35955a320e51f4c96ceb20ef9265_2_470x500.jpeg" alt="" data-base62-sha1="dYuGP5FVpPdrf7E630QrH19B0IR" width="470" height="500" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/61f2e23ebe5c35955a320e51f4c96ceb20ef9265_2_470x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/61f2e23ebe5c35955a320e51f4c96ceb20ef9265_2_705x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/61f2e23ebe5c35955a320e51f4c96ceb20ef9265_2_940x1000.jpeg 2x" data-dominant-color="BAB2C9"></a></div><p></p>
+<p>This is showing the seasonal revenue potential, not the cumulative earned at that point. For example, in our high growth scenario keeping the baseline at $100k for the average matching pot, we could bring in $44 million in the July season of 2025, then follow that with $77 million 3 months later another $135 million!</p>
+<p>Obviously, this is a fairly naive model which purely looks exponential growth without any flattening of the growth curve. Don’t @ me for this an other trivial issues like “hey Joe, we aren’t going to get that revenue in the first beta round!” Feel free to just push the start dates back!</p>
+<h1>
+<a name="which-levers-have-the-highest-impact-potential-for-the-lowest-effort-risk-5" class="anchor" href="https://gov.gitcoin.co#which-levers-have-the-highest-impact-potential-for-the-lowest-effort-risk-5"></a>Which Levers Have the Highest Impact Potential for the Lowest Effort &amp; Risk</h1>
+<p>Lastly, I’d like to present a framework for thinking through where our efforts are best spent. To do this, I will baseline using the same growth variables and baselines. For each variable, I will assess the impact in seasonal revenue potential when we get to July of 2025.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7b6abc1e8930097fc7f68be2fd4b8e945b4eb4af.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/7b6abc1e8930097fc7f68be2fd4b8e945b4eb4af" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7b6abc1e8930097fc7f68be2fd4b8e945b4eb4af_2_444x500.jpeg" alt="" data-base62-sha1="hBNpfiTP3AJtjbRjv4ybUOOWwQ7" width="444" height="500" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7b6abc1e8930097fc7f68be2fd4b8e945b4eb4af_2_444x500.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/7/7b6abc1e8930097fc7f68be2fd4b8e945b4eb4af.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/7/7b6abc1e8930097fc7f68be2fd4b8e945b4eb4af.jpeg 2x" data-dominant-color="BCB7C5"></a></div><p></p>
+<p>This naive representation gives me a $ value Impact Expectation for a controlled change in a variable. I then can sort them vertically in an Impact x Feasibility matrix.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e7493bc5b2ddbab8e422a2848cfe072286fd694c.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/e7493bc5b2ddbab8e422a2848cfe072286fd694c" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e7493bc5b2ddbab8e422a2848cfe072286fd694c_2_624x463.jpeg" alt="" data-base62-sha1="x03cfVFHw63eZJIQ5qVAGxyUi5e" width="624" height="463" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e7493bc5b2ddbab8e422a2848cfe072286fd694c_2_624x463.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/e/e7493bc5b2ddbab8e422a2848cfe072286fd694c.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/e/e7493bc5b2ddbab8e422a2848cfe072286fd694c.jpeg 2x" data-dominant-color="CFC5DA"></a></div><p></p>
+<p>I then assessed the feasibility of each and thought a bit about the risk as well.</p>
+<ul>
+<li>
+<strong>Cost vs Revenue Scaling:</strong> Linear vs non-linear</li>
+<li>
+<strong>Risk:</strong> Likelihood of increases to lose GMV</li>
+<li>
+<strong>Risk Volatility:</strong> Can we gently approach the risk level through experimentation</li>
+</ul>
+<p>DAO warning - these were all my own subjective opinions! Here are some of the ways I thought about each lever.</p>
+<h2>
+<a name="donor-funds-as-a-of-matching-funds-6" class="anchor" href="https://gov.gitcoin.co#donor-funds-as-a-of-matching-funds-6"></a>Donor Funds as a % of Matching Funds</h2>
+<ul>
+<li>
+<strong>Cost vs Revenue Scaling:</strong> Maybe scales non-linearly through branding and tools to help program managers market their rounds better</li>
+<li>
+<strong>Risk:</strong> Mostly opportunity cost of not improving higher impact levers</li>
+<li>
+<strong>Risk Volatility:</strong> Very Little</li>
+</ul>
+<h2>
+<a name="service-fee-revenue-7" class="anchor" href="https://gov.gitcoin.co#service-fee-revenue-7"></a>Service Fee Revenue %</h2>
+<ul>
+<li>
+<strong>Cost vs Revenue Scaling:</strong> Linear</li>
+<li>
+<strong>Risk:</strong> As we depend on service revenue, more DAO funds are allocated to the services growth than Gitcoin ecosystem public goods - open source software, data, analysis, research, and education.</li>
+<li>
+<strong>Risk Volatility:</strong> Moderately high - Once the path is set, it is hard to convince people to vote against their own interest</li>
+</ul>
+<h2>
+<a name="growth-rate-of-of-rounds-8" class="anchor" href="https://gov.gitcoin.co#growth-rate-of-of-rounds-8"></a>Growth Rate of # of Rounds</h2>
+<ul>
+<li>
+<strong>Cost vs Revenue Scaling:</strong> Non-linear - Plus, more rounds means more donors!</li>
+<li>
+<strong>Risk:</strong> Lower average round size - The round size distribution is likely to resemble a Pareto curve more and more as the ecosystem develops. MetaQF could be an answer for not only positive-sum round growth, but also bending economic gravity in a way that increases average round size.</li>
+<li>
+<strong>Risk Volatility:</strong> Very little</li>
+</ul>
+<h2>
+<a name="program-fee-revenue-9" class="anchor" href="https://gov.gitcoin.co#program-fee-revenue-9"></a>Program Fee Revenue %</h2>
+<ul>
+<li>
+<strong>Cost vs Revenue Scaling:</strong> Non-linear</li>
+<li>
+<strong>Risk:</strong> Forking! The program fee may be part of the UI or the protocol. Either way, the higher it is, the more likely someone is to fork.</li>
+<li>
+<strong>Risk Volatility:</strong> HIGH! Once one org forks the UI and/or protocol, it will make it exponentially easier for other matching pool funders (program managers) to choose to use a non-Gitcoin option. This creates an event horizon where there is no turning back from this decision!</li>
+</ul>
+<h2>
+<a name="donor-fee-revenue-10" class="anchor" href="https://gov.gitcoin.co#donor-fee-revenue-10"></a>Donor Fee Revenue %</h2>
+<ul>
+<li>
+<strong>Cost vs Revenue Scaling:</strong> Non-linear</li>
+<li>
+<strong>Risk:</strong> Very low - Donors are not likely to have the resources and expertise to fork the UI or protocol. (Although our users are more likely than most out there!) I also assume that most wouldn’t mind a small percentage being given to support Gitcoin!</li>
+<li>
+<strong>Risk Volatility:</strong> Low - Experimentation at the UI level with individual rounds and/or within programs allows us to test how much is reasonable before broader application of fees at the protocol level.</li>
+</ul>
+<h1>
+<a name="conclusion-11" class="anchor" href="https://gov.gitcoin.co#conclusion-11"></a>Conclusion</h1>
+<p>I hope this tool and analysis is helpful. As we move forward, I would love to see more data-driven growth techniques used to make decisions. High level metrics based on highest potential levers can catalyze a symbiotic relationship between contributors and token holders. They can also paint a picture of what is possible and why we are doing what we are doing.</p>
+<p>Special thanks to FDD’s <a class="mention" href="https://gov.gitcoin.co/u/sod">@SoD</a> for thinking through some of this with me. Also, to everyone who has been participating on the forums and in community calls and keeping an open mind while we explore possibilities.</p>
+<p>PS: I’d love to add the baseline averages for each metric from the last 4 rounds, but I got tired…</p>
+          <p><a href="https://gov.gitcoin.co/t/an-interactive-model-for-gitcoin-revenue-growth-forecasting/12625/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/an-interactive-model-for-gitcoin-revenue-growth-forecasting/12625/1
+        Sat, 21 Jan 2023 19:29:09 +0000
+gov.gitcoin.co-post-12625-1
+An Interactive Model for Gitcoin Revenue Growth Forecasting
+      
+
+

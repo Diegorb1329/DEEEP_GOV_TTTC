@@ -1,0 +1,412 @@
+
+
+
+Gitcoin Aqueduct
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684
+    ## Authors
+
+[Dave White](https://twitter.com/_dave__white_), [Kevin Owocki](https://twitter.com/owocki)
+
+## Summary
+
+This paper introduces **Gitcoin Aqueduct**, a tool that incentivizes ecosystem development for your project with a single line of Solidity.
+
+Aqueduct helps unbundle the work of protocol creation from the work of supporting an ecosystem, and helps protocols grow in a truly decentralized way.
+
+To fill your Aqueduct, you transfer in some of your project’s revenue or inflation.
+
+In the beginning, your Aqueduct will distribute these tokens to developers on your ecosystem automatically, creating and running [quadratic funding](https://vitalik.ca/general/2019/12/07/quadratic.html) rounds with no human intervention.
+
+As your project grows and more assets flow into its Aqueduct, GitcoinDAO will begin to provide more and more high-touch ecosystem development services.
+
+## Narrative
+
+### Problem
+
+Alice is developing a new NFT project, NFTP. She is a talented coder and artist and believes in what she is making.
+
+Alice also knows that if her project is to be successful long-term, it will need an ecosystem, with other developers contributing, a team managing the Discord, and so on.
+
+However, Alice is a builder, not a manager. She is also committed to decentralization.
+
+As a result, she doesn't want to personally coordinate an ecosystem long-term, and she doesn't want to set up an organization or hire somebody to do it for her.
+
+### Solution
+
+By design, NFTP receives ongoing revenue from secondary sales of its NFTs.
+
+Alice redirects 10% of this revenue to NFTP’s Aqueduct.
+
+If NFTP were intended as a pure public good, it might send 100% of revenue to its Aqueduct.
+
+### Result
+
+After a sufficient amount of tokens accrue in the Aqueduct, Gitcoin automatically holds a [quadratic funding](https://vitalik.ca/general/2019/12/07/quadratic.html) round for NFTP using those tokens: developers propose projects that will benefit the NFTP ecosystem, and members of the NFTP community allocate the Aqueduct’s funds to those projects using the quadratic funding mechanism. 
+
+GitcoinDAO supports this process both by providing the infrastructure for funding and by promoting the round on Twitter and other channels (including, perhaps, a list of Discords to which a GitcoinDAO bot has been invited). Critically, none of this requires any significant expense or human time.
+
+Furthermore, it requires no further interaction from Alice or NFTP, which doesn’t even need to have governance.
+
+As NFTP grows, aided by Aqueduct-funded development, the amount of revenue allocated to the Aqueduct will grow as well, eventually reaching a point where human involvement is both prudent and economical.
+
+Accordingly, at certain pre-defined revenue tiers, the level of service provided by GitcoinDAO will increase.
+
+For example, a $100K Aqueduct might come with automated human-in-the-loop anti-fraud support, while a $1M Aqueduct might come with a part-time community manager, and a $10M Aqueduct might come with a full-time ecosystem management team.
+
+GitcoinDAO would be compensated with a percentage fee for providing these services.
+
+## Mechanism Notes
+
+### Side Round Protection
+
+The main challenge with this design is how to ensure that funds in the NFTP side-round are actually spent on NFTP ecosystem projects.
+
+At sufficient levels of Aqueduct funding, a fee to GitcoinDAO could easily pay for humans to help ensure grants are appropriate.
+
+For smaller rounds, or even to ensure alignment in larger rounds, specific protection mechanisms might help. For example, in order to match a donation of 1 ETH, Aqueduct might require the donor to stake at least 5 ETH worth of NFTP NFTs for some time period.
+
+Or, it might require the person posting a new grant to post a bond that can be slashed if they are found to have submitted a project that isn't for the benefit of NFTP, with the bond amount sufficient to incentivize both reporting and adjudication.
+
+### Alternatives to Quadratic Funding
+
+Today, quadratic funding is the leading system for permissionless ecosystem development.
+
+Over time, other methods like [Retroactive Public Goods Funding](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c) might prove to be more effective.
+
+Any such method can easily integrate with Aqueduct.
+
+## Conclusion
+
+Gitcoin Aqueduct unbundles the work of designing and implementing a protocol from the work of scaling it and managing its community.
+
+By doing so, it reduces the friction involved with starting a protocol while providing opportunities for developers to make a living contributing to open source.
+
+This is only a rough design sketch, and there are likely many problems to be solved before it can become a reality.
+
+We’re excited to hear your feedback and work on improving it together.
+
+## Acknowledgements
+
+[Dan Robinson](https://twitter.com/danrobinson), [llllvvuu](https://twitter.com/llllvvuu), [Allan Niemerg](https://twitter.com/niemerg), [Jordan Lazaro](https://twitter.com/jordanlzg), [Greg Fodor](https://twitter.com/gfodor)
+Wed, 19 Jan 2022 20:27:41 +0000
+📜 Proposals
+
+
+Gitcoin Aqueduct
+frankchen07
+
+            <p>This may come out as we experiment with the first initial groups in the Aqueduct, but do you think it’s a risk that this fundamentally separates handling possible protocol development and the community that supports the protocol?</p>
+<p>The positive case is that this would be a good separation between protocol building and the Aqueduct funding spawned off projects themselves in the community that eventually become public goods.</p>
+<p>In the example for the NFTP ecosystem, what are the guidelines for the proposals that developers give? I can see in the case of a protocol, there can be projects that spawn off of it, but if it’s already a set NFT project, are Aqueduct funds used to develop a community, or develop additional projects on top of NFTP? Is this distinction even important?</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/17
+        Wed, 19 Jan 2022 20:27:41 +0000
+gov.gitcoin.co-post-9684-17
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+DisruptionJoe
+
+            <p>Jordan, that is a cool consideration! Thanks for posting. I see this is your first post on the forum. Are you in the Discord already?</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/16
+        Wed, 19 Jan 2022 11:51:24 +0000
+gov.gitcoin.co-post-9684-16
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+rahul-kothari
+
+            <p>Love this idea! Esp that Alice can now grow and reward the ecosystem without having to do grants or be ever present on discord.</p>
+<ol>
+<li>
+<p>How do you determine who in the ecosystem would be rewarded? Is it an automatic or manual process?</p>
+</li>
+<li>
+<p>What are the biggest technical problems do you see rn for implementing this?</p>
+</li>
+<li>
+<p>Stupid question that I might have missed → will the contributions to Aqueduct be strictly in GTC or their token or a mix?</p>
+</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/15
+        Sat, 15 Jan 2022 19:10:25 +0000
+gov.gitcoin.co-post-9684-15
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+Jordan
+
+            <p>This is a game changer for the whole ecosystem, love to see the community reaction.</p>
+<p>Already seeing a possible improvement :</p>
+<aside class="quote no-group" data-username="paradave" data-post="1" data-topic="9684">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/paradave/48/5129_2.png" class="avatar"> paradave:</div>
+<blockquote>
+<p>bond that can be slashed</p>
+</blockquote>
+</aside>
+<p>This would make sense only if bonds can be community sponsored.</p>
+<p>Indeed if all proposals must have bond then we run into a problem where proposers without any “cash” cant add value to the projects and we might end up money gating contribution.</p>
+<p>A potential solutions would be to have proposers submit the proposal “off chain” and anyone from the community could stake on their behalf to support the aforementionned proposal, once the staking thresehold is met, the proposal becomes on-chain code and enter the aqueduct voting system.</p>
+<p>We can call this the Dropshafts, those are safety mechanism in aqueduct architecture.</p>
+<p>Happy to hear feedback on this to make the aqueduct even more efficient.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/14
+        Fri, 14 Jan 2022 19:00:43 +0000
+gov.gitcoin.co-post-9684-14
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+seedphrase
+
+            <p>Oh wow! This is an awesome concept.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/13
+        Fri, 14 Jan 2022 10:28:58 +0000
+gov.gitcoin.co-post-9684-13
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+joshuavial
+
+            <p>Best proposal I have seen in a long time. Love it.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/12
+        Thu, 13 Jan 2022 22:00:00 +0000
+gov.gitcoin.co-post-9684-12
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+annika
+
+            <p>I love this idea and am excited to collaborate in bringing it to life.</p>
+<p>In case it’s helpful to others as we ideate on what this might look like, I <a href="https://docs.google.com/document/d/1RqXqSxJz2b6XYgYKAppx4P0yyZricaBkDSipWYIpZjk/edit" rel="noopener nofollow ugc">jotted down some thoughts</a> on my interpretation of the write-up and the potential solution sets &amp; customer sets that I gleaned from it.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/11
+        Thu, 13 Jan 2022 18:02:40 +0000
+gov.gitcoin.co-post-9684-11
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+DisruptionJoe
+
+            <p>This is a game changer. Love the idea. Looking forward to see how people use it.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/10
+        Thu, 13 Jan 2022 17:52:45 +0000
+gov.gitcoin.co-post-9684-10
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+simplemachine92
+
+            <p>Hey Dave, Kevin,</p>
+<p>Read through the notion after Kevin sent me the draft, and as a solo-maintainer / dev of a public goods supporting project (Mars-Shot Bots), I really see the niche for this.</p>
+<p>What if we think of this as a permission-less system, where we can identify “Cartels”? We could enable anyone to contribute to “Moonshot”, “Mars-Shot”, “LARP” cartels, simply by including an ID in their contract. When funding, or x amount is received from a contract, we can call a view function to retrieve their ID, and associate them with their cartel for a funding round.</p>
+<p>Anyway, really interested in helping y’all get this off the ground.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/9
+        Thu, 13 Jan 2022 17:33:47 +0000
+gov.gitcoin.co-post-9684-9
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+0xjim
+
+            <p>Ah I see - so the Aqueduct can also fund marketing contributors</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/8
+        Thu, 13 Jan 2022 16:27:31 +0000
+gov.gitcoin.co-post-9684-8
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+Sirlupinwatson
+
+            <p>Interesting, can you expand how does this work or it’s still a work-in-progress, do you guys have an architecture model for the solidity line of code that represent what it actually do, is this an addon over an existing contract that bridge both?</p>
+<p>I’m really curious about that and understand the process of funds distribution from that !code</p>
+<aside class="quote no-group" data-username="paradave" data-post="1" data-topic="9684">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/paradave/48/5129_2.png" class="avatar"> paradave:</div>
+<blockquote>
+<p>Furthermore, it requires no further interaction from Alice or NFTP, which doesn’t even need to have governance.</p>
+</blockquote>
+</aside>
+<p>Looking really great!</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/7
+        Thu, 13 Jan 2022 16:23:21 +0000
+gov.gitcoin.co-post-9684-7
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+leeyy777
+
+            <p>真的很酷的想法我可以想象公共产品项目使用某种资金曲线，随着它们产生的收益量增加，进入Aqueduct的金额也会增加。这将使创始人能够在早期支持自己，然后在以后的日子里让资金流向生态系统</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/6
+        Thu, 13 Jan 2022 10:04:20 +0000
+gov.gitcoin.co-post-9684-6
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+owocki
+
+            <blockquote>
+<p>Metis’ “ecosystem mining” program they announced last week.</p>
+</blockquote>
+<p>will check that out!</p>
+<p><a href="https://twitter.com/MetisDAO/status/1478872569394700296">edit: found it!</a></p>
+<aside class="quote no-group" data-username="0xjim" data-post="4" data-topic="9684">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/0xjim/48/5177_2.png" class="avatar"> 0xjim:</div>
+<blockquote>
+<p>However, Aqueduct only automates the BD/grants/dev relations part of running a project, and doesn’t touch the marketing side – which will still need to be done by Alice’s team.</p>
+</blockquote>
+</aside>
+<p>why is that?</p>
+<p>AFAIK - there are plenty of marketing teams funded by QF in recent grants rounds.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/5
+        Thu, 13 Jan 2022 05:21:17 +0000
+gov.gitcoin.co-post-9684-5
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+0xjim
+
+            <p>Really cool idea! This reminds me of an automated version of Metis’ “ecosystem mining” program they announced last week.</p>
+<p>Nitpick on the value prop: in the illustrative example, you mentioned that Alice is a builder and doesn’t want to deal with growing an ecosystem. However, Aqueduct only automates the BD/grants/dev relations part of running a project, and doesn’t touch the marketing side – which will still need to be done by Alice’s team.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/4
+        Thu, 13 Jan 2022 04:20:04 +0000
+gov.gitcoin.co-post-9684-4
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+owocki
+
+            <p>if people have questions, or would like to discuss the design, pls comment below.</p>
+<p>or you can pls contact <a href="mailto:aqueduct@gitcoin.co">aqueduct@gitcoin.co</a> if you’d like to set up a Gitcoin Aqueduct.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/db41d1a801821f7ac9d6ca99b728a06c0ead0bc4.png" data-download-href="/uploads/short-url/vhDA7d1gm6ssISxCOowJ17U47qs.png?dl=1" title="is-this-a-pigeon (5)"><img src="/uploads/db4391/optimized/2X/d/db41d1a801821f7ac9d6ca99b728a06c0ead0bc4_2_690x414.png" alt="is-this-a-pigeon (5)" data-base62-sha1="vhDA7d1gm6ssISxCOowJ17U47qs" width="690" height="414" srcset="/uploads/db4391/optimized/2X/d/db41d1a801821f7ac9d6ca99b728a06c0ead0bc4_2_690x414.png, /uploads/db4391/original/2X/d/db41d1a801821f7ac9d6ca99b728a06c0ead0bc4.png 1.5x, /uploads/db4391/original/2X/d/db41d1a801821f7ac9d6ca99b728a06c0ead0bc4.png 2x" data-small-upload="/uploads/db4391/optimized/2X/d/db41d1a801821f7ac9d6ca99b728a06c0ead0bc4_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/3
+        Thu, 13 Jan 2022 01:47:56 +0000
+gov.gitcoin.co-post-9684-3
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+umarkhaneth
+
+            <p>This is awesome.</p>
+<p>I can imagine Public Goods projects using some sort of funding curve where as the amount of proceeds they generate increase, the amount going to Aqueduct increases too. This would allow Founders to support themselves in early days and then let the funds flow to the ecosystem in later days.</p>
+<p>Let’s make up an example for illustration: If NFTP has a wallet which has received less than 100k then maybe 10% flow into the aqueduct. If the project has received more than 1 million then maybe 50% flow into the aqueduct. If the project has received more than 10 million then 90%+ should flow into the aqueduct.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/2
+        Wed, 12 Jan 2022 23:58:38 +0000
+gov.gitcoin.co-post-9684-2
+Gitcoin Aqueduct
+      
+
+Gitcoin Aqueduct
+paradave
+
+            <h2>
+<a name="authors-1" class="anchor" href="https://gov.gitcoin.co#authors-1"></a>Authors</h2>
+<p><a href="https://twitter.com/_dave__white_" rel="noopener nofollow ugc">Dave White</a>, <a href="https://twitter.com/owocki" rel="noopener nofollow ugc">Kevin Owocki</a></p>
+<h2>
+<a name="summary-2" class="anchor" href="https://gov.gitcoin.co#summary-2"></a>Summary</h2>
+<p>This paper introduces <strong>Gitcoin Aqueduct</strong>, a tool that incentivizes ecosystem development for your project with a single line of Solidity.</p>
+<p>Aqueduct helps unbundle the work of protocol creation from the work of supporting an ecosystem, and helps protocols grow in a truly decentralized way.</p>
+<p>To fill your Aqueduct, you transfer in some of your project’s revenue or inflation.</p>
+<p>In the beginning, your Aqueduct will distribute these tokens to developers on your ecosystem automatically, creating and running <a href="https://vitalik.ca/general/2019/12/07/quadratic.html" rel="noopener nofollow ugc">quadratic funding</a> rounds with no human intervention.</p>
+<p>As your project grows and more assets flow into its Aqueduct, GitcoinDAO will begin to provide more and more high-touch ecosystem development services.</p>
+<h2>
+<a name="narrative-3" class="anchor" href="https://gov.gitcoin.co#narrative-3"></a>Narrative</h2>
+<h3>
+<a name="problem-4" class="anchor" href="https://gov.gitcoin.co#problem-4"></a>Problem</h3>
+<p>Alice is developing a new NFT project, NFTP. She is a talented coder and artist and believes in what she is making.</p>
+<p>Alice also knows that if her project is to be successful long-term, it will need an ecosystem, with other developers contributing, a team managing the Discord, and so on.</p>
+<p>However, Alice is a builder, not a manager. She is also committed to decentralization.</p>
+<p>As a result, she doesn’t want to personally coordinate an ecosystem long-term, and she doesn’t want to set up an organization or hire somebody to do it for her.</p>
+<h3>
+<a name="solution-5" class="anchor" href="https://gov.gitcoin.co#solution-5"></a>Solution</h3>
+<p>By design, NFTP receives ongoing revenue from secondary sales of its NFTs.</p>
+<p>Alice redirects 10% of this revenue to NFTP’s Aqueduct.</p>
+<p>If NFTP were intended as a pure public good, it might send 100% of revenue to its Aqueduct.</p>
+<h3>
+<a name="result-6" class="anchor" href="https://gov.gitcoin.co#result-6"></a>Result</h3>
+<p>After a sufficient amount of tokens accrue in the Aqueduct, Gitcoin automatically holds a <a href="https://vitalik.ca/general/2019/12/07/quadratic.html" rel="noopener nofollow ugc">quadratic funding</a> round for NFTP using those tokens: developers propose projects that will benefit the NFTP ecosystem, and members of the NFTP community allocate the Aqueduct’s funds to those projects using the quadratic funding mechanism.</p>
+<p>GitcoinDAO supports this process both by providing the infrastructure for funding and by promoting the round on Twitter and other channels (including, perhaps, a list of Discords to which a GitcoinDAO bot has been invited). Critically, none of this requires any significant expense or human time.</p>
+<p>Furthermore, it requires no further interaction from Alice or NFTP, which doesn’t even need to have governance.</p>
+<p>As NFTP grows, aided by Aqueduct-funded development, the amount of revenue allocated to the Aqueduct will grow as well, eventually reaching a point where human involvement is both prudent and economical.</p>
+<p>Accordingly, at certain pre-defined revenue tiers, the level of service provided by GitcoinDAO will increase.</p>
+<p>For example, a $100K Aqueduct might come with automated human-in-the-loop anti-fraud support, while a $1M Aqueduct might come with a part-time community manager, and a $10M Aqueduct might come with a full-time ecosystem management team.</p>
+<p>GitcoinDAO would be compensated with a percentage fee for providing these services.</p>
+<h2>
+<a name="mechanism-notes-7" class="anchor" href="https://gov.gitcoin.co#mechanism-notes-7"></a>Mechanism Notes</h2>
+<h3>
+<a name="side-round-protection-8" class="anchor" href="https://gov.gitcoin.co#side-round-protection-8"></a>Side Round Protection</h3>
+<p>The main challenge with this design is how to ensure that funds in the NFTP side-round are actually spent on NFTP ecosystem projects.</p>
+<p>At sufficient levels of Aqueduct funding, a fee to GitcoinDAO could easily pay for humans to help ensure grants are appropriate.</p>
+<p>For smaller rounds, or even to ensure alignment in larger rounds, specific protection mechanisms might help. For example, in order to match a donation of 1 ETH, Aqueduct might require the donor to stake at least 5 ETH worth of NFTP NFTs for some time period.</p>
+<p>Or, it might require the person posting a new grant to post a bond that can be slashed if they are found to have submitted a project that isn’t for the benefit of NFTP, with the bond amount sufficient to incentivize both reporting and adjudication.</p>
+<h3>
+<a name="alternatives-to-quadratic-funding-9" class="anchor" href="https://gov.gitcoin.co#alternatives-to-quadratic-funding-9"></a>Alternatives to Quadratic Funding</h3>
+<p>Today, quadratic funding is the leading system for permissionless ecosystem development.</p>
+<p>Over time, other methods like <a href="https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c" rel="noopener nofollow ugc">Retroactive Public Goods Funding</a> might prove to be more effective.</p>
+<p>Any such method can easily integrate with Aqueduct.</p>
+<h2>
+<a name="conclusion-10" class="anchor" href="https://gov.gitcoin.co#conclusion-10"></a>Conclusion</h2>
+<p>Gitcoin Aqueduct unbundles the work of designing and implementing a protocol from the work of scaling it and managing its community.</p>
+<p>By doing so, it reduces the friction involved with starting a protocol while providing opportunities for developers to make a living contributing to open source.</p>
+<p>This is only a rough design sketch, and there are likely many problems to be solved before it can become a reality.</p>
+<p>We’re excited to hear your feedback and work on improving it together.</p>
+<h2>
+<a name="acknowledgements-11" class="anchor" href="https://gov.gitcoin.co#acknowledgements-11"></a>Acknowledgements</h2>
+<p><a href="https://twitter.com/danrobinson" rel="noopener nofollow ugc">Dan Robinson</a>, <a href="https://twitter.com/llllvvuu" rel="noopener nofollow ugc">llllvvuu</a>, <a href="https://twitter.com/niemerg" rel="noopener nofollow ugc">Allan Niemerg</a>, <a href="https://twitter.com/jordanlzg" rel="noopener nofollow ugc">Jordan Lazaro</a>, <a href="https://twitter.com/gfodor" rel="noopener nofollow ugc">Greg Fodor</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-aqueduct/9684/1
+        Wed, 12 Jan 2022 23:15:22 +0000
+gov.gitcoin.co-post-9684-1
+Gitcoin Aqueduct
+      
+
+

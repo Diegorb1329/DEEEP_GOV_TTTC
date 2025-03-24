@@ -1,0 +1,686 @@
+
+
+
+Incident Regarding Mistransferred Treasury Funds
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683
+    This post is to inform the Gitcoin ecosystem about an incident of misdirected funds in relation to this Tally proposal: https://www.tally.xyz/gov/gitcoin/proposal/108857091257155353415608123635307134327397364492395330571315789161941080916144
+
+The transfer intended for the MMM’s S19 budget did not land in its multisig, and instead was sent to a GTC token contract. This has rendered the funds stuck in the contract, with no way of recovering them.
+
+Below I outline all the facts about what happened, the timeline of events and steps we are putting in place to ensure that a mistake like this does not happen again.
+
+## Relevant Data
+
+* Total amount transferred: 521.44K GTC
+* Sent to GTC token contract: 0xde30da39c46104798bb5aa3fe8b9e0e1f348163f
+* Proposal was created by Laura (MMM Workstream Lead)
+* Large token holders who signed off on the proposal include:
+  * Kyle (ED of the Foundation)
+  * Meg (Grants Stack WS Lead)
+  * Jeremy (Passport WS Lead)
+  * Carl (Steward Council member)
+  * Myself (MMM co-lead)
+
+## Timeline
+
+* Tuesday Sept 19 17:16 - Proposal published onchain
+* Thursday Sept 21 13:24 - Voting period started
+  * Sept 22 - Carl, CoachJ, Jeremy votes
+  * Sept 25 - Laura and Kyle vote (quorum is now met)
+  * Sept 27 - Meg votes
+* Wednesday Sept 27 04:54 - Voting period ended
+* Saturday Sept 30 00:16 - Proposal executed
+* Sunday Oct 1 evening CET - CoachJ informed that funds have not yet landed in MMM’s multisig
+* Monday Oct 2 morning CET - CoachJ connects with Aditya (core dev on Allo) to explore whether the contract has a withdraw function and/or is upgradable
+  * Aditya says no, and to double check with the contract owner to make sure
+* Monday Oct 2 6pm CET - CoachJ connects with Kyle to explain the situation and see if the funds are recoverable
+  * Kyle says it is unlikely, but will do some digging to see if it is possible
+* Thursday Oct 5 - CoachJ confirms with Kyle that the funds are not recoverable
+* Thursday Oct 5 - CoachJ informs CSDO of the incident
+
+## Next steps
+
+The intention of these steps are to:
+
+1. Create safeguards to ensure something like this never happens again
+2. Create clearer accountability if there is an incident like this again
+
+Action items:
+
+* All proposals in Snapshot moving forward should have wallet addresses listed if there will be any transfers of funds
+* All proposals in Tally moving forward should have wallet addresses listed if there will be any transfers of funds
+  * It is up to the Tally proposal creator to ensure that the funds are being transferred to the correct address based on the Snapshot description
+  * It is up to Tally voters to ensure that the funds are being transferred to the correct address based on the Tally description
+* CSDO is going to explore the possibility of implementing a DAO Guardians program
+  * DAO Guardians would be individuals contracted to review proposals and ensure their accuracy, particularly around proposals and large transactions
+* We’ve been in contact with the team at Tally who have graciously accepted some feedback requests that they will look to include in their roadmaps, including:
+  * If the destination address is not a DAO multisig within our DAO admin address book, a warning will come up and confirm they still want to use the address
+  * If an admin has an address labeled, then everyone can see that label (not just the admin) - this way anyone voting will have a better visual cue
+
+*Note: Though the Tally team was very receptive to our feedback and is keen to work with us in the future to prevent something like this from happening again, it is important to note that the root cause of this incident was due to human error, not issues with the Tally platform.*
+
+## Conclusion
+
+It is unfortunate that this incident occurred and I want to apologize on behalf of myself and others involved in this having happened. I am also confident that the steps being put into place will create more safeguards and clear accountability should a situation like this happen again.
+
+Large token holders and multisig signers have a responsibility to be extra diligent when it comes to handling funds that do not belong to them (myself included). Unfortunate as this incident was, I hope it can serve as (yet another) lesson for many of us.
+
+If you have any feedback, concerns or suggestions on other safeguards we can put in place, please leave a comment below.
+Thu, 19 Oct 2023 15:07:27 +0000
+👋 News and Community
+
+
+Incident Regarding Mistransferred Treasury Funds
+CoachJonathan
+
+            <p>Hey everyone, <a href="https://gov.gitcoin.co/t/proposal-process-procedure-for-handling-funds/16808">I started a new thread</a> to discuss governance we can put in place to create more clarity around how to handle situations like this moving forward.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/32">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/32
+        Thu, 19 Oct 2023 15:07:27 +0000
+gov.gitcoin.co-post-16683-32
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+owocki
+
+            <p>gm all,</p>
+<p>here is my proposal to prevent an incident like this from happening in the future: <a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772" class="inline-onebox">Gitcoin WalletGuard 🛡️</a></p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/31">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/31
+        Tue, 17 Oct 2023 15:33:29 +0000
+gov.gitcoin.co-post-16683-31
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+thedevanshmehta
+
+            <aside class="quote no-group" data-username="CoachJonathan" data-post="26" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>Looking ahead, it is fairly easy to estimate that MMM will come under the amount that they’ve requested, hence the lower budget request.</p>
+</blockquote>
+</aside>
+<p>Thanks for the clarification, i was under the mistaken impression that gitcoin management reduced MMM’s budget for no fault of theirs and it would adversely impact their functioning.</p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="26" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>Technically <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xc8cea5df7b14e71ec91aa307837e1e86f7cd285a5037a517daac29e45e34bb2d" rel="noopener nofollow ugc">a Snapshot vote was done to guarantee these funds,</a> and now we had this situation + MMM is requesting a reduced amount that still will get them to the end of the season.</p>
+</blockquote>
+</aside>
+<p>Yes my thinking was that the snapshot vote was for allocating a certain amount X. Changing that to another amount Y requires a fresh vote as there are budgetary implications.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/30">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/30
+        Sat, 14 Oct 2023 18:05:53 +0000
+gov.gitcoin.co-post-16683-30
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+CryptoReuMD
+
+            <aside class="quote no-group" data-username="jengajojo" data-post="21" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>I second this and is absolutely necessary from a decentralisation pov! For the actual implementation, while I have designed and delivered many delegates programs myself, for gitcoin we can perhaps start with a ‘Delegates QF Round’ each quarter or so and iterate from there? What do you think</p>
+</blockquote>
+</aside>
+<p>Up to. I think that self delegation sometimes it’s indifferent for the protocol but if we raise hands in the same way it’s more visible and valuable.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/29">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/29
+        Wed, 11 Oct 2023 18:07:49 +0000
+gov.gitcoin.co-post-16683-29
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+carlosjmelgar
+
+            <p>I voted “Abstain” because my self delegated tokens wont make an impact on the decision and would be more visible in grey than in red.</p>
+<p>Connor raises many valid concerns.</p>
+<aside class="quote no-group" data-username="connor" data-post="25" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>I don’t feel like any real ownership has been taken over the mistake (and I don’t think it’s Tally’s fault)</p>
+</blockquote>
+</aside>
+<p>I thought these severance payments bundled with Devconnect expenses was a result of the mistake, but it is unclear. These could have been separated in sub bullet points for clarity.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/fba7864e5767cc7090082cf658328c46f3afd75d.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/fba7864e5767cc7090082cf658328c46f3afd75d" title="severance pay"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/f/fba7864e5767cc7090082cf658328c46f3afd75d.png" alt="severance pay" data-base62-sha1="zUeLqtO11UuM2UYpkg5CtYAW9xb" width="690" height="100" data-dominant-color="F6F6F7"></a></div><p></p>
+<aside class="quote no-group" data-username="connor" data-post="25" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>I am still a bit unsettled about the $100k+ sent from the CSDO multisig to MMM of which there still hasn’t been any acknowledgment of it, unclear whether that was free gift or if it’s supposed to be paid back by this budget, if that will happen again, etc</p>
+</blockquote>
+</aside>
+<p>+1 - With more clarity on the use of these funds, this vote does seem rushed and prevents proper procedures to be put in place through DAO participation. The idea of a DAO Guardians sounds redundant now that the DAO Infra Workstream (?) <a href="https://gov.gitcoin.co/t/proposal-dao-infra-workstream/16732">proposal</a> (?) went up.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="21" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>I second this and is absolutely necessary from a decentralisation pov! For the actual implementation, while I have designed and delivered many delegates programs myself, for gitcoin we can perhaps start with a ‘Delegates QF Round’ each quarter or so and iterate from there?</p>
+</blockquote>
+</aside>
+<p>Bullish on this idea. Leaning in favor of this being a community led initiative (as it aligns with new EIs), rather than this being caked into another workstream’s roadmap.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/28
+        Wed, 11 Oct 2023 17:43:16 +0000
+gov.gitcoin.co-post-16683-28
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+CoachJonathan
+
+            <p>Appreciate the thoughtful post, Connor. Would love to address a few of your comments and use your post to springboard the discussion that you’re seeing has been missing.</p>
+<aside class="quote no-group" data-username="connor" data-post="25" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>There hasn’t really been any actual discussion (in public or that I’ve seen) about the issue, how to resolve it (financially) and the next steps, it was “hey this big mistake happened” and then “Here’s a new budget request”. The proposal says MMM “will be staggering their budget request from the rest of Gitcoin” going forward - what are the financial and operational implications of this?</p>
+</blockquote>
+</aside>
+<p>I think what would be helpful here is an actual discussion starter, maybe:</p>
+<ul>
+<li>Some questions to get us started pondering how to handle future situations like this</li>
+<li>A strawman for others to comment on and eventually arrive at a satisfactory conclusion</li>
+</ul>
+<p>This would be super helpful to advancing the conversation.</p>
+<aside class="quote no-group" data-username="connor" data-post="25" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>The proposal says MMM “will be staggering their budget request from the rest of Gitcoin” going forward</p>
+</blockquote>
+</aside>
+<p>I wouldn’t worry too much about this comment - this is almost a sidebar convo and Laura will be posting about this in the coming days to explain why MMM’s budget is not going up at the same time as everyone else’s.</p>
+<aside class="quote no-group" data-username="connor" data-post="25" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<ul>
+<li>I don’t feel like any real ownership has been taken over the mistake (and I don’t think it’s Tally’s fault)</li>
+</ul>
+</blockquote>
+</aside>
+<p>What would have you feel like “real ownership” has been taken? Are there any specific actions you’d like to see?</p>
+<aside class="quote no-group" data-username="connor" data-post="25" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>I am still a bit unsettled about the $100k+ sent from the CSDO multisig to MMM of which there still hasn’t been any acknowledgment of it, unclear whether that was free gift or if it’s supposed to be paid back by this budget, if that will happen again, etc</p>
+</blockquote>
+</aside>
+<p>Apologies for not acknowledging this in the gov forum and only discussing this in CSDO channels. Funds were borrowed from the CSDO multisig in order to be able to pay contributors at the end of the month.</p>
+<p>As soon as MMM receives funds for work completed in September, the full amount will be sent back to the CSDO multisig. <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> had already flagged this and we will be creating new procedures around the use of the CSDO multisig moving forward to ensure transparency (that will ultimately be documented in the <a href="https://gitcoin-1.gitbook.io/gitcoin-governance-manual/">Governance Manual</a>.</p>
+<aside class="quote no-group" data-username="connor" data-post="25" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/connor/48/7376_2.png" class="avatar"> connor:</div>
+<blockquote>
+<p>But <strong>most importantly</strong> with so little discussion or debate, does this go and set the precedent that any time in the future funds are lost, workstreams can just turn around and request more and expect to get it?</p>
+</blockquote>
+</aside>
+<p>Would love your support on leading this discussion! If you have a place for us to start that would be super helpful and consider me your partner in driving this conversation and documenting its outcome for future implementation.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/27">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/27
+        Wed, 11 Oct 2023 11:25:49 +0000
+gov.gitcoin.co-post-16683-27
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+CoachJonathan
+
+            <aside class="quote no-group" data-username="thedevanshmehta" data-post="17" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Will the reduced amount negatively affect the workstream ? I wouldn’t want them penalized for no fault of theirs.</p>
+</blockquote>
+</aside>
+<p>No, this should not negatively impact the workstream. Because of how MMM operates, MMM often ends up with a large surplus at the end of each season. Looking ahead, it is fairly easy to estimate that MMM will come under the amount that they’ve requested, hence the lower budget request.</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="17" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Ideally it would have been nice to have a snapshot vote before the tally vote, with the options of keeping the same budget, increasing it or reducing it (with the multi-sig signers involved abstaining from the vote)</p>
+</blockquote>
+</aside>
+<p>I think this is worth a larger discussion on how to treat situations like this. Technically <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xc8cea5df7b14e71ec91aa307837e1e86f7cd285a5037a517daac29e45e34bb2d">a Snapshot vote was done to guarantee these funds,</a> and now we had this situation + MMM is requesting a reduced amount that still will get them to the end of the season.</p>
+<p>Maybe to move this conversation forward - what do you think are the pros/cons of running another Snapshot vote? What is the intention of doing that and what outcome are we hoping to achieve? Maybe let’s start there and we can get to the bottom of some sort of procedure we can put in place (and <a href="https://gitcoin-1.gitbook.io/gitcoin-governance-manual/">codified in our governance manual</a> that I shared in a separate post).</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/26">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/26
+        Wed, 11 Oct 2023 11:16:17 +0000
+gov.gitcoin.co-post-16683-26
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+connor
+
+            <aside class="quote no-group" data-username="CoachJonathan" data-post="9" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>I just posted the new request to Tally here: <a href="https://www.tally.xyz/gov/gitcoin/proposal/83370444265186051506036240751499191729551923064564972278212022875236597720544" rel="noopener nofollow ugc">Tally | Gitcoin Proposal </a></p>
+</blockquote>
+</aside>
+<p>This may not be the ideal place to share this but I’m not aware of discussion on this vote happening anywhere else, so posting here. I voted “Against” on this proposal - some people have reached out privately to learn why, so to be transparent I’ll also post in public.</p>
+<p>First off, let me say I absolutely think we need to find a way to keep the MMM team compensated for both past and future work, I don’t want to see the workstream stuck with $0 for the season, and regardless of my vote I’m confident the proposal will pass given it’s basically at quorum already.</p>
+<p>But I voted against it for a few reasons:</p>
+<ul>
+<li>There hasn’t really been any actual discussion (in public or that I’ve seen) about the issue, how to resolve it (financially) and the next steps, it was “hey this big mistake happened” and then “Here’s a new budget request”. The proposal says MMM “will be staggering their budget request from the rest of Gitcoin” going forward - what are the financial and operational implications of this?</li>
+<li>I don’t feel like any real ownership has been taken over the mistake (and I don’t think it’s Tally’s fault)</li>
+<li>I am still a bit unsettled about the $100k+ sent from the CSDO multisig to MMM of which there still hasn’t been any acknowledgment of it, unclear whether that was free gift or if it’s supposed to be paid back by this budget, if that will happen again, etc</li>
+<li>IMO some key stakeholders should probably abstain from voting on this</li>
+</ul>
+<p>But <strong>most importantly</strong> with so little discussion or debate, does this go and set the precedent that any time in the future funds are lost, workstreams can just turn around and request more and expect to get it?</p>
+<p>I hesitated to vote no outright because i knew it would ruffle some feathers, but frankly, it looks pretty clear this is going to pass regardless so it’s more of an ideological pushback. I &lt;3 the MMM team and want the DAO to support you all but I also would like more transparency, accountability, and to establish clear processes.</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="17" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Will the reduced amount negatively affect the workstream ? I wouldn’t want them penalized for no fault of theirs.</p>
+</blockquote>
+</aside>
+<p>+1 need more info on workstream impact, new budget items, other funding sources in the interim (csdo) etc</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="17" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Ideally it would have been nice to have a snapshot vote before the tally vote, with the options of keeping the same budget, increasing it or reducing it (with the multi-sig signers involved abstaining from the vote)</p>
+</blockquote>
+</aside>
+<p>+100</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/25">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/25
+        Wed, 11 Oct 2023 10:00:36 +0000
+gov.gitcoin.co-post-16683-25
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+CryptoReuMD
+
+            <p>Yes my friend. I’m fully engaged with the team that it’s been growing for the good of the community. With a very aligned and ethical responsabilities as far as i can say and i know from all the tagged ones in this post.<br>
+I’d love to work with an internal workforce could be great, and a big opportunity to learn and discuss about what it’s the best for the different communities. As we can see in L2Beat for the pie that its being very popular we can have a spider web graphic with eight different values and align the projects inside.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/24
+        Tue, 10 Oct 2023 14:16:48 +0000
+gov.gitcoin.co-post-16683-24
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+Jimi
+
+            <p>Sorry to hear about this!</p>
+<p>How do you all feel about doing test transactions for anything above a certain amount?</p>
+<p>Obviously it’s a balance between this not slowing down ops too much &amp; securely avoiding situations like this.</p>
+<p>What do you think the number would be that enables a nice balance between those things? 50K? 100K?</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/23
+        Mon, 09 Oct 2023 18:32:05 +0000
+gov.gitcoin.co-post-16683-23
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+CoachJonathan
+
+            <p>I’d love to see this. I’m adding this to the roadmap, hoping we can tackle this in S20 (starting next month) or S21 at the latest.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/22
+        Mon, 09 Oct 2023 10:45:01 +0000
+gov.gitcoin.co-post-16683-22
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+jengajojo
+
+            <aside class="quote no-group" data-username="carlosjmelgar" data-post="19" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/carlosjmelgar/48/12109_2.png" class="avatar"> carlosjmelgar:</div>
+<blockquote>
+<p>I’d love to explore delegate rewards, which could encourage more community participation and create an opportunity for them to earn GTC for their work in governance.</p>
+</blockquote>
+</aside>
+<p>I second this and is absolutely necessary from a decentralisation pov! For the actual implementation, while I have designed and delivered many delegates programs myself, for gitcoin we can perhaps start with a ‘Delegates QF Round’ each quarter or so and iterate from there? What do you think <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a> ?</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/21
+        Mon, 09 Oct 2023 08:32:08 +0000
+gov.gitcoin.co-post-16683-21
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+FractalVisions
+
+            <p>I like the idea of creating an attestation dashboard for the checks &amp; balances to sign on chain prior to sending the main Tx from the vote. <img src="https://gov.gitcoin.co/images/emoji/twitter/ballot_box.png?v=12" title=":ballot_box:" class="emoji" alt=":ballot_box:" loading="lazy" width="20" height="20"></p>
+<p>Anyone could participate in these attestation check in events to get the full community participation of GTC holders or stakers to further decentralize the process.</p>
+<p>Even a token of appreciation like the Kudos was a nice touch at the end of an educational quest on Gitcoin. The learning aspect of the platform was something that I was heavily drawn to in the past. That is one thing that would be really amazing to see implemented into the UI somehow down the road.<br>
+Maybe <img src="https://gov.gitcoin.co/images/emoji/twitter/thinking.png?v=12" title=":thinking:" class="emoji" alt=":thinking:" loading="lazy" width="20" height="20"> even refurbished kudos on PGN or other L2 options that align with the ecosystem such as Optimism.</p>
+<p>I will just use what was mentioned above <img src="https://gov.gitcoin.co/images/emoji/twitter/arrow_up.png?v=12" title=":arrow_up:" class="emoji" alt=":arrow_up:" loading="lazy" width="20" height="20"> from <a class="mention" href="https://gov.gitcoin.co/u/distributeddoge">@DistributedDoge</a> ! <img src="https://gov.gitcoin.co/images/emoji/twitter/dog2.png?v=12" title=":dog2:" class="emoji" alt=":dog2:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="DistributedDoge" data-post="7" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/distributeddoge/48/10188_2.png" class="avatar"> DistributedDoge:</div>
+<blockquote>
+<p>I think a short checklist could help Tally voters to follow the motions of validating common budgets proposals without omitting steps or having to think too much about the process. At the minimum:</p>
+<ul>
+<li>confirm recipient address is known &amp; labeled</li>
+<li>confirm correct token is being sent</li>
+<li>check token amount</li>
+<li>check <code>executable code</code> matches written <code>description</code></li>
+</ul>
+</blockquote>
+</aside>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/20
+        Sun, 08 Oct 2023 21:58:25 +0000
+gov.gitcoin.co-post-16683-20
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+carlosjmelgar
+
+            <p>It’s unfortunate to see a workstream’s budget disappear this way. I’m relieved that the community and contributors are being so forgiving in light of this incident.</p>
+<p>The Tally team are the heroes we don’t deserve in all of this. They <a href="https://twitter.com/tallyxyz/status/1710696489297617067" rel="noopener nofollow ugc">delivered a great update</a> as a response to this mishap. It’s great seeing team’s react so swiftly to community reports.</p>
+<p><strong>Where’s the learning opportunity here?</strong><br>
+Should we be incentivizing/ rewarding delegate participation? Instead of creating another internally appointed mini workstream?</p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="1" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>CSDO is going to explore the possibility of implementing a DAO Guardians program</p>
+<ul>
+<li>DAO Guardians would be individuals contracted to review proposals and ensure their accuracy, particularly around proposals and large transactions</li>
+</ul>
+</blockquote>
+</aside>
+<p>I’d love to explore delegate rewards, which could encourage more community participation and create an opportunity for them to earn GTC for their work in governance. Creating an internal DAO Guardians Program sounds like the DAO appointing more insiders and paying them for work we should have all been already been doing more of as contributors. Interested in governerds like <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> <a class="mention" href="https://gov.gitcoin.co/u/fractalvisions">@FractalVisions</a> <a class="mention" href="https://gov.gitcoin.co/u/cryptoreumd">@CryptoReuMD</a> <a class="mention" href="https://gov.gitcoin.co/u/lefterisjp">@lefterisjp</a> to offer their insights on this.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/19
+        Sun, 08 Oct 2023 19:36:57 +0000
+gov.gitcoin.co-post-16683-19
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+FractalVisions
+
+            <p>Still trying to grok how this much funding was fumbled after all the years of experience between the members who were involved with the transfer.</p>
+<p>Even if a test transaction was sent separately from a personal wallet with funds out of their own pockets it could have prevented this from happening.</p>
+<p>I see that a test transaction is not the best way to approach voting <img src="https://gov.gitcoin.co/images/emoji/twitter/ballot_box.png?v=12" title=":ballot_box:" class="emoji" alt=":ballot_box:" loading="lazy" width="20" height="20"> mechanisms but still think that the method to send a small test transaction of $1 would be helpful regardless.</p>
+<p>Perhaps there is a way to implement this into the procedure because a small transaction of this nature could have easily saved a half a million dollars. I am imagining the community is at a loss of words as we were until now.</p>
+<p>The potential that this funding could have brought to the grant ecosystem is now lost for those who have been grinding day in and out to improve the Gitcoin platform. A major setback in the world of public goods.</p>
+<p>To those who were involved with the transaction make sure to keep your chin up!</p>
+<p>We are all rooting for you &amp; hope that this learning lesson will improve the quality control happening during a transfer for a large sum of capital.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/18
+        Sun, 08 Oct 2023 18:49:14 +0000
+gov.gitcoin.co-post-16683-18
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+thedevanshmehta
+
+            <aside class="quote no-group" data-username="owocki" data-post="5" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>ill be curious if this narrative of “its actually GTC burned” is seen as legitimate.</p>
+</blockquote>
+</aside>
+<p>i did post this on twitter and there were some sympathetic views towards this perspective.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/39cfc3bd93f9fc38b7f81d0fb2827a57fdda1e70.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/39cfc3bd93f9fc38b7f81d0fb2827a57fdda1e70" title="Screenshot 2023-10-08 at 4.08.03 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/39cfc3bd93f9fc38b7f81d0fb2827a57fdda1e70_2_690x190.png" alt="Screenshot 2023-10-08 at 4.08.03 PM" data-base62-sha1="8fqlFfZDArb5YduEqdUszCr2U80" width="690" height="190" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/39cfc3bd93f9fc38b7f81d0fb2827a57fdda1e70_2_690x190.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/39cfc3bd93f9fc38b7f81d0fb2827a57fdda1e70_2_1035x285.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/3/39cfc3bd93f9fc38b7f81d0fb2827a57fdda1e70.png 2x" data-dominant-color="F2F2F2"></a></div><p></p>
+<p>Really drives home the importance of paying workstreams in your native token! this mishap would have been much much worse had it been in stables or eth</p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="9" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>We will be re-requesting budget for the two months (a reduced amount, not for the original request of around $500k).</p>
+</blockquote>
+</aside>
+<p>Will the reduced amount negatively affect the workstream ? I wouldn’t want them penalized for no fault of theirs.</p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="9" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>I just posted the new request to Tally here</p>
+</blockquote>
+</aside>
+<p>Ideally it would have been nice to have a snapshot vote before the tally vote, with the options of keeping the same budget, increasing it or reducing it  (with the multi-sig signers involved abstaining from the vote)</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/17
+        Sun, 08 Oct 2023 10:43:03 +0000
+gov.gitcoin.co-post-16683-17
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+lefterisjp
+
+            <p>Absolutely. A checklist and people checking that the advertised function is what the actual call data do is a must.</p>
+<p>In my opinion we should educate governance voters that they are in essence multisig signers for such transactions. It’s their responsibility to check the call data. Perhaps this is not widely understood and needs to be explained.</p>
+<p>On a more personal note this is not an individual failure, but a collective governance failure. Don’t feel bad about this. <strong>Neither you nor the other votes or the proposer are solely responsible for what happened.</strong></p>
+<p>Individual people can and do make mistakes. The collective as a whole should check for them and mitigate them. This is what failed and did not happen here.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/14
+        Sat, 07 Oct 2023 13:11:49 +0000
+gov.gitcoin.co-post-16683-14
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+ccerv1
+
+            <p>Extremely sorry to learn about this incident. And, as a delegate who voted on the proposal, I’m especially disappointed and frustrated.</p>
+<p>IMO, I don’t think delegates have the mindset that they should be checking executable code. I also don’t think they have the mindset that they should confirm other particulars, eg, that the transfer amounts match the original budget proposals, that the Snapshot vote was approved with quorum, etc.</p>
+<p>While it’s great that any delegate or interested member from the community can easily check these things on Tally, we should also have a checklist that someone other than the proposer can use to verify the proposal. For example:</p>
+<ul>
+<li>Proposer is in good standing with the DAO / address has not been hacked</li>
+<li>Proposal has been approved on Snapshot</li>
+<li>Amount of tokens and exchange rate is correct</li>
+<li>Recipient address is correct</li>
+</ul>
+<p>I’m happy to see Tally responding quickly with a UI improvement. I could also imagine Tally giving DAOs an address whitelisting / labeling feature to give users more confidence that the address the proposal is interacting with is the correct one.</p>
+<p>That said, I would also like to see the DAO implement its own “social ware” upgrade in light of this event.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/13
+        Sat, 07 Oct 2023 12:58:55 +0000
+gov.gitcoin.co-post-16683-13
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+lefterisjp
+
+            <p>I am really sad to see this happen. Signers/voters should triple check arguments and try to simulate all transactions to see they do what they were intended to do.</p>
+<p>Safe’s UI is integrating Tenderly simulations for exactly this reason. Could it be that this can also be integrated in the voting process with Tally?</p>
+<p>But really sending to own token contract is really easy to spot even in Tally’s interface. I just looked at the UI.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1917b4d32b6abc556af926bc078d8a2ef9e26bf6.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/1917b4d32b6abc556af926bc078d8a2ef9e26bf6" title="2023-10-07_10-41"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1917b4d32b6abc556af926bc078d8a2ef9e26bf6_2_690x427.png" alt="2023-10-07_10-41" data-base62-sha1="3zYJ621Qaj6uo2cFhFkCBAVTKHY" width="690" height="427" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1917b4d32b6abc556af926bc078d8a2ef9e26bf6_2_690x427.png, https://gov.gitcoin.co/uploads/db4391/original/2X/1/1917b4d32b6abc556af926bc078d8a2ef9e26bf6.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/1/1917b4d32b6abc556af926bc078d8a2ef9e26bf6.png 2x" data-dominant-color="FCFCFC"></a></div><p></p>
+<p>Edit: To be clear, I am not taking the shitty view that I would have seen this if I was still participating in governance. I can very well imagine situations where it’s late, you are confused or tired and just press sign/vote.</p>
+<p>Just sad to see that not one person noticed it before it was too late. I mean come on guys 136 people made an on-chain transaction spending their own ETH in gas to vote for such a mistake without even bothering to check what it is they are spending the ETH for.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/0/03a785410dcef8e74133d22e45dace57e4e7f064.png" alt="2023-10-07_14-43" data-base62-sha1="wklikxSJV0WPu1890DyTCX0biI" width="292" height="151"></p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/12
+        Sat, 07 Oct 2023 08:29:10 +0000
+gov.gitcoin.co-post-16683-12
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+rsolari
+
+            <p>Hi, Raf from Tally here. I’m really sorry to hear that this happened.</p>
+<p>We know that proposals have high stakes, so we’re adding more safety checks for both proposal creators and voters. We’re talking with some of the leads and stewards about how we can help prevent this kind of thing from happening in the future. They’ve already suggested some great ideas as part of the post-mortem for this incident.</p>
+<p>Today, we added a warning to the Create Proposal tool when sending funds to a token contract. “This is a token address, and in most cases is not recommended. Please make sure this is the intended address”</p>
+<p>Proposal safety is a key pillar of our product, so we’ll be rolling out more improvements to proposal drafts, simulations and safety checks over the next few months. I’m especially keen for feedback from you all. My goal is to make sure that creating and voting on these high-stakes proposals is both easy and safe!</p>
+<p>Feel free to reach out if you have suggestions or would like to preview some of our UX ideas.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/11
+        Sat, 07 Oct 2023 01:42:20 +0000
+gov.gitcoin.co-post-16683-11
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+pinakion
+
+            <p>Should have used Kleros! Maybe next time? <img src="https://gov.gitcoin.co/images/emoji/twitter/wink.png?v=12" title=":wink:" class="emoji" alt=":wink:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/10
+        Fri, 06 Oct 2023 18:30:27 +0000
+gov.gitcoin.co-post-16683-10
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+CoachJonathan
+
+            <p>In short <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a>, no.</p>
+<p>These funds were supposed to provide the MMM workstream with funding for August, September and October.</p>
+<p>MMM was able to use funds from S18 (May-July) to pay all its contributors and opex in August. However, MMM has insufficient funds to pay contributors and opex costs for September and October.</p>
+<p>We will be re-requesting budget for the two months (a reduced amount, not for the original request of around $500k).</p>
+<p>I just posted the new request to Tally here: <a href="https://www.tally.xyz/gov/gitcoin/proposal/83370444265186051506036240751499191729551923064564972278212022875236597720544" class="inline-onebox" rel="noopener nofollow ugc">Tally | Gitcoin Proposal</a></p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/9
+        Fri, 06 Oct 2023 09:50:12 +0000
+gov.gitcoin.co-post-16683-9
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+jengajojo
+
+            <p>Sorry to hear about this and thank you for the transparency. <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a> will MMM be able to function as budgeted given this development?</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/8
+        Fri, 06 Oct 2023 09:29:00 +0000
+gov.gitcoin.co-post-16683-8
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+DistributedDoge
+
+            <p>To see organization waste funds in such reckless manner is disappointing.</p>
+<p>I don’t care much for “burned/locked” narrative but I am concerned how multiple high-profile DAO individuals misallocated 450k which could have been avoided if even a single person exercised <em>baseline level of due diligence</em>.</p>
+<p>I think a short checklist could help Tally voters to follow the motions of validating common budgets proposals without omitting steps or having to think too much about the process. At the minimum:</p>
+<ul>
+<li>confirm recipient address is known &amp; labeled</li>
+<li>confirm correct token is being sent</li>
+<li>check token amount</li>
+<li>check <code>executable code</code> matches written <code>description</code></li>
+</ul>
+<p>Then you can go in more detail like “Confirm I am NOT sending token DIRECTLY to BRIDGE/TOKENADDRESS where it will get STUCK (again)”</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/7
+        Fri, 06 Oct 2023 03:50:59 +0000
+gov.gitcoin.co-post-16683-7
+Incident Regarding Mistransferred Treasury Funds
+      
+
+Incident Regarding Mistransferred Treasury Funds
+connor
+
+            <p>Thank you for the transparency here. I am extremely sorry for all parties directly affected at no fault of their own. This is a shitty situation all around <img src="https://gov.gitcoin.co/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="1" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>All proposals in Tally moving forward should have wallet addresses listed if there will be any transfers of funds</p>
+<ul>
+<li>It is up to the Tally proposal creator to ensure that the funds are being transferred to the correct address based on the Snapshot description</li>
+<li>It is up to Tally voters to ensure that the <strong>funds are being transferred to the correct address based on the Tally description</strong></li>
+</ul>
+</blockquote>
+</aside>
+<p>I agree it should be made extremely clear and redundant where transfers are going. But as laid out, this action item could be even more dangerous. The transaction details and destination address are already laid out front and center, even before the actual description:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/00e64acdeffc0554ca4dee2da400a0a31bd2534b.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/00e64acdeffc0554ca4dee2da400a0a31bd2534b" title="Screenshot 2023-10-05 at 5.49.43 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/00e64acdeffc0554ca4dee2da400a0a31bd2534b_2_690x473.jpeg" alt="Screenshot 2023-10-05 at 5.49.43 PM" data-base62-sha1="7XoISRlF6j9pCdlvehpf5kNk2D" width="690" height="473" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/00e64acdeffc0554ca4dee2da400a0a31bd2534b_2_690x473.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/00e64acdeffc0554ca4dee2da400a0a31bd2534b_2_1035x709.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/00e64acdeffc0554ca4dee2da400a0a31bd2534b_2_1380x946.jpeg 2x" data-dominant-color="F5F7F8"></a></div><br>
+Asking voters to verify the address in the description opens the possibility for a malicious actor to put the correct address in the description while the on chain action sends somewhere else (not saying this is likely just thinking out loud).<p></p>
+<aside class="quote no-group" data-username="CoachJonathan" data-post="1" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/coachjonathan/48/4856_2.png" class="avatar"> CoachJonathan:</div>
+<blockquote>
+<p>CSDO is going to explore the possibility of implementing a DAO Guardians program</p>
+<ul>
+<li>DAO Guardians would be individuals contracted to review proposals and ensure their accuracy, particularly around proposals and large transactions</li>
+</ul>
+</blockquote>
+</aside>
+<p>All large delegates and Tally voters should be DAO Guardians, we don’t need a new special program or to contract anyone for this imo. Obviously, we all screwed up here to let this slip though, but hopefully that’s a huge wake up call to all delegates that they should be a DAO Guardian and need to do light due diligence on what they vote on.</p>
+<aside class="quote no-group" data-username="owocki" data-post="5" data-topic="16683">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>ill be curious if this narrative of “its actually GTC burned” is seen as legitimate.</p>
+</blockquote>
+</aside>
+<p>This is certainly not a net positive situation for the DAO, but I think objectively these 500k GTC (.8% of the circulating supply) are stuck forever and burned.</p>
+          <p><a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683/6
+        Fri, 06 Oct 2023 00:58:38 +0000
+gov.gitcoin.co-post-16683-6
+Incident Regarding Mistransferred Treasury Funds
+      
+
+

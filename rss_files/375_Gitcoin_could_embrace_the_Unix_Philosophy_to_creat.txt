@@ -1,0 +1,377 @@
+
+
+
+Gitcoin could embrace the Unix Philosophy to create exponential innovation 📈
+https://gov.gitcoin.co/t/gitcoin-could-embrace-the-unix-philosophy-to-create-exponential-innovation/18602
+    # Gitcoin should embrace the Unix Philosophy to enable exponential innovation
+
+## TLDR
+
+1. The unix philosophy is to (1) build small modular tools that do one thing + do them well (2) make them interoperable with each other.
+2. The unix philosophy is a powerful way of developing software because the tools are supermodular to one another (supermodular = exponential value creation)
+3. We should adopt the unix philosophy at Gitcoin.
+
+## What is Unix Philosophy?
+
+The Unix philosophy embodies a set of cultural norms and philosophical approaches to minimalist, modular software development. It emphasizes building simple, short, clear, modular, and extendable code that accomplishes a single task well. This philosophy is foundational to the development and design of Unix and its various offspring, including Linux. Key tenets of the Unix philosophy include:
+
+1. Make each program do one thing well: Instead of creating complex programs that attempt to do many tasks, Unix encourages developers to build simple programs focused on one task. This makes the programs easier to develop, understand, and maintain.
+
+2. Expect the output of every program to become the input to another, as yet unknown, program: This encourages the design of programs that can work together, using pipelines and filters to pass data from one utility to another.
+
+3. Design and build software, even operating systems, to be tried early, ideally within weeks: This principle emphasizes the importance of quick prototyping and iterative development.
+
+4. Build a prototype as soon as possible: Similar to "try early", this principle pushes for a working model that can be tested and improved upon, rather than trying to make it perfect the first time.
+
+5. Use software leverage to your advantage: Reuse code when possible instead of reinventing the wheel, benefiting from the collective effort of the developer community.
+
+The Unix philosophy has influenced not only the development of Unix and Linux but also the design of software and operating systems across the computing landscape. It emphasizes efficiency, simplicity, and the importance of open standards and interoperability.
+
+## Why is the Unix Philosophy powerful?
+
+The Unix philosophy's power lies in its emphasis on simplicity, modularity, and composability, principles that make software development more efficient and maintainable. By advocating for programs that do one thing well and work together seamlessly, it ensures systems are both robust and adaptable. This approach reduces complexity, making software easier to understand, debug, and enhance over time. Additionally, the focus on a universal interface and the encouragement of rapid prototyping and tool reuse accelerates development and fosters innovation, allowing developers to quickly iterate on ideas and leverage existing solutions.
+
+Moreover, the Unix philosophy's emphasis on portability and open standards has broadened software's utility and longevity, ensuring applications can run across different environments and evolve alongside technological advances. This has not only democratized access to technology but also cultivated an ecosystem where interoperability and collaboration are foundational . As a result, the Unix philosophy has had a profound and lasting impact on software engineering, influencing not just Unix-derived systems but the broader landscape of computing and development practices.
+
+The modular approach supports the dynamic, distributed nature of DAOs like Gitcoin’s. The unix philosophy enables continuous integration, development, and community-driven innovation, making it a fitting philosophy for this new era of software development.
+
+## Monolithic software
+
+Monolithic software contrasts sharply with the Unix philosophy through its approach to design and functionality. Where the Unix philosophy advocates for simplicity, modularity, and the development of small, interoperable programs that each perform one task well, monolithic software typically bundles a wide range of functionalities within a single codebase. This integration means that tasks and features in monolithic applications are deeply entwined, making it challenging to modify, update, or scale individual components without affecting the entire system. As a result, monolithic systems can become complex and cumbersome, hindering rapid development and adaptability.
+
+While monolithic applications may initially be simpler to deploy and manage, the Unix philosophy's approach typically offers greater efficiency, adaptability, and resilience over the software's lifecycle.
+
+## Modular software @ Gitcoin
+
+Having built Gitcoin 1.0 the wrong way (cGrants was a monolith that was expensive and slow to maintain)... I believe that Gitcoin should fully adopt the unix philosophy in its software development.
+
+This is already partially true.
+
+1. Our software is built upon modular blockchains.
+2. Allo protocol contains several different strategies: QF, RetroPGF.
+3. Grants stack contains several small applications:
+   1. Explorer - for browsing grants
+   2. Builder - for building grants
+   3. Manager - for making QF rounds
+
+But it is also partially false
+
+1. Allo strategies are all in the same repository.
+2. Allo strategies do not have corresponding webapps.
+3. Grants Stack’s modular apps are bundled into one repository and for many intents and purposes, one monolithic app.
+4. We are beginning to develop monolithic tendencies as a team (merging modular tools.
+
+## Modular software @ Gitcoin would enable bottoms up innovation
+
+Right now the core apps at Gitcoin are
+
+1. Explorer - for browsing grants
+2. Builder - for building grants
+3. Manager - for making QF rounds
+
+These apps work pretty well for what they do.. But let’s explore things they don’t do.
+
+1. Explorer is a plain vanilla way of exploring grants. What other types of grant exploration are possible?
+   1. AI powered discovery of grants
+   2. More powerful search functionality
+   3. More powerful collections / curation functionality
+   4. Social discovery of grants (eg see what my twitter/farcaster network is funding)
+   5. Using collaborative filtering and/or a tinder style interface to fund grants
+   6. A whitelabel manager that a partner who wants
+   7. [One click donations on farcastser frames](https://twitter.com/OrnellaWeb3/status/1775258764570186002)
+   8. Fiat checkout
+2. Manager is a plain vanilla way of creating a QF campaign. What other types of campaigns are possible?
+   1. A manager that uses an LLM to study my community and recommend intelligent defaults
+   2. An Openzeppelin-wizard way of creating a manager from an allo strategy.
+   3. A results calculator/verification tool - so I dont have to
+3. Builder
+   1. [Pub/Sub](https://gov.gitcoin.co/t/pubsub-on-allo-v2/17742)
+   2. [Allowlist Configurability](https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741)
+4. Other design spaces to explore
+   1. [Aqueducts](https://gov.gitcoin.co/t/gitcoin-aqueduct/9684) -
+   2. Tools to crowdfund matching pools.
+   3. Karma/Impact Certs
+   4. KYC/Compliance Tools
+   5. GTC Token Center
+   6. AlloScan
+   7. [Other things mentioned in the rainbow paper](https://www.gitcoin.co/rainbowpaper)
+5. Other funding mechanisms
+   1. Maci QF
+   2. RetroPGF
+   3. Conviction Voting
+   4. etc..
+
+If these apps were to be build by our centralized team in a monolithic and sequential way, I am certain it would take decades to do it. Because we’d be doing it single threaded. And we’d have to go through a complicated regression/QA process for each new feature to make sure we didnt break anything.
+
+If we built these decentralized, then our community of citizens can explore these design space without permission.
+
+Here is what i think the design space exploration looks like visualized.
+
+![|624x276](upload://aEc1LhyvgDuWHOUuAVMcMcsRilV.png)
+
+## It's already happening
+
+I am super proud of two modular apps that have been built.
+
+1. ReportCards.Gitcoin.co - a tool for getting a visual of how a QF round is going.
+2. Checker.Gitcoin.co - a tool for automating (and augmenting with LLMs) the checking of multiple grants in application queue for a round.
+
+The developers behind both of these projects realized there was a design space that was underexplored by the main Grants Stack app… and took the initiative to build apps that explored the design space in high resolution. Awesome!
+
+## Modular software @ Gitcoin would enable a culture of autonomy within Grants Lab
+
+Autonomy in software development shops is crucial because it fosters a culture of innovation and ownership, leading to the creation of more efficient and effective solutions. When developers have the freedom to make decisions about their work, they're more engaged and motivated, which translates into higher productivity and better problem-solving. Autonomy encourages a deeper understanding of the project as a whole, the problems being solved, enabling developers to anticipate issues, adapt to changes more swiftly, and contribute ideas that can lead to breakthroughs in development practices and end products.
+
+## Modular software @ Gitcoin would enable a culture of intrepreneurship within Grants Lab
+
+Intrapreneurship refers to the practice of applying entrepreneurial skills and approaches within an existing organization to develop innovative products, services, or processes. It encourages employees to take initiative, embrace risk-taking, and pursue innovative ideas as if they were external entrepreneurs, but with the resources, support, and structure of their current employer. This approach fosters a culture of innovation and agility, allowing companies to stay competitive and adapt to changing market dynamics by leveraging the creativity and entrepreneurial spirit of their workforce.
+
+## Modular software @ Gitcoin would enable citizens to create massive tailwinds around gitcoin.
+
+A modular setup encourages a wide range of developers to participate and contribute, as it provides a transparent, trustless system for collaboration. Engaging with an open-source community is crucial for a DAO like ours, as it taps into a global talent pool, accelerating development, fostering innovation, and ensuring the software evolves in response to user needs and emerging trends.
+
+## Challenges
+
+1. We need a way for modular apps to have a shared source of truth for their shared dependencies: L2 network lists, allo contracts + deployment addresses, etc..
+2. DevEx - Our developer experience needs some work. For example, great docs + a starter kit. [More on this here. ](https://gov.gitcoin.co/t/allo-v2-b2d-strategy/17744)
+3. Integrated ux
+   1. For Gitcoin to have worldclass software, we may need a unified navigation across these modular apps. This nav would solve for the discoverability of the apps in the Allo/Gitcoin ecosystem (even I can’t keep track of them right now and i’ve been trying to at https://ecosystem.gitcoin.co/)
+   2. There are some clunky things if the apps are deployed seperately. EG having to “connect wallet” separately across explorer.gitcoin.co manager.gitcoin.co and builder.gitcoin.co
+   3. Its possible that “weaving” apps will need to be build that weave together various modular apps.
+   4. There might be some opportunity to combine modular tools into a thin monolithic app that is a thin wrapper around git submodules of smaller modular apps.
+4. Architecture - a few of us did an [architecture evaluation](https://gov.gitcoin.co/t/opening-up-grants-stack-allo-to-more-community-contributions/17145) a few months ago. We would need to revisit + make some decisions about what exactly the architecture/ground rules are for this next era.
+5. Maintenance
+   1. How are modular packages maintained in a world where those maintainers could go away?
+6. Problem/idea exchange - we need a clearing house for exchanging ideas for modular builds + feedback on modular builds.
+
+## Conclusion
+
+In conclusion, unix philosophy is good. It's been repeatedly proven over decades. Let’s adopt it.
+
+Feedback welcome.
+Wed, 17 Apr 2024 17:23:07 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Gitcoin could embrace the Unix Philosophy to create exponential innovation 📈
+owocki
+
+            <aside class="quote no-group" data-username="quaylawn" data-post="2" data-topic="18602">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/quaylawn/48/12069_2.png" class="avatar"> quaylawn:</div>
+<blockquote>
+<p>No feedback from me as I’m not a techie, although I do wonder if you’d be open to pushing your thoughts on this subject out a bit more publicly.</p>
+</blockquote>
+</aside>
+<p>I’m happy to do it.  But I dont think there will be a lot of demand for content about how Grants lab / Gitcoin does software development unless/until Gitcoin is seen as leading the market in some way (eg is innovative/effective/etc) using this approach.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-could-embrace-the-unix-philosophy-to-create-exponential-innovation/18602/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-could-embrace-the-unix-philosophy-to-create-exponential-innovation/18602/3
+        Wed, 17 Apr 2024 17:23:07 +0000
+gov.gitcoin.co-post-18602-3
+Gitcoin could embrace the Unix Philosophy to create exponential innovation 📈
+      
+
+Gitcoin could embrace the Unix Philosophy to create exponential innovation 📈
+quaylawn
+
+            <p>No feedback from me as I’m not a techie, although I do wonder if you’d be open to pushing your thoughts on this subject out a bit more publicly. The governance forum doesn’t contribute to our <em>Share of Voice</em> on these topics, so I’m thinking something along these lines:</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.coindesk.com/consensus-magazine/2024/04/16/what-the-history-of-linux-says-about-the-long-road-to-decentralized-storage-adoption/">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1faec1c208b90c02c05f9816f28760c81c758ec1.png" class="site-icon" data-dominant-color="281F05" width="48" height="48">
+
+      <a href="https://www.coindesk.com/consensus-magazine/2024/04/16/what-the-history-of-linux-says-about-the-long-road-to-decentralized-storage-adoption/" target="_blank" rel="noopener nofollow ugc" title="03:45PM - 16 April 2024">coindesk.com – 16 Apr 24</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/360;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ac811f453a7be43891f5f9c47ff447299d4d090d_2_690x361.jpeg" class="thumbnail" data-dominant-color="154E66" width="690" height="361"></div>
+
+<h3><a href="https://www.coindesk.com/consensus-magazine/2024/04/16/what-the-history-of-linux-says-about-the-long-road-to-decentralized-storage-adoption/" target="_blank" rel="noopener nofollow ugc">What the History of Linux Says About the Long Road to Decentralized Storage...</a></h3>
+
+  <p>The current dominance of cloud hyperscalers like Google and Amazon is not a natural monopoly, but decentralized cloud needs to continue to innovate before it becomes the option paying customers choose, Banyan CEO Claudia Richoux argues.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>I noticed that Linux has featured in the media alongside a discussion on the vulnerabilities of open source tech, specifically <a href="https://usw2.nyl.as/t1/43/5604jhfwzv4lji64lntncksh0/0/514592e492460407396ad81b99b70f6a814547034de61a79fb980e162838a9a2" rel="noopener nofollow ugc">social engineering attacks</a> or attempts to exploit <a href="https://usw2.nyl.as/t1/43/5604jhfwzv4lji64lntncksh0/1/f10d53b63d7186c5c5ad03921d52aead337512257d2871f23c01ceda5ef8161c" rel="noopener nofollow ugc">licensing loopholes</a>.</p>
+<p>As <strong>Claudia Richoux</strong> mentions in the CoinDesk opinion piece, “open source codebases are hard to kill”, but that doesn’t mean it doesn’t need protection.</p>
+<p>Building on the data from <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a>, as well as the narrative around our return to supporting digital public goods and ecosystem growth, I think this could be a great chance for us to capture a greater <em>Share of Voice</em> in relation to OSS. More broadly, this would support our overarching mission to position Gitcoin at the centre of all things web3 grants.</p>
+<p>Currently our dominance in this regard, mapped against 5 other prominent decentralised organisations, is ~42% over the last four months. Happy to share the Notion page where this data has been captured if of interest!</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-could-embrace-the-unix-philosophy-to-create-exponential-innovation/18602/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-could-embrace-the-unix-philosophy-to-create-exponential-innovation/18602/2
+        Wed, 17 Apr 2024 11:01:12 +0000
+gov.gitcoin.co-post-18602-2
+Gitcoin could embrace the Unix Philosophy to create exponential innovation 📈
+      
+
+Gitcoin could embrace the Unix Philosophy to create exponential innovation 📈
+owocki
+
+            <h1><a name="gitcoin-should-embrace-the-unix-philosophy-to-enable-exponential-innovation-1" class="anchor" href="https://gov.gitcoin.co#gitcoin-should-embrace-the-unix-philosophy-to-enable-exponential-innovation-1"></a>Gitcoin should embrace the Unix Philosophy to enable exponential innovation</h1>
+<h2><a name="tldr-2" class="anchor" href="https://gov.gitcoin.co#tldr-2"></a>TLDR</h2>
+<ol>
+<li>The unix philosophy is to (1) build small modular tools that do one thing + do them well (2) make them interoperable with each other.</li>
+<li>The unix philosophy is a powerful way of developing software because the tools are supermodular to one another (supermodular = exponential value creation)</li>
+<li>We should adopt the unix philosophy at Gitcoin.</li>
+</ol>
+<h2><a name="what-is-unix-philosophy-3" class="anchor" href="https://gov.gitcoin.co#what-is-unix-philosophy-3"></a>What is Unix Philosophy?</h2>
+<p>The Unix philosophy embodies a set of cultural norms and philosophical approaches to minimalist, modular software development. It emphasizes building simple, short, clear, modular, and extendable code that accomplishes a single task well. This philosophy is foundational to the development and design of Unix and its various offspring, including Linux. Key tenets of the Unix philosophy include:</p>
+<ol>
+<li>
+<p>Make each program do one thing well: Instead of creating complex programs that attempt to do many tasks, Unix encourages developers to build simple programs focused on one task. This makes the programs easier to develop, understand, and maintain.</p>
+</li>
+<li>
+<p>Expect the output of every program to become the input to another, as yet unknown, program: This encourages the design of programs that can work together, using pipelines and filters to pass data from one utility to another.</p>
+</li>
+<li>
+<p>Design and build software, even operating systems, to be tried early, ideally within weeks: This principle emphasizes the importance of quick prototyping and iterative development.</p>
+</li>
+<li>
+<p>Build a prototype as soon as possible: Similar to “try early”, this principle pushes for a working model that can be tested and improved upon, rather than trying to make it perfect the first time.</p>
+</li>
+<li>
+<p>Use software leverage to your advantage: Reuse code when possible instead of reinventing the wheel, benefiting from the collective effort of the developer community.</p>
+</li>
+</ol>
+<p>The Unix philosophy has influenced not only the development of Unix and Linux but also the design of software and operating systems across the computing landscape. It emphasizes efficiency, simplicity, and the importance of open standards and interoperability.</p>
+<h2><a name="why-is-the-unix-philosophy-powerful-4" class="anchor" href="https://gov.gitcoin.co#why-is-the-unix-philosophy-powerful-4"></a>Why is the Unix Philosophy powerful?</h2>
+<p>The Unix philosophy’s power lies in its emphasis on simplicity, modularity, and composability, principles that make software development more efficient and maintainable. By advocating for programs that do one thing well and work together seamlessly, it ensures systems are both robust and adaptable. This approach reduces complexity, making software easier to understand, debug, and enhance over time. Additionally, the focus on a universal interface and the encouragement of rapid prototyping and tool reuse accelerates development and fosters innovation, allowing developers to quickly iterate on ideas and leverage existing solutions.</p>
+<p>Moreover, the Unix philosophy’s emphasis on portability and open standards has broadened software’s utility and longevity, ensuring applications can run across different environments and evolve alongside technological advances. This has not only democratized access to technology but also cultivated an ecosystem where interoperability and collaboration are foundational . As a result, the Unix philosophy has had a profound and lasting impact on software engineering, influencing not just Unix-derived systems but the broader landscape of computing and development practices.</p>
+<p>The modular approach supports the dynamic, distributed nature of DAOs like Gitcoin’s. The unix philosophy enables continuous integration, development, and community-driven innovation, making it a fitting philosophy for this new era of software development.</p>
+<h2><a name="monolithic-software-5" class="anchor" href="https://gov.gitcoin.co#monolithic-software-5"></a>Monolithic software</h2>
+<p>Monolithic software contrasts sharply with the Unix philosophy through its approach to design and functionality. Where the Unix philosophy advocates for simplicity, modularity, and the development of small, interoperable programs that each perform one task well, monolithic software typically bundles a wide range of functionalities within a single codebase. This integration means that tasks and features in monolithic applications are deeply entwined, making it challenging to modify, update, or scale individual components without affecting the entire system. As a result, monolithic systems can become complex and cumbersome, hindering rapid development and adaptability.</p>
+<p>While monolithic applications may initially be simpler to deploy and manage, the Unix philosophy’s approach typically offers greater efficiency, adaptability, and resilience over the software’s lifecycle.</p>
+<h2><a name="modular-software-gitcoin-6" class="anchor" href="https://gov.gitcoin.co#modular-software-gitcoin-6"></a>Modular software @ Gitcoin</h2>
+<p>Having built Gitcoin 1.0 the wrong way (cGrants was a monolith that was expensive and slow to maintain)… I believe that Gitcoin should fully adopt the unix philosophy in its software development.</p>
+<p>This is already partially true.</p>
+<ol>
+<li>Our software is built upon modular blockchains.</li>
+<li>Allo protocol contains several different strategies: QF, RetroPGF.</li>
+<li>Grants stack contains several small applications:
+<ol>
+<li>Explorer - for browsing grants</li>
+<li>Builder - for building grants</li>
+<li>Manager - for making QF rounds</li>
+</ol>
+</li>
+</ol>
+<p>But it is also partially false</p>
+<ol>
+<li>Allo strategies are all in the same repository.</li>
+<li>Allo strategies do not have corresponding webapps.</li>
+<li>Grants Stack’s modular apps are bundled into one repository and for many intents and purposes, one monolithic app.</li>
+<li>We are beginning to develop monolithic tendencies as a team (merging modular tools.</li>
+</ol>
+<h2><a name="modular-software-gitcoin-would-enable-bottoms-up-innovation-7" class="anchor" href="https://gov.gitcoin.co#modular-software-gitcoin-would-enable-bottoms-up-innovation-7"></a>Modular software @ Gitcoin would enable bottoms up innovation</h2>
+<p>Right now the core apps at Gitcoin are</p>
+<ol>
+<li>Explorer - for browsing grants</li>
+<li>Builder - for building grants</li>
+<li>Manager - for making QF rounds</li>
+</ol>
+<p>These apps work pretty well for what they do… But let’s explore things they don’t do.</p>
+<ol>
+<li>Explorer is a plain vanilla way of exploring grants. What other types of grant exploration are possible?
+<ol>
+<li>AI powered discovery of grants</li>
+<li>More powerful search functionality</li>
+<li>More powerful collections / curation functionality</li>
+<li>Social discovery of grants (eg see what my twitter/farcaster network is funding)</li>
+<li>Using collaborative filtering and/or a tinder style interface to fund grants</li>
+<li>A whitelabel manager that a partner who wants</li>
+<li><a href="https://twitter.com/OrnellaWeb3/status/1775258764570186002">One click donations on farcastser frames</a></li>
+<li>Fiat checkout</li>
+</ol>
+</li>
+<li>Manager is a plain vanilla way of creating a QF campaign. What other types of campaigns are possible?
+<ol>
+<li>A manager that uses an LLM to study my community and recommend intelligent defaults</li>
+<li>An Openzeppelin-wizard way of creating a manager from an allo strategy.</li>
+<li>A results calculator/verification tool - so I dont have to</li>
+</ol>
+</li>
+<li>Builder
+<ol>
+<li><a href="https://gov.gitcoin.co/t/pubsub-on-allo-v2/17742">Pub/Sub</a></li>
+<li><a href="https://gov.gitcoin.co/t/allowlist-configurability-a-strategic-investment/17741">Allowlist Configurability</a></li>
+</ol>
+</li>
+<li>Other design spaces to explore
+<ol>
+<li><a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684">Aqueducts</a> -</li>
+<li>Tools to crowdfund matching pools.</li>
+<li>Karma/Impact Certs</li>
+<li>KYC/Compliance Tools</li>
+<li>GTC Token Center</li>
+<li>AlloScan</li>
+<li><a href="https://www.gitcoin.co/rainbowpaper">Other things mentioned in the rainbow paper</a></li>
+</ol>
+</li>
+<li>Other funding mechanisms
+<ol>
+<li>Maci QF</li>
+<li>RetroPGF</li>
+<li>Conviction Voting</li>
+<li>etc…</li>
+</ol>
+</li>
+</ol>
+<p>If these apps were to be build by our centralized team in a monolithic and sequential way, I am certain it would take decades to do it. Because we’d be doing it single threaded. And we’d have to go through a complicated regression/QA process for each new feature to make sure we didnt break anything.</p>
+<p>If we built these decentralized, then our community of citizens can explore these design space without permission.</p>
+<p>Here is what i think the design space exploration looks like visualized.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4aa0e2b0cf4408095244793259a6f52067c4c52f.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/4aa0e2b0cf4408095244793259a6f52067c4c52f" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4aa0e2b0cf4408095244793259a6f52067c4c52f_2_624x276.png" alt="" data-base62-sha1="aEc1LhyvgDuWHOUuAVMcMcsRilV" width="624" height="276" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4aa0e2b0cf4408095244793259a6f52067c4c52f_2_624x276.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4aa0e2b0cf4408095244793259a6f52067c4c52f_2_936x414.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4aa0e2b0cf4408095244793259a6f52067c4c52f_2_1248x552.png 2x" data-dominant-color="FAFAFA"></a></div><p></p>
+<h2><a name="its-already-happening-8" class="anchor" href="https://gov.gitcoin.co#its-already-happening-8"></a>It’s already happening</h2>
+<p>I am super proud of two modular apps that have been built.</p>
+<ol>
+<li><a href="http://ReportCards.Gitcoin.co">ReportCards.Gitcoin.co</a> - a tool for getting a visual of how a QF round is going.</li>
+<li><a href="http://Checker.Gitcoin.co">Checker.Gitcoin.co</a> - a tool for automating (and augmenting with LLMs) the checking of multiple grants in application queue for a round.</li>
+</ol>
+<p>The developers behind both of these projects realized there was a design space that was underexplored by the main Grants Stack app… and took the initiative to build apps that explored the design space in high resolution. Awesome!</p>
+<h2><a name="modular-software-gitcoin-would-enable-a-culture-of-autonomy-within-grants-lab-9" class="anchor" href="https://gov.gitcoin.co#modular-software-gitcoin-would-enable-a-culture-of-autonomy-within-grants-lab-9"></a>Modular software @ Gitcoin would enable a culture of autonomy within Grants Lab</h2>
+<p>Autonomy in software development shops is crucial because it fosters a culture of innovation and ownership, leading to the creation of more efficient and effective solutions. When developers have the freedom to make decisions about their work, they’re more engaged and motivated, which translates into higher productivity and better problem-solving. Autonomy encourages a deeper understanding of the project as a whole, the problems being solved, enabling developers to anticipate issues, adapt to changes more swiftly, and contribute ideas that can lead to breakthroughs in development practices and end products.</p>
+<h2><a name="modular-software-gitcoin-would-enable-a-culture-of-intrepreneurship-within-grants-lab-10" class="anchor" href="https://gov.gitcoin.co#modular-software-gitcoin-would-enable-a-culture-of-intrepreneurship-within-grants-lab-10"></a>Modular software @ Gitcoin would enable a culture of intrepreneurship within Grants Lab</h2>
+<p>Intrapreneurship refers to the practice of applying entrepreneurial skills and approaches within an existing organization to develop innovative products, services, or processes. It encourages employees to take initiative, embrace risk-taking, and pursue innovative ideas as if they were external entrepreneurs, but with the resources, support, and structure of their current employer. This approach fosters a culture of innovation and agility, allowing companies to stay competitive and adapt to changing market dynamics by leveraging the creativity and entrepreneurial spirit of their workforce.</p>
+<h2><a name="modular-software-gitcoin-would-enable-citizens-to-create-massive-tailwinds-around-gitcoin-11" class="anchor" href="https://gov.gitcoin.co#modular-software-gitcoin-would-enable-citizens-to-create-massive-tailwinds-around-gitcoin-11"></a>Modular software @ Gitcoin would enable citizens to create massive tailwinds around gitcoin.</h2>
+<p>A modular setup encourages a wide range of developers to participate and contribute, as it provides a transparent, trustless system for collaboration. Engaging with an open-source community is crucial for a DAO like ours, as it taps into a global talent pool, accelerating development, fostering innovation, and ensuring the software evolves in response to user needs and emerging trends.</p>
+<h2><a name="challenges-12" class="anchor" href="https://gov.gitcoin.co#challenges-12"></a>Challenges</h2>
+<ol>
+<li>We need a way for modular apps to have a shared source of truth for their shared dependencies: L2 network lists, allo contracts + deployment addresses, etc…</li>
+<li>DevEx - Our developer experience needs some work. For example, great docs + a starter kit. <a href="https://gov.gitcoin.co/t/allo-v2-b2d-strategy/17744">More on this here. </a></li>
+<li>Integrated ux
+<ol>
+<li>For Gitcoin to have worldclass software, we may need a unified navigation across these modular apps. This nav would solve for the discoverability of the apps in the Allo/Gitcoin ecosystem (even I can’t keep track of them right now and i’ve been trying to at <a href="https://ecosystem.gitcoin.co/">https://ecosystem.gitcoin.co/</a>)</li>
+<li>There are some clunky things if the apps are deployed seperately. EG having to “connect wallet” separately across <a href="http://explorer.gitcoin.co">explorer.gitcoin.co</a> <a href="http://manager.gitcoin.co">manager.gitcoin.co</a> and <a href="http://builder.gitcoin.co">builder.gitcoin.co</a></li>
+<li>Its possible that “weaving” apps will need to be build that weave together various modular apps.</li>
+<li>There might be some opportunity to combine modular tools into a thin monolithic app that is a thin wrapper around git submodules of smaller modular apps.</li>
+</ol>
+</li>
+<li>Architecture - a few of us did an <a href="https://gov.gitcoin.co/t/opening-up-grants-stack-allo-to-more-community-contributions/17145">architecture evaluation</a> a few months ago. We would need to revisit + make some decisions about what exactly the architecture/ground rules are for this next era.</li>
+<li>Maintenance
+<ol>
+<li>How are modular packages maintained in a world where those maintainers could go away?</li>
+</ol>
+</li>
+<li>Problem/idea exchange - we need a clearing house for exchanging ideas for modular builds + feedback on modular builds.</li>
+</ol>
+<h2><a name="conclusion-13" class="anchor" href="https://gov.gitcoin.co#conclusion-13"></a>Conclusion</h2>
+<p>In conclusion, unix philosophy is good. It’s been repeatedly proven over decades. Let’s adopt it.</p>
+<p>Feedback welcome.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-could-embrace-the-unix-philosophy-to-create-exponential-innovation/18602/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-could-embrace-the-unix-philosophy-to-create-exponential-innovation/18602/1
+        Mon, 15 Apr 2024 21:50:27 +0000
+gov.gitcoin.co-post-18602-1
+Gitcoin could embrace the Unix Philosophy to create exponential innovation 📈
+      
+
+

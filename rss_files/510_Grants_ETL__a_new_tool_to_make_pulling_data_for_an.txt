@@ -1,0 +1,81 @@
+
+
+
+Grants-ETL, a new tool to make pulling data for anti-sybil/anti-collusion analysis easier
+https://gov.gitcoin.co/t/grants-etl-a-new-tool-to-make-pulling-data-for-anti-sybil-anti-collusion-analysis-easier/16060
+    Supermodular has developed an early version of **grants-etl** - a tool that could enable data scientists to find the sybils faster/better/cheaper.
+
+Our hypothesis is that there a need for an easy to setup relational database with clean data + a well documented schema to enable ppl to do great data work on Grants Stack/Allo/Passport without having to spend a bunch of time building their own **Extract Transform Load (ETL)** pipeline that talks to Ipfs, the graph, multiple rpc endpoints etc....
+
+Here is a visual of what Extract Transform Load (ETL) looks like:
+
+![|624x243](upload://aT8pClII0pb8VxDrsaWdHS3QjQ2.png)
+
+**Our goal for this build:**
+1. Create a data warehouse that allows data scientists to query information about a grants round, its contributions, and the 2nd order data about the contributors (txn history, profile, passport stamp analysis, etc).... into a well documented schema.
+2. Enable it to be run locally, such that there is no central intermediary that holds & maintains the data.
+3. To start, the tool will pull down information about rounds, grants, contributions, and users. But the tool is designed for easy extensibility. Anyone could build an ETL pipeline into this tool for
+    1. Passport stamps or scores
+    2. Data about each user from any L1/L2
+    3. Any other source of data
+
+And then PR it back into the main repo.
+
+**Our goal for this tool long term:** My hope is that over time, as more ETL pipelines are built, and more data scientists build on top of this tool, the tool will compound in value + that will create more momentum for the blue team (sybil defense). If we can convince ppl who run Grants rounds to fund data science work, the tool will become an attractor for a blue team data economy on top of the Gitcoin ecosystem.
+
+Play with the tool at [https://github.com/supermodularxyz/grants-etl](https://github.com/supermodularxyz/grants-etl)
+Got feature requests? [Log an issue here](https://github.com/supermodularxyz/grants-etl)
+
+I’d love feedback:
+
+1. If you are a data scientist, is this tool useful for you?
+2. If you are doing anti-sybil or anti-collusion, is this tool useful for you?
+3. What ETL pipelines should be built into the tool?
+4. Feel free to open up a Github Issue if you have feedback: https://github.com/supermodularxyz/grants-etl/issues
+
+Thanks to @ghostffcode from the Supermodular team for being my huckleberry on this build!
+Mon, 31 Jul 2023 13:59:01 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Grants-ETL, a new tool to make pulling data for anti-sybil/anti-collusion analysis easier
+owocki
+
+            <p>Supermodular has developed an early version of <strong>grants-etl</strong> - a tool that could enable data scientists to find the sybils faster/better/cheaper.</p>
+<p>Our hypothesis is that there a need for an easy to setup relational database with clean data + a well documented schema to enable ppl to do great data work on Grants Stack/Allo/Passport without having to spend a bunch of time building their own <strong>Extract Transform Load (ETL)</strong> pipeline that talks to Ipfs, the graph, multiple rpc endpoints etc…</p>
+<p>Here is a visual of what Extract Transform Load (ETL) looks like:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4c5145c01e2c90a12c3d8a0286bd876cc5704ff6.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/4c5145c01e2c90a12c3d8a0286bd876cc5704ff6" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4c5145c01e2c90a12c3d8a0286bd876cc5704ff6_2_624x243.png" alt="" data-base62-sha1="aT8pClII0pb8VxDrsaWdHS3QjQ2" width="624" height="243" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4c5145c01e2c90a12c3d8a0286bd876cc5704ff6_2_624x243.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4c5145c01e2c90a12c3d8a0286bd876cc5704ff6_2_936x364.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/4c5145c01e2c90a12c3d8a0286bd876cc5704ff6.png 2x" data-dominant-color="FAF6F2"></a></div><p></p>
+<p><strong>Our goal for this build:</strong></p>
+<ol>
+<li>Create a data warehouse that allows data scientists to query information about a grants round, its contributions, and the 2nd order data about the contributors (txn history, profile, passport stamp analysis, etc)… into a well documented schema.</li>
+<li>Enable it to be run locally, such that there is no central intermediary that holds &amp; maintains the data.</li>
+<li>To start, the tool will pull down information about rounds, grants, contributions, and users. But the tool is designed for easy extensibility. Anyone could build an ETL pipeline into this tool for
+<ol>
+<li>Passport stamps or scores</li>
+<li>Data about each user from any L1/L2</li>
+<li>Any other source of data</li>
+</ol>
+</li>
+</ol>
+<p>And then PR it back into the main repo.</p>
+<p><strong>Our goal for this tool long term:</strong> My hope is that over time, as more ETL pipelines are built, and more data scientists build on top of this tool, the tool will compound in value + that will create more momentum for the blue team (sybil defense). If we can convince ppl who run Grants rounds to fund data science work, the tool will become an attractor for a blue team data economy on top of the Gitcoin ecosystem.</p>
+<p>Play with the tool at <a href="https://github.com/supermodularxyz/grants-etl">https://github.com/supermodularxyz/grants-etl</a><br>
+Got feature requests? <a href="https://github.com/supermodularxyz/grants-etl">Log an issue here</a></p>
+<p>I’d love feedback:</p>
+<ol>
+<li>If you are a data scientist, is this tool useful for you?</li>
+<li>If you are doing anti-sybil or anti-collusion, is this tool useful for you?</li>
+<li>What ETL pipelines should be built into the tool?</li>
+<li>Feel free to open up a Github Issue if you have feedback: <a href="https://github.com/supermodularxyz/grants-etl/issues" class="inline-onebox">Issues · supermodularxyz/grants-etl · GitHub</a>
+</li>
+</ol>
+<p>Thanks to <a class="mention" href="https://gov.gitcoin.co/u/ghostffcode">@ghostffcode</a> from the Supermodular team for being my huckleberry on this build!</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-etl-a-new-tool-to-make-pulling-data-for-anti-sybil-anti-collusion-analysis-easier/16060/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-etl-a-new-tool-to-make-pulling-data-for-anti-sybil-anti-collusion-analysis-easier/16060/1
+        Mon, 31 Jul 2023 13:59:01 +0000
+gov.gitcoin.co-post-16060-1
+Grants-ETL, a new tool to make pulling data for anti-sybil/anti-collusion analysis easier
+      
+
+

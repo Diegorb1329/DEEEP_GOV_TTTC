@@ -1,0 +1,274 @@
+
+
+
+3 Transitions from Gitcoin 1.0 => Gitcoin 2.0
+https://gov.gitcoin.co/t/3-transitions-from-gitcoin-1-0-gitcoin-2-0/16736
+    # TLDR
+1. Gitcoin's target market is evolving.
+2. In response, Gitcoin is evolving too.  Gitcoin's 3 evolutions are :
+![3transitions|690x388](upload://7k6XVh6nEuQa2AelODkmIdCgDud.jpeg)
+
+# Market Evolution
+
+Crypto moves FAST.  We are in a rapidly changing ecosystem. 
+
+My high level read on the changing market (at least the parts that affect Gitcoin) is:
+
+1. The markets we are in *(public goods funding, capital allocation, sybil resistance)* are newly crowded/competitive. 
+1. QF doesn't solve for every public goods or capital allocation problem, it is only 1 tool in the toolbox.
+1. The markets that Gitcoin is in (*public goods funding, capital allocation, sybil resistance)* require credible neutrality + democratic decision making. As [those things can only be provided by DAOs](https://vitalik.ca/general/2022/09/20/daos.html), Gitcoin is evolving from a company to a DAO.
+1. The Ethereum ecosystem is evolving towards a [modular architecture](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).  Within the broader Ethereum ecosystem there are now many different categories of sub-ecosystems *(layer 1s, layer 2s, NFT ecosystems, infrastructure DAOs, DeFi ecosystems)*  + many of these EVM based communities have billion $$ treasuries.
+
+In this post, I would like to articulate 3 transitions that Gitcoin is undergoing which are meant to address the changing landscape.
+
+# Gitcoin Evolution
+
+I think these transitions are:
+
+| | Gitcoin 1.0  |   Gitcoin 2.0 |
+|---|---|---|
+| **1. Architecture** | centralized product  | decentralized/modular protocols  |
+| **2. Mechanisms** |  just QF |  many mechanisms (QF/QV/direct grants/many mechanisms) |
+| **3. Customer** | for Ethereum  |  for any EVM based community |
+
+
+## 1. Centralized Product => Decentralized / Modular Protocols
+
+The old platform was a centralized monolith that was unforkable + unmaintainable bc it was so large.
+
+The new platform is a suite of decentralized protocols that follow the [unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy) of doing one thing thing + doing it well.  And each protocol has a well designed interface that allows inputs from unforeseen programs.
+
+|  Module | One Thing It Does Well  |
+|---|---|
+| Passport  |  Sybil Resistence |
+| Grants Explorer  | Browsing Grants  |
+| Grants Builder  |  Building Grants |
+| Round Manager  | Managing QF Rounds  |
+| Allo Protocol QF Strategy | Quadratic Funding   |
+| Allo Protocol QV Strategy | Quadratic Voting   |
+| Allo Protocol *x* Strategy | *Capital Allocation Mechanism x* |
+
+If designed well, this ecosystem of tools are "supermodular" - meaning that they produce more value than the sum of their parts.  Each new modular added to the ecosystem adds value to rest of the ecosystem.
+
+![Screenshot 2023-10-10 at 2.03.03 PM|690x434, 75%](upload://e2CGhdUSVanqCvyGWVBbxVmkajd.png)
+
+Modularity means that any of these modules 
+
+1. have concerns that are separated by well-defined boundaries, which makes development of each module easier.
+2. can be used as a money lego in other programs.
+3. can be forked + extended for new purposes.
+4. can be forked + replaced with something better
+5. development can be parallel pathed across many modules
+
+Per [this Vitalik post](https://vitalik.ca/general/2022/09/20/daos.html), decentralization means that Gitcoin has
+1. credibile neutrality
+2. censorship resistance
+3. better decision making in a democratic environment (what Vitalik calls concave environments)
+
+## 2. QF => many mechanisms
+
+Quadratic Funding is great.  But it's not the only mechanism for distributing capital.  Even if it was, there are many flavors of QF (plain vanilla, MACI, pairwise, cluster mapping, and many configurations of each of these).
+
+In the past 24 months we've seen the rise of
+1. retroactive public goods funding (primarily on Optimism)
+2. self curating registries (primarily on Protocol Guild)
+
+With the introduction of Allo v2,  we are embarking on a [Systematic Exploration of the Coordination Mechanism Design Space](https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616).  This means that we'll be exploring
+
+1. different flavors of QF
+2. Quadratic Voting
+3. Direct Grants
+3. Badholeholder based / Retroactive public goods funding
+4. Self Curating Registries
+5. Conviction Voting
+6. Assurance Contracts
+7. and [more](https://supermodular.xyz/coordination-mechanisms/)!!
+
+At maturity, Gitcoin's product suite could be a toolbox of capital allocation mechanisms that can handle many different types of capital allocation.   These mechanisms will each do 1 thing + do them well.  
+
+When one purchases a toolbox because they need a screwdriver, it is also nice to have a set of pliers + a hammer right next to it.  When one starts doing capital allocation via Gitcoin's toolset, it'll be easy for them to start with one capital allocation mechanism + then pivot to another.  
+
+## 3. for Ethereum => for any EVM based community
+
+
+### A. Passport
+
+Last cycle, Gitcoin's sybil resistance toolsuite provided sybil resistance to Gitcoin Grants (which serviced the Ethereum ecosystem).
+This cycle, Passport will provide sybil resistance to any EVM based community.
+
+Sybil Resistence enables new mechanisms like Quadratic Voting, Quadratic Funding, UBI, Democratic DAOs, and other use cases that leverage a money lego that provides a source of truth about unique-humanness.
+
+I envision an ecosystem of sybil resistent dapps enabled by Gitcoin Passport.  The larger this ecosystem gets as measured in total sybil resistance, the larger the total amount of sybil resistence available to this ecosystem of dApps.
+
+### B. Grants Stack / Allo
+
+The problem that we were solving with Gitcoin Grants 1.0 was helping the Ethereum ecosystem grow it's ecosystem value. 
+
+Gitcoin Grants augmented the Ethereum ecosystems ESP (Ecosystem Support Program) with Quadratic Funding.  Quadratic Funding on Gitcoin served as a more democratic counterweight to the ESP program.
+
+![Screen Recording 2023-10-10 at 2.33.57 PM|446x390, 50%](upload://bFCjt9EepvdyFPOMSTDJ4MCV9Ks.gif)
+
+In the next cycle, Gitcoin Grants Stack (powered by Allo Protocol) will allow any EVM based community to grow it's ecosystem value.
+
+In the next cycle, Gitcoin Grants Stack (powered by Allo Protocol) can augment their existing grants program (or replace the software upon which it runs).
+
+There are [multiple EVM based communities with multi-million $$$ treasuries](https://deepdao.io/organizations), I think a great outcome of this cycle would be if a majority of those organizations were deploying capital using Gitcoin's suite of tools.
+
+
+----
+
+Feedback welcome.
+Mon, 27 Nov 2023 11:47:34 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+3 Transitions from Gitcoin 1.0 => Gitcoin 2.0
+owocki
+
+            <h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR</h1>
+<ol>
+<li>Gitcoin’s target market is evolving.</li>
+<li>In response, Gitcoin is evolving too.  Gitcoin’s 3 evolutions are :<br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/33553c346c8ca1b9b886b7f647394e6a9f363b2d.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/33553c346c8ca1b9b886b7f647394e6a9f363b2d" title="3transitions"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/33553c346c8ca1b9b886b7f647394e6a9f363b2d_2_690x388.jpeg" alt="3transitions" data-base62-sha1="7k6XVh6nEuQa2AelODkmIdCgDud" width="690" height="388" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/33553c346c8ca1b9b886b7f647394e6a9f363b2d_2_690x388.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/33553c346c8ca1b9b886b7f647394e6a9f363b2d_2_1035x582.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/33553c346c8ca1b9b886b7f647394e6a9f363b2d_2_1380x776.jpeg 2x" data-dominant-color="F9EFEC"></a></div></li>
+</ol>
+<h1><a name="market-evolution-2" class="anchor" href="https://gov.gitcoin.co#market-evolution-2"></a>Market Evolution</h1>
+<p>Crypto moves FAST.  We are in a rapidly changing ecosystem.</p>
+<p>My high level read on the changing market (at least the parts that affect Gitcoin) is:</p>
+<ol>
+<li>The markets we are in <em>(public goods funding, capital allocation, sybil resistance)</em> are newly crowded/competitive.</li>
+<li>QF doesn’t solve for every public goods or capital allocation problem, it is only 1 tool in the toolbox.</li>
+<li>The markets that Gitcoin is in (<em>public goods funding, capital allocation, sybil resistance)</em> require credible neutrality + democratic decision making. As <a href="https://vitalik.ca/general/2022/09/20/daos.html">those things can only be provided by DAOs</a>, Gitcoin is evolving from a company to a DAO.</li>
+<li>The Ethereum ecosystem is evolving towards a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">modular architecture</a>.  Within the broader Ethereum ecosystem there are now many different categories of sub-ecosystems <em>(layer 1s, layer 2s, NFT ecosystems, infrastructure DAOs, DeFi ecosystems)</em>  + many of these EVM based communities have billion $$ treasuries.</li>
+</ol>
+<p>In this post, I would like to articulate 3 transitions that Gitcoin is undergoing which are meant to address the changing landscape.</p>
+<h1><a name="gitcoin-evolution-3" class="anchor" href="https://gov.gitcoin.co#gitcoin-evolution-3"></a>Gitcoin Evolution</h1>
+<p>I think these transitions are:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Gitcoin 1.0</th>
+<th>Gitcoin 2.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Architecture</strong></td>
+<td>centralized product</td>
+<td>decentralized/modular protocols</td>
+</tr>
+<tr>
+<td><strong>2. Mechanisms</strong></td>
+<td>just QF</td>
+<td>many mechanisms (QF/QV/direct grants/many mechanisms)</td>
+</tr>
+<tr>
+<td><strong>3. Customer</strong></td>
+<td>for Ethereum</td>
+<td>for any EVM based community</td>
+</tr>
+</tbody>
+</table>
+</div><h2><a name="h-1-centralized-product-decentralized-modular-protocols-4" class="anchor" href="https://gov.gitcoin.co#h-1-centralized-product-decentralized-modular-protocols-4"></a>1. Centralized Product =&gt; Decentralized / Modular Protocols</h2>
+<p>The old platform was a centralized monolith that was unforkable + unmaintainable bc it was so large.</p>
+<p>The new platform is a suite of decentralized protocols that follow the <a href="https://en.wikipedia.org/wiki/Unix_philosophy">unix philosophy</a> of doing one thing thing + doing it well.  And each protocol has a well designed interface that allows inputs from unforeseen programs.</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>One Thing It Does Well</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passport</td>
+<td>Sybil Resistence</td>
+</tr>
+<tr>
+<td>Grants Explorer</td>
+<td>Browsing Grants</td>
+</tr>
+<tr>
+<td>Grants Builder</td>
+<td>Building Grants</td>
+</tr>
+<tr>
+<td>Round Manager</td>
+<td>Managing QF Rounds</td>
+</tr>
+<tr>
+<td>Allo Protocol QF Strategy</td>
+<td>Quadratic Funding</td>
+</tr>
+<tr>
+<td>Allo Protocol QV Strategy</td>
+<td>Quadratic Voting</td>
+</tr>
+<tr>
+<td>Allo Protocol <em>x</em> Strategy</td>
+<td><em>Capital Allocation Mechanism x</em></td>
+</tr>
+</tbody>
+</table>
+</div><p>If designed well, this ecosystem of tools are “supermodular” - meaning that they produce more value than the sum of their parts.  Each new modular added to the ecosystem adds value to rest of the ecosystem.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/626a5de5f06947117731f94898f5546dfe35022f.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/626a5de5f06947117731f94898f5546dfe35022f" title="Screenshot 2023-10-10 at 2.03.03 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/626a5de5f06947117731f94898f5546dfe35022f_2_517x325.png" alt="Screenshot 2023-10-10 at 2.03.03 PM" data-base62-sha1="e2CGhdUSVanqCvyGWVBbxVmkajd" width="517" height="325" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/626a5de5f06947117731f94898f5546dfe35022f_2_517x325.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/626a5de5f06947117731f94898f5546dfe35022f_2_775x487.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/6/626a5de5f06947117731f94898f5546dfe35022f.png 2x" data-dominant-color="F7F6F5"></a></div><p></p>
+<p>Modularity means that any of these modules</p>
+<ol>
+<li>have concerns that are separated by well-defined boundaries, which makes development of each module easier.</li>
+<li>can be used as a money lego in other programs.</li>
+<li>can be forked + extended for new purposes.</li>
+<li>can be forked + replaced with something better</li>
+<li>development can be parallel pathed across many modules</li>
+</ol>
+<p>Per <a href="https://vitalik.ca/general/2022/09/20/daos.html">this Vitalik post</a>, decentralization means that Gitcoin has</p>
+<ol>
+<li>credibile neutrality</li>
+<li>censorship resistance</li>
+<li>better decision making in a democratic environment (what Vitalik calls concave environments)</li>
+</ol>
+<h2><a name="h-2-qf-many-mechanisms-5" class="anchor" href="https://gov.gitcoin.co#h-2-qf-many-mechanisms-5"></a>2. QF =&gt; many mechanisms</h2>
+<p>Quadratic Funding is great.  But it’s not the only mechanism for distributing capital.  Even if it was, there are many flavors of QF (plain vanilla, MACI, pairwise, cluster mapping, and many configurations of each of these).</p>
+<p>In the past 24 months we’ve seen the rise of</p>
+<ol>
+<li>retroactive public goods funding (primarily on Optimism)</li>
+<li>self curating registries (primarily on Protocol Guild)</li>
+</ol>
+<p>With the introduction of Allo v2,  we are embarking on a <a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616">Systematic Exploration of the Coordination Mechanism Design Space</a>.  This means that we’ll be exploring</p>
+<ol>
+<li>different flavors of QF</li>
+<li>Quadratic Voting</li>
+<li>Direct Grants</li>
+<li>Badholeholder based / Retroactive public goods funding</li>
+<li>Self Curating Registries</li>
+<li>Conviction Voting</li>
+<li>Assurance Contracts</li>
+<li>and <a href="https://supermodular.xyz/coordination-mechanisms/">more</a>!!</li>
+</ol>
+<p>At maturity, Gitcoin’s product suite could be a toolbox of capital allocation mechanisms that can handle many different types of capital allocation.   These mechanisms will each do 1 thing + do them well.</p>
+<p>When one purchases a toolbox because they need a screwdriver, it is also nice to have a set of pliers + a hammer right next to it.  When one starts doing capital allocation via Gitcoin’s toolset, it’ll be easy for them to start with one capital allocation mechanism + then pivot to another.</p>
+<h2><a name="h-3-for-ethereum-for-any-evm-based-community-6" class="anchor" href="https://gov.gitcoin.co#h-3-for-ethereum-for-any-evm-based-community-6"></a>3. for Ethereum =&gt; for any EVM based community</h2>
+<h3><a name="a-passport-7" class="anchor" href="https://gov.gitcoin.co#a-passport-7"></a>A. Passport</h3>
+<p>Last cycle, Gitcoin’s sybil resistance toolsuite provided sybil resistance to Gitcoin Grants (which serviced the Ethereum ecosystem).<br>
+This cycle, Passport will provide sybil resistance to any EVM based community.</p>
+<p>Sybil Resistence enables new mechanisms like Quadratic Voting, Quadratic Funding, UBI, Democratic DAOs, and other use cases that leverage a money lego that provides a source of truth about unique-humanness.</p>
+<p>I envision an ecosystem of sybil resistent dapps enabled by Gitcoin Passport.  The larger this ecosystem gets as measured in total sybil resistance, the larger the total amount of sybil resistence available to this ecosystem of dApps.</p>
+<h3><a name="b-grants-stack-allo-8" class="anchor" href="https://gov.gitcoin.co#b-grants-stack-allo-8"></a>B. Grants Stack / Allo</h3>
+<p>The problem that we were solving with Gitcoin Grants 1.0 was helping the Ethereum ecosystem grow it’s ecosystem value.</p>
+<p>Gitcoin Grants augmented the Ethereum ecosystems ESP (Ecosystem Support Program) with Quadratic Funding.  Quadratic Funding on Gitcoin served as a more democratic counterweight to the ESP program.</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/5/51cc44387d5913e50f7b45686295ed8e66a3137c.gif" alt="Screen Recording 2023-10-10 at 2.33.57 PM" data-base62-sha1="bFCjt9EepvdyFPOMSTDJ4MCV9Ks" width="223" height="195" class="animated"></p>
+<p>In the next cycle, Gitcoin Grants Stack (powered by Allo Protocol) will allow any EVM based community to grow it’s ecosystem value.</p>
+<p>In the next cycle, Gitcoin Grants Stack (powered by Allo Protocol) can augment their existing grants program (or replace the software upon which it runs).</p>
+<p>There are <a href="https://deepdao.io/organizations">multiple EVM based communities with multi-million $$$ treasuries</a>, I think a great outcome of this cycle would be if a majority of those organizations were deploying capital using Gitcoin’s suite of tools.</p>
+<hr>
+<p>Feedback welcome.</p>
+          <p><a href="https://gov.gitcoin.co/t/3-transitions-from-gitcoin-1-0-gitcoin-2-0/16736/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/3-transitions-from-gitcoin-1-0-gitcoin-2-0/16736/1
+        Tue, 10 Oct 2023 21:11:46 +0000
+gov.gitcoin.co-post-16736-1
+3 Transitions from Gitcoin 1.0 => Gitcoin 2.0
+      
+
+

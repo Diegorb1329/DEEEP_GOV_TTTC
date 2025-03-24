@@ -1,0 +1,290 @@
+
+
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257
+    Co-authors
+
+@sejalrekhan , @lanzdingz and @bitbeckers 
+
+Recap and reflection on Hypercerts Based Impact Funding experiment - The initiative was taken by GreenPill Network in collaboration with RaidGuild team.
+
+The Raid Guild (RG) team forked the GrantsStack and helped us build a GPN-specific Hypercerts integrated tool which enabled chapters to mint GPN hypercerts for work done by the chapters, which was then meant to showcase their hypercert on the forked explorer page for GPN’s community round.
+
+Hypercerts were minted on minter.greenpill.network.
+
+![|624x193](upload://vp7DVHYZallK6wLnMaIxY42jsJa.jpeg)
+
+The experiment was to see if having Hypercerts would have a correlation to the level of funding a project received.
+
+Here is some of what we learnt:
+
+1. Hypercerts were minted for the work done over a 6 month period,
+
+* The short amount of time gave us no real data that will measure the impact to the community.
+* There was not enough quality control as any chapter could mint on their own without having to meet certain criteria. This resulted in a mixture of impactful hypercerts and some highly frivolous ones.
+
+An interesting next step is setting up an evaluation flow. For example, a chapter steward could approve minted hypercerts and these attestations would go on chain.
+
+2. With this being a [forked version](https://explorer.greenpill.network/#/round/10/0x4727e3265706c59dbc31e7c518960f4f843bb4da), we ran into some glitches that had us in a start-stop space for a few weeks. This meant there was a lot of manual time spent both on GPNs side and RG’s side. We also ran into some issues with hypercert visibility in the backend when using the forked manager.greenpill page as a Round Operator. We had to reject half the applicants and have them reapply because not all the data was showing properly. This is normal when experimenting with something, so it was to be expected. As an improvement, we could take a more guided approach in the minting process to make sure the applications are correct. This could be either hands-on or more rigid checks in the application.
+
+3. Not all chapters grasped why minting hypercerts was important and what impact this could have, which was a challenge and most likely is what affected the quality control aspect of it. Having hypercerts in your application was also a requirement for our internal GPN community round. This also meant people were minting as a step vs a thoughtful proof of impact - which also potentially affected quality control. The design is that hypercerts loop impact creators in a larger value flow, but this is something very abstract and we can improve on this by providing more education.
+
+4. We believe that the average donor might not have understood the importance of hypercerts and therefore might not have taken that into consideration when donating. This is an assumption, but it’s based on how the quality/proof of impact of the hypercert didn’t seem to play a big factor in if a project got funding or not.
+
+5. Overlap with GG19. The GPN round ran on a forked version while GG19 was happening and this caused confusion as you needed to apply to the GPN round on the forked Grants Stack in order to have your hypercert appear and some chapters applied from the normal builder.gitcoin program page. This meant that while all Chapters/grantees had a hypercert, not all of them showed up in the explorer page. From a Round Manager perspective there was no way for us to know where they were applying from and have them reapply from the proper greenpill.builder page. In comparison, RG ran an experiment connecting the Grants Stack with Lens which was widely announced during EthCC. Such a major announcement pull people into your app, while the GPN experiment was more on a friends-and-family scale for the network. Putting more attention on the fork, or finding support from GitCoin to run a ‘beta’ version, could generate more traffic into these kind of experiments.
+
+6. Our hypothesis was the chapters with more hypercerts would get more funding. Our sample size wasn’t good enough for real data collection as all chapters had to have a hypercert to be accepted into the round. It also doesn’t seem that the quality of the hypercert was taken into account during the donation process. This could also be due to the fact that this was an internal GreenPill Chapter round, and therefore many donors might (this is an assumption) have just been donating to their own community and 1 other, as we saw 403 contributions from 172 unique contributors, which means the average contributor donated to 2.3 projects.
+
+6. We believe that hypercerts can and will have a positive impact on how people make donations within the GreenPill ecosystem, we just need more structure around the hypercerts eligibility/ minting criteria, and have more education around why they are important - both for projects and for community members making donations. We also need to work out the technical glitches to make a smoother process for everyone.
+
+7. Technically, it was relatively straightforward to adapt the grants stack to support hypercerts. Since rounds, project and application, all store their metadata on IPFS and only the CID pointer is stored on chain, RG was able to modify the metadata being stored to contain an array or related hypercert IDs. When reading the metadata, any hypercerts found were displayed in the application.
+
+While our experiment didn’t turn out exactly as we had planned, we do believe that hypercerts and other impact tracking tools will be helpful in assisting people make decisions around what projects to donate to. GPN is also interested in ways to track impact so that we are better able to fund our own community projects.
+Fri, 19 Jan 2024 03:38:27 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+owocki
+
+            <p>podcast about this experiment just dropped!</p>
+<p><a href="https://www.youtube.com/watch?v=yUybHaHKAHw">Season 3 - Ep. 5 - GreenPill Hypercerts Experiment w/ Sejal + Bitbeckers</a></p>
+
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/12
+        Fri, 19 Jan 2024 03:38:27 +0000
+gov.gitcoin.co-post-17257-12
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+wasabi
+
+            <aside class="quote no-group" data-username="krrisis" data-post="10" data-topic="17257">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/krrisis/48/6203_2.png" class="avatar"> krrisis:</div>
+<blockquote>
+<p>Wondering if what <a class="mention" href="https://gov.gitcoin.co/u/mmurthy">@mmurthy</a> is building for <a href="https://gap.karmahq.xyz/gitcoin/?categories=&amp;status=all&amp;sortBy=milestones" rel="noopener nofollow ugc">gathering of proof of work here with milestones</a>, could be linked to the issuing of the hypercerts?</p>
+</blockquote>
+</aside>
+<p>Would be cool if we can mint Karma GAP milestones as Hypercerts on 1-click</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/11
+        Thu, 11 Jan 2024 22:10:32 +0000
+gov.gitcoin.co-post-17257-11
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+krrisis
+
+            <p>Super interesting, thanks for sharing, also looking into this for the next Citizens Round.</p>
+<aside class="quote no-group" data-username="sejalrekhan" data-post="1" data-topic="17257">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sejalrekhan/48/11222_2.png" class="avatar"> sejalrekhan:</div>
+<blockquote>
+<p>There was not enough quality control as any chapter could mint on their own without having to meet certain criteria. This resulted in a mixture of impactful hypercerts and some highly frivolous ones.</p>
+</blockquote>
+</aside>
+<p>Wondering if what <a class="mention" href="https://gov.gitcoin.co/u/mmurthy">@mmurthy</a> is building for <a href="https://gap.karmahq.xyz/gitcoin/?categories=&amp;status=all&amp;sortBy=milestones">gathering of proof of work here with milestones</a>, could be linked to the issuing of the hypercerts?</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/10
+        Thu, 11 Jan 2024 17:34:18 +0000
+gov.gitcoin.co-post-17257-10
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+lanzdingz
+
+            <p>Yes, we also are looking into what systems are needed to ‘verify’ impact/that the work has been done. This was the first step in moving towards a more verifiable and measurable impact. We still have a long way to go but learned a lot from this first experiment.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/9
+        Fri, 15 Dec 2023 19:04:53 +0000
+gov.gitcoin.co-post-17257-9
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+lanzdingz
+
+            <p>thank you for participating in it with us</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/8
+        Fri, 15 Dec 2023 19:03:02 +0000
+gov.gitcoin.co-post-17257-8
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+lanzdingz
+
+            <p>This is a great point, and something we also brought up internally - what constitutes ‘impact’ and how it is measurable/what are the metrics we use to measure it? <a class="mention" href="https://gov.gitcoin.co/u/jon-spark-eco">@jon-spark-eco</a> I know is diving into this with his project which we hope to use to help us answer these questions.</p>
+<p>On our end too we should have provided more structure for people minting hypercerts so that we could have had a better impact value captured.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/7
+        Fri, 15 Dec 2023 19:02:33 +0000
+gov.gitcoin.co-post-17257-7
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+FractalVisions
+
+            <p>Yep <img src="https://gov.gitcoin.co/images/emoji/twitter/+1.png?v=12" title=":+1:" class="emoji" alt=":+1:" loading="lazy" width="20" height="20"> we were directed to use the discord for our issue with minting from one <img src="https://gov.gitcoin.co/images/emoji/twitter/point_up.png?v=12" title=":point_up:" class="emoji" alt=":point_up:" loading="lazy" width="20" height="20"> of the members in the TG chat that works for hypercerts.</p>
+<p>Here is a link to the conversation where we were left hanging.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://discord.com/channels/1075404472152494100/1169409394312757328">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0ddfd0d1e4e25d70a378fd8efa6611e1f348b862.png" class="site-icon" data-dominant-color="8891F6" width="256" height="256">
+
+      <a href="https://discord.com/channels/1075404472152494100/1169409394312757328" target="_blank" rel="noopener nofollow ugc">Discord</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://discord.com/channels/1075404472152494100/1169409394312757328" target="_blank" rel="noopener nofollow ugc">Discord - A New Way to Chat with Friends &amp; Communities</a></h3>
+
+  <p>Discord is the easiest way to communicate over voice, video, and text.  Chat, hang out, and stay close with your friends and communities.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/6
+        Tue, 12 Dec 2023 22:08:03 +0000
+gov.gitcoin.co-post-17257-6
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+bitbeckers
+
+            <p>gm, sorry to hear you see it this way. Are you also in our Telegram? Feel free to reach out to me because I can’t find any open issues related to you not being able to mint.</p>
+<blockquote>
+<p>Who is going to hold projects accountable for their hypercerts ?</p>
+</blockquote>
+<p>This is a good question and high on the priority list for hypercert development. We want to support initiatives from organisations evaluation impact in a given domain. Gitcoinreviews / deresy is a good example -currently- or an application focussing on evaluating impact claims.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/5
+        Tue, 12 Dec 2023 21:25:30 +0000
+gov.gitcoin.co-post-17257-5
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+FractalVisions
+
+            <p>Totally <img src="https://gov.gitcoin.co/images/emoji/twitter/100.png?v=12" title=":100:" class="emoji" alt=":100:" loading="lazy" width="20" height="20"> agree <img src="https://gov.gitcoin.co/images/emoji/twitter/+1.png?v=12" title=":+1:" class="emoji" alt=":+1:" loading="lazy" width="20" height="20">… While hypercerts is still a work in progress there are a ton of things that need to be improved upon.</p>
+<p>We for one can not get Hypercerts website to load properly &amp; the tech team in the support channel of their discord gave up on helping us sort out the issues.</p>
+<p>So our ability to mint any hypercerts has been taken away until their team provides us with a solution.</p>
+<p>That being said anyone can create a hypercert to say anything they want which doesn’t necessarily mean the work was completed.</p>
+<p>Who is going to hold projects accountable for their hypercerts ?</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/4
+        Tue, 12 Dec 2023 15:50:19 +0000
+gov.gitcoin.co-post-17257-4
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+robioreefeco
+
+            <p>We are here early, hypercerts are awesome…</p>
+<p>Our task is to discover genuine onboarding mechanisms, creating on-chain value and meaningful impact.</p>
+<p>Thanks for the experiment <img src="https://gov.gitcoin.co/images/emoji/twitter/sparkles.png?v=12" title=":sparkles:" class="emoji" alt=":sparkles:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/green_heart.png?v=12" title=":green_heart:" class="emoji" alt=":green_heart:" loading="lazy" width="20" height="20"><br>
+<a class="mention" href="https://gov.gitcoin.co/u/sejalrekhan">@sejalrekhan</a> <a class="mention" href="https://gov.gitcoin.co/u/lanzdingz">@lanzdingz</a> <a class="mention" href="https://gov.gitcoin.co/u/bitbeckers">@bitbeckers</a></p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/3
+        Tue, 12 Dec 2023 15:18:27 +0000
+gov.gitcoin.co-post-17257-3
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+thedevanshmehta
+
+            <p>Thanks for sharing this Sejal, really interesting pilot of integrating hypercerts with projects in their gitcoin round</p>
+<p>I went through some of the projects and the hypercerts they minted, and I’m still unsure of their value add - what additional information or validity does the hypercert provide which is not already there in their project description?</p>
+<p>Ideally it would have been good to have hard numbers against the hypercerts - this was our past impact and here’s the cost we incurred in reaching it. Then we’d have an extra layer of accountability or information we can hold projects against and also compare with one another.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/2
+        Tue, 12 Dec 2023 10:39:22 +0000
+gov.gitcoin.co-post-17257-2
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+sejalrekhan
+
+            <p>Co-authors</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/sejalrekhan">@sejalrekhan</a> , <a class="mention" href="https://gov.gitcoin.co/u/lanzdingz">@lanzdingz</a> and <a class="mention" href="https://gov.gitcoin.co/u/bitbeckers">@bitbeckers</a></p>
+<p>Recap and reflection on Hypercerts Based Impact Funding experiment - The initiative was taken by GreenPill Network in collaboration with RaidGuild team.</p>
+<p>The Raid Guild (RG) team forked the GrantsStack and helped us build a GPN-specific Hypercerts integrated tool which enabled chapters to mint GPN hypercerts for work done by the chapters, which was then meant to showcase their hypercert on the forked explorer page for GPN’s community round.</p>
+<p>Hypercerts were minted on minter.greenpill.network.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/dc1a6b0976217ff88dfb8e8574fc448d8ab745e8.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/dc1a6b0976217ff88dfb8e8574fc448d8ab745e8" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/dc1a6b0976217ff88dfb8e8574fc448d8ab745e8_2_624x193.jpeg" alt="" data-base62-sha1="vp7DVHYZallK6wLnMaIxY42jsJa" width="624" height="193" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/dc1a6b0976217ff88dfb8e8574fc448d8ab745e8_2_624x193.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/dc1a6b0976217ff88dfb8e8574fc448d8ab745e8_2_936x289.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/dc1a6b0976217ff88dfb8e8574fc448d8ab745e8_2_1248x386.jpeg 2x" data-dominant-color="C9D9CE"></a></div><p></p>
+<p>The experiment was to see if having Hypercerts would have a correlation to the level of funding a project received.</p>
+<p>Here is some of what we learnt:</p>
+<ol>
+<li>Hypercerts were minted for the work done over a 6 month period,</li>
+</ol>
+<ul>
+<li>The short amount of time gave us no real data that will measure the impact to the community.</li>
+<li>There was not enough quality control as any chapter could mint on their own without having to meet certain criteria. This resulted in a mixture of impactful hypercerts and some highly frivolous ones.</li>
+</ul>
+<p>An interesting next step is setting up an evaluation flow. For example, a chapter steward could approve minted hypercerts and these attestations would go on chain.</p>
+<ol start="2">
+<li>
+<p>With this being a <a href="https://explorer.greenpill.network/#/round/10/0x4727e3265706c59dbc31e7c518960f4f843bb4da" rel="noopener nofollow ugc">forked version</a>, we ran into some glitches that had us in a start-stop space for a few weeks. This meant there was a lot of manual time spent both on GPNs side and RG’s side. We also ran into some issues with hypercert visibility in the backend when using the forked manager.greenpill page as a Round Operator. We had to reject half the applicants and have them reapply because not all the data was showing properly. This is normal when experimenting with something, so it was to be expected. As an improvement, we could take a more guided approach in the minting process to make sure the applications are correct. This could be either hands-on or more rigid checks in the application.</p>
+</li>
+<li>
+<p>Not all chapters grasped why minting hypercerts was important and what impact this could have, which was a challenge and most likely is what affected the quality control aspect of it. Having hypercerts in your application was also a requirement for our internal GPN community round. This also meant people were minting as a step vs a thoughtful proof of impact - which also potentially affected quality control. The design is that hypercerts loop impact creators in a larger value flow, but this is something very abstract and we can improve on this by providing more education.</p>
+</li>
+<li>
+<p>We believe that the average donor might not have understood the importance of hypercerts and therefore might not have taken that into consideration when donating. This is an assumption, but it’s based on how the quality/proof of impact of the hypercert didn’t seem to play a big factor in if a project got funding or not.</p>
+</li>
+<li>
+<p>Overlap with GG19. The GPN round ran on a forked version while GG19 was happening and this caused confusion as you needed to apply to the GPN round on the forked Grants Stack in order to have your hypercert appear and some chapters applied from the normal builder.gitcoin program page. This meant that while all Chapters/grantees had a hypercert, not all of them showed up in the explorer page. From a Round Manager perspective there was no way for us to know where they were applying from and have them reapply from the proper greenpill.builder page. In comparison, RG ran an experiment connecting the Grants Stack with Lens which was widely announced during EthCC. Such a major announcement pull people into your app, while the GPN experiment was more on a friends-and-family scale for the network. Putting more attention on the fork, or finding support from GitCoin to run a ‘beta’ version, could generate more traffic into these kind of experiments.</p>
+</li>
+<li>
+<p>Our hypothesis was the chapters with more hypercerts would get more funding. Our sample size wasn’t good enough for real data collection as all chapters had to have a hypercert to be accepted into the round. It also doesn’t seem that the quality of the hypercert was taken into account during the donation process. This could also be due to the fact that this was an internal GreenPill Chapter round, and therefore many donors might (this is an assumption) have just been donating to their own community and 1 other, as we saw 403 contributions from 172 unique contributors, which means the average contributor donated to 2.3 projects.</p>
+</li>
+<li>
+<p>We believe that hypercerts can and will have a positive impact on how people make donations within the GreenPill ecosystem, we just need more structure around the hypercerts eligibility/ minting criteria, and have more education around why they are important - both for projects and for community members making donations. We also need to work out the technical glitches to make a smoother process for everyone.</p>
+</li>
+<li>
+<p>Technically, it was relatively straightforward to adapt the grants stack to support hypercerts. Since rounds, project and application, all store their metadata on IPFS and only the CID pointer is stored on chain, RG was able to modify the metadata being stored to contain an array or related hypercert IDs. When reading the metadata, any hypercerts found were displayed in the application.</p>
+</li>
+</ol>
+<p>While our experiment didn’t turn out exactly as we had planned, we do believe that hypercerts and other impact tracking tools will be helpful in assisting people make decisions around what projects to donate to. GPN is also interested in ways to track impact so that we are better able to fund our own community projects.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-from-greenpill-networks-hypercerts-impact-funding-experiment/17257/1
+        Tue, 12 Dec 2023 09:05:54 +0000
+gov.gitcoin.co-post-17257-1
+Lessons from GreenPill Network's Hypercerts Impact Funding Experiment
+      
+
+

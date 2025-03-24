@@ -1,0 +1,280 @@
+
+
+
+Grants Protocol Simulated Rounds Post-Op Summary
+https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609
+    **TL;DR**
+
+Two simulated grants rounds were conducted on the protocol in December - one on Ethereum mainnet and one on Optimism. There were 17 grants split between the rounds selected based on prior engagement with the Grant Ops team and the mainnet results can be seen [here](https://dune.com/umarkhaneth/gitcoin-simulated-mainnet-round)*. Grantees provided candid feedback during onboarding through the end of the round. They were also surveyed after the round end date and provided both Grant Ops and GPC with valuable feedback that is currently being used to improve the Grants Protocol.
+
+*Optimism results are still pending.
+
+
+**Background + Objectives**
+
+Prior to the [Grants Protocol Alpha Round](https://gov.gitcoin.co/t/discussion-feedback-request-grants-protocol-alpha-round-eligibility/11873), Grant Ops conducted two simulated (test) rounds. The primary objective of these rounds was for the Gitcoin team to learn how the Grants Protocol works and togather valuable data and feedback on the Grants Protocol from a small subset of highly engaged grantees and donors. This data would then be used to identify pain points, adjust Alpha Round preparations, improve the protocol where needed, and overall help the team prepare for the beta launch in March.
+
+
+**Structure & Details**
+
+The simulated rounds were structured as two separate rounds featuring Gitcoin grantees who participated in GR15.
+
+The first simulated round was deployed on the Ethereum Mainnet and had 9 grants in the round. This round ran for 4 days from December 13-16.
+
+![|624x344](upload://1aVKBrvio6ILw5tU5zTscKNYLur.jpeg)
+
+The 2nd round was deployed on Optimism and had 8 grants in the round. This round ran for 5 days from December 15-19.
+
+![|624x332](upload://nGg1kREw1JxGd6Vio5dhrzYP2Vn.jpeg)
+
+The reason for deploying two separate rounds was to test the protocol using both Ethereum mainnet and Optimism to see what the differences were in gas costs, transaction times, general UI/UX for round managers, grantees and donors, bugs, etc. The plan was initially to run these rounds simultaneously to “practice” running multiple rounds at the same time, however an error on my end when creating the first Optimism round delayed the deployment for a few days and the rounds ran one after the other.
+
+The grantees were primarily selected based on previous engagement with Gitcoin DAO contributors. For example, over half of the grantees were invited because they completed a voluntary interview with @madison after GR15 and gave valuable feedback regarding their experience and suggested improvements. We wanted to make sure the grantees helping us to test the protocol were not only interested in Gitcoin’s mission but also highly engaged and trustworthy.
+
+
+**Ethereum Mainnet vs. Optimism**
+
+Gas Costs:
+
+* Creating a program in round manager: ~$18 on ETH, ~$0.21 on OP
+
+* Creating a round: 3 smart contracts, ~$30 on ETH, ~$4 on OP
+
+* Accepting grant applications: ~$2-3 on ETH, ~$0.10 on OP
+
+As expected, the gas costs when using Optimism were significantly cheaper than Ethereum mainnet. Across the board, the exact same transactions using Optimism were ~90% cheaper than mainnet. This will likely lead to some strong upfront incentives for future Round Managers to run their rounds on Optimism instead of Mainnet.
+
+On the flip side the layer 2 solution was more of a challenge for grantees and donors to navigate - it was not clear that they had to create their grant on Optimism in Grants Hub before applying to the Optimism-specific round. Only a few grantees had this issue, but with such a small sample size this could very easily scale up into a headache for round managers and grantees in a bigger round. I imagine this would be even more difficult when running a round with fewer crypto-native grantees who don’t already have an optimism wallet set up. It’s already a tall order to explain how to set up a wallet, fund it with DAI and ETH, and apply to a round on mainnet, but explaining a layer 2 solution like Optimism and how to convert assets into OP-ETH and OP-DAI adds a whole additional layer of complexity to the process.
+
+Lastly, based on the donor data from these simulated rounds and the findings from the UNICEF Round, it appears that the majority of donors will still donate on Ethereum mainnet - likely because they don’t have a funded Optimism wallet handy or simply due to the familiarity of Ethereum regardless of the higher gas fees.
+
+
+**Data Collection**
+
+A strong emphasis was placed on gathering as much useful data as possible from these simulated rounds. The data came from:
+
+* 1-on-1 walkthrough onboarding calls
+* Grantee Telegram group
+* Post-round grantee survey
+* On-chain transactions
+
+
+**Mainnet Round Dune Dashboard:**
+
+A big shoutout goes to @umarkhaneth for his work in creating a [Dune dashboard](https://dune.com/umarkhaneth/gitcoin-simulated-mainnet-round) to show the stats from the mainnet simulated round. The results can be seen below:
+
+![|624x393](upload://46DXhs3CRnCzWE1NUZKuYVU1rLj.jpeg)
+
+In summary, 19 unique donors made 108 donations for a total USD value of $459.13 spread across 9 projects. This was also a great exercise in using Dune to dive into the on-chain analytics of a grant round on the protocol and will be invaluable for all rounds moving forward.
+
+***Note: We are currently working through an issue in calculating the Optimism donation and matching fund totals, so those results have been omitted for the time being.
+
+
+**Live Feedback/Product Improvements**
+
+Overall, the rounds went pretty well considering it was a pre-alpha test of the protocol! There were some bugs and UI/UX issues but finding them was one of the goals of these test rounds. GPC has been great with addressing bugs as they come up and were able to fix a few things on the fly - huge shoutout to all of the GPC contributors for taking feedback in stride and working hard to make sure the protocol development continues and gets better and better with each iteration. If you have feedback for protocol improvements, please share it here: [https://forms.gle/um3JbjCuReTectcj7
+](https://forms.gle/um3JbjCuReTectcj7)
+
+Lastly, the Gitcoin Program Alpha Round is now live and running until January 31. please donate here: gitcoin.info/alpha
+
+
+**Survey Results**
+
+In full transparency, we wanted to share anonymous feedback from the grantees who responded to our survey after being onboarding to the round - the detailed responses can be found [here](https://docs.google.com/document/d/1ceatboeHfBVyNSbSt8RXOB4IR06OozfilSawqXrPEIE/edit?usp=sharing) and a TL;DR of the questions and results are summarized below:
+
+Grantees were asked the following quantitative questions where 1 = Very easy and 5 = Very difficult. Each question was followed with a short answer prompt where we asked the grantees to elaborate on their experience. The last two questions were focused on overall impression of the round and any features they wanted to see added before the protocol beta launch.
+
+![Forms response chart. Question title: On a scale of 1-5 how easy or difficult was it to set up your grant on the protocol? . Number of responses: 15 responses.|624x297](upload://tNWzmiiU3TdWz343kYGkSepymHw.png "On a scale of 1-5 how easy or difficult was it to set up your grant on the protocol? ")
+
+*Please elaborate on your experience of setting up a grant:*
+
+TL;DR - Most answers said creating a grant in Grants Hub was fairly easy and intuitive. There were some difficulties with Optimism with grantees requesting more info on how to use Optimism and bridge assets. Two other common themes throughout the responses were the troubles with verifying Twitter/Github (which GPC has already fixed!) and the lack of formatting/rich text ability in the grant description.
+
+![Forms response chart. Question title: On a scale of 1-5 how easy or difficult was it to join the round and navigate the protocol?. Number of responses: 15 responses.|624x297](upload://1esaRab3VWOzOXGpgkzITtpIpJw.png "On a scale of 1-5 how easy or difficult was it to join the round and navigate the protocol?")
+
+*Please elaborate on your experience of joining the round and navigating the protocol as a grantee:*
+
+**TL;DR** - Grantees found it easy to join the round and navigate the protocol, although some mentioned that the UI did not have much detail and was slower than cGrants.
+
+![Forms response chart. Question title: On a scale of 1-5 how easy was it to check out other grants and donate on the protocol?. Number of responses: 15 responses.|624x297](upload://f3nnkGM0J5TQps3TplB3QqMfghd.png "On a scale of 1-5 how easy was it to check out other grants and donate on the protocol?")
+
+*Please elaborate on your experience of checking out grants and donating:*
+
+**TL;DR** - This step did not go as well as the previous two for grantees. Some had issues with the checkout flow, others had txn errors they had to work through, and a few struggled to donate on Optimism for various reasons.
+
+*How satisfied are you with your overall experience in the simulated round? What went well and what didn't?*
+
+**TL;DR** - Most grantees said they had a positive experience helping us test the protocol with these simulated rounds. Many stated they want to see improvements in UI/UX, especially with adding rich text and images to grant descriptions and seeing live donation stats.
+
+*What features you would like to see the product team focus on before the protocol beta launch in the Spring?*
+
+**TL;DR** - Similar to the above question, the common requests were improvements to formatting for grant descriptions and adding functionality to see donation and matching stats live as the round is being run. Other interesting feature requests included language translation, support for more blockchains, grant sorting functionality, and load time improvements.
+
+Thanks for reading and be sure to donate to grants in the [Alpha Rounds](http://gitcoin.info/alpha)!
+Wed, 08 Feb 2023 01:39:55 +0000
+🌱 Gitcoin Grants
+
+
+Grants Protocol Simulated Rounds Post-Op Summary
+koday
+
+            <p>Thanks to <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> we also have a Dune dashboard for the simulated round that ran on Optimism! <a href="https://dune.com/umarkhaneth/gitcoin-simulated-optimism-round" class="inline-onebox" rel="noopener nofollow ugc">Gitcoin Simulated Optimism Round</a></p>
+<p>Even though the donor numbers were low while testing it’s nice to have all the data in one place and prepare for reporting on larger rounds.</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/7
+        Wed, 08 Feb 2023 01:39:55 +0000
+gov.gitcoin.co-post-12609-7
+Grants Protocol Simulated Rounds Post-Op Summary
+      
+
+Grants Protocol Simulated Rounds Post-Op Summary
+ceresstation
+
+            <p>This is fantastic work <a class="mention" href="https://gov.gitcoin.co/u/koday">@koday</a>, I don’t have much to add but I appreciate that we’re sharing these results and learning from them in public. The more experiments we run the better the protocol will be.</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/6
+        Tue, 24 Jan 2023 16:25:59 +0000
+gov.gitcoin.co-post-12609-6
+Grants Protocol Simulated Rounds Post-Op Summary
+      
+
+Grants Protocol Simulated Rounds Post-Op Summary
+PaigeDAO
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/koday">@koday</a> appreciate the detail in this article. after I was invited to set up my sim grant, I was sort of left wondering how it all went? good to see that donations did come through… Am enjoying the Alpha Round now (Climate)</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/5
+        Tue, 24 Jan 2023 11:01:09 +0000
+gov.gitcoin.co-post-12609-5
+Grants Protocol Simulated Rounds Post-Op Summary
+      
+
+Grants Protocol Simulated Rounds Post-Op Summary
+PaigeDAO
+
+            <p>great suggestions. thank you <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a></p>
+          <p><a href="https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/4
+        Tue, 24 Jan 2023 10:59:02 +0000
+gov.gitcoin.co-post-12609-4
+Grants Protocol Simulated Rounds Post-Op Summary
+      
+
+Grants Protocol Simulated Rounds Post-Op Summary
+Ministry888
+
+            <aside class="quote no-group" data-username="koday" data-post="1" data-topic="12609">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/koday/48/7280_2.png" class="avatar"> koday:</div>
+<blockquote>
+<p>Two simulated grants rounds were conducted on the protocol in December - one on Ethereum mainnet and one on Optimism. There were 17 grants split between the rounds selected based on prior engagement with the Grant Ops team and the mainnet results can be seen <a href="https://dune.com/umarkhaneth/gitcoin-simulated-mainnet-round" rel="noopener nofollow ugc">here </a>*. Grantees provided candid feedback during onboarding through the end of the round. They were also surveyed after the round end date and provided both Grant Ops and GPC with valuable feedback that is currently being used to improve the Grants Protocol.</p>
+<p>*Optimism results are still pending.</p>
+<p><strong>Background + Objectives</strong></p>
+<p>Prior to the <a href="https://gov.gitcoin.co/t/discussion-feedback-request-grants-protocol-alpha-round-eligibility/11873">Grants Protocol Alpha Round</a>, Grant Ops conducted two simulated (test) rounds. The primary objective of these rounds was for the Gitcoin team to learn how the Grants Protocol works and togather valuable data and feedback on the Grants Protocol from a small subset of highly engaged grantees and donors. This data would then be used to identify pain points, adjust Alpha Round preparations, improve the protocol where needed, and overall help the team prepare for the beta launch in March.</p>
+</blockquote>
+</aside>
+<p>Thank you for the detailed article</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/3
+        Tue, 24 Jan 2023 10:07:11 +0000
+gov.gitcoin.co-post-12609-3
+Grants Protocol Simulated Rounds Post-Op Summary
+      
+
+Grants Protocol Simulated Rounds Post-Op Summary
+J9leger
+
+            <p>Thanks for sharing about the Simulated rounds <a class="mention" href="https://gov.gitcoin.co/u/koday">@koday</a>. Well documented. This was a great low risk way for us to learn  about how the grants stack works and reduce any anxiety about the lift to run a round. I think there are two opportunities here for others to learn from starting in March:</p>
+<ol>
+<li>It would be awesome for partners interested in running their own rounds but unsure how to do so, to start by using this “simulated round” approach to learn by experience before deploying a large round</li>
+<li>For devs who want to build on allo/grants protocol but don’t know how to or where to start, run a full round as small as $100 with 2-3 grantees to understand what we already have, what is missing and what to build. This is something Supermodular could even suggest for devs in their ecosystem.</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/2
+        Fri, 20 Jan 2023 23:09:40 +0000
+gov.gitcoin.co-post-12609-2
+Grants Protocol Simulated Rounds Post-Op Summary
+      
+
+Grants Protocol Simulated Rounds Post-Op Summary
+koday
+
+            <p><strong>TL;DR</strong></p>
+<p>Two simulated grants rounds were conducted on the protocol in December - one on Ethereum mainnet and one on Optimism. There were 17 grants split between the rounds selected based on prior engagement with the Grant Ops team and the mainnet results can be seen <a href="https://dune.com/umarkhaneth/gitcoin-simulated-mainnet-round" rel="noopener nofollow ugc">here</a>*. Grantees provided candid feedback during onboarding through the end of the round. They were also surveyed after the round end date and provided both Grant Ops and GPC with valuable feedback that is currently being used to improve the Grants Protocol.</p>
+<p>*Optimism results are still pending.</p>
+<p><strong>Background + Objectives</strong></p>
+<p>Prior to the <a href="https://gov.gitcoin.co/t/discussion-feedback-request-grants-protocol-alpha-round-eligibility/11873">Grants Protocol Alpha Round</a>, Grant Ops conducted two simulated (test) rounds. The primary objective of these rounds was for the Gitcoin team to learn how the Grants Protocol works and togather valuable data and feedback on the Grants Protocol from a small subset of highly engaged grantees and donors. This data would then be used to identify pain points, adjust Alpha Round preparations, improve the protocol where needed, and overall help the team prepare for the beta launch in March.</p>
+<p><strong>Structure &amp; Details</strong></p>
+<p>The simulated rounds were structured as two separate rounds featuring Gitcoin grantees who participated in GR15.</p>
+<p>The first simulated round was deployed on the Ethereum Mainnet and had 9 grants in the round. This round ran for 4 days from December 13-16.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/083e8323e1059f6ffed9b359b79b647b9e3b328b.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/083e8323e1059f6ffed9b359b79b647b9e3b328b" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/083e8323e1059f6ffed9b359b79b647b9e3b328b_2_624x344.jpeg" alt="" data-base62-sha1="1aVKBrvio6ILw5tU5zTscKNYLur" width="624" height="344" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/083e8323e1059f6ffed9b359b79b647b9e3b328b_2_624x344.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/083e8323e1059f6ffed9b359b79b647b9e3b328b_2_936x516.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/083e8323e1059f6ffed9b359b79b647b9e3b328b_2_1248x688.jpeg 2x" data-dominant-color="AEABA9"></a></div><p></p>
+<p>The 2nd round was deployed on Optimism and had 8 grants in the round. This round ran for 5 days from December 15-19.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a5f8e330dc23f2d81c008e2d8a359e1f9b5afff5.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/a5f8e330dc23f2d81c008e2d8a359e1f9b5afff5" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a5f8e330dc23f2d81c008e2d8a359e1f9b5afff5_2_624x332.jpeg" alt="" data-base62-sha1="nGg1kREw1JxGd6Vio5dhrzYP2Vn" width="624" height="332" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a5f8e330dc23f2d81c008e2d8a359e1f9b5afff5_2_624x332.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a5f8e330dc23f2d81c008e2d8a359e1f9b5afff5_2_936x498.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a5f8e330dc23f2d81c008e2d8a359e1f9b5afff5_2_1248x664.jpeg 2x" data-dominant-color="AEADAD"></a></div><p></p>
+<p>The reason for deploying two separate rounds was to test the protocol using both Ethereum mainnet and Optimism to see what the differences were in gas costs, transaction times, general UI/UX for round managers, grantees and donors, bugs, etc. The plan was initially to run these rounds simultaneously to “practice” running multiple rounds at the same time, however an error on my end when creating the first Optimism round delayed the deployment for a few days and the rounds ran one after the other.</p>
+<p>The grantees were primarily selected based on previous engagement with Gitcoin DAO contributors. For example, over half of the grantees were invited because they completed a voluntary interview with <span class="mention">@madison</span> after GR15 and gave valuable feedback regarding their experience and suggested improvements. We wanted to make sure the grantees helping us to test the protocol were not only interested in Gitcoin’s mission but also highly engaged and trustworthy.</p>
+<p><strong>Ethereum Mainnet vs. Optimism</strong></p>
+<p>Gas Costs:</p>
+<ul>
+<li>
+<p>Creating a program in round manager: ~$18 on ETH, ~$0.21 on OP</p>
+</li>
+<li>
+<p>Creating a round: 3 smart contracts, ~$30 on ETH, ~$4 on OP</p>
+</li>
+<li>
+<p>Accepting grant applications: ~$2-3 on ETH, ~$0.10 on OP</p>
+</li>
+</ul>
+<p>As expected, the gas costs when using Optimism were significantly cheaper than Ethereum mainnet. Across the board, the exact same transactions using Optimism were ~90% cheaper than mainnet. This will likely lead to some strong upfront incentives for future Round Managers to run their rounds on Optimism instead of Mainnet.</p>
+<p>On the flip side the layer 2 solution was more of a challenge for grantees and donors to navigate - it was not clear that they had to create their grant on Optimism in Grants Hub before applying to the Optimism-specific round. Only a few grantees had this issue, but with such a small sample size this could very easily scale up into a headache for round managers and grantees in a bigger round. I imagine this would be even more difficult when running a round with fewer crypto-native grantees who don’t already have an optimism wallet set up. It’s already a tall order to explain how to set up a wallet, fund it with DAI and ETH, and apply to a round on mainnet, but explaining a layer 2 solution like Optimism and how to convert assets into OP-ETH and OP-DAI adds a whole additional layer of complexity to the process.</p>
+<p>Lastly, based on the donor data from these simulated rounds and the findings from the UNICEF Round, it appears that the majority of donors will still donate on Ethereum mainnet - likely because they don’t have a funded Optimism wallet handy or simply due to the familiarity of Ethereum regardless of the higher gas fees.</p>
+<p><strong>Data Collection</strong></p>
+<p>A strong emphasis was placed on gathering as much useful data as possible from these simulated rounds. The data came from:</p>
+<ul>
+<li>1-on-1 walkthrough onboarding calls</li>
+<li>Grantee Telegram group</li>
+<li>Post-round grantee survey</li>
+<li>On-chain transactions</li>
+</ul>
+<p><strong>Mainnet Round Dune Dashboard:</strong></p>
+<p>A big shoutout goes to <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> for his work in creating a <a href="https://dune.com/umarkhaneth/gitcoin-simulated-mainnet-round" rel="noopener nofollow ugc">Dune dashboard</a> to show the stats from the mainnet simulated round. The results can be seen below:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1cc8f99a7bc580c09f66193f5fbe07ddc7323039.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/1cc8f99a7bc580c09f66193f5fbe07ddc7323039" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cc8f99a7bc580c09f66193f5fbe07ddc7323039_2_624x393.jpeg" alt="" data-base62-sha1="46DXhs3CRnCzWE1NUZKuYVU1rLj" width="624" height="393" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cc8f99a7bc580c09f66193f5fbe07ddc7323039_2_624x393.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cc8f99a7bc580c09f66193f5fbe07ddc7323039_2_936x589.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cc8f99a7bc580c09f66193f5fbe07ddc7323039_2_1248x786.jpeg 2x" data-dominant-color="A29DA4"></a></div><p></p>
+<p>In summary, 19 unique donors made 108 donations for a total USD value of $459.13 spread across 9 projects. This was also a great exercise in using Dune to dive into the on-chain analytics of a grant round on the protocol and will be invaluable for all rounds moving forward.</p>
+<p>***Note: We are currently working through an issue in calculating the Optimism donation and matching fund totals, so those results have been omitted for the time being.</p>
+<p><strong>Live Feedback/Product Improvements</strong></p>
+<p>Overall, the rounds went pretty well considering it was a pre-alpha test of the protocol! There were some bugs and UI/UX issues but finding them was one of the goals of these test rounds. GPC has been great with addressing bugs as they come up and were able to fix a few things on the fly - huge shoutout to all of the GPC contributors for taking feedback in stride and working hard to make sure the protocol development continues and gets better and better with each iteration. If you have feedback for protocol improvements, please share it here: <a href="https://forms.gle/um3JbjCuReTectcj7" rel="noopener nofollow ugc">https://forms.gle/um3JbjCuReTectcj7<br>
+</a></p>
+<p>Lastly, the Gitcoin Program Alpha Round is now live and running until January 31. please donate here: gitcoin.info/alpha</p>
+<p><strong>Survey Results</strong></p>
+<p>In full transparency, we wanted to share anonymous feedback from the grantees who responded to our survey after being onboarding to the round - the detailed responses can be found <a href="https://docs.google.com/document/d/1ceatboeHfBVyNSbSt8RXOB4IR06OozfilSawqXrPEIE/edit?usp=sharing" rel="noopener nofollow ugc">here</a> and a TL;DR of the questions and results are summarized below:</p>
+<p>Grantees were asked the following quantitative questions where 1 = Very easy and 5 = Very difficult. Each question was followed with a short answer prompt where we asked the grantees to elaborate on their experience. The last two questions were focused on overall impression of the round and any features they wanted to see added before the protocol beta launch.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d0e45bda0412563b5d430ffdd83ea371ac39f722.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/d0e45bda0412563b5d430ffdd83ea371ac39f722" title="On a scale of 1-5 how easy or difficult was it to set up your grant on the protocol?"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d0e45bda0412563b5d430ffdd83ea371ac39f722_2_624x297.png" alt="Forms response chart. Question title: On a scale of 1-5 how easy or difficult was it to set up your grant on the protocol? . Number of responses: 15 responses." title="On a scale of 1-5 how easy or difficult was it to set up your grant on the protocol?" data-base62-sha1="tNWzmiiU3TdWz343kYGkSepymHw" width="624" height="297" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d0e45bda0412563b5d430ffdd83ea371ac39f722_2_624x297.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d0e45bda0412563b5d430ffdd83ea371ac39f722_2_936x445.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d0e45bda0412563b5d430ffdd83ea371ac39f722_2_1248x594.png 2x" data-dominant-color="E0F9F3"></a></div><p></p>
+<p><em>Please elaborate on your experience of setting up a grant:</em></p>
+<p>TL;DR - Most answers said creating a grant in Grants Hub was fairly easy and intuitive. There were some difficulties with Optimism with grantees requesting more info on how to use Optimism and bridge assets. Two other common themes throughout the responses were the troubles with verifying Twitter/Github (which GPC has already fixed!) and the lack of formatting/rich text ability in the grant description.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/08a475ee5e7bf33b10e3fbe6377473474a2a19ba.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/08a475ee5e7bf33b10e3fbe6377473474a2a19ba" title="On a scale of 1-5 how easy or difficult was it to join the round and navigate the protocol?"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/08a475ee5e7bf33b10e3fbe6377473474a2a19ba_2_624x297.png" alt="Forms response chart. Question title: On a scale of 1-5 how easy or difficult was it to join the round and navigate the protocol?. Number of responses: 15 responses." title="On a scale of 1-5 how easy or difficult was it to join the round and navigate the protocol?" data-base62-sha1="1esaRab3VWOzOXGpgkzITtpIpJw" width="624" height="297" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/08a475ee5e7bf33b10e3fbe6377473474a2a19ba_2_624x297.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/08a475ee5e7bf33b10e3fbe6377473474a2a19ba_2_936x445.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/08a475ee5e7bf33b10e3fbe6377473474a2a19ba_2_1248x594.png 2x" data-dominant-color="E0F9F3"></a></div><p></p>
+<p><em>Please elaborate on your experience of joining the round and navigating the protocol as a grantee:</em></p>
+<p><strong>TL;DR</strong> - Grantees found it easy to join the round and navigate the protocol, although some mentioned that the UI did not have much detail and was slower than cGrants.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/698255d1f4c9d1bbd117a03d6f57c28966ae7b33.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/698255d1f4c9d1bbd117a03d6f57c28966ae7b33" title="On a scale of 1-5 how easy was it to check out other grants and donate on the protocol?"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/698255d1f4c9d1bbd117a03d6f57c28966ae7b33_2_624x297.png" alt="Forms response chart. Question title: On a scale of 1-5 how easy was it to check out other grants and donate on the protocol?. Number of responses: 15 responses." title="On a scale of 1-5 how easy was it to check out other grants and donate on the protocol?" data-base62-sha1="f3nnkGM0J5TQps3TplB3QqMfghd" width="624" height="297" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/698255d1f4c9d1bbd117a03d6f57c28966ae7b33_2_624x297.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/698255d1f4c9d1bbd117a03d6f57c28966ae7b33_2_936x445.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/698255d1f4c9d1bbd117a03d6f57c28966ae7b33_2_1248x594.png 2x" data-dominant-color="D2F7EE"></a></div><p></p>
+<p><em>Please elaborate on your experience of checking out grants and donating:</em></p>
+<p><strong>TL;DR</strong> - This step did not go as well as the previous two for grantees. Some had issues with the checkout flow, others had txn errors they had to work through, and a few struggled to donate on Optimism for various reasons.</p>
+<p><em>How satisfied are you with your overall experience in the simulated round? What went well and what didn’t?</em></p>
+<p><strong>TL;DR</strong> - Most grantees said they had a positive experience helping us test the protocol with these simulated rounds. Many stated they want to see improvements in UI/UX, especially with adding rich text and images to grant descriptions and seeing live donation stats.</p>
+<p><em>What features you would like to see the product team focus on before the protocol beta launch in the Spring?</em></p>
+<p><strong>TL;DR</strong> - Similar to the above question, the common requests were improvements to formatting for grant descriptions and adding functionality to see donation and matching stats live as the round is being run. Other interesting feature requests included language translation, support for more blockchains, grant sorting functionality, and load time improvements.</p>
+<p>Thanks for reading and be sure to donate to grants in the <a href="http://gitcoin.info/alpha" rel="noopener nofollow ugc">Alpha Rounds</a>!</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609/1
+        Fri, 20 Jan 2023 06:28:26 +0000
+gov.gitcoin.co-post-12609-1
+Grants Protocol Simulated Rounds Post-Op Summary
+      
+
+

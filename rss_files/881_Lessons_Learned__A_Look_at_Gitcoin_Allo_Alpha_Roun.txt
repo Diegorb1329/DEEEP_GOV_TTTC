@@ -1,0 +1,439 @@
+
+
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011
+    The purpose of this post-mortem is to document the experience with Gitcoin Passport during Gitcoin Allo Alpha Rounds. The goal is to understand what went well, wrong, and what can be improved to prevent similar issues from happening in the future.
+
+# Summary of the Experience
+
+During the Gitcoin Allo Alpha Rounds, donors were unable to verify their unique identity for most of the program due to infrastructure instability with Gitcoin Passport. This resulted in a significant number of donors being unable to meaningfully participate in the program because they would not be able to verify themselves for matching funding for their donations.
+
+When the infrastructure was accessible, we heard that Stamps were reset, and Passports often needed to be “re-anchored.” In the event users were able to verify stamps, they could then have their Passports scored to determine eligibility. 
+
+# Background
+
+Gitcoin Allo Alpha Rounds were pilot grant programs hosted by GitcoinDAO on the Gitcoin Allo Protocol, which is a new and more decentralized version of the grants product. The program was aimed at supporting innovative projects in the blockchain, open-source, and regen space, with a focus on increasing the impact and reach of such projects.
+
+To ensure the fairness and transparency of the program, Gitcoin Grants operates on a democratic matching funding mechanism called Quadratic Funding. Based on previous experience, the grants programs may be manipulated by participants who create multiple accounts/wallets to influence the matching funding results. To address this issue, Gitcoin Passport was introduced as a decentralized identity verification tool that allows participants to prove their unique humanity through various identity providers.
+
+During the round, Gitcoin Passport worked by linking a participant's digital identity to their Ethereum wallet address on the Ceramic Network, and then verifying their identity through trusted identity providers. This ensured that each participant can only have one account, and that their vote and donation are tied to their unique identity.
+
+# Timeline of Experience
+
+* 2023/01/18: Users reported issues with Ceramic Network, with a CORS policy blocking requests and 504 Gateway timeout error. The team attempted to debug, restarted IPFS, and waited for feedback from Ceramic.
+* 2023/01/19: Users experienced issues with Passports and verification process. The team advised users to be patient and were compiling an issues log. Kyle reported a few steps in place to resolve the issue.
+* 2023/01/20: A user reported difficulty with Twitter, Discord, and ENS verification stamps. Kyle asked for an update and Gerald mentioned they were close to a fix.
+* 2023/01/21: Ceramic network became unhealthy causing an outage and issues with the Gitcoin Passport App. Gerald worked on fixing the problem and deployed a fix for the error pop-up.
+* 2023/01/22: The team deployed a fix for the Ceramic Network Error and moved the Passport App to AWS Amplify in an effort to resolve the server side errors we were seeing. Some web2 stamps didn't work due to the domain, but they would be fixed with a domain change. Gerald identified a bug in the reset flow causing an infinite loop error.
+* 2023/01/23: The issue of chunks not loading persisted, with a high rate of 4xx errors in Amplify. Gerald sought assistance from Kammerdiener for the issue, which only affected the Passport App.
+* 2023/01/24: Two separate issues were discussed regarding the Ceramic Network Error, one for the Grant Explorer page and one for the Gitcoin passport page. The team tried to improve the situation by increasing the number of worker threads.
+* 2023/01/25: Some users reported slow performance and issues with loading their passport. Gitcoin pushed an upgrade for the Ceramic node. Another user reported that stamps could not be verified with "too many open files" error.
+* 2023/01/26: The team attempted to resolve issues with Passport Stamps and timeouts by restarting IPFS and Ceramic nodes and considered a caching layer.
+* 2023/01/27: Passport connections continued to time out on the Gitcoin platform. Gerald restarted the nodes and considered scripting a restart every 3 hours. Kammerdiener suggested using AWS commands for a redeploy. Product and engineering teams start considering and exploring a hotfix to the issues by migrating Passport data over from Ceramic to a centralized “cache”database.
+* 2023/01/28: Passport app still not working, despite servers being restarted every 2 hours. The team attempted to resolve the issue by restarting nodes but with no success.
+* 2023/01/29: Many errors are reported by the Passport app and in Datadog. The team tried restarting the Ceramic node but with no success. The idea of using a second Ceramic node is discussed, but it will result in a delay as the node has to sync. Good progress has been made on cache, but the challenge remains in migrating to a new data strategy. Passport app still not working for some team members.
+* 2023/01/30: Team works on fixing Passport app and Ceramic Network Error. They try various methods including changing ENS stamps. Joel from Ceramic suggests turning off pub-sub could solve the issue. New build deployed and team monitors logs, but couldn't find any issues. Some team members succeed in removing/adding stamps, while others face trouble. The team tweets they're working on the issue, but node is not functioning properly again by the end of day. Team notices a wave pattern of requests trending downwards and erroring out, then spiking back up.
+* 2023/01/31: Ceramic returns to problematic state. The team decides to switch to its own database for Passport instead of relying on Ceramic. The community is informed of the change and development begins to migrate Passport away from Ceramic as the primary database.
+
+# The Triggering Event or Root Cause of the Incident
+
+![|624x183](upload://ilxhuHAM9CKyAsZ4NpgJzu2aqaV.png)
+
+Gitcoin Passport requests on Ceramic in Gitcoin Grants Round 15, Source: Ceramic team
+
+The incidents that occurred during the recent Passport app were a result of increased load on the Ceramic node. Although the total number of participating donors was lower in this round compared to Grants Round 15, the number of write requests to the Ceramic node was higher due to the fact that a solid Passport score (derived through verifying various stamps) was mandatory in order to receive matching, while in GR15 it was just a boost.
+
+![|624x351.63442150809897](upload://lFQu3lNvNpJDUCteWyEMYhZSUiO.png)
+
+Gitcoin Passport requests on Ceramic in Gitcoin Allo Alpha Rounds, Source: Ceramic team
+
+Despite efforts to resolve the issue by restarting the Ceramic node and its underlying IPFS nodes, the problem persisted. The Ceramic and Passport teams observed a wave pattern of failing requests trending downward and then spiking back up, but were unable to identify the root cause of the issue and corresponding fix during the round.
+
+# Customer Impact
+
+The incident had a significant impact on Gitcoin's brand, with many users expressing frustration on platforms like Twitter and the Gitcoin Discord. The user impact of the incident was that the Passport app was not working and loading properly, causing inconvenience for the users, especially for those participating in the Gitcoin Allo Alpha Rounds. The team worked to resolve the issue and communicate with the community about the changes being made.
+
+![|624x372](upload://mEA3w8VW720sa9ZkBjKDD0fj3WP.jpeg)
+
+Source: https://twitter.com/EnormousRage/status/1618922283829178369?s=20
+
+# Direct Outcomes
+
+As a result of the ongoing issues with the Ceramic infrastructure, the team decided to migrate Passport to its own database instead of relying on Ceramic as the primary database. This change in plans allows users to verify their participation after the round ended within a grace period.
+
+In other words, we have taken steps to migrate the Passport app and Scorer so that they read from and write to our centrally hosted database instead of Ceramic. We plan to work on migrating Passports to Ceramic in the background.
+
+# Preventive Measures in Future Rounds
+
+To prevent similar issues from occurring in future rounds, we have identified the need for rigorous load testing to be conducted prior to a round to reveal potential issues with Passport. We are taking the following preventive measures:
+
+* Relying on a new PostgreSQL instance for the Gitcoin Passport as the primary cache database.
+* Exploring on-chain solutions for Passport to benefit from the reliable uptime and data availability on blockchains.
+* The Ceramic team acknowledges the experienced instability and supports a primary cache database mitigation proposed as an intermediate solution. Meanwhile, Ceramic is committed to conducting rigorous load testing and making improvements to ensure the stability of the Ceramic system for future rounds. Ceramic is dedicated to the Gitcoin Passport mission and is determined to make Gitcoin Passport reliably composable across web3.
+
+# Risk and Mitigation Strategies
+
+1. Improve communication and attention to issues:
+
+  * Increase transparency by providing more frequent updates to the community about the status of Gitcoin Passport and any issues that arise.
+  * Enhance the monitoring and alert systems to quickly identify and address any potential issues.
+  * Implement a protocol for reviewing and addressing community feedback to improve Gitcoin Passport
+
+2. Ensure reliability and scalability of centrally hosted Gitcoin Passport database:
+
+  * Conduct regular audits and testing of the database to identify potential issues and ensure that it is functioning properly.
+  * Implement redundancy and backup measures (i.e., via Ceramic, on-chain solutions, and more) to minimize the risk of data loss.
+  * Evaluate the need for additional infrastructure and capacity to support future growth.
+
+3. Enhance collaboration with Ceramic team:
+
+  * Establish clear lines of communication and collaboration with the Ceramic team to prevent similar issues from occurring in the future.
+  * Regularly review and assess Gitcoin Passport’s architecture and infrastructure to ensure compatibility and reliability with the Ceramic network.
+  * Foster an ongoing dialogue with the Ceramic team to identify potential risks and vulnerabilities and develop appropriate mitigation strategies.
+Fri, 05 May 2023 19:15:03 +0000
+🌱 Gitcoin Grants
+
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+ale.k
+
+            <p>I’m late on the uptake here- but finding this now and finding it beautifully expressed.</p>
+<p>Yes- our plan is to use best-in-class web2 solutions to surface on-chain data as it is available to us.  Doing this in duplicate (or even triplicate) is our contribution to general chain stability and trust-but-verify methods for treating stamp providers.</p>
+<p>When the web3 solutions that can serve data pipelines for near-live data and anomaly detection exist - I hope we’ll be the first to jump… But right now we are committed to independently verifying on-chain data (with TrueBlocks+Erigon suite) and providing transparency in our usage of on-chain data (i.e. through relational db, neo4j environment, bigquery dump, etc - we will get the data to the interested parties.)</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/15
+        Wed, 26 Apr 2023 17:57:05 +0000
+gov.gitcoin.co-post-13011-15
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+kyle
+
+            <p>It has been! We would love your feedback as you start to use the updated Passport experience.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/14
+        Wed, 26 Apr 2023 15:08:47 +0000
+gov.gitcoin.co-post-13011-14
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+skilesare
+
+            <p>Was this resolved for the Beta round?  Is a passport being used?  We need a solution for Proof of Humanity over on the IC and with tECDSA coming online I’d like to explore if we could plug into Passport easily or not.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/13
+        Wed, 26 Apr 2023 13:28:39 +0000
+gov.gitcoin.co-post-13011-13
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+griff
+
+            <aside class="quote no-group" data-username="erich" data-post="1" data-topic="13011">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar"> erich:</div>
+<blockquote>
+<p>To prevent similar issues from occurring in future rounds, we have identified the need for rigorous load testing to be conducted prior to a round to reveal potential issues with Passport.</p>
+</blockquote>
+</aside>
+<p>I think that is the big one… basically a dress rehearsal before launch will find all the catastrophic issues… and lots of the minor ones too.</p>
+<p>Overall though, if you look passed this glaring issue there were a lot of wins with passport this round, I am VERY bullish on Passport, and know several groups excited to build on and fork. Don’t let one oversight cloud the incredible leap in meta-identity that you all are making.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/12
+        Thu, 16 Mar 2023 11:12:06 +0000
+gov.gitcoin.co-post-13011-12
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+tjayrush
+
+            <p>It’s very hard for me to express these ideas, so you’ll bear with me as I stumble through…</p>
+<ol>
+<li>
+<p>I’m not sure add more “trueblocks” nodes would ever help the situation. TrueBlocks is local first and intended to support a single user. In that case, it’s very fast because it’s not rate limited or shared.</p>
+</li>
+<li>
+<p>If you’re hoping to support many "data scientists’ or many ‘users,’ then perhaps a local-first, single-user-focused tool is not quite right.</p>
+</li>
+<li>
+<p>Web 2.0 SQL databases are excellent at serving data to many clients and many users.</p>
+</li>
+<li>
+<p>Blocks only appear once every 12 seconds, so there’s tons of time to process data.</p>
+</li>
+</ol>
+<p>I’ve been thinking lately that TrueBlocks should not be seen as an API server. It’s not that. It’s a data extraction tool.</p>
+<p>One of the tools we’re working on is called ‘monitoring’ whereby TrueBlocks watches the end of the chain, extracts any needed data at each new block and puts it somewhere, and then goes to sleep waiting for the next block.</p>
+<p>“Putting it somewhere” currently means writing the data to a <code>.csv</code> file on disc, but it could be modified to push the data into a regular web 2.0 SQL database.</p>
+<p>In that way, you can use TrueBlocks to extract deep data and not use it for something it’s not good at (serving data to many users). You can use regular, old-fashioned SQL API server to serve as many users as you like.</p>
+<p>As far as decentralization, SQL (of course) doesn’t help there at all, but there could be some sort of post processing done (on the SQL database) to create any sort of structures one might like. TrueBlocks itself already decentralizes the index of addresses, so simply by running it as a <code>monitoring</code> tool, it would decentralize the index by creating, pinning and publishing the IPFS hashes.</p>
+<p>As I said, bear with me as I try to learn how to articulate the ideas behind TrueBlocks. They’re subtle and they don’t work the way we might expect.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/11
+        Fri, 10 Mar 2023 21:14:16 +0000
+gov.gitcoin.co-post-13011-11
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+DisruptionJoe
+
+            <p>Is there a good way for us to estimate the minimum viable decentralization needed for something like Ceramic or Trueblocks to operate efficiently for our use case?</p>
+<p>For example, could we use math/engineering to know that "if we had 5 or more nodes, we wouldn’t have run into passport issues on ceramic until &gt; 60,000 donors accessing it)</p>
+<p>Also, how does a truly decentralized system handle ddos attacks? Is it simply resiliant because of the increased needs to ddos <em>all</em> of the nodes?</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/10
+        Fri, 10 Mar 2023 15:34:35 +0000
+gov.gitcoin.co-post-13011-10
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+pcfreak30
+
+            <aside class="quote no-group" data-username="tjayrush" data-post="8" data-topic="13011">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tjayrush/48/41_2.png" class="avatar"> tjayrush:</div>
+<blockquote>
+<p>It depends what you’re optimizing for.</p>
+</blockquote>
+</aside>
+<p>It depends on what you are targeting, but I view this more from a blockchain POV. The more centralized leadership that exists, the faster you innovate. But the more decentralized (BTC) the harder it is to agree on the time of day and thus no leadership at all.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/9
+        Mon, 27 Feb 2023 02:45:05 +0000
+gov.gitcoin.co-post-13011-9
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+tjayrush
+
+            <aside class="quote no-group" data-username="pcfreak30" data-post="7" data-topic="13011">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/pcfreak30/48/8557_2.png" class="avatar"> pcfreak30:</div>
+<blockquote>
+<p>Broadly speaking the more decentralized something is, the more inefficient it is by definition.</p>
+</blockquote>
+</aside>
+<p>I don’t agree with this. I would slightly modify it to say, “If one tries to force a decentralized system through centralized pipelines, then this will be more inefficient that both pipelines.”</p>
+<p>If a truly decentralized system is working in a truly decentralized way, it’s significantly more efficient than a centralized system. In both cost (per participant) and speed (if well designed) and especially resiliency and censorship resistance. It depends what you’re optimizing for.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/8
+        Mon, 27 Feb 2023 02:18:00 +0000
+gov.gitcoin.co-post-13011-8
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+pcfreak30
+
+            <p>Ironically my project (Lume Web, <a href="http://lumeweb.com" rel="noopener nofollow ugc">lumeweb.com</a>), which is also a Gitcoin project grantee, is innovating development on true web3 infrastructure as I see the same problems. We call everything web3, but it’s really just web2 + blockchain (even AWS was used here). I, however, cannot say anything I’m engineering would have solved these issues, though my tribe is a decentralized storage network <img src="https://gov.gitcoin.co/images/emoji/twitter/stuck_out_tongue.png?v=12" title=":stuck_out_tongue:" class="emoji" alt=":stuck_out_tongue:" loading="lazy" width="20" height="20"> .</p>
+<p>I find this writeup interesting as it exposes bottlenecks in Ceramic at scale that force the need for a web2 centralized system that just talks to a crypto/web3 database to get information.</p>
+<p>Broadly speaking the more decentralized something is, the more inefficient it is by definition. So I might call the passport a <code>self-hosted identity system that uses web3 technology</code>.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/7
+        Sun, 26 Feb 2023 00:26:30 +0000
+gov.gitcoin.co-post-13011-7
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+DisruptionJoe
+
+            <p>I think we can start by running our own node with Trueblocks indexing. Then, we can realize the efficiency and performance gains along with the cost reduction of the decentralized storage for data. Then perhaps we begin acquiring peers on the network.</p>
+<p>Every program manager with more than say $100k has a pretty strong incentive to run a peer if we can package the image properly to make it as easy as possible.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/6
+        Wed, 22 Feb 2023 14:31:02 +0000
+gov.gitcoin.co-post-13011-6
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+tjayrush
+
+            <p>It’s very complicated, I think. And it requires the “peers” to be <em>actual</em> “peers.” By that, I quite explicitly mean, that the normal, web 2.0 “client-provider” model has to be upset.</p>
+<p>It’s a radical position, I know, but I think that as long as “developers” build “systems” using web 2.0 APIs that “serve services to humans” you will never create a true peer-to-peer system.</p>
+<p>The word “peer” means something. I think it means “equal peer.” In a provider-client relationship the “peers” are not equal. The “provider” sets the rules of the game. The “provider” determines what happens to the data – because the data is physically on the “provider’s” hardware. The “provider” pays for the hardware.</p>
+<p>In a true peer-to-peer system, every peer provides resources (compute, hard drive space, etc.) and carries their fair share of the burden. This massively lowers the cost of the system for the provider. That’s important. If the provider is able to massively lower their costs, they’re not so heavily pressured to monetize the user. If a user is being monetized, she’s not a true peer.</p>
+<p>As I said above, it’s very complicated. But, I think, if we never start the process and continue to build on top of what I call “an old-fashioned web 2.0 tech stack,” we’ll never solve the problems we’re trying to solve.</p>
+<p>A really amazing place to start thinking about this stuff is in this document: <a href="https://www.inkandswitch.com/local-first/" class="inline-onebox" rel="noopener nofollow ugc">Local-first software: You own your data, in spite of the cloud</a>. It’s one of the things that lit my mind on fire five years ago.</p>
+<p>By the way – I did indicate above that I was on a soapbox. I know what I’m saying is a bit radical and that it’s not easy, so there’s that.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/5
+        Wed, 22 Feb 2023 04:01:51 +0000
+gov.gitcoin.co-post-13011-5
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+kyle
+
+            <aside class="quote no-group" data-username="tjayrush" data-post="3" data-topic="13011">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tjayrush/48/41_2.png" class="avatar"> tjayrush:</div>
+<blockquote>
+<p>The trouble is that your app isn’t peer-to-peer.</p>
+</blockquote>
+</aside>
+<p>I appreciate this! I want to confirm I am understanding the feedback here. I suspect that by posting these details on chain, might help resolve this? I would love your thoguhts on what making Passport “peer to peer” means to you. <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/4
+        Wed, 22 Feb 2023 01:43:43 +0000
+gov.gitcoin.co-post-13011-4
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+tjayrush
+
+            <aside class="quote no-group" data-username="erich" data-post="1" data-topic="13011">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar"> erich:</div>
+<blockquote>
+<p>relying on Ceramic as the primary database.</p>
+</blockquote>
+</aside>
+<p>This is an excellent article. Thanks so much for posting. I wanted to highlight the above quote. That’s the root of the problem.</p>
+<p><strong>…writer steps up on soapbox</strong></p>
+<p>IPFS, Ceramic, Ethereum are peer-to-peer. By funneling all users through a website, you’re taking a many-to-many relationship and forcing it through a many-to-one-one-to-many relationship. You’ve eliminated a massive amount of connections.</p>
+<p>Plus, you’ve removed the fact that in a true peer-to-peer network each participant brings some of their own resources to the party (in the form of storage and/or compute).</p>
+<p>It’s not surprising that you had to add a SQL database. SQL databases are designed (very well) to serve as the <code>to-one-one-to</code> in the above relationship.</p>
+<p>The trouble isn’t that Ceramic is not a good database, nor is the solution that Ceramic needs to become a better database. The trouble is that your app isn’t peer-to-peer.</p>
+<p>That’s where your efforts should be spent.</p>
+<p><strong>…writer steps down</strong></p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/3
+        Wed, 22 Feb 2023 00:42:11 +0000
+gov.gitcoin.co-post-13011-3
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+Maxwell
+
+            <p>This is amazing! Thank you so much for taking the time to write this up, Erich. Lots of learnings, and excited for Gitcoin to continue to grow, develop, and deliver outstanding products.</p>
+<p>Thanks again for the honest, vulnerable, and detailed reflection here.</p>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/2
+        Tue, 21 Feb 2023 18:21:48 +0000
+gov.gitcoin.co-post-13011-2
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+erich
+
+            <p>The purpose of this post-mortem is to document the experience with Gitcoin Passport during Gitcoin Allo Alpha Rounds. The goal is to understand what went well, wrong, and what can be improved to prevent similar issues from happening in the future.</p>
+<h1>
+<a name="summary-of-the-experience-1" class="anchor" href="https://gov.gitcoin.co#summary-of-the-experience-1"></a>Summary of the Experience</h1>
+<p>During the Gitcoin Allo Alpha Rounds, donors were unable to verify their unique identity for most of the program due to infrastructure instability with Gitcoin Passport. This resulted in a significant number of donors being unable to meaningfully participate in the program because they would not be able to verify themselves for matching funding for their donations.</p>
+<p>When the infrastructure was accessible, we heard that Stamps were reset, and Passports often needed to be “re-anchored.” In the event users were able to verify stamps, they could then have their Passports scored to determine eligibility.</p>
+<h1>
+<a name="background-2" class="anchor" href="https://gov.gitcoin.co#background-2"></a>Background</h1>
+<p>Gitcoin Allo Alpha Rounds were pilot grant programs hosted by GitcoinDAO on the Gitcoin Allo Protocol, which is a new and more decentralized version of the grants product. The program was aimed at supporting innovative projects in the blockchain, open-source, and regen space, with a focus on increasing the impact and reach of such projects.</p>
+<p>To ensure the fairness and transparency of the program, Gitcoin Grants operates on a democratic matching funding mechanism called Quadratic Funding. Based on previous experience, the grants programs may be manipulated by participants who create multiple accounts/wallets to influence the matching funding results. To address this issue, Gitcoin Passport was introduced as a decentralized identity verification tool that allows participants to prove their unique humanity through various identity providers.</p>
+<p>During the round, Gitcoin Passport worked by linking a participant’s digital identity to their Ethereum wallet address on the Ceramic Network, and then verifying their identity through trusted identity providers. This ensured that each participant can only have one account, and that their vote and donation are tied to their unique identity.</p>
+<h1>
+<a name="timeline-of-experience-3" class="anchor" href="https://gov.gitcoin.co#timeline-of-experience-3"></a>Timeline of Experience</h1>
+<ul>
+<li>2023/01/18: Users reported issues with Ceramic Network, with a CORS policy blocking requests and 504 Gateway timeout error. The team attempted to debug, restarted IPFS, and waited for feedback from Ceramic.</li>
+<li>2023/01/19: Users experienced issues with Passports and verification process. The team advised users to be patient and were compiling an issues log. Kyle reported a few steps in place to resolve the issue.</li>
+<li>2023/01/20: A user reported difficulty with Twitter, Discord, and ENS verification stamps. Kyle asked for an update and Gerald mentioned they were close to a fix.</li>
+<li>2023/01/21: Ceramic network became unhealthy causing an outage and issues with the Gitcoin Passport App. Gerald worked on fixing the problem and deployed a fix for the error pop-up.</li>
+<li>2023/01/22: The team deployed a fix for the Ceramic Network Error and moved the Passport App to AWS Amplify in an effort to resolve the server side errors we were seeing. Some web2 stamps didn’t work due to the domain, but they would be fixed with a domain change. Gerald identified a bug in the reset flow causing an infinite loop error.</li>
+<li>2023/01/23: The issue of chunks not loading persisted, with a high rate of 4xx errors in Amplify. Gerald sought assistance from Kammerdiener for the issue, which only affected the Passport App.</li>
+<li>2023/01/24: Two separate issues were discussed regarding the Ceramic Network Error, one for the Grant Explorer page and one for the Gitcoin passport page. The team tried to improve the situation by increasing the number of worker threads.</li>
+<li>2023/01/25: Some users reported slow performance and issues with loading their passport. Gitcoin pushed an upgrade for the Ceramic node. Another user reported that stamps could not be verified with “too many open files” error.</li>
+<li>2023/01/26: The team attempted to resolve issues with Passport Stamps and timeouts by restarting IPFS and Ceramic nodes and considered a caching layer.</li>
+<li>2023/01/27: Passport connections continued to time out on the Gitcoin platform. Gerald restarted the nodes and considered scripting a restart every 3 hours. Kammerdiener suggested using AWS commands for a redeploy. Product and engineering teams start considering and exploring a hotfix to the issues by migrating Passport data over from Ceramic to a centralized “cache”database.</li>
+<li>2023/01/28: Passport app still not working, despite servers being restarted every 2 hours. The team attempted to resolve the issue by restarting nodes but with no success.</li>
+<li>2023/01/29: Many errors are reported by the Passport app and in Datadog. The team tried restarting the Ceramic node but with no success. The idea of using a second Ceramic node is discussed, but it will result in a delay as the node has to sync. Good progress has been made on cache, but the challenge remains in migrating to a new data strategy. Passport app still not working for some team members.</li>
+<li>2023/01/30: Team works on fixing Passport app and Ceramic Network Error. They try various methods including changing ENS stamps. Joel from Ceramic suggests turning off pub-sub could solve the issue. New build deployed and team monitors logs, but couldn’t find any issues. Some team members succeed in removing/adding stamps, while others face trouble. The team tweets they’re working on the issue, but node is not functioning properly again by the end of day. Team notices a wave pattern of requests trending downwards and erroring out, then spiking back up.</li>
+<li>2023/01/31: Ceramic returns to problematic state. The team decides to switch to its own database for Passport instead of relying on Ceramic. The community is informed of the change and development begins to migrate Passport away from Ceramic as the primary database.</li>
+</ul>
+<h1>
+<a name="the-triggering-event-or-root-cause-of-the-incident-4" class="anchor" href="https://gov.gitcoin.co#the-triggering-event-or-root-cause-of-the-incident-4"></a>The Triggering Event or Root Cause of the Incident</h1>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/80965eafe1f466d1c33318ffd473a22ada134f5d.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/80965eafe1f466d1c33318ffd473a22ada134f5d" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/80965eafe1f466d1c33318ffd473a22ada134f5d_2_624x183.png" alt="" data-base62-sha1="ilxhuHAM9CKyAsZ4NpgJzu2aqaV" width="624" height="183" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/80965eafe1f466d1c33318ffd473a22ada134f5d_2_624x183.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/80965eafe1f466d1c33318ffd473a22ada134f5d_2_936x274.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/80965eafe1f466d1c33318ffd473a22ada134f5d_2_1248x366.png 2x" data-dominant-color="EAEFF4"></a></div><p></p>
+<p>Gitcoin Passport requests on Ceramic in Gitcoin Grants Round 15, Source: Ceramic team</p>
+<p>The incidents that occurred during the recent Passport app were a result of increased load on the Ceramic node. Although the total number of participating donors was lower in this round compared to Grants Round 15, the number of write requests to the Ceramic node was higher due to the fact that a solid Passport score (derived through verifying various stamps) was mandatory in order to receive matching, while in GR15 it was just a boost.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/97e89ecc5006c6bdd52c0a8dd6800860b5f6be6e.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/97e89ecc5006c6bdd52c0a8dd6800860b5f6be6e" title="|624x351.63442150809897"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/97e89ecc5006c6bdd52c0a8dd6800860b5f6be6e_2_690x389.png" alt="|624x351.63442150809897" data-base62-sha1="lFQu3lNvNpJDUCteWyEMYhZSUiO" width="690" height="389" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/97e89ecc5006c6bdd52c0a8dd6800860b5f6be6e_2_690x389.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/97e89ecc5006c6bdd52c0a8dd6800860b5f6be6e_2_1035x583.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/97e89ecc5006c6bdd52c0a8dd6800860b5f6be6e.png 2x" data-dominant-color="F3F5F7"></a></div><p></p>
+<p>Gitcoin Passport requests on Ceramic in Gitcoin Allo Alpha Rounds, Source: Ceramic team</p>
+<p>Despite efforts to resolve the issue by restarting the Ceramic node and its underlying IPFS nodes, the problem persisted. The Ceramic and Passport teams observed a wave pattern of failing requests trending downward and then spiking back up, but were unable to identify the root cause of the issue and corresponding fix during the round.</p>
+<h1>
+<a name="customer-impact-5" class="anchor" href="https://gov.gitcoin.co#customer-impact-5"></a>Customer Impact</h1>
+<p>The incident had a significant impact on Gitcoin’s brand, with many users expressing frustration on platforms like Twitter and the Gitcoin Discord. The user impact of the incident was that the Passport app was not working and loading properly, causing inconvenience for the users, especially for those participating in the Gitcoin Allo Alpha Rounds. The team worked to resolve the issue and communicate with the community about the changes being made.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9ec63032b6213258e864ec47e3bde75824e2fee3.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/9ec63032b6213258e864ec47e3bde75824e2fee3" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9ec63032b6213258e864ec47e3bde75824e2fee3_2_624x372.jpeg" alt="" data-base62-sha1="mEA3w8VW720sa9ZkBjKDD0fj3WP" width="624" height="372" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9ec63032b6213258e864ec47e3bde75824e2fee3_2_624x372.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9ec63032b6213258e864ec47e3bde75824e2fee3_2_936x558.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9ec63032b6213258e864ec47e3bde75824e2fee3_2_1248x744.jpeg 2x" data-dominant-color="424449"></a></div><p></p>
+<p>Source: <a href="https://twitter.com/EnormousRage/status/1618922283829178369?s=20" rel="noopener nofollow ugc">https://twitter.com/EnormousRage/status/1618922283829178369?s=20</a></p>
+<h1>
+<a name="direct-outcomes-6" class="anchor" href="https://gov.gitcoin.co#direct-outcomes-6"></a>Direct Outcomes</h1>
+<p>As a result of the ongoing issues with the Ceramic infrastructure, the team decided to migrate Passport to its own database instead of relying on Ceramic as the primary database. This change in plans allows users to verify their participation after the round ended within a grace period.</p>
+<p>In other words, we have taken steps to migrate the Passport app and Scorer so that they read from and write to our centrally hosted database instead of Ceramic. We plan to work on migrating Passports to Ceramic in the background.</p>
+<h1>
+<a name="preventive-measures-in-future-rounds-7" class="anchor" href="https://gov.gitcoin.co#preventive-measures-in-future-rounds-7"></a>Preventive Measures in Future Rounds</h1>
+<p>To prevent similar issues from occurring in future rounds, we have identified the need for rigorous load testing to be conducted prior to a round to reveal potential issues with Passport. We are taking the following preventive measures:</p>
+<ul>
+<li>Relying on a new PostgreSQL instance for the Gitcoin Passport as the primary cache database.</li>
+<li>Exploring on-chain solutions for Passport to benefit from the reliable uptime and data availability on blockchains.</li>
+<li>The Ceramic team acknowledges the experienced instability and supports a primary cache database mitigation proposed as an intermediate solution. Meanwhile, Ceramic is committed to conducting rigorous load testing and making improvements to ensure the stability of the Ceramic system for future rounds. Ceramic is dedicated to the Gitcoin Passport mission and is determined to make Gitcoin Passport reliably composable across web3.</li>
+</ul>
+<h1>
+<a name="risk-and-mitigation-strategies-8" class="anchor" href="https://gov.gitcoin.co#risk-and-mitigation-strategies-8"></a>Risk and Mitigation Strategies</h1>
+<ol>
+<li>Improve communication and attention to issues:</li>
+</ol>
+<ul>
+<li>Increase transparency by providing more frequent updates to the community about the status of Gitcoin Passport and any issues that arise.</li>
+<li>Enhance the monitoring and alert systems to quickly identify and address any potential issues.</li>
+<li>Implement a protocol for reviewing and addressing community feedback to improve Gitcoin Passport</li>
+</ul>
+<ol start="2">
+<li>Ensure reliability and scalability of centrally hosted Gitcoin Passport database:</li>
+</ol>
+<ul>
+<li>Conduct regular audits and testing of the database to identify potential issues and ensure that it is functioning properly.</li>
+<li>Implement redundancy and backup measures (i.e., via Ceramic, on-chain solutions, and more) to minimize the risk of data loss.</li>
+<li>Evaluate the need for additional infrastructure and capacity to support future growth.</li>
+</ul>
+<ol start="3">
+<li>Enhance collaboration with Ceramic team:</li>
+</ol>
+<ul>
+<li>Establish clear lines of communication and collaboration with the Ceramic team to prevent similar issues from occurring in the future.</li>
+<li>Regularly review and assess Gitcoin Passport’s architecture and infrastructure to ensure compatibility and reliability with the Ceramic network.</li>
+<li>Foster an ongoing dialogue with the Ceramic team to identify potential risks and vulnerabilities and develop appropriate mitigation strategies.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lessons-learned-a-look-at-gitcoin-allo-alpha-rounds-and-the-path-forward-with-gitcoin-passport/13011/1
+        Mon, 20 Feb 2023 14:22:23 +0000
+gov.gitcoin.co-post-13011-1
+Lessons Learned: A Look at Gitcoin Allo Alpha Rounds and the Path Forward with Gitcoin Passport
+      
+
+

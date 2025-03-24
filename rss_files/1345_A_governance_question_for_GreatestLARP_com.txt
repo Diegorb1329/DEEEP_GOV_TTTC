@@ -1,0 +1,431 @@
+
+
+
+A governance question for GreatestLARP.com
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848
+    ![FCOeEKKUcAQto0g|690x388](upload://zTgpYHmGQmGpiFROoZqsLa2K5D0.jpeg)
+
+At Liscon, the moonshot collective launched http://greatestlarp.com/ - a coordination game about coordination games.  In this game, the main character is leading us through each of the 5 levels, starting with level 1 - where you can read about The Greatest LARP in Comic book form, level 2-4 which are NFT auctions, and level 5 which is the "you win" level.  The game starts with "Moloch is winning" and ends with "the good guys win".  The whole point of the game is the community has to coordinate to win the game.  
+
+Read more about the game mechanics  [here in this twitter thread](https://twitter.com/owocki/status/1451180297827930114).  Or checkout this video of Kevin announcing this game on stage [here](https://vimeo.com/manage/videos/637530828)
+
+Here's what the levels look like:
+
+![FCOeqrKX0AASOwh|690x161](upload://4nu7Jo4mvo1KbaPpG9StteId1Z0.jpeg)
+
+Level 2 is an NFT auction on a bonding curve.   Here's how to play according to the copy on the site. 
+
+> Moloch is made of coordination failures, and the only way to beat a monster like that ... is more coordination.
+> 
+> ETHBots are built to coordinate. They are configured by the community they serve to create coordination. They are the vessels through which humanity coordinates to defeat Moloch.
+> 
+> To play this level, launch a new hero into the world by minting their NFT. Once 200 Digital ETHBots are minted (155 minted so far), and 3 Statue ETHBots are minted(4 minted so far), humanity can begin its fight against Moloch.
+
+OK so TLDR - once 200 ETHBots are minted, then the community can get to the next level.  Awesome, we're 76% there right?
+
+Well.. if you [look at the price function](https://docs.google.com/spreadsheets/u/1/d/1__uH78nJVYmpwR1XYzgNbz8hCQjz3ONU6fQcOCex7nE/edit#gid=0) on the level, youll see that the price grows exponentially over time as more units are sold.
+
+![Screen Shot 2021-10-22 at 4.14.13 AM|690x423, 75%](upload://k8A4F43H8oBXHIWp24Ht9bZ6Ptd.png)
+
+Lets zoom in on where the community is now, at 155 units sold: 
+![Screen Shot 2021-10-22 at 4.22.53 AM|690x418, 75%](upload://jIufTXpIjJOTamPEUxCQCy4gvlb.jpeg)
+
+Looks like the current price for one of these ETHBots is 1.34 ETH, and the price will increasing to 6.6 ETH by the time 200 bots are minted.
+
+Will the community want too pay 1-6.6 ETH per NFT for the next 45 NFTs in order to beat the level?  
+
+# womp womp womp
+
+Well, thats a great question.  And thats why the community built in a mechanism we call the "womp womp" mechanism.  The "womp womp" mechanism reduces the price by 10%.  [Checkout the code here](https://github.com/moonshotcollective/anon-vs-moloch-nft/blob/develop/packages/hardhat/contracts/GreatestLARP.sol#L115).  We call it womp womp because we think using the mechanism sounds like a [sad trombone](https://www.youtube.com/watch?v=tKdcjJoXeEY).  
+
+Here's what the price curve looks like with 1 womp womp.
+
+![Screen Shot 2021-10-22 at 4.30.48 AM|690x427, 75%](upload://wlwWPUsePLZM00lsVd3sTF2nf0e.jpeg)
+
+and here's what itd look like if womp womp's were applied every few days, but the community still purchased the NFTs every few days too.
+![Screen Shot 2021-10-22 at 4.31.10 AM|690x408, 75%](upload://vXKpfA9qamtAJKPP0eb21y04k87.jpeg)
+
+TLDR: This mechanism is effectively a way to counter-balance the upward pressure of the price curve.  It is a release valve in case the curve is too steep.
+
+# How do we  use it?
+
+Which leaves us with the question:  should we use it?  if so, how should we use it?
+
+We'd like to leave that question up to [governance](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v1/7860) - at least getting rough consensus on how it should be used.
+
+To ground the discussion in the goals of the GreatestLARP project (and of broader GitcoinDAO, these are the stated goal of the project
+1. spread the message as far and wide as possible
+2. raise money for public goods.
+
+So far so good on both fronts, the project has raised $180k in funding for public goods and the comic has been read 100s of times.
+
+Some options for how the DAO proceeds on using "womp womp":
+1. don't use it at all.  if the community doesnt consume the NFTs on current price curve, don't pass the level.  don't meet moloch.
+2. use it whenever there is not a sale for 24 hours.
+2. use it whenever there is not a sale for 7 days.
+3. some other proposal (pls comment below)
+Fri, 10 Dec 2021 18:03:43 +0000
+📜 Proposals
+
+
+A governance question for GreatestLARP.com
+Colton
+
+            <p>Hi larper frens,</p>
+<p>Since the Greatest LARP launched, we’ve raised over $500k–all going directly to the Gitcoin Grants Matching Pool.</p>
+<p>You are all awesome. Seriously.</p>
+<p>We’ll be doing a full retrospective on what we’ve learned so we can make the next fundraiser even more fun, but today we have one more decision to make as a community.</p>
+<p>We have pooled 38 ETH in the final boss PartyBid, but momentum has slowed. It’s time to decide on the biggest womp womp yet.</p>
+<p>Please cast your vote, I’ll close this poll in 24 hours.</p>
+<p>and remember, if you want the final battle POAP, join us in the GitcoinParty: <a href="https://www.partybid.app/party/0xA2db0A5687F7c1F685e2E62a917b40E3133B3D8E" class="inline-onebox" rel="noopener nofollow ugc">GitcoinParty is bidding on ETHbot VS Moloch Showdown | PartyBid</a></p>
+<p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/35">Click to view the poll.</a></p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/35">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/35
+        Fri, 10 Dec 2021 17:12:26 +0000
+gov.gitcoin.co-post-8848-35
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>poll is closed; here is the results. see you at this event <a href="https://www.addevent.com/event/Jb7972221" class="inline-onebox">AddEvent</a><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1b429c917fd13d24efc2c61aae6286f56c13d91b.png" data-download-href="/uploads/short-url/3T9BAWT2vdCtpESXFp5Vlugh4U3.png?dl=1" title="Screen Shot 2021-11-21 at 7.04.44 AM"><img src="/uploads/db4391/optimized/2X/1/1b429c917fd13d24efc2c61aae6286f56c13d91b_2_690x400.png" alt="Screen Shot 2021-11-21 at 7.04.44 AM" data-base62-sha1="3T9BAWT2vdCtpESXFp5Vlugh4U3" width="690" height="400" srcset="/uploads/db4391/optimized/2X/1/1b429c917fd13d24efc2c61aae6286f56c13d91b_2_690x400.png, /uploads/db4391/optimized/2X/1/1b429c917fd13d24efc2c61aae6286f56c13d91b_2_1035x600.png 1.5x, /uploads/db4391/optimized/2X/1/1b429c917fd13d24efc2c61aae6286f56c13d91b_2_1380x800.png 2x" data-small-upload="/uploads/db4391/optimized/2X/1/1b429c917fd13d24efc2c61aae6286f56c13d91b_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/34">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/34
+        Sun, 21 Nov 2021 14:07:08 +0000
+gov.gitcoin.co-post-8848-34
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>Hey everyone,</p>
+<p>At the current pace of sales of 4-12 sales per day, and with 80 sales to go, Level 4 (<a href="https://zora.co/collections/zora/5725">The Final Boss)</a> is about a week away.</p>
+<p>Its possible that the final boss will happen at night time, or during a holiday (US Thanksgiving is coming up).</p>
+<p>Some ppl have come to me and told me that its important that for sale optics, it is important that we are able to co-market the final level together when the final boss goes live.</p>
+<p>This leads me to the following poll.  What should the final boss go-live policy be?</p>
+<p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/33">Click to view the poll.</a></p>
+<p>For the purposes of the poll above, lets assume that <a href="https://www.redcort.com/usa-business-holidays">holidays as defined by this calendar</a> are not business days.  And that weekend days are not business days.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/33">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/33
+        Wed, 17 Nov 2021 19:37:03 +0000
+gov.gitcoin.co-post-8848-33
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>thank you for the suggestion. added that to the poll</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/32">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/32
+        Wed, 17 Nov 2021 19:36:05 +0000
+gov.gitcoin.co-post-8848-32
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+MoonshotCoordinator
+
+            <p>MoonShotBots launching at our community call was a big win - perhaps we could launch the Final Boss at our call on the 6th?</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/31">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/31
+        Wed, 17 Nov 2021 19:04:24 +0000
+gov.gitcoin.co-post-8848-31
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>edit: moving the poll to a new post now</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/30">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/30
+        Wed, 17 Nov 2021 18:53:45 +0000
+gov.gitcoin.co-post-8848-30
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>poll is now closed. here is the results.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c3afb3a5bed2f5c657ac7fb58b886212776ef928.png" data-download-href="/uploads/short-url/rV7xQOaHMUzdXiQv0Ku2wUOsNBK.png?dl=1" title="Screen Shot 2021-11-11 at 8.51.54 AM"><img src="/uploads/db4391/optimized/2X/c/c3afb3a5bed2f5c657ac7fb58b886212776ef928_2_690x432.png" alt="Screen Shot 2021-11-11 at 8.51.54 AM" data-base62-sha1="rV7xQOaHMUzdXiQv0Ku2wUOsNBK" width="690" height="432" srcset="/uploads/db4391/optimized/2X/c/c3afb3a5bed2f5c657ac7fb58b886212776ef928_2_690x432.png, /uploads/db4391/optimized/2X/c/c3afb3a5bed2f5c657ac7fb58b886212776ef928_2_1035x648.png 1.5x, /uploads/db4391/original/2X/c/c3afb3a5bed2f5c657ac7fb58b886212776ef928.png 2x" data-small-upload="/uploads/db4391/optimized/2X/c/c3afb3a5bed2f5c657ac7fb58b886212776ef928_2_10x10.png"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/3e2e7eb8430a7cdd949d71cfc13ed70062ddfa73.png" data-download-href="/uploads/short-url/8S5dwVEZnbxij24xIFqRvCVE1zB.png?dl=1" title="Screen Shot 2021-11-11 at 8.51.51 AM"><img src="/uploads/db4391/optimized/2X/3/3e2e7eb8430a7cdd949d71cfc13ed70062ddfa73_2_690x442.png" alt="Screen Shot 2021-11-11 at 8.51.51 AM" data-base62-sha1="8S5dwVEZnbxij24xIFqRvCVE1zB" width="690" height="442" srcset="/uploads/db4391/optimized/2X/3/3e2e7eb8430a7cdd949d71cfc13ed70062ddfa73_2_690x442.png, /uploads/db4391/optimized/2X/3/3e2e7eb8430a7cdd949d71cfc13ed70062ddfa73_2_1035x663.png 1.5x, /uploads/db4391/original/2X/3/3e2e7eb8430a7cdd949d71cfc13ed70062ddfa73.png 2x" data-small-upload="/uploads/db4391/optimized/2X/3/3e2e7eb8430a7cdd949d71cfc13ed70062ddfa73_2_10x10.png"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5ad166ca23cf46f15e48c3ffbcde7fbf95f8a7c5.png" data-download-href="/uploads/short-url/cXpC0uGMjtCl1hZZ7wRHApycXYN.png?dl=1" title="Screen Shot 2021-11-11 at 8.51.48 AM"><img src="/uploads/db4391/optimized/2X/5/5ad166ca23cf46f15e48c3ffbcde7fbf95f8a7c5_2_690x369.png" alt="Screen Shot 2021-11-11 at 8.51.48 AM" data-base62-sha1="cXpC0uGMjtCl1hZZ7wRHApycXYN" width="690" height="369" srcset="/uploads/db4391/optimized/2X/5/5ad166ca23cf46f15e48c3ffbcde7fbf95f8a7c5_2_690x369.png, /uploads/db4391/optimized/2X/5/5ad166ca23cf46f15e48c3ffbcde7fbf95f8a7c5_2_1035x553.png 1.5x, /uploads/db4391/original/2X/5/5ad166ca23cf46f15e48c3ffbcde7fbf95f8a7c5.png 2x" data-small-upload="/uploads/db4391/optimized/2X/5/5ad166ca23cf46f15e48c3ffbcde7fbf95f8a7c5_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/29">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/29
+        Thu, 11 Nov 2021 15:52:23 +0000
+gov.gitcoin.co-post-8848-29
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+Sandy-Seaweed
+
+            <p>Hi Kevin, I agree with the sentiment of using the womp womp with the conditions you have set above, until, we complete the level, at which point–I recommend no womps to be used in order to maximize any potential lagging sales, which would fund public goods.</p>
+<p>I have voted accordingly, and agree with general consensus of more womps to defeat the Moloch’s. Thanks for everything you do. I’m learning a lot through this process.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/28
+        Wed, 10 Nov 2021 15:51:59 +0000
+gov.gitcoin.co-post-8848-28
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>Welcome to level 3 everyone!  here is the curve for level 3 at present:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/41ebf023f7b2bf64ec944ba322c1f47e32f0b87d.jpeg" data-download-href="/uploads/short-url/9pawTjapauQ8ihEIAidC4fhKPwN.jpeg?dl=1" title="b88c556d-3eac-48c8-8802-7b56de447dfe"><img src="/uploads/db4391/optimized/2X/4/41ebf023f7b2bf64ec944ba322c1f47e32f0b87d_2_690x425.jpeg" alt="b88c556d-3eac-48c8-8802-7b56de447dfe" data-base62-sha1="9pawTjapauQ8ihEIAidC4fhKPwN" width="690" height="425" srcset="/uploads/db4391/optimized/2X/4/41ebf023f7b2bf64ec944ba322c1f47e32f0b87d_2_690x425.jpeg, /uploads/db4391/optimized/2X/4/41ebf023f7b2bf64ec944ba322c1f47e32f0b87d_2_1035x637.jpeg 1.5x, /uploads/db4391/original/2X/4/41ebf023f7b2bf64ec944ba322c1f47e32f0b87d.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/4/41ebf023f7b2bf64ec944ba322c1f47e32f0b87d_2_10x10.png"></a></div><p></p>
+<h1>
+<a name="lets-ratify-a-new-womp-wopm-policy-for-level-3-this-poll-will-last-36-hours-1" class="anchor" href="https://gov.gitcoin.co#lets-ratify-a-new-womp-wopm-policy-for-level-3-this-poll-will-last-36-hours-1"></a>Lets ratify a new womp wopm policy for level 3, this poll will last 36 hours:</h1>
+<p>How many womp womps should happen <em>no matter what</em> each day?</p>
+<p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/27">Click to view the poll.</a></p>
+<p>In addition to the base womp womps (above), should we add a bonus womp womp womp when the price is higher than 0.2 ETH?</p>
+<p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/27">Click to view the poll.</a></p>
+<p>In addition to the 0.2 ETH womp womp + the base womp womp, should we add a bonus womp womp womp when the price is higher than 0.4 ETH?</p>
+<p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/27">Click to view the poll.</a></p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/27">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/27
+        Tue, 09 Nov 2021 17:58:25 +0000
+gov.gitcoin.co-post-8848-27
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>The community has beat level 2 + we will be moving on to level 3!</p>
+<blockquote>
+<p>Eventually, the current womp womp will unlock the next level, but keep in mind, this same system plays out again on the next level. If this level takes 3-4 weeks, the next level takes 3-4 more. And there’s still a final level after that!</p>
+</blockquote>
+<p>Based on the above discussion + comments (in which the womp womp was being discussed as a method to beat the active levels), I am interpreting the “womp womp” policy to be applicable to the current active level.   If people feel we need another poll to disambguate womp womp across multiple levels, please feel free to post another poll to measure that sentiment.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/26">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/26
+        Tue, 09 Nov 2021 15:40:30 +0000
+gov.gitcoin.co-post-8848-26
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>Posting this <a href="https://t.me/c/1505231312/2111">on behalf</a> of <a class="mention" href="https://gov.gitcoin.co/u/colton">@Colton</a></p>
+<p><strong>Womp Womp V2:</strong></p>
+<p>The womp womp was designed to strike a balance between (1) spreading the Moloch lore and (2) funding public goods.</p>
+<p>Eventually, the current womp womp will unlock the next level, but keep in mind, this same system plays out again on the next level. If this level takes 3-4 weeks, the next level takes 3-4 more. And there’s still a final level after that!</p>
+<p><em>Crypto moves fast and this auction must consider the ecosystem’s pace to maximize public goods funding.</em></p>
+<p>There were no womp womps this morning because a single sale happened 21 hours ago. We have clearly not found a level most participants will engage with, and delaying a womp womp is unnecessarily dragging this process out.</p>
+<p><strong>I propose we womp womp every 24 hours, regardless of sales. When people start buying again, the bonding curve + womp womp will stabilize the price.</strong></p>
+<p>Can you please vote on this poll?</p>
+<p>After 36 hours I’ll plan to close the poll. Kevin has agreed to “folllow the lead of whatever the community decides”.</p>
+<p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/25">Click to view the poll.</a></p>
+<p>How many womp womps should happen each day?</p>
+<p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/25">Click to view the poll.</a></p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/25">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/25
+        Mon, 01 Nov 2021 15:41:42 +0000
+gov.gitcoin.co-post-8848-25
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>Poll is now closed, here is the results.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/855997c740ce1f57418bc1c65a9ffd47c0a8a5d9.jpeg" data-download-href="/uploads/short-url/j1FseHMGaCVUyGf61fQgZwThiPf.jpeg?dl=1" title="0f15a14a-62d5-4334-942d-5929bfab38ae"><img src="/uploads/db4391/optimized/2X/8/855997c740ce1f57418bc1c65a9ffd47c0a8a5d9_2_627x499.jpeg" alt="0f15a14a-62d5-4334-942d-5929bfab38ae" data-base62-sha1="j1FseHMGaCVUyGf61fQgZwThiPf" width="627" height="499" srcset="/uploads/db4391/optimized/2X/8/855997c740ce1f57418bc1c65a9ffd47c0a8a5d9_2_627x499.jpeg, /uploads/db4391/optimized/2X/8/855997c740ce1f57418bc1c65a9ffd47c0a8a5d9_2_940x748.jpeg 1.5x, /uploads/db4391/original/2X/8/855997c740ce1f57418bc1c65a9ffd47c0a8a5d9.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/8/855997c740ce1f57418bc1c65a9ffd47c0a8a5d9_2_10x10.png"></a></div><p></p>
+<p>Ill plan to execute the womp womps around 9am MST every day, and will post in the telegram channel about it when the txns are submitted.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/24
+        Wed, 27 Oct 2021 13:11:46 +0000
+gov.gitcoin.co-post-8848-24
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>The goal of the campaign is twofold:</p>
+<ol>
+<li>spread the word about the fight against moloch</li>
+<li>raise money for public goods.</li>
+</ol>
+<p>To your point; the price support is probably in support of the 2nd goal over the 1st goal.  But the womp womp is designed to balance this out.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/23
+        Wed, 27 Oct 2021 13:11:04 +0000
+gov.gitcoin.co-post-8848-23
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+AdamJ
+
+            <p>Agree - it doesn’t really serve the community to have a price curve that stretches into the stratosphere (exaggeration) just as we are wanting to onboard new members. And I would also not be concerned if prices didn’t rise after I purchased.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/22
+        Wed, 27 Oct 2021 04:39:45 +0000
+gov.gitcoin.co-post-8848-22
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+amy
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="8848">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Well… if you <a href="https://docs.google.com/spreadsheets/u/1/d/1__uH78nJVYmpwR1XYzgNbz8hCQjz3ONU6fQcOCex7nE/edit#gid=0" rel="noopener nofollow ugc">look at the price function </a> on the level, youll see that the price grows exponentially over time as more units are sold.</p>
+</blockquote>
+</aside>
+<p>Maybe this is a dumb question, but why a price increase? In this case, it feels coordination across 200 people purchasing 200 NFTs feels sufficient than coordination with increasing prices which may push out others from coordinating.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/21
+        Tue, 26 Oct 2021 23:23:18 +0000
+gov.gitcoin.co-post-8848-21
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+owocki
+
+            <p>Hey all, its hard to parse the responses in freeform.  Can you please vote on this poll?</p>
+<p>After 36 hours Ill plan to close the poll + we can institute the policy.</p>
+<p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/20">Click to view the poll.</a></p>
+<p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/20">Click to view the poll.</a></p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/20
+        Mon, 25 Oct 2021 17:46:23 +0000
+gov.gitcoin.co-post-8848-20
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+blaylockcomics
+
+            <p>Womp Womps could not kick in until prices reach a certain level.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/19
+        Mon, 25 Oct 2021 16:41:48 +0000
+gov.gitcoin.co-post-8848-19
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+Lautaro
+
+            <p>I support using a wompwomp if there are no sales on the last 24hs, althought i also like the idea of using it on special events, such as twitter spaces or conferences.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/18
+        Mon, 25 Oct 2021 16:36:05 +0000
+gov.gitcoin.co-post-8848-18
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+MoneyManDoug
+
+            <p>I also really like that idea, the community calls usually bring in a decent amount of exposure.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/17
+        Mon, 25 Oct 2021 16:30:19 +0000
+gov.gitcoin.co-post-8848-17
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+Lam
+
+            <p>Sers, I propose we WOMP WOMP immediately. Then we pay Steve Aoki to do a cameo saying WOMP WOMP. Fomo ensues and the coordination of ETHbots will surely hit power levels over 9000 to defeat Moloch. Option 2 is also nice.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/16
+        Mon, 25 Oct 2021 16:12:17 +0000
+gov.gitcoin.co-post-8848-16
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+blaylockcomics
+
+            <p>Comic creator here. I am all for multiple womp womps a day! Three or four.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/15
+        Mon, 25 Oct 2021 16:08:06 +0000
+gov.gitcoin.co-post-8848-15
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+Ethnation
+
+            <p>I think option 2 will help sustain momentum and help us reach a threshold where we can move ahead more reasonably.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/14
+        Mon, 25 Oct 2021 16:05:14 +0000
+gov.gitcoin.co-post-8848-14
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+Sandy-Seaweed
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> I’m in favor of using the womp womp twice every 24 hours. I think the benefits of raising more funding for public goods outweighs the negative externalities of influencing the bonding curve and corresponding prices. As a Bot holder myself, I’m supportive of this approach, thanks!</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/13
+        Mon, 25 Oct 2021 15:52:11 +0000
+gov.gitcoin.co-post-8848-13
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+ObayaDevOps
+
+            <p>The community call idea is great</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/12
+        Mon, 25 Oct 2021 15:24:07 +0000
+gov.gitcoin.co-post-8848-12
+A governance question for GreatestLARP.com
+      
+
+A governance question for GreatestLARP.com
+okeaguugochukwu
+
+            <p>nice idea …I propose to it, keep it up.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-governance-question-for-greatestlarp-com/8848/11
+        Mon, 25 Oct 2021 13:25:39 +0000
+gov.gitcoin.co-post-8848-11
+A governance question for GreatestLARP.com
+      
+
+

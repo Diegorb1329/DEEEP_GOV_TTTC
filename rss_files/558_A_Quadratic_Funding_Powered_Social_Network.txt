@@ -1,0 +1,565 @@
+
+
+
+A Quadratic Funding Powered Social Network
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462
+    *Note: This post assumes the reader is already familiar with what makes Quadratic Funding Powerful.  If that is not you, please checkout [https://wtfisqf.com/](https://wtfisqf.com/) first!*
+
+## The Quest for a better social network.
+
+In [July 2021](https://www.youtube.com/watch?v=oLsb7clrXMQ) Ethereum Founder Vitalik Buterin shared a [list of things that matter in Ethereum past Defi](https://www.youtube.com/watch?v=oLsb7clrXMQ), which listed the following
+
+> Sign in with Ethereum,  Social Networks, Public Goods
+
+Yesterday at the [RadXChange Denver 2021 Conference](https://www.radicalxchange.org/2021-conference/denver/), during the "Regenerative CryptoEconomics" breakout, we explored the problems with web2-era social networks, and what a web3-era social network that was more regenerative to the ecosystem it served might look like.
+
+These two experiences have inspired me to write up a document detailing an experiment that I spearheaded at Gitcoin in early 2020 involving *public goods + social networks*.
+
+## The Experiment
+
+### The Social Network
+
+One problem that novel social networks have is how to bootstrap their network effects.
+
+Before you have any users on your social network, you won't have any utility for people who join.  Before there is any utility for people who join, there won't be any users on a network.  It's a vicious cycle.
+
+![social-media-3846597_1280-1|690x435, 50%](upload://wGWytPo3PvGPNAPdFPU1QK0ieOM.png)
+
+Gitcoin didn't have that problem at all, because 
+
+1. Gitcoin Grants were growing rapidly during the bear market.
+2. Gitcoin Hackathons was too.
+2. [In early 2020](https://web.archive.org/web/20200406173347/https://gitcoin.co/results), we we had 20k active users and had already delivered about $4mm to OSS developers.  
+
+### The Gitcoin Activity Feeds
+
+With this growing usage, we were trying to figure out a few things:
+
+1. How could we make Gitcoin feel more like a community?  Give it a shared space where you could have chance encounters just by showing up.
+2. How do we surface novel/interesting ways ton show the activity of the network?
+1. People would come to Gitcoin once or twice a quarter to contribute to a hack or grant, how could we get them coming back more to partcipate in [our mission](https://gitcoin.co/mission) often?
+
+In 2020, we had been experimenting with building a handful of ways to solve these problems, and [Gitcoin's Townsquare](https://gitcoin.co/townsquare) was one of them.  
+
+It was place where we could aggregate all of the interesting happenings across Gitcoin into one place.  After all, lots of interesting public goods funding was happening on Gitcoin, and stepping into the 'Townsquare' would be a novel way to navigate that, right?
+
+The idea ended up looking something like this:
+![Screen Shot 2021-12-18 at 2.20.20 PM|382x500](upload://9a1ufys225WObSw4V4BCwyj31j1.png)
+
+Looks like a standard newsfeed, right?
+
+It is.
+
+And just like that, we stumbled into building a web 2.5-era social network.  The ux felt like web2, but it was web3 enabled, so we playfully call this era of Gitcoin web 2.5. :)
+
+### Let's not zuck it up!
+
+The problems with web2 social networks are well documented elsewhere.  They aren't forkable, they create polarity, they're like battle royales where nasty arguments can develop.   
+
+We were determined to leverage our web3-ness to mitigate some of these problems and create something novel.
+
+We were also interested in using this town square tool to solve the problems of people who were already on Gitcoin.  Members would share lots of different types of things on their Gitcoin newsfeeds.
+1. They'd promote their grant.
+2. They'd try to hire people.
+2. They'd ask how Gitcoin worked.
+3. They'd ask for customer support.
+4. They'd share memes.
+
+One of the consistent themes I'd seen was that when people had a job to be done, they'd come to the newsfeed + ask for help from the community.
+
+But we weren't seeing many people show up to answer questions, to explain how things work, or to give thoughtful feedback.
+
+So we started experimenting with ways to solve this problem.
+
+### Tipping
+
+In order to create incentives for people to help each other, and to [build in public](https://www.buildinpublic.xyz/) on a web3 primitive, I built the ability to tip other users in the newsfeed.
+
+Here's what it looks like:
+
+![Screen Shot 2021-12-18 at 2.36.50 PM|690x166](upload://Ab3yjTAWB1K6n4AejChipHEwnxp.png)
+You can send a tip by clicking on the little Ether symbol on the newsfeed.
+
+![Screen Shot 2021-12-18 at 2.35.06 PM|690x291](upload://oNOekDcipDJ4RfMWIRc2OdCxpTU.png)
+and decide how much to send in the next dialogue.
+
+#### Tips > Likes
+
+**Likes are the ultimate shitcoin!**  They're infinite supply, you can't spend them on anything.  They're like little ephemeral dopamine rushes to consume, but they leave the creators who receive them feeling empty!
+
+One of the things we wanted to prove here was that it was possible to build a social network on *something more web3-native than likes*.  
+
+I wanted to provide something more valuable to our users than likes.  It felt intuitively like a micro-tip was a better measure of whether a piece of content was actually truly valued or not.  
+
+People *like something* when it creates a visceral reaction.  People *tip someone* when they feel like they've truly been provided value.  
+
+There is a subtle but important difference there.
+
+#### .. but who cares about earning 30cents?
+
+At the time of this experiment, 0.001 ETH was about 30c.  And gas fees on the Ethereum mainnet were low enough that you could send a 30c transaction without worrying about gas.  Ahh those were the days!
+
+One thing that we saw when we launched tips was that people weren't really using it.  And when we asked them why they weren't using it, the answer us [unequivocally](https://twitter.com/owocki/status/1224042348335644672) "meh, 30c, who really cares?"
+
+So we tried an experiment.  We took the biggest, most powerful mechanism we know of, [Quadratic Funding](https://wtfisqf.com/), and pointed it at the problem.
+
+### Mini Quadratic Funding 🚀
+
+In early 2020, I [quietly launched](https://github.com/gitcoinco/web/pull/5942) a thing we called "Mini Quadratic Funding" Rounds.  
+
+It was a $200 per week subsidy to those who were providing helpful commentary to the platform.  Here's how it looked:
+
+Every  week we put 200 DAI into a matching pool, and we loudly advertised to the users that if they received tips they would receive quadratic matches (just like they already did in Gitcoin Grants).
+
+Here's a module that advertised the leaderboard of the Mini CLR Rounds
+![75190350-1dded680-571e-11ea-8d14-eb1cf2881f1d|419x357](upload://xNIIMsU36wQ9310o8oRj7nSItRE.png)
+
+### We have a hit!
+
+
+Over the next few months, people sent 100s of tips:
+
+![Screen Shot 2021-12-18 at 2.41.26 PM|690x377](upload://miaXfxvToJ37wQfCVZQ4ZYU6jQW.png)
+
+The median tip amount was the default amount, 0.001 ETH ($0.30 at the time), but the median match amount was 0.005ETH ($1.50) at the time.
+
+Here was the distribution of tip amounts by num tips:
+
+![Screen Shot 2021-12-18 at 2.43.42 PM|690x137](upload://ziTQDM9wyllOXrBDId0jCHesbYC.png)
+
+Over the subsequent  weeks, we ran 14 successive Mini QF Rounds, with 2,348 contributions resulting in 1,085 matching payouts/
+
+![Screen Shot 2021-12-18 at 2.17.44 PM|532x499](upload://4J06WhHPJcswa5m5kZytlbI7FyZ.png)
+
+### Behavior Change
+
+Most importantly, we saw a large behaviour change in the participants. 
+
+1. DAUs went up.
+1. Community members seemed to really care about climbing the leaderboard.  
+1. They went from passively ignoring each others help requests, and more actively helping to problem solve - directing support requests to the relevant Knoweldege Base entries, answering questions about the network.  
+
+Effectively, this experiment it created a class of community member that earned by being helpful + providing value.
+
+I [tweeted](https://twitter.com/owocki/status/1230633929280933888) about the behaviour change we saw:
+
+![Screen Shot 2021-12-18 at 3.01.01 PM|253x500](upload://1OdlARZHTPj8mD7AmDTDGBvnVWm.jpeg)
+
+### A Sybil Resistance Honeypot
+
+![virtual-honey-pot-sized|650x400, 50%](upload://w04ZGO4o78AcZTd7QTx0NuxiH1M.jpeg)
+
+
+One other benefit of the Mini QF experiment was that it allowed us to speed run the sybil resistence tools we were quietly building for use in the main Gitcoin Grants rounds.  
+
+The main Grants rounds were 1x/quarter, and having a [honeypot](https://blog.24by7security.com/honeypots-and-how-they-can-secure-your-network?https://www.24by7security.com/cmmc) 1x/week QF round meant that we could see how attackers were attacking the system and learn about how to mitigate it even better.
+
+Some of those insights endure as a major part of our [sybil resistance strategy today](https://gitcoin.co/blog/a-community-based-roadmap-for-sybil-detection-across-web-3/).
+
+### Overcome by events.
+
+Unfortunately, circumstances turned against the experiment:
+1. gas fees on the eth mainnet went up in summer 2020 (colloquially known as DEFI summer)
+2. we moved onto other things, like integrating ZKSync into Gitcoin Grants or adding a [bulk checkout](https://twitter.com/owocki/status/1279092094720598017) on Gitcoin Grants, or trying to figure out what GitcoinDAO would look like. Or the move towards creating a new landing page & navigation structure for Gitcoin, so people could get around easier.  Or the [imminent spinout from Consensys](https://decrypt.co/66541/ethereum-gitcoin-raises-11-million-spins-out-consensys)
+
+Because of those events, we had to abandon the mini QF experiment and refocus on our core - Gitcoin Grants.
+
+But I continue to think there is the KERNEL of a great idea here.  What if we replaced likes with micro-tip subsidies all across social media?  Would we close the asymmetry between value created and value captured for creators on social media, and realize Vitalik's dream of web3 social media?
+
+These are big ideas.  I hope that I have played a small part in validating them.  I continue to be focused on building Gitcoin Grants. 
+
+If anyone wants to take up this mechanism, please reach out.  I'd love to support you.
+
+## example posts
+
+edit; 12/19/2021, i'm attaching a few examples of posts here that got a lot of tips from 2020, so give a sense of what kind of posts this mechanism optimized for..
+ 
+![Screen Shot 2021-12-19 at 5.50.28 PM|690x494](upload://tUNEvOWqpNcTDOq6eLGddMglnnj.jpeg)
+![Screen Shot 2021-12-19 at 5.49.56 PM|690x495](upload://a8OnlM76pvsNi153gXxygsY9rlk.jpeg)
+![Screen Shot 2021-12-19 at 5.49.36 PM|690x493](upload://yfbWNx6ql6M57i3zpTFstTnxDOb.png)
+![Screen Shot 2021-12-19 at 5.49.19 PM|690x429](upload://ueEafzcCwHiW8xM0qOX9ZpBJwk5.jpeg)
+![Screen Shot 2021-12-19 at 5.49.01 PM|690x463](upload://xHO46CJXhG2VwZPoyAH8uHV3gSq.png)
+Thu, 26 Jan 2023 11:16:37 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+A Quadratic Funding Powered Social Network
+DisruptionJoe
+
+            <p>How do you know if they are real humans or not?</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/19
+        Thu, 26 Jan 2023 11:16:37 +0000
+gov.gitcoin.co-post-9462-19
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+KazanderDad
+
+            <p>Folks,</p>
+<p>Check out <a href="https://www.goodmicrogrants.com/" rel="noopener nofollow ugc">GoodMicroGrants</a>, currently in proof of concept. A quadratic matching site for any tipping transactions and/or purchase transactions. As long as they are between real humans it counts. Not a pure play social tipping protocol, but tipping is encouraged and certainly counts towards your “microgrants”.</p>
+<p>Tweet and share if you can.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/18
+        Thu, 26 Jan 2023 02:09:50 +0000
+gov.gitcoin.co-post-9462-18
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+guoliu
+
+            <p>We have been using micro-tipping (USDT on Polygon) on Matter.News for users to curate content, and are now starting to do donation-matching: exactly the same idea described here! So glad I found this post.</p>
+<p>The biggest challenge we had was how to rank content based on tipping. If we use tipping times and amounts directly, people can easily create different accounts and tip each other, and occupy everyone’s attention.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/17
+        Wed, 16 Nov 2022 02:07:46 +0000
+gov.gitcoin.co-post-9462-17
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+monk2525
+
+            <p>This is a really nice idea – mini-grants / tips.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/16
+        Mon, 07 Nov 2022 14:10:10 +0000
+gov.gitcoin.co-post-9462-16
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+ZER8
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="9462">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>How could we make Gitcoin feel more like a community? Give it a shared space where you could have chance encounters just by showing up.</p>
+</blockquote>
+</aside>
+<p>This is a great post. It’s always amazing to see that the level of experimentation in Gitcoin is always mooning.</p>
+<p>As a member of the community that worked for the DAO and joined organically and Stewards I sometimes feel that the community would need more than a space and could highly benefit from QV. This could be an area in which 1H1V could make a huge difference. Maybe until or during the next bull the DAO could experiment with 1H1V and enable the creation of organic pods in a bottoms up way. They would organize around common goals that would apply for funding via grants. They could even compete for the same goals/outcomes, but not in a winner takes all fashion.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/15
+        Sat, 05 Nov 2022 21:06:33 +0000
+gov.gitcoin.co-post-9462-15
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+bestape
+
+            <p>Experimenting with tips in LexDAO Clinic right now. Thanks for this. Really like the idea of QF boosting tips.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/14
+        Fri, 04 Nov 2022 16:50:20 +0000
+gov.gitcoin.co-post-9462-14
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+anneconnelly
+
+            <p>I’ll be presenting on it at Schelling Point in Denver and you can also check out this blog: <a href="https://anneconnelly.medium.com/quadratic-trust-339e3569475d" class="inline-onebox" rel="noopener nofollow ugc">Quadratic Trust. Making it easier to support open source | by Anne Connelly | Medium</a></p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/13
+        Mon, 07 Feb 2022 04:06:46 +0000
+gov.gitcoin.co-post-9462-13
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+auryn
+
+            <aside class="quote no-group" data-username="ManuAlzuru" data-post="11" data-topic="9462">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/manualzuru/48/398_2.png" class="avatar"> ManuAlzuru:</div>
+<blockquote>
+<p>Where can I learn more?</p>
+</blockquote>
+</aside>
+<p>You can find it at <a href="http://quadratictrust.com" rel="noopener nofollow ugc">http://quadratictrust.com</a></p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/12
+        Wed, 29 Dec 2021 00:36:50 +0000
+gov.gitcoin.co-post-9462-12
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+ManuAlzuru
+
+            <p>Amazing experiment, thanks again for sharing your learnings <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a>. I would love to learn more about Quadratic Trust that <a class="mention" href="https://gov.gitcoin.co/u/auryn">@auryn</a> mentioned by <a class="mention" href="https://gov.gitcoin.co/u/anneconnelly">@anneconnelly</a>. Where can I learn more?</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/11
+        Wed, 29 Dec 2021 00:25:21 +0000
+gov.gitcoin.co-post-9462-11
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+farmerxt
+
+            <p>its a module and can potentially be integrated into minds/com<br>
+//question!!</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/10
+        Wed, 22 Dec 2021 10:52:39 +0000
+gov.gitcoin.co-post-9462-10
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+Lunacat
+
+            <p>This is a fantastic idea.  I’d be more inclined to try and build this idea into something that already exists as opposed to creating something completely new.  Competing decentralized social media apps will run risk of fragmenting “liquidity” of user bases, similar to all the competing liquidity pools and L2s that are starting to consolidate.  Peepeth is still alive and kicking and shares much of the above ethos, and they have a tip feature that people were pretty actively using when it first launched; if a quadratic matching pool could be funded and tipping/likes moved to an L2, I could see that gaining some traction.  Might be a way to leverage what they (or someone else) has already built?  Granted, Peepeth specifically is focused on Twitter model while you’ve laid out a Facebook one, just using them as an example of possible “synergies” out there…</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/9
+        Mon, 20 Dec 2021 15:35:06 +0000
+gov.gitcoin.co-post-9462-9
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+owocki
+
+            <p>attaching a few examples of posts that got a lot of tips from 2020, so give a sense of what kind of posts this mechanism optimized for…</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919.jpeg" data-download-href="/uploads/short-url/tUNEvOWqpNcTDOq6eLGddMglnnj.jpeg?dl=1" title="Screen Shot 2021-12-19 at 5.50.28 PM"><img src="/uploads/db4391/optimized/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919_2_690x494.jpeg" alt="Screen Shot 2021-12-19 at 5.50.28 PM" data-base62-sha1="tUNEvOWqpNcTDOq6eLGddMglnnj" width="690" height="494" srcset="/uploads/db4391/optimized/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919_2_690x494.jpeg, /uploads/db4391/optimized/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919_2_1035x741.jpeg 1.5x, /uploads/db4391/optimized/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919_2_1380x988.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919_2_10x10.png"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e.jpeg" data-download-href="/uploads/short-url/a8OnlM76pvsNi153gXxygsY9rlk.jpeg?dl=1" title="Screen Shot 2021-12-19 at 5.49.56 PM"><img src="/uploads/db4391/optimized/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e_2_690x495.jpeg" alt="Screen Shot 2021-12-19 at 5.49.56 PM" data-base62-sha1="a8OnlM76pvsNi153gXxygsY9rlk" width="690" height="495" srcset="/uploads/db4391/optimized/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e_2_690x495.jpeg, /uploads/db4391/optimized/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e_2_1035x742.jpeg 1.5x, /uploads/db4391/optimized/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e_2_1380x990.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e_2_10x10.png"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f00190ef3e8513c46acadf73721c206836ea268b.png" data-download-href="/uploads/short-url/yfbWNx6ql6M57i3zpTFstTnxDOb.png?dl=1" title="Screen Shot 2021-12-19 at 5.49.36 PM"><img src="/uploads/db4391/optimized/2X/f/f00190ef3e8513c46acadf73721c206836ea268b_2_690x493.png" alt="Screen Shot 2021-12-19 at 5.49.36 PM" data-base62-sha1="yfbWNx6ql6M57i3zpTFstTnxDOb" width="690" height="493" srcset="/uploads/db4391/optimized/2X/f/f00190ef3e8513c46acadf73721c206836ea268b_2_690x493.png, /uploads/db4391/optimized/2X/f/f00190ef3e8513c46acadf73721c206836ea268b_2_1035x739.png 1.5x, /uploads/db4391/optimized/2X/f/f00190ef3e8513c46acadf73721c206836ea268b_2_1380x986.png 2x" data-small-upload="/uploads/db4391/optimized/2X/f/f00190ef3e8513c46acadf73721c206836ea268b_2_10x10.png"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5.jpeg" data-download-href="/uploads/short-url/ueEafzcCwHiW8xM0qOX9ZpBJwk5.jpeg?dl=1" title="Screen Shot 2021-12-19 at 5.49.19 PM"><img src="/uploads/db4391/optimized/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5_2_690x429.jpeg" alt="Screen Shot 2021-12-19 at 5.49.19 PM" data-base62-sha1="ueEafzcCwHiW8xM0qOX9ZpBJwk5" width="690" height="429" srcset="/uploads/db4391/optimized/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5_2_690x429.jpeg, /uploads/db4391/optimized/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5_2_1035x643.jpeg 1.5x, /uploads/db4391/optimized/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5_2_1380x858.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5_2_10x10.png"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706.png" data-download-href="/uploads/short-url/xHO46CJXhG2VwZPoyAH8uHV3gSq.png?dl=1" title="Screen Shot 2021-12-19 at 5.49.01 PM"><img src="/uploads/db4391/optimized/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706_2_690x463.png" alt="Screen Shot 2021-12-19 at 5.49.01 PM" data-base62-sha1="xHO46CJXhG2VwZPoyAH8uHV3gSq" width="690" height="463" srcset="/uploads/db4391/optimized/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706_2_690x463.png, /uploads/db4391/optimized/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706_2_1035x694.png 1.5x, /uploads/db4391/optimized/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706_2_1380x926.png 2x" data-small-upload="/uploads/db4391/optimized/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/8
+        Mon, 20 Dec 2021 00:51:24 +0000
+gov.gitcoin.co-post-9462-8
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+socal434
+
+            <p>I think the tips&gt;likes is great. Instead of mindlessly smashing like you really put thought into who earned that commendation. Using Brave browser it is already kind of baked into it with $BAT on some social media sites and I think twitter is doing its own native thing with tips too (if I remember correctly). I think it should be moved to an L2 and revived because it would help to foster quality content in my opinion.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/7
+        Sun, 19 Dec 2021 11:37:45 +0000
+gov.gitcoin.co-post-9462-7
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+tjayrush
+
+            <p>This is a really nice idea – mini-grants / tips.</p>
+<p>What would be super cool would be a javascript code snippet that people could drop into a website. Copy and paste tips.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/6
+        Sun, 19 Dec 2021 01:31:30 +0000
+gov.gitcoin.co-post-9462-6
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+ntnsndr
+
+            <p>Might it be worth considering integrating this idea with ethereum.world?</p>
+<p>Nice to see you at RxC:)</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/5
+        Sun, 19 Dec 2021 00:52:20 +0000
+gov.gitcoin.co-post-9462-5
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+auryn
+
+            <aside class="quote no-group" data-username="owocki" data-post="3" data-topic="9462">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I’m kicking myself for not just biting the bullet + migrating this to a L2 so it could live on</p>
+</blockquote>
+</aside>
+<p>The L2 ecosystem is in a much better place to make this a reality now though.</p>
+<p>Since you mentioned web 2.5, I’d love to explore how to push the town hall / feed feature to full web3. One option could be to use a shared data layer via something like <a href="https://github.com/onposter/contract" rel="noopener nofollow ugc">Poster</a> on a cheap L2/sidechain.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/4
+        Sun, 19 Dec 2021 00:29:46 +0000
+gov.gitcoin.co-post-9462-4
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+owocki
+
+            <p>Yes Quadratic Trust deserves it’s own retrospective post <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<blockquote>
+<p>which ultimately suffered from the same gas price issues</p>
+</blockquote>
+<p>I’m kicking myself for not just biting the bullet + migrating this to a L2 so it could live on …</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/3
+        Sat, 18 Dec 2021 23:54:26 +0000
+gov.gitcoin.co-post-9462-3
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+auryn
+
+            <p>I really dig this concept and explored a tangentially similar idea in burn signal, which ultimately suffered from the same gas price issues (along with some other questionable assumptions)</p>
+<p>I’ve often wondered about using Medium-like claps for QV / QF in the context of a publishing or social media platform. <a class="mention" href="https://gov.gitcoin.co/u/anneconnelly">@anneconnelly</a>’s Quadratic Trust was a really nice experiment in this direction. CLR.fund is going to leverage some version of this for recipient curation at some point.</p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/2
+        Sat, 18 Dec 2021 23:15:34 +0000
+gov.gitcoin.co-post-9462-2
+A Quadratic Funding Powered Social Network
+      
+
+A Quadratic Funding Powered Social Network
+owocki
+
+            <p><em>Note: This post assumes the reader is already familiar with what makes Quadratic Funding Powerful.  If that is not you, please checkout <a href="https://wtfisqf.com/">https://wtfisqf.com/</a> first!</em></p>
+<h2><a name="the-quest-for-a-better-social-network-1" class="anchor" href="https://gov.gitcoin.co#the-quest-for-a-better-social-network-1"></a>The Quest for a better social network.</h2>
+<p>In <a href="https://www.youtube.com/watch?v=oLsb7clrXMQ">July 2021</a> Ethereum Founder Vitalik Buterin shared a <a href="https://www.youtube.com/watch?v=oLsb7clrXMQ">list of things that matter in Ethereum past Defi</a>, which listed the following</p>
+<blockquote>
+<p>Sign in with Ethereum,  Social Networks, Public Goods</p>
+</blockquote>
+<p>Yesterday at the <a href="https://www.radicalxchange.org/2021-conference/denver/">RadXChange Denver 2021 Conference</a>, during the “Regenerative CryptoEconomics” breakout, we explored the problems with web2-era social networks, and what a web3-era social network that was more regenerative to the ecosystem it served might look like.</p>
+<p>These two experiences have inspired me to write up a document detailing an experiment that I spearheaded at Gitcoin in early 2020 involving <em>public goods + social networks</em>.</p>
+<h2><a name="the-experiment-2" class="anchor" href="https://gov.gitcoin.co#the-experiment-2"></a>The Experiment</h2>
+<h3><a name="the-social-network-3" class="anchor" href="https://gov.gitcoin.co#the-social-network-3"></a>The Social Network</h3>
+<p>One problem that novel social networks have is how to bootstrap their network effects.</p>
+<p>Before you have any users on your social network, you won’t have any utility for people who join.  Before there is any utility for people who join, there won’t be any users on a network.  It’s a vicious cycle.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e5204e59f0f8f95ffb5706d40cb850eb6bdee0b4.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/e5204e59f0f8f95ffb5706d40cb850eb6bdee0b4" title="social-media-3846597_1280-1"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5204e59f0f8f95ffb5706d40cb850eb6bdee0b4_2_345x217.png" alt="social-media-3846597_1280-1" data-base62-sha1="wGWytPo3PvGPNAPdFPU1QK0ieOM" width="345" height="217" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5204e59f0f8f95ffb5706d40cb850eb6bdee0b4_2_345x217.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5204e59f0f8f95ffb5706d40cb850eb6bdee0b4_2_517x325.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5204e59f0f8f95ffb5706d40cb850eb6bdee0b4_2_690x434.png 2x" data-dominant-color="816554"></a></div><p></p>
+<p>Gitcoin didn’t have that problem at all, because</p>
+<ol>
+<li>Gitcoin Grants were growing rapidly during the bear market.</li>
+<li>Gitcoin Hackathons was too.</li>
+<li><a href="https://web.archive.org/web/20200406173347/https://gitcoin.co/results">In early 2020</a>, we we had 20k active users and had already delivered about $4mm to OSS developers.</li>
+</ol>
+<h3><a name="the-gitcoin-activity-feeds-4" class="anchor" href="https://gov.gitcoin.co#the-gitcoin-activity-feeds-4"></a>The Gitcoin Activity Feeds</h3>
+<p>With this growing usage, we were trying to figure out a few things:</p>
+<ol>
+<li>How could we make Gitcoin feel more like a community?  Give it a shared space where you could have chance encounters just by showing up.</li>
+<li>How do we surface novel/interesting ways ton show the activity of the network?</li>
+<li>People would come to Gitcoin once or twice a quarter to contribute to a hack or grant, how could we get them coming back more to partcipate in <a href="https://gitcoin.co/mission">our mission</a> often?</li>
+</ol>
+<p>In 2020, we had been experimenting with building a handful of ways to solve these problems, and <a href="https://gitcoin.co/townsquare">Gitcoin’s Townsquare</a> was one of them.</p>
+<p>It was place where we could aggregate all of the interesting happenings across Gitcoin into one place.  After all, lots of interesting public goods funding was happening on Gitcoin, and stepping into the ‘Townsquare’ would be a novel way to navigate that, right?</p>
+<p>The idea ended up looking something like this:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4035a4a21e3f10d243f6a5417ced2e2a2a96ff77.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/4035a4a21e3f10d243f6a5417ced2e2a2a96ff77" title="Screen Shot 2021-12-18 at 2.20.20 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4035a4a21e3f10d243f6a5417ced2e2a2a96ff77_2_382x500.png" alt="Screen Shot 2021-12-18 at 2.20.20 PM" data-base62-sha1="9a1ufys225WObSw4V4BCwyj31j1" width="382" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4035a4a21e3f10d243f6a5417ced2e2a2a96ff77_2_382x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4035a4a21e3f10d243f6a5417ced2e2a2a96ff77_2_573x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4035a4a21e3f10d243f6a5417ced2e2a2a96ff77_2_764x1000.png 2x" data-dominant-color="302C4B"></a></div><p></p>
+<p>Looks like a standard newsfeed, right?</p>
+<p>It is.</p>
+<p>And just like that, we stumbled into building a web 2.5-era social network.  The ux felt like web2, but it was web3 enabled, so we playfully call this era of Gitcoin web 2.5. <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<h3><a name="lets-not-zuck-it-up-5" class="anchor" href="https://gov.gitcoin.co#lets-not-zuck-it-up-5"></a>Let’s not zuck it up!</h3>
+<p>The problems with web2 social networks are well documented elsewhere.  They aren’t forkable, they create polarity, they’re like battle royales where nasty arguments can develop.</p>
+<p>We were determined to leverage our web3-ness to mitigate some of these problems and create something novel.</p>
+<p>We were also interested in using this town square tool to solve the problems of people who were already on Gitcoin.  Members would share lots of different types of things on their Gitcoin newsfeeds.</p>
+<ol>
+<li>They’d promote their grant.</li>
+<li>They’d try to hire people.</li>
+<li>They’d ask how Gitcoin worked.</li>
+<li>They’d ask for customer support.</li>
+<li>They’d share memes.</li>
+</ol>
+<p>One of the consistent themes I’d seen was that when people had a job to be done, they’d come to the newsfeed + ask for help from the community.</p>
+<p>But we weren’t seeing many people show up to answer questions, to explain how things work, or to give thoughtful feedback.</p>
+<p>So we started experimenting with ways to solve this problem.</p>
+<h3><a name="tipping-6" class="anchor" href="https://gov.gitcoin.co#tipping-6"></a>Tipping</h3>
+<p>In order to create incentives for people to help each other, and to <a href="https://www.buildinpublic.xyz/">build in public</a> on a web3 primitive, I built the ability to tip other users in the newsfeed.</p>
+<p>Here’s what it looks like:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/fd8e3e205f588a37a25e64f20e3ec27adff6a7d3.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/fd8e3e205f588a37a25e64f20e3ec27adff6a7d3" title="Screen Shot 2021-12-18 at 2.36.50 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fd8e3e205f588a37a25e64f20e3ec27adff6a7d3_2_690x166.png" alt="Screen Shot 2021-12-18 at 2.36.50 PM" data-base62-sha1="Ab3yjTAWB1K6n4AejChipHEwnxp" width="690" height="166" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fd8e3e205f588a37a25e64f20e3ec27adff6a7d3_2_690x166.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fd8e3e205f588a37a25e64f20e3ec27adff6a7d3_2_1035x249.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/f/fd8e3e205f588a37a25e64f20e3ec27adff6a7d3.png 2x" data-dominant-color="373551"></a></div><br>
+You can send a tip by clicking on the little Ether symbol on the newsfeed.<p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/add598c052151e4ddae85186eeff38c72b0a0926.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/add598c052151e4ddae85186eeff38c72b0a0926" title="Screen Shot 2021-12-18 at 2.35.06 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/add598c052151e4ddae85186eeff38c72b0a0926_2_690x291.png" alt="Screen Shot 2021-12-18 at 2.35.06 PM" data-base62-sha1="oNOekDcipDJ4RfMWIRc2OdCxpTU" width="690" height="291" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/add598c052151e4ddae85186eeff38c72b0a0926_2_690x291.png, https://gov.gitcoin.co/uploads/db4391/original/2X/a/add598c052151e4ddae85186eeff38c72b0a0926.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/a/add598c052151e4ddae85186eeff38c72b0a0926.png 2x" data-dominant-color="302D30"></a></div><br>
+and decide how much to send in the next dialogue.<p></p>
+<h4><a name="tips-likes-7" class="anchor" href="https://gov.gitcoin.co#tips-likes-7"></a>Tips &gt; Likes</h4>
+<p><strong>Likes are the ultimate shitcoin!</strong>  They’re infinite supply, you can’t spend them on anything.  They’re like little ephemeral dopamine rushes to consume, but they leave the creators who receive them feeling empty!</p>
+<p>One of the things we wanted to prove here was that it was possible to build a social network on <em>something more web3-native than likes</em>.</p>
+<p>I wanted to provide something more valuable to our users than likes.  It felt intuitively like a micro-tip was a better measure of whether a piece of content was actually truly valued or not.</p>
+<p>People <em>like something</em> when it creates a visceral reaction.  People <em>tip someone</em> when they feel like they’ve truly been provided value.</p>
+<p>There is a subtle but important difference there.</p>
+<h4><a name="but-who-cares-about-earning-30cents-8" class="anchor" href="https://gov.gitcoin.co#but-who-cares-about-earning-30cents-8"></a>… but who cares about earning 30cents?</h4>
+<p>At the time of this experiment, 0.001 ETH was about 30c.  And gas fees on the Ethereum mainnet were low enough that you could send a 30c transaction without worrying about gas.  Ahh those were the days!</p>
+<p>One thing that we saw when we launched tips was that people weren’t really using it.  And when we asked them why they weren’t using it, the answer us <a href="https://twitter.com/owocki/status/1224042348335644672">unequivocally</a> “meh, 30c, who really cares?”</p>
+<p>So we tried an experiment.  We took the biggest, most powerful mechanism we know of, <a href="https://wtfisqf.com/">Quadratic Funding</a>, and pointed it at the problem.</p>
+<h3><a name="mini-quadratic-funding-9" class="anchor" href="https://gov.gitcoin.co#mini-quadratic-funding-9"></a>Mini Quadratic Funding <img src="https://gov.gitcoin.co/images/emoji/twitter/rocket.png?v=12" title=":rocket:" class="emoji" alt=":rocket:" loading="lazy" width="20" height="20"></h3>
+<p>In early 2020, I <a href="https://github.com/gitcoinco/web/pull/5942">quietly launched</a> a thing we called “Mini Quadratic Funding” Rounds.</p>
+<p>It was a $200 per week subsidy to those who were providing helpful commentary to the platform.  Here’s how it looked:</p>
+<p>Every  week we put 200 DAI into a matching pool, and we loudly advertised to the users that if they received tips they would receive quadratic matches (just like they already did in Gitcoin Grants).</p>
+<p>Here’s a module that advertised the leaderboard of the Mini CLR Rounds<br>
+<img src="https://gov.gitcoin.co/uploads/db4391/original/2X/e/ece6975595f10fbf63c563e0d339b97e0f065cd2.png" alt="75190350-1dded680-571e-11ea-8d14-eb1cf2881f1d" data-base62-sha1="xNIIMsU36wQ9310o8oRj7nSItRE" width="419" height="357"></p>
+<h3><a name="we-have-a-hit-10" class="anchor" href="https://gov.gitcoin.co#we-have-a-hit-10"></a>We have a hit!</h3>
+<p>Over the next few months, people sent 100s of tips:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9c3dd47dfceb810cf1eb1e660260821d2304e32e.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/9c3dd47dfceb810cf1eb1e660260821d2304e32e" title="Screen Shot 2021-12-18 at 2.41.26 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9c3dd47dfceb810cf1eb1e660260821d2304e32e_2_690x377.png" alt="Screen Shot 2021-12-18 at 2.41.26 PM" data-base62-sha1="miaXfxvToJ37wQfCVZQ4ZYU6jQW" width="690" height="377" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9c3dd47dfceb810cf1eb1e660260821d2304e32e_2_690x377.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9c3dd47dfceb810cf1eb1e660260821d2304e32e_2_1035x565.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/9c3dd47dfceb810cf1eb1e660260821d2304e32e.png 2x" data-dominant-color="ECECF3"></a></div><p></p>
+<p>The median tip amount was the default amount, 0.001 ETH ($0.30 at the time), but the median match amount was 0.005ETH ($1.50) at the time.</p>
+<p>Here was the distribution of tip amounts by num tips:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f76f0ba4f84f8b5a0914d728afbb2806d09dec7a.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/f76f0ba4f84f8b5a0914d728afbb2806d09dec7a" title="Screen Shot 2021-12-18 at 2.43.42 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f76f0ba4f84f8b5a0914d728afbb2806d09dec7a_2_690x137.png" alt="Screen Shot 2021-12-18 at 2.43.42 PM" data-base62-sha1="ziTQDM9wyllOXrBDId0jCHesbYC" width="690" height="137" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f76f0ba4f84f8b5a0914d728afbb2806d09dec7a_2_690x137.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f76f0ba4f84f8b5a0914d728afbb2806d09dec7a_2_1035x205.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f76f0ba4f84f8b5a0914d728afbb2806d09dec7a_2_1380x274.png 2x" data-dominant-color="FCFCFD"></a></div><p></p>
+<p>Over the subsequent  weeks, we ran 14 successive Mini QF Rounds, with 2,348 contributions resulting in 1,085 matching payouts/</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/211ef89e2e8db425066cfcdc7a1f180ef4596905.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/211ef89e2e8db425066cfcdc7a1f180ef4596905" title="Screen Shot 2021-12-18 at 2.17.44 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/211ef89e2e8db425066cfcdc7a1f180ef4596905_2_532x499.png" alt="Screen Shot 2021-12-18 at 2.17.44 PM" data-base62-sha1="4J06WhHPJcswa5m5kZytlbI7FyZ" width="532" height="499" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/211ef89e2e8db425066cfcdc7a1f180ef4596905_2_532x499.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/211ef89e2e8db425066cfcdc7a1f180ef4596905_2_798x748.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/211ef89e2e8db425066cfcdc7a1f180ef4596905.png 2x" data-dominant-color="F7F7F7"></a></div><p></p>
+<h3><a name="behavior-change-11" class="anchor" href="https://gov.gitcoin.co#behavior-change-11"></a>Behavior Change</h3>
+<p>Most importantly, we saw a large behaviour change in the participants.</p>
+<ol>
+<li>DAUs went up.</li>
+<li>Community members seemed to really care about climbing the leaderboard.</li>
+<li>They went from passively ignoring each others help requests, and more actively helping to problem solve - directing support requests to the relevant Knoweldege Base entries, answering questions about the network.</li>
+</ol>
+<p>Effectively, this experiment it created a class of community member that earned by being helpful + providing value.</p>
+<p>I <a href="https://twitter.com/owocki/status/1230633929280933888">tweeted</a> about the behaviour change we saw:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0caf519893ad6b44211007857ab15a4d06778b9e.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/0caf519893ad6b44211007857ab15a4d06778b9e" title="Screen Shot 2021-12-18 at 3.01.01 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0caf519893ad6b44211007857ab15a4d06778b9e_2_253x500.jpeg" alt="Screen Shot 2021-12-18 at 3.01.01 PM" data-base62-sha1="1OdlARZHTPj8mD7AmDTDGBvnVWm" width="253" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0caf519893ad6b44211007857ab15a4d06778b9e_2_253x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0caf519893ad6b44211007857ab15a4d06778b9e_2_379x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0caf519893ad6b44211007857ab15a4d06778b9e_2_506x1000.jpeg 2x" data-dominant-color="727A8F"></a></div><p></p>
+<h3><a name="a-sybil-resistance-honeypot-12" class="anchor" href="https://gov.gitcoin.co#a-sybil-resistance-honeypot-12"></a>A Sybil Resistance Honeypot</h3>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e047e5fe007e3f242e3cdc3aab51d49bf1a1e11a.jpeg" alt="virtual-honey-pot-sized" data-base62-sha1="w04ZGO4o78AcZTd7QTx0NuxiH1M" width="325" height="200"></p>
+<p>One other benefit of the Mini QF experiment was that it allowed us to speed run the sybil resistence tools we were quietly building for use in the main Gitcoin Grants rounds.</p>
+<p>The main Grants rounds were 1x/quarter, and having a <a href="https://blog.24by7security.com/honeypots-and-how-they-can-secure-your-network?https://www.24by7security.com/cmmc">honeypot</a> 1x/week QF round meant that we could see how attackers were attacking the system and learn about how to mitigate it even better.</p>
+<p>Some of those insights endure as a major part of our <a href="https://gitcoin.co/blog/a-community-based-roadmap-for-sybil-detection-across-web-3/">sybil resistance strategy today</a>.</p>
+<h3><a name="overcome-by-events-13" class="anchor" href="https://gov.gitcoin.co#overcome-by-events-13"></a>Overcome by events.</h3>
+<p>Unfortunately, circumstances turned against the experiment:</p>
+<ol>
+<li>gas fees on the eth mainnet went up in summer 2020 (colloquially known as DEFI summer)</li>
+<li>we moved onto other things, like integrating ZKSync into Gitcoin Grants or adding a <a href="https://twitter.com/owocki/status/1279092094720598017">bulk checkout</a> on Gitcoin Grants, or trying to figure out what GitcoinDAO would look like. Or the move towards creating a new landing page &amp; navigation structure for Gitcoin, so people could get around easier.  Or the <a href="https://decrypt.co/66541/ethereum-gitcoin-raises-11-million-spins-out-consensys">imminent spinout from Consensys</a></li>
+</ol>
+<p>Because of those events, we had to abandon the mini QF experiment and refocus on our core - Gitcoin Grants.</p>
+<p>But I continue to think there is the KERNEL of a great idea here.  What if we replaced likes with micro-tip subsidies all across social media?  Would we close the asymmetry between value created and value captured for creators on social media, and realize Vitalik’s dream of web3 social media?</p>
+<p>These are big ideas.  I hope that I have played a small part in validating them.  I continue to be focused on building Gitcoin Grants.</p>
+<p>If anyone wants to take up this mechanism, please reach out.  I’d love to support you.</p>
+<h2><a name="example-posts-14" class="anchor" href="https://gov.gitcoin.co#example-posts-14"></a>example posts</h2>
+<p>edit; 12/19/2021, i’m attaching a few examples of posts here that got a lot of tips from 2020, so give a sense of what kind of posts this mechanism optimized for…</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919" title="Screen Shot 2021-12-19 at 5.50.28 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919_2_690x494.jpeg" alt="Screen Shot 2021-12-19 at 5.50.28 PM" data-base62-sha1="tUNEvOWqpNcTDOq6eLGddMglnnj" width="690" height="494" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919_2_690x494.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919_2_1035x741.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d1aac3d0a2099d5a0c7fa538b2aad14bb1f86919_2_1380x988.jpeg 2x" data-dominant-color="EDEFF2"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/4714c2565731f5f04bf687dc040d5e4273b73b8e" title="Screen Shot 2021-12-19 at 5.49.56 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e_2_690x495.jpeg" alt="Screen Shot 2021-12-19 at 5.49.56 PM" data-base62-sha1="a8OnlM76pvsNi153gXxygsY9rlk" width="690" height="495" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e_2_690x495.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e_2_1035x742.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4714c2565731f5f04bf687dc040d5e4273b73b8e_2_1380x990.jpeg 2x" data-dominant-color="E7E8EC"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f00190ef3e8513c46acadf73721c206836ea268b.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/f00190ef3e8513c46acadf73721c206836ea268b" title="Screen Shot 2021-12-19 at 5.49.36 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f00190ef3e8513c46acadf73721c206836ea268b_2_690x493.png" alt="Screen Shot 2021-12-19 at 5.49.36 PM" data-base62-sha1="yfbWNx6ql6M57i3zpTFstTnxDOb" width="690" height="493" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f00190ef3e8513c46acadf73721c206836ea268b_2_690x493.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f00190ef3e8513c46acadf73721c206836ea268b_2_1035x739.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f00190ef3e8513c46acadf73721c206836ea268b_2_1380x986.png 2x" data-dominant-color="EAEBEF"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/d3e91a272ff00e600711aeff5a0f756c99f9ffe5" title="Screen Shot 2021-12-19 at 5.49.19 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5_2_690x429.jpeg" alt="Screen Shot 2021-12-19 at 5.49.19 PM" data-base62-sha1="ueEafzcCwHiW8xM0qOX9ZpBJwk5" width="690" height="429" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5_2_690x429.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5_2_1035x643.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d3e91a272ff00e600711aeff5a0f756c99f9ffe5_2_1380x858.jpeg 2x" data-dominant-color="EAEAED"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706" title="Screen Shot 2021-12-19 at 5.49.01 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706_2_690x463.png" alt="Screen Shot 2021-12-19 at 5.49.01 PM" data-base62-sha1="xHO46CJXhG2VwZPoyAH8uHV3gSq" width="690" height="463" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706_2_690x463.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706_2_1035x694.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/ec3b74a7a5fc65e8eefd13c5e8471f23a0cc9706_2_1380x926.png 2x" data-dominant-color="EBECEE"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462/1
+        Sat, 18 Dec 2021 22:24:20 +0000
+gov.gitcoin.co-post-9462-1
+A Quadratic Funding Powered Social Network
+      
+
+

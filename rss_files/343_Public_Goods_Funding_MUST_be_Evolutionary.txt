@@ -1,0 +1,257 @@
+
+
+
+Public Goods Funding MUST be Evolutionary!
+https://gov.gitcoin.co/t/public-goods-funding-must-be-evolutionary/18728
+    *(Thanks for @ccerv1 and @Jonassft for reviewing + feedback.)*
+
+# Public Goods Funding MUST be Evolutionary!
+
+# Tldr
+
+* Goodhart's Law states that when a metric is used as a target, it can no longer serve as an effective measure, leading to behavior focused on optimizing that metric at the cost of broader goals.
+* Implications for DAOs and Public Goods Funding: In DAOs, especially in public goods funding mechanisms, there's a need for systems that evolve over time, using diverse, dynamic metrics and incorporating community feedback to prevent gaming and maintain effectiveness.
+* Balance Between Immutability and Evolution: While the crypto community values immutability, the post argues for a balance, suggesting that while some aspects of DAO operations should remain immutable, others should evolve to adapt to new insights and conditions - to avoid Goodharts law.
+
+# Goodhart’s Law
+
+![|200x219](upload://3vVCf7S2Oq0CmAcnWVAlKP1QHh3.png)
+
+Goodhart's Law is a principle in economics and statistics that states, "When a measure becomes a target, it ceases to be a good measure."
+
+This concept was first articulated by British economist Charles Goodhart in 1975. The reasoning behind this law involves several key ideas:
+
+1. **Distortion of Incentives**: When a particular metric is chosen as the target for policy or performance evaluation, it often leads to a change in behavior to optimize specifically for that metric. This change in behavior can lead to unintended consequences that distort the original purpose of the measure.
+2. **Overemphasis on Measurable Outcomes**: People tend to focus on what can be easily measured and quantified. When a measure becomes a target, there is a risk that other important but less quantifiable aspects are neglected, leading to a narrower and potentially misleading evaluation of success or progress.
+3. **Manipulation and Gaming:** There is a tendency for individuals or organizations to manipulate or game the system to achieve better scores on targeted metrics, regardless of whether this results in genuine improvements in the underlying objectives. For instance, schools might focus on teaching to the test rather than improving overall educational quality if test scores become the primary measure of educational success.
+4. **Reductionism**: Goodhart's Law highlights the dangers of reductionism in policy-making and management, where complex systems are reduced to simplistic numbers or targets. This reductionism can oversimplify reality and lead to decisions that might work well for the metric but poorly for the system as a whole.
+
+The law serves as a caution against over-relying on any single measure or metric for decision-making, especially in complex systems where multiple factors should be considered. It underscores the importance of using a balanced set of measures and remaining vigilant about the ways that incentives can influence behavior.
+
+# Goodhart’s Law 🤝 Public Goods Funding
+
+In this post, I will argue that this has massive implications for how we fund public goods in the future.
+
+Why? Public goods funding isn't one discrete event, its a series of events over time.
+
+What we hope will happen is this. PGF rounds create massive value creation in your ecosystem.
+
+![|624x461](upload://2Eaav4fPHsrqaqS4OP1fpRaqQg3.png)
+
+But if we take Goodhart’s law into account, what actually happens is less value creative.
+
+![|624x443](upload://wNJ2Kl4YtQTalAui01UeG8gWlSa.png)
+
+In the above diagram, we see that what works in pgf_round(n) wont work in pgf_round(n+1).
+
+As measures become targets, pgf_rounds will become less effective + thereby create diminishing returns in value creation.
+
+This applies no matter what mechanism you use! It applies in quadratic funding contexts, badgeholder review contexts, and any other repeat public goods funding round in a adaptive complex system (like a DAO’s political economy).
+
+## So what do we do about it?
+
+What I think follows from this is that the best PGF rounds will become infinitely evolutionary games. An evolutionary game is a game theory concept where strategies and behaviors evolve over time based on the success of previous rounds, influenced by natural selection.
+
+As measures become targets, and targets become measures, the best systems will evolve forward in a way that is hard to be gamed + thereby does not create diminishing returns in value creation.
+
+![Screenshot 2024-05-03 at 10.18.59 AM|690x201](upload://p1UXnHQeHbV91aNGvncjmiFqIb7.png)
+
+In the new paradigm, our experiments will look a bit like this.
+
+![|624x447](upload://dSUvbtXXTWOgRPouqf3Zf8ePP8m.png)
+
+## Designing measure m+1
+
+How does measure m evolve measure m +1? We have an evolutionary pressure insofar as the best ecosystems will be continuously evolving their measures forward, but in what ways can we do it?
+
+This is the frontier, and so unless you’ve run dozens of PGF rounds, you probably don’t know the answer (yet). But we can reason about this. I think there are a couple ways we can think about it though.
+
+1. **OODA Loop -** Each PGF round is an OODA (Observe Orient Decide Act) loop by the mechanism designers. After each PGF round, mechanism designers will have to learn from that round, and figure out how the measure fared, and evolve it forward based on those learnings.
+2. **Algorithmic Randomness:** Introduce elements of randomness in the reward or evaluation processes to reduce predictability and the effectiveness of gaming strategies. For example, random spot checks or audits can be used to ensure compliance without the system being entirely predictable.
+   1. In RetroPGF, the voting on metrics element of Round 4 design has a good amount of randomness built into it, as well as hard to predict game mechanisms like quorum rules and scoring formulas
+3. **Community Feedback Mechanisms**: Implement robust feedback systems that allow participants to report and address concerns about the integrity of the metrics or behaviors in the community. This feedback can be used to refine and improve the system continuously.
+4. **Hard to game metrics** - metrics that are hard, or expensive, to game, will be resistant (but not immune) to goodharts law.
+5. **Diversified Metrics**: Rather than relying on a single metric or indicator, use a diverse set of metrics to assess performance or impact. This helps ensure that different aspects of the desired outcomes are being captured and reduces the risk of any one metric becoming overly dominant.
+6. **Dynamic and Adaptive Metrics**: Implement mechanisms that allow for metrics to be adjusted or replaced as the system evolves. This adaptability can help prevent the gaming of static metrics and ensure that measures continue to align with the underlying goals of the DAO. Metrics should also have counterbalancing forces, eg, new users vs retained users. It's very hard to do both
+7. **Cap and Rotate Mechanisms**: For critical metrics or roles within the system, consider using caps (limits on the maximum score or benefit) and rotating the focus among various metrics or areas. This can prevent over-optimization for any single metric and encourage broader contributions across different areas. An example of this policy in practice: one metric can never be more than 20% of the allocation.
+
+A feature in my view — is that this is a competitive landscape. If lots of actors start trying to game a metric, then it's value collapses. There will always be alpha in looking for areas where you have outsize impact in hard areas.
+
+## Immutable => Evolutionary
+
+In much of the history of the crypto ecosystem, we have placed a value on complete immutability of our protocols.
+
+Often, this is for good reason. Immutable protocols are incorruptible. We need this in our protocols for money - which according to crypto lore, should not be subject to the whims of any party. Because of this, we have uncensorable money, unprintable money, in BTC + ETH.
+
+But do we need immutability in every protocol for everything?
+
+Crypto-era Public Goods Funding has been born from this era of immutability, but it must also transcend it in order to be successful.
+
+1. We can gain the benefits of immutability in some places (eg intra-round, we should depend on credibly neutral protocols where anyone can verify the vote count), while we partially deviate from it in between rounds (for good reasons, outlined above).
+2. We must recognize that our emphasis on immutability has often made us aim for the perfect solution and think less iteratively. Public Goods Funding experiments could and should take the opposite approach - iterate towards a local maxima over time. Have a bias towards action + have the courage to ship something imperfect soon over never shipping the (theoretically) perfect thing.
+
+## Conclusion
+
+Goodhart's Law, introduced by British economist Charles Goodhart in 1975, articulates that "When a measure becomes a target, it ceases to be a good measure." This principle highlights how using a specific metric as a target for policy or performance can lead to behaviors aimed at optimizing that metric, often at the expense of the intended goal. This manipulation and overemphasis on measurable outcomes can distort the original purpose of the measure, reduce the complexity of systems to simplistic numbers, and potentially lead to misleading evaluations.
+
+We think this has massive implications on the funding of public goods in decentralized autonomous organizations (DAOs), particularly through mechanisms like quadratic funding and badgeholder review.
+
+We suggest that the best public goods funding (PGF) systems would benefit from being evolutionary and adaptable, incorporating strategies such as diversified metrics, dynamic adjustments, and robust community feedback to stay effective and resistant to gaming.
+
+We advocate for a balance between immutable protocols and adaptable strategies to ensure long-term success in funding public goods.
+Wed, 10 Jul 2024 07:32:06 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Public Goods Funding MUST be Evolutionary!
+Ninit
+
+            <p>Thanks for this thought-provoking post on the evolutionary nature of public goods funding.</p>
+<p>Your emphasis on avoiding the pursuit of theoretically perfect systems is particularly appreciated; encouraging practical, iterative approaches.</p>
+<p>Your analysis of Goodhart’s Law’s implications for public goods funding is compelling. The proposed evolutionary approach seems promising, and I’d like to explore some aspects further:</p>
+<ul>
+<li>
+<p>Balancing Immutability and Evolution: While you suggest a balance between immutable and evolving elements, could we maintain core immutability while iterating on parameters or criteria? This might preserve trust while allowing adaptation.</p>
+</li>
+<li>
+<p>Transparency vs. Gaming Prevention: How might we balance the need for transparency with the desire to prevent gaming? Could a combination of rotating criteria, partial disclosure, and delayed revelation of some metrics be effective?</p>
+</li>
+<li>
+<p>Automated Parameter Adjustments: To address centralization concerns, could we implement automated, randomized parameter changes? This could reduce human capital needs and potential bias.</p>
+</li>
+<li>
+<p>Impact on Legitimate Projects: You mention that uncertainty in criteria might make planning harder. Could this uncertainty disproportionately affect projects attempting to game the system, thus indirectly supporting genuine innovation?</p>
+</li>
+<li>
+<p>Measuring Success: How can we effectively measure the success of an evolutionary funding system? What quantitative or qualitative metrics would indicate that we’re successfully adapting without falling prey to Goodhart’s Law?</p>
+</li>
+</ul>
+<p>These ideas are very intriguing. You’ve sparked some fascinating thoughts about evolving our funding mechanisms. Really appreciate the focus on iteration rather than chasing an elusive perfect system.<br>
+Thanks for sharing. It’s exciting to consider how these concepts could reshape our ecosystem. Really looking forward to seeing where this conversation leads and how we might shake things up in future iterations.</p>
+          <p><a href="https://gov.gitcoin.co/t/public-goods-funding-must-be-evolutionary/18728/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/public-goods-funding-must-be-evolutionary/18728/4
+        Wed, 10 Jul 2024 01:02:23 +0000
+gov.gitcoin.co-post-18728-4
+Public Goods Funding MUST be Evolutionary!
+      
+
+Public Goods Funding MUST be Evolutionary!
+robioreefeco
+
+            <p>Evolutionary speaking we are stuck as a species since centuries for sociocultural issues. I believe and have some faith that technology would eventually mitigate this, metabully on evolutionary public goods funding using smart contracts and on chain evolutionary impact metrics <img src="https://gov.gitcoin.co/images/emoji/twitter/sparkles.png?v=12" title=":sparkles:" class="emoji" alt=":sparkles:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/public-goods-funding-must-be-evolutionary/18728/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/public-goods-funding-must-be-evolutionary/18728/3
+        Fri, 03 May 2024 18:13:57 +0000
+gov.gitcoin.co-post-18728-3
+Public Goods Funding MUST be Evolutionary!
+      
+
+Public Goods Funding MUST be Evolutionary!
+skilesare
+
+            <p>I can’t possibly recommend Christopher Alexander’s Nature of Order more for context on this discussion.  It is a bit meta as it is about actual architecture(building houses and towns), but it and works like Waguespack’s Thriving System Theory and Metaphor-Driven Modeling show how it can be extended to other areas.  It ends up looking something like:</p>
+<ol>
+<li>Step-by-step adaptation.</li>
+<li>Each step helping to enhance the whole.</li>
+<li>Always making centers.</li>
+<li>Allowing steps to unfold in the most fitting order.</li>
+<li>Creating uniqueness everywhere.</li>
+<li>Working to understand needs of users.</li>
+<li>Evoking &amp; being guided by a deep feeling of whole.</li>
+<li>Finding coherent geometric order.</li>
+<li>Establishing a form language that rises from &amp; shapes thing being made.</li>
+<li>Always striving for simplicity by which thing becomes more coherent &amp; pur</li>
+</ol>
+<p><a href="https://amzn.to/3UiD9ks" class="onebox" target="_blank" rel="noopener nofollow ugc">https://amzn.to/3UiD9ks</a><br>
+<a href="https://amzn.to/3JMz2rU" class="onebox" target="_blank" rel="noopener nofollow ugc">https://amzn.to/3JMz2rU</a><br>
+<a href="https://amzn.to/4bn9CwG" class="onebox" target="_blank" rel="noopener nofollow ugc">https://amzn.to/4bn9CwG</a><br>
+<a href="https://amzn.to/3JRuhgF" class="onebox" target="_blank" rel="noopener nofollow ugc">https://amzn.to/3JRuhgF</a></p>
+<p><a href="https://amzn.to/3UUhf8R" class="onebox" target="_blank" rel="noopener nofollow ugc">https://amzn.to/3UUhf8R</a></p>
+          <p><a href="https://gov.gitcoin.co/t/public-goods-funding-must-be-evolutionary/18728/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/public-goods-funding-must-be-evolutionary/18728/2
+        Fri, 03 May 2024 16:39:15 +0000
+gov.gitcoin.co-post-18728-2
+Public Goods Funding MUST be Evolutionary!
+      
+
+Public Goods Funding MUST be Evolutionary!
+owocki
+
+            <p><em>(Thanks for <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> and <a class="mention" href="https://gov.gitcoin.co/u/jonassft">@Jonassft</a> for reviewing + feedback.)</em></p>
+<h1><a name="public-goods-funding-must-be-evolutionary-1" class="anchor" href="https://gov.gitcoin.co#public-goods-funding-must-be-evolutionary-1"></a>Public Goods Funding MUST be Evolutionary!</h1>
+<h1><a name="tldr-2" class="anchor" href="https://gov.gitcoin.co#tldr-2"></a>Tldr</h1>
+<ul>
+<li>Goodhart’s Law states that when a metric is used as a target, it can no longer serve as an effective measure, leading to behavior focused on optimizing that metric at the cost of broader goals.</li>
+<li>Implications for DAOs and Public Goods Funding: In DAOs, especially in public goods funding mechanisms, there’s a need for systems that evolve over time, using diverse, dynamic metrics and incorporating community feedback to prevent gaming and maintain effectiveness.</li>
+<li>Balance Between Immutability and Evolution: While the crypto community values immutability, the post argues for a balance, suggesting that while some aspects of DAO operations should remain immutable, others should evolve to adapt to new insights and conditions - to avoid Goodharts law.</li>
+</ul>
+<h1><a name="goodharts-law-3" class="anchor" href="https://gov.gitcoin.co#goodharts-law-3"></a>Goodhart’s Law</h1>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/18a28058cf2ae01e27b3a9ae1d520ede64c084dd.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/18a28058cf2ae01e27b3a9ae1d520ede64c084dd" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/18a28058cf2ae01e27b3a9ae1d520ede64c084dd_2_200x219.png" alt="" data-base62-sha1="3vVCf7S2Oq0CmAcnWVAlKP1QHh3" width="200" height="219" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/18a28058cf2ae01e27b3a9ae1d520ede64c084dd_2_200x219.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/18a28058cf2ae01e27b3a9ae1d520ede64c084dd_2_300x328.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/18a28058cf2ae01e27b3a9ae1d520ede64c084dd_2_400x438.png 2x" data-dominant-color="E8E8E8"></a></div><p></p>
+<p>Goodhart’s Law is a principle in economics and statistics that states, “When a measure becomes a target, it ceases to be a good measure.”</p>
+<p>This concept was first articulated by British economist Charles Goodhart in 1975. The reasoning behind this law involves several key ideas:</p>
+<ol>
+<li><strong>Distortion of Incentives</strong>: When a particular metric is chosen as the target for policy or performance evaluation, it often leads to a change in behavior to optimize specifically for that metric. This change in behavior can lead to unintended consequences that distort the original purpose of the measure.</li>
+<li><strong>Overemphasis on Measurable Outcomes</strong>: People tend to focus on what can be easily measured and quantified. When a measure becomes a target, there is a risk that other important but less quantifiable aspects are neglected, leading to a narrower and potentially misleading evaluation of success or progress.</li>
+<li><strong>Manipulation and Gaming:</strong> There is a tendency for individuals or organizations to manipulate or game the system to achieve better scores on targeted metrics, regardless of whether this results in genuine improvements in the underlying objectives. For instance, schools might focus on teaching to the test rather than improving overall educational quality if test scores become the primary measure of educational success.</li>
+<li><strong>Reductionism</strong>: Goodhart’s Law highlights the dangers of reductionism in policy-making and management, where complex systems are reduced to simplistic numbers or targets. This reductionism can oversimplify reality and lead to decisions that might work well for the metric but poorly for the system as a whole.</li>
+</ol>
+<p>The law serves as a caution against over-relying on any single measure or metric for decision-making, especially in complex systems where multiple factors should be considered. It underscores the importance of using a balanced set of measures and remaining vigilant about the ways that incentives can influence behavior.</p>
+<h1><a name="goodharts-law-public-goods-funding-4" class="anchor" href="https://gov.gitcoin.co#goodharts-law-public-goods-funding-4"></a>Goodhart’s Law <img src="https://gov.gitcoin.co/images/emoji/twitter/handshake.png?v=12" title=":handshake:" class="emoji" alt=":handshake:" loading="lazy" width="20" height="20"> Public Goods Funding</h1>
+<p>In this post, I will argue that this has massive implications for how we fund public goods in the future.</p>
+<p>Why? Public goods funding isn’t one discrete event, its a series of events over time.</p>
+<p>What we hope will happen is this. PGF rounds create massive value creation in your ecosystem.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/128ea044de08774b0e5b588a13b262d9cd36eda3.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/128ea044de08774b0e5b588a13b262d9cd36eda3" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/128ea044de08774b0e5b588a13b262d9cd36eda3_2_624x461.png" alt="" data-base62-sha1="2Eaav4fPHsrqaqS4OP1fpRaqQg3" width="624" height="461" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/128ea044de08774b0e5b588a13b262d9cd36eda3_2_624x461.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/128ea044de08774b0e5b588a13b262d9cd36eda3_2_936x691.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/128ea044de08774b0e5b588a13b262d9cd36eda3_2_1248x922.png 2x" data-dominant-color="FBFBFB"></a></div><p></p>
+<p>But if we take Goodhart’s law into account, what actually happens is less value creative.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e5e49146c41d85dd383287eaf919dc41b3cd1e22.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/e5e49146c41d85dd383287eaf919dc41b3cd1e22" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5e49146c41d85dd383287eaf919dc41b3cd1e22_2_624x443.png" alt="" data-base62-sha1="wNJ2Kl4YtQTalAui01UeG8gWlSa" width="624" height="443" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5e49146c41d85dd383287eaf919dc41b3cd1e22_2_624x443.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5e49146c41d85dd383287eaf919dc41b3cd1e22_2_936x664.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e5e49146c41d85dd383287eaf919dc41b3cd1e22_2_1248x886.png 2x" data-dominant-color="FAFAFA"></a></div><p></p>
+<p>In the above diagram, we see that what works in pgf_round(n) wont work in pgf_round(n+1).</p>
+<p>As measures become targets, pgf_rounds will become less effective + thereby create diminishing returns in value creation.</p>
+<p>This applies no matter what mechanism you use! It applies in quadratic funding contexts, badgeholder review contexts, and any other repeat public goods funding round in a adaptive complex system (like a DAO’s political economy).</p>
+<h2><a name="so-what-do-we-do-about-it-5" class="anchor" href="https://gov.gitcoin.co#so-what-do-we-do-about-it-5"></a>So what do we do about it?</h2>
+<p>What I think follows from this is that the best PGF rounds will become infinitely evolutionary games. An evolutionary game is a game theory concept where strategies and behaviors evolve over time based on the success of previous rounds, influenced by natural selection.</p>
+<p>As measures become targets, and targets become measures, the best systems will evolve forward in a way that is hard to be gamed + thereby does not create diminishing returns in value creation.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/af6ddf532b018b1c2a5c9687d2b6981df12b4ae1.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/af6ddf532b018b1c2a5c9687d2b6981df12b4ae1" title="Screenshot 2024-05-03 at 10.18.59 AM"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/a/af6ddf532b018b1c2a5c9687d2b6981df12b4ae1.png" alt="Screenshot 2024-05-03 at 10.18.59 AM" data-base62-sha1="p1UXnHQeHbV91aNGvncjmiFqIb7" width="690" height="201" data-dominant-color="E8E8E8"></a></div><p></p>
+<p>In the new paradigm, our experiments will look a bit like this.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/61514d445044f4d36c4c401f51849fcf41d4e95a.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/61514d445044f4d36c4c401f51849fcf41d4e95a" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/61514d445044f4d36c4c401f51849fcf41d4e95a_2_624x447.png" alt="" data-base62-sha1="dSUvbtXXTWOgRPouqf3Zf8ePP8m" width="624" height="447" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/61514d445044f4d36c4c401f51849fcf41d4e95a_2_624x447.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/61514d445044f4d36c4c401f51849fcf41d4e95a_2_936x670.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/61514d445044f4d36c4c401f51849fcf41d4e95a_2_1248x894.png 2x" data-dominant-color="FBFBFB"></a></div><p></p>
+<h2><a name="designing-measure-m1-6" class="anchor" href="https://gov.gitcoin.co#designing-measure-m1-6"></a>Designing measure m+1</h2>
+<p>How does measure m evolve measure m +1? We have an evolutionary pressure insofar as the best ecosystems will be continuously evolving their measures forward, but in what ways can we do it?</p>
+<p>This is the frontier, and so unless you’ve run dozens of PGF rounds, you probably don’t know the answer (yet). But we can reason about this. I think there are a couple ways we can think about it though.</p>
+<ol>
+<li><strong>OODA Loop -</strong> Each PGF round is an OODA (Observe Orient Decide Act) loop by the mechanism designers. After each PGF round, mechanism designers will have to learn from that round, and figure out how the measure fared, and evolve it forward based on those learnings.</li>
+<li><strong>Algorithmic Randomness:</strong> Introduce elements of randomness in the reward or evaluation processes to reduce predictability and the effectiveness of gaming strategies. For example, random spot checks or audits can be used to ensure compliance without the system being entirely predictable.
+<ol>
+<li>In RetroPGF, the voting on metrics element of Round 4 design has a good amount of randomness built into it, as well as hard to predict game mechanisms like quorum rules and scoring formulas</li>
+</ol>
+</li>
+<li><strong>Community Feedback Mechanisms</strong>: Implement robust feedback systems that allow participants to report and address concerns about the integrity of the metrics or behaviors in the community. This feedback can be used to refine and improve the system continuously.</li>
+<li><strong>Hard to game metrics</strong> - metrics that are hard, or expensive, to game, will be resistant (but not immune) to goodharts law.</li>
+<li><strong>Diversified Metrics</strong>: Rather than relying on a single metric or indicator, use a diverse set of metrics to assess performance or impact. This helps ensure that different aspects of the desired outcomes are being captured and reduces the risk of any one metric becoming overly dominant.</li>
+<li><strong>Dynamic and Adaptive Metrics</strong>: Implement mechanisms that allow for metrics to be adjusted or replaced as the system evolves. This adaptability can help prevent the gaming of static metrics and ensure that measures continue to align with the underlying goals of the DAO. Metrics should also have counterbalancing forces, eg, new users vs retained users. It’s very hard to do both</li>
+<li><strong>Cap and Rotate Mechanisms</strong>: For critical metrics or roles within the system, consider using caps (limits on the maximum score or benefit) and rotating the focus among various metrics or areas. This can prevent over-optimization for any single metric and encourage broader contributions across different areas. An example of this policy in practice: one metric can never be more than 20% of the allocation.</li>
+</ol>
+<p>A feature in my view — is that this is a competitive landscape. If lots of actors start trying to game a metric, then it’s value collapses. There will always be alpha in looking for areas where you have outsize impact in hard areas.</p>
+<h2><a name="immutable-evolutionary-7" class="anchor" href="https://gov.gitcoin.co#immutable-evolutionary-7"></a>Immutable =&gt; Evolutionary</h2>
+<p>In much of the history of the crypto ecosystem, we have placed a value on complete immutability of our protocols.</p>
+<p>Often, this is for good reason. Immutable protocols are incorruptible. We need this in our protocols for money - which according to crypto lore, should not be subject to the whims of any party. Because of this, we have uncensorable money, unprintable money, in BTC + ETH.</p>
+<p>But do we need immutability in every protocol for everything?</p>
+<p>Crypto-era Public Goods Funding has been born from this era of immutability, but it must also transcend it in order to be successful.</p>
+<ol>
+<li>We can gain the benefits of immutability in some places (eg intra-round, we should depend on credibly neutral protocols where anyone can verify the vote count), while we partially deviate from it in between rounds (for good reasons, outlined above).</li>
+<li>We must recognize that our emphasis on immutability has often made us aim for the perfect solution and think less iteratively. Public Goods Funding experiments could and should take the opposite approach - iterate towards a local maxima over time. Have a bias towards action + have the courage to ship something imperfect soon over never shipping the (theoretically) perfect thing.</li>
+</ol>
+<h2><a name="conclusion-8" class="anchor" href="https://gov.gitcoin.co#conclusion-8"></a>Conclusion</h2>
+<p>Goodhart’s Law, introduced by British economist Charles Goodhart in 1975, articulates that “When a measure becomes a target, it ceases to be a good measure.” This principle highlights how using a specific metric as a target for policy or performance can lead to behaviors aimed at optimizing that metric, often at the expense of the intended goal. This manipulation and overemphasis on measurable outcomes can distort the original purpose of the measure, reduce the complexity of systems to simplistic numbers, and potentially lead to misleading evaluations.</p>
+<p>We think this has massive implications on the funding of public goods in decentralized autonomous organizations (DAOs), particularly through mechanisms like quadratic funding and badgeholder review.</p>
+<p>We suggest that the best public goods funding (PGF) systems would benefit from being evolutionary and adaptable, incorporating strategies such as diversified metrics, dynamic adjustments, and robust community feedback to stay effective and resistant to gaming.</p>
+<p>We advocate for a balance between immutable protocols and adaptable strategies to ensure long-term success in funding public goods.</p>
+          <p><a href="https://gov.gitcoin.co/t/public-goods-funding-must-be-evolutionary/18728/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/public-goods-funding-must-be-evolutionary/18728/1
+        Fri, 03 May 2024 16:20:07 +0000
+gov.gitcoin.co-post-18728-1
+Public Goods Funding MUST be Evolutionary!
+      
+
+

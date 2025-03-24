@@ -1,0 +1,1014 @@
+
+
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235
+    # Preamble
+
+This is a knowledge transfer post. With my [recent disaffiliation from leadership in GitcoinDAO](https://gov.gitcoin.co/t/passing-the-torch/10971), I would like to pass along knowledge I have ascertained from 2.5 years of watching Gitcoin Grants grow. This post is a data point for the DAO, whose governance structures continue to retain full control & have final say of how to design Gitcoin Passport.
+# TLDR
+
+As Daniel Schmachtenberger [likes to say](https://podcasts.apple.com/us/podcast/a-problem-well-stated-is-half-solved/id1460030305?i=1000526825665), “A Problem Well-Stated is Half-Solved”.
+
+In this post I will try to articulate what I have seen and convey my limited but earnest view on the design space of sybil resistance as it pertains to Gitcoin & the web3 ecosystem.
+
+In this post, I make these assertions:
+1. Sybil resistance is an important problem to address.
+1. Sybil resistance is an adversarial game.
+1. Sybil resistance is an iterative game.
+1. Sybil resistance is an evolutionary game.
+1. Sybil resistance is an infinite evolutionary iterative game between a diversity of adversaries.
+1. What are the criteria for addressing sybil resistance?
+
+This post is a 13 minute read.
+
+# Table of Contents
+
+- TLDR
+- Wait, what are sybil attacks?
+- The high upside of addressing this problem space.
+- Meet your adversaries
+- Criteria for desirable approaches to this problem.
+  - Criteria 0: The complexity of large social systems
+  - Criteria 1: The need for privacy-centricity &amp; sovereignty
+  - Criteria 2: The need to avoid plutocracy
+  - Criteria 3: Collusion
+  - Criteria 4: The need to build in systemic defensibility
+  - Criteria 5: The need to build network effects
+  - Criteria 6: Enabling Innovation &amp; Preventing Capture with Modularity &amp; Forkability
+  - Criteria 7: Enabling Innovation &amp; Preventing Capture with Decentralization
+  - Criteria 8: The evolutionary nature of this game
+- What will round 69 look like?
+- In closing
+
+
+# Wait, what are sybil attacks?
+
+Many systems that aim to democratically decide outcomes, like Gitcoin Grants, assume each participant is a unique human.
+
+This makes them vulnerable to sybil attacks, where a bad actor creates a large number of pseudonymous identities to subvert the service’s reputation system and gain a disproportionate amount of influence.
+
+Sybil attacks undermine the legitimacy of blockchain-based democratic pluralistic processes. Learn more about sybil attacks [here](https://www.youtube.com/watch?v=v1Dm7FI2AdU).
+
+# The high upside of addressing this problem space.
+
+GitcoinDAO’s impact on the world depends on the success of Gitcoin Grants, which depends on [Quadratic Funding](http://wtfisqf.com), which depends on sybil/fraud resistance.
+
+Without sybil resistance, Gitcoin Grants is a castle in the sky. Sybil resistance is the bedrock of Gitcoin Grant’s legitimacy & the lack of a solid foundational understanding of the problem is a constraint on it’s growth.
+
+But the stakes are larger than GitcoinDAO.
+
+Sybil attacks are why we can’t have nice things. Right now, the DAO ecosystem is built around one-token-one-vote or one-cpu-one-vote schemes. If sybil resistance was addressed, the ecosystem could move to systems built more on one-human-one-vote.
+
+Addressing sybil resistance is very desirable if we want web3 systems that provide utility to everyday citizens of the world, not just the moneyed elite.
+
+Addressing sybil resistance unlocks use cases like:
+
+* quadratic funding
+* quadratic voting
+* Gini coefficient measurements
+* UBI
+* one-person-one-vote DAOs
+* data collectives
+* sybil resistant airdrops
+* + other use cases we haven't discovered yet!
+
+# Meet your adversaries
+
+### Script Kiddies
+
+![|624x269](upload://4sjVpV7tfrt9FgrTX07oSSKSgQv.png)
+
+### Petty Criminals
+
+![|239x320](upload://2DDbzw96ZtKE7cKgNV82VDwxIOG.jpeg)
+
+### Rational Economic Actors
+
+![|273x364](upload://rpvlqR3Of0aokvTHHs3IMWwokpy.jpeg)![|378x311](upload://8jnP5Xf8JsArYAR7Dj5SQn0Mz4h.png)
+
+### [Solana DEFI Developers](https://www.coindesk.com/layer2/2022/08/04/master-of-anons-how-a-crypto-developer-faked-a-defi-ecosystem/)
+
+![FZWO5fgWAAQUCxG|497x500, 75%](upload://4fjuXm0lAbFu8Afxl0neWHF4Ep8.png) 
+![FZaO_83XEAEwsIf|500x500, 50%](upload://fKz9954IBfEYTU20DSc5FLlCBRG.jpeg) ![FZaxw6yakAAfgV0|585x500, 50%](upload://4aWUScIrWJRJWnTzcGvWkdpcmTB.jpeg)
+
+
+### Organized Crime
+
+![|417x218](upload://v8NokU1v2cBWYJe5lbW1R2NgLuD.jpeg)
+
+### Nation States
+
+![|485x340](upload://uLvqcFoR5NX5VIwbA8vTSpTtzh7.jpeg)
+
+# Criteria for desirable approaches to this problem.
+
+## Criteria 0: The complexity of large social systems
+
+There are different sophistication levels for each of these adversaries. A script kiddie may lack the skills, organization, and conviction to pull off a sophisticated attack, whereas organized crime & nation states may have nearly infinite budgets, skills, organization, and conviction to attack a system. More sophisticated adversaries will grow & evolve over time, which requires either (1) constant vigilance or (2) systemic anti-fragility on behalf of DAOs that function as digital identity providers.
+
+Adversaries have different motivations. Some adversaries may be in it for the money. Some are in it for the lolz. Some are in it to help you, some are in it to pwn you. Some are just bored and seeking a thrill.
+
+Different adversaries may attempt attacks that are diverse from one another. Some adversaries may pursue schemes that are invulnerable to biometric identity + government identity countermeasures, but are vulnerable to timing-attack countermeasures. Other adversaries may try things that are invulnerable to web of trust and presence based countermeasures, but vulnerable to biometric countermeasures.
+
+Because of the varying types of adversaries, the most comprehensively anti-fragile approach to sybil/fraud resistance will aggregate different types of countermeasures.
+
+![Kirby_passport|400x270](upload://mq41VThVMs9i99fHVlWrDdJCUCH.gif)
+(*A good guy aggreagting countermeasuroooooors)*
+
+Because we’ve read [Impact Networks](https://gov.gitcoin.co/t/lessons-about-impact-networks/10305), we know that networks are good at sensing & responding to complex environments. Because of the complexity of the problem, a network is a better institution to address the problem than a company could be.
+
+![rO4KKdujwVAxPJ9SezpusoX-OPCXdMNJZ1e_zwf8K-kxrUJ4V6e1T5J8-71fQLrBv1c3xn2kWfzDZgbZ4BjtjKUbaMejMJWsiE2rUXE_ejccSzcbeh9ui9ftDBIRFiI4CXyhiZho|690x434, 50%](upload://u6yjiPYknGsRAUzWGF9TLTAWdom.png)
+*([Lessons from Impact Networks](https://gov.gitcoin.co/t/lessons-about-impact-networks/10305))*
+
+## Criteria 1: The need for privacy-centricity & sovereignty
+
+On challenge with building a system that can address sybil attacks is to manage identity information. Identity information is essential to identifying sybil attackers.
+
+But there are countervailing forces to the need for identity.
+
+In a world where [control of data is a liability](https://vitalik.ca/general/2019/05/09/control_as_liability.html), any designer of said system must avoid becoming a data honeypot - lest it become a headline one day, or worse, silently drift into becoming a deep-state style intelligence agency.
+
+Another requirement of web3 based DID systems is to make them sovereign to their users (eg users can own/manage/delete their data) and privacy preserving. Eg when a dapp discovers whether a user is a unique user or not, they should not find out more information about the user than that without express consent.
+
+## Criteria 2: The need to avoid plutocracy
+
+Sybil resistance is a spectrum, from protecting against script kiddies to protecting against nation states.
+
+One metric that has been kicked around to manage this is the idea of a TrustBonus. Basically you just amplify or dampen quadratic matching according to some percentage. Eg a user with
+
+1. 100% trustbonus + $100 in matching will be able to allocate $100 in matching
+2. 50% trustbonus + $100 in matching will be able to allocate $50 in matching
+3. 150% trustbonus + $100 in matching will be able to allocate $150 in matching
+4. And so on…..
+
+[I was there in rounds](https://twitter.com/owocki/status/1271864852101791744) 4-6 when Gitcoin first started introducing SMS verification and later bright. I know how duct taped together that conception of sybil resistance was 2 years ago. I’m glad it has evolved but I think TrustBonuses are outliving their usefulness.
+
+One reason i have such an aversion to continuing to talk about this as a TrustBonus is that its a legacy concept from the cGrants days that only applies to QF products (other sybil resistant dapps wont have trust bonuses since they don't have quadratic matches).
+
+### OK, but what next?
+
+One way of moving to a more manageable metric is moving to the idea of a Personhood Score = cost of forgery = the cost in USD it would take to forge a users identity. For a system wide KPI, that would make TCF = Total Cost of Forgery in the system, the ultimate KPI that the DAO shoots for to bootstrap a sybil resistant economy.
+
+As the personhood score for a passport grows, it becomes more resistant to certain types of adversaries. Here is a rough estimate of personhood scores by adversary sophistication level:
+
+![|624x64](upload://50TQUeA3o1gbWllqmaSxTH6Ujbd.png)
+
+Cost of forgery is built by connecting multiple stamps. A very rudimentary example:
+
+* If a user connects twitter (+ gitcoin governance decides twitter has a $.10 cost of forgery)
+* and a user connects POH (+ gitcoin governance decides POH has a $100 cost of forgery)
+* and a user connects brightID (+ gitcoin governance decides brightid has a $10 cost of forgery)
+* then the total cost of forgery for that users identity is $110.10
+
+Cost of forgery is how value is transmitted around the ecosystem of Passport users. If I am designing a dapp, and I know the cost of forgery for this user is $110.10, I can rationally reward the user with up to $110.10 worth of sybil resistant rewards.
+
+So in the case of gitcoin, it can give $110.10 worth of matching. Rabbithole (if it integrates with Passport) can give $110.10 worth of rewards. POAP (if it integrates with Passport) can give $110.10 worth of POAP gas fees, and so on
+
+The key insight behind personhood scores is that in an adversarial world there are different levels of sophistication of adversaries Gitcoin wants to protect against (script kiddies => organized crime => nation states). Instead of treating sybil resistance as a binary (yes/no), we instead treat sybil resistance as a spectrum, making the problem more manageable.
+
+Conceptually, you can back into PersonhoodScores with the current architecture of TrustBonus, eg your trust bonus * your matching amount = current dollars at risk.
+
+IMO cGrants is architected backwards. It makes more sense to start with the personhood score + guide the user to either increasing it or muting their contributions by computing their trustbonus.
+
+![|624x261](upload://KTdgzQgZoF79CQBFxwloAhBJdz.jpeg)
+
+I wrote more about this [here](https://gov.gitcoin.co/t/establishing-a-new-process-for-identify-verification-scoring-and-removing-troubled-id-methods/7506/3).
+
+### The Problem with Plutocracy
+
+This brings me to the one major problem with PersonhoodScores. It puts the sybil resistance in economic terms. If designers of the sybil resistant game are not careful, this could give the system very dystopian attributes.
+
+If the TCF (Total Cost of Forgery) of the system is put into parity with the amount of capital in the system, then only rich people can have identities, that is dystopian
+
+If there is not a way for everyday citizens to reliably create a high enough personhood score without having money, that is dystopian.
+
+For this reason, it could be important to prioritize verification mechanisms that don’t filter out citizens without wealth. It could be important to track the number of moneyed identities active in the system vs non-monied identities. Such examples of these systems: BrightID, Proof of Humanity, biometric identification systems. (You can learn more about this problem [here](https://www.youtube.com/watch?v=PlDOjDu-mpU))
+
+![Screen Shot 2022-08-06 at 7.43.46 AM|690x360](upload://7bFkvg2plLz95IVkIwRHPt1vWil.jpeg)
+
+## Criteria 3: Collusion
+
+Say that you’ve architected the perfect sybil resistant identity system.
+
+Or a good enough system. A good enough IMO is a system where the TCF (Total cost of forgery) is greater than the amount of rewards that is available to citizens of the system to exploit it. 
+
+So a good enough sybil resistant identity system is one where 
+1. there is $3,000,000 TCF and there is a $2,999,999 matching pool. 
+2. Or, in a world where passport is implemented by multiple dApps, there is $3,000,000 TCF and there is a $2,999,999 aggregate economic opportunity across all of those dapps.
+3. Or, perhaps the DAOI decides it is willing to accept a 10% fraud risk, so when it has a $3,000,000 TCF, it supports a $3,299,999 aggregate economic opportunity across all of the dapps in Passport-ecosystem.
+
+In this scenario, you still have to deal with collusion attacks. Stuff like “Hey if you contribute to my grant I’ll give you a bribe.” or “I’ll buy your identity from you”.
+
+Really a good enough system is one where The TCB (Total cost of bribery) + TCF (Total cost of forgery) is greater than the amount of rewards that is available to citizens of the system to exploit it.
+
+The bribery/collusion attack surface area is still under research, and deserves its own post.
+
+## Criteria 4: The need to build in systemic defensibility
+
+One of the things I find most inspiring about how Proof of Stake and Proof of Work are designed is how well they function by acknowledging that adversaries exist + fundamentally tilt the design of the system towards defensibility and anti-fragility. Both PoW/Pow, they both boil down to the simple principle of making a system much cheaper to defend than to attack.
+
+1. In PoW, it is way more profitable (and way less risky) to use my mining hardware to mine the next block than it is to try and 51% attack the network.
+2. In PoS, it is way more profitable (and way less risky) to use my mining hardware to mine the next block than it is to try and 51% attack the network.
+
+This leads me to the following criteria: In Gitcoin Passport, it should be way more profitable (and way less risky) to participate in the network legitimately than to attack the network.
+
+## Criteria 5: The need to build network effects
+
+If you build the most perfect sybil resistant ecosystem, and no one is there to use it, does it make a sound?
+
+This is called the cold start problem in n-sided networks. 
+
+The flywheel of passport could grow like this: The more users use Gitcoin Passport, the more the TCF of Passport increases, the more dApps/stamps will integrate with it, the more utility it will provide, which causes more users to use it (and the cycle repeats).
+
+How does one cold start this network?  With [Gitcoin Grants scale](https://gitcoin.co/results).
+
+With the right configuration - as this flywheel spins, because networks fundamentally grow exponentially, TCF should start to grow exponentially. Here is an example of one such model of how this could grow (this is an illustration + not a promise of any sort):
+
+![|376x241](upload://frMlfMv48iGucWHOQ9Tn4hYpi4z.png)
+
+Learn more about the network effects of the Gitcoin ecosystem [here](https://gov.gitcoin.co/t/the-network-effects-of-gitcoindaos-protocols/10973).
+
+## Criteria 6: Enabling Innovation & Preventing Capture with Modularity & Forkability
+
+One thing I think is really important about Gitcoin Passport is how forkable it is.
+
+Don't agree with Gitcoin’s (stamps|scoring algorithm|focus on sybil resistance). Fork it! Create your own. Over time, one could build a marketplace of stamping tools, scoring algorithms around Gitcoin Passport. Such a rich ecosystem is the foundation of the network effects of Decentralized Society.
+
+![|624x353](upload://dfEDjyFmO9UsC02p9ucuNxZePT8.jpeg)
+
+![|624x353](upload://bJnEO86ufqQQ5tGfChA3c6QQRky.jpeg)
+
+![|624x376](upload://tLNmlfDBSQuFFDvN5opqG9jfwvW.jpeg)
+
+Forkability requires [great documentation](https://docs.passport.gitcoin.co/) and a great devrel campaign. I’ll be curious to see what evolves here. Let me know if the DAO wants an intro to anyone I know who does DevRel!
+
+A great devrel campaign enables decentralized innovation on top of the Passport Protocol. It invites contributions from everywhere and turns Passport into a schelling point for addressing sybil resistance & creating plural cooperation across social distance that grows stronger over time.
+
+A great devrel campaign would be an attractor that would act as a memetic schelling point for people who want to solve this problem + enable them to contribute their resources (coding skills, capital, anti fraud data analysis, etc) to solving the problem. 
+![1_sX8csWo6oQm_gq47--nKKA|690x387, 75%](upload://cHIWhN5XvJCEKMTxYZbGvUHevgx.jpeg)
+If done right, this memetic schelling point could even increase in "gravity" over time as more resources are added to it, compounding in strength over time.
+
+## Criteria 7: Enabling Innovation & Preventing Capture with Decentralization
+
+As Gitcoin Progressively decentralizes over time, I think itll move from centralization to a decentralized and modular set of protocol based codebases.
+
+It will move from [socialware to trustware](https://orca.mirror.xyz/T70CmuhX95ubkw_JHOxSEy8d_EFeYXgtJnF13mPtaZE).
+
+* “Socialware - Mechanisms that create assurances through human relationships, incurring a high social coordination cost”
+* “Trustware - Mechanisms that create assurances through technology, incurring a low social coordination cost”
+* “By using blockchains as our underlying assurance mechanism, we can codify organizational governance through code and not purely documented principles that rely on humans to coordinate around. In doing so, we foster greater trust between parties by minimizing trust in people and maximizing trust in technology.”
+
+![Screen Shot 2022-08-08 at 8.08.10 AM|690x186](upload://icNG7qF3fKizCOfqXcmxe8xPK9C.jpeg)
+
+I think that Gitcoin’s final form could be that of a [Hyperstructure](https://twitter.com/owocki/status/1543651089462939648). Hyperstructures *are crypto protocols that can run for free and forever, without maintenance, interruption or intermediaries*.. The trustware in the center **is** the hyperstructure (blue). The rest of the things the push the network effects forwards are just humans doing whats rational / in their incentive set (purple). In a well designed system this hyperstructure will grow according to network effects (on the right)
+
+On tradeoff I think is interesting to manage here is the time preference of the systems ability to manage attacks.
+
+How can the base of the protocol harden (bc its trustware), but also evolve to continuously ongoing threats (socialware well governed)? Where are yearly, quarterly, weekly, daily, or instant feedback incorporated? Where is more governance oversight needed over socialware, and where can the system move to trustware? And on what time preference?  As the attackers evolve, how can the fraud defense evolve (0) effectively (1) without tipping off the attackers (2) but still in a legitimate (eg transparent to governance) way?
+
+![|156x164](upload://lVnvLwGH9KMraI92Ebu0txiCtfz.png)
+
+Which brings me to…
+
+## Criteria 8: The evolutionary nature of this game
+
+Gall's Law states that all complex systems that work evolved from simpler systems that worked.
+
+With Gitcoin Grants, the simple rules are the rules of [Quadratic Funding](https://wtfisqf.com/). Basically.
+
+1. Funds are continuously raised into a matching pool.
+2. For 2 weeks every quarter, there will be a matching campaign where contributions from the crowd to grants in matching rounds n1-x that fill eligibility criteria ec[n] will be matched with funds from matching pool m[n] according to the [pairwse quadratic funding formula](https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553) with sybil resistant identity mechanisms i1-x.
+3. Every quarter,
+   1. Gitcoin’s governance structure creates consensus about how to evolve each of these rules & mechanism, & the evolves.
+   2. The ecosystems taste in projects evolves
+   3. Adversaries that want to capture the matching funds evolve.
+
+These simple rules have evolved Gitcoin Grants from:
+
+### Round 1 in Q1 2019 - 200(ish) Contributions - $38k raised
+
+![Screen Shot 2022-08-06 at 12.23.55 AM|690x434, 50%](upload://5ajyvpwzrQ0e8S4vOVlI2pRe0j9.png)
+
+(economic contribution graph - round 1 - each contribution is an edge + each grant/user is a node)
+
+### Round 14 in June 2022 - 100k+ contributions + $5mm raised
+
+![Screen Shot 2022-08-06 at 12.23.14 AM|690x356, 50%](upload://ufMRrIijHPBKdVIaHERubbsxPE1.png)
+
+(economic contribution graph - round 14 - each contribution is an edge + each grant/user is a node)
+
+### The emergent, iterative, evolutionary, zero sum game between the red team & blue team
+
+The primary stated goal of Gitcoin Grants has been fund public goods. But if you look at it from a certain angle, because Gitcoin Grants requires sybil resistance, every Gitcoin Grants round is actually a giant red team / blue team exercise for battle testing Digitally Native Sybil Resistance technologies.
+
+I believe that accepting the iterative, evolutionary, and zero sum nature of this aspect of the grants rounds is key to designing a manageable way of addressing the problem.
+
+Gitcoin’s sybil resistance will evolve as the attackers evolve. It is important to embrace this as an evolutionary game and recognize that the ecosystem is fluid, adversaries will come and go (and possibly get more advanced).
+
+# What will round 69 look like?
+
+IMO the north star is to build a system that:
+
+1. Is anti-fragile to many types of attackoooors.
+2. Is privacy preserving & respecting of the users sovereignty
+3. Avoids plutocracy/dystopic outcomes
+4. Avoids collusion
+5. Is systemically anti-fragile because its cheaper to defend than it is to attack.
+6. Has network effects
+7. Enables Innovation
+8. Prevents Capture
+9. Embraces the evolutionary nature of this problem
+
+# In closing
+
+In this post, I made these assertions:
+1. Sybil resistance is an important problem to address.
+1. Sybil resistance is an adversarial game.
+1. Sybil resistance is an iterative game.
+1. Sybil resistance is an evolutionary game.
+1. Sybil resistance is an infinite evolutionary iterative game between a diversity of adversaries.
+1. What are the criteria for addressing sybil resistance?
+
+
+Thanks for reading to the end.
+
+If you want to follow my continued research efforts on these subjects checkout season 2 of the Greenpill podcast which is [all about the subject of digital identity & sybil resistance](https://gov.gitcoin.co/t/greenpill-podcast-season-2-digital-identity-sybil-resistance/11201).
+
+I hope this knowledge transfer post was a valuable data point for you, DAO citizens.
+
+Thank you to @DisruptionJoe @kevin.olsen, Takuya Kitagawa, Razvan, Carl Cervone, @GTChase, @brent @erich + countless others for proofreading earlier drafts of this post. I welcome feedback/comments below.
+Fri, 28 Oct 2022 23:13:36 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+castall
+
+            <p>Yes.  This is a great question.  <a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159/16">I posted my response in the Aura thread</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/17
+        Fri, 28 Oct 2022 23:13:36 +0000
+gov.gitcoin.co-post-11235-17
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+DisruptionJoe
+
+            <p>The current implementation of aura uses graph analysis. Would it be possible to use other types of analysis in the future?</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/16
+        Fri, 28 Oct 2022 10:51:34 +0000
+gov.gitcoin.co-post-11235-16
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+castall
+
+            <aside class="quote no-group" data-username="owocki" data-post="2" data-topic="11235">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>A sybil DAO of DAOs that shares information across BrightID/POH</p>
+</blockquote>
+</aside>
+<p>I’d like <a href="https://brightid.gitbook.io/aura" rel="noopener nofollow ugc">Aura</a> to add tools to input/incorporate DAO/ecosystem findings.  Its goal is to be the swiss army knife for sybil hunters.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/15
+        Fri, 28 Oct 2022 02:34:39 +0000
+gov.gitcoin.co-post-11235-15
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+castall
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="11235">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>acknowledging that adversaries exist + fundamentally tilt the design of the system towards defensibility and anti-fragility</p>
+</blockquote>
+</aside>
+<p>Yes, you can either design something to stop the adversary or design something to work in spite of the adversary.</p>
+<p>BrightID (with <a href="https://brightid.gitbook.io/aura/" rel="noopener nofollow ugc">Aura</a> as its best verification method to date) attempts to stop sybil attacks.  (Aura can also stop certain kinds of bribery and collusion.)  But I also designed <a href="https://docs.google.com/document/d/1TKA-K8YadRdgz-Qek01TUcCkRaI9CKCXGtJ31AbVWIU/" rel="noopener nofollow ugc">attention streams</a> (a separate thing) to function despite sybils, collusion, and plutocrats. There’s a team that built a back end (smart contracts) and is working on a frontend for attention streams for SongADAO “Song Dust”, but we need more builders to prototype uses for attention streams.  It will be a lot easier to grok it with prototypes.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/14
+        Fri, 28 Oct 2022 02:13:09 +0000
+gov.gitcoin.co-post-11235-14
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+DisruptionJoe
+
+            <p>Here is the presentation by <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> and <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> at DevCon Bogota 2022</p>
+<p><a href="https://www.youtube.com/watch?v=TRoO5fD7TI4">1 Human 1 Vote Money Legos 🔜 More Democratic DAOs 🧱🤝✨ by Kevin Owocki | Devcon Bogotá</a></p>
+
+<p>As much as I enjoy the talk which frames the problem, I want to encourage people to check out the developer focused presentation on Passport which begins about 26 minutes into the video.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/13
+        Tue, 25 Oct 2022 13:23:17 +0000
+gov.gitcoin.co-post-11235-13
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+owocki
+
+            <p>just tweeted this talk for ppl who wanted a nice visual overview of the problem space:</p>
+<aside class="onebox twitterstatus" data-onebox-src="https://twitter.com/owocki/status/1569727500791709696">
+  <header class="source">
+
+      <a href="https://twitter.com/owocki/status/1569727500791709696" target="_blank" rel="noopener">twitter.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="/uploads/db4391/original/2X/d/dba62a7da6579ffe28b861d7fad85a3d2d75da18.jpeg" class="thumbnail onebox-avatar" width="400" height="400">
+<h4><a href="https://twitter.com/owocki/status/1569727500791709696" target="_blank" rel="noopener">Ξwoki (🤖,💚)</a></h4>
+<div class="twitter-screen-name"><a href="https://twitter.com/owocki/status/1569727500791709696" target="_blank" rel="noopener">@owocki</a></div>
+
+<div class="tweet">
+  <span class="tweet-description">sybil resistance - the infinite game
+
+... a talk i wrote + <a href="https://twitter.com/kevinrolsen" target="_blank" rel="noopener">@kevinrolsen</a> is giving <a href="https://twitter.com/dappcon_berlin" target="_blank" rel="noopener">@dappcon_berlin</a> today ...👇🧵 <a href="https://t.co/p71GTGHtsc" target="_blank" rel="noopener">https://t.co/p71GTGHtsc</a><div class="aspect-image-full-size" style="--aspect-ratio:690/430;"><img class="tweet-image" src="/uploads/db4391/optimized/2X/e/ea71e2f2a84e52b006f9b614e9d7b0a052965b5d_2_690x431.jpeg" width="690" height="431" srcset="/uploads/db4391/optimized/2X/e/ea71e2f2a84e52b006f9b614e9d7b0a052965b5d_2_690x431.jpeg, /uploads/db4391/optimized/2X/e/ea71e2f2a84e52b006f9b614e9d7b0a052965b5d_2_1035x646.jpeg 1.5x, /uploads/db4391/original/2X/e/ea71e2f2a84e52b006f9b614e9d7b0a052965b5d.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/e/ea71e2f2a84e52b006f9b614e9d7b0a052965b5d_2_10x10.png"></div></span>
+</div>
+
+<div class="date">
+  <a href="https://twitter.com/owocki/status/1569727500791709696" class="timestamp" target="_blank" rel="noopener">4:39 PM - 13 Sep 2022</a>
+
+    <span class="like">
+      <svg viewBox="0 0 512 512" width="14px" height="16px" aria-hidden="true">
+        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+      </svg>
+      47
+    </span>
+
+    <span class="retweet">
+      <svg viewBox="0 0 640 512" width="14px" height="16px" aria-hidden="true">
+        <path d="M629.657 343.598L528.971 444.284c-9.373 9.372-24.568 9.372-33.941 0L394.343 343.598c-9.373-9.373-9.373-24.569 0-33.941l10.823-10.823c9.562-9.562 25.133-9.34 34.419.492L480 342.118V160H292.451a24.005 24.005 0 0 1-16.971-7.029l-16-16C244.361 121.851 255.069 96 276.451 96H520c13.255 0 24 10.745 24 24v222.118l40.416-42.792c9.285-9.831 24.856-10.054 34.419-.492l10.823 10.823c9.372 9.372 9.372 24.569-.001 33.941zm-265.138 15.431A23.999 23.999 0 0 0 347.548 352H160V169.881l40.416 42.792c9.286 9.831 24.856 10.054 34.419.491l10.822-10.822c9.373-9.373 9.373-24.569 0-33.941L144.971 67.716c-9.373-9.373-24.569-9.373-33.941 0L10.343 168.402c-9.373 9.373-9.373 24.569 0 33.941l10.822 10.822c9.562 9.562 25.133 9.34 34.419-.491L96 169.881V392c0 13.255 10.745 24 24 24h243.549c21.382 0 32.09-25.851 16.971-40.971l-16.001-16z"></path>
+      </svg>
+      11
+    </span>
+</div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>here is the deck i used for this talk: <a href="https://docs.google.com/presentation/d/1xyQU7dRntgDqUNFGCKVUQXdB0KRe_hgMTKX_7YToP8E/edit#slide=id.p">https://docs.google.com/presentation/d/1xyQU7dRntgDqUNFGCKVUQXdB0KRe_hgMTKX_7YToP8E/edit#slide=id.p</a></p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> how did the dappcon talk go?  got a video of your preso?</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/12
+        Tue, 13 Sep 2022 16:56:20 +0000
+gov.gitcoin.co-post-11235-12
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+owocki
+
+            <p>Shared this visual of the adversarial infinite game with <span class="mention">@kevinolsen</span> today and am sharing it here too since he asked me to share.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/36bbdb0238d1d0d06e54c2d3044f8c5bb04f1219.jpeg" data-download-href="/uploads/short-url/7OcgeYZxCDEQPBl0hat5uVlmxBv.jpeg?dl=1" title="FbqVhOWUUAEKbpL"><img src="/uploads/db4391/optimized/2X/3/36bbdb0238d1d0d06e54c2d3044f8c5bb04f1219_2_530x500.jpeg" alt="FbqVhOWUUAEKbpL" data-base62-sha1="7OcgeYZxCDEQPBl0hat5uVlmxBv" width="530" height="500" srcset="/uploads/db4391/optimized/2X/3/36bbdb0238d1d0d06e54c2d3044f8c5bb04f1219_2_530x500.jpeg, /uploads/db4391/optimized/2X/3/36bbdb0238d1d0d06e54c2d3044f8c5bb04f1219_2_795x750.jpeg 1.5x, /uploads/db4391/optimized/2X/3/36bbdb0238d1d0d06e54c2d3044f8c5bb04f1219_2_1060x1000.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/3/36bbdb0238d1d0d06e54c2d3044f8c5bb04f1219_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/11
+        Fri, 02 Sep 2022 15:58:51 +0000
+gov.gitcoin.co-post-11235-11
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+owocki
+
+            <p>No misunderstanding, was just clarifying that the two approaches are not mutually exclusive</p>
+<p>I think the integrated order of preference for me is</p>
+<ol>
+<li>Social ware</li>
+<li>Social ware with separation of concerns and competitive marketplace via micro DAOs or pods</li>
+<li>Trustware</li>
+</ol>
+<p>From worst to best.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/10
+        Mon, 08 Aug 2022 16:23:37 +0000
+gov.gitcoin.co-post-11235-10
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="owocki" data-post="8" data-topic="11235">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>They are similar to the pods idea I posted about <a href="https://gov.gitcoin.co/t/8-ideas-for-dao-work-maximum-coordination/10483">here</a>. Would you agree they shouldn’t all be socialware ?</p>
+</blockquote>
+</aside>
+<p>Yes, I agree. I think this may be the misunderstanding. I believe we CAN make those microservice pieces into trustware as well! (Or at least many of them.)</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/9
+        Mon, 08 Aug 2022 15:23:13 +0000
+gov.gitcoin.co-post-11235-9
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+owocki
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="6" data-topic="11235">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>I love the impact of Gitcoin always being exponential. Let’s build some microservices, with massive upside potential as the digital public infrastructure of the future.</p>
+</blockquote>
+</aside>
+<p>Hyperstructures are crypto protocols that can run for free and forever, without maintenance, interruption or <strong>intermediaries</strong>…</p>
+<p>One attribute here that i think may have flown under the radar in this discussion is this attribute of <strong>without maintenance, interruption or intermediaries</strong>.</p>
+<p>In this light, I’d encourage the dAO to think about how to seperate <a href="https://orca.mirror.xyz/T70CmuhX95ubkw_JHOxSEy8d_EFeYXgtJnF13mPtaZE">socialware vs trustware</a>.  In the past gitcoin has been bad about relying on socialware (intermediaries) too much.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> I think micro-DAOs and microservices are good ideas.  They are similar to the pods idea I posted about <a href="https://gov.gitcoin.co/t/8-ideas-for-dao-work-maximum-coordination/10483">here</a>.  Would you agree they shouldn’t all be socialware ?</p>
+<p>Here is an updated view  of the hyperstructure graphic I made that visually deliniaties where the trustware is in blue and the socialware in purple.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a792acedbcd011b44979bdb45a65cc892b226410.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/a792acedbcd011b44979bdb45a65cc892b226410" title="Screen Shot 2022-08-08 at 8.00.36 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a792acedbcd011b44979bdb45a65cc892b226410_2_690x348.jpeg" alt="Screen Shot 2022-08-08 at 8.00.36 AM" data-base62-sha1="nUpZhkCC5aBKTvA7gNSFeaHMW9a" width="690" height="348" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a792acedbcd011b44979bdb45a65cc892b226410_2_690x348.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a792acedbcd011b44979bdb45a65cc892b226410_2_1035x522.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a792acedbcd011b44979bdb45a65cc892b226410_2_1380x696.jpeg 2x" data-dominant-color="F5F5F7"></a></div><p></p>
+<p>The trustware in the center <strong>is</strong> the hyperstructure.  The rest of the things the push the network effects forwards are just humans doing whats rational / in their incentive set.</p>
+<p>In a well designed system this hyperstructure will grow according to network effects.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/19efce529d0a84dd84315a65d2ea9db86f46599c.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/19efce529d0a84dd84315a65d2ea9db86f46599c" title="Screen Shot 2022-08-08 at 8.03.05 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19efce529d0a84dd84315a65d2ea9db86f46599c_2_690x412.png" alt="Screen Shot 2022-08-08 at 8.03.05 AM" data-base62-sha1="3HrIyqWV9LMRooOjcq12sYa7Exm" width="690" height="412" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19efce529d0a84dd84315a65d2ea9db86f46599c_2_690x412.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19efce529d0a84dd84315a65d2ea9db86f46599c_2_1035x618.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/1/19efce529d0a84dd84315a65d2ea9db86f46599c.png 2x" data-dominant-color="F5F5F5"></a></div><p></p>
+<p>I would do a separate post on the hyperstructure if people are interested.</p>
+<p>Of course the final direction here is up to the DAO.  I am here only to transfer knowledge.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/8
+        Mon, 08 Aug 2022 14:06:13 +0000
+gov.gitcoin.co-post-11235-8
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+epowell101
+
+            <p>Very much the sort of work - but better thought through - I was wondering about in my forum response to the FDD budget request.</p>
+<p>One caveat is the motion of making space for external contributors - accepting external PRs - takes a bit of intentionality of course.  Who does devrel etc and how much patience do we have to find and grow external contributors… requires devrel focus.</p>
+<p>Now if we only knew a place w bounties and hackathons to jump start contributor activity! <img src="https://emoji.discourse-cdn.com/twitter/stuck_out_tongue_winking_eye.png?v=12" title=":stuck_out_tongue_winking_eye:" class="emoji" alt=":stuck_out_tongue_winking_eye:" loading="lazy" width="20" height="20">. Ie we are well suited to be great at devrel++</p>
+<p>Feels like the code level collaboration is important for the higher level data / service / protocol ecosystem alignment?</p>
+<p>A) do you agree that the OSS collaboration is important and non trivial to nurture and B) do we have devrel folks that can help lead within or across work streams?  (Understanding they’d need to be aligned as a part of a budget request etc…)</p>
+<p>Excellent thoughtful post as always and thanks for <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> for tweeting about it</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/7
+        Mon, 08 Aug 2022 13:24:46 +0000
+gov.gitcoin.co-post-11235-7
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+DisruptionJoe
+
+            <aside class="quote no-group quote-modified" data-username="owocki" data-post="1" data-topic="11235">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8873458b67de535c70720610d94b5f77b4aa93ea.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/8873458b67de535c70720610d94b5f77b4aa93ea" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8873458b67de535c70720610d94b5f77b4aa93ea_2_690x297.png" alt="" data-base62-sha1="jt5U4oK9KryGO6rExe8JQY9EkCm" role="presentation" width="690" height="297" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8873458b67de535c70720610d94b5f77b4aa93ea_2_690x297.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8873458b67de535c70720610d94b5f77b4aa93ea_2_1035x445.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8873458b67de535c70720610d94b5f77b4aa93ea_2_1380x594.png 2x" data-dominant-color="F1F1F1"></a></div><p></p>
+<p>I think that Gitcoin’s final form could be that of a <a href="https://twitter.com/owocki/status/1543651089462939648">Hyperstructure </a>. Hyperstructures are crypto protocols that can run for free and forever, without maintenance, interruption or intermediaries…</p>
+<p>On tradeoff I think is interesting to manage here is the time preference of the systems ability to manage attacks.</p>
+<p>How can the base of the protocol harden, but also evolve to continuously ongoing threats? Where are yearly, quarterly, weekly, daily, or instant feedback incorporated? Where is more governance oversight needed over socialware, and where can the system move to trustware? And on what time preference? As the attackers evolve, how can the fraud defense evolve (0) effectively (1) without tipping off the attackers (2) but still in a legitimate (eg transparent to governance) way?</p>
+</blockquote>
+</aside>
+<p>I like to think of this using <a class="mention" href="https://gov.gitcoin.co/u/pet3rpan">@pet3rpan</a> model of <a href="https://twitter.com/pet3rpan_/status/1505977368099233793">microservice DAOs.</a></p>
+<p>Take something like contributing data to the hyperstructure or staking on models for sybil detection. Either one of these are low value without the other pieces of the structure which aggregates the component value into something worthwhile. This is similar to how your post on facebook isn’t that valuable, but millions of peoples posts organized in a particular way are valueable, and you are a part of it.</p>
+<p>How might the smaller systems be rewarded for their contribution to the whole?</p>
+<p>I think this is where the microservice idea comes into play. A continually evolving sybil detection algorithm would require multiple inputs. Each of these inputs can be incentivized by an issuance curve rewarding the useful contributions in very narrow scope. The value created by the system as a whole can then be adjusted to balance the system inputs using a Shapley Value.</p>
+<p>Let me put that in a more concrete example.</p>
+<p>If you contribute data to the sybil defense DAO, you get SDDdata rewards.</p>
+<p>If you contribute code to the sybil defense DAO, you get SDDcode rewards.</p>
+<p>If you contribute models to the sybil defense DAO, you get SDDmodel rewards.</p>
+<p>If you give your opinion on flagged sybils as an evaluator, you get SDDeval rewards.</p>
+<p>Each of these has an issuance curve of its own. In the first few months or years, people might be earning millions of SDDrewards for their contributions, but few $$$ (only what GitcoinDAO and others are willing to pay to subsidize the risk they are taking)</p>
+<p>These are the “microservice DAOs” that provide the inputs to the bigger “Sybil Detection DAO”</p>
+<p>Now Sybil Detection DAO is only one of the inputs to the FDD system, and FDD is only one workstream in GitcoinDAO.</p>
+<p>If we want to build a hyperstructure, we must first build all the microservice components and then allow the hyperstructure’s sustainable value flow emerge.</p>
+<p>Consider this a strong opinion held loosely, but throwing this out there to stimulate the conversation.</p>
+<p>Another cool side effect of this is it builds modular Hyperstructure Legos. Imagine the microservice DAO that finds models that are excellent at detecting sybil accounts is forked to be used to fight a pandemic or to organize debt unions in a way that proves the collective can win.</p>
+<p>Building microservice DAOs is something we can become very good at. It can be in our playbook. Figuring out how to build “can’t do wrong” cheaper to defend than attack services that are great at one thing is a huge value to the world. I also don’t see how we think we can build the hyperstructure that will provide sustainable fair capital allocation if we can’t build a microservice DAO that sustainably incentivizes one action to be done well.</p>
+<p>I love the impact of Gitcoin always being exponential. Let’s build some microservices, with massive upside potential as the digital public infrastructure of the future.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/6
+        Mon, 08 Aug 2022 09:40:40 +0000
+gov.gitcoin.co-post-11235-6
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+ZER8
+
+            <p>Just wanted to jump in and thank you for taking the time to write this huge and hugely important post Kevin. <img src="https://emoji.discourse-cdn.com/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"><br>
+The resources posted here will help everyone interested in the sybil learn more about what a sybil is and at the same time it will give the sybil defenders amazing context, insights and vision</p>
+<p>PS. All the memes are good, but the Cat meme with Shaquille is <img src="https://emoji.discourse-cdn.com/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"> <img src="https://emoji.discourse-cdn.com/twitter/rofl.png?v=12" title=":rofl:" class="emoji" alt=":rofl:" loading="lazy" width="20" height="20"> <img src="https://emoji.discourse-cdn.com/twitter/joy.png?v=12" title=":joy:" class="emoji" alt=":joy:" loading="lazy" width="20" height="20">  <img src="https://emoji.discourse-cdn.com/twitter/fire.png?v=12" title=":fire:" class="emoji" alt=":fire:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/5
+        Sun, 07 Aug 2022 10:39:51 +0000
+gov.gitcoin.co-post-11235-5
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+owocki
+
+            <p>Some Sybil Resistence Memes, just for fun + to perpetuate this vision <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> …</p>
+<p><img src="/uploads/db4391/original/2X/0/0e33d57e74b1c47743ead72926a9d928a97114d2.gif" alt="6p3q9h" data-base62-sha1="21DJM9WjGqHEGtT4TVV7JnPalQC" width="360" height="232" class="animated"></p>
+<p><img src="/uploads/db4391/original/2X/f/f45c2f1d172b02a25428975b47a93d419c950416.gif" alt="6p3u7i" data-base62-sha1="yRI0nKHP1TXfbJiAF2cUZPWVcWy" width="260" height="241" class="animated"></p>
+<p><img src="/uploads/db4391/original/2X/e/e8f08b8212c34758b1f5b2b176b8d0ee5c0284c9.jpeg" alt="6p3oyc" data-base62-sha1="xeG8zJY5kpSBOpHr231fl5iRMCZ" width="337" height="249"></p>
+<p><img src="/uploads/db4391/original/2X/9/9d221ab99dba346d77451ef2233e28631d5e087f.gif" alt="Kirby_passport" data-base62-sha1="mq41VThVMs9i99fHVlWrDdJCUCH" width="400" height="270" class="animated"></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0a8483dc5a15f09065b8d5f10246f2f586c84a8a.jpeg" data-download-href="/uploads/short-url/1v2GAEUtIJRvc16OyKRCwWMsLNg.jpeg?dl=1" title="6p3uj5"><img src="/uploads/db4391/optimized/2X/0/0a8483dc5a15f09065b8d5f10246f2f586c84a8a_2_690x387.jpeg" alt="6p3uj5" data-base62-sha1="1v2GAEUtIJRvc16OyKRCwWMsLNg" width="690" height="387" srcset="/uploads/db4391/optimized/2X/0/0a8483dc5a15f09065b8d5f10246f2f586c84a8a_2_690x387.jpeg, /uploads/db4391/original/2X/0/0a8483dc5a15f09065b8d5f10246f2f586c84a8a.jpeg 1.5x, /uploads/db4391/original/2X/0/0a8483dc5a15f09065b8d5f10246f2f586c84a8a.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/0/0a8483dc5a15f09065b8d5f10246f2f586c84a8a_2_10x10.png"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646.png" data-download-href="/uploads/short-url/4fjuXm0lAbFu8Afxl0neWHF4Ep8.png?dl=1" title="FZWO5fgWAAQUCxG"><img src="/uploads/db4391/optimized/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646_2_497x500.png" alt="FZWO5fgWAAQUCxG" data-base62-sha1="4fjuXm0lAbFu8Afxl0neWHF4Ep8" width="497" height="500" srcset="/uploads/db4391/optimized/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646_2_497x500.png, /uploads/db4391/original/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646.png 1.5x, /uploads/db4391/original/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646.png 2x" data-small-upload="/uploads/db4391/optimized/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646_2_10x10.png"></a></div><p></p>
+<p><a href="https://bits.owocki.com/Wnu7jJeB"><img src="/uploads/db4391/original/2X/5/56ed909f06f71ddc1fd1fb29728c690ad41b4604.jpeg" alt="Screen Shot 2022-08-06 at 7.49.41 AM" data-base62-sha1="cp02Fa5KWpvhPzOARpOP2E6JfAo" width="517" height="292"></a></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/dff1eb4fc97f44744c158876afcf69f4dcc3f35f.jpeg" data-download-href="/uploads/short-url/vX6MGZ85BSOqikZo92dcvqcacSH.jpeg?dl=1" title="a6c8e06407f2a0eb830ce6e1ebdcc00a00e561ed"><img src="/uploads/db4391/optimized/2X/d/dff1eb4fc97f44744c158876afcf69f4dcc3f35f_2_517x291.jpeg" alt="a6c8e06407f2a0eb830ce6e1ebdcc00a00e561ed" data-base62-sha1="vX6MGZ85BSOqikZo92dcvqcacSH" width="517" height="291" srcset="/uploads/db4391/optimized/2X/d/dff1eb4fc97f44744c158876afcf69f4dcc3f35f_2_517x291.jpeg, /uploads/db4391/optimized/2X/d/dff1eb4fc97f44744c158876afcf69f4dcc3f35f_2_775x436.jpeg 1.5x, /uploads/db4391/original/2X/d/dff1eb4fc97f44744c158876afcf69f4dcc3f35f.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/d/dff1eb4fc97f44744c158876afcf69f4dcc3f35f_2_10x10.png"></a></div><p></p>
+<p><a href="https://twitter.com/owocki/status/1555896232924442624"><img src="/uploads/db4391/original/2X/4/4964f6bb679654ffa9bc7eee199bd889a25288d6.jpeg" alt="Screen Shot 2022-08-06 at 7.45.38 AM" data-base62-sha1="athauIfCkz1qrbfLWDuURZ094ii" width="345" height="193"></a></p>
+<p><a href="https://twitter.com/owocki/status/1555895270373675009"><img src="/uploads/db4391/original/2X/8/8695e25ee4c30da0cc1f8c8695e5d1a6cd7f226c.jpeg" alt="Screen Shot 2022-08-06 at 7.46.19 AM" data-base62-sha1="jcB6BIIeh9YPggPZIMhlfWrzB9i" width="345" height="243"></a></p>
+<p>Not a meme, but here is me announcing season 2 of greenpill pod on DIDs/Sybil Resistence.</p>
+<p><a href="https://www.youtube.com/watch?v=GgIzmXJ0Y7U&amp;t=1s"><img src="/uploads/db4391/original/2X/8/89f4fd5d6d92d45ee533e617fedd056fe0e7a918.jpeg" alt="Screen Shot 2022-08-06 at 7.47.16 AM" data-base62-sha1="jGqiGSzzNT3Shoe16osPWp6jDjW" width="690" height="399"></a></p>
+<p>And here is me announcing Gitcoin Passport on stage at ETHcc.</p>
+<p><a href="https://www.youtube.com/watch?v=n6cahMvivjU"><img src="/uploads/db4391/original/2X/8/8b8e72917dab9567fa38456c60cf68214637ff5d.jpeg" alt="Screen Shot 2022-08-06 at 7.48.17 AM" data-base62-sha1="jUzyLNTvnhBexJsRHKdazvz1jgF" width="690" height="394"></a></p>
+<p>Slides from this talk available <a href="https://docs.google.com/presentation/u/1/d/1NY17vw1fOFgp9WR40c0hsDkTnafSGkEPT2Pmemr4Rdo/edit#slide=id.p">here</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/3
+        Sat, 06 Aug 2022 13:53:27 +0000
+gov.gitcoin.co-post-11235-3
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+owocki
+
+            <aside class="quote no-group quote-modified" data-username="owocki" data-post="1" data-topic="11235">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>How can the base of the protocol harden, but also evolve to continuously ongoing threats? Where are yearly, quarterly, weekly, daily, or instant feedback incorporated? Where is more governance oversight needed over socialware, and where can the system move to trustware? And on what time preference? As the attackers evolve, how can the fraud defense evolve (0) effectively (1) without tipping off the attackers (2) but still in a legitimate (eg transparent to governance) way?</p>
+</blockquote>
+</aside>
+<p>Some further thoughts on this:</p>
+<p>The DAO could consider a multi layered modular approach to these problems, comprising of multiple reinforcing feedback loops on multiple different time preferences.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8510b91ff62b75b9e1be3b021b456fcbbe5a4ef9.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/8510b91ff62b75b9e1be3b021b456fcbbe5a4ef9" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8510b91ff62b75b9e1be3b021b456fcbbe5a4ef9_2_299x298.png" alt="" data-base62-sha1="iZ9kD3lIN96E3uYE501JpmiUOZb" width="299" height="298" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8510b91ff62b75b9e1be3b021b456fcbbe5a4ef9_2_299x298.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8510b91ff62b75b9e1be3b021b456fcbbe5a4ef9_2_448x447.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/8/8510b91ff62b75b9e1be3b021b456fcbbe5a4ef9.png 2x" data-dominant-color="E6E6E6"></a></div><p></p>
+<p>The loops on shorter time periods rely more on trustware and immediate actions. And the loops on the longer time period rely on DAO governance &amp; take more time.</p>
+<p>Some mechanisms that could be in these feedback loops are:</p>
+<ol start="0">
+<li>New &amp; Better Stamps (Continuous)</li>
+<li>Upala (Instant)</li>
+<li>Sybil Data marketplace (Instant)</li>
+<li>DAO Blue Team Action Squad (Daily)</li>
+<li>DAO Policy Issuance (Quarterly)</li>
+<li>A sybil DAO of DAOs that shares information across BrightID/POH (Quarterly)</li>
+</ol>
+<p>A sketch of these mechanisms:</p>
+<h3><a name="h-0-newbetter-stamps-1" class="anchor" href="https://gov.gitcoin.co#h-0-newbetter-stamps-1"></a>0. New&amp;Better Stamps</h3>
+<p>Feedback speed: Continuous</p>
+<p>There is a mountain of data on and off-chain that could help increase the personhood score of users in the system.</p>
+<ul>
+<li>My gut says that there is a lot of opportunity with integrating POAPs if the DAO can determine which POAPs are most important</li>
+<li>Carl + Lawrence have done a great job taking a look at multiple data sources in passport and using that to produce sybil-ness, presenting that at Gathering Hour on July 28th 2022.</li>
+</ul>
+<p>There should be a continuous feedback loop between the data analysis team + the stamps roadmap, with the ability to add new stamps rolling out often. It should be easy for the user to know what stamps are the highest priority for them to integrate (perhaps the user could sort the stamp UI by total added personhood score).</p>
+<p>Right now the GPC is building in new stamp integrations themselves. There is an opportunity to just publish the stamp roadmap + accept PRs from third parties that would allow us to push this development work out to the community.</p>
+<h3><a name="h-1-upala-2" class="anchor" href="https://gov.gitcoin.co#h-1-upala-2"></a>1. Upala</h3>
+<p>Feedback speed: instant</p>
+<p>Upala is a protocol that provides human uniqueness score in dollars. The score of an account represents how much it would cost to forge the account.</p>
+<p>Sound familiar? <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Upala has a quite elegant mechanism where it allows anyone to “liquidate” an account for a reward equal to their personhood score.</p>
+<p>Why is this powerful? It allows us to create a rational crypto economic incentive for attackers to claim a honeypot reward. If no one is claiming the reward, we could reasonably assume that no such attacker has been able to manufacture an identity equal to their personhood score</p>
+<p>Project website: <a href="https://medium.com/six-degrees-of-separation" class="inline-onebox">Upala Digital Identity - Medium</a></p>
+<h3><a name="h-2-sybil-data-analysis-marketplace-3" class="anchor" href="https://gov.gitcoin.co#h-2-sybil-data-analysis-marketplace-3"></a>2. Sybil Data Analysis marketplace</h3>
+<p>Feedback speed: instant</p>
+<p><a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159">This is a topic that has been discussed on the forum.</a> What if GitcoinDAO made the data for it’s sybil attackers available publicly (within reason, in a privacy preserving manner), such that anyone could evaluate where they think attackers come from, and then get rewarded for reporting those attackors to the DAO?</p>
+<p>Such a system would provide instant feedback to the Passport ecosystem about how attackers are abusing the system.</p>
+<p>This is a model that has been pioneered in other domains by <a href="https://numer.ai/">Numerai</a>.</p>
+<h3><a name="h-3-dao-blue-team-action-squad-4" class="anchor" href="https://gov.gitcoin.co#h-3-dao-blue-team-action-squad-4"></a>3. DAO Blue Team Action Squad</h3>
+<p>Feedback speed: Daily</p>
+<p>Perhaps the GitcoinDAO FDD or Data science group could continuously monitor the data in Passport during Grants rounds, and propose daily squelches to some sort of governance mechanism. (Perhaps the DAO has a rotating steward slot that is the Sybil Resistance Steward who sits in this role for a quarter at a time, and they are responsible for approving these recommendations). Governance could then verify that those recommendations are legitimate.</p>
+<p>If the DAO is successful in decentralizing, the DAO Blue Team Action Squad will not be needed any longer. Over time the DAO Blue Team Action Squad will become part of the sybil data marketplace.</p>
+<h3><a name="h-4-dao-policy-issuance-5" class="anchor" href="https://gov.gitcoin.co#h-4-dao-policy-issuance-5"></a>4. DAO Policy Issuance</h3>
+<p>Feedback speed: Quarterly</p>
+<p>Perhaps the GitcoinDAO FDD or Data science group be in charge of issuing an algorithmic score for how personhood scores are computed.</p>
+<p>A policy could be as simple as follows</p>
+<blockquote>
+<p>PS = CF = Weight(twitter) + weight(POH) + weight(POAP1) + weight(POAP2) and so on.</p>
+</blockquote>
+<p>Perhaps there could be more complicated logic where certain stamps compound one exponentially. Or perhaps a squelch list could be built in to a scoring policy that dApps could subscribe to (as opposed to computing in memory in the dApp), so that the DAO Blue Team Action Squad’s actions have teeth.</p>
+<p>By doing this on a quarterly basis, the DAO can enter into a loop where it</p>
+<ol>
+<li>Observes the attackers</li>
+<li>Learns their patterns</li>
+<li>Recommends policy to governance</li>
+<li>Governance approves</li>
+<li>Updates the official GitcoinDAO algorithm</li>
+</ol>
+<p>Over time, this system would create algorithmic policies that cover many different permutations of sybil attackers.</p>
+<h3><a name="h-5-a-sybil-dao-of-daos-that-shares-information-across-brightidpoh-quarterly-6" class="anchor" href="https://gov.gitcoin.co#h-5-a-sybil-dao-of-daos-that-shares-information-across-brightidpoh-quarterly-6"></a>5. A sybil DAO of DAOs that shares information across BrightID/POH (Quarterly)</h3>
+<p>Feedback speed: Quarterly</p>
+<p>As Gitcoin Passport aggregates more and more data from DeSoc, it will naturally become a information marketplace for the latest trends in sybil resistence.</p>
+<p>If Gitcoin wants to be a good neighbor to the systems it integrate switch, it could find a way to report sybil attackors back to BrightID, POH, and any other ecosystem that is integrated with it. Such a data interchange would make the whole ecosystem stronger.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/2
+        Sat, 06 Aug 2022 06:06:02 +0000
+gov.gitcoin.co-post-11235-2
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+owocki
+
+            <h1>
+<a name="preamble-1" class="anchor" href="https://gov.gitcoin.co#preamble-1"></a>Preamble</h1>
+<p>This is a knowledge transfer post. With my <a href="https://gov.gitcoin.co/t/passing-the-torch/10971">recent disaffiliation from leadership in GitcoinDAO</a>, I would like to pass along knowledge I have ascertained from 2.5 years of watching Gitcoin Grants grow. This post is a data point for the DAO, whose governance structures continue to retain full control &amp; have final say of how to design Gitcoin Passport.</p>
+<h1>
+<a name="tldr-2" class="anchor" href="https://gov.gitcoin.co#tldr-2"></a>TLDR</h1>
+<p>As Daniel Schmachtenberger <a href="https://podcasts.apple.com/us/podcast/a-problem-well-stated-is-half-solved/id1460030305?i=1000526825665">likes to say</a>, “A Problem Well-Stated is Half-Solved”.</p>
+<p>In this post I will try to articulate what I have seen and convey my limited but earnest view on the design space of sybil resistance as it pertains to Gitcoin &amp; the web3 ecosystem.</p>
+<p>In this post, I make these assertions:</p>
+<ol>
+<li>Sybil resistance is an important problem to address.</li>
+<li>Sybil resistance is an adversarial game.</li>
+<li>Sybil resistance is an iterative game.</li>
+<li>Sybil resistance is an evolutionary game.</li>
+<li>Sybil resistance is an infinite evolutionary iterative game between a diversity of adversaries.</li>
+<li>What are the criteria for addressing sybil resistance?</li>
+</ol>
+<p>This post is a 13 minute read.</p>
+<h1>
+<a name="table-of-contents-3" class="anchor" href="https://gov.gitcoin.co#table-of-contents-3"></a>Table of Contents</h1>
+<ul>
+<li>TLDR</li>
+<li>Wait, what are sybil attacks?</li>
+<li>The high upside of addressing this problem space.</li>
+<li>Meet your adversaries</li>
+<li>Criteria for desirable approaches to this problem.
+<ul>
+<li>Criteria 0: The complexity of large social systems</li>
+<li>Criteria 1: The need for privacy-centricity &amp; sovereignty</li>
+<li>Criteria 2: The need to avoid plutocracy</li>
+<li>Criteria 3: Collusion</li>
+<li>Criteria 4: The need to build in systemic defensibility</li>
+<li>Criteria 5: The need to build network effects</li>
+<li>Criteria 6: Enabling Innovation &amp; Preventing Capture with Modularity &amp; Forkability</li>
+<li>Criteria 7: Enabling Innovation &amp; Preventing Capture with Decentralization</li>
+<li>Criteria 8: The evolutionary nature of this game</li>
+</ul>
+</li>
+<li>What will round 69 look like?</li>
+<li>In closing</li>
+</ul>
+<h1>
+<a name="wait-what-are-sybil-attacks-4" class="anchor" href="https://gov.gitcoin.co#wait-what-are-sybil-attacks-4"></a>Wait, what are sybil attacks?</h1>
+<p>Many systems that aim to democratically decide outcomes, like Gitcoin Grants, assume each participant is a unique human.</p>
+<p>This makes them vulnerable to sybil attacks, where a bad actor creates a large number of pseudonymous identities to subvert the service’s reputation system and gain a disproportionate amount of influence.</p>
+<p>Sybil attacks undermine the legitimacy of blockchain-based democratic pluralistic processes. Learn more about sybil attacks <a href="https://www.youtube.com/watch?v=v1Dm7FI2AdU">here</a>.</p>
+<h1>
+<a name="the-high-upside-of-addressing-this-problem-space-5" class="anchor" href="https://gov.gitcoin.co#the-high-upside-of-addressing-this-problem-space-5"></a>The high upside of addressing this problem space.</h1>
+<p>GitcoinDAO’s impact on the world depends on the success of Gitcoin Grants, which depends on <a href="http://wtfisqf.com">Quadratic Funding</a>, which depends on sybil/fraud resistance.</p>
+<p>Without sybil resistance, Gitcoin Grants is a castle in the sky. Sybil resistance is the bedrock of Gitcoin Grant’s legitimacy &amp; the lack of a solid foundational understanding of the problem is a constraint on it’s growth.</p>
+<p>But the stakes are larger than GitcoinDAO.</p>
+<p>Sybil attacks are why we can’t have nice things. Right now, the DAO ecosystem is built around one-token-one-vote or one-cpu-one-vote schemes. If sybil resistance was addressed, the ecosystem could move to systems built more on one-human-one-vote.</p>
+<p>Addressing sybil resistance is very desirable if we want web3 systems that provide utility to everyday citizens of the world, not just the moneyed elite.</p>
+<p>Addressing sybil resistance unlocks use cases like:</p>
+<ul>
+<li>quadratic funding</li>
+<li>quadratic voting</li>
+<li>Gini coefficient measurements</li>
+<li>UBI</li>
+<li>one-person-one-vote DAOs</li>
+<li>data collectives</li>
+<li>sybil resistant airdrops</li>
+<li>
+<ul>
+<li>other use cases we haven’t discovered yet!</li>
+</ul>
+</li>
+</ul>
+<h1>
+<a name="meet-your-adversaries-6" class="anchor" href="https://gov.gitcoin.co#meet-your-adversaries-6"></a>Meet your adversaries</h1>
+<h3>
+<a name="script-kiddies-7" class="anchor" href="https://gov.gitcoin.co#script-kiddies-7"></a>Script Kiddies</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1f3c44b7c821d0ca8e89439fe0455a4230102de7.png" data-download-href="/uploads/short-url/4sjVpV7tfrt9FgrTX07oSSKSgQv.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/1/1f3c44b7c821d0ca8e89439fe0455a4230102de7_2_624x269.png" alt="" data-base62-sha1="4sjVpV7tfrt9FgrTX07oSSKSgQv" width="624" height="269" srcset="/uploads/db4391/optimized/2X/1/1f3c44b7c821d0ca8e89439fe0455a4230102de7_2_624x269.png, /uploads/db4391/optimized/2X/1/1f3c44b7c821d0ca8e89439fe0455a4230102de7_2_936x403.png 1.5x, /uploads/db4391/original/2X/1/1f3c44b7c821d0ca8e89439fe0455a4230102de7.png 2x" data-small-upload="/uploads/db4391/optimized/2X/1/1f3c44b7c821d0ca8e89439fe0455a4230102de7_2_10x10.png"></a></div><p></p>
+<h3>
+<a name="petty-criminals-8" class="anchor" href="https://gov.gitcoin.co#petty-criminals-8"></a>Petty Criminals</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/127f3b4259d54379a62b45e597c4cb3809ed234e.jpeg" data-download-href="/uploads/short-url/2DDbzw96ZtKE7cKgNV82VDwxIOG.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/1/127f3b4259d54379a62b45e597c4cb3809ed234e_2_239x320.jpeg" alt="" data-base62-sha1="2DDbzw96ZtKE7cKgNV82VDwxIOG" width="239" height="320" srcset="/uploads/db4391/optimized/2X/1/127f3b4259d54379a62b45e597c4cb3809ed234e_2_239x320.jpeg, /uploads/db4391/optimized/2X/1/127f3b4259d54379a62b45e597c4cb3809ed234e_2_358x480.jpeg 1.5x, /uploads/db4391/optimized/2X/1/127f3b4259d54379a62b45e597c4cb3809ed234e_2_478x640.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/1/127f3b4259d54379a62b45e597c4cb3809ed234e_2_10x10.png"></a></div><p></p>
+<h3>
+<a name="rational-economic-actors-9" class="anchor" href="https://gov.gitcoin.co#rational-economic-actors-9"></a>Rational Economic Actors</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c01cc8ef64505d39c84642b83c53a5b2fe4be180.jpeg" data-download-href="/uploads/short-url/rpvlqR3Of0aokvTHHs3IMWwokpy.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/c/c01cc8ef64505d39c84642b83c53a5b2fe4be180_2_273x364.jpeg" alt="" data-base62-sha1="rpvlqR3Of0aokvTHHs3IMWwokpy" width="273" height="364" srcset="/uploads/db4391/optimized/2X/c/c01cc8ef64505d39c84642b83c53a5b2fe4be180_2_273x364.jpeg, /uploads/db4391/optimized/2X/c/c01cc8ef64505d39c84642b83c53a5b2fe4be180_2_409x546.jpeg 1.5x, /uploads/db4391/optimized/2X/c/c01cc8ef64505d39c84642b83c53a5b2fe4be180_2_546x728.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/c/c01cc8ef64505d39c84642b83c53a5b2fe4be180_2_10x10.png"></a></div><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/3a4256ce93054e5b2ca56c0d9893498a66058b35.png" data-download-href="/uploads/short-url/8jnP5Xf8JsArYAR7Dj5SQn0Mz4h.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/3/3a4256ce93054e5b2ca56c0d9893498a66058b35_2_378x311.png" alt="" data-base62-sha1="8jnP5Xf8JsArYAR7Dj5SQn0Mz4h" width="378" height="311" srcset="/uploads/db4391/optimized/2X/3/3a4256ce93054e5b2ca56c0d9893498a66058b35_2_378x311.png, /uploads/db4391/optimized/2X/3/3a4256ce93054e5b2ca56c0d9893498a66058b35_2_567x466.png 1.5x, /uploads/db4391/optimized/2X/3/3a4256ce93054e5b2ca56c0d9893498a66058b35_2_756x622.png 2x" data-small-upload="/uploads/db4391/optimized/2X/3/3a4256ce93054e5b2ca56c0d9893498a66058b35_2_10x10.png"></a></div><p></p>
+<h3>
+<a name="solana-defi-developershttpswwwcoindeskcomlayer220220804master-of-anons-how-a-crypto-developer-faked-a-defi-ecosystem-10" class="anchor" href="https://gov.gitcoin.co#solana-defi-developershttpswwwcoindeskcomlayer220220804master-of-anons-how-a-crypto-developer-faked-a-defi-ecosystem-10"></a><a href="https://www.coindesk.com/layer2/2022/08/04/master-of-anons-how-a-crypto-developer-faked-a-defi-ecosystem/">Solana DEFI Developers</a>
+</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646.png" data-download-href="/uploads/short-url/4fjuXm0lAbFu8Afxl0neWHF4Ep8.png?dl=1" title="FZWO5fgWAAQUCxG"><img src="/uploads/db4391/optimized/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646_2_372x375.png" alt="FZWO5fgWAAQUCxG" data-base62-sha1="4fjuXm0lAbFu8Afxl0neWHF4Ep8" width="372" height="375" srcset="/uploads/db4391/optimized/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646_2_372x375.png, /uploads/db4391/optimized/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646_2_558x562.png 1.5x, /uploads/db4391/original/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646.png 2x" data-small-upload="/uploads/db4391/optimized/2X/1/1dc3df180a5fb3cc87a4ea34750c6e3ecdab9646_2_10x10.png"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/6e642d04ae3f9043248792b12448f9d725d50c94.jpeg" data-download-href="/uploads/short-url/fKz9954IBfEYTU20DSc5FLlCBRG.jpeg?dl=1" title="FZaO_83XEAEwsIf"><img src="/uploads/db4391/optimized/2X/6/6e642d04ae3f9043248792b12448f9d725d50c94_2_250x250.jpeg" alt="FZaO_83XEAEwsIf" data-base62-sha1="fKz9954IBfEYTU20DSc5FLlCBRG" width="250" height="250" srcset="/uploads/db4391/optimized/2X/6/6e642d04ae3f9043248792b12448f9d725d50c94_2_250x250.jpeg, /uploads/db4391/optimized/2X/6/6e642d04ae3f9043248792b12448f9d725d50c94_2_375x375.jpeg 1.5x, /uploads/db4391/optimized/2X/6/6e642d04ae3f9043248792b12448f9d725d50c94_2_500x500.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/6/6e642d04ae3f9043248792b12448f9d725d50c94_2_10x10.png"></a></div> <div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1d4594074d363567f2be5fc942e2339801fa325f.jpeg" data-download-href="/uploads/short-url/4aWUScIrWJRJWnTzcGvWkdpcmTB.jpeg?dl=1" title="FZaxw6yakAAfgV0"><img src="/uploads/db4391/optimized/2X/1/1d4594074d363567f2be5fc942e2339801fa325f_2_292x250.jpeg" alt="FZaxw6yakAAfgV0" data-base62-sha1="4aWUScIrWJRJWnTzcGvWkdpcmTB" width="292" height="250" srcset="/uploads/db4391/optimized/2X/1/1d4594074d363567f2be5fc942e2339801fa325f_2_292x250.jpeg, /uploads/db4391/optimized/2X/1/1d4594074d363567f2be5fc942e2339801fa325f_2_438x375.jpeg 1.5x, /uploads/db4391/optimized/2X/1/1d4594074d363567f2be5fc942e2339801fa325f_2_584x500.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/1/1d4594074d363567f2be5fc942e2339801fa325f_2_10x10.png"></a></div><p></p>
+<h3>
+<a name="organized-crime-11" class="anchor" href="https://gov.gitcoin.co#organized-crime-11"></a>Organized Crime</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/da41f401c810229cd9c96dfa428139e5ab2df837.jpeg" data-download-href="/uploads/short-url/v8NokU1v2cBWYJe5lbW1R2NgLuD.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/d/da41f401c810229cd9c96dfa428139e5ab2df837_2_417x218.jpeg" alt="" data-base62-sha1="v8NokU1v2cBWYJe5lbW1R2NgLuD" width="417" height="218" srcset="/uploads/db4391/optimized/2X/d/da41f401c810229cd9c96dfa428139e5ab2df837_2_417x218.jpeg, /uploads/db4391/optimized/2X/d/da41f401c810229cd9c96dfa428139e5ab2df837_2_625x327.jpeg 1.5x, /uploads/db4391/optimized/2X/d/da41f401c810229cd9c96dfa428139e5ab2df837_2_834x436.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/d/da41f401c810229cd9c96dfa428139e5ab2df837_2_10x10.png"></a></div><p></p>
+<h3>
+<a name="nation-states-12" class="anchor" href="https://gov.gitcoin.co#nation-states-12"></a>Nation States</h3>
+<p><img src="/uploads/db4391/original/2X/d/d79ffc2fc0c5099ab863c67dc9384e2a50f8ad19.jpeg" alt="" data-base62-sha1="uLvqcFoR5NX5VIwbA8vTSpTtzh7" width="485" height="340"></p>
+<h1>
+<a name="criteria-for-desirable-approaches-to-this-problem-13" class="anchor" href="https://gov.gitcoin.co#criteria-for-desirable-approaches-to-this-problem-13"></a>Criteria for desirable approaches to this problem.</h1>
+<h2>
+<a name="criteria-0-the-complexity-of-large-social-systems-14" class="anchor" href="https://gov.gitcoin.co#criteria-0-the-complexity-of-large-social-systems-14"></a>Criteria 0: The complexity of large social systems</h2>
+<p>There are different sophistication levels for each of these adversaries. A script kiddie may lack the skills, organization, and conviction to pull off a sophisticated attack, whereas organized crime &amp; nation states may have nearly infinite budgets, skills, organization, and conviction to attack a system. More sophisticated adversaries will grow &amp; evolve over time, which requires either (1) constant vigilance or (2) systemic anti-fragility on behalf of DAOs that function as digital identity providers.</p>
+<p>Adversaries have different motivations. Some adversaries may be in it for the money. Some are in it for the lolz. Some are in it to help you, some are in it to pwn you. Some are just bored and seeking a thrill.</p>
+<p>Different adversaries may attempt attacks that are diverse from one another. Some adversaries may pursue schemes that are invulnerable to biometric identity + government identity countermeasures, but are vulnerable to timing-attack countermeasures. Other adversaries may try things that are invulnerable to web of trust and presence based countermeasures, but vulnerable to biometric countermeasures.</p>
+<p>Because of the varying types of adversaries, the most comprehensively anti-fragile approach to sybil/fraud resistance will aggregate different types of countermeasures.</p>
+<p><img src="/uploads/db4391/original/2X/9/9d221ab99dba346d77451ef2233e28631d5e087f.gif" alt="Kirby_passport" data-base62-sha1="mq41VThVMs9i99fHVlWrDdJCUCH" width="400" height="270" class="animated"><br>
+(<em>A good guy aggreagting countermeasuroooooors)</em></p>
+<p>Because we’ve read <a href="https://gov.gitcoin.co/t/lessons-about-impact-networks/10305">Impact Networks</a>, we know that networks are good at sensing &amp; responding to complex environments. Because of the complexity of the problem, a network is a better institution to address the problem than a company could be.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d2fedd0f2dfa3cbba9853b310daf55ca5b678bea.png" data-download-href="/uploads/short-url/u6yjiPYknGsRAUzWGF9TLTAWdom.png?dl=1" title="rO4KKdujwVAxPJ9SezpusoX-OPCXdMNJZ1e_zwf8K-kxrUJ4V6e1T5J8-71fQLrBv1c3xn2kWfzDZgbZ4BjtjKUbaMejMJWsiE2rUXE_ejccSzcbeh9ui9ftDBIRFiI4CXyhiZho"><img src="/uploads/db4391/optimized/2X/d/d2fedd0f2dfa3cbba9853b310daf55ca5b678bea_2_345x217.png" alt="rO4KKdujwVAxPJ9SezpusoX-OPCXdMNJZ1e_zwf8K-kxrUJ4V6e1T5J8-71fQLrBv1c3xn2kWfzDZgbZ4BjtjKUbaMejMJWsiE2rUXE_ejccSzcbeh9ui9ftDBIRFiI4CXyhiZho" data-base62-sha1="u6yjiPYknGsRAUzWGF9TLTAWdom" width="345" height="217" srcset="/uploads/db4391/optimized/2X/d/d2fedd0f2dfa3cbba9853b310daf55ca5b678bea_2_345x217.png, /uploads/db4391/optimized/2X/d/d2fedd0f2dfa3cbba9853b310daf55ca5b678bea_2_517x325.png 1.5x, /uploads/db4391/optimized/2X/d/d2fedd0f2dfa3cbba9853b310daf55ca5b678bea_2_690x434.png 2x" data-small-upload="/uploads/db4391/optimized/2X/d/d2fedd0f2dfa3cbba9853b310daf55ca5b678bea_2_10x10.png"></a></div><br>
+<em>(<a href="https://gov.gitcoin.co/t/lessons-about-impact-networks/10305">Lessons from Impact Networks</a>)</em><p></p>
+<h2>
+<a name="criteria-1-the-need-for-privacy-centricity-sovereignty-15" class="anchor" href="https://gov.gitcoin.co#criteria-1-the-need-for-privacy-centricity-sovereignty-15"></a>Criteria 1: The need for privacy-centricity &amp; sovereignty</h2>
+<p>On challenge with building a system that can address sybil attacks is to manage identity information. Identity information is essential to identifying sybil attackers.</p>
+<p>But there are countervailing forces to the need for identity.</p>
+<p>In a world where <a href="https://vitalik.ca/general/2019/05/09/control_as_liability.html">control of data is a liability</a>, any designer of said system must avoid becoming a data honeypot - lest it become a headline one day, or worse, silently drift into becoming a deep-state style intelligence agency.</p>
+<p>Another requirement of web3 based DID systems is to make them sovereign to their users (eg users can own/manage/delete their data) and privacy preserving. Eg when a dapp discovers whether a user is a unique user or not, they should not find out more information about the user than that without express consent.</p>
+<h2>
+<a name="criteria-2-the-need-to-avoid-plutocracy-16" class="anchor" href="https://gov.gitcoin.co#criteria-2-the-need-to-avoid-plutocracy-16"></a>Criteria 2: The need to avoid plutocracy</h2>
+<p>Sybil resistance is a spectrum, from protecting against script kiddies to protecting against nation states.</p>
+<p>One metric that has been kicked around to manage this is the idea of a TrustBonus. Basically you just amplify or dampen quadratic matching according to some percentage. Eg a user with</p>
+<ol>
+<li>100% trustbonus + $100 in matching will be able to allocate $100 in matching</li>
+<li>50% trustbonus + $100 in matching will be able to allocate $50 in matching</li>
+<li>150% trustbonus + $100 in matching will be able to allocate $150 in matching</li>
+<li>And so on……</li>
+</ol>
+<p><a href="https://twitter.com/owocki/status/1271864852101791744">I was there in rounds</a> 4-6 when Gitcoin first started introducing SMS verification and later bright. I know how duct taped together that conception of sybil resistance was 2 years ago. I’m glad it has evolved but I think TrustBonuses are outliving their usefulness.</p>
+<p>One reason i have such an aversion to continuing to talk about this as a TrustBonus is that its a legacy concept from the cGrants days that only applies to QF products (other sybil resistant dapps wont have trust bonuses since they don’t have quadratic matches).</p>
+<h3>
+<a name="ok-but-what-next-17" class="anchor" href="https://gov.gitcoin.co#ok-but-what-next-17"></a>OK, but what next?</h3>
+<p>One way of moving to a more manageable metric is moving to the idea of a Personhood Score = cost of forgery = the cost in USD it would take to forge a users identity. For a system wide KPI, that would make TCF = Total Cost of Forgery in the system, the ultimate KPI that the DAO shoots for to bootstrap a sybil resistant economy.</p>
+<p>As the personhood score for a passport grows, it becomes more resistant to certain types of adversaries. Here is a rough estimate of personhood scores by adversary sophistication level:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2324f06f7b46948ad5c4fe3004f6639f831ee483.png" data-download-href="/uploads/short-url/50TQUeA3o1gbWllqmaSxTH6Ujbd.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/2/2324f06f7b46948ad5c4fe3004f6639f831ee483_2_624x64.png" alt="" data-base62-sha1="50TQUeA3o1gbWllqmaSxTH6Ujbd" width="624" height="64" srcset="/uploads/db4391/optimized/2X/2/2324f06f7b46948ad5c4fe3004f6639f831ee483_2_624x64.png, /uploads/db4391/optimized/2X/2/2324f06f7b46948ad5c4fe3004f6639f831ee483_2_936x96.png 1.5x, /uploads/db4391/original/2X/2/2324f06f7b46948ad5c4fe3004f6639f831ee483.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/2324f06f7b46948ad5c4fe3004f6639f831ee483_2_10x10.png"></a></div><p></p>
+<p>Cost of forgery is built by connecting multiple stamps. A very rudimentary example:</p>
+<ul>
+<li>If a user connects twitter (+ gitcoin governance decides twitter has a $.10 cost of forgery)</li>
+<li>and a user connects POH (+ gitcoin governance decides POH has a $100 cost of forgery)</li>
+<li>and a user connects brightID (+ gitcoin governance decides brightid has a $10 cost of forgery)</li>
+<li>then the total cost of forgery for that users identity is $110.10</li>
+</ul>
+<p>Cost of forgery is how value is transmitted around the ecosystem of Passport users. If I am designing a dapp, and I know the cost of forgery for this user is $110.10, I can rationally reward the user with up to $110.10 worth of sybil resistant rewards.</p>
+<p>So in the case of gitcoin, it can give $110.10 worth of matching. Rabbithole (if it integrates with Passport) can give $110.10 worth of rewards. POAP (if it integrates with Passport) can give $110.10 worth of POAP gas fees, and so on</p>
+<p>The key insight behind personhood scores is that in an adversarial world there are different levels of sophistication of adversaries Gitcoin wants to protect against (script kiddies =&gt; organized crime =&gt; nation states). Instead of treating sybil resistance as a binary (yes/no), we instead treat sybil resistance as a spectrum, making the problem more manageable.</p>
+<p>Conceptually, you can back into PersonhoodScores with the current architecture of TrustBonus, eg your trust bonus * your matching amount = current dollars at risk.</p>
+<p>IMO cGrants is architected backwards. It makes more sense to start with the personhood score + guide the user to either increasing it or muting their contributions by computing their trustbonus.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/054ceea98a4e8213e24151d60adf570483117ee5.jpeg" data-download-href="/uploads/short-url/KTdgzQgZoF79CQBFxwloAhBJdz.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_624x261.jpeg" alt="" data-base62-sha1="KTdgzQgZoF79CQBFxwloAhBJdz" width="624" height="261" srcset="/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_624x261.jpeg, /uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_936x391.jpeg 1.5x, /uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_1248x522.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/0/054ceea98a4e8213e24151d60adf570483117ee5_2_10x10.png"></a></div><p></p>
+<p>I wrote more about this <a href="https://gov.gitcoin.co/t/establishing-a-new-process-for-identify-verification-scoring-and-removing-troubled-id-methods/7506/3">here</a>.</p>
+<h3>
+<a name="the-problem-with-plutocracy-18" class="anchor" href="https://gov.gitcoin.co#the-problem-with-plutocracy-18"></a>The Problem with Plutocracy</h3>
+<p>This brings me to the one major problem with PersonhoodScores. It puts the sybil resistance in economic terms. If designers of the sybil resistant game are not careful, this could give the system very dystopian attributes.</p>
+<p>If the TCF (Total Cost of Forgery) of the system is put into parity with the amount of capital in the system, then only rich people can have identities, that is dystopian</p>
+<p>If there is not a way for everyday citizens to reliably create a high enough personhood score without having money, that is dystopian.</p>
+<p>For this reason, it could be important to prioritize verification mechanisms that don’t filter out citizens without wealth. It could be important to track the number of moneyed identities active in the system vs non-monied identities. Such examples of these systems: BrightID, Proof of Humanity, biometric identification systems. (You can learn more about this problem <a href="https://www.youtube.com/watch?v=PlDOjDu-mpU">here</a>)</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/3260d476f54be196844623914a18e1a95c65ec11.jpeg" data-download-href="/uploads/short-url/7bFkvg2plLz95IVkIwRHPt1vWil.jpeg?dl=1" title="Screen Shot 2022-08-06 at 7.43.46 AM"><img src="/uploads/db4391/optimized/2X/3/3260d476f54be196844623914a18e1a95c65ec11_2_690x360.jpeg" alt="Screen Shot 2022-08-06 at 7.43.46 AM" data-base62-sha1="7bFkvg2plLz95IVkIwRHPt1vWil" width="690" height="360" srcset="/uploads/db4391/optimized/2X/3/3260d476f54be196844623914a18e1a95c65ec11_2_690x360.jpeg, /uploads/db4391/optimized/2X/3/3260d476f54be196844623914a18e1a95c65ec11_2_1035x540.jpeg 1.5x, /uploads/db4391/optimized/2X/3/3260d476f54be196844623914a18e1a95c65ec11_2_1380x720.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/3/3260d476f54be196844623914a18e1a95c65ec11_2_10x10.png"></a></div><p></p>
+<h2>
+<a name="criteria-3-collusion-19" class="anchor" href="https://gov.gitcoin.co#criteria-3-collusion-19"></a>Criteria 3: Collusion</h2>
+<p>Say that you’ve architected the perfect sybil resistant identity system.</p>
+<p>Or a good enough system. A good enough IMO is a system where the TCF (Total cost of forgery) is greater than the amount of rewards that is available to citizens of the system to exploit it.</p>
+<p>So a good enough sybil resistant identity system is one where</p>
+<ol>
+<li>there is $3,000,000 TCF and there is a $2,999,999 matching pool.</li>
+<li>Or, in a world where passport is implemented by multiple dApps, there is $3,000,000 TCF and there is a $2,999,999 aggregate economic opportunity across all of those dapps.</li>
+<li>Or, perhaps the DAOI decides it is willing to accept a 10% fraud risk, so when it has a $3,000,000 TCF, it supports a $3,299,999 aggregate economic opportunity across all of the dapps in Passport-ecosystem.</li>
+</ol>
+<p>In this scenario, you still have to deal with collusion attacks. Stuff like “Hey if you contribute to my grant I’ll give you a bribe.” or “I’ll buy your identity from you”.</p>
+<p>Really a good enough system is one where The TCB (Total cost of bribery) + TCF (Total cost of forgery) is greater than the amount of rewards that is available to citizens of the system to exploit it.</p>
+<p>The bribery/collusion attack surface area is still under research, and deserves its own post.</p>
+<h2>
+<a name="criteria-4-the-need-to-build-in-systemic-defensibility-20" class="anchor" href="https://gov.gitcoin.co#criteria-4-the-need-to-build-in-systemic-defensibility-20"></a>Criteria 4: The need to build in systemic defensibility</h2>
+<p>One of the things I find most inspiring about how Proof of Stake and Proof of Work are designed is how well they function by acknowledging that adversaries exist + fundamentally tilt the design of the system towards defensibility and anti-fragility. Both PoW/Pow, they both boil down to the simple principle of making a system much cheaper to defend than to attack.</p>
+<ol>
+<li>In PoW, it is way more profitable (and way less risky) to use my mining hardware to mine the next block than it is to try and 51% attack the network.</li>
+<li>In PoS, it is way more profitable (and way less risky) to use my mining hardware to mine the next block than it is to try and 51% attack the network.</li>
+</ol>
+<p>This leads me to the following criteria: In Gitcoin Passport, it should be way more profitable (and way less risky) to participate in the network legitimately than to attack the network.</p>
+<h2>
+<a name="criteria-5-the-need-to-build-network-effects-21" class="anchor" href="https://gov.gitcoin.co#criteria-5-the-need-to-build-network-effects-21"></a>Criteria 5: The need to build network effects</h2>
+<p>If you build the most perfect sybil resistant ecosystem, and no one is there to use it, does it make a sound?</p>
+<p>This is called the cold start problem in n-sided networks.</p>
+<p>The flywheel of passport could grow like this: The more users use Gitcoin Passport, the more the TCF of Passport increases, the more dApps/stamps will integrate with it, the more utility it will provide, which causes more users to use it (and the cycle repeats).</p>
+<p>How does one cold start this network?  With <a href="https://gitcoin.co/results">Gitcoin Grants scale</a>.</p>
+<p>With the right configuration - as this flywheel spins, because networks fundamentally grow exponentially, TCF should start to grow exponentially. Here is an example of one such model of how this could grow (this is an illustration + not a promise of any sort):</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/6c4481d818fd28384248d13b54f460766073c9bb.png" data-download-href="/uploads/short-url/frMlfMv48iGucWHOQ9Tn4hYpi4z.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/6/6c4481d818fd28384248d13b54f460766073c9bb_2_376x241.png" alt="" data-base62-sha1="frMlfMv48iGucWHOQ9Tn4hYpi4z" width="376" height="241" srcset="/uploads/db4391/optimized/2X/6/6c4481d818fd28384248d13b54f460766073c9bb_2_376x241.png, /uploads/db4391/optimized/2X/6/6c4481d818fd28384248d13b54f460766073c9bb_2_564x361.png 1.5x, /uploads/db4391/optimized/2X/6/6c4481d818fd28384248d13b54f460766073c9bb_2_752x482.png 2x" data-small-upload="/uploads/db4391/optimized/2X/6/6c4481d818fd28384248d13b54f460766073c9bb_2_10x10.png"></a></div><p></p>
+<p>Learn more about the network effects of the Gitcoin ecosystem <a href="https://gov.gitcoin.co/t/the-network-effects-of-gitcoindaos-protocols/10973">here</a>.</p>
+<h2>
+<a name="criteria-6-enabling-innovation-preventing-capture-with-modularity-forkability-22" class="anchor" href="https://gov.gitcoin.co#criteria-6-enabling-innovation-preventing-capture-with-modularity-forkability-22"></a>Criteria 6: Enabling Innovation &amp; Preventing Capture with Modularity &amp; Forkability</h2>
+<p>One thing I think is really important about Gitcoin Passport is how forkable it is.</p>
+<p>Don’t agree with Gitcoin’s (stamps|scoring algorithm|focus on sybil resistance). Fork it! Create your own. Over time, one could build a marketplace of stamping tools, scoring algorithms around Gitcoin Passport. Such a rich ecosystem is the foundation of the network effects of Decentralized Society.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5ce14d4181e561431ec2da719e47547b2c6a59a6.jpeg" data-download-href="/uploads/short-url/dfEDjyFmO9UsC02p9ucuNxZePT8.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/5/5ce14d4181e561431ec2da719e47547b2c6a59a6_2_624x353.jpeg" alt="" data-base62-sha1="dfEDjyFmO9UsC02p9ucuNxZePT8" width="624" height="353" srcset="/uploads/db4391/optimized/2X/5/5ce14d4181e561431ec2da719e47547b2c6a59a6_2_624x353.jpeg, /uploads/db4391/optimized/2X/5/5ce14d4181e561431ec2da719e47547b2c6a59a6_2_936x529.jpeg 1.5x, /uploads/db4391/optimized/2X/5/5ce14d4181e561431ec2da719e47547b2c6a59a6_2_1248x706.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/5/5ce14d4181e561431ec2da719e47547b2c6a59a6_2_10x10.png"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/52392dd88c9ee6f0b34690b2fbf2fa94fe03c92e.jpeg" data-download-href="/uploads/short-url/bJnEO86ufqQQ5tGfChA3c6QQRky.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/5/52392dd88c9ee6f0b34690b2fbf2fa94fe03c92e_2_624x353.jpeg" alt="" data-base62-sha1="bJnEO86ufqQQ5tGfChA3c6QQRky" width="624" height="353" srcset="/uploads/db4391/optimized/2X/5/52392dd88c9ee6f0b34690b2fbf2fa94fe03c92e_2_624x353.jpeg, /uploads/db4391/optimized/2X/5/52392dd88c9ee6f0b34690b2fbf2fa94fe03c92e_2_936x529.jpeg 1.5x, /uploads/db4391/optimized/2X/5/52392dd88c9ee6f0b34690b2fbf2fa94fe03c92e_2_1248x706.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/5/52392dd88c9ee6f0b34690b2fbf2fa94fe03c92e_2_10x10.png"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d0a62efa1454f24ac793b0bfa7c271994c87d354.jpeg" data-download-href="/uploads/short-url/tLNmlfDBSQuFFDvN5opqG9jfwvW.jpeg?dl=1" title=""><img src="/uploads/db4391/optimized/2X/d/d0a62efa1454f24ac793b0bfa7c271994c87d354_2_624x376.jpeg" alt="" data-base62-sha1="tLNmlfDBSQuFFDvN5opqG9jfwvW" width="624" height="376" srcset="/uploads/db4391/optimized/2X/d/d0a62efa1454f24ac793b0bfa7c271994c87d354_2_624x376.jpeg, /uploads/db4391/optimized/2X/d/d0a62efa1454f24ac793b0bfa7c271994c87d354_2_936x564.jpeg 1.5x, /uploads/db4391/optimized/2X/d/d0a62efa1454f24ac793b0bfa7c271994c87d354_2_1248x752.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/d/d0a62efa1454f24ac793b0bfa7c271994c87d354_2_10x10.png"></a></div><p></p>
+<p>Forkability requires <a href="https://docs.passport.gitcoin.co/">great documentation</a> and a great devrel campaign. I’ll be curious to see what evolves here. Let me know if the DAO wants an intro to anyone I know who does DevRel!</p>
+<p>A great devrel campaign enables decentralized innovation on top of the Passport Protocol. It invites contributions from everywhere and turns Passport into a schelling point for addressing sybil resistance &amp; creating plural cooperation across social distance that grows stronger over time.</p>
+<p>A great devrel campaign would be an attractor that would act as a memetic schelling point for people who want to solve this problem + enable them to contribute their resources (coding skills, capital, anti fraud data analysis, etc) to solving the problem.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/590b68e4540d1529e86ef374860188e6fe536e7d.jpeg" data-download-href="/uploads/short-url/cHIWhN5XvJCEKMTxYZbGvUHevgx.jpeg?dl=1" title="1_sX8csWo6oQm_gq47--nKKA"><img src="/uploads/db4391/optimized/2X/5/590b68e4540d1529e86ef374860188e6fe536e7d_2_517x290.jpeg" alt="1_sX8csWo6oQm_gq47--nKKA" data-base62-sha1="cHIWhN5XvJCEKMTxYZbGvUHevgx" width="517" height="290" srcset="/uploads/db4391/optimized/2X/5/590b68e4540d1529e86ef374860188e6fe536e7d_2_517x290.jpeg, /uploads/db4391/optimized/2X/5/590b68e4540d1529e86ef374860188e6fe536e7d_2_775x435.jpeg 1.5x, /uploads/db4391/original/2X/5/590b68e4540d1529e86ef374860188e6fe536e7d.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/5/590b68e4540d1529e86ef374860188e6fe536e7d_2_10x10.png"></a></div><br>
+If done right, this memetic schelling point could even increase in “gravity” over time as more resources are added to it, compounding in strength over time.<p></p>
+<h2>
+<a name="criteria-7-enabling-innovation-preventing-capture-with-decentralization-23" class="anchor" href="https://gov.gitcoin.co#criteria-7-enabling-innovation-preventing-capture-with-decentralization-23"></a>Criteria 7: Enabling Innovation &amp; Preventing Capture with Decentralization</h2>
+<p>As Gitcoin Progressively decentralizes over time, I think itll move from centralization to a decentralized and modular set of protocol based codebases.</p>
+<p>It will move from <a href="https://orca.mirror.xyz/T70CmuhX95ubkw_JHOxSEy8d_EFeYXgtJnF13mPtaZE">socialware to trustware</a>.</p>
+<ul>
+<li>“Socialware - Mechanisms that create assurances through human relationships, incurring a high social coordination cost”</li>
+<li>“Trustware - Mechanisms that create assurances through technology, incurring a low social coordination cost”</li>
+<li>“By using blockchains as our underlying assurance mechanism, we can codify organizational governance through code and not purely documented principles that rely on humans to coordinate around. In doing so, we foster greater trust between parties by minimizing trust in people and maximizing trust in technology.”</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7f99941e47c3484b0853ecf93f957ec767f1d284.jpeg" data-download-href="/uploads/short-url/icNG7qF3fKizCOfqXcmxe8xPK9C.jpeg?dl=1" title="Screen Shot 2022-08-08 at 8.08.10 AM"><img src="/uploads/db4391/optimized/2X/7/7f99941e47c3484b0853ecf93f957ec767f1d284_2_690x186.jpeg" alt="Screen Shot 2022-08-08 at 8.08.10 AM" data-base62-sha1="icNG7qF3fKizCOfqXcmxe8xPK9C" width="690" height="186" srcset="/uploads/db4391/optimized/2X/7/7f99941e47c3484b0853ecf93f957ec767f1d284_2_690x186.jpeg, /uploads/db4391/optimized/2X/7/7f99941e47c3484b0853ecf93f957ec767f1d284_2_1035x279.jpeg 1.5x, /uploads/db4391/optimized/2X/7/7f99941e47c3484b0853ecf93f957ec767f1d284_2_1380x372.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/7/7f99941e47c3484b0853ecf93f957ec767f1d284_2_10x10.png"></a></div><p></p>
+<p>I think that Gitcoin’s final form could be that of a <a href="https://twitter.com/owocki/status/1543651089462939648">Hyperstructure</a>. Hyperstructures <em>are crypto protocols that can run for free and forever, without maintenance, interruption or intermediaries</em>… The trustware in the center <strong>is</strong> the hyperstructure (blue). The rest of the things the push the network effects forwards are just humans doing whats rational / in their incentive set (purple). In a well designed system this hyperstructure will grow according to network effects (on the right)</p>
+<p>On tradeoff I think is interesting to manage here is the time preference of the systems ability to manage attacks.</p>
+<p>How can the base of the protocol harden (bc its trustware), but also evolve to continuously ongoing threats (socialware well governed)? Where are yearly, quarterly, weekly, daily, or instant feedback incorporated? Where is more governance oversight needed over socialware, and where can the system move to trustware? And on what time preference?  As the attackers evolve, how can the fraud defense evolve (0) effectively (1) without tipping off the attackers (2) but still in a legitimate (eg transparent to governance) way?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/99aa1c34ecdffe405bc8496a2792c23359d2e849.png" data-download-href="/uploads/short-url/lVnvLwGH9KMraI92Ebu0txiCtfz.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/9/99aa1c34ecdffe405bc8496a2792c23359d2e849_2_156x164.png" alt="" data-base62-sha1="lVnvLwGH9KMraI92Ebu0txiCtfz" width="156" height="164" srcset="/uploads/db4391/optimized/2X/9/99aa1c34ecdffe405bc8496a2792c23359d2e849_2_156x164.png, /uploads/db4391/optimized/2X/9/99aa1c34ecdffe405bc8496a2792c23359d2e849_2_234x246.png 1.5x, /uploads/db4391/optimized/2X/9/99aa1c34ecdffe405bc8496a2792c23359d2e849_2_312x328.png 2x" data-small-upload="/uploads/db4391/optimized/2X/9/99aa1c34ecdffe405bc8496a2792c23359d2e849_2_10x10.png"></a></div><p></p>
+<p>Which brings me to…</p>
+<h2>
+<a name="criteria-8-the-evolutionary-nature-of-this-game-24" class="anchor" href="https://gov.gitcoin.co#criteria-8-the-evolutionary-nature-of-this-game-24"></a>Criteria 8: The evolutionary nature of this game</h2>
+<p>Gall’s Law states that all complex systems that work evolved from simpler systems that worked.</p>
+<p>With Gitcoin Grants, the simple rules are the rules of <a href="https://wtfisqf.com/">Quadratic Funding</a>. Basically.</p>
+<ol>
+<li>Funds are continuously raised into a matching pool.</li>
+<li>For 2 weeks every quarter, there will be a matching campaign where contributions from the crowd to grants in matching rounds n1-x that fill eligibility criteria ec[n] will be matched with funds from matching pool m[n] according to the <a href="https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553">pairwse quadratic funding formula</a> with sybil resistant identity mechanisms i1-x.</li>
+<li>Every quarter,
+<ol>
+<li>Gitcoin’s governance structure creates consensus about how to evolve each of these rules &amp; mechanism, &amp; the evolves.</li>
+<li>The ecosystems taste in projects evolves</li>
+<li>Adversaries that want to capture the matching funds evolve.</li>
+</ol>
+</li>
+</ol>
+<p>These simple rules have evolved Gitcoin Grants from:</p>
+<h3>
+<a name="round-1-in-q1-2019-200ish-contributions-38k-raised-25" class="anchor" href="https://gov.gitcoin.co#round-1-in-q1-2019-200ish-contributions-38k-raised-25"></a>Round 1 in Q1 2019 - 200(ish) Contributions - $38k raised</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/243561759023f404993ebf135a515112fd0cb7e3.png" data-download-href="/uploads/short-url/5ajyvpwzrQ0e8S4vOVlI2pRe0j9.png?dl=1" title="Screen Shot 2022-08-06 at 12.23.55 AM"><img src="/uploads/db4391/optimized/2X/2/243561759023f404993ebf135a515112fd0cb7e3_2_345x217.png" alt="Screen Shot 2022-08-06 at 12.23.55 AM" data-base62-sha1="5ajyvpwzrQ0e8S4vOVlI2pRe0j9" width="345" height="217" srcset="/uploads/db4391/optimized/2X/2/243561759023f404993ebf135a515112fd0cb7e3_2_345x217.png, /uploads/db4391/optimized/2X/2/243561759023f404993ebf135a515112fd0cb7e3_2_517x325.png 1.5x, /uploads/db4391/optimized/2X/2/243561759023f404993ebf135a515112fd0cb7e3_2_690x434.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/243561759023f404993ebf135a515112fd0cb7e3_2_10x10.png"></a></div><p></p>
+<p>(economic contribution graph - round 1 - each contribution is an edge + each grant/user is a node)</p>
+<h3>
+<a name="round-14-in-june-2022-100k-contributions-5mm-raised-26" class="anchor" href="https://gov.gitcoin.co#round-14-in-june-2022-100k-contributions-5mm-raised-26"></a>Round 14 in June 2022 - 100k+ contributions + $5mm raised</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d40a19800017f858540f78fe26cef46e93ed2a95.png" data-download-href="/uploads/short-url/ufMRrIijHPBKdVIaHERubbsxPE1.png?dl=1" title="Screen Shot 2022-08-06 at 12.23.14 AM"><img src="/uploads/db4391/optimized/2X/d/d40a19800017f858540f78fe26cef46e93ed2a95_2_345x178.png" alt="Screen Shot 2022-08-06 at 12.23.14 AM" data-base62-sha1="ufMRrIijHPBKdVIaHERubbsxPE1" width="345" height="178" srcset="/uploads/db4391/optimized/2X/d/d40a19800017f858540f78fe26cef46e93ed2a95_2_345x178.png, /uploads/db4391/optimized/2X/d/d40a19800017f858540f78fe26cef46e93ed2a95_2_517x267.png 1.5x, /uploads/db4391/optimized/2X/d/d40a19800017f858540f78fe26cef46e93ed2a95_2_690x356.png 2x" data-small-upload="/uploads/db4391/optimized/2X/d/d40a19800017f858540f78fe26cef46e93ed2a95_2_10x10.png"></a></div><p></p>
+<p>(economic contribution graph - round 14 - each contribution is an edge + each grant/user is a node)</p>
+<h3>
+<a name="the-emergent-iterative-evolutionary-zero-sum-game-between-the-red-team-blue-team-27" class="anchor" href="https://gov.gitcoin.co#the-emergent-iterative-evolutionary-zero-sum-game-between-the-red-team-blue-team-27"></a>The emergent, iterative, evolutionary, zero sum game between the red team &amp; blue team</h3>
+<p>The primary stated goal of Gitcoin Grants has been fund public goods. But if you look at it from a certain angle, because Gitcoin Grants requires sybil resistance, every Gitcoin Grants round is actually a giant red team / blue team exercise for battle testing Digitally Native Sybil Resistance technologies.</p>
+<p>I believe that accepting the iterative, evolutionary, and zero sum nature of this aspect of the grants rounds is key to designing a manageable way of addressing the problem.</p>
+<p>Gitcoin’s sybil resistance will evolve as the attackers evolve. It is important to embrace this as an evolutionary game and recognize that the ecosystem is fluid, adversaries will come and go (and possibly get more advanced).</p>
+<h1>
+<a name="what-will-round-69-look-like-28" class="anchor" href="https://gov.gitcoin.co#what-will-round-69-look-like-28"></a>What will round 69 look like?</h1>
+<p>IMO the north star is to build a system that:</p>
+<ol>
+<li>Is anti-fragile to many types of attackoooors.</li>
+<li>Is privacy preserving &amp; respecting of the users sovereignty</li>
+<li>Avoids plutocracy/dystopic outcomes</li>
+<li>Avoids collusion</li>
+<li>Is systemically anti-fragile because its cheaper to defend than it is to attack.</li>
+<li>Has network effects</li>
+<li>Enables Innovation</li>
+<li>Prevents Capture</li>
+<li>Embraces the evolutionary nature of this problem</li>
+</ol>
+<h1>
+<a name="in-closing-29" class="anchor" href="https://gov.gitcoin.co#in-closing-29"></a>In closing</h1>
+<p>In this post, I made these assertions:</p>
+<ol>
+<li>Sybil resistance is an important problem to address.</li>
+<li>Sybil resistance is an adversarial game.</li>
+<li>Sybil resistance is an iterative game.</li>
+<li>Sybil resistance is an evolutionary game.</li>
+<li>Sybil resistance is an infinite evolutionary iterative game between a diversity of adversaries.</li>
+<li>What are the criteria for addressing sybil resistance?</li>
+</ol>
+<p>Thanks for reading to the end.</p>
+<p>If you want to follow my continued research efforts on these subjects checkout season 2 of the Greenpill podcast which is <a href="https://gov.gitcoin.co/t/greenpill-podcast-season-2-digital-identity-sybil-resistance/11201">all about the subject of digital identity &amp; sybil resistance</a>.</p>
+<p>I hope this knowledge transfer post was a valuable data point for you, DAO citizens.</p>
+<p>Thank you to <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a>, Takuya Kitagawa, Razvan, Carl Cervone, <a class="mention" href="https://gov.gitcoin.co/u/gtchase">@GTChase</a>, <a class="mention" href="https://gov.gitcoin.co/u/brent">@brent</a> <a class="mention" href="https://gov.gitcoin.co/u/erich">@erich</a> + countless others for proofreading earlier drafts of this post. I welcome feedback/comments below.</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-transfer-characterizing-the-sybil-resistance-problem/11235/1
+        Sat, 06 Aug 2022 05:44:24 +0000
+gov.gitcoin.co-post-11235-1
+Knowledge Transfer: Characterizing the Sybil Resistance Problem
+      
+
+

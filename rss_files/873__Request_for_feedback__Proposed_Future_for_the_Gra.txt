@@ -1,0 +1,613 @@
+
+
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624
+    ## Request for Review of the Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+
+Reference: [Future of the grants program](https://gov.gitcoin.co/t/discussion-series-future-of-the-grants-program/11252), [Gitcoin Protocol Launch Event](https://docs.google.com/document/d/1eel7Kn33yWiJyi-Xug2W5gMMUWAUSEwHQAII3vU0nRs/edit#) and [Gitcoin Brand Evolution](https://gitcoin.notion.site/Brand-Evolution-Working-Group-69394eea1888405bbaf40e7028bfe8b1)
+
+I’d like to call out fellow DAO contributors @connor @lthrift @nategosselin @ceresstation @kevin.olsen @Viriya who co-wrote and/or deeply contributed much of this thinking. I’d also like to call out all 23 contributors from all our workstreams in the DAO that participated in our cross-workstream GR16 planning workshop.
+
+## TL;DR
+
+We’re currently at a pivotal point in the Gitcoin Grants journey as we determine how to best transition from the centralized grants program to the grants protocol in a way that scales up our ability to help our communities fund their shared needs.
+
+We would love your reflection and thoughts around this key transition decision. We believe that it is in the best interests of our community to let our program take a breath in S16 so that we can fully prepare for our grants protocol future. Specifically, we propose that we do not run GR16 in December and use the bandwidth to prepare the protocol launch in Q1 2023. If you’re opposed to this suggestion, our other consideration is running GR16 in December in a smaller / more manageable capacity.
+
+The core Grants team has explored several options for this transition period (see full exploration details below) and we believe that this pause is our best option. If the community agrees with this recommendation, the PGF, MMM, FDD and Support team would all shift focus immediately to prioritize our exciting future Gitcoin Grants program and support our partners’ programs transition to our decentralized and permissionless protocol. We would ideally launch the new Gitcoin Grants Program in Q1, 2023 and begin transitioning our partner’s programs onto the protocol at the same time. This would be an exciting step for Gitcoin to make sure we’re building a strong foundation as we start the next step of our journey as a DAO.
+
+If you are opposed to this suggestion, an alternate option is running GR16 Dec 1-15, 2022 on C-Grants with a narrowed scope that would only include rounds focused on core Gitcoin community themes. These would likely include rounds for Open Source Software, Ethereum Infrastructure, ZKTech and cause rounds such as DeSci, Climate and Diversity, Equity and Inclusion (DEI). We would start partnering with all other partners from rounds to transition to the protocol after GR16 is complete. This would not include a main round and would be set up this way to reduce the current friction associated with running such a complex grants program on the fragile C-grants platform. While this would mean that we continue with our typical quarterly cadence for GR16, we would likely need to refocus and delay the launch of our program on the protocol.
+
+***We ask our community to share their reactions to the suggestion of sunsetting c-grants and voice what they think is best for the future success of Gitcoin. When commenting please specify if you’re a Partner, Steward, Grantee, Donor or Gitcoin Contributor.***
+
+
+
+## Context and Details to Consider
+
+### Our Ideal Final State Vision
+
+As a reminder, at a high level we aspire to provide the mechanisms to help communities – whether they be DAOs, companies, countries, cities, not-for-profits, groups of friends – fund their collective needs in the way that is right for them. Our ambition with this new protocol & program delineation is to be able to accomplish this vision on a much larger scale, funding tens if not hundreds of millions of dollars in shared needs through a permissionless and decentralized system.
+
+The [first post](https://gov.gitcoin.co/t/discussion-series-future-of-the-grants-program/11252) about the future of the grants program summarized the history of the program, our current state, key aspirations for the future and the three key elements to make our next phase for Gitcoin Grants successful. We aligned on the idea that in order to achieve this aspiration, the future state will have three major components - the Protocol, the Gitcoin Grants Program and Grants Services.
+
+* The Protocol: A Decentralized and Permissionless Platform to run Fully Independent Grant Programs
+  * For communities that do not require any service and minimal support, they can run a grants program on the protocol on their own. There will still be a small team focused on partner grant program success (in onboarding partners) and call center style support
+* Gitcoin Grants Program
+  * A major event that happens on a regular basis (i.e. quarterly) in which GTC holders select N# of causes they wish to fund to have an impact
+    * This means there is no single “main round” but instead a main event with a set number of impact areas, voted on by the community, with their own eligibility criteria. Initially we will start this as four key areas the community cares about supporting but could grow this as we see fit to help achieve the largest impact as Gitcoin, with support from the community, while helping drive protocol interest.
+
+* Grants "Services"
+  * We will provide services to ecosystem grant programs running on the protocol. These may be fully supported rounds, a tiered offering or an “a la carte” menu from our list of supported services (marketing, FDD, operations as a service).
+  * We would manage how we scale up our services model based on demand.
+  * Note: Partners are still welcome to manage their own programs or use a 3rd party provider, so the GitcoinDAO services capacity is not a limiting factor to growth
+
+### Where We are Today
+
+Gitcoin Grants has prioritized running quarterly grants rounds and scaling GMV. We’ve been mostly successful and have grown round over round since inception although declining in recent rounds. However we’ve increased program complexity with adding new rounds to our program every round. The GR15 program consisted of a general main round, four cause rounds (climate round, crypto advocacy, DEI and DeSci) and 12 ecosystem rounds (for projects that want to fund growth in their specific ecosystem). We run all these rounds together in a two week period once a quarter. The current process, scale, complexity and lack of product updates (due to our product teams focus on developing the protocol), is under significant strain.
+
+The current scalability challenges and complexity of the c-grants program are unnecessarily creating an unpleasant experience for grantees, donors, partners and our Gitcoin contributors / team. These program challenges span across:
+
+* The number of rounds we run in a two week period
+* When we open and close the grantee application period
+* Our manual grantee review process
+* Increasing fraud and sybil attacks
+* The speed of our round cadence
+* The fragility of and tech debt in our legacy centralized product (c-grants)
+
+In order to transition to the protocol successfully, it’s critical for us to build a better decentralized grants program that alleviates some of these challenges, while achieving the protocol objectives: a decentralized grants protocol that scales our overall impact both as Gitcoin Grants and as a broader community to fund our shared needs.
+
+As Gitcoin, we have to make a hard decision around the most strategic way to sunset the C-grants product and transition to the Gitcoin Grants Protocol in a way that prioritizes a successful transition to the protocol and a positive experience for our key stakeholders.
+
+### Considerations for GR16
+
+After many internal conversations around this complex and nuanced decision and a broader team retrospective with a representative from every workstream (23 individuals in attendance) of what GR16 should look like, we aligned on two main options (mentioned above and shared again below). In the activity we outlined risks and benefits of both options for you to review as a way to inform or reflect your own perspective.
+
+**Option 1:**
+
+Sunset C-grants and focus our team on launching our program on the protocol in Q1, 2023. We would do this while working with partners to help launch their programs on the protocol late Q1 and Q2, 2023. Note, with this option, this does not exclude the opportunity to have partners donate to existing Gitcoin grants in December if we feel strongly about supporting our top grants on the same regular cadence. Whatever we do in this decision, we’d ideally like to focus on still delivering value to grantees and partners, while prioritizing our team's time around launching the protocol.
+
+**Option 2:**
+
+Run GR16 Dec 1-15, 2022 on C-Grants with a narrowed scope that would only include rounds focused on core Gitcoin community themes. This would not include a main round. While this would mean that we continue with our typical quarterly cadence for GR16, we would have to revisit the turn around time to transition to the protocol.
+
+Below are summaries of all the risks and benefits contributors shared during our workshops that helped inform our broader decision:
+
+#### Option 1: Sunset C-Grants and Launch our Gitcoin Program on the Protocol in Q1
+
+**Risks**
+
+The main risk to consider is that the protocol is still not fully ready by a program launch event at the end of February/ March. If we end up pushing back our program further because of delays, we may lose credibility with a lot of our community.
+
+Risk factors to our stakeholders
+
+* Grantees
+  * Grantees will be upset that GR16 is not happening as some projects depend on our funding
+  * Uncertainty and changes to the program may create panic
+  * Gitcoin may lose some grantees because of changing the cadence
+  * Gitcoin is concerned that GR15 wasn’t enough of a goodbye round
+* Donors
+  * Donors have become used to our quarterly cadence and we may lose some if we transition to the protocol a few months delayed
+  * December is a key time for donations
+* Partners
+  * Partners may be upset about rounds they wanted to run this quarter and have pre-paid for (note there may still be the opportunity to donate to specific grants partners would still like to support)
+  * We may lose some funders in the transition
+* Stewards
+  * Stewards may wonder if Gitcoin will lose momentum if we don’t run GR16 in December
+* Gitcoin Internal / Contributors
+  * There is increased risk of the product team moving too fast to deliver and as a result have many more bugs and issues
+  * Support will have a lot of questions about why there is not a round that they will have to manage
+
+**Benefits**
+
+The main benefit of sunsetting c-grants is that our team can fully focus on defining the strategy and begin executing around how we transition the Gitcoin program and our partners to the protocol. In addition we can spend time including our community in voting on how we decentralize our grants program and causes to focus our funding efforts around.
+
+Benefits to our stakeholders
+
+* Grantees
+  * Grantees can start learning about the protocol and have enough time to get up to speed and reopen their grants on the protocol vs being rushed between rounds
+  * Grantees won’t have to go through the current c-grants process again, including the manual and broken grant review process, which caused a lot of frustration and backlash in GR15
+* Donors
+  * Donors can start learning about the protocol and how to fund on the protocol through our smaller design partner rounds before participating in our program round
+  * This break could relieve donor fatigue
+* Partners
+  * Partners can get some breathing room and will have the potential to be more organized around how they run rounds with us in a decentralized fashion
+  * Partners will no longer have to navigate the challenging review process and instead will get to experience the protocol review process.
+  * Partners would receive more attention from the Gitcoin team in their transition, so while decreasing the number of grants funded in December, we will hopefully help partners build a higher quality grants program on the protocol
+  * Partners can build out the programs they want to build out vs run them how Gitcoin expects them to
+* Stewards
+  * Stewards will rally around our focus on becoming a decentralized protocol and program
+* Gitcoin Internal / Contributors
+  * All contributors involved in running the c-grants will avoid wasted hours and attention on c-grants, a platform that will not be used again
+  * The team will have increased focus on the grants protocol / program launch
+  * We will be able to really reflect on the current program structure and have time to create a real strategy around the future, test it properly and develop our services offering while partnering with partners to transition effectively
+  * The internal team can be focused on mapping out talent needs to thrive on the protocol without burning out and dealing with more attrition of highly talented team members who are frustrated with the current platform and dealing with burnout
+  * The team can be invested in bridging grantees from c-grants to the grants protocol will take time and energy
+
+#### Option 2: Run a small GR16 C-grants round
+
+**Risks to our stakeholders**
+
+* Grantees
+  * We will receive backlash for running a smaller round and that it’s seen as us losing momentum vs reprioritizing
+  * There will be limited improvement around grant review timelines, support help and fraud review
+  * Many projects will receive less funding and look elsewhere for funding
+  * If our team runs the round, we will not be able to think about and invest in how we structure the protocol launch and future until mid-Q1 2023
+* Donors
+  * Donors doubt Gitcoin’s stability and ability to scale given the fragility of the c-grants platform (especially with the number of times the site goes down)
+  * Lose engagement from donors
+* Partners
+  * Partners might really want to run a round or have already committed to running a round that we turn down
+  * The size of the round will still interrupt momentum of recurring rounds for all ecosystem partners
+  * We would have to pick specific partners, which may come across as if we are picking favorites
+* Stewards
+  * Stewards will be concerned about running a smaller round while also not being fully ready to transition to the protocol
+* Gitcoin Internal / Contributors
+  * The C-grants platform requires immense effort to run in its current state and even running a smaller round will likely require the same if not more effort due to communicating changes all to still communicate the change to the protocol the following round, improving / changing the review process etc. all to abandon it after
+  * We will see burnout between the shorter timeline between GR15 and GR16 and the increased need to support with both the program and the protocol development
+  * The current rounds take the full attention of PGF Partnerships, Grant Ops and MMM for 6-8 weeks, FDD works close to 24/7 during the round and product needs to help resolve a lot of bugs and issues with the product during the round, when we need them focused on developing the protocol
+  * The team will not be able to transition focus to any work on the protocol until mid-Jan. This includes supporting the protocol and investing in the strategy and execution of transitioning to the protocol, building out the program strategy and services for the protocol.
+
+**Benefits**
+
+* Grantees
+  * Grantees may find it easier to understand what rounds we are running because it is more focused
+  * This shift alludes to where our future state program vision might be
+* Donors
+  * Donors will find it easier to donate because there will be fewer grants and the rounds will be more defined
+* Partners
+  * Will appreciate that they are supporting core building for the ecosystem during a bear market
+* Stewards
+  * Stewards will appreciate that we’re still making an effort to run rounds and support public goods
+* Gitcoin Internal / Contributors
+  * The team can work on making the round more manageable between now and December
+
+Based on the above risks and benefits, and the exciting future we’re moving toward, internally we’re leaning toward fully refocusing our time on a successful protocol launch in Q1 and not running a round in December. However, we recognize that this decision does not come without trade-offs and a significant investment of time over the next few months to make this a success.
+
+Helping us weigh in on which of these options is of critical value, and we want to hear from as many people as possible. We appreciate your reactions, thoughts and ideas to help us inform our final decision. Once a healthy dialog has occurred here, we hope to crystalize the result with a snapshot vote.
+Sun, 16 Jul 2023 05:03:52 +0000
+🌱 Gitcoin Grants
+
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+Soni665
+
+            <p>Nice I liked you feedback bcs we are new in platform thanks for understanding <img src="https://gov.gitcoin.co/images/emoji/twitter/relaxed.png?v=12" title=":relaxed:" class="emoji" alt=":relaxed:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/71">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/71
+        Sun, 16 Jul 2023 05:03:52 +0000
+gov.gitcoin.co-post-11624-71
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+OffroadStudios
+
+            <aside class="quote no-group" data-username="Joel_m" data-post="1" data-topic="14174">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/joel_m/48/9525_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/gcp-010-evolving-gitcoin-grants-the-q-e-d-quadratic-experimentation-and-development-program/14174/1">[GCP-010] Evolving Gitcoin Grants: The Q.E.D. (Quadratic Experimentation and Development) Program</a></div>
+<blockquote>
+<p>This paper established a flexible framework for understanding collusion in QF and presented a new collusion-resistant mechanism currently utilized in the RadicalxChange <a href="https://pluralvote.radicalxchange.org/" rel="noopener nofollow ugc">web app</a>.</p>
+</blockquote>
+</aside>
+<p>To  Begin with, I had a look through the study conducted between <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a>  <a class="mention" href="https://gov.gitcoin.co/u/erich">@erich</a> &amp; <a class="mention" href="https://gov.gitcoin.co/u/glenweyl">@GlenWeyl</a><br>
+and without a doubt it is just plain impressive, the amount of effort and thought process being put in to make the process of Quadratic funding flawless and evolve in the best interest of the community.</p>
+<aside class="quote no-group" data-username="J9leger" data-post="1" data-topic="11624">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j9leger/48/7629_2.png" class="avatar"> J9leger:</div>
+<blockquote>
+<p>Grantees won’t have to go through the current c-grants process again, including the manual and broken grant review process, which caused a lot of frustration and backlash in GR15</p>
+</blockquote>
+</aside>
+<p>Yet at the same time I am surprised on how there is such little emphasis on such an important part of the grant process that has been put forward here by <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a>  which is the grant review process &amp; eligibility criteria. I would agree that my understanding regarding the whole process might be limited as it hasn’t been long since I joined the community, yet I have read through and I couldn’t find much on the topic of decentralision of the grant review process. Does the community decide or is it in the hands of few individuals to to chose who participates in a funding round and who doesn’t. And if that is the case then there isa fair chance that deserving projects wouldn’t even get  to be seen and assessed by the community based on the preferences of a certain individual. In other words how can we fully achieve decentralization when the entry point to whole process is clearly centralized with zero exposure to the community.</p>
+<p>Based on  my personal experience of applying to the current round and not being able to compete without any reason provided whatsoever , I have a strong stance that projects with an exactly similar theme and probably a much smaller scope have been accepted I might be totally wrong about it considering my individualistic interest which is why it should be visible to the community and be based on there consent which currently isn’t the case. I have been in touch with <a class="mention" href="https://gov.gitcoin.co/u/azeem">@azeem</a>  and <a class="mention" href="https://gov.gitcoin.co/u/m0nkeyfl0wer">@M0nkeyFl0wer</a> who I believe are a great asset to the community and have totally backed my reasoning.</p>
+<p>And while <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a>  emphasizes on the grantees frustration, who comes to the community for support yet gets denied by an individual once – without any reasoning whatsoever followed by an email (IMAGE ATTACHED) yet he never gets to be exposed to the community even once  and never gets a response for all the effort he puts in not once but twice. Is this something that needs the our  attention I ask?</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/3/340df939f1cf12a99e4aa781bd3ef23c9a704aaf.jpeg" alt="IMG_0887" data-base62-sha1="7quLwWJqkuIQU9xWx0kJBVtiEKb" width="634" height="283"></p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/69">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/69
+        Mon, 01 May 2023 21:56:42 +0000
+gov.gitcoin.co-post-11624-69
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+sakhaowat017
+
+            <p>Thanks for confirming!</p>
+<p>I also wanted to share my observation that five token holders comprise over 50% of GTC. I’d be curious to hear how other people in the community feel about this.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/60">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/60
+        Wed, 28 Dec 2022 19:45:50 +0000
+gov.gitcoin.co-post-11624-60
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+Arth5
+
+            <p>Soy hispano hablante y estoy interesado de participar de las grants</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/59">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/59
+        Sat, 17 Dec 2022 03:25:10 +0000
+gov.gitcoin.co-post-11624-59
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+climateXcrypto
+
+            <p>Thanks for confirming!</p>
+<p>I also wanted to share my observation that five token holders comprise over 50% of GTC. I’d be curious to hear how other people in the community feel about this.</p>
+<p>There isn’t a lot of diversity in terms of the representation of the core holders either, which probably helps explain why the consensus leaned so strongly in the direction it did…</p>
+<p>If Gitcoin is pushing hard to decentralize their software infrastructure at the expense of funding founders from marginalized communities, I would encourage an open dialogue about building a more diverse representation of token holders who are incentivized to actively participate in governance and strategic direction.</p>
+<p>Gitcoin provides a critical stream of funding for hundreds of projects creating positive externalities. Would love to see some of the diverse leaders in these communities gaining ownership in Gitcoin and having a vested interest in it’s success.</p>
+<p>I’m sure this conversation has been catalyzed elsewhere and is being deeply considered, so apologies if it is redundant!</p>
+<p>Lots of love Gitcoin fam <img src="https://emoji.discourse-cdn.com/twitter/pray/3.png?v=12" title=":pray:t3:" class="emoji" alt=":pray:t3:" loading="lazy" width="20" height="20"></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/ffb8911b6b3cc292dfd02612528ad525f26846f4.jpeg" data-download-href="/uploads/short-url/AudbCZpq3yksYoYAZ6Y8Fz9g0RK.jpeg?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/f/ffb8911b6b3cc292dfd02612528ad525f26846f4_2_690x324.jpeg" alt="image" data-base62-sha1="AudbCZpq3yksYoYAZ6Y8Fz9g0RK" width="690" height="324" srcset="/uploads/db4391/optimized/2X/f/ffb8911b6b3cc292dfd02612528ad525f26846f4_2_690x324.jpeg, /uploads/db4391/optimized/2X/f/ffb8911b6b3cc292dfd02612528ad525f26846f4_2_1035x486.jpeg 1.5x, /uploads/db4391/original/2X/f/ffb8911b6b3cc292dfd02612528ad525f26846f4.jpeg 2x" data-dominant-color="262529"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/58">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/58
+        Fri, 18 Nov 2022 12:39:04 +0000
+gov.gitcoin.co-post-11624-58
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+shawn16400
+
+            <p>To note, this proposal passed on snapshot with ~99.9% approval rate on Oct 28.<br>
+<strong>Metrics:</strong><br>
+687 unique votes<br>
+~12M GTC tokens cast.</p>
+<p>Thank you to everyone who commented and help shape this proposal &amp; to the voters who turned out some really sold voting metrics.</p>
+<p>You can see the results of the vote <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xecc9736dc4f9e6eb954b67a0d7301ecbcc48bbd5ad31fbd28f1e74ade500c479" rel="noopener nofollow ugc">here</a></p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/57">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/57
+        Mon, 31 Oct 2022 10:10:56 +0000
+gov.gitcoin.co-post-11624-57
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+gospelofchange
+
+            <p>So many valuable insights shared already</p>
+<p>I want to upregulate <a class="mention" href="https://gov.gitcoin.co/u/climatexcrypto">@climateXcrypto</a>’s information here. Grant funding has been ESSENTIAL to Regens Unite. I’m already terrified about the potential for disruption thinking about a major upgrade.</p>
+<p>There will be disruptions mind you. I get that right now fixing the stuff that breaks feels like a waste of time, and you’d much rather fix the stuff that breaks in the new version.</p>
+<p>First principle of the Agile Manifesto:<br>
+Our highest priority is to satisfy the customer<br>
+through early and continuous delivery<br>
+of valuable software.</p>
+<p>I appreciate the desire to get new functionality out there, and would encourage an incremental approach as much as possible. For example, I love the suggestion of requiring the passport.</p>
+<p>This might seem like I’m big-timing, but I’ve been doing product development and agile coaching in lots of contexts for quite some time. I’d be happy to help lift the coordination on the process side.</p>
+<p>My last point is around the information of <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> this is deceptive information. As many have mentioned, $5 does not spend the same everywhere. The global south will be impacted more even thought in monetary terms it looks like they rely less. Is there a way to sort on location or ad that consideration to your 5⭐️ analysts.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/56">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/56
+        Sat, 29 Oct 2022 12:59:58 +0000
+gov.gitcoin.co-post-11624-56
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+kevin.olsen
+
+            <p>Thanks Vincent. This is a great point to raise, and probably deserves it’s own post around the structure of GR17 and beyond. In GR15 and before, we have seen that there are pretty strong clusters (preferences expressed in donor behavior) between certain rounds, but not a lot of overlap with others. You’re right that cause rounds see a lot of cross-donation, but this doesn’t play out in the data across the whole of the Gitcoin Grants program.</p>
+<p>This is an active discussion in the DAO on how to balance the value of Gitcoin Grants Rounds as a Schelling-point with the ops burden (and the degraded user experience) of running so many rounds in parallel.</p>
+<p>One concept I’m bullish on is reframing our program as a Grants Season with cross-community clusters running concurrently, but not necessarily all clusters of rounds in the program running on the same schedule.  Beyond helping to reduce the ops burden needed to support dozens of parallel rounds. This will help us target our outreach and messaging to different audiences, allow for tuning the levels of sybil and fraud prevention for different communities, and provide a hypothetical benefit of values-coherent communities driving better fund allocation through their participation in QF round-clusters.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/55">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/55
+        Sat, 29 Oct 2022 11:56:58 +0000
+gov.gitcoin.co-post-11624-55
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+vincentweisser
+
+            <aside class="quote no-group" data-username="J9leger" data-post="1" data-topic="11624">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j9leger/48/7629_2.png" class="avatar"> J9leger:</div>
+<blockquote>
+<p>we propose that we do not run GR16 in December and use the bandwidth to prepare the protocol launch in Q1 2023. If you’re opposed to this suggestion, our other consideration is running GR16 in December in a smaller / more manageable capacity.</p>
+</blockquote>
+</aside>
+<p>Agree with this, launching the new protocol with a splash and great set of first core and cause rounds in Q1 sounds great.</p>
+<p>One thing I haven’t fully understood yet is how the user experience for donors would be different within the new protocol. I think one of the biggest values of Gitcoin is having a quarterly schelling point for the community to donate easily in one go to a range of initiatives, including cause rounds.</p>
+<p>In my opinion, it’s important that the user experience is maintained and that all rounds run at the same time, with all donations being collected in one basket…  cc <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a></p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/54">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/54
+        Thu, 27 Oct 2022 15:55:25 +0000
+gov.gitcoin.co-post-11624-54
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+tjayrush
+
+            <p>I’m going to vote for the proposal as well. The sooner to the new paradigm, the better.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/53">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/53
+        Thu, 27 Oct 2022 15:12:00 +0000
+gov.gitcoin.co-post-11624-53
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+SLBK123
+
+            <p>As a new Steward here <img src="https://emoji.discourse-cdn.com/twitter/v.png?v=12" title=":v:" class="emoji" alt=":v:" loading="lazy" width="20" height="20">  and in support of Option 1.  Leaning in on the fact that we should support the focus of becoming a decentralized protocol and program as stated in the recap. I agree that while this is a hard decision to make, overall it will lead us to the North Star which is the future success of Gitcoin. Thank you to <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a>  for the recap and also for providing the context on the Ideal State Vision and going into detail where we are today.  I am very impressed with this robust discussion and it reflects all aspects of Gitcoins values, a big shout out to the Gitcoin team.</p>
+<p>I do agree that messaging will be key in all of this no matter what the final outcome is. The MMM team indeed has a monumental task ahead of them in launching the Grants Protocol successfully. All eyes are on Gitcoin, and this should be handled with kid gloves.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/52">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/52
+        Tue, 25 Oct 2022 20:11:22 +0000
+gov.gitcoin.co-post-11624-52
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+M0nkeyFl0wer
+
+            <p>We’ve been talking about having some grants that would drip to a group of related projects so that we can deal with the needs of running the alpha rounds and still include grantees in some meaningful way.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/51">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/51
+        Tue, 25 Oct 2022 19:49:56 +0000
+gov.gitcoin.co-post-11624-51
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+M0nkeyFl0wer
+
+            <p>Its moved to a snapshot vote this week <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xecc9736dc4f9e6eb954b67a0d7301ecbcc48bbd5ad31fbd28f1e74ade500c479" class="inline-onebox" rel="noopener nofollow ugc">Snapshot</a></p>
+<p>Lets talk soon about how best to involve the ReFiDAO community.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/50">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/50
+        Tue, 25 Oct 2022 18:11:53 +0000
+gov.gitcoin.co-post-11624-50
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+griff
+
+            <p>This is a really good point, it would be great to have an edge case solution where projects that have been part of at least the last 2 rounds can apply to be included if they are excluded… honestly there will be lots of projects that will demand a way in and there should be some sort of way to include the ones that really were counting on this funding, so its not just nepotism and squeaky wheels that get their projects included at the last minute.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/49">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/49
+        Tue, 25 Oct 2022 14:01:32 +0000
+gov.gitcoin.co-post-11624-49
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+hbesso31
+
+            <p>This discussion is fascinating on how is it unfolding. It shares the care community stewards put into making the best decision possible.</p>
+<p>I have one concern. Is money the only data input to be considered? Why should 5 K be the bottom line for vetting a project is trustworthy?</p>
+<p>There are projects that have participated in at least 3 rounds but may not have raised that much due to different factors such as the Polygon network having problems, or not having the traction that others had due to its marketing strategies, influencers, and so on.</p>
+<p>What about those projects that are relying on GR and that are in an early stage? If these projects do not have the chance to participate they most likely will be killed.</p>
+<p>My suggestion is: Take the number of rounds participating and the promised delivered value of the project. These factors are way more important than raised money to distinguish those projects that are building public good from those not.</p>
+<p>Excited to see the decentralized platform happening. It will enable new ways of funding the commons. Also, looking forward to Option 3 hopefully considering my suggestion.</p>
+<p>Blessings to all, and thanks for the great work you’ve put into making QF and the social movement of GR.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/48">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/48
+        Mon, 24 Oct 2022 22:39:52 +0000
+gov.gitcoin.co-post-11624-48
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+griff
+
+            <p>Love the third option. As long as the team that is actually doing the work supports this option, I support it too!</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/47">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/47
+        Mon, 24 Oct 2022 11:42:16 +0000
+gov.gitcoin.co-post-11624-47
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+bobjiang
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a></p>
+<p>Thank you very much for your summary!<br>
+There are some questions from the community as following:</p>
+<ul>
+<li>Are there main round or ecosystem round in GR13?</li>
+<li>What are the oldest rounds: Open Source Software, Ethereum Infrastructure, and Climate?</li>
+<li>a subset of existing grantees? how to choose the subset?</li>
+</ul>
+<p>looking forward to see more clear description for the option3.<br>
+thanks again!</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/46">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/46
+        Mon, 24 Oct 2022 09:35:31 +0000
+gov.gitcoin.co-post-11624-46
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+nategosselin
+
+            <p>Huge thanks to <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a> for spearheading this discussion, and to the community for engaging in such a thoughtful, constructive manner. As the product lead for the Grants Protocol (and formerly of the cGrants platform), I have spent the better part of a year deep in the weeds of both tech stacks and firmly believe that this option presents our best path forward. I love that this enables us to provide funding our most dedicated grantees, while also giving us an opportunity to learn and continue building the protocol alongside the community.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/45">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/45
+        Sun, 23 Oct 2022 16:31:59 +0000
+gov.gitcoin.co-post-11624-45
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+epowell101
+
+            <p>Very clear summation of options.  I voted for the proposal.</p>
+<p>That said, as per my original post, I think shutting off the grants round to jump into the future was risky for reasons that we didn’t understand completely; otherwise - these reasons wouldn’t have been risks.</p>
+<p>I hope we work to learn more to derisk our transition, for eg focusing on:</p>
+<ul>
+<li>protocol delivery - although we currently have experienced and motivated engineers and product folks in Gitcoin afaik the team is saying the process has not converged yet, for eg points are not predictive; i.e. we cannot look at history to predict when code will be delivered on time and on quality</li>
+<li>community-centric self-adoption - DevRel isn’t something that can easily be bolted onto an organization that has a somewhat insular culture &amp; that is relatively unfamiliar with being self-adopted by technical users</li>
+<li>GTC utility and value - at some point the ongoing decline in the value of GTC could impact our ability to execute our transition or pivot</li>
+</ul>
+<p>Organizations grow in value in large part IMO by identifying &amp; addressing risks to their success.  We have all the ingredients to address these and other risks and opportunities.  Hopefully, we can use some of the breathing room gained by this proposal to build a more solid foundation.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/44">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/44
+        Sun, 23 Oct 2022 15:39:36 +0000
+gov.gitcoin.co-post-11624-44
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+lefterisjp
+
+            <p>I really enjoy the way you write and articulate how you reached specific decisions.</p>
+<p>As I already wrote above I was okay with either result so for the vote that is now open I am going to vote FOR as there is no option for a multiple choice vote <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/43">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/43
+        Sun, 23 Oct 2022 08:53:19 +0000
+gov.gitcoin.co-post-11624-43
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+J9leger
+
+            <p>Over the past few weeks, we’ve heard from many of you on the forum and others through personal outreach (even in person in Bogota). I’m going to synthesize feedback into one response.</p>
+<p>First of all, THANK YOU to everyone who helped us arrive at this decision. Your feedback is invaluable and we’ll have a stronger decision because of it. This discussion proves the value of building in public and how collective input can get to better decision making.</p>
+<p>After connecting with many of you, we’ve recognized there is ultimately more than an option 1 or 2, there is an option 3. We believe this option better aligns with the majority of responses and intend to move this to a DAO-wide vote as a Y/N decision. If this vote is successful, we will begin preparing for a protocol-driven, streamlined and tightly-scoped GR16.</p>
+<h2>
+<a name="gr16-option-3-1" class="anchor" href="https://gov.gitcoin.co#gr16-option-3-1"></a>GR16 Option 3</h2>
+<p>Gitcoin will run a streamlined alpha round on the protocol in mid-January 2023 for our oldest running rounds: Open Source Software, Ethereum Infrastructure, and Climate.</p>
+<p>Each round will run with a subset of existing grantees to ensure those that rely on us for funding and have helped make a significant impact in the ecosystem continue receiving support (refer to <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> analysis above for more details on data about our grantees), that we have the capacity to provide support during the transition, and that we are able to work with the community to intentionally receive feedback and build out operational services to support scaling future rounds soon.</p>
+<p>This option takes into account the desire to run a streamlined round in GR16, not lose momentum, and ensure when we launch at scale in early Q2, 2023 on the protocol that it is more stable and reliable for grantees, both technically and operationally.</p>
+<p>In addition we will be running a number of design partner rounds between now and the full protocol launch in early Q2, 2023 that will provide both partners and grantees with opportunities to engage with our grants protocol.</p>
+<p>While we’re always optimizing for impact, it’s sometimes important to make short term trade-offs - progress is not often linear. Rather than run a sub-par GR16 on c-grants or risk going too big too soon with the protocol, we’ve opted to make tradeoffs to ensure long term growth and sustainability for Gitcoin Grants, our partners and our grantees. We’re optimistic that this approach will help hundreds of additional communities fund their shared needs, and thousands of new grantees get the sustainable funding they need. Stay tuned for more details and communications about next steps.</p>
+<h2>
+<a name="additional-summary-of-findings-2" class="anchor" href="https://gov.gitcoin.co#additional-summary-of-findings-2"></a>Additional Summary of Findings</h2>
+<p>In the interest of full transparency, here are some of the key points from the community:</p>
+<p><strong>Gitcoin grantees survey responses suggest we should prioritize the protocol transition</strong></p>
+<p>40 grantees responded to a survey that went out to all GR15 grantees about what they wanted to see for GR16 and majority would be supportive of the option we’re positioning (see data from responses below).</p>
+<p>To the question: “How would you react if we shifted GR16 to focus on a successful protocol launch in Q1, 2023 instead?”</p>
+<ul>
+<li>
+<p>51% said they would prefer if you ran a small round with only a few key causes in GR16 and delayed the protocol launch</p>
+</li>
+<li>
+<p>23% would be excited about and support the prioritization around the protocol</p>
+</li>
+<li>
+<p>8% said they would be upset and leave the Gitcoin community if we don’t run GR16</p>
+</li>
+<li>
+<p>18% said they were not sure</p>
+</li>
+</ul>
+<h2>
+<a name="summary-of-differing-opinions-and-how-the-option-detailed-above-addresses-these-perspectives-3" class="anchor" href="https://gov.gitcoin.co#summary-of-differing-opinions-and-how-the-option-detailed-above-addresses-these-perspectives-3"></a>Summary of differing opinions and how the option detailed above addresses these perspectives</h2>
+<p><strong>Keep the current format until we’re sure of protocol stability</strong></p>
+<p>Some expressed reasonable concerns and cautionary anecdotes about leaving the current c-grants platform too soon. We’re cautiously optimistic, but want to make consistent, reliable, and incremental progress.</p>
+<p><strong>Run something streamlined vs nothing at all</strong></p>
+<p>It is clear that the majority would like us to run a round in GR16 to continue supporting our core community and not lose momentum, all while realizing the risk of potential protocol delays. Many recognize the tension between running a round on c-grants and how that pulls us in a different direction to where our priorities lie: successfully bringing a new version of grants to life.</p>
+<p><strong>Run all or no grant rounds for GR16</strong></p>
+<p>A few of you suggested that we would impact the community if we did a selective round and should either do the full round or nothing at all. We believe in <a href="https://vitalik.ca/general/2020/11/08/concave.html" rel="noopener nofollow ugc">concavity</a> – the best policy decisions are often somewhere in the middle. In addition, we are hard at work putting in plan an approach to support our extended grantee community even if it isn’t in the traditional grants round capacity.</p>
+<p><strong>Don’t run a grants round and spend the time focusing on protocol launch</strong></p>
+<p>Similarly, there were a few people who suggested going with option 1, to ensure our focus was on the potential future benefits to new grantees and not existing ones. We believe this approach allows us to take care of both.</p>
+<p><strong>Run a round with community support</strong></p>
+<p>We appreciate the few cause round grantees who volunteered to involve the community to help run GR16. It’s hard to solicit help for the centralized platform. When we launch the protocol, we’ll be able to decentralize grant rounds further and look to our community to help us run rounds and make a larger impact than we could with just a small internal team. We’re excited to get to start bringing this future to life and involve more of our community in our program design.</p>
+<hr>
+<p>Once again, I can’t thank you all enough for your engagement in this discussion and your feedback. We’re excited to keep building the future of funding communities shared needs with all of you.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/42">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/42
+        Fri, 21 Oct 2022 23:22:42 +0000
+gov.gitcoin.co-post-11624-42
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+J9leger
+
+            <p>Thank you for the response. Complaints are definitely not the primary reason we’re rethinking GR16. There will always be complainers and complaints are good - they help us build something better for all. The primary reason for this discussion is to ensure a successful launch of the protocol. By running the c-grants platform, we’re not focusing on building and launching to help our community and other communities easily scale in the future.</p>
+<p>Appreciate the suggestions!</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/41">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/41
+        Fri, 21 Oct 2022 23:00:28 +0000
+gov.gitcoin.co-post-11624-41
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+climateXcrypto
+
+            <p>Hey all! Has a decision been made on this topic?</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/40">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/40
+        Wed, 19 Oct 2022 12:18:26 +0000
+gov.gitcoin.co-post-11624-40
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+M0nkeyFl0wer
+
+            <p>Great points <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a>. Thanks for sharing and thanks for digging up the numbers for context. One further thing to consider is the location of projects. I suspect many of the projects raising what seems like smaller amounts to us in North America or western Europe may in fact be critical amounts of funding for projects in the global south.</p>
+<p>That being said I do think its possible for us to find a middle path that allows projects a way forward through Gitcoin running a smaller round in January on the new platform as well as bounties and other ways to get involved and potentially earn some funding as we are in the midst of this transition.</p>
+<p>Its fabulous to see so many thoughtful and detailed responses to this thread. Its an honour to work with you and everyone else on this team.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/39">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/39
+        Tue, 18 Oct 2022 16:37:26 +0000
+gov.gitcoin.co-post-11624-39
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+umarkhaneth
+
+            <p>Catching up here after a couple weeks out and wanted to say how great is that we’re having this conversation in public. Thank you <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a></p>
+<p>After reading this post, I became tentatively supportive of Option 1 because I think it’s better to focus on nailing the next version of Grants instead of being pulled in the other direction so hard it slows progress.</p>
+<p>However my biggest concern, shared by many others I see posting, is that not having a GR16 in December will upset the financial runway of projects relying on Gitcoin. But I wasn’t sure how many projects actually <strong>rely</strong> on Gitcoin as a consistent and significant source of quarterly funding. There is intense variability among the over 1k+ grantees we get each round. I took a look at the data from the last year (rounds 12 to 15) to see if I could answer: how many grantees raise at least $X thousand from gitcoin every round?</p>
+<p>Over 5K every round: 18<br>
+Over 10K every round: 12<br>
+Over 20K every round: 6<br>
+Over 50K every round: 2</p>
+<p>Of the grantees who raised at least 5k in every round during the last year, the average total yearly raised was $206k and the median was $190k. There is great variability from round to round with one grantee going from raising over 400k in one round to less than 10k the next. This is why the average is so high despite these being a small number of grants raised over 50k every round.</p>
+<p>These results indicate there is a small, but important, number of grantees who <strong>do rely</strong> on Gitcoin as a somewhat steady and significant source of funding.</p>
+<p>These grantees are significant and (by virtue of their QF results) well-liked members of our community. However, this does not consider what other funding sources these projects may have. Still, I think it could erode trust we have built over time with Grantees (and their supporters) if we were to rug them by not holding any round without greater advance warning.</p>
+<p>I also asked: how many grantees raised over 5k in X of the last 4 rounds?</p>
+<p>3 or more of 4 rounds: 56 (Average Yearly Fund: 136k, Median: 113k)<br>
+2 or more of 4 rounds: 141 (Average Yearly Fund: 86k, Median: 53k)</p>
+<p>After seeing these results, my suggestion would be in-line with what others raised above about an <strong>Option 3:</strong> hold a single, stream-lined, and curated round during GR16. I would include only grantees who have raised at least 5k in 2 of the last 4 rounds. This smaller pool of grantees who have already been vetted will significantly reduce resource strain as they should not require reviews.</p>
+<p>There is also a question underlying these results but tangential to this conversation: Why does funding change so much from round to round for some grantees? can/should we enable more consistent funding? The variability experienced by grantees is significant although it still allows them to raise large sums over time.</p>
+          <p><a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/38">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/38
+        Tue, 18 Oct 2022 16:16:15 +0000
+gov.gitcoin.co-post-11624-38
+[Request for feedback] Proposed Future for the Grant Programs and GR16 as we Transition to the Protocol
+      
+
+

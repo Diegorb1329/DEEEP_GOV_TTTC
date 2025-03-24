@@ -1,0 +1,310 @@
+
+
+
+Opening up Grants Stack/Allo to more community contributions
+https://gov.gitcoin.co/t/opening-up-grants-stack-allo-to-more-community-contributions/17145
+    
+Thank you to: Andrea Franz, Kevin Owocki, Meg Lister, Carl Barrdahl, Zakk Fleischmann
+
+# TLDR
+
+1. We convened to discuss how to do software development in a post-Allo v2/Grants Stack integration world. Should we enable anyone to contribute to the Allo/Grants Stack roadmap?
+2. We decided that the Grants Stack Team will continue their current development style for the next 12 months.
+3. In parallel, Owocki/Raid Guild and Allo Workstream will build on top of Option E - Allo webapps.
+
+# What we did
+
+The Grants Stack (GS) product has come a long way over the last year – but it is still early in its journey. There are tons of features we want to build and new opportunities in the grants space to explore.
+
+We’re really interested in leveraging the unique power of the Web3 ecosystem and open-source development in order to accelerate our product capabilities exponentially and flexibly, rather than the traditional linear growth model of new, full-time dev/product/design headcount.
+
+With the integration of Allo v2 features into Grants Stack, we have an opportunity to build new funding mechanisms and tooling more quickly and flexibly at the protocol layer. We’re also interested in exploring ways to make our front-end architecture more flexible and modular for external developers to contribute without substantial onboarding and deployment time and costs.
+
+Allo and Grants Stack are complementary in that both create capital allocation tools for communities to Fund What Matters (™) in their own communities. While GS is focused on going deep on enterprise grade no-code tools, Allo creates the opportunity space to explore broader possibilities of experimental/developer focused opportunities.
+
+![|625x496](upload://ubmbxcvYeBqNVV2B9vW6fp6D2XH.png)
+
+With this in mind, we came together to explore the different ways we might work together and align how we do development.
+
+In doing this evaluation, we used the following criteria:
+
+1. Ease of onboarding external devs
+2. Accelerates GS growth, including revenue growth
+3. Ability for Grants Stack team to “feature flag” or control visibility of externally contributed features
+4. Level of effort (able to integrate Allo v2 + MVP this in a reasonable time frame, eg not more than 4-6 weeks)
+
+We also evaluated the risks. Introducing an architecture for community involvement could create new pressures on the GS core team (like code review, merge conflicts, architecture, community engagement/devrel). Grants Stacks customers typically desire enterprise grade product quality, and we would need a way to ensure quality through the process.
+
+#
+The options we evaluated
+
+|Option|What|
+| --- | --- |
+|A - Do Nothing|Status Quo, do nothing.|
+|B - Plugin Architecture|Undertake a re-architecture towards a plugin architecture that allows anyone to augment grants stack code. Plugins could be loaded dynamically in rounds. We would then build a plugin marketplace where people could discover/rate/download plugins.|
+|C - Fork Architecture|We would allow developers to simply fork the grants stack codebase and build/design on their own fork. TBD if/how these would be merged back into grants stack upstream.|
+|D - Modular Webapps|We focus on having developers build modules around Grants Stack that are compatible with Grants Stack, and build around (as opposed to replace) core functionality.|
+|E - Allo Webapps|Similar to option D, but we heavily focus on pushing developers to build webapps on top of Allo v2.|
+
+# Decision
+
+We see a strategic opportunity to enable an ecosystem of developers to build new functionality around Grants Stack & Allo. This would enable not only faster development but a more diverse set of developments.
+
+But the Grants Stack team is highly focused on customer adoption right now, and a giant re-architecture or change in working norms is not in the cards right now - therefore Option B and C are not viable.
+
+The group has decided that Option E is the best path forward for the next 12 months.
+
+# Appendix A - Full Evaluation of different options.
+
+## Option A - Do Nothing
+
+Status Quo, do nothing.
+
+Pros: Nothing changes
+
+Cons: Nothing changes
+
+## Option B - Plugin Architecture
+
+To allow developers to easily contribute to Grants Stack, we would extract all the QF (and Direct Grants) functionalities to a self contained module to prepare the core part to load any kind of voting and distribution strategy.
+
+We could encourage plugins that mostly just write new strategies.. but we may also make available the ability to override any function/object/template (subject to some security considerations)
+
+A new extension will be published on IPFS and registered in an Extensions Registry contract, saving the hash of the package signed by the owner, to be able to verify it in the front-end.
+
+Eventually, Community members will be able to sign messages to curate the registry, something similar to the Web of Trust or on-chain attestations to establish the authenticity of the extensions. we could build a UI that allows people to browse/install packages into their grants stack instance.
+
+Doing this will simplify the way people can contribute to Grants Stack, with simple PRs with self contained extensions, without the need to touch all the codebase, preparing Grants Stack in the future to load any extensions from a decentralized Extensions Registry curated by the community.
+
+[More details in this document.](https://docs.google.com/document/d/1obbH5WgBbeW4X1Gkel1CnORplEmfUsYqp1duYsNDwiA/edit)
+
+Pros: Enables an ecosystem to build on top of GG.
+
+Cons: Refactor would take some time. Complexity comes from managing security concerns, curation of registry, plugin overlap/conflicts.
+
+## Option C - Fork Architecture
+
+To allow developers to easily contribute to Grants Stack, we would allow them to simply fork the grants stack codebase and build/design on their own fork.
+
+We would call these branches “Grants Stack Frontier”. For example, the branch that Supermodular built for [Collections](https://github.com/gitcoinco/grants-stack/pull/1786) could be called “Grants Stack Frontier - Collections/Supermodular” and the [Hypercerts/GS integration](https://gov.gitcoin.co/t/better-impact-funding-the-greenpill-hypercerts-gitcoin-combo-move/16477) could be called “Grants Stack Frontier - Hypercerts/Raid Guild”..
+
+We could spin up infrastructure for them to run pilot rounds on top of their new codebases.
+
+Only the best PRs would get merged back into Grants Stack main branch. We would provide strict guidelines around feature flagging, ux, documentation, variable scoping, code standards, and merge conflict reduction of what we’d accept upstream.
+
+There would likely be a bunch of dangling forks that are never merged back in.
+
+Pros: Enables an ecosystem to build on top of GG.
+
+Cons: Messy merge conflicts + eventual codebase bloat.
+
+## Option D - Modular Ecosystem Built Around Grants Stack
+
+In this option, we abandon our goal of allowing developers to easily contribute to Grants Stack. Instead, we ask that they build modules around it that are compatible with Grants Stack, and build upon (as opposed to replace) core functionality.
+
+This option is arguably already in place. Just look at all of the fun stuff that Supermodular built that fits within this category!
+
+|Built on|When|Name|Desc|Link|
+| --- | --- | --- | --- | --- |
+|Allo v1|Q2 2023|Funding.Social|See who you're following on lens + who they contribute to on Gitcoin|[Go](https://funding.social/)[(opens in a new tab)](https://funding.social/)|
+|Passport|Q2 2023|Passport Gated Airdrop Tool|A forkable tool to allow anyone to airdrop a token gated by Gitcoin Passport|[Go](https://twitter.com/owocki/status/1671581682925965312)[(opens in a new tab)](https://twitter.com/owocki/status/1671581682925965312)|
+|Allo v1/Passport|Q2 2023|Grants-ETL|a tool to make pulling data for anti sybil/collusion easier.|[Go](https://gov.gitcoin.co/t/grants-etl-a-new-tool-to-make-pulling-data-for-anti-sybil-anti-collusion-analysis-easier/16060)[(opens in a new tab)](https://gov.gitcoin.co/t/grants-etl-a-new-tool-to-make-pulling-data-for-anti-sybil-anti-collusion-analysis-easier/16060)|
+|Allo v1|Q1 2023|Quadratic Yeeter|a tool to create a Grants Stack round in 1 click|[Go](https://community.supermodular.xyz/t/new-build-bulk-uploader-for-gitcoin-grants-registry/442)[(opens in a new tab)](https://community.supermodular.xyz/t/new-build-bulk-uploader-for-gitcoin-grants-registry/442)|
+|Allo v1|Q1 2023|Gitcoin Grants crowdfunder|a tool to make a crowdfunding aqueduct into Gitcoin Grants|[Go](https://crowdfund-matchingpool.vercel.app/pool/0x74ad514636f1386f374e1107435f35d393d0b279)[(opens in a new tab)](https://crowdfund-matchingpool.vercel.app/pool/0x74ad514636f1386f374e1107435f35d393d0b279)|
+|Allo v1|Q1 2023|Gitcoin Grants data vis|an easy way to visualize Gitcoin QF rounds crowdfund data structure.|[Go](https://twitter.com/owocki/status/1658103631500161024)[(opens in a new tab)](https://twitter.com/owocki/status/1658103631500161024)|
+|Allo v1|Q1 2023|Partnership Protocol|An easy way to see the top grants round projects + get in touch with them for partnership/BD folks.|[Go](https://community.supermodular.xyz/t/partnerships-tool-on-grants-stack/261)[(opens in a new tab)](https://community.supermodular.xyz/t/partnerships-tool-on-grants-stack/261)|
+|Allo v1|Q1 2023|Economic Graph Generator|A tool to visualize Economic Graphs on top of Allo Protocol|[Go](https://community.supermodular.xyz/t/help-wanted-build-economic-graph-tool-on-top-of-allo-protocol/430/5)[(opens in a new tab)](https://community.supermodular.xyz/t/help-wanted-build-economic-graph-tool-on-top-of-allo-protocol/430/5)|
+
+Pros: No new re-architecture effort needed
+
+Cons: People can’t replace/replicate core GS functionality, only build around it.
+
+## Option E - Allo Webapps
+
+In this option, we abandon our goal of allowing developers to easily contribute to Grants Stack. Instead we ask them to build webapps on top of Allo v2.
+
+These webapps could be tightly coupled with the new Allo v2 strategies + data structures, and would be optimized for easy forking + building of new webapps. Kind of like [Scaffold ETH 2](https://github.com/scaffold-eth/scaffold-eth-2) but for Allo.
+
+We could then maintain a registry of the best Allo v2 webapps that customers could use.
+
+Pros: Enables an ecosystem to build on top of GG. No effort needed for Grants Stack team
+
+Cons: Allo/Grants Stack likely to not be in sync from a code/business model/culture perspective.
+Mon, 20 Nov 2023 19:23:04 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Opening up Grants Stack/Allo to more community contributions
+owocki
+
+            <p>Thank you to: Andrea Franz, Kevin Owocki, Meg Lister, Carl Barrdahl, Zakk Fleischmann</p>
+<h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR</h1>
+<ol>
+<li>We convened to discuss how to do software development in a post-Allo v2/Grants Stack integration world. Should we enable anyone to contribute to the Allo/Grants Stack roadmap?</li>
+<li>We decided that the Grants Stack Team will continue their current development style for the next 12 months.</li>
+<li>In parallel, Owocki/Raid Guild and Allo Workstream will build on top of Option E - Allo webapps.</li>
+</ol>
+<h1><a name="what-we-did-2" class="anchor" href="https://gov.gitcoin.co#what-we-did-2"></a>What we did</h1>
+<p>The Grants Stack (GS) product has come a long way over the last year – but it is still early in its journey. There are tons of features we want to build and new opportunities in the grants space to explore.</p>
+<p>We’re really interested in leveraging the unique power of the Web3 ecosystem and open-source development in order to accelerate our product capabilities exponentially and flexibly, rather than the traditional linear growth model of new, full-time dev/product/design headcount.</p>
+<p>With the integration of Allo v2 features into Grants Stack, we have an opportunity to build new funding mechanisms and tooling more quickly and flexibly at the protocol layer. We’re also interested in exploring ways to make our front-end architecture more flexible and modular for external developers to contribute without substantial onboarding and deployment time and costs.</p>
+<p>Allo and Grants Stack are complementary in that both create capital allocation tools for communities to Fund What Matters (™) in their own communities. While GS is focused on going deep on enterprise grade no-code tools, Allo creates the opportunity space to explore broader possibilities of experimental/developer focused opportunities.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d389e540e307041a0f40485c9e4451196cb00a45.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/d389e540e307041a0f40485c9e4451196cb00a45" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d389e540e307041a0f40485c9e4451196cb00a45_2_625x496.png" alt="" data-base62-sha1="ubmbxcvYeBqNVV2B9vW6fp6D2XH" width="625" height="496" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d389e540e307041a0f40485c9e4451196cb00a45_2_625x496.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d389e540e307041a0f40485c9e4451196cb00a45_2_937x744.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d389e540e307041a0f40485c9e4451196cb00a45_2_1250x992.png 2x" data-dominant-color="FAFAFA"></a></div><p></p>
+<p>With this in mind, we came together to explore the different ways we might work together and align how we do development.</p>
+<p>In doing this evaluation, we used the following criteria:</p>
+<ol>
+<li>Ease of onboarding external devs</li>
+<li>Accelerates GS growth, including revenue growth</li>
+<li>Ability for Grants Stack team to “feature flag” or control visibility of externally contributed features</li>
+<li>Level of effort (able to integrate Allo v2 + MVP this in a reasonable time frame, eg not more than 4-6 weeks)</li>
+</ol>
+<p>We also evaluated the risks. Introducing an architecture for community involvement could create new pressures on the GS core team (like code review, merge conflicts, architecture, community engagement/devrel). Grants Stacks customers typically desire enterprise grade product quality, and we would need a way to ensure quality through the process.</p>
+<h1><a name="h-3" class="anchor" href="https://gov.gitcoin.co#h-3"></a></h1>
+<p>The options we evaluated</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A - Do Nothing</td>
+<td>Status Quo, do nothing.</td>
+</tr>
+<tr>
+<td>B - Plugin Architecture</td>
+<td>Undertake a re-architecture towards a plugin architecture that allows anyone to augment grants stack code. Plugins could be loaded dynamically in rounds. We would then build a plugin marketplace where people could discover/rate/download plugins.</td>
+</tr>
+<tr>
+<td>C - Fork Architecture</td>
+<td>We would allow developers to simply fork the grants stack codebase and build/design on their own fork. TBD if/how these would be merged back into grants stack upstream.</td>
+</tr>
+<tr>
+<td>D - Modular Webapps</td>
+<td>We focus on having developers build modules around Grants Stack that are compatible with Grants Stack, and build around (as opposed to replace) core functionality.</td>
+</tr>
+<tr>
+<td>E - Allo Webapps</td>
+<td>Similar to option D, but we heavily focus on pushing developers to build webapps on top of Allo v2.</td>
+</tr>
+</tbody>
+</table>
+</div><h1><a name="decision-4" class="anchor" href="https://gov.gitcoin.co#decision-4"></a>Decision</h1>
+<p>We see a strategic opportunity to enable an ecosystem of developers to build new functionality around Grants Stack &amp; Allo. This would enable not only faster development but a more diverse set of developments.</p>
+<p>But the Grants Stack team is highly focused on customer adoption right now, and a giant re-architecture or change in working norms is not in the cards right now - therefore Option B and C are not viable.</p>
+<p>The group has decided that Option E is the best path forward for the next 12 months.</p>
+<h1><a name="appendix-a-full-evaluation-of-different-options-5" class="anchor" href="https://gov.gitcoin.co#appendix-a-full-evaluation-of-different-options-5"></a>Appendix A - Full Evaluation of different options.</h1>
+<h2><a name="option-a-do-nothing-6" class="anchor" href="https://gov.gitcoin.co#option-a-do-nothing-6"></a>Option A - Do Nothing</h2>
+<p>Status Quo, do nothing.</p>
+<p>Pros: Nothing changes</p>
+<p>Cons: Nothing changes</p>
+<h2><a name="option-b-plugin-architecture-7" class="anchor" href="https://gov.gitcoin.co#option-b-plugin-architecture-7"></a>Option B - Plugin Architecture</h2>
+<p>To allow developers to easily contribute to Grants Stack, we would extract all the QF (and Direct Grants) functionalities to a self contained module to prepare the core part to load any kind of voting and distribution strategy.</p>
+<p>We could encourage plugins that mostly just write new strategies… but we may also make available the ability to override any function/object/template (subject to some security considerations)</p>
+<p>A new extension will be published on IPFS and registered in an Extensions Registry contract, saving the hash of the package signed by the owner, to be able to verify it in the front-end.</p>
+<p>Eventually, Community members will be able to sign messages to curate the registry, something similar to the Web of Trust or on-chain attestations to establish the authenticity of the extensions. we could build a UI that allows people to browse/install packages into their grants stack instance.</p>
+<p>Doing this will simplify the way people can contribute to Grants Stack, with simple PRs with self contained extensions, without the need to touch all the codebase, preparing Grants Stack in the future to load any extensions from a decentralized Extensions Registry curated by the community.</p>
+<p><a href="https://docs.google.com/document/d/1obbH5WgBbeW4X1Gkel1CnORplEmfUsYqp1duYsNDwiA/edit">More details in this document.</a></p>
+<p>Pros: Enables an ecosystem to build on top of GG.</p>
+<p>Cons: Refactor would take some time. Complexity comes from managing security concerns, curation of registry, plugin overlap/conflicts.</p>
+<h2><a name="option-c-fork-architecture-8" class="anchor" href="https://gov.gitcoin.co#option-c-fork-architecture-8"></a>Option C - Fork Architecture</h2>
+<p>To allow developers to easily contribute to Grants Stack, we would allow them to simply fork the grants stack codebase and build/design on their own fork.</p>
+<p>We would call these branches “Grants Stack Frontier”. For example, the branch that Supermodular built for <a href="https://github.com/gitcoinco/grants-stack/pull/1786">Collections</a> could be called “Grants Stack Frontier - Collections/Supermodular” and the <a href="https://gov.gitcoin.co/t/better-impact-funding-the-greenpill-hypercerts-gitcoin-combo-move/16477">Hypercerts/GS integration</a> could be called “Grants Stack Frontier - Hypercerts/Raid Guild”…</p>
+<p>We could spin up infrastructure for them to run pilot rounds on top of their new codebases.</p>
+<p>Only the best PRs would get merged back into Grants Stack main branch. We would provide strict guidelines around feature flagging, ux, documentation, variable scoping, code standards, and merge conflict reduction of what we’d accept upstream.</p>
+<p>There would likely be a bunch of dangling forks that are never merged back in.</p>
+<p>Pros: Enables an ecosystem to build on top of GG.</p>
+<p>Cons: Messy merge conflicts + eventual codebase bloat.</p>
+<h2><a name="option-d-modular-ecosystem-built-around-grants-stack-9" class="anchor" href="https://gov.gitcoin.co#option-d-modular-ecosystem-built-around-grants-stack-9"></a>Option D - Modular Ecosystem Built Around Grants Stack</h2>
+<p>In this option, we abandon our goal of allowing developers to easily contribute to Grants Stack. Instead, we ask that they build modules around it that are compatible with Grants Stack, and build upon (as opposed to replace) core functionality.</p>
+<p>This option is arguably already in place. Just look at all of the fun stuff that Supermodular built that fits within this category!</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Built on</th>
+<th>When</th>
+<th>Name</th>
+<th>Desc</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Allo v1</td>
+<td>Q2 2023</td>
+<td>Funding.Social</td>
+<td>See who you’re following on lens + who they contribute to on Gitcoin</td>
+<td><a href="https://funding.social/">Go</a><a href="https://funding.social/">(opens in a new tab)</a></td>
+</tr>
+<tr>
+<td>Passport</td>
+<td>Q2 2023</td>
+<td>Passport Gated Airdrop Tool</td>
+<td>A forkable tool to allow anyone to airdrop a token gated by Gitcoin Passport</td>
+<td><a href="https://twitter.com/owocki/status/1671581682925965312">Go</a><a href="https://twitter.com/owocki/status/1671581682925965312">(opens in a new tab)</a></td>
+</tr>
+<tr>
+<td>Allo v1/Passport</td>
+<td>Q2 2023</td>
+<td>Grants-ETL</td>
+<td>a tool to make pulling data for anti sybil/collusion easier.</td>
+<td><a href="https://gov.gitcoin.co/t/grants-etl-a-new-tool-to-make-pulling-data-for-anti-sybil-anti-collusion-analysis-easier/16060">Go</a><a href="https://gov.gitcoin.co/t/grants-etl-a-new-tool-to-make-pulling-data-for-anti-sybil-anti-collusion-analysis-easier/16060">(opens in a new tab)</a></td>
+</tr>
+<tr>
+<td>Allo v1</td>
+<td>Q1 2023</td>
+<td>Quadratic Yeeter</td>
+<td>a tool to create a Grants Stack round in 1 click</td>
+<td><a href="https://community.supermodular.xyz/t/new-build-bulk-uploader-for-gitcoin-grants-registry/442">Go</a><a href="https://community.supermodular.xyz/t/new-build-bulk-uploader-for-gitcoin-grants-registry/442">(opens in a new tab)</a></td>
+</tr>
+<tr>
+<td>Allo v1</td>
+<td>Q1 2023</td>
+<td>Gitcoin Grants crowdfunder</td>
+<td>a tool to make a crowdfunding aqueduct into Gitcoin Grants</td>
+<td><a href="https://crowdfund-matchingpool.vercel.app/pool/0x74ad514636f1386f374e1107435f35d393d0b279">Go</a><a href="https://crowdfund-matchingpool.vercel.app/pool/0x74ad514636f1386f374e1107435f35d393d0b279">(opens in a new tab)</a></td>
+</tr>
+<tr>
+<td>Allo v1</td>
+<td>Q1 2023</td>
+<td>Gitcoin Grants data vis</td>
+<td>an easy way to visualize Gitcoin QF rounds crowdfund data structure.</td>
+<td><a href="https://twitter.com/owocki/status/1658103631500161024">Go</a><a href="https://twitter.com/owocki/status/1658103631500161024">(opens in a new tab)</a></td>
+</tr>
+<tr>
+<td>Allo v1</td>
+<td>Q1 2023</td>
+<td>Partnership Protocol</td>
+<td>An easy way to see the top grants round projects + get in touch with them for partnership/BD folks.</td>
+<td><a href="https://community.supermodular.xyz/t/partnerships-tool-on-grants-stack/261">Go</a><a href="https://community.supermodular.xyz/t/partnerships-tool-on-grants-stack/261">(opens in a new tab)</a></td>
+</tr>
+<tr>
+<td>Allo v1</td>
+<td>Q1 2023</td>
+<td>Economic Graph Generator</td>
+<td>A tool to visualize Economic Graphs on top of Allo Protocol</td>
+<td><a href="https://community.supermodular.xyz/t/help-wanted-build-economic-graph-tool-on-top-of-allo-protocol/430/5">Go</a><a href="https://community.supermodular.xyz/t/help-wanted-build-economic-graph-tool-on-top-of-allo-protocol/430/5">(opens in a new tab)</a></td>
+</tr>
+</tbody>
+</table>
+</div><p>Pros: No new re-architecture effort needed</p>
+<p>Cons: People can’t replace/replicate core GS functionality, only build around it.</p>
+<h2><a name="option-e-allo-webapps-10" class="anchor" href="https://gov.gitcoin.co#option-e-allo-webapps-10"></a>Option E - Allo Webapps</h2>
+<p>In this option, we abandon our goal of allowing developers to easily contribute to Grants Stack. Instead we ask them to build webapps on top of Allo v2.</p>
+<p>These webapps could be tightly coupled with the new Allo v2 strategies + data structures, and would be optimized for easy forking + building of new webapps. Kind of like <a href="https://github.com/scaffold-eth/scaffold-eth-2">Scaffold ETH 2</a> but for Allo.</p>
+<p>We could then maintain a registry of the best Allo v2 webapps that customers could use.</p>
+<p>Pros: Enables an ecosystem to build on top of GG. No effort needed for Grants Stack team</p>
+<p>Cons: Allo/Grants Stack likely to not be in sync from a code/business model/culture perspective.</p>
+          <p><a href="https://gov.gitcoin.co/t/opening-up-grants-stack-allo-to-more-community-contributions/17145/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/opening-up-grants-stack-allo-to-more-community-contributions/17145/1
+        Mon, 20 Nov 2023 19:23:04 +0000
+gov.gitcoin.co-post-17145-1
+Opening up Grants Stack/Allo to more community contributions
+      
+
+

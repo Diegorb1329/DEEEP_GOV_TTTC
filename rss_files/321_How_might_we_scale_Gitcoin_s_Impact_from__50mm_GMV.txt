@@ -1,0 +1,466 @@
+
+
+
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697
+    ![c173d4e1-a87a-4235-b3aa-0cc6ac6e18a7|500x500](upload://mCN3d3Xtua9oqjkmeuLKXmfzhy6.jpeg)
+
+Per impact.gitcoin.co, the Gross Marketplace Value of Gitcoin sits at $50m*
+
+I would like to offer some thoughts on how the DAO might scale that $50m GMV 10x up to $500m GMV.
+
+Before I get into that, I'd like to tell you about a handful of hard fought lessons for me.  I've gathered these over the last few years and have conveniently summarized for you in less than one page!
+
+1. Because we've listened to [this recent interview with Vitalik](https://www.youtube.com/watch?v=OH3dPShZwagO) we know that the public goods funding problem can be broken down into (1) funding sources + (2) fund distribution mechanisms.  These two sides of the equation need to grow in lockstep together.   
+
+2. Because we've read @meglister 's many fantastic updates, including [Grants Stack Roadmap Updates 2023](https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642) and we've also read [Systematic Exploration of the Coordination Design Space](https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616) in Jan 23 we know that Gitcoin has a strongly articulated vision on the "fund distribution mechanisms" side of the equation.  Quadratic Funding got us started, and we continue to innovate there, but it's not the end-all-be-all mechanism for all of public goods.  We're building a swiss army knife of fund distribution mechanisms - Quadratic Funding, Direct Grants, + TBD but more details :soon: :tm: .
+    - Each of these 3 products can be thought of as fund distribution mechanisms.
+         - Allo is a suite of fund distribution mechanisms targeted at developers.
+         - Grants Stack is a suite of fund distribution mechanisms targeted at Grants ecosystems.
+         - Passport is a fund distribution mechanism for the very hard but very valuable problem of sybil resistance.
+
+3. Because we we've read [Where does the Gitcoin Grants Matching Pool Money Come From?](https://gov.gitcoin.co/t/where-does-the-gitcoin-grants-matching-pool-money-come-from/9036) from Nov 21 we know that we've raised money from sponsorships, NFT sales, and sometimes donations.  
+
+4. Because we've read my post [Scaling Funding for Blockchain-era Public Goods](https://gov.gitcoin.co/t/scaling-funding-for-blockchain-era-public-goods/9797) from Jan 22 and [Public Goods funding - The Race to the Bottom](https://gov.gitcoin.co/t/public-goods-funding-the-race-to-the-bottom/15739) from Kyle in the summer of 23 , we know that we should prioritize legitimate, recurring, deep wells of public goods funding.  So far we've not yet found & tapped something that meets those criteria.  Sometimes the wells of funding we have tapped have been deep/legimate, they've not often been recurring.  
+
+5. Because we've been following the ecosystem this summer, we know that Optimism and Protocol Guild are both on a tear lately.  The Protocol Guild (a self curated registry of ETH core protocol developers) has regularly been pulling in $1m+ sponsorships (total > $10m in the last 18 months ) and even get a TradFi ETF to donate 10% of their fees to them.  Optimism (a Layer 2 that uses Retroactive Public Goods Funding to fund it's public goods) is using revenue from sequencer fees to fund Retroactive Public Goods to the tune of $20m/quarter.    Another interesting entrant is Octant, which is using Golem Foundations massive treasury to stake + return the funds to public goods to the tune of $10m/yr+.
+
+6. Because we [practice practical pluralism](https://medium.com/@owocki/practical-pluralism-322ab0a984c5) we celebrate these successes.. We love to see public goods get funded!  We are proud to be side by side in the ecosystem with these deeply legitimate projects + helping to serve many of the same people they serve, but with different mechanisms.  At the same time, these data points prove to us that *finding recurring/legitimate/deep wells of funding can be done, even in a bear market* and so they give us hope that we will too find a solution!  Also, how we add value to these projects by making Allo good enough that it'll help them?
+
+7. Because we've read Vitaliks post [on where decentralization matters](https://vitalik.ca/general/2022/09/20/daos.html), we know that decentralization matters for (1) democratic decision making (2) censorship resistance (3) credible neutrality.  Because public goods funding requires (1) democratic decision making + (2) credible neutrality, we can take solace that the 24 month odyssey to rewrite the web2 products into decentralized protocols was worth it.  And that any project that wants to compete with us will have to make more effective investments in smart contract engineering, protocol design, and dapp design as well. 
+
+Ok with those hard fought lessons out of the way...  how do we scale 10x from here?
+
+We can (and will) keep [doing things that don't scale](https://paulgraham.com/ds.html).  Or only scale sublinearly (worse than linearly).  Things like building regen culture, chasing sponsorships, doing NFT drops.  I'd go so far as to say that we should be more organized about doing outbound campaigns to partner with other DAOs (in most cases we'd prpose to do a social/tech/token swap + we help fund their public goods as we do it ).
+
+But the bulk of this post is about the promising things that do scale super-linearly (better than linear).  Hopefully by having a conversation about where the highest ROI is, we can start making some smart bets.
+
+What follows is what I'm excited about.   
+
+**Aqueducts** - I'm excited about building modular [aqueducts](https://gov.gitcoin.co/t/gitcoin-aqueduct/9684) for recurring always on funding.   Experiments I think are cool here
+- Aqueducts being a formal part of Allo v2
+- [The crowdfunding tool](https://community.supermodular.xyz/t/new-open-source-crowdfunding-tool/412) @carlb built while we were at supermodular:
+- Taking each of our newly modularized [programs](https://gov.gitcoin.co/t/modularizing-the-program/16670) and creating separate matching pools for each round we run a la climate.gitcoin.eth, eth_infra.gitcoin.eth, eth_oss.gitcoin.eth, eth_community.gitcoin.eth, etc….
+- Integrations with Superfluid and/or Radicle Drips or other similar streaming tools.
+- Building mechanisms that consume hypercerts, EAS, or other standardized on-chain impact signals + intelligently distribute rewards to them.  Idk any experiments that are doing this yet, except maybe tea.xyz or OSObserver, and I'm mostly just excited about this bc [Vitalik is](https://www.youtube.com/watch?v=OH3dPShZwagO).
+
+**Doing Grants/Airdrops for every EVM based Ecosystem** - I'm excited about the momentum that we've seen in self-serve QF and direct grants since Grants Stack launched.  There are many DAOs out there w billions$$$ in capital that doesnt have the proper distribution mechanisms out there, and we could provide that.  The meta of Airdrops is totally broken right now, and Grants Stack/Passport offer some interesting new tools to evolve that meta forward.  The market for this right now is likely in the tens or hundreds of millions$$$ yearly.
+
+**Doing Grants for fiat ecosystems** - I think that eventually, having fiat capital on-ramps could be huge for Gitcoin.  A [recent architectural analysis even showed how this could be done](https://www.notion.so/Proposal-Fiat-donations-direct-on-ramping-to-PGN-c58eccd9d5814f6e84e28e4bcf4bb2d1), but I think we'll have to focus on EVM ecosystems first.  When the GTM for EVM ecosystems is maturing, it might be prudent to pursue more fiat ecosystems.  The TAM for this is likely in the tens of billions of $$$s/yearly, maybe even more.
+
+**Totally new form factors for capital allocation** - I am excited to see what Allo v2 will bring, and how a fruitful developer ecosystem can be built around it .  Some experiments I'm excite for
+- [Quadratic Funding Social Networks](https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462)
+- [Impact Stream](https://www.youtube.com/watch?v=JardevlkgQg)
+- Other Allo Integrations like Buildbox, Endaoment, Sablier, or Octant.
+- Allo Hackathons
+
+I can't even estimate how big this market becuase the opportunity is so big.  But it is also very complicated GTM wise, because we are bootstrapping a developer ecosystem around our suite of protoocols - and for Allo to be successful, it must make those people successful.  Each of them have slightly different GTM considerations.
+
+**Always on funding sources** - We should always be looking for economically exothermic areas of the ecosystem (meaning they give off funding as a byproduct of normal operations) and then plugging them into our products.  Some examples of economically exothermic parts of Ethereum:
+
+- MEV / Sequencer Fees, especially from PublicGoods.network or other L1s/L2s.
+- Contract Secured Revenue/EIP-6968 - I'm cooking up something here with Zak Cole.
+- Yield from gtcETH, GLOW, etc.
+- DAO Treasuries for any DAO that has a sustainable revenue model (like Uniswap, compound, or any DEFI project)
+
+I think these are each 10$$m+ opportunities.  But we lack any well-funded special teams that have a mandate dedicate to pursuing them and most of them emerge as underfunded side projects.
+
+**Passport -**  Passport has the opportunity to do for sybil resistance what twilio did for SMS.    I wrote a bit about how big of an opportunity I think passport is [here](https://gov.gitcoin.co/t/passport-is-our-aws/10995) last summer.  More on their roadmap [here](https://www.notion.so/gitcoin/Passport-SSOT-e5d4df27d3c54192a947efe315f3f550).  I think there's likely a billion $$$$ market here. The TAM for human identity tools is literally everyone on earth who has an internet connection.
+
+**Internal stuff** - OK, this one is different than the above ones.  It's purely an internal-centric one.  
+
+**> 1. Speaking each others language internally**
+I think the one important thing we can do is build up inter-workstream and inter-skillset and inter-network shared understanding + empathy.  We are building an [impact network](https://gov.gitcoin.co/t/lessons-about-impact-networks/10305) shouldnt we be following those best practices? 
+
+How do we create more [common knowledge](https://www.youtube.com/watch?v=v7YbnY1JUhg) about our paths to the most important thing.  Each pocket of important common knowledge can serve as a shelling point for getting important shit done + delivering more Ws than Ls.  This would stretch all of us, because it means that engineers need to speak sales, that BD needs to speak computer science, that we all rally around the product managers for what they need, but it would be high upside if we could.
+
+**> 2. Create a formal organization-wide value heuristic**
+
+I think another intra-workstream thing we could do that would reinforce this is to [we need to make value-delivery + the creation external facing W's the social-political currency + actual economic currency of the DAO](https://twitter.com/owocki/status/1704204134625464515) .  I'd even go so far as to one day formalize this so that everyone is clear on the rubric they are judged against:
+
+A proposed anchor point for the question of "how much is my team generating value?" could be: 
+
+> w₁ = GTC_utility_produced + revenue_generated_in_usd
+
+In the event that a product is pre-revenue their weight can be determined by 
+
+> w₂ = size_of_subDAO_economy_in_usd
+
+I have a whole 'nother post about this I can drop if ppl are interested.  DM me if you want a preview.
+
+**> 3. Decentralization wen?**
+
+I expect that the next 12-18 months will be focused on product/protocol adoption and we will start thinking about ossifying Gitcoin's governance *only after reaching product market fit*.  
+
+I have a whole 'nother post about Gitcoin's path to ossifyication I can drop if ppl are interested.  DM me if you want a preview.
+
+
+**A rising tide lifts all boats** - Gitcoin is a bet on EVM ecosystems continuing to grow + proliterate.  We are riding Ethereum's network effects like a tide that is lifting all boats.  If Ethereum grows 10x in the next decade, that could lift Gitcoin's boat as well.
+
+One tangible sign of this happening already is that Gitcoin has started raising funds from Optimism Retro PGF + from Octant.  We are extremely blessed to be in a growing ecosystem with a. pluralism of other innovators within the area of public goods funding :)
+
+.
+
+
+Thanks for reading to the end.  When I think about the next 10x, the above is what I'm excited about.  What are you excited about? 
+
+----- 
+ - **impact.gitcoin.co needs an update: the GMV number is actually  ~$52m ish after beta rounds/gg18 but for the purposes of this post, lets call it 50m)*
+- **impact.gitcoin.co also doesnt reflect the total size of the sybil resistent economy on Gitcoin Passport.  if you take the sum of all the cost of forgeries on Passport and/or the rewards that have been given because a user has a passport, i estimate that it's between 3-7.5 million $$$ tho*
+- Not financial or tax advice. This content is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This post is not tax advice. Talk to your accountant. Do your own research.
+Wed, 21 Aug 2024 23:52:16 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+mars
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I would like to offer some thoughts on how the DAO might scale that $50m GMV 10x up to $500m GMV.</p>
+</blockquote>
+</aside>
+<p>Some pretty basic and pretty obvious suggestions:</p>
+<h1><a name="h-1-to-have-ready-to-be-deployed-1" class="anchor" href="https://gov.gitcoin.co#h-1-to-have-ready-to-be-deployed-1"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/one.png?v=12" title=":one:" class="emoji" alt=":one:" loading="lazy" width="20" height="20"> To have <img src="https://gov.gitcoin.co/images/emoji/twitter/moneybag.png?v=12" title=":moneybag:" class="emoji" alt=":moneybag:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/moneybag.png?v=12" title=":moneybag:" class="emoji" alt=":moneybag:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/moneybag.png?v=12" title=":moneybag:" class="emoji" alt=":moneybag:" loading="lazy" width="20" height="20"> ready to be deployed</h1>
+<p>When you have $500m of money to be deployed, there is a large amount of ways to spend it.</p>
+<p>The easiest and the fastest way to achieve $500m in GMV (Gross Marketplace Value) is to have $500m burning your pocket.</p>
+<h1><a name="h-2-showcase-illustrate-demonstrate-the-value-generated-2" class="anchor" href="https://gov.gitcoin.co#h-2-showcase-illustrate-demonstrate-the-value-generated-2"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/two.png?v=12" title=":two:" class="emoji" alt=":two:" loading="lazy" width="20" height="20"> Showcase / illustrate / demonstrate the value generated</h1>
+<p>I think that majority of the Web3 stack was at some point funded by Gitcoin.</p>
+<p><strong>Showcase success stories.</strong></p>
+<p>I think <a href="https://x.com/gainforestnow" rel="noopener nofollow ugc">GainForest</a> is quite successful.</p>
+<p>I think Sablier is quite sucessful:</p>
+<ul>
+<li><a href="https://blog.sablier.com/sablier-labs-raises-seed-round/" rel="noopener nofollow ugc">Sablier Labs Raises $4.5M Seed Round</a></li>
+<li>Bootstraped on Gitcoin: <a href="https://www.gitcoin.co/blog/gitcoin-grants-round-4" class="inline-onebox" rel="noopener nofollow ugc">Gitcoin Grants Round 4 Results | Gitcoin Blog</a></li>
+</ul>
+<p><strong>EDIT / UPDATE:</strong> Uniswap to large extent was funded on Gitcoin (and Etheruem Foundation grants):</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a82a0e7785ae84e8a06cf069d7f8e1e07faacb5d.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/a82a0e7785ae84e8a06cf069d7f8e1e07faacb5d" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a82a0e7785ae84e8a06cf069d7f8e1e07faacb5d_2_661x500.png" alt="image" data-base62-sha1="nZEjSKEVIgopujZoMUTfr0gNnCl" width="661" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a82a0e7785ae84e8a06cf069d7f8e1e07faacb5d_2_661x500.png, https://gov.gitcoin.co/uploads/db4391/original/2X/a/a82a0e7785ae84e8a06cf069d7f8e1e07faacb5d.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/a/a82a0e7785ae84e8a06cf069d7f8e1e07faacb5d.png 2x" data-dominant-color="F3F4F3"></a></div><p></p>
+<h1><a name="h-3-onboard-nation-states-to-web3-regen-refi-stack-3" class="anchor" href="https://gov.gitcoin.co#h-3-onboard-nation-states-to-web3-regen-refi-stack-3"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/three.png?v=12" title=":three:" class="emoji" alt=":three:" loading="lazy" width="20" height="20"> Onboard nation states to Web3 regen ReFi stack</h1>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/19c8858e00ca6ac45d89816dfbff000dec606a66.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/19c8858e00ca6ac45d89816dfbff000dec606a66" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19c8858e00ca6ac45d89816dfbff000dec606a66_2_679x500.png" alt="image" data-base62-sha1="3G5yfSus9PbKSXblz2eUgNSRfiS" width="679" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19c8858e00ca6ac45d89816dfbff000dec606a66_2_679x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19c8858e00ca6ac45d89816dfbff000dec606a66_2_1018x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19c8858e00ca6ac45d89816dfbff000dec606a66_2_1358x1000.png 2x" data-dominant-color="2B2B2B"></a></div><p></p>
+<p>$500m is 10x from where we are right now, but in the grand scheme of things: conservative estimate.</p>
+<aside class="quote no-group quote-modified" data-username="mars" data-post="1" data-topic="18875">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/mars/48/13147_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/beyond-qf-quadratic-funding-comments-suggestions-ideas/18875/1">Beyond QF quadratic funding: comments, suggestions, ideas <img width="20" height="20" src="https://gov.gitcoin.co/images/emoji/twitter/bulb.png?v=12" title="bulb" loading="lazy" alt="bulb" class="emoji"></a></div>
+<blockquote>
+<h1>Going 100x from here</h1>
+<p>Shared this <a href="https://discord.com/channels/562828676480237578/1047159914956591114/1243934533326475385" rel="noopener nofollow ugc">thought on Discord</a>:</p>
+<blockquote>
+<p>Gitcoin has easy potential to go 100x from here, I can totally imagine a prosperous country like Norway or Saudi Arabia gives us 1% of their sovereing fund budget to fund public goods.</p>
+</blockquote>
+</blockquote>
+</aside>
+<p>That’s achievable, that’s not unrealistic.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/65012d8d95fc8437ad27eda5263f9b5376af41d1.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/65012d8d95fc8437ad27eda5263f9b5376af41d1" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/65012d8d95fc8437ad27eda5263f9b5376af41d1_2_690x394.jpeg" alt="image" data-base62-sha1="epwKofrffyiF7tDMon1LXpOexHj" width="690" height="394" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/65012d8d95fc8437ad27eda5263f9b5376af41d1_2_690x394.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/65012d8d95fc8437ad27eda5263f9b5376af41d1_2_1035x591.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/65012d8d95fc8437ad27eda5263f9b5376af41d1_2_1380x788.jpeg 2x" data-dominant-color="5B706A"></a></div><p></p>
+<h1><a name="h-4-inspire-big-vision-4" class="anchor" href="https://gov.gitcoin.co#h-4-inspire-big-vision-4"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/four.png?v=12" title=":four:" class="emoji" alt=":four:" loading="lazy" width="20" height="20"> Inspire big vision:</h1>
+<p>Imagination + inspiration + dreams = does not require capital upfront.</p>
+<blockquote>
+<p>‘<em>If your dreams</em> do <em>not scare you</em>, <em>they</em> are <em>not big enough</em>.’</p>
+</blockquote>
+          <p><a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/8
+        Thu, 15 Aug 2024 21:49:02 +0000
+gov.gitcoin.co-post-16697-8
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+      
+
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+owocki
+
+            <aside class="quote no-group" data-username="ccerv1" data-post="6" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ccerv1/48/6966_2.png" class="avatar"> ccerv1:</div>
+<blockquote>
+<ul>
+<li>$500M GMV is a good target but still a drop in the bucket relative to legacy PGF. It’s how much the country of Chad <a href="https://www.theglobaleconomy.com/rankings/government_spending_dollars/">currently </a> allocates to PGF. (Have fun with that meme btw)</li>
+</ul>
+</blockquote>
+</aside>
+<p>this is true!  i think that 10x growth is a hard thing to do, but 1000x feels insurmountable.  so thats why i chose a target horizon of 10x.</p>
+<aside class="quote no-group" data-username="ccerv1" data-post="6" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ccerv1/48/6966_2.png" class="avatar"> ccerv1:</div>
+<blockquote>
+<ul>
+<li>Vitalik often talks about <a href="https://vitalik.ca/general/2020/11/08/concave.html">convex vs concave</a> outcomes. I think he brought it up in the latest greenpill podcast ep too. The unanswered question is whether complex yet largely concave allocation mechanisms like QF offer superior results than simply allocating a pool of money evenly across a set of projects (or using some other extremely simple heuristic).*</li>
+</ul>
+</blockquote>
+</aside>
+<p>i think that is an important unanswered question (esp while Gitcoin is primarily QF).  but once we go multi mechanism w the launch of allo v2, there are oppportunity to build mechanisms that take concave inputs and create convex outcomes (like assurance contracts + dominance assurance contracts).  this is an important diversification opportunity for gitcoin</p>
+<aside class="quote no-group" data-username="ccerv1" data-post="6" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ccerv1/48/6966_2.png" class="avatar"> ccerv1:</div>
+<blockquote>
+<p>Let me also disclose that I have a horse in this race – and am betting that decentralized impact measurement is the linchpin! There’s a sweet spot we have yet to find between qualitative and quantitative allocation mechanisms.</p>
+</blockquote>
+</aside>
+<p>decentralized impact eval is def part of the equation and i hope there are partnership oppies in the future!</p>
+          <p><a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/7
+        Mon, 09 Oct 2023 15:43:10 +0000
+gov.gitcoin.co-post-16697-7
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+      
+
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+ccerv1
+
+            <p>Epic post. This feels like one that will end up in the Gitcoin canon!</p>
+<p>A few reactions:</p>
+<ul>
+<li>$500M GMV is a good target but still a drop in the bucket relative to legacy PGF. It’s how much the country of Chad <a href="https://www.theglobaleconomy.com/rankings/government_spending_dollars/" rel="noopener nofollow ugc">currently</a> allocates to PGF. (Have fun with that meme btw)</li>
+<li>Vitalik often talks about <a href="https://vitalik.ca/general/2020/11/08/concave.html" rel="noopener nofollow ugc">convex vs concave</a> outcomes. I think he brought it up in the latest greenpill podcast ep too. The unanswered question is whether complex yet largely concave allocation mechanisms like QF offer superior results than simply allocating a pool of money evenly across a set of projects (or using some other extremely simple heuristic).*</li>
+<li>If we can demonstrate that crypto PGF is (a) more cost efficient for ecosystem funders and projects,  and (b) leads to better allocation outcomes, then I think we get to $500M very fast.</li>
+</ul>
+<p>Let me also disclose that I have a horse in this race – and am betting that decentralized impact measurement is the linchpin! There’s a sweet spot we have yet to find between qualitative and quantitative allocation mechanisms.</p>
+<p>(*) Edit: for further reading, checkout <a href="https://www.aeaweb.org/articles?id=10.1257/aer.20151404" rel="noopener nofollow ugc">this experiment</a> in Nigeria: “Random assignment of US$34 million in grants” or listen to the <a href="https://www.npr.org/sections/money/2016/05/20/478883658/episode-702-nigeria-you-win" rel="noopener nofollow ugc">Planet Money episode</a> about it</p>
+          <p><a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/6
+        Mon, 09 Oct 2023 15:23:31 +0000
+gov.gitcoin.co-post-16697-6
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+      
+
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+owocki
+
+            <p>IIRC we did a “gitcoin gathering hour” with the author <span class="mention">@daviderlichman</span> about 15 months ago.   we could dig up the recording or invite him to come back + talk about it again</p>
+          <p><a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/5
+        Sun, 08 Oct 2023 21:10:07 +0000
+gov.gitcoin.co-post-16697-5
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+      
+
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+carlosjmelgar
+
+            <aside class="quote no-group" data-username="owocki" data-post="3" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>“culture eats strategy for breakfast” so realize that many of these issues are cultural / training. invest in education to build the right regen cutlure internally.</p>
+</blockquote>
+</aside>
+<p><a href="https://www.amazon.com/Impact-Networks-Connection-Collaboration-Catalyze/dp/1523091681" rel="noopener nofollow ugc">Impact Networks</a> audiobook is $6. We should fire up a DAO (core, community, stewards, partners POC) book club with a review at the end of the month. You get a POAP and next month’s book if you read it. Education, culture, team vibes.</p>
+          <p><a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/4
+        Sun, 08 Oct 2023 19:52:05 +0000
+gov.gitcoin.co-post-16697-4
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+      
+
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+owocki
+
+            <p>thanks for the thoughtful response carlos!  i’ve got a few areas i want to respond/engage eventually… but this one is one that immediately brings up something for me</p>
+<aside class="quote no-group" data-username="carlosjmelgar" data-post="2" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/carlosjmelgar/48/12109_2.png" class="avatar"> carlosjmelgar:</div>
+<blockquote>
+<p>The contrast in response to PGF for DEI/ Shell vrs. MMM for discord + twitter hacks and the recent GTC highlight a disbalance in empathy within the DAO in my eyes. Not saying MMM deserves harsh treatment, just wishing PGF received similar empathy in public forums.</p>
+</blockquote>
+</aside>
+<p>i might be overindexing on this… but i would challenge everyone to look at such divisions like the differences between MMM/PGF (but also other divisions like misaligned priorities between the grants stack/allo team) one layer up the governance stack.  eg try to look at it from a network level instead of a narrative level.  one way to induce this frame is “imagine youre kevin/kyle/a gtc steward/anyone else with a network wide vantage point and people are always coming to you to complain about each other and you’re just trying to figure out protopia aka figure out how to piss away less budget/brand/opporutnity-cost on any type of coordination failure, especially feifdom-like, conflict every quarter”</p>
+<p>from the perspective of PGF for shell, everyone throwing them under the bus.  from the perspective of MMM, they feel stuck also but in different ways.</p>
+<p>from where i stand its just a lot of finger pointing across the groups/feifdoms.   while it’s gotten a lot better since a year ago, gitcoin still (in some palces) looks like microsoft whereas i think it maybe should look a bit more like facebook’s org or like an <a href="https://gov.gitcoin.co/t/lessons-about-impact-networks/10305">impact network</a>.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/99c8416181ef79414a8ad71269978579dd2c0035.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/99c8416181ef79414a8ad71269978579dd2c0035" title="2011.06.27_organizational_charts"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/99c8416181ef79414a8ad71269978579dd2c0035_2_384x375.jpeg" alt="2011.06.27_organizational_charts" data-base62-sha1="lWq65ptBPya3z7wJxZJCqblfZCl" width="384" height="375" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/99c8416181ef79414a8ad71269978579dd2c0035_2_384x375.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/99c8416181ef79414a8ad71269978579dd2c0035_2_576x562.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/99c8416181ef79414a8ad71269978579dd2c0035.jpeg 2x" data-dominant-color="EDEDED"></a></div><p></p>
+<p>feifdoms are a really bad way to organize in a competitive ecosystem if you think about it from first principles for a bit.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e084bb8566b0a57831a277bea352ba72c021fac1.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/e084bb8566b0a57831a277bea352ba72c021fac1" title="F6aMi8UaUAE0kUT"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e084bb8566b0a57831a277bea352ba72c021fac1_2_517x281.jpeg" alt="F6aMi8UaUAE0kUT" data-base62-sha1="w2bky84ObnwFlLlVsQ5ST1i43kZ" width="517" height="281" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e084bb8566b0a57831a277bea352ba72c021fac1_2_517x281.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e084bb8566b0a57831a277bea352ba72c021fac1_2_775x421.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/e/e084bb8566b0a57831a277bea352ba72c021fac1.jpeg 2x" data-dominant-color="EDEDED"></a></div><p></p>
+<p>some ways to solve this</p>
+<ul>
+<li>modularize the workstreams to be smaller + so there is surface area for feifdoms to evolve</li>
+<li>formalize the conflicts between groups into a political economy where these modules compete in a market against each other</li>
+<li>formalize the way the dao makes budgeting decisions to align budgets with those who create value so that people always have a SSOT on where their job/salary stands ( a la <code>job_security = prioritization = GTC_utility_produced + revenue_generated_in_usd</code>. ) without having to go through some tribal leader to get an answer.</li>
+<li>solve for the fact that low engagement/low output individuals can stick around indefinitely without being noticed (as long as theres no active layoff round going on).  conversely, solve for the fact that high engagement/high output individuals do not have job security.</li>
+<li>follow the best practices from <a href="https://gov.gitcoin.co/t/lessons-about-impact-networks/10305">impact networks book</a> (especially the ones about building trust across social difference)</li>
+<li>recognize that we shouldnt expect to “solve” for this anytime soon, but instead this will be a slow backburner process of “addressing” it for the next 12-18 months while the DAO is focused on the object level issues of its competitiveness in a crowded markets + product market fit + revenue.</li>
+<li>bring in external stewards who have a lot of clout + time to engage + pick apart the issues. i have a unicorn i might bring in / announce soon</li>
+<li>“culture eats strategy for breakfast” so realize that many of these issues are cultural / training.  invest in education to build the right regen cutlure internally.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/3
+        Sun, 08 Oct 2023 19:26:50 +0000
+gov.gitcoin.co-post-16697-3
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+      
+
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+carlosjmelgar
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>TradFi ETF to donate 10% of their fees to them.</p>
+</blockquote>
+</aside>
+<p>Normies present a huge opportunity. I’ve heard <a class="mention" href="https://gov.gitcoin.co/u/azeem">@azeem</a> express interest in pursing entities outside of our bubble, including governments. Outsiders see the potential in crypto, but don’t know how to take the leap. Many governments have branches focusing on tench/ innovation and climate; this is a great opportunity imo. We do have to go into those opportunities accepting that they want to “Fund What Matters” to them. They probably don’t want to YOLO funds into OSS and Eth Infra without being able to produce tangible and relevant results. I’ve been discussing a featured round with our local Tourism Board. It’s been a slow conversation, but I see lots of potential in bridging normies to Ethereum PGF.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>outbound campaigns to partner with other DAOs (in most cases we’d prpose to do a social/tech/token swap + we help fund their public goods as we do it ).</p>
+</blockquote>
+</aside>
+<p>Ethereum needs more cross DAO coordination. I love this idea. Gitcoin should also b e exploring the opportunity to participate in other DAOs as a delegate(s). Gov forums are where you <a href="https://gov.push.org/t/discussion-a-community-run-push-grants-program-v3/1484" rel="noopener nofollow ugc">find the real alpha</a>. This is an opportunity to tap into ecosystem grants programs early. The cross DAO integrations can tap into “always on”.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>There are many DAOs out there w billions$$$ in capital that doesnt have the proper distribution mechanisms out there, and we could provide that.</p>
+</blockquote>
+</aside>
+<p>Agreed above. Building relationships through governance participation has potential to balance the constant sales hustle we have now. Not sure what workstream this would fall under at the moment. Maybe a combination of GSD, PGF and MMM?</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p><strong>&gt; 1. Speaking each others language internally</strong><br>
+I think the one important thing we can do is build up inter-workstream and inter-skillset and inter-network shared understanding + empathy. We are building an <a href="https://gov.gitcoin.co/t/lessons-about-impact-networks/10305">impact network</a> shouldnt we be following those best practices?</p>
+</blockquote>
+</aside>
+<p>We can be doing a better job at this. The contrast in response to PGF for DEI/ Shell vrs. MMM for discord + twitter hacks and the recent GTC highlight a disbalance in empathy within the DAO in my eyes. Not saying MMM deserves harsh treatment, just wishing PGF received similar empathy in public forums. Most was external, but some was also from our own.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10305">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/lessons-about-impact-networks/10305/1">Lessons about Impact Networks</a></div>
+<blockquote>
+<p>Most people love the idea of collaboration as long as it promises to do exactly what you want to do. But that’s not how collaboration works, Collaboration is not forced or coerced. Collaboration is hard because to collaborate you need to give up control.</p>
+<p>Networks are networks of relationships. Relationships between network participants is the core basis of trust that allows for antifragility of the network.</p>
+</blockquote>
+</aside>
+<p>This gave me lots to think about how I handle collaboration attempts that don’t go my way, Thanks for linking that article.</p>
+          <p><a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/2
+        Sun, 08 Oct 2023 19:13:59 +0000
+gov.gitcoin.co-post-16697-2
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+      
+
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+owocki
+
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9e9260888850267c2543fa0719313b0244d6705e.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/9e9260888850267c2543fa0719313b0244d6705e" title="c173d4e1-a87a-4235-b3aa-0cc6ac6e18a7"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9e9260888850267c2543fa0719313b0244d6705e_2_500x500.jpeg" alt="c173d4e1-a87a-4235-b3aa-0cc6ac6e18a7" data-base62-sha1="mCN3d3Xtua9oqjkmeuLKXmfzhy6" width="500" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9e9260888850267c2543fa0719313b0244d6705e_2_500x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9e9260888850267c2543fa0719313b0244d6705e_2_750x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9e9260888850267c2543fa0719313b0244d6705e_2_1000x1000.jpeg 2x" data-dominant-color="BB8948"></a></div><p></p>
+<p>Per <a href="http://impact.gitcoin.co">impact.gitcoin.co</a>, the Gross Marketplace Value of Gitcoin sits at $50m*</p>
+<p>I would like to offer some thoughts on how the DAO might scale that $50m GMV 10x up to $500m GMV.</p>
+<p>Before I get into that, I’d like to tell you about a handful of hard fought lessons for me.  I’ve gathered these over the last few years and have conveniently summarized for you in less than one page!</p>
+<ol>
+<li>
+<p>Because we’ve listened to <a href="https://www.youtube.com/watch?v=OH3dPShZwagO">this recent interview with Vitalik</a> we know that the public goods funding problem can be broken down into (1) funding sources + (2) fund distribution mechanisms.  These two sides of the equation need to grow in lockstep together.</p>
+</li>
+<li>
+<p>Because we’ve read <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> 's many fantastic updates, including <a href="https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642">Grants Stack Roadmap Updates 2023</a> and we’ve also read <a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616">Systematic Exploration of the Coordination Design Space</a> in Jan 23 we know that Gitcoin has a strongly articulated vision on the “fund distribution mechanisms” side of the equation.  Quadratic Funding got us started, and we continue to innovate there, but it’s not the end-all-be-all mechanism for all of public goods.  We’re building a swiss army knife of fund distribution mechanisms - Quadratic Funding, Direct Grants, + TBD but more details <img src="https://gov.gitcoin.co/images/emoji/twitter/soon.png?v=12" title=":soon:" class="emoji" alt=":soon:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/tm.png?v=12" title=":tm:" class="emoji" alt=":tm:" loading="lazy" width="20" height="20"> .</p>
+<ul>
+<li>Each of these 3 products can be thought of as fund distribution mechanisms.
+<ul>
+<li>Allo is a suite of fund distribution mechanisms targeted at developers.</li>
+<li>Grants Stack is a suite of fund distribution mechanisms targeted at Grants ecosystems.</li>
+<li>Passport is a fund distribution mechanism for the very hard but very valuable problem of sybil resistance.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Because we we’ve read <a href="https://gov.gitcoin.co/t/where-does-the-gitcoin-grants-matching-pool-money-come-from/9036">Where does the Gitcoin Grants Matching Pool Money Come From?</a> from Nov 21 we know that we’ve raised money from sponsorships, NFT sales, and sometimes donations.</p>
+</li>
+<li>
+<p>Because we’ve read my post <a href="https://gov.gitcoin.co/t/scaling-funding-for-blockchain-era-public-goods/9797">Scaling Funding for Blockchain-era Public Goods</a> from Jan 22 and <a href="https://gov.gitcoin.co/t/public-goods-funding-the-race-to-the-bottom/15739">Public Goods funding - The Race to the Bottom</a> from Kyle in the summer of 23 , we know that we should prioritize legitimate, recurring, deep wells of public goods funding.  So far we’ve not yet found &amp; tapped something that meets those criteria.  Sometimes the wells of funding we have tapped have been deep/legimate, they’ve not often been recurring.</p>
+</li>
+<li>
+<p>Because we’ve been following the ecosystem this summer, we know that Optimism and Protocol Guild are both on a tear lately.  The Protocol Guild (a self curated registry of ETH core protocol developers) has regularly been pulling in $1m+ sponsorships (total &gt; $10m in the last 18 months ) and even get a TradFi ETF to donate 10% of their fees to them.  Optimism (a Layer 2 that uses Retroactive Public Goods Funding to fund it’s public goods) is using revenue from sequencer fees to fund Retroactive Public Goods to the tune of $20m/quarter.    Another interesting entrant is Octant, which is using Golem Foundations massive treasury to stake + return the funds to public goods to the tune of $10m/yr+.</p>
+</li>
+<li>
+<p>Because we <a href="https://medium.com/@owocki/practical-pluralism-322ab0a984c5">practice practical pluralism</a> we celebrate these successes… We love to see public goods get funded!  We are proud to be side by side in the ecosystem with these deeply legitimate projects + helping to serve many of the same people they serve, but with different mechanisms.  At the same time, these data points prove to us that <em>finding recurring/legitimate/deep wells of funding can be done, even in a bear market</em> and so they give us hope that we will too find a solution!  Also, how we add value to these projects by making Allo good enough that it’ll help them?</p>
+</li>
+<li>
+<p>Because we’ve read Vitaliks post <a href="https://vitalik.ca/general/2022/09/20/daos.html">on where decentralization matters</a>, we know that decentralization matters for (1) democratic decision making (2) censorship resistance (3) credible neutrality.  Because public goods funding requires (1) democratic decision making + (2) credible neutrality, we can take solace that the 24 month odyssey to rewrite the web2 products into decentralized protocols was worth it.  And that any project that wants to compete with us will have to make more effective investments in smart contract engineering, protocol design, and dapp design as well.</p>
+</li>
+</ol>
+<p>Ok with those hard fought lessons out of the way…  how do we scale 10x from here?</p>
+<p>We can (and will) keep <a href="https://paulgraham.com/ds.html">doing things that don’t scale</a>.  Or only scale sublinearly (worse than linearly).  Things like building regen culture, chasing sponsorships, doing NFT drops.  I’d go so far as to say that we should be more organized about doing outbound campaigns to partner with other DAOs (in most cases we’d prpose to do a social/tech/token swap + we help fund their public goods as we do it ).</p>
+<p>But the bulk of this post is about the promising things that do scale super-linearly (better than linear).  Hopefully by having a conversation about where the highest ROI is, we can start making some smart bets.</p>
+<p>What follows is what I’m excited about.</p>
+<p><strong>Aqueducts</strong> - I’m excited about building modular <a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684">aqueducts</a> for recurring always on funding.   Experiments I think are cool here</p>
+<ul>
+<li>Aqueducts being a formal part of Allo v2</li>
+<li><a href="https://community.supermodular.xyz/t/new-open-source-crowdfunding-tool/412">The crowdfunding tool</a> <span class="mention">@carlb</span> built while we were at supermodular:</li>
+<li>Taking each of our newly modularized <a href="https://gov.gitcoin.co/t/modularizing-the-program/16670">programs</a> and creating separate matching pools for each round we run a la climate.gitcoin.eth, eth_infra.gitcoin.eth, eth_oss.gitcoin.eth, eth_community.gitcoin.eth, etc….</li>
+<li>Integrations with Superfluid and/or Radicle Drips or other similar streaming tools.</li>
+<li>Building mechanisms that consume hypercerts, EAS, or other standardized on-chain impact signals + intelligently distribute rewards to them.  Idk any experiments that are doing this yet, except maybe tea.xyz or OSObserver, and I’m mostly just excited about this bc <a href="https://www.youtube.com/watch?v=OH3dPShZwagO">Vitalik is</a>.</li>
+</ul>
+<p><strong>Doing Grants/Airdrops for every EVM based Ecosystem</strong> - I’m excited about the momentum that we’ve seen in self-serve QF and direct grants since Grants Stack launched.  There are many DAOs out there w billions$$$ in capital that doesnt have the proper distribution mechanisms out there, and we could provide that.  The meta of Airdrops is totally broken right now, and Grants Stack/Passport offer some interesting new tools to evolve that meta forward.  The market for this right now is likely in the tens or hundreds of millions$$$ yearly.</p>
+<p><strong>Doing Grants for fiat ecosystems</strong> - I think that eventually, having fiat capital on-ramps could be huge for Gitcoin.  A <a href="https://www.notion.so/Proposal-Fiat-donations-direct-on-ramping-to-PGN-c58eccd9d5814f6e84e28e4bcf4bb2d1">recent architectural analysis even showed how this could be done</a>, but I think we’ll have to focus on EVM ecosystems first.  When the GTM for EVM ecosystems is maturing, it might be prudent to pursue more fiat ecosystems.  The TAM for this is likely in the tens of billions of $$$s/yearly, maybe even more.</p>
+<p><strong>Totally new form factors for capital allocation</strong> - I am excited to see what Allo v2 will bring, and how a fruitful developer ecosystem can be built around it .  Some experiments I’m excite for</p>
+<ul>
+<li><a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462">Quadratic Funding Social Networks</a></li>
+<li><a href="https://www.youtube.com/watch?v=JardevlkgQg">Impact Stream</a></li>
+<li>Other Allo Integrations like Buildbox, Endaoment, Sablier, or Octant.</li>
+<li>Allo Hackathons</li>
+</ul>
+<p>I can’t even estimate how big this market becuase the opportunity is so big.  But it is also very complicated GTM wise, because we are bootstrapping a developer ecosystem around our suite of protoocols - and for Allo to be successful, it must make those people successful.  Each of them have slightly different GTM considerations.</p>
+<p><strong>Always on funding sources</strong> - We should always be looking for economically exothermic areas of the ecosystem (meaning they give off funding as a byproduct of normal operations) and then plugging them into our products.  Some examples of economically exothermic parts of Ethereum:</p>
+<ul>
+<li>MEV / Sequencer Fees, especially from PublicGoods.network or other L1s/L2s.</li>
+<li>Contract Secured Revenue/EIP-6968 - I’m cooking up something here with Zak Cole.</li>
+<li>Yield from gtcETH, GLOW, etc.</li>
+<li>DAO Treasuries for any DAO that has a sustainable revenue model (like Uniswap, compound, or any DEFI project)</li>
+</ul>
+<p>I think these are each 10$$m+ opportunities.  But we lack any well-funded special teams that have a mandate dedicate to pursuing them and most of them emerge as underfunded side projects.</p>
+<p><strong>Passport -</strong>  Passport has the opportunity to do for sybil resistance what twilio did for SMS.    I wrote a bit about how big of an opportunity I think passport is <a href="https://gov.gitcoin.co/t/passport-is-our-aws/10995">here</a> last summer.  More on their roadmap <a href="https://www.notion.so/gitcoin/Passport-SSOT-e5d4df27d3c54192a947efe315f3f550">here</a>.  I think there’s likely a billion $$$$ market here. The TAM for human identity tools is literally everyone on earth who has an internet connection.</p>
+<p><strong>Internal stuff</strong> - OK, this one is different than the above ones.  It’s purely an internal-centric one.</p>
+<p><strong>&gt; 1. Speaking each others language internally</strong><br>
+I think the one important thing we can do is build up inter-workstream and inter-skillset and inter-network shared understanding + empathy.  We are building an <a href="https://gov.gitcoin.co/t/lessons-about-impact-networks/10305">impact network</a> shouldnt we be following those best practices?</p>
+<p>How do we create more <a href="https://www.youtube.com/watch?v=v7YbnY1JUhg">common knowledge</a> about our paths to the most important thing.  Each pocket of important common knowledge can serve as a shelling point for getting important shit done + delivering more Ws than Ls.  This would stretch all of us, because it means that engineers need to speak sales, that BD needs to speak computer science, that we all rally around the product managers for what they need, but it would be high upside if we could.</p>
+<p><strong>&gt; 2. Create a formal organization-wide value heuristic</strong></p>
+<p>I think another intra-workstream thing we could do that would reinforce this is to <a href="https://twitter.com/owocki/status/1704204134625464515">we need to make value-delivery + the creation external facing W’s the social-political currency + actual economic currency of the DAO</a> .  I’d even go so far as to one day formalize this so that everyone is clear on the rubric they are judged against:</p>
+<p>A proposed anchor point for the question of “how much is my team generating value?” could be:</p>
+<blockquote>
+<p>w₁ = GTC_utility_produced + revenue_generated_in_usd</p>
+</blockquote>
+<p>In the event that a product is pre-revenue their weight can be determined by</p>
+<blockquote>
+<p>w₂ = size_of_subDAO_economy_in_usd</p>
+</blockquote>
+<p>I have a whole 'nother post about this I can drop if ppl are interested.  DM me if you want a preview.</p>
+<p><strong>&gt; 3. Decentralization wen?</strong></p>
+<p>I expect that the next 12-18 months will be focused on product/protocol adoption and we will start thinking about ossifying Gitcoin’s governance <em>only after reaching product market fit</em>.</p>
+<p>I have a whole 'nother post about Gitcoin’s path to ossifyication I can drop if ppl are interested.  DM me if you want a preview.</p>
+<p><strong>A rising tide lifts all boats</strong> - Gitcoin is a bet on EVM ecosystems continuing to grow + proliterate.  We are riding Ethereum’s network effects like a tide that is lifting all boats.  If Ethereum grows 10x in the next decade, that could lift Gitcoin’s boat as well.</p>
+<p>One tangible sign of this happening already is that Gitcoin has started raising funds from Optimism Retro PGF + from Octant.  We are extremely blessed to be in a growing ecosystem with a. pluralism of other innovators within the area of public goods funding <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>.</p>
+<p>Thanks for reading to the end.  When I think about the next 10x, the above is what I’m excited about.  What are you excited about?</p>
+<hr>
+<ul>
+<li>*<em><a href="http://impact.gitcoin.co">impact.gitcoin.co</a> needs an update: the GMV number is actually  ~$52m ish after beta rounds/gg18 but for the purposes of this post, lets call it 50m)</em></li>
+<li>*<em><a href="http://impact.gitcoin.co">impact.gitcoin.co</a> also doesnt reflect the total size of the sybil resistent economy on Gitcoin Passport.  if you take the sum of all the cost of forgeries on Passport and/or the rewards that have been given because a user has a passport, i estimate that it’s between 3-7.5 million $$$ tho</em></li>
+<li>Not financial or tax advice. This content is strictly educational and is not investment advice or a solicitation to buy or sell any assets or to make any financial decisions. This post is not tax advice. Talk to your accountant. Do your own research.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/1
+        Sat, 07 Oct 2023 05:04:43 +0000
+gov.gitcoin.co-post-16697-1
+How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? 📈
+      
+
+

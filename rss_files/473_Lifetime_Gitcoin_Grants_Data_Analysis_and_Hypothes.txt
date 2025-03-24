@@ -1,0 +1,366 @@
+
+
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595
+    Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+
+This report is a submission for the Gitcoin Bounty: https://gitcoin.co/issue/gitcoinco/skunkworks/252/100027341.
+
+
+# Summary
+A drastic increase in the Gitcoin Matching Pools in Round 12 has not been close to any of the rounds historically. 
+The Gitcoin Platform successfully catches opportunistic behaviour in changing grant to a larger matching pool. 
+With the new matching pool strcuture in GR12 users have decided to not mention their region. North American grants have dominated the Gitcoin platform and Africa has been neglected.
+
+*On the technical side:*
+We have cleaned the dataset optimizing for the Gitcoin dataset and Gitcoin in particular. We have also provided an open-source code in Python that can be used for production.
+ 
+# Introduction
+To understand how we can use the data to maximize its utility for the community at large and for decision makers in Gitcoin community, first we have researched the Gitcoin forum posts and the Quadratic Formula.
+
+The posts for Reference:
+* https://gov.gitcoin.co/t/proposal-gitcoin-gr12-matching-pool-allocations/9007
+* https://gov.gitcoin.co/t/grants-round-12-governance-brief/9495
+* https://gov.gitcoin.co/t/gitcoin-round-11-matching-pool-allocations/8386/14
+* https://hackmd.io/@bsci-gitcoin/HJdaK6yoY#
+
+Following these posts we outlined the areas of research that could be explored with the given data:
+* The distribution patterns in the Gitcoin Grants data, for example, correlations between crowdsourced funding + matching to regions, grant category.
+* The effect of changes in matching pools structure prior to GR12 and some insight into the changes that came up with GR12 one pool.
+
+We also provide an account of the peculiarities of the given data such as missing values.
+
+## Structure of the report
+First we provide an overview of the Gitcoin rounds data. Then, we deal with the technical side of working with data: filling in the missing values, correcting for artifacts and feature engineering.
+
+The code is open-sourced and available on kaggle at
+
+* EDA: https://www.kaggle.com/pavfedotov/gtc-bounty-eda
+* Interactive Map: https://www.kaggle.com/pavfedotov/gtc-map
+* Correlations and Modeling: https://www.kaggle.com/pavfedotov/gtc-distribution
+
+We have also uploaded the dataset on kaggle at https://www.kaggle.com/pavfedotov/grallrounds
+
+# Data Cleaning and exploratory data analysis
+## Rounds 1-12 Matching Pools and pot sizes
+In the rounds data we have noticed that besides the official Gitcoin Rounds data includes the rounds data of its partners. Therefore, as the title of the bounty states 12 rounds we left only GR data and the partners rounds counted in the dataset as the GR.
+
+GR data has the most common name of a matching pool in the data is 'all' since Gitcoin Core team (rounds 1-5) and later in consultation with the Funders League (rounds 6-9) has made more centralised decisions on the matching relative to the current state of governance.
+ 
+![Count of Rounds|690x398](upload://634l9XzYo0cT7gbgL71ODeK8D6H.png)
+
+The second most common occurring round is Infra, Dapp and Community which took place from 7 to 11 round. Nft is the third most common value of the pot.
+
+ 
+![newplot|690x325](upload://tFzeFGTTxjSjvbyeP9TjbEPt6ml.png)
+
+One of the notable developments in the round 12 was diffusion of the previous structure of matching pools and a trajectory towards one large single pool. Hence, on the graph above we do not see the common categories in round 12. 
+In the granular data we noticed that instead of the traditional matching pools that OG Gitcoin users likely got used to, the names have switched to "Uniswap", "Polygon", "ZkTech" among other names. To qualify for such pools the grants need to be in one of the 6 categories such as "dGov" or "dApp"  and co-operate with the partner.
+The new grant structure also introduced the new pools such as "Longevity" and "Climate Change" that have stricter qualifying requirements.
+In total in round 12 this led to the historically largest amount of unique grant pools - 9. In part due to the amount of partners and available matching funds.
+![newplot (1)|690x325](upload://wkcG8Q0QpnSXTJ15IGBGoCEKiqK.png)
+ 
+
+## Rounds 1-12 Granular data missing values
+To begin with, we visualize the missing values to find interesting patterns:
+
+ 
+![MSNO|690x276](upload://kIFw6nmINmXvT2M8KwThZiNR0or.png)
+
+ 
+![MSNObar|690x287](upload://zjsYnFyR0NOJAHHe4MMXQ2w3ev4.png)
+
+
+We can see that the column with the most missing values is crowdfund. On the more detailed analysis we find that rows with missing crowdfund values all contain zero unique contributors, which is very interesting. Some ideas on the underlying pattern: the owner of the grant contributing to the grant, error in data logging or a returning contributor.
+ 
+![1|631x218](upload://miX0ozgDBI4iJuaTPnWF0FtIDz2.jpeg)
+
+We also find that the rows that have nan for total have nan for crowdfund and therefore contain little useful information. In proportion its 15% of the total rows that we drop from the dataframe.
+ 
+![2|313x111](upload://5RluMBaZWWm2POA1RnBG1GdCrBP.jpeg)
+
+
+## Exploring Gitcoin Detection of opportunistic behaviour
+
+Next, it was particularly interesting to explore the patterns among the unique grants across time.
+After we cleaned the data we found that the number of unique grants is 1886.
+Personally, I was really interested in exploring the adaptation behaviour in changing the grant region and category and how often that has occurred per grant_id.
+To my surprise less than 0.1% of the grants have been involved in such behaviour that we know from the data. Besides, most of actions that changed region involved actually mentioning the region for the first time.
+ 
+![3|293x285](upload://nyIFrWnX67jJukzxSlXFAJ1dQrh.jpeg)
+
+
+In turn, the grant_id is also connected to the same category across time and Gitcoin has successfully disabled such opportunistic behaviour.
+
+Nevertheless, We decided to test the hypothesis that Gitcoin historically enables changing the grant details if the owner creates similar grant with new details. We assumed that the same grant title might be connected to the same grants. The number of such grants is 44.
+On more detailed analysis we evaluated the changed details and it appeared to not be connected to the gaming the system since none of the detailed in the dataset were changed.
+Therefore, we are confident that Gitcoin has historically caught opportunistic behaviour in adapting the same grant for more favourable matching pool.
+
+## Regions across time and Continent EDA
+From the data, the most common region is none meaning that users in most of the cases decided not to mention the region out of the available options.
+ 
+![4|566x273](upload://50gmeOfAOcNttgihGOKMWh23f6g.jpeg)
+
+It is also interesting that none has coincided with the type of the round and whether there was a pool for a region. Notable that such grants received relatively low amount of matching funds, likely attributed to the Gitcoin penalizing this behaviour.
+ 
+![newplot (2)|690x325](upload://nlClWfwxCXziunuPkw7jyoa1uvO.png)
+
+We also find that the mean total raised funding per grant per round favours Oceania and North America and neglects Africa and Asia to some extent.
+![5|213x117](upload://uc2ie5UUEskZKzkE0Ypw9WMF2I.jpeg)
+
+![base (1)|690x345](upload://8bbYNwHQASPXHbYipLFIxzkgaeT.png)
+
+In fact, by capita NA is a strong favourite in terms of the raised funding.
+
+We have also build an interactive map available at https://www.kaggle.com/pavfedotov/gtc-map
+
+Moreover we explore the interaction between matching and the total for category and region variables for Round 11.
+
+In Round 11 the over-subsidized  region was Africa while  under-subsidized was Middle East.
+![8|209x182](upload://rtmIKJEIVz7zrKLPVHqix7yt4BH.jpeg)
+
+While for a category dGov was the most subsidized while dApp and Comms were not favoured by QF.
+![9|216x126](upload://wJ9eI3wQlzxIcsdgWWXx7Bz0SDX.jpeg)
+Tue, 17 Oct 2023 04:22:31 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+mixmore
+
+            <p>Thank you for sharing this great effort.</p>
+          <p><a href="https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/10
+        Tue, 17 Oct 2023 04:22:31 +0000
+gov.gitcoin.co-post-9595-10
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+      
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+Pfed-prog
+
+            <p>Really great to get such a positive response from a policy analysis expert. Means a lot, cheers.</p>
+          <p><a href="https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/9
+        Tue, 04 Jan 2022 19:44:36 +0000
+gov.gitcoin.co-post-9595-9
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+      
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+cemgundogan
+
+            <p>Thank you very much for this unique analysis!</p>
+          <p><a href="https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/8
+        Tue, 04 Jan 2022 16:56:57 +0000
+gov.gitcoin.co-post-9595-8
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+      
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+Sirlupinwatson
+
+            <p>No, all I am saying is that you made a great analysis. And I like the second part (Correlation + modeling)</p>
+          <p><a href="https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/7
+        Tue, 04 Jan 2022 14:52:32 +0000
+gov.gitcoin.co-post-9595-7
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+      
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+Pfed-prog
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> I would prefer not to be inlcluded in the meta-report. If my prize depends on the inclusion in the meta-report, please, do not send it to me.</p>
+          <p><a href="https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/6
+        Tue, 04 Jan 2022 09:52:41 +0000
+gov.gitcoin.co-post-9595-6
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+      
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+Pfed-prog
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/sirlupinwatson">@Sirlupinwatson</a> Do you mean adapt to Gitcoin pipeline? I am pretty sure that i’ve accomplished exactly what was possible with the given data. I think there is a misunderstanding on how hard is actually to clean this data. Personally, I would prefer to not work with similar Gitcoin dataset in the future. But I definitely made life easier for further applications.</p>
+          <p><a href="https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/5
+        Tue, 04 Jan 2022 09:24:17 +0000
+gov.gitcoin.co-post-9595-5
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+      
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+Sirlupinwatson
+
+            <p>Yes, nice work <a class="mention" href="https://gov.gitcoin.co/u/pfed-prog">@Pfed-prog</a>!</p>
+<p>To a large extent on the correlation analysis + the modeling part.<br>
+It could be great to have a cloud clustering of different mapping as well but this is just an addon.</p>
+          <p><a href="https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/4
+        Mon, 03 Jan 2022 23:53:18 +0000
+gov.gitcoin.co-post-9595-4
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+      
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+DisruptionJoe
+
+            <p>Really great work here! I’m loving lawrence idea to package up all the best insights and continue to deliver the analysis each round</p>
+          <p><a href="https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/3
+        Mon, 03 Jan 2022 21:09:39 +0000
+gov.gitcoin.co-post-9595-3
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+      
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+Pfed-prog
+
+            <h1>
+<a name="correlations-analysis-1" class="anchor" href="https://gov.gitcoin.co#correlations-analysis-1"></a>Correlations Analysis</h1>
+<p>We have further conducted correlations analysis and found relatively strong relationships between these variables:<br>
+<img src="/uploads/db4391/original/2X/9/95f597e579b19a3637dbc9ff723bd0e6811cb2e8.jpeg" alt="6" data-base62-sha1="loBk72yUEtpIWai0QPZJOqyzW0U" width="443" height="300"></p>
+<p>Interesting Findings:<br>
+There is negative low correlation between grant round and match_amount, meaning that as time passes the matching amount decreases<br>
+<img src="/uploads/db4391/original/2X/9/94c0f0be999c53b813fb8ec7786af1c2346c6497.jpeg" alt="7" data-base62-sha1="ldW2oajxH6LUreMnO24F8mkQlIX" width="385" height="104"><br>
+Also a similar relationship between grant_id and match_amount. Since new grants have higher number, the new grants are likely to get lower funding.</p>
+<p>For the observation with region none there is a negative somewhat mild correlation -0.35 with the number of unique contributors. For this region it is also notable that it has negative correlation of -.27 with total funding raised. However, very similar region undefined has a positive correlation of .17 to total.</p>
+<p>The structured heatmap for the variables is as follows:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/65e6904f9721d05d901b326db57366dd33a501d9.png" data-download-href="/uploads/short-url/exscI08fpEY0xyuoGQ4pNc1tyc1.png?dl=1" title="MSNObar (1)" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/6/65e6904f9721d05d901b326db57366dd33a501d9_2_461x500.png" alt="MSNObar (1)" data-base62-sha1="exscI08fpEY0xyuoGQ4pNc1tyc1" width="461" height="500" srcset="/uploads/db4391/optimized/2X/6/65e6904f9721d05d901b326db57366dd33a501d9_2_461x500.png, /uploads/db4391/optimized/2X/6/65e6904f9721d05d901b326db57366dd33a501d9_2_691x750.png 1.5x, /uploads/db4391/original/2X/6/65e6904f9721d05d901b326db57366dd33a501d9.png 2x" data-small-upload="/uploads/db4391/optimized/2X/6/65e6904f9721d05d901b326db57366dd33a501d9_2_10x10.png"></a></div><p></p>
+<h1>
+<a name="modeling-2" class="anchor" href="https://gov.gitcoin.co#modeling-2"></a>Modeling</h1>
+<p>We modeled grouped by round and weighted by count of unique grants. We found that on weighted average a mean contribution of 1$ per grant would result into $660 total funding per average grant.<br>
+<img src="/uploads/db4391/original/2X/e/ea65abbfdef4cfa2e645a261f2540c68cf80b6e1.jpeg" alt="10" data-base62-sha1="xrzyx10EXh4G3u8ruCNfEbHv6gh" width="546" height="88"><br>
+<img src="/uploads/db4391/original/2X/f/f92ab84051346ba95afeab2704d3b3b47e39bb5c.jpeg" alt="11" data-base62-sha1="zyepPXOK2GgFBomoXw5H1aga88s" width="404" height="269"></p>
+<p>In turn, when we add another parameter - average number of unique contributors per round, we get coefficients and results that demonstrate the value of a large amount of unique contributors and the crowdsourced funds:</p>
+<p><img src="/uploads/db4391/original/2X/4/42d254c321148eb28e93201302fa5aeea4fdc6dd.png" alt="image" data-base62-sha1="9x890KXfUsqjD0ez2jFcrmD0d0V" width="547" height="116"></p>
+<p>For instance, if only 1 person donates 1$ to each grant, the grant owners would get around 185$ per grant. But if 1000 people donate a sum that would be equal to .001$ to each available grant, an average total raised per grant would be around 3130$.<br>
+In round 12 there were 882 such grants, hence each of the 1000 would  only need to spend 80 cents.</p>
+<p>Next we group by region as well as round and weight by the number of unique grants.<br>
+Since we found that mean_crowdfund is highly significant we will include dummies for each region except one to avoid bias. In addition we include the number of grant round to estimate the effect of the trend.</p>
+<p>We find that the most penalized region is Africa followed by Middle East.<br>
+<img src="/uploads/db4391/original/2X/6/6640d7314e472ee2688df3db423828192a181743.png" alt="image" data-base62-sha1="eAzCAcOBQ34y4D75QiVslf0lpd1" width="589" height="406"></p>
+<h3>
+<a name="synthetic-controls-3" class="anchor" href="https://gov.gitcoin.co#synthetic-controls-3"></a>Synthetic Controls</h3>
+<p>The effect of the separating Africa in GR11 as its own matching pool.<br>
+<img src="/uploads/db4391/original/2X/e/eb7f4f7cf5cf90208583b04db03bf7ee3841075f.png" alt="image" data-base62-sha1="xBiXXjRTbQmz8ItdBbVmoZ0QBJB" width="586" height="335"></p>
+<p>The initial effect of the policy seems to have an immediate positive impact on the Africa in GR 11, but a large negative effect in round 12.</p>
+          <p><a href="https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/2
+        Sat, 01 Jan 2022 07:03:57 +0000
+gov.gitcoin.co-post-9595-2
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+      
+
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+Pfed-prog
+
+            <p>Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing</p>
+<p>This report is a submission for the Gitcoin Bounty: <a href="https://gitcoin.co/issue/gitcoinco/skunkworks/252/100027341" class="inline-onebox" rel="noopener nofollow ugc">analyze lifetime Gitcoin Grants Data Rounds -12 | gitcoinco Funded Issue Detail | Gitcoin | Gitcoin</a>.</p>
+<h1>
+<a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary</h1>
+<p>A drastic increase in the Gitcoin Matching Pools in Round 12 has not been close to any of the rounds historically.<br>
+The Gitcoin Platform successfully catches opportunistic behaviour in changing grant to a larger matching pool.<br>
+With the new matching pool strcuture in GR12 users have decided to not mention their region. North American grants have dominated the Gitcoin platform and Africa has been neglected.</p>
+<p><em>On the technical side:</em><br>
+We have cleaned the dataset optimizing for the Gitcoin dataset and Gitcoin in particular. We have also provided an open-source code in Python that can be used for production.</p>
+<h1>
+<a name="introduction-2" class="anchor" href="https://gov.gitcoin.co#introduction-2"></a>Introduction</h1>
+<p>To understand how we can use the data to maximize its utility for the community at large and for decision makers in Gitcoin community, first we have researched the Gitcoin forum posts and the Quadratic Formula.</p>
+<p>The posts for Reference:</p>
+<ul>
+<li><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr12-matching-pool-allocations/9007" class="inline-onebox">[Proposal] Gitcoin GR12 Matching Pool Allocations</a></li>
+<li><a href="https://gov.gitcoin.co/t/grants-round-12-governance-brief/9495" class="inline-onebox">Grants Round 12 Governance Brief</a></li>
+<li><a href="https://gov.gitcoin.co/t/gitcoin-round-11-matching-pool-allocations/8386/14" class="inline-onebox">Gitcoin Round 11 Matching Pool Allocations 🤖 - #14 by makoto</a></li>
+<li><a href="https://hackmd.io/@bsci-gitcoin/HJdaK6yoY#" class="inline-onebox" rel="noopener nofollow ugc">Sybil Report on Gitcoin Grants Rounds 12 - HackMD</a></li>
+</ul>
+<p>Following these posts we outlined the areas of research that could be explored with the given data:</p>
+<ul>
+<li>The distribution patterns in the Gitcoin Grants data, for example, correlations between crowdsourced funding + matching to regions, grant category.</li>
+<li>The effect of changes in matching pools structure prior to GR12 and some insight into the changes that came up with GR12 one pool.</li>
+</ul>
+<p>We also provide an account of the peculiarities of the given data such as missing values.</p>
+<h2>
+<a name="structure-of-the-report-3" class="anchor" href="https://gov.gitcoin.co#structure-of-the-report-3"></a>Structure of the report</h2>
+<p>First we provide an overview of the Gitcoin rounds data. Then, we deal with the technical side of working with data: filling in the missing values, correcting for artifacts and feature engineering.</p>
+<p>The code is open-sourced and available on kaggle at</p>
+<ul>
+<li>EDA: <a href="https://www.kaggle.com/pavfedotov/gtc-bounty-eda" class="inline-onebox" rel="noopener nofollow ugc">GTC Bounty EDA | Kaggle</a>
+</li>
+<li>Interactive Map: <a href="https://www.kaggle.com/pavfedotov/gtc-map" class="inline-onebox" rel="noopener nofollow ugc">GTC_map | Kaggle</a>
+</li>
+<li>Correlations and Modeling: <a href="https://www.kaggle.com/pavfedotov/gtc-distribution" class="inline-onebox" rel="noopener nofollow ugc">GTC distribution + modeling | Kaggle</a>
+</li>
+</ul>
+<p>We have also uploaded the dataset on kaggle at <a href="https://www.kaggle.com/pavfedotov/grallrounds" class="inline-onebox" rel="noopener nofollow ugc">GRallRounds | Kaggle</a></p>
+<h1>
+<a name="data-cleaning-and-exploratory-data-analysis-4" class="anchor" href="https://gov.gitcoin.co#data-cleaning-and-exploratory-data-analysis-4"></a>Data Cleaning and exploratory data analysis</h1>
+<h2>
+<a name="rounds-1-12-matching-pools-and-pot-sizes-5" class="anchor" href="https://gov.gitcoin.co#rounds-1-12-matching-pools-and-pot-sizes-5"></a>Rounds 1-12 Matching Pools and pot sizes</h2>
+<p>In the rounds data we have noticed that besides the official Gitcoin Rounds data includes the rounds data of its partners. Therefore, as the title of the bounty states 12 rounds we left only GR data and the partners rounds counted in the dataset as the GR.</p>
+<p>GR data has the most common name of a matching pool in the data is ‘all’ since Gitcoin Core team (rounds 1-5) and later in consultation with the Funders League (rounds 6-9) has made more centralised decisions on the matching relative to the current state of governance.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2a65e28d69c150e5aa9c171d80c78c421c0e6bdb.png" data-download-href="/uploads/short-url/634l9XzYo0cT7gbgL71ODeK8D6H.png?dl=1" title="Count of Rounds" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/2/2a65e28d69c150e5aa9c171d80c78c421c0e6bdb_2_690x398.png" alt="Count of Rounds" data-base62-sha1="634l9XzYo0cT7gbgL71ODeK8D6H" width="690" height="398" srcset="/uploads/db4391/optimized/2X/2/2a65e28d69c150e5aa9c171d80c78c421c0e6bdb_2_690x398.png, /uploads/db4391/optimized/2X/2/2a65e28d69c150e5aa9c171d80c78c421c0e6bdb_2_1035x597.png 1.5x, /uploads/db4391/optimized/2X/2/2a65e28d69c150e5aa9c171d80c78c421c0e6bdb_2_1380x796.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/2a65e28d69c150e5aa9c171d80c78c421c0e6bdb_2_10x10.png"></a></div><p></p>
+<p>The second most common occurring round is Infra, Dapp and Community which took place from 7 to 11 round. Nft is the third most common value of the pot.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cff1f62958e7fb5869564b0f819bfa9edaccd609.png" data-download-href="/uploads/short-url/tFzeFGTTxjSjvbyeP9TjbEPt6ml.png?dl=1" title="newplot" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/c/cff1f62958e7fb5869564b0f819bfa9edaccd609_2_690x325.png" alt="newplot" data-base62-sha1="tFzeFGTTxjSjvbyeP9TjbEPt6ml" width="690" height="325" srcset="/uploads/db4391/optimized/2X/c/cff1f62958e7fb5869564b0f819bfa9edaccd609_2_690x325.png, /uploads/db4391/optimized/2X/c/cff1f62958e7fb5869564b0f819bfa9edaccd609_2_1035x487.png 1.5x, /uploads/db4391/original/2X/c/cff1f62958e7fb5869564b0f819bfa9edaccd609.png 2x" data-small-upload="/uploads/db4391/optimized/2X/c/cff1f62958e7fb5869564b0f819bfa9edaccd609_2_10x10.png"></a></div><p></p>
+<p>One of the notable developments in the round 12 was diffusion of the previous structure of matching pools and a trajectory towards one large single pool. Hence, on the graph above we do not see the common categories in round 12.<br>
+In the granular data we noticed that instead of the traditional matching pools that OG Gitcoin users likely got used to, the names have switched to “Uniswap”, “Polygon”, “ZkTech” among other names. To qualify for such pools the grants need to be in one of the 6 categories such as “dGov” or “dApp”  and co-operate with the partner.<br>
+The new grant structure also introduced the new pools such as “Longevity” and “Climate Change” that have stricter qualifying requirements.<br>
+In total in round 12 this led to the historically largest amount of unique grant pools - 9. In part due to the amount of partners and available matching funds.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e28e40429e2d8b2c28b0ea6e2673c3e915a16d12.png" data-download-href="/uploads/short-url/wkcG8Q0QpnSXTJ15IGBGoCEKiqK.png?dl=1" title="newplot (1)" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/e/e28e40429e2d8b2c28b0ea6e2673c3e915a16d12_2_690x325.png" alt="newplot (1)" data-base62-sha1="wkcG8Q0QpnSXTJ15IGBGoCEKiqK" width="690" height="325" srcset="/uploads/db4391/optimized/2X/e/e28e40429e2d8b2c28b0ea6e2673c3e915a16d12_2_690x325.png, /uploads/db4391/optimized/2X/e/e28e40429e2d8b2c28b0ea6e2673c3e915a16d12_2_1035x487.png 1.5x, /uploads/db4391/original/2X/e/e28e40429e2d8b2c28b0ea6e2673c3e915a16d12.png 2x" data-small-upload="/uploads/db4391/optimized/2X/e/e28e40429e2d8b2c28b0ea6e2673c3e915a16d12_2_10x10.png"></a></div><p></p>
+<h2>
+<a name="rounds-1-12-granular-data-missing-values-6" class="anchor" href="https://gov.gitcoin.co#rounds-1-12-granular-data-missing-values-6"></a>Rounds 1-12 Granular data missing values</h2>
+<p>To begin with, we visualize the missing values to find interesting patterns:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/913824756a33b0e6a2f60c3547f90ecea6a499d3.png" data-download-href="/uploads/short-url/kIFw6nmINmXvT2M8KwThZiNR0or.png?dl=1" title="MSNO" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/9/913824756a33b0e6a2f60c3547f90ecea6a499d3_2_690x276.png" alt="MSNO" data-base62-sha1="kIFw6nmINmXvT2M8KwThZiNR0or" width="690" height="276" srcset="/uploads/db4391/optimized/2X/9/913824756a33b0e6a2f60c3547f90ecea6a499d3_2_690x276.png, /uploads/db4391/optimized/2X/9/913824756a33b0e6a2f60c3547f90ecea6a499d3_2_1035x414.png 1.5x, /uploads/db4391/optimized/2X/9/913824756a33b0e6a2f60c3547f90ecea6a499d3_2_1380x552.png 2x" data-small-upload="/uploads/db4391/optimized/2X/9/913824756a33b0e6a2f60c3547f90ecea6a499d3_2_10x10.png"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f77f709c7007e2c64f9a6e43f5f06220bd9c2be6.png" data-download-href="/uploads/short-url/zjsYnFyR0NOJAHHe4MMXQ2w3ev4.png?dl=1" title="MSNObar" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/f/f77f709c7007e2c64f9a6e43f5f06220bd9c2be6_2_690x287.png" alt="MSNObar" data-base62-sha1="zjsYnFyR0NOJAHHe4MMXQ2w3ev4" width="690" height="287" srcset="/uploads/db4391/optimized/2X/f/f77f709c7007e2c64f9a6e43f5f06220bd9c2be6_2_690x287.png, /uploads/db4391/optimized/2X/f/f77f709c7007e2c64f9a6e43f5f06220bd9c2be6_2_1035x430.png 1.5x, /uploads/db4391/optimized/2X/f/f77f709c7007e2c64f9a6e43f5f06220bd9c2be6_2_1380x574.png 2x" data-small-upload="/uploads/db4391/optimized/2X/f/f77f709c7007e2c64f9a6e43f5f06220bd9c2be6_2_10x10.png"></a></div><p></p>
+<p>We can see that the column with the most missing values is crowdfund. On the more detailed analysis we find that rows with missing crowdfund values all contain zero unique contributors, which is very interesting. Some ideas on the underlying pattern: the owner of the grant contributing to the grant, error in data logging or a returning contributor.</p>
+<p><img src="/uploads/db4391/original/2X/9/9c5441efcf3820d50ac174728c966b27df40f8e8.jpeg" alt="1" data-base62-sha1="miX0ozgDBI4iJuaTPnWF0FtIDz2" width="631" height="218"></p>
+<p>We also find that the rows that have nan for total have nan for crowdfund and therefore contain little useful information. In proportion its 15% of the total rows that we drop from the dataframe.</p>
+<p><img src="/uploads/db4391/original/2X/2/2912a1f40931e77bc88e189b7e4e275890c08935.jpeg" alt="2" data-base62-sha1="5RluMBaZWWm2POA1RnBG1GdCrBP" width="313" height="111"></p>
+<h2>
+<a name="exploring-gitcoin-detection-of-opportunistic-behaviour-7" class="anchor" href="https://gov.gitcoin.co#exploring-gitcoin-detection-of-opportunistic-behaviour-7"></a>Exploring Gitcoin Detection of opportunistic behaviour</h2>
+<p>Next, it was particularly interesting to explore the patterns among the unique grants across time.<br>
+After we cleaned the data we found that the number of unique grants is 1886.<br>
+Personally, I was really interested in exploring the adaptation behaviour in changing the grant region and category and how often that has occurred per grant_id.<br>
+To my surprise less than 0.1% of the grants have been involved in such behaviour that we know from the data. Besides, most of actions that changed region involved actually mentioning the region for the first time.</p>
+<p><img src="/uploads/db4391/original/2X/a/a51ec0857d1e4ce13c5a4f63aab73d1d2ac245f3.jpeg" alt="3" data-base62-sha1="nyIFrWnX67jJukzxSlXFAJ1dQrh" width="293" height="285"></p>
+<p>In turn, the grant_id is also connected to the same category across time and Gitcoin has successfully disabled such opportunistic behaviour.</p>
+<p>Nevertheless, We decided to test the hypothesis that Gitcoin historically enables changing the grant details if the owner creates similar grant with new details. We assumed that the same grant title might be connected to the same grants. The number of such grants is 44.<br>
+On more detailed analysis we evaluated the changed details and it appeared to not be connected to the gaming the system since none of the detailed in the dataset were changed.<br>
+Therefore, we are confident that Gitcoin has historically caught opportunistic behaviour in adapting the same grant for more favourable matching pool.</p>
+<h2>
+<a name="regions-across-time-and-continent-eda-8" class="anchor" href="https://gov.gitcoin.co#regions-across-time-and-continent-eda-8"></a>Regions across time and Continent EDA</h2>
+<p>From the data, the most common region is none meaning that users in most of the cases decided not to mention the region out of the available options.</p>
+<p><img src="/uploads/db4391/original/2X/2/231281555463b4d720b9e4e64d2a5c53e9ef6e28.jpeg" alt="4" data-base62-sha1="50gmeOfAOcNttgihGOKMWh23f6g" width="566" height="273"></p>
+<p>It is also interesting that none has coincided with the type of the round and whether there was a pool for a region. Notable that such grants received relatively low amount of matching funds, likely attributed to the Gitcoin penalizing this behaviour.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a3a39b5e35917db6790b55d53b163cfebcf2e8c4.png" data-download-href="/uploads/short-url/nlClWfwxCXziunuPkw7jyoa1uvO.png?dl=1" title="newplot (2)" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/a/a3a39b5e35917db6790b55d53b163cfebcf2e8c4_2_690x325.png" alt="newplot (2)" data-base62-sha1="nlClWfwxCXziunuPkw7jyoa1uvO" width="690" height="325" srcset="/uploads/db4391/optimized/2X/a/a3a39b5e35917db6790b55d53b163cfebcf2e8c4_2_690x325.png, /uploads/db4391/optimized/2X/a/a3a39b5e35917db6790b55d53b163cfebcf2e8c4_2_1035x487.png 1.5x, /uploads/db4391/original/2X/a/a3a39b5e35917db6790b55d53b163cfebcf2e8c4.png 2x" data-small-upload="/uploads/db4391/optimized/2X/a/a3a39b5e35917db6790b55d53b163cfebcf2e8c4_2_10x10.png"></a></div><p></p>
+<p>We also find that the mean total raised funding per grant per round favours Oceania and North America and neglects Africa and Asia to some extent.<br>
+<img src="/uploads/db4391/original/2X/0/0369c45519011b0d93104860bcf782fb387ab4cc.jpeg" alt="5" data-base62-sha1="uc2ie5UUEskZKzkE0Ypw9WMF2I" width="213" height="117"></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/39554e0b081cf87078503162316738ee23abe363.png" data-download-href="/uploads/short-url/8bbYNwHQASPXHbYipLFIxzkgaeT.png?dl=1" title="base (1)" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/3/39554e0b081cf87078503162316738ee23abe363_2_690x345.png" alt="base (1)" data-base62-sha1="8bbYNwHQASPXHbYipLFIxzkgaeT" width="690" height="345" srcset="/uploads/db4391/optimized/2X/3/39554e0b081cf87078503162316738ee23abe363_2_690x345.png, /uploads/db4391/optimized/2X/3/39554e0b081cf87078503162316738ee23abe363_2_1035x517.png 1.5x, /uploads/db4391/optimized/2X/3/39554e0b081cf87078503162316738ee23abe363_2_1380x690.png 2x" data-small-upload="/uploads/db4391/optimized/2X/3/39554e0b081cf87078503162316738ee23abe363_2_10x10.png"></a></div><p></p>
+<p>In fact, by capita NA is a strong favourite in terms of the raised funding.</p>
+<p>We have also build an interactive map available at <a href="https://www.kaggle.com/pavfedotov/gtc-map" class="inline-onebox" rel="noopener nofollow ugc">GTC_map | Kaggle</a></p>
+<p>Moreover we explore the interaction between matching and the total for category and region variables for Round 11.</p>
+<p>In Round 11 the over-subsidized  region was Africa while  under-subsidized was Middle East.<br>
+<img src="/uploads/db4391/original/2X/c/c08c834db5937bd19e117973120c9d559a6727c9.jpeg" alt="8" data-base62-sha1="rtmIKJEIVz7zrKLPVHqix7yt4BH" width="209" height="182"></p>
+<p>While for a category dGov was the most subsidized while dApp and Comms were not favoured by QF.<br>
+<img src="/uploads/db4391/original/2X/e/e56019fc894fe40374fd82bf554537b4f2e38e55.jpeg" alt="9" data-base62-sha1="wJ9eI3wQlzxIcsdgWWXx7Bz0SDX" width="216" height="126"></p>
+          <p><a href="https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/lifetime-gitcoin-grants-data-analysis-and-hypothesis-testing/9595/1
+        Sat, 01 Jan 2022 06:22:58 +0000
+gov.gitcoin.co-post-9595-1
+Lifetime Gitcoin Grants Data Analysis and Hypothesis Testing
+      
+
+

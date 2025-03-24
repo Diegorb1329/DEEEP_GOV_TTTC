@@ -1,0 +1,105 @@
+
+
+
+Concerns about allowing Paypal donations to receive matching from Gitcoin funds
+https://gov.gitcoin.co/t/concerns-about-allowing-paypal-donations-to-receive-matching-from-gitcoin-funds/19708
+    Gm. I would like to share a personal feedback about allowing fiat donations to match funds from the Gitcoin Community.  In the recent round reports I saw many operators praising the benefits of having more fiat donations, and not so many criticizing it so I felt the need to play devil's advocate for once, in the spirit of collective learning. 
+
+There were 2 specific points that made me concerned and I would like to hear your perceptions about them.
+
+1. **Security Risks**: It seems that fiat donations are not transparent enough to flag bad behavior like collusion or other attack vectors. If I make a fiat deposit in your bank account so you can donate it back to me there's no way to detect it. Therefore all the hard work of folks building the security features of Gitcoin Passport and COCM becomes of no use, or applied only upon web3 donors.
+
+2. **Inequality:** There's a clear inequality in accessibility to allow digital transfers from only one private company, in this case PayPal. In India people do digital transactions using UPI, in Brazil it's PIX and so on. If the goal is to be more "democratic" then should consider all the many digital payment options, or stick with the one that can be used by anyone such as web3. According to the website [worldpopulationreview](https://worldpopulationreview.com/country-rankings/paypal-users-by-country), the **United States** has the most PayPal users with 38.87%. This is followed by **Germany**, which has 19.25%, and the **United Kingdom** with 7.85%. Bringing up the top five is **France** 2.87% and **Italy** with 3.06%. 
+
+So we can always expect the matching to favor projects based or with strong ties with these countries, like happened in the Land Regenerators Round. A suggestion would be to add a QR code for fiat donations of any company in the project application, or a link to a gofundme site, but to allow these donations to get matched is quite risky imo. If one invested one thousand to bribe people to support him and got 10 thousand as match in return COCM wouldn't even notice it. 
+
+I hope this feedback can be of any use for the Gitcoin Community to continue building the best allocation tool that exists. For a more in depth discussion on the flaws of using Paypal please refer to the most recent comments in the Viaprize topic [here](https://gov.gitcoin.co/t/gcp-017-updated-proposal-for-fiat-donations-in-grants-stack/19446/51).
+
+Thank you,
+Diogo Jorge
+Mon, 09 Dec 2024 00:46:17 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Concerns about allowing Paypal donations to receive matching from Gitcoin funds
+Diogo
+
+            <p>Hi Umar, thanks for taking the time to address my concerns regarding security risks.  Here are my 2 last additions to this debate:</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="2" data-topic="19708">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>This is also possible onchain using CEXs. Our goal with sybil defense is similar to the goal of most cybersecurity systems: you can’t make a system unhackable you can only increase the cost to attack it beyond what attackers can pay.</p>
+</blockquote>
+</aside>
+<p>In theory this kind of attack could be made using CEX, that’s right. But imo, the cost of attacking it using CEX is a lot higher than using Paypal, because of the learning curve it demands, which adds a new layer of difficulty to commit crimes (create CEX account, create personal wallet, transfer, donate)… It can be done, but it seems to be much harder for the attacker than just using their favorite digital payment systems.</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="2" data-topic="19708">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>I also agree that PayPal might not be the best long-term onramp yet it’s sufficient for us to run a test to see what the demand for fiat onramping is. As a lean experiment it let us gather data that <a class="mention" href="https://gov.gitcoin.co/u/noahchonlee">@noahchonlee</a> shared amounted to 48% of donations in the GG22 rounds it was used in. That doesn’t mean it’s always going to be PayPal tho!</p>
+</blockquote>
+</aside>
+<p>I imagine you say this because of the inherent inequality in picking one specific digital payment company. I wonder if this 48% increase in donations makes it worth using it despite the inequality. Also, wonder if this 48% increase led to a more concentrated allocation of funds to few projects or kept a similar allocation ratio as seen in previous rounds.</p>
+<p>I praise the experiment and hope it contributes to continue improving the allocation mechanism. Thank you for all the work you put into this.</p>
+          <p><a href="https://gov.gitcoin.co/t/concerns-about-allowing-paypal-donations-to-receive-matching-from-gitcoin-funds/19708/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/concerns-about-allowing-paypal-donations-to-receive-matching-from-gitcoin-funds/19708/3
+        Mon, 09 Dec 2024 00:46:17 +0000
+gov.gitcoin.co-post-19708-3
+Concerns about allowing Paypal donations to receive matching from Gitcoin funds
+      
+
+Concerns about allowing Paypal donations to receive matching from Gitcoin funds
+umarkhaneth
+
+            <p>Thanks for sharing your concerns!</p>
+<blockquote>
+<p>Therefore all the hard work of folks building the security features of Gitcoin Passport and COCM becomes of no use, or applied only upon web3 donors.</p>
+</blockquote>
+<p>To clarify, COCM works on donation choices therefore it applies equally to both Paypal and regular donors. Collusion still gets treated even if you donate via Fiat.</p>
+<p>Passport works on transaction behavior to filter out bot accounts so you’re right that this part does not apply to Paypal donors. However, when donating through Paypal, viaPrize only accepts donations from verified donors. Paypal verification and passport therefore each provide security against bots.</p>
+<blockquote>
+<p>If I make a fiat deposit in your bank account so you can donate it back to me there’s no way to detect it.</p>
+</blockquote>
+<p>This is also possible onchain using CEXs. Our goal with sybil defense is similar to the goal of most cybersecurity systems: you can’t make a system unhackable you can only increase the cost to attack it beyond what attackers can pay.</p>
+<blockquote>
+<p>There’s a clear inequality in accessibility to allow digital transfers from only one private company, in this case PayPal.</p>
+</blockquote>
+<p>I also agree that PayPal might not be the best long-term onramp yet it’s sufficient for us to run a test to see what the demand for fiat onramping is. As a lean experiment it let us gather data that <a class="mention" href="https://gov.gitcoin.co/u/noahchonlee">@noahchonlee</a> shared amounted to 48% of donations in the GG22 rounds it was used in. That doesn’t mean it’s always going to be PayPal tho!</p>
+          <p><a href="https://gov.gitcoin.co/t/concerns-about-allowing-paypal-donations-to-receive-matching-from-gitcoin-funds/19708/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/concerns-about-allowing-paypal-donations-to-receive-matching-from-gitcoin-funds/19708/2
+        Fri, 06 Dec 2024 07:35:41 +0000
+gov.gitcoin.co-post-19708-2
+Concerns about allowing Paypal donations to receive matching from Gitcoin funds
+      
+
+Concerns about allowing Paypal donations to receive matching from Gitcoin funds
+Diogo
+
+            <p>Gm. I would like to share a personal feedback about allowing fiat donations to match funds from the Gitcoin Community.  In the recent round reports I saw many operators praising the benefits of having more fiat donations, and not so many criticizing it so I felt the need to play devil’s advocate for once, in the spirit of collective learning.</p>
+<p>There were 2 specific points that made me concerned and I would like to hear your perceptions about them.</p>
+<ol>
+<li>
+<p><strong>Security Risks</strong>: It seems that fiat donations are not transparent enough to flag bad behavior like collusion or other attack vectors. If I make a fiat deposit in your bank account so you can donate it back to me there’s no way to detect it. Therefore all the hard work of folks building the security features of Gitcoin Passport and COCM becomes of no use, or applied only upon web3 donors.</p>
+</li>
+<li>
+<p><strong>Inequality:</strong> There’s a clear inequality in accessibility to allow digital transfers from only one private company, in this case PayPal. In India people do digital transactions using UPI, in Brazil it’s PIX and so on. If the goal is to be more “democratic” then should consider all the many digital payment options, or stick with the one that can be used by anyone such as web3. According to the website <a href="https://worldpopulationreview.com/country-rankings/paypal-users-by-country" rel="noopener nofollow ugc">worldpopulationreview</a>, the <strong>United States</strong> has the most PayPal users with 38.87%. This is followed by <strong>Germany</strong>, which has 19.25%, and the <strong>United Kingdom</strong> with 7.85%. Bringing up the top five is <strong>France</strong> 2.87% and <strong>Italy</strong> with 3.06%.</p>
+</li>
+</ol>
+<p>So we can always expect the matching to favor projects based or with strong ties with these countries, like happened in the Land Regenerators Round. A suggestion would be to add a QR code for fiat donations of any company in the project application, or a link to a gofundme site, but to allow these donations to get matched is quite risky imo. If one invested one thousand to bribe people to support him and got 10 thousand as match in return COCM wouldn’t even notice it.</p>
+<p>I hope this feedback can be of any use for the Gitcoin Community to continue building the best allocation tool that exists. For a more in depth discussion on the flaws of using Paypal please refer to the most recent comments in the Viaprize topic <a href="https://gov.gitcoin.co/t/gcp-017-updated-proposal-for-fiat-donations-in-grants-stack/19446/51">here</a>.</p>
+<p>Thank you,<br>
+Diogo Jorge</p>
+          <p><a href="https://gov.gitcoin.co/t/concerns-about-allowing-paypal-donations-to-receive-matching-from-gitcoin-funds/19708/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/concerns-about-allowing-paypal-donations-to-receive-matching-from-gitcoin-funds/19708/1
+        Thu, 05 Dec 2024 03:58:47 +0000
+gov.gitcoin.co-post-19708-1
+Concerns about allowing Paypal donations to receive matching from Gitcoin funds
+      
+
+

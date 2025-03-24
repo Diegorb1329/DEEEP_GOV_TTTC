@@ -1,0 +1,770 @@
+
+
+
+Shape Rotators Guide to Funding What Matters
+https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174
+    *(this post is a 10 min read, and is targeted at leaders following Gitcoin's evolution in the regen web3 space.  if you want to get up to speed,  [start with this post first](https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616) and [this post](https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697) next, and [this post](https://gov.gitcoin.co/t/3-transitions-from-gitcoin-1-0-gitcoin-2-0/16736) last)*
+
+# TLDR
+
+This post discusses the evolution of funding mechanisms in the context of Gitcoin's mission to "Fund What Matters".
+
+We use both empirical knowledge, a priori reasoning, and a few educated guesses, to explore the evolving landscape of funding mechanisms in web3.
+
+The post examines how different design criteria have shaped various funding experiments.
+
+We then explore the potential future of the design space, considering additional design criteria like project maturity, retroactive funding, dependance on impact attestations, or mobile first experiments.
+
+We then make some educated guesses about how the design space might evolve, informing where to place bets over the next 5-10 years.
+
+# Shape Rotators Guide to Funding What Matters
+
+As a [shape rotator](https://www.urbandictionary.com/define.php?term=shape%20rotator), I love cartography. Cartography (the study and practice of making and using maps) allows for visual understanding of what’s around us. A picture is worth a thousand words, which means that by visualizing abstract concepts, more of us can get on the same page faster & at higher fidelity than we would otherwise.
+
+The objective of this post is to cartography the design space in & around Gitcoin’s mission (To Fund What Matters).
+
+![|624x256](upload://pMBATMdE4VyyOUK9Eir7K2wn3aO.png)
+
+Empirical knowledge is gained through experience or observation, relying on the senses or experiments to understand the world. A priori knowledge, on the other hand, is knowledge that is known independently of experience, based on reason or logical deduction.
+
+In this post, I will try to leverage both types of reasoning to cut through the “fog of war” of the design space. "Fog of war" metaphorically describes the ambiguity and lack of clarity in understanding and making decisions within complex systems.
+
+![|264x200](upload://kpce7Q3vhffsJ9php9U80020N2Z.jpeg)
+
+# The design space
+
+By reflecting on the growth of the internet empirically, and by reasoning about the a priori parallels between web1 and web3, we can reason about how web3 might play out..
+
+![Screen Shot 2021-12-24 at 9.26.45 AM|624x153](upload://p1T5DJxwcgb3D1rRUJSDxGt1R5e.png)
+
+Just as email, IMs, twitter and tik tok, and LLMs changed how we transfer information… The internet of money could change how we transfer money. How we Fund What Matters.
+
+We have Massively Multiplayer Online Role Playing Games (MMORPGs). Now that we’ve got web3, will we have Massively Multiplayer Online Funding Games (MMOFPs)? Can large networks of people coordinating resources be more powerful than large corporations/governments/billionaires?
+
+I have an instinct that peer to peer funding games may be the biggest wedge we have. There is a greenfield opportunity to explore the design space around Gitcoin’s mission, to “Fund What Matters”.
+
+# The mission
+
+Gitcoin’s mission, "Fund What Matters", is a directive emphasizing the importance of investing in or financially supporting causes, projects, or initiatives that hold significant value or impact. It suggests prioritizing spending in areas that make a meaningful difference, whether socially, environmentally, culturally, or economically.
+
+This phrase often encourages individuals or organizations to think critically about where their money can have the greatest positive effect. It's a call to action for responsible and purpose-driven allocation of resources, aligning financial decisions with core values and priorities.
+
+# The mission x the design space
+
+By leveraging blockchain technology, the attributes of it that make it powerful (transparency, corruption resistance, global, open source, programmable), and the wave of innovation surrounding the EVM, we can help evolve how people “Fund what matters” to them.
+
+Just as the internet accelerated the flow of information, web3 can accelerate the flow of capital. We can ride this wave to build and scale new funding experiments.
+
+# The past
+
+In 2019, the bear market had just hit. And projects in the Ethereum ecosystem needed funding.. At the time, the major forces in Eth public goods funding were the Ethereum Community Fund, the Ethereum Foundation, and Consensys. The EF/ECF had grants programs or you could get hired at Consensys.
+
+Gitcoin discovered [Quadratic Funding](https://wtfisqf.com/) in late 2018 and launched Gitcoin Grants in January 2019. We were differentiated from the existing players by the decentralized decision making introduced by quadratic funding.
+
+I think the design space kind of looked like this.
+
+|criteria|comment|
+| --- | --- |
+|technocratic = small group of decision makers|At the ECF/EF, you had to go through a grantmaking process where a small commitee would decide if you got funding. At Consensys, you had to be hired by Joe Lubin or his disciples.|
+|democratic = larger more permissionless group of decision makers|At Gitcoin, anyone can help allocate the funding due to Quadratic Funding. This scales because 1000s of projects can get funded at once.|
+
+Here it is visualized as a 2 dimensional spectrum:
+
+![|238x99](upload://lKHlT8BzhPMYlfZksM9K5As8KGs.png)
+
+Of course, this doesn't tell the full story. If you were to add a 2nd axis showing the amount of funding being deployed, the design space would look something like this.
+
+![|245x194](upload://idvxfpq0y1sTanXgBwwD7qodaGt.png)
+
+# The present
+
+Over the course of 2022, more players entered the space and we began to see the rise of [retroactive public goods funding experiments](https://gov.gitcoin.co/t/devconnect-zuzalu-istanbul-takeaways-for-gitcoin/17159#h-2-new-market-leaders-7) like Optimism RPGF and very simple but effective mechanisms like the Protocol Guild’s self curating registry.
+
+Trying to further map the design space, adding another 3rd dimension…. Looks like this:
+
+![|295x194](upload://sxCUzUVyeGOPgnkXyNePyqildF7.png)
+
+If we were to make the 3rd dimension “simplicity”, then it would kind of look like this:
+
+![|219x142](upload://bi4W71QJh6zFHQ3HvshtShCLpR5.png)
+
+Each of these experiments evolved the design space forward in important ways.
+
+1. [Retroactive public goods funding](https://vitalik.ca/general/2021/11/16/retro1.html) is based off the idea that it is easier to fund projects based on the impact they’ve already had. As opposed to speculating on the impact they might have in the future. After retroPGF is established, we can then bet that projects could receive proactive funding based on future retroactive rewards.
+2. [Protocol Guild](https://protocol-guild.readthedocs.io/en/latest/) built a very simple mechanism, a self curating registry. This registry allowed projects to easily contribute to protocol development.
+
+Lets get weird. Lets look at what this new design space looks like all together. If we combine the two 3d cubes, we get a tesseract (4 dimensional cube) showing us the new design space.
+
+![|624x379](upload://aKnJRNpBub1tnDd53HuTVZw1jGf.png)
+
+Since us humans have evolved to understand 3d images, this 4d visualization is a bit hard to grok visually. That said, once you spend some time staring at it, you will can internalize that we’ve found a way to conceptualize the entire design space across all 4 dimensions:
+
+1. Technocratic vs democratic
+2. Amount of funding
+3. Proactive vs retroactive
+4. Simple vs complex
+
+As a [shape rotator](https://www.urbandictionary.com/define.php?term=shape%20rotator) is where things get interesting to me. As people begin launching projects that are empirically effective at funding what matters to them, we can start to build a 1, 2, 3 dimensional ….. Up to n-dimensional space of what the design space looks like.
+
+[![|624x193](upload://taeZp0viy00AdxuWuAlRSm8TsFQ.png)](https://www.figma.com/file/G40n68I2Qyi07WgQqMTjdV/Fund-What-Matters---Cartography'ing-the-design-space.?type=design&node-id=0%3A1&mode=design&t=lW4WMLuhJ55pxpzu-1)
+
+# The future
+
+Now we are really starting to cartography the design space. By creating visualizations of how these mechanisms relate to each other, and extracting the criteria that makes them different, we’re starting to get a visual of the design space!! We’ve started to beat back the fog of war of the possibilities.
+
+Here, again are the criteria (dimensions) that the market has begun to segment itself upon:
+
+|criteria|comment|
+| --- | --- |
+|Technocratic vs Democratic|Is the # of decision makers larger or small?|
+|Amount of Funding in $$$|Is the amount of $$ at stake larger or small?|
+|Retroactive vs proactive|Is the funding criteria based on value in the past, future, present, or a combo of both.|
+|Simple vs complicated|How much complexity is within the capital allocation mechanism.|
+
+What opportunities to do something cool and innovative, building on this criteria, are there? Some examples:
+
+* What if we built self curating registries (like Protocol Guild) into Allo and deployed them to adjacent public goods spaces (eg other than protocol developers)? How big is the TAM (total addressable market) for this?
+* What if we built retroactive public goods funding into Gitcoin Grants? How big is this TAM?
+* What if we built more technocratic/expert-led decision making into Gitcoin Grants? How big is thisTAM?
+
+What if there are more criteria (dimensions) that matter? What if there is a higher dimensionality to the design space?
+
+[![|508x206](upload://pkHMZpV8C5ErlK5cb4Dtt1oIXLX.png)](https://www.figma.com/file/G40n68I2Qyi07WgQqMTjdV/Fund-What-Matters---Cartography'ing-the-design-space.?type=design&node-id=0%3A1&mode=design&t=lW4WMLuhJ55pxpzu-1)
+
+What dimensions would we even care to splice the design space by? And would each dimension justify the complexity of thinking in higher dimensional thinking? Since it’s hard to think in higher than 3 dimensions, maybe we’d be better off focusing on design spaces 3 dimensions or less.
+
+That said, there might be value in exploring what dimensions to even look at.
+
+We can make some educated guesses here. Here are all of the additional dimensions I can think would ever matter within the design space of “how do you build a mechanism that helps people fund what matters?
+
+|Criteria (cont’d)|Comment (cont’d)|
+| --- | --- |
+|Mature projects vs seed projects|Is the mechanism more for mature projects or seed stage projects?|
+|web2 vs web3 ux|Is the ux usable for web2 natives??|
+|Effective or not.|Is the mechanism actually effective at whatever its goal is (in Gitcoin’s case building an ecosystem)? How big is the TAM?|
+|Return expected vs not|Is a return expected as part of the fundraise? Or not?|
+|Virality vs not|Is virality a big part of the mechanism? Like for Quadratic Funding, where people tend to share their grants on social media.|
+|Does it depend on Impact Attestations?|Does the mechanism depend on impact attestations? Do we have a reliable proof-of-impact?|
+|Oracle-limited or not?|If the mechanism depends on some external data source, is it limited by having reliable oracles or not? Eg if you were trying to fund a project to stop deforestation, what is the data-trail between the forest + the blockchain?|
+|Credibly neutral vs not|Does the mechanism's constituents care that its credibly neutral, or does it allow for rent-seeking intermediaries?|
+|Desktop vs mobile|Is the mechanism experience desktop first (okcupid, match.com), or mobile-first? (like tinder)|
+|Built into social media? (emergent)|Is the mechanism a standalone website, or is it built onto a web3 social network like farcaster/lens protocol?|
+|Massively multiplayer?|Will the mechanism work at scale? Will it enable Massively Multiplayer Online Funding Games (MMOFPs)?|
+|Are assets fungible or not?|Do the primary assets in the mechanism resemble fungible things like ERC-20s? Or are they more based on ERC-721 like assets?|
+|Can it be built on top of Allo?|This is a germane question for Gitcoin. Can it be built upon allo? Does allo help make it easier to bring to market?|
+|Can it be built on top of Passport?|Does the mechanism benefit from sybil resistance? If so, does Passport newly enable it?|
+|Is the funding continuous/recurring? Is it based off dependably [economically exothermic](https://twitter.com/owocki/status/1722234106954838355) funding sources?|Does the mechanism depend on fickle things like people donating? Or does it depend on continuous sources of funding (like sequencer fees or yield)?|
+
+# Open Questions
+
+Which combinations of these criteria have billion$$$ potential to ‘Fund What Matters’?? Where is the TAM very large now, and what design spaces have billion $$$ potential next cycle? Which will only be enabled by new ux breakthroughs (like PWAs, gasless apps, account abstraction)?
+
+Would we be served well by building/researching many of these tools internally, or enabling 1000s of devs to build in these design spaces, on top of Allo? And perhaps taking upside in each.
+
+It may be worth defining criteria for when it makes sense to double down on existing families of mechanisms we know are working (QF, retro PGF), vs go broad and exploring new mechanisms. Are the two mutually exclusive, or can we design a network that, like a[ slime mold](https://twitter.com/owocki/status/1456368527347044355), can both search + harvest at the same time?
+
+Here are some of the things I am interested in doing
+
+1. Map out spectrum of public goods funding from cradle-to-grave (or cradle-to-unicorn) for each project.
+2. How does retroactive public goods funding create new opportunities?
+3. How does sybil resistance from things like Gitcoin Passport create new opportunities?
+4. What opportunities are there to build mechanisms into web3 social networks like Lens/Farcaster?
+5. What are the mobile-first possibilities?
+6. What would Gitcoin Grants but for private goods look like? Eg you get gov tokens when you donate? Would it detract from Gitcoin’s mission or be a valuable extension of Allo/Grants Stack?
+7. What is the design space of Allo v2? What are the highest opportunities within them?
+8. How would making the ux of Gitcoin feel more web2 native affect the market size oppy?
+
+# Next Steps
+
+First, I’d love to validate that this way of thinking about the design space is valuable to others. If it is (or is not), feel free to comment below, DM me, or [join this telegram group](https://t.me/+SISOI8-cs3c0NjM5).
+
+![Screenshot 2023-11-24 at 8.55.57 AM|690x391](upload://oGUIsnGnIi3wymaSRiouwVfDajT.jpeg)
+
+
+I will be putting together a working group to work through these questions above. If this sounds like you, [Join the telegram group!](https://t.me/+SISOI8-cs3c0NjM5)
+
+# Conclusion
+
+In this post, we reasoned empirically and a priori about how the design space for Funding What Matters has evolved so far. We then visualized it.
+
+From there, we made some educated guesses about what other types of experiments for Funding What Matters may exist in the future. Then we identified some next steps we could take for Gitcoin (and the broader regen web3 ecosystem) to advance the mission.
+Thu, 07 Dec 2023 12:54:45 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Shape Rotators Guide to Funding What Matters
+owocki
+
+            <aside class="quote no-group" data-username="sophia" data-post="6" data-topic="17174">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sophia/48/11928_2.png" class="avatar"> sophia:</div>
+<blockquote>
+<p>Perhaps, more tooling/research to figure out what type of impact metrics retroactive funders are willing to pay for could enable more marketplaces for retroactive funding projects/investments… ?</p>
+</blockquote>
+</aside>
+<p>im planning a whole greenpill season on this <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> 5-7 episodes, recording next week.  hopefullly dropping by the new year.</p>
+          <p><a href="https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/7
+        Thu, 07 Dec 2023 12:54:45 +0000
+gov.gitcoin.co-post-17174-7
+Shape Rotators Guide to Funding What Matters
+      
+
+Shape Rotators Guide to Funding What Matters
+sophia
+
+            <aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17174">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Perhaps another thing that could help more projects cross this chasm is making more people angel investors, in a more crypto native way…</p>
+</blockquote>
+</aside>
+<p>Been thinking a lot about this, especially because of your twitter comment about pgf mechanisms becoming more active in economically exothermic areas. If we want real money to fund public goods, we can’t rely solely on grants &amp; donations forever…</p>
+<p>While the entire point of PGF infrastructure is that traditional venture models don’t work here, those models also imply that acquisitions and IPOs are the main exit strategies. However, if retroPGF is a viable “exit” strategy, it can open a whole new pathway for early-stage and angel investors. Instead of donors, we could have investors actively speculating on the future impact of a project.</p>
+<p>For this to happen, this assumes “impact equals profit.” The main place (to my knowledge) where this is occurring is in Optimism retroPGF. But here, they have their own definitions for impact and governance structures that guide what gets funded.</p>
+<p>Perhaps, more tooling/research to figure out what type of impact metrics retroactive funders are willing to pay for could enable more marketplaces for retroactive funding projects/investments… ?</p>
+          <p><a href="https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/6
+        Thu, 07 Dec 2023 02:34:19 +0000
+gov.gitcoin.co-post-17174-6
+Shape Rotators Guide to Funding What Matters
+      
+
+Shape Rotators Guide to Funding What Matters
+owocki
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="17174">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<ul>
+<li>Map out spectrum of public goods funding from cradle-to-grave (or cradle-to-unicorn) for each project.</li>
+</ul>
+</blockquote>
+</aside>
+<p><a href="https://gov.gitcoin.co/t/cradle-to-unicorn-public-goods-funding/17189">OP delivers!  </a></p>
+          <p><a href="https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/5
+        Tue, 28 Nov 2023 22:19:36 +0000
+gov.gitcoin.co-post-17174-5
+Shape Rotators Guide to Funding What Matters
+      
+
+Shape Rotators Guide to Funding What Matters
+owocki
+
+            <p>Responding to a few of my own prompts here:</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="17174">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<ul>
+<li>Map out spectrum of public goods funding from cradle-to-grave (or cradle-to-unicorn) for each project.</li>
+</ul>
+</blockquote>
+</aside>
+<p>Here is the spectrum of cradle-to-grave funding for web3 projects:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e9865b5ae7b54779fcb2c7a4555003a853b21546.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/e9865b5ae7b54779fcb2c7a4555003a853b21546" title="Screenshot 2023-11-24 at 8.39.55 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e9865b5ae7b54779fcb2c7a4555003a853b21546_2_264x199.png" alt="Screenshot 2023-11-24 at 8.39.55 AM" data-base62-sha1="xjR6KqazMqSoOgtwIBqYnqKsL4i" width="264" height="199" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e9865b5ae7b54779fcb2c7a4555003a853b21546_2_264x199.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e9865b5ae7b54779fcb2c7a4555003a853b21546_2_396x298.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e9865b5ae7b54779fcb2c7a4555003a853b21546_2_528x398.png 2x" data-dominant-color="F5F5F6"></a></div><p></p>
+<p>(thanks <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> for stimulating these thoughts) There is maybe a trough of dissillusionment between</p>
+<ul>
+<li>pure prospective funding minimizes the risk of projects not getting off the ground due to lack of funding, but has high uncertainty when it comes to achieving impact (most startups die, etc)</li>
+<li>pure retro funding does the inverse</li>
+</ul>
+<p>Some would say that this is what VC does, ie, inject different amounts of funding following the famous startup curve (peak of inflated expectations, trough of disillusionment, etc)</p>
+<p>But I think there’s some very interesting about experimenting on those dimensions, eg, Gitcoin could evolve to be perfect for projects in the trough of disillusionment phase.</p>
+<p>There may also be an opportunity for projects to start issuing impact certificates and creating a web of trust that helps create data about which projects are ngmi vs wagmi… and helps cross that cham too.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d9a645359638987065e06c0857d26985cdc0c202.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/d9a645359638987065e06c0857d26985cdc0c202" title="Screenshot 2023-11-24 at 8.44.29 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d9a645359638987065e06c0857d26985cdc0c202_2_345x203.png" alt="Screenshot 2023-11-24 at 8.44.29 AM" data-base62-sha1="v3pQj3udkB8AeQYYZYEkWQ6sbui" width="345" height="203" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d9a645359638987065e06c0857d26985cdc0c202_2_345x203.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d9a645359638987065e06c0857d26985cdc0c202_2_517x304.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d9a645359638987065e06c0857d26985cdc0c202_2_690x406.png 2x" data-dominant-color="F1F1F1"></a></div><p></p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="17174">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<ul>
+<li>What would Gitcoin Grants but for private goods look like? Eg you get gov tokens when you donate? Would it detract from Gitcoin’s mission or be a valuable extension of Allo/Grants Stack?</li>
+</ul>
+</blockquote>
+</aside>
+<p>Perhaps another thing that could help more projects cross this chasm is making more people angel investors, in a more crypto native way…</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1cdc670bd5691f48d827f388961d0c401e1e4a69.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/1cdc670bd5691f48d827f388961d0c401e1e4a69" title="Screenshot 2023-11-24 at 8.45.04 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cdc670bd5691f48d827f388961d0c401e1e4a69_2_312x250.png" alt="Screenshot 2023-11-24 at 8.45.04 AM" data-base62-sha1="47jzVdZ4a1HcX1R9X6o9n0Xud4Z" width="312" height="250" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cdc670bd5691f48d827f388961d0c401e1e4a69_2_312x250.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cdc670bd5691f48d827f388961d0c401e1e4a69_2_468x375.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cdc670bd5691f48d827f388961d0c401e1e4a69_2_624x500.png 2x" data-dominant-color="F1F3F2"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/4
+        Fri, 24 Nov 2023 15:49:20 +0000
+gov.gitcoin.co-post-17174-4
+Shape Rotators Guide to Funding What Matters
+      
+
+Shape Rotators Guide to Funding What Matters
+owocki
+
+            <aside class="quote no-group" data-username="harryeastham" data-post="2" data-topic="17174">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/harryeastham/48/11718_2.png" class="avatar"> harryeastham:</div>
+<blockquote>
+<p>my initial reaction is that the multi-dimension <em>maps</em> could be overly complex and the complexity could actually be obscuring the ‘thing’ that’s trying to be found/plotted/discovered.</p>
+</blockquote>
+</aside>
+<p>yeah thats definitely true.  its something <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> also mentioned.</p>
+<p>I think when building market maps we should stick to 3d or less, but it’s useful to know higher dimensions are out there if we want to pop into them and re-index on other dimensions.</p>
+<p>alternatively, another way of grokking the higher dimensional spaces could be star graphs.</p>
+<p>here is one you and i have been jamming on in DMs<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/80e19c582fb8bb549154da84dbdddc2c41baa473.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/80e19c582fb8bb549154da84dbdddc2c41baa473" title="Screenshot 2023-11-24 at 8.30.38 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/80e19c582fb8bb549154da84dbdddc2c41baa473_2_672x500.jpeg" alt="Screenshot 2023-11-24 at 8.30.38 AM" data-base62-sha1="io8u4aRuLdFJZ9vAu9GRHcpheuL" width="672" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/80e19c582fb8bb549154da84dbdddc2c41baa473_2_672x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/80e19c582fb8bb549154da84dbdddc2c41baa473_2_1008x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/80e19c582fb8bb549154da84dbdddc2c41baa473_2_1344x1000.jpeg 2x" data-dominant-color="F9F9F8"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/3
+        Fri, 24 Nov 2023 15:31:54 +0000
+gov.gitcoin.co-post-17174-3
+Shape Rotators Guide to Funding What Matters
+      
+
+Shape Rotators Guide to Funding What Matters
+harryeastham
+
+            <p>gm, interesting thoughts here! just continuing this chat from the dm’s</p>
+<p>my initial reaction is that the multi-dimension <em>maps</em> could be overly complex and the complexity could actually be obscuring the ‘thing’ that’s trying to be found/plotted/discovered.</p>
+<p>if a real map contained every possible factor all at the same time while you were trying to navigate, would that map still be useful? running with the cartography/navigation concept, sometimes I only care about altitude if I’m walking but not driving… sometimes I care about directness if i’m driving but not going for a stroll. So the multi-dimension map at some point is potentially no longer useful, and what may be more useful is pairing relevant criteria together - it may be that value lies not at the intersection between 5 dimensions, but actually inbetween the 2 or 3 dimensions that haven’t been connected or put next to each other before</p>
+<p>i wonder what would come from combining 2x or 3x criteria and looking at what the extremes of those combinations look like. No idea how to properly do this but would be cool to plot those orgs (and others in the space!) on 2/3 axis based even on the criteria you provided.</p>
+<p><strong>Have just generated the below on chatgpt as an example</strong> (<a href="https://chat.openai.com/share/f0522664-8567-452b-b507-9873168a6e4c" rel="noopener nofollow ugc">chat here</a>)</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Point 1 (Lowest)</th>
+<th>Point 2</th>
+<th>Point 3</th>
+<th>Point 4 (Highest)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mature projects vs seed projects</td>
+<td>Seed Projects</td>
+<td>Early Stage</td>
+<td>Growth Stage</td>
+<td>Mature Projects</td>
+</tr>
+<tr>
+<td>Effective or not</td>
+<td>Ineffective</td>
+<td>Somewhat Effective</td>
+<td>Effective</td>
+<td>Highly Effective</td>
+</tr>
+<tr>
+<td>Return expected vs not</td>
+<td>No Return</td>
+<td>Possible Return</td>
+<td>Expected Return</td>
+<td>High Return</td>
+</tr>
+<tr>
+<td>Virality vs not</td>
+<td>Non-viral</td>
+<td>Slightly Viral</td>
+<td>Viral</td>
+<td>Highly Viral</td>
+</tr>
+<tr>
+<td>Impact Attestations Dependency</td>
+<td>Not Dependent</td>
+<td>Slightly Dependent</td>
+<td>Dependent</td>
+<td>Fully Dependent</td>
+</tr>
+<tr>
+<td>Oracle-limited or not?</td>
+<td>Not Oracle-limited</td>
+<td>Somewhat Limited</td>
+<td>Limited</td>
+<td>Fully Limited</td>
+</tr>
+<tr>
+<td>Credibly neutral vs not</td>
+<td>Not Neutral</td>
+<td>Somewhat Neutral</td>
+<td>Neutral</td>
+<td>Fully Neutral</td>
+</tr>
+<tr>
+<td>Desktop vs mobile</td>
+<td>Desktop-Only</td>
+<td>Desktop-Preferred</td>
+<td>Mobile-Preferred</td>
+<td>Mobile-Only</td>
+</tr>
+<tr>
+<td>Built into social media? (emergent)</td>
+<td>Standalone</td>
+<td>Slightly Integrated</td>
+<td>Integrated</td>
+<td>Fully Integrated</td>
+</tr>
+<tr>
+<td>Massively multiplayer?</td>
+<td>Not Scalable</td>
+<td>Slightly Scalable</td>
+<td>Scalable</td>
+<td>Highly Scalable</td>
+</tr>
+<tr>
+<td>Assets fungibility</td>
+<td>Non-Fungible</td>
+<td>Mostly Non-Fungible</td>
+<td>Mostly Fungible</td>
+<td>Fungible</td>
+</tr>
+<tr>
+<td>Can it be built on top of Allo?</td>
+<td>Not Applicable</td>
+<td>Possible</td>
+<td>Applicable</td>
+<td>Fully Integrated</td>
+</tr>
+<tr>
+<td>Can it be built on top of Passport?</td>
+<td>No Benefit</td>
+<td>Slight Benefit</td>
+<td>Beneficial</td>
+<td>Highly Beneficial</td>
+</tr>
+<tr>
+<td>Funding: Continuous/recurring vs fickle</td>
+<td>Fickle</td>
+<td>Somewhat Stable</td>
+<td>Stable</td>
+<td>Highly Stable</td>
+</tr>
+</tbody>
+</table>
+</div><div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Organizations / Groups</th>
+<th>Mature Projects</th>
+<th>Effective or Not</th>
+<th>Return Expected</th>
+<th>Virality</th>
+<th>Impact Attestations Dependency</th>
+<th>Oracle-limited</th>
+<th>Credibly Neutral</th>
+<th>Desktop vs Mobile</th>
+<th>Built into Social Media</th>
+<th>Massively Multiplayer</th>
+<th>Assets Fungibility</th>
+<th>Built on Allo</th>
+<th>Built on Passport</th>
+<th>Funding Stability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ethereum Foundation</td>
+<td>Mature Projects</td>
+<td>Highly Effective</td>
+<td>No Return</td>
+<td>Non-viral</td>
+<td>Not Dependent</td>
+<td>Not Limited</td>
+<td>Fully Neutral</td>
+<td>Desktop-Preferred</td>
+<td>Standalone</td>
+<td>Highly Scalable</td>
+<td>Fungible</td>
+<td>Possible</td>
+<td>Beneficial</td>
+<td>Highly Stable</td>
+</tr>
+<tr>
+<td>Ethereum Community Fund</td>
+<td>Growth Stage</td>
+<td>Effective</td>
+<td>Possible Return</td>
+<td>Viral</td>
+<td>Dependent</td>
+<td>Limited</td>
+<td>Neutral</td>
+<td>Desktop-Preferred</td>
+<td>Slightly Integrated</td>
+<td>Scalable</td>
+<td>Mostly Fungible</td>
+<td>Applicable</td>
+<td>Highly Beneficial</td>
+<td>Stable</td>
+</tr>
+<tr>
+<td>Gitcoin</td>
+<td>Early Stage</td>
+<td>Highly Effective</td>
+<td>No Return</td>
+<td>Highly Viral</td>
+<td>Fully Dependent</td>
+<td>Limited</td>
+<td>Fully Neutral</td>
+<td>Mobile-Preferred</td>
+<td>Fully Integrated</td>
+<td>Highly Scalable</td>
+<td>Non-Fungible</td>
+<td>Fully Integrated</td>
+<td>Highly Beneficial</td>
+<td>Fickle</td>
+</tr>
+<tr>
+<td>ConsenSys</td>
+<td>Mature Projects</td>
+<td>Highly Effective</td>
+<td>High Return</td>
+<td>Slightly Viral</td>
+<td>Not Dependent</td>
+<td>Not Limited</td>
+<td>Somewhat Neutral</td>
+<td>Desktop-Only</td>
+<td>Standalone</td>
+<td>Scalable</td>
+<td>Fungible</td>
+<td>Possible</td>
+<td>Beneficial</td>
+<td>Stable</td>
+</tr>
+</tbody>
+</table>
+</div><p>So you could see what happens and where orgs sit when you combine ‘Credibly neutral’ x ‘massively multiplayer’ or ‘virality’ x ‘maturity’ x ‘assets fungibility’</p>
+          <p><a href="https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/2
+        Fri, 24 Nov 2023 14:48:50 +0000
+gov.gitcoin.co-post-17174-2
+Shape Rotators Guide to Funding What Matters
+      
+
+Shape Rotators Guide to Funding What Matters
+owocki
+
+            <p><em>(this post is a 10 min read, and is targeted at leaders following Gitcoin’s evolution in the regen web3 space.  if you want to get up to speed,  <a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616">start with this post first</a> and <a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697">this post</a> next, and <a href="https://gov.gitcoin.co/t/3-transitions-from-gitcoin-1-0-gitcoin-2-0/16736">this post</a> last)</em></p>
+<h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR</h1>
+<p>This post discusses the evolution of funding mechanisms in the context of Gitcoin’s mission to “Fund What Matters”.</p>
+<p>We use both empirical knowledge, a priori reasoning, and a few educated guesses, to explore the evolving landscape of funding mechanisms in web3.</p>
+<p>The post examines how different design criteria have shaped various funding experiments.</p>
+<p>We then explore the potential future of the design space, considering additional design criteria like project maturity, retroactive funding, dependance on impact attestations, or mobile first experiments.</p>
+<p>We then make some educated guesses about how the design space might evolve, informing where to place bets over the next 5-10 years.</p>
+<h1><a name="shape-rotators-guide-to-funding-what-matters-2" class="anchor" href="https://gov.gitcoin.co#shape-rotators-guide-to-funding-what-matters-2"></a>Shape Rotators Guide to Funding What Matters</h1>
+<p>As a <a href="https://www.urbandictionary.com/define.php?term=shape%20rotator">shape rotator</a>, I love cartography. Cartography (the study and practice of making and using maps) allows for visual understanding of what’s around us. A picture is worth a thousand words, which means that by visualizing abstract concepts, more of us can get on the same page faster &amp; at higher fidelity than we would otherwise.</p>
+<p>The objective of this post is to cartography the design space in &amp; around Gitcoin’s mission (To Fund What Matters).</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b4b4ef3e56054752112ea470f9607eb111afa4b2.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/b4b4ef3e56054752112ea470f9607eb111afa4b2" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b4b4ef3e56054752112ea470f9607eb111afa4b2_2_624x256.png" alt="" data-base62-sha1="pMBATMdE4VyyOUK9Eir7K2wn3aO" width="624" height="256" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b4b4ef3e56054752112ea470f9607eb111afa4b2_2_624x256.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b4b4ef3e56054752112ea470f9607eb111afa4b2_2_936x384.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b4b4ef3e56054752112ea470f9607eb111afa4b2_2_1248x512.png 2x" data-dominant-color="D7CDCD"></a></div><p></p>
+<p>Empirical knowledge is gained through experience or observation, relying on the senses or experiments to understand the world. A priori knowledge, on the other hand, is knowledge that is known independently of experience, based on reason or logical deduction.</p>
+<p>In this post, I will try to leverage both types of reasoning to cut through the “fog of war” of the design space. “Fog of war” metaphorically describes the ambiguity and lack of clarity in understanding and making decisions within complex systems.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8f04a4d88574bc03e31ba6aa4e8e9aea145a3e9d.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/8f04a4d88574bc03e31ba6aa4e8e9aea145a3e9d" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8f04a4d88574bc03e31ba6aa4e8e9aea145a3e9d_2_264x200.jpeg" alt="" data-base62-sha1="kpce7Q3vhffsJ9php9U80020N2Z" width="264" height="200" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8f04a4d88574bc03e31ba6aa4e8e9aea145a3e9d_2_264x200.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8f04a4d88574bc03e31ba6aa4e8e9aea145a3e9d_2_396x300.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8f04a4d88574bc03e31ba6aa4e8e9aea145a3e9d_2_528x400.jpeg 2x" data-dominant-color="8B8585"></a></div><p></p>
+<h1><a name="the-design-space-3" class="anchor" href="https://gov.gitcoin.co#the-design-space-3"></a>The design space</h1>
+<p>By reflecting on the growth of the internet empirically, and by reasoning about the a priori parallels between web1 and web3, we can reason about how web3 might play out…</p>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/a/af6d004439706e773209b73f97009e427f949560.png" alt="Screen Shot 2021-12-24 at 9.26.45 AM" data-base62-sha1="p1T5DJxwcgb3D1rRUJSDxGt1R5e" width="624" height="153"></p>
+<p>Just as email, IMs, twitter and tik tok, and LLMs changed how we transfer information… The internet of money could change how we transfer money. How we Fund What Matters.</p>
+<p>We have Massively Multiplayer Online Role Playing Games (MMORPGs). Now that we’ve got web3, will we have Massively Multiplayer Online Funding Games (MMOFPs)? Can large networks of people coordinating resources be more powerful than large corporations/governments/billionaires?</p>
+<p>I have an instinct that peer to peer funding games may be the biggest wedge we have. There is a greenfield opportunity to explore the design space around Gitcoin’s mission, to “Fund What Matters”.</p>
+<h1><a name="the-mission-4" class="anchor" href="https://gov.gitcoin.co#the-mission-4"></a>The mission</h1>
+<p>Gitcoin’s mission, “Fund What Matters”, is a directive emphasizing the importance of investing in or financially supporting causes, projects, or initiatives that hold significant value or impact. It suggests prioritizing spending in areas that make a meaningful difference, whether socially, environmentally, culturally, or economically.</p>
+<p>This phrase often encourages individuals or organizations to think critically about where their money can have the greatest positive effect. It’s a call to action for responsible and purpose-driven allocation of resources, aligning financial decisions with core values and priorities.</p>
+<h1><a name="the-mission-x-the-design-space-5" class="anchor" href="https://gov.gitcoin.co#the-mission-x-the-design-space-5"></a>The mission x the design space</h1>
+<p>By leveraging blockchain technology, the attributes of it that make it powerful (transparency, corruption resistance, global, open source, programmable), and the wave of innovation surrounding the EVM, we can help evolve how people “Fund what matters” to them.</p>
+<p>Just as the internet accelerated the flow of information, web3 can accelerate the flow of capital. We can ride this wave to build and scale new funding experiments.</p>
+<h1><a name="the-past-6" class="anchor" href="https://gov.gitcoin.co#the-past-6"></a>The past</h1>
+<p>In 2019, the bear market had just hit. And projects in the Ethereum ecosystem needed funding… At the time, the major forces in Eth public goods funding were the Ethereum Community Fund, the Ethereum Foundation, and Consensys. The EF/ECF had grants programs or you could get hired at Consensys.</p>
+<p>Gitcoin discovered <a href="https://wtfisqf.com/">Quadratic Funding</a> in late 2018 and launched Gitcoin Grants in January 2019. We were differentiated from the existing players by the decentralized decision making introduced by quadratic funding.</p>
+<p>I think the design space kind of looked like this.</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>criteria</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>technocratic = small group of decision makers</td>
+<td>At the ECF/EF, you had to go through a grantmaking process where a small commitee would decide if you got funding. At Consensys, you had to be hired by Joe Lubin or his disciples.</td>
+</tr>
+<tr>
+<td>democratic = larger more permissionless group of decision makers</td>
+<td>At Gitcoin, anyone can help allocate the funding due to Quadratic Funding. This scales because 1000s of projects can get funded at once.</td>
+</tr>
+</tbody>
+</table>
+</div><p>Here it is visualized as a 2 dimensional spectrum:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/98750cb09201cb8b954a7fde7b5d0a65015f8540.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/98750cb09201cb8b954a7fde7b5d0a65015f8540" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/98750cb09201cb8b954a7fde7b5d0a65015f8540_2_238x99.png" alt="" data-base62-sha1="lKHlT8BzhPMYlfZksM9K5As8KGs" width="238" height="99" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/98750cb09201cb8b954a7fde7b5d0a65015f8540_2_238x99.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/98750cb09201cb8b954a7fde7b5d0a65015f8540_2_357x148.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/98750cb09201cb8b954a7fde7b5d0a65015f8540_2_476x198.png 2x" data-dominant-color="F2F2F2"></a></div><p></p>
+<p>Of course, this doesn’t tell the full story. If you were to add a 2nd axis showing the amount of funding being deployed, the design space would look something like this.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7fae0c748aaacc1066459b739d6fa86537729f89.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/7fae0c748aaacc1066459b739d6fa86537729f89" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7fae0c748aaacc1066459b739d6fa86537729f89_2_245x194.png" alt="" data-base62-sha1="idvxfpq0y1sTanXgBwwD7qodaGt" width="245" height="194" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7fae0c748aaacc1066459b739d6fa86537729f89_2_245x194.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7fae0c748aaacc1066459b739d6fa86537729f89_2_367x291.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7fae0c748aaacc1066459b739d6fa86537729f89_2_490x388.png 2x" data-dominant-color="F2F2F2"></a></div><p></p>
+<h1><a name="the-present-7" class="anchor" href="https://gov.gitcoin.co#the-present-7"></a>The present</h1>
+<p>Over the course of 2022, more players entered the space and we began to see the rise of <a href="https://gov.gitcoin.co/t/devconnect-zuzalu-istanbul-takeaways-for-gitcoin/17159#h-2-new-market-leaders-7">retroactive public goods funding experiments</a> like Optimism RPGF and very simple but effective mechanisms like the Protocol Guild’s self curating registry.</p>
+<p>Trying to further map the design space, adding another 3rd dimension…. Looks like this:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c809ff3b9538ebe3290029fc784680175b6ffc61.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/c809ff3b9538ebe3290029fc784680175b6ffc61" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c809ff3b9538ebe3290029fc784680175b6ffc61_2_295x194.png" alt="" data-base62-sha1="sxCUzUVyeGOPgnkXyNePyqildF7" width="295" height="194" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c809ff3b9538ebe3290029fc784680175b6ffc61_2_295x194.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c809ff3b9538ebe3290029fc784680175b6ffc61_2_442x291.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c809ff3b9538ebe3290029fc784680175b6ffc61_2_590x388.png 2x" data-dominant-color="F6F5F5"></a></div><p></p>
+<p>If we were to make the 3rd dimension “simplicity”, then it would kind of look like this:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4f231b7b3051734145863bd8f1e0d6eb03311007.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/4f231b7b3051734145863bd8f1e0d6eb03311007" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4f231b7b3051734145863bd8f1e0d6eb03311007_2_219x142.png" alt="" data-base62-sha1="bi4W71QJh6zFHQ3HvshtShCLpR5" width="219" height="142" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4f231b7b3051734145863bd8f1e0d6eb03311007_2_219x142.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4f231b7b3051734145863bd8f1e0d6eb03311007_2_328x213.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4f231b7b3051734145863bd8f1e0d6eb03311007_2_438x284.png 2x" data-dominant-color="F3F3F5"></a></div><p></p>
+<p>Each of these experiments evolved the design space forward in important ways.</p>
+<ol>
+<li><a href="https://vitalik.ca/general/2021/11/16/retro1.html">Retroactive public goods funding</a> is based off the idea that it is easier to fund projects based on the impact they’ve already had. As opposed to speculating on the impact they might have in the future. After retroPGF is established, we can then bet that projects could receive proactive funding based on future retroactive rewards.</li>
+<li><a href="https://protocol-guild.readthedocs.io/en/latest/">Protocol Guild</a> built a very simple mechanism, a self curating registry. This registry allowed projects to easily contribute to protocol development.</li>
+</ol>
+<p>Lets get weird. Lets look at what this new design space looks like all together. If we combine the two 3d cubes, we get a tesseract (4 dimensional cube) showing us the new design space.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4b53fb4317716035fc1725720ad7d90869f2779f.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/4b53fb4317716035fc1725720ad7d90869f2779f" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4b53fb4317716035fc1725720ad7d90869f2779f_2_624x379.png" alt="" data-base62-sha1="aKnJRNpBub1tnDd53HuTVZw1jGf" width="624" height="379" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4b53fb4317716035fc1725720ad7d90869f2779f_2_624x379.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4b53fb4317716035fc1725720ad7d90869f2779f_2_936x568.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4b53fb4317716035fc1725720ad7d90869f2779f_2_1248x758.png 2x" data-dominant-color="F5F5F6"></a></div><p></p>
+<p>Since us humans have evolved to understand 3d images, this 4d visualization is a bit hard to grok visually. That said, once you spend some time staring at it, you will can internalize that we’ve found a way to conceptualize the entire design space across all 4 dimensions:</p>
+<ol>
+<li>Technocratic vs democratic</li>
+<li>Amount of funding</li>
+<li>Proactive vs retroactive</li>
+<li>Simple vs complex</li>
+</ol>
+<p>As a <a href="https://www.urbandictionary.com/define.php?term=shape%20rotator">shape rotator</a> is where things get interesting to me. As people begin launching projects that are empirically effective at funding what matters to them, we can start to build a 1, 2, 3 dimensional …… Up to n-dimensional space of what the design space looks like.</p>
+<p><a href="https://www.figma.com/file/G40n68I2Qyi07WgQqMTjdV/Fund-What-Matters---Cartography'ing-the-design-space.?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=lW4WMLuhJ55pxpzu-1"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cc676cb95cee1a66233874f13e4af015e36b9f9a.png" alt="" data-base62-sha1="taeZp0viy00AdxuWuAlRSm8TsFQ" width="624" height="193" role="presentation"></a></p>
+<h1><a name="the-future-8" class="anchor" href="https://gov.gitcoin.co#the-future-8"></a>The future</h1>
+<p>Now we are really starting to cartography the design space. By creating visualizations of how these mechanisms relate to each other, and extracting the criteria that makes them different, we’re starting to get a visual of the design space!! We’ve started to beat back the fog of war of the possibilities.</p>
+<p>Here, again are the criteria (dimensions) that the market has begun to segment itself upon:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>criteria</th>
+<th>comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Technocratic vs Democratic</td>
+<td>Is the # of decision makers larger or small?</td>
+</tr>
+<tr>
+<td>Amount of Funding in $$$</td>
+<td>Is the amount of $$ at stake larger or small?</td>
+</tr>
+<tr>
+<td>Retroactive vs proactive</td>
+<td>Is the funding criteria based on value in the past, future, present, or a combo of both.</td>
+</tr>
+<tr>
+<td>Simple vs complicated</td>
+<td>How much complexity is within the capital allocation mechanism.</td>
+</tr>
+</tbody>
+</table>
+</div><p>What opportunities to do something cool and innovative, building on this criteria, are there? Some examples:</p>
+<ul>
+<li>What if we built self curating registries (like Protocol Guild) into Allo and deployed them to adjacent public goods spaces (eg other than protocol developers)? How big is the TAM (total addressable market) for this?</li>
+<li>What if we built retroactive public goods funding into Gitcoin Grants? How big is this TAM?</li>
+<li>What if we built more technocratic/expert-led decision making into Gitcoin Grants? How big is thisTAM?</li>
+</ul>
+<p>What if there are more criteria (dimensions) that matter? What if there is a higher dimensionality to the design space?</p>
+<p><a href="https://www.figma.com/file/G40n68I2Qyi07WgQqMTjdV/Fund-What-Matters---Cartography'ing-the-design-space.?type=design&amp;node-id=0%3A1&amp;mode=design&amp;t=lW4WMLuhJ55pxpzu-1"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b18d8dce8580ad958df71b658a10f43674a14d49.png" alt="" data-base62-sha1="pkHMZpV8C5ErlK5cb4Dtt1oIXLX" width="508" height="206" role="presentation"></a></p>
+<p>What dimensions would we even care to splice the design space by? And would each dimension justify the complexity of thinking in higher dimensional thinking? Since it’s hard to think in higher than 3 dimensions, maybe we’d be better off focusing on design spaces 3 dimensions or less.</p>
+<p>That said, there might be value in exploring what dimensions to even look at.</p>
+<p>We can make some educated guesses here. Here are all of the additional dimensions I can think would ever matter within the design space of “how do you build a mechanism that helps people fund what matters?</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Criteria (cont’d)</th>
+<th>Comment (cont’d)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mature projects vs seed projects</td>
+<td>Is the mechanism more for mature projects or seed stage projects?</td>
+</tr>
+<tr>
+<td>web2 vs web3 ux</td>
+<td>Is the ux usable for web2 natives??</td>
+</tr>
+<tr>
+<td>Effective or not.</td>
+<td>Is the mechanism actually effective at whatever its goal is (in Gitcoin’s case building an ecosystem)? How big is the TAM?</td>
+</tr>
+<tr>
+<td>Return expected vs not</td>
+<td>Is a return expected as part of the fundraise? Or not?</td>
+</tr>
+<tr>
+<td>Virality vs not</td>
+<td>Is virality a big part of the mechanism? Like for Quadratic Funding, where people tend to share their grants on social media.</td>
+</tr>
+<tr>
+<td>Does it depend on Impact Attestations?</td>
+<td>Does the mechanism depend on impact attestations? Do we have a reliable proof-of-impact?</td>
+</tr>
+<tr>
+<td>Oracle-limited or not?</td>
+<td>If the mechanism depends on some external data source, is it limited by having reliable oracles or not? Eg if you were trying to fund a project to stop deforestation, what is the data-trail between the forest + the blockchain?</td>
+</tr>
+<tr>
+<td>Credibly neutral vs not</td>
+<td>Does the mechanism’s constituents care that its credibly neutral, or does it allow for rent-seeking intermediaries?</td>
+</tr>
+<tr>
+<td>Desktop vs mobile</td>
+<td>Is the mechanism experience desktop first (okcupid, <a href="http://match.com">match.com</a>), or mobile-first? (like tinder)</td>
+</tr>
+<tr>
+<td>Built into social media? (emergent)</td>
+<td>Is the mechanism a standalone website, or is it built onto a web3 social network like farcaster/lens protocol?</td>
+</tr>
+<tr>
+<td>Massively multiplayer?</td>
+<td>Will the mechanism work at scale? Will it enable Massively Multiplayer Online Funding Games (MMOFPs)?</td>
+</tr>
+<tr>
+<td>Are assets fungible or not?</td>
+<td>Do the primary assets in the mechanism resemble fungible things like ERC-20s? Or are they more based on ERC-721 like assets?</td>
+</tr>
+<tr>
+<td>Can it be built on top of Allo?</td>
+<td>This is a germane question for Gitcoin. Can it be built upon allo? Does allo help make it easier to bring to market?</td>
+</tr>
+<tr>
+<td>Can it be built on top of Passport?</td>
+<td>Does the mechanism benefit from sybil resistance? If so, does Passport newly enable it?</td>
+</tr>
+<tr>
+<td>Is the funding continuous/recurring? Is it based off dependably <a href="https://twitter.com/owocki/status/1722234106954838355">economically exothermic</a> funding sources?</td>
+<td>Does the mechanism depend on fickle things like people donating? Or does it depend on continuous sources of funding (like sequencer fees or yield)?</td>
+</tr>
+</tbody>
+</table>
+</div><h1><a name="open-questions-9" class="anchor" href="https://gov.gitcoin.co#open-questions-9"></a>Open Questions</h1>
+<p>Which combinations of these criteria have billion$$$ potential to ‘Fund What Matters’?? Where is the TAM very large now, and what design spaces have billion $$$ potential next cycle? Which will only be enabled by new ux breakthroughs (like PWAs, gasless apps, account abstraction)?</p>
+<p>Would we be served well by building/researching many of these tools internally, or enabling 1000s of devs to build in these design spaces, on top of Allo? And perhaps taking upside in each.</p>
+<p>It may be worth defining criteria for when it makes sense to double down on existing families of mechanisms we know are working (QF, retro PGF), vs go broad and exploring new mechanisms. Are the two mutually exclusive, or can we design a network that, like a<a href="https://twitter.com/owocki/status/1456368527347044355"> slime mold</a>, can both search + harvest at the same time?</p>
+<p>Here are some of the things I am interested in doing</p>
+<ol>
+<li>Map out spectrum of public goods funding from cradle-to-grave (or cradle-to-unicorn) for each project.</li>
+<li>How does retroactive public goods funding create new opportunities?</li>
+<li>How does sybil resistance from things like Gitcoin Passport create new opportunities?</li>
+<li>What opportunities are there to build mechanisms into web3 social networks like Lens/Farcaster?</li>
+<li>What are the mobile-first possibilities?</li>
+<li>What would Gitcoin Grants but for private goods look like? Eg you get gov tokens when you donate? Would it detract from Gitcoin’s mission or be a valuable extension of Allo/Grants Stack?</li>
+<li>What is the design space of Allo v2? What are the highest opportunities within them?</li>
+<li>How would making the ux of Gitcoin feel more web2 native affect the market size oppy?</li>
+</ol>
+<h1><a name="next-steps-10" class="anchor" href="https://gov.gitcoin.co#next-steps-10"></a>Next Steps</h1>
+<p>First, I’d love to validate that this way of thinking about the design space is valuable to others. If it is (or is not), feel free to comment below, DM me, or <a href="https://t.me/+SISOI8-cs3c0NjM5">join this telegram group</a>.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/ad0e0e50e11e8d9b92d364a14ea2434096e4f591.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/ad0e0e50e11e8d9b92d364a14ea2434096e4f591" title="Screenshot 2023-11-24 at 8.55.57 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad0e0e50e11e8d9b92d364a14ea2434096e4f591_2_690x391.jpeg" alt="Screenshot 2023-11-24 at 8.55.57 AM" data-base62-sha1="oGUIsnGnIi3wymaSRiouwVfDajT" width="690" height="391" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad0e0e50e11e8d9b92d364a14ea2434096e4f591_2_690x391.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad0e0e50e11e8d9b92d364a14ea2434096e4f591_2_1035x586.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad0e0e50e11e8d9b92d364a14ea2434096e4f591_2_1380x782.jpeg 2x" data-dominant-color="E9E8E6"></a></div><p></p>
+<p>I will be putting together a working group to work through these questions above. If this sounds like you, <a href="https://t.me/+SISOI8-cs3c0NjM5">Join the telegram group!</a></p>
+<h1><a name="conclusion-11" class="anchor" href="https://gov.gitcoin.co#conclusion-11"></a>Conclusion</h1>
+<p>In this post, we reasoned empirically and a priori about how the design space for Funding What Matters has evolved so far. We then visualized it.</p>
+<p>From there, we made some educated guesses about what other types of experiments for Funding What Matters may exist in the future. Then we identified some next steps we could take for Gitcoin (and the broader regen web3 ecosystem) to advance the mission.</p>
+          <p><a href="https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174/1
+        Thu, 23 Nov 2023 14:20:26 +0000
+gov.gitcoin.co-post-17174-1
+Shape Rotators Guide to Funding What Matters
+      
+
+

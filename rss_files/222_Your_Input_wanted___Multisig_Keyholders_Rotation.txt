@@ -1,0 +1,312 @@
+
+
+
+Your Input wanted - Multisig Keyholders Rotation
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925
+    Hey all,
+
+The [Gitcoin multisig](https://etherscan.io/address/0xde21f729137c5af1b01d73af1dc21effa2b8a0d6) was [created in August 2020](https://etherscan.io/tx/0x296fe57c2c227b7b37c3901844607e22633d2c12c98f8430727bfbed56d27de2), before the GitcoinDAO launch.
+
+It has the following keyholders:
+- myself
+- David Hoffman
+- Sassal
+- Hudson Jameson
+- Eric Coner
+- Kyle Weiss
+
+As we got around to paying out GR11, we realized that things have evolved a lot since we created this multisig.  Particularly, 
+1. We now have formal governance of GitcoinDAO via the [Gitcoin Stewards](https://withtally.com/governance/gitcoin).
+2. Things have shifted in the ecosystem, and many of the keyholders are now busy with other projects.
+
+As a result, we started to have a conversation about what it would look like to have a "changing of the guard" here.  Specifically, David Hoffman, Sassal, and Eric Conner have all told me that they are interested in rolling off the multisig.  There are two directions we could go.  
+
+1. Rotate the multisig keyholders to be [top GitcoinDAO stewards](https://withtally.com/governance/gitcoin), which are currently Trent, Austin, Linda, Lefteris - on a case by case basis if they want it.
+2. Transfer all of the assets in the multisig to the [Timelock](https://etherscan.io/address/0x57a8865cfb1ecef7253c27da6b4bc3daee5be518).
+
+I would like to hear which way the community would like us to go.
+
+One consideration that you should know about  if you consider doing (2) is that right now the only way to rebalance tokens into DAI (which is what the Grants Rounds are paid out with) is to do a trade on uniswap/1inch or any other DEX.  We've found that if there is a long lag between when those txns are proposed and executed on chain, that the transaction will fail - presumably due to slippage.  If the community decides to go with (2) we will need a workaround that allows governance to rebalance the treasury within the structure of the 2 day Timelock.
+
+What do ppl want to see? 
+[poll type=regular results=always chartType=bar]
+* 1. Rotate the Multisig Keyholders to top Stewards
+* 2. Move all tokens into the GitcoinDAO Timelock
+* 3. Other (pls comment below)
+[/poll]
+Thu, 04 Nov 2021 22:14:36 +0000
+🤖 DAO Governance and Vision
+
+
+Your Input wanted - Multisig Keyholders Rotation
+owocki
+
+            <p>Setting up some time next week with <a class="mention" href="https://gov.gitcoin.co/u/auryn">@auryn</a> to talk through Gnosis Zodiac setup details.</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/17
+        Thu, 04 Nov 2021 22:14:36 +0000
+gov.gitcoin.co-post-8925-17
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+auryn
+
+            <aside class="quote no-group" data-username="owocki" data-post="11" data-topic="8925">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>how might we explore Zodiac for GitcoinDAO in a way that respects governance + sets the right fine grained controls for the multisig?</p>
+</blockquote>
+</aside>
+<p>The setup could look something like this.</p>
+<pre><code class="lang-auto">Gitcoin Gnosis Safe
+  ⬑ Multisig
+    ⬑Scope guard (optional)
+  ⬑ GitcoinDAO timelock
+  ⬑ Reality Module
+    ⬑ GitcoinDAO Snapshot
+      ⬑Scope guard (optional)
+</code></pre>
+<p>Essentially, the safe would be controlled by three mechanisms in parallel, the multisig, the compound timelock, and the Snapshot (via the <a href="https://github.com/gnosis/zodiac-module-reality" rel="noopener nofollow ugc">Reality module</a>).  Optionally, the multisig and/or the Reality module could be restricted with a <a href="https://github.com/gnosis/zodiac-guard-scope/" rel="noopener nofollow ugc">Scope Guard</a>, which let’s us define the addresses and function signatures with which they interact.</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/16
+        Thu, 04 Nov 2021 19:55:38 +0000
+gov.gitcoin.co-post-8925-16
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+griff
+
+            <p>+1 on Zodiac… seems like a nice high profile opportunity to give a nod to the great work Gnosis is doing with Cowswap and Zodiac</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/15
+        Thu, 04 Nov 2021 19:42:40 +0000
+gov.gitcoin.co-post-8925-15
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+DisruptionJoe
+
+            <p>Yeah. I didn’t mention here yet, but definitely agree that this is a perfect use case for Zodiac.</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/14
+        Thu, 04 Nov 2021 18:47:03 +0000
+gov.gitcoin.co-post-8925-14
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+lefterisjp
+
+            <p>I am happy to help too. Been already doing a lot for Gitcoin DAO so this would be a good fit.</p>
+<p>But I think I would like to echo <a class="mention" href="https://gov.gitcoin.co/u/auryn">@auryn</a> and <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> that we could use a module in the multisig and do it directly from the safe.</p>
+<p>If my (or anyone else’s) availability changes then we can always rotate out.</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/13
+        Thu, 04 Nov 2021 17:44:54 +0000
+gov.gitcoin.co-post-8925-13
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+austingriffith
+
+            <p>I support rotating in stewards and happy to help! <img src="https://emoji.discourse-cdn.com/twitter/surfing_man.png?v=10" title=":surfing_man:" class="emoji" alt=":surfing_man:"></p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/12
+        Thu, 04 Nov 2021 17:34:08 +0000
+gov.gitcoin.co-post-8925-12
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+owocki
+
+            <p>this idea seems like an intriguing “best of both worlds” scenario.</p>
+<p>how might we explore Zodiac for GitcoinDAO in a way that respects governance + sets the right fine grained controls for the multisig?</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/11
+        Wed, 03 Nov 2021 18:36:23 +0000
+gov.gitcoin.co-post-8925-11
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+thelostone-mc
+
+            <p>Agreed on this.<br>
+I found myself being slowed down on getting the stuff setup for payout.<br>
+Having a rotating list would help would help make us get through this process quicker</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/10
+        Wed, 03 Nov 2021 17:03:42 +0000
+gov.gitcoin.co-post-8925-10
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+auryn
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="8925">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>We’ve found that if there is a long lag between when those txns are proposed and executed on chain, that the transaction will fail - presumably due to slippage. If the community decides to go with (2) we will need a workaround that allows governance to rebalance the treasury within the structure of the 2 day Timelock.</p>
+</blockquote>
+</aside>
+<p>Whether it’s the DAO or the multi-sig controlling the funds, it should absolutely use Cowswap for trades to avoid MEV or transaction failing due to falling outside of the slippage tolerance.</p>
+<aside class="quote no-group" data-username="disruptionjoe1" data-post="7" data-topic="8925" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe1/48/4424_2.png" class="avatar"> disruptionjoe1:</div>
+<blockquote>
+<p>Another option would be to leave it in the multisig but use a Zodiac module to initiate governance control. <a class="mention" href="https://gov.gitcoin.co/u/auryn">@auryn</a> would probably be best to explain.</p>
+</blockquote>
+</aside>
+<p>Absolutely! There is no need to move funds from the safe, the GitcoinDAO’s timelock can be enabled as a module on the Gnosis Safe, giving it full control over the funds.</p>
+<p>The nice thing with this is that both the DAO and the multisig members can control the safe in parallel. If we want to get real crazy, we could even use a scope guard to limit the scope of what the multisig members are allowed to do. So maybe they are only allowed to do swaps on cowswap, but anything else requires DAO proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/9
+        Tue, 02 Nov 2021 19:24:46 +0000
+gov.gitcoin.co-post-8925-9
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+trent
+
+            <p>I’ve been asked if I would be able to help with this, I can definitely be a part of moving Gitcoin forward.</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/8
+        Tue, 02 Nov 2021 13:28:23 +0000
+gov.gitcoin.co-post-8925-8
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+disruptionjoe1
+
+            <p>Another option would be to leave it in the multisig but use a Zodiac module to initiate governance control. <a class="mention" href="https://gov.gitcoin.co/u/auryn">@auryn</a> would probably be best to explain.</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/7
+        Tue, 02 Nov 2021 02:29:16 +0000
+gov.gitcoin.co-post-8925-7
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+sassal
+
+            <p>Echoing what David says here - it’s especially difficult for me to be involved because of time-zone differences (I’m usually sleeping when critical Gitcoin governance things are happening).</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/6
+        Tue, 02 Nov 2021 00:24:31 +0000
+gov.gitcoin.co-post-8925-6
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+kyle
+
+            <p>I am also supportive of rotating and ensuring we can take actions in a timely manner <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=10" title=":slight_smile:" class="emoji" alt=":slight_smile:"></p>
+<p>One future goal will be to rebalance the multisig and this requires real time and work from folks to make happen on a regular cadence.</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/5
+        Mon, 01 Nov 2021 20:52:24 +0000
+gov.gitcoin.co-post-8925-5
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+linda
+
+            <p>I’m supportive of rotating the multisig keyholders to top Stewards and I’m happy to be a signer.</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/4
+        Mon, 01 Nov 2021 19:43:10 +0000
+gov.gitcoin.co-post-8925-4
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+econoar
+
+            <p>I echo David’s comment for myself.</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/3
+        Mon, 01 Nov 2021 18:10:00 +0000
+gov.gitcoin.co-post-8925-3
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+TrustlessState0x
+
+            <p>Hey all,</p>
+<p>Yes indeed, I think it might be in the best interest of the DAO to replace me with someone a bit more responsive towards what’s specifically going on in Gitcoin.</p>
+<p>Cheers!</p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/2
+        Mon, 01 Nov 2021 17:26:10 +0000
+gov.gitcoin.co-post-8925-2
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+Your Input wanted - Multisig Keyholders Rotation
+owocki
+
+            <p>Hey all,</p>
+<p>The <a href="https://etherscan.io/address/0xde21f729137c5af1b01d73af1dc21effa2b8a0d6">Gitcoin multisig</a> was <a href="https://etherscan.io/tx/0x296fe57c2c227b7b37c3901844607e22633d2c12c98f8430727bfbed56d27de2">created in August 2020</a>, before the GitcoinDAO launch.</p>
+<p>It has the following keyholders:</p>
+<ul>
+<li>myself</li>
+<li>David Hoffman</li>
+<li>Sassal</li>
+<li>Hudson Jameson</li>
+<li>Eric Coner</li>
+<li>Kyle Weiss</li>
+</ul>
+<p>As we got around to paying out GR11, we realized that things have evolved a lot since we created this multisig.  Particularly,</p>
+<ol>
+<li>We now have formal governance of GitcoinDAO via the <a href="https://withtally.com/governance/gitcoin">Gitcoin Stewards</a>.</li>
+<li>Things have shifted in the ecosystem, and many of the keyholders are now busy with other projects.</li>
+</ol>
+<p>As a result, we started to have a conversation about what it would look like to have a “changing of the guard” here.  Specifically, David Hoffman, Sassal, and Eric Conner have all told me that they are interested in rolling off the multisig.  There are two directions we could go.</p>
+<ol>
+<li>Rotate the multisig keyholders to be <a href="https://withtally.com/governance/gitcoin">top GitcoinDAO stewards</a>, which are currently Trent, Austin, Linda, Lefteris - on a case by case basis if they want it.</li>
+<li>Transfer all of the assets in the multisig to the <a href="https://etherscan.io/address/0x57a8865cfb1ecef7253c27da6b4bc3daee5be518">Timelock</a>.</li>
+</ol>
+<p>I would like to hear which way the community would like us to go.</p>
+<p>One consideration that you should know about  if you consider doing (2) is that right now the only way to rebalance tokens into DAI (which is what the Grants Rounds are paid out with) is to do a trade on uniswap/1inch or any other DEX.  We’ve found that if there is a long lag between when those txns are proposed and executed on chain, that the transaction will fail - presumably due to slippage.  If the community decides to go with (2) we will need a workaround that allows governance to rebalance the treasury within the structure of the 2 day Timelock.</p>
+<p>What do ppl want to see?</p>
+<p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/1">Click to view the poll.</a></p>
+          <p><a href="https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/your-input-wanted-multisig-keyholders-rotation/8925/1
+        Mon, 01 Nov 2021 17:04:53 +0000
+gov.gitcoin.co-post-8925-1
+Your Input wanted - Multisig Keyholders Rotation
+      
+
+

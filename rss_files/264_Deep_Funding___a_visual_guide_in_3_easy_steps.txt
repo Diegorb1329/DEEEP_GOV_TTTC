@@ -1,0 +1,200 @@
+
+
+
+Deep Funding - a visual guide in 3 easy steps
+https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765
+    # deep funding : a visual guide in 3 easy steps
+
+deep funding is a new way of funding open source software introduced by Vitalik Buterin last week.  myself and @sejalrekhan and a few others are working on a pilot with him.
+
+the 1st deep funding pilot is $170k in ETH to figure out which OSS dependancies of Ethereum to fund.  
+
+the basic question being asked here is "what dependancies do we fund? which are the most important to Ethereum?"
+
+STEP 1 the first thing we do is map the dependancies.
+
+![Screenshot 2024-12-18 at 12.25.39 PM|470x500](upload://dxhgiUJMjtly0IJhYnfJ1o8wLI6.jpeg)
+
+to do so, a data layer is created mapping the various dependencies (vertices) of a project and the connections between them (edges).
+
+now we must evaluate which dependency to fund at what level.
+
+but how do we do that?  there is a scale problem here. current public goods funding mechanisms require funders to evaluate each project, making the process increasingly burdensome as the number of applicants increases. funding mechanisms end up depending either on a large group of people, creating incentives for projects to publicly campaign to get themselves known, or a small group of people, creating incentives to privately curry favor and limiting the mechanism’s effectiveness at scaling beyond a small number of projects.
+
+in Deep Funding, most of the work gets done by a public market of allocators, that suggest proposed weights of edges in a graph, which answer the question “what percent of the credit for A belongs to B?”. potentially, there could be millions of weights to allocate, and so we encourage using AI to do this.
+
+this market of allocators assign weights to the edges to indicate their relative importance.
+
+![Ge-ZisJWIAA_nMV|527x500](upload://gf8e3zZgc3VwGtFyxZ22oFJYy8Z.jpeg)
+
+now that we've got a handful of agents that have ranked the dependancies and formed opinions about which part of the dependancy graph to reward, its time to figure out which agent is correct.
+
+to do that, a jury of experts “spot-check”s the graph, expressing expert preferences on a randomly selected set of edges. 
+
+the goal of all of this is to determine: which agents most closely align with your preferences?
+
+![Ge-Z1LtWUAAuL2t|509x500](upload://yKrLe7g2MFtWKcSDDIeSznqNIqB.jpeg)
+
+at the end the prizes will be distributed. 
+
+the mechanism then distributes funding to repos based on the weights provided by agent allocators that are most compatible with the spot checking results. 
+
+here is how prizes in the pilot will be distributed:
+* $170k - repos based on the weighting of their edges by the winning model
+* $40k - models that conform the best with spot check results by jury members manually giving weights
+* $40k - prizes to open source submissions of models, based on how interesting they are to jury members
+
+what is the timeline for this experiment?
+
+* NOW - Data on 40,000 Ethereum dependencies for building your model has been rleased
+* Jan 20th - Sample spot check data by jury members to train your model
+* Jan 20th - Deadline for “early bird” prizes for open source model submissions. At least half of the open source model submission prize pool will be reserved for early bird submissions.
+* Feb 20th - Submit your model 
+* Feb 27th - Results (the same day as schelling point :) )
+
+if you want to get involved and submit a model, checkout deep funding dot org
+
+thanks to vitalik, allo, gitcoin, voicedeck, oso, evalscience, drips, and pairwise for the hard work building this with us!
+
+zooming out - it is an exciting time, we are prototyping a new way of funding what matters!  i hope to see this pilot be successful and see the  mechanism spread far and wide in 2025!
+
+it could grow in 2 ways i think
+1. fund more open source.
+2. fund other things that depend on dependancy graphs
+
+lots of other things have dependancy trees that could be funded this way 
+1. open source software, dependancy trees of software
+2. scientific research, eg dependancy trees of citation graphs
+3. assembly theory - dependancy trees of simpler assemblies/legos its built upon
+4. music - eg dependancy trees of sampling of other songs/beats.
+5. legal systems, eg dependancy trees of precedent  
+6. movies, dependancy trees of ideas (for example star wars was a fork of dune)
+7. journalism, eg dependancy trees of reporting
+8. what else?
+
+TLDR - deep funding funds dependancy trees deeply.  it is a new frontier in public goods funding!  pilot is happening.  
+
+DM if you are DTF (down to fund) a deep funding pilot in your own ecosystem.
+Mon, 24 Feb 2025 04:57:33 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Deep Funding - a visual guide in 3 easy steps
+APAC
+
+            <p>This pilot is awesome. I happened to read an article which was unrelated , yet, seems to speak directly to this issue in the manner by which it would approach Deep Funding per se.</p>
+<p>I’m hoping this pilot leads to a community of great minds who can eventually help create the foundation for a really vibrant framework where qualitatively good OSS contributions can get the funding it/they deserve <img src="https://gov.gitcoin.co/images/emoji/twitter/bowing_man.png?v=12" title=":bowing_man:" class="emoji" alt=":bowing_man:" loading="lazy" width="20" height="20">.</p>
+          <p><a href="https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765/4
+        Mon, 24 Feb 2025 04:57:33 +0000
+gov.gitcoin.co-post-19765-4
+Deep Funding - a visual guide in 3 easy steps
+      
+
+Deep Funding - a visual guide in 3 easy steps
+CanopyCulture
+
+            <p>When we think about Ethereum’s dependencies, we often focus on software libraries, code bases, and direct technical dependencies. However, one crucial yet underfunded dependency category is mid-sized server farm operations across the globe.</p>
+<p>These aren’t massive centralized data centers, but rather professional node operations that:</p>
+<ul>
+<li>Provide robust computational power for the network</li>
+<li>Maintain geographic distribution and decentralization</li>
+<li>Operate at a scale above home nodes but below major cloud providers</li>
+<li>Require significant technical expertise and capital investment</li>
+</ul>
+<p>This infrastructure layer is currently underfunded in the Ethereum ecosystem, despite being critical for:</p>
+<ul>
+<li>Network resilience and performance</li>
+<li>Reducing reliance on major cloud providers</li>
+<li>Supporting growing network demands</li>
+<li>Maintaining true decentralization</li>
+</ul>
+<p>We can look to Filecoin as an example of how to better support this type of infrastructure - they’ve successfully created incentives for mid-sized storage providers around the world.</p>
+<p>The $170k pilot to identify critical dependencies could be an opportunity to recognize and start addressing this infrastructure gap. While software dependencies are obviously important, the ecosystem also needs to consider how to better fund and incentivize these crucial infrastructure providers that sit between individual stakers and centralized server farms.</p>
+          <p><a href="https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765/3
+        Fri, 20 Dec 2024 04:59:38 +0000
+gov.gitcoin.co-post-19765-3
+Deep Funding - a visual guide in 3 easy steps
+      
+
+Deep Funding - a visual guide in 3 easy steps
+Oba-One
+
+            <p>Checkout the Greenpill Podcast discussing <a href="https://deepfunding.org" rel="noopener nofollow ugc">Deep Funding</a>!</p><p><a href="https://www.youtube.com/watch?v=ygaEBHYllPU">[2024] DeepFunding.Org W/ Vitalik Buterin Pt.2</a></p>
+
+          <p><a href="https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765/2
+        Thu, 19 Dec 2024 23:33:03 +0000
+gov.gitcoin.co-post-19765-2
+Deep Funding - a visual guide in 3 easy steps
+      
+
+Deep Funding - a visual guide in 3 easy steps
+owocki
+
+            <h1><a name="deep-funding-a-visual-guide-in-3-easy-steps-1" class="anchor" href="https://gov.gitcoin.co#deep-funding-a-visual-guide-in-3-easy-steps-1"></a>deep funding : a visual guide in 3 easy steps</h1>
+<p>deep funding is a new way of funding open source software introduced by Vitalik Buterin last week.  myself and <a class="mention" href="https://gov.gitcoin.co/u/sejalrekhan">@sejalrekhan</a> and a few others are working on a pilot with him.</p>
+<p>the 1st deep funding pilot is $170k in ETH to figure out which OSS dependancies of Ethereum to fund.</p>
+<p>the basic question being asked here is “what dependancies do we fund? which are the most important to Ethereum?”</p>
+<p>STEP 1 the first thing we do is map the dependancies.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5edf48586f90a4370a28bf38f6289a74718c8baa.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/5edf48586f90a4370a28bf38f6289a74718c8baa" title="Screenshot 2024-12-18 at 12.25.39 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5edf48586f90a4370a28bf38f6289a74718c8baa_2_470x500.jpeg" alt="Screenshot 2024-12-18 at 12.25.39 PM" data-base62-sha1="dxhgiUJMjtly0IJhYnfJ1o8wLI6" width="470" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5edf48586f90a4370a28bf38f6289a74718c8baa_2_470x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5edf48586f90a4370a28bf38f6289a74718c8baa_2_705x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/5edf48586f90a4370a28bf38f6289a74718c8baa_2_940x1000.jpeg 2x" data-dominant-color="ECE3EE"></a></div><p></p>
+<p>to do so, a data layer is created mapping the various dependencies (vertices) of a project and the connections between them (edges).</p>
+<p>now we must evaluate which dependency to fund at what level.</p>
+<p>but how do we do that?  there is a scale problem here. current public goods funding mechanisms require funders to evaluate each project, making the process increasingly burdensome as the number of applicants increases. funding mechanisms end up depending either on a large group of people, creating incentives for projects to publicly campaign to get themselves known, or a small group of people, creating incentives to privately curry favor and limiting the mechanism’s effectiveness at scaling beyond a small number of projects.</p>
+<p>in Deep Funding, most of the work gets done by a public market of allocators, that suggest proposed weights of edges in a graph, which answer the question “what percent of the credit for A belongs to B?”. potentially, there could be millions of weights to allocate, and so we encourage using AI to do this.</p>
+<p>this market of allocators assign weights to the edges to indicate their relative importance.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/71d8b29949ff62e4fa54db25fe01338a7d848d85.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/71d8b29949ff62e4fa54db25fe01338a7d848d85" title="Ge-ZisJWIAA_nMV"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/71d8b29949ff62e4fa54db25fe01338a7d848d85_2_527x500.jpeg" alt="Ge-ZisJWIAA_nMV" data-base62-sha1="gf8e3zZgc3VwGtFyxZ22oFJYy8Z" width="527" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/71d8b29949ff62e4fa54db25fe01338a7d848d85_2_527x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/71d8b29949ff62e4fa54db25fe01338a7d848d85_2_790x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/71d8b29949ff62e4fa54db25fe01338a7d848d85_2_1054x1000.jpeg 2x" data-dominant-color="EAE7F3"></a></div><p></p>
+<p>now that we’ve got a handful of agents that have ranked the dependancies and formed opinions about which part of the dependancy graph to reward, its time to figure out which agent is correct.</p>
+<p>to do that, a jury of experts “spot-check”s the graph, expressing expert preferences on a randomly selected set of edges.</p>
+<p>the goal of all of this is to determine: which agents most closely align with your preferences?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f38a08b24a8f7d282fc0f19657a748947fa53f19.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/f38a08b24a8f7d282fc0f19657a748947fa53f19" title="Ge-Z1LtWUAAuL2t"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f38a08b24a8f7d282fc0f19657a748947fa53f19_2_509x500.jpeg" alt="Ge-Z1LtWUAAuL2t" data-base62-sha1="yKrLe7g2MFtWKcSDDIeSznqNIqB" width="509" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f38a08b24a8f7d282fc0f19657a748947fa53f19_2_509x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f38a08b24a8f7d282fc0f19657a748947fa53f19_2_763x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f38a08b24a8f7d282fc0f19657a748947fa53f19_2_1018x1000.jpeg 2x" data-dominant-color="E9E6F1"></a></div><p></p>
+<p>at the end the prizes will be distributed.</p>
+<p>the mechanism then distributes funding to repos based on the weights provided by agent allocators that are most compatible with the spot checking results.</p>
+<p>here is how prizes in the pilot will be distributed:</p>
+<ul>
+<li>$170k - repos based on the weighting of their edges by the winning model</li>
+<li>$40k - models that conform the best with spot check results by jury members manually giving weights</li>
+<li>$40k - prizes to open source submissions of models, based on how interesting they are to jury members</li>
+</ul>
+<p>what is the timeline for this experiment?</p>
+<ul>
+<li>NOW - Data on 40,000 Ethereum dependencies for building your model has been rleased</li>
+<li>Jan 20th - Sample spot check data by jury members to train your model</li>
+<li>Jan 20th - Deadline for “early bird” prizes for open source model submissions. At least half of the open source model submission prize pool will be reserved for early bird submissions.</li>
+<li>Feb 20th - Submit your model</li>
+<li>Feb 27th - Results (the same day as schelling point <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> )</li>
+</ul>
+<p>if you want to get involved and submit a model, checkout deep funding dot org</p>
+<p>thanks to vitalik, allo, gitcoin, voicedeck, oso, evalscience, drips, and pairwise for the hard work building this with us!</p>
+<p>zooming out - it is an exciting time, we are prototyping a new way of funding what matters!  i hope to see this pilot be successful and see the  mechanism spread far and wide in 2025!</p>
+<p>it could grow in 2 ways i think</p>
+<ol>
+<li>fund more open source.</li>
+<li>fund other things that depend on dependancy graphs</li>
+</ol>
+<p>lots of other things have dependancy trees that could be funded this way</p>
+<ol>
+<li>open source software, dependancy trees of software</li>
+<li>scientific research, eg dependancy trees of citation graphs</li>
+<li>assembly theory - dependancy trees of simpler assemblies/legos its built upon</li>
+<li>music - eg dependancy trees of sampling of other songs/beats.</li>
+<li>legal systems, eg dependancy trees of precedent</li>
+<li>movies, dependancy trees of ideas (for example star wars was a fork of dune)</li>
+<li>journalism, eg dependancy trees of reporting</li>
+<li>what else?</li>
+</ol>
+<p>TLDR - deep funding funds dependancy trees deeply.  it is a new frontier in public goods funding!  pilot is happening.</p>
+<p>DM if you are DTF (down to fund) a deep funding pilot in your own ecosystem.</p>
+          <p><a href="https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765/1
+        Tue, 17 Dec 2024 05:08:21 +0000
+gov.gitcoin.co-post-19765-1
+Deep Funding - a visual guide in 3 easy steps
+      
+
+

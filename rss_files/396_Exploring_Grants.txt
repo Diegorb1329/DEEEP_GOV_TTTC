@@ -1,0 +1,271 @@
+
+
+
+Exploring Grants+
+https://gov.gitcoin.co/t/exploring-grants/18119
+    Grants+
+
+# TLDR
+
+1. Gitcoin is focused on Grants right now,
+2. but we see a lucrative design space beyond Grants; we call it Grants+.
+3. We are exploring this design space ourselves.
+4. We are also enabling others to explore the design space in a way that adds value back to Gitcoin.
+5. This value proposition will grow over time as more people understand & execute it.
+
+For full context on this post, please read the Gitcoin Rainbow Paper first (link coming soon ™).
+
+# Grants+
+
+We aim to explore the vast potential beyond the familiar territory of Gitcoin centered around grants, venturing into what we refer to as “Grants+”. This ambition involves delving into the non-skeuomorphic frontier of capital allocation.
+
+How do we begin to reason about what we will find in this frontier? How do we evaluate the immense opportunity space and the transformative power it holds?
+
+Reflecting on the internet’s evolution– how innovations like email, instant messaging, social media platforms, and large language models revolutionized information exchange– allows us to envision the possible shifts in our methods of Funding What Matters. The emerging “internet of value” promises to redefine financial transactions and capital distribution, moving beyond traditional grants.
+
+![Screenshot 2024-02-26 at 11.01.16 AM|690x222](upload://45AhkplW1keRy9G0yM5KAIePUDb.png)
+
+
+Just as we now exchange information in much higher volume and more powerfully than we did before the internet, we believe that Grants+ will offer much higher volume and more powerful ways for ecosystems to do capital allocation or collective action.
+
+# Traversing the Design Space
+
+The basic modules of Allo’s simple core are:
+
+1. **Tokens** being ingested into Allo and [Aqueducts](https://gov.gitcoin.co/t/gitcoin-aqueduct/9684) that get the tokens into Allo.
+2. **Registry** - list of projects which could be funded.
+3. **Strategy** - how to distribute capital to the projects in the registry.
+
+One way to think about the design space for capital allocation is all permutations of these modules = (sum of all possible aqueducts) x (sum of all possible onchain assets) x (sum of all possible registries) x (sum of all strategies).
+
+A naive way to traverse the design space would be by brute force - e.g. by simply trying all different permutations of modules.
+
+This naive approach would not be efficient. So we do not expect to run campaigns on top of Allo for every permutation of this design space. So how should we traverse the design space?
+
+Viewing design space exploration through the lens of a classic computer science “hill climbing program,” it allows us to reason about the most promising configurations.
+
+Initially, we define our search area as “the sum total of all possible capital allocation configurations,” with our metric for success being “the generation of value for customers.”
+
+By conducting funding rounds on Allo and analyzing the outcomes, we can empirically navigate the design space. This process involves iteratively refining our approach based on what we learn, aiming to reach a higher point within the design space. This OODA loop (Observe, Orient, Decide, Act, repeat) is a formula that we’ve used in the past to mature Gitcoin Grants Stack and the Gitcoin Grants program.
+
+From time to time, we may integrate the latest research from theorists in our network in order to make bigger leaps towards an optimal design.
+
+![|511x315](upload://9W4A9VmnxvE6vA1pqpEU1ukooms.png)
+
+You can [read more](https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174) about how we’ve explored this design space so far.
+
+# Multiple Local Maximas
+
+The above graphic is misleading, as there will not be one global maxima of “the best possible capital allocation method” possible for all of humanity.
+
+It is likely that there will be multiple local maxima of Allo protocol configurations that work well for specific capital allocation problems.
+
+![|624x579](upload://l0fanVkahXtKh5E00j6ESfHDNOi.png)
+
+By encouraging a plurality of these local maxima to be discovered and available out of the box in Allo, we can build a funding ecosystem in which one mechanism does not become overly dominant. By having a plurality of mechanisms, none of which are dominant, the Allo ecosystem becomes less fragile than it otherwise would.
+
+# Decentralized Exploration of the Design Space
+
+It would not be possible to explore the full breadth of this design space ourselves.
+
+A prime example of this approach in action is EasyRetroPGF.xyz - RetroPGF is a design space pioneered by Optimism, and we have launched EasyRetroPGF.xyz to allow anyone to run an Optimism RetroPGF style campaign in their own ecosystem.
+
+Another example is the streaming Quadratic Funding pilot recently launched by Superfluid. Using this application, which combines the streaming money primitives from Superfluid and an Allo strategy, users are able to run realtime Quadratic Funding rounds.
+
+Because Gitcoin cannot explore the entire design space ourselves, Allo is designed to empower others to navigate this terrain themselves and then collaborate with Allo to share their discoveries with a broader audience.
+
+There are many other builds being built into Allo. We hope to see these as pull requests back into the main Allo repository.
+
+![|624x471](upload://EOcKukZukUtUfYGdl7XLxF0MK8.png)
+
+Our ambition is for Allo to become a pivotal tool for developers integrating capital allocation into their projects. Once the Allo repository becomes a reliable source of audited, well-documented, Allo strategies, we believe there emerges an immense value prop for developers to harness Allo’s capabilities within their own applications.
+
+From the perspective of the Gitcoin network, these developers who are pushing the frontier of capital allocation design space
+
+1. act as decentralized explorers of the capital allocation design space..
+2. & have opportunities to align their incentives with Gitcoin’s along the way. This could be through participating in our Citizens Grants program, which utilizes Allo, or by fostering economic interoperability with Gitcoin through other channels.
+
+What OpenZeppelin has done for ERC20/721 contracts, Allo could do for capital allocation. Success in establishing Allo as a hub for these contracts could generate a positive feedback loop: better contracts attract more developers, leading to even better contracts, and so on. This cycle not only enhances the ecosystem's value but also expands the tools and services within the Allo ecosystem, bolstering its network effects and competitive advantage.
+
+For more on this strategy, check out [Allo B2C Strategy](https://gov.gitcoin.co/t/allo-v2-b2c-strategy/17744).
+
+# Gitcoin as attractor
+
+One can think of Gitcoin as an attractor - or gravity well, that attracts new opportunities into it. Every new partner, integration, or other opportunity that enters Gitcoin’s orbit builds momentum to Gitcoin’s social layer, technology layer, or economic layer, and therefore adds to the attractiveness for future opportunities to enter Gitcoin’s orbit.
+
+![|500x327](upload://jSs7SqTLXTrePSAxqN6oBin9yDf.png)
+
+# Reflexively growing
+
+One cool thing about this attractor is how it can grow over time. It can grow reflexively.
+
+Reflexive growth refers to a process where success breeds further success, creating a positive feedback loop that accelerates expansion and influence. This phenomenon is powerful because it can lead to exponential growth and dominance in a market or sector by leveraging initial successes to fuel further advancements and attract more resources.
+
+![|624x299](upload://fE0O6Wditf0MrPDENsdIqw3s5aw.png)
+
+Right now, building on allo is hard. But over time it will get easier (and higher upside) as this cycle generates a network of tools, devs, and other momentum built around it.
+
+One way to think of this is through exponential thinking. Reflexive growth cycles like this can create exponential growth in network utility due to Metcalfe’s law:
+
+![|624x292](upload://4ZlKYAiSCX5MQPIWSnO1ROu0sX0.png)
+
+# Conclusion
+
+In Summary,
+
+1. Gitcoin is focused on Grants right now,
+2. but we see a lucrative design space beyond Grants; we call it Grants+.
+3. We are exploring this design space ourselves.
+4. We are also enabling others to explore the design space in a way that adds value back to Gitcoin.
+5. This value proposition will grow over time as more people understand & execute it.
+Sat, 09 Mar 2024 09:01:53 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Exploring Grants+
+notthere-2023
+
+            <p>Thanks for your reply Carl! I think I misunderstood the meaning of “per funding dollar” here, it makes sense now.</p>
+<p>By the way I have tried to translate the whitepaper in to chinese, appreciate your work and insights in those ideas! And want to translate the rainbowpaper next week.</p>
+          <p><a href="https://gov.gitcoin.co/t/exploring-grants/18119/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/exploring-grants/18119/5
+        Sat, 09 Mar 2024 09:01:53 +0000
+gov.gitcoin.co-post-18119-5
+Exploring Grants+
+      
+
+Exploring Grants+
+ccerv1
+
+            <p>Thanks for stress-testing the numbers! I’m the author of the original report, which you can find <a href="https://docs.opensource.observer/blog/gitcoin-grants-impact" rel="noopener nofollow ugc">here</a>.</p>
+<p>Here’s a quote explaining the math:</p>
+<blockquote>
+<p>According to Electric Capital’s 2023 edition of the <a href="https://www.developerreport.com/reports/devs/2023?s=developer-report" rel="noopener nofollow ugc">Developer Report</a>, the sector has a total of 6,889 full-time open source developers. Meanwhile, more than <a href="https://pitchbook.com/news/reports/q4-2023-crypto-report" rel="noopener nofollow ugc">$76 billion</a> has been invested by venture capital firms since 2018 according to Pitchbook. This translates into a return of less than 0.1 full-time developers for every $1M raised in venture capital.</p>
+</blockquote>
+<p>Essentially:</p>
+<ul>
+<li>$76B invested</li>
+<li>6889 FT devs retained</li>
+<li>Ratio of $11M spent per FT dev retained</li>
+<li>Equiv. to 0.09 FT dev per $1M</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/exploring-grants/18119/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/exploring-grants/18119/4
+        Thu, 07 Mar 2024 13:51:24 +0000
+gov.gitcoin.co-post-18119-4
+Exploring Grants+
+      
+
+Exploring Grants+
+notthere-2023
+
+            <p>Hi Kevin, I am reading the “The Gitcoin Whitepaper”,find something confusing:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/ce70760269bf92ce460701a17db5ef9182f7ac02.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/ce70760269bf92ce460701a17db5ef9182f7ac02" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/ce70760269bf92ce460701a17db5ef9182f7ac02_2_690x186.png" alt="image" data-base62-sha1="tsfiW6BEdDLTm2YNvLAfeIu1s9c" width="690" height="186" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/ce70760269bf92ce460701a17db5ef9182f7ac02_2_690x186.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/ce70760269bf92ce460701a17db5ef9182f7ac02_2_1035x279.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/ce70760269bf92ce460701a17db5ef9182f7ac02_2_1380x372.png 2x" data-dominant-color="B4C4E6"></a></div><p></p>
+<p>I interpret this as 76B * 0. 1 = 0.76 B, 76B / 1m * 13 = 988000, which is not able to reach the conclusion.</p>
+<p>Sorry for the disturbance of my comment, I can’t find a way to publish posts but am also confused about it.</p>
+          <p><a href="https://gov.gitcoin.co/t/exploring-grants/18119/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/exploring-grants/18119/3
+        Wed, 06 Mar 2024 10:20:12 +0000
+gov.gitcoin.co-post-18119-3
+Exploring Grants+
+      
+
+Exploring Grants+
+owocki
+
+            <p>video version of this post, from my talk at ethdenver =&gt;  <a href="https://www.youtube.com/watch?v=P6TFcBEXESk">https://www.youtube.com/watch?v=P6TFcBEXESk</a></p>
+<p><a href="https://www.youtube.com/watch?v=P6TFcBEXESk"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8161a8a02b9fd5ec6f983fe9c3fdc500be90f53b.jpeg" alt="Screenshot 2024-03-05 at 11.38.22 AM" data-base62-sha1="isyPeY6j1CmnNxGLZT2nC4qmoPh" width="690" height="409"></a></p>
+          <p><a href="https://gov.gitcoin.co/t/exploring-grants/18119/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/exploring-grants/18119/2
+        Tue, 05 Mar 2024 18:38:05 +0000
+gov.gitcoin.co-post-18119-2
+Exploring Grants+
+      
+
+Exploring Grants+
+owocki
+
+            <p>Grants+</p>
+<h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR</h1>
+<ol>
+<li>Gitcoin is focused on Grants right now,</li>
+<li>but we see a lucrative design space beyond Grants; we call it Grants+.</li>
+<li>We are exploring this design space ourselves.</li>
+<li>We are also enabling others to explore the design space in a way that adds value back to Gitcoin.</li>
+<li>This value proposition will grow over time as more people understand &amp; execute it.</li>
+</ol>
+<p>For full context on this post, please read the Gitcoin Rainbow Paper first (link coming soon ™).</p>
+<h1><a name="grants-2" class="anchor" href="https://gov.gitcoin.co#grants-2"></a>Grants+</h1>
+<p>We aim to explore the vast potential beyond the familiar territory of Gitcoin centered around grants, venturing into what we refer to as “Grants+”. This ambition involves delving into the non-skeuomorphic frontier of capital allocation.</p>
+<p>How do we begin to reason about what we will find in this frontier? How do we evaluate the immense opportunity space and the transformative power it holds?</p>
+<p>Reflecting on the internet’s evolution– how innovations like email, instant messaging, social media platforms, and large language models revolutionized information exchange– allows us to envision the possible shifts in our methods of Funding What Matters. The emerging “internet of value” promises to redefine financial transactions and capital distribution, moving beyond traditional grants.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1caa5216bf931045bc6331963bb48b8221d0c425.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/1caa5216bf931045bc6331963bb48b8221d0c425" title="Screenshot 2024-02-26 at 11.01.16 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1caa5216bf931045bc6331963bb48b8221d0c425_2_690x222.png" alt="Screenshot 2024-02-26 at 11.01.16 AM" data-base62-sha1="45AhkplW1keRy9G0yM5KAIePUDb" width="690" height="222" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1caa5216bf931045bc6331963bb48b8221d0c425_2_690x222.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1caa5216bf931045bc6331963bb48b8221d0c425_2_1035x333.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/1/1caa5216bf931045bc6331963bb48b8221d0c425.png 2x" data-dominant-color="EAEAEA"></a></div><p></p>
+<p>Just as we now exchange information in much higher volume and more powerfully than we did before the internet, we believe that Grants+ will offer much higher volume and more powerful ways for ecosystems to do capital allocation or collective action.</p>
+<h1><a name="traversing-the-design-space-3" class="anchor" href="https://gov.gitcoin.co#traversing-the-design-space-3"></a>Traversing the Design Space</h1>
+<p>The basic modules of Allo’s simple core are:</p>
+<ol>
+<li><strong>Tokens</strong> being ingested into Allo and <a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684">Aqueducts</a> that get the tokens into Allo.</li>
+<li><strong>Registry</strong> - list of projects which could be funded.</li>
+<li><strong>Strategy</strong> - how to distribute capital to the projects in the registry.</li>
+</ol>
+<p>One way to think about the design space for capital allocation is all permutations of these modules = (sum of all possible aqueducts) x (sum of all possible onchain assets) x (sum of all possible registries) x (sum of all strategies).</p>
+<p>A naive way to traverse the design space would be by brute force - e.g. by simply trying all different permutations of modules.</p>
+<p>This naive approach would not be efficient. So we do not expect to run campaigns on top of Allo for every permutation of this design space. So how should we traverse the design space?</p>
+<p>Viewing design space exploration through the lens of a classic computer science “hill climbing program,” it allows us to reason about the most promising configurations.</p>
+<p>Initially, we define our search area as “the sum total of all possible capital allocation configurations,” with our metric for success being “the generation of value for customers.”</p>
+<p>By conducting funding rounds on Allo and analyzing the outcomes, we can empirically navigate the design space. This process involves iteratively refining our approach based on what we learn, aiming to reach a higher point within the design space. This OODA loop (Observe, Orient, Decide, Act, repeat) is a formula that we’ve used in the past to mature Gitcoin Grants Stack and the Gitcoin Grants program.</p>
+<p>From time to time, we may integrate the latest research from theorists in our network in order to make bigger leaps towards an optimal design.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/45a42030307a13073a149f606a1a7d463c98c4d0.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/45a42030307a13073a149f606a1a7d463c98c4d0" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/45a42030307a13073a149f606a1a7d463c98c4d0_2_511x315.png" alt="" data-base62-sha1="9W4A9VmnxvE6vA1pqpEU1ukooms" width="511" height="315" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/45a42030307a13073a149f606a1a7d463c98c4d0_2_511x315.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/45a42030307a13073a149f606a1a7d463c98c4d0_2_766x472.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/45a42030307a13073a149f606a1a7d463c98c4d0.png 2x" data-dominant-color="F0F0F0"></a></div><p></p>
+<p>You can <a href="https://gov.gitcoin.co/t/shape-rotators-guide-to-funding-what-matters/17174">read more</a> about how we’ve explored this design space so far.</p>
+<h1><a name="multiple-local-maximas-4" class="anchor" href="https://gov.gitcoin.co#multiple-local-maximas-4"></a>Multiple Local Maximas</h1>
+<p>The above graphic is misleading, as there will not be one global maxima of “the best possible capital allocation method” possible for all of humanity.</p>
+<p>It is likely that there will be multiple local maxima of Allo protocol configurations that work well for specific capital allocation problems.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9334bb945a625d89cc32b6469400e16d0eaa2e0a.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/9334bb945a625d89cc32b6469400e16d0eaa2e0a" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9334bb945a625d89cc32b6469400e16d0eaa2e0a_2_538x500.png" alt="" data-base62-sha1="l0fanVkahXtKh5E00j6ESfHDNOi" width="538" height="500" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9334bb945a625d89cc32b6469400e16d0eaa2e0a_2_538x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9334bb945a625d89cc32b6469400e16d0eaa2e0a_2_807x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/9334bb945a625d89cc32b6469400e16d0eaa2e0a.png 2x" data-dominant-color="CFD1D0"></a></div><p></p>
+<p>By encouraging a plurality of these local maxima to be discovered and available out of the box in Allo, we can build a funding ecosystem in which one mechanism does not become overly dominant. By having a plurality of mechanisms, none of which are dominant, the Allo ecosystem becomes less fragile than it otherwise would.</p>
+<h1><a name="decentralized-exploration-of-the-design-space-5" class="anchor" href="https://gov.gitcoin.co#decentralized-exploration-of-the-design-space-5"></a>Decentralized Exploration of the Design Space</h1>
+<p>It would not be possible to explore the full breadth of this design space ourselves.</p>
+<p>A prime example of this approach in action is EasyRetroPGF.xyz - RetroPGF is a design space pioneered by Optimism, and we have launched EasyRetroPGF.xyz to allow anyone to run an Optimism RetroPGF style campaign in their own ecosystem.</p>
+<p>Another example is the streaming Quadratic Funding pilot recently launched by Superfluid. Using this application, which combines the streaming money primitives from Superfluid and an Allo strategy, users are able to run realtime Quadratic Funding rounds.</p>
+<p>Because Gitcoin cannot explore the entire design space ourselves, Allo is designed to empower others to navigate this terrain themselves and then collaborate with Allo to share their discoveries with a broader audience.</p>
+<p>There are many other builds being built into Allo. We hope to see these as pull requests back into the main Allo repository.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/049cf70418044f2a4bf5d79f4f9f6c5567b1f59c.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/049cf70418044f2a4bf5d79f4f9f6c5567b1f59c" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/049cf70418044f2a4bf5d79f4f9f6c5567b1f59c_2_624x471.png" alt="" data-base62-sha1="EOcKukZukUtUfYGdl7XLxF0MK8" width="624" height="471" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/049cf70418044f2a4bf5d79f4f9f6c5567b1f59c_2_624x471.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/049cf70418044f2a4bf5d79f4f9f6c5567b1f59c_2_936x706.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/0/049cf70418044f2a4bf5d79f4f9f6c5567b1f59c.png 2x" data-dominant-color="FAFAFA"></a></div><p></p>
+<p>Our ambition is for Allo to become a pivotal tool for developers integrating capital allocation into their projects. Once the Allo repository becomes a reliable source of audited, well-documented, Allo strategies, we believe there emerges an immense value prop for developers to harness Allo’s capabilities within their own applications.</p>
+<p>From the perspective of the Gitcoin network, these developers who are pushing the frontier of capital allocation design space</p>
+<ol>
+<li>act as decentralized explorers of the capital allocation design space…</li>
+<li>&amp; have opportunities to align their incentives with Gitcoin’s along the way. This could be through participating in our Citizens Grants program, which utilizes Allo, or by fostering economic interoperability with Gitcoin through other channels.</li>
+</ol>
+<p>What OpenZeppelin has done for ERC20/721 contracts, Allo could do for capital allocation. Success in establishing Allo as a hub for these contracts could generate a positive feedback loop: better contracts attract more developers, leading to even better contracts, and so on. This cycle not only enhances the ecosystem’s value but also expands the tools and services within the Allo ecosystem, bolstering its network effects and competitive advantage.</p>
+<p>For more on this strategy, check out <a href="https://gov.gitcoin.co/t/allo-v2-b2c-strategy/17744">Allo B2C Strategy</a>.</p>
+<h1><a name="gitcoin-as-attractor-6" class="anchor" href="https://gov.gitcoin.co#gitcoin-as-attractor-6"></a>Gitcoin as attractor</h1>
+<p>One can think of Gitcoin as an attractor - or gravity well, that attracts new opportunities into it. Every new partner, integration, or other opportunity that enters Gitcoin’s orbit builds momentum to Gitcoin’s social layer, technology layer, or economic layer, and therefore adds to the attractiveness for future opportunities to enter Gitcoin’s orbit.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8b5119ece3ce203ffad3a04dab0103688c950331.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/8b5119ece3ce203ffad3a04dab0103688c950331" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8b5119ece3ce203ffad3a04dab0103688c950331_2_500x327.png" alt="" data-base62-sha1="jSs7SqTLXTrePSAxqN6oBin9yDf" width="500" height="327" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8b5119ece3ce203ffad3a04dab0103688c950331_2_500x327.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8b5119ece3ce203ffad3a04dab0103688c950331_2_750x490.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/8/8b5119ece3ce203ffad3a04dab0103688c950331.png 2x" data-dominant-color="E6E6E6"></a></div><p></p>
+<h1><a name="reflexively-growing-7" class="anchor" href="https://gov.gitcoin.co#reflexively-growing-7"></a>Reflexively growing</h1>
+<p>One cool thing about this attractor is how it can grow over time. It can grow reflexively.</p>
+<p>Reflexive growth refers to a process where success breeds further success, creating a positive feedback loop that accelerates expansion and influence. This phenomenon is powerful because it can lead to exponential growth and dominance in a market or sector by leveraging initial successes to fuel further advancements and attract more resources.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/6da684b45e7b475a63df9e0b7d8294c248a27e70.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/6da684b45e7b475a63df9e0b7d8294c248a27e70" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6da684b45e7b475a63df9e0b7d8294c248a27e70_2_624x299.png" alt="" data-base62-sha1="fE0O6Wditf0MrPDENsdIqw3s5aw" width="624" height="299" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6da684b45e7b475a63df9e0b7d8294c248a27e70_2_624x299.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6da684b45e7b475a63df9e0b7d8294c248a27e70_2_936x448.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/6/6da684b45e7b475a63df9e0b7d8294c248a27e70.png 2x" data-dominant-color="E5E5E5"></a></div><p></p>
+<p>Right now, building on allo is hard. But over time it will get easier (and higher upside) as this cycle generates a network of tools, devs, and other momentum built around it.</p>
+<p>One way to think of this is through exponential thinking. Reflexive growth cycles like this can create exponential growth in network utility due to Metcalfe’s law:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/22f8163e246fd94259eeaae9585d6d82a6b45f1a.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/22f8163e246fd94259eeaae9585d6d82a6b45f1a" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/22f8163e246fd94259eeaae9585d6d82a6b45f1a_2_624x292.png" alt="" data-base62-sha1="4ZlKYAiSCX5MQPIWSnO1ROu0sX0" width="624" height="292" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/22f8163e246fd94259eeaae9585d6d82a6b45f1a_2_624x292.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/22f8163e246fd94259eeaae9585d6d82a6b45f1a_2_936x438.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/22f8163e246fd94259eeaae9585d6d82a6b45f1a_2_1248x584.png 2x" data-dominant-color="FAFAFA"></a></div><p></p>
+<h1><a name="conclusion-8" class="anchor" href="https://gov.gitcoin.co#conclusion-8"></a>Conclusion</h1>
+<p>In Summary,</p>
+<ol>
+<li>Gitcoin is focused on Grants right now,</li>
+<li>but we see a lucrative design space beyond Grants; we call it Grants+.</li>
+<li>We are exploring this design space ourselves.</li>
+<li>We are also enabling others to explore the design space in a way that adds value back to Gitcoin.</li>
+<li>This value proposition will grow over time as more people understand &amp; execute it.</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/exploring-grants/18119/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/exploring-grants/18119/1
+        Mon, 26 Feb 2024 18:02:47 +0000
+gov.gitcoin.co-post-18119-1
+Exploring Grants+
+      
+
+

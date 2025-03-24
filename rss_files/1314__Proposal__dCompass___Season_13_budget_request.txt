@@ -1,0 +1,454 @@
+
+
+
+[Proposal] dCompass - Season 13 budget request
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794
+    ## **TLDR**:
+The dCompass workstream is requesting a total of 38k GTC for Season 13.
+The focus for this season will be on:
+- Rewarding users going through pathways & quests
+- Beta release & deployment on mainnet and Polygon
+- Onboarding new projects, DAOs and protocols
+
+## **Milestone Report**:
+Q4 2021 Retrospective and January 2022 update
+https://gov.gitcoin.co/t/proposal-integrate-dcompass-within-dgitcoin-to-build-dquests-dknowledge/8836/19?u=huxwell
+
+## **Proposal body**:
+
+****Season 13 roadmap****
+- **dCompass** - PROJECT
+   - Project Sponsor Pass (stake required to submit a project for review)
+   - If any, display all the smart contracts of a project
+   - ERC20 allocation and distribution for pathway and quest creation
+   - Claim ERC20, ERC701 and ERC1155 rewards
+   - Public profile page & browse profiles by pathway & quests progress(eg: query all users that completed the Gitcoin Grants 101 pathway)
+   - Performance, additional datastore to act as a caching layer such as ThreadDB or PostgreSQL
+   - Smart contract audits, mandatory before going to production and we'd appreciate any advice from the community on our [contracts](https://github.com/Discovery-Labs/dCompass/tree/main/packages/hardhat/contracts).
+   - Beta launch on mainnet and Polygon + research and potential deployment on other scaling solutions
+   - Responsiveness
+   - [Website - WIP](https://dcompass.webflow.io/) (about, features, values, go to dapp)
+   - Allow users to choose between uploading a markdown file or use the Gitbook integration for pathway & quest guides
+
+- **Gitcoin Knowledge Base** - PROJECT
+*While working on the v1 of the Gitcoin Knowledge Base with FAQs and translations, we realized a pain point that could serve the Gitcoin DAO Community greatly by addressing one of the main problems; **contributor onboarding**.* 
+By working with Workstream and Squad leads for the last month on the Gitcoin Knowledge Base, we started to prepare *Handbooks*, which are one-stop information hubs for Workstreams that include **introductions to workstream squads** and **step-by-step instructions** on **how to contribute** to each workstream squad.
+We'll focus on creating 3 handbooks as an example for other workstreams and Gitcoin products:
+  - Handbook for the Moonshot Collective Workstream
+  - Handbook for the FDD Workstream
+  - Handbook for the Gitcoin Grants (what is gtc grants, cGrants vs dGrants, contribute to a grant)
+  - Translations of the *Handbooks*
+
+- **dKnowledge** - SQUAD
+  - Integrate **Moonshot Collective developer pathway** to dCompass dApp
+  - Integrate **FDD contributor pathway** to dCompass dApp
+  - Integrate **Gitcoin grants pathway** to dCompass dApp
+  - Content curation and guide creation for pathways & quests
+  - Preparation of Blog Articles to standardize the use of Handbooks across DAOops
+
+**Success metrics and KPIs**
+I would consider our workstream successful if we have a decent MVP deployed in a production environment at the end of Season 13.
+
+Some KPIs
+- Get at least 6 projects to purchase a sponsor pass
+- Create pathways and quests with at least a total of $100K rewards distributed
+- Get at least 1000 users that engage with a project, pathway or quest
+
+**Season 13 budget request**
+We're requesting a total of **38k GTC** that will be used to compensate contributors and to handle various expenses such as the smart contract audits and the infrastructure costs (Ceramic Node and a few other instances running on AWS).
+
+![Capture d’écran 2022-01-31 214207|690x343](upload://1n8jWiHitlJT9l4nZfAuFRd7lAf.png)
+
+## **Vote**
+
+**FOR** - If you vote "yes", the **dCompass Workstream** will continue to exist within the **Decentralize Gitcoin Workstream** , and the proposed budget above will be allocated to the multisig of the dCompass Workstream `0x756239E5B7D2aa6F3DA0594B296952121Fb71606`.
+
+**AGAINST** - If you vote "no", the dCompass Workstream won't be funded or supported by the Gitcoin DAO anymore, and the requested budget won't be allocated.
+Thu, 14 Apr 2022 21:12:52 +0000
+📜 Proposals
+
+
+[Proposal] dCompass - Season 13 budget request
+Huxwell
+
+            <p>Here’s the staging app with a bit of delay!<br>
+<a href="https://dcompass-staging.herokuapp.com/" class="onebox" target="_blank" rel="noopener nofollow ugc">https://dcompass-staging.herokuapp.com/</a></p>
+<p>Anyone that has some Rinkeby ETH should be able to go through the Gitcoin Grants pathway and complete the quest to claim the rewards.</p>
+<p>Let us now if you’re having issues or any feedback to provide.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/16
+        Thu, 14 Apr 2022 21:12:52 +0000
+gov.gitcoin.co-post-9794-16
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+Huxwell
+
+            <p><strong>Season 13 milestone report</strong></p>
+<p><strong>Contributors</strong> : 4 full-time &amp; 2 part-time<br>
+<strong>Funds spent to date from S13 fund allocation</strong>: 9221 GTC (21.4% of the dCompass treasury)<br>
+<strong>Notable achievements for the quarter so far</strong>:</p>
+<ul>
+<li>
+<p>Big improvements on the product organization, kudos to Eli our scrum master</p>
+</li>
+<li>
+<p><a href="https://trello.com/c/KACFAZ3o/1-5-as-a-quest-creator-i-want-to-configure-how-the-rewards-of-the-quest-are-distributed-to-the-adventurers" rel="noopener nofollow ugc">As a quest creator I want to configure how the rewards of the quest are distributed to the adventurers</a><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/193952b3d8e0ca7a1340076803844e6db43198bb.png" data-download-href="/uploads/short-url/3B8Kyf7Lwo3ThHe31NrAOcyiL5V.png?dl=1" title="Capture d’écran 2022-04-04 163102" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/1/193952b3d8e0ca7a1340076803844e6db43198bb_2_690x360.png" alt="Capture d’écran 2022-04-04 163102" data-base62-sha1="3B8Kyf7Lwo3ThHe31NrAOcyiL5V" width="690" height="360" srcset="/uploads/db4391/optimized/2X/1/193952b3d8e0ca7a1340076803844e6db43198bb_2_690x360.png, /uploads/db4391/optimized/2X/1/193952b3d8e0ca7a1340076803844e6db43198bb_2_1035x540.png 1.5x, /uploads/db4391/optimized/2X/1/193952b3d8e0ca7a1340076803844e6db43198bb_2_1380x720.png 2x" data-small-upload="/uploads/db4391/optimized/2X/1/193952b3d8e0ca7a1340076803844e6db43198bb_2_10x10.png"></a></div><p></p>
+</li>
+<li>
+<p><a href="https://trello.com/c/uUgRKeC3/4-5-as-an-adventurer-i-want-to-complete-a-quiz-so-that-i-can-claim-the-various-rewards" rel="noopener nofollow ugc">As an adventurer I want to complete a quiz so that I can claim the various rewards</a><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c8d29014363c64f3772194a5986958b336c50350.png" data-download-href="/uploads/short-url/sEyCC8VPggPMOeYOH0UymzIMqLC.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/c/c8d29014363c64f3772194a5986958b336c50350_2_690x361.png" alt="image" data-base62-sha1="sEyCC8VPggPMOeYOH0UymzIMqLC" width="690" height="361" srcset="/uploads/db4391/optimized/2X/c/c8d29014363c64f3772194a5986958b336c50350_2_690x361.png, /uploads/db4391/optimized/2X/c/c8d29014363c64f3772194a5986958b336c50350_2_1035x541.png 1.5x, /uploads/db4391/optimized/2X/c/c8d29014363c64f3772194a5986958b336c50350_2_1380x722.png 2x" data-small-upload="/uploads/db4391/optimized/2X/c/c8d29014363c64f3772194a5986958b336c50350_2_10x10.png"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2c1d186578c86d4f4178f2119e3869e42f6d1f3d.png" data-download-href="/uploads/short-url/6iflowmjEgoQrUi1KMlTHSa1ETP.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/2/2c1d186578c86d4f4178f2119e3869e42f6d1f3d_2_690x356.png" alt="image" data-base62-sha1="6iflowmjEgoQrUi1KMlTHSa1ETP" width="690" height="356" srcset="/uploads/db4391/optimized/2X/2/2c1d186578c86d4f4178f2119e3869e42f6d1f3d_2_690x356.png, /uploads/db4391/optimized/2X/2/2c1d186578c86d4f4178f2119e3869e42f6d1f3d_2_1035x534.png 1.5x, /uploads/db4391/optimized/2X/2/2c1d186578c86d4f4178f2119e3869e42f6d1f3d_2_1380x712.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/2c1d186578c86d4f4178f2119e3869e42f6d1f3d_2_10x10.png"></a></div><p></p>
+</li>
+</ul>
+<p><a href="https://rinkeby.etherscan.io/tx/0xa03ecd1cd91d360739350d6e60d829d335dc261315d33a0a425e32270bc70f5c" rel="noopener nofollow ugc">Claim quest rewards transaction example on a testnet</a> &amp; <a href="https://testnets.opensea.io/assets/0xad66eccb5dc5a9d00a820fcf898fa72061539d52/1" rel="noopener nofollow ugc">NFT Reward on opensea</a></p>
+<ul>
+<li>
+<a href="https://trello.com/c/oD0aZqr1/9-8-as-a-visitor-i-want-to-see-a-list-of-users-that-completed-a-quest" rel="noopener nofollow ugc">As a visitor I want to see a list of users that completed a quest</a><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b27b666732c5518fbf7a4e01b01c3836f68980e2.png" data-download-href="/uploads/short-url/psVn7Ztuy8RWwKFkxEhH7z3VkGu.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/b/b27b666732c5518fbf7a4e01b01c3836f68980e2_2_690x316.png" alt="image" data-base62-sha1="psVn7Ztuy8RWwKFkxEhH7z3VkGu" width="690" height="316" srcset="/uploads/db4391/optimized/2X/b/b27b666732c5518fbf7a4e01b01c3836f68980e2_2_690x316.png, /uploads/db4391/optimized/2X/b/b27b666732c5518fbf7a4e01b01c3836f68980e2_2_1035x474.png 1.5x, /uploads/db4391/optimized/2X/b/b27b666732c5518fbf7a4e01b01c3836f68980e2_2_1380x632.png 2x" data-small-upload="/uploads/db4391/optimized/2X/b/b27b666732c5518fbf7a4e01b01c3836f68980e2_2_10x10.png"></a></div>
+</li>
+<li>Staging app to allow anyone to test and play with the first quests on testnets will be deployed during this week.</li>
+</ul>
+<p><strong>Achieved S13 roadmap goals so far:</strong></p>
+<ul>
+<li>Project Sponsor Pass (stake required to submit a project for review)</li>
+<li>ERC20 allocation and distribution for pathway and quest creation</li>
+<li>Claim ERC20, ERC721 and ERC1155 rewards</li>
+<li>Performance, additional datastore to act as a caching layer such as ThreadDB <s>or PostgreSQL</s>
+</li>
+</ul>
+<p><strong>Blockers in moving towards goals (if any):</strong><br>
+No blockers but we’re planning to attend multiple events to demo dCompass during devconnect and announce an official release of the MVP.<br>
+<strong>Have any of actions of the workstream brought back value into the DAO/treasury (and if so, what?)</strong><br>
+Not yet but we do expect to generate value and revenue by the end of Season 13, post devconnect/official release.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/15
+        Mon, 04 Apr 2022 12:44:42 +0000
+gov.gitcoin.co-post-9794-15
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+lefterisjp
+
+            <p>I like what this workstream has put out so far with the budget they have and especially compared to other streams the request for funding is not extraordinary so I will support it.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/14
+        Mon, 21 Feb 2022 11:58:32 +0000
+gov.gitcoin.co-post-9794-14
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+Fishbiscuit
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/huxwell">@Huxwell</a> great job putting together this budget request! I’m personally very invested in the education space and I think we can afford to give you the space to experiment and try to build new ways to engage developers in a scalable manner.</p>
+<p><strong>Suggestions</strong></p>
+<ul>
+<li>there might be some open source education material that would like to work with us on this, I noticed free code camp coming up with a <a href="https://www.freecodecamp.org/news/carbon-neutral-web3-curriculum-plans/" rel="noopener nofollow ugc">Web3 education course</a>
+</li>
+<li>I’d like to see dCompass featured at ETHGlobal as a learning pathway for Scaffold-ETH (since this is an existing pathway)</li>
+<li>if you’d like some curriculum development work I can offer some time to help build this out</li>
+<li>perhaps collaborating with places like Bankless Academy (i think there were some initial conversations), Secureum, buildspace might help. I’d imagine these organisations could have a free version/trial version on dCompass and dCompass could help provide referrals to these more advanced courses</li>
+</ul>
+<p><strong>Curious about</strong></p>
+<ul>
+<li>I’d like to see where the project is managed, I couldn’t find it on Notion</li>
+<li>how would you keep the Gitcoin Knowledge Base present considering that GitcoinDAO is constantly evolving</li>
+<li>how the proposed DAO will interact with overall regenerative economics ecosystem (<a class="mention" href="https://gov.gitcoin.co/u/aleborda21">@Aleborda21</a>)</li>
+</ul>
+<p>Otherwise it’s tentatively a yes from me</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/13
+        Thu, 17 Feb 2022 14:08:50 +0000
+gov.gitcoin.co-post-9794-13
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+bobjiang
+
+            <p>dCompass comes from GitcoinDAO, dQuest.</p>
+<p>This is a great experiment to gamelize the knowledge and quest on Gitcoin.<br>
+I will support the continuous experiment.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/12
+        Thu, 17 Feb 2022 06:49:31 +0000
+gov.gitcoin.co-post-9794-12
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+krrisis
+
+            <p>Adding a comment here to make sure dCompass can move this proposal asap to Snapshot. I will probably abstain from voting on this proposal because I’ve seen dCompass struggle to be fully integrated within GitcoinDAO, or even within the DGitcoin Workstream. I don’t think this is per se a bad thing, knowing that the goal is to become a separate DAO within the year.</p>
+<p>However I do think investing in better and more communication within the DAO would be a good thing. The forking away without warning from the Gitcoin Discord was in that context a sign that better communication is needed. Even if in the future you become a separate DAO, good communication within that DAO will be key, so just passing this on as a note. I hope we’ll be able to collaborate in S13 on how we can get there together, and I hope I’ll personally find more time to jump on calls to discuss these pain points and figure out how to facilitate better.</p>
+<p>Most important point why I will abstain is a lack of time to really dive deep into what DCompass has accomplished &amp; wants to accomplish.<br>
+What I do know is that both <a class="mention" href="https://gov.gitcoin.co/u/huxwell">@Huxwell</a> &amp; <a class="mention" href="https://gov.gitcoin.co/u/maerg">@maerg</a> are two massively competent, hard-working &amp; talented contributors who believe deeply in the mission of Gitcoin &amp; decentralization, so hopefully other stewards will have time to dive deeper (missing at least one comment at time of writing).</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/11
+        Tue, 15 Feb 2022 06:32:22 +0000
+gov.gitcoin.co-post-9794-11
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+maerg
+
+            <p>Thank you <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a><br>
+Sorry for not adding these details to our forum post. We learn as we go!<br>
+And, we will make sure to prepare documentation to detail these initiatives and share it with you all.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/10
+        Fri, 11 Feb 2022 12:52:50 +0000
+gov.gitcoin.co-post-9794-10
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+kyle
+
+            <p>Thanks so much for the info. This is helpful to know these conversations are in flight.</p>
+<p>Assuming they continue in good faith and when the workstream is interested in spinning out we have involvement from the DAO at large (not just Owocki), I am supportive of funding the workstream.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/9
+        Wed, 09 Feb 2022 17:29:33 +0000
+gov.gitcoin.co-post-9794-9
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+DisruptionJoe
+
+            <p>I’m very in support of this proposal. With a small budget they executed and are about to drop a critical piece of web 3 infrastructure. They are an example of decentralization in action.</p>
+<p>Please fund this stream and do not delay!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/8
+        Wed, 09 Feb 2022 16:41:49 +0000
+gov.gitcoin.co-post-9794-8
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+maerg
+
+            <p>Hi Kyle,</p>
+<p>As <a class="mention" href="https://gov.gitcoin.co/u/huxwell">@Huxwell</a> mentioned we intend to make sure that our mission, values &amp; goals are aligned with Gitcoin DAO and the Gitcoin community.</p>
+<p>Currently, we are a group of builders, and we are structuring the coordination between our working groups. We are putting a lot of effort to make sure we have the core structure today to progressively decentralize in the future.</p>
+<p>As Cali mentioned, we talked with <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> about revenue(fee) sharing, and a potential Token Swap before the launch.<br>
+In addition to those, we have been talking with <a class="mention" href="https://gov.gitcoin.co/u/beist">@beist</a> to align our business model and pricing to benefit GitcoinDAO as much as possible - we are trying to build a structure where we can funnel more sponsors to the Gitcoin Hackathons via dCompass dApp.<br>
+Other than the monetary value that we can add, we are building funnels to ease onboarding for the GitcoinDAO through pathways &amp; quests; working with <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a>, the FDD workstream, and the MC to create the initial onboarding structures.</p>
+<p>Having that said, we are a part of the GitcoinDAO family and we would love to discuss these in detail to make sure the DAOs support to dCompass is justified and we have the necessary structure set for GitcoinDAO to play a great role in the future of dCompass.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/7
+        Wed, 09 Feb 2022 13:28:12 +0000
+gov.gitcoin.co-post-9794-7
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+Huxwell
+
+            <aside class="quote no-group" data-username="kyle" data-post="5" data-topic="9794">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>You also have mentioned there is the intention to eventually launch this protocol as a unique community/DAO.</p>
+</blockquote>
+</aside>
+<p>Yes the idea of creating our own DAO is something we had since the beginning and that was briefly discussed with <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> during the first meeting about decentralizing quests. It’s a mid-term goal (6 months or 1 year) but it is important to start having those conversations to avoid creating chaotic situations when the time comes.</p>
+<aside class="quote no-group" data-username="kyle" data-post="5" data-topic="9794">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>We are forming some precedent in how we launch new DAOs from Gitcoin, with the goal of making sure Gitcoin, as the funding partner, is able to participate in the upside in any growth that dCompass. Have you given consideration to what it might mean to offer upside to Gitcoin (the community and DAO)?</p>
+</blockquote>
+</aside>
+<p>Here’s what we have in mind so far:</p>
+<ul>
+<li>On pathway &amp; quest creation, there will be a 15% fee on the rewards allocated where 5% will go to the Gitcoin treasury.</li>
+<li>A token swap, so Gitcoin will always have a big say about the project.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/6
+        Wed, 09 Feb 2022 10:26:13 +0000
+gov.gitcoin.co-post-9794-6
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+kyle
+
+            <p>Thanks Huxwell for the comments on the other thread., I figured I would move the conversation over here.</p>
+<p>It sounds like you are interested in updating the branding to denote this is a Gitcoin Project, which I appreciate. Given Gitcoin is funding this work, showing ties and branding that gives this</p>
+<p>You also have mentioned there is the intention to eventually launch this protocol as a unique community/DAO. We are forming some precedent in how we launch new DAOs from Gitcoin, with the goal of making sure Gitcoin, as the funding partner, is able to participate in the upside in any growth that dCompass. Have you given consideration to what it might mean to offer upside to Gitcoin (the community and DAO)?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/5
+        Tue, 08 Feb 2022 19:25:38 +0000
+gov.gitcoin.co-post-9794-5
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+Huxwell
+
+            <p>Thanks to <a class="mention" href="https://gov.gitcoin.co/u/matthewcarano">@matthewcarano</a> <a href="https://www.youtube.com/watch?v=KUPT0L8voLo" rel="noopener nofollow ugc">here’s a demo video of the dCompass dApp</a>!</p>
+<p>The feedback is always more than welcome!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/4
+        Mon, 07 Feb 2022 10:02:57 +0000
+gov.gitcoin.co-post-9794-4
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+Huxwell
+
+            <p>I would say in about a week if everything goes well.</p>
+<p>The last step for submitting a project is to choose the sponsor pass plan. Then those projects will be reviewed by the dCompass community and if approved they get the Sponsor Pass NFT and we take their staked tokens.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a439a74825a7dde5fa8f3d6e9790f13fa4c60afd.png" data-download-href="/uploads/short-url/nqNPhkuaAqD2evrU3G85VYHH8hD.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/a/a439a74825a7dde5fa8f3d6e9790f13fa4c60afd_2_690x370.png" alt="image" data-base62-sha1="nqNPhkuaAqD2evrU3G85VYHH8hD" width="690" height="370" srcset="/uploads/db4391/optimized/2X/a/a439a74825a7dde5fa8f3d6e9790f13fa4c60afd_2_690x370.png, /uploads/db4391/optimized/2X/a/a439a74825a7dde5fa8f3d6e9790f13fa4c60afd_2_1035x555.png 1.5x, /uploads/db4391/optimized/2X/a/a439a74825a7dde5fa8f3d6e9790f13fa4c60afd_2_1380x740.png 2x" data-small-upload="/uploads/db4391/optimized/2X/a/a439a74825a7dde5fa8f3d6e9790f13fa4c60afd_2_10x10.png"></a></div><p></p>
+<p>It will certainly change so we’re open to feedback regarding the pricing and features.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/3
+        Tue, 01 Feb 2022 15:44:27 +0000
+gov.gitcoin.co-post-9794-3
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+Sirlupinwatson
+
+            <p>Listening to BBB Big Buck Bunny this morning <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>When this will be live on snapshot?</p>
+<aside class="quote no-group" data-username="Huxwell" data-post="1" data-topic="9794">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar"> Huxwell:</div>
+<blockquote>
+<p>Project Sponsor Pass</p>
+</blockquote>
+</aside>
+<p>Interesting, do you have more info about the Sponsor Project Pass?<br>
+Looking great!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/2
+        Tue, 01 Feb 2022 13:44:17 +0000
+gov.gitcoin.co-post-9794-2
+[Proposal] dCompass - Season 13 budget request
+      
+
+[Proposal] dCompass - Season 13 budget request
+Huxwell
+
+            <h2><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a><strong>TLDR</strong>:</h2>
+<p>The dCompass workstream is requesting a total of 38k GTC for Season 13.<br>
+The focus for this season will be on:</p>
+<ul>
+<li>Rewarding users going through pathways &amp; quests</li>
+<li>Beta release &amp; deployment on mainnet and Polygon</li>
+<li>Onboarding new projects, DAOs and protocols</li>
+</ul>
+<h2><a name="milestone-report-2" class="anchor" href="https://gov.gitcoin.co#milestone-report-2"></a><strong>Milestone Report</strong>:</h2>
+<p>Q4 2021 Retrospective and January 2022 update</p><aside class="quote quote-modified" data-post="19" data-topic="8836">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/huxwell/48/3808_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/proposal-integrate-dcompass-within-dgitcoin-to-build-dquests-dknowledge/8836/19">[PROPOSAL] - Integrate dCompass within dGitcoin to build dQuests &amp; dKnowledge</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    Hey everyone, after 3 months of hard work from the dCompass and Gitcoin contributors we have some updates to share. 
+Q4 2021 retrospective 
+Contributors: 5 full-time &amp; 6 part-time 
+Funds spent: 11 859 GTC 
+Funds carrying over the next quarter: 14 286 GTC 
+Have the actions of the workstream brought back value into the DAO/treasury? 
+Not yet but we do expect to generate value and revenue by the end of Season 13. 
+Milestone 1 &amp; 2 achievements  - [v] = success      [x] = failure 
+[v] Enable user to …
+  </blockquote>
+</aside>
+
+<h2><a name="proposal-body-3" class="anchor" href="https://gov.gitcoin.co#proposal-body-3"></a><strong>Proposal body</strong>:</h2>
+<p><strong><strong>Season 13 roadmap</strong></strong></p>
+<ul>
+<li>
+<p><strong>dCompass</strong> - PROJECT</p>
+<ul>
+<li>Project Sponsor Pass (stake required to submit a project for review)</li>
+<li>If any, display all the smart contracts of a project</li>
+<li>ERC20 allocation and distribution for pathway and quest creation</li>
+<li>Claim ERC20, ERC701 and ERC1155 rewards</li>
+<li>Public profile page &amp; browse profiles by pathway &amp; quests progress(eg: query all users that completed the Gitcoin Grants 101 pathway)</li>
+<li>Performance, additional datastore to act as a caching layer such as ThreadDB or PostgreSQL</li>
+<li>Smart contract audits, mandatory before going to production and we’d appreciate any advice from the community on our <a href="https://github.com/Discovery-Labs/dCompass/tree/main/packages/hardhat/contracts" rel="noopener nofollow ugc">contracts</a>.</li>
+<li>Beta launch on mainnet and Polygon + research and potential deployment on other scaling solutions</li>
+<li>Responsiveness</li>
+<li><a href="https://dcompass.webflow.io/" rel="noopener nofollow ugc">Website - WIP</a> (about, features, values, go to dapp)</li>
+<li>Allow users to choose between uploading a markdown file or use the Gitbook integration for pathway &amp; quest guides</li>
+</ul>
+</li>
+<li>
+<p><strong>Gitcoin Knowledge Base</strong> - PROJECT<br>
+<em>While working on the v1 of the Gitcoin Knowledge Base with FAQs and translations, we realized a pain point that could serve the Gitcoin DAO Community greatly by addressing one of the main problems; <strong>contributor onboarding</strong>.</em><br>
+By working with Workstream and Squad leads for the last month on the Gitcoin Knowledge Base, we started to prepare <em>Handbooks</em>, which are one-stop information hubs for Workstreams that include <strong>introductions to workstream squads</strong> and <strong>step-by-step instructions</strong> on <strong>how to contribute</strong> to each workstream squad.<br>
+We’ll focus on creating 3 handbooks as an example for other workstreams and Gitcoin products:</p>
+<ul>
+<li>Handbook for the Moonshot Collective Workstream</li>
+<li>Handbook for the FDD Workstream</li>
+<li>Handbook for the Gitcoin Grants (what is gtc grants, cGrants vs dGrants, contribute to a grant)</li>
+<li>Translations of the <em>Handbooks</em></li>
+</ul>
+</li>
+<li>
+<p><strong>dKnowledge</strong> - SQUAD</p>
+<ul>
+<li>Integrate <strong>Moonshot Collective developer pathway</strong> to dCompass dApp</li>
+<li>Integrate <strong>FDD contributor pathway</strong> to dCompass dApp</li>
+<li>Integrate <strong>Gitcoin grants pathway</strong> to dCompass dApp</li>
+<li>Content curation and guide creation for pathways &amp; quests</li>
+<li>Preparation of Blog Articles to standardize the use of Handbooks across DAOops</li>
+</ul>
+</li>
+</ul>
+<p><strong>Success metrics and KPIs</strong><br>
+I would consider our workstream successful if we have a decent MVP deployed in a production environment at the end of Season 13.</p>
+<p>Some KPIs</p>
+<ul>
+<li>Get at least 6 projects to purchase a sponsor pass</li>
+<li>Create pathways and quests with at least a total of $100K rewards distributed</li>
+<li>Get at least 1000 users that engage with a project, pathway or quest</li>
+</ul>
+<p><strong>Season 13 budget request</strong><br>
+We’re requesting a total of <strong>38k GTC</strong> that will be used to compensate contributors and to handle various expenses such as the smart contract audits and the infrastructure costs (Ceramic Node and a few other instances running on AWS).</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/099fa38348e4f590a81e15a4d70766a16242bc53.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/099fa38348e4f590a81e15a4d70766a16242bc53" title="Capture d’écran 2022-01-31 214207"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/0/099fa38348e4f590a81e15a4d70766a16242bc53.png" alt="Capture d’écran 2022-01-31 214207" data-base62-sha1="1n8jWiHitlJT9l4nZfAuFRd7lAf" width="690" height="343" data-dominant-color="F8F8F8"></a></div><p></p>
+<h2><a name="vote-4" class="anchor" href="https://gov.gitcoin.co#vote-4"></a><strong>Vote</strong></h2>
+<p><strong>FOR</strong> - If you vote “yes”, the <strong>dCompass Workstream</strong> will continue to exist within the <strong>Decentralize Gitcoin Workstream</strong> , and the proposed budget above will be allocated to the multisig of the dCompass Workstream <code>0x756239E5B7D2aa6F3DA0594B296952121Fb71606</code>.</p>
+<p><strong>AGAINST</strong> - If you vote “no”, the dCompass Workstream won’t be funded or supported by the Gitcoin DAO anymore, and the requested budget won’t be allocated.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-dcompass-season-13-budget-request/9794/1
+        Mon, 31 Jan 2022 20:46:56 +0000
+gov.gitcoin.co-post-9794-1
+[Proposal] dCompass - Season 13 budget request
+      
+
+

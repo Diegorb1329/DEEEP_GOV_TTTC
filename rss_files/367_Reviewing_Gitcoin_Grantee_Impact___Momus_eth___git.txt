@@ -1,0 +1,318 @@
+
+
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215
+    **<h1>tl;dr</h1>**
+As a long-time supporter of the Gitcoin climate grant round, Momus.eth has made it a mission to support the emerging regenerative finance movement. They have contributed generously to the Climate grant round matching fund and individual grantees. After making significant contributions, the question is whether these grantees have made an impact with the funding received. Out of this need, Momus built a new tool called DeReSy (DEcentralized REview SYstem), with the first use case being reviewing climate round grantees’ impact and use of funds. The first set of reviews was conducted and found that seven out of the top ten most funded climate projects in GR14 had made a positive impact with their work and should receive additional funding (reviews can be found here: gitcoinreviews.co).
+
+**<h1>Who is Momus</h1>**
+momus.eth, aka the Momus Collective, is an anonymous group that we do not know much about. They did well in the early days of crypto and curated a fantastic collection of early NFTs from 2018-2020. They were betting on artists in a bear market at a time when most people didn’t understand or see the value of NFTs. They saw the possibilities at the intersection of the physical and digital world and used their precious ETH to encourage artists to push the space forward. They own many early and historically significant CryptoArt pieces.
+
+In the same spirit of funding and supporting the next generation of innovation on the blockchain, they began funding regens and climate-focused projects. In their words, “This regenerative movement is especially critical now, at a point in history when we need to be re-aligning human incentives to enable a sustainable way of life for the planet and future generations.” They have begun selling some of their NFT art collection to fund this critical work and, in their words, “to signal that your (climate/ReFi projects) contribution to the space is valuable and that you can persevere through the doubts of the bear…Regens Unite!” In late 2021, the Momus Collective began funding projects via Gitcoin and has contributed 1.5 Million DAI to the Gitcoin grant climate round matching fund and over 444k DAI in direct donations to grants.
+
+You can read their most recent public statement here: 
+[https://ipfs.io/ipfs/bafybeibgmniyijilqtuvf6yeqxah4jb4fivhrng4wmhwedlp3i4aabpgga/](https://ipfs.io/ipfs/bafybeibgmniyijilqtuvf6yeqxah4jb4fivhrng4wmhwedlp3i4aabpgga/)
+
+**<h1>What is DeReSy?</h1>**
+Momus built a contract-based review system deployed on Arbitrum: DeReSy (DEcentralized REview SYstem). This review system was initially designed to enable the evaluation of Gitcoin funding in a transparent, scalable, self-service, credibly neutral way. However, DeReSy is application-agnostic: it could review a list of movies, products, protocols, or VC funds. The hope is that others use DeReSy to increase the efficiency of their work through contracted reviews.
+
+The general idea is that a sponsor writes a ReviewForm to evaluate a set of Targets. The sponsor then selects a group of Reviewers who will be compensated - in ETH - to fill in the ReviewForm for each Target. This is done by creating a ReviewRequest and depositing enough ETH to guarantee reviewers will be paid for their work. DeReSy is built on Arbitrum and can be forked by anyone to begin using it. Arbitrum is used to automate the execution of the payment logic, and IPFS is used to store data. DeReSy does not rely on any centralized component and is unstoppable as long as Arbitrum and IPFS exist. Momus is excited to see how others use this tool.  
+  
+Fully-Decentralized DeReSy application, on arbitrum and ipfs:
+https://deresy.eth.limo/  
+  
+DeReSy smart contract code and IPFS Single Page Application: 
+https://github.com/chimi-co/deresy  
+  
+DeReSy V1 deployment: https://arbiscan.io/address/0x50e9a780bde93ccfa592ce9e981d5dbaf9cfc107
+
+**<h1>What is GitcoinReviews.co?</h1>**
+One of the challenges the Momus Collective has faced is determining what Gitcoin grants to fund and, perhaps more importantly, whether these projects are making an impact with the funding. There was a need for a tool to review grants, so Momus funded building one. Gitcoinreviews.co is the first use case for DeReSy.
+
+As an initial test of gitcoinreview.co and the underlying DeReSy protocol, Momus used the site to review the top 10 most funded projects from the GR14 climate round. They worked with two reviewers (as seen on-chain, I was one of the reviewers) to independently review these grants/projects. All reviews are on-chain, and as previously noted, Arbitrum was used for the execution and payments, and IPFS stores all the data. A third party, like Momus, can fund these reviews by issuing bounties for reviewers to perform due diligence on projects.
+
+During the test run, the two reviewers sometimes disagreed with each other. Still, there are clear trends on the positive impact projects generated and how much they would benefit from additional funding. The compiled review data is below.
+
+![Screenshot 2023-05-31 at 2.38.26 PM|690x391](upload://wOXF9mdGxlkf0SQn2H0rnIEcGAD.png)  
+  
+While DeReSy has the advantage of being an unstoppable, immutable, self-service protocol, the user experience from serving content from IPFS and looking up key review data from Arbitrum is slow and not ideal for end users. For this reason, gitcoinreviews.co serves as a fast-cache to both IPFS and Arbitrum, and interacts with the underlying DeReSy platform to serve content and provide a UI for the reviewers to complete their reviews efficiently.  
+  
+GitcoinReviews.co UI code: [https://github.com/chimi-co/deresy-centralized-ui](https://github.com/chimi-co/deresy-centralized-ui)
+
+GitcoinReviews.co API code: [https://github.com/chimi-co/deresy-centralized-api](https://github.com/chimi-co/deresy-centralized-api)
+
+**<h1>Why?</h1>**
+The use of funds and progress projects are making is important to funders. Contributors will contribute more if they can assess the project's progress and see the impact they are funding. There is no easy way for matching fund contributors and individual contributors to evaluate a project's impact and progress. Gitcoinreviews.co provides a way to assess project progress and impact.
+
+To conduct due diligence, you can review a project's Twitter, webpage, Discord, and other online presence to assess what they are working on and shipping. You can investigate on-chain activity to see where funds have gone and what % have been off-ramped to FIAT. The problem is with hundreds of projects in grant rounds; this is time-consuming and inefficient.  
+
+Momus built Gitcoinreviews.co to outsource this due diligence work. The tool provides a 3rd party audit of the project that should present a non-biased view of the project. Momus funded the initial alpha test reviews and plans to fund further reviews of the climate grant round. We hope to see other matching pool contributors do this for additional grant rounds.
+
+**<h1>The Future</h1>**
+Gitcoinreviews.co pulled in data from the old c-Grants platform. We are beginning work on v2 of the site, including integration with the Allo Protocol and the Grants Stack. Some feature improvements include editing and updating reviews and tracking version history all on-chain. There will be improvements to the UI/UX for both reviewers and the public view of the site. For the projects being reviewed, we also want to incorporate an on-chain feedback form for self-reporting work accomplished and project impacts.
+
+We are also working with other projects, including [Hypercerts](https://hypercerts.org/), to explore using these reviews as on-chain attestations of verified impact. We may explore integrating the project's Hypercerts into the project reviews. Another possibility is for the site to connect to various api’s to pull more data and metrics about the projects into the review site.
+
+If you are interested in working with us or spinning up another use case for DeReSy please contact us at momus.eth@proton.me.
+Mon, 06 May 2024 15:36:52 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+mars
+
+            <p>Revisiting an old thread.</p>
+<p>Something that was created literally Today… Speaking on LetsGROW Live GG20 Twitter Spaces, talking about impact evaluation: <a href="https://impactevaluation.foundation" rel="noopener nofollow ugc">https://impactevaluation.foundation</a></p>
+<p>Does exactly what says on the tin.</p>
+<p>Telegram chat: <a href="https://t.me/ImpactEval" rel="noopener nofollow ugc">https://t.me/ImpactEval</a></p>
+<p>Literally Today, a few hours ago, fresh of the press, alpha <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/14
+        Mon, 06 May 2024 15:36:52 +0000
+gov.gitcoin.co-post-15215-14
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+ZER8
+
+            <p>Thanks for writing this Jon. I personally find it amazing that someone took time and put effort into solving an issue that has been around for so much time- namely creating a decentralized review system.</p>
+<p>I don’t think we ever chatted, but I would be very interested in reviewing grants with Deresy. Sending an e-mail now <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>As time passes I’m sure we can reach a even better “review” formula. Good times</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/13
+        Fri, 09 Jun 2023 19:32:47 +0000
+gov.gitcoin.co-post-15215-13
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+thedevanshmehta
+
+            <p>Hi Jon,</p>
+<p>I was going through the <a href="https://forum.arbitrum.foundation/" rel="noopener nofollow ugc">Arbitrum DAO governance forum</a> and had the thought that we could submit a proposal to them for using Deresy to pay reviewers evaluating Gitcoin grantees. It’s the right time as they recently got decentralized and are looking for avenues to deploy $4 billion+ in treasury funds to grow the ecosystem.</p>
+<p>It could be a compelling pitch for them as it positions Arbitrum as the leading blockchain for grant evaluators. The outcome from their grant would be creating a pool of evaluators interacting with the Deresy smart contract on Arbitrum to receive payouts and post their reviews. Eventually, we would aim for this to be sustainable by giving donors the option of allocating 7-10% of their donation to the evaluator pool (the standard in the traditional nonprofit world).</p>
+<p>Let me know your thoughts, happy to work on putting a proposal together!</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/12
+        Sun, 04 Jun 2023 13:52:24 +0000
+gov.gitcoin.co-post-15215-12
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+MathildaDV
+
+            <p>This is great <a class="mention" href="https://gov.gitcoin.co/u/jon-spark-eco">@jon-spark-eco</a>! This ties in so well with how we’re exploring further ways of improving the relationship and transparency between grantees and funders, and how we might support those initiatives. Very excited for V2 and a possible implementation of Hypercerts! There’s a lot to do here and I’m eager to explore more</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/11
+        Fri, 02 Jun 2023 19:34:29 +0000
+gov.gitcoin.co-post-15215-11
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+jon-spark-eco
+
+            <p>gm, <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> I appreciate the feedback. I don’t think there is an incentive for reviewers to collude. The way the initial test worked was Momus chose two allow-listed reviewers (<a class="mention" href="https://gov.gitcoin.co/u/knome7337">@knome7337</a> and Myself). They funded two reviews per project with equal payouts. This way, we were incentivized to conduct the reviews but not to collude. By allow-listing reviewers, the party funding the reviews can choose trusted individuals to conduct a thorough review. We are still exploring how the incentives would work if these were open bounties for anyone to claim. By allow-listing reviewers the review funder is essentially hiring them to do the reviews but the work and payments are decentralized. In the case of an anon like Momus this is ideal as they can fund the contract and then the reviewers do the reviews without them having to do any further work.</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/10
+        Fri, 02 Jun 2023 13:10:38 +0000
+gov.gitcoin.co-post-15215-10
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+thedevanshmehta
+
+            <p>I love the quant based approach to evaluations! We could go the way of yelp/airbnb/amazon where every reviewer gives their own score, or one that’s standardized across certain parameters (1 = team is not responsive/not continuing the project , 2 = …). Whichever route we go, we shouldn’t neglect the qualitative, which can be helpful to the projects as an outside assessment of their work.</p>
+<p>I have been playing around with GPT4 scoring impact certificates. Not much to report on that front except the importance of giving it prompts to anchor ratings, otherwise everything gets between a 3 and 4 <img src="https://gov.gitcoin.co/images/emoji/twitter/rofl.png?v=12" title=":rofl:" class="emoji" alt=":rofl:" loading="lazy" width="20" height="20"></p>
+<p>Edit for an unsolicited suggestion: Deresys sounds better than Deresy</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/9
+        Fri, 02 Jun 2023 11:00:05 +0000
+gov.gitcoin.co-post-15215-9
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+jengajojo
+
+            <p>Thank you Momus.eth for shipping this! Great to hear about the future hypercerts integration</p>
+<p>I like the fact that this decentralizes the review system, I wonder if the reviewers are incentivised to collude with each other to pick up the bounty? Maybe the reviwers themselves should be asked to stake some GTC with slashing conditions. I understand that this may demotivate newbies from participating, but may incentivize professional groups to apply as reviewers.</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/8
+        Fri, 02 Jun 2023 08:45:06 +0000
+gov.gitcoin.co-post-15215-8
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+knome7337
+
+            <p>Great to see community engagement on this. Jon and myself spent a lot of time working through available data and reviews are a crucial element to track projects.</p>
+<p>We welcome community inputs on datapoints to be covered in future reviews and a huge shoutout to Momus for their support.</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/7
+        Fri, 02 Jun 2023 02:30:54 +0000
+gov.gitcoin.co-post-15215-7
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+shawn16400
+
+            <aside class="quote no-group" data-username="jon-spark-eco" data-post="1" data-topic="15215">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jon-spark-eco/48/10207_2.png" class="avatar"> jon-spark-eco:</div>
+<blockquote>
+<p>DeReSy</p>
+</blockquote>
+</aside>
+<p>And… really interested to see if / how we might use this capability for later Gitcoin Citizens Rounds -= both for pre and post assessment… DM sent.</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/6
+        Thu, 01 Jun 2023 13:28:10 +0000
+gov.gitcoin.co-post-15215-6
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+shawn16400
+
+            <p>Wow. This capability is exciting and I love the decentralized nature of evaluating impact - which I think web3 needs to do better at across the board.</p>
+<aside class="quote no-group" data-username="jon-spark-eco" data-post="1" data-topic="15215">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jon-spark-eco/48/10207_2.png" class="avatar"> jon-spark-eco:</div>
+<blockquote>
+<p>The first set of reviews was conducted and found that seven out of the top ten most funded climate projects in GR14 had made a positive impact with their work and should receive additional funding (reviews can be found here: <a href="http://gitcoinreviews.co" rel="noopener nofollow ugc">gitcoinreviews.co </a>).</p>
+</blockquote>
+</aside>
+<p>Time is short, but I would encourage you to consider applying for a retroactive public goods funding via the Gitcoin Citizens Round.  Nominations / applications close on Sunday.</p>
+<p><a href="https://twitter.com/GitcoinCitizens/status/1659216733922824196?s=20" class="onebox" target="_blank" rel="noopener nofollow ugc">https://twitter.com/GitcoinCitizens/status/1659216733922824196?s=20</a></p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/5
+        Thu, 01 Jun 2023 13:24:22 +0000
+gov.gitcoin.co-post-15215-5
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+jon-spark-eco
+
+            <p>Thanks, <a class="mention" href="https://gov.gitcoin.co/u/carlosjmelgar">@carlosjmelgar</a>! For the first test, Momus chose to fund a small subset of reviews based on the top ten funded grants in the round. We plan to do a larger set of reviews of the alpha/beta rounds. At this time, the bounty funder who spins up a request for reviews chooses what projects to review and chooses the reviewers. I think in future versions, there may be a way for projects to opt-in.</p>
+<p>One thing I didn’t write as much about is that we also sent a form to projects to fill out and “self-review” their own impact. The reviewers then used this as a starting place for the review. This was an off-chain process; we hope to bring it on-chain in v2. I think these self-reviews will be a place for smaller projects to dig in and show their work with proof. During our first set of reviews, projects that provided detailed information about the work they accomplished, uses of funds with backup, and a clear roadmap for future use of funds got higher reviews unless the reviewer found issues with these self-reviews.</p>
+<p>Hey, <a class="mention" href="https://gov.gitcoin.co/u/thedevanshmehta">@thedevanshmehta</a>, I will reach out to chat. It sounds like you would be a good candidate for being a reviewer. We would like to get to a point where we are providing a score based on the reviews, and ideally, this would be integrated into the grants stack at some point.</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/4
+        Thu, 01 Jun 2023 13:18:25 +0000
+gov.gitcoin.co-post-15215-4
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+thedevanshmehta
+
+            <p>I went through the <a href="http://gitcoinreviews.co" rel="noopener nofollow ugc">gitcoinreviews.co</a> site in detail and really love how its presented, especially for a first version. I can imagine it evolving as a Twitter community notes equivalent for gitcoin, showing up for projects against their listing in a round. Separating the signal from the noise is key to improving donor experience!</p>
+<p>I have a background as an investigative reporter and then 5 years in the social space. As i discussed with Carlos earlier, I feel I could do evaluations fairly well so count me in for any bounties on reviewing more gitcoin projects.</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/3
+        Thu, 01 Jun 2023 11:48:44 +0000
+gov.gitcoin.co-post-15215-3
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+carlosjmelgar
+
+            <p>I love this. Devansh and I just had a call discussing something like this. We discussed creating a group of reviewers from varied backgrounds to review grantees across various platforms.</p>
+<p>I would like to know if there is a process for opting in. This could be very helpful to smaller grantees who are confident about their impact and lack visibility.</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/2
+        Wed, 31 May 2023 21:10:53 +0000
+gov.gitcoin.co-post-15215-2
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+jon-spark-eco
+
+            <p><strong></strong></p><h1><strong>tl;dr</strong></h1><br>
+As a long-time supporter of the Gitcoin climate grant round, Momus.eth has made it a mission to support the emerging regenerative finance movement. They have contributed generously to the Climate grant round matching fund and individual grantees. After making significant contributions, the question is whether these grantees have made an impact with the funding received. Out of this need, Momus built a new tool called DeReSy (DEcentralized REview SYstem), with the first use case being reviewing climate round grantees’ impact and use of funds. The first set of reviews was conducted and found that seven out of the top ten most funded climate projects in GR14 had made a positive impact with their work and should receive additional funding (reviews can be found here: <a href="http://gitcoinreviews.co" rel="noopener nofollow ugc">gitcoinreviews.co</a>).<p></p>
+<p><strong></strong></p><h1><strong>Who is Momus</strong></h1><br>
+momus.eth, aka the Momus Collective, is an anonymous group that we do not know much about. They did well in the early days of crypto and curated a fantastic collection of early NFTs from 2018-2020. They were betting on artists in a bear market at a time when most people didn’t understand or see the value of NFTs. They saw the possibilities at the intersection of the physical and digital world and used their precious ETH to encourage artists to push the space forward. They own many early and historically significant CryptoArt pieces.<p></p>
+<p>In the same spirit of funding and supporting the next generation of innovation on the blockchain, they began funding regens and climate-focused projects. In their words, “This regenerative movement is especially critical now, at a point in history when we need to be re-aligning human incentives to enable a sustainable way of life for the planet and future generations.” They have begun selling some of their NFT art collection to fund this critical work and, in their words, “to signal that your (climate/ReFi projects) contribution to the space is valuable and that you can persevere through the doubts of the bear…Regens Unite!” In late 2021, the Momus Collective began funding projects via Gitcoin and has contributed 1.5 Million DAI to the Gitcoin grant climate round matching fund and over 444k DAI in direct donations to grants.</p>
+<p>You can read their most recent public statement here:<br>
+<a href="https://ipfs.io/ipfs/bafybeibgmniyijilqtuvf6yeqxah4jb4fivhrng4wmhwedlp3i4aabpgga/" rel="noopener nofollow ugc">https://ipfs.io/ipfs/bafybeibgmniyijilqtuvf6yeqxah4jb4fivhrng4wmhwedlp3i4aabpgga/</a></p>
+<p><strong></strong></p><h1><strong>What is DeReSy?</strong></h1><br>
+Momus built a contract-based review system deployed on Arbitrum: DeReSy (DEcentralized REview SYstem). This review system was initially designed to enable the evaluation of Gitcoin funding in a transparent, scalable, self-service, credibly neutral way. However, DeReSy is application-agnostic: it could review a list of movies, products, protocols, or VC funds. The hope is that others use DeReSy to increase the efficiency of their work through contracted reviews.<p></p>
+<p>The general idea is that a sponsor writes a ReviewForm to evaluate a set of Targets. The sponsor then selects a group of Reviewers who will be compensated - in ETH - to fill in the ReviewForm for each Target. This is done by creating a ReviewRequest and depositing enough ETH to guarantee reviewers will be paid for their work. DeReSy is built on Arbitrum and can be forked by anyone to begin using it. Arbitrum is used to automate the execution of the payment logic, and IPFS is used to store data. DeReSy does not rely on any centralized component and is unstoppable as long as Arbitrum and IPFS exist. Momus is excited to see how others use this tool.</p>
+<p>Fully-Decentralized DeReSy application, on arbitrum and ipfs:<br>
+<a href="https://deresy.eth.limo/" class="onebox" target="_blank" rel="noopener nofollow ugc">https://deresy.eth.limo/</a></p>
+<p>DeReSy smart contract code and IPFS Single Page Application:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://github.com/chimi-co/deresy">
+  <header class="source">
+      <img src="https://github.githubassets.com/favicons/favicon.svg" class="site-icon" width="32" height="32">
+
+      <a href="https://github.com/chimi-co/deresy" target="_blank" rel="noopener nofollow ugc">GitHub</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4ea2fae576893f635d2830907b10e5db1c557576_2_690x345.png" class="thumbnail" width="690" height="345" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4ea2fae576893f635d2830907b10e5db1c557576_2_690x345.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4ea2fae576893f635d2830907b10e5db1c557576_2_1035x517.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/4ea2fae576893f635d2830907b10e5db1c557576.png 2x" data-dominant-color="F8F3F1"></div>
+
+<h3><a href="https://github.com/chimi-co/deresy" target="_blank" rel="noopener nofollow ugc">GitHub - chimi-co/deresy</a></h3>
+
+  <p>Contribute to chimi-co/deresy development by creating an account on GitHub.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>DeReSy V1 deployment: <a href="https://arbiscan.io/address/0x50e9a780bde93ccfa592ce9e981d5dbaf9cfc107" class="inline-onebox" rel="noopener nofollow ugc">DeresyRequests | Address 0x50e9a780bde93ccfa592ce9e981d5dbaf9cfc107 | Arbiscan</a></p>
+<p><strong></strong></p><h1><strong>What is <a href="http://GitcoinReviews.co" rel="noopener nofollow ugc">GitcoinReviews.co</a>?</strong></h1><br>
+One of the challenges the Momus Collective has faced is determining what Gitcoin grants to fund and, perhaps more importantly, whether these projects are making an impact with the funding. There was a need for a tool to review grants, so Momus funded building one. <a href="http://Gitcoinreviews.co" rel="noopener nofollow ugc">Gitcoinreviews.co</a> is the first use case for DeReSy.<p></p>
+<p>As an initial test of <a href="http://gitcoinreview.co" rel="noopener nofollow ugc">gitcoinreview.co</a> and the underlying DeReSy protocol, Momus used the site to review the top 10 most funded projects from the GR14 climate round. They worked with two reviewers (as seen on-chain, I was one of the reviewers) to independently review these grants/projects. All reviews are on-chain, and as previously noted, Arbitrum was used for the execution and payments, and IPFS stores all the data. A third party, like Momus, can fund these reviews by issuing bounties for reviewers to perform due diligence on projects.</p>
+<p>During the test run, the two reviewers sometimes disagreed with each other. Still, there are clear trends on the positive impact projects generated and how much they would benefit from additional funding. The compiled review data is below.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e608544f6908cf5338a90584daec751ee0808267.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/e608544f6908cf5338a90584daec751ee0808267" title="Screenshot 2023-05-31 at 2.38.26 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e608544f6908cf5338a90584daec751ee0808267_2_690x391.png" alt="Screenshot 2023-05-31 at 2.38.26 PM" data-base62-sha1="wOXF9mdGxlkf0SQn2H0rnIEcGAD" width="690" height="391" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e608544f6908cf5338a90584daec751ee0808267_2_690x391.png, https://gov.gitcoin.co/uploads/db4391/original/2X/e/e608544f6908cf5338a90584daec751ee0808267.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/e/e608544f6908cf5338a90584daec751ee0808267.png 2x" data-dominant-color="C3DFD4"></a></div><p></p>
+<p>While DeReSy has the advantage of being an unstoppable, immutable, self-service protocol, the user experience from serving content from IPFS and looking up key review data from Arbitrum is slow and not ideal for end users. For this reason, <a href="http://gitcoinreviews.co" rel="noopener nofollow ugc">gitcoinreviews.co</a> serves as a fast-cache to both IPFS and Arbitrum, and interacts with the underlying DeReSy platform to serve content and provide a UI for the reviewers to complete their reviews efficiently.</p>
+<p><a href="http://GitcoinReviews.co" rel="noopener nofollow ugc">GitcoinReviews.co</a> UI code: <a href="https://github.com/chimi-co/deresy-centralized-ui" rel="noopener nofollow ugc">https://github.com/chimi-co/deresy-centralized-ui</a></p>
+<p><a href="http://GitcoinReviews.co" rel="noopener nofollow ugc">GitcoinReviews.co</a> API code: <a href="https://github.com/chimi-co/deresy-centralized-api" rel="noopener nofollow ugc">https://github.com/chimi-co/deresy-centralized-api</a></p>
+<p><strong></strong></p><h1><strong>Why?</strong></h1><br>
+The use of funds and progress projects are making is important to funders. Contributors will contribute more if they can assess the project’s progress and see the impact they are funding. There is no easy way for matching fund contributors and individual contributors to evaluate a project’s impact and progress. <a href="http://Gitcoinreviews.co" rel="noopener nofollow ugc">Gitcoinreviews.co</a> provides a way to assess project progress and impact.<p></p>
+<p>To conduct due diligence, you can review a project’s Twitter, webpage, Discord, and other online presence to assess what they are working on and shipping. You can investigate on-chain activity to see where funds have gone and what % have been off-ramped to FIAT. The problem is with hundreds of projects in grant rounds; this is time-consuming and inefficient.</p>
+<p>Momus built <a href="http://Gitcoinreviews.co" rel="noopener nofollow ugc">Gitcoinreviews.co</a> to outsource this due diligence work. The tool provides a 3rd party audit of the project that should present a non-biased view of the project. Momus funded the initial alpha test reviews and plans to fund further reviews of the climate grant round. We hope to see other matching pool contributors do this for additional grant rounds.</p>
+<p><strong></strong></p><h1><strong>The Future</strong></h1><br>
+<a href="http://Gitcoinreviews.co" rel="noopener nofollow ugc">Gitcoinreviews.co</a> pulled in data from the old c-Grants platform. We are beginning work on v2 of the site, including integration with the Allo Protocol and the Grants Stack. Some feature improvements include editing and updating reviews and tracking version history all on-chain. There will be improvements to the UI/UX for both reviewers and the public view of the site. For the projects being reviewed, we also want to incorporate an on-chain feedback form for self-reporting work accomplished and project impacts.<p></p>
+<p>We are also working with other projects, including <a href="https://hypercerts.org/" rel="noopener nofollow ugc">Hypercerts</a>, to explore using these reviews as on-chain attestations of verified impact. We may explore integrating the project’s Hypercerts into the project reviews. Another possibility is for the site to connect to various api’s to pull more data and metrics about the projects into the review site.</p>
+<p>If you are interested in working with us or spinning up another use case for DeReSy please contact us at <a href="mailto:momus.eth@proton.me">momus.eth@proton.me</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/reviewing-gitcoin-grantee-impact-momus-eth-gitcoinreviews-co/15215/1
+        Wed, 31 May 2023 18:42:04 +0000
+gov.gitcoin.co-post-15215-1
+Reviewing Gitcoin Grantee Impact - Momus.eth & gitcoinreviews.co
+      
+
+

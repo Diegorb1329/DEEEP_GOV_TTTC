@@ -1,0 +1,353 @@
+
+
+
+The Impact Web of Trust Could Change Everything 💰
+https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635
+    Thanks to @ccerv1 and @Jonassft for reviewing (and in some places, co-authoring) this post.
+
+# TLDR
+
+This brief argues that The Impact Web of Trust Will Change Everything about web3-era capital allocation.
+
+A Web of Trust is a decentralized trust model used for verifying the authenticity of participants in a network through mutual endorsements, rather than relying on a central authority. It enables users to establish trust based on the recommendations or validations from others within the network.
+
+We are witnessing the  creation of an Impact Attestation Web of Trust that will create powerful new ways of allocating capital to Fund What Matters - at new degrees of precision and scale.
+
+This will lead to a totally revolutionary category of impact funding applications that could eventually secure $$billions of value.
+
+# The Impact Web of Trust Will Change Everything
+
+## What's a Web of Trust?
+
+A Web of Trust is a decentralized trust model used primarily in cryptography and online communities, where trust in the authenticity of digital entities (like public keys) is established through a network of mutual assurances. Rather than relying on a central authority to validate identities, users vouch for each other's trustworthiness through digital signatures, creating a networked chain of trust. This method allows individuals to assess the credibility of digital certificates or identities based on the trustworthiness of those who endorse them, new categories of peer 2 peer commerce.
+
+![|624x325](upload://vpnITdYrSzSdQsMH1yDKdjG21BR.png)
+
+## What are the most famous webs of trust?
+
+### 1. Academic Papers
+
+The academic paper citation regime functions similarly to a Web of Trust, albeit in an intellectual and scholarly context. It relies on the collective credibility of authors, journals, and institutions, where the citation of sources acts as endorsements of reliability and relevance in the academic discourse. This network of scholarly references and peer reviews creates a trusted framework for advancing knowledge, where the validity of research is continuously vetted and reinforced by the academic community.
+
+Relevance: (Secures $$$millions of research papers + directs flows of scientific funding)
+
+### 2. Pagerank
+
+PageRank, originally developed by Google's founders, can be viewed as a form of a Web of Trust for the internet, where web pages are ranked based on their link structure and the quality of these links. Each link to a page is considered a vote of trust and authority, with links from highly trusted sites carrying more weight. This algorithm creates a hierarchical system of trustworthiness and relevance, enabling users to discover the most authoritative and reliable pages on the web based on the collective endorsement of the online community.
+
+Relevance: (Secures $$$millions of web SEO Traffic)
+
+![|273x218](upload://eiMMZJZaaP9QXQ9iAhFXwh8shw8.png)
+
+### 3. Knights Templar
+
+The Knights Templar were an OG web of trust, founded in the 12th century during the Crusades. They were entrusted with the protection of pilgrims traveling to the Holy Land. To facilitate this mission, they developed a system akin to modern banking, where pilgrims could deposit their assets in one Templar location and receive a document to redeem their wealth at another, making long journeys safer.
+
+Relevance: (Precursor to modern banking, so people could travel without carrying their assets)
+
+## What is the Impact Web of Trust?
+
+AKA the impact = profit capital allocation web of trust.
+
+The Impact web of trust is a series of attestations where impact is being made. These attestations could be stored on  either Hypercerts or [EAS](https://www.youtube.com/watch?v=6yCbiSDaqUk) attestations, and would be linked in a network to other attestations.
+
+Here is a visual of what it looks like:
+
+![|519x546](upload://pfHOHRjVeCmBNW9L4J4tivyfU2H.png)
+
+## Triple Sided Market
+
+Right now we (royal we: Gitcoin, Optimism, Giveth, ClrFund, Hypercerts, etc) are building the triple sided market of impact attestations, and growing the network value of all impact attestations on EVM based blockchains.
+
+The tree sides of this market are
+
+1. Demand
+2. Supply
+3. Evaluation
+
+This 3 sided market looks like this:
+
+![|296x122](upload://nVOBmX6gA6Pe31n27zTWZx6ZUa0.png)
+
+This flywheel is already humming!
+
+1. **Impact** **Demand** is being bootstrapped by funders on Gitcoin, Optimism, Giveth, ClrFund, Hypercerts, etc.
+2. **Impact** **Supply** is bootstrapped by grant owners on the same platforms.
+3. **Impact** **Evaluation** is being bootstrapped in many different forms: QF Voters, Optimism Badgeholders, Hats Roles, or many other onchain signals
+
+Like many systems that are subject to network effects, this network could be subject to [metcalfes law](https://en.wikipedia.org/wiki/Metcalfe%27s_law) + create exponential value.  
+
+![Screenshot 2024-02-07 at 3.32.59 PM|690x348](upload://z0CGRRxNDuPs5kV7B2SgsypmFoo.png)
+
+At scale, this network will completely change the capital allocation game on-chain. With a dense source of high-signal data about impact attestations (and which ones are reliable), we will be able to build much more powerful capital allocation mechanisms.
+
+# How can Gitcoin build for this future?
+
+1. Make sure the WoT is compatible with the Allo registry (even more so, an interface across diff projects that can be the source of truth)
+2. Build Impact Evaluation tools compatible with Allo.
+3. Bootstrap frontier experiments in Impact Evaluation, Demand, and Supply.
+4. Democratize successful experiments in Impact Evaluation, Demand, and Supply.
+
+# Appendix A - Risks
+
+What are the risks to this vision?
+
+1. **Goodharts law** - as soon as a measure becomes a target, it ceases to be a good measure. Does this mean that the system evolves infinitely as we increment t+=1 over time?
+2. **Not enough capital in to bootstrap demand side. Or Not enough supply side.**
+   - I dont believe either of these things after seeing Gitcoin/Optimism/Giveth/ClrFund/etc work really well. I think its possible the ability to bootstrap will vary by Impact vertical tho. Starting with Open Source Software funding, there is enough money/data to get started.
+3. **Not enough relevant attestations for your use case** (the oracle problem will likely be a problem for non digital impact!). Need to find clever ways of bootstrapping. Starting with digital impact like OSS is a good place to start.
+4. **Oracle problem**, especially for offchain Impact Attestations likely to be a source of pain.
+5. **Spamming**. Need to differentiate between people who give attestations liberally and those who are more reserved in their evaluations.
+6. **Anonymity and pseudonymity.** Bad reviews are important but people need to feel safe so they can offer them without fear of being canceled or retaliation.
+
+# Appendix B - Opportunities
+
+What are the opportunities for executing on this vision? (Thanks to Jonas for mostly authoring this)
+
+1. A shift from via distinct voting rounds to constant preference expression/signals is needed:
+   - **The old paradigm:** Thus far PG funding has been structured in distinct rounds, where users are asked to express what projects they thought were impactful to them or think should receive more funding. E.g. Quadratic Funding is the prime example. This system can only scale to a certain accuracy. It has large overhead in hundreds of human hours spend casting votes.
+   -  **The new paradigm:** Web3 Citizens generate a constant stream of signals of what was impactful to them. Instead of requiring citizens to review a large list of projects and tell the system what they think deserves funding or was impactful, citizens generate signals in their everyday lives: When they find an article helpful, when they use a product, when they like a tweet, etc.
+   -  **This is generally, not a new idea:** Twitter doesn’t ask you at the end of the quarter what tweets you thought were useful, instead it allows you to constantly signal what tweets were useful while engaging on the platform.
+2. **Bootstrap with existing data.** We should focus on leveraging existing signals, and only generate new ones if absolutely necessary. Examples:
+   * Having a library in the dependency tree of your repo
+   * Collecting a Mirror NFT
+   * Collecting a POAP for visiting an event
+   * Using a protocol onchain
+   * Etc.
+   * Our goal should be to integrate these into everyday activities, not to make them a separate activity.
+3. **Reputation:** We need to understand the profile of citizens who generated a signal. Are they trustworthy? Are they human? Do they have other properties which are important to the funder (e.g. a core user of Optimism, a builder on Optimism)?
+4. **Impact Evaluation**: Now that we have collected a number of valuable signals on impact, we need to design the algorithm which makes sense of these. (e.g. PageRank and others)
+   * There is an opportunity to create a plurality of ranking algorithms, eg KevinRank might be emphasize certain values, whereas JonasRank might emphasize different ones and so on.
+   * Here Citizens’ should be asked to express their values for how capital should be allocated in the ecosystem: Do we only reward OS projects? Should we allocate more funding to education than ethereum development? Etc
+   * One of the challenges here is that each diff niche is diff. The attestation schemas for OS will be diff from education will be diff from ppl building wallets vs those consuming block space.
+   * Perhaps a next step could be defining the diff niches + which attestations we care about. and lets start with doing it in 2-3 places + only expand once its working there.
+
+# Appendix C - Types of evaluators
+
+(Thanks to Carl for mostly authoring this)
+
+One thing about attestations is that they are revocable. This means you can revoke an attestation made about a project if you think it’s no longer having the impact it’s supposed to or new evidence comes to light. It also means a network of impact evaluators could attest that each member meets a certain standard (eg, is free from conflicts of interest) but their membership in the network could be revoked if they fail to uphold that standard.
+
+Over time you will want to see a plurality of trusted evaluators. This is already starting to happen with Optimism RetroPGF and through attestation-based tools like Karma GAP.
+
+Here are some of the types of evaluators we think are necessary:
+
+* **Citizen evaluators.** Anyone should be able to evaluate projects and public goods that impact them or that they care about. In RetroPGF, Zuzalu was a project that had an important impact on a relatively small number of people but still received a large token award. When questions were raised about why Zuzalu received such a large reward, the people who benefited from it stood up Zuzalu and explained why they thought it was impactful. Ideally, those types of attestations should have been visible before the project was scrutinized, not in response to scrutiny.
+* **Professional evaluators.** Similar to traditional ratings agencies, there should be organizations that are credibly neutral and bring a technical approach to evaluating groups of projects. Open Source Observer is working in this area. Jesse.xyz also created an open framework for identifying and scoring projects building on Base. Unlike traditional ratings agencies, these evaluations should be open source and hella forkable.
+* **Experts**. People with deep experience and subject matter expertise should offer expert reviews of projects’ impact. In RetroPGF, Lefteris and TJ Rush are examples of people who offered perspectives on specific groups of projects that held a lot of weight because of their domain experience.
+* **Self evaluation.** Self-reporting is also a critical part of the evaluation. In RetroPGF, every project had the opportunity to submit a list of relevant impact metrics in their application. These were hard to discover / compare, but it’s a form of attestation. Karma GAP is also getting people to self-report milestone completion.
+* **Funder evaluation**. Not relevant in the RPGF3 case, but there are plenty of examples of funders evaluating their projects.
+* etc
+
+Once we have the evaluation layer, we can also build the algorithmic and curation layers. Instead of having the Yelp algorithm for ranking restaurants we can have a plurality of approaches. Imagine being able to see a ranking that takes into consideration Kevin’s knowledge of a city, Meg’s taste in Japanese food, and Carl’s sense of what makes a place good for a friday night with friends.
+Thu, 19 Sep 2024 17:22:34 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+The Impact Web of Trust Could Change Everything 💰
+mars
+
+            <p>Enjoyooors of this post might also like this project from ETH Denver, that was literally inspired by this forum thread, 7 minutes demo:</p>
+<p><a href="https://www.youtube.com/watch?v=Nc1whvHuR9I">ETH Denver buildathon - EBF Network of Trust</a></p>
+
+<p>Hackathon submission: <a href="https://devfolio.co/projects/trust-impact-4bf0" rel="noopener nofollow ugc">https://devfolio.co/projects/trust-impact-4bf0</a></p>
+          <p><a href="https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635/6
+        Thu, 19 Sep 2024 17:22:34 +0000
+gov.gitcoin.co-post-17635-6
+The Impact Web of Trust Could Change Everything 💰
+      
+
+The Impact Web of Trust Could Change Everything 💰
+owocki
+
+            <p>Enjoyooors of this post might also like this new piece from ENS <a href="https://mirror.xyz/0xeee68aECeB4A9e9f328a46c39F50d83fA0239cDF/GLCRxzd7Y68_lWNnLxk4FG20sOWDwcQE_stQt6V7y1Y">Transitive Trust for P2P Reputation Systesm</a></p>
+          <p><a href="https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635/5
+        Fri, 13 Sep 2024 13:19:07 +0000
+gov.gitcoin.co-post-17635-5
+The Impact Web of Trust Could Change Everything 💰
+      
+
+The Impact Web of Trust Could Change Everything 💰
+mars
+
+            <ul>
+<li>Web of Trust = massive problem.</li>
+<li>Reputation on the internet = massive problem.</li>
+<li>Identity on the blockchain = massive problem.</li>
+<li>Impact evaluation = massive problem.</li>
+<li>Climate change = massive problem.</li>
+</ul>
+<aside class="quote no-group quote-modified" data-username="owocki" data-post="1" data-topic="17635">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Once we have the evaluation layer…</p>
+</blockquote>
+</aside>
+<p>Something I’ve been working on for a while: <a href="http://BaseX.com" rel="noopener nofollow ugc">BaseX.com</a> literally an evaluation layer.</p>
+<p>The core purpose of the BaseX is evaluation of impact / externalities / cobenefits. Tagline from the homepage: <strong>“universal evaluation engine”</strong></p>
+<p>What is the implemented solution?</p>
+<ol>
+<li>Create a report <em>(permissionless, anyone can do it)</em></li>
+<li>Create an evaluation of a report <em>(permissionless, anyone can do it)</em></li>
+</ol>
+<p>Both reports and evaluations are fact-checked by Kleros jurors and will be rejected when fraudulent. Current still on the testnet, not real money, not real incentives, but the Kleros integration works and you can test-drive the platform: <a href="https://staging.basex.com" rel="noopener nofollow ugc">https://staging.basex.com</a></p>
+<p>Reputation (Web of Trust) of evaluators: <strong>TODO</strong>. I haven’t started working on it because I know it is a massive problem, on top of that we do not have enough data.</p>
+<p><em>(segway into getting moar data)</em></p>
+<h3><a name="partnerships-bizdev-onboarding-1" class="anchor" href="https://gov.gitcoin.co#partnerships-bizdev-onboarding-1"></a>Partnerships / BizDev / onboarding</h3>
+<p>I’ve just posted this video to Climate Coordination Network, an independent Gitcoin round:</p>
+<p><a href="https://www.youtube.com/watch?v=hI5wiKDnYn8">Climate Coordination Network - gift and invitation</a></p>
+
+<p>Printing your own money, why not, it’s my gift (carrot) towards the projects who will use BaseX. Stick would be even better - round operators requiring returning projects to submit impact report using BaseX? <em>(or any other evaluation platform that is scalable and ready to go)</em></p>
+<h3><a name="going-deep-questions-next-steps-2" class="anchor" href="https://gov.gitcoin.co#going-deep-questions-next-steps-2"></a>Going deep / questions / next steps</h3>
+<p>This reply is high level. Happy to tell you more and go deeper. In this forum thread. Via DM. On a call. On Twitter spaces. On a podcast.</p>
+<p>Or just DYOR, click around, <a href="https://staging.basex.com/" rel="noopener nofollow ugc">test-drive the platform</a> or check the <a href="https://basex.com/" rel="noopener nofollow ugc">website</a>, <a href="https://wiki.basex.com/signed/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fbf508c3d-6404-4754-9ab1-1b6e97b081a1%2Ff28e75e6-d54e-49e6-bd3c-da0d1e423c6f%2Fwhitepaper.pdf?table=block&amp;id=03c2d54c-f909-4438-872f-ed36b28ee06c&amp;spaceId=bf508c3d-6404-4754-9ab1-1b6e97b081a1&amp;name=whitepaper.pdf&amp;cache=v2" rel="noopener nofollow ugc">whitepaper</a>, <a href="https://file.notion.so/f/f/bf508c3d-6404-4754-9ab1-1b6e97b081a1/1bf03f85-ca81-4a48-833a-6d714620653c/BaseX_-_pitchdeck.pdf?id=629c4463-477c-458b-ab94-38a28529761a&amp;table=block&amp;spaceId=bf508c3d-6404-4754-9ab1-1b6e97b081a1&amp;expirationTimestamp=1707616800000&amp;signature=BwpOGB6GoYUb9rgZ795ECZ2WUDoKjRtsQMvV-opACAk&amp;downloadName=BaseX+-+pitchdeck.pdf" rel="noopener nofollow ugc">pitchdeck</a>, <a href="https://wiki.basex.com/" rel="noopener nofollow ugc">wiki</a>…</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4b5a4588d4745b81dd8a56345f2b8fee0b3704cc.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/4b5a4588d4745b81dd8a56345f2b8fee0b3704cc" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4b5a4588d4745b81dd8a56345f2b8fee0b3704cc_2_690x382.jpeg" alt="image" data-base62-sha1="aKBdpAQ6vTK5LBOwMYzBSTZrcDi" width="690" height="382" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4b5a4588d4745b81dd8a56345f2b8fee0b3704cc_2_690x382.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4b5a4588d4745b81dd8a56345f2b8fee0b3704cc_2_1035x573.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4b5a4588d4745b81dd8a56345f2b8fee0b3704cc_2_1380x764.jpeg 2x" data-dominant-color="425158"></a></div><p></p>
+<p>Only slightly embarassed,  I hope your experience will be smooth.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635/4
+        Sat, 10 Feb 2024 01:54:16 +0000
+gov.gitcoin.co-post-17635-4
+The Impact Web of Trust Could Change Everything 💰
+      
+
+The Impact Web of Trust Could Change Everything 💰
+flowscience
+
+            <p>I’d love for someone to simulate game theory strategies like those used for the Prisoner’s Dilemma (e…g tit-for-tat etc) to model how attestations, impact evaluation, and capital allocation could work at scale. Those who generate impact are often the same ones evaluating it and creating demand for it. The interactions become much more complex than a binary cooperate/defect, but I’m optimistic similar strategies that are “nice” will prevail.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635/3
+        Fri, 09 Feb 2024 19:45:04 +0000
+gov.gitcoin.co-post-17635-3
+The Impact Web of Trust Could Change Everything 💰
+      
+
+The Impact Web of Trust Could Change Everything 💰
+owocki
+
+            <p>Thanks to <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> and <a class="mention" href="https://gov.gitcoin.co/u/jonassft">@Jonassft</a> for reviewing (and in some places, co-authoring) this post.</p>
+<h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR</h1>
+<p>This brief argues that The Impact Web of Trust Will Change Everything about web3-era capital allocation.</p>
+<p>A Web of Trust is a decentralized trust model used for verifying the authenticity of participants in a network through mutual endorsements, rather than relying on a central authority. It enables users to establish trust based on the recommendations or validations from others within the network.</p>
+<p>We are witnessing the  creation of an Impact Attestation Web of Trust that will create powerful new ways of allocating capital to Fund What Matters - at new degrees of precision and scale.</p>
+<p>This will lead to a totally revolutionary category of impact funding applications that could eventually secure $$billions of value.</p>
+<h1><a name="the-impact-web-of-trust-will-change-everything-2" class="anchor" href="https://gov.gitcoin.co#the-impact-web-of-trust-will-change-everything-2"></a>The Impact Web of Trust Will Change Everything</h1>
+<h2><a name="whats-a-web-of-trust-3" class="anchor" href="https://gov.gitcoin.co#whats-a-web-of-trust-3"></a>What’s a Web of Trust?</h2>
+<p>A Web of Trust is a decentralized trust model used primarily in cryptography and online communities, where trust in the authenticity of digital entities (like public keys) is established through a network of mutual assurances. Rather than relying on a central authority to validate identities, users vouch for each other’s trustworthiness through digital signatures, creating a networked chain of trust. This method allows individuals to assess the credibility of digital certificates or identities based on the trustworthiness of those who endorse them, new categories of peer 2 peer commerce.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/dc21ec63d1c04ca1c7db74cf86cd6f0a60fe359f.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/dc21ec63d1c04ca1c7db74cf86cd6f0a60fe359f" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/dc21ec63d1c04ca1c7db74cf86cd6f0a60fe359f_2_624x325.png" alt="" data-base62-sha1="vpnITdYrSzSdQsMH1yDKdjG21BR" width="624" height="325" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/dc21ec63d1c04ca1c7db74cf86cd6f0a60fe359f_2_624x325.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/dc21ec63d1c04ca1c7db74cf86cd6f0a60fe359f_2_936x487.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/dc21ec63d1c04ca1c7db74cf86cd6f0a60fe359f_2_1248x650.png 2x" data-dominant-color="EFEEEE"></a></div><p></p>
+<h2><a name="what-are-the-most-famous-webs-of-trust-4" class="anchor" href="https://gov.gitcoin.co#what-are-the-most-famous-webs-of-trust-4"></a>What are the most famous webs of trust?</h2>
+<h3><a name="h-1-academic-papers-5" class="anchor" href="https://gov.gitcoin.co#h-1-academic-papers-5"></a>1. Academic Papers</h3>
+<p>The academic paper citation regime functions similarly to a Web of Trust, albeit in an intellectual and scholarly context. It relies on the collective credibility of authors, journals, and institutions, where the citation of sources acts as endorsements of reliability and relevance in the academic discourse. This network of scholarly references and peer reviews creates a trusted framework for advancing knowledge, where the validity of research is continuously vetted and reinforced by the academic community.</p>
+<p>Relevance: (Secures $$$millions of research papers + directs flows of scientific funding)</p>
+<h3><a name="h-2-pagerank-6" class="anchor" href="https://gov.gitcoin.co#h-2-pagerank-6"></a>2. Pagerank</h3>
+<p>PageRank, originally developed by Google’s founders, can be viewed as a form of a Web of Trust for the internet, where web pages are ranked based on their link structure and the quality of these links. Each link to a page is considered a vote of trust and authority, with links from highly trusted sites carrying more weight. This algorithm creates a hierarchical system of trustworthiness and relevance, enabling users to discover the most authoritative and reliable pages on the web based on the collective endorsement of the online community.</p>
+<p>Relevance: (Secures $$$millions of web SEO Traffic)</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/643e18f3a0f1744a99a08cdab2e78ba67e65be0c.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/643e18f3a0f1744a99a08cdab2e78ba67e65be0c" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/643e18f3a0f1744a99a08cdab2e78ba67e65be0c_2_273x218.png" alt="" data-base62-sha1="eiMMZJZaaP9QXQ9iAhFXwh8shw8" width="273" height="218" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/643e18f3a0f1744a99a08cdab2e78ba67e65be0c_2_273x218.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/643e18f3a0f1744a99a08cdab2e78ba67e65be0c_2_409x327.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/643e18f3a0f1744a99a08cdab2e78ba67e65be0c_2_546x436.png 2x" data-dominant-color="C7F1E4"></a></div><p></p>
+<h3><a name="h-3-knights-templar-7" class="anchor" href="https://gov.gitcoin.co#h-3-knights-templar-7"></a>3. Knights Templar</h3>
+<p>The Knights Templar were an OG web of trust, founded in the 12th century during the Crusades. They were entrusted with the protection of pilgrims traveling to the Holy Land. To facilitate this mission, they developed a system akin to modern banking, where pilgrims could deposit their assets in one Templar location and receive a document to redeem their wealth at another, making long journeys safer.</p>
+<p>Relevance: (Precursor to modern banking, so people could travel without carrying their assets)</p>
+<h2><a name="what-is-the-impact-web-of-trust-8" class="anchor" href="https://gov.gitcoin.co#what-is-the-impact-web-of-trust-8"></a>What is the Impact Web of Trust?</h2>
+<p>AKA the impact = profit capital allocation web of trust.</p>
+<p>The Impact web of trust is a series of attestations where impact is being made. These attestations could be stored on  either Hypercerts or <a href="https://www.youtube.com/watch?v=6yCbiSDaqUk">EAS</a> attestations, and would be linked in a network to other attestations.</p>
+<p>Here is a visual of what it looks like:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b0fce01aba0fd4e860bc70501a89ac87f346084f.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/b0fce01aba0fd4e860bc70501a89ac87f346084f" title=""><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b0fce01aba0fd4e860bc70501a89ac87f346084f.png" alt="" data-base62-sha1="pfHOHRjVeCmBNW9L4J4tivyfU2H" width="475" height="500" role="presentation" data-dominant-color="F3F3F3"></a></div><p></p>
+<h2><a name="triple-sided-market-9" class="anchor" href="https://gov.gitcoin.co#triple-sided-market-9"></a>Triple Sided Market</h2>
+<p>Right now we (royal we: Gitcoin, Optimism, Giveth, ClrFund, Hypercerts, etc) are building the triple sided market of impact attestations, and growing the network value of all impact attestations on EVM based blockchains.</p>
+<p>The tree sides of this market are</p>
+<ol>
+<li>Demand</li>
+<li>Supply</li>
+<li>Evaluation</li>
+</ol>
+<p>This 3 sided market looks like this:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a7bb1a3b14f7a894ff5cbfd0906bf894a6fd2fe4.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/a7bb1a3b14f7a894ff5cbfd0906bf894a6fd2fe4" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a7bb1a3b14f7a894ff5cbfd0906bf894a6fd2fe4_2_296x122.png" alt="" data-base62-sha1="nVOBmX6gA6Pe31n27zTWZx6ZUa0" width="296" height="122" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a7bb1a3b14f7a894ff5cbfd0906bf894a6fd2fe4_2_296x122.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a7bb1a3b14f7a894ff5cbfd0906bf894a6fd2fe4_2_444x183.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a7bb1a3b14f7a894ff5cbfd0906bf894a6fd2fe4_2_592x244.png 2x" data-dominant-color="F2F2F2"></a></div><p></p>
+<p>This flywheel is already humming!</p>
+<ol>
+<li><strong>Impact</strong> <strong>Demand</strong> is being bootstrapped by funders on Gitcoin, Optimism, Giveth, ClrFund, Hypercerts, etc.</li>
+<li><strong>Impact</strong> <strong>Supply</strong> is bootstrapped by grant owners on the same platforms.</li>
+<li><strong>Impact</strong> <strong>Evaluation</strong> is being bootstrapped in many different forms: QF Voters, Optimism Badgeholders, Hats Roles, or many other onchain signals</li>
+</ol>
+<p>Like many systems that are subject to network effects, this network could be subject to <a href="https://en.wikipedia.org/wiki/Metcalfe%27s_law">metcalfes law</a> + create exponential value.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f55e25e3b203bf07bdd5eda35a4e9fd6591fe92c.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/f55e25e3b203bf07bdd5eda35a4e9fd6591fe92c" title="Screenshot 2024-02-07 at 3.32.59 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f55e25e3b203bf07bdd5eda35a4e9fd6591fe92c_2_690x348.png" alt="Screenshot 2024-02-07 at 3.32.59 PM" data-base62-sha1="z0CGRRxNDuPs5kV7B2SgsypmFoo" width="690" height="348" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f55e25e3b203bf07bdd5eda35a4e9fd6591fe92c_2_690x348.png, https://gov.gitcoin.co/uploads/db4391/original/2X/f/f55e25e3b203bf07bdd5eda35a4e9fd6591fe92c.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/f/f55e25e3b203bf07bdd5eda35a4e9fd6591fe92c.png 2x" data-dominant-color="F4F3F4"></a></div><p></p>
+<p>At scale, this network will completely change the capital allocation game on-chain. With a dense source of high-signal data about impact attestations (and which ones are reliable), we will be able to build much more powerful capital allocation mechanisms.</p>
+<h1><a name="how-can-gitcoin-build-for-this-future-10" class="anchor" href="https://gov.gitcoin.co#how-can-gitcoin-build-for-this-future-10"></a>How can Gitcoin build for this future?</h1>
+<ol>
+<li>Make sure the WoT is compatible with the Allo registry (even more so, an interface across diff projects that can be the source of truth)</li>
+<li>Build Impact Evaluation tools compatible with Allo.</li>
+<li>Bootstrap frontier experiments in Impact Evaluation, Demand, and Supply.</li>
+<li>Democratize successful experiments in Impact Evaluation, Demand, and Supply.</li>
+</ol>
+<h1><a name="appendix-a-risks-11" class="anchor" href="https://gov.gitcoin.co#appendix-a-risks-11"></a>Appendix A - Risks</h1>
+<p>What are the risks to this vision?</p>
+<ol>
+<li><strong>Goodharts law</strong> - as soon as a measure becomes a target, it ceases to be a good measure. Does this mean that the system evolves infinitely as we increment t+=1 over time?</li>
+<li><strong>Not enough capital in to bootstrap demand side. Or Not enough supply side.</strong>
+<ul>
+<li>I dont believe either of these things after seeing Gitcoin/Optimism/Giveth/ClrFund/etc work really well. I think its possible the ability to bootstrap will vary by Impact vertical tho. Starting with Open Source Software funding, there is enough money/data to get started.</li>
+</ul>
+</li>
+<li><strong>Not enough relevant attestations for your use case</strong> (the oracle problem will likely be a problem for non digital impact!). Need to find clever ways of bootstrapping. Starting with digital impact like OSS is a good place to start.</li>
+<li><strong>Oracle problem</strong>, especially for offchain Impact Attestations likely to be a source of pain.</li>
+<li><strong>Spamming</strong>. Need to differentiate between people who give attestations liberally and those who are more reserved in their evaluations.</li>
+<li><strong>Anonymity and pseudonymity.</strong> Bad reviews are important but people need to feel safe so they can offer them without fear of being canceled or retaliation.</li>
+</ol>
+<h1><a name="appendix-b-opportunities-12" class="anchor" href="https://gov.gitcoin.co#appendix-b-opportunities-12"></a>Appendix B - Opportunities</h1>
+<p>What are the opportunities for executing on this vision? (Thanks to Jonas for mostly authoring this)</p>
+<ol>
+<li>A shift from via distinct voting rounds to constant preference expression/signals is needed:
+<ul>
+<li><strong>The old paradigm:</strong> Thus far PG funding has been structured in distinct rounds, where users are asked to express what projects they thought were impactful to them or think should receive more funding. E.g. Quadratic Funding is the prime example. This system can only scale to a certain accuracy. It has large overhead in hundreds of human hours spend casting votes.</li>
+<li><strong>The new paradigm:</strong> Web3 Citizens generate a constant stream of signals of what was impactful to them. Instead of requiring citizens to review a large list of projects and tell the system what they think deserves funding or was impactful, citizens generate signals in their everyday lives: When they find an article helpful, when they use a product, when they like a tweet, etc.</li>
+<li><strong>This is generally, not a new idea:</strong> Twitter doesn’t ask you at the end of the quarter what tweets you thought were useful, instead it allows you to constantly signal what tweets were useful while engaging on the platform.</li>
+</ul>
+</li>
+<li><strong>Bootstrap with existing data.</strong> We should focus on leveraging existing signals, and only generate new ones if absolutely necessary. Examples:
+<ul>
+<li>Having a library in the dependency tree of your repo</li>
+<li>Collecting a Mirror NFT</li>
+<li>Collecting a POAP for visiting an event</li>
+<li>Using a protocol onchain</li>
+<li>Etc.</li>
+<li>Our goal should be to integrate these into everyday activities, not to make them a separate activity.</li>
+</ul>
+</li>
+<li><strong>Reputation:</strong> We need to understand the profile of citizens who generated a signal. Are they trustworthy? Are they human? Do they have other properties which are important to the funder (e.g. a core user of Optimism, a builder on Optimism)?</li>
+<li><strong>Impact Evaluation</strong>: Now that we have collected a number of valuable signals on impact, we need to design the algorithm which makes sense of these. (e.g. PageRank and others)
+<ul>
+<li>There is an opportunity to create a plurality of ranking algorithms, eg KevinRank might be emphasize certain values, whereas JonasRank might emphasize different ones and so on.</li>
+<li>Here Citizens’ should be asked to express their values for how capital should be allocated in the ecosystem: Do we only reward OS projects? Should we allocate more funding to education than ethereum development? Etc</li>
+<li>One of the challenges here is that each diff niche is diff. The attestation schemas for OS will be diff from education will be diff from ppl building wallets vs those consuming block space.</li>
+<li>Perhaps a next step could be defining the diff niches + which attestations we care about. and lets start with doing it in 2-3 places + only expand once its working there.</li>
+</ul>
+</li>
+</ol>
+<h1><a name="appendix-c-types-of-evaluators-13" class="anchor" href="https://gov.gitcoin.co#appendix-c-types-of-evaluators-13"></a>Appendix C - Types of evaluators</h1>
+<p>(Thanks to Carl for mostly authoring this)</p>
+<p>One thing about attestations is that they are revocable. This means you can revoke an attestation made about a project if you think it’s no longer having the impact it’s supposed to or new evidence comes to light. It also means a network of impact evaluators could attest that each member meets a certain standard (eg, is free from conflicts of interest) but their membership in the network could be revoked if they fail to uphold that standard.</p>
+<p>Over time you will want to see a plurality of trusted evaluators. This is already starting to happen with Optimism RetroPGF and through attestation-based tools like Karma GAP.</p>
+<p>Here are some of the types of evaluators we think are necessary:</p>
+<ul>
+<li><strong>Citizen evaluators.</strong> Anyone should be able to evaluate projects and public goods that impact them or that they care about. In RetroPGF, Zuzalu was a project that had an important impact on a relatively small number of people but still received a large token award. When questions were raised about why Zuzalu received such a large reward, the people who benefited from it stood up Zuzalu and explained why they thought it was impactful. Ideally, those types of attestations should have been visible before the project was scrutinized, not in response to scrutiny.</li>
+<li><strong>Professional evaluators.</strong> Similar to traditional ratings agencies, there should be organizations that are credibly neutral and bring a technical approach to evaluating groups of projects. Open Source Observer is working in this area. Jesse.xyz also created an open framework for identifying and scoring projects building on Base. Unlike traditional ratings agencies, these evaluations should be open source and hella forkable.</li>
+<li><strong>Experts</strong>. People with deep experience and subject matter expertise should offer expert reviews of projects’ impact. In RetroPGF, Lefteris and TJ Rush are examples of people who offered perspectives on specific groups of projects that held a lot of weight because of their domain experience.</li>
+<li><strong>Self evaluation.</strong> Self-reporting is also a critical part of the evaluation. In RetroPGF, every project had the opportunity to submit a list of relevant impact metrics in their application. These were hard to discover / compare, but it’s a form of attestation. Karma GAP is also getting people to self-report milestone completion.</li>
+<li><strong>Funder evaluation</strong>. Not relevant in the RPGF3 case, but there are plenty of examples of funders evaluating their projects.</li>
+<li>etc</li>
+</ul>
+<p>Once we have the evaluation layer, we can also build the algorithmic and curation layers. Instead of having the Yelp algorithm for ranking restaurants we can have a plurality of approaches. Imagine being able to see a ranking that takes into consideration Kevin’s knowledge of a city, Meg’s taste in Japanese food, and Carl’s sense of what makes a place good for a friday night with friends.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-impact-web-of-trust-could-change-everything/17635/1
+        Wed, 07 Feb 2024 22:00:42 +0000
+gov.gitcoin.co-post-17635-1
+The Impact Web of Trust Could Change Everything 💰
+      
+
+

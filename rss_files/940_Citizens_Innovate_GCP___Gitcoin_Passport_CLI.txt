@@ -1,0 +1,581 @@
+
+
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201
+    ## Building a Command Line Interface for Gitcoin Passport
+
+*This is an updated version of my previous proposal. This revised version is based on feedback I've received from the Gitcoin community, and a very helpful conversation recently with members of the Gitcoin Passport dev team.*
+
+*Also, the project is [now live on Grants Stack here.](https://builder.gitcoin.co/#/chains/10/registry/0x/projects/0x2232dc3a26e6ddeb679dc83868640cebb94a2e49e3015cf60c393d45eb804585)*
+
+-----
+# Passport CLI – A command-line tool for Gitcoin Passport (v0.3)
+
+## Description
+
+This proposal seeks funding to build a command-line interface (CLI) tool for Gitcoin Passport. The purpose of this tool is to simplify and streamline interaction with the Gitcoin Passport API for developers, and to enhance the overall developer experience for Gitcoin Passport.
+
+The first version of the Passport CLI tool will essentially provide a wrapper for Gitcoin Passport’s [existing API functions](https://api.scorer.gitcoin.co/docs), to help devs work with Passport’s API without having to write custom applications or scripts.
+
+More specifically, this tool will leverage Gitcoin Passport's API to allow users to fetch passport scores, fetch stamps for a given Ethereum address, claim web3 stamps, and more, all from their terminal!
+
+#### Impacted Stakeholders and Expected Outcomes
+
+Developers who seek to build with Gitcoin Passport will benefit from improved productivity and an enhanced development process by using Passport CLI.
+
+Passport CLI will allow developers to access Gitcoin Passport’s API without having to write a script or custom software to fetch user Stamps, submit an address for scoring, and to fetch the Passport score for one or more addresses. The Passport CLI will also allow developers and users to claim web3 stamps via the command–pretty cool!
+
+Additionally, the Gitcoin community will experience increased accessibility and usability of Gitcoin Passport via Passport CLI. This command-line tool will provide a more accessible experience to users who are vision-impaired, as CLI tools work better with screen readers, compared to graphics-rich web interfaces.
+
+Expected outcomes include a boost in Gitcoin Passport's adoption and a strengthening of its network effects. Passport CLI will be the first tool built in the Gitcoin Passport ecosystem that is built expressly to serve the needs of developers.
+
+Lastly, I have spoken to members of the Gitcoin Passport dev team and they have expressed excitement and support for this project.
+
+#### Motivation
+
+As a developer actively involved in the Gitcoin community, I've identified the need for easier access to Gitcoin Passport's functionalities. This tool will simplify developers' interactions with the platform, enhancing productivity and engagement. I assure there are no conflicts of interest with this proposal, and any future concerns will be transparently addressed.
+
+#### Why the Citizen Grants Program Should Adopt the Proposal
+
+This proposal has been created specifically with [Gitcoin's Essential Intents](https://gov.gitcoin.co/t/update-gitcoin-s-ratified-essential-intents-2023-2024-and-a-recap-of-our-successes/16818) in mind.
+
+At a glance, the benefits of adopting this proposal and funding the development of the Gitcoin Passport CLI tool are:
+
+* **Prioritizing the developer community** by providing tools that empower developers to contribute more effectively.
+
+* **Contributing to financial longevity of the Gitcoin ecosystem** by supporting the development of utilities that enhance Gitcoin Passport's value.
+
+* **Enhancing the network effects of Gitcoin’s current developer ecosystem** by streamlining the developer experience and fostering product adoption. One success metric for the project is to be responsible for onboarding 100 new developers to the Gitcoin Passport developer ecosystem over the next six months.
+
+The Citizen Grants Program should back this initiative because it directly supports Gitcoin's goal of fostering a thriving developer ecosystem. By reducing barriers and improving accessibility, the Passport CLI tool will attract new developers and enhance the productivity of existing ones. This adoption is essential for nurturing innovation within the Gitcoin community, ensuring its growth and relevance in the blockchain sector. The proposal presents a strategic opportunity to strengthen the Gitcoin ecosystem by making it more welcoming and efficient for developers.
+
+Furthermore, the proposal responds to a clear demand within the community for more efficient ways to interact with Gitcoin Passport, demonstrating Gitcoin's responsiveness to user needs and its dedication to innovation.
+
+By building on the existing infrastructure of Gitcoin Passport and utilizing its public APIs, the Passport CLI tool represents a practical and strategic opportunity to enhance the Gitcoin ecosystem.
+
+#### Challenges
+
+* **Deploying the Passport CLI will require ongoing maintenance and updates to keep Passport CLI function and aligned with Gitcoin Passport.** In the event of any breaking changes to Gitcoin Passport’s API, Passport CLI will need to be updated accordingly. As a part of this proposal, we will co-create a maintenance plan with members of the Gitcoin Passport dev team, which will provide a written protocol in regard to keeping the Passport CLI functional and working, in the event of Passport API breaking changes.
+
+* **Authentication and Signature Generation:** A significant technical challenge identified is handling authentication and signature generation for interacting with the Gitcoin Passport's API. One example of this is that we will need to generate signatures with a user's wallet, possibly requiring interaction with browser wallet extensions or external tools for signing.
+
+* **Claiming Stamps:** Another challenge involves claiming stamps, especially concerning OAuth for Web2 stamps and the authentication flow that might require a browser interaction for user consent. This presents a potential hurdle for a purely CLI-based tool.
+
+We will work closely with the Gitcoin Passport dev team via regular video calls (weekly or bi-weekly) to align with the mission of Gitcoin Passport and Gitcoin’s Essential Intents, and to implement robust solutions for these challenges.
+
+## Specifications
+
+This project will be built using Node and TypeScript, with the goal of closely mirroring the tech stack of Gitcoin Passport.
+
+Additionally, we will use the [Commander.js](https://github.com/tj/commander.js/) library to implement the core command line functionality.
+
+We will utilize environment variables for API key management, emphasizing security through the principle of least privilege. This includes running the CLI tool with user-level permissions, implementing secure API key entry to prevent exposure in command history, and ensuring files generated by the tool have restricted access.
+
+Additionally, we plan to encrypt sensitive data at rest using Node.js's crypto library and secure data in transit with HTTPS, offering guidance on securing .env files against unauthorized access.
+
+The Gitcoin Passport CLI Tools will be installable via npm and designed to support a wide range of functionalities through a user-friendly command-line interface.
+
+### Proposed Feature Set
+
+This feature set was derived based on feedback from Gitcoin Passport users and from members of the Gitcoin Passport dev team.
+
+#### Category 1: Standard Features (Utilizing Public APIs)
+
+**Submit a Wallet Address for Scoring**
+
+* **Command Name:** `submit-passport`
+* **Usage:** `passport-cli submit-passport --address <address> --scorer_id <scorer_id> [--signature <signature>] [--nonce <nonce>]`
+* **Description:** Submits an Ethereum address to the Scorer for passport scoring. Initially returns a status of PROCESSING or DONE. For PROCESSING status, the score computation is underway and the status can be checked by querying the score with the scorer ID and address.
+* **Passport API endpoint:** `POST /registry/submit-passport`
+
+**Fetch User Stamps**
+
+* **Command Name:** `get-stamps`
+* **Usage:** `passport-cli get-stamps <address>`
+* **Description:** Retrieves and displays a user's verified stamps.
+* **Passport API endpoint:** `GET /registry/stamps/{address}`
+
+**Fetch Passport Score for an Address**
+
+* **Command Name:** `get-score`
+* **Usage:** `passport-cli get-score <scorer_id> <address>`
+* **Description:** Retrieves and displays the Passport score for a specific address as per a given scorer ID.
+* **Passport API endpoint:** `GET /registry/score/{scorer-id}/{address}`
+
+**Fetch Passport Scores for All Addresses**
+
+* **Command Name:** `get-all-scores`
+* **Usage:** passport-cli `get-all-scores <scorer_id> [--limit <limit>] [--offset <offset>] [--gt <timestamp>] [--gte <timestamp>] [--order <order>]`
+* **Description:** Retrieves Passport scores for all addresses associated with a specific scorer. Supports pagination, and filtering scores based on timestamps, with the ability to order results.
+* **Passport API endpoint:** `GET /registry/score/{scorer-id}/`
+
+**Fetch Score History**
+
+* **Command Name:** `get-score-history`
+* **Usage:** `passport-cli get-score-history <address> [--timestamp <timestamp>]`
+* **Description:** Obtains a historical view of scores based on timestamp and optional address.
+* **Passport API endpoint:** `GET /registry/score/{scorer-id}/history`
+
+**Fetch Stamp Metadata**
+
+* **Command Name:** `get-stamp-metadata`
+* **Usage:** `passport-cli get-stamp-metadata`
+* **Description:** Gathers metadata for all stamps available in the Passport ecosystem.
+* **Passport API endpoint:** `GET /registry/stamp-metadata`
+
+**Retrieve GTC Stake Amounts**
+
+* **Command Name:** `get-gtc-stake`
+* **Usage:** `passport-cli get-gtc-stake <address> <round_id>`
+* **Description:** Fetches GTC stake amounts related to the GTC Staking stamp.
+* **Passport API endpoint:** `GET /registry/gtc-stake/{address}/{round_id}`
+
+#### Category 2: Advanced Features
+
+Claiming New Credentials
+
+* **Command Name:** `claim-credentials`
+* **Usage:** `passport-cli claim-credentials`
+* **Description:** Streamlines the process of claiming new credentials for Passport users. (Note: This command's implementation will depend on further collaboration and access to internal APIs.)
+* **Note:**
+  * For the first version of Passport CLI, we will focus on claiming web3 credentials, as claiming web 2 credentials must be done via oAuth and is beyond the scope of this proposal.
+  * The ability to claim web 2 credentials will be built into a later version of Passport CLI.
+
+**Saving to Centralized Storage/Ceramic**
+
+* **Command Name:** `save-credentials`
+* **Usage:** `gitcoin-passport-cli save-credentials [--storage-type <type>]`
+* **Description:** Enables saving credentials to centralized storage solutions or the Ceramic Network. (Note: Similar to claim-credentials, the feasibility of this command is subject to collaboration outcomes and API availability.)
+
+These command names are designed to be intuitive and reflective of their respective functionalities, providing a user-friendly interface for developers to interact with the Gitcoin Passport ecosystem efficiently.
+
+For further description of the Gitcoin Passport API, see Passport’s [API reference](https://docs.passport.gitcoin.co/building-with-passport/passport-api/api-reference) and the [API playground](https://api.scorer.gitcoin.co/v2/docs).
+
+## Timeline and Milestones
+
+1. **Development of Standard Features (6 weeks):** Implement, test, and refine Category 1 features.
+2. **Documentation and Initial Launch (2 weeks):** Finalize documentation and officially launch the tool with Category 1 features.
+3. **Advanced Features Development and Collaboration (3 weeks):** Develop Category 2 features based on collaboration outcomes with the Passport team.
+
+### Deliverables
+
+* **Passport CLI Tool:** A fully functional CLI tool capable of interacting with Gitcoin Passport APIs. Can be installed via NPM.
+* **Comprehensive Documentation:** Detailed setup instructions, usage guides, and examples.
+* **Source Code:** Well-documented and maintainable source code, hosted on GitHub.
+* **Maintenance Plan:** We will work with the Gitcoin Passport dev team to create a maintenance plan for Passport CLI.
+
+### Budget Estimate
+
+* **Total Estimated Cost:** $9,000
+  * **Research and Planning:** $1,500
+  * **Development and Testing:** $5,000
+  * **Documentation and Launch:** $2,500
+
+This revised budget accommodates a more comprehensive planning phase, detailed development and testing of features, and the production of thorough documentation.
+
+### Importance of Collaboration
+
+Collaboration with the Gitcoin Passport development team is vital, particularly for the advanced features in Category 2.
+
+We have a verbal promise from members of the Gitcoin Passport dev team to provide periodic guidance to this project, in the form of weekly or bi-weekly video calls to review the progress of this project.
+
+This partnership ensures the CLI tool's alignment with Gitcoin Passport's API stability and future roadmap, laying a strong foundation for its continuous enhancement.
+
+### Measures of Success and KPIs
+
+* **Developer Adoption Rates:** Targeting 200 unique users to install the Gitcoin Passport CLI Tool within the first six months.
+
+* **User Satisfaction:** Achieving an 80% satisfaction rate in post-launch surveys.
+
+* **Contribution to Gitcoin Passport's Network Effects:** Qualitative feedback on increased engagement and adoption.
+
+### Non-Financial Requirements
+
+* Insight and collaboration from members of the Gitcoin Passport development team for advanced feature integration. Ideally, members of the Gitcoin Passport product team as well.
+
+* **Community feedback and testing to refine the tool pre and post-launch.**
+
+## Conclusion
+
+The Gitcoin Passport CLI tool project will be the first tool built specifically for developers in the Gitcoin Passport ecosystem!
+
+Building Passport CLI will boost the network effects within the Gitcoin ecosystem, foster dev community engagement, and contribute to Gitcoin's mission of building and funding public goods.
+
+By initially focusing on public API functionalities and planning for advanced features, this proposal aims to deliver a valuable tool that significantly enriches the developer and user experience.
+
+*Thanks for reading! Obviously I will be replying here in the comments, and you can also dm me via Discord or Telegram–I'm @alexdw5.*
+Tue, 12 Mar 2024 23:08:16 +0000
+📝 Citizen Grants
+
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+alexdwagner
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/lebraat">@lebraat</a>! This is valuable feedback. I am super curious to know how Bankless built that integration(likely using Passport API, how they are storing credentials data is the part I don’t have a good guess on yet), and how they are using it.</p>
+<p>The Passport CLI is essentially a command-line wrapper for the Passport API that stores user keys in secure environment variables, so it should be able to do this in theory.</p>
+<p>How do you think that would work in this case, especially in regard to pushing Bankless’ Passport db data to Gitcoin’s db? This may be a question for the Passport dev team <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Passport CLI will be downstream of whatever Passport API can do, and basically just extends that to the command-line so you don’t have to script it.</p>
+<p>I’ll do some research to see what I can find out about Bankless’ Passport integration.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/12
+        Tue, 12 Mar 2024 23:08:16 +0000
+gov.gitcoin.co-post-18201-12
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+lebraat
+
+            <p>Thank you so much <a class="mention" href="https://gov.gitcoin.co/u/alexdwagner">@alexdwagner</a> for submitting this proposal.</p>
+<p>The comments and responses between you and <a class="mention" href="https://gov.gitcoin.co/u/nutrina">@nutrina</a> cover my feedback as well! There is some good value in making it even easier to pull Passport data directly from a CLI to start.</p>
+<hr>
+<p>I am, however, very interested in enabling users to verify credentials outside of our walls. We have seen some recent interest in this option during partner conversations, so even making just web3 Stamps available via partner sites might be a big win.</p>
+<p>Here is an example screenshot of Bankless Academy enabling users to verify Stamps via their site:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2deace03cf26ff06062a8cff43aa01728f9a80b0.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/2deace03cf26ff06062a8cff43aa01728f9a80b0" title="2024-03-07 16.08.04"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2deace03cf26ff06062a8cff43aa01728f9a80b0_2_345x211.jpeg" alt="2024-03-07 16.08.04" data-base62-sha1="6ycyhNzFIAPfaTao6F65E7fRFh6" width="345" height="211" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2deace03cf26ff06062a8cff43aa01728f9a80b0_2_345x211.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2deace03cf26ff06062a8cff43aa01728f9a80b0_2_517x316.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2deace03cf26ff06062a8cff43aa01728f9a80b0_2_690x422.jpeg 2x" data-dominant-color="796E9A"></a></div><p></p>
+<p>This isn’t a great integration from our perspective since they are storing the data in their own databases and not in ours. Enabling partners to verify Stamps via their own site, but making sure to communicate that with us properly would be ideal.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/11
+        Tue, 12 Mar 2024 21:50:24 +0000
+gov.gitcoin.co-post-18201-11
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+alexdwagner
+
+            <p>Hey everyone, just a quick update that I revised my proposal above based on feedback from <a class="mention" href="https://gov.gitcoin.co/u/nutrina">@nutrina</a> and <a class="mention" href="https://gov.gitcoin.co/u/lucian">@lucian</a> from the Gitcoin Passport dev team!</p>
+<p>For next steps, I will create the project on Grants Stack, to be reviewed by the Grants Council in early April.</p>
+<p>Thank you all for your feedback and your support thus far. I’m excited to apply for this grant and to keep building Passport CLI!</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/10
+        Tue, 12 Mar 2024 19:13:41 +0000
+gov.gitcoin.co-post-18201-10
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+nutrina
+
+            <p>I think this is a good idea, to approach things incrementally (easy first, then the hard one <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> ).</p>
+<p>Looking forward for your proposed feature set.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/9
+        Tue, 05 Mar 2024 18:41:17 +0000
+gov.gitcoin.co-post-18201-9
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+alexdwagner
+
+            <p>These are some really good points. I appreciate you pointing these things out. I was intuitively grasping towards this, thinking "Alright, the <code>passport score --address 0x1234abcd…</code> and <code>help</code> commands should be easy enough, but the CI/CD functionality could be a bear–i.e. theres an “easy version” of the CLI tool, and a hard version.</p>
+<p>Two potential solutions I see are:</p>
+<ul>
+<li>
+<p><strong>Ship the easy version on a shorter timeline and smaller budget.</strong> This seems the wisest path. I am new to the Gitcoin Passport dev community, and this seems like a more manageable lift for my skillset. If the dev community and Passport devs find the CLI tool useful, then there’s the option to build additional functionality, such as CI/CD functionality, or functions that are more vulnerable to breaking changes. I’ll grant that breaking changes happening in Passport could still break this simpler version of the CLI, but it will likely be less catastrophic than if we build a CLI that has a lot of complex functionality.</p>
+</li>
+<li>
+<p><strong>Work with the Gitcoin Passport leads to figure out who will maintain the Passport CLI tool once it’s released.</strong> This would be the “ship the ‘hard version’ option”, although it’s worth thinking about who will maintain the project, even if we end up just ship the easy version of Gitcoin Passport CLI. I suppose it could be maintained by either the Passport team, open source contributors, or there could be a periodic bounty to update the tool and fix any breaking changes. I ultimately want to serve the Passport team’s vision and the dev community, so will be glad to defer to the Passport team here.</p>
+</li>
+</ul>
+<p>I am hoping to build the Passport CLI with guidance from Passport devs like yourself, so your feedback is invaluable as I try to shape this proposal into something viable and worth funding for the DAO.</p>
+<p>I’d love to chat and run my proposed feature set by you and get your feedback.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/8
+        Tue, 05 Mar 2024 16:05:15 +0000
+gov.gitcoin.co-post-18201-8
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+alexdwagner
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/karlagod">@KarlaGod</a>! I appreciate the +1 here <img src="https://gov.gitcoin.co/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/7
+        Tue, 05 Mar 2024 15:45:39 +0000
+gov.gitcoin.co-post-18201-7
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+nutrina
+
+            <p>Hello,</p>
+<p>As a Passport developer I would like to share my take on this.</p>
+<p>First, I like CLI tools. I use them daily, and I feel they make a developer more productive. So having a passport cli tool sounds of curse great to me, because I can already imagine how easily I can put together certain workflows.</p>
+<p>But building a Passport CLI, is not quite easy.</p>
+<p>Reading through the proposal, I think the commands that the cli tool would provide fall into 2 categories:</p>
+<p><strong>Category 1 (easy)</strong></p>
+<p>These commands which can be implemented by using our public API (<a href="https://api.scorer.gitcoin.co/docs" class="inline-onebox" rel="noopener nofollow ugc">Passport API Playground.</a>). This includes features like retrieving a users stamps, score, etc … It is already possible to interact with the API from a terminal using <code>curl</code> commands, and these <code>curl</code> commands are provided in the docs page.</p>
+<p>It would be easy to wrap these for convenience in a CLI tool.</p>
+<p><strong>Category 2 (hard)</strong></p>
+<p>These are commands that need to tap into APIs that are not officially available to integrators.</p>
+<p>Commands that fall into this category would be for example: claiming new credential, saving to centralised storage / ceramic .</p>
+<p>And this is difficult to implement, and also risky because there is no commitment from the Passport team to <strong>not break</strong> these. So the questions is, how to best deal with this situations? There will be maintenance required on the CLI tool as well.</p>
+<p>And we do occasionally make breaking changes as continue our implementation. Such breaking changes could mean: any change in the API that are used, authentication methods, new providers that are added.</p>
+<p>I am happy to provide further technical insights and answer any questions.</p>
+<p>I think it is important to understand these aspects, in order to properly estimate the required effort.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/6
+        Tue, 05 Mar 2024 12:37:21 +0000
+gov.gitcoin.co-post-18201-6
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+KarlaGod
+
+            <p>Yeah, this is good, sounds like you have development processes covered and thought out. I’m excited to see your milestones report when you start, I hope you get it.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/5
+        Tue, 05 Mar 2024 07:01:26 +0000
+gov.gitcoin.co-post-18201-5
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+alexdwagner
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/distributeddoge">@DistributedDoge</a>, really appreciate the feedback here.</p>
+<p>You make a good point about going to the devs to gather feedback <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Also great suggestion to add a <code>--json</code> option to format outputs. I will add a card for that!</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/4
+        Fri, 01 Mar 2024 19:00:37 +0000
+gov.gitcoin.co-post-18201-4
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+DistributedDoge
+
+            <p>Looks neat. Good CLI can go a long way to improve developer experience, so I am petty much sold on that one!</p>
+<p>So far Gitcoin is <em>talking</em> a lot about improving developer experience, but yours is first initiative I see that may actually <em>do</em> something in that direction!</p>
+<blockquote>
+<p><code>npx passport score --from-file addresses_to_check.csv</code></p>
+</blockquote>
+<p>You may have hard time gathering feedback <em>here</em>, as I am not sure many Passport builders frequent governance forums but we will see how it goes!</p>
+<p>Anyways, one feature suggestion would be to add <code>--json</code> option for command outputs a bit like  <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-output-format.html" rel="noopener nofollow ugc">aws-cli</a> is doing =&gt; make it easier to glue scripts together.</p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/3
+        Fri, 01 Mar 2024 12:53:05 +0000
+gov.gitcoin.co-post-18201-3
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+alexdwagner
+
+            <p>Tagging <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> <a class="mention" href="https://gov.gitcoin.co/u/jeremy">@Jeremy</a> and <a class="mention" href="https://gov.gitcoin.co/u/lebraat">@lebraat</a> for feedback <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/2
+        Thu, 29 Feb 2024 17:10:38 +0000
+gov.gitcoin.co-post-18201-2
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+Citizens Innovate GCP – Gitcoin Passport CLI
+alexdwagner
+
+            <h2><a name="building-a-command-line-interface-for-gitcoin-passport-1" class="anchor" href="https://gov.gitcoin.co#building-a-command-line-interface-for-gitcoin-passport-1"></a>Building a Command Line Interface for Gitcoin Passport</h2>
+<p><em>This is an updated version of my previous proposal. This revised version is based on feedback I’ve received from the Gitcoin community, and a very helpful conversation recently with members of the Gitcoin Passport dev team.</em></p>
+<p><em>Also, the project is <a href="https://builder.gitcoin.co/#/chains/10/registry/0x/projects/0x2232dc3a26e6ddeb679dc83868640cebb94a2e49e3015cf60c393d45eb804585" rel="noopener nofollow ugc">now live on Grants Stack here.</a></em></p>
+<hr>
+<h1><a name="passport-cli-a-command-line-tool-for-gitcoin-passport-v03-2" class="anchor" href="https://gov.gitcoin.co#passport-cli-a-command-line-tool-for-gitcoin-passport-v03-2"></a>Passport CLI – A command-line tool for Gitcoin Passport (v0.3)</h1>
+<h2><a name="description-3" class="anchor" href="https://gov.gitcoin.co#description-3"></a>Description</h2>
+<p>This proposal seeks funding to build a command-line interface (CLI) tool for Gitcoin Passport. The purpose of this tool is to simplify and streamline interaction with the Gitcoin Passport API for developers, and to enhance the overall developer experience for Gitcoin Passport.</p>
+<p>The first version of the Passport CLI tool will essentially provide a wrapper for Gitcoin Passport’s <a href="https://api.scorer.gitcoin.co/docs" rel="noopener nofollow ugc">existing API functions</a>, to help devs work with Passport’s API without having to write custom applications or scripts.</p>
+<p>More specifically, this tool will leverage Gitcoin Passport’s API to allow users to fetch passport scores, fetch stamps for a given Ethereum address, claim web3 stamps, and more, all from their terminal!</p>
+<h4><a name="impacted-stakeholders-and-expected-outcomes-4" class="anchor" href="https://gov.gitcoin.co#impacted-stakeholders-and-expected-outcomes-4"></a>Impacted Stakeholders and Expected Outcomes</h4>
+<p>Developers who seek to build with Gitcoin Passport will benefit from improved productivity and an enhanced development process by using Passport CLI.</p>
+<p>Passport CLI will allow developers to access Gitcoin Passport’s API without having to write a script or custom software to fetch user Stamps, submit an address for scoring, and to fetch the Passport score for one or more addresses. The Passport CLI will also allow developers and users to claim web3 stamps via the command–pretty cool!</p>
+<p>Additionally, the Gitcoin community will experience increased accessibility and usability of Gitcoin Passport via Passport CLI. This command-line tool will provide a more accessible experience to users who are vision-impaired, as CLI tools work better with screen readers, compared to graphics-rich web interfaces.</p>
+<p>Expected outcomes include a boost in Gitcoin Passport’s adoption and a strengthening of its network effects. Passport CLI will be the first tool built in the Gitcoin Passport ecosystem that is built expressly to serve the needs of developers.</p>
+<p>Lastly, I have spoken to members of the Gitcoin Passport dev team and they have expressed excitement and support for this project.</p>
+<h4><a name="motivation-5" class="anchor" href="https://gov.gitcoin.co#motivation-5"></a>Motivation</h4>
+<p>As a developer actively involved in the Gitcoin community, I’ve identified the need for easier access to Gitcoin Passport’s functionalities. This tool will simplify developers’ interactions with the platform, enhancing productivity and engagement. I assure there are no conflicts of interest with this proposal, and any future concerns will be transparently addressed.</p>
+<h4><a name="why-the-citizen-grants-program-should-adopt-the-proposal-6" class="anchor" href="https://gov.gitcoin.co#why-the-citizen-grants-program-should-adopt-the-proposal-6"></a>Why the Citizen Grants Program Should Adopt the Proposal</h4>
+<p>This proposal has been created specifically with <a href="https://gov.gitcoin.co/t/update-gitcoin-s-ratified-essential-intents-2023-2024-and-a-recap-of-our-successes/16818">Gitcoin’s Essential Intents</a> in mind.</p>
+<p>At a glance, the benefits of adopting this proposal and funding the development of the Gitcoin Passport CLI tool are:</p>
+<ul>
+<li>
+<p><strong>Prioritizing the developer community</strong> by providing tools that empower developers to contribute more effectively.</p>
+</li>
+<li>
+<p><strong>Contributing to financial longevity of the Gitcoin ecosystem</strong> by supporting the development of utilities that enhance Gitcoin Passport’s value.</p>
+</li>
+<li>
+<p><strong>Enhancing the network effects of Gitcoin’s current developer ecosystem</strong> by streamlining the developer experience and fostering product adoption. One success metric for the project is to be responsible for onboarding 100 new developers to the Gitcoin Passport developer ecosystem over the next six months.</p>
+</li>
+</ul>
+<p>The Citizen Grants Program should back this initiative because it directly supports Gitcoin’s goal of fostering a thriving developer ecosystem. By reducing barriers and improving accessibility, the Passport CLI tool will attract new developers and enhance the productivity of existing ones. This adoption is essential for nurturing innovation within the Gitcoin community, ensuring its growth and relevance in the blockchain sector. The proposal presents a strategic opportunity to strengthen the Gitcoin ecosystem by making it more welcoming and efficient for developers.</p>
+<p>Furthermore, the proposal responds to a clear demand within the community for more efficient ways to interact with Gitcoin Passport, demonstrating Gitcoin’s responsiveness to user needs and its dedication to innovation.</p>
+<p>By building on the existing infrastructure of Gitcoin Passport and utilizing its public APIs, the Passport CLI tool represents a practical and strategic opportunity to enhance the Gitcoin ecosystem.</p>
+<h4><a name="challenges-7" class="anchor" href="https://gov.gitcoin.co#challenges-7"></a>Challenges</h4>
+<ul>
+<li>
+<p><strong>Deploying the Passport CLI will require ongoing maintenance and updates to keep Passport CLI function and aligned with Gitcoin Passport.</strong> In the event of any breaking changes to Gitcoin Passport’s API, Passport CLI will need to be updated accordingly. As a part of this proposal, we will co-create a maintenance plan with members of the Gitcoin Passport dev team, which will provide a written protocol in regard to keeping the Passport CLI functional and working, in the event of Passport API breaking changes.</p>
+</li>
+<li>
+<p><strong>Authentication and Signature Generation:</strong> A significant technical challenge identified is handling authentication and signature generation for interacting with the Gitcoin Passport’s API. One example of this is that we will need to generate signatures with a user’s wallet, possibly requiring interaction with browser wallet extensions or external tools for signing.</p>
+</li>
+<li>
+<p><strong>Claiming Stamps:</strong> Another challenge involves claiming stamps, especially concerning OAuth for Web2 stamps and the authentication flow that might require a browser interaction for user consent. This presents a potential hurdle for a purely CLI-based tool.</p>
+</li>
+</ul>
+<p>We will work closely with the Gitcoin Passport dev team via regular video calls (weekly or bi-weekly) to align with the mission of Gitcoin Passport and Gitcoin’s Essential Intents, and to implement robust solutions for these challenges.</p>
+<h2><a name="specifications-8" class="anchor" href="https://gov.gitcoin.co#specifications-8"></a>Specifications</h2>
+<p>This project will be built using Node and TypeScript, with the goal of closely mirroring the tech stack of Gitcoin Passport.</p>
+<p>Additionally, we will use the <a href="https://github.com/tj/commander.js/" rel="noopener nofollow ugc">Commander.js</a> library to implement the core command line functionality.</p>
+<p>We will utilize environment variables for API key management, emphasizing security through the principle of least privilege. This includes running the CLI tool with user-level permissions, implementing secure API key entry to prevent exposure in command history, and ensuring files generated by the tool have restricted access.</p>
+<p>Additionally, we plan to encrypt sensitive data at rest using Node.js’s crypto library and secure data in transit with HTTPS, offering guidance on securing .env files against unauthorized access.</p>
+<p>The Gitcoin Passport CLI Tools will be installable via npm and designed to support a wide range of functionalities through a user-friendly command-line interface.</p>
+<h3><a name="proposed-feature-set-9" class="anchor" href="https://gov.gitcoin.co#proposed-feature-set-9"></a>Proposed Feature Set</h3>
+<p>This feature set was derived based on feedback from Gitcoin Passport users and from members of the Gitcoin Passport dev team.</p>
+<h4><a name="category-1-standard-features-utilizing-public-apis-10" class="anchor" href="https://gov.gitcoin.co#category-1-standard-features-utilizing-public-apis-10"></a>Category 1: Standard Features (Utilizing Public APIs)</h4>
+<p><strong>Submit a Wallet Address for Scoring</strong></p>
+<ul>
+<li><strong>Command Name:</strong> <code>submit-passport</code></li>
+<li><strong>Usage:</strong> <code>passport-cli submit-passport --address &lt;address&gt; --scorer_id &lt;scorer_id&gt; [--signature &lt;signature&gt;] [--nonce &lt;nonce&gt;]</code></li>
+<li><strong>Description:</strong> Submits an Ethereum address to the Scorer for passport scoring. Initially returns a status of PROCESSING or DONE. For PROCESSING status, the score computation is underway and the status can be checked by querying the score with the scorer ID and address.</li>
+<li><strong>Passport API endpoint:</strong> <code>POST /registry/submit-passport</code></li>
+</ul>
+<p><strong>Fetch User Stamps</strong></p>
+<ul>
+<li><strong>Command Name:</strong> <code>get-stamps</code></li>
+<li><strong>Usage:</strong> <code>passport-cli get-stamps &lt;address&gt;</code></li>
+<li><strong>Description:</strong> Retrieves and displays a user’s verified stamps.</li>
+<li><strong>Passport API endpoint:</strong> <code>GET /registry/stamps/{address}</code></li>
+</ul>
+<p><strong>Fetch Passport Score for an Address</strong></p>
+<ul>
+<li><strong>Command Name:</strong> <code>get-score</code></li>
+<li><strong>Usage:</strong> <code>passport-cli get-score &lt;scorer_id&gt; &lt;address&gt;</code></li>
+<li><strong>Description:</strong> Retrieves and displays the Passport score for a specific address as per a given scorer ID.</li>
+<li><strong>Passport API endpoint:</strong> <code>GET /registry/score/{scorer-id}/{address}</code></li>
+</ul>
+<p><strong>Fetch Passport Scores for All Addresses</strong></p>
+<ul>
+<li><strong>Command Name:</strong> <code>get-all-scores</code></li>
+<li><strong>Usage:</strong> passport-cli <code>get-all-scores &lt;scorer_id&gt; [--limit &lt;limit&gt;] [--offset &lt;offset&gt;] [--gt &lt;timestamp&gt;] [--gte &lt;timestamp&gt;] [--order &lt;order&gt;]</code></li>
+<li><strong>Description:</strong> Retrieves Passport scores for all addresses associated with a specific scorer. Supports pagination, and filtering scores based on timestamps, with the ability to order results.</li>
+<li><strong>Passport API endpoint:</strong> <code>GET /registry/score/{scorer-id}/</code></li>
+</ul>
+<p><strong>Fetch Score History</strong></p>
+<ul>
+<li><strong>Command Name:</strong> <code>get-score-history</code></li>
+<li><strong>Usage:</strong> <code>passport-cli get-score-history &lt;address&gt; [--timestamp &lt;timestamp&gt;]</code></li>
+<li><strong>Description:</strong> Obtains a historical view of scores based on timestamp and optional address.</li>
+<li><strong>Passport API endpoint:</strong> <code>GET /registry/score/{scorer-id}/history</code></li>
+</ul>
+<p><strong>Fetch Stamp Metadata</strong></p>
+<ul>
+<li><strong>Command Name:</strong> <code>get-stamp-metadata</code></li>
+<li><strong>Usage:</strong> <code>passport-cli get-stamp-metadata</code></li>
+<li><strong>Description:</strong> Gathers metadata for all stamps available in the Passport ecosystem.</li>
+<li><strong>Passport API endpoint:</strong> <code>GET /registry/stamp-metadata</code></li>
+</ul>
+<p><strong>Retrieve GTC Stake Amounts</strong></p>
+<ul>
+<li><strong>Command Name:</strong> <code>get-gtc-stake</code></li>
+<li><strong>Usage:</strong> <code>passport-cli get-gtc-stake &lt;address&gt; &lt;round_id&gt;</code></li>
+<li><strong>Description:</strong> Fetches GTC stake amounts related to the GTC Staking stamp.</li>
+<li><strong>Passport API endpoint:</strong> <code>GET /registry/gtc-stake/{address}/{round_id}</code></li>
+</ul>
+<h4><a name="category-2-advanced-features-11" class="anchor" href="https://gov.gitcoin.co#category-2-advanced-features-11"></a>Category 2: Advanced Features</h4>
+<p>Claiming New Credentials</p>
+<ul>
+<li><strong>Command Name:</strong> <code>claim-credentials</code></li>
+<li><strong>Usage:</strong> <code>passport-cli claim-credentials</code></li>
+<li><strong>Description:</strong> Streamlines the process of claiming new credentials for Passport users. (Note: This command’s implementation will depend on further collaboration and access to internal APIs.)</li>
+<li><strong>Note:</strong>
+<ul>
+<li>For the first version of Passport CLI, we will focus on claiming web3 credentials, as claiming web 2 credentials must be done via oAuth and is beyond the scope of this proposal.</li>
+<li>The ability to claim web 2 credentials will be built into a later version of Passport CLI.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Saving to Centralized Storage/Ceramic</strong></p>
+<ul>
+<li><strong>Command Name:</strong> <code>save-credentials</code></li>
+<li><strong>Usage:</strong> <code>gitcoin-passport-cli save-credentials [--storage-type &lt;type&gt;]</code></li>
+<li><strong>Description:</strong> Enables saving credentials to centralized storage solutions or the Ceramic Network. (Note: Similar to claim-credentials, the feasibility of this command is subject to collaboration outcomes and API availability.)</li>
+</ul>
+<p>These command names are designed to be intuitive and reflective of their respective functionalities, providing a user-friendly interface for developers to interact with the Gitcoin Passport ecosystem efficiently.</p>
+<p>For further description of the Gitcoin Passport API, see Passport’s <a href="https://docs.passport.gitcoin.co/building-with-passport/passport-api/api-reference" rel="noopener nofollow ugc">API reference</a> and the <a href="https://api.scorer.gitcoin.co/v2/docs" rel="noopener nofollow ugc">API playground</a>.</p>
+<h2><a name="timeline-and-milestones-12" class="anchor" href="https://gov.gitcoin.co#timeline-and-milestones-12"></a>Timeline and Milestones</h2>
+<ol>
+<li><strong>Development of Standard Features (6 weeks):</strong> Implement, test, and refine Category 1 features.</li>
+<li><strong>Documentation and Initial Launch (2 weeks):</strong> Finalize documentation and officially launch the tool with Category 1 features.</li>
+<li><strong>Advanced Features Development and Collaboration (3 weeks):</strong> Develop Category 2 features based on collaboration outcomes with the Passport team.</li>
+</ol>
+<h3><a name="deliverables-13" class="anchor" href="https://gov.gitcoin.co#deliverables-13"></a>Deliverables</h3>
+<ul>
+<li><strong>Passport CLI Tool:</strong> A fully functional CLI tool capable of interacting with Gitcoin Passport APIs. Can be installed via NPM.</li>
+<li><strong>Comprehensive Documentation:</strong> Detailed setup instructions, usage guides, and examples.</li>
+<li><strong>Source Code:</strong> Well-documented and maintainable source code, hosted on GitHub.</li>
+<li><strong>Maintenance Plan:</strong> We will work with the Gitcoin Passport dev team to create a maintenance plan for Passport CLI.</li>
+</ul>
+<h3><a name="budget-estimate-14" class="anchor" href="https://gov.gitcoin.co#budget-estimate-14"></a>Budget Estimate</h3>
+<ul>
+<li><strong>Total Estimated Cost:</strong> $9,000
+<ul>
+<li><strong>Research and Planning:</strong> $1,500</li>
+<li><strong>Development and Testing:</strong> $5,000</li>
+<li><strong>Documentation and Launch:</strong> $2,500</li>
+</ul>
+</li>
+</ul>
+<p>This revised budget accommodates a more comprehensive planning phase, detailed development and testing of features, and the production of thorough documentation.</p>
+<h3><a name="importance-of-collaboration-15" class="anchor" href="https://gov.gitcoin.co#importance-of-collaboration-15"></a>Importance of Collaboration</h3>
+<p>Collaboration with the Gitcoin Passport development team is vital, particularly for the advanced features in Category 2.</p>
+<p>We have a verbal promise from members of the Gitcoin Passport dev team to provide periodic guidance to this project, in the form of weekly or bi-weekly video calls to review the progress of this project.</p>
+<p>This partnership ensures the CLI tool’s alignment with Gitcoin Passport’s API stability and future roadmap, laying a strong foundation for its continuous enhancement.</p>
+<h3><a name="measures-of-success-and-kpis-16" class="anchor" href="https://gov.gitcoin.co#measures-of-success-and-kpis-16"></a>Measures of Success and KPIs</h3>
+<ul>
+<li>
+<p><strong>Developer Adoption Rates:</strong> Targeting 200 unique users to install the Gitcoin Passport CLI Tool within the first six months.</p>
+</li>
+<li>
+<p><strong>User Satisfaction:</strong> Achieving an 80% satisfaction rate in post-launch surveys.</p>
+</li>
+<li>
+<p><strong>Contribution to Gitcoin Passport’s Network Effects:</strong> Qualitative feedback on increased engagement and adoption.</p>
+</li>
+</ul>
+<h3><a name="non-financial-requirements-17" class="anchor" href="https://gov.gitcoin.co#non-financial-requirements-17"></a>Non-Financial Requirements</h3>
+<ul>
+<li>
+<p>Insight and collaboration from members of the Gitcoin Passport development team for advanced feature integration. Ideally, members of the Gitcoin Passport product team as well.</p>
+</li>
+<li>
+<p><strong>Community feedback and testing to refine the tool pre and post-launch.</strong></p>
+</li>
+</ul>
+<h2><a name="conclusion-18" class="anchor" href="https://gov.gitcoin.co#conclusion-18"></a>Conclusion</h2>
+<p>The Gitcoin Passport CLI tool project will be the first tool built specifically for developers in the Gitcoin Passport ecosystem!</p>
+<p>Building Passport CLI will boost the network effects within the Gitcoin ecosystem, foster dev community engagement, and contribute to Gitcoin’s mission of building and funding public goods.</p>
+<p>By initially focusing on public API functionalities and planning for advanced features, this proposal aims to deliver a valuable tool that significantly enriches the developer and user experience.</p>
+<p><em>Thanks for reading! Obviously I will be replying here in the comments, and you can also dm me via Discord or Telegram–I’m <span class="mention">@alexdw5</span>.</em></p>
+          <p><a href="https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/citizens-innovate-gcp-gitcoin-passport-cli/18201/1
+        Thu, 29 Feb 2024 17:06:11 +0000
+gov.gitcoin.co-post-18201-1
+Citizens Innovate GCP – Gitcoin Passport CLI
+      
+
+

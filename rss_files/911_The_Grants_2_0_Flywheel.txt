@@ -1,0 +1,257 @@
+
+
+
+The Grants 2.0 Flywheel ♻️
+https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711
+    # Grants 1.0 flywheel
+
+I think that Gitcoin Grants is a triple sided marketplace.
+
+![Screen Shot 2022-05-25 at 5.19.23 PM|582x500](upload://zb6PplBdYzvvxoYnjetCOlnr5a4.png)
+
+1. We enable **Community/Ecosystem builders** to get their JTBD (Build their ecosystem/community) done.
+1. The way we do that is we enable **Grant Owners** to get their JTBD (raise $$$) done.
+2. The way we do that is we enable **Contributors** to get their JTBD (find great projects, support them) done.
+
+This is a virtous flywheel here where each side of the market contributes to the network effect of the entire market.
+
+[![a0ce63f7-2a5e-4155-a040-1426497419d6|661x500](upload://4x7tOb0JKcxruXdbUfA06lLlmBd.gif)](https://ncase.me/loopy/v1.1/?data=[[[1,484,194,0.5,%22more%2520contributions%22,4],[2,571,336,0.5,%22more%2520grants%22,4],[4,726,210,0.5,%22more%2520ecosystems%22,4]],[[2,1,70,1,0],[1,2,60,1,0],[4,2,-35,1,0],[2,4,-58,1,0]],[[626,134,%22Grants%25201.0%2520Flywheel%22]],7%5D)
+
+Said another way:  
+
+- More contributions creates more grants creates more ecosystems => (repeat)
+- More ecosystems creates more grants creates more contributions => (repeat)
+
+Because each marginal new user creates more value for each grant owner, and visa versa, the network is subject to power law growth in it's utility.  This law of network value is called [Metcalfe's law](https://www.techopedia.com/definition/29066/metcalfes-law#:~:text=Metcalfe's%20Law%20is%20a%20concept,100%20(10%20*%2010).):
+![Screen Shot 2022-05-25 at 6.50.47 PM|690x368](upload://5vCd3oxg7EVrlatnpRUV59GOSLt.jpeg)
+
+
+It gets better. We can build this triple sided market by choosing the leverage point on any of the 3 sides of the marketplace.
+1. Focus on getting more ecosystems (via sales)
+2. Focus on getting more grants (via marketing)
+2. Focus on getting more contributions (via marketing).
+
+This triple sided marketplace (and Metcalfe's law) is how Gitcoin has grown to help **78,070** funders reach an audience of **318,218** earners. Gitcoin has facilitated **2,069,421** complete transactions to **10,457** unique earners.
+
+# Grants 2.0 flywheel
+
+I think that Grants 2.0 builds on the momentum of Grants 1.0 in a really important way.
+
+In the second half of this post I aim to articualte how.
+
+Grants 1.0 was a monolithic app, but Grants 2.0 will be made up of a suite of modular money legos that are all interoperable with each other (and replacable)
+
+![Screen Shot 2022-05-25 at 5.27.38 PM|690x318](upload://iaivLh3U2dxl3xmjQmlfx1iTmng.png)
+
+1. At the base of the system is a deeply liquid grants registry (which in the spirit of [Practical Pluralism](https://gov.gitcoin.co/t/practical-pluralism-essay-draft/10462), is interoperable with other grants programs).
+2. Built on that is an ecosystem of mechanisms that all help create more contributions on the platform.  
+   - In Grants 1.0, we leveraged [Pairwise QF](https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553) and were stuck with it because of the monolithic architecture.  But in Grants 2.0, we could build many pluralistic mechanisms (MACI QF, [DeSoc QF](https://gov.gitcoin.co/t/how-soulbound-tokens-can-make-gitcoin-grants-more-pluralistic/10077), Retroactive Public Goods Funding, Dominance Assurance Contracts, etc) on top, or integrate other mechanisms (like Optimism's RetroPGF or CLRFunds Maci QF).  
+   - This allows for more modular choice among ecosystems about how they want to coordinate their ecosystem.
+    - It also allows mechanism designers to quickly traverse the design space of possible mechanisms to get real emperical feedback & data.
+3. We can supercharge this ecosystem by adding Governance to any part of the system that needs it.
+   - For example, the DAO could build useful components that (1) offer Mutual Grants to Grant owners, (2) enhance the sybil resistence of the system, (3) help curate Grants, (4) set the round rules.
+
+I really cant emphasize enough how much this modular & composable architecture matters to building on the EVM.  
+
+https://twitter.com/deaneigenmann/status/1524746298074697732
+
+What is really exciting to me is how this modular architecture enhances the existing  Grants 1.0 flywheel.
+
+[![a9643b9b-88c6-459b-ba74-e43cb74ba356|690x392](upload://35SqjkSp2hXqM4h4XqMo98tEuLn.gif)](https://ncase.me/loopy/v1.1/?data=[[[1,563,241,0.5,%22more%2520contributions%22,4],[2,650,383,0.5,%22more%2520grants%22,4],[4,805,257,0.5,%22more%2520ecosystems%22,4],[5,466,91,0.5,%22more%2520gtc%2520utility%22,5],[6,387,257,0.5,%22more%252C%2520better%252C%2520mechanisms%22,5],[7,428,410,0.5,%22more%2520registry%2520integrations%22,5],[8,214,311,0.5,%22more%2520developers%22,5]],[[2,1,70,1,0],[1,2,60,1,0],[4,2,-35,1,0],[2,4,-58,1,0],[7,2,-30,1,0],[6,1,-29,1,0],[1,6,-42,1,0],[2,7,-26,1,0],[8,7,-19,1,0],[8,6,13,1,0],[6,5,-23,1,0],[5,6,-39,1,0],[1,5,-16,1,0],[5,1,-15,1,0]],[[716,192,%22Grants%25201.0%2520Flywheel%22],[216,179,%22Grants%25202.0%2520Flywheel%22]],8%5D)
+
+In Grants 2.0, we can enhance the Grants 1.0 flywheel by giving our ecosystem participants more leverage points to create network effects.  The levers that become available to them in Grants 2.0:
+1. Building more better mechanisms into the platform.
+2. Building more registry integrations into the platform.
+2. Building more governance utility into the platform.
+
+It is important to note that this modular open source architecture presupposes that each module will have good documentation + there will be a solid developer relations campaign to build out this ecosystem .  Having these things will create a thriving developer ecosystem + marketplace of mechanisms to fund these grants.  *(We could jumpstart this with Gitcoin Hackathons + Moonshot Collective)*
+![Screen Shot 2022-05-25 at 5.36.34 PM|690x378](upload://oy9amwFriTFsMY0cObHfry7jn08.png)
+
+By creating this thriving ecosystem of modules,  we can speed run the search space of possible coordination mechanisms, which speeds our ability to reach our shared mission.
+
+If you think of Gitcoin as being on search for better coordination mechanisms that help us meet our purpose (help communities build & fund their shared needs), then you can visualize the search as follows:
+
+We are in a [hill climbing problem](https://cdixon.org/2009/09/19/climbing-the-wrong-hill) where the heuristic (how high or low each point in the hill climbing problem is), is defined by the heuristic of "how much does it help communities meet their shared needs".
+
+Within this hill climbing problem, we are looking for the global maxima.  The mechanism that helps us find the global maximum utility this heuristic (again, the heuristic is "how much does it help communities meet their shared needs?")
+
+![Screen Shot 2022-05-25 at 5.34.23 PM|690x384](upload://zhhiNvA0jfxjJuFTe3HMirorx9Q.png)
+
+We can speedrun the traversal of that mechanism design space by creating a thriving ecosystem of developers who are building different flavors of QF in parallel with each other.   
+
+By creating & designing new modular plugins that do a better job of coordinating ecosystems + deploying them to our ecosystem partners, we find the ultimate coordination mechanisms for helping communities build & fund their shared needs.
+
+Here is the same diagram, but laid out with multiple mechanisms (many of which are on our roadmap) on it.
+
+![Screen Shot 2022-05-25 at 5.34.09 PM|690x390](upload://akKtcFxK5k4h848dZxHtE1JU8Pb.png)
+
+Feedback welcome.
+Mon, 06 Jun 2022 00:24:15 +0000
+🌱 Gitcoin Grants
+
+
+The Grants 2.0 Flywheel ♻️
+owocki
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10711">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<ol>
+<li>We enable <strong>Community/Ecosystem builders</strong> to get their JTBD (Build their ecosystem/community) done.</li>
+<li>The way we do that is we enable <strong>Grant Owners</strong> to get their JTBD (raise $$$) done.</li>
+<li>The way we do that is we enable <strong>Contributors</strong> to get their JTBD (find great projects, support them) done.</li>
+</ol>
+</blockquote>
+</aside>
+<p>I would like to augment this graph to represent the following feedback loop (denoted in blue)…</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/dfb037bcf56f8dd3234533bdbaac1976ab38f4ac.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/dfb037bcf56f8dd3234533bdbaac1976ab38f4ac" title="Screen Shot 2022-06-05 at 6.22.00 PM"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/d/dfb037bcf56f8dd3234533bdbaac1976ab38f4ac.png" alt="Screen Shot 2022-06-05 at 6.22.00 PM" data-base62-sha1="vUQ1hnfPF73dIhcCGW8y5KtTBTK" width="587" height="500" data-dominant-color="110B36"></a></div><p></p>
+<ol>
+<li>We enable <strong>Community/Ecosystem builders</strong> to get their JTBD (Build their ecosystem/community) done <strong>(and get feedback about which parts their community is worth funding)</strong>.</li>
+<li>The way we do that is we enable <strong>Grant Owners</strong> to get their JTBD (raise $$$) done. <strong>(and get feedback about which things their community thinks is worth funding)</strong></li>
+<li>The way we do that is we enable <strong>Contributors</strong> to get their JTBD (find great projects, support them) done.  <strong>(and give feedback about which things they think is worth funding)</strong></li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711/3
+        Mon, 06 Jun 2022 00:24:15 +0000
+gov.gitcoin.co-post-10711-3
+The Grants 2.0 Flywheel ♻️
+      
+
+The Grants 2.0 Flywheel ♻️
+owocki
+
+            <p>Oh, one other Grants 1.0 flywheel effect I think is really powerful (but not really documented above):</p>
+<p>The community that serves (1) ENS can also be the community that (2) Gitcoin serves can also be the community that (3) Ethereum serves.</p>
+<p>Visualized below, each ecosystem that does a QF round is a circle in a series of circles that sometimes overlap and sometimes do not.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/979886446d11772e71f1e2d4ad81dacc6f30ff85.png" data-download-href="/uploads/short-url/lD4SzC3BmVE6TOadxafzgTEmxU1.png?dl=1" title="Screen Shot 2021-12-14 at 1.00.53 PM"><img src="/uploads/db4391/optimized/2X/9/979886446d11772e71f1e2d4ad81dacc6f30ff85_2_690x383.png" alt="Screen Shot 2021-12-14 at 1.00.53 PM" data-base62-sha1="lD4SzC3BmVE6TOadxafzgTEmxU1" width="690" height="383" srcset="/uploads/db4391/optimized/2X/9/979886446d11772e71f1e2d4ad81dacc6f30ff85_2_690x383.png, /uploads/db4391/optimized/2X/9/979886446d11772e71f1e2d4ad81dacc6f30ff85_2_1035x574.png 1.5x, /uploads/db4391/optimized/2X/9/979886446d11772e71f1e2d4ad81dacc6f30ff85_2_1380x766.png 2x" data-small-upload="/uploads/db4391/optimized/2X/9/979886446d11772e71f1e2d4ad81dacc6f30ff85_2_10x10.png"></a></div><p></p>
+<p>Whats exciting to me is the intersection of these overlapping circles + the opportunity to force multiply projects that serve multiple ecosystems.</p>
+<p>e.g. if Project X₁ is in QF Matching Round Y₁, the matching multiple of that is Z₁. And if you add Project X₁ to Y₂Y₃…Yₙ, then the matching multiple of it becomes Z₁<em>Z₂</em>Z₃*…Zₙ.  essentially if each QF round for each public is a fan, then all-together they stack to be a jet engine.</p>
+<p>This in fact did happen for <a href="https://gitcoin.co/grants/1668/coin-center-is-educating-policy-makers-about-publ">Coin Center</a> during GR12 ($1 contribution == $1000 in matching).  The matching multiple was so good that the <a href="https://twitter.com/NeerajKA/status/1466416228084457497">twitterati</a> though it was too good to be true. <img src="https://emoji.discourse-cdn.com/twitter/laughing.png?v=12" title=":laughing:" class="emoji" alt=":laughing:" loading="lazy" width="20" height="20"></p>
+<p>This is an extremely powerful primitive!  If each QF matching pool is like a fan, then the combination of several matching pools together is like a jet engine!</p>
+          <p><a href="https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711/2
+        Wed, 25 May 2022 23:56:09 +0000
+gov.gitcoin.co-post-10711-2
+The Grants 2.0 Flywheel ♻️
+      
+
+The Grants 2.0 Flywheel ♻️
+owocki
+
+            <h1>
+<a name="grants-10-flywheel-1" class="anchor" href="https://gov.gitcoin.co#grants-10-flywheel-1"></a>Grants 1.0 flywheel</h1>
+<p>I think that Gitcoin Grants is a triple sided marketplace.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f68d98fbdf6bd8f8c963a59b2aeaf5c207e0b6fc.png" data-download-href="/uploads/short-url/zb6PplBdYzvvxoYnjetCOlnr5a4.png?dl=1" title="Screen Shot 2022-05-25 at 5.19.23 PM"><img src="/uploads/db4391/original/2X/f/f68d98fbdf6bd8f8c963a59b2aeaf5c207e0b6fc.png" alt="Screen Shot 2022-05-25 at 5.19.23 PM" data-base62-sha1="zb6PplBdYzvvxoYnjetCOlnr5a4" width="582" height="500" data-small-upload="/uploads/db4391/optimized/2X/f/f68d98fbdf6bd8f8c963a59b2aeaf5c207e0b6fc_2_10x10.png"></a></div><p></p>
+<ol>
+<li>We enable <strong>Community/Ecosystem builders</strong> to get their JTBD (Build their ecosystem/community) done.</li>
+<li>The way we do that is we enable <strong>Grant Owners</strong> to get their JTBD (raise $$$) done.</li>
+<li>The way we do that is we enable <strong>Contributors</strong> to get their JTBD (find great projects, support them) done.</li>
+</ol>
+<p>This is a virtous flywheel here where each side of the market contributes to the network effect of the entire market.</p>
+<p><a href="https://ncase.me/loopy/v1.1/?data=%5B%5B%5B1,484,194,0.5,%22more%2520contributions%22,4%5D,%5B2,571,336,0.5,%22more%2520grants%22,4%5D,%5B4,726,210,0.5,%22more%2520ecosystems%22,4%5D%5D,%5B%5B2,1,70,1,0%5D,%5B1,2,60,1,0%5D,%5B4,2,-35,1,0%5D,%5B2,4,-58,1,0%5D%5D,%5B%5B626,134,%22Grants%25201.0%2520Flywheel%22%5D%5D,7%5D"><img src="/uploads/db4391/original/2X/1/1fc726ace2d4d3f007db653770272a0fe143fd83.gif" alt="a0ce63f7-2a5e-4155-a040-1426497419d6" data-base62-sha1="4x7tOb0JKcxruXdbUfA06lLlmBd" width="661" height="500"></a></p>
+<p>Said another way:</p>
+<ul>
+<li>More contributions creates more grants creates more ecosystems =&gt; (repeat)</li>
+<li>More ecosystems creates more grants creates more contributions =&gt; (repeat)</li>
+</ul>
+<p>Because each marginal new user creates more value for each grant owner, and visa versa, the network is subject to power law growth in it’s utility.  This law of network value is called <a href="https://www.techopedia.com/definition/29066/metcalfes-law#:~:text=Metcalfe's%20Law%20is%20a%20concept,100%20(10%20*%2010).">Metcalfe’s law</a>:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/269dca9e575cc25d802c0631e118bb8286ff5f07.jpeg" data-download-href="/uploads/short-url/5vCd3oxg7EVrlatnpRUV59GOSLt.jpeg?dl=1" title="Screen Shot 2022-05-25 at 6.50.47 PM"><img src="/uploads/db4391/optimized/2X/2/269dca9e575cc25d802c0631e118bb8286ff5f07_2_690x368.jpeg" alt="Screen Shot 2022-05-25 at 6.50.47 PM" data-base62-sha1="5vCd3oxg7EVrlatnpRUV59GOSLt" width="690" height="368" srcset="/uploads/db4391/optimized/2X/2/269dca9e575cc25d802c0631e118bb8286ff5f07_2_690x368.jpeg, /uploads/db4391/optimized/2X/2/269dca9e575cc25d802c0631e118bb8286ff5f07_2_1035x552.jpeg 1.5x, /uploads/db4391/optimized/2X/2/269dca9e575cc25d802c0631e118bb8286ff5f07_2_1380x736.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/2/269dca9e575cc25d802c0631e118bb8286ff5f07_2_10x10.png"></a></div><p></p>
+<p>It gets better. We can build this triple sided market by choosing the leverage point on any of the 3 sides of the marketplace.</p>
+<ol>
+<li>Focus on getting more ecosystems (via sales)</li>
+<li>Focus on getting more grants (via marketing)</li>
+<li>Focus on getting more contributions (via marketing).</li>
+</ol>
+<p>This triple sided marketplace (and Metcalfe’s law) is how Gitcoin has grown to help <strong>78,070</strong> funders reach an audience of <strong>318,218</strong> earners. Gitcoin has facilitated <strong>2,069,421</strong> complete transactions to <strong>10,457</strong> unique earners.</p>
+<h1>
+<a name="grants-20-flywheel-2" class="anchor" href="https://gov.gitcoin.co#grants-20-flywheel-2"></a>Grants 2.0 flywheel</h1>
+<p>I think that Grants 2.0 builds on the momentum of Grants 1.0 in a really important way.</p>
+<p>In the second half of this post I aim to articualte how.</p>
+<p>Grants 1.0 was a monolithic app, but Grants 2.0 will be made up of a suite of modular money legos that are all interoperable with each other (and replacable)</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7f5127a6ea995dc89c53a989e3f6c0a1eb485a02.png" data-download-href="/uploads/short-url/iaivLh3U2dxl3xmjQmlfx1iTmng.png?dl=1" title="Screen Shot 2022-05-25 at 5.27.38 PM"><img src="/uploads/db4391/optimized/2X/7/7f5127a6ea995dc89c53a989e3f6c0a1eb485a02_2_690x318.png" alt="Screen Shot 2022-05-25 at 5.27.38 PM" data-base62-sha1="iaivLh3U2dxl3xmjQmlfx1iTmng" width="690" height="318" srcset="/uploads/db4391/optimized/2X/7/7f5127a6ea995dc89c53a989e3f6c0a1eb485a02_2_690x318.png, /uploads/db4391/original/2X/7/7f5127a6ea995dc89c53a989e3f6c0a1eb485a02.png 1.5x, /uploads/db4391/original/2X/7/7f5127a6ea995dc89c53a989e3f6c0a1eb485a02.png 2x" data-small-upload="/uploads/db4391/optimized/2X/7/7f5127a6ea995dc89c53a989e3f6c0a1eb485a02_2_10x10.png"></a></div><p></p>
+<ol>
+<li>At the base of the system is a deeply liquid grants registry (which in the spirit of <a href="https://gov.gitcoin.co/t/practical-pluralism-essay-draft/10462">Practical Pluralism</a>, is interoperable with other grants programs).</li>
+<li>Built on that is an ecosystem of mechanisms that all help create more contributions on the platform.
+<ul>
+<li>In Grants 1.0, we leveraged <a href="https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553">Pairwise QF</a> and were stuck with it because of the monolithic architecture.  But in Grants 2.0, we could build many pluralistic mechanisms (MACI QF, <a href="https://gov.gitcoin.co/t/how-soulbound-tokens-can-make-gitcoin-grants-more-pluralistic/10077">DeSoc QF</a>, Retroactive Public Goods Funding, Dominance Assurance Contracts, etc) on top, or integrate other mechanisms (like Optimism’s RetroPGF or CLRFunds Maci QF).</li>
+<li>This allows for more modular choice among ecosystems about how they want to coordinate their ecosystem.</li>
+<li>It also allows mechanism designers to quickly traverse the design space of possible mechanisms to get real emperical feedback &amp; data.</li>
+</ul>
+</li>
+<li>We can supercharge this ecosystem by adding Governance to any part of the system that needs it.
+<ul>
+<li>For example, the DAO could build useful components that (1) offer Mutual Grants to Grant owners, (2) enhance the sybil resistence of the system, (3) help curate Grants, (4) set the round rules.</li>
+</ul>
+</li>
+</ol>
+<p>I really cant emphasize enough how much this modular &amp; composable architecture matters to building on the EVM.</p>
+<aside class="onebox twitterstatus" data-onebox-src="https://twitter.com/deaneigenmann/status/1524746298074697732">
+  <header class="source">
+
+      <a href="https://twitter.com/deaneigenmann/status/1524746298074697732" target="_blank" rel="noopener">twitter.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="/uploads/db4391/original/2X/a/a7963a79d8129529c37f3a55592a5a2229a05e5c.jpeg" class="thumbnail onebox-avatar" width="399" height="399">
+<h4><a href="https://twitter.com/deaneigenmann/status/1524746298074697732" target="_blank" rel="noopener">Dean Eigenmann</a></h4>
+<div class="twitter-screen-name"><a href="https://twitter.com/deaneigenmann/status/1524746298074697732" target="_blank" rel="noopener">@DeanEigenmann</a></div>
+
+<div class="tweet">
+  <span class="tweet-description">crypto products gain product market fit when they compose</span>
+</div>
+
+<div class="date">
+  <a href="https://twitter.com/deaneigenmann/status/1524746298074697732" class="timestamp" target="_blank" rel="noopener">6:40 AM - 12 May 2022</a>
+
+    <span class="like">
+      <svg viewBox="0 0 512 512" width="14px" height="16px" aria-hidden="true">
+        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+      </svg>
+      19
+    </span>
+
+</div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>What is really exciting to me is how this modular architecture enhances the existing  Grants 1.0 flywheel.</p>
+<p><a href="https://ncase.me/loopy/v1.1/?data=%5B%5B%5B1,563,241,0.5,%22more%2520contributions%22,4%5D,%5B2,650,383,0.5,%22more%2520grants%22,4%5D,%5B4,805,257,0.5,%22more%2520ecosystems%22,4%5D,%5B5,466,91,0.5,%22more%2520gtc%2520utility%22,5%5D,%5B6,387,257,0.5,%22more%252C%2520better%252C%2520mechanisms%22,5%5D,%5B7,428,410,0.5,%22more%2520registry%2520integrations%22,5%5D,%5B8,214,311,0.5,%22more%2520developers%22,5%5D%5D,%5B%5B2,1,70,1,0%5D,%5B1,2,60,1,0%5D,%5B4,2,-35,1,0%5D,%5B2,4,-58,1,0%5D,%5B7,2,-30,1,0%5D,%5B6,1,-29,1,0%5D,%5B1,6,-42,1,0%5D,%5B2,7,-26,1,0%5D,%5B8,7,-19,1,0%5D,%5B8,6,13,1,0%5D,%5B6,5,-23,1,0%5D,%5B5,6,-39,1,0%5D,%5B1,5,-16,1,0%5D,%5B5,1,-15,1,0%5D%5D,%5B%5B716,192,%22Grants%25201.0%2520Flywheel%22%5D,%5B216,179,%22Grants%25202.0%2520Flywheel%22%5D%5D,8%5D"><img src="/uploads/db4391/original/2X/1/15b09da1fe0ecb187dd24cdb7f9394ff22a71bc1.gif" alt="a9643b9b-88c6-459b-ba74-e43cb74ba356" data-base62-sha1="35SqjkSp2hXqM4h4XqMo98tEuLn" width="690" height="392"></a></p>
+<p>In Grants 2.0, we can enhance the Grants 1.0 flywheel by giving our ecosystem participants more leverage points to create network effects.  The levers that become available to them in Grants 2.0:</p>
+<ol>
+<li>Building more better mechanisms into the platform.</li>
+<li>Building more registry integrations into the platform.</li>
+<li>Building more governance utility into the platform.</li>
+</ol>
+<p>It is important to note that this modular open source architecture presupposes that each module will have good documentation + there will be a solid developer relations campaign to build out this ecosystem .  Having these things will create a thriving developer ecosystem + marketplace of mechanisms to fund these grants.  <em>(We could jumpstart this with Gitcoin Hackathons + Moonshot Collective)</em><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/ac105b18917058ba6c7e4fadc91c39b7a1539a3c.png" data-download-href="/uploads/short-url/oy9amwFriTFsMY0cObHfry7jn08.png?dl=1" title="Screen Shot 2022-05-25 at 5.36.34 PM"><img src="/uploads/db4391/optimized/2X/a/ac105b18917058ba6c7e4fadc91c39b7a1539a3c_2_690x378.png" alt="Screen Shot 2022-05-25 at 5.36.34 PM" data-base62-sha1="oy9amwFriTFsMY0cObHfry7jn08" width="690" height="378" srcset="/uploads/db4391/optimized/2X/a/ac105b18917058ba6c7e4fadc91c39b7a1539a3c_2_690x378.png, /uploads/db4391/original/2X/a/ac105b18917058ba6c7e4fadc91c39b7a1539a3c.png 1.5x, /uploads/db4391/original/2X/a/ac105b18917058ba6c7e4fadc91c39b7a1539a3c.png 2x" data-small-upload="/uploads/db4391/optimized/2X/a/ac105b18917058ba6c7e4fadc91c39b7a1539a3c_2_10x10.png"></a></div><p></p>
+<p>By creating this thriving ecosystem of modules,  we can speed run the search space of possible coordination mechanisms, which speeds our ability to reach our shared mission.</p>
+<p>If you think of Gitcoin as being on search for better coordination mechanisms that help us meet our purpose (help communities build &amp; fund their shared needs), then you can visualize the search as follows:</p>
+<p>We are in a <a href="https://cdixon.org/2009/09/19/climbing-the-wrong-hill">hill climbing problem</a> where the heuristic (how high or low each point in the hill climbing problem is), is defined by the heuristic of “how much does it help communities meet their shared needs”.</p>
+<p>Within this hill climbing problem, we are looking for the global maxima.  The mechanism that helps us find the global maximum utility this heuristic (again, the heuristic is “how much does it help communities meet their shared needs?”)</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f7401db56213efc9c27c2c1adda00ff5ca52fdae.png" data-download-href="/uploads/short-url/zhhiNvA0jfxjJuFTe3HMirorx9Q.png?dl=1" title="Screen Shot 2022-05-25 at 5.34.23 PM"><img src="/uploads/db4391/optimized/2X/f/f7401db56213efc9c27c2c1adda00ff5ca52fdae_2_690x384.png" alt="Screen Shot 2022-05-25 at 5.34.23 PM" data-base62-sha1="zhhiNvA0jfxjJuFTe3HMirorx9Q" width="690" height="384" srcset="/uploads/db4391/optimized/2X/f/f7401db56213efc9c27c2c1adda00ff5ca52fdae_2_690x384.png, /uploads/db4391/optimized/2X/f/f7401db56213efc9c27c2c1adda00ff5ca52fdae_2_1035x576.png 1.5x, /uploads/db4391/original/2X/f/f7401db56213efc9c27c2c1adda00ff5ca52fdae.png 2x" data-small-upload="/uploads/db4391/optimized/2X/f/f7401db56213efc9c27c2c1adda00ff5ca52fdae_2_10x10.png"></a></div><p></p>
+<p>We can speedrun the traversal of that mechanism design space by creating a thriving ecosystem of developers who are building different flavors of QF in parallel with each other.</p>
+<p>By creating &amp; designing new modular plugins that do a better job of coordinating ecosystems + deploying them to our ecosystem partners, we find the ultimate coordination mechanisms for helping communities build &amp; fund their shared needs.</p>
+<p>Here is the same diagram, but laid out with multiple mechanisms (many of which are on our roadmap) on it.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/486e321864da1b30af814e55b0700631402bb9f5.png" data-download-href="/uploads/short-url/akKtcFxK5k4h848dZxHtE1JU8Pb.png?dl=1" title="Screen Shot 2022-05-25 at 5.34.09 PM"><img src="/uploads/db4391/optimized/2X/4/486e321864da1b30af814e55b0700631402bb9f5_2_690x390.png" alt="Screen Shot 2022-05-25 at 5.34.09 PM" data-base62-sha1="akKtcFxK5k4h848dZxHtE1JU8Pb" width="690" height="390" srcset="/uploads/db4391/optimized/2X/4/486e321864da1b30af814e55b0700631402bb9f5_2_690x390.png, /uploads/db4391/optimized/2X/4/486e321864da1b30af814e55b0700631402bb9f5_2_1035x585.png 1.5x, /uploads/db4391/original/2X/4/486e321864da1b30af814e55b0700631402bb9f5.png 2x" data-small-upload="/uploads/db4391/optimized/2X/4/486e321864da1b30af814e55b0700631402bb9f5_2_10x10.png"></a></div><p></p>
+<p>Feedback welcome.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711/1
+        Wed, 25 May 2022 23:51:56 +0000
+gov.gitcoin.co-post-10711-1
+The Grants 2.0 Flywheel ♻️
+      
+
+

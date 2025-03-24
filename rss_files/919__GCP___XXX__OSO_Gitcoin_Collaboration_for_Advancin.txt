@@ -1,0 +1,687 @@
+
+
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578
+    ## Summary
+
+This GCP proposes to fund tighter integration and ongoing use of analytics from [Open Source Observer (OSO)](https://www.opensource.observer/) to track cohorts of grantees before, during, and after they receive funding from grant programs on Grants Stack. We aim to enhance data infrastructure and develop advanced metrics to improve the grants experience and Gitcoin’s go-to-market strategy.
+
+For this, we are requesting a total of $15K GTC from the Gitcoin treasury, equivalent to $2500/mo over 6 months.
+
+## Abstract
+
+Open Source Observer (OSO) analytics provides critical insights into grantee impact by capturing data on open source developer activity. This integration will enable more objective impact scoring, efficient fund tracking, and granular post-funding analysis of grantee performance.
+
+There are two primary components:
+
+* **Infrastructure:** Tighter integration and collaboration on improving grants data. Gitcoin would benefit from stronger data infrastructure, but should also keep its team lean and focused on growing GMV. OSO’s model of maintaining [public datasets](https://docs.opensource.observer/docs/integrate/overview/) and [public ETL infrastructure](https://docs.opensource.observer/docs/how-oso-works/architecture) can reduce Gitcoin’s maintenance burden while opening up additional pathways for the analyst / data science community to work on top of Gitcoin data.
+
+* **Data-driven GTM:** Development of more advanced metrics to improve the grants experience and go-to-market. In addition to using more data to screen projects and provide impact metrics on Grants Explorer, there is a backlog of data science work the two organizations would like to pursue together. This includes co-developing new measures of builder quality, project momentum, and round success. Gitcoin wants to use data to improve its GTM strategy, help Round Operators configure their grants programs, and show ROI to funders.
+
+## Motivation
+
+The Gitcoin ecosystem requires transparent, data-driven insights into funded projects' impact. Current challenges include:
+
+* Maintenance of ETL infrastructure
+* Lack of automated data collection for grantee performance
+* Difficulting joining Gitcoin data on other relevant datasets
+* Need for more objective impact metrics, especially back to funders
+* Limited visibility into post-funding outcomes
+* Difficulty in demonstrating ROI and effectiveness of different allocation strategies
+
+Previously, OSO data demonstrated the [impact of Gitcoin Grants](https://docs.opensource.observer/blog/tags/gitcoin/) on open source developer activity. Snapshots of OSO data have been integrated into the application sign-up and screening. Gitcoin also uses OSO’s free API to surface “impact stats” for OSS projects on Grants Explorer. At the same time, Gitcoin and OSO have worked closely in a variety of other contexts, including the Cartographers Syndicate, Optimism Retro Funding, and the Sunny Awards. OSO also maintains raw and indexed Gitcoin data in its public data warehouse.
+
+By expanding this collaboration, we can provide high-resolution analytics for grant operators and program managers using Gitcoin Grants Stack, improving accountability and attracting new ecosystems to the platform.
+
+This collaboration will result in:
+
+* A single source of truth for Gitcoin project data that’s easy to join on other datasets
+* More automated tracking of developer activity
+* Standardized impact metrics across the grants lifecycle
+* Continuous monitoring of funded projects and cohort-based analysis
+* Data-driven insights for program and GTM optimization
+
+## Specifications
+
+### Work Components
+
+#### Infrastructure
+
+Existing Infrastructure:
+
+* Allo Indexer and RegenData.xyz as ETL and data warehouse for Gitcoin data
+* Regular updates to OSO’s [OSS Directory](https://github.com/opensource-observer/oss-directory) of projects in each Gitcoin grants round
+* Gitcoin’s existing backend infrastructure for serving grant and funder data to users
+* OSO’s project-artifact registration and mapping system, and events indexer for monitoring code contributions and blockchain transactions related to projects
+* OSO’s free API and BigQuery access to metrics (plus easy integration with other public datasets)
+
+New Development:
+
+1. Alignment on ETL standards
+
+  * Identify the critical data marts to serve business needs
+  * Ingest and warehouse the necessary (raw) source data, e.g., from Allo Indexer
+  * Implement schemas for processing and normalizing the data
+
+2. Tighter integration and single (public) source of truth for grants data
+
+  * Implement consistent project, round, and donor namespacing
+  * Create automated updates for projects from Grants Stack applications
+  * Ensure data synchronization and latency requirements are met
+
+#### Data-driven GTM
+
+3. Develop advanced analytics and GTM
+
+  * Design v1 “builder quality” and momentum metrics
+  * Create cohort analysis models for different rounds and categories of projects
+  * Use metrics to power public dashboards and internal tools, addressing key questions like:
+    1. How has grantee impact evolved before and after receiving funding?
+    2. How do impacts compare across different rounds?
+    3. Predict future impact using historical data to identify high-potential grantees.
+    4. Analyze trends across rounds to refine future funding strategies.
+  * Collaborate on GTM value proposition and round success metrics
+
+### Milestones & Timeline
+
+|Phase|Task|Date|
+| --- | --- | --- |
+|Phase I|Alignment on ETL standards|Month 1|
+|Phase II|Tighter integration and single (public) source of truth for grants data|Month 2-3|
+|Phase III|Develop advanced analytics and GTM|Month 4-6|
+
+### Budget Breakdown
+
+Total Request: $15K GTC ($2500/month for 6 months).
+
+This effectively covers a portion of time spent by the OSO data & engineering teams. It does not cover any of the infrastructure costs, which will continue to be borne by each organization on its own. There is strong potential for a win-win here, so this GCP provides a springboard for additional work between Gitcoin and OSO in the future.
+
+Note: There may be additional data requirements around metrics and reporting that come from partners and will be budgeted & scoped directly with those partners.
+
+### Success Measures
+
+1. Infrastructure
+
+  * Source data is cleaned up and harmonized
+  * All active OSS projects are indexed; relevant metrics available on Gitcoin
+  * Ongoing data coverage and latency requirements are met
+
+2. Analytics implementation
+
+  * Release of v1 of builder quality and momentum models
+  * Builder metrics integrated at the application stage and on grants explorer
+  * Longitudinal analysis of grant cohorts by round and type of project
+
+3. Adoption
+
+  * Number of round operators using the analytics
+  * User engagement with dashboards on Gitcoin website
+  * Use of raw data in data warehouse and via the OSO API
+
+### Benefits
+
+1. Reduced data infra burden for Gitcoin
+2. Enhanced decision making for round operators and donors
+3. Improved transparency and accountability to funders
+4. High quality and up-and-coming projects receive more funding
+5. Ecosystem growth and better ROI
+
+### Drawbacks & Considerations
+
+1. Legacy data migration (eg, from cGrants, Allo v1)
+2. Integration complexity with existing systems
+3. Standardization / “hardening” of schemas
+4. Data quality maintenance and pipeline upkeep
+5. Finding robust metrics that are resistant to gamification
+
+### Out of Scope
+
+The following items are not included in this proposal:
+
+* Impact metrics beyond open source developer activity
+* Custom visualizations for specific grant programs
+* Data entry for onboarding new ecosystems
+* Deep dives / additional data science work
+Fri, 17 Jan 2025 08:22:50 +0000
+📝 Citizen Grants
+
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+rohit
+
+            <h3><a name="milestone-1-update-1" class="anchor" href="https://gov.gitcoin.co#milestone-1-update-1"></a>Milestone 1 Update:</h3>
+<p>This post summarizes the outcomes of Milestone 1: Alignment on ETL Standards, highlighting how standardized queries and integrated pipelines effectively link funding data, development activity, and coding metrics for Gitcoin grantees. By creating a unified approach to normalizing and processing disparate data sources, the milestone ensures harmonized data outputs, enhances dataset usability, and lays a strong foundation for advanced analytics within Gitcoin’s Grants Stack.</p>
+<p>The following queries show how you can use OSO to:</p>
+<ul>
+<li>Find and explore Gitcoin grantee (OSS) information in OSO’s repository</li>
+<li>Evaluate coding activity, contributions, and productivity to assess project momentum and engagement</li>
+<li>Track funding patterns across rounds, review top-funded projects, and correlate funding with developer activity</li>
+<li>Identify similar grantees with comparable development profiles</li>
+<li>Discover additional funders supporting Gitcoin grantees</li>
+</ul>
+<p>Open Source Observer is a public good built with the community. We aim to make this data as widely available and easy-to-use as possible. We welcome you to explore the clean, normalized data to generate visualizations and insights, connect to your favorite data tools, and integrate into your existing applications.</p>
+<p>You can execute these queries on the OSO Data Lake in BigQuery by following the instructions <a href="https://docs.opensource.observer/docs/integrate/query-data" rel="noopener nofollow ugc">here</a> or setting up a local <a href="https://docs.opensource.observer/docs/guides/notebooks/jupyter/" rel="noopener nofollow ugc">Jupyter Notebook environment</a> and using the tutorial Notebook available <a href="https://github.com/opensource-observer/insights/blob/main/community/notebooks/oso_gitcoin_tutorial.ipynb" rel="noopener nofollow ugc">here</a>.</p>
+<h3><a name="query-1-find-a-gitcoin-grantee-in-oso-2" class="anchor" href="https://gov.gitcoin.co#query-1-find-a-gitcoin-grantee-in-oso-2"></a>Query 1: Find a Gitcoin Grantee in OSO</h3>
+<p>You can search if an OSS Gitcoin Grantee’s data is available in OSO by using their name as follows:</p>
+<pre><code class="lang-auto">query = """
+select project_id, project_name, display_name
+from `oso_production.projects_v1`
+where lower(display_name) like lower('%open%source%')
+"""
+results = client.query(query)
+results.to_dataframe()
+</code></pre>
+<p>The matching records are displayed as follows. You can utilize the field project_name, say “opensource-observer”, for additional information on the grantee, as shown in the following queries.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/bc7e359f6d27a0c5a8059a10fb36bde2eb5baead.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/bc7e359f6d27a0c5a8059a10fb36bde2eb5baead" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bc7e359f6d27a0c5a8059a10fb36bde2eb5baead_2_624x145.png" alt="" data-base62-sha1="qTualQwgziQQzUoRtH1XFSvIWpD" width="624" height="145" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bc7e359f6d27a0c5a8059a10fb36bde2eb5baead_2_624x145.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bc7e359f6d27a0c5a8059a10fb36bde2eb5baead_2_936x217.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bc7e359f6d27a0c5a8059a10fb36bde2eb5baead_2_1248x290.png 2x" data-dominant-color="EBEBEB"></a></div><p></p>
+<p>OSO manages a repository of open source projects, including OSS grantees in Gitcoin, called the <a href="https://github.com/opensource-observer/oss-directory" rel="noopener nofollow ugc">oss-directory</a>. This repository serves as the foundation of the OSO data pipeline. By running indexers on every artifact linked to projects in the directory, OSO generates metrics that power its API and dashboards, providing valuable insights into project performance and impact.</p>
+<h3><a name="query-2-query-the-latest-coding-metrics-for-a-project-3" class="anchor" href="https://gov.gitcoin.co#query-2-query-the-latest-coding-metrics-for-a-project-3"></a>Query 2: Query the latest coding metrics for a project</h3>
+<blockquote>
+<p>Evaluating the latest coding metrics for a project provides critical insights into its development activity, community contributions, and overall momentum in the open source ecosystem.</p>
+</blockquote>
+<p>After identifying the project in OSO, you can quickly evaluate its recent performance by reviewing its coding metrics for the past six months with the following query:</p>
+<pre><code class="lang-auto">query = """
+select
+project_name,
+display_name,
+star_count,
+fork_count,
+commit_count_6_months,
+contributor_count_6_months
+from `oso_production.code_metrics_by_project_v1`
+where project_name = 'opensource-observer'
+"""
+results = client.query(query)
+results.to_dataframe()
+</code></pre>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0809eabb9c3624f35af53ca91536abe9c13e3ad1.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/0809eabb9c3624f35af53ca91536abe9c13e3ad1" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0809eabb9c3624f35af53ca91536abe9c13e3ad1_2_624x48.png" alt="" data-base62-sha1="19748jcmACk1GmcGL6Ppb9b4NGN" width="624" height="48" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0809eabb9c3624f35af53ca91536abe9c13e3ad1_2_624x48.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0809eabb9c3624f35af53ca91536abe9c13e3ad1_2_936x72.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0809eabb9c3624f35af53ca91536abe9c13e3ad1_2_1248x96.png 2x" data-dominant-color="EFEFEF"></a></div><p></p>
+<p>Besides the above metrics, the dataset also allows for analyzing trends in code contributions, issue resolution, community engagement, and project releases. These insights collectively offer a comprehensive view of a project’s health and momentum, enabling data-driven evaluations for funding decisions. It’s important to note that developer activity is an input metric rather than the desired impact outcome; however, it offers valuable context for understanding engagement and sustainability.</p>
+<h3><a name="query-3-track-project-funding-across-gitcoin-grant-rounds-4" class="anchor" href="https://gov.gitcoin.co#query-3-track-project-funding-across-gitcoin-grant-rounds-4"></a>Query 3: Track Project Funding Across Gitcoin Grant Rounds</h3>
+<blockquote>
+<p>Tracking project funding across Gitcoin Grant rounds offers a clear view of a project’s growth trajectory, funding patterns, and its appeal to the community over time.</p>
+</blockquote>
+<p>This query aggregates the total funding received by the project in each Gitcoin Grant round.</p>
+<pre><code class="lang-auto">query = """
+SELECT
+grant_pool_name,
+sum(amount) grant
+FROM `oso_production.oss_funding_v0`
+WHERE to_project_name = 'opensource-observer'
+and from_project_name = 'gitcoin'
+group by grant_pool_name
+"""
+results = client.query(query)
+results.to_dataframe()
+</code></pre>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a8dd451414f536f418e5696b03a19499b38c4997.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/a8dd451414f536f418e5696b03a19499b38c4997" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a8dd451414f536f418e5696b03a19499b38c4997_2_624x263.png" alt="" data-base62-sha1="o5QhzGkKzt02k7FHsTozBkkDOXZ" width="624" height="263" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a8dd451414f536f418e5696b03a19499b38c4997_2_624x263.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a8dd451414f536f418e5696b03a19499b38c4997_2_936x394.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/a/a8dd451414f536f418e5696b03a19499b38c4997.png 2x" data-dominant-color="EFEFEF"></a></div><p></p>
+<p>OSO maintains the <a href="https://github.com/opensource-observer/oss-funding" rel="noopener nofollow ugc">oss-funding</a> repository, which houses Gitcoin funding data alongside a curated registry of grants and other funding sources for open source software (OSS) projects. This directory is free to use and distribute as a public good, aiming to support researchers, developers, foundations, and others in gaining deeper insights into the OSS ecosystem.</p>
+<h3><a name="query-4-explore-the-latest-coding-metrics-for-top-funded-projects-in-a-round-5" class="anchor" href="https://gov.gitcoin.co#query-4-explore-the-latest-coding-metrics-for-top-funded-projects-in-a-round-5"></a>Query 4: Explore the Latest Coding Metrics for Top-Funded Projects in a Round</h3>
+<blockquote>
+<p>Understanding how top-funded projects perform provides valuable insights into their sustainability, community engagement, and potential for long-term impact.</p>
+</blockquote>
+<p>In this example, you can discover the top 20 funded projects from the GG22 Developer Tooling and Libraries round and gain insights into their development activity. View key metrics such as active developers, commits, issues opened, stars, and forks over the past six months, alongside their total funding in the round.</p>
+<pre><code class="lang-auto">query = """
+WITH project_funding AS (
+SELECT
+to_project_name,
+SUM(amount) AS total_funding,
+COUNT(DISTINCT event_source) AS funding_sources
+FROM `oso_production.oss_funding_v0`
+WHERE grant_pool_name = 'GG-22 - 609'
+GROUP BY to_project_name
+ORDER BY total_funding DESC
+LIMIT 20
+)
+SELECT
+f.to_project_name,
+f.total_funding,
+f.funding_sources,
+m.active_developer_count_6_months,
+m.commit_count_6_months,
+m.opened_issue_count_6_months,
+m.star_count,
+m.fork_count
+FROM project_funding f
+JOIN `oso_production.code_metrics_by_project_v1` m
+ON f.to_project_name = m.project_name
+ORDER BY f.total_funding DESC;
+"""
+results = client.query(query)
+results.to_dataframe()
+</code></pre>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/169939ea19511abb994e73d6d275a21d40331d26.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/169939ea19511abb994e73d6d275a21d40331d26" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/169939ea19511abb994e73d6d275a21d40331d26_2_624x361.jpeg" alt="" data-base62-sha1="3dUMYSgQHixHwPII5cHCWzndgbk" width="624" height="361" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/169939ea19511abb994e73d6d275a21d40331d26_2_624x361.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/169939ea19511abb994e73d6d275a21d40331d26_2_936x541.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/169939ea19511abb994e73d6d275a21d40331d26_2_1248x722.jpeg 2x" data-dominant-color="F5F5F5"></a></div><p></p>
+<h3><a name="query-5-normalized-funding-productivity-commits-per-developer-vs-total-funding-6" class="anchor" href="https://gov.gitcoin.co#query-5-normalized-funding-productivity-commits-per-developer-vs-total-funding-6"></a>Query 5: Normalized Funding Productivity: Commits per Developer vs. Total Funding</h3>
+<blockquote>
+<p>Understanding how funding correlates with developer activity helps assess funded projects’ engagement and resource utilization.</p>
+</blockquote>
+<p>Continuing the analysis from the prior example, the following example inspects how funding translates into developer activity for the top 20 projects.</p>
+<pre><code class="lang-auto">import plotly.express as px
+results_df = results.to_dataframe()
+
+# Calculate the ratio of commit_count_6_months to active_developer_count_6_months
+results_df['commit_ratio'] = results_df['commit_count_6_months'] / results_df['active_developer_count_6_months']
+
+# Create the scatter plot using Plotly with bubble size
+fig = px.scatter(
+results_df,
+x='total_funding',
+y='commit_ratio',
+size='active_developer_count_6_months', # Bubble size
+size_max=50,
+text='to_project_name',
+hover_data=['to_project_name'],
+labels={
+'total_funding': 'Total Funding ($)',
+'commit_ratio': 'Commits per Active Developer',
+'active_developer_count_6_months': 'Active Developers'
+},
+title='Commit Ratio vs Total Funding for Top 20 Projects in GG-22 - 609',
+log_x=True, # Logarithmic X-axis
+log_y=True # Logarithmic Y-axis
+)
+
+# Update layout for better visualization
+fig.update_layout(
+xaxis_title='Total Funding ($)',
+yaxis_title='Commits per Active Developer',
+height=1000,
+width=1000
+)
+
+# Show the scatter plot
+fig.show()
+</code></pre>
+<p>This scatter plot visualizes total funding against the normalized ratio of commits per active developer, with bubble sizes representing the number of active developers. It offers insights into how efficiently teams utilize funding relative to their developer engagement.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1ac52b3e359b0e42c396bc68dd1be48b2b83e0e0.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/1ac52b3e359b0e42c396bc68dd1be48b2b83e0e0" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1ac52b3e359b0e42c396bc68dd1be48b2b83e0e0_2_500x500.png" alt="" data-base62-sha1="3OOQuFZlCkiq6xUJGtfWlsoudCE" width="500" height="500" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1ac52b3e359b0e42c396bc68dd1be48b2b83e0e0_2_500x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1ac52b3e359b0e42c396bc68dd1be48b2b83e0e0_2_750x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1ac52b3e359b0e42c396bc68dd1be48b2b83e0e0_2_1000x1000.png 2x" data-dominant-color="E9EEF7"></a></div><p></p>
+<h3><a name="query-6-discover-grantees-with-the-most-similar-coding-metrics-to-another-project-7" class="anchor" href="https://gov.gitcoin.co#query-6-discover-grantees-with-the-most-similar-coding-metrics-to-another-project-7"></a>Query 6: Discover grantees with the most similar coding metrics to another project</h3>
+<blockquote>
+<p>Identifying projects with similar development profiles can uncover potential collaborators, reveal benchmarking opportunities, and highlight successful patterns in the open-source ecosystem.</p>
+</blockquote>
+<p>This query compares metrics such as active developers, commits per developer, and contributors per developer to find the top 10 projects most similar to Open Source Observer.</p>
+<pre><code class="lang-auto">query = """
+WITH reference_metrics AS (
+SELECT
+active_developer_count_6_months AS reference_active_developers,
+commit_count_6_months / active_developer_count_6_months AS reference_commit_per_developer,
+contributor_count_6_months / active_developer_count_6_months AS reference_contributor_per_developer
+FROM `oso_production.code_metrics_by_project_v1`
+WHERE project_name = 'opensource-observer'
+)
+
+SELECT
+project_name,
+active_developer_count_6_months,
+commit_count_6_months / active_developer_count_6_months AS commit_per_developer,
+contributor_count_6_months / active_developer_count_6_months AS contributor_per_developer,
+SQRT(
+POWER((commit_count_6_months / active_developer_count_6_months - reference_commit_per_developer), 2) +
+POWER((contributor_count_6_months / active_developer_count_6_months - reference_contributor_per_developer), 2) +
+POWER((active_developer_count_6_months - reference_active_developers), 2)
+) AS similarity_score
+FROM `oso_production.code_metrics_by_project_v1`, reference_metrics
+WHERE project_name != 'opensource-observer'
+and active_developer_count_6_months &gt; 0
+ORDER BY similarity_score ASC
+LIMIT 10;
+"""
+results = client.query(query)
+results.to_dataframe()
+</code></pre>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/610072c45254c43b3b8a7644f0f210f275b02b76.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/610072c45254c43b3b8a7644f0f210f275b02b76" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/610072c45254c43b3b8a7644f0f210f275b02b76_2_624x236.jpeg" alt="" data-base62-sha1="dQ7h3B0VSnmh8IquaVlbJ2YqBqC" width="624" height="236" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/610072c45254c43b3b8a7644f0f210f275b02b76_2_624x236.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/610072c45254c43b3b8a7644f0f210f275b02b76_2_936x354.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/610072c45254c43b3b8a7644f0f210f275b02b76_2_1248x472.jpeg 2x" data-dominant-color="F1F1F1"></a></div><p></p>
+<h3><a name="query-7-find-other-funders-of-the-top-gitcoin-grants-recipients-8" class="anchor" href="https://gov.gitcoin.co#query-7-find-other-funders-of-the-top-gitcoin-grants-recipients-8"></a>Query 7: Find other funders of the top Gitcoin Grants recipients</h3>
+<blockquote>
+<p>Understanding the funding relationships for top-supported projects reveals key contributing funders, highlights funding patterns, and provides insights into collaborative networks within the ecosystem.</p>
+</blockquote>
+<p>This query identifies the top 50 Gitcoin-funded projects and aggregates their funding amounts, breaking down contributions by funders to showcase the most influential backers and their impact.</p>
+<pre><code class="lang-auto">query = """
+WITH top_projects AS (
+-- Select the top 50 projects funded by Gitcoin
+SELECT
+to_project_name,
+SUM(amount) AS total_funding
+FROM
+`oso_production.oss_funding_v0`
+WHERE
+from_project_name = 'gitcoin'
+GROUP BY
+to_project_name
+ORDER BY
+total_funding DESC
+LIMIT 50
+)
+SELECT
+o.to_project_name AS project,
+o.from_project_name AS funder,
+SUM(o.amount) AS funding_amount
+FROM
+`oso_production.oss_funding_v0` o
+JOIN
+top_projects t
+ON
+o.to_project_name = t.to_project_name
+GROUP BY
+o.from_project_name, o.to_project_name
+ORDER BY
+project, funding_amount DESC;
+"""
+results = client.query(query)
+results.to_dataframe()
+</code></pre>
+<p>Here’s a Sankey diagram created using the outputs of the above query showing the flow of funds for top Gitcoin grantees from other ecosystems, using linked nodes and proportional flow widths to highlight relationships and the magnitude of transfers.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1622602a313ee31b8a69077a441f34db2d80abdd.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/1622602a313ee31b8a69077a441f34db2d80abdd" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1622602a313ee31b8a69077a441f34db2d80abdd_2_624x447.png" alt="" data-base62-sha1="39O9xjimhICrBHK6x3Cq1lWaN8V" width="624" height="447" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1622602a313ee31b8a69077a441f34db2d80abdd_2_624x447.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1622602a313ee31b8a69077a441f34db2d80abdd_2_936x670.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/1/1622602a313ee31b8a69077a441f34db2d80abdd.png 2x" data-dominant-color="EBEBEC"></a></div><p></p>
+<h3><a name="whats-upcoming-9" class="anchor" href="https://gov.gitcoin.co#whats-upcoming-9"></a>What’s upcoming?</h3>
+<p>The next phase of the grant focuses on automating project updates, ensuring data synchronization, and developing advanced analytics further to enhance Gitcoin’s grant management and go-to-market strategy.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/13
+        Fri, 17 Jan 2025 08:22:50 +0000
+gov.gitcoin.co-post-19578-13
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+disruptionjoe1
+
+            <p>Highly in favor. I’m seeing a strong need for the alignment of data standards for the ETL portion of this. We are even seeing this with attempts to do it using attestations. There is budding fragmentation that Gitcoin could potentially head off for the betterment of the web 3 ecosystem as a whole.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/12
+        Mon, 02 Dec 2024 15:56:23 +0000
+gov.gitcoin.co-post-19578-12
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+MathildaDV
+
+            <p>This proposal has passed by a majority vote through our internal GCP council. I will be in touch with this team directly for next steps!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/11
+        Thu, 21 Nov 2024 05:17:41 +0000
+gov.gitcoin.co-post-19578-11
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+deltajuliet
+
+            <p>Support this proposal, thanks for thinking through the details. Excited to see this data come to life.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/10
+        Tue, 19 Nov 2024 10:14:25 +0000
+gov.gitcoin.co-post-19578-10
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+MathildaDV
+
+            <p>And just as an FYI, GCP’s are now bucketed under the Citizens Grants program. You can find out more about the new process here: <a href="https://gov.gitcoin.co/t/citizen-grants-program-updated-strategy/19203/12" class="inline-onebox">Citizen Grants Program Updated Strategy - #12 by MathildaDV</a></p>
+<p>I will also be updating everyone on next steps once a decision is made.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/9
+        Tue, 19 Nov 2024 09:56:18 +0000
+gov.gitcoin.co-post-19578-9
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+MathildaDV
+
+            <p>In massive support of this proposal! Love seeing this work coming to life.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/8
+        Tue, 19 Nov 2024 09:46:05 +0000
+gov.gitcoin.co-post-19578-8
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+owocki
+
+            <p>I support this proposal.  Seems like a big value add!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/7
+        Mon, 18 Nov 2024 15:52:15 +0000
+gov.gitcoin.co-post-19578-7
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+Joel_m
+
+            <p>I support this proposal. I can’t speak to the finer points of the proposed infrastructure changes, but in general I’m very excited to see what we can do with easier access to data about impact.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/6
+        Fri, 08 Nov 2024 17:09:40 +0000
+gov.gitcoin.co-post-19578-6
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+meglister
+
+            <p>I’m in favor of this proposal and am grateful for the collaboration with the OSO team!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/5
+        Wed, 06 Nov 2024 21:48:00 +0000
+gov.gitcoin.co-post-19578-5
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+ccerv1
+
+            <p>I have a COI so will be abstaining from this GCP, but obviously think there is a huge win-win here. Happy to help clarify anything from the original post too.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/4
+        Mon, 04 Nov 2024 19:17:51 +0000
+gov.gitcoin.co-post-19578-4
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+Sov
+
+            <p>I’m in favor of this proposal as I believe this investment will enhance our data infrastructure and metrics capabilities. The team at OSO are proven and longtime partners to Gitcoin.</p>
+<p>LFG!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/3
+        Mon, 04 Nov 2024 18:18:47 +0000
+gov.gitcoin.co-post-19578-3
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+umarkhaneth
+
+            <p>Bullish. OSO has done amazing work pushing forward the grants and impact measurement space. I’m excited to have your expertise more available to us at Gitcoin and to work with familiar faces like <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> and <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/2
+        Mon, 04 Nov 2024 16:16:27 +0000
+gov.gitcoin.co-post-19578-2
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+rohit
+
+            <h2><a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary</h2>
+<p>This GCP proposes to fund tighter integration and ongoing use of analytics from <a href="https://www.opensource.observer/">Open Source Observer (OSO)</a> to track cohorts of grantees before, during, and after they receive funding from grant programs on Grants Stack. We aim to enhance data infrastructure and develop advanced metrics to improve the grants experience and Gitcoin’s go-to-market strategy.</p>
+<p>For this, we are requesting a total of $15K GTC from the Gitcoin treasury, equivalent to $2500/mo over 6 months.</p>
+<h2><a name="abstract-2" class="anchor" href="https://gov.gitcoin.co#abstract-2"></a>Abstract</h2>
+<p>Open Source Observer (OSO) analytics provides critical insights into grantee impact by capturing data on open source developer activity. This integration will enable more objective impact scoring, efficient fund tracking, and granular post-funding analysis of grantee performance.</p>
+<p>There are two primary components:</p>
+<ul>
+<li>
+<p><strong>Infrastructure:</strong> Tighter integration and collaboration on improving grants data. Gitcoin would benefit from stronger data infrastructure, but should also keep its team lean and focused on growing GMV. OSO’s model of maintaining <a href="https://docs.opensource.observer/docs/integrate/overview/">public datasets</a> and <a href="https://docs.opensource.observer/docs/how-oso-works/architecture">public ETL infrastructure</a> can reduce Gitcoin’s maintenance burden while opening up additional pathways for the analyst / data science community to work on top of Gitcoin data.</p>
+</li>
+<li>
+<p><strong>Data-driven GTM:</strong> Development of more advanced metrics to improve the grants experience and go-to-market. In addition to using more data to screen projects and provide impact metrics on Grants Explorer, there is a backlog of data science work the two organizations would like to pursue together. This includes co-developing new measures of builder quality, project momentum, and round success. Gitcoin wants to use data to improve its GTM strategy, help Round Operators configure their grants programs, and show ROI to funders.</p>
+</li>
+</ul>
+<h2><a name="motivation-3" class="anchor" href="https://gov.gitcoin.co#motivation-3"></a>Motivation</h2>
+<p>The Gitcoin ecosystem requires transparent, data-driven insights into funded projects’ impact. Current challenges include:</p>
+<ul>
+<li>Maintenance of ETL infrastructure</li>
+<li>Lack of automated data collection for grantee performance</li>
+<li>Difficulting joining Gitcoin data on other relevant datasets</li>
+<li>Need for more objective impact metrics, especially back to funders</li>
+<li>Limited visibility into post-funding outcomes</li>
+<li>Difficulty in demonstrating ROI and effectiveness of different allocation strategies</li>
+</ul>
+<p>Previously, OSO data demonstrated the <a href="https://docs.opensource.observer/blog/tags/gitcoin/">impact of Gitcoin Grants</a> on open source developer activity. Snapshots of OSO data have been integrated into the application sign-up and screening. Gitcoin also uses OSO’s free API to surface “impact stats” for OSS projects on Grants Explorer. At the same time, Gitcoin and OSO have worked closely in a variety of other contexts, including the Cartographers Syndicate, Optimism Retro Funding, and the Sunny Awards. OSO also maintains raw and indexed Gitcoin data in its public data warehouse.</p>
+<p>By expanding this collaboration, we can provide high-resolution analytics for grant operators and program managers using Gitcoin Grants Stack, improving accountability and attracting new ecosystems to the platform.</p>
+<p>This collaboration will result in:</p>
+<ul>
+<li>A single source of truth for Gitcoin project data that’s easy to join on other datasets</li>
+<li>More automated tracking of developer activity</li>
+<li>Standardized impact metrics across the grants lifecycle</li>
+<li>Continuous monitoring of funded projects and cohort-based analysis</li>
+<li>Data-driven insights for program and GTM optimization</li>
+</ul>
+<h2><a name="specifications-4" class="anchor" href="https://gov.gitcoin.co#specifications-4"></a>Specifications</h2>
+<h3><a name="work-components-5" class="anchor" href="https://gov.gitcoin.co#work-components-5"></a>Work Components</h3>
+<h4><a name="infrastructure-6" class="anchor" href="https://gov.gitcoin.co#infrastructure-6"></a>Infrastructure</h4>
+<p>Existing Infrastructure:</p>
+<ul>
+<li>Allo Indexer and RegenData.xyz as ETL and data warehouse for Gitcoin data</li>
+<li>Regular updates to OSO’s <a href="https://github.com/opensource-observer/oss-directory">OSS Directory</a> of projects in each Gitcoin grants round</li>
+<li>Gitcoin’s existing backend infrastructure for serving grant and funder data to users</li>
+<li>OSO’s project-artifact registration and mapping system, and events indexer for monitoring code contributions and blockchain transactions related to projects</li>
+<li>OSO’s free API and BigQuery access to metrics (plus easy integration with other public datasets)</li>
+</ul>
+<p>New Development:</p>
+<ol>
+<li>Alignment on ETL standards</li>
+</ol>
+<ul>
+<li>Identify the critical data marts to serve business needs</li>
+<li>Ingest and warehouse the necessary (raw) source data, e.g., from Allo Indexer</li>
+<li>Implement schemas for processing and normalizing the data</li>
+</ul>
+<ol start="2">
+<li>Tighter integration and single (public) source of truth for grants data</li>
+</ol>
+<ul>
+<li>Implement consistent project, round, and donor namespacing</li>
+<li>Create automated updates for projects from Grants Stack applications</li>
+<li>Ensure data synchronization and latency requirements are met</li>
+</ul>
+<h4><a name="data-driven-gtm-7" class="anchor" href="https://gov.gitcoin.co#data-driven-gtm-7"></a>Data-driven GTM</h4>
+<ol start="3">
+<li>Develop advanced analytics and GTM</li>
+</ol>
+<ul>
+<li>Design v1 “builder quality” and momentum metrics</li>
+<li>Create cohort analysis models for different rounds and categories of projects</li>
+<li>Use metrics to power public dashboards and internal tools, addressing key questions like:
+<ol>
+<li>How has grantee impact evolved before and after receiving funding?</li>
+<li>How do impacts compare across different rounds?</li>
+<li>Predict future impact using historical data to identify high-potential grantees.</li>
+<li>Analyze trends across rounds to refine future funding strategies.</li>
+</ol>
+</li>
+<li>Collaborate on GTM value proposition and round success metrics</li>
+</ul>
+<h3><a name="milestones-timeline-8" class="anchor" href="https://gov.gitcoin.co#milestones-timeline-8"></a>Milestones &amp; Timeline</h3>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Task</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Phase I</td>
+<td>Alignment on ETL standards</td>
+<td>Month 1</td>
+</tr>
+<tr>
+<td>Phase II</td>
+<td>Tighter integration and single (public) source of truth for grants data</td>
+<td>Month 2-3</td>
+</tr>
+<tr>
+<td>Phase III</td>
+<td>Develop advanced analytics and GTM</td>
+<td>Month 4-6</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="budget-breakdown-9" class="anchor" href="https://gov.gitcoin.co#budget-breakdown-9"></a>Budget Breakdown</h3>
+<p>Total Request: $15K GTC ($2500/month for 6 months).</p>
+<p>This effectively covers a portion of time spent by the OSO data &amp; engineering teams. It does not cover any of the infrastructure costs, which will continue to be borne by each organization on its own. There is strong potential for a win-win here, so this GCP provides a springboard for additional work between Gitcoin and OSO in the future.</p>
+<p>Note: There may be additional data requirements around metrics and reporting that come from partners and will be budgeted &amp; scoped directly with those partners.</p>
+<h3><a name="success-measures-10" class="anchor" href="https://gov.gitcoin.co#success-measures-10"></a>Success Measures</h3>
+<ol>
+<li>Infrastructure</li>
+</ol>
+<ul>
+<li>Source data is cleaned up and harmonized</li>
+<li>All active OSS projects are indexed; relevant metrics available on Gitcoin</li>
+<li>Ongoing data coverage and latency requirements are met</li>
+</ul>
+<ol start="2">
+<li>Analytics implementation</li>
+</ol>
+<ul>
+<li>Release of v1 of builder quality and momentum models</li>
+<li>Builder metrics integrated at the application stage and on grants explorer</li>
+<li>Longitudinal analysis of grant cohorts by round and type of project</li>
+</ul>
+<ol start="3">
+<li>Adoption</li>
+</ol>
+<ul>
+<li>Number of round operators using the analytics</li>
+<li>User engagement with dashboards on Gitcoin website</li>
+<li>Use of raw data in data warehouse and via the OSO API</li>
+</ul>
+<h3><a name="benefits-11" class="anchor" href="https://gov.gitcoin.co#benefits-11"></a>Benefits</h3>
+<ol>
+<li>Reduced data infra burden for Gitcoin</li>
+<li>Enhanced decision making for round operators and donors</li>
+<li>Improved transparency and accountability to funders</li>
+<li>High quality and up-and-coming projects receive more funding</li>
+<li>Ecosystem growth and better ROI</li>
+</ol>
+<h3><a name="drawbacks-considerations-12" class="anchor" href="https://gov.gitcoin.co#drawbacks-considerations-12"></a>Drawbacks &amp; Considerations</h3>
+<ol>
+<li>Legacy data migration (eg, from cGrants, Allo v1)</li>
+<li>Integration complexity with existing systems</li>
+<li>Standardization / “hardening” of schemas</li>
+<li>Data quality maintenance and pipeline upkeep</li>
+<li>Finding robust metrics that are resistant to gamification</li>
+</ol>
+<h3><a name="out-of-scope-13" class="anchor" href="https://gov.gitcoin.co#out-of-scope-13"></a>Out of Scope</h3>
+<p>The following items are not included in this proposal:</p>
+<ul>
+<li>Impact metrics beyond open source developer activity</li>
+<li>Custom visualizations for specific grant programs</li>
+<li>Data entry for onboarding new ecosystems</li>
+<li>Deep dives / additional data science work</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-oso-gitcoin-collaboration-for-advancing-data-infrastructure-and-gtm-analytics/19578/1
+        Mon, 04 Nov 2024 06:32:10 +0000
+gov.gitcoin.co-post-19578-1
+[GCP - XXX] OSO-Gitcoin Collaboration for Advancing Data Infrastructure and GTM Analytics
+      
+
+

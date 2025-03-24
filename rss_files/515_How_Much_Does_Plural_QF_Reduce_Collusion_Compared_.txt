@@ -1,0 +1,361 @@
+
+
+
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709
+    In our efforts to mitigate collusion and make QF more effective, we've been exploring the concept of Plural QF. To illustrate this, let's consider a comparison between Plural QF and Normal QF.
+
+## The Setup
+Let's consider 
+- **2 projects** with 
+- **7 contributors** each
+- and a **$100 matching pool**
+
+## The Results
+Under Normal QF, our projects received:
+- Project #1: $140
+- Project #2: $129
+
+Under Plural QF, our projects received:
+- Project #1: $154
+- Project #2: $115
+
+Let's break it down.
+
+---
+
+### Normal QF
+![image|690x106](upload://1s3fQT1pBYQCCigQP12M45SguSd.png)
+
+Contributors donated to Project #1 as follows: 5, 10, 0, 20, 0, 10, 50. This resulted in:
+- Funded amount: $95.00
+- Matched amount: $45.31
+- Total: $140.31
+
+![image|690x101](upload://aWoQJBKF9BsZX0j6RDfpHr4uB1L.png)
+
+Similarly, Project #2 received donations as follows: 5, 15, 5, 5, 20, 10, 15. This resulted in:
+- Funded amount: $75.00
+- Matched amount: $54.69
+- Total: $129.69
+
+---
+
+### Plural QF
+We simulated a social graph for the same number of contributors. Using the COCM model and running a Python script, we obtained the following results:
+
+assume Social Graph 
+![image|690x408](upload://wTsmhTRFxD9TpF4f8ll2tNElnyE.png)
+
+`$ python3 multipleproject.py cocm "[[0], [1, 2], [2, 3, 4, 5], [5, 6]]" "[[50, 5], [5, 15], [10, 5], [0, 5], [20, 20], [0, 10], [10, 15]]"`
+→`[289.7424515457382, 199.92969686897504]`
+calcurated with https://github.com/tkgshn/plural-qf/blob/main/multipleproject.py
+
+
+Project #1:
+- Funded amount: $95.00
+- Matched amount: $59 (calculated using the COCM model)
+- Total: $154
+
+Project #2:
+- Funded amount: $75.00
+- Matched amount: $40 (calculated using the COCM model)
+- Total: $115
+
+### More Info
+
+![image|690x472](upload://i2qb1HcFqIkPMmc23ML0lGAN4cE.jpeg)
+
+For a closer look at our simulations and calculations, check out 
+- simulation code: https://github.com/tkgshn/plural-qf/blob/main/differentamount_Simulation.py
+- more: https://scrapbox.io/tkgshn/how_to_implement_wtfipluralqf_update#647930e009c5f200008d3de4
+
+To understand how Plural QF could influence individual contributors, consider this: **if you're in a good social position like `Agent0`, increasing your contribution amount can have more impact than a similar increase from an agent in a less advantageous social position.**
+
+### Comparison with RetroPGF and GR11 (Infra round)
+
+![image|511x500](upload://fnEL6potl0ZxG7FyAU94aCBidwV.png)
+
+it's compared our findings with the data from Optimism's Retro Funding Round 1. [Vitalik Buterin](https://vitalik.ca/general/2021/11/16/retro1.html) observed that the retro round had less variance, the winners were more well-known projects, and there was more focus on infrastructure as opposed to user-facing projects. Here are our visualizations of these comparisons:
+
+VitalikButerin said below in https://vitalik.ca/general/2021/11/16/retro1.html
+>It is my own (admittedly highly subjective) opinion that the retro round winner selection is somewhat higher quality
+  The retro round was low variance
+  The retro round winners are more well-known projects
+  The retro round focused more on infrastructure, the Gitcoin round more on more user-facing projects
+
+
+https://docs.google.com/spreadsheets/d/10nOQ_umnNpS1Ef_y0Jt9yNdv8UevEo_9PJt7D8phJMw/edit?usp=sharing
+
+---
+
+maybe DeCartography's future is likes this
+![image|545x500](upload://DcsyFsUCyvABji9kCJYkCVXoNW.png)
+https://www.figma.com/file/zvbu9R8rBKrbovGXLuKSGG/Untitled?type=design&node-id=0-1&mode=design&t=LcMRwtOWxIwOphyZ-0
+
+Let's continue the conversation around improving QF through Plural QF. Your thoughts and insights are always welcome.
+Wed, 12 Jul 2023 18:51:25 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+Joel_m
+
+            <aside class="quote no-group" data-username="koday" data-post="3" data-topic="15709">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/koday/48/7280_2.png" class="avatar"> koday:</div>
+<blockquote>
+<p>In this example, do all agents know their social position or plurality “score” before they donate? I.e. the first donor knows nothing, but the 2nd donor knows where they stand in relation to the 1st, and the 100th donor knows how they relate to the first 99. Is it more advantageous to keep this data open and what are the game-theoretical impacts of doing so? Or should this be hidden and only used to calculate matching amounts after the round has ended?</p>
+<p>Also - is there enough on-chain data to make pluralistic QF more impactful than regular QF? Or do we need to add off-chain data to build an adequate base-level social graph? In this example it seems like the more active a wallet has been in different ecosystems, the more likely they are to have their match attenuated compared to a wallet that’s active in only 1 ecosystem. To me, this doesn’t seem like a meaningful way to scale donation matching.</p>
+</blockquote>
+</aside>
+<p>Hey <a class="mention" href="https://gov.gitcoin.co/u/koday">@koday</a> sorry for the late response! But yes, these are two important points to consider. Aside from what Taka has said, I want to offer my own thoughts, since we may diverge in some ways.</p>
+<p>As for the question of whether there’s enough data: I think it is possible to get enough data to do something meaningful, and the idea that <a class="mention" href="https://gov.gitcoin.co/u/erich">@erich</a> and I have had is to use passport stamps as identity markers, rather than using on-chain events. We hope that by looking at a few well-chosen “special” stamps that are relevant to the funding round in question, you can get good results.</p>
+<p>As for openness of data, and whether or not that creates an opportunity for strategizing – you’re right that if everyone can see the data that CO-CM uses, they can strategize, which we probably don’t want. In particular, under CO-CM, there can be situations where an agent’s funding impact would go down if they claimed a new identity marker. So agents might be shy away from claiming certain markers. But we definitely want to encourage agents to claim all the identity markers they can, especially since these markers are really passport stamps (and from the passport perspective, more stamps are always good since they mean you’re less likely to be a Sybil). So, I’m tweaking the algorithm so that it always rewards agents for claiming more stamps/ identity markers. It probably won’t have the same mathematical properties as the old algorithm, but I think the tradeoff will be worth it in this context.</p>
+          <p><a href="https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/6
+        Wed, 12 Jul 2023 18:51:25 +0000
+gov.gitcoin.co-post-15709-6
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+      
+
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+tkgshn
+
+            <p>As I mentioned in my response to Joel’s comment, DeCartography serves as an oracle providing a social graph, and it is loosely coupled with the QF formula itself. Therefore, in answer to your question, I believe it depends on <strong>when Gitcoin (or QF) decides to perform the calculation</strong>.</p>
+<p>In my previous <a href="https://gov.gitcoin.co/t/proof-of-concept-utilizing-decartography-for-plural-qf-enabling-social-identity-based-collaboration-amidst-differences/15698">post</a>, I mentioned that what DeCartography intends to do in its initial experiment is:</p>
+<ul>
+<li>Analyze the data from GR15, where project funding has already been distributed (precisely, only the unique wallet addresses of participants are needed to generate a social graph by DeCartography)</li>
+<li>After that, DeCartography will return the analyzed data to Gitcoin, and we plan to calculate the results of GR15 using regular QF and the results of GR15 as Plural QF simulated by combining the social layer</li>
+<li>We then plan to report these results in the forum and hope to adjust various coefficients accordingly.</li>
+</ul>
+<hr>
+<aside class="quote no-group" data-username="koday" data-post="3" data-topic="15709">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/koday/48/7280_2.png" class="avatar"> koday:</div>
+<blockquote>
+<p>In this example, do all agents know their social position or plurality “score” before they donate?</p>
+</blockquote>
+</aside>
+<p>So, in this case, all agents as participants in the GR Round would <strong>not be able to know</strong> their social position or plurality “score” in advance.</p>
+<hr>
+<aside class="quote no-group" data-username="koday" data-post="3" data-topic="15709">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/koday/48/7280_2.png" class="avatar"> koday:</div>
+<blockquote>
+<p>Also - is there enough on-chain data to make pluralistic QF more impactful than regular QF?</p>
+</blockquote>
+</aside>
+<p>I had a call about this with <a class="mention" href="https://gov.gitcoin.co/u/erich">@erich</a> yesterday. In his presentation on “<a href="https://youtu.be/RM7UFpSemjA?t=1594" rel="noopener nofollow ugc">Plural Funding at Funding the Commons</a>”, he mentioned using <a href="https://attest.sh/" rel="noopener nofollow ugc">EAS</a>, etc., for Plural QF.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/015f94fdafd4e6f1662a7a0f4d663fcd4682ddb0.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/015f94fdafd4e6f1662a7a0f4d663fcd4682ddb0" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/015f94fdafd4e6f1662a7a0f4d663fcd4682ddb0_2_345x190.jpeg" alt="image" data-base62-sha1="c9gb6fipwSTXiaqMzQp2fgxFsI" width="345" height="190" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/015f94fdafd4e6f1662a7a0f4d663fcd4682ddb0_2_345x190.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/015f94fdafd4e6f1662a7a0f4d663fcd4682ddb0_2_517x285.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/015f94fdafd4e6f1662a7a0f4d663fcd4682ddb0_2_690x380.jpeg 2x" data-dominant-color="E3E4E5"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a88470015dfb63beee7d2d0b507b57f220fe27d3.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/a88470015dfb63beee7d2d0b507b57f220fe27d3" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a88470015dfb63beee7d2d0b507b57f220fe27d3_2_345x191.jpeg" alt="image" data-base62-sha1="o2LXAwG2C3KuCJbhPhVO4dTrOxl" width="345" height="191" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a88470015dfb63beee7d2d0b507b57f220fe27d3_2_345x191.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a88470015dfb63beee7d2d0b507b57f220fe27d3_2_517x286.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a88470015dfb63beee7d2d0b507b57f220fe27d3_2_690x382.jpeg 2x" data-dominant-color="DEDFE0"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4740aa89cad27cc03a5a0483da4695236a82d459.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/4740aa89cad27cc03a5a0483da4695236a82d459" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4740aa89cad27cc03a5a0483da4695236a82d459_2_345x190.jpeg" alt="image" data-base62-sha1="aakrIlK91ODKrGczr4GOU4JtfvP" width="345" height="190" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4740aa89cad27cc03a5a0483da4695236a82d459_2_345x190.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4740aa89cad27cc03a5a0483da4695236a82d459_2_517x285.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4740aa89cad27cc03a5a0483da4695236a82d459_2_690x380.jpeg 2x" data-dominant-color="CDCECF"></a></div><p></p>
+<p>However, I personally feel that the number of attestations/certification as attendees / POAP distributed in the first place is <strong>STILL</strong> small.</p>
+<p>Therefore, DeCartography intentionally does not “analyze data” but generates a social graph based on intuitive classification (<a href="https://medium.com/witnet/on-oracles-and-schelling-points-2a1807c29b73" rel="noopener nofollow ugc">Schelling Point</a>) by crowd workers. Hence, DeCartography holds a unique position among Relational Oracles, and even if EAS grows or decides to acquire off-chain data, I think it is possible to integrate them and locate them in the social identity layer of Plural QF.</p>
+<hr>
+<p>at last, I really appreciate your feedback to build.<br>
+more info (almost still WIP) is here</p>
+<ul>
+<li><a href="https://decartography.github.io/docs/" class="inline-onebox" rel="noopener nofollow ugc">DeCartography Docs</a></li>
+<li><a href="https://drive.google.com/file/d/1Q-OTIH_dBJ9a8gxJWsQm9qCHxd9_MolQ/view?usp=sharing" class="inline-onebox" rel="noopener nofollow ugc">DeCartography EN.pdf - Google Drive</a></li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/5
+        Fri, 07 Jul 2023 02:04:40 +0000
+gov.gitcoin.co-post-15709-5
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+      
+
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+tkgshn
+
+            <p>Firstly, let me express my appreciation for your thoughtful feedback and comments.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a> , thank you so much for your insight! I must confess that the mathematical portion of the “Beyond Collusion” paper was a bit of a challenge for me. I was mainly referring to the code posted on GitHub, so it is incredibly valuable to receive feedback directly from the author. Your suggestion on making the function <code>K</code> more sensitive to the specifics of <code>i</code>’s relationship to <code>h</code> is intriguing, and I agree that the coefficients in Plural QF are worth fine-tuning. Given that DeCartography has a stand-alone function to generate a social graph and is <strong>loosely coupled with the QF formula itself</strong>, I believe that iterative experimentation and simulation is the best approach to adjust the formula. I intend to continue sharing this process publicly for ongoing discussion.</p>
+          <p><a href="https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/4
+        Fri, 07 Jul 2023 01:41:27 +0000
+gov.gitcoin.co-post-15709-4
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+      
+
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+koday
+
+            <p>This is really cool, thanks for sharing! I’m excited to see more experiments and simulations with pluralistic QF and it’d be awesome if we can eventually integrate some form of it into Grants Stack. I do have a few questions though:</p>
+<aside class="quote no-group" data-username="tkgshn" data-post="1" data-topic="15709">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tkgshn/48/6258_2.png" class="avatar"> tkgshn:</div>
+<blockquote>
+<p>To understand how Plural QF could influence individual contributors, consider this: <strong>if you’re in a good social position like <code>Agent0</code>, increasing your contribution amount can have more impact than a similar increase from an agent in a less advantageous social position.</strong></p>
+</blockquote>
+</aside>
+<p>In this example, do all agents know their social position or plurality “score” before they donate? I.e. the first donor knows nothing, but the 2nd donor knows where they stand in relation to the 1st, and the 100th donor knows how they relate to the first 99. Is it more advantageous to keep this data open and what are the game-theoretical impacts of doing so? Or should this be hidden and only used to calculate matching amounts after the round has ended?</p>
+<p>Also - is there enough on-chain data to make pluralistic QF more impactful than regular QF? Or do we need to add off-chain data to build an adequate base-level social graph? In this example it seems like the more active a wallet has been in different ecosystems, the more likely they are to have their match attenuated compared to a wallet that’s active in only 1 ecosystem. To me, this doesn’t seem like a meaningful way to scale donation matching.</p>
+<p>CC <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a> in case you have any thoughts on the above.</p>
+          <p><a href="https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/3
+        Thu, 06 Jul 2023 21:27:09 +0000
+gov.gitcoin.co-post-15709-3
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+      
+
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+Joel_m
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/tkgshn">@tkgshn</a>, great stuff! As you move forward with the COCM algorithm, I would recommend playing with the amount that contributions are attenuated.</p>
+<p>To be clear about what I’m talking about (and in case anyone else is interested), if you look at the formula for COCM in the <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507" rel="noopener nofollow ugc">“Beyond Collusion Resistance” whitepaper</a>  – equation (16) at the top of page 15 – there’s this function <em>K(i,h)</em>. Here <em>i</em> is an agent and <em>h</em> is a group. In the paper, <em>K(i,h)</em> either returns agent <em>i</em> 's contribution (if agent <em>i</em> and group <em>h</em> have nothing to do with each other), or the root of <em>i</em> 's contribution (if there’s even a small social connection between <em>i</em> and <em>h</em>).</p>
+<p>So overall <em>K(i,h)</em> is a pretty simple function, and that’s because when we were writing the paper we really just wanted something that would satisfy our definition of collusion resistance. But I think that in practice, one can make <em>K</em> more sensitive to the specifics of <em>i</em> 's relationship to <em>h</em> – for example, it could smoothly grade between the two options I mentioned above, instead of just returning one or the other, based on how socially close agent <em>i</em> is to group <em>h</em>. I think that being more delicate here might produce better outcomes.</p>
+          <p><a href="https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/2
+        Thu, 06 Jul 2023 20:03:07 +0000
+gov.gitcoin.co-post-15709-2
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+      
+
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+tkgshn
+
+            <p>In our efforts to mitigate collusion and make QF more effective, we’ve been exploring the concept of Plural QF. To illustrate this, let’s consider a comparison between Plural QF and Normal QF.</p>
+<h2><a name="the-setup-1" class="anchor" href="https://gov.gitcoin.co#the-setup-1"></a>The Setup</h2>
+<p>Let’s consider</p>
+<ul>
+<li><strong>2 projects</strong> with</li>
+<li><strong>7 contributors</strong> each</li>
+<li>and a <strong>$100 matching pool</strong></li>
+</ul>
+<h2><a name="the-results-2" class="anchor" href="https://gov.gitcoin.co#the-results-2"></a>The Results</h2>
+<p>Under Normal QF, our projects received:</p>
+<ul>
+<li>Project <span class="hashtag-raw">#1:</span> $140</li>
+<li>Project <span class="hashtag-raw">#2:</span> $129</li>
+</ul>
+<p>Under Plural QF, our projects received:</p>
+<ul>
+<li>Project <span class="hashtag-raw">#1:</span> $154</li>
+<li>Project <span class="hashtag-raw">#2:</span> $115</li>
+</ul>
+<p>Let’s break it down.</p>
+<hr>
+<h3><a name="normal-qf-3" class="anchor" href="https://gov.gitcoin.co#normal-qf-3"></a>Normal QF</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0a2df736042307a55c09700b32210cef55848ad9.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/0a2df736042307a55c09700b32210cef55848ad9" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0a2df736042307a55c09700b32210cef55848ad9_2_690x106.png" alt="image" data-base62-sha1="1s3fQT1pBYQCCigQP12M45SguSd" width="690" height="106" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0a2df736042307a55c09700b32210cef55848ad9_2_690x106.png, https://gov.gitcoin.co/uploads/db4391/original/2X/0/0a2df736042307a55c09700b32210cef55848ad9.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/0/0a2df736042307a55c09700b32210cef55848ad9.png 2x" data-dominant-color="F3F4F6"></a></div><p></p>
+<p>Contributors donated to Project <span class="hashtag-raw">#1</span> as follows: 5, 10, 0, 20, 0, 10, 50. This resulted in:</p>
+<ul>
+<li>Funded amount: $95.00</li>
+<li>Matched amount: $45.31</li>
+<li>Total: $140.31</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4cafc269583408d15998befc9452a2fef977b131.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/4cafc269583408d15998befc9452a2fef977b131" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4cafc269583408d15998befc9452a2fef977b131_2_690x101.png" alt="image" data-base62-sha1="aWoQJBKF9BsZX0j6RDfpHr4uB1L" width="690" height="101" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4cafc269583408d15998befc9452a2fef977b131_2_690x101.png, https://gov.gitcoin.co/uploads/db4391/original/2X/4/4cafc269583408d15998befc9452a2fef977b131.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/4cafc269583408d15998befc9452a2fef977b131.png 2x" data-dominant-color="E7EEEF"></a></div><p></p>
+<p>Similarly, Project <span class="hashtag-raw">#2</span> received donations as follows: 5, 15, 5, 5, 20, 10, 15. This resulted in:</p>
+<ul>
+<li>Funded amount: $75.00</li>
+<li>Matched amount: $54.69</li>
+<li>Total: $129.69</li>
+</ul>
+<hr>
+<h3><a name="plural-qf-4" class="anchor" href="https://gov.gitcoin.co#plural-qf-4"></a>Plural QF</h3>
+<p>We simulated a social graph for the same number of contributors. Using the COCM model and running a Python script, we obtained the following results:</p>
+<p>assume Social Graph<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e68a68de5ba9091e18e6826aa303428377f979b8.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/e68a68de5ba9091e18e6826aa303428377f979b8" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e68a68de5ba9091e18e6826aa303428377f979b8_2_690x408.png" alt="image" data-base62-sha1="wTsmhTRFxD9TpF4f8ll2tNElnyE" width="690" height="408" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e68a68de5ba9091e18e6826aa303428377f979b8_2_690x408.png, https://gov.gitcoin.co/uploads/db4391/original/2X/e/e68a68de5ba9091e18e6826aa303428377f979b8.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/e/e68a68de5ba9091e18e6826aa303428377f979b8.png 2x" data-dominant-color="F4F3F3"></a></div><p></p>
+<p><code>$ python3 multipleproject.py cocm "[[0], [1, 2], [2, 3, 4, 5], [5, 6]]" "[[50, 5], [5, 15], [10, 5], [0, 5], [20, 20], [0, 10], [10, 15]]"</code><br>
+→<code>[289.7424515457382, 199.92969686897504]</code><br>
+calcurated with <a href="https://github.com/tkgshn/plural-qf/blob/main/multipleproject.py" class="inline-onebox" rel="noopener nofollow ugc">plural-qf/multipleproject.py at main · tkgshn/plural-qf · GitHub</a></p>
+<p>Project <span class="hashtag-raw">#1:</span></p>
+<ul>
+<li>Funded amount: $95.00</li>
+<li>Matched amount: $59 (calculated using the COCM model)</li>
+<li>Total: $154</li>
+</ul>
+<p>Project <span class="hashtag-raw">#2:</span></p>
+<ul>
+<li>Funded amount: $75.00</li>
+<li>Matched amount: $40 (calculated using the COCM model)</li>
+<li>Total: $115</li>
+</ul>
+<h3><a name="more-info-5" class="anchor" href="https://gov.gitcoin.co#more-info-5"></a>More Info</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7e6d39f8744f514d41edcee2bb6a040b2327f5d8.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/7e6d39f8744f514d41edcee2bb6a040b2327f5d8" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7e6d39f8744f514d41edcee2bb6a040b2327f5d8_2_690x472.jpeg" alt="image" data-base62-sha1="i2qb1HcFqIkPMmc23ML0lGAN4cE" width="690" height="472" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7e6d39f8744f514d41edcee2bb6a040b2327f5d8_2_690x472.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7e6d39f8744f514d41edcee2bb6a040b2327f5d8_2_1035x708.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7e6d39f8744f514d41edcee2bb6a040b2327f5d8_2_1380x944.jpeg 2x" data-dominant-color="EBE9E9"></a></div><p></p>
+<p>For a closer look at our simulations and calculations, check out</p>
+<ul>
+<li>simulation code: <a href="https://github.com/tkgshn/plural-qf/blob/main/differentamount_Simulation.py" class="inline-onebox" rel="noopener nofollow ugc">plural-qf/differentamount_Simulation.py at main · tkgshn/plural-qf · GitHub</a></li>
+<li>more: <a href="https://scrapbox.io/tkgshn/how_to_implement_wtfipluralqf_update#647930e009c5f200008d3de4" class="inline-onebox" rel="noopener nofollow ugc">how to implement wtfipluralqf update - tkgshn</a></li>
+</ul>
+<p>To understand how Plural QF could influence individual contributors, consider this: <strong>if you’re in a good social position like <code>Agent0</code>, increasing your contribution amount can have more impact than a similar increase from an agent in a less advantageous social position.</strong></p>
+<h3><a name="comparison-with-retropgf-and-gr11-infra-round-6" class="anchor" href="https://gov.gitcoin.co#comparison-with-retropgf-and-gr11-infra-round-6"></a>Comparison with RetroPGF and GR11 (Infra round)</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/6bcd36f457b901ac5d06f682c82e8fe4a71a37ad.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/6bcd36f457b901ac5d06f682c82e8fe4a71a37ad" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6bcd36f457b901ac5d06f682c82e8fe4a71a37ad_2_511x500.png" alt="image" data-base62-sha1="fnEL6potl0ZxG7FyAU94aCBidwV" width="511" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6bcd36f457b901ac5d06f682c82e8fe4a71a37ad_2_511x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6bcd36f457b901ac5d06f682c82e8fe4a71a37ad_2_766x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/6/6bcd36f457b901ac5d06f682c82e8fe4a71a37ad.png 2x" data-dominant-color="EEECF1"></a></div><p></p>
+<p>it’s compared our findings with the data from Optimism’s Retro Funding Round 1. <a href="https://vitalik.ca/general/2021/11/16/retro1.html" rel="noopener nofollow ugc">Vitalik Buterin</a> observed that the retro round had less variance, the winners were more well-known projects, and there was more focus on infrastructure as opposed to user-facing projects. Here are our visualizations of these comparisons:</p>
+<p>VitalikButerin said below in <a href="https://vitalik.ca/general/2021/11/16/retro1.html" rel="noopener nofollow ugc">https://vitalik.ca/general/2021/11/16/retro1.html</a></p>
+<blockquote>
+<p>It is my own (admittedly highly subjective) opinion that the retro round winner selection is somewhat higher quality<br>
+The retro round was low variance<br>
+The retro round winners are more well-known projects<br>
+The retro round focused more on infrastructure, the Gitcoin round more on more user-facing projects</p>
+</blockquote>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F10nOQ_umnNpS1Ef_y0Jt9yNdv8UevEo_9PJt7D8phJMw%2Fedit%3Fusp%3Dsharing&amp;followup=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F10nOQ_umnNpS1Ef_y0Jt9yNdv8UevEo_9PJt7D8phJMw%2Fedit%3Fusp%3Dsharing&amp;ifkv=ASKXGp1CwWMxaq4uiae8huZwevdqv_nrKpZOTa1SjfGIZzJLL73FJThCM5-LQxYnQW4NXDvtvIoNYw&amp;ltmpl=sheets&amp;osid=1&amp;passive=1209600&amp;service=wise&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin&amp;dsh=S403467554%3A1707134646776434&amp;theme=glif">
+  <header class="source">
+
+      <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F10nOQ_umnNpS1Ef_y0Jt9yNdv8UevEo_9PJt7D8phJMw%2Fedit%3Fusp%3Dsharing&amp;followup=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F10nOQ_umnNpS1Ef_y0Jt9yNdv8UevEo_9PJt7D8phJMw%2Fedit%3Fusp%3Dsharing&amp;ifkv=ASKXGp1CwWMxaq4uiae8huZwevdqv_nrKpZOTa1SjfGIZzJLL73FJThCM5-LQxYnQW4NXDvtvIoNYw&amp;ltmpl=sheets&amp;osid=1&amp;passive=1209600&amp;service=wise&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin&amp;dsh=S403467554%3A1707134646776434&amp;theme=glif" target="_blank" rel="noopener nofollow ugc">accounts.google.com</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F10nOQ_umnNpS1Ef_y0Jt9yNdv8UevEo_9PJt7D8phJMw%2Fedit%3Fusp%3Dsharing&amp;followup=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F10nOQ_umnNpS1Ef_y0Jt9yNdv8UevEo_9PJt7D8phJMw%2Fedit%3Fusp%3Dsharing&amp;ifkv=ASKXGp1CwWMxaq4uiae8huZwevdqv_nrKpZOTa1SjfGIZzJLL73FJThCM5-LQxYnQW4NXDvtvIoNYw&amp;ltmpl=sheets&amp;osid=1&amp;passive=1209600&amp;service=wise&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin&amp;dsh=S403467554%3A1707134646776434&amp;theme=glif" target="_blank" rel="noopener nofollow ugc">Google Sheets: Sign-in</a></h3>
+
+  <p>Access Google Sheets with a personal Google account or Google Workspace account (for business use).</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<hr>
+<p>maybe DeCartography’s future is likes this<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/046e68c54ed886742399d02a2bc9a9c956f78270.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/046e68c54ed886742399d02a2bc9a9c956f78270" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/046e68c54ed886742399d02a2bc9a9c956f78270_2_545x500.png" alt="image" data-base62-sha1="DcsyFsUCyvABji9kCJYkCVXoNW" width="545" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/046e68c54ed886742399d02a2bc9a9c956f78270_2_545x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/046e68c54ed886742399d02a2bc9a9c956f78270_2_817x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/0/046e68c54ed886742399d02a2bc9a9c956f78270.png 2x" data-dominant-color="E7E9EC"></a></div><p></p><aside class="onebox allowlistedgeneric" data-onebox-src="https://www.figma.com/file/zvbu9R8rBKrbovGXLuKSGG/Untitled?type=design&amp;node-id=0-1&amp;mode=design&amp;t=LcMRwtOWxIwOphyZ-0">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/4/46b68c732942369c25b4f21b54c73cbb7337d8d2.png" class="site-icon" data-dominant-color="37353A" width="192" height="192">
+
+      <a href="https://www.figma.com/file/zvbu9R8rBKrbovGXLuKSGG/Untitled?type=design&amp;node-id=0-1&amp;mode=design&amp;t=LcMRwtOWxIwOphyZ-0" target="_blank" rel="noopener nofollow ugc" title="03:51AM - 07 September 2022">Figma – 7 Sep 22</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:266/450;"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/9/96ce2d7c16184bd57b8e4be958ae728d382457b1.png" class="thumbnail" data-dominant-color="C2C2C4" width="267" height="450"></div>
+
+<h3><a href="https://www.figma.com/file/zvbu9R8rBKrbovGXLuKSGG/Untitled?type=design&amp;node-id=0-1&amp;mode=design&amp;t=LcMRwtOWxIwOphyZ-0" target="_blank" rel="noopener nofollow ugc">Figma</a></h3>
+
+  <p>Created with Figma</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Let’s continue the conversation around improving QF through Plural QF. Your thoughts and insights are always welcome.</p>
+          <p><a href="https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709/1
+        Thu, 06 Jul 2023 10:23:57 +0000
+gov.gitcoin.co-post-15709-1
+How Much Does Plural QF Reduce Collusion Compared to Normal QF?
+      
+
+

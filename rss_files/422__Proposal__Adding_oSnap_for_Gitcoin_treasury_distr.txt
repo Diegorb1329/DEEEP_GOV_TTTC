@@ -1,0 +1,390 @@
+
+
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263
+    ### Summary
+
+We propose adding oSnap, a governance tool developed by UMA, to the Gitcoin Snapshot space and Safe to allow for automatic onchain execution of token transfers and grant funding after successful Snapshot votes.
+
+### Abstract
+
+The current Gitcoin governance flow uses offchain Snapshot voting to approve or deny proposals. However, proposals that are approved must then be repeated onchain with Tally to achieve onchain execution. This repeated vote is an administrative task that wastes the time and gas fees of DAO participants. There have been instances where the revote on Tally did not achieve Quorum and the revote had to be posted again, wasting even more time and gas.
+
+The adoption of oSnap eliminates the need for the redundant Tally revote by automatically executing successful Snapshot votes onchain, thus consolidating the governance process to one gasless vote on Snapshot that results in onchain execution.
+
+oSnap secures over $250M for treasuries including CoW Protocol, Across, Connext and Shapeshift. A dashboard of all oSnap users can be viewed [here](https://dune.com/risk_labs/osnap-total-value-secured). oSnap was built by UMA, an experienced leader in optimistic verification. UMA’s optimistic oracle currently secures $450M of TVS across bridges, prediction markets and governance tools.
+
+### Motivation
+
+Adding oSnap aims to streamline the execution of governance decisions, bringing a new layer of efficiency and reliability to Gitcoin requiring minimal effort and no disruption to existing DAO governance systems. On top of these benefits, oSnap is highly aligned with Gitcoin as it is a public good that increases decentralization.
+
+### Specification
+
+oSnap is a module that is added to a Safe with rules on how to evaluate a Snapshot proposal. oSnap Safe app lets you add oSnap to your Snapshot space and Safe in a few minutes with no developer time required. A video demonstration of the oSnap Safe App can be viewed [here](https://docs.uma.xyz/developers/osnap/osnap-quick-start).
+
+Once enabled, Snapshot proposals related to the distribution of funds from Gitcoin's treasury can include token transfers with the proposal. There will be no changes related to proposals not related to treasury distributions, such as social votes relating to governance, removing a director, etc.
+
+The updated Snapshot flow for proposals that include treasury distributions would be:
+
+* An oSnap enabled snapshot proposal is created. This process is the same as a normal Snapshot proposal with the addition of transaction data that will be verified and executed if the proposal passes. The Snapshot transaction builder is specifically designed to make it easy to create and verify transaction data for token transfers.
+* GTC holders vote on the proposal like any other Gitcoin Snapshot proposal
+* If GTC holders approve the proposal by vote, any address can post a bond (2 WETH) for a challenge period (1 to 3 days) and propose to execute the transactions onchain. UMA has implemented a bot that validates proposals (vote passed, meets min voting period/quorum) and posts the bond for DAOs along with covering gas costs for execution (there are no fees to use oSnap).
+
+* If no dispute arises about the proposal’s accuracy during the challenge period, the transactions can then be executed.
+* In case of a dispute, the proposal is not executed. UMA token holders vote to resolve the dispute, with the correct party rewarded from the opposing party’s bond. This bonding and dispute mechanism punishes incorrect proposers and disputers and incentivizes honest disputes. Any proposal that was incorrectly disputed can be re-proposed to the oracle for execution without requiring revoting. It is important to note, the dispute resolution decided by UMA token holder votes are not deciding if the transactions can be executed or not, only the bond allocation between the proposer and disputer.
+
+UMA created and maintains oSnap as a public good with no implementation or usage fees because we believe decentralized governance tools are critical to the entire Web3 ecosystem. Since UMA is already running robust monitoring across all of our optimistic oracle integrations and can recycle the bonds posted, the additional costs associated with these services are negligible and it is sustainable to continue providing this service for DAOs. If any changes were to be made in the future, we are committed to having existing DAOs not face any changes (aka be “grandfathered in”).
+
+### Benefits
+
+The benefits of Gitcoin adopting oSnap are:
+
+* Adding oSnap removes the unnecessary, administrative step of an onchain Tally vote when releasing funds from Gitcoin's treasury saving Gitcoin DAO voters time and gas fees.
+
+* Transaction payloads included in proposals that are approved by voters are trustlessly and permissionlessly executed which increases transparency and decentralization.
+* Automatic transaction execution by UMA bots is faster than waiting for multi-sig signers along with the bot paying the gas costs for execution.
+
+* The UMA team is continuously making frontend improvements as per user feedback and improving open source monitoring infrastructure for oSnap.
+
+UMA has also focused significant resources on monitoring efforts:
+
+* The same bot that proposes and executes transactions also automatically disputes inaccurate proposals if the following criteria are not met:
+  * The proposed onchain transactions match the transactions that were approved in the Snapshot proposal
+  * The Snapshot proposal passed with the minimum parameters specified (majority in favor, meets minimum voting period and quorum)
+  * The proposal follows the strategy specified in the Snapshot space.
+
+* Proposals are included in the UMA Oracle UI (https://oracle.uma.xyz/) which is the same interface used by disputers verifying and disputing for other third-party integrations (Polymarket, Sherlock, Cozy, and other oSnap integrations).
+
+* UMA sponsors a verification program, that pays UMA community members to verify all optimistic oracle assertions So when any transactions are proposed through oSnap, a Discord ticket is automatically created and an experienced verifier from the UMA community completes a multi-step verification process that focuses on areas such as the transaction payload matching the intent of the proposal, verifies transactions do not include interactions with malicious contracts, etc.
+
+### Drawbacks
+
+While oSnap has been audited by Open Zeppelin, as with any system, there may be unforeseen vulnerabilities.
+
+### Vote
+
+For - Formalizes the community is “for” adding oSnap to Gitcoin.
+Against - Formalizes the community is “against” adding oSnap to Gitcoin.
+Fri, 19 Jan 2024 18:30:54 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+CoachJonathan
+
+            <p>Hi everyone, the vote is now live on Snapshot here: <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xbba6d5e08ea0adb069fa2b1fcea02333e90b7c8cf387e31c0b77e61f4f29f5b8" class="inline-onebox">Snapshot</a> and will be live for 7 days.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/14
+        Fri, 19 Jan 2024 18:30:54 +0000
+gov.gitcoin.co-post-17263-14
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+kyle
+
+            <p>Thanks for the details here. I have been playing catch up a bit on the conversation and the value proposition.</p>
+<p>I heard a rumor that oSnap may soon integrate with Tally, and we could skip the Safe requirement… is that right?</p>
+<p>Given the complexity of the integration (having to add oSnap, having to create a new gnosis safe with governor access, etc.) I would likely vote no on this proposal.</p>
+<p>Gitcoin is often very conservative in our approach of new technology related to the treasury and governance (flexible voting being a notable exception, but we have not configured any flexible voting strategies yet).</p>
+<p>This seems very powerful for many DAOs that dont rely on governor bravo, and I am excited to hear you all may be working to remove the requirement to have a Safe integrated as well.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/13
+        Fri, 19 Jan 2024 14:23:01 +0000
+gov.gitcoin.co-post-17263-13
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+alexuma
+
+            <p>Hi Pradolo, thanks for the comments. I’ll start by responding to your numbered points:</p>
+<p>1 - Yes, oSnap is dependent on Snapshot to signal the approval of a DAO vote. However, the existing governance process also relies on Snapshot to signal approval as well. As per the “Moving to Vote” section of the <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358">Gitcoin DAO Governance Process v3</a>, after a vote is approved on Snapshot, “No one person should ever vote NO on Tally as all proposals that make it on Tally are classed as passed”. So whether the execution of a Snapshot approved vote is executed through oSnap (as proposed), or through an onchain Tally vote (current system), both systems rely on Snapshot correctly signaling the DAO’s approval.</p>
+<p>In the edge case where Snapshot is misreporting vote results, the current system would rely on DAO members to realize this and vote ‘No’ on Tally against the usual governance flow. With oSnap, proposed transactions based on misreported vote results would require only one disputer to block transaction execution. As described in the Specifications section above, UMA token holders would then vote to redistribute the proposer’s and disputer’s bond.</p>
+<p>2 - oSnap does rely on there being one honest disputer to dispute invalid proposals. Disputing is public and permissionless. Disputes do not require holding any UMA, but do require posting a bond in WETH or USDC. UMA runs bots that dispute invalid proposals and also sponsors a verification program as described in the above proposal. Gitcoin DAO members are welcome to add another layer of protection by monitoring their proposals and disputing invalid proposals (if they are fast enough!). This can be done using the Oracle UI or running a UMA developed monitoring bot.</p>
+<p>UMA token holders only vote if there is a dispute on a transaction batch proposed to the oracle for execution. As soon as a proposed transaction batch is disputed, that proposal can no longer be executed no matter how UMA token holders vote to resolve it. The token holder vote only resolves the bonds posted by the proposer and disputer. Dishonest parties lose their bond and honest parties get a portion of the other’s bond. If a valid proposal is disputed, a new transaction proposal can be created using the same Snapshot proposal results. So the dishonest disputer would be continually losing bonds to block a valid proposal. If there is a dishonest proposer who continually submits dishonest proposals, it would be extremely costly as they would be continually losing their bond.</p>
+<p>3 - As you mentioned, the multi-sig can be removed from an oSnap enabled Safe. Considering Gitcoin doesn’t have a Safe or multi-sig signers, we propose adding a new Safe with an oSnap module and then incorporating the existing Gitcoin Governor as a module on the Safe. This enables the existing governance system to serve as a fallback and would prevent Gitcoin from needing to add multi-sig signers or introduce centralization into the Gitcoin governance process.</p>
+<p>The proposed implementation accomplishes the main goal of removing redundancy in the voting process (voting on both Snapshot and Tally) with no commitment required to be made until a Tally proposal is created for migrating funds to the Safe. This enables a test oSnap proposal and other testing to be completed before migrating funds.</p>
+<p>For Tally to serve as an emergency option, it would require an ‘exec call’ within the safe contract. While we expect Gitcoin to not need this fallback, it’s important to be transparent about the tradeoff. The other additional complexity, as mentioned above, is assets Gitcoin controls with Snapshot and oSnap would need to be migrated to the Safe.</p>
+<p><strong>Proposed Integration Steps:</strong></p>
+<p><strong>Setup:</strong></p>
+<ul>
+<li>UMA: Deploy a Safe</li>
+<li>UMA: Add oSnap module to Safe</li>
+<li>UMA: Add existing Gitcoin Governor as a module on Safe</li>
+<li>UMA: Remove all signers from Safe</li>
+<li>Gitcoin: Add the “oSnap by UMA” plugin to Gitcoin’s Snapshot space<br>
+Note: all UMA steps above could alternatively be completed by Gitcoin with support from UMA.</li>
+</ul>
+<p><strong>Testing:</strong></p>
+<ul>
+<li>Gitcoin (optional): Complete test Snapshot proposal with oSnap</li>
+</ul>
+<p><strong>Execution:</strong></p>
+<ul>
+<li>UMA: Create a Tally proposal for migrating agreed upon amount to Safe</li>
+</ul>
+<p>Please let us know if there are additional questions on oSnap or the proposed implementation.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/12
+        Tue, 09 Jan 2024 23:13:15 +0000
+gov.gitcoin.co-post-17263-12
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+Pradolo
+
+            <p>Hello,</p>
+<p>I believe this proposal may not transparently be notifying readers and potential voters on what this solution entails? I am happy to be wrong so please feel free to respond:</p>
+<p>If Gitcoin is actually using OZ Governor for DAO execution currently via Tally then this proposal actually requests Gitcoin to reduce its autonomy and decentralisation, adding in multiple layers of trust. It in essence would no longer be a DAO.</p>
+<p>By using UMA with Snapshot and SAFE you add 3 layers of trust, from originally (0?)</p>
+<ol>
+<li>You must trust Snapshot a centralised offchain signalling platform on a server (best intended for signalling as it is not e2e verifiable).</li>
+<li>You must trust UMA token holders for all future Gitcoin disputes.</li>
+<li>You must trust a group of multisig signers on a SAFE</li>
+</ol>
+<p>I know there are ways to remove the SAFE, however, this would then place the entirety of the organisations trust on a centralised product, Snapshot. Even though its an amazing product and team!</p>
+<p>I’m shocked to see no other “drawbacks” included in the information outlining these tradeoffs? Apologies if I get something wrong, please feel free to address these as discussion questions.</p>
+<p>This seems like a complete step backwords in being a true DAO.</p>
+<p>UMA seems like a wonderful tool for moving fast in a low stakes environment where you can use multiple layers of trust, not vote onchain with any e2e verifiability, etc. Not in a high-stakes environment where being a true DAO is essential to being resilient and unstoppable.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/11
+        Sun, 24 Dec 2023 18:56:21 +0000
+gov.gitcoin.co-post-17263-11
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+Viriya
+
+            <p>Thanks for tagging me and bringing this to my attention <a class="mention" href="https://gov.gitcoin.co/u/robioreefeco">@robioreefeco</a></p>
+<p>I’m going to abstain from commenting as my technical understanding in these matters is extremely limited. I will defer to people (probably <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a>) who understand the security implications of a decision like this.</p>
+<p>That said, it sounds like an awesome value prop (bringing more ease and speed to DAO governance? yes please!) and I would love to see it implemented if more qualified individuals are aligned <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/10
+        Fri, 22 Dec 2023 16:11:20 +0000
+gov.gitcoin.co-post-17263-10
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+alexuma
+
+            <p>Hey <a href="https://gov.gitcoin.co/u/robioreefeco"><strong>robioreefeco</strong></a>, thanks for the comment! Below are responses to provide more context but let me know if you have any additional questions or concerns.</p>
+<p><strong>First:</strong> The oSnap verification process is a combination of automated and manual validation. The open-source bot UMA and other third-party verifiers run use strict parameters to verify Snapshot proposals. UMA is continuously assessing and improving its verification system along with incorporating feedback from DAOs to improve the oSnap user experience. The manual verification team has biweekly meetings to discuss any questions or issues that arise.</p>
+<p>UMA’s manual verification system reviews all oSnap transactions and serves a similar purpose to the Gitcoin WalletGuard. The Gitcoin WalletGuard could also add another layer of security to Gitcoin oSnap proposals. UMA has public bot scripts that can report oSnap transaction proposals to a terminal, Slack, or Discord. These notifications could be used to alert the Gitcoin WalletGuard to review any Gitcoin oSnap proposed transactions that are being verified by the oracle.</p>
+<p><strong>Second:</strong> oSnap takes a conservative approach to handling disputes. If any transaction is disputed during oracle verification, that proposal is deleted and can not be executed. The dispute is still resolved by UMA token holders, but this only decides how the proposer and disputer bonds are redistributed. oSnap disputes are straightforward to resolve and since the vote is not deciding if the transactions can be executed, there is little financial incentive for attempts to corrupt the oracle based on the allocation of a 2 WETH bond.</p>
+<p><strong>Third:</strong> We are happy to support Gitcoin in any way to ensure the DAO is comfortable with the implementation. oSnap is currently being used by large DAOs to secure their treasuries with the default implementation.</p>
+<p>While a gradual implementation can potentially add complexity and administrative time, there are options for gradual implementations:</p>
+<ul>
+<li>A <a href="https://medium.com/uma-project/building-on-safe-a-security-veto-for-osnap-daos-036392271032" rel="noopener nofollow ugc">guard module</a> enables the DAO to veto transactions or potentially add limits to transfer amounts that can be proposed through oSnap.</li>
+<li>Escalation managers would allow Gitcoin to whitelist addresses that can propose transactions (their Safe, UMA bot) and allow anyone to dispute.</li>
+<li>Setting the oracle dispute window higher to start (ie, 3-5 days) gives extra time for your DAO to do their own check on any proposed transactions on top of UMA’s verification system and decentralized disputers. Once comfortable, the liveness period can be decreased to a more typical length (1-3 days).</li>
+</ul>
+<p>Let us know if you have any other questions or concerns and we look forward to more comments from the Gitcoin community!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/9
+        Thu, 21 Dec 2023 23:22:16 +0000
+gov.gitcoin.co-post-17263-9
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+robioreefeco
+
+            <p>Hola Alex</p>
+<p>I believe that reducing the redundant voting steps within Gitcoin’s governance flow offers significant advantages. Integrating oSnap to eliminate the need for a second on-chain vote via Tally has the potential to save time, effort, and gas fees for participants. Simplifying the process could notably enhance decision-making efficiency within the Gitcoin DAO, representing a positive step forward.</p>
+<p><strong>First:</strong> The concept of automating the execution of successful Snapshot votes on-chain through oSnap is intriguing. It aligns seamlessly with the objective of fostering transparency and decentralization by executing approved transactions without multi-sig signers. Additionally, I commend UMA for its dedication to continuously improving the frontend, monitoring infrastructure, and verification procedures for oSnap. These efforts significantly contribute to a more reliable integration. However, I am mindful of the necessity for robust security measures. While the system has undergone audits, continuous assessment and improvement are imperative to effectively counter unforeseen vulnerabilities.</p>
+<p><strong>Second:</strong> Community engagement stands as a pivotal factor. A transparent decision-making process, inclusive of feedback, open discussions, and incorporation of community suggestions, will bolster the acceptance and effectiveness of the integration. Moreover, establishing clear contingency plans for disputes or vulnerabilities is crucial. Having well-defined protocols for dispute resolution and prompt mechanisms to address unforeseen issues will be vital for a resilient governance system. I referenced this in relation to the <a href="https://gov.gitcoin.co/t/incident-regarding-mistransferred-treasury-funds/16683">Incident Regarding Mistransferred Treasury Funds</a> that occurred a few months ago.</p>
+<p><strong>Third:</strong> Considering the potential risks, a gradual implementation approach might be prudent. A phased or pilot phase would allow for identifying and rectifying potential issues before full-scale integration, mitigating risks associated with rapid deployment.</p>
+<p><strong>Conclusion:</strong> While I endorse the overarching aim of enhancing Gitcoin’s governance through oSnap integration, I stress the importance of stringent security measures, community involvement, dispute resolution protocols, and a cautious implementation strategy. Therefore, I partially support the integration of oSnap into Gitcoin, contingent upon addressing the outlined considerations comprehensively.</p>
+<p>Vote: <strong>Against</strong> …</p>
+<p><strong>Note</strong>: We should propose the development of an AI tool for managing treasury distributions, with the potential to integrate it with <a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772">Gitcoin WalletGuard <img src="https://gov.gitcoin.co/images/emoji/twitter/shield.png?v=12" title=":shield:" class="emoji" alt=":shield:" loading="lazy" width="20" height="20"></a> for human verification in specific situations.</p>
+<p>Would love to see your suggestions around this proposal:<br>
+<a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a> <a class="mention" href="https://gov.gitcoin.co/u/m0nkeyfl0wer">@M0nkeyFl0wer</a> <a class="mention" href="https://gov.gitcoin.co/u/azeem">@azeem</a> <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> <a class="mention" href="https://gov.gitcoin.co/u/shawn16400">@shawn16400</a></p>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/ocean.png?v=12" title=":ocean:" class="emoji only-emoji" alt=":ocean:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/tropical_fish.png?v=12" title=":tropical_fish:" class="emoji only-emoji" alt=":tropical_fish:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/sparkles.png?v=12" title=":sparkles:" class="emoji only-emoji" alt=":sparkles:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/8
+        Thu, 21 Dec 2023 01:19:24 +0000
+gov.gitcoin.co-post-17263-8
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+Willy
+
+            <p>My opinion on this mirrors <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a>’s. I’m a fan of oSnap and think it could be a great solution offering the best of both worlds: free, gasless voting plus permissionless execution that doesn’t depend on a multisig. That said, I defer to more active stakeholders on whether it’s the best solution for Gitcoin at this time.</p>
+<p>to quote Annika, “If the main stakeholders overseeing those areas think it is a good idea, I would certainly vote with my support.” <img src="https://gov.gitcoin.co/images/emoji/twitter/handshake.png?v=12" title=":handshake:" class="emoji" alt=":handshake:" loading="lazy" width="20" height="20"></p>
+<p>Definitely appreciate Uma for building and maintaining this awesome public good and for making this proposal <img src="https://gov.gitcoin.co/images/emoji/twitter/purple_heart.png?v=12" title=":purple_heart:" class="emoji" alt=":purple_heart:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/7
+        Wed, 20 Dec 2023 20:42:06 +0000
+gov.gitcoin.co-post-17263-7
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+CryptoReuMD
+
+            <aside class="quote no-group" data-username="annika" data-post="4" data-topic="17263">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>I’ll express my directional support — I think the UMA team is exceptional: highly competent &amp; professional, and certainly values-aligned with Gitcoin. I also think oSnap looks like a great product that makes sense for this use case.</p>
+</blockquote>
+</aside>
+<p>Yup, Trust in Optimstic solutions =). Really nice work and oracles need to be part of any decentralized solution.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/6
+        Wed, 20 Dec 2023 18:36:50 +0000
+gov.gitcoin.co-post-17263-6
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+Saurabh
+
+            <p>I would like to support the proposal. Integrating oSnap by UMA into Gitcoin offers significant benefits for Gitcoin governance.</p>
+<p>With oSnap’s track record of securing over $250M and UMA’s expertise in optimistic verification, the implementation is reliable and secure. Adopting oSnap streamlines governance, aligns with Gitcoin’s commitment to decentralization, and brings transparency, efficiency, and reliability to decisions.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/5
+        Wed, 20 Dec 2023 18:04:00 +0000
+gov.gitcoin.co-post-17263-5
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+annika
+
+            <p>I’ll express my directional support — I think the UMA team is exceptional: highly competent &amp; professional, and certainly values-aligned with Gitcoin. I also think oSnap looks like a great product that makes sense for this use case.</p>
+<p>I would want to see an analysis of benefits &amp; drawbacks from those who are closer to the current Snapshot → Tally flow and its challenges than I am, and also on any potential technical / governance attack risks here since those are blindspots from my perspective.</p>
+<p>If the main stakeholders overseeing those areas think it is a good idea, I would certainly vote with my support.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/4
+        Fri, 15 Dec 2023 22:48:16 +0000
+gov.gitcoin.co-post-17263-4
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+CryptoReuMD
+
+            <p>Yes please. We need more automatization and stronger decisions.<br>
+Nice <img src="https://gov.gitcoin.co/images/emoji/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/3
+        Fri, 15 Dec 2023 19:32:21 +0000
+gov.gitcoin.co-post-17263-3
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+CoachJonathan
+
+            <p>I want to express my support for this proposal.</p>
+<p>I think the main benefit for me is eliminating the need of posting from Snapshot → Tally. This is mostly an administrative procedure at this point, taking things we agreed to offchain, onchain. Adding in this functionality removes this step entirely, saves times and resources and attention.</p>
+<p>Main potential drawback I see is the increased potential of governance attacks b/c of the reduced time for releasing funds. I see this risk being minimal and am confident we can put in the appropriate safeguards to manage this risk.</p>
+<p>Would love to hear from some others to make sure I’m not missing anything in terms of benefits/drawbacks.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/2
+        Fri, 15 Dec 2023 08:32:05 +0000
+gov.gitcoin.co-post-17263-2
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+alexuma
+
+            <h3><a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a>Summary</h3>
+<p>We propose adding oSnap, a governance tool developed by UMA, to the Gitcoin Snapshot space and Safe to allow for automatic onchain execution of token transfers and grant funding after successful Snapshot votes.</p>
+<h3><a name="abstract-2" class="anchor" href="https://gov.gitcoin.co#abstract-2"></a>Abstract</h3>
+<p>The current Gitcoin governance flow uses offchain Snapshot voting to approve or deny proposals. However, proposals that are approved must then be repeated onchain with Tally to achieve onchain execution. This repeated vote is an administrative task that wastes the time and gas fees of DAO participants. There have been instances where the revote on Tally did not achieve Quorum and the revote had to be posted again, wasting even more time and gas.</p>
+<p>The adoption of oSnap eliminates the need for the redundant Tally revote by automatically executing successful Snapshot votes onchain, thus consolidating the governance process to one gasless vote on Snapshot that results in onchain execution.</p>
+<p>oSnap secures over $250M for treasuries including CoW Protocol, Across, Connext and Shapeshift. A dashboard of all oSnap users can be viewed <a href="https://dune.com/risk_labs/osnap-total-value-secured" rel="noopener nofollow ugc">here</a>. oSnap was built by UMA, an experienced leader in optimistic verification. UMA’s optimistic oracle currently secures $450M of TVS across bridges, prediction markets and governance tools.</p>
+<h3><a name="motivation-3" class="anchor" href="https://gov.gitcoin.co#motivation-3"></a>Motivation</h3>
+<p>Adding oSnap aims to streamline the execution of governance decisions, bringing a new layer of efficiency and reliability to Gitcoin requiring minimal effort and no disruption to existing DAO governance systems. On top of these benefits, oSnap is highly aligned with Gitcoin as it is a public good that increases decentralization.</p>
+<h3><a name="specification-4" class="anchor" href="https://gov.gitcoin.co#specification-4"></a>Specification</h3>
+<p>oSnap is a module that is added to a Safe with rules on how to evaluate a Snapshot proposal. oSnap Safe app lets you add oSnap to your Snapshot space and Safe in a few minutes with no developer time required. A video demonstration of the oSnap Safe App can be viewed <a href="https://docs.uma.xyz/developers/osnap/osnap-quick-start" rel="noopener nofollow ugc">here</a>.</p>
+<p>Once enabled, Snapshot proposals related to the distribution of funds from Gitcoin’s treasury can include token transfers with the proposal. There will be no changes related to proposals not related to treasury distributions, such as social votes relating to governance, removing a director, etc.</p>
+<p>The updated Snapshot flow for proposals that include treasury distributions would be:</p>
+<ul>
+<li>
+<p>An oSnap enabled snapshot proposal is created. This process is the same as a normal Snapshot proposal with the addition of transaction data that will be verified and executed if the proposal passes. The Snapshot transaction builder is specifically designed to make it easy to create and verify transaction data for token transfers.</p>
+</li>
+<li>
+<p>GTC holders vote on the proposal like any other Gitcoin Snapshot proposal</p>
+</li>
+<li>
+<p>If GTC holders approve the proposal by vote, any address can post a bond (2 WETH) for a challenge period (1 to 3 days) and propose to execute the transactions onchain. UMA has implemented a bot that validates proposals (vote passed, meets min voting period/quorum) and posts the bond for DAOs along with covering gas costs for execution (there are no fees to use oSnap).</p>
+</li>
+<li>
+<p>If no dispute arises about the proposal’s accuracy during the challenge period, the transactions can then be executed.</p>
+</li>
+<li>
+<p>In case of a dispute, the proposal is not executed. UMA token holders vote to resolve the dispute, with the correct party rewarded from the opposing party’s bond. This bonding and dispute mechanism punishes incorrect proposers and disputers and incentivizes honest disputes. Any proposal that was incorrectly disputed can be re-proposed to the oracle for execution without requiring revoting. It is important to note, the dispute resolution decided by UMA token holder votes are not deciding if the transactions can be executed or not, only the bond allocation between the proposer and disputer.</p>
+</li>
+</ul>
+<p>UMA created and maintains oSnap as a public good with no implementation or usage fees because we believe decentralized governance tools are critical to the entire Web3 ecosystem. Since UMA is already running robust monitoring across all of our optimistic oracle integrations and can recycle the bonds posted, the additional costs associated with these services are negligible and it is sustainable to continue providing this service for DAOs. If any changes were to be made in the future, we are committed to having existing DAOs not face any changes (aka be “grandfathered in”).</p>
+<h3><a name="benefits-5" class="anchor" href="https://gov.gitcoin.co#benefits-5"></a>Benefits</h3>
+<p>The benefits of Gitcoin adopting oSnap are:</p>
+<ul>
+<li>
+<p>Adding oSnap removes the unnecessary, administrative step of an onchain Tally vote when releasing funds from Gitcoin’s treasury saving Gitcoin DAO voters time and gas fees.</p>
+</li>
+<li>
+<p>Transaction payloads included in proposals that are approved by voters are trustlessly and permissionlessly executed which increases transparency and decentralization.</p>
+</li>
+<li>
+<p>Automatic transaction execution by UMA bots is faster than waiting for multi-sig signers along with the bot paying the gas costs for execution.</p>
+</li>
+<li>
+<p>The UMA team is continuously making frontend improvements as per user feedback and improving open source monitoring infrastructure for oSnap.</p>
+</li>
+</ul>
+<p>UMA has also focused significant resources on monitoring efforts:</p>
+<ul>
+<li>
+<p>The same bot that proposes and executes transactions also automatically disputes inaccurate proposals if the following criteria are not met:</p>
+<ul>
+<li>The proposed onchain transactions match the transactions that were approved in the Snapshot proposal</li>
+<li>The Snapshot proposal passed with the minimum parameters specified (majority in favor, meets minimum voting period and quorum)</li>
+<li>The proposal follows the strategy specified in the Snapshot space.</li>
+</ul>
+</li>
+<li>
+<p>Proposals are included in the UMA Oracle UI (<a href="https://oracle.uma.xyz/" rel="noopener nofollow ugc">https://oracle.uma.xyz/</a>) which is the same interface used by disputers verifying and disputing for other third-party integrations (Polymarket, Sherlock, Cozy, and other oSnap integrations).</p>
+</li>
+<li>
+<p>UMA sponsors a verification program, that pays UMA community members to verify all optimistic oracle assertions So when any transactions are proposed through oSnap, a Discord ticket is automatically created and an experienced verifier from the UMA community completes a multi-step verification process that focuses on areas such as the transaction payload matching the intent of the proposal, verifies transactions do not include interactions with malicious contracts, etc.</p>
+</li>
+</ul>
+<h3><a name="drawbacks-6" class="anchor" href="https://gov.gitcoin.co#drawbacks-6"></a>Drawbacks</h3>
+<p>While oSnap has been audited by Open Zeppelin, as with any system, there may be unforeseen vulnerabilities.</p>
+<h3><a name="vote-7" class="anchor" href="https://gov.gitcoin.co#vote-7"></a>Vote</h3>
+<p>For - Formalizes the community is “for” adding oSnap to Gitcoin.<br>
+Against - Formalizes the community is “against” adding oSnap to Gitcoin.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-adding-osnap-for-gitcoin-treasury-distributions/17263/1
+        Tue, 12 Dec 2023 17:12:49 +0000
+gov.gitcoin.co-post-17263-1
+[Proposal] Adding oSnap for Gitcoin treasury distributions
+      
+
+

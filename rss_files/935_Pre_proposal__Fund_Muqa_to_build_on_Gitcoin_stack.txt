@@ -1,0 +1,263 @@
+
+
+
+Pre-proposal: Fund Muqa to build on Gitcoin stack
+https://gov.gitcoin.co/t/pre-proposal-fund-muqa-to-build-on-gitcoin-stack/19047
+    # Pre-proposal: Fund Muqa to build on Gitcoin stack
+
+Hello Gitcoin,
+
+I am kindly asking you to review this pre-proposal, join the discussion and provide your sentiment for this temp check. Thank you to @RohitMalekar and @CoachJ for helping with this proposal.
+
+## Background
+Last summer, thanks to the Funding the Commons support and Gitcoin's funding, I started [working on a project](https://explorer-v1.gitcoin.co/#/round/42161/0x5aa255d5cae9b6ce0f2d9aee209cb02349b83731/65) which would get my home town, City of Split, to try out QF for one of their grant programs.
+
+Since then, I have done a lot on advancing the idea. From multiple meetings with various city officials, collecting the data on city's grants programs, analysing it, presenting at [UNDP](https://innovation.eurasia.undp.org/urban-transformation/) conference for cities, researching the needed tech stacks and potential integrations, to narrowing down the how and where we would use QF.
+
+Also, I applied for EF Next Billion with this project in mind. Not only the [project was selected](https://blog.ethereum.org/2024/06/24/next-billion-cohort4) as one of the very few, but it got additional funding for the purpose of building the app.
+
+## What are we building?
+Ethereum has a number of protocols and apps that are both mature enough and solve a need a city has. We are building an open-source app customised for cities, which will serve as an interface to the Ethereum ecosystem of apps and protocols. Premier example of these, and the first one we want to offer access to is Gitcoin.
+
+One of the most important things cities do, is allocating money for public goods. Whether they need direct grants, QF, retro funding or something else, they could and should use Allo protocol. We intend on running our grant programs on Allo protocol.
+
+Gitcoin has built Grants Stack for the purpose of providing an easy and powerful interface for using Allo protocol. While using Allo protocol is a non-brainer for us, for Grants Stack we have some obstacles to use it as-is. It comes with its own set of features which are not directly usable by cities in their interaction with non-web3-native citizens, while some features which are needed are missing. We want to use as much of Grants stack as possible, but we have yet to look deeper and decide how to do it.
+
+Here are some of the things we'll probably need to do differently:
+
+- we need to offer users an in-app non-custodial wallet with no need to manage private keys (we plan to use Cometh Connect for this)
+- we need to offer simple in-app onramp solution which works well with local banks, cards, currencies and KYC requirements.
+- we need to abstract away the cryptocurrency used, so that users who top up euros, see euro balance (which means we need to use euro stablecoin)
+- we need to make it in local language with local legal documents
+- we need to be able to support different types of grants than what is currently supported by Gitcoin. (Eg. citizens propose projects, but the city gets the money and executes)
+- we need to use city-specific tools and available data for sybil resistance, and possibly for KYC
+- we need to only show the rounds which a citizen can participate in
+- we might need to integrate a forum for discussions on the rounds
+- we might need to integrate an option for donors to vote on disbursement of funds after the execution
+- we might need to allow for documents submission
+- we might need to add additional types of fields in the submission forms
+
+
+## Where are we now?
+To advance [or help implement] this project I was recently selected as part of the Ethereum Foundation's Next Billion Fellowship Program.  With their advisory and financial support we will build a minimum viable app for the purpose of running one specific QF grant round in Split, Croatia. Unfortunately, this funding is limited and besides building the app for pilot, doesn't cover much more.
+
+Also, there are multiple grant programs with multiple grant rounds which we could run through the app as well. We could just run the pilot, or we could build such an MVP, which would be usable by any city or other institution to run local grant programs on Ethereum and Allo. We have already started talks with UNDP about this possibility. They work directly with more than 100 cities and national governments, and thourgh their network, we could reach more users quickly.
+
+## What do we expect from the pilot?
+The pilot will run in Split in September 2024. with a goal of at least 30 proposals and 1500 citizens donating (1% of population).
+
+These citizens will be onboarded on Ethereum and Gitcoin.
+
+## What do we expect to achieve with additional funding?
+### June 2024 - November 2024
+We will create an app and run a successful pilot in the city of Split during the fellowship (). We will do the necessary legal work, local marketing campaign, establish key partnerships, provide support for grant program managers, grantees and citizens, create a report and build a website to showcase the outcome.
+
+### December 2024 - May 2025
+We will run multiple rounds of different types during the 6 months following the pilot.
+Types of rounds:
+1. Municipal grant program
+2. Participatory budgeting
+3. Journalism funding on the national level
+We will onboard the first cohort of cities after the pilot. We will make necessary adjustments to the app.
+
+## What do we ask?
+### Supplement the funding for current development milestone
+We ask for funding to start working right away on incorporating Allo and Grants stack and preparing to run multiple rounds after the pilot on this infrastructure.
+
+### Extend the development runway to build more than prototype
+We ask for funding to extend our development runway from 3 to 9 months, where for each quarter (or more frequent if needed) we would set objective and relevant milestones.
+
+### Costs of operations, marketing, bizdev and legal
+We ask for funding to run local campaigns for rounds, for business development activities and for other costs there might be such as legal costs.
+
+# Conclusion
+Please provide your opinions and thoughts. Do you think this project should be funded by Gitcoin. If not, why not and can we change something to make it better fitting. If yes, please express your support.
+Sat, 29 Jun 2024 09:06:13 +0000
+📝 Citizen Grants
+
+
+Pre-proposal: Fund Muqa to build on Gitcoin stack
+tomislavmamic
+
+            <p>It’s very cool what you have done in Boulder! I hope to see more of such initiatives.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="19047">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>QF/funding is something that can legitimately trojan horse crypto into the mainstream (and also make ppls first interaction with crypto be receiving $$$ to pay their rent, as opposed to buying a speculative asset).</p>
+</blockquote>
+</aside>
+<p>I couldn’t agree more. A day will come when thousands of regular people will participate in funding and managing local public goods without even realising they are using blockchain. I believe this day is closer than we think. Also, I believe this use-case is the perfect candidate for non-speculative first use of Ethereum for masses.</p>
+<hr>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="19047">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>how much $$$ are you looking for?</p>
+</blockquote>
+</aside>
+<p>I wasn’t sure if this proposal is even eligible or would receive positive sentiment so I didn’t create any estimates yet. I’ll make an estimate in the coming days/week.</p>
+<p>I had some estimates before, but these need reviewing and updating. I’ll post asap.</p>
+<hr>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="19047">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>how much GMV will this generate?</p>
+</blockquote>
+</aside>
+<p>For the pilot itself, I am expecting up to $100k. But in the long run, we are entering potentially the biggest opportunity, as noted <a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/6">in this comment</a> by <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> :</p>
+<aside class="quote no-group" data-username="ccerv1" data-post="6" data-topic="16697">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ccerv1/48/6966_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697/6">How might we scale Gitcoin's Impact from $50mm GMV to $500m GMV? <img width="20" height="20" src="https://gov.gitcoin.co/images/emoji/twitter/chart_with_upwards_trend.png?v=12" title="chart_with_upwards_trend" loading="lazy" alt="chart_with_upwards_trend" class="emoji"></a></div>
+<blockquote>
+<p>$500M GMV is a good target but still a drop in the bucket relative to legacy PGF. It’s how much the country of Chad <a href="https://www.theglobaleconomy.com/rankings/government_spending_dollars/" rel="noopener nofollow ugc">currently </a> allocates to PGF.</p>
+</blockquote>
+</aside>
+<p>What is also important to note is the <a href="https://gov.gitcoin.co/t/how-might-we-scale-gitcoins-impact-from-50mm-gmv-to-500m-gmv/16697">type of the opportunity</a>. These are recurring + legitimate + deep wells of funding.</p>
+<hr>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="19047">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>do you have a lo fi prototype of what you are building?</p>
+</blockquote>
+</aside>
+<p>Not yet. But we will have in a few weeks. The work done so far was mostly research and BD. We are just starting the work on actual application.</p>
+<hr>
+<p>We will definitely use Allo Starter Kit, but also other Gitcoin’s products as much as possible.</p>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-fund-muqa-to-build-on-gitcoin-stack/19047/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-fund-muqa-to-build-on-gitcoin-stack/19047/4
+        Fri, 28 Jun 2024 20:09:26 +0000
+gov.gitcoin.co-post-19047-4
+Pre-proposal: Fund Muqa to build on Gitcoin stack
+      
+
+Pre-proposal: Fund Muqa to build on Gitcoin stack
+carlb
+
+            <p>Really cool idea Tomo!</p>
+<p>I love the ideas for reduction friction in the UX by using non-custodial wallets, in-app onramps and KYC.</p>
+<p>Like <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> mentions, Allo Starter Kit could be leveraged to help you with interacting with Allo Protocol and Indexer.</p>
+<p>Allo Starter Kit is at its core:</p>
+<ul>
+<li>An SDK to communicate with Allo2 and Grants Stack Indexer. Each of the method is wrapped in a ReactQuery hook to simplify frontend development.</li>
+<li>A collection of building blocks and components for discovering rounds, projects, applications, details about them, creating rounds, registering projects etc.</li>
+<li>Flexible and pick &amp; choose what you need</li>
+<li>Extensible (extend create round form component with functionality required by the custom Allo Strategy)</li>
+</ul>
+<p>We currently have a Web3Provider using RainbowKit but it should be trivial to create a custom one for Cometh Connect. (There’s also a way to pass a custom sendTransaction function to the ApiProvider)</p>
+<p>Here’s how I see it being leveraged for your build:</p>
+<ul>
+<li>A custom Allo2 Strategy that handles the custom logic of citizens and payouts to city (+ euro stablecoin)</li>
+<li>A Next.js app using AlloStarterKit to query Grants Stack (<a href="https://grants-stack-indexer-v2.gitcoin.co/graphiql" class="inline-onebox" rel="noopener nofollow ugc">PostGraphile GraphiQL</a>) and interact with Allo2</li>
+<li>Your own custom logic for Onramp, KYC, city-specific tools, forum, documents,translations, etc</li>
+<li>“Querying rounds which a citizen can participate”. This might not be available in the GrantsStack Indexer so you would need to query the round contracts directly (can be done from a server-side endpoint to cache responses)</li>
+<li>Custom components for voting after execution</li>
+<li>AlloStarterKit Strategy Extension for additional fields in the submission forms (Or Custom Components that call Allo2 via AlloKit)</li>
+</ul>
+<p>AlloStarterKit is still in alpha so some functionality might not be implemented yet in the links below:</p>
+<p>Links:</p>
+<ul>
+<li>Github - <a href="https://github.com/gitcoinco/allo-starter-kit" class="inline-onebox" rel="noopener nofollow ugc">GitHub - gitcoinco/allo-starter-kit</a></li>
+<li>Storybook - <a href="https://allo-starter-kit-storybook.vercel.app" rel="noopener nofollow ugc">https://allo-starter-kit-storybook.vercel.app</a></li>
+<li>Demo App - <a href="https://allo-starter-kit-demo.vercel.app" rel="noopener nofollow ugc">https://allo-starter-kit-demo.vercel.app</a></li>
+</ul>
+<p>Happy to answer any questions!</p>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-fund-muqa-to-build-on-gitcoin-stack/19047/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-fund-muqa-to-build-on-gitcoin-stack/19047/3
+        Fri, 28 Jun 2024 07:48:12 +0000
+gov.gitcoin.co-post-19047-3
+Pre-proposal: Fund Muqa to build on Gitcoin stack
+      
+
+Pre-proposal: Fund Muqa to build on Gitcoin stack
+owocki
+
+            <p>seems interesting!  we ran a QF pilot in boulder CO back in 2020 [<a href="https://twitter.com/dtstimulus">ref</a>]…</p>
+<p>and i think that QF/funding is something that can legitimately trojan horse crypto into the mainstream (and also make ppls first interaction with crypto be receiving $$$ to pay their rent, as opposed to buying a speculative asset).</p>
+<ol>
+<li>how much $$$ are you looking for?</li>
+<li>how much GMV will this generate?</li>
+<li>do you have a lo fi prototype of what you are building?</li>
+</ol>
+<p>i wonder if this is something that could leverage <a href="https://github.com/gitcoinco/allo-starter-kit">allo starter kit</a> to reduce the build time! <a class="mention" href="https://gov.gitcoin.co/u/carlb">@carlb</a></p>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-fund-muqa-to-build-on-gitcoin-stack/19047/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-fund-muqa-to-build-on-gitcoin-stack/19047/2
+        Thu, 27 Jun 2024 17:36:05 +0000
+gov.gitcoin.co-post-19047-2
+Pre-proposal: Fund Muqa to build on Gitcoin stack
+      
+
+Pre-proposal: Fund Muqa to build on Gitcoin stack
+tomislavmamic
+
+            <h1><a name="pre-proposal-fund-muqa-to-build-on-gitcoin-stack-1" class="anchor" href="https://gov.gitcoin.co#pre-proposal-fund-muqa-to-build-on-gitcoin-stack-1"></a>Pre-proposal: Fund Muqa to build on Gitcoin stack</h1>
+<p>Hello Gitcoin,</p>
+<p>I am kindly asking you to review this pre-proposal, join the discussion and provide your sentiment for this temp check. Thank you to <span class="mention">@RohitMalekar</span> and <span class="mention">@CoachJ</span> for helping with this proposal.</p>
+<h2><a name="background-2" class="anchor" href="https://gov.gitcoin.co#background-2"></a>Background</h2>
+<p>Last summer, thanks to the Funding the Commons support and Gitcoin’s funding, I started <a href="https://explorer-v1.gitcoin.co/#/round/42161/0x5aa255d5cae9b6ce0f2d9aee209cb02349b83731/65" rel="noopener nofollow ugc">working on a project</a> which would get my home town, City of Split, to try out QF for one of their grant programs.</p>
+<p>Since then, I have done a lot on advancing the idea. From multiple meetings with various city officials, collecting the data on city’s grants programs, analysing it, presenting at <a href="https://innovation.eurasia.undp.org/urban-transformation/" rel="noopener nofollow ugc">UNDP</a> conference for cities, researching the needed tech stacks and potential integrations, to narrowing down the how and where we would use QF.</p>
+<p>Also, I applied for EF Next Billion with this project in mind. Not only the <a href="https://blog.ethereum.org/2024/06/24/next-billion-cohort4" rel="noopener nofollow ugc">project was selected</a> as one of the very few, but it got additional funding for the purpose of building the app.</p>
+<h2><a name="what-are-we-building-3" class="anchor" href="https://gov.gitcoin.co#what-are-we-building-3"></a>What are we building?</h2>
+<p>Ethereum has a number of protocols and apps that are both mature enough and solve a need a city has. We are building an open-source app customised for cities, which will serve as an interface to the Ethereum ecosystem of apps and protocols. Premier example of these, and the first one we want to offer access to is Gitcoin.</p>
+<p>One of the most important things cities do, is allocating money for public goods. Whether they need direct grants, QF, retro funding or something else, they could and should use Allo protocol. We intend on running our grant programs on Allo protocol.</p>
+<p>Gitcoin has built Grants Stack for the purpose of providing an easy and powerful interface for using Allo protocol. While using Allo protocol is a non-brainer for us, for Grants Stack we have some obstacles to use it as-is. It comes with its own set of features which are not directly usable by cities in their interaction with non-web3-native citizens, while some features which are needed are missing. We want to use as much of Grants stack as possible, but we have yet to look deeper and decide how to do it.</p>
+<p>Here are some of the things we’ll probably need to do differently:</p>
+<ul>
+<li>we need to offer users an in-app non-custodial wallet with no need to manage private keys (we plan to use Cometh Connect for this)</li>
+<li>we need to offer simple in-app onramp solution which works well with local banks, cards, currencies and KYC requirements.</li>
+<li>we need to abstract away the cryptocurrency used, so that users who top up euros, see euro balance (which means we need to use euro stablecoin)</li>
+<li>we need to make it in local language with local legal documents</li>
+<li>we need to be able to support different types of grants than what is currently supported by Gitcoin. (Eg. citizens propose projects, but the city gets the money and executes)</li>
+<li>we need to use city-specific tools and available data for sybil resistance, and possibly for KYC</li>
+<li>we need to only show the rounds which a citizen can participate in</li>
+<li>we might need to integrate a forum for discussions on the rounds</li>
+<li>we might need to integrate an option for donors to vote on disbursement of funds after the execution</li>
+<li>we might need to allow for documents submission</li>
+<li>we might need to add additional types of fields in the submission forms</li>
+</ul>
+<h2><a name="where-are-we-now-4" class="anchor" href="https://gov.gitcoin.co#where-are-we-now-4"></a>Where are we now?</h2>
+<p>To advance [or help implement] this project I was recently selected as part of the Ethereum Foundation’s Next Billion Fellowship Program.  With their advisory and financial support we will build a minimum viable app for the purpose of running one specific QF grant round in Split, Croatia. Unfortunately, this funding is limited and besides building the app for pilot, doesn’t cover much more.</p>
+<p>Also, there are multiple grant programs with multiple grant rounds which we could run through the app as well. We could just run the pilot, or we could build such an MVP, which would be usable by any city or other institution to run local grant programs on Ethereum and Allo. We have already started talks with UNDP about this possibility. They work directly with more than 100 cities and national governments, and thourgh their network, we could reach more users quickly.</p>
+<h2><a name="what-do-we-expect-from-the-pilot-5" class="anchor" href="https://gov.gitcoin.co#what-do-we-expect-from-the-pilot-5"></a>What do we expect from the pilot?</h2>
+<p>The pilot will run in Split in September 2024. with a goal of at least 30 proposals and 1500 citizens donating (1% of population).</p>
+<p>These citizens will be onboarded on Ethereum and Gitcoin.</p>
+<h2><a name="what-do-we-expect-to-achieve-with-additional-funding-6" class="anchor" href="https://gov.gitcoin.co#what-do-we-expect-to-achieve-with-additional-funding-6"></a>What do we expect to achieve with additional funding?</h2>
+<h3><a name="june-2024-november-2024-7" class="anchor" href="https://gov.gitcoin.co#june-2024-november-2024-7"></a>June 2024 - November 2024</h3>
+<p>We will create an app and run a successful pilot in the city of Split during the fellowship (). We will do the necessary legal work, local marketing campaign, establish key partnerships, provide support for grant program managers, grantees and citizens, create a report and build a website to showcase the outcome.</p>
+<h3><a name="december-2024-may-2025-8" class="anchor" href="https://gov.gitcoin.co#december-2024-may-2025-8"></a>December 2024 - May 2025</h3>
+<p>We will run multiple rounds of different types during the 6 months following the pilot.<br>
+Types of rounds:</p>
+<ol>
+<li>Municipal grant program</li>
+<li>Participatory budgeting</li>
+<li>Journalism funding on the national level<br>
+We will onboard the first cohort of cities after the pilot. We will make necessary adjustments to the app.</li>
+</ol>
+<h2><a name="what-do-we-ask-9" class="anchor" href="https://gov.gitcoin.co#what-do-we-ask-9"></a>What do we ask?</h2>
+<h3><a name="supplement-the-funding-for-current-development-milestone-10" class="anchor" href="https://gov.gitcoin.co#supplement-the-funding-for-current-development-milestone-10"></a>Supplement the funding for current development milestone</h3>
+<p>We ask for funding to start working right away on incorporating Allo and Grants stack and preparing to run multiple rounds after the pilot on this infrastructure.</p>
+<h3><a name="extend-the-development-runway-to-build-more-than-prototype-11" class="anchor" href="https://gov.gitcoin.co#extend-the-development-runway-to-build-more-than-prototype-11"></a>Extend the development runway to build more than prototype</h3>
+<p>We ask for funding to extend our development runway from 3 to 9 months, where for each quarter (or more frequent if needed) we would set objective and relevant milestones.</p>
+<h3><a name="costs-of-operations-marketing-bizdev-and-legal-12" class="anchor" href="https://gov.gitcoin.co#costs-of-operations-marketing-bizdev-and-legal-12"></a>Costs of operations, marketing, bizdev and legal</h3>
+<p>We ask for funding to run local campaigns for rounds, for business development activities and for other costs there might be such as legal costs.</p>
+<h1><a name="conclusion-13" class="anchor" href="https://gov.gitcoin.co#conclusion-13"></a>Conclusion</h1>
+<p>Please provide your opinions and thoughts. Do you think this project should be funded by Gitcoin. If not, why not and can we change something to make it better fitting. If yes, please express your support.</p>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-fund-muqa-to-build-on-gitcoin-stack/19047/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-fund-muqa-to-build-on-gitcoin-stack/19047/1
+        Thu, 27 Jun 2024 14:11:50 +0000
+gov.gitcoin.co-post-19047-1
+Pre-proposal: Fund Muqa to build on Gitcoin stack
+      
+
+

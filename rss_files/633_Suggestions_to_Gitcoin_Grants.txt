@@ -1,0 +1,128 @@
+
+
+
+Suggestions to Gitcoin Grants
+https://gov.gitcoin.co/t/suggestions-to-gitcoin-grants/10694
+    Hey Gitcoin team,
+I am Raphina from Primitives Lane. As an early user of Gitcoin, both myself and Primitives lane have witnessed your tremendous growth. We are very grateful for your dedication to the public good.
+However, in order to better fight for Moloch, we do have some suggestions :grinning:
+
+:heavy_heart_exclamation:**Statistics**
+
+:thinking:**1. Incorrect statistics** :face_with_thermometer:
+
+* a. We requested the grant statistics for analysis and received from Gitcoin after GR13. When we were checking the data, we found that one donor donate 1 ETH to us (txid: sync-tx:2acec8d4d31123ccc58c491989fadb6134667743c313d6d0d451b476fe2545ca), but we actually didn’t receive it, so we checked out on zkSync and found the donor only donate 1 DAI(https://zkscan.io/explorer/transactions/0x2acec8d4d31123ccc58c491989fadb6134667743c313d6d0d451b476fe2545ca) while the donor’s gitcoin profile page shows the 1 ETH transaction failed.
+**We still didn’t understand why the data was wrong and is there any other mistake that we didn’t find in the exported data form? Any possibility to help us figure out why?**
+
+
+**![|602x95](upload://tGBMJRVRdgZZYiX3b2WOGkJpUkA.jpeg)**
+
+* b. **There’s no donation status (success/failure) through the exported data form**, it is really confusing that the donation amount we calculated from the data form is not the same as what we actually received on gitcoin (since some transactions on the form actually failed.)
+
+:slightly_smiling_face:2. Traffic tacking:
+
+*  a. The creator can't see what collections the grant has been included in, and therefore can't analyze the related traffic sources. It would be better if owners of grants can get notifications when grants are added to collections.
+
+* b. There’s no notification of being included in the official list, so it is impossible to analyze the traffic sources related to the list. It would be great if owners of grants can get notifications when grants are included in the official list.
+
+* c. The creator can’t see the source of home page visits. If there is a traffic-related data analysis function, grants can better optimise the promotion methods and achieve better fundraising results.
+
+3. We are also interested in the cumulative amount of donations made by individual users and donation amount range distribution
+
+4. It would be great if there are richer and more refined data analysis dimensions, e.g, a,filter the donation data by Grants Round (rather than date)
+
+
+:heavy_heart_exclamation:**User Experience**
+1. The banner at the top of the grant's homepage uses the logo uploaded by grant creator, and the thumbnail of the homepage sharing link only displays the middle square part of the banner, so for any banners that are not square, it will be cut rather than kept the full logo. Here is an example:
+**![|602x193](upload://Alr9QossKCCWgNLOARywtAQBVtG.png)**
+We suggest setting separate options for the logo（square like 500x500） and banner, meanwhile, using the logo for the thumbnail in the sharing link.
+
+2. According to [Fundraising Principles and Practice](https://onlinelibrary.wiley.com/doi/book/10.1002/9781119228974) written by Co-Director of the Institute for Sustainable Philanthropy[ Adrian Sargeant](https://www.linkedin.com/in/adriansargeant/?originalSubdomain=uk), **donors tend to donate in reference to other donors' amounts.** So it would be better to set suggestions for donation amounts, perhaps by displaying objective donation data, or by setting a few recommended donation amounts for the grants by creators themselves. There are also some best practices like on Patreon and Wechat Official Account, people can donate easily by just clicking the suggestion amount button.
+**![|602x547](upload://haxBkmthbw0phOGNr1qzpK25MQg.jpeg)**
+
+3. For now, it seems that the exported data on donations is according to users. What if someone has multiple accounts?
+
+
+
+**Not sure which category the thread should be posted in, please let me know if this is not the correct sub-category and I would move it to the correct one, thanks!*
+Thu, 26 May 2022 20:33:46 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Suggestions to Gitcoin Grants
+nategosselin
+
+            <p>Hey Raphina, thanks for taking the time to provide such detailed feedback! I’m on the product team for Grants and wanted to share some thoughts back.</p>
+<p><strong>Re: the incorrect statistics</strong> for that specific transaction, I’m not entirely sure what happened — and I’m sorry for the confusion! I’m going to look into this, but do you mind dropping an email to <a href="mailto:support@gitcoin.co">support@gitcoin.co</a> so we have your email and can work through it with you directly?</p>
+<p><strong>Re: the rest of your suggestions</strong>, this is all incredibly helpful feedback. We’re in the process of revamping our Grants software product through the <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Grants 2.0 protocol</a>, which <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> also <a href="https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711">wrote about this week</a>. A big design consideration for this initiative is data availability, and your suggestions are super useful inputs to that work. Right now the teams are working on laying the foundation of the protocol (you can see weekly progress on the gov forum — <a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-23/10679">here’s this week’s</a>) but as we get further into development this summer we’ll start to turn our attention to things like this.</p>
+<p>Thanks again, and feel free to reach out with any questions!</p>
+          <p><a href="https://gov.gitcoin.co/t/suggestions-to-gitcoin-grants/10694/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/suggestions-to-gitcoin-grants/10694/2
+        Thu, 26 May 2022 20:33:46 +0000
+gov.gitcoin.co-post-10694-2
+Suggestions to Gitcoin Grants
+      
+
+Suggestions to Gitcoin Grants
+Raphina
+
+            <p>Hey Gitcoin team,<br>
+I am Raphina from Primitives Lane. As an early user of Gitcoin, both myself and Primitives lane have witnessed your tremendous growth. We are very grateful for your dedication to the public good.<br>
+However, in order to better fight for Moloch, we do have some suggestions <img src="https://emoji.discourse-cdn.com/twitter/grinning.png?v=12" title=":grinning:" class="emoji" alt=":grinning:" loading="lazy" width="20" height="20"></p>
+<p><img src="https://emoji.discourse-cdn.com/twitter/heavy_heart_exclamation.png?v=12" title=":heavy_heart_exclamation:" class="emoji only-emoji" alt=":heavy_heart_exclamation:" loading="lazy" width="20" height="20"><strong>Statistics</strong></p>
+<p><img src="https://emoji.discourse-cdn.com/twitter/thinking.png?v=12" title=":thinking:" class="emoji only-emoji" alt=":thinking:" loading="lazy" width="20" height="20"><strong>1. Incorrect statistics</strong> <img src="https://emoji.discourse-cdn.com/twitter/face_with_thermometer.png?v=12" title=":face_with_thermometer:" class="emoji" alt=":face_with_thermometer:" loading="lazy" width="20" height="20"></p>
+<ul>
+<li>a. We requested the grant statistics for analysis and received from Gitcoin after GR13. When we were checking the data, we found that one donor donate 1 ETH to us (txid: sync-tx:2acec8d4d31123ccc58c491989fadb6134667743c313d6d0d451b476fe2545ca), but we actually didn’t receive it, so we checked out on zkSync and found the donor only donate 1 DAI(<a href="https://zkscan.io/explorer/transactions/0x2acec8d4d31123ccc58c491989fadb6134667743c313d6d0d451b476fe2545ca" class="inline-onebox" rel="noopener nofollow ugc">Explore zkSync L2 Blockchain | zkSync Block Explorer</a>) while the donor’s gitcoin profile page shows the 1 ETH transaction failed.<br>
+<strong>We still didn’t understand why the data was wrong and is there any other mistake that we didn’t find in the exported data form? Any possibility to help us figure out why?</strong>
+</li>
+</ul>
+<p><strong></strong></p><div class="lightbox-wrapper"><strong><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d01016fe37db9ffb8e0b54c4070cb71ba26d8be4.jpeg" data-download-href="/uploads/short-url/tGBMJRVRdgZZYiX3b2WOGkJpUkA.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/d/d01016fe37db9ffb8e0b54c4070cb71ba26d8be4_2_602x95.jpeg" alt="" data-base62-sha1="tGBMJRVRdgZZYiX3b2WOGkJpUkA" width="602" height="95" srcset="/uploads/db4391/optimized/2X/d/d01016fe37db9ffb8e0b54c4070cb71ba26d8be4_2_602x95.jpeg, /uploads/db4391/optimized/2X/d/d01016fe37db9ffb8e0b54c4070cb71ba26d8be4_2_903x142.jpeg 1.5x, /uploads/db4391/optimized/2X/d/d01016fe37db9ffb8e0b54c4070cb71ba26d8be4_2_1204x190.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/d/d01016fe37db9ffb8e0b54c4070cb71ba26d8be4_2_10x10.png"></a></strong></div><p></p>
+<ul>
+<li>b. <strong>There’s no donation status (success/failure) through the exported data form</strong>, it is really confusing that the donation amount we calculated from the data form is not the same as what we actually received on gitcoin (since some transactions on the form actually failed.)</li>
+</ul>
+<p><img src="https://emoji.discourse-cdn.com/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20">2. Traffic tacking:</p>
+<ul>
+<li>
+<p>a. The creator can’t see what collections the grant has been included in, and therefore can’t analyze the related traffic sources. It would be better if owners of grants can get notifications when grants are added to collections.</p>
+</li>
+<li>
+<p>b. There’s no notification of being included in the official list, so it is impossible to analyze the traffic sources related to the list. It would be great if owners of grants can get notifications when grants are included in the official list.</p>
+</li>
+<li>
+<p>c. The creator can’t see the source of home page visits. If there is a traffic-related data analysis function, grants can better optimise the promotion methods and achieve better fundraising results.</p>
+</li>
+</ul>
+<ol start="3">
+<li>
+<p>We are also interested in the cumulative amount of donations made by individual users and donation amount range distribution</p>
+</li>
+<li>
+<p>It would be great if there are richer and more refined data analysis dimensions, e.g, a,filter the donation data by Grants Round (rather than date)</p>
+</li>
+</ol>
+<p><img src="https://emoji.discourse-cdn.com/twitter/heavy_heart_exclamation.png?v=12" title=":heavy_heart_exclamation:" class="emoji only-emoji" alt=":heavy_heart_exclamation:" loading="lazy" width="20" height="20"><strong>User Experience</strong></p>
+<ol>
+<li>
+<p>The banner at the top of the grant’s homepage uses the logo uploaded by grant creator, and the thumbnail of the homepage sharing link only displays the middle square part of the banner, so for any banners that are not square, it will be cut rather than kept the full logo. Here is an example:<br>
+<strong></strong></p><div class="lightbox-wrapper"><strong><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/febaa4ab602939c6fce5945d306b2a15af686aec.png" data-download-href="/uploads/short-url/Alr9QossKCCWgNLOARywtAQBVtG.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/f/febaa4ab602939c6fce5945d306b2a15af686aec_2_602x193.png" alt="" data-base62-sha1="Alr9QossKCCWgNLOARywtAQBVtG" width="602" height="193" srcset="/uploads/db4391/optimized/2X/f/febaa4ab602939c6fce5945d306b2a15af686aec_2_602x193.png, /uploads/db4391/optimized/2X/f/febaa4ab602939c6fce5945d306b2a15af686aec_2_903x289.png 1.5x, /uploads/db4391/original/2X/f/febaa4ab602939c6fce5945d306b2a15af686aec.png 2x" data-small-upload="/uploads/db4391/optimized/2X/f/febaa4ab602939c6fce5945d306b2a15af686aec_2_10x10.png"></a></strong></div><br>
+We suggest setting separate options for the logo（square like 500x500） and banner, meanwhile, using the logo for the thumbnail in the sharing link.<p></p>
+</li>
+<li>
+<p>According to <a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9781119228974" rel="noopener nofollow ugc">Fundraising Principles and Practice</a> written by Co-Director of the Institute for Sustainable Philanthropy<a href="https://www.linkedin.com/in/adriansargeant/?originalSubdomain=uk" rel="noopener nofollow ugc"> Adrian Sargeant</a>, <strong>donors tend to donate in reference to other donors’ amounts.</strong> So it would be better to set suggestions for donation amounts, perhaps by displaying objective donation data, or by setting a few recommended donation amounts for the grants by creators themselves. There are also some best practices like on Patreon and Wechat Official Account, people can donate easily by just clicking the suggestion amount button.<br>
+<strong></strong></p><div class="lightbox-wrapper"><strong><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/78560626514cd9fbc3e294d76776f0adec247f60.jpeg" data-download-href="/uploads/short-url/haxBkmthbw0phOGNr1qzpK25MQg.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/7/78560626514cd9fbc3e294d76776f0adec247f60_2_550x500.jpeg" alt="" data-base62-sha1="haxBkmthbw0phOGNr1qzpK25MQg" width="550" height="500" srcset="/uploads/db4391/optimized/2X/7/78560626514cd9fbc3e294d76776f0adec247f60_2_550x500.jpeg, /uploads/db4391/optimized/2X/7/78560626514cd9fbc3e294d76776f0adec247f60_2_825x750.jpeg 1.5x, /uploads/db4391/original/2X/7/78560626514cd9fbc3e294d76776f0adec247f60.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/7/78560626514cd9fbc3e294d76776f0adec247f60_2_10x10.png"></a></strong></div><p></p>
+</li>
+<li>
+<p>For now, it seems that the exported data on donations is according to users. What if someone has multiple accounts?</p>
+</li>
+</ol>
+<p>*<em>Not sure which category the thread should be posted in, please let me know if this is not the correct sub-category and I would move it to the correct one, thanks!</em></p>
+          <p><a href="https://gov.gitcoin.co/t/suggestions-to-gitcoin-grants/10694/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/suggestions-to-gitcoin-grants/10694/1
+        Tue, 24 May 2022 11:44:27 +0000
+gov.gitcoin.co-post-10694-1
+Suggestions to Gitcoin Grants
+      
+
+

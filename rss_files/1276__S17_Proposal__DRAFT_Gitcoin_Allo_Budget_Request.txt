@@ -1,0 +1,578 @@
+
+
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739
+    # Allo Protocol S17 Workstream Budget Proposal
+During Season 17, the GPC workstream (Gitcoin Product Collective) has decided to split into two workstreams: **Gitcoin Allo** which is focused on the continued development of our Grants protocol and stack, and **[Gitcoin Passport](https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-passport-budget-request/12727)** which is focused on our Passport protocol and stack. Splitting GPC into two workstreams will allow for a more “complete” team structure in the future.  This will allow for a more "complete" team structure in the future. @nategosselin and @kevin.olsen will be workstream leads for this workstream (h/t to @kyle for his assistance getting this initial draft up and running).
+
+## Essential Intents
+
+We are focused on a number of the Essential Intents. Specifically the following two:
+1) Protocol Adoption + Growth
+2) Financial Sustainability
+
+
+## TL;DR
+
+This season the Allo workstream will be focused on transitioning from alpha to beta, with Eth Denver as a key milestone and inflection point. At a high level, we will be focused on three key themes:
+
+1) **Finish Protocol v0** — finalize the payouts interface and build our first payout mechanism so that there is an end-to-end protocol flow
+2) **Engage the developer community** — with the foundational protocol complete, we will ramp up our DevRel efforts and work on getting external teams building on Allo
+3) **Productize QF on Grants Stack** — Enabling communities to run Quadratic Funding rounds is a major opportunity for protocol adoption and growth. We want to make running QF rounds to be truly self-serve for non-technical operators on Grants Strack. We received great feedback during our alpha rounds and will continue building solutions to that feedback this season. 
+
+Based on what we learned in Season 16, we recognize the need to continue being nimble with our development roadmap so that we can quickly adapt to the needs of the market. This season's roadmap will likely change month-to-month as we get feedback, so our objectives read more as high-priority user needs than concrete features.
+
+
+> 💡For more context regarding our vision, the current state of the workstream and more please refer to the [📄Workstream Notion Page](https://www.notion.so/gitcoin/Grants-Protocol-Round-Manager-b650b50c91d14e43adacae14f3f2bd53). This page has not been updated to reflect the new workstream structure at time of writing, but you can find details on our vision and what we are building towards. 
+
+## Amount
+
+Gitcoin Allo (GA) is requesting **$803,533** for S17. A breakdown of the budget can be found at the end.
+
+|Gitcoin Season|Season 15|Season 16|Season 17|
+|---|---|---|---|
+|Season Budget|$-- |$-- |$803,533|
+
+***1)** The amount of GTC requested and the value of the reserves will be adjusted based on the current market value at the time this proposal is moved to Tally using the lower of the current price or the 20 day moving average, whichever is lower.*
+
+
+
+# Objectives and Key Results
+
+
+## Milestone Report for the past Season
+
+
+**Legend**
+🟢 Success / completed / shipped
+🟡 Incomplete but will hit goal and/or priority changed for initial description
+🔴 Incomplete, will not hit goal (see description for reasons why)
+⚫️ Canceled (see description for reasons why)
+
+
+|Initiative/Project|Always-on|Key Results<br>|
+|---|---|---|
+|Round Operators can run a Quadratic Funding round on the protocol|NO|🟢 Ran 5 Alpha rounds (UNICEF, Fantom, 3 Gitcoin Alphas) + 2 simulated quadratic funding rounds| |
+|Round Operator can run a Quadratic Voting round on the protocol|NO|⚫️ The team did significant scoping and discovery but, in consultation with other workstreams, ultimately decided to deprioritize QV in favor of remaining focused on QF, Alpha round support, and payouts work  
+|Round Operator can execute payouts on the protocol|NO|🟡 The team originally planned to have this completed by Eth Denver, despite including it as a milestone on our S16 budget. We are still on track to build this by the launch in Denver. |  |
+|Donors can browse and assess the projects in a round|NO|🟢 All alpha rounds mentioned above used the Explorer front end designed for this experience. The Gitcoin Alpha rounds also included a first integration with Passport for Sybil Defense. | |
+|Project Reputation |NO|🔴 Our workstream had multiple S16 milestones that were effectively the same problem: enabling project reputation. The Grants Hub team spent significant time exploring the problem area of users bringing project reputation to other protocols, but ultimately learned that this was not an immediate need. Given these learnings, we've refocused on an Allo-specific funding use case for project reputation and will be working on that area in S17.
+
+
+## Objectives and Key Results
+As mentioned above, we are tracking three key themes for Season 17. Given the need to be nimble, we will primarily use a monthly roadmap for how we translate those themes into development work. In February we are focusing on three high-priority needs for launch (payouts, repo refactor, and application flow improvements). We will share an updated Season 17 roadmap in the coming weeks and update it on a monthly cadence as our plans crystallize.
+
+*Note: at this stage of development we have yet to establish baseline metrics for our products. We plan to establish our core metric portfolio and begin measuring baselines this season. Our goal is to transition to metrics-lead objectives in future seasons. For now, we have left metrics blank and instead focused on likely focus areas.*
+
+
+## List of S17 OKRs
+
+|Initiative/Project|Layer|Metrics|Likely Efforts|
+|---|---|---|---|
+|**Finish Protocol v0**<br>Complete the payouts interface so that end-to-end funding programs can run on Allo Protocol.|Protocol|- |- Finalize payouts interface<br> - Build bulk payout mechanism
+|**Engage the developer community**<br>Ramp up our DevRel efforts to begin getting developers building on the protocol.|Protocol|- |- Refactor repos into easy-to-use Allo repo<br>- Improve Documentation, Legibility, DX<br> - Partnership and Project Incubation (likely focused on allocation mechanisms + payouts)
+|**Productize QF on Grants Stack**<br>Enabling communities to run QF rounds is a major adoption and growth opportunity for our products. We want to remain laser-focused on the feedback we heard during the Alpha rounds and build a first-class QF grants exerpeince. |Stack + Protocol|- |- General iteration on Alpha round feedback<br>- Improve Application experience for Operators + Grantees<br> - Improve project review flow for Operators<br>- Improve and enrich the explorer experience for donors<br>- Enable new verified credentials so that projects can accrue reputation (including KYC)
+
+
+
+## Budget Breakdown
+We have broken the budget down by staffing, contracting, devrel, opex as we feel like this gives fairly granular details into where the funding will be going. 
+
+### View: USD per Category
+
+|Gitcoin Allo denoted in USD||||||
+|---|---|---|---|---|---|
+|Staffing||**2023.02**|**2023.03**|**2023.04**|**S17 Total**|
+||Core Contributors|181,201|180,868|180,868|542,937|
+||Leadership / Ops|34,865|34,865|34,865|104,596|
+|**Total Staffing**||**216,066**|**215,733**|**215,733**|**647,533**|
+|Contracting||||||
+||DevOps|12,000|12,000|12,000|36,000|
+|**Total Contracting**||**12,000**|**12,000**|**12,000**|**36,000**|
+|DevRel||||||
+||DevRel|15,000|15,000|15,000|45,000|
+||Hackathons & Bounties|5,000|5,000|5,000|15,000|
+|**Total DevRel**||**20,000**|**20,000**|**20,000**|**60,000**|
+|OpEx||||||
+||Saas Fees (AWS, Datadog, fleek, etc.)|20,000|20,000|20,000|60,000|
+|**Total OpEx**||**20,000**|**20,000**|**20,000**|**60,000**|
+|---|---|---|---|---|---|
+|**Total GPC Budgeted Spend**||**268,066**|**267,733**|**267,733**|**803,533**|
+|60 Day Reserves|||||**535,635**|
+|S16 Treasury Balance|||||645,628|
+|**Total S17 Request**|||||**693,540**|
+Fri, 17 Feb 2023 21:46:47 +0000
+📜 Proposals
+
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+michaelgreen06
+
+            <p>I am sharing a quick note about Allo’s S16 reserves here for full transparency so anyone can reference it in the future if it’s helpful. In our original S17 budget request (this request) we cited having $645,628 in reserves. When the S17 budget request went to snapshot we cited having $1,049,168 in reserves. As mentioned in our snapshot summary, the extra reserves are due to price increases from when the S16 budget was issued, absorbing the Moonshot Collective treasury, and strong diversification in S16.</p>
+<p>The main reason we didn’t catch the discrepancy in our actual reserves amount when posting our initial S17 budget request was because a large amount of our reserves were held in the foundation’s coinbase (CB) account at the time. We partner with the foundation to diversify our GTC into USDC to pay contributors primarily in USDC. We realized we forgot to include these funds held on CB when the foundation sent us all of our diversified funds when clearing our trading balance for S16.</p>
+<p>Another reason we have more reserves than expected is when we requested our S16 budget we assumed that we would have $0 in reserves from S15 due to the falling price of GTC at the time. When our S15 budget was issued we actually had ~$86.5k in USDC and 16k in GTC. Due to an oversight on our end we failed to update our budget request when it went to tally to reflect these reserves. This resulted in our workstream getting slightly overfunded for S16. I apologize for this oversight in calculating our S15 &amp; S16 reserve amounts.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/12
+        Fri, 17 Feb 2023 21:46:47 +0000
+gov.gitcoin.co-post-12739-12
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+linda
+
+            <p>I voted yes on this proposal given the assigned steward reviews and that this work is a core focus of the DAO.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/11
+        Thu, 16 Feb 2023 23:16:48 +0000
+gov.gitcoin.co-post-12739-11
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+annika
+
+            <p>I echo <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a>’s comments – to me, this is actually the most reasonable of all the budget requests this season.</p>
+<p>As with all workstreams, I think we should continue to seek opportunities for cost-cutting but given the scope of this team &amp; the fact that it’s all mission-critical work, I am supportive of the budget as described and will vote yes.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/10
+        Sat, 11 Feb 2023 03:07:27 +0000
+gov.gitcoin.co-post-12739-10
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+DisruptionJoe
+
+            <p>I am voting yes to this budget. Allo &amp; Grantstack products are the most important work we have. I would hope all stewards know this as well. Even when we need to pull in the reigns on some of the “nice to have” work, this work needs to be funded for there to be a Gitcoin.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/9
+        Fri, 10 Feb 2023 18:44:27 +0000
+gov.gitcoin.co-post-12739-9
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+kyle
+
+            <p>I thought I would chime in with support of the budget here. There are five distinct products being built by this team (Explorer, Manager, Builder, Allo and Project protocol) so the team size seems appropriate given the initiatives scale. I will be voting yes to this one.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/8
+        Fri, 10 Feb 2023 17:05:40 +0000
+gov.gitcoin.co-post-12739-8
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+kevin.olsen
+
+            <p>Thanks Griff.</p>
+<aside class="quote no-group" data-username="griff" data-post="6" data-topic="12739">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/griff/48/82_2.png" class="avatar"> griff:</div>
+<blockquote>
+<p>I am not excited about such a huge spend on passport and Allo this quarter, would prefer a slower ramp up of the reserves.</p>
+</blockquote>
+</aside>
+<p>The Allo budget carries over the GPC Reserves which are in excess of the standard 60 day request, you’ll see the total S17 request is less than the total budgeted spend as a result.</p>
+<aside class="quote no-group" data-username="griff" data-post="6" data-topic="12739">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/griff/48/82_2.png" class="avatar"> griff:</div>
+<blockquote>
+<p>That said I’m, in general, supportive of this proposal, but I want to ask every workstream… what would happen if this proposal didn’t pass?</p>
+</blockquote>
+</aside>
+<p>I just responded on the Passport budget, but somewhat similar outlook here on the Allo side.</p>
+<p>In the scenario where Passport is funded, and Allo is not, Allo would have 80% of the season funded from reserves. The choice would be to reduce spending by 20% to survive until S18 and put up another budget or spin down the workstream. It would be essential to receive direction from the Stewards and the rest of the DAO regarding the preferred path.</p>
+<p>As in my hypothetical that I explored in my response on the passport budget: if neither budget passes, we would be required to spin down the work pretty quickly. The DAO would need to help produce a contingency plan for this, either sourcing a small team for maintenance and operations, rebuilding a team for in-house development, or finding a new home for the products outside the DAO.</p>
+<p>Thanks for exploring the tougher topics here, and I hope that helps.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/7
+        Thu, 09 Feb 2023 17:27:53 +0000
+gov.gitcoin.co-post-12739-7
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+griff
+
+            <p>I am not excited about such a huge spend on passport and Allo this quarter, would prefer a slower ramp up of the reserves.</p>
+<p>That said I’m, in general, supportive of this proposal, but I want to ask every workstream… what would happen if this proposal didn’t pass?</p>
+<p>Not fear mongering, just a practical reality. This post clearly explains what “yes” looks like… What would “No” look like?</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/6
+        Wed, 08 Feb 2023 21:30:34 +0000
+gov.gitcoin.co-post-12739-6
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+lefterisjp
+
+            <p>Hey guys. For this gitcoin budget season I will be following a different approach. I am not happy with how many things have been going in gitcoin and the way budget reviews work so I will either be abstaining or voting No in most budget reviews.</p>
+<p>Despite the budget cuts I still think the DAO is burning too much money and it needs to become more lean.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/5
+        Wed, 08 Feb 2023 11:00:59 +0000
+gov.gitcoin.co-post-12739-5
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+bobjiang
+
+            <p>Excellent job, Nate!</p>
+<p>Firstly I support GA budget request, some questions -</p>
+<p>would we keep the team size or grow in next season?<br>
+would we list the team size currently (FT and PT)?<br>
+if possible, list the contributors’ name like GPC did.</p>
+<p>so as a steward I would know that we have xx team members, and we have a goal/vision for next season, and then we would achieve it or partially achieve it with the team.</p>
+<p>Actually the basis idea is, as a steward, I would know more details about team. (this is a black box for me now)</p>
+<p>from the vision and product view, it’s very clear.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/4
+        Wed, 08 Feb 2023 00:52:17 +0000
+gov.gitcoin.co-post-12739-4
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+michaelgreen06
+
+            <p>Looks good. I’m eager to see the allo team make progress on all of these items in S17</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/3
+        Mon, 06 Feb 2023 18:07:08 +0000
+gov.gitcoin.co-post-12739-3
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+shawn16400
+
+            <p>Heads up <a class="mention" href="https://gov.gitcoin.co/u/griff">@griff</a>  <a class="mention" href="https://gov.gitcoin.co/u/azeem">@azeem</a> <a class="mention" href="https://gov.gitcoin.co/u/farque65">@farque65</a> <a class="mention" href="https://gov.gitcoin.co/u/bobjiang">@bobjiang</a> and <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a><br>
+This is the second budget to review from GPC.</p>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/2
+        Wed, 01 Feb 2023 09:57:37 +0000
+gov.gitcoin.co-post-12739-2
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+nategosselin
+
+            <h1><a name="allo-protocol-s17-workstream-budget-proposal-1" class="anchor" href="https://gov.gitcoin.co#allo-protocol-s17-workstream-budget-proposal-1"></a>Allo Protocol S17 Workstream Budget Proposal</h1>
+<p>During Season 17, the GPC workstream (Gitcoin Product Collective) has decided to split into two workstreams: <strong>Gitcoin Allo</strong> which is focused on the continued development of our Grants protocol and stack, and <strong><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-passport-budget-request/12727">Gitcoin Passport</a></strong> which is focused on our Passport protocol and stack. Splitting GPC into two workstreams will allow for a more “complete” team structure in the future.  This will allow for a more “complete” team structure in the future. <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> and <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> will be workstream leads for this workstream (h/t to <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> for his assistance getting this initial draft up and running).</p>
+<h2><a name="essential-intents-2" class="anchor" href="https://gov.gitcoin.co#essential-intents-2"></a>Essential Intents</h2>
+<p>We are focused on a number of the Essential Intents. Specifically the following two:</p>
+<ol>
+<li>Protocol Adoption + Growth</li>
+<li>Financial Sustainability</li>
+</ol>
+<h2><a name="tldr-3" class="anchor" href="https://gov.gitcoin.co#tldr-3"></a>TL;DR</h2>
+<p>This season the Allo workstream will be focused on transitioning from alpha to beta, with Eth Denver as a key milestone and inflection point. At a high level, we will be focused on three key themes:</p>
+<ol>
+<li><strong>Finish Protocol v0</strong> — finalize the payouts interface and build our first payout mechanism so that there is an end-to-end protocol flow</li>
+<li><strong>Engage the developer community</strong> — with the foundational protocol complete, we will ramp up our DevRel efforts and work on getting external teams building on Allo</li>
+<li><strong>Productize QF on Grants Stack</strong> — Enabling communities to run Quadratic Funding rounds is a major opportunity for protocol adoption and growth. We want to make running QF rounds to be truly self-serve for non-technical operators on Grants Strack. We received great feedback during our alpha rounds and will continue building solutions to that feedback this season.</li>
+</ol>
+<p>Based on what we learned in Season 16, we recognize the need to continue being nimble with our development roadmap so that we can quickly adapt to the needs of the market. This season’s roadmap will likely change month-to-month as we get feedback, so our objectives read more as high-priority user needs than concrete features.</p>
+<blockquote>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/bulb.png?v=12" title=":bulb:" class="emoji" alt=":bulb:" loading="lazy" width="20" height="20">For more context regarding our vision, the current state of the workstream and more please refer to the <a href="https://www.notion.so/gitcoin/Grants-Protocol-Round-Manager-b650b50c91d14e43adacae14f3f2bd53" rel="noopener nofollow ugc"><img src="https://gov.gitcoin.co/images/emoji/twitter/page_facing_up.png?v=12" title=":page_facing_up:" class="emoji" alt=":page_facing_up:" loading="lazy" width="20" height="20">Workstream Notion Page</a>. This page has not been updated to reflect the new workstream structure at time of writing, but you can find details on our vision and what we are building towards.</p>
+</blockquote>
+<h2><a name="amount-4" class="anchor" href="https://gov.gitcoin.co#amount-4"></a>Amount</h2>
+<p>Gitcoin Allo (GA) is requesting <strong>$803,533</strong> for S17. A breakdown of the budget can be found at the end.</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Gitcoin Season</th>
+<th>Season 15</th>
+<th>Season 16</th>
+<th>Season 17</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Season Budget</td>
+<td>$–</td>
+<td>$–</td>
+<td>$803,533</td>
+</tr>
+</tbody>
+</table>
+</div><p><em><strong>1)</strong> The amount of GTC requested and the value of the reserves will be adjusted based on the current market value at the time this proposal is moved to Tally using the lower of the current price or the 20 day moving average, whichever is lower.</em></p>
+<h1><a name="objectives-and-key-results-5" class="anchor" href="https://gov.gitcoin.co#objectives-and-key-results-5"></a>Objectives and Key Results</h1>
+<h2><a name="milestone-report-for-the-past-season-6" class="anchor" href="https://gov.gitcoin.co#milestone-report-for-the-past-season-6"></a>Milestone Report for the past Season</h2>
+<p><strong>Legend</strong><br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Success / completed / shipped<br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> Incomplete but will hit goal and/or priority changed for initial description<br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/red_circle.png?v=12" title=":red_circle:" class="emoji" alt=":red_circle:" loading="lazy" width="20" height="20"> Incomplete, will not hit goal (see description for reasons why)<br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/black_circle.png?v=12" title=":black_circle:" class="emoji" alt=":black_circle:" loading="lazy" width="20" height="20"> Canceled (see description for reasons why)</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Initiative/Project</th>
+<th>Always-on</th>
+<th>Key Results<br></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Round Operators can run a Quadratic Funding round on the protocol</td>
+<td>NO</td>
+<td><img src="https://gov.gitcoin.co/images/emoji/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Ran 5 Alpha rounds (UNICEF, Fantom, 3 Gitcoin Alphas) + 2 simulated quadratic funding rounds</td>
+</tr>
+<tr>
+<td>Round Operator can run a Quadratic Voting round on the protocol</td>
+<td>NO</td>
+<td><img src="https://gov.gitcoin.co/images/emoji/twitter/black_circle.png?v=12" title=":black_circle:" class="emoji" alt=":black_circle:" loading="lazy" width="20" height="20"> The team did significant scoping and discovery but, in consultation with other workstreams, ultimately decided to deprioritize QV in favor of remaining focused on QF, Alpha round support, and payouts work</td>
+</tr>
+<tr>
+<td>Round Operator can execute payouts on the protocol</td>
+<td>NO</td>
+<td><img src="https://gov.gitcoin.co/images/emoji/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> The team originally planned to have this completed by Eth Denver, despite including it as a milestone on our S16 budget. We are still on track to build this by the launch in Denver.</td>
+</tr>
+<tr>
+<td>Donors can browse and assess the projects in a round</td>
+<td>NO</td>
+<td><img src="https://gov.gitcoin.co/images/emoji/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> All alpha rounds mentioned above used the Explorer front end designed for this experience. The Gitcoin Alpha rounds also included a first integration with Passport for Sybil Defense.</td>
+</tr>
+<tr>
+<td>Project Reputation</td>
+<td>NO</td>
+<td><img src="https://gov.gitcoin.co/images/emoji/twitter/red_circle.png?v=12" title=":red_circle:" class="emoji" alt=":red_circle:" loading="lazy" width="20" height="20"> Our workstream had multiple S16 milestones that were effectively the same problem: enabling project reputation. The Grants Hub team spent significant time exploring the problem area of users bringing project reputation to other protocols, but ultimately learned that this was not an immediate need. Given these learnings, we’ve refocused on an Allo-specific funding use case for project reputation and will be working on that area in S17.</td>
+</tr>
+</tbody>
+</table>
+</div><h2><a name="objectives-and-key-results-7" class="anchor" href="https://gov.gitcoin.co#objectives-and-key-results-7"></a>Objectives and Key Results</h2>
+<p>As mentioned above, we are tracking three key themes for Season 17. Given the need to be nimble, we will primarily use a monthly roadmap for how we translate those themes into development work. In February we are focusing on three high-priority needs for launch (payouts, repo refactor, and application flow improvements). We will share an updated Season 17 roadmap in the coming weeks and update it on a monthly cadence as our plans crystallize.</p>
+<p><em>Note: at this stage of development we have yet to establish baseline metrics for our products. We plan to establish our core metric portfolio and begin measuring baselines this season. Our goal is to transition to metrics-lead objectives in future seasons. For now, we have left metrics blank and instead focused on likely focus areas.</em></p>
+<h2><a name="list-of-s17-okrs-8" class="anchor" href="https://gov.gitcoin.co#list-of-s17-okrs-8"></a>List of S17 OKRs</h2>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Initiative/Project</th>
+<th>Layer</th>
+<th>Metrics</th>
+<th>Likely Efforts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Finish Protocol v0</strong><br>Complete the payouts interface so that end-to-end funding programs can run on Allo Protocol.</td>
+<td>Protocol</td>
+<td>-</td>
+<td>- Finalize payouts interface<br> - Build bulk payout mechanism</td>
+</tr>
+<tr>
+<td><strong>Engage the developer community</strong><br>Ramp up our DevRel efforts to begin getting developers building on the protocol.</td>
+<td>Protocol</td>
+<td>-</td>
+<td>- Refactor repos into easy-to-use Allo repo<br>- Improve Documentation, Legibility, DX<br> - Partnership and Project Incubation (likely focused on allocation mechanisms + payouts)</td>
+</tr>
+<tr>
+<td><strong>Productize QF on Grants Stack</strong><br>Enabling communities to run QF rounds is a major adoption and growth opportunity for our products. We want to remain laser-focused on the feedback we heard during the Alpha rounds and build a first-class QF grants exerpeince.</td>
+<td>Stack + Protocol</td>
+<td>-</td>
+<td>- General iteration on Alpha round feedback<br>- Improve Application experience for Operators + Grantees<br> - Improve project review flow for Operators<br>- Improve and enrich the explorer experience for donors<br>- Enable new verified credentials so that projects can accrue reputation (including KYC)</td>
+</tr>
+</tbody>
+</table>
+</div><h2><a name="budget-breakdown-9" class="anchor" href="https://gov.gitcoin.co#budget-breakdown-9"></a>Budget Breakdown</h2>
+<p>We have broken the budget down by staffing, contracting, devrel, opex as we feel like this gives fairly granular details into where the funding will be going.</p>
+<h3><a name="view-usd-per-category-10" class="anchor" href="https://gov.gitcoin.co#view-usd-per-category-10"></a>View: USD per Category</h3>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Gitcoin Allo denoted in USD</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Staffing</td>
+<td></td>
+<td><strong>2023.02</strong></td>
+<td><strong>2023.03</strong></td>
+<td><strong>2023.04</strong></td>
+<td><strong>S17 Total</strong></td>
+</tr>
+<tr>
+<td></td>
+<td>Core Contributors</td>
+<td>181,201</td>
+<td>180,868</td>
+<td>180,868</td>
+<td>542,937</td>
+</tr>
+<tr>
+<td></td>
+<td>Leadership / Ops</td>
+<td>34,865</td>
+<td>34,865</td>
+<td>34,865</td>
+<td>104,596</td>
+</tr>
+<tr>
+<td><strong>Total Staffing</strong></td>
+<td></td>
+<td><strong>216,066</strong></td>
+<td><strong>215,733</strong></td>
+<td><strong>215,733</strong></td>
+<td><strong>647,533</strong></td>
+</tr>
+<tr>
+<td>Contracting</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>DevOps</td>
+<td>12,000</td>
+<td>12,000</td>
+<td>12,000</td>
+<td>36,000</td>
+</tr>
+<tr>
+<td><strong>Total Contracting</strong></td>
+<td></td>
+<td><strong>12,000</strong></td>
+<td><strong>12,000</strong></td>
+<td><strong>12,000</strong></td>
+<td><strong>36,000</strong></td>
+</tr>
+<tr>
+<td>DevRel</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>DevRel</td>
+<td>15,000</td>
+<td>15,000</td>
+<td>15,000</td>
+<td>45,000</td>
+</tr>
+<tr>
+<td></td>
+<td>Hackathons &amp; Bounties</td>
+<td>5,000</td>
+<td>5,000</td>
+<td>5,000</td>
+<td>15,000</td>
+</tr>
+<tr>
+<td><strong>Total DevRel</strong></td>
+<td></td>
+<td><strong>20,000</strong></td>
+<td><strong>20,000</strong></td>
+<td><strong>20,000</strong></td>
+<td><strong>60,000</strong></td>
+</tr>
+<tr>
+<td>OpEx</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Saas Fees (AWS, Datadog, fleek, etc.)</td>
+<td>20,000</td>
+<td>20,000</td>
+<td>20,000</td>
+<td>60,000</td>
+</tr>
+<tr>
+<td><strong>Total OpEx</strong></td>
+<td></td>
+<td><strong>20,000</strong></td>
+<td><strong>20,000</strong></td>
+<td><strong>20,000</strong></td>
+<td><strong>60,000</strong></td>
+</tr>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Total GPC Budgeted Spend</strong></td>
+<td></td>
+<td><strong>268,066</strong></td>
+<td><strong>267,733</strong></td>
+<td><strong>267,733</strong></td>
+<td><strong>803,533</strong></td>
+</tr>
+<tr>
+<td>60 Day Reserves</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>535,635</strong></td>
+</tr>
+<tr>
+<td>S16 Treasury Balance</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>645,628</td>
+</tr>
+<tr>
+<td><strong>Total S17 Request</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><strong>693,540</strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+          <p><a href="https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s17-proposal-draft-gitcoin-allo-budget-request/12739/1
+        Tue, 31 Jan 2023 20:00:37 +0000
+gov.gitcoin.co-post-12739-1
+[S17 Proposal] DRAFT Gitcoin Allo Budget Request
+      
+
+

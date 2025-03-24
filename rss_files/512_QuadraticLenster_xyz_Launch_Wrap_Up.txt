@@ -1,0 +1,262 @@
+
+
+
+QuadraticLenster.xyz Launch Wrap-Up
+https://gov.gitcoin.co/t/quadraticlenster-xyz-launch-wrap-up/15962
+    *Thanks to Raid Guild, Lenster, Gitcoin, Stani, Nader, and everyone who helped with this launch!*
+
+# The Vision
+
+At EthCC, Supermodular announced the launch of a new integration with Lens Protocol that will bring Quadratic Funding (QF) to web3 social apps.
+
+The pilot launch was QuadraticLenster.xyz, a web3 social media app with funding mechanisms embedded in the newsfeed. The first QF round ran from July 17 to 25, 2023, and allowed all Lenster users to reward creators or organizations they value during the week of EthCC. By leveraging [Gitcoin’s Allo Protocol](https://allo.gitcoin.co/), users could tip any post that mentions #ethcc and tap into the $10,000 USD matching pool.
+
+Our vision for this launch was: “QF transforms posting on social media into a lucrative income opportunity for creators, enabling popular posts to magnify earnings. It also creates a virtuous cycle where social media rewards the most active creators of public goods and other prosocial behaviors. We are replacing ‘likes’ with tips, which can be further amplified by Allo matching pools; this new feature can stimulate positive behavior through economic incentives and create a more regenerative and less divisive social media experience.”
+
+With QF, the number of contributors matters more than the amount funded. Relatively small tips can have large impact, propelling a $1 USD tip to have $100 USD worth of impact (or more, if a post has many contributors). In each instance, a matching pool is raised and tips from the crowd are matched according to the number of tips via the QF algorithm. This unique funding mechanism, [conceived by Vitalik Buterin, Glen Weyl, and Zoë Hitzig](https://scholar.harvard.edu/hitzig/home), has been used to [fund $50m worth of public goods on Gitcoin](https://impact.gitcoin.co/) through 18 matching campaigns.
+
+Stani Kulechov, Founder and CEO of [Aave Companies](https://aave.com/) said: “People need public town squares that enable positive-sum behavior so that individuals as a community can align their contributions towards a collective movement. As a social networking initiative, QF for public goods has the incredible potential to support positive actions that benefit us all.”
+
+This integration brought public goods funding, popularized by Gitcoin, and embedded it into the Lens ecosystem.
+
+During the pilot round, users could go to https://quadraticlenster.xyz/, find a post with the #ethcc hashtag, and click the ‘send tip’ button. If you are a creator, you can create a post with the #ethcc hashtag and begin to receive tips and access the matching pool.
+
+# The Launch
+
+Watch the talk @ [https://www.youtube.com/watch?v=-zT9l63LkEU or click below![|624x357](upload://7TZMzZKQoePQOHN70xelOmIK1h8.jpeg)](https://www.youtube.com/watch?v=-zT9l63LkEU)
+
+I also did a podcast episode with Glen Weyl (QF Paper Author) on this experiment.  Watch it here: https://www.youtube.com/watch?v=bikJSo7qnDU
+
+[![Screenshot 2023-07-26 at 4.08.01 PM|690x401](upload://cOqhHI6papQt8TjbP5VG0DzykSi.jpeg)](https://www.youtube.com/watch?v=bikJSo7qnDU)
+
+
+# The Goal
+
+My goal for the pilot round is to validate these ideas:
+
+1. This could be an easier way to onboard people into quadratic funding.  Our goal was 100 contributions.
+2. Microtransactions have long been a dream for people who want to fund a better internet, and move us away from the attention economy. But people don’t care about the micro-transactions, they are too micro. What if quadratic funding can solve this by making a 30c microtransaction worth $10?
+3. People spend 15 minutes per quarter funding grants on Gitcoin, is there potential inputting the mechanism behind Gitcoin into social networks they spend hours per day on?
+4. We can use social media to algorithmically upregulate public good (instead of just things that hijack attention).
+5. Gitcoin 1.0 had a [QF social network component to it](https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462), now that web3 social is here, we could revive this in a Gitcoin 2.0 world.
+
+# The Experiment
+
+Raid Guild + Supermodular built a Lenster.xyz fork that leveraged [Allo Protocol](https://allo.gitcoin.co/) to implement quadratic funding on tips, and launched a $10k QF round (which i will fund) for anyone whos talking about #ethcc on quadraticlenster.com (our lenster fork), and we get at least 100 contributions + positive buzz about the tool. Here’s what it looked like:
+
+## Creating a post
+
+![|624x563](upload://2PKJSirjlX0yvHh7NKTjKbt97ZK.png)
+
+## Sending a tip
+
+![|624x421](upload://t1tEbbx4OxrH96GGQUPvobvUIhA.jpeg)
+
+## How the match multiples work:
+
+![|425x219](upload://yWikoR98YmjUHCp50w3WaZ9fnx0.gif)
+
+## Viewing a post that has tips & matching
+
+![|624x336](upload://46s37VVKBSXvJTLvyhjczBfUX3e.png)
+
+# The Results
+
+I am happy to say that the round was a moderate success!
+
+Here are some stats:
+
+* Round Start: 7/20 - 7/25
+* Contributions: 581
+* Unique Contributors: 181
+* Total contributions: $4.9k (6.9 WMATIC)
+* Round Size: $10k (12k WMATIC)
+* Top Posts: You can view the top posts in the round at https://www.quadraticlenster.xyz/rounds-overview
+
+## The good:
+
+1. [Payouts are out!](https://www.quadraticlenster.xyz/posts/0x01cf85-0x10)
+2. We contributed $10k and the community contributed $5k! Woo hoo for amplifying our own contribution.
+3. We reached and (very much surpassed) our 100 contribution goal.
+4. We successfully validated that it was easier to onboard onto Quadratic Funding Rounds by simply posting in a social media environment, we validated that people would send microtransactions when there are quadratic matches.
+
+## Things to work on:
+
+* The contracts were exploited and we had to redeploy them (more details [here](https://www.quadraticlenster.xyz/posts/0x01cf85-0x0b))
+* We have seen some evidence the round was sybil attacked. An investigation is ongoing.
+* Matching funding is required to keep this experiment going.
+  * One idea for future sustainability is to have rounds themselves be funded through tipping; once they reach a threshold the round goes live. Like a climate round that then in turn can potentially fund posts made by reforestation, re-wilding initiatives etc.
+* Our comms could have been better. People missed the announcement, drowned out with other ethcc news. For some reason, we never sent the press release out during launch. (This might be on me for not cat herding better)
+
+##  Final thoughts
+
+* I’m thrilled with the participation we saw. I imagine we can see 100x-1000x these results if we can get this QF tipping module distributed to the rest of the lens network,I’d even venture to say that it would be a killer feature for Lens as more creators begin earning an income from QF.
+* Over the next 18 months, I expect that we will see this re-built on top of Lens v2 and Allo protocol v2. (so that it works inside Lensster.xyz + Orb + all other Lens enabled social apps).
+* In the first version, we sponsored the #ethcc hashtag. In the next version, we will allow anyone to sponsor any hashtag.
+* I would like to double down on this QF form factor, the ideal end state will be to have many sponsored QF rounds happening at the same time on social media, upregulating pro-social/public goods behavior. Perhaps one way to start would be to have normal Gitcoin rounds have side-car QF rounds on Lens to allow a broader swatch of humanity.
+* It was interesting to observe the content that emerged from the round. From people writing up [great explainers](https://www.quadraticlenster.xyz/posts/0x01a14e-0x011f) to using the platform for [development funding](https://www.quadraticlenster.xyz/posts/0x01cdd5-0x01).
+Fri, 28 Jul 2023 11:31:05 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+QuadraticLenster.xyz Launch Wrap-Up
+Viriya
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15962">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Matching funding is required to keep this experiment going</p>
+</blockquote>
+</aside>
+<p>I wonder if we can experiment with this in GG round marketing. Ad spend (which we don’t normally do btw but could front a small matching fund for the experiement) could go to the matching pool instead of boosted posts. We could track engagement with the campaign through a hashtag and distribute the pool retroactively.</p>
+<p>I think it could be really interesting as A LOT of community members produce incredible content during the round to support grantees and their communities…all for free! Would be awesome to show them our appreciation as a community.</p>
+<p>I would feel more comfortable doing this when Lens figures out it’s bot problem. Candidly, my experience there has mostly been interacting with bots so it’s kinda lame but I LOVE the concept of Lens and QL. Do they have plans to integrate Passport or some other form of POH? Also, I don’t have a Lens profile bc I’m not cool enough…I’d love to continue to partner and experiement with Lens across the board, especially once it’s more widely available.</p>
+          <p><a href="https://gov.gitcoin.co/t/quadraticlenster-xyz-launch-wrap-up/15962/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadraticlenster-xyz-launch-wrap-up/15962/3
+        Fri, 28 Jul 2023 11:31:05 +0000
+gov.gitcoin.co-post-15962-3
+QuadraticLenster.xyz Launch Wrap-Up
+      
+
+QuadraticLenster.xyz Launch Wrap-Up
+carlosjmelgar
+
+            <p>Congrats, this was well executed! I’m excited about SoMe users using QF without knowing wtfisqf. These innovations allow for meaningful adoption of tool stacks by making it more vibey and less nerdy.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15962">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>It also creates a virtuous cycle where social media rewards the most active creators of public goods and other prosocial behaviors.</p>
+</blockquote>
+</aside>
+<p>This is such a powerful concept, looking forward to seeing this become a reality.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15962">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>“People need public town squares that enable positive-sum behavior so that individuals as a community can align their contributions towards a collective movement. As a social networking initiative, QF for public goods has the incredible potential to support positive actions that benefit us all.”</p>
+</blockquote>
+</aside>
+<p>Wen GHO? Stani is big on the idea of programming values into money. Would love to see GHO integrated in the future.</p>
+<aside class="quote no-group" data-username="owocki" data-post="1" data-topic="15962">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Matching funding is required to keep this experiment going.</p>
+<ul>
+<li>One idea for future sustainability is to have rounds themselves be funded through tipping; once they reach a threshold the round goes live. Like a climate round that then in turn can potentially fund posts made by reforestation, re-wilding initiatives etc.</li>
+</ul>
+</blockquote>
+</aside>
+<p>Would you consider ad revenue for this? i.e. funding partners get a sponsor banner on the site + GP episode + tweets + hypercerts reflecting whatever impact was created during the round.</p>
+<p>Crowdfunding campaigns for the matching funding can align with things like World Ocean Day, Earth Hour, Earth Day. The QL account can make daily posts announcing the raise for the upcoming rounds, allowing used to contribute leading into the round.</p>
+<p>Feedback:<br>
+I spent the first few days posting from mobile. Txns appeared to send but didn’t actually post. I didn’t realize this until I opened my laptop a few days later.</p>
+          <p><a href="https://gov.gitcoin.co/t/quadraticlenster-xyz-launch-wrap-up/15962/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadraticlenster-xyz-launch-wrap-up/15962/2
+        Thu, 27 Jul 2023 11:20:23 +0000
+gov.gitcoin.co-post-15962-2
+QuadraticLenster.xyz Launch Wrap-Up
+      
+
+QuadraticLenster.xyz Launch Wrap-Up
+owocki
+
+            <p><em>Thanks to Raid Guild, Lenster, Gitcoin, Stani, Nader, and everyone who helped with this launch!</em></p>
+<h1>
+<a name="the-vision-1" class="anchor" href="https://gov.gitcoin.co#the-vision-1"></a>The Vision</h1>
+<p>At EthCC, Supermodular announced the launch of a new integration with Lens Protocol that will bring Quadratic Funding (QF) to web3 social apps.</p>
+<p>The pilot launch was QuadraticLenster.xyz, a web3 social media app with funding mechanisms embedded in the newsfeed. The first QF round ran from July 17 to 25, 2023, and allowed all Lenster users to reward creators or organizations they value during the week of EthCC. By leveraging <a href="https://allo.gitcoin.co/">Gitcoin’s Allo Protocol</a>, users could tip any post that mentions <span class="hashtag">#ethcc</span> and tap into the $10,000 USD matching pool.</p>
+<p>Our vision for this launch was: “QF transforms posting on social media into a lucrative income opportunity for creators, enabling popular posts to magnify earnings. It also creates a virtuous cycle where social media rewards the most active creators of public goods and other prosocial behaviors. We are replacing ‘likes’ with tips, which can be further amplified by Allo matching pools; this new feature can stimulate positive behavior through economic incentives and create a more regenerative and less divisive social media experience.”</p>
+<p>With QF, the number of contributors matters more than the amount funded. Relatively small tips can have large impact, propelling a $1 USD tip to have $100 USD worth of impact (or more, if a post has many contributors). In each instance, a matching pool is raised and tips from the crowd are matched according to the number of tips via the QF algorithm. This unique funding mechanism, <a href="https://scholar.harvard.edu/hitzig/home">conceived by Vitalik Buterin, Glen Weyl, and Zoë Hitzig</a>, has been used to <a href="https://impact.gitcoin.co/">fund $50m worth of public goods on Gitcoin</a> through 18 matching campaigns.</p>
+<p>Stani Kulechov, Founder and CEO of <a href="https://aave.com/">Aave Companies</a> said: “People need public town squares that enable positive-sum behavior so that individuals as a community can align their contributions towards a collective movement. As a social networking initiative, QF for public goods has the incredible potential to support positive actions that benefit us all.”</p>
+<p>This integration brought public goods funding, popularized by Gitcoin, and embedded it into the Lens ecosystem.</p>
+<p>During the pilot round, users could go to <a href="https://quadraticlenster.xyz/">https://quadraticlenster.xyz/</a>, find a post with the <span class="hashtag">#ethcc</span> hashtag, and click the ‘send tip’ button. If you are a creator, you can create a post with the <span class="hashtag">#ethcc</span> hashtag and begin to receive tips and access the matching pool.</p>
+<h1>
+<a name="the-launch-2" class="anchor" href="https://gov.gitcoin.co#the-launch-2"></a>The Launch</h1>
+<p>Watch the talk @ <a href="https://www.youtube.com/watch?v=-zT9l63LkEU">https://www.youtube.com/watch?v=-zT9l63LkEU or click below<img src="https://gov.gitcoin.co/uploads/db4391/original/2X/3/3763a9368a8ebd952383dd7acde64288482b89ba.jpeg" alt="" data-base62-sha1="7TZMzZKQoePQOHN70xelOmIK1h8" width="624" height="357" role="presentation"></a></p>
+<p>I also did a podcast episode with Glen Weyl (QF Paper Author) on this experiment.  Watch it here: <a href="https://www.youtube.com/watch?v=bikJSo7qnDU" class="inline-onebox">Launching a Public Goods Social Network with Glen Weyl - YouTube</a></p>
+<p><a href="https://www.youtube.com/watch?v=bikJSo7qnDU"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/5/59cd455431d8baf7da2ee4d0d39547ba614f4db6.jpeg" alt="Screenshot 2023-07-26 at 4.08.01 PM" data-base62-sha1="cOqhHI6papQt8TjbP5VG0DzykSi" width="690" height="401"></a></p>
+<h1>
+<a name="the-goal-3" class="anchor" href="https://gov.gitcoin.co#the-goal-3"></a>The Goal</h1>
+<p>My goal for the pilot round is to validate these ideas:</p>
+<ol>
+<li>This could be an easier way to onboard people into quadratic funding.  Our goal was 100 contributions.</li>
+<li>Microtransactions have long been a dream for people who want to fund a better internet, and move us away from the attention economy. But people don’t care about the micro-transactions, they are too micro. What if quadratic funding can solve this by making a 30c microtransaction worth $10?</li>
+<li>People spend 15 minutes per quarter funding grants on Gitcoin, is there potential inputting the mechanism behind Gitcoin into social networks they spend hours per day on?</li>
+<li>We can use social media to algorithmically upregulate public good (instead of just things that hijack attention).</li>
+<li>Gitcoin 1.0 had a <a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462">QF social network component to it</a>, now that web3 social is here, we could revive this in a Gitcoin 2.0 world.</li>
+</ol>
+<h1>
+<a name="the-experiment-4" class="anchor" href="https://gov.gitcoin.co#the-experiment-4"></a>The Experiment</h1>
+<p>Raid Guild + Supermodular built a Lenster.xyz fork that leveraged <a href="https://allo.gitcoin.co/">Allo Protocol</a> to implement quadratic funding on tips, and launched a $10k QF round (which i will fund) for anyone whos talking about <span class="hashtag">#ethcc</span> on <a href="http://quadraticlenster.com">quadraticlenster.com</a> (our lenster fork), and we get at least 100 contributions + positive buzz about the tool. Here’s what it looked like:</p>
+<h2>
+<a name="creating-a-post-5" class="anchor" href="https://gov.gitcoin.co#creating-a-post-5"></a>Creating a post</h2>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/13de0434513c44c5eaa436f7dd8c3b76150eb038.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/13de0434513c44c5eaa436f7dd8c3b76150eb038" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/13de0434513c44c5eaa436f7dd8c3b76150eb038_2_554x500.png" alt="" data-base62-sha1="2PKJSirjlX0yvHh7NKTjKbt97ZK" width="554" height="500" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/13de0434513c44c5eaa436f7dd8c3b76150eb038_2_554x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/13de0434513c44c5eaa436f7dd8c3b76150eb038_2_831x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/13de0434513c44c5eaa436f7dd8c3b76150eb038_2_1108x1000.png 2x" data-dominant-color="A7A5AF"></a></div><p></p>
+<h2>
+<a name="sending-a-tip-6" class="anchor" href="https://gov.gitcoin.co#sending-a-tip-6"></a>Sending a tip</h2>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cb69d24f6a31fb092fbce7bc7e6a3c31570c8d42.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/cb69d24f6a31fb092fbce7bc7e6a3c31570c8d42" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cb69d24f6a31fb092fbce7bc7e6a3c31570c8d42_2_624x421.jpeg" alt="" data-base62-sha1="t1tEbbx4OxrH96GGQUPvobvUIhA" width="624" height="421" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cb69d24f6a31fb092fbce7bc7e6a3c31570c8d42_2_624x421.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cb69d24f6a31fb092fbce7bc7e6a3c31570c8d42_2_936x631.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/cb69d24f6a31fb092fbce7bc7e6a3c31570c8d42_2_1248x842.jpeg 2x" data-dominant-color="AAA7B3"></a></div><p></p>
+<h2>
+<a name="how-the-match-multiples-work-7" class="anchor" href="https://gov.gitcoin.co#how-the-match-multiples-work-7"></a>How the match multiples work:</h2>
+<p><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f4e0e409a7e97460bef805a439e656d2d6b07352.gif" alt="" data-base62-sha1="yWikoR98YmjUHCp50w3WaZ9fnx0" width="425" height="219" role="presentation" class="animated"></p>
+<h2>
+<a name="viewing-a-post-that-has-tips-matching-8" class="anchor" href="https://gov.gitcoin.co#viewing-a-post-that-has-tips-matching-8"></a>Viewing a post that has tips &amp; matching</h2>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1cc36b0678403343433219e49997ab08302f4904.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/1cc36b0678403343433219e49997ab08302f4904" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cc36b0678403343433219e49997ab08302f4904_2_624x336.png" alt="" data-base62-sha1="46s37VVKBSXvJTLvyhjczBfUX3e" width="624" height="336" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cc36b0678403343433219e49997ab08302f4904_2_624x336.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cc36b0678403343433219e49997ab08302f4904_2_936x504.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1cc36b0678403343433219e49997ab08302f4904_2_1248x672.png 2x" data-dominant-color="F9F6F7"></a></div><p></p>
+<h1>
+<a name="the-results-9" class="anchor" href="https://gov.gitcoin.co#the-results-9"></a>The Results</h1>
+<p>I am happy to say that the round was a moderate success!</p>
+<p>Here are some stats:</p>
+<ul>
+<li>Round Start: 7/20 - 7/25</li>
+<li>Contributions: 581</li>
+<li>Unique Contributors: 181</li>
+<li>Total contributions: $4.9k (6.9 WMATIC)</li>
+<li>Round Size: $10k (12k WMATIC)</li>
+<li>Top Posts: You can view the top posts in the round at <a href="https://www.quadraticlenster.xyz/rounds-overview">https://www.quadraticlenster.xyz/rounds-overview</a>
+</li>
+</ul>
+<h2>
+<a name="the-good-10" class="anchor" href="https://gov.gitcoin.co#the-good-10"></a>The good:</h2>
+<ol>
+<li><a href="https://www.quadraticlenster.xyz/posts/0x01cf85-0x10">Payouts are out!</a></li>
+<li>We contributed $10k and the community contributed $5k! Woo hoo for amplifying our own contribution.</li>
+<li>We reached and (very much surpassed) our 100 contribution goal.</li>
+<li>We successfully validated that it was easier to onboard onto Quadratic Funding Rounds by simply posting in a social media environment, we validated that people would send microtransactions when there are quadratic matches.</li>
+</ol>
+<h2>
+<a name="things-to-work-on-11" class="anchor" href="https://gov.gitcoin.co#things-to-work-on-11"></a>Things to work on:</h2>
+<ul>
+<li>The contracts were exploited and we had to redeploy them (more details <a href="https://www.quadraticlenster.xyz/posts/0x01cf85-0x0b">here</a>)</li>
+<li>We have seen some evidence the round was sybil attacked. An investigation is ongoing.</li>
+<li>Matching funding is required to keep this experiment going.
+<ul>
+<li>One idea for future sustainability is to have rounds themselves be funded through tipping; once they reach a threshold the round goes live. Like a climate round that then in turn can potentially fund posts made by reforestation, re-wilding initiatives etc.</li>
+</ul>
+</li>
+<li>Our comms could have been better. People missed the announcement, drowned out with other ethcc news. For some reason, we never sent the press release out during launch. (This might be on me for not cat herding better)</li>
+</ul>
+<h2>
+<a name="final-thoughts-12" class="anchor" href="https://gov.gitcoin.co#final-thoughts-12"></a>Final thoughts</h2>
+<ul>
+<li>I’m thrilled with the participation we saw. I imagine we can see 100x-1000x these results if we can get this QF tipping module distributed to the rest of the lens network,I’d even venture to say that it would be a killer feature for Lens as more creators begin earning an income from QF.</li>
+<li>Over the next 18 months, I expect that we will see this re-built on top of Lens v2 and Allo protocol v2. (so that it works inside Lensster.xyz + Orb + all other Lens enabled social apps).</li>
+<li>In the first version, we sponsored the <span class="hashtag">#ethcc</span> hashtag. In the next version, we will allow anyone to sponsor any hashtag.</li>
+<li>I would like to double down on this QF form factor, the ideal end state will be to have many sponsored QF rounds happening at the same time on social media, upregulating pro-social/public goods behavior. Perhaps one way to start would be to have normal Gitcoin rounds have side-car QF rounds on Lens to allow a broader swatch of humanity.</li>
+<li>It was interesting to observe the content that emerged from the round. From people writing up <a href="https://www.quadraticlenster.xyz/posts/0x01a14e-0x011f">great explainers</a> to using the platform for <a href="https://www.quadraticlenster.xyz/posts/0x01cdd5-0x01">development funding</a>.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/quadraticlenster-xyz-launch-wrap-up/15962/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/quadraticlenster-xyz-launch-wrap-up/15962/1
+        Wed, 26 Jul 2023 16:11:06 +0000
+gov.gitcoin.co-post-15962-1
+QuadraticLenster.xyz Launch Wrap-Up
+      
+
+

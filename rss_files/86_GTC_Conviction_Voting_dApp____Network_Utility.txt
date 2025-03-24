@@ -1,0 +1,603 @@
+
+
+
+GTC Conviction Voting dApp => Network Utility
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523
+    I wanted to share a dApp prototype that @austingriffith & two of the BuidlGuidl builders built (Viraz + 0xDarni).
+
+This is a dApp that allows a user to stake GTC on Gitcoin Grants based on the Grant quality using [Conviction Voting](https://medium.com/giveth/conviction-voting-a-novel-continuous-decision-making-alternative-to-governance-aa746cfb9475).   From there, Gitcoin Grants 1.0 (or 2.0) could then adjust the sort algorithm of the grants based on what grants GTC holders think is most valuable.
+
+Problems this dApp solves:
+1. Allow GTC Holders to have governance utility with their GTC.
+2. Provide fairer starting conditions to the Gitcoin Grants rounds, so it does not become a horse race (where ppl get more contributions => higher matching => repeat)
+
+Check out the demo of this conviction voting dapp.  It allows people to trustlessly stake GTC on their favorite grants, signaling their conviction about which grants are quality.
+
+https://www.youtube.com/watch?v=vHwUs9m45sA
+
+# Roadmap from here
+1. Audit the smart contracts
+2. Deploy on Optimism L2
+3. Simplify the UX
+4. (If governance decides to) Adopt this data as part of the sorting algorithm on Gitcoin Grants.
+
+# Links:
+1. Play with the demo yourself: https://gtc.v37.io/
+2. Checkout [the Github](https://github.com/0xDarni/scaffold-eth/tree/conviction-voting-gitcoin)
+3. [Demo video](https://www.youtube.com/watch?v=vHwUs9m45sA)
+4. [What is conviction voting?](https://medium.com/giveth/conviction-voting-a-novel-continuous-decision-making-alternative-to-governance-aa746cfb9475)
+
+# This was built in 3 days!
+
+## What can we learn from this?
+
+What I think is incredible about this prototype is that Austin + crew conceived + built this in 3 days!
+
+They didnt hire any fancy consultants.  They aren't spending $200k-300k/mo on software development.  This was just someone who cares about Gitcoin who chose to work backwards from an outcome + ship the software (and will probably be rewarded retroactively from Build Gulid/Gitcoin if/once this ships).  It's really inspiring to me!
+
+What can we learn from this type of rapid prototyping?  Can we sprinkle some of this culture in the Moonshot Collective + Gitcoin Product Group so that we can ship [Grants 2.0 well before the overton window closes](https://gov.gitcoin.co/t/the-overton-window-for-grants-2-0/10461)?
+
+IMO its existential to solve our software dev velocity problems.  We cannot continue to plow hundreds of thousands of dollars into software development that is neither [fast, cheap, nor good](https://fastgood.cheap/).  Questions about priorities are only existential when it takes us 2-6 months to ship any new module.  If we could quickly ship slim MVPs it would be less of a zero sum "my priority vs yours" between leaders.
+
+I am a strong advocate of focusing on [minimum shippable increments](https://gov.gitcoin.co/t/minimum-shippable-increments/10140).  This GTC Conviction Voting dApp is a great emergent example of that.
+
+
+# Prompts
+
+1. How can we get more rapid prototyping juju (build guild culture) into MSC/GPG?  Daniele showed here that a steel thread for a small dApp takes 2-3 days if you have the right builder on a project/focused on outcomes.
+2. Do we want to support this conviction voting app as part of grants 2.0 roadmap?
+Fri, 05 May 2023 16:24:46 +0000
+🤖 DAO Governance and Vision
+
+
+GTC Conviction Voting dApp => Network Utility
+ZER8
+
+            <p>Wow, Give is the give that keeps on giving. Thank you for the heads up <img src="https://emoji.discourse-cdn.com/twitter/blue_heart.png?v=12" title=":blue_heart:" class="emoji" alt=":blue_heart:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/40">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/40
+        Wed, 05 Oct 2022 14:57:17 +0000
+gov.gitcoin.co-post-10523-40
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+griff
+
+            <p>Giveth is going to be launching GIVpower, which is something very similar to the work being done here. The first part of it, the staking and locking, rolls out is tomorrow.</p>
+<p>There should be lots of interesting Comms around it on our twitter and it might be fun to check it out.</p>
+<p><a href="https://twitter.com/Givethio" class="onebox" target="_blank" rel="noopener nofollow ugc">https://twitter.com/Givethio</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/39">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/39
+        Mon, 03 Oct 2022 17:01:59 +0000
+gov.gitcoin.co-post-10523-39
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="DanieleSalatti" data-post="35" data-topic="10523">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/danielesalatti/48/5445_2.png" class="avatar"> DanieleSalatti:</div>
+<blockquote>
+<p>what would have to be true for us to use conviction voting as the default sorting method for next round?</p>
+</blockquote>
+</aside>
+<p>I’d really like to see some strategizing around how we can ensure that this mechanism isn’t turning the game into an unfair rich get richer system BEFORE putting it as a default sort!</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/38">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/38
+        Mon, 08 Aug 2022 10:35:15 +0000
+gov.gitcoin.co-post-10523-38
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+Fred
+
+            <p>Is the 23232+4760 GTC that’s still being staked continuing to accrue conviction bonus for upcoming rounds, or are these reset prior to each GR?</p>
+<p>If the bonus carries over into GR15, will new staker be able to catch up in time for launch without a considerably larger amount of GTC? Or phrased differently; What percentage of their maximum conviction bonus have the GR14 stakers accumulated?</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/37">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/37
+        Sun, 31 Jul 2022 07:32:23 +0000
+gov.gitcoin.co-post-10523-37
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+owocki
+
+            <aside class="quote no-group" data-username="DanieleSalatti" data-post="35" data-topic="10523">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/danielesalatti/48/5445_2.png" class="avatar"> DanieleSalatti:</div>
+<blockquote>
+<p>what would have to be true for us to use conviction voting as the default sorting method for next round?</p>
+</blockquote>
+</aside>
+<p>perhaps <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a> this is something to include in the convo about GR15 structure?</p>
+<p>if not, it would probably be its own proposal?</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/36">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/36
+        Sun, 24 Jul 2022 18:20:10 +0000
+gov.gitcoin.co-post-10523-36
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+DanieleSalatti
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> good question.</p>
+<p>There’s a lot that we cannot measure, for example I would love to know how often the new sorting was used on <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a> while the round was going.</p>
+<p>That said, we think it worked great.</p>
+<p>Some numbers:</p>
+<ul>
+<li>23232 GTC still staked on Mainnet</li>
+<li>4760 GTC still staked on Optimism <a href="https://optimistic.etherscan.io/token/0x1eba7a6a72c894026cd654ac5cdcf83a46445b08#balances" rel="noopener nofollow ugc">about about 60% of the total</a>  as of now</li>
+<li>Highest amount staked was about 50K GTC on Mainnet - Optimism has been stable</li>
+<li>54 unique stakers across the two networks</li>
+</ul>
+<p>So let me turn the question back to you, <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a>, and to the DAO: what would have to be true for us to use conviction voting as the default sorting method for next round?</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/35">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/35
+        Sun, 24 Jul 2022 08:25:50 +0000
+gov.gitcoin.co-post-10523-35
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+owocki
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/danielesalatti">@DanieleSalatti</a> <a class="mention" href="https://gov.gitcoin.co/u/austingriffith">@austingriffith</a> do u gents have any data on how this experiment went?  would you call iteration 1 a success?  is there another iteration planned for GR15?</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/34">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/34
+        Mon, 11 Jul 2022 20:29:16 +0000
+gov.gitcoin.co-post-10523-34
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+jdonmoyer
+
+            <p>I’m also very much interested in the ‘answer’ to this question… I’m not currently a GTC holder, but I want to be and I would like to acquire it/keep it on the chain where it has the most utility.</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/33">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/33
+        Fri, 17 Jun 2022 18:07:39 +0000
+gov.gitcoin.co-post-10523-33
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+lefterisjp
+
+            <p>I was asked to post here and not only Twitter <img src="https://emoji.discourse-cdn.com/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
+<p>So I think this is a good idea in the long run! But not for GR14. And such a last minute change should go through governance.</p>
+<aside class="onebox twitterstatus" data-onebox-src="https://twitter.com/LefterisJP/status/1533821810260824065">
+  <header class="source">
+
+      <a href="https://twitter.com/LefterisJP/status/1533821810260824065" target="_blank" rel="noopener nofollow ugc">twitter.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <img src="/uploads/db4391/original/2X/5/562bb317d35d9021c3137b4e8c924ebb6ebb6773.png" class="thumbnail onebox-avatar" width="400" height="400">
+<h4><a href="https://twitter.com/LefterisJP/status/1533821810260824065" target="_blank" rel="noopener nofollow ugc">Lefteris Karapetsas | Hiring for @rotkiapp</a></h4>
+<div class="twitter-screen-name"><a href="https://twitter.com/LefterisJP/status/1533821810260824065" target="_blank" rel="noopener nofollow ugc">@LefterisJP</a></div>
+
+<div class="tweet">
+  <span class="tweet-description">@owocki @kbw @Sim_Pop @austingriffith @krrisis @ljxie @AnnikaSays @f_shbiscuit I think this is a big change and would need to go through governance
+
+As it stands I would not support it because:
+1. No time for conviction part to work.
+2. Unaudited contract + counterparty risk
+3. Potential tax
+4. Staking breaks delegation
+5. Lack of time for (1) -&gt; plutocracy</span>
+    <div class="quoted">
+      <a class="quoted-link" href="https://twitter.com/austingriffith/status/1532717789118705664" rel="noopener nofollow ugc">
+        <p class="quoted-title">Austin Griffith <span>@austingriffith</span></p>
+      </a>
+
+      <div> Announcing:  Gitcoin Conviction Week!
+
+ For the next week you can stake GTC on your favorite Gitcoin Grants. 
+
+ The results will be used to sort the grants at the start of GR14...</div>
+    </div>
+</div>
+
+<div class="date">
+  <a href="https://twitter.com/LefterisJP/status/1533821810260824065" class="timestamp" target="_blank" rel="noopener nofollow ugc">7:07 AM - 6 Jun 2022</a>
+
+    <span class="like">
+      <svg viewBox="0 0 512 512" width="14px" height="16px" aria-hidden="true">
+        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+      </svg>
+      3
+    </span>
+
+</div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>As it stands I would not support it because:</p>
+<ol>
+<li>No time for conviction part to work.</li>
+<li>Unaudited contract + counterparty risk</li>
+<li>Potential tax</li>
+<li>Staking breaks delegation</li>
+<li>Lack of time for (1) → plutocracy</li>
+</ol>
+<p>We would need to solve all these to have proper conviction voting,</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/32">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/32
+        Mon, 06 Jun 2022 16:55:46 +0000
+gov.gitcoin.co-post-10523-32
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+owocki
+
+            <p>heads up this is live now</p>
+<p>how to use GTC to stake on the gitcoin grants you believe in 3 easy steps</p>
+<ol>
+<li>go to <a href="https://t.co/4BOxC4aFcz">http://voting.gitcoin.co</a>
+</li>
+<li>stake your GTC on either mainnet or optimism</li>
+<li>browse to <a href="https://t.co/8P0WRpB1pF">http://gitcoin.co/grants</a> and select “GTC Conviction Voting” as your sort order</li>
+</ol>
+<p>itll look like this:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f917b74f60e340fd050197ca4618fb81407596fd.png" data-download-href="/uploads/short-url/zxzHuMg2sujPO9ylMWwR4qIGZhX.png?dl=1" title="FUkyT8NUUAAZkHK"><img src="/uploads/db4391/optimized/2X/f/f917b74f60e340fd050197ca4618fb81407596fd_2_690x436.png" alt="FUkyT8NUUAAZkHK" data-base62-sha1="zxzHuMg2sujPO9ylMWwR4qIGZhX" width="690" height="436" srcset="/uploads/db4391/optimized/2X/f/f917b74f60e340fd050197ca4618fb81407596fd_2_690x436.png, /uploads/db4391/original/2X/f/f917b74f60e340fd050197ca4618fb81407596fd.png 1.5x, /uploads/db4391/original/2X/f/f917b74f60e340fd050197ca4618fb81407596fd.png 2x" data-small-upload="/uploads/db4391/optimized/2X/f/f917b74f60e340fd050197ca4618fb81407596fd_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/31">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/31
+        Mon, 06 Jun 2022 15:52:42 +0000
+gov.gitcoin.co-post-10523-31
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+DanieleSalatti
+
+            <p>We launched:</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://voting.gitcoin.co/">
+  <header class="source">
+      <img src="/uploads/db4391/original/2X/6/6dd8ebea96b3c2942fae57c07ecaac76809fdfec.png" class="site-icon" width="30" height="32">
+
+      <a href="https://voting.gitcoin.co/" target="_blank" rel="noopener nofollow ugc">voting.gitcoin.co</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://voting.gitcoin.co/" target="_blank" rel="noopener nofollow ugc">Ethereum App</a></h3>
+
+  <p>Web site created using 🏗 scaffold-eth</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/30">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/30
+        Sat, 04 Jun 2022 02:33:20 +0000
+gov.gitcoin.co-post-10523-30
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+DanieleSalatti
+
+            <p>We redeployed on Mainnet, and now that the Optimism bridge supports GTC we will work to support both networks <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c4b1c67bd7c6432913345fd8433c3d4c86e130a6.jpeg" data-download-href="/uploads/short-url/s42sTEhc3YuCc1eK36bGFl5MAM6.jpeg?dl=1" title="Schermata 2022-05-29 alle 18.52.16" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/c/c4b1c67bd7c6432913345fd8433c3d4c86e130a6_2_444x500.jpeg" alt="Schermata 2022-05-29 alle 18.52.16" data-base62-sha1="s42sTEhc3YuCc1eK36bGFl5MAM6" width="444" height="500" srcset="/uploads/db4391/optimized/2X/c/c4b1c67bd7c6432913345fd8433c3d4c86e130a6_2_444x500.jpeg, /uploads/db4391/optimized/2X/c/c4b1c67bd7c6432913345fd8433c3d4c86e130a6_2_666x750.jpeg 1.5x, /uploads/db4391/optimized/2X/c/c4b1c67bd7c6432913345fd8433c3d4c86e130a6_2_888x1000.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/c/c4b1c67bd7c6432913345fd8433c3d4c86e130a6_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/29">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/29
+        Mon, 30 May 2022 01:53:36 +0000
+gov.gitcoin.co-post-10523-29
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+DanieleSalatti
+
+            <p>That helps!</p>
+<p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/gtcsameerth">@gtcsameerth</a>!</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/28
+        Wed, 25 May 2022 15:30:10 +0000
+gov.gitcoin.co-post-10523-28
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+gtcsameerth
+
+            <p>Hey there Daniele! MoonshotCollective has bridged GTC to Optimism. Here is the contract address and token view. We’re currently waiting on folks over at Optimism to merge our PR so GTC can be easily selected from their bridge (<a href="https://app.optimism.io/bridge" class="inline-onebox" rel="noopener nofollow ugc">Optimism Gateway</a>)!</p>
+<p>GTC Optimism Contract Address:</p>
+<p><a href="https://optimistic.etherscan.io/address/0x1eba7a6a72c894026cd654ac5cdcf83a46445b08" rel="noopener nofollow ugc">0x1eba7a6a72c894026cd654ac5cdcf83a46445b08</a></p>
+<p>GTC Optimism Token View:</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://optimistic.etherscan.io/token/0x1eba7a6a72c894026cd654ac5cdcf83a46445b08">
+  <header class="source">
+      
+
+      <a href="https://optimistic.etherscan.io/token/0x1eba7a6a72c894026cd654ac5cdcf83a46445b08" target="_blank" rel="noopener nofollow ugc">Optimistic Ethereum L2 Explorer</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://optimistic.etherscan.io/token/0x1eba7a6a72c894026cd654ac5cdcf83a46445b08" target="_blank" rel="noopener nofollow ugc">Gitcoin (GTC) Token Tracker | Optimism</a></h3>
+
+  <p>Gitcoin (GTC) Token Tracker on Etherscan shows the price of the Token $0.0000, total supply 1.000000000000001, number of holders 2 and updated information of the token. The token tracker page also shows the analytics and historical data.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>Let me know if that was helpful or if you had any more question!</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/27">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/27
+        Mon, 23 May 2022 20:06:41 +0000
+gov.gitcoin.co-post-10523-27
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+DanieleSalatti
+
+            <p>Yeah sorry. I am trying to piece together bits and pieces from here and a couple of chat rooms, and I’m doing a poor job at it…</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/26">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/26
+        Mon, 23 May 2022 19:44:16 +0000
+gov.gitcoin.co-post-10523-26
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+owocki
+
+            <aside class="quote no-group" data-username="DanieleSalatti" data-post="24" data-topic="10523">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/danielesalatti/48/5445_2.png" class="avatar"> DanieleSalatti:</div>
+<blockquote>
+<p>Turns out there isn’t a GTC token on Optimism - I’ll work on refining the UX for now then, and as soon as we decide for an L2 I will deploy there.</p>
+</blockquote>
+</aside>
+<p>i thought <a class="mention" href="https://gov.gitcoin.co/u/austingriffith">@austingriffith</a> found a bridge? <a href="https://twitter.com/austingriffith/status/1522671723937550337?s=20&amp;t=-5R9Lwpb8qR99SyzCQSQdw">https://twitter.com/austingriffith/status/1522671723937550337?s=20&amp;t=-5R9Lwpb8qR99SyzCQSQdw</a></p>
+<p>if not we should get one over there.  idk if you’ve had any luck <span class="mention">@gtcchase</span>?</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/25">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/25
+        Mon, 23 May 2022 18:28:58 +0000
+gov.gitcoin.co-post-10523-25
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+DanieleSalatti
+
+            <aside class="quote no-group" data-username="owocki" data-post="22" data-topic="10523">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>idk how to ratify this decision without going through the whole DAO voting process, but here is what i think: <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698" rel="noopener nofollow ugc">ethereum has a rollup-centric scaling solution</a>, therefore i think this dapp should be hosted on a rollup.</p>
+</blockquote>
+</aside>
+<p><s>I’ll get to building the UI/UX for bridging to Optimism then <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></s></p>
+<p><s>I’ll make it so the network can be feature-switched and the bridging UI hidden, in case the decision from the DAO is to stay on Mainnet.</s></p>
+<p>Turns out there isn’t a GTC token on Optimism - I’ll work on refining the UX for now then, and as soon as we decide for an L2 I will deploy there.</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/24
+        Mon, 23 May 2022 15:11:55 +0000
+gov.gitcoin.co-post-10523-24
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+DanieleSalatti
+
+            <aside class="quote no-group" data-username="kevin.olsen" data-post="20" data-topic="10523" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p>Does the 250GTC max apply universally? If I’m a whale and I drop 250GTC is my voting power maxed out at 15 days or does it really grow to 12500 GTC in 6 months?</p>
+</blockquote>
+</aside>
+<p>With the numbers in that example it would grow to 12500 in 6 months (50x multiplier).</p>
+<aside class="quote no-group" data-username="erich" data-post="19" data-topic="10523" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/erich/48/9553_2.png" class="avatar"> erich:</div>
+<blockquote>
+<p>In what values do you ground these prescriptions for increasing voting power over time? Indeed, it seems pretty off to me to formally punish deliberation in the staking process as you prescribe.</p>
+<p>Deliberation is key to plural forms of social organization!</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="kevin.olsen" data-post="21" data-topic="10523" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p>Another question, why would we want a decay when someone unstakes? It feels like a clear signal that a person has lost ‘conviction’ in the project, and the boost should go to 0.</p>
+</blockquote>
+</aside>
+<p>I’ll let <a class="mention" href="https://gov.gitcoin.co/u/griff">@griff</a> and others with more experience on CV answer these. If they don’t I’ll give it a shot.</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/23
+        Mon, 23 May 2022 15:08:55 +0000
+gov.gitcoin.co-post-10523-23
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+owocki
+
+            <aside class="quote no-group" data-username="DanieleSalatti" data-post="18" data-topic="10523">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/danielesalatti/48/5445_2.png" class="avatar"> DanieleSalatti:</div>
+<blockquote>
+<p>I think the decision in the end should be coming from you / the DAO. I am not aware of what the long term plans are for the token and L2 adoption.</p>
+</blockquote>
+</aside>
+<p>idk how to ratify this decision without going through the whole DAO voting process, but here is what i think: <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">ethereum has a rollup-centric scaling solution</a>, therefore i think this dapp should be hosted on a rollup.</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/22
+        Mon, 23 May 2022 14:10:55 +0000
+gov.gitcoin.co-post-10523-22
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+kevin.olsen
+
+            <p>Another question, why would we want a decay when someone unstakes? It feels like a clear signal that a person has lost ‘conviction’ in the project, and the boost should go to 0.</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/21
+        Mon, 23 May 2022 12:31:49 +0000
+gov.gitcoin.co-post-10523-21
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+kevin.olsen
+
+            <p>Does the 250GTC max apply universally? If I’m a whale and I drop 250GTC is my voting power maxed out at 15 days or does it really grow to 12500 GTC in 6 months?</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/20
+        Mon, 23 May 2022 12:25:18 +0000
+gov.gitcoin.co-post-10523-20
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+erich
+
+            <p>In what values do you ground these prescriptions for increasing voting power over time? Indeed, it seems pretty off to me to formally punish deliberation in the staking process as you prescribe.</p>
+<p>Deliberation is key to plural forms of social organization!</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/19
+        Mon, 23 May 2022 10:19:50 +0000
+gov.gitcoin.co-post-10523-19
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+DanieleSalatti
+
+            <aside class="quote no-group" data-username="owocki" data-post="17" data-topic="10523">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>is the final place for this tool mainnet or a L2?</p>
+</blockquote>
+</aside>
+<p>Wherever it makes sense <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"><br>
+Is the DAO planning on moving GTC to an L2, even partially?</p>
+<p>If you ask me, then I’d say long term an L2. Short term we could do L2, it just requires some work on the UX.</p>
+<p>The reason we went for Mainnet is that <a class="mention" href="https://gov.gitcoin.co/u/austingriffith">@austingriffith</a> tried bridging to Optimism and it cost him 41 USD to transfer 1 GTC:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/fb57787c8292f6041242383027305fe07a1be28e.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/fb57787c8292f6041242383027305fe07a1be28e" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fb57787c8292f6041242383027305fe07a1be28e_2_690x118.png" alt="" data-base62-sha1="zRtfvkrffsUJxW9R1Cq7RWYFTrM" role="presentation" width="690" height="118" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fb57787c8292f6041242383027305fe07a1be28e_2_690x118.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fb57787c8292f6041242383027305fe07a1be28e_2_1035x177.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fb57787c8292f6041242383027305fe07a1be28e_2_1380x236.png 2x" data-dominant-color="F8F9FA"></a></div><p></p>
+<p>Presumably you’d have to transfer back to L1 if you want to use the tokens for something else.</p>
+<p>On top of that right now the UX is not great - this thread explains what Austin had to do:</p>
+<p><a href="https://twitter.com/austingriffith/status/1522671054308610048?s=20&amp;t=jrp1o2jiuc-GNBtv-ZtXjQ" class="onebox" target="_blank" rel="noopener nofollow ugc">https://twitter.com/austingriffith/status/1522671054308610048?s=20&amp;t=jrp1o2jiuc-GNBtv-ZtXjQ</a></p>
+<p>Nothing that can’t be solved: we can quickly build a UI to let people bridge GTC to Optimism in a few clicks from the dApp, or we can use a different L2.</p>
+<p>We can do anything <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>I think the decision in the end should be coming from you / the DAO. I am not aware of what the long term plans are for the token and L2 adoption.</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/18
+        Mon, 23 May 2022 03:46:16 +0000
+gov.gitcoin.co-post-10523-18
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+owocki
+
+            <aside class="quote no-group" data-username="DanieleSalatti" data-post="16" data-topic="10523">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/danielesalatti/48/5445_2.png" class="avatar"> DanieleSalatti:</div>
+<blockquote>
+<p>We deployed to Mainnet.</p>
+</blockquote>
+</aside>
+<p>is the final place for this tool mainnet or a L2?</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/17
+        Mon, 23 May 2022 01:40:44 +0000
+gov.gitcoin.co-post-10523-17
+GTC Conviction Voting dApp => Network Utility
+      
+
+GTC Conviction Voting dApp => Network Utility
+DanieleSalatti
+
+            <aside class="quote no-group" data-username="DanieleSalatti" data-post="15" data-topic="10523">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/danielesalatti/48/5445_2.png" class="avatar"> DanieleSalatti:</div>
+<blockquote>
+<p>I’m on a trip in NY at the moment</p>
+</blockquote>
+</aside>
+<p>I’m back <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>We deployed to Mainnet.</p>
+<p>The next step is adding a visual indicator of the voting power to the dashboard.</p>
+          <p><a href="https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gtc-conviction-voting-dapp-network-utility/10523/16
+        Mon, 23 May 2022 01:22:31 +0000
+gov.gitcoin.co-post-10523-16
+GTC Conviction Voting dApp => Network Utility
+      
+
+

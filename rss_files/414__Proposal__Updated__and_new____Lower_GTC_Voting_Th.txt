@@ -1,0 +1,231 @@
+
+
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410
+    ## Context and Update
+
+In our continued efforts to evolve and democratize the governance process within the Gitcoin DAO, we previously proposed ([which passed](https://snapshot.org/#/gitcoindao.eth/proposal/0xa68b33484f5fe3e53f2f51335483057200d3fa08cdafc93c0904b29514cb9980)!) adjustments to the GTC voting thresholds. After valuable discussions and technical consultations, it's clear that some proposed changes need refinement. Specifically, adjusting the 2.5M GTC quorum requirement presents technical challenges and may necessitate deploying a new contract, which we want to avoid. However, we can modify the 1M GTC requirement for creating new proposals.
+
+## Original Proposal Recap
+
+Our initial proposal aimed to empower a broader range of GTC token holders in the governance process by reducing the dominance of large holders. The key points were:
+
+* Lowering the quorum threshold from 2.5M GTC to 1M GTC for both on-chain and off-chain voting.
+
+* Reducing the initial proposal threshold from 1M GTC to 150K GTC.
+
+* Keeping the current time and duration for voting procedures intact.
+
+## Revised Proposal Details
+Based on technical advisability, the revised proposal is as follows:
+
+* Maintain Quorum Threshold: While the original plan was to reduce the quorum threshold to 1M GTC, we don’t want to deploy a new governor to make this change.
+
+* Reduce Proposal Threshold: Lower the requirement to initiate a proposal from 1M GTC to 150K GTC, making it easier for a wider range of stakeholders to actively participate in governance.
+
+* Maintain Current Voting Processes: The existing timeframes and procedures for both on-chain and off-chain voting will remain unchanged to ensure continuity and stability in our governance operations.
+
+## Next Steps:
+
+Barring any strong community feedback, we’ll move this (new) proposal through the same governance steps as any proposal follows, with the above mentioned adjustments in implementation (maintain quorum threshold, reduced proposal threshold and maintained voting processes).
+
+## Vote
+
+* Yes - Approve the adjustments to the voting thresholds as proposed.
+* No - Do not implement the proposed changes to the voting thresholds.
+* Abstain - Neither approve nor disapprove the proposed changes.
+Thu, 01 Feb 2024 09:36:13 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+favvyuc
+
+            <p>i will be voting yes to this proposal, its great</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/11
+        Thu, 01 Feb 2024 09:36:13 +0000
+gov.gitcoin.co-post-17410-11
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+sarahasher
+
+            <p>nice proposal. looking forward for a positive effect once implemented</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/10
+        Sun, 28 Jan 2024 15:45:01 +0000
+gov.gitcoin.co-post-17410-10
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+CoachJonathan
+
+            <p>This proposal is now live on Snapshot: <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x7747f4f73400a296f1ef2010ebfdc72f02327ed4c95cd7dd1220f610d6ee0bbf" class="inline-onebox">Snapshot</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/9
+        Tue, 23 Jan 2024 17:16:38 +0000
+gov.gitcoin.co-post-17410-9
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+owocki
+
+            <aside class="quote no-group" data-username="kyle" data-post="1" data-topic="17410">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<ul>
+<li>Reducing the initial proposal threshold from 1M GTC to 150K GTC.</li>
+</ul>
+</blockquote>
+</aside>
+<p>I do wonder if well start to see spam or malicious proposals with this new lower, threshold. Thinking adversarially for a moment, the path for an attacker to attack the DAO would be</p>
+<ol>
+<li>Acquire 150k GTC</li>
+<li>Self-delegate</li>
+<li>Submit a proposal, hope no one notices. *note: the proposal could be crafted to look like a genuine proposal (like a budget request)</li>
+<li>Find enough votes to reach quorum.</li>
+<li>Pass it.</li>
+</ol>
+<p>Vigilance from the top delegates + from the <a href="https://gov.gitcoin.co/t/gitcoin-walletguard/16772">Wallet Guard</a> will be needed.</p>
+<hr>
+<p>That said, I am leaning towards voting FOR this proposal.  I think the positives outweigh the negatives…</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/8
+        Tue, 23 Jan 2024 16:47:26 +0000
+gov.gitcoin.co-post-17410-8
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+Viriya
+
+            <p>Aligned! I’ll be voting yes on this.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/7
+        Tue, 23 Jan 2024 15:25:49 +0000
+gov.gitcoin.co-post-17410-7
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+kyle
+
+            <p>Great question, the 150k was based on looking at the current GTC delegation amount and trying to be more inclusive of the top 25.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/6
+        Mon, 22 Jan 2024 16:03:06 +0000
+gov.gitcoin.co-post-17410-6
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+kempsterrrr
+
+            <p>Nice initiative, develope dao will be voting yes on this proposal assuming we can get our voting issue cleared up by the time this is elevated.</p>
+<p>We’re considering a similar change, is there anything you can share regarding how you decided on 150k as the right number of the threshold?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/5
+        Mon, 22 Jan 2024 15:26:23 +0000
+gov.gitcoin.co-post-17410-5
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+krrisis
+
+            <p>Thx for the clear update, will be voting yes</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/4
+        Thu, 18 Jan 2024 15:14:18 +0000
+gov.gitcoin.co-post-17410-4
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+owocki
+
+            <p>I will be voting yes on this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/3
+        Mon, 15 Jan 2024 19:40:59 +0000
+gov.gitcoin.co-post-17410-3
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+CoachJonathan
+
+            <p>Thanks for this revised proposal, Kyle. I am in favor of moving forward with this.</p>
+<p>Sounds like the work effort needed to implement the new quorum threshold is high and it may be worthwhile keeping this threshold for now until it becomes a much more intense and obvious pain point.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/2
+        Mon, 15 Jan 2024 16:25:06 +0000
+gov.gitcoin.co-post-17410-2
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+kyle
+
+            <h2><a name="context-and-update-1" class="anchor" href="https://gov.gitcoin.co#context-and-update-1"></a>Context and Update</h2>
+<p>In our continued efforts to evolve and democratize the governance process within the Gitcoin DAO, we previously proposed (<a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xa68b33484f5fe3e53f2f51335483057200d3fa08cdafc93c0904b29514cb9980">which passed</a>!) adjustments to the GTC voting thresholds. After valuable discussions and technical consultations, it’s clear that some proposed changes need refinement. Specifically, adjusting the 2.5M GTC quorum requirement presents technical challenges and may necessitate deploying a new contract, which we want to avoid. However, we can modify the 1M GTC requirement for creating new proposals.</p>
+<h2><a name="original-proposal-recap-2" class="anchor" href="https://gov.gitcoin.co#original-proposal-recap-2"></a>Original Proposal Recap</h2>
+<p>Our initial proposal aimed to empower a broader range of GTC token holders in the governance process by reducing the dominance of large holders. The key points were:</p>
+<ul>
+<li>
+<p>Lowering the quorum threshold from 2.5M GTC to 1M GTC for both on-chain and off-chain voting.</p>
+</li>
+<li>
+<p>Reducing the initial proposal threshold from 1M GTC to 150K GTC.</p>
+</li>
+<li>
+<p>Keeping the current time and duration for voting procedures intact.</p>
+</li>
+</ul>
+<h2><a name="revised-proposal-details-3" class="anchor" href="https://gov.gitcoin.co#revised-proposal-details-3"></a>Revised Proposal Details</h2>
+<p>Based on technical advisability, the revised proposal is as follows:</p>
+<ul>
+<li>
+<p>Maintain Quorum Threshold: While the original plan was to reduce the quorum threshold to 1M GTC, we don’t want to deploy a new governor to make this change.</p>
+</li>
+<li>
+<p>Reduce Proposal Threshold: Lower the requirement to initiate a proposal from 1M GTC to 150K GTC, making it easier for a wider range of stakeholders to actively participate in governance.</p>
+</li>
+<li>
+<p>Maintain Current Voting Processes: The existing timeframes and procedures for both on-chain and off-chain voting will remain unchanged to ensure continuity and stability in our governance operations.</p>
+</li>
+</ul>
+<h2><a name="next-steps-4" class="anchor" href="https://gov.gitcoin.co#next-steps-4"></a>Next Steps:</h2>
+<p>Barring any strong community feedback, we’ll move this (new) proposal through the same governance steps as any proposal follows, with the above mentioned adjustments in implementation (maintain quorum threshold, reduced proposal threshold and maintained voting processes).</p>
+<h2><a name="vote-5" class="anchor" href="https://gov.gitcoin.co#vote-5"></a>Vote</h2>
+<ul>
+<li>Yes - Approve the adjustments to the voting thresholds as proposed.</li>
+<li>No - Do not implement the proposed changes to the voting thresholds.</li>
+<li>Abstain - Neither approve nor disapprove the proposed changes.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-updated-and-new-lower-gtc-voting-thresholds-on-and-off-chain/17410/1
+        Sat, 13 Jan 2024 15:46:23 +0000
+gov.gitcoin.co-post-17410-1
+[Proposal] Updated (and new!): Lower GTC Voting Thresholds on and off chain
+      
+
+

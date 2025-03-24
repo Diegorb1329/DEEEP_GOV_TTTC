@@ -1,0 +1,153 @@
+
+
+
+Wonderland x Gitcoin - Update
+https://gov.gitcoin.co/t/wonderland-x-gitcoin-update/19495
+    # Wonderland x Gitcoin - Update Oct 8th, 2024
+This report aims to keep the Gitcoin community and the DAO updated on Wonderland's work and progress as a strategic partner in the development of the Gitcoin protocol.
+
+![image|690x178](upload://ffvWYpRPXHY4rVXQlXsBEsA84Xm.jpeg)
+
+## **What are we working on?**
+
+The Wonderland team, in collaboration with the Gitcoin team, is focused on two key projects for the Gitcoin ecosystem:
+
+-   **Allo v2.1**: Aiming to improve the core protocol and strategies to increase modularity and composability.
+-   **Indexer v2**: Focused on rebuilding the Gitcoin indexer from the ground up, with a better separation of concerns to ensure scalability and forkability.
+
+## **Allo v2.1**
+
+We have improved the Allo protocol in version 2.1 to optimize the developer experience. Previously, creating a strategy required 400 lines of code; now, thanks to reusable components, only 30 lines are needed. This makes it easier for users to create pools (funding campaigns) and interact with them through the improved Allo core. We’ve developed additional tools, such as libraries and extensions, that make strategies more modular, enabling developers to build custom strategies more easily. We have also refactored and optimized existing strategies to take full leveraging of these new tools.
+
+### **Key Improvements**
+
+-   **Strategy tools: Tools** that facilitate the creation and modularization of customized strategies.
+    -   [**Base Strategy:**](https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/strategies/BaseStrategy.sol) Base contract that includes all the “main” actions of a strategy (fund pool, register recipients, allocate funds, distribute funds).
+    -   [**Extensions:**](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/extensions) These extensions provide additional functionality to the base strategy, enabling developers to implement more advanced.
+        -   **Recipient Extension:** Provides detailed recipient data with a review system.
+        -   **Milestone Extension:** Manages milestone-based strategies.
+        -   **Gating Extension:** Adds additional logic for customized strategies.
+    -   **Libraries**: Strategies for managing voting and calculating the results of a Quadratic Voting or Funding on chain.
+        -   Added [QF](https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/strategies/libraries/QFHelper.sol) and [QV](https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/strategies/libraries/QVHelper.sol) libraries.
+-   **Core and Strategies Improvements:**
+    -   [Removed](https://github.com/allo-protocol/allo-v2/issues/574) the requirement for Allo team approval for every strategy
+    -   Improved user experience by enabling [batch calls](https://github.com/allo-protocol/allo-v2/issues/592) for registering and allocating to [multiple pools](https://github.com/allo-protocol/allo-v2/issues/585) and managing pool roles.
+    -   [Improved usage](https://github.com/allo-protocol/allo-v2/issues/593) of `msg.sender` to allow support for meta transactions.
+-   **Strategy Refactoring**:
+    -   [Refactored](https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/examples) DirectAllocation, D**onationVoting, easy** RPGF**,** QVImpactStream, QVSimple and RFP strategies.
+
+**Note:** We drastically improved the unit tests for both the core and strategies, as well as added integration tests.
+
+### **Current Status**
+Allo v2.1 is currently under internal review. Wonderland's security team is performing a comprehensive audit of the contracts and strategies to ensure the highest level of security and reliability. Following that, the testing team will apply advanced fuzzing and symbolic execution tests. Once this process is complete, the protocol will be ready for production.
+
+### **Timeline**
+Allo v2.1 will be ready in 1-2 weeks at the time of this writing (pending external audit).
+
+## Indexer V2
+We are redesigning the Gitcoin Grants Stack indexer, which was originally built to index/query cross-chain grant data across the Allo ecosystem. It currently faces design limitations such as dependency on external vendors, scalability problems, and it was also not built for a multi-mechanism future. Indexer v2 addresses these issues through a modular architecture that improves flexibility and scalability while maintaining compatibility with existing data.
+
+We are in the early stages of this project, finalizing the technical design. We will soon share the specifications of the new design with the community.
+
+### **Timeline**
+We estimate having the Indexer V2 ready in Q1 2025. We'll also have an MVP ready by the end of this year.
+
+## **Next Steps**
+We are excited to continue working alongside the Gitcoin team. In the coming months, we will provide further updates. Any feedback from the community is welcome!
+Tue, 11 Feb 2025 14:20:46 +0000
+⚙️ Grants Lab
+
+
+Wonderland x Gitcoin - Update
+free2ride19
+
+            <p>"Exciting updates! Looking forward to Allo v2.1’s release in the next 1-2 weeks. The redesign of the Gitcoin Grants Stack indexer (Indexer V2) sounds promising, addressing scalability and flexibility issues.</p>
+<p>Key takeaways:</p>
+<ul>
+<li>Allo v2.1: 1-2 weeks</li>
+<li>Indexer V2: Q1 2025 (MVP by end of 2024)</li>
+<li>Modular architecture for improved flexibility and scalability</li>
+</ul>
+<p>Appreciate the transparency and community involvement. Keep us posted on progress!</p>
+<p>Questions:</p>
+<ul>
+<li>Will Indexer V2 support additional chain integrations?</li>
+<li>How will the new design impact existing grant data?</li>
+</ul>
+<p>Eager to provide feedback and collaborate."</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/free2ride19">@free2ride19</a></p>
+          <p><a href="https://gov.gitcoin.co/t/wonderland-x-gitcoin-update/19495/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/wonderland-x-gitcoin-update/19495/3
+        Sat, 12 Oct 2024 05:56:36 +0000
+gov.gitcoin.co-post-19495-3
+Wonderland x Gitcoin - Update
+      
+
+Wonderland x Gitcoin - Update
+Wonderland
+
+            <h1><a name="wonderland-x-gitcoin-update-oct-8th-2024-1" class="anchor" href="https://gov.gitcoin.co#wonderland-x-gitcoin-update-oct-8th-2024-1"></a>Wonderland x Gitcoin - Update Oct 8th, 2024</h1>
+<p>This report aims to keep the Gitcoin community and the DAO updated on Wonderland’s work and progress as a strategic partner in the development of the Gitcoin protocol.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/6ae198d4b122bd2353aaab67926d29d057288270.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/6ae198d4b122bd2353aaab67926d29d057288270" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6ae198d4b122bd2353aaab67926d29d057288270_2_690x178.jpeg" alt="image" data-base62-sha1="ffvWYpRPXHY4rVXQlXsBEsA84Xm" width="690" height="178" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/6/6ae198d4b122bd2353aaab67926d29d057288270_2_690x178.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/6/6ae198d4b122bd2353aaab67926d29d057288270.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/6/6ae198d4b122bd2353aaab67926d29d057288270.jpeg 2x" data-dominant-color="7A617E"></a></div><p></p>
+<h2><a name="what-are-we-working-on-2" class="anchor" href="https://gov.gitcoin.co#what-are-we-working-on-2"></a><strong>What are we working on?</strong></h2>
+<p>The Wonderland team, in collaboration with the Gitcoin team, is focused on two key projects for the Gitcoin ecosystem:</p>
+<ul>
+<li><strong>Allo v2.1</strong>: Aiming to improve the core protocol and strategies to increase modularity and composability.</li>
+<li><strong>Indexer v2</strong>: Focused on rebuilding the Gitcoin indexer from the ground up, with a better separation of concerns to ensure scalability and forkability.</li>
+</ul>
+<h2><a name="allo-v21-3" class="anchor" href="https://gov.gitcoin.co#allo-v21-3"></a><strong>Allo v2.1</strong></h2>
+<p>We have improved the Allo protocol in version 2.1 to optimize the developer experience. Previously, creating a strategy required 400 lines of code; now, thanks to reusable components, only 30 lines are needed. This makes it easier for users to create pools (funding campaigns) and interact with them through the improved Allo core. We’ve developed additional tools, such as libraries and extensions, that make strategies more modular, enabling developers to build custom strategies more easily. We have also refactored and optimized existing strategies to take full leveraging of these new tools.</p>
+<h3><a name="key-improvements-4" class="anchor" href="https://gov.gitcoin.co#key-improvements-4"></a><strong>Key Improvements</strong></h3>
+<ul>
+<li><strong>Strategy tools: Tools</strong> that facilitate the creation and modularization of customized strategies.
+<ul>
+<li><a href="https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/strategies/BaseStrategy.sol" rel="noopener nofollow ugc"><strong>Base Strategy:</strong></a> Base contract that includes all the “main” actions of a strategy (fund pool, register recipients, allocate funds, distribute funds).</li>
+<li><a href="https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/extensions" rel="noopener nofollow ugc"><strong>Extensions:</strong></a> These extensions provide additional functionality to the base strategy, enabling developers to implement more advanced.
+<ul>
+<li><strong>Recipient Extension:</strong> Provides detailed recipient data with a review system.</li>
+<li><strong>Milestone Extension:</strong> Manages milestone-based strategies.</li>
+<li><strong>Gating Extension:</strong> Adds additional logic for customized strategies.</li>
+</ul>
+</li>
+<li><strong>Libraries</strong>: Strategies for managing voting and calculating the results of a Quadratic Voting or Funding on chain.
+<ul>
+<li>Added <a href="https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/strategies/libraries/QFHelper.sol" rel="noopener nofollow ugc">QF</a> and <a href="https://github.com/allo-protocol/allo-v2.1/blob/dev/contracts/strategies/libraries/QVHelper.sol" rel="noopener nofollow ugc">QV</a> libraries.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Core and Strategies Improvements:</strong>
+<ul>
+<li><a href="https://github.com/allo-protocol/allo-v2/issues/574" rel="noopener nofollow ugc">Removed</a> the requirement for Allo team approval for every strategy</li>
+<li>Improved user experience by enabling <a href="https://github.com/allo-protocol/allo-v2/issues/592" rel="noopener nofollow ugc">batch calls</a> for registering and allocating to <a href="https://github.com/allo-protocol/allo-v2/issues/585" rel="noopener nofollow ugc">multiple pools</a> and managing pool roles.</li>
+<li><a href="https://github.com/allo-protocol/allo-v2/issues/593" rel="noopener nofollow ugc">Improved usage</a> of <code>msg.sender</code> to allow support for meta transactions.</li>
+</ul>
+</li>
+<li><strong>Strategy Refactoring</strong>:
+<ul>
+<li><a href="https://github.com/allo-protocol/allo-v2.1/tree/dev/contracts/strategies/examples" rel="noopener nofollow ugc">Refactored</a> DirectAllocation, D<strong>onationVoting, easy</strong> RPGF**,** QVImpactStream, QVSimple and RFP strategies.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> We drastically improved the unit tests for both the core and strategies, as well as added integration tests.</p>
+<h3><a name="current-status-5" class="anchor" href="https://gov.gitcoin.co#current-status-5"></a><strong>Current Status</strong></h3>
+<p>Allo v2.1 is currently under internal review. Wonderland’s security team is performing a comprehensive audit of the contracts and strategies to ensure the highest level of security and reliability. Following that, the testing team will apply advanced fuzzing and symbolic execution tests. Once this process is complete, the protocol will be ready for production.</p>
+<h3><a name="timeline-6" class="anchor" href="https://gov.gitcoin.co#timeline-6"></a><strong>Timeline</strong></h3>
+<p>Allo v2.1 will be ready in 1-2 weeks at the time of this writing (pending external audit).</p>
+<h2><a name="indexer-v2-7" class="anchor" href="https://gov.gitcoin.co#indexer-v2-7"></a>Indexer V2</h2>
+<p>We are redesigning the Gitcoin Grants Stack indexer, which was originally built to index/query cross-chain grant data across the Allo ecosystem. It currently faces design limitations such as dependency on external vendors, scalability problems, and it was also not built for a multi-mechanism future. Indexer v2 addresses these issues through a modular architecture that improves flexibility and scalability while maintaining compatibility with existing data.</p>
+<p>We are in the early stages of this project, finalizing the technical design. We will soon share the specifications of the new design with the community.</p>
+<h3><a name="timeline-8" class="anchor" href="https://gov.gitcoin.co#timeline-8"></a><strong>Timeline</strong></h3>
+<p>We estimate having the Indexer V2 ready in Q1 2025. We’ll also have an MVP ready by the end of this year.</p>
+<h2><a name="next-steps-9" class="anchor" href="https://gov.gitcoin.co#next-steps-9"></a><strong>Next Steps</strong></h2>
+<p>We are excited to continue working alongside the Gitcoin team. In the coming months, we will provide further updates. Any feedback from the community is welcome!</p>
+          <p><a href="https://gov.gitcoin.co/t/wonderland-x-gitcoin-update/19495/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/wonderland-x-gitcoin-update/19495/1
+        Tue, 08 Oct 2024 14:58:25 +0000
+gov.gitcoin.co-post-19495-1
+Wonderland x Gitcoin - Update
+      
+
+

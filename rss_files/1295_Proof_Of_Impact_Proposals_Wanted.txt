@@ -1,0 +1,269 @@
+
+
+
+Proof Of Impact 🌱 [Proposals Wanted]
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179
+    ImpactDAOs any DAO that has a positive impact on the world
+
+Following the success of https://gov.gitcoin.co/t/impactdao-cartographers-wanted/9866 , we now have a telegram group with 130 people [[link]](https://t.me/+ORZ8joj8_AhjM2I5) who are working together to discover the space of ImpactDAOS.
+
+I've also started working with @Aleborda21, who has done a wonderful job putting together a [resource library on the subject with information on 100s of DAOs](https://gitcoin.notion.site/ImpactDAO-Cartographers-Map-Room-18c0126b82af40ccb46405427ffb834d).  We plan to release a small book in PDF/softcover at DevConnect on 4/21.  It would catalogue over 100 ImpactDAOs, and here is what it would look like:
+
+![Cover|690x422](upload://8WviWf2q2bL4v1RED7cY3Q1eZFz.jpeg)
+
+# Extending this momentum
+
+I would like to challenge the community to extend this momentum.  I would like to see a ImpactDAO RatingsDAO emerge.
+
+The RatingsDAO would maintain an important money lego: **a Proof of Impact**.  Such a DAO would maintain an on-chain registry of which ImpactDAOs have what Impact.  Such a money lego could be used to facilitate trustless smart contract functionality only available to ImpactDAOs, and would also allow ImpactDAOs to display an independently verified "Proof Of Impact".
+
+This RatingsDAO could solicit & ingest attestations about a DAO's social impact, independently verify their impact, and then issue a report card on them.    [(here is a write up I did a few weeks ago about what such an attestation framework could look like)](https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/7)
+
+The Report cards would perhaps be available via smart contract and then also via a beautiful web interface.
+
+Here are two mocks of what an ImpactDAO rating card could look like (all numbers made up, for demonstration purposes only):
+
+![Screen Shot 2022-03-22 at 8.18.29 PM|690x298, 75%](upload://rutXoACa03GCUVqy1htGVFPChWJ.png)
+![Screen Shot 2022-03-22 at 8.18.24 PM|690x267, 75%](upload://4R2D7w6jOwPseOFX6cSjmyeNiAU.png)
+
+
+I think that the above ratings primitive could be deeply valuable to the space if
+1. it has a deep liqudity of ratings.
+2. it is backed by a highly [legitimate](https://vitalik.ca/general/2021/03/23/legitimacy.html) governance. The governance should also be uncapture-able and [hella forkable](https://twitter.com/YalorMewn/status/1419723207674777601).  ImpactDAOs should be able to/invited to participate in the conversation about their impact.
+3. it'd be nice if it plugged into other money legos, like say [Gitcoin Grants 2.0](https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/7).  Allowing Gitcoin Grants to display Impact Ratings in it's UI
+
+
+Such a ratings primitive could be used to create interesting new smart contract modifiers available only to DAOs with high impact scores.  Imagine if the following primitives were available in smart contracts:
+
+`modifier onlyImpactDAORatingAbove(uint 256 above_score)`
+`modifier onlyImpactDAOSocialRatingAbove(uint 256 above_score)`
+`modifier onlyImpactDAOMaterialRatingAbove(uint 256 above_score)`
+
+Is anyone working on something like this or interested in starting to? If so, I would like to talk to you. Please (1) [join this telegram](https://t.me/+ORZ8joj8_AhjM2I5) (2) post a proposal below in 500 words or less that articulates how you would attack this problem and what would have to be true for it to happen (hint: please ask for funding, I want to fund good proposals!).
+
+I have budget to fund as many promising proposals as I receive, and will decide how to spend that budget on a case by case basis.
+Wed, 13 Jul 2022 16:36:15 +0000
+📜 Proposals
+
+
+Proof Of Impact 🌱 [Proposals Wanted]
+owocki
+
+            <p>hey all, thanks again for the discussion + for the proposals.</p>
+<p>we posted about the next step for this initiative here =&gt; <a href="https://gov.gitcoin.co/t/impact-certificates-proposals-wanted/10499/29" class="inline-onebox">Impact Certificates [Proposals Wanted] 📄 - #29 by owocki</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/11
+        Wed, 13 Jul 2022 16:36:15 +0000
+gov.gitcoin.co-post-10179-11
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+Proof Of Impact 🌱 [Proposals Wanted]
+OrBlob
+
+            <p>Hi folks,</p>
+<p>My name is Or (<span class="mention">@realblob</span>), I work in impact management and measurement. I lead a community of SDG stakeholders and professionals and I work with startups to help them align their KPIs with impact KPIs, indicators, and frameworks. Our proposal is to align impact metrics and values with monetary values and streamline their incorporation into transactions through an “Impact Oracle”.</p>
+<p><strong>Why?</strong><br>
+Over the years we’ve noticed that much of impact accounting is a mess of acronyms that create a race to the bottom. Companies do the minimum in order to be up to par with regulation/certificates. This is because we fundamentally do not have metrics that value impact in monetary terms (outside of marketing).</p>
+<p>Essentially, ESG, SDGs, IMP, GRI, SASB, and other acronyms and methodologies are “patches” to an economic system that does not value environmental and social impact. Our economic system “speaks in money” and we respond with qualitative impact analysis. We “patch” our economy with certifications, verifications, and different tags or stickers that symbolize that the goods or services are aligned with our values, but this does not change the context of the system.</p>
+<p><strong>What?</strong><br>
+Impact Oracle (IO) is a price oracle for impact that draws on market values and stakeholder consensus. Instead of creating a rigid top-down accounting for impact, we decentralize the process and allow the price of impact to reflect its actual value in monetary terms.</p>
+<p>IO maintains a registry of the value of impact, as a flexible, ad-hoc, community-sourced metric. Constantly evolving, living, and changing with the needs and values of the ecosystem. Just as prices of commodities and assets change with market demands, so must impact. Using this pricing, IO compensates for positive impact and offsets negative impact.</p>
+<p>By creating a price for every type of impact we create a new metric for businesses to measure against. By making this metric monetary, we create a new potential revenue stream and incentivize a race to the top: More impact = more profit.</p>
+<p>This creates transparency, impact, alignment, and transformation of the economic incentives in our economy like never before. IO creates a system in which verification of impact is an all-in-one process. Any organization, DAO or otherwise, can streamline their impact accounting, getting compensation for positive impact and offsetting their negative.</p>
+<p><strong>How?</strong><br>
+By connecting to legacy systems such as the company’s logistics, supply, ERM software, etc. we can correlate their actual activities with their real impact. We don’t need to track each DAO or company individually as we can connect with MRV systems, tokenization frameworks, and existing data.</p>
+<p>More on the “How” in our lite paper which I’d be happy to share.</p>
+<p>What we’re looking for:<br>
+We are currently building the tokenomics and governance system and building partnerships with relevant stakeholders to supply capital and professional resources. This should be a cross-chain endeavor and we would like for it to be built for Ethereum as well as other blockchains.</p>
+<p>Any of the following would be of massive help:</p>
+<ul>
+<li>35K USDC for an MVP of the Oracle</li>
+<li>Professional and tech support from the ICC community</li>
+<li>Community-building support for the IO DAO through Gitcoin and others</li>
+</ul>
+<p>(This proposal is similar to a proposal in the the “Impact Certificate” thread - if one is accepted, we will rescind the other)</p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/10
+        Fri, 13 May 2022 06:57:27 +0000
+gov.gitcoin.co-post-10179-10
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+Proof Of Impact 🌱 [Proposals Wanted]
+deeparocks
+
+            <p>Proof of Impact is easy to verify for digital goods but it gets messy for on ground projects. No matter how many videos and stories the project creator supplies it needs to be attested and verified by an independent person. You got to make that field trip and talk to the beneficiaries to assess the real impact. Oracles could potentially be a solution to prove impact in a decentralized way</p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/9
+        Thu, 05 May 2022 21:56:09 +0000
+gov.gitcoin.co-post-10179-9
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+Proof Of Impact 🌱 [Proposals Wanted]
+zhiganov
+
+            <p>Hi guys!</p>
+<p><strong>Protein</strong> is looking to build a web3 version of BCorp/MSCI to make it easier for ImpactDAOs to access funding, investment and other novel mechanisms to boost their impact. There is a need for impact investors and philanthropists to be able to synthesize due diligence, using the tools of web3 to escape the siloed and proprietary approach of legacy ESG initiatives.</p>
+<p>A token curated registry (TCR) of ImpactDAOs with their validated impact / traction scores would create a key ingredient in a composable ecosystem to improve the collective impact of the web3 world.</p>
+<p>Such registry is basically a curated list of impact DAOs, which enables discovery of impactDAOs for potential contributors, investors, funders. Each ImpactDAO receives an on-chain score from a validator, allowing for investment vehicles and other token mechanics / governance to be built on top. For example a tracker fund could invest in the 10 highest impact across all projects, or the 10 highest impact in solving the food crisis, or buy a crypto ETF based on the tokens of top DAOs across specific areas of impact (for retail investors). Alternatively, an active donor fund could use this list to adjust its recurring / streaming donation. Conversely, a certain score could be used for gating access to the list, e.g. on the Regen Stack for web3 orgs that want to address their impacts but are outside of their expertise: highly rated forestry might be recommended for offsetting, highly rated design for reuse featured for laptops equipment, etc.</p>
+<p>The impact rating can be kept honest due to 1) crypto economic incentives for evaluation / challenging scores and adding / removing DAOs from the registry, 2) robust governance system that would ensure legitimacy of the process.</p>
+<p><strong>This grant would allow us to reach the goals of Stage 1:</strong></p>
+<ul>
+<li>Develop the scoring mechanism v1 - impact values that validators would be attesting to. These could range from internal policies and processes through to verifiable impacts.</li>
+<li>Design the incentive structure v1 required to ensure all eligible ImpactDAOs are scored and that their scores are an accurate reflection (this would include arbitration mechanisms).</li>
+<li>Validate the demand from potential investors (consumers of the curated list)</li>
+</ul>
+<p><strong>What we need</strong></p>
+<ul>
+<li>35,000 USDC</li>
+<li>Support from RatingsDAO / access to talent from ICC/Gitcoin network (e.g. for game theory and token engineering)</li>
+</ul>
+<p><strong>Once Stage 1 is completed, we’ll look for additional support to:</strong></p>
+<ul>
+<li>Prototype the investable TCR</li>
+<li>Build frontend for ease of navigation</li>
+<li>Train validators / evaluation agents to use our scoring mechanism</li>
+<li>Kickstart the ecosystem for decentralized validation of ImpactDAOs, incl. supplying it with the necessary liquidity</li>
+</ul>
+<p><strong>Who we are</strong></p>
+<p>Protein Community is a community DAO, building out the Good Growth standard and cultural / regenerative accelerator. We’ve just released our pilot cohort, supporting and funding projects that ‘bring under-represented communities into the new economy’. We are currently evaluating our approach before our next “recelerator” which focuses on supporting projects and their regen stack.</p>
+<p>You can learn more about us on Twitter <span class="mention">@protein</span></p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/8
+        Fri, 29 Apr 2022 01:21:20 +0000
+gov.gitcoin.co-post-10179-8
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+Proof Of Impact 🌱 [Proposals Wanted]
+bestape
+
+            <p>We’ll need this to determine priority at our International Legal Clinic: <a href="https://gitcoin.co/grants/4811/lexdao-providing-legal-aid-to-impactdaos-funded-by" class="inline-onebox" rel="noopener nofollow ugc">💰 LexDAO providing legal aid to impactDAOs funded by GR13 and beyond | Grants | Gitcoin</a> .</p>
+<p>Thank you for initiating the resource.</p>
+<p>Also other graders, like ixo Foundation?</p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/7
+        Thu, 24 Mar 2022 02:14:07 +0000
+gov.gitcoin.co-post-10179-7
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+Proof Of Impact 🌱 [Proposals Wanted]
+nya-elimuai
+
+            <p>This might also relate to what the <em>ixo Foundation</em> is doing: <a href="https://www.ixo.world" rel="noopener nofollow ugc">https://www.ixo.world</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/6
+        Thu, 24 Mar 2022 01:26:24 +0000
+gov.gitcoin.co-post-10179-6
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+Proof Of Impact 🌱 [Proposals Wanted]
+thelostone-mc
+
+            <aside class="quote no-group" data-username="owocki" data-post="1" data-topic="10179">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Such a ratings primitive could be used to create interesting new smart contract modifiers available only to DAOs with high impact scores. Imagine if the following primitives were available in smart contracts:</p>
+<p><code>modifier onlyImpactDAORatingAbove(uint 256 above_score)</code><br>
+<code>modifier onlyImpactDAOSocialRatingAbove(uint 256 above_score)</code><br>
+<code>modifier onlyImpactDAOMaterialRatingAbove(uint 256 above_score)</code></p>
+</blockquote>
+</aside>
+<p><a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> Yo so this is something interesting. Might be worth keeping it at the back of our head during the grant round manager. Think about it.<br>
+If above product existed → how neat would it be to use allow the grant round to rely on this to fetch grants from the registry.</p>
+<p>While this goes takes a tangent to the vision of Grants2.0 where we expect the grant to apply for the grant round. Having something like this down the line → would be a nice feature</p>
+<p>Imagine collections but an actually legit / vetted collection</p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/5
+        Wed, 23 Mar 2022 14:11:49 +0000
+gov.gitcoin.co-post-10179-5
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+Proof Of Impact 🌱 [Proposals Wanted]
+joanna
+
+            <p>this is awesome, you are amazing <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a><br>
+eager to build the new world together &lt;3</p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/4
+        Wed, 23 Mar 2022 13:15:18 +0000
+gov.gitcoin.co-post-10179-4
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+Proof Of Impact 🌱 [Proposals Wanted]
+Jahed
+
+            <p>Awesome initiative, and reminds me of some of the stuff we talked about on the pod. Would be interesting to get the PopcornDAO folks involved with this (Anna-marie Swan, Mike Kisselgof, Anthony Martin), as well as Evan Miyazono from Protocol Labs</p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/3
+        Wed, 23 Mar 2022 12:47:44 +0000
+gov.gitcoin.co-post-10179-3
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+Proof Of Impact 🌱 [Proposals Wanted]
+owocki
+
+            <p>Free name idea for a Ratings DAO:  Effective DAOtrusim <img src="https://emoji.discourse-cdn.com/twitter/stuck_out_tongue.png?v=12" title=":stuck_out_tongue:" class="emoji" alt=":stuck_out_tongue:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/2
+        Wed, 23 Mar 2022 02:46:12 +0000
+gov.gitcoin.co-post-10179-2
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+Proof Of Impact 🌱 [Proposals Wanted]
+owocki
+
+            <p>ImpactDAOs any DAO that has a positive impact on the world</p>
+<p>Following the success of <a href="https://gov.gitcoin.co/t/impactdao-cartographers-wanted/9866" class="inline-onebox">ImpactDAO Cartographers Wanted! 🗺</a> , we now have a telegram group with 130 people <a href="https://t.me/+ORZ8joj8_AhjM2I5">[link]</a> who are working together to discover the space of ImpactDAOS.</p>
+<p>I’ve also started working with <a class="mention" href="https://gov.gitcoin.co/u/aleborda21">@Aleborda21</a>, who has done a wonderful job putting together a <a href="https://gitcoin.notion.site/ImpactDAO-Cartographers-Map-Room-18c0126b82af40ccb46405427ffb834d">resource library on the subject with information on 100s of DAOs</a>.  We plan to release a small book in PDF/softcover at DevConnect on 4/21.  It would catalogue over 100 ImpactDAOs, and here is what it would look like:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/3eae6c9deaa1b59c20d8fc1bea34758e1654a5e5.jpeg" data-download-href="/uploads/short-url/8WviWf2q2bL4v1RED7cY3Q1eZFz.jpeg?dl=1" title="Cover"><img src="/uploads/db4391/optimized/2X/3/3eae6c9deaa1b59c20d8fc1bea34758e1654a5e5_2_690x422.jpeg" alt="Cover" data-base62-sha1="8WviWf2q2bL4v1RED7cY3Q1eZFz" width="690" height="422" srcset="/uploads/db4391/optimized/2X/3/3eae6c9deaa1b59c20d8fc1bea34758e1654a5e5_2_690x422.jpeg, /uploads/db4391/optimized/2X/3/3eae6c9deaa1b59c20d8fc1bea34758e1654a5e5_2_1035x633.jpeg 1.5x, /uploads/db4391/optimized/2X/3/3eae6c9deaa1b59c20d8fc1bea34758e1654a5e5_2_1380x844.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/3/3eae6c9deaa1b59c20d8fc1bea34758e1654a5e5_2_10x10.png"></a></div><p></p>
+<h1>
+<a name="extending-this-momentum-1" class="anchor" href="https://gov.gitcoin.co#extending-this-momentum-1"></a>Extending this momentum</h1>
+<p>I would like to challenge the community to extend this momentum.  I would like to see a ImpactDAO RatingsDAO emerge.</p>
+<p>The RatingsDAO would maintain an important money lego: <strong>a Proof of Impact</strong>.  Such a DAO would maintain an on-chain registry of which ImpactDAOs have what Impact.  Such a money lego could be used to facilitate trustless smart contract functionality only available to ImpactDAOs, and would also allow ImpactDAOs to display an independently verified “Proof Of Impact”.</p>
+<p>This RatingsDAO could solicit &amp; ingest attestations about a DAO’s social impact, independently verify their impact, and then issue a report card on them.    <a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/7">(here is a write up I did a few weeks ago about what such an attestation framework could look like)</a></p>
+<p>The Report cards would perhaps be available via smart contract and then also via a beautiful web interface.</p>
+<p>Here are two mocks of what an ImpactDAO rating card could look like (all numbers made up, for demonstration purposes only):</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c0acd422ade61a823dcea665359dd7b2120db09d.png" data-download-href="/uploads/short-url/rutXoACa03GCUVqy1htGVFPChWJ.png?dl=1" title="Screen Shot 2022-03-22 at 8.18.29 PM"><img src="/uploads/db4391/optimized/2X/c/c0acd422ade61a823dcea665359dd7b2120db09d_2_517x223.png" alt="Screen Shot 2022-03-22 at 8.18.29 PM" data-base62-sha1="rutXoACa03GCUVqy1htGVFPChWJ" width="517" height="223" srcset="/uploads/db4391/optimized/2X/c/c0acd422ade61a823dcea665359dd7b2120db09d_2_517x223.png, /uploads/db4391/optimized/2X/c/c0acd422ade61a823dcea665359dd7b2120db09d_2_775x334.png 1.5x, /uploads/db4391/original/2X/c/c0acd422ade61a823dcea665359dd7b2120db09d.png 2x" data-small-upload="/uploads/db4391/optimized/2X/c/c0acd422ade61a823dcea665359dd7b2120db09d_2_10x10.png"></a></div><br>
+<div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2207a73ac9552cbca9be5af3605fa2b47563d750.png" data-download-href="/uploads/short-url/4R2D7w6jOwPseOFX6cSjmyeNiAU.png?dl=1" title="Screen Shot 2022-03-22 at 8.18.24 PM"><img src="/uploads/db4391/optimized/2X/2/2207a73ac9552cbca9be5af3605fa2b47563d750_2_517x200.png" alt="Screen Shot 2022-03-22 at 8.18.24 PM" data-base62-sha1="4R2D7w6jOwPseOFX6cSjmyeNiAU" width="517" height="200" srcset="/uploads/db4391/optimized/2X/2/2207a73ac9552cbca9be5af3605fa2b47563d750_2_517x200.png, /uploads/db4391/optimized/2X/2/2207a73ac9552cbca9be5af3605fa2b47563d750_2_775x300.png 1.5x, /uploads/db4391/original/2X/2/2207a73ac9552cbca9be5af3605fa2b47563d750.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/2207a73ac9552cbca9be5af3605fa2b47563d750_2_10x10.png"></a></div><p></p>
+<p>I think that the above ratings primitive could be deeply valuable to the space if</p>
+<ol>
+<li>it has a deep liqudity of ratings.</li>
+<li>it is backed by a highly <a href="https://vitalik.ca/general/2021/03/23/legitimacy.html">legitimate</a> governance. The governance should also be uncapture-able and <a href="https://twitter.com/YalorMewn/status/1419723207674777601">hella forkable</a>.  ImpactDAOs should be able to/invited to participate in the conversation about their impact.</li>
+<li>it’d be nice if it plugged into other money legos, like say <a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016/7">Gitcoin Grants 2.0</a>.  Allowing Gitcoin Grants to display Impact Ratings in it’s UI</li>
+</ol>
+<p>Such a ratings primitive could be used to create interesting new smart contract modifiers available only to DAOs with high impact scores.  Imagine if the following primitives were available in smart contracts:</p>
+<p><code>modifier onlyImpactDAORatingAbove(uint 256 above_score)</code><br>
+<code>modifier onlyImpactDAOSocialRatingAbove(uint 256 above_score)</code><br>
+<code>modifier onlyImpactDAOMaterialRatingAbove(uint 256 above_score)</code></p>
+<p>Is anyone working on something like this or interested in starting to? If so, I would like to talk to you. Please (1) <a href="https://t.me/+ORZ8joj8_AhjM2I5">join this telegram</a> (2) post a proposal below in 500 words or less that articulates how you would attack this problem and what would have to be true for it to happen (hint: please ask for funding, I want to fund good proposals!).</p>
+<p>I have budget to fund as many promising proposals as I receive, and will decide how to spend that budget on a case by case basis.</p>
+          <p><a href="https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proof-of-impact-proposals-wanted/10179/1
+        Wed, 23 Mar 2022 02:37:06 +0000
+gov.gitcoin.co-post-10179-1
+Proof Of Impact 🌱 [Proposals Wanted]
+      
+
+

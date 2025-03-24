@@ -1,0 +1,294 @@
+
+
+
+GG23 Pre-Ratification Proposal
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136
+    ## GG23 Pre-Ratification Proposal
+
+We propose to set the matching funds for GG23 as follows: **$1.348M** total from the Gitcoin.eth multisig. This proposal is to pre-ratify the allocation of funds to expedite the process and ensure a smooth and efficient round execution.
+
+After the post-round review, we will post the round results on the governance forum, allowing the community one week for discussion and feedback before payouts are made.
+
+## Proposed Matching Fund Allocation
+
+The proposed matching funds of $1.2M will be distributed across the following OSS Program Rounds:
+
+### Quadratic Funding
+
+* Web3 Infrastructure Round: $200k
+* dApps & Apps: $200k
+* Developer Tooling & Libraries: $200k
+
+#### GG23 Sybil Analysis and Matching Calculation Strategy
+In GG20, we introduced a two-pronged sybil analysis strategy, outlined in detail [in this post.](https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524) It has shown to be incredibly effective as a strong strategy in our Quadratic Funding rounds. We will continue to drive forward with this strategy for GG23, finalizing each of the above rounds using the calculator that uses the approach of combining Passport's Model Based Detection and COCM.
+
+**TL;DR:** 
+**Passport's MBD:** 
+This system analyzes the on-chain history of addresses and compares it to the historical data of known human and sybil addresses. Based on this comparison, the model assigns each address a score ranging from 0 to 100, where a score closer to 0 indicates a higher likelihood of the address being a sybil, and a score closer to 100 suggests a higher probability of the address belonging to a genuine human user.
+
+**COCM:**
+COCM takes Quadratic Funding (QF) to the next level by tackling its biggest challenge—manipulation through fake accounts and coordinated groups. By analyzing how connected donors are, COCM ensures that projects with genuine, diverse community support get the most matching funds. This method not only promotes fairness but also reflects the true values of the community, giving round operators more accurate insights into what their network really supports. [Read this blog post](https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding) for more in-depth information.
+
+*We are exploring potential updates to Passport's engagement with GG23, which we will post on the forum if we go ahead with it.*
+
+Calculations occur directly after the round has been completed, posted to the forum in roughly a week after donations end. The results will be posted to the forum and open for comments for a week.
+
+### Retro Funding
+
+$600k towards a curated round of 30 top OSS projects.
+
+More details on the OSS Program eligibility can be found [here](https://gov.gitcoin.co/t/gg23-oss-program-eligibility-criteria/20072).
+
+The Retro Funding round for GG23 was designed to support high-impact, mature projects based on their historical contributions to Gitcoin Grants and OSS.
+
+For this round, a curated selection of 30 projects was identified using a force-ranked Elo rating system. This ranking was based on matching amounts received across at least 3 OSS rounds between GG18 and GG22. The goal was to recognize projects with sustained impact and strong community support over time.
+
+This is a metrics-based round, so once the voting has been concluded, we will work closely with Open Source Observer to finalize the results, equally posting these to the forum for community input before conducting payouts.
+
+
+### Community Rounds
+
+The proposed matching funds of $130k will be distributed across the [selected Community Rounds](https://gov.gitcoin.co/t/gg23-community-rounds-announced/20127).
+
+### Experimentation
+
+We are equally requesting an additional $18k for a [GTC Utility experiment](https://gov.gitcoin.co/t/gtc-utility-experiment-for-gg23/20044).
+
+### Current Matching Pool Status
+
+The Matching Pool is heavily denominated in ETH, which has experienced significant volatility over the past year. We are actively working with Avantgarde to improve financial sustainability while managing market impacts.
+
+Moving forward, our strategy includes increasing our stablecoin allocation to reduce volatility, generate revenue on idle assets, and maintain upside potential through strategic ETH exposure, all while ensuring we can meet our dollar-denominated spending commitments.
+
+**Proposal for Community Vote**
+We request the community to vote on the following options:
+
+* Yes, approve the pre-ratified matching fund amounts from the multisig for GG23, totaling **$1.348M**.
+* No, do not approve.
+* No, follow the traditional process of ratification after the round.
+* Abstain
+
+Please share your thoughts and vote in the comments below.
+
+*Thank you for your continued support and participation in Gitcoin Grants governance.*
+Wed, 19 Mar 2025 14:46:31 +0000
+🌱 Gitcoin Grants
+
+
+GG23 Pre-Ratification Proposal
+PGov
+
+            <p>This is a comprehensive and well-thought-out proposal. We are particularly impressed by the clear structure and thorough attention to details, especially regarding budget allocation and community engagement plans.</p>
+<p>The emphasis on transparency and accountability through periodic reporting is appreciated and should be replicated across to build trust within the community. Appreciate the team involving diverse stakeholders early in the planning process.</p>
+<p>Overall, we fully support this proposal moving forward to ratification and am excited to see its positive impact on the Gitcoin ecosystem. Great work to all involved!</p>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/11
+        Wed, 19 Mar 2025 14:46:31 +0000
+gov.gitcoin.co-post-20136-11
+GG23 Pre-Ratification Proposal
+      
+
+GG23 Pre-Ratification Proposal
+Tane
+
+            <p>We appreciate the thoughtful proposal and have several points we’d like to clarify and provide feedback on.</p>
+<p>Regarding OSS Program Rounds,</p>
+<ul>
+<li>Could you please provide additional details on the Elo Rating mentioned in the <a href="https://gov.gitcoin.co/t/gg23-oss-program-eligibility-criteria/20072">GG23 OSS Program Eligibility Criteria</a>? Specifically, we would love to know what metrics contribute to this score and how exactly these metrics reflect the impact of previously funded projects. Given that the Retro Round offers a valuable opportunity to measure the real impact and success of past projects, we believe clear understanding and transparency about this rating system is essential.</li>
+<li>For the dApps &amp; Apps category, we note that projects within this category may typically have greater potential for generating financial returns compared to other categories, making them more attractive for venture capital funding. Therefore, could you elaborate on the justification for maintaining similar grant funding levels in this category relative to others?</li>
+<li>We find the funding allocation for Web3 Infrastructure and Developer Tooling &amp; Libraries to be appropriate based on historical context and performance.</li>
+</ul>
+<p>As for the Community Rounds, <a href="https://gov.gitcoin.co/t/gg23-community-rounds-announced">we have already evaluated them before</a>, and we keep supporting them.</p>
+<p>We also agree with the direction of exploring and validating the utility of GTC tokens through experimentation and fully support pursuing this approach. However, while we support moving forward with the experiment, we have some concerns regarding the design and its effectiveness, such as the fact that the current proposal may heavily rely on the Gitcoin DAO’s existing resources, potentially limiting its scalability or sustainability given the current Gitcoin DAO’s financial status. We feel further discussion and deeper research will be needed to address these concerns.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/10
+        Wed, 19 Mar 2025 14:12:19 +0000
+gov.gitcoin.co-post-20136-10
+GG23 Pre-Ratification Proposal
+      
+
+GG23 Pre-Ratification Proposal
+meglister
+
+            <p>To echo others, I’m in support of the proposal and ratifying methdology for post-round analysis. Might be good to include a challenge mechanism for the latter, but that feels like an optimization vs gating factor!</p>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/9
+        Wed, 19 Mar 2025 13:09:37 +0000
+gov.gitcoin.co-post-20136-9
+GG23 Pre-Ratification Proposal
+      
+
+GG23 Pre-Ratification Proposal
+ccerv1
+
+            <p>Support the proposal and agree with other comments about ratifying the “rules of the game” at the same time</p>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/8
+        Wed, 19 Mar 2025 11:43:14 +0000
+gov.gitcoin.co-post-20136-8
+GG23 Pre-Ratification Proposal
+      
+
+GG23 Pre-Ratification Proposal
+Sov
+
+            <p>I support the proposal but agree with the past recommendations of <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> and believe establishing these guidelines will add further clarity and streamline the process moving forward.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/7
+        Wed, 19 Mar 2025 02:22:02 +0000
+gov.gitcoin.co-post-20136-7
+GG23 Pre-Ratification Proposal
+      
+
+GG23 Pre-Ratification Proposal
+MathildaDV
+
+            <p>Thank you for your comments and I appreciate <a class="mention" href="https://gov.gitcoin.co/u/ivanmolto">@ivanmolto</a> <a class="mention" href="https://gov.gitcoin.co/u/wasabi">@wasabi</a> and <a class="mention" href="https://gov.gitcoin.co/u/seedgov">@SEEDGov</a> echoing this sentiment. I have updated the post to reflect our calculation strategy as well as how we’re quantifying the Retro Funding round.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/6
+        Tue, 18 Mar 2025 23:46:06 +0000
+gov.gitcoin.co-post-20136-6
+GG23 Pre-Ratification Proposal
+      
+
+GG23 Pre-Ratification Proposal
+SEEDGov
+
+            <p>We support the pre-ratification proposal for GG23 since its allocation of matching funds seems reasonable to have a successful execution round. The breakdown looks pretty solid, and the balance between the traditional Quadratic Funding rounds and the newer Retro Funding approach seems also accurate.</p>
+<p>However, we tend to share the concerns raised by <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> and <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> about the calculation process. For future rounds, we believe it would be good to include in the pre-ratification proposal not just the matching pool size but also the complete process for calculating the results. In this sense, we support the idea of moving towards a fully on-chain calculation process without off-chain components, alongside creating easier pathways for funders to contribute to the matching pool once they see the ratified process and projects.</p>
+<p>We believe that with these minor tweaks, everyone can have better visibility into the grant distribution process. Despite these suggestions, we vote to support the pre-ratified matching fund amounts for GG23.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/5
+        Tue, 18 Mar 2025 20:09:54 +0000
+gov.gitcoin.co-post-20136-5
+GG23 Pre-Ratification Proposal
+      
+
+GG23 Pre-Ratification Proposal
+wasabi
+
+            <p>I’m in support for pre-ratification of the process and I would also echo <a class="mention" href="https://gov.gitcoin.co/u/ivanmolto">@ivanmolto</a>, the ratification vote should include the QF Sybil Strategy for GG23 which is COCM + Retro Round mechanics (metrics criteria for selection of the 30 OSS Projects)</p>
+<aside class="quote no-group" data-username="MathildaDV" data-post="1" data-topic="20072">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/mathildadv/48/10198_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/gg23-oss-program-eligibility-criteria/20072/1">GG23 OSS Program Eligibility Criteria</a></div>
+<blockquote>
+<h4>How we’re quantifying mature builders:</h4>
+<ul>
+<li>The list is based on grantees participating in OSS rounds in GG18, GG19, GG20, and GG22, with criteria applied to participation in more than two rounds at a minimum.</li>
+<li>The grantees are force-ranked on their Elo Rating - a score based on their GMV normalized for differences across round sizes and competition.</li>
+<li>To exclude projects that have not been recently active, the list filters out grantees that have less than one commit a week over the last 6 months (or less than 25 commits over 6 months).</li>
+</ul>
+</blockquote>
+</aside>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/4
+        Mon, 17 Mar 2025 22:58:43 +0000
+gov.gitcoin.co-post-20136-4
+GG23 Pre-Ratification Proposal
+      
+
+GG23 Pre-Ratification Proposal
+ivanmolto
+
+            <p>I endorse this pre-ratification proposal for GG23.<br>
+And I would also appreciate a proposal about the process for calculating the results.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/3
+        Fri, 14 Mar 2025 08:03:52 +0000
+gov.gitcoin.co-post-20136-3
+GG23 Pre-Ratification Proposal
+      
+
+GG23 Pre-Ratification Proposal
+owocki
+
+            <p>Copying these comments from <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> on the <a href="https://gov.gitcoin.co/t/proposal-gg22-pre-ratification/19501/11">GG22 pre-ratification</a>.</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="12" data-topic="19501" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"><a href="https://gov.gitcoin.co/t/proposal-gg22-pre-ratification/19501/12">[PROPOSAL] GG22 Pre-Ratification</a></div>
+<blockquote>
+<p>In the future, I think it would be amazing if:</p>
+<ul>
+<li>in addition to ratifying the matching pool size gitcoin ratifies the process for calculating the results (e.g everyone agrees to the rules: COCM + Passport, or QF + Allowlist, or hypotheticaloption 3)</li>
+<li>that calculation process is completely onchain and has no offchain components</li>
+<li>there is an easy way for funders who see the ratified process and projects in the round to add to the matching pool</li>
+</ul>
+<p>this increases trust in the system, removes centralization points, and could result in more allo GMV</p>
+</blockquote>
+</aside>
+<p>I happen to agree with the above!</p>
+<p>But I support this proposal regardless.</p>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/2
+        Wed, 12 Mar 2025 16:05:18 +0000
+gov.gitcoin.co-post-20136-2
+GG23 Pre-Ratification Proposal
+      
+
+GG23 Pre-Ratification Proposal
+MathildaDV
+
+            <h2><a name="gg23-pre-ratification-proposal-1" class="anchor" href="https://gov.gitcoin.co#gg23-pre-ratification-proposal-1"></a>GG23 Pre-Ratification Proposal</h2>
+<p>We propose to set the matching funds for GG23 as follows: <strong>$1.348M</strong> total from the Gitcoin.eth multisig. This proposal is to pre-ratify the allocation of funds to expedite the process and ensure a smooth and efficient round execution.</p>
+<p>After the post-round review, we will post the round results on the governance forum, allowing the community one week for discussion and feedback before payouts are made.</p>
+<h2><a name="proposed-matching-fund-allocation-2" class="anchor" href="https://gov.gitcoin.co#proposed-matching-fund-allocation-2"></a>Proposed Matching Fund Allocation</h2>
+<p>The proposed matching funds of $1.2M will be distributed across the following OSS Program Rounds:</p>
+<h3><a name="quadratic-funding-3" class="anchor" href="https://gov.gitcoin.co#quadratic-funding-3"></a>Quadratic Funding</h3>
+<ul>
+<li>Web3 Infrastructure Round: $200k</li>
+<li>dApps &amp; Apps: $200k</li>
+<li>Developer Tooling &amp; Libraries: $200k</li>
+</ul>
+<h4><a name="gg23-sybil-analysis-and-matching-calculation-strategy-4" class="anchor" href="https://gov.gitcoin.co#gg23-sybil-analysis-and-matching-calculation-strategy-4"></a>GG23 Sybil Analysis and Matching Calculation Strategy</h4>
+<p>In GG20, we introduced a two-pronged sybil analysis strategy, outlined in detail <a href="https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524">in this post.</a> It has shown to be incredibly effective as a strong strategy in our Quadratic Funding rounds. We will continue to drive forward with this strategy for GG23, finalizing each of the above rounds using the calculator that uses the approach of combining Passport’s Model Based Detection and COCM.</p>
+<p><strong>TL;DR:</strong><br>
+<strong>Passport’s MBD:</strong><br>
+This system analyzes the on-chain history of addresses and compares it to the historical data of known human and sybil addresses. Based on this comparison, the model assigns each address a score ranging from 0 to 100, where a score closer to 0 indicates a higher likelihood of the address being a sybil, and a score closer to 100 suggests a higher probability of the address belonging to a genuine human user.</p>
+<p><strong>COCM:</strong><br>
+COCM takes Quadratic Funding (QF) to the next level by tackling its biggest challenge—manipulation through fake accounts and coordinated groups. By analyzing how connected donors are, COCM ensures that projects with genuine, diverse community support get the most matching funds. This method not only promotes fairness but also reflects the true values of the community, giving round operators more accurate insights into what their network really supports. <a href="https://www.gitcoin.co/blog/leveling-the-field-how-connection-oriented-cluster-matching-strengthens-quadratic-funding" rel="noopener nofollow ugc">Read this blog post</a> for more in-depth information.</p>
+<p><em>We are exploring potential updates to Passport’s engagement with GG23, which we will post on the forum if we go ahead with it.</em></p>
+<p>Calculations occur directly after the round has been completed, posted to the forum in roughly a week after donations end. The results will be posted to the forum and open for comments for a week.</p>
+<h3><a name="retro-funding-5" class="anchor" href="https://gov.gitcoin.co#retro-funding-5"></a>Retro Funding</h3>
+<p>$600k towards a curated round of 30 top OSS projects.</p>
+<p>More details on the OSS Program eligibility can be found <a href="https://gov.gitcoin.co/t/gg23-oss-program-eligibility-criteria/20072">here</a>.</p>
+<p>The Retro Funding round for GG23 was designed to support high-impact, mature projects based on their historical contributions to Gitcoin Grants and OSS.</p>
+<p>For this round, a curated selection of 30 projects was identified using a force-ranked Elo rating system. This ranking was based on matching amounts received across at least 3 OSS rounds between GG18 and GG22. The goal was to recognize projects with sustained impact and strong community support over time.</p>
+<p>This is a metrics-based round, so once the voting has been concluded, we will work closely with Open Source Observer to finalize the results, equally posting these to the forum for community input before conducting payouts.</p>
+<h3><a name="community-rounds-6" class="anchor" href="https://gov.gitcoin.co#community-rounds-6"></a>Community Rounds</h3>
+<p>The proposed matching funds of $130k will be distributed across the <a href="https://gov.gitcoin.co/t/gg23-community-rounds-announced/20127">selected Community Rounds</a>.</p>
+<h3><a name="experimentation-7" class="anchor" href="https://gov.gitcoin.co#experimentation-7"></a>Experimentation</h3>
+<p>We are equally requesting an additional $18k for a <a href="https://gov.gitcoin.co/t/gtc-utility-experiment-for-gg23/20044">GTC Utility experiment</a>.</p>
+<h3><a name="current-matching-pool-status-8" class="anchor" href="https://gov.gitcoin.co#current-matching-pool-status-8"></a>Current Matching Pool Status</h3>
+<p>The Matching Pool is heavily denominated in ETH, which has experienced significant volatility over the past year. We are actively working with Avantgarde to improve financial sustainability while managing market impacts.</p>
+<p>Moving forward, our strategy includes increasing our stablecoin allocation to reduce volatility, generate revenue on idle assets, and maintain upside potential through strategic ETH exposure, all while ensuring we can meet our dollar-denominated spending commitments.</p>
+<p><strong>Proposal for Community Vote</strong><br>
+We request the community to vote on the following options:</p>
+<ul>
+<li>Yes, approve the pre-ratified matching fund amounts from the multisig for GG23, totaling <strong>$1.348M</strong>.</li>
+<li>No, do not approve.</li>
+<li>No, follow the traditional process of ratification after the round.</li>
+<li>Abstain</li>
+</ul>
+<p>Please share your thoughts and vote in the comments below.</p>
+<p><em>Thank you for your continued support and participation in Gitcoin Grants governance.</em></p>
+          <p><a href="https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gg23-pre-ratification-proposal/20136/1
+        Tue, 11 Mar 2025 19:49:48 +0000
+gov.gitcoin.co-post-20136-1
+GG23 Pre-Ratification Proposal
+      
+
+

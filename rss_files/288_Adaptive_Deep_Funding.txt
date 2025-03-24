@@ -1,0 +1,154 @@
+
+
+
+Adaptive Deep Funding
+https://gov.gitcoin.co/t/adaptive-deep-funding/19770
+    **TL;DR:** What if we could build a mechanism where Gitcoin donors directly steer "deep funding" towards repositories/projects they care about?
+
+## Deep Funding
+
+[Deep Funding - a visual guide in 3 easy steps](https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765)
+
+The existing design for deep funding assumes that it’s possible to create a quality model (or ensemble of models) that sufficiently answers the question: *"What is valuable?"* 
+
+- Even if multiple models are in place this feels like approach of central planner. 
+- This approach doesn’t appeal to me as a donor. I want to direct my money to projects I care about, not rely on a third party’s determination. I am much more liberal when it comes to money that comes from Gitcoin round sponsors.
+- Deep funding also emphasizes **good models** as a key part of the mechanism. I’d rather have **donors** drive the mechanism, adjusting rules toward the desired outcome: **funding dependencies.**
+
+I am going to take part in "model contest" and maybe it would produce good models that I like to use, but really interesting question for me is - can we build better **deep funding** using wisdom of crowds, instead of AI/ML? 
+
+### Main Idea is to propose "Adaptive" flavour of deep funding:
+
+1. **Initialize deep funding** by starting with weights in a **neutral position**.
+2. Allow these weights to be adjusted through Gitcoin donations.
+3. Stream sponsor money to projects according to the current weights.
+
+You can imagine this process as donors paying to teach a neural network to steer sponsor funds toward the outcomes they value. 
+
+If some donor prefers to use "AI agent" to decide where his funds should go - they could do that in this system.
+
+This is still popularity contest, but thanks to "trickle-down" effect it does better job funding dependencies than current approach where each project in a round is independent.
+
+---
+
+#### Example Initial Position:
+
+* *"Every dependency gets a fixed share of the matching pool per hour."*
+
+
+**Simple Round:**
+A round with four projects:
+
+* "Gitcoin,"
+* "Gitcoin-Citizens,"
+* "Chainlink,"
+* "Chainlink-Marines."
+
+Each starts earning $3/hour. Donating to the "Gitcoin" project would also benefit "Gitcoin-Citizens" (as part of its dependency tree) - but not as much as if we donated to "Gitcoin-Citizens" directly.
+
+![image|487x500](upload://sq0zwGA6uZxgJhV3ndRG7BqaLNQ.png)
+
+Total rate of funding coming from sponsors is some fixed number (e.g. 12$/h).
+
+### Key Differences from Gitcoin Today:
+
+1. **Dependencies:**
+Projects must declare dependencies (e.g., "Bankless" → "Bankless-London") or infer them (e.g., software dependency trees).
+2. **Trickle-Down:**
+Matching needs to account for the "trickle-down" effect when calculating final distributions.
+3. **Trickle-Up:**
+If dependencies get donations "upstream" project should benefit as well.
+4. **Streaming Matching:**
+The matching pool could either stream in real-time or calculate at the end of a round.
+
+---
+
+### Considerations:
+
+1. Exact algorithms for weight updates/trickle-up/down are required.
+2. "Initial distribution" could be more complex - something metrics based. It doesn't need to be perfect, because donors should quickly correct it.
+3. Projects may excessively split into smaller units to capture more initial funding (happens already).
+
+I am still trying to iron out how such "deep funding through crowdfunding" mechanism could work so would be happy for any feedback or alternative ideas!
+Thu, 19 Dec 2024 18:37:58 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Adaptive Deep Funding
+KMLLC
+
+            <p>Love this model, perfect example of multiple mechanism funding, leveraging various capital allocation mechanisms.</p>
+          <p><a href="https://gov.gitcoin.co/t/adaptive-deep-funding/19770/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/adaptive-deep-funding/19770/2
+        Thu, 19 Dec 2024 18:37:58 +0000
+gov.gitcoin.co-post-19770-2
+Adaptive Deep Funding
+      
+
+Adaptive Deep Funding
+DistributedDoge
+
+            <p><strong>TL;DR:</strong> What if we could build a mechanism where Gitcoin donors directly steer “deep funding” towards repositories/projects they care about?</p>
+<h2><a name="deep-funding-1" class="anchor" href="https://gov.gitcoin.co#deep-funding-1"></a>Deep Funding</h2>
+<p><a href="https://gov.gitcoin.co/t/deep-funding-a-visual-guide-in-3-easy-steps/19765">Deep Funding - a visual guide in 3 easy steps</a></p>
+<p>The existing design for deep funding assumes that it’s possible to create a quality model (or ensemble of models) that sufficiently answers the question: <em>“What is valuable?”</em></p>
+<ul>
+<li>Even if multiple models are in place this feels like approach of central planner.</li>
+<li>This approach doesn’t appeal to me as a donor. I want to direct my money to projects I care about, not rely on a third party’s determination. I am much more liberal when it comes to money that comes from Gitcoin round sponsors.</li>
+<li>Deep funding also emphasizes <strong>good models</strong> as a key part of the mechanism. I’d rather have <strong>donors</strong> drive the mechanism, adjusting rules toward the desired outcome: <strong>funding dependencies.</strong></li>
+</ul>
+<p>I am going to take part in “model contest” and maybe it would produce good models that I like to use, but really interesting question for me is - can we build better <strong>deep funding</strong> using wisdom of crowds, instead of AI/ML?</p>
+<h3><a name="main-idea-is-to-propose-adaptive-flavour-of-deep-funding-2" class="anchor" href="https://gov.gitcoin.co#main-idea-is-to-propose-adaptive-flavour-of-deep-funding-2"></a>Main Idea is to propose “Adaptive” flavour of deep funding:</h3>
+<ol>
+<li><strong>Initialize deep funding</strong> by starting with weights in a <strong>neutral position</strong>.</li>
+<li>Allow these weights to be adjusted through Gitcoin donations.</li>
+<li>Stream sponsor money to projects according to the current weights.</li>
+</ol>
+<p>You can imagine this process as donors paying to teach a neural network to steer sponsor funds toward the outcomes they value.</p>
+<p>If some donor prefers to use “AI agent” to decide where his funds should go - they could do that in this system.</p>
+<p>This is still popularity contest, but thanks to “trickle-down” effect it does better job funding dependencies than current approach where each project in a round is independent.</p>
+<hr>
+<h4><a name="example-initial-position-3" class="anchor" href="https://gov.gitcoin.co#example-initial-position-3"></a>Example Initial Position:</h4>
+<ul>
+<li><em>“Every dependency gets a fixed share of the matching pool per hour.”</em></li>
+</ul>
+<p><strong>Simple Round:</strong><br>
+A round with four projects:</p>
+<ul>
+<li>“Gitcoin,”</li>
+<li>“Gitcoin-Citizens,”</li>
+<li>“Chainlink,”</li>
+<li>“Chainlink-Marines.”</li>
+</ul>
+<p>Each starts earning $3/hour. Donating to the “Gitcoin” project would also benefit “Gitcoin-Citizens” (as part of its dependency tree) - but not as much as if we donated to “Gitcoin-Citizens” directly.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c72d88bc065dfffd11727ee923ef3de679e3883e.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/c72d88bc065dfffd11727ee923ef3de679e3883e" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c72d88bc065dfffd11727ee923ef3de679e3883e_2_487x500.png" alt="image" data-base62-sha1="sq0zwGA6uZxgJhV3ndRG7BqaLNQ" width="487" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c72d88bc065dfffd11727ee923ef3de679e3883e_2_487x500.png, https://gov.gitcoin.co/uploads/db4391/original/2X/c/c72d88bc065dfffd11727ee923ef3de679e3883e.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/c/c72d88bc065dfffd11727ee923ef3de679e3883e.png 2x" data-dominant-color="F0F5F4"></a></div><p></p>
+<p>Total rate of funding coming from sponsors is some fixed number (e.g. 12$/h).</p>
+<h3><a name="key-differences-from-gitcoin-today-4" class="anchor" href="https://gov.gitcoin.co#key-differences-from-gitcoin-today-4"></a>Key Differences from Gitcoin Today:</h3>
+<ol>
+<li><strong>Dependencies:</strong><br>
+Projects must declare dependencies (e.g., “Bankless” → “Bankless-London”) or infer them (e.g., software dependency trees).</li>
+<li><strong>Trickle-Down:</strong><br>
+Matching needs to account for the “trickle-down” effect when calculating final distributions.</li>
+<li><strong>Trickle-Up:</strong><br>
+If dependencies get donations “upstream” project should benefit as well.</li>
+<li><strong>Streaming Matching:</strong><br>
+The matching pool could either stream in real-time or calculate at the end of a round.</li>
+</ol>
+<hr>
+<h3><a name="considerations-5" class="anchor" href="https://gov.gitcoin.co#considerations-5"></a>Considerations:</h3>
+<ol>
+<li>Exact algorithms for weight updates/trickle-up/down are required.</li>
+<li>“Initial distribution” could be more complex - something metrics based. It doesn’t need to be perfect, because donors should quickly correct it.</li>
+<li>Projects may excessively split into smaller units to capture more initial funding (happens already).</li>
+</ol>
+<p>I am still trying to iron out how such “deep funding through crowdfunding” mechanism could work so would be happy for any feedback or alternative ideas!</p>
+          <p><a href="https://gov.gitcoin.co/t/adaptive-deep-funding/19770/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/adaptive-deep-funding/19770/1
+        Wed, 18 Dec 2024 00:38:18 +0000
+gov.gitcoin.co-post-19770-1
+Adaptive Deep Funding
+      
+
+

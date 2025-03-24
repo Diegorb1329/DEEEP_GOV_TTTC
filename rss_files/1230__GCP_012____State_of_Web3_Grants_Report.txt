@@ -1,0 +1,505 @@
+
+
+
+[GCP-012] - State of Web3 Grants Report
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562
+    **Summary (TL:DR):**
+
+The goal of this project is to do a review of and to produce a report on the current state of grant programs in the web3 space. This will also entail looking to grant programs outside of web3 to better understand best practices. Finally, this report will focus on best practices for decentralizing grant programs, specifically tailored for Gitcoin.
+
+I discussed this proposal with @azeem @Sov @Viriya and am looking forward to wider feedback. Let me know if I can add any other info / answer any questions. 
+
+**Abstract:**
+
+This project would entail: producing a list of active grant programs as of Q1 2023, conducting interviews and running surveys with those who both structured/ran the programs or applied for/received grants from them and writing a report on the current state of grants in web3.
+
+[Grants programs to assess](https://docs.google.com/spreadsheets/d/1-8N2Bt1NLZZ2Sj6w8eVnmo02vCNKtprz0d-OOjnXgh0/edit?usp=sharing) will include: Aave, Algorand, Aragon, BitDAO, Cardano, Celo, Chainlink, Consensys, Ethereum Foundation, NEAR, Ocean Protocol, Optimism, PolygonDAO, Protocol Labs, Radicle, Safe DAO, Solana, Uniswap, and Web3 Foundation, amongst others. The first step with expanding and refining this list of grant programs will be to split the programs into a tiered structure based on size of treasury, size of grant issuance, age of the program, and/or kind of organization.
+
+Questions to explore and compare will include: volume of grants (quantity, funds), team size, review process, number of reviewers, post issuance process, general operations structure, focus of grants, as well as the user experience of applying for and receiving the grants. It is important to explore the journey of users as part of this research to better understand the perceived desire and impact from the perspective of those applying for grants.
+
+In order to gain the right level of insight, a series of surveys and interviews will be conducted with at least 50-75+ individuals. These interviews will explore how the grant programs were created, structured, managed, and what kind of impact they have had.
+
+In addition to this information, larger scale surveys and data gathering will take place in order to conduct some analysis across grant programs and to provide some learnings for the space. A report will then be written, bringing together the results of the surveys and analysis, along with any other potential suggestions for how to improve the state of grants in web3. This report will provide a history of grant programs in web3, highlight common and best practices, share any data that was collected, and provide both open questions and potential solutions.
+
+**Benefits & Motivation:**
+
+Grant programs play an interesting role in the web3 space. At their core, most programs are intended to support the overall growth of the specific ecosystem they exist within (e.g. the Ethereum Foundation’s grant program is meant to grow Ethereum broadly, Aave’s program is meant to grow Aave, etc.). That’s not to say these grants are myopically focused on short-term ecosystem growth at the expense of long-term success. Quite the contrary, some programs are inspired by foundation or other long-term focused funding/giving models. However, many programs have struggled with various elements such as what to focus giving grants on, who should be reviewing grants, how to best assess grants once issued, etc.
+
+Especially given the bear market, just about every grant program is evaluating its progress over the last few years. Some programs are outright pausing / indefinitely stopping while others are trying to get a better sense of what impact they want to have with their capital allocation and how to measure said impact.
+
+The results of this report will help all grant programs in the space in terms of more clearly understanding the current state of affairs. The report will also include suggestions for improvements broadly, as well as specific learnings tailored for Gitcoin.
+
+**Strategic fit:**
+
+This project is aligned with Gitcoin’s desire to better understand the landscape of grant programs, to learn from non-web3 grant programs as far as best practices go, and to think about how Gitcoin can best support decentralized grant funding.
+
+**Scope:**
+
+The scope of this project will be to:
+
+* Better understand the current state of grant programs in web3 and how they are changing
+* Learn from non-web3 grant programs (foundation, government, research funding, arts funding, etc.)
+* Glean insights on the user experience of going through web3 grant programs
+
+Below is a list of elements to explore for each grant program. This is not an exhaustive list and is intended to give a general sense of the specific questions that will be asked. The surveys are currently being developed and more detail can be provided as needed.
+
+* History of grant programs and how they came together
+  * When was the program first conceived and by whom
+  * What examples were looked to when structuring the grant program
+  * What was the desired impact?
+  * Was there a grant lead and who decided on that person?
+  * How was the initial grant budget decided?
+  * When was the grant program ‘launched’? What did launch entail? When was the first grant application received?
+  * Who reviewed the first grant(s)?
+* Nature of the operations of grant programs
+  * How many grants issued to date (including size and focus, ideally)
+  * How many people are on the grants team, both part-time and full-time? If there’s no dedicated team, how many people support the program?
+  * How many people review each grant? How do you source these reviewers?
+  * Is there a component of community review / voting?
+  * Are grants decisions on-chain? If yes, does that trigger payout or signal for someone else to payout? If the latter, who has control over the treasury?
+  * Average and range of response time from the time the grant was first submitted.
+  * What kind of interactions take place with grantees once grants have been issued?
+  * Is there any kind of follow up on impact / achievement of milestones? If yes, what does that look like?
+* Impact of grant programs
+  * Is there a measure of impact already used in the ecosystem?
+  * Is there some overly simplistic breakdown of ‘was this grant impactful or not’?
+  * How many were product / development focus vs other?
+* Experience going through grant programs
+  * How many grants did you apply to across how many ecosystems?
+  * How hard was it to find grants?
+  * How hard was it to apply?
+  * How long did it take to hear?
+  * How much communication and feedback did you get?
+  * How much did you receive in funding?
+* Select non-web3 grant programs to explore
+  * Explore the grant programs that are being run by Experiment Foundation, Speculative Technologies, Artizen Fund, Big Green DAO, etc.
+  * How many grants issued to date (including size and focus, ideally)
+  * How many people are on the grants team, both part-time and full-time? If there’s no dedicated team, how many people support the program?
+  * How many people review each grant? How do you source these reviewers?
+  * Is there a component of community review / voting?
+  * How is impact assessed?
+* How grant programs in web3 compare to overall grant programs
+  * Landscape of funding that research orgs apply for
+  * Landscape
+* How can grant programs improve
+  * Synthesize best practices to be shared publicly
+
+**Risk assessment:**
+
+Increased transparency across grants programs will be a net-positive for the space overall, though specific programs might get positive or negative outcomes depending on the specifics of the rigor and logic of their individual programs.
+
+The main risks with this project arise from the operations and execution of the project itself. There are no known systemic risks that can result from going forward with this project.
+
+**Budget:**
+
+The main costs for this project will be labor, with some additional costs around travel, equipment rental, and marketing related expenses. The roles required for this project include, at a minimum:
+
+* Lead researcher(s)
+* Research assistants
+
+We are starting out by seeking a total budget of $50,000 total. This will cover the labor hours on a general survey of grant programs as well as a more comprehensive deep dive for a few programs. If it makes sense, additional funding can be sought beyond GCP.
+
+Proposed fund distribution for this project would be on a monthly basis and would roughly correspond to:
+
+* First distribution: $10k USD equivalent upon approval to support through milestones 1 & 2 during the first month
+* Second distribution: $10k USD equivalent for month 2, expectation of wrapping up milestones 1 and 2 and commencing milestone 3
+* Third distribution: $10k USD equivalent for month 3, expectation of getting 75+ survey responses and conducting 20 interviews, initial assessment of data and blog post
+* Fourth distribution: $10k USD equivalent for month 3, expectation of getting to 200+ survey responses and 50 interviews, assessment of more complete dataset, second blog post
+* Fifth distribution: $10k in month 5 or 6 upon release of the report.
+
+**Timeline**:
+
+The first milestone revolves around mapping grant programs in the space and providing a clear way for others to learn about active grant programs with more insights relative to a tool such as https://blockworks.co/grants and https://wiki.defillama.com/wiki/LlamaoGrants. This would involve proposing a tier-based breakdown of grant programs. Progress has already started on this milestone and the first version of this milestone would be generated within two weeks of approval.
+
+The second milestone will revolve around developing two surveys: one for those running/building grant programs and one for those who have applied to grant programs. Progress has already started on this milestone and this version would complete within four to six weeks of approval in order to allow for the initial draft, sharing with a wider community of practitioners and survey design specialists, and for making revisions.
+
+The third milestone will involve deploying aforementioned surveys to as many individuals as possible, with an initial focus on getting as many core contributors to major grant programs to fill out the survey as possible. This milestone will take at least 2 months, as it will also entail running 50+ hours of one on one interviews as well as deploying the survey at scale.
+
+The fourth milestone will entail analyzing the data from the third milestone and synthesizing results into a series of blog posts (at least 1) and a longer report. This milestone will take at least two months, with one month overlapping with milestone 3 for exploring some initial results and at least one month after to synthesize the data, produce a preliminary blog post, and to work on the report. Updates will be provided if any delays occur with data collection in milestone 3 or with analysis or report generation in milestone 4.
+
+**Customer acceptance criteria:**
+
+Outcomes and deliverables:
+
+1. List of grant programs to assess
+2. Surveys to run
+3. Data gathered from surveys and interviews
+4. At least 2 blog posts and 1 report
+
+Relevant metrics:
+
+* Number of grant programs assessed
+* Number of survey responses
+* Number of interviews (along with time of each interview)
+* Time it took to complete milestone 3
+* Time it took to complete milestone 4
+* Likert scale measure of satisfaction with the results
+* Number of grant programs that implement any learnings from the program
+* Specific points that the Gitcoin or Allo or other related projects/products take from the report and make internal adjustments as a result
+
+Vote:
+
+Clearly outline what voting “yes” and “no” entails. Always add an “abstain” option on Snapshot.
+
+Yes = full support of the project as outlined with $50k in funding
+
+Yes, conditional other funding = full support of the project as outlined with $30k in funding (milestone payments go down to $6k) and the assumption that the remaining funds will be raised from other programs
+
+No = full rejection of this proposal, whether due to the scope or funding amount
+
+Abstain = neither support nor reject the proposal
+Thu, 19 Sep 2024 03:40:41 +0000
+📜 Proposals
+
+
+[GCP-012] - State of Web3 Grants Report
+Sirlupinwatson
+
+            <p>Well simply because we don’t need the graph, respectfully said of course, we have way enough of data analyst(s), and much repository to play with, as necessary.</p>
+<p>The replication of the data is easily done, via each project API’s, there is not a single entity that does not have it, so, have fun! So, either you use the graph with API’s, this is the same as doing it, yourself…</p>
+<p>User = aggregator in any ways, as well as a projection of a project, is still, a commune of different variables vis-a-vis other users, not sure to understand your point here, if you can be more specific, I’ll be more than happy to reply to you!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/39">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/39
+        Thu, 19 Sep 2024 03:40:41 +0000
+gov.gitcoin.co-post-14562-39
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+Pfed-prog
+
+            <p>Very curious why there is no mention of the Graph protocol, despite them having a lot of data and reports online <a href="https://storage.thegraph.com/2023-grants-report.pdf" rel="noopener nofollow ugc">https://storage.thegraph.com/2023-grants-report.pdf</a>.</p>
+<p>Let’s say there is a potential for a V2.</p>
+<p>The replication of the data analysis is close to impossible since the grants directory is not updated.</p>
+<p>Nothing mentioned about the lifecycle of the funded and not funded projects. Where the case of the Graph could be valuable to investigate.</p>
+<p>From my perspective, there is an objective lack of focus on grants where developers have an actual chance to obtain funding. The data focuses on grants as aggregates and not projects.</p>
+<p>Good Summary:<br>
+<a href="https://nftnow.com/news/researchers-analyze-over-1-billion-in-web3-grants-heres-what-they-found/" class="onebox" target="_blank" rel="noopener nofollow ugc">https://nftnow.com/news/researchers-analyze-over-1-billion-in-web3-grants-heres-what-they-found/</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/38">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/38
+        Wed, 04 Sep 2024 08:29:17 +0000
+gov.gitcoin.co-post-14562-38
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+thedevanshmehta
+
+            <p>I just finished reading the report, really great work ! I really like how thorough and comprehensive it is</p>
+<p>Some of the more nuanced points that emerged could only have been obtained through painstaking, original research. I’m summarising some of my favorite points for the benefit of other readers;</p>
+<ul>
+<li>
+<p>Solana is the only convertible grants program, where a portion of future investment money a project raises goes back to solana -</p>
+</li>
+<li>
+<p>Polygon experimented with a voucher system where rather than direct cash you get free smart contract audits, developer resources, etc -</p>
+</li>
+<li>
+<p>NEAR gave grants in their native token and many grantees didn’t sell for emotional reasons or hoping for an upshot, with the end result that many resources got squandered -</p>
+</li>
+<li>
+<p>Ethereum foundations team is unique in their focus on digging deeper into projects that might not look great in their application but have some core insight which is unearthed through questioning -</p>
+</li>
+<li>
+<p>Protocol Labs’ system got much better after they told teams to get a review committee in place BEFORE launching a RFP</p>
+</li>
+</ul>
+<p>I also like the meta point on how splintering grants program reduce overall impact and the discussion on grant farmers (the authors found one project that got a grant from optimism 3 months after completing the same grant from compund). <a class="mention" href="https://gov.gitcoin.co/u/0xzakk">@0xZakk</a> , I think parts of this report definitely make the case for Gitcoins project registry to be used as a standard across the ecosystem!</p>
+<p>What I’d particularly like to see going ahead is case studies on the L2 ecosystem like zora, optimism, arbitrum, etc. This is particularly relevant for us as we’ve launched PGN and will eventually need some sort of grants program to attract builders.</p>
+<p>Finally, attaching a screenshot of my favorite part in the report looking at types of grant programs and what they require<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9efdd1ef9edb085874910a86a488b5601e2a6436.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/9efdd1ef9edb085874910a86a488b5601e2a6436" title="Screenshot 2023-09-30 at 7.15.43 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9efdd1ef9edb085874910a86a488b5601e2a6436_2_638x500.png" alt="Screenshot 2023-09-30 at 7.15.43 PM" data-base62-sha1="mGvfkEbeCYLWEcNjIYeDGwQhmd0" width="638" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9efdd1ef9edb085874910a86a488b5601e2a6436_2_638x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9efdd1ef9edb085874910a86a488b5601e2a6436_2_957x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9efdd1ef9edb085874910a86a488b5601e2a6436_2_1276x1000.png 2x" data-dominant-color="E6E6E6"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/37">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/37
+        Sat, 30 Sep 2023 14:57:16 +0000
+gov.gitcoin.co-post-14562-37
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+lovegrovegeorge
+
+            <p>Report is worth a read! Great info in there, keen to jump on a call when you’re free!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/36">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/36
+        Thu, 28 Sep 2023 17:59:11 +0000
+gov.gitcoin.co-post-14562-36
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+eleventh19
+
+            <p>Happy to connect to scope out any future collaboration, will DM on discord</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/35">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/35
+        Thu, 28 Sep 2023 09:39:00 +0000
+gov.gitcoin.co-post-14562-35
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+ocandocrypto
+
+            <p>On my way to start reading. Thank you guys.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/34">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/34
+        Wed, 27 Sep 2023 20:44:12 +0000
+gov.gitcoin.co-post-14562-34
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+eleventh19
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/ocandocrypto">@ocandocrypto</a> <a class="mention" href="https://gov.gitcoin.co/u/lovegrovegeorge">@lovegrovegeorge</a> and anyone else checking on this thread, the report finally got published!</p>
+<p>This is a link to the google doc: <a href="http://bit.ly/Web3-Grants-Report" class="inline-onebox" rel="noopener nofollow ugc">State of Web3 Grants Report - PUBLIC - Google Docs</a></p>
+<p>Mashal and I both posted on Twitter accounts so please feel free to amply if you’re so inclined - <a href="https://twitter.com/arlery/status/1706394384692809938" rel="noopener nofollow ugc">Mashal’s post</a>, <a href="https://twitter.com/bbeats1/status/1706395033870410055" rel="noopener nofollow ugc">my post</a>.</p>
+<p>We’re interested in doing more research, both in terms of covering more programs an in terms of delving deeper into specific questions (outlined at the end of the report). Let us know if there’s enough interest for another GCP!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/33">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/33
+        Wed, 27 Sep 2023 18:18:29 +0000
+gov.gitcoin.co-post-14562-33
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+lovegrovegeorge
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/eleventh19">@eleventh19</a> would love to keep up to date with this and read the final report! I’m recently started working on creating treasury knowledge resources, with a current focus on disbursement. Just in case it was useful to collaborate at any point now or in the future I’d love to chat!</p>
+<p>Treasury resources can be found on Twitter: W3Association</p>
+<p>Welcome to reach out anytime via discord: lovegrovegeorge or twitter: lovegrovegeo</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/32">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/32
+        Wed, 27 Sep 2023 12:34:10 +0000
+gov.gitcoin.co-post-14562-32
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+ocandocrypto
+
+            <p>Awesome, <a class="mention" href="https://gov.gitcoin.co/u/eleventh19">@eleventh19</a> thank you so much.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/31">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/31
+        Wed, 20 Sep 2023 15:10:36 +0000
+gov.gitcoin.co-post-14562-31
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+eleventh19
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/ocandocrypto">@ocandocrypto</a>. We got another round of feedback / clarifications from grant program operators so we’re adding that in and doing a final edit this week. Our goal is to have the report out no later than Monday. I’ll come back and post here as soon as it’s ready to share</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/30">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/30
+        Wed, 20 Sep 2023 12:36:27 +0000
+gov.gitcoin.co-post-14562-30
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+ocandocrypto
+
+            <p>Do we have this report ready by any chance?</p>
+<p>I’m really interested in reading it. In terms on proposal deadlines we’re good to start reading it, right?</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/29">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/29
+        Wed, 20 Sep 2023 04:36:39 +0000
+gov.gitcoin.co-post-14562-29
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+eleventh19
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/alexalombardo">@alexalombardo</a>. To clarify, the <a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/10">revised proposal</a> both passed and the related research is happening! We are close to finalizing the second milestone in terms of capturing the formal interviews and are on track to publish the final report by mid-September (hopefully by Schelling Point).</p>
+<p>We experienced some delays with getting connected to the desired number of grant programs relative to the initial timeline. We’re going to have a catch up with <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> tomorrow (Thu Aug 17) to fill him in on our progress.</p>
+<p>By the end of this week we will have spoken to 21 people across 15 different organizations.</p>
+<p>I’ll make sure to drop a link to the report as it’s finalized</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/28
+        Wed, 16 Aug 2023 19:59:58 +0000
+gov.gitcoin.co-post-14562-28
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+alexalombardo
+
+            <p>After numerous conversations I’ve had across the dao this week it feels like this work could have been really valuable - and would still be. I know the proposal passed but that this didnt happen, and wondering where that decision/reasoning was communicated?</p>
+<p>I’d love to revisit a revised, tightened scope as this in the context of the market sizing/segmentation work we’ve been discussing <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a> <a class="mention" href="https://gov.gitcoin.co/u/nategosselin">@nategosselin</a> <a class="mention" href="https://gov.gitcoin.co/u/0xzakk">@0xZakk</a> <a class="mention" href="https://gov.gitcoin.co/u/meglister">@meglister</a> <a class="mention" href="https://gov.gitcoin.co/u/azeem">@azeem</a></p>
+<p>i think this is still a really good blueprint for how wed approach a more robust study but for now we can also use this to inform some quick market research exercises that could help justify this larger one</p>
+<p>there is SUCH a need for this and im wondering if we could even share the cost if we partnered with other orgs with grants programs</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/27">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/27
+        Wed, 16 Aug 2023 01:13:38 +0000
+gov.gitcoin.co-post-14562-27
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+kyle
+
+            <p>Excited to see the results of this one come to fruition. It will be helpful for the ecosystem to consume the result.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/26">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/26
+        Tue, 20 Jun 2023 02:25:42 +0000
+gov.gitcoin.co-post-14562-26
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+shawn16400
+
+            <p>This proposal has passed a snapshot vote has passed with ~100% approval rate.<br>
+Metrics:<br>
+1291 unique votes<br>
+~6M GTC tokens cast.</p>
+<p>Thank you to all the voters for participating in our governance!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/25">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/25
+        Mon, 19 Jun 2023 14:40:27 +0000
+gov.gitcoin.co-post-14562-25
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+umarkhaneth
+
+            <p>This is a great proposal and the team here is incredibly strong. Looking forward to your learnings and echo’ing Mathilda please let me know if I can be of ANY help. Great project!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/24
+        Tue, 13 Jun 2023 15:30:15 +0000
+gov.gitcoin.co-post-14562-24
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+MathildaDV
+
+            <p>I love this idea Carl! I’m in favour of this proposal, and I love the idea of pulling in Metalabel or Zora.</p>
+<p>Please also let me know if I can be of help at all during the process of this initiative <a class="mention" href="https://gov.gitcoin.co/u/eleventh19">@eleventh19</a>. I have worked with Mashal Waqar on the UNICEF case study and it’s so exciting to see that she will also be involved in this! She’s amazing.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/23
+        Tue, 13 Jun 2023 03:35:36 +0000
+gov.gitcoin.co-post-14562-23
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+ccerv1
+
+            <p>Excited to support this proposal – and to read the report too! (<a class="mention" href="https://gov.gitcoin.co/u/eleventh19">@eleventh19</a> let me know if you need any help regarding Protocol Labs grantmaking)</p>
+<p>One idea, just to put it out there in response to <a class="mention" href="https://gov.gitcoin.co/u/ale.k">@ale.k</a>’s point, might be to fund the work from the treasury but then create an artifact (eg on Metalabel or Zora) that can be sold for a modest amount, with proceeds going back to the treasury. No need to act on this – it’s just a thought!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/22
+        Tue, 13 Jun 2023 01:03:12 +0000
+gov.gitcoin.co-post-14562-22
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+Viriya
+
+            <p>Thank you for that offer <a class="mention" href="https://gov.gitcoin.co/u/jr-okx">@JR-OKX</a>! How lovely. I would love to chat further <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> I’m viriya on Discord</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/21
+        Mon, 12 Jun 2023 13:05:16 +0000
+gov.gitcoin.co-post-14562-21
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+CoachJonathan
+
+            <p>This proposal has now been posted to Snapshot for voting: <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x6c4bab7e3710a7b226a5a6a0570fbafd546bf07293f7853142f40483227d9823" class="inline-onebox" rel="noopener nofollow ugc">Snapshot</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/20
+        Fri, 09 Jun 2023 17:49:57 +0000
+gov.gitcoin.co-post-14562-20
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+eleventh19
+
+            <p>I realized I forgot to share my collaborator’s (Mashal) info - we will be co-leading this project.</p>
+<p>Mashal Waqar is a techie, entrepreneur, and researcher. Her recent projects including heading operations at a web3 product studio, researching token models for seed club, doing the UNICEF case study for Gitcoin, and researching protocols for Summer of Protocols (in affiliation with Ethereum Foundation). She previously co-founded an accelerator program for early stage female founders, and has co-authored a paper on challenges faced by them.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/19
+        Wed, 07 Jun 2023 21:56:12 +0000
+gov.gitcoin.co-post-14562-19
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+JR-OKX
+
+            <p>This is a really exciting initiative! I have helped nurtured a lot of seed projects in this bear market, and can fully attest that this report can be both intellectual meaningful and practically useful for a lot of early stage founders.</p>
+<p>Let me know if there’s anything OKX Ventures can help with. We can provide research manpower, PR support and translation into other languages without budget concerns.  PMing <a class="mention" href="https://gov.gitcoin.co/u/eleventh19">@eleventh19</a> <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a> you guys separately as well.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/18
+        Wed, 07 Jun 2023 07:54:13 +0000
+gov.gitcoin.co-post-14562-18
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+CoachJonathan
+
+            <p>Fully supportive of this proposal. Excited to see this come to fruition.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/17
+        Tue, 06 Jun 2023 13:08:05 +0000
+gov.gitcoin.co-post-14562-17
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+azeem
+
+            <p>Supportive of this proposal. Definitely work that not only needs to internally be done but just is something that our ecosystem as a whole needs to better understand!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/16
+        Mon, 05 Jun 2023 23:07:24 +0000
+gov.gitcoin.co-post-14562-16
+[GCP-012] - State of Web3 Grants Report
+      
+
+[GCP-012] - State of Web3 Grants Report
+koday
+
+            <p>I’m in support of this proposal and excited to see the results - please reach out if there’s any way I can help!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-012-state-of-web3-grants-report/14562/15
+        Mon, 05 Jun 2023 22:41:37 +0000
+gov.gitcoin.co-post-14562-15
+[GCP-012] - State of Web3 Grants Report
+      
+
+

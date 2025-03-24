@@ -1,0 +1,98 @@
+
+
+
+[Nerd post] Updates to Cluster Mapping / Matching!
+https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705
+    Hi all,
+
+I want to briefly share an update to the algorithm we use to calculate QF results. This is a minor tweak, but I like sharing this type of thing with the community because transparency/ community consent for the algorithms we run is is good. I also always love feedback, positive or negative.
+
+Before I go further, [you can find the code here.](https://github.com/Jmiller4/qf-variants) The function COCM (with the default inputs) is what I'll be explaining in this post. 
+
+COCM (Connection Oriented Cluster Match) works in three steps. 
+1. First, it takes in data about "clusters", which are just different (possibly overlapping) groups of users. You could generate cluster data from POAPs, twitter follower lists, or even the donation records (where if someone donates to project X, they're put in project X's cluster). Users can also have "weights" in a cluster, denoting how strongly they belong to it. For example, you could use github repositories as clusters, where if I make *n* pull requests to that repository, I have a weight of *n* in that repository's cluster. In general, round operators can choose what cluster data to use (or they can not use COCM at all, of course).
+2. COCM calculates "similarity scores" between each user and each cluster. 
+3. Finally, COCM runs QF, but then attenuates each project's funding if many of its donors are similar according to the scores calculated in step 2.  
+
+Step 2 is what we'll focus on here. First, here's how we used to calculate similarity scores. Lets call the user U and call the cluster X. If a U is in X, their similarity score to X is 1. Otherwise, we look at all the other clusters that U is in, and look at all the people in all of those clusters. Then we ask, how many of *those* people are in X? We use that fraction as the similarity score.
+
+The issue with this method is that we don't use any of that juicy weight information I mentioned above. Let's say user U is in cluster Y, and everybody else in Y is also in X, with a really high weight. If we gave all those people a really low weight instead, it wouldn't change the similarity score between U and X. But shouldn't it? 
+
+So our new way of calculating similarity scores essentially does exactly that. You can think of it as an adaptation of the old method but with a weighted average, instead of an unweighted average. 
+
+You can also think of the new method as an analysis of a [Markov process](https://en.wikipedia.org/wiki/Markov_chain), like what Google uses in their PageRank algorithm. We can think of a graph of all users and all clusters, where directed edges from users to clusters (and vice versa) are weighted according to that user's weight in that cluster, and normalized so that all outgoing edges sum to 1 (thus forming a probability distribution). Then, we can start at user U's node and randomly jump to a cluster that U is in according to the probabilities on their outgoing edges. Then we can randomly jump from that cluster to a user, with probabilities proportional to each user's weight in that cluster. Then we can jump to another cluster from whatever user we wind up at. 
+
+Now, here's a question: what's the probability that after all of that jumping, we wound up at cluster X? If user U is closely connected to X via many intermediate clusters and donors with high weights, the probability will be high. If U isn't closely connected to X, the probability will be low. So this probability is precisely what we use for the similarity score between U and X. 
+
+This new method of calculating similarity scores really improved the sybil resistance of the algorithm. All of the charts in @umarkhaneth 's [recent post](https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524/1) were calculated with this new version of COCM.
+.
+That's all for now. Please let me know if you have any questions or feedback!
+Sat, 04 May 2024 13:14:19 +0000
+🌱 Gitcoin Grants
+
+
+[Nerd post] Updates to Cluster Mapping / Matching!
+Sov
+
+            <p>We love to see it.  Awesome work <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a></p>
+          <p><a href="https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705/4
+        Sat, 04 May 2024 13:14:19 +0000
+gov.gitcoin.co-post-18705-4
+[Nerd post] Updates to Cluster Mapping / Matching!
+      
+
+[Nerd post] Updates to Cluster Mapping / Matching!
+M0nkeyFl0wer
+
+            <p>Not only is this work dope the name of this post is exemplary <img src="https://gov.gitcoin.co/images/emoji/twitter/nerd_face.png?v=12" title=":nerd_face:" class="emoji" alt=":nerd_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705/3
+        Fri, 03 May 2024 14:29:53 +0000
+gov.gitcoin.co-post-18705-3
+[Nerd post] Updates to Cluster Mapping / Matching!
+      
+
+[Nerd post] Updates to Cluster Mapping / Matching!
+owocki
+
+            <p>I’m really exceptionally proud to see that new &amp; powerful flavors of collusion-resistence are being pioneered at Gitcoin.  Keep up the great work <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a> !</p>
+          <p><a href="https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705/2
+        Thu, 02 May 2024 23:31:31 +0000
+gov.gitcoin.co-post-18705-2
+[Nerd post] Updates to Cluster Mapping / Matching!
+      
+
+[Nerd post] Updates to Cluster Mapping / Matching!
+Joel_m
+
+            <p>Hi all,</p>
+<p>I want to briefly share an update to the algorithm we use to calculate QF results. This is a minor tweak, but I like sharing this type of thing with the community because transparency/ community consent for the algorithms we run is is good. I also always love feedback, positive or negative.</p>
+<p>Before I go further, <a href="https://github.com/Jmiller4/qf-variants" rel="noopener nofollow ugc">you can find the code here.</a> The function COCM (with the default inputs) is what I’ll be explaining in this post.</p>
+<p>COCM (Connection Oriented Cluster Match) works in three steps.</p>
+<ol>
+<li>First, it takes in data about “clusters”, which are just different (possibly overlapping) groups of users. You could generate cluster data from POAPs, twitter follower lists, or even the donation records (where if someone donates to project X, they’re put in project X’s cluster). Users can also have “weights” in a cluster, denoting how strongly they belong to it. For example, you could use github repositories as clusters, where if I make <em>n</em> pull requests to that repository, I have a weight of <em>n</em> in that repository’s cluster. In general, round operators can choose what cluster data to use (or they can not use COCM at all, of course).</li>
+<li>COCM calculates “similarity scores” between each user and each cluster.</li>
+<li>Finally, COCM runs QF, but then attenuates each project’s funding if many of its donors are similar according to the scores calculated in step 2.</li>
+</ol>
+<p>Step 2 is what we’ll focus on here. First, here’s how we used to calculate similarity scores. Lets call the user U and call the cluster X. If a U is in X, their similarity score to X is 1. Otherwise, we look at all the other clusters that U is in, and look at all the people in all of those clusters. Then we ask, how many of <em>those</em> people are in X? We use that fraction as the similarity score.</p>
+<p>The issue with this method is that we don’t use any of that juicy weight information I mentioned above. Let’s say user U is in cluster Y, and everybody else in Y is also in X, with a really high weight. If we gave all those people a really low weight instead, it wouldn’t change the similarity score between U and X. But shouldn’t it?</p>
+<p>So our new way of calculating similarity scores essentially does exactly that. You can think of it as an adaptation of the old method but with a weighted average, instead of an unweighted average.</p>
+<p>You can also think of the new method as an analysis of a <a href="https://en.wikipedia.org/wiki/Markov_chain" rel="noopener nofollow ugc">Markov process</a>, like what Google uses in their PageRank algorithm. We can think of a graph of all users and all clusters, where directed edges from users to clusters (and vice versa) are weighted according to that user’s weight in that cluster, and normalized so that all outgoing edges sum to 1 (thus forming a probability distribution). Then, we can start at user U’s node and randomly jump to a cluster that U is in according to the probabilities on their outgoing edges. Then we can randomly jump from that cluster to a user, with probabilities proportional to each user’s weight in that cluster. Then we can jump to another cluster from whatever user we wind up at.</p>
+<p>Now, here’s a question: what’s the probability that after all of that jumping, we wound up at cluster X? If user U is closely connected to X via many intermediate clusters and donors with high weights, the probability will be high. If U isn’t closely connected to X, the probability will be low. So this probability is precisely what we use for the similarity score between U and X.</p>
+<p>This new method of calculating similarity scores really improved the sybil resistance of the algorithm. All of the charts in <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> 's <a href="https://gov.gitcoin.co/t/our-sybil-resistance-strategy-for-gg20/18524/1">recent post</a> were calculated with this new version of COCM.<br>
+.<br>
+That’s all for now. Please let me know if you have any questions or feedback!</p>
+          <p><a href="https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/nerd-post-updates-to-cluster-mapping-matching/18705/1
+        Tue, 30 Apr 2024 21:31:17 +0000
+gov.gitcoin.co-post-18705-1
+[Nerd post] Updates to Cluster Mapping / Matching!
+      
+
+

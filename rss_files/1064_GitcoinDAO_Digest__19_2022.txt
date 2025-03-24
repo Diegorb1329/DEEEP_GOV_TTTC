@@ -1,0 +1,388 @@
+
+
+
+GitcoinDAO Digest #19 2022
+https://gov.gitcoin.co/t/gitcoindao-digest-19-2022/10737
+    ![|624x149](upload://cvngY12DWKN7ZkMeVvOeLpagnXj.png)
+
+***Happy Birthday to us! One year already 🎂***
+
+:email: If you would like to receive this newsletter in your inbox, [sign up here! ](https://form.typeform.com/to/ttNCMt8w)
+
+**👉 Key actions for this week:**
+
+1. Celebrate one year of GitcoinDAO with us on this [tweet thread](https://twitter.com/gitcoin/status/1529556065792180230?s=20&t=ghy9yDn-Aoz9Z4K2U2bGMQ)!
+2. Provide your feedback on [GitcoinDAO's Draft Purpose & Essential Intents](https://gov.gitcoin.co/t/proposal-community-input-on-gitcoindao-s-draft-purpose-essential-intents/10662)
+
+### 🔥 Hot Topics:
+
+* [Jodi](https://gov.gitcoin.co/u/jodi_gitcoindao/summary) shares that [CSDO](https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358#cross-stream-dao-ops-csdo-16) seeks [Community Input on GitcoinDAO's Draft Purpose & Essential Intents](https://gov.gitcoin.co/t/proposal-community-input-on-gitcoindao-s-draft-purpose-essential-intents/10662) after “several members of CSDO raised concerns that there was growing misalignment [...] around the DAO’s mission and methods.” On May 6th, workstream leads and Gitcoin Holdings leadership met to have a strategy session, and develop a preliminary sense of the DAO’s purpose and essential intents. The attendees then elected a subgroup to continue the effort and that group’s draft is shared in this document. They state that the purpose of GitcoinDAO should be “to empower communities to build and fund their shared needs” and request community feedback on this as well as the four essential intents by Friday, June 3rd.
+
+* [Philip](https://gov.gitcoin.co/u/phutchins/summary) proposes [Upgrading the Gitcoin Governance Contracts](https://gov.gitcoin.co/t/upgrading-the-gitcoin-governance-contracts/10721) from Governor Alpha to Open Zeppelin’s implementation of Governor Bravo, reducing the delay on our timelock, and continuing to evaluate how to solve other governance pain points. The proposed upgrades would reduce the delay in turning around budget requests, and allow us to configure proposal parameters to remove or reduce restrictions. These restrictions include requiring 1MM votes to create a proposal, a user only being able to create one active proposal at a time, and having a minimum proposal vote threshold of 2.5MM votes.
+
+* In [The Grants 2.0 Flywheel](https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711), [Owocki](https://gov.gitcoin.co/u/owocki/summary) begins by articulating that Grants is a three-sided marketplace among Grant Owners, Community/Ecosystem Builders, and Contributors. A virtuous cycle between these three market participants is described where any of them increasing will also cause the others to increase. Grants 2.0 will build on this by open-sourcing modular tools which enable increases in mechanisms, grants registry integrations, and governance utility to feed this virtuous cycle.
+
+* [Schlabach](https://gov.gitcoin.co/u/schlabach/summary) and [HelloShreyas](https://gov.gitcoin.co/u/helloshreyas/summary) from [Llama](https://llama.xyz/) share a proposal to [Improve GTC Liquidity with Tokemak](https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725). [Tokemak](https://docs.tokemak.xyz/) is a “novel protocol designed to generate deep, sustainable liquidity for DeFi.” The benefits of using Tokemak could include increasing GTC liquidity across DEXs and earning revenue for the DAO. In order to do so, Gitcoin would need to win a Tokemak reactor in ~1.5 months by getting enough votes. Votes can be earned through advocacy, bribes, and/or a mutual grant.
+
+* [Owocki](https://gov.gitcoin.co/u/owocki/summary) shares an essay he wrote titled “[Where is the fire around this fire?](https://gov.gitcoin.co/t/where-is-the-fire-around-this-fire/10664)” about how, at a small music festival, he noticed that some of the campfires had people around them having fun and enjoying each other’s company, while other people just had the fire burning. In a time of transition, and a bear market, Owocki says “I hope we keep the fire around the fire. And if we can’t do that, I hope we can keep the fire burning. Because it’s not just the GitcoinDAO fire that we are keeping alive. It’s the mission. It’s the impact…And if we can’t do that, I hope that some of the fire from GitcoinDAO is carried forward in each of you in whatever you do next.”
+
+* In [The Meta Trap](https://gov.gitcoin.co/t/the-meta-trap/10666), [Owocki](https://gov.gitcoin.co/u/owocki/summary) quotes “If you think a typical cause has very high impact, it seems quite plausible that you can have even higher impact by working one level of “meta” up – working not on that cause directly, but instead working on getting more people to work on that cause. [[The Meta Trap](https://forum.effectivealtruism.org/s/KeipizrSxYFuyuyow)].” He goes on to identify two particular meta traps that Gitcoin should watch out for as “Probability of not having an impact” & “Overestimating impact” and advises the DAO to consider these in their daily work. Owocki proposes that less meta work should be funded during times of scarcity and budgets may want to take this into consideration.
+
+* The latest episode of the [Green Pill Podcast](https://availableon.com/greenpill) is live! This week [Owocki](https://twitter.com/owocki) speaks with [Auryn Macmillan](https://twitter.com/auryn_macmillan) about Practical Pluralism and the [essay](https://medium.com/@owocki/practical-pluralism-322ab0a984c5) they wrote together on this topic. Auryn is founder of [clr.fund](https://clr.fund/#/), a solidity dev, and a Gnosis Product Manager.
+
+## 🗳️ GitcoinDAO Governance Overview:
+
+Snapshot polls GTC Stewards. Tally performs on-chain actions. Proposals that have on-chain steps, such as budget requests, are approved on Snapshot before moving on to Tally.
+
+|Proposal Discussions|Active Proposals|Latest completed proposals|
+| --- | --- | --- |
+|[FDD Season 14 Budget Request](https://gov.gitcoin.co/t/proposal-fdd-season-14-budget-request/10658) **Option 1**: $390k USD for everything below plus explore a sybil detection DAO. **Option 2:** $330k USD for everything below and round over round improvements. **Option 3:** $200k USD to execute the bare minimum to protect from sybil attacks in Season 14|[Tally: Proposal for PGF Season 14 Budget](https://www.tally.xyz/governance/eip155:1:0xDbD27635A534A3d3169Ef0498beB56Fb9c937489/proposal/28) Status: 71% For|[Tally: Proposal for MMM Season 14 Funding](https://www.tally.xyz/governance/eip155:1:0xDbD27635A534A3d3169Ef0498beB56Fb9c937489/proposal/24) Result: Passed|
+|[Community Input on GitcoinDAO's Draft Purpose & Essential Intents](https://gov.gitcoin.co/t/proposal-community-input-on-gitcoindao-s-draft-purpose-essential-intents/10662)|[Tally: Proposal for DAO Ops Season 14 Funding](https://www.tally.xyz/governance/eip155:1:0xDbD27635A534A3d3169Ef0498beB56Fb9c937489/proposal/27) Status: 96% For||
+|[Improve GTC Liquidity with Tokemak ](https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725)|[Tally: Proposal for Moonshot Collective Season 14 Funding](https://www.tally.xyz/governance/eip155:1:0xDbD27635A534A3d3169Ef0498beB56Fb9c937489/proposal/26) Status: 98% For||
+||[Snapshot: SGR14 Round Structure & Grants Eligibility Update](https://snapshot.org/#/gitcoindao.eth/proposal/0xf8a7f4c5c6f894046555d608d5508ab04ae608670c135b27869c184c3c325236) Status: 89% For Round Structure & Against New Eligibility||
+
+## [🧙‍♂️🧙‍♀️ Workstream Discussion](https://gov.gitcoin.co/c/workstream-discussion/9)
+
+### 🛠 [Grants 2.0](https://www.notion.so/gitcoin/Grants-2-0-f2860138cbb24505b5cb2d8576119a78)
+
+* [We](https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-23/10679) have our [genesis brief](https://www.notion.so/Grants-Explorer-and-Round-Manager-Genesis-c74df8c04e0e45898f1885ad6a8bb5c8) up on Notion. It shares some context about the four pieces of Grants 2.0:
+  * dPopp,
+  * Grants Hub,
+  * Grants Explorer, and
+  * Round Manager.
+  * While the first two of these have been in development, Round Manager has just been kicked off in earnest in the last two weeks. We’re excited to run 3 alpha rounds on the Round Manager MVP by November.
+
+* **dPopp:** We are 87% complete with our MVP goals for dPopp and on course to complete our MVP for GR14. We are working on GR14 branding for our alpha launch which enables Gitcoin members to test our product. We also have a new [demo](https://drive.google.com/file/d/1iCMXxa8k5UPS7xV37-N0oGqexrF5tF4G/view)!
+
+* **Grants Hub:** We expect to finish testing our Grants Hub MVP by June 3rd and just released our new [demo](https://drive.google.com/file/d/1WBKMANj0tvb-yyF_kPxXd6gJHyfYuvvD/view). We expect to be production ready by July 1st so we can prompt users to migrate to the new Grants Hub during GR14 claims.
+
+### 🌱 [Public Goods Funding](https://gitcoin.notion.site/Public-Goods-4ccd579f433c4dff9d8952314468d6e8)
+
+* GR14 starts on June 8, which is just two weeks away! We have over $1.5M in matching funds confirmed! We are heads-down getting everything ready for this round including grants eligibility briefs and finalizing partnerships.
+
+* Our [round structure governance post](https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/47) received a lot of comments and engagement. The proposal is now [live on Snapshot](https://snapshot.org/#/gitcoindao.eth/proposal/0xf8a7f4c5c6f894046555d608d5508ab04ae608670c135b27869c184c3c325236) for voting!
+
+### [🚀](https://gov.gitcoin.co/t/proposal-prototyping-workstream-moonshot-budget-request-q4-2021/8785) [Moonshot Collective](https://gitcoin.notion.site/Moonshot-Collective-ffa78f44a0de412cb607f9b69d3a376f)
+
+* We’re thrilled to announce the brand new name for dPopp (decentralized proof of personhood passport) to… *drumroll*, Gitcoin Passport!
+
+* We finished the final iterations for key workflows for the Optimism Citizen House. We’ve delivered initial workflows for a retroactive public goods funding (RPGF) grant explorer.
+
+* We’re scoping how we scale governance operations and drafting user journeys for our stewards. We’ve synthesized our discovery research to prioritize pain points stewards face and are prioritizing solutions to prototype. Expect a governance post soon!
+
+* We’re focused on making the Moonshot Collective the place to be for builders in the DAO community. We’re [merging our community](https://gov.gitcoin.co/t/builders-of-the-dao-soon/10704) and Discord with the Builder Band (Gitcoin hackathon alumni) to form a talent pool that can learn, teach, grow, and build together!
+
+### 💙 [Fraud Detection & Defense (FDD)](https://gitcoin.notion.site/Fraud-Detection-Defense-2bde13c0b8e74fda81435d94e49e2703)
+
+* Our updated [season 14 budget request](https://gov.gitcoin.co/t/proposal-fdd-season-14-budget-request/10658) is live for feedback on the forum. We present 4 options for stewards to choose from in determining how much to fund us and for which outcomes. These options range from the bare minimum needed for round execution ($200k) to the amount needed for improvement ($330k), and discovery around a sybil detection DAO ($390k). The most expensive of these options is still a 40% budget reduction from our [initial proposal](https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448).
+
+* We’ve added the [levenshtein distance](https://hackmd.io/-1hMrN9GQfKV_Q8R6wejaA?view) to our Anti-Sybil Operational Process (ASOP) and containerized the process to work with one click. “The Levenshtein distance between string a and string b is the minimum number of edits required to transform a into b.” We can use this metric to identify low-effort sybil accounts by their username.
+
+* We completed our full backlog of grants applications since GR13 and began work with [LexDAO](https://www.lexdao.coop/) to improve our appeal process and close liability gaps.
+
+### 🎨 [Merch, Memes & Marketing](https://gitcoin.notion.site/Merch-Memes-and-Marketing-60cc693f0fe14be1879a05587922c8a3)
+
+* We’ve finalized the assets for our GR14 marketing campaign and are ready to drive some hype around funding public goods! GR14 starts super soon: June 8th to 23rd!
+
+* [Sean](https://gov.gitcoin.co/u/seanmac/summary) [shares his thoughts](https://gov.gitcoin.co/t/proposal-community-input-on-gitcoindao-s-draft-purpose-essential-intents/10662/7) on Gitcoin’s Purpose and Essential Intents “Our vision, purpose, mission & impact feed into our overall marketing strategy. They are what is used to create a channel & content strategy… We will use this clarity to speak with a unified voice to all of our audiences, thereby increasing awareness, comprehension & action.”
+
+* We kicked-off a building-in-public channel and used it to develop our Season 14 content strategy in public. We’re making sure we align on our mission and breaking our audience into segments for targeted campaigns.
+
+* We’re celebrating one year of GitcoinDAO! Check out the [tweet thread](https://twitter.com/gitcoin/status/1529556065792180230?s=20&t=ghy9yDn-Aoz9Z4K2U2bGMQ), [sign the yearbook](https://www.figma.com/file/FeybcbzCaXt59Y5cMammBq/Sign-the-GitcoinDAO-Year-in-Review?node-id=0%3A1), and look out for more! 👀
+
+* Our Dune Dashboards aim to improve transparency and accountability of GitcoinDAO and continue to improve! Check them out, and let us know if you have ideas for improvement:
+  * [GitcoinDAO: Governance & Financial overview](https://dune.com/ivanmolto/Gitcoin-DAO)
+  * [GitcoinDAO: Governor Alpha & Timelock](https://dune.com/ivanmolto/GitcoinDAO:-The-case-for-Governor-Alpha)
+  * [GitcoinDAO: GTC](https://dune.com/ivanmolto/Interaction)
+
+### ☀️ [DAO Operations](https://gitcoin.notion.site/DAO-Ops-84f425e281ae49579a2b4acf0bad5dd5)
+
+* We passed two proposals this week in our CSDO:
+  * A proposal to consolidate the Moonshot Collective and the Builderband while aiding in increasing participation at events and hackathons.
+  * A proposal to create and migrate governance forum topics into more fitting categories, add a new visual layout to the forum, and create tags.
+
+* We’ve learned a lot from our season 14 governance process and are interested in shipping a version 2 to match our DAO’s evolution.
+
+* We are hiring! We are still looking for a qualified [Support Lead.](https://twitter.com/GitcoinDAO/status/1511043414317584384?s=20&t=Xs18hYXcltlTH658zdlzLA)
+
+## 📅 [Upcoming community events](https://www.addevent.com/calendar/pz351122)
+
+* Drop in on our weekly [DAO Vibes](https://calendar.google.com/calendar/u/0/r/eventedit/copy/NWo3ODBxdmpmOHJ1ZGZqYnRxa3I2ZzhwdGhfMjAyMjA2MDFUMTYwMDAwWiBjX3R0NGczOGE2NnVtam1lcTE1NGFnY3AyZDRzQGc) on Wednesdays at 12PM ET on [Discord](http://gitcoin.co/discord)! We have been seeing great attendance and engagement and we would love for you to join us.
+
+* [Community Onboarding Call!](https://calendar.google.com/calendar/u/0/r/eventedit/copy/Mm00bzZjdjg2YmhwcGZwb2toMXMybGpwNDJfMjAyMjA2MDZUMTcwMDAwWiBjX3R0NGczOGE2NnVtam1lcTE1NGFnY3AyZDRzQGc) New to Gitcoin? The next event will be Monday, June 6th from 1:00 to 2:00 PM EST. We’ll tell you all about how we're organized and how you can become an active contributor. If you haven’t applied, [do this first!](https://form.typeform.com/to/DiMdHaWe)
+
+## 👋 [New to GitcoinDAO?](http://gitcoindao.com/)
+
+* [TLDR - What is Gitcoin?](https://gov.gitcoin.co/t/tldr-what-is-gitcoin-updated-oct-2021/8694)
+
+* Apply to become a member of GitcoinDAO by [filling out the application form.](https://form.typeform.com/to/DiMdHaWe) To learn more about what the DAO onboarding experience entails, please visit our [notion page](https://www.notion.so/Learn-about-the-DAO-onboarding-experience-5856a0032e73494888b92b84d9be6af5).
+
+* Have you already applied but have yet to join a Gitcoin workstream? [Start here](http://gitcoindao.com/) to learn more about where you might fit in.
+
+Thanks for reading!
+
+[Previous edition](https://gov.gitcoin.co/t/gitcoindao-digest-18-2022/10660)
+Wed, 01 Jun 2022 05:52:29 +0000
+👋 News and Community
+
+
+GitcoinDAO Digest #19 2022
+umarkhaneth
+
+            <p>Thank you <a class="mention" href="https://gov.gitcoin.co/u/seanmac">@seanmac</a> and <a class="mention" href="https://gov.gitcoin.co/u/zer8">@ZER8</a> for reading. I am very glad to hear the digest is useful to you <img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoindao-digest-19-2022/10737/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoindao-digest-19-2022/10737/4
+        Wed, 01 Jun 2022 05:52:29 +0000
+gov.gitcoin.co-post-10737-4
+GitcoinDAO Digest #19 2022
+      
+
+GitcoinDAO Digest #19 2022
+ZER8
+
+            <p>Yes, this should be wayy more popular, it’s very helpful for everyone here <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Will share it with the FDD regularly.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoindao-digest-19-2022/10737/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoindao-digest-19-2022/10737/3
+        Sun, 29 May 2022 13:26:51 +0000
+gov.gitcoin.co-post-10737-3
+GitcoinDAO Digest #19 2022
+      
+
+GitcoinDAO Digest #19 2022
+seanmac
+
+            <p>Another fantastic edition <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a>, <a class="mention" href="https://gov.gitcoin.co/u/fred">@Fred</a> and everyone!</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoindao-digest-19-2022/10737/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoindao-digest-19-2022/10737/2
+        Fri, 27 May 2022 16:34:02 +0000
+gov.gitcoin.co-post-10737-2
+GitcoinDAO Digest #19 2022
+      
+
+GitcoinDAO Digest #19 2022
+umarkhaneth
+
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/57a6099afd6e70b8bec5de96531ce675fec3f579.png" data-download-href="/uploads/short-url/cvngY12DWKN7ZkMeVvOeLpagnXj.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/5/57a6099afd6e70b8bec5de96531ce675fec3f579_2_624x149.png" alt="" data-base62-sha1="cvngY12DWKN7ZkMeVvOeLpagnXj" width="624" height="149" srcset="/uploads/db4391/optimized/2X/5/57a6099afd6e70b8bec5de96531ce675fec3f579_2_624x149.png, /uploads/db4391/optimized/2X/5/57a6099afd6e70b8bec5de96531ce675fec3f579_2_936x223.png 1.5x, /uploads/db4391/optimized/2X/5/57a6099afd6e70b8bec5de96531ce675fec3f579_2_1248x298.png 2x" data-small-upload="/uploads/db4391/optimized/2X/5/57a6099afd6e70b8bec5de96531ce675fec3f579_2_10x10.png"></a></div><p></p>
+<p><em><strong>Happy Birthday to us! One year already <img src="https://emoji.discourse-cdn.com/twitter/birthday.png?v=12" title=":birthday:" class="emoji" alt=":birthday:" loading="lazy" width="20" height="20"></strong></em></p>
+<p><img src="https://emoji.discourse-cdn.com/twitter/email.png?v=12" title=":email:" class="emoji" alt=":email:" loading="lazy" width="20" height="20"> If you would like to receive this newsletter in your inbox, <a href="https://form.typeform.com/to/ttNCMt8w" rel="noopener nofollow ugc">sign up here! </a></p>
+<p><strong><img src="https://emoji.discourse-cdn.com/twitter/point_right.png?v=12" title=":point_right:" class="emoji" alt=":point_right:" loading="lazy" width="20" height="20"> Key actions for this week:</strong></p>
+<ol>
+<li>Celebrate one year of GitcoinDAO with us on this <a href="https://twitter.com/gitcoin/status/1529556065792180230?s=20&amp;t=ghy9yDn-Aoz9Z4K2U2bGMQ" rel="noopener nofollow ugc">tweet thread</a>!</li>
+<li>Provide your feedback on <a href="https://gov.gitcoin.co/t/proposal-community-input-on-gitcoindao-s-draft-purpose-essential-intents/10662">GitcoinDAO’s Draft Purpose &amp; Essential Intents</a>
+</li>
+</ol>
+<h3>
+<a name="hot-topics-1" class="anchor" href="https://gov.gitcoin.co#hot-topics-1"></a><img src="https://emoji.discourse-cdn.com/twitter/fire.png?v=12" title=":fire:" class="emoji" alt=":fire:" loading="lazy" width="20" height="20"> Hot Topics:</h3>
+<ul>
+<li>
+<p><a href="https://gov.gitcoin.co/u/jodi_gitcoindao/summary">Jodi</a> shares that <a href="https://gov.gitcoin.co/t/gitcoin-dao-governance-process-v3/10358#cross-stream-dao-ops-csdo-16">CSDO</a> seeks <a href="https://gov.gitcoin.co/t/proposal-community-input-on-gitcoindao-s-draft-purpose-essential-intents/10662">Community Input on GitcoinDAO’s Draft Purpose &amp; Essential Intents</a> after “several members of CSDO raised concerns that there was growing misalignment […] around the DAO’s mission and methods.” On May 6th, workstream leads and Gitcoin Holdings leadership met to have a strategy session, and develop a preliminary sense of the DAO’s purpose and essential intents. The attendees then elected a subgroup to continue the effort and that group’s draft is shared in this document. They state that the purpose of GitcoinDAO should be “to empower communities to build and fund their shared needs” and request community feedback on this as well as the four essential intents by Friday, June 3rd.</p>
+</li>
+<li>
+<p><a href="https://gov.gitcoin.co/u/phutchins/summary">Philip</a> proposes <a href="https://gov.gitcoin.co/t/upgrading-the-gitcoin-governance-contracts/10721">Upgrading the Gitcoin Governance Contracts</a> from Governor Alpha to Open Zeppelin’s implementation of Governor Bravo, reducing the delay on our timelock, and continuing to evaluate how to solve other governance pain points. The proposed upgrades would reduce the delay in turning around budget requests, and allow us to configure proposal parameters to remove or reduce restrictions. These restrictions include requiring 1MM votes to create a proposal, a user only being able to create one active proposal at a time, and having a minimum proposal vote threshold of 2.5MM votes.</p>
+</li>
+<li>
+<p>In <a href="https://gov.gitcoin.co/t/the-grants-2-0-flywheel/10711">The Grants 2.0 Flywheel</a>, <a href="https://gov.gitcoin.co/u/owocki/summary">Owocki</a> begins by articulating that Grants is a three-sided marketplace among Grant Owners, Community/Ecosystem Builders, and Contributors. A virtuous cycle between these three market participants is described where any of them increasing will also cause the others to increase. Grants 2.0 will build on this by open-sourcing modular tools which enable increases in mechanisms, grants registry integrations, and governance utility to feed this virtuous cycle.</p>
+</li>
+<li>
+<p><a href="https://gov.gitcoin.co/u/schlabach/summary">Schlabach</a> and <a href="https://gov.gitcoin.co/u/helloshreyas/summary">HelloShreyas</a> from <a href="https://llama.xyz/" rel="noopener nofollow ugc">Llama</a> share a proposal to <a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725">Improve GTC Liquidity with Tokemak</a>. <a href="https://docs.tokemak.xyz/" rel="noopener nofollow ugc">Tokemak</a> is a “novel protocol designed to generate deep, sustainable liquidity for DeFi.” The benefits of using Tokemak could include increasing GTC liquidity across DEXs and earning revenue for the DAO. In order to do so, Gitcoin would need to win a Tokemak reactor in ~1.5 months by getting enough votes. Votes can be earned through advocacy, bribes, and/or a mutual grant.</p>
+</li>
+<li>
+<p><a href="https://gov.gitcoin.co/u/owocki/summary">Owocki</a> shares an essay he wrote titled “<a href="https://gov.gitcoin.co/t/where-is-the-fire-around-this-fire/10664">Where is the fire around this fire?</a>” about how, at a small music festival, he noticed that some of the campfires had people around them having fun and enjoying each other’s company, while other people just had the fire burning. In a time of transition, and a bear market, Owocki says “I hope we keep the fire around the fire. And if we can’t do that, I hope we can keep the fire burning. Because it’s not just the GitcoinDAO fire that we are keeping alive. It’s the mission. It’s the impact…And if we can’t do that, I hope that some of the fire from GitcoinDAO is carried forward in each of you in whatever you do next.”</p>
+</li>
+<li>
+<p>In <a href="https://gov.gitcoin.co/t/the-meta-trap/10666">The Meta Trap</a>, <a href="https://gov.gitcoin.co/u/owocki/summary">Owocki</a> quotes “If you think a typical cause has very high impact, it seems quite plausible that you can have even higher impact by working one level of “meta” up – working not on that cause directly, but instead working on getting more people to work on that cause. [<a href="https://forum.effectivealtruism.org/s/KeipizrSxYFuyuyow" rel="noopener nofollow ugc">The Meta Trap</a>].” He goes on to identify two particular meta traps that Gitcoin should watch out for as “Probability of not having an impact” &amp; “Overestimating impact” and advises the DAO to consider these in their daily work. Owocki proposes that less meta work should be funded during times of scarcity and budgets may want to take this into consideration.</p>
+</li>
+<li>
+<p>The latest episode of the <a href="https://availableon.com/greenpill" rel="noopener nofollow ugc">Green Pill Podcast</a> is live! This week <a href="https://twitter.com/owocki" rel="noopener nofollow ugc">Owocki</a> speaks with <a href="https://twitter.com/auryn_macmillan" rel="noopener nofollow ugc">Auryn Macmillan</a> about Practical Pluralism and the <a href="https://medium.com/@owocki/practical-pluralism-322ab0a984c5" rel="noopener nofollow ugc">essay</a> they wrote together on this topic. Auryn is founder of <a href="https://clr.fund/#/" rel="noopener nofollow ugc">clr.fund</a>, a solidity dev, and a Gnosis Product Manager.</p>
+</li>
+</ul>
+<h2>
+<a name="gitcoindao-governance-overview-2" class="anchor" href="https://gov.gitcoin.co#gitcoindao-governance-overview-2"></a><img src="https://emoji.discourse-cdn.com/twitter/ballot_box.png?v=12" title=":ballot_box:" class="emoji" alt=":ballot_box:" loading="lazy" width="20" height="20"> GitcoinDAO Governance Overview:</h2>
+<p>Snapshot polls GTC Stewards. Tally performs on-chain actions. Proposals that have on-chain steps, such as budget requests, are approved on Snapshot before moving on to Tally.</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Proposal Discussions</th>
+<th>Active Proposals</th>
+<th>Latest completed proposals</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://gov.gitcoin.co/t/proposal-fdd-season-14-budget-request/10658">FDD Season 14 Budget Request</a> <strong>Option 1</strong>: $390k USD for everything below plus explore a sybil detection DAO. <strong>Option 2:</strong> $330k USD for everything below and round over round improvements. <strong>Option 3:</strong> $200k USD to execute the bare minimum to protect from sybil attacks in Season 14</td>
+<td>
+<a href="https://www.tally.xyz/governance/eip155:1:0xDbD27635A534A3d3169Ef0498beB56Fb9c937489/proposal/28" rel="noopener nofollow ugc">Tally: Proposal for PGF Season 14 Budget</a> Status: 71% For</td>
+<td>
+<a href="https://www.tally.xyz/governance/eip155:1:0xDbD27635A534A3d3169Ef0498beB56Fb9c937489/proposal/24" rel="noopener nofollow ugc">Tally: Proposal for MMM Season 14 Funding</a> Result: Passed</td>
+</tr>
+<tr>
+<td><a href="https://gov.gitcoin.co/t/proposal-community-input-on-gitcoindao-s-draft-purpose-essential-intents/10662">Community Input on GitcoinDAO’s Draft Purpose &amp; Essential Intents</a></td>
+<td>
+<a href="https://www.tally.xyz/governance/eip155:1:0xDbD27635A534A3d3169Ef0498beB56Fb9c937489/proposal/27" rel="noopener nofollow ugc">Tally: Proposal for DAO Ops Season 14 Funding</a> Status: 96% For</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://gov.gitcoin.co/t/improve-gtc-liquidity-with-tokemak/10725">Improve GTC Liquidity with Tokemak </a></td>
+<td>
+<a href="https://www.tally.xyz/governance/eip155:1:0xDbD27635A534A3d3169Ef0498beB56Fb9c937489/proposal/26" rel="noopener nofollow ugc">Tally: Proposal for Moonshot Collective Season 14 Funding</a> Status: 98% For</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>
+<a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xf8a7f4c5c6f894046555d608d5508ab04ae608670c135b27869c184c3c325236" rel="noopener nofollow ugc">Snapshot: SGR14 Round Structure &amp; Grants Eligibility Update</a> Status: 89% For Round Structure &amp; Against New Eligibility</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div><h2>
+<a name="workstream-discussionhttpsgovgitcoincocworkstream-discussion9-3" class="anchor" href="https://gov.gitcoin.co#workstream-discussionhttpsgovgitcoincocworkstream-discussion9-3"></a><a href="https://gov.gitcoin.co/c/workstream-discussion/9"><img src="https://emoji.discourse-cdn.com/twitter/man_mage.png?v=12" title=":man_mage:" class="emoji" alt=":man_mage:" loading="lazy" width="20" height="20"><img src="https://emoji.discourse-cdn.com/twitter/woman_mage.png?v=12" title=":woman_mage:" class="emoji" alt=":woman_mage:" loading="lazy" width="20" height="20"> Workstream Discussion</a>
+</h2>
+<h3>
+<a name="grants-20httpswwwnotionsogitcoingrants-2-0-f2860138cbb24505b5cb2d8576119a78-4" class="anchor" href="https://gov.gitcoin.co#grants-20httpswwwnotionsogitcoingrants-2-0-f2860138cbb24505b5cb2d8576119a78-4"></a><img src="https://emoji.discourse-cdn.com/twitter/hammer_and_wrench.png?v=12" title=":hammer_and_wrench:" class="emoji" alt=":hammer_and_wrench:" loading="lazy" width="20" height="20"> <a href="https://www.notion.so/gitcoin/Grants-2-0-f2860138cbb24505b5cb2d8576119a78" rel="noopener nofollow ugc">Grants 2.0</a>
+</h3>
+<ul>
+<li>
+<p><a href="https://gov.gitcoin.co/t/weekly-grants-2-0-update-2022-5-23/10679">We</a> have our <a href="https://www.notion.so/Grants-Explorer-and-Round-Manager-Genesis-c74df8c04e0e45898f1885ad6a8bb5c8" rel="noopener nofollow ugc">genesis brief</a> up on Notion. It shares some context about the four pieces of Grants 2.0:</p>
+<ul>
+<li>dPopp,</li>
+<li>Grants Hub,</li>
+<li>Grants Explorer, and</li>
+<li>Round Manager.</li>
+<li>While the first two of these have been in development, Round Manager has just been kicked off in earnest in the last two weeks. We’re excited to run 3 alpha rounds on the Round Manager MVP by November.</li>
+</ul>
+</li>
+<li>
+<p><strong>dPopp:</strong> We are 87% complete with our MVP goals for dPopp and on course to complete our MVP for GR14. We are working on GR14 branding for our alpha launch which enables Gitcoin members to test our product. We also have a new <a href="https://drive.google.com/file/d/1iCMXxa8k5UPS7xV37-N0oGqexrF5tF4G/view" rel="noopener nofollow ugc">demo</a>!</p>
+</li>
+<li>
+<p><strong>Grants Hub:</strong> We expect to finish testing our Grants Hub MVP by June 3rd and just released our new <a href="https://drive.google.com/file/d/1WBKMANj0tvb-yyF_kPxXd6gJHyfYuvvD/view" rel="noopener nofollow ugc">demo</a>. We expect to be production ready by July 1st so we can prompt users to migrate to the new Grants Hub during GR14 claims.</p>
+</li>
+</ul>
+<h3>
+<a name="public-goods-fundinghttpsgitcoinnotionsitepublic-goods-4ccd579f433c4dff9d8952314468d6e8-5" class="anchor" href="https://gov.gitcoin.co#public-goods-fundinghttpsgitcoinnotionsitepublic-goods-4ccd579f433c4dff9d8952314468d6e8-5"></a><img src="https://emoji.discourse-cdn.com/twitter/seedling.png?v=12" title=":seedling:" class="emoji" alt=":seedling:" loading="lazy" width="20" height="20"> <a href="https://gitcoin.notion.site/Public-Goods-4ccd579f433c4dff9d8952314468d6e8" rel="noopener nofollow ugc">Public Goods Funding</a>
+</h3>
+<ul>
+<li>
+<p>GR14 starts on June 8, which is just two weeks away! We have over $1.5M in matching funds confirmed! We are heads-down getting everything ready for this round including grants eligibility briefs and finalizing partnerships.</p>
+</li>
+<li>
+<p>Our <a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632/47">round structure governance post</a> received a lot of comments and engagement. The proposal is now <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0xf8a7f4c5c6f894046555d608d5508ab04ae608670c135b27869c184c3c325236" rel="noopener nofollow ugc">live on Snapshot</a> for voting!</p>
+</li>
+</ul>
+<h3>
+<a name="httpsgovgitcoincotproposal-prototyping-workstream-moonshot-budget-request-q4-20218785-moonshot-collectivehttpsgitcoinnotionsitemoonshot-collective-ffa78f44a0de412cb607f9b69d3a376f-6" class="anchor" href="https://gov.gitcoin.co#httpsgovgitcoincotproposal-prototyping-workstream-moonshot-budget-request-q4-20218785-moonshot-collectivehttpsgitcoinnotionsitemoonshot-collective-ffa78f44a0de412cb607f9b69d3a376f-6"></a><a href="https://gov.gitcoin.co/t/proposal-prototyping-workstream-moonshot-budget-request-q4-2021/8785"><img src="https://emoji.discourse-cdn.com/twitter/rocket.png?v=12" title=":rocket:" class="emoji only-emoji" alt=":rocket:" loading="lazy" width="20" height="20"></a> <a href="https://gitcoin.notion.site/Moonshot-Collective-ffa78f44a0de412cb607f9b69d3a376f" rel="noopener nofollow ugc">Moonshot Collective</a>
+</h3>
+<ul>
+<li>
+<p>We’re thrilled to announce the brand new name for dPopp (decentralized proof of personhood passport) to… <em>drumroll</em>, Gitcoin Passport!</p>
+</li>
+<li>
+<p>We finished the final iterations for key workflows for the Optimism Citizen House. We’ve delivered initial workflows for a retroactive public goods funding (RPGF) grant explorer.</p>
+</li>
+<li>
+<p>We’re scoping how we scale governance operations and drafting user journeys for our stewards. We’ve synthesized our discovery research to prioritize pain points stewards face and are prioritizing solutions to prototype. Expect a governance post soon!</p>
+</li>
+<li>
+<p>We’re focused on making the Moonshot Collective the place to be for builders in the DAO community. We’re <a href="https://gov.gitcoin.co/t/builders-of-the-dao-soon/10704">merging our community</a> and Discord with the Builder Band (Gitcoin hackathon alumni) to form a talent pool that can learn, teach, grow, and build together!</p>
+</li>
+</ul>
+<h3>
+<a name="fraud-detection-defense-fddhttpsgitcoinnotionsitefraud-detection-defense-2bde13c0b8e74fda81435d94e49e2703-7" class="anchor" href="https://gov.gitcoin.co#fraud-detection-defense-fddhttpsgitcoinnotionsitefraud-detection-defense-2bde13c0b8e74fda81435d94e49e2703-7"></a><img src="https://emoji.discourse-cdn.com/twitter/blue_heart.png?v=12" title=":blue_heart:" class="emoji" alt=":blue_heart:" loading="lazy" width="20" height="20"> <a href="https://gitcoin.notion.site/Fraud-Detection-Defense-2bde13c0b8e74fda81435d94e49e2703" rel="noopener nofollow ugc">Fraud Detection &amp; Defense (FDD)</a>
+</h3>
+<ul>
+<li>
+<p>Our updated <a href="https://gov.gitcoin.co/t/proposal-fdd-season-14-budget-request/10658">season 14 budget request</a> is live for feedback on the forum. We present 4 options for stewards to choose from in determining how much to fund us and for which outcomes. These options range from the bare minimum needed for round execution ($200k) to the amount needed for improvement ($330k), and discovery around a sybil detection DAO ($390k). The most expensive of these options is still a 40% budget reduction from our <a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448">initial proposal</a>.</p>
+</li>
+<li>
+<p>We’ve added the <a href="https://hackmd.io/-1hMrN9GQfKV_Q8R6wejaA?view" rel="noopener nofollow ugc">levenshtein distance</a> to our Anti-Sybil Operational Process (ASOP) and containerized the process to work with one click. “The Levenshtein distance between string a and string b is the minimum number of edits required to transform a into b.” We can use this metric to identify low-effort sybil accounts by their username.</p>
+</li>
+<li>
+<p>We completed our full backlog of grants applications since GR13 and began work with <a href="https://www.lexdao.coop/" rel="noopener nofollow ugc">LexDAO</a> to improve our appeal process and close liability gaps.</p>
+</li>
+</ul>
+<h3>
+<a name="merch-memes-marketinghttpsgitcoinnotionsitemerch-memes-and-marketing-60cc693f0fe14be1879a05587922c8a3-8" class="anchor" href="https://gov.gitcoin.co#merch-memes-marketinghttpsgitcoinnotionsitemerch-memes-and-marketing-60cc693f0fe14be1879a05587922c8a3-8"></a><img src="https://emoji.discourse-cdn.com/twitter/art.png?v=12" title=":art:" class="emoji" alt=":art:" loading="lazy" width="20" height="20"> <a href="https://gitcoin.notion.site/Merch-Memes-and-Marketing-60cc693f0fe14be1879a05587922c8a3" rel="noopener nofollow ugc">Merch, Memes &amp; Marketing</a>
+</h3>
+<ul>
+<li>
+<p>We’ve finalized the assets for our GR14 marketing campaign and are ready to drive some hype around funding public goods! GR14 starts super soon: June 8th to 23rd!</p>
+</li>
+<li>
+<p><a href="https://gov.gitcoin.co/u/seanmac/summary">Sean</a> <a href="https://gov.gitcoin.co/t/proposal-community-input-on-gitcoindao-s-draft-purpose-essential-intents/10662/7">shares his thoughts</a> on Gitcoin’s Purpose and Essential Intents “Our vision, purpose, mission &amp; impact feed into our overall marketing strategy. They are what is used to create a channel &amp; content strategy… We will use this clarity to speak with a unified voice to all of our audiences, thereby increasing awareness, comprehension &amp; action.”</p>
+</li>
+<li>
+<p>We kicked-off a building-in-public channel and used it to develop our Season 14 content strategy in public. We’re making sure we align on our mission and breaking our audience into segments for targeted campaigns.</p>
+</li>
+<li>
+<p>We’re celebrating one year of GitcoinDAO! Check out the <a href="https://twitter.com/gitcoin/status/1529556065792180230?s=20&amp;t=ghy9yDn-Aoz9Z4K2U2bGMQ" rel="noopener nofollow ugc">tweet thread</a>, <a href="https://www.figma.com/file/FeybcbzCaXt59Y5cMammBq/Sign-the-GitcoinDAO-Year-in-Review?node-id=0%3A1" rel="noopener nofollow ugc">sign the yearbook</a>, and look out for more! <img src="https://emoji.discourse-cdn.com/twitter/eyes.png?v=12" title=":eyes:" class="emoji" alt=":eyes:" loading="lazy" width="20" height="20"></p>
+</li>
+<li>
+<p>Our Dune Dashboards aim to improve transparency and accountability of GitcoinDAO and continue to improve! Check them out, and let us know if you have ideas for improvement:</p>
+<ul>
+<li><a href="https://dune.com/ivanmolto/Gitcoin-DAO" rel="noopener nofollow ugc">GitcoinDAO: Governance &amp; Financial overview</a></li>
+<li><a href="https://dune.com/ivanmolto/GitcoinDAO:-The-case-for-Governor-Alpha" rel="noopener nofollow ugc">GitcoinDAO: Governor Alpha &amp; Timelock</a></li>
+<li><a href="https://dune.com/ivanmolto/Interaction" rel="noopener nofollow ugc">GitcoinDAO: GTC</a></li>
+</ul>
+</li>
+</ul>
+<h3>
+<a name="dao-operationshttpsgitcoinnotionsitedao-ops-84f425e281ae49579a2b4acf0bad5dd5-9" class="anchor" href="https://gov.gitcoin.co#dao-operationshttpsgitcoinnotionsitedao-ops-84f425e281ae49579a2b4acf0bad5dd5-9"></a><img src="https://emoji.discourse-cdn.com/twitter/sunny.png?v=12" title=":sunny:" class="emoji" alt=":sunny:" loading="lazy" width="20" height="20"> <a href="https://gitcoin.notion.site/DAO-Ops-84f425e281ae49579a2b4acf0bad5dd5" rel="noopener nofollow ugc">DAO Operations</a>
+</h3>
+<ul>
+<li>
+<p>We passed two proposals this week in our CSDO:</p>
+<ul>
+<li>A proposal to consolidate the Moonshot Collective and the Builderband while aiding in increasing participation at events and hackathons.</li>
+<li>A proposal to create and migrate governance forum topics into more fitting categories, add a new visual layout to the forum, and create tags.</li>
+</ul>
+</li>
+<li>
+<p>We’ve learned a lot from our season 14 governance process and are interested in shipping a version 2 to match our DAO’s evolution.</p>
+</li>
+<li>
+<p>We are hiring! We are still looking for a qualified <a href="https://twitter.com/GitcoinDAO/status/1511043414317584384?s=20&amp;t=Xs18hYXcltlTH658zdlzLA" rel="noopener nofollow ugc">Support Lead.</a></p>
+</li>
+</ul>
+<h2>
+<a name="upcoming-community-eventshttpswwwaddeventcomcalendarpz351122-10" class="anchor" href="https://gov.gitcoin.co#upcoming-community-eventshttpswwwaddeventcomcalendarpz351122-10"></a><img src="https://emoji.discourse-cdn.com/twitter/date.png?v=12" title=":date:" class="emoji" alt=":date:" loading="lazy" width="20" height="20"> <a href="https://www.addevent.com/calendar/pz351122" rel="noopener nofollow ugc">Upcoming community events</a>
+</h2>
+<ul>
+<li>
+<p>Drop in on our weekly <a href="https://calendar.google.com/calendar/u/0/r/eventedit/copy/NWo3ODBxdmpmOHJ1ZGZqYnRxa3I2ZzhwdGhfMjAyMjA2MDFUMTYwMDAwWiBjX3R0NGczOGE2NnVtam1lcTE1NGFnY3AyZDRzQGc" rel="noopener nofollow ugc">DAO Vibes</a> on Wednesdays at 12PM ET on <a href="http://gitcoin.co/discord" rel="noopener nofollow ugc">Discord</a>! We have been seeing great attendance and engagement and we would love for you to join us.</p>
+</li>
+<li>
+<p><a href="https://calendar.google.com/calendar/u/0/r/eventedit/copy/Mm00bzZjdjg2YmhwcGZwb2toMXMybGpwNDJfMjAyMjA2MDZUMTcwMDAwWiBjX3R0NGczOGE2NnVtam1lcTE1NGFnY3AyZDRzQGc" rel="noopener nofollow ugc">Community Onboarding Call!</a> New to Gitcoin? The next event will be Monday, June 6th from 1:00 to 2:00 PM EST. We’ll tell you all about how we’re organized and how you can become an active contributor. If you haven’t applied, <a href="https://form.typeform.com/to/DiMdHaWe" rel="noopener nofollow ugc">do this first!</a></p>
+</li>
+</ul>
+<h2>
+<a name="new-to-gitcoindaohttpgitcoindaocom-11" class="anchor" href="https://gov.gitcoin.co#new-to-gitcoindaohttpgitcoindaocom-11"></a><img src="https://emoji.discourse-cdn.com/twitter/wave.png?v=12" title=":wave:" class="emoji" alt=":wave:" loading="lazy" width="20" height="20"> <a href="http://gitcoindao.com/" rel="noopener nofollow ugc">New to GitcoinDAO?</a>
+</h2>
+<ul>
+<li>
+<p><a href="https://gov.gitcoin.co/t/tldr-what-is-gitcoin-updated-oct-2021/8694">TLDR - What is Gitcoin?</a></p>
+</li>
+<li>
+<p>Apply to become a member of GitcoinDAO by <a href="https://form.typeform.com/to/DiMdHaWe" rel="noopener nofollow ugc">filling out the application form.</a> To learn more about what the DAO onboarding experience entails, please visit our <a href="https://www.notion.so/Learn-about-the-DAO-onboarding-experience-5856a0032e73494888b92b84d9be6af5" rel="noopener nofollow ugc">notion page</a>.</p>
+</li>
+<li>
+<p>Have you already applied but have yet to join a Gitcoin workstream? <a href="http://gitcoindao.com/" rel="noopener nofollow ugc">Start here</a> to learn more about where you might fit in.</p>
+</li>
+</ul>
+<p>Thanks for reading!</p>
+<p><a href="https://gov.gitcoin.co/t/gitcoindao-digest-18-2022/10660">Previous edition</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoindao-digest-19-2022/10737/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoindao-digest-19-2022/10737/1
+        Fri, 27 May 2022 09:32:20 +0000
+gov.gitcoin.co-post-10737-1
+GitcoinDAO Digest #19 2022
+      
+
+

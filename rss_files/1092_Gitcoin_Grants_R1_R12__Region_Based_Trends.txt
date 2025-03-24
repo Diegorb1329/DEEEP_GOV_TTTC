@@ -1,0 +1,336 @@
+
+
+
+Gitcoin Grants R1-R12: Region Based Trends
+https://gov.gitcoin.co/t/gitcoin-grants-r1-r12-region-based-trends/9579
+    # Introduction
+This is in response to the [GitCoin Grants R1-R12 Analysis Bounty](https://gitcoin.co/issue/gitcoinco/skunkworks/252/100027341).
+The post will cover two types of analysis:
+
+* Cross-Region Trends: Will highlight macro changes in participation across regions. [Dashboard Link](https://public.tableau.com/app/profile/aditya.agarwal1920/viz/GitCoin_Grants_R1_R12_Region_Analysis/Story1?publish=yes)
+* Region Specific Category Trends: Focus on macro-changes in categories at a specific region. [Dashboard Link](https://public.tableau.com/app/profile/aditya.agarwal1920/viz/GitCoin_Grants_R1_R12_Analysis/Story4?publish=yes)
+
+## Intuition:
+
+Since quadratic funding is applied, the match_amount received by any grant can be thought of as a derived value.
+Considering this, ***total funding*** (which is sum of match amount and crowdfund amount) and ***match amount*** are given less attention over ***region***, ***unique_contributors*** and ***crowdfund_amount***.
+
+Thus we take a dig at the ***the wider crypto ecosystem*** part of the problem statement in the bounty.
+
+
+# 1. Cross-Region Trends
+
+## Description of the Data
+* x-axis: Grant Round for each data is plotted above
+* y-axis: It represents three different values showing the percentage distribution across different regions for each value. The values shown are:
+
+<ol>
+<li> <b>% Unique Grant Request:</b> Percentage of Unique Grants for the region in the specific round </li>
+<li> <b>% Unique Contributors:</b> Percentage of Unique Contributors Found for the region in the specific round </li>
+<li> <b>% Crowdfund Contributions:</b> Percentage of Crowdfund Amount given to grants in a region in the specific round</li>
+
+Thus, for each round, the total of any metric always scaled to 100.
+
+**Note:** Since a contributor may fund more than one grant request, **% Unique Contributors**   doesn't necessarily represent Unique Contributors in the complete ecosystem. Since the analysis deals with region-specific trends across rounds, impact of this should be minimal.
+
+## 1.1 All Regions
+<div align="center">
+
+![Region_All|529x500, 100%](upload://uyKicTccW9a6dNtO8DNkjBaV5Xt.jpeg)
+**All Region Analysis**
+</div>
+The most obvious insight from the graph above is the relative reduction in Grants with missing Region details. From round 7 onwards, the proportion of such grants reduce drastically.
+What's more interesting though, is
+
+> the drop in unique contributions to these projects is more rapid
+
+This hints at further exploration from Round 7 onwards, but intuitively couple of questions come to mind:
+1. Did people become more comfortable sharing their region details?
+2. Did not revealing region information show possible signs of distrust? Or was their any event or potential scam that made people vary?
+
+It could also be the case that initial projects were region agnostic.
+
+## 1.2 Removing Missing Region Entries
+To get less skewed trends, I decided filter out the entries with missing region.
+
+<div align="center">
+
+![Region_Without_None|522x500](upload://xCpLGLnKqp3RuHwuAF0fjIaIo9g.jpeg)
+
+**Removing** *None*, *Undefined* & *Null* **regions**
+</div>
+Now the trends are some what as expected. Initial Rounds were dominated by North America, with active participation from Europe round 3 onwards. I guess America retains the tag of early adopters.
+Please note that lower percentage of grant request (in a specific round) compared to contributors or crowdfund amount from North America, i.e. more wealth is going to projects from North America, and more grant requests are arising from other regions.
+
+## 1.3 Removing North America
+Let's remove the Biggest Fish from the sea and see who else has been making progress.
+<div align="center">
+
+![Region_Without_NorthAmerica|524x500](upload://rPd0nk8xDxnGmj6kGf28YMfZzkf.jpeg)
+
+**Also removing North America**
+</div>
+Now we see something interesting.
+
+> What happened to Oceania?
+
+Rounds 2 and 3 witnessed projects from oceania getting funded significantly in comparison to Europe. The actual number of projects though was 1 each from Europe, Oceania and Latin America.
+Round 4 onwards, we see a surge of projects from Europe, which remained till round 12, while oceania struggled to even have a presence.
+Does hint at a lack of ecosystem adoption or promotion or resource? 
+
+## 1.4 Removing Europe
+We further remove Europe to see trends for emerging regions.
+<div align="center">
+
+![Region_Without_Europe|529x500](upload://5KqoK4mTPMYs5AEw2nmd6lSJ0y8.jpeg)
+
+**Removing Europe**
+</div>
+
+Multiple parts of Asia show interest in creating new grants (hence developing new projects and growing the eco-system).
+ Latin America and East Asia are leading here, but that could be the region specific grants allocated by the platform in later rounds.
+India and Southeast Asia are two strong technological hubs which is now showing active web3 interest.
+Africa though is on a decline, despite grant reserves for the region. Could the reserved pool require more appropriate allocation?
+
+# 2. Region-Category Trends
+
+## 2.1 The Default View
+We've removed the field showcasing number of grants and added total contributions received in grants.
+
+<div align="center">
+
+![All|607x499](upload://aWMV1qtuLfVxsW8ccJ39IBoCQyy.jpeg)
+
+**All Regions**
+</div>
+
+
+## 2.2 North America - The trend indicator
+The first wave of projects are obviously built to support the tech.
+Then the next wave projects were supporting the platform itself and community to promote the eco-system. 
+<div align="center">
+
+![North America|605x499](upload://se11fT3hSOLXVf4aPvuXFXx0VDW.jpeg)
+
+**North America**
+</div>
+
+## 2.3 East Asia - The NFT run
+There's a clear increase in NFT projects from east asia in last 3 rounds. One could promote the NFT DeFi Apps here.
+<div align="center">
+
+![East_Asia|604x500, 100%](upload://re435gS3rvjPuit64HsmYMqz1AE.png)
+
+**East Asia**
+</div>
+
+## 2.4 India - The ground unknown
+The Region is still not showing a clear trend other than being capable of producing tech, which, given it's IT resource pool, shouldn't be a surprise.
+<div align="center">
+
+![India|612x500](upload://c6iqIcArY0QZf0cJHPbaebTIrJs.png)
+
+**India**
+</div>
+
+## 2.5 Latin America
+Latin America still looks mostly driven by community and artist, and might be a good space for engineers to find work.
+<div align="center">
+
+![Latin America|600x500](upload://53PPdURRF3CBqMvrO4s0abrdBdn.png)
+
+**Latin America**
+</div>
+
+## 2.6 South East Asia
+South East Asia is showing majorly showing the rise for decentralised and community projects. Maybe could be good places to promote green and regenerative projects.
+<div align="center">
+
+![SouthEastAsia|604x500](upload://gLuHZMTyCfGEdcJ52NYb1Cf5piv.png)
+
+**South East Asia**
+</div>
+
+## 2.7 Middle East
+Middle East is not showing any Governance Tokens. Is this because of they their culture is? Would centralized projects do well here? Or is the governance yet to be introduced?
+<div align="center">
+
+![MiddleEast|601x499](upload://8b8fH0s5A23i5kOlDjYzBdJegCS.png)
+
+**Middle East**
+</div>
+
+
+## 2.8 Health Needs special exploration?
+> All Health Based Projects are With Missing Region
+There is no new grant since round 7. Does this hint at a whole industry not adequately addressed using decentralised technology currently?
+
+# Extension & Future Scope
+There was thoughts around figuring out more patterns based on the textual content available, which couldn't be attempted within the bounty period:
+### Grant Title Analysis
+Since grant titles are first thing read by the crowd, there could be patterns on which titles lead to more or less crowd curiosity. Sample features to explore could be:
+
+* Length of grant title
+* Frequently used words in grants with higher engagement
+* Buzzword Analysis
+* Semantic Analysis of the title to determine how intuitive or catchy the title could be
+
+### Grant Description Analysis
+Once the Title/Thumbnail triggers a clickthrough, the project description is key to selling the concept and secure a backer. A web scraper can be used to scrape the grant's page for description text/media and analyse it. The features could be:
+* length of text
+* overall sentiment score of the text
+* Usage of hot words
+* Relevance to categories promoted by the platform in the specific round
+Fri, 31 Dec 2021 16:50:23 +0000
+👋 News and Community
+
+
+Gitcoin Grants R1-R12: Region Based Trends
+vintageplayer
+
+            <h1><a name="introduction-1" class="anchor" href="https://gov.gitcoin.co#introduction-1"></a>Introduction</h1>
+<p>This is in response to the <a href="https://gitcoin.co/issue/gitcoinco/skunkworks/252/100027341" rel="noopener nofollow ugc">GitCoin Grants R1-R12 Analysis Bounty</a>.<br>
+The post will cover two types of analysis:</p>
+<ul>
+<li>Cross-Region Trends: Will highlight macro changes in participation across regions. <a href="https://public.tableau.com/app/profile/aditya.agarwal1920/viz/GitCoin_Grants_R1_R12_Region_Analysis/Story1?publish=yes" rel="noopener nofollow ugc">Dashboard Link</a></li>
+<li>Region Specific Category Trends: Focus on macro-changes in categories at a specific region. <a href="https://public.tableau.com/app/profile/aditya.agarwal1920/viz/GitCoin_Grants_R1_R12_Analysis/Story4?publish=yes" rel="noopener nofollow ugc">Dashboard Link</a></li>
+</ul>
+<h2><a name="intuition-2" class="anchor" href="https://gov.gitcoin.co#intuition-2"></a>Intuition:</h2>
+<p>Since quadratic funding is applied, the match_amount received by any grant can be thought of as a derived value.<br>
+Considering this, <em><strong>total funding</strong></em> (which is sum of match amount and crowdfund amount) and <em><strong>match amount</strong></em> are given less attention over <em><strong>region</strong></em>, <em><strong>unique_contributors</strong></em> and <em><strong>crowdfund_amount</strong></em>.</p>
+<p>Thus we take a dig at the <em><strong>the wider crypto ecosystem</strong></em> part of the problem statement in the bounty.</p>
+<h1><a name="h-1-cross-region-trends-3" class="anchor" href="https://gov.gitcoin.co#h-1-cross-region-trends-3"></a>1. Cross-Region Trends</h1>
+<h2><a name="description-of-the-data-4" class="anchor" href="https://gov.gitcoin.co#description-of-the-data-4"></a>Description of the Data</h2>
+<ul>
+<li>x-axis: Grant Round for each data is plotted above</li>
+<li>y-axis: It represents three different values showing the percentage distribution across different regions for each value. The values shown are:</li>
+</ul>
+<ol>
+<li> <b>% Unique Grant Request:</b> Percentage of Unique Grants for the region in the specific round </li>
+<li> <b>% Unique Contributors:</b> Percentage of Unique Contributors Found for the region in the specific round </li>
+<li> <b>% Crowdfund Contributions:</b> Percentage of Crowdfund Amount given to grants in a region in the specific round</li>
+<p>Thus, for each round, the total of any metric always scaled to 100.</p>
+<p><strong>Note:</strong> Since a contributor may fund more than one grant request, <strong>% Unique Contributors</strong>   doesn’t necessarily represent Unique Contributors in the complete ecosystem. Since the analysis deals with region-specific trends across rounds, impact of this should be minimal.</p>
+<h2><a name="h-11-all-regions-5" class="anchor" href="https://gov.gitcoin.co#h-11-all-regions-5"></a>1.1 All Regions</h2>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d62eba7447876ddeb3ab4c3c8c79f3ad721d8073.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/d62eba7447876ddeb3ab4c3c8c79f3ad721d8073" title="Region_All"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d62eba7447876ddeb3ab4c3c8c79f3ad721d8073_2_529x500.jpeg" alt="Region_All" data-base62-sha1="uyKicTccW9a6dNtO8DNkjBaV5Xt" width="529" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d62eba7447876ddeb3ab4c3c8c79f3ad721d8073_2_529x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d62eba7447876ddeb3ab4c3c8c79f3ad721d8073_2_793x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/d/d62eba7447876ddeb3ab4c3c8c79f3ad721d8073.jpeg 2x" data-dominant-color="CBCBC3"></a></div><br>
+<strong>All Region Analysis</strong><p></p>
+</div>
+The most obvious insight from the graph above is the relative reduction in Grants with missing Region details. From round 7 onwards, the proportion of such grants reduce drastically.
+What's more interesting though, is
+<blockquote>
+<p>the drop in unique contributions to these projects is more rapid</p>
+</blockquote>
+<p>This hints at further exploration from Round 7 onwards, but intuitively couple of questions come to mind:</p>
+<ol>
+<li>Did people become more comfortable sharing their region details?</li>
+<li>Did not revealing region information show possible signs of distrust? Or was their any event or potential scam that made people vary?</li>
+</ol>
+<p>It could also be the case that initial projects were region agnostic.</p>
+<h2><a name="h-12-removing-missing-region-entries-6" class="anchor" href="https://gov.gitcoin.co#h-12-removing-missing-region-entries-6"></a>1.2 Removing Missing Region Entries</h2>
+<p>To get less skewed trends, I decided filter out the entries with missing region.</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/eb9f6c75858363e99989b21c4b5016f92421b39e.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/eb9f6c75858363e99989b21c4b5016f92421b39e" title="Region_Without_None"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/eb9f6c75858363e99989b21c4b5016f92421b39e_2_522x500.jpeg" alt="Region_Without_None" data-base62-sha1="xCpLGLnKqp3RuHwuAF0fjIaIo9g" width="522" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/eb9f6c75858363e99989b21c4b5016f92421b39e_2_522x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/eb9f6c75858363e99989b21c4b5016f92421b39e_2_783x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/e/eb9f6c75858363e99989b21c4b5016f92421b39e.jpeg 2x" data-dominant-color="CED7C8"></a></div><p></p>
+<p><strong>Removing</strong> <em>None</em>, <em>Undefined</em> &amp; <em>Null</em> <strong>regions</strong></p>
+</div>
+Now the trends are some what as expected. Initial Rounds were dominated by North America, with active participation from Europe round 3 onwards. I guess America retains the tag of early adopters.
+Please note that lower percentage of grant request (in a specific round) compared to contributors or crowdfund amount from North America, i.e. more wealth is going to projects from North America, and more grant requests are arising from other regions.
+<h2><a name="h-13-removing-north-america-7" class="anchor" href="https://gov.gitcoin.co#h-13-removing-north-america-7"></a>1.3 Removing North America</h2>
+<p>Let’s remove the Biggest Fish from the sea and see who else has been making progress.</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c3049ed7b3b1b65b3a7e23e5f31fbdcea383217b.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/c3049ed7b3b1b65b3a7e23e5f31fbdcea383217b" title="Region_Without_NorthAmerica"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c3049ed7b3b1b65b3a7e23e5f31fbdcea383217b_2_524x500.jpeg" alt="Region_Without_NorthAmerica" data-base62-sha1="rPd0nk8xDxnGmj6kGf28YMfZzkf" width="524" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c3049ed7b3b1b65b3a7e23e5f31fbdcea383217b_2_524x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c3049ed7b3b1b65b3a7e23e5f31fbdcea383217b_2_786x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/c/c3049ed7b3b1b65b3a7e23e5f31fbdcea383217b.jpeg 2x" data-dominant-color="E4DCC2"></a></div><p></p>
+<p><strong>Also removing North America</strong></p>
+</div>
+Now we see something interesting.
+<blockquote>
+<p>What happened to Oceania?</p>
+</blockquote>
+<p>Rounds 2 and 3 witnessed projects from oceania getting funded significantly in comparison to Europe. The actual number of projects though was 1 each from Europe, Oceania and Latin America.<br>
+Round 4 onwards, we see a surge of projects from Europe, which remained till round 12, while oceania struggled to even have a presence.<br>
+Does hint at a lack of ecosystem adoption or promotion or resource?</p>
+<h2><a name="h-14-removing-europe-8" class="anchor" href="https://gov.gitcoin.co#h-14-removing-europe-8"></a>1.4 Removing Europe</h2>
+<p>We further remove Europe to see trends for emerging regions.</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/284a5a54e8f8e9f9e8594698a3d2a9a45c9c1d9c.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/284a5a54e8f8e9f9e8594698a3d2a9a45c9c1d9c" title="Region_Without_Europe"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/284a5a54e8f8e9f9e8594698a3d2a9a45c9c1d9c_2_529x500.jpeg" alt="Region_Without_Europe" data-base62-sha1="5KqoK4mTPMYs5AEw2nmd6lSJ0y8" width="529" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/284a5a54e8f8e9f9e8594698a3d2a9a45c9c1d9c_2_529x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/284a5a54e8f8e9f9e8594698a3d2a9a45c9c1d9c_2_793x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/284a5a54e8f8e9f9e8594698a3d2a9a45c9c1d9c.jpeg 2x" data-dominant-color="D6D9BF"></a></div><p></p>
+<p><strong>Removing Europe</strong></p>
+</div>
+<p>Multiple parts of Asia show interest in creating new grants (hence developing new projects and growing the eco-system).<br>
+Latin America and East Asia are leading here, but that could be the region specific grants allocated by the platform in later rounds.<br>
+India and Southeast Asia are two strong technological hubs which is now showing active web3 interest.<br>
+Africa though is on a decline, despite grant reserves for the region. Could the reserved pool require more appropriate allocation?</p>
+<h1><a name="h-2-region-category-trends-9" class="anchor" href="https://gov.gitcoin.co#h-2-region-category-trends-9"></a>2. Region-Category Trends</h1>
+<h2><a name="h-21-the-default-view-10" class="anchor" href="https://gov.gitcoin.co#h-21-the-default-view-10"></a>2.1 The Default View</h2>
+<p>We’ve removed the field showcasing number of grants and added total contributions received in grants.</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4cbafe5d8995f4886a4d72166549a4635728965e.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/4cbafe5d8995f4886a4d72166549a4635728965e" title="All"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4cbafe5d8995f4886a4d72166549a4635728965e_2_607x499.jpeg" alt="All" data-base62-sha1="aWMV1qtuLfVxsW8ccJ39IBoCQyy" width="607" height="499" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4cbafe5d8995f4886a4d72166549a4635728965e_2_607x499.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4cbafe5d8995f4886a4d72166549a4635728965e_2_910x748.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/4cbafe5d8995f4886a4d72166549a4635728965e.jpeg 2x" data-dominant-color="C7CDAD"></a></div><p></p>
+<p><strong>All Regions</strong></p>
+</div>
+<h2><a name="h-22-north-america-the-trend-indicator-11" class="anchor" href="https://gov.gitcoin.co#h-22-north-america-the-trend-indicator-11"></a>2.2 North America - The trend indicator</h2>
+<p>The first wave of projects are obviously built to support the tech.<br>
+Then the next wave projects were supporting the platform itself and community to promote the eco-system.</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c5d27bbf7628c84cd7a11f49932ee619be09b900.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/c5d27bbf7628c84cd7a11f49932ee619be09b900" title="North America"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c5d27bbf7628c84cd7a11f49932ee619be09b900_2_605x499.jpeg" alt="North America" data-base62-sha1="se11fT3hSOLXVf4aPvuXFXx0VDW" width="605" height="499" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c5d27bbf7628c84cd7a11f49932ee619be09b900_2_605x499.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c5d27bbf7628c84cd7a11f49932ee619be09b900_2_907x748.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/c/c5d27bbf7628c84cd7a11f49932ee619be09b900.jpeg 2x" data-dominant-color="C3CEBB"></a></div><p></p>
+<p><strong>North America</strong></p>
+</div>
+<h2><a name="h-23-east-asia-the-nft-run-12" class="anchor" href="https://gov.gitcoin.co#h-23-east-asia-the-nft-run-12"></a>2.3 East Asia - The NFT run</h2>
+<p>There’s a clear increase in NFT projects from east asia in last 3 rounds. One could promote the NFT DeFi Apps here.</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/bed1b9329c6884784be49ee0db63137a1248a56c.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/bed1b9329c6884784be49ee0db63137a1248a56c" title="East_Asia"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bed1b9329c6884784be49ee0db63137a1248a56c_2_604x500.png" alt="East_Asia" data-base62-sha1="re435gS3rvjPuit64HsmYMqz1AE" width="604" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bed1b9329c6884784be49ee0db63137a1248a56c_2_604x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/bed1b9329c6884784be49ee0db63137a1248a56c_2_906x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/b/bed1b9329c6884784be49ee0db63137a1248a56c.png 2x" data-dominant-color="DFD2B9"></a></div><p></p>
+<p><strong>East Asia</strong></p>
+</div>
+<h2><a name="h-24-india-the-ground-unknown-13" class="anchor" href="https://gov.gitcoin.co#h-24-india-the-ground-unknown-13"></a>2.4 India - The ground unknown</h2>
+<p>The Region is still not showing a clear trend other than being capable of producing tech, which, given it’s IT resource pool, shouldn’t be a surprise.</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/54d051e53e01ff4f36fb32ebf871d8e1865cb09e.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/54d051e53e01ff4f36fb32ebf871d8e1865cb09e" title="India"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/54d051e53e01ff4f36fb32ebf871d8e1865cb09e_2_612x500.png" alt="India" data-base62-sha1="c6iqIcArY0QZf0cJHPbaebTIrJs" width="612" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/54d051e53e01ff4f36fb32ebf871d8e1865cb09e_2_612x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/54d051e53e01ff4f36fb32ebf871d8e1865cb09e_2_918x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/5/54d051e53e01ff4f36fb32ebf871d8e1865cb09e.png 2x" data-dominant-color="D6DDCA"></a></div><p></p>
+<p><strong>India</strong></p>
+</div>
+<h2><a name="h-25-latin-america-14" class="anchor" href="https://gov.gitcoin.co#h-25-latin-america-14"></a>2.5 Latin America</h2>
+<p>Latin America still looks mostly driven by community and artist, and might be a good space for engineers to find work.</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2379dfd9d4c720dddbe5831b5ac903c025971039.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/2379dfd9d4c720dddbe5831b5ac903c025971039" title="Latin America"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2379dfd9d4c720dddbe5831b5ac903c025971039_2_600x500.png" alt="Latin America" data-base62-sha1="53PPdURRF3CBqMvrO4s0abrdBdn" width="600" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2379dfd9d4c720dddbe5831b5ac903c025971039_2_600x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2379dfd9d4c720dddbe5831b5ac903c025971039_2_900x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/2379dfd9d4c720dddbe5831b5ac903c025971039.png 2x" data-dominant-color="E1C0A7"></a></div><p></p>
+<p><strong>Latin America</strong></p>
+</div>
+<h2><a name="h-26-south-east-asia-15" class="anchor" href="https://gov.gitcoin.co#h-26-south-east-asia-15"></a>2.6 South East Asia</h2>
+<p>South East Asia is showing majorly showing the rise for decentralised and community projects. Maybe could be good places to promote green and regenerative projects.</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7581377c013e557675f34ff1d4c78a58610fcba7.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/7581377c013e557675f34ff1d4c78a58610fcba7" title="SouthEastAsia"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7581377c013e557675f34ff1d4c78a58610fcba7_2_604x500.png" alt="SouthEastAsia" data-base62-sha1="gLuHZMTyCfGEdcJ52NYb1Cf5piv" width="604" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7581377c013e557675f34ff1d4c78a58610fcba7_2_604x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7581377c013e557675f34ff1d4c78a58610fcba7_2_906x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/7/7581377c013e557675f34ff1d4c78a58610fcba7.png 2x" data-dominant-color="E3E9D5"></a></div><p></p>
+<p><strong>South East Asia</strong></p>
+</div>
+<h2><a name="h-27-middle-east-16" class="anchor" href="https://gov.gitcoin.co#h-27-middle-east-16"></a>2.7 Middle East</h2>
+<p>Middle East is not showing any Governance Tokens. Is this because of they their culture is? Would centralized projects do well here? Or is the governance yet to be introduced?</p>
+<div align="center">
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/395390a78c9f266d962604265630badf191e022a.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/395390a78c9f266d962604265630badf191e022a" title="MiddleEast"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/395390a78c9f266d962604265630badf191e022a_2_601x499.png" alt="MiddleEast" data-base62-sha1="8b8fH0s5A23i5kOlDjYzBdJegCS" width="601" height="499" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/395390a78c9f266d962604265630badf191e022a_2_601x499.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/395390a78c9f266d962604265630badf191e022a_2_901x748.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/3/395390a78c9f266d962604265630badf191e022a.png 2x" data-dominant-color="E9D5BF"></a></div><p></p>
+<p><strong>Middle East</strong></p>
+</div>
+<h2><a name="h-28-health-needs-special-exploration-17" class="anchor" href="https://gov.gitcoin.co#h-28-health-needs-special-exploration-17"></a>2.8 Health Needs special exploration?</h2>
+<blockquote>
+<p>All Health Based Projects are With Missing Region<br>
+There is no new grant since round 7. Does this hint at a whole industry not adequately addressed using decentralised technology currently?</p>
+</blockquote>
+<h1><a name="extension-future-scope-18" class="anchor" href="https://gov.gitcoin.co#extension-future-scope-18"></a>Extension &amp; Future Scope</h1>
+<p>There was thoughts around figuring out more patterns based on the textual content available, which couldn’t be attempted within the bounty period:</p>
+<h3><a name="grant-title-analysis-19" class="anchor" href="https://gov.gitcoin.co#grant-title-analysis-19"></a>Grant Title Analysis</h3>
+<p>Since grant titles are first thing read by the crowd, there could be patterns on which titles lead to more or less crowd curiosity. Sample features to explore could be:</p>
+<ul>
+<li>Length of grant title</li>
+<li>Frequently used words in grants with higher engagement</li>
+<li>Buzzword Analysis</li>
+<li>Semantic Analysis of the title to determine how intuitive or catchy the title could be</li>
+</ul>
+<h3><a name="grant-description-analysis-20" class="anchor" href="https://gov.gitcoin.co#grant-description-analysis-20"></a>Grant Description Analysis</h3>
+<p>Once the Title/Thumbnail triggers a clickthrough, the project description is key to selling the concept and secure a backer. A web scraper can be used to scrape the grant’s page for description text/media and analyse it. The features could be:</p>
+<ul>
+<li>length of text</li>
+<li>overall sentiment score of the text</li>
+<li>Usage of hot words</li>
+<li>Relevance to categories promoted by the platform in the specific round</li>
+</ul></ol>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-r1-r12-region-based-trends/9579/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-r1-r12-region-based-trends/9579/1
+        Fri, 31 Dec 2021 16:50:23 +0000
+gov.gitcoin.co-post-9579-1
+Gitcoin Grants R1-R12: Region Based Trends
+      
+
+

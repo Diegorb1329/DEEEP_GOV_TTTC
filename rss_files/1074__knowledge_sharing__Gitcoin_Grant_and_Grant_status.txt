@@ -1,0 +1,111 @@
+
+
+
+[knowledge sharing] Gitcoin Grant and Grant status introduction
+https://gov.gitcoin.co/t/knowledge-sharing-gitcoin-grant-and-grant-status-introduction/10318
+    # Gitcoin grant advices based on my  observations
+
+# What is Gitcoin Grant
+In gitcoin support knowledge base, there is a definition for [what is gitcoin grant](https://support.gitcoin.co/gitcoin-grants/what-is-a-grant). 
+
+## What are Grants Rounds?
+
+In short, to support people and organizations that are building public goods. That is, people & orgs who are building software, tools, media and other artifacts that are freely available AND create positive externalities to the world.
+
+Many people think of Gitcoin as a meta public good – a public good that enables other public goods (+builders of public goods!) to spawn, grow and thrive. 
+
+DAOs and other ecosystem builders see Gitcoin’s quarterly grants rounds as an opportunity to partner regularly with the broader web3 community to fund the most impactful projects & builders. Over the past 13 quarters, Gitcoin’s grants rounds have collectively raised over $40 million.
+[refer to GR13 results](https://gitcoin.co/blog/gr13-results/) 
+
+## How Grants work
+There are 2 funding flows for grants: 
+1. one is from the contributors (your donation), which will go to the grantee's wallet directly and instantly 
+2. 2. the other is from Gitcoin matching pool, which will have a final calculation based on Quadratic Funding rule ([https://wtfisqf.com/](https://wtfisqf.com/)) after Grant Round. 
+
+So let's say you (as donors) donated $100 to the grant, and then the grantee (grant owner) will get your $100 once the transactions succeeded. But the grantee will get matching fund (which is est. on the checkout) after grant round.
+
+# What questions the Gitcoin users have
+There are some FAQs from Gitcoin users for the grant, you can find them from [Gitcoin support knowledge base](https://support.gitcoin.co/gitcoin-grants/grantee-questions).
+
+-  **Some Grant issues examples**
+		- in the beginning of GR13, some grantees didn't know why their grants are inactive.
+		- some grants are not in matching round grants
+		- for the denied grants, the grantees didn't know next steps clearly.
+		- for the appealed grants, the grantees didn't know the status.
+		- removing tags, the grantees didn't get notifications for the reasons.
+
+## Grants status
+
+Based on above issues we can see, there are several statuses for the grants, and I would introduce a bit here (please correct me if I am wrong, I am not the grant guru):
+
+- **new** - This is a “virtual” status, without mapping a real status in the database. The new grants are inactive and invisible from web UI.
+- **inactive** - The grant is inactive after being created by default. Once the grant is approved, it should be changed to be active. The grant could be set to inactive by the review team after reported and confirmed.
+- **opt in for clr** - Eligible to get matching funds from the matching pool. By default the grant is in clr status after approval, but the grantees could de-select clr matching by themselves.
+- **cancel (removed)** - The grant will be canceled (removed) from the database.
+
+If you have any comments for gitcoin grant, just leave here. We (user support team) are here for you!
+Thu, 07 Apr 2022 01:56:14 +0000
+👋 News and Community
+
+
+[knowledge sharing] Gitcoin Grant and Grant status introduction
+bobjiang
+
+            <h1>
+<a name="gitcoin-grant-advices-based-on-my-observations-1" class="anchor" href="https://gov.gitcoin.co#gitcoin-grant-advices-based-on-my-observations-1"></a>Gitcoin grant advices based on my  observations</h1>
+<h1>
+<a name="what-is-gitcoin-grant-2" class="anchor" href="https://gov.gitcoin.co#what-is-gitcoin-grant-2"></a>What is Gitcoin Grant</h1>
+<p>In gitcoin support knowledge base, there is a definition for <a href="https://support.gitcoin.co/gitcoin-grants/what-is-a-grant">what is gitcoin grant</a>.</p>
+<h2>
+<a name="what-are-grants-rounds-3" class="anchor" href="https://gov.gitcoin.co#what-are-grants-rounds-3"></a>What are Grants Rounds?</h2>
+<p>In short, to support people and organizations that are building public goods. That is, people &amp; orgs who are building software, tools, media and other artifacts that are freely available AND create positive externalities to the world.</p>
+<p>Many people think of Gitcoin as a meta public good – a public good that enables other public goods (+builders of public goods!) to spawn, grow and thrive.</p>
+<p>DAOs and other ecosystem builders see Gitcoin’s quarterly grants rounds as an opportunity to partner regularly with the broader web3 community to fund the most impactful projects &amp; builders. Over the past 13 quarters, Gitcoin’s grants rounds have collectively raised over $40 million.<br>
+<a href="https://gitcoin.co/blog/gr13-results/">refer to GR13 results</a></p>
+<h2>
+<a name="how-grants-work-4" class="anchor" href="https://gov.gitcoin.co#how-grants-work-4"></a>How Grants work</h2>
+<p>There are 2 funding flows for grants:</p>
+<ol>
+<li>one is from the contributors (your donation), which will go to the grantee’s wallet directly and instantly</li>
+<li>
+<ol start="2">
+<li>the other is from Gitcoin matching pool, which will have a final calculation based on Quadratic Funding rule (<a href="https://wtfisqf.com/">https://wtfisqf.com/</a>) after Grant Round.</li>
+</ol>
+</li>
+</ol>
+<p>So let’s say you (as donors) donated $100 to the grant, and then the grantee (grant owner) will get your $100 once the transactions succeeded. But the grantee will get matching fund (which is est. on the checkout) after grant round.</p>
+<h1>
+<a name="what-questions-the-gitcoin-users-have-5" class="anchor" href="https://gov.gitcoin.co#what-questions-the-gitcoin-users-have-5"></a>What questions the Gitcoin users have</h1>
+<p>There are some FAQs from Gitcoin users for the grant, you can find them from <a href="https://support.gitcoin.co/gitcoin-grants/grantee-questions">Gitcoin support knowledge base</a>.</p>
+<ul>
+<li>
+<strong>Some Grant issues examples</strong><br>
+- in the beginning of GR13, some grantees didn’t know why their grants are inactive.<br>
+- some grants are not in matching round grants<br>
+- for the denied grants, the grantees didn’t know next steps clearly.<br>
+- for the appealed grants, the grantees didn’t know the status.<br>
+- removing tags, the grantees didn’t get notifications for the reasons.</li>
+</ul>
+<h2>
+<a name="grants-status-6" class="anchor" href="https://gov.gitcoin.co#grants-status-6"></a>Grants status</h2>
+<p>Based on above issues we can see, there are several statuses for the grants, and I would introduce a bit here (please correct me if I am wrong, I am not the grant guru):</p>
+<ul>
+<li>
+<strong>new</strong> - This is a “virtual” status, without mapping a real status in the database. The new grants are inactive and invisible from web UI.</li>
+<li>
+<strong>inactive</strong> - The grant is inactive after being created by default. Once the grant is approved, it should be changed to be active. The grant could be set to inactive by the review team after reported and confirmed.</li>
+<li>
+<strong>opt in for clr</strong> - Eligible to get matching funds from the matching pool. By default the grant is in clr status after approval, but the grantees could de-select clr matching by themselves.</li>
+<li>
+<strong>cancel (removed)</strong> - The grant will be canceled (removed) from the database.</li>
+</ul>
+<p>If you have any comments for gitcoin grant, just leave here. We (user support team) are here for you!</p>
+          <p><a href="https://gov.gitcoin.co/t/knowledge-sharing-gitcoin-grant-and-grant-status-introduction/10318/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/knowledge-sharing-gitcoin-grant-and-grant-status-introduction/10318/1
+        Thu, 07 Apr 2022 01:56:14 +0000
+gov.gitcoin.co-post-10318-1
+[knowledge sharing] Gitcoin Grant and Grant status introduction
+      
+
+

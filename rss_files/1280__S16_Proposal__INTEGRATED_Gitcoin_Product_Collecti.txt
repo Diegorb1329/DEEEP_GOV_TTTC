@@ -1,0 +1,1040 @@
+
+
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814
+    # Gitcoin Product Collective Workstream S16 Budget
+
+## Season 16 Budget Proposal
+
+This is a funding proposal for the Gitcoin Product Collective (GPC) Workstream requesting ratification budgetary funds for Season 16
+
+TL;DR 3 main takeaways:
+
+1. GPC [merged with the Moonshot Collective](https://gov.gitcoin.co/t/the-future-of-moonshot-collective/11604), consolidating the Gitcoin DAO’s software building teams into one workstream. The GPC Budget for S16 is relatively flat from S15 despite the merge and the inclusion of new talent from Moonshot, as the merge relieved GPC’s reliance on outside contracted resources.
+2. GPC’s focus is now 100% on launching the Grants Protocol with the [DAO’s recent commitment to replace GR16](https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/42) with an alpha round on the protocol.
+3. Gitcoin Passport is here, and it’s awesome. We will spend much of this season growing our list of integration partners and continue to refine & build out initial use cases to confirm product market fit.
+
+# Amount:
+
+GPC’s budget request in S16 is 1,100,689 USD or 647,464* GTC. This amount does not include a re-up of our 60 day reserves, and the full budget breakdown can be found at the end of this post.
+
+*Based on a 20 day price average of $1.70
+
+# Milestone Report for Past Season
+
+Note: This Milestone Report does not conform to the standard template, as the S15 GPC budget was published before the new template was ratified.
+
+🟢 Success
+🟡 Incomplete but will hit goal
+🔴 Incomplete, will not hit goal
+⚫️ Canceled
+
+### Review Shared Commitments
+
+Across all 3 protocol domains, in Season 15 we committed to:
+
+🟢 Enabling Moonshot Collective builders to be able to extend protocol functionality through developer documentation and on-going developer support
+*This support served as early feedback on the implementation of the protocol and has ensured developers are first-class citizens in our protocol ecosystem.*
+
+🟢 We will brand and name all protocol components in collaboration with MMM.
+*Each of the protocols have unique naming, and seeds of branding as well. We will likely evolve this now that our product strategy is more clear.*
+
+🟢 GPC will work with DAO Support to develop Gitcoin’s knowledge base and evolve the support process, integrating the efforts to support existing products and onboarding new ones for support as they launch.
+*Support for the protocols was improved and much of the work was done to bolster the docs. We have the opportunity to reframe the communities expectations on how to receive support in future seasons as well.*
+🟡 Launch and run partner programs that drive a user-centered approach to our protocol development and scale adoption over time.
+🟡 The Round Manager team, with support from the Grant Hub team, will collaborate with PGF on the Grants 2.0 Design Partner Program. Our goal is to use this program to test and validate design decisions for the protocol while also building up an initial Grant Program user base.
+🟢 The Passport team will launch an Alpha Partner Program, which targets 4-6 other application teams who have high interest in using Passport for identity verification.
+
+### Passport
+
+#### Review Commitments:
+
+🟢 Move over all GR15 contributors to Passport and decommission cGrants Trust Bonus entirely.
+🟢 Review the performance of the Passport’s technological architecture and interface, and the Trust Bonus in GR14, ship protocol and interface experience improvements for GR15.
+🟡 Improve the accuracy of Trust Bonus in GR15 by a measurable degree. The exact target for improvement and how to measure it will be determined in collaboration with GitcoinDAO Fraud Detection and Defense.
+🟢 Drive adoption of Passport by other dApps through an alpha partnership program.
+
+### Grant Hub
+
+#### Review Commitments:
+
+🟢 Build out Phase 2 of Grant Hub, which will enable project owners to apply to a round, view application status,
+⚫ track active grants, and
+⚫ view historical project data.
+🟡 We will test Phase 2 of Grant Hub in partnership with Grants 2.0 Design Partners (i.e. Optimism’s RPGF round targeted for early August 2022)
+🟢 Expand Grant Hub project metadata to store verified fields, starting with verified spam and fraud signals
+🟢 Verifying ownership of Twitter & Github social accounts
+🟢Research how to further leverage Grant Hub project metadata to support building project reputation and niche curation. Long term, this enables more automated grant round eligibility curation.
+
+### Round Manager
+
+#### Review Commitments:
+
+🟡 Allow Round Manager to ingest verified spam and fraud signals from Grant Hub and filter projects based on those signals
+🟡 Allow Round Operators to select and configure a voting/contribution module from 2-4 options
+🟢 Design the Grant Explorer for Gitcoin rounds (i.e. interface for contributors to browse/vote) based on PGF partnership
+🟢 Partner with PGF on the design of the future Gitcoin grants program
+🟡 Enable Round Manager to generate payout calculations based on the selected voting/contribution module and votes cast via a Contributor-facing front-end
+
+# Recap of the S15
+
+Beyond the green and yellow callouts above, we wanted to offer a bit of a narrative on how the season progressed and offer some insight into our goals S16 and beyond. We are very excited to be welcoming the Moonshot collective into our workstream this season. The builders have been absolutely instrumental in the development of a number of our protocols and bringing the two teams closer made a lot of sense. We would be remiss to not call out that our Head of Product for the last year is going to be moving on. Saying goodbye is always hard, but we love the idea of creating a culture where DAO life can be more fluid than most “full-time” roles. Lindsey will be missed, but her impact on the workstream’s creation, general DAO leadership and the creation of the protocols will be felt for quite some time - Kyle will be stepping in to support the team.
+
+Through S15, we have started to make some significant traction on protocol development and traction. Passport has nearly fifty thousand unique wallets set up and has become the largest issuer of DIDs on the Ceramic network. This is increasingly exciting as we have welcomed nearly a dozen other dApps integrating and leveraging the tech.We will really double down on the core use cases and ensure we have the ability to support exponentially more dApps.
+
+The Grants Protocol and Grants Hub are here. The steel threads are done, the protocols are in private alpha, and we will be running our first full Grant Round in just a couple of weeks. The teams have been laser-focused on ensuring the use cases for the protocol are well-defined, and we will ensure experimentation on funding mechanisms, project details, and user interfaces continue to be a focus.
+
+# List of Season 16 Commitments
+
+We have included additional details below on the roadmap items each protocol team is targeting to complete over the next twelve months (four seasons). We have also broken down Objectives and Outcomes in the template format requested. You can review the details in the Roadmap and Commitments for context on the Objectives. It is known that some of these roadmap items will take longer than 1 season to accomplish. Each of the roadmap items are focused on growing adoption and retention of users to the protocols.
+
+## Passport Season 16 Roadmap and Commitments
+
+**Updated Vision**: The Passport protocol enables individuals and communities to authentically and securely interact through transparent/accountable/sovereign data control and privacy-preserving validation. It seeks to spin a utility flywheel between individuals and communities to empower meaningful and consensual relationships. It will allow individuals to collect evidence of their reputation and identity in a single source where they have transparent/accountable/sovereign data control and enable communities to secure their platforms with simplified access to user data using privacy-preserving data validation.
+
+**Strategy:**
+**1-2 year Goal 1**: 80% of web3 communities have integrated Passport to solve identity verification problems
+**1-2 year Goal 2**: 80% of passport holders are using their passport for verification in > 1 communities
+
+**S16 Outcomes:**
+Goal 1:
+* Gitcoin Grants protocol is able to use Passport to programmatically identify donors as unique humans
+* Passport has a productized set of scoring methods that meet the use cases of the majority of interested of communities
+* Passport and its components are verifiable on-chain so any dApp can integrate passport, verify, and trust the source of passports data/components
+
+Goal 2:
+
+* Passport holders are able to easily navigate their passports to understand how it could be used across different communities (Research and Design output)
+
+## Grants Protocol (Round Manager and Grants Explorer) Season 16 Roadmap and Commitments
+
+**Updated Vision**: We envision a world where communities are able to grow and evolve by funding their shared needs. The Grants Protocol will enable thousands of funding programs to run at any given time, uniquely designed to fit their communities.
+
+**Strategy:**
+**1-2 year Goal**: 80% of web3 ecosystems with grants programs are using the Grants Protocol to run their program.
+* Our primary focus is protocol adoption among web3 ecosystems with grant programs. We believe this enables us to build a foundation in a market where we already have strong product fit.
+* Key considerations
+  * We will design the protocol in a way that is extensible & approachable.
+  * Web2 programs/communities that are willing to use web3 tech will be able to adopt the protocol, but are not the initial targeted market for protocol adoption.
+  * Anti-goals:
+    * Building GTC utility and/or revenue model into the core protocol. We may end up building token utility tools compatible with the protocol, but only if we feel it’s a viable strategy for significantly increasing adoption. Revenue models, fee switches and token sinks are all being considered, but no timeline for implementation has been defined at this time.
+
+**S16 Goal**: This season, our goal is to ensure that Alpha / Design Partner Grant Programs running on protocol can use v1 mechanisms for all core operations. In Season 16, we want to finish building out the core protocol and its initial interfaces. We will also run a number of closed alpha rounds on the protocol to prepare for a public beta launch.
+
+**S16 Outcomes:**
+
+* Round Operators can run a Quadratic Funding round on the protocol
+* Round Operator can run a Quadratic Voting round on the protocol
+* Round Operator can execute payouts on the protocol
+* Round Operator has confidence in the accuracy of application data from all 3 levels of the Project Selection Pyramid (PSP)
+* Donors can browse and assess the projects in a round
+
+## Project Protocol (Grants Hub) S16 Roadmap and Commitments
+
+**Updated Vision**: We envision owners using the protocol as a place they incept their project’s existence and then use it as a vehicle for growth over time. As an open source, permissionless protocol it will provide critical signals to communities that support and enable project growth over time. It will be the web3 space for creating a connected home for your project that allows you to build a reputation for sustainable fundraising, recruiting talent, reporting progress over time, and promoting your expertise.
+
+**Strategy:**
+**1-2 year Goal 1**: Enable the growth and adoption of Project Protocol through supporting project owners to apply to grants rounds on the Grants Protocol
+**1-2 year Goal 2**: 80% of project owners who have used the Project Protocol to participate in a grants program are also using it to attest their legitimacy or manage their project on another platform
+
+**S16 Outcomes:**
+Goal 1:
+
+* Project owners can collect the reputational data that Round Manager needs to programmatically verify for round eligibility
+
+Goal 2:
+
+* Enable external integration(s) with Grants Hub that leverage project reputation
+* Empower project owners to build project reputation
+
+## Objectives and Outcomes
+
+|Objective & EI|Objectives|Outcome Description|Likely Projects/Initiatives|
+| --- | --- | --- | --- |
+|What is it?|What will be done?|What impact will it have?|What might the work look like?|
+|Gitcoin Passport Adoption 1.2|1-2 year Goal 1: 80% of web3 communities have integrated passport to solve identity verification problems|We believe that building a widely adopted, highly open and permissionless identity layer for the Ethereum ecosystem will reduce Sybil accounts, and enable real humans to showcase themselves without doxxing themselves. This will grow interest, trust and usability of web3 in general| Gitcoin Grants protocol is able to use Passport to programmatically identify donors as unique humans. Passport has productized set of scoring methods that meet the use cases of majority of interested of communities. Passports and its components are verifiable on-chain so any dApps can integrate passport, verify and trust the source of passports data/components|
+|Gitcoin Passport Adoption 1.2|1-2 year Goal 2: 80% of passport holders are using their passport for verification in > 1 communities|Identity and reputation are much more valuable if they are fresh, and are not full of stale credentials. We will ensure we maintain a high activity rate to maintain the value a passport has for dApps.| Passport holders are able to easily navigate their passports to understand how it could be used across different communities (Research and Design output)|
+|Grants Protocol Adoption 1.1|1-2 year Goal: 80% of web3 ecosystems with grants programs are using the Grants Protocol to run their program.|The value flowing to projects through the grants protocol makes it more valuable to project owners. By growing adoption of the grants protocol, the quality of project owners applying increases and the number of grants programs seeking talented teams to support increases.| Round Operators can run a Quadratic Funding round on the protocol. Round Operator can run a Quadratic Voting round on the protocol. Round Operator can execute payouts on the protocol. Round Operator can have confidence in accuracy of application data from all 3 levels of Project Selection Pyramid (PSP). Donors can browse and assess the projects in a round|
+|Project Protocol Adoption 1.1| 1-2 year Goal 1: Enable the growth and adoption of Project Protocol through supporting project owners to apply to grants rounds on the Grants Protocol|Ensuring Project owners can apply to rounds, and express the unique value they are creating in the space will ensure funding is deployed to those with the largest impact.|  Project owners can collect the reputational data that Round Manager needs to programmatically verify for round eligibility.|
+|Project Protocol Adoption 1.1|1-2 year Goal 2: 80% of project owners who have used the Project Protocol to participate in a grants program are also using it to attest their legitimacy or manage their project on another platform|For project owners who are returning users of the Project Protocol, we want to enable them to leverage the project reputation capabilities of Project Protocol outside of the Gitcoin ecosystem (i.e. through key partnership integrations)| Enable external integration(s) with Grants Hub that leverage project reputation. Empower project owners to build project reputation|
+
+# Budget Breakdown
+
+|||Budgeted|Budgeted|Budgeted|Budgeted|
+| --- | --- | --- | --- | --- | --- |
+|Expense Statement||2022.11|2022.12|2023.01|S16|
+|GPC||||||
+|Staffing||||||
+||Round Manager Core Contributors|100,872|100,872|100,872|302,617|
+||Grants Hub Core Contributors|87,898|87,898|87,898|263,694|
+||Passport Core Contributors|103,001|103,001|103,001|309,002|
+||GPC Core (all teams)|28,125|28,125|28,125|84,375|
+||Severance|0|0|0|0|
+|Total Staffing||319,896|319,896|319,896|959,689|
+|Contracting||||||
+||DevOps|12,000|12,000|12,000|36,000|
+|Total Contracting||12,000|12,000|12,000|36,000|
+|DevRel||||||
+||Hackathons & Bounties|5,000|5,000|5,000|15,000|
+|Total DevRel||5,000|5,000|5,000|15,000|
+|OpEx||||||
+||Saas and Infrastructure|30,000|30,000|30,000|90,000|
+|Total OpEx||30,000|30,000|30,000|90,000|
+|||||||
+|Total GPC Budgeted Spend||366,896|366,896|366,896|1,100,689|
+|60 Day Reserves|||||733,719|
+|S15 Treasury Balance|||||0|
+|Total S16 Request|||||1,834,408|
+Wed, 23 Nov 2022 11:47:05 +0000
+📜 Proposals
+
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+shawn16400
+
+            <p>This snapshot passed with ~76% approval rate. To note, 23% of voters abstained from voting. Some percentage of these “abstain” votes are caused by larger holders who are directly compensated by the GPC workstream and thus abstain from voting to avoid a conflict of interest.<br>
+<strong>Metrics:</strong><br>
+795 unique votes<br>
+~9.1M GTC tokens cast.<br>
+And thank you to all the commenters &amp; voters who took the time to participate in Gitcoin Governance.<br>
+<a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x974724227df2dcd1659379651886364eee441c24ff96ed0e0b2ee6395712408d" class="onebox" target="_blank" rel="noopener nofollow ugc">https://snapshot.org/#/gitcoindao.eth/proposal/0x974724227df2dcd1659379651886364eee441c24ff96ed0e0b2ee6395712408d</a></p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/22
+        Wed, 23 Nov 2022 11:47:05 +0000
+gov.gitcoin.co-post-11814-22
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+kyle
+
+            <aside class="quote no-group" data-username="GClayMiller" data-post="16" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/gclaymiller/48/7571_2.png" class="avatar"> GClayMiller:</div>
+<blockquote>
+<p>How much money was saved from cutting down on external resources and what types of operations did we move ‘in-house?’</p>
+</blockquote>
+</aside>
+<p>This is was a total savings of about $275k for the season, and then also we added about $225k for the Moonshot folks</p>
+<aside class="quote no-group" data-username="GClayMiller" data-post="16" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/gclaymiller/48/7571_2.png" class="avatar"> GClayMiller:</div>
+<blockquote>
+<p>Have we already identified with DevRel shop we are contracting with for S16 and if so who are they?</p>
+</blockquote>
+</aside>
+<p>We actually don’t have budget for DevRel allocated. This is to show a $0 line item, but we may help with this cost in future seasons.</p>
+<aside class="quote no-group" data-username="GClayMiller" data-post="16" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/gclaymiller/48/7571_2.png" class="avatar"> GClayMiller:</div>
+<blockquote>
+<p>For the 80% goals related to acquisition and usage: is this explicitly a GPC Workstream task or does it overlap with MMM?</p>
+</blockquote>
+</aside>
+<p>Yeah, great question. As a product team we decided to “throw our sword in the ground” on this metric, knowing it was a 1-2 year goal. We are working to collaborate and roll this out with others in the DAO throughout this season. Timing was awkward with budgets.</p>
+<p>Thanks for the review and I appreciate the questions!</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/21
+        Mon, 21 Nov 2022 03:59:08 +0000
+gov.gitcoin.co-post-11814-21
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+kyle
+
+            <p>This is 24 people full time.</p>
+<p>Adding more text so I can post on the 30 character limit requirement <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/20
+        Mon, 21 Nov 2022 03:47:31 +0000
+gov.gitcoin.co-post-11814-20
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+griff
+
+            <p>How many people are being staffed here?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/5ede1560221780fcfbcb89d2ffeb0c14a3689197.png" data-download-href="/uploads/short-url/dxeH1raoq7aIaNbxPAm7BS19nPp.png?dl=1" title="Screen Shot 2022-11-20 at 9.29.57 AM" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/5/5ede1560221780fcfbcb89d2ffeb0c14a3689197_2_690x371.png" alt="Screen Shot 2022-11-20 at 9.29.57 AM" data-base62-sha1="dxeH1raoq7aIaNbxPAm7BS19nPp" width="690" height="371" srcset="/uploads/db4391/optimized/2X/5/5ede1560221780fcfbcb89d2ffeb0c14a3689197_2_690x371.png, /uploads/db4391/optimized/2X/5/5ede1560221780fcfbcb89d2ffeb0c14a3689197_2_1035x556.png 1.5x, /uploads/db4391/original/2X/5/5ede1560221780fcfbcb89d2ffeb0c14a3689197.png 2x" data-dominant-color="F3F3F3"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/19
+        Sun, 20 Nov 2022 15:30:18 +0000
+gov.gitcoin.co-post-11814-19
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+lefterisjp
+
+            <p>Thanks to everyone for all the detailed questions and answers in this thread. Also thanks to <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> for a very detailed budget proposal.</p>
+<p>I will be voting yes on this one as it’s imo probably the most important workstream of the DAO.</p>
+<p>Some feedback which probably already got echoed in some form or another.</p>
+<ul>
+<li>Try to set a bit more concrete goals for the next quarter</li>
+<li>Try to cut down expenses a bit. The bear has gotten worse since the last season where we discussed this and with no clear light at the end of the tunnel. We need to think of the DAO’s sustainability.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/18
+        Sat, 19 Nov 2022 09:40:02 +0000
+gov.gitcoin.co-post-11814-18
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+shawn16400
+
+            <p>reminder - this vote is now live on snapshot and the vote closes on:<br>
+<strong>End date</strong> Nov 20, 2022, 5:00 PM  EST</p>
+<p><a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x974724227df2dcd1659379651886364eee441c24ff96ed0e0b2ee6395712408d" class="onebox" target="_blank" rel="noopener nofollow ugc">https://snapshot.org/#/gitcoindao.eth/proposal/0x974724227df2dcd1659379651886364eee441c24ff96ed0e0b2ee6395712408d</a></p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/17
+        Thu, 17 Nov 2022 13:24:17 +0000
+gov.gitcoin.co-post-11814-17
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+GClayMiller
+
+            <p><em>Brand new Steward, lacking context. Apologies if questions and comments are naive while I get my footing</em></p>
+<ol>
+<li>The outline for merging with the Moonshot Collective makes sense—how many Contributors are being retained and how does the S16 Staffing costs compare to the S15 Staffing costs prior to the addition of new talent? How much money was saved from cutting down on external resources and what types of operations did we move ‘in-house?’ Appears like we are saving $232,500 from S15 contracting but even with losing a few Moonshot Contributors the Staffing budget still feels low?</li>
+</ol>
+<p><img src="/uploads/db4391/original/2X/5/594e26f6c0540bb0b74623c564661b90b56b3979.png" alt="Screen Shot 2022-11-16 at 12.26.37 PM" data-base62-sha1="cK1VYSpdGKM3BnPnv6HWrJmlEoN" width="686" height="152"></p>
+<ol start="2">
+<li>Does this screenshot below for ‘Total Contracting’ represent outsourced labor? Have we already identified with DevRel shop we are contracting with for S16 and if so who are they?</li>
+</ol>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/225bd1391474808a0d085e63d2e36d86d19be907.png" data-download-href="/uploads/short-url/4TWWZXZf3q7320KALph3DFZAYKz.png?dl=1" title="Screen Shot 2022-11-16 at 12.15.35 PM" rel="noopener nofollow ugc"><img src="/uploads/db4391/original/2X/2/225bd1391474808a0d085e63d2e36d86d19be907.png" alt="Screen Shot 2022-11-16 at 12.15.35 PM" data-base62-sha1="4TWWZXZf3q7320KALph3DFZAYKz" width="690" height="58" data-dominant-color="F7F7F7"></a></div><p></p>
+<ol start="3">
+<li>For the 80% goals related to acquisition and usage: is this explicitly a GPC Workstream task or does it overlap with MMM? Unclear if the budget contains acquisition costs to or marketing expenses related to meeting these KPIS.</li>
+</ol>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8df25d6f36a824e70c164fbbf08c8502f8c29161.png" data-download-href="/uploads/short-url/kfIArU4ll0J9atTY3pnRY1mzMVH.png?dl=1" title="Screen Shot 2022-11-16 at 12.16.12 PM" rel="noopener nofollow ugc"><img src="/uploads/db4391/original/2X/8/8df25d6f36a824e70c164fbbf08c8502f8c29161.png" alt="Screen Shot 2022-11-16 at 12.16.12 PM" data-base62-sha1="kfIArU4ll0J9atTY3pnRY1mzMVH" width="690" height="469" data-dominant-color="EAEAEA"></a></div><p></p>
+<p>Otherwise I support the proposal, found it very detailed &amp; informative, and appreciative of the thought that went into it! Still wrapping my head around Passport, but excited to learn more.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/16
+        Wed, 16 Nov 2022 17:33:37 +0000
+gov.gitcoin.co-post-11814-16
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+SLBK123
+
+            <p>I am supportive of this budget request. I honestly love reading through all the questions and responses to clarify questions. It is very helpful to me as a Steward. Hopefully we will continue to grow engagement here as well. I do believe that Gitcoin Passport adoption most certainly will grow trust and interested of Web3 in general. The North Star! Safely and securely. The cherry on top! Value to projects, growing support for teams, with that anything is possible.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/15
+        Tue, 15 Nov 2022 21:10:36 +0000
+gov.gitcoin.co-post-11814-15
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+chaselb
+
+            <p>Thank you all for your answers! Looking forward to see how this develops in the future.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/14
+        Tue, 15 Nov 2022 17:54:24 +0000
+gov.gitcoin.co-post-11814-14
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+kevin.olsen
+
+            <aside class="quote no-group" data-username="chaselb" data-post="7" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/chaselb/48/7505_2.png" class="avatar"> chaselb:</div>
+<blockquote>
+<p>Passport is a plurality enabling solution, but in the spirit of that, should we not allow room for other plurality enabling solutions? I’m a bit new and missing context so I may just be confused here.</p>
+</blockquote>
+</aside>
+<p>I love this question. I think the obis.club integration is an example of the type of plurality that we’re seeing already: <a href="https://twitter.com/OrbisClub/status/1592185710219448320" rel="noopener nofollow ugc">https://twitter.com/OrbisClub/status/1592185710219448320</a>. And I hope that many builders will find new and interesting ways to pull in the passport data. Simultaneously, we have new options to explore with how we can surface this new unified VC dataset in the Passport and in our scoring mechanisms.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/13
+        Tue, 15 Nov 2022 14:51:18 +0000
+gov.gitcoin.co-post-11814-13
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+kevin.olsen
+
+            <p>Thanks for the feedback <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="kevin.olsen" data-post="1" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p>Gitcoin Grants protocol is able to use Passport to programmatically identify donors as unique humans</p>
+</blockquote>
+</aside>
+<p>That goal for Passport is intended to deliver the integration of the Grant Explorer with Passport, implied in that is that with a Passport attached to the vote, the Grants protocol has the downstream ability to generate Passport scores and apply them to determine a user’s effect on the quadratic match. The exact approach here is still being designed in collaboration with FDD, and will be an iterative process to deliver higher confidence in our ability to detect sybils.</p>
+<p>You’re right that passport won’t deliver 100%, it cannot be a guarantee of humanness. But this goal is about Passporting being a replacement for the dataset to support the analysis that was previously accomplished via the centralized platform. I would put forward that we should have the ability to deliver at least parity with our levels of sybil detection from GR15, and be in a position to continuously improve this metric.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/12
+        Tue, 15 Nov 2022 14:44:20 +0000
+gov.gitcoin.co-post-11814-12
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+kyle
+
+            <aside class="quote no-group" data-username="chaselb" data-post="7" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/chaselb/48/7505_2.png" class="avatar"> chaselb:</div>
+<blockquote>
+<p>Passport is a plurality enabling solution, but in the spirit of that, should we not allow room for other plurality enabling solutions?</p>
+</blockquote>
+</aside>
+<p>Our goal with Product and Protocol Development has long been to collaborate over compete. We recognize the need for plurality in dApps - we are unsure of the value in fragmenting the ecosystem with multiple protocols. This means, Ideally the plurality of dApps can share a single protocol that many teams develop (not Just Gitcoin).</p>
+<p>I appreciate the question and hopefully the nuance in the approach we are seeking helps.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/11
+        Mon, 14 Nov 2022 14:22:03 +0000
+gov.gitcoin.co-post-11814-11
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+krrisis
+
+            <p>Highly supportive of the GPC budget. I’ve read up on the above comments and replies, in the context of the ‘light’ budget approach as decided in CSDO and combined with the earlier live session we had to review the draft commitments and budget I’ve gathered enough feedback to vote confidently yes here.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/10
+        Mon, 14 Nov 2022 13:20:36 +0000
+gov.gitcoin.co-post-11814-10
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+shawn16400
+
+            <p>Hey folks meet <a class="mention" href="https://gov.gitcoin.co/u/chaselb">@chaselb</a>!  Chase is one of our newest <a href="https://gov.gitcoin.co/t/introducing-stewards-governance/41/261">stewards</a> and and a student at the University of Southern California.   Chase has an interesting blog where he mentions <a href="https://medium.com/@chaselbjeter/down-the-rabbit-hole-50142280cc9a" rel="noopener nofollow ugc">conversations</a> with <a class="mention" href="https://gov.gitcoin.co/u/glenweyl">@GlenWeyl</a>, his introduction into the blockchain several years ago and some really interesting thinking.<br>
+Welcome chase - glad to have you with us, and thanks for your questions.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/9
+        Sat, 12 Nov 2022 12:16:48 +0000
+gov.gitcoin.co-post-11814-9
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+chaselb
+
+            <p>I agree with annika in terms of the vagueness of the S16 goals. Is there a way to attach more specific numbers to them? For example, I think it might be unreasonable to think passport can verify the uniqueness of a human with 100% confidence, so what level of confidence should projects using passport have of sybil resistance?</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/8
+        Sat, 12 Nov 2022 06:57:58 +0000
+gov.gitcoin.co-post-11814-8
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+chaselb
+
+            <aside class="quote no-group" data-username="kevin.olsen" data-post="1" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p><strong>1-2 year Goal 1</strong>: 80% of web3 communities have integrated Passport to solve identity verification problems</p>
+</blockquote>
+</aside>
+<p>How can we measure this? Also, is it wise to seek majority adoption of Passport considering the importance of plurality in our key technologies? Passport is a plurality enabling solution, but in the spirit of that, should we not allow room for other plurality enabling solutions? I’m a bit new and missing context so I may just be confused here.</p>
+<aside class="quote no-group" data-username="kevin.olsen" data-post="1" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p><strong>1-2 year Goal 2</strong>: 80% of passport holders are using their passport for verification in &gt; 1 communities</p>
+</blockquote>
+</aside>
+<p>I like this focus. For the people we provide value for, let’s provide TREMENDOUS value for them. Again, how might we measure this? Customer survey?</p>
+<p>I think the work that’s being done here is super dope! Can’t wait to see it come into fruition.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/7
+        Sat, 12 Nov 2022 06:55:05 +0000
+gov.gitcoin.co-post-11814-7
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+shawn16400
+
+            <p>As a steward, I had the chance to study the proposal in detail and get individual feedback from <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> on my questions in discord.  Most of my questions were clarifying for me to understand more about the GPC workstream and I thank the team for their feedback and patience.<br>
+Observations when comparing season 15 and 16:</p>
+<ul>
+<li>
+<p>Integration of the MoonShots team - while saying virtually flat on budget on budget.   The team could have argued a ~40% budget increase (combination of the MS+GCP budgets) however they go into S16 asking for a 3% increase.  Thank you for your stewardship.</p>
+</li>
+<li>
+<p>How did GPC remain flat? When I asked how this was possible, I learned GPC used higher-cost external resources in S15, but was able to use the external team to build internal processes and resources and thus transition the work to (lower cost) GPC resources.  This exemplifies excellent use of external partnerships - get the work done, learn from their expertise, and bring the work in house (where it is a core capability).  This approach is worthy of reapplication.</p>
+</li>
+</ul>
+<p>On strategic thinking:</p>
+<aside class="quote no-group" data-username="kevin.olsen" data-post="1" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p><strong>1-2 year Goal 1</strong>: 80% of web3 communities have integrated Passport to solve identity verification problems<br>
+<strong>1-2 year Goal 2</strong>: 80% of passport holders are using their passport for verification in &gt; 1 communities</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="kevin.olsen" data-post="1" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p><strong>1-2 year Goal</strong>: 80% of web3 ecosystems with grants programs are using the Grants Protocol to run their program.</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="kevin.olsen" data-post="1" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p><strong>1-2 year Goal 2</strong>: 80% of project owners who have used the Project Protocol to participate in a grants program are also using it to attest their legitimacy or manage their project on another platform</p>
+</blockquote>
+</aside>
+<p>The goals above are excellent starting points. I like how they are lofty yet achievable and how they give us clear time-bound targets of success.  Recognizing GPC may need help, it would be great to see other workstreams consider/refine these goals so we might have concise building blocks enabling the DAO to deliver.</p>
+<p>In summary - this is a solid plan for Season 16 and plan to vote for it.<br>
+And thanks to the GPC team for your leadership and helping me understand your work.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/6
+        Thu, 10 Nov 2022 13:27:34 +0000
+gov.gitcoin.co-post-11814-6
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+Jodi_GitcoinDAO
+
+            <p>Thanks for the thorough answers to questions here and separately. I’m supportive of this budget based on the outcomes described above and the responses to questions.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/5
+        Wed, 09 Nov 2022 22:10:38 +0000
+gov.gitcoin.co-post-11814-5
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+GTChase
+
+            <aside class="quote no-group quote-modified" data-username="annika" data-post="2" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p><strong>Passport</strong> – Not so much of a question as a point of feedback, but the four S16 outcomes listed feel a bit vague and long-term-y (…)  It might be helpful to see what, more specifically, is being accomplished on each of these dimensions in the next three months, since they feel very meaty in scope</p>
+</blockquote>
+</aside>
+<p>This is a fair call out, the TLDR is we want our software development focused on driving specific outcomes for our users, rather then focusing on solutions. Our roadmaps actually take this a bit further and lays out the opportunities we want to experiment against in order to meet the desired outcome.</p>
+<p>So in different words for this budget, the outcome is what we would like to accomplish and the oppurtunties are the ‘How’ we will potentially accomplish the outcome.</p>
+<p>Attached is a visualization to show how we have broken down our outcomes into opportunities, hopefully this gives you more answers then questions <img src="https://gov.gitcoin.co/images/emoji/twitter/grinning.png?v=12" title=":grinning:" class="emoji" alt=":grinning:" loading="lazy" width="20" height="20"></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b66c53d567976ad4164649da4de80013179063b2.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/b66c53d567976ad4164649da4de80013179063b2" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b66c53d567976ad4164649da4de80013179063b2_2_690x168.jpeg" alt="image" data-base62-sha1="q1MZocqKbAzb3hEk56ZR9t7MAcG" width="690" height="168" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b66c53d567976ad4164649da4de80013179063b2_2_690x168.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b66c53d567976ad4164649da4de80013179063b2_2_1035x252.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b66c53d567976ad4164649da4de80013179063b2_2_1380x336.jpeg 2x" data-dominant-color="F4F5ED"></a></div><p></p>
+<aside class="quote no-group" data-username="annika" data-post="2" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>aren’t elements of these kind of true already (e.g., the protocol can use Passport to programatically identify donors as unique humans)?</p>
+</blockquote>
+</aside>
+<p>Lastly, to directly answer your point on the protocol + passport… There is actually no integration of Passport and the Grants Protocol, only with the cGrants platform. So, we need to prioritize building that integration and the functionality for Passport to achieve this outcome.</p>
+<p>Appreciate your thoughtful feedback, and happy to jam around any other questions or feedback you may have!</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/4
+        Mon, 07 Nov 2022 19:44:20 +0000
+gov.gitcoin.co-post-11814-4
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+kyle
+
+            <p>Great questions, Annika.</p>
+<aside class="quote no-group" data-username="annika" data-post="2" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>Size of budget request</p>
+</blockquote>
+</aside>
+<p>The S15 Budget can be found <a href="https://gov.gitcoin.co/t/s15-proposal-gitcoin-product-collective-workstream-proposal-budget-request/11058/3">here</a>. The tl;dr is that S15 total request (no reserve) was $983,429 and S16 is now $1,100,689. A difference of $117k. S16 now also includes Saas costs that the foundation was absorbing ($90k for the season), the MC team and the loss of a couple of folks.</p>
+<aside class="quote no-group" data-username="annika" data-post="2" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>MC Merge</p>
+</blockquote>
+</aside>
+<p>The short answer is yes that we will be slowing down the Moonshotty type experiments while we focus on our Essential Intents for a couple of seasons. We might still hire out some of this work via the foundation (ie, the governor contract upgrade, the Grants Protocol launch experience, etc.) but we have not made any final plans yet.</p>
+<aside class="quote no-group" data-username="annika" data-post="2" data-topic="11814">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>Passport</p>
+</blockquote>
+</aside>
+<p>I wuold love to defer to <a class="mention" href="https://gov.gitcoin.co/u/gtchase">@GTChase</a> on this one <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> Overall, we wanted to ensure we defined the outcomes we cared about without being overly prescriptive in how we accomplished them.</p>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/3
+        Mon, 07 Nov 2022 14:06:30 +0000
+gov.gitcoin.co-post-11814-3
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+annika
+
+            <p>This is a great proposal - it is clear in focus &amp; scope.</p>
+<p>In particular, I loved seeing the S15 outcome that Passport is now “the largest issuer of DIDs on Ceramic”, and that a dozen other apps are leveraging the tech - those are huge results that we should be shouting from the rooftops (internally, at the very least) <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>I have a few questions:</p>
+<ul>
+<li>
+<p><strong>Size of budget request</strong> – It’s mentioned at the top that the S16 budget is “relatively flat” vs. S15, can you share a link we can reference? Given the size of this budget, would love to compare &amp; cross-check (IMO we should be doing this for all workstreams season-over-season, not just a GPC thing)</p>
+</li>
+<li>
+<p><strong>MC Merge</strong> – this post makes it clear that the two teams have come together, but what does this mean for staffing? How many MC folks have joined GPC? And, this is implicit given that it’s not called out as a focus, but my assumption is that the more exploratory moonshot-y work is being completely halted altogether, is that correct?</p>
+</li>
+<li>
+<p><strong>Passport</strong> – Not so much of a question as a point of feedback, but the four S16 outcomes listed feel a bit vague and long-term-y – aren’t elements of these kind of true already (e.g., the protocol can use Passport to programatically identify donors as unique humans)? It might be helpful to see what, more specifically, is being accomplished on each of these dimensions in the next three months, since they feel very meaty in scope</p>
+</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/2
+        Fri, 04 Nov 2022 18:52:40 +0000
+gov.gitcoin.co-post-11814-2
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+kevin.olsen
+
+            <h1>
+<a name="gitcoin-product-collective-workstream-s16-budget-1" class="anchor" href="https://gov.gitcoin.co#gitcoin-product-collective-workstream-s16-budget-1"></a>Gitcoin Product Collective Workstream S16 Budget</h1>
+<h2>
+<a name="season-16-budget-proposal-2" class="anchor" href="https://gov.gitcoin.co#season-16-budget-proposal-2"></a>Season 16 Budget Proposal</h2>
+<p>This is a funding proposal for the Gitcoin Product Collective (GPC) Workstream requesting ratification budgetary funds for Season 16</p>
+<p>TL;DR 3 main takeaways:</p>
+<ol>
+<li>GPC <a href="https://gov.gitcoin.co/t/the-future-of-moonshot-collective/11604">merged with the Moonshot Collective</a>, consolidating the Gitcoin DAO’s software building teams into one workstream. The GPC Budget for S16 is relatively flat from S15 despite the merge and the inclusion of new talent from Moonshot, as the merge relieved GPC’s reliance on outside contracted resources.</li>
+<li>GPC’s focus is now 100% on launching the Grants Protocol with the <a href="https://gov.gitcoin.co/t/request-for-feedback-proposed-future-for-the-grant-programs-and-gr16-as-we-transition-to-the-protocol/11624/42">DAO’s recent commitment to replace GR16</a> with an alpha round on the protocol.</li>
+<li>Gitcoin Passport is here, and it’s awesome. We will spend much of this season growing our list of integration partners and continue to refine &amp; build out initial use cases to confirm product market fit.</li>
+</ol>
+<h1>
+<a name="amount-3" class="anchor" href="https://gov.gitcoin.co#amount-3"></a>Amount:</h1>
+<p>GPC’s budget request in S16 is 1,100,689 USD or 647,464* GTC. This amount does not include a re-up of our 60 day reserves, and the full budget breakdown can be found at the end of this post.</p>
+<p>*Based on a 20 day price average of $1.70</p>
+<h1>
+<a name="milestone-report-for-past-season-4" class="anchor" href="https://gov.gitcoin.co#milestone-report-for-past-season-4"></a>Milestone Report for Past Season</h1>
+<p>Note: This Milestone Report does not conform to the standard template, as the S15 GPC budget was published before the new template was ratified.</p>
+<p><img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Success<br>
+<img src="https://emoji.discourse-cdn.com/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> Incomplete but will hit goal<br>
+<img src="https://emoji.discourse-cdn.com/twitter/red_circle.png?v=12" title=":red_circle:" class="emoji" alt=":red_circle:" loading="lazy" width="20" height="20"> Incomplete, will not hit goal<br>
+<img src="https://emoji.discourse-cdn.com/twitter/black_circle.png?v=12" title=":black_circle:" class="emoji" alt=":black_circle:" loading="lazy" width="20" height="20"> Canceled</p>
+<h3>
+<a name="review-shared-commitments-5" class="anchor" href="https://gov.gitcoin.co#review-shared-commitments-5"></a>Review Shared Commitments</h3>
+<p>Across all 3 protocol domains, in Season 15 we committed to:</p>
+<p><img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Enabling Moonshot Collective builders to be able to extend protocol functionality through developer documentation and on-going developer support<br>
+<em>This support served as early feedback on the implementation of the protocol and has ensured developers are first-class citizens in our protocol ecosystem.</em></p>
+<p><img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> We will brand and name all protocol components in collaboration with MMM.<br>
+<em>Each of the protocols have unique naming, and seeds of branding as well. We will likely evolve this now that our product strategy is more clear.</em></p>
+<p><img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> GPC will work with DAO Support to develop Gitcoin’s knowledge base and evolve the support process, integrating the efforts to support existing products and onboarding new ones for support as they launch.<br>
+<em>Support for the protocols was improved and much of the work was done to bolster the docs. We have the opportunity to reframe the communities expectations on how to receive support in future seasons as well.</em><br>
+<img src="https://emoji.discourse-cdn.com/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> Launch and run partner programs that drive a user-centered approach to our protocol development and scale adoption over time.<br>
+<img src="https://emoji.discourse-cdn.com/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> The Round Manager team, with support from the Grant Hub team, will collaborate with PGF on the Grants 2.0 Design Partner Program. Our goal is to use this program to test and validate design decisions for the protocol while also building up an initial Grant Program user base.<br>
+<img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> The Passport team will launch an Alpha Partner Program, which targets 4-6 other application teams who have high interest in using Passport for identity verification.</p>
+<h3>
+<a name="passport-6" class="anchor" href="https://gov.gitcoin.co#passport-6"></a>Passport</h3>
+<h4>
+<a name="review-commitments-7" class="anchor" href="https://gov.gitcoin.co#review-commitments-7"></a>Review Commitments:</h4>
+<p><img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Move over all GR15 contributors to Passport and decommission cGrants Trust Bonus entirely.<br>
+<img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Review the performance of the Passport’s technological architecture and interface, and the Trust Bonus in GR14, ship protocol and interface experience improvements for GR15.<br>
+<img src="https://emoji.discourse-cdn.com/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> Improve the accuracy of Trust Bonus in GR15 by a measurable degree. The exact target for improvement and how to measure it will be determined in collaboration with GitcoinDAO Fraud Detection and Defense.<br>
+<img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Drive adoption of Passport by other dApps through an alpha partnership program.</p>
+<h3>
+<a name="grant-hub-8" class="anchor" href="https://gov.gitcoin.co#grant-hub-8"></a>Grant Hub</h3>
+<h4>
+<a name="review-commitments-9" class="anchor" href="https://gov.gitcoin.co#review-commitments-9"></a>Review Commitments:</h4>
+<p><img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Build out Phase 2 of Grant Hub, which will enable project owners to apply to a round, view application status,<br>
+<img src="https://emoji.discourse-cdn.com/twitter/black_circle.png?v=12" title=":black_circle:" class="emoji" alt=":black_circle:" loading="lazy" width="20" height="20"> track active grants, and<br>
+<img src="https://emoji.discourse-cdn.com/twitter/black_circle.png?v=12" title=":black_circle:" class="emoji" alt=":black_circle:" loading="lazy" width="20" height="20"> view historical project data.<br>
+<img src="https://emoji.discourse-cdn.com/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> We will test Phase 2 of Grant Hub in partnership with Grants 2.0 Design Partners (i.e. Optimism’s RPGF round targeted for early August 2022)<br>
+<img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Expand Grant Hub project metadata to store verified fields, starting with verified spam and fraud signals<br>
+<img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Verifying ownership of Twitter &amp; Github social accounts<br>
+<img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20">Research how to further leverage Grant Hub project metadata to support building project reputation and niche curation. Long term, this enables more automated grant round eligibility curation.</p>
+<h3>
+<a name="round-manager-10" class="anchor" href="https://gov.gitcoin.co#round-manager-10"></a>Round Manager</h3>
+<h4>
+<a name="review-commitments-11" class="anchor" href="https://gov.gitcoin.co#review-commitments-11"></a>Review Commitments:</h4>
+<p><img src="https://emoji.discourse-cdn.com/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> Allow Round Manager to ingest verified spam and fraud signals from Grant Hub and filter projects based on those signals<br>
+<img src="https://emoji.discourse-cdn.com/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> Allow Round Operators to select and configure a voting/contribution module from 2-4 options<br>
+<img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Design the Grant Explorer for Gitcoin rounds (i.e. interface for contributors to browse/vote) based on PGF partnership<br>
+<img src="https://emoji.discourse-cdn.com/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Partner with PGF on the design of the future Gitcoin grants program<br>
+<img src="https://emoji.discourse-cdn.com/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> Enable Round Manager to generate payout calculations based on the selected voting/contribution module and votes cast via a Contributor-facing front-end</p>
+<h1>
+<a name="recap-of-the-s15-12" class="anchor" href="https://gov.gitcoin.co#recap-of-the-s15-12"></a>Recap of the S15</h1>
+<p>Beyond the green and yellow callouts above, we wanted to offer a bit of a narrative on how the season progressed and offer some insight into our goals S16 and beyond. We are very excited to be welcoming the Moonshot collective into our workstream this season. The builders have been absolutely instrumental in the development of a number of our protocols and bringing the two teams closer made a lot of sense. We would be remiss to not call out that our Head of Product for the last year is going to be moving on. Saying goodbye is always hard, but we love the idea of creating a culture where DAO life can be more fluid than most “full-time” roles. Lindsey will be missed, but her impact on the workstream’s creation, general DAO leadership and the creation of the protocols will be felt for quite some time - Kyle will be stepping in to support the team.</p>
+<p>Through S15, we have started to make some significant traction on protocol development and traction. Passport has nearly fifty thousand unique wallets set up and has become the largest issuer of DIDs on the Ceramic network. This is increasingly exciting as we have welcomed nearly a dozen other dApps integrating and leveraging the tech.We will really double down on the core use cases and ensure we have the ability to support exponentially more dApps.</p>
+<p>The Grants Protocol and Grants Hub are here. The steel threads are done, the protocols are in private alpha, and we will be running our first full Grant Round in just a couple of weeks. The teams have been laser-focused on ensuring the use cases for the protocol are well-defined, and we will ensure experimentation on funding mechanisms, project details, and user interfaces continue to be a focus.</p>
+<h1>
+<a name="list-of-season-16-commitments-13" class="anchor" href="https://gov.gitcoin.co#list-of-season-16-commitments-13"></a>List of Season 16 Commitments</h1>
+<p>We have included additional details below on the roadmap items each protocol team is targeting to complete over the next twelve months (four seasons). We have also broken down Objectives and Outcomes in the template format requested. You can review the details in the Roadmap and Commitments for context on the Objectives. It is known that some of these roadmap items will take longer than 1 season to accomplish. Each of the roadmap items are focused on growing adoption and retention of users to the protocols.</p>
+<h2>
+<a name="passport-season-16-roadmap-and-commitments-14" class="anchor" href="https://gov.gitcoin.co#passport-season-16-roadmap-and-commitments-14"></a>Passport Season 16 Roadmap and Commitments</h2>
+<p><strong>Updated Vision</strong>: The Passport protocol enables individuals and communities to authentically and securely interact through transparent/accountable/sovereign data control and privacy-preserving validation. It seeks to spin a utility flywheel between individuals and communities to empower meaningful and consensual relationships. It will allow individuals to collect evidence of their reputation and identity in a single source where they have transparent/accountable/sovereign data control and enable communities to secure their platforms with simplified access to user data using privacy-preserving data validation.</p>
+<p><strong>Strategy:</strong><br>
+<strong>1-2 year Goal 1</strong>: 80% of web3 communities have integrated Passport to solve identity verification problems<br>
+<strong>1-2 year Goal 2</strong>: 80% of passport holders are using their passport for verification in &gt; 1 communities</p>
+<p><strong>S16 Outcomes:</strong><br>
+Goal 1:</p>
+<ul>
+<li>Gitcoin Grants protocol is able to use Passport to programmatically identify donors as unique humans</li>
+<li>Passport has a productized set of scoring methods that meet the use cases of the majority of interested of communities</li>
+<li>Passport and its components are verifiable on-chain so any dApp can integrate passport, verify, and trust the source of passports data/components</li>
+</ul>
+<p>Goal 2:</p>
+<ul>
+<li>Passport holders are able to easily navigate their passports to understand how it could be used across different communities (Research and Design output)</li>
+</ul>
+<h2>
+<a name="grants-protocol-round-manager-and-grants-explorer-season-16-roadmap-and-commitments-15" class="anchor" href="https://gov.gitcoin.co#grants-protocol-round-manager-and-grants-explorer-season-16-roadmap-and-commitments-15"></a>Grants Protocol (Round Manager and Grants Explorer) Season 16 Roadmap and Commitments</h2>
+<p><strong>Updated Vision</strong>: We envision a world where communities are able to grow and evolve by funding their shared needs. The Grants Protocol will enable thousands of funding programs to run at any given time, uniquely designed to fit their communities.</p>
+<p><strong>Strategy:</strong><br>
+<strong>1-2 year Goal</strong>: 80% of web3 ecosystems with grants programs are using the Grants Protocol to run their program.</p>
+<ul>
+<li>Our primary focus is protocol adoption among web3 ecosystems with grant programs. We believe this enables us to build a foundation in a market where we already have strong product fit.</li>
+<li>Key considerations
+<ul>
+<li>We will design the protocol in a way that is extensible &amp; approachable.</li>
+<li>Web2 programs/communities that are willing to use web3 tech will be able to adopt the protocol, but are not the initial targeted market for protocol adoption.</li>
+<li>Anti-goals:
+<ul>
+<li>Building GTC utility and/or revenue model into the core protocol. We may end up building token utility tools compatible with the protocol, but only if we feel it’s a viable strategy for significantly increasing adoption. Revenue models, fee switches and token sinks are all being considered, but no timeline for implementation has been defined at this time.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>S16 Goal</strong>: This season, our goal is to ensure that Alpha / Design Partner Grant Programs running on protocol can use v1 mechanisms for all core operations. In Season 16, we want to finish building out the core protocol and its initial interfaces. We will also run a number of closed alpha rounds on the protocol to prepare for a public beta launch.</p>
+<p><strong>S16 Outcomes:</strong></p>
+<ul>
+<li>Round Operators can run a Quadratic Funding round on the protocol</li>
+<li>Round Operator can run a Quadratic Voting round on the protocol</li>
+<li>Round Operator can execute payouts on the protocol</li>
+<li>Round Operator has confidence in the accuracy of application data from all 3 levels of the Project Selection Pyramid (PSP)</li>
+<li>Donors can browse and assess the projects in a round</li>
+</ul>
+<h2>
+<a name="project-protocol-grants-hub-s16-roadmap-and-commitments-16" class="anchor" href="https://gov.gitcoin.co#project-protocol-grants-hub-s16-roadmap-and-commitments-16"></a>Project Protocol (Grants Hub) S16 Roadmap and Commitments</h2>
+<p><strong>Updated Vision</strong>: We envision owners using the protocol as a place they incept their project’s existence and then use it as a vehicle for growth over time. As an open source, permissionless protocol it will provide critical signals to communities that support and enable project growth over time. It will be the web3 space for creating a connected home for your project that allows you to build a reputation for sustainable fundraising, recruiting talent, reporting progress over time, and promoting your expertise.</p>
+<p><strong>Strategy:</strong><br>
+<strong>1-2 year Goal 1</strong>: Enable the growth and adoption of Project Protocol through supporting project owners to apply to grants rounds on the Grants Protocol<br>
+<strong>1-2 year Goal 2</strong>: 80% of project owners who have used the Project Protocol to participate in a grants program are also using it to attest their legitimacy or manage their project on another platform</p>
+<p><strong>S16 Outcomes:</strong><br>
+Goal 1:</p>
+<ul>
+<li>Project owners can collect the reputational data that Round Manager needs to programmatically verify for round eligibility</li>
+</ul>
+<p>Goal 2:</p>
+<ul>
+<li>Enable external integration(s) with Grants Hub that leverage project reputation</li>
+<li>Empower project owners to build project reputation</li>
+</ul>
+<h2>
+<a name="objectives-and-outcomes-17" class="anchor" href="https://gov.gitcoin.co#objectives-and-outcomes-17"></a>Objectives and Outcomes</h2>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Objective &amp; EI</th>
+<th>Objectives</th>
+<th>Outcome Description</th>
+<th>Likely Projects/Initiatives</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is it?</td>
+<td>What will be done?</td>
+<td>What impact will it have?</td>
+<td>What might the work look like?</td>
+</tr>
+<tr>
+<td>Gitcoin Passport Adoption 1.2</td>
+<td>1-2 year Goal 1: 80% of web3 communities have integrated passport to solve identity verification problems</td>
+<td>We believe that building a widely adopted, highly open and permissionless identity layer for the Ethereum ecosystem will reduce Sybil accounts, and enable real humans to showcase themselves without doxxing themselves. This will grow interest, trust and usability of web3 in general</td>
+<td>Gitcoin Grants protocol is able to use Passport to programmatically identify donors as unique humans. Passport has productized set of scoring methods that meet the use cases of majority of interested of communities. Passports and its components are verifiable on-chain so any dApps can integrate passport, verify and trust the source of passports data/components</td>
+</tr>
+<tr>
+<td>Gitcoin Passport Adoption 1.2</td>
+<td>1-2 year Goal 2: 80% of passport holders are using their passport for verification in &gt; 1 communities</td>
+<td>Identity and reputation are much more valuable if they are fresh, and are not full of stale credentials. We will ensure we maintain a high activity rate to maintain the value a passport has for dApps.</td>
+<td>Passport holders are able to easily navigate their passports to understand how it could be used across different communities (Research and Design output)</td>
+</tr>
+<tr>
+<td>Grants Protocol Adoption 1.1</td>
+<td>1-2 year Goal: 80% of web3 ecosystems with grants programs are using the Grants Protocol to run their program.</td>
+<td>The value flowing to projects through the grants protocol makes it more valuable to project owners. By growing adoption of the grants protocol, the quality of project owners applying increases and the number of grants programs seeking talented teams to support increases.</td>
+<td>Round Operators can run a Quadratic Funding round on the protocol. Round Operator can run a Quadratic Voting round on the protocol. Round Operator can execute payouts on the protocol. Round Operator can have confidence in accuracy of application data from all 3 levels of Project Selection Pyramid (PSP). Donors can browse and assess the projects in a round</td>
+</tr>
+<tr>
+<td>Project Protocol Adoption 1.1</td>
+<td>1-2 year Goal 1: Enable the growth and adoption of Project Protocol through supporting project owners to apply to grants rounds on the Grants Protocol</td>
+<td>Ensuring Project owners can apply to rounds, and express the unique value they are creating in the space will ensure funding is deployed to those with the largest impact.</td>
+<td>Project owners can collect the reputational data that Round Manager needs to programmatically verify for round eligibility.</td>
+</tr>
+<tr>
+<td>Project Protocol Adoption 1.1</td>
+<td>1-2 year Goal 2: 80% of project owners who have used the Project Protocol to participate in a grants program are also using it to attest their legitimacy or manage their project on another platform</td>
+<td>For project owners who are returning users of the Project Protocol, we want to enable them to leverage the project reputation capabilities of Project Protocol outside of the Gitcoin ecosystem (i.e. through key partnership integrations)</td>
+<td>Enable external integration(s) with Grants Hub that leverage project reputation. Empower project owners to build project reputation</td>
+</tr>
+</tbody>
+</table>
+</div><h1>
+<a name="budget-breakdown-18" class="anchor" href="https://gov.gitcoin.co#budget-breakdown-18"></a>Budget Breakdown</h1>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>Budgeted</th>
+<th>Budgeted</th>
+<th>Budgeted</th>
+<th>Budgeted</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Expense Statement</td>
+<td></td>
+<td>2022.11</td>
+<td>2022.12</td>
+<td>2023.01</td>
+<td>S16</td>
+</tr>
+<tr>
+<td>GPC</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Staffing</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Round Manager Core Contributors</td>
+<td>100,872</td>
+<td>100,872</td>
+<td>100,872</td>
+<td>302,617</td>
+</tr>
+<tr>
+<td></td>
+<td>Grants Hub Core Contributors</td>
+<td>87,898</td>
+<td>87,898</td>
+<td>87,898</td>
+<td>263,694</td>
+</tr>
+<tr>
+<td></td>
+<td>Passport Core Contributors</td>
+<td>103,001</td>
+<td>103,001</td>
+<td>103,001</td>
+<td>309,002</td>
+</tr>
+<tr>
+<td></td>
+<td>GPC Core (all teams)</td>
+<td>28,125</td>
+<td>28,125</td>
+<td>28,125</td>
+<td>84,375</td>
+</tr>
+<tr>
+<td></td>
+<td>Severance</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Total Staffing</td>
+<td></td>
+<td>319,896</td>
+<td>319,896</td>
+<td>319,896</td>
+<td>959,689</td>
+</tr>
+<tr>
+<td>Contracting</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>DevOps</td>
+<td>12,000</td>
+<td>12,000</td>
+<td>12,000</td>
+<td>36,000</td>
+</tr>
+<tr>
+<td>Total Contracting</td>
+<td></td>
+<td>12,000</td>
+<td>12,000</td>
+<td>12,000</td>
+<td>36,000</td>
+</tr>
+<tr>
+<td>DevRel</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Hackathons &amp; Bounties</td>
+<td>5,000</td>
+<td>5,000</td>
+<td>5,000</td>
+<td>15,000</td>
+</tr>
+<tr>
+<td>Total DevRel</td>
+<td></td>
+<td>5,000</td>
+<td>5,000</td>
+<td>5,000</td>
+<td>15,000</td>
+</tr>
+<tr>
+<td>OpEx</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>Saas and Infrastructure</td>
+<td>30,000</td>
+<td>30,000</td>
+<td>30,000</td>
+<td>90,000</td>
+</tr>
+<tr>
+<td>Total OpEx</td>
+<td></td>
+<td>30,000</td>
+<td>30,000</td>
+<td>30,000</td>
+<td>90,000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Total GPC Budgeted Spend</td>
+<td></td>
+<td>366,896</td>
+<td>366,896</td>
+<td>366,896</td>
+<td>1,100,689</td>
+</tr>
+<tr>
+<td>60 Day Reserves</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>733,719</td>
+</tr>
+<tr>
+<td>S15 Treasury Balance</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>Total S16 Request</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1,834,408</td>
+</tr>
+</tbody>
+</table>
+</div>
+          <p><a href="https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/s16-proposal-integrated-gitcoin-product-collective-budget-request/11814/1
+        Mon, 31 Oct 2022 23:49:38 +0000
+gov.gitcoin.co-post-11814-1
+[S16 Proposal] INTEGRATED Gitcoin Product Collective Budget Request
+      
+
+

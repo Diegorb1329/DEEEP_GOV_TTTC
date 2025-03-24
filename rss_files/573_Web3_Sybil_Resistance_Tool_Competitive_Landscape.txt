@@ -1,0 +1,306 @@
+
+
+
+Web3 Sybil Resistance Tool Competitive Landscape
+https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461
+    Following the success of my post https://gov.gitcoin.co/t/web3-crowdfunding-tool-competitive-landscape/12266/1 post I have decided to do a similar one for Gitcoin Passport.
+
+As I mentioned in my https://gov.gitcoin.co/t/a-bull-bear-case-for-gitcoin-gtc-in-2023/12442 post, the most positive outlook I can imagine for Gitcoin Passport is:
+
+> Passport will be the foundation of a new sybil resistant economy in web3.
+
+In order to understand if that is on track or not, I created this table of the competitive outlook. Here is the competitive landscape for Sybil Tools in web3:
+
+|- | [Circles UBI](https://joincircles.net/) | [POAP](https://poap.xyz/) | [KYC-DAO](https://kycdao.xyz/)  | [Idena](https://www.idena.io/)  | [BrightID](https://www.brightid.org/)  | [Proof Of Humanity](https://proofofhumanity.xyz/)  | [Worldcoin](https://worldcoin.org/)  |  [Gitcoin Passport](https://passport.gitcoin.co/)  |
+|---|---|---|---|---|---|---|---|---|
+|Mechanism |Web of Trust |Web of Trust   | Nation State ID   |  Presence/Intelligence Testing | Web of Trust   |  Web of Trust | Biometric  | Aggregator of other mechanisms
+| Traction | [100k users](https://twitter.com/koeppelmann/status/1563089304775061504)  | [1million wallets](https://dune.com/greywizard/sgc-work)  | Not launched  | 3k validated identities  | 65K+ sponsored users / 15 Apps Integrated  |  17k users  | 700k users | 100k users  |
+| Notable Integrations | $CIRCLES  | ~ | ~  | ~  | Gitcoin, Rabbithole, Unitap, [& others](https://apps.brightid.org/)  | $UBI, easy on-chain integration  |  ~ | Snapshot, Gitcoin Grants
+| Pros | ~| ~  | ~  | ~  |  ~ |  ~ |  Distribution worldwide, scale, simple mechanism | Integration with Gitcoin Grants, Pluralistic Approach
+| Cons | ~ | Not specifically a sybil tool  |  Nation State IDs not likely to be seen as legitimate in blockchain communities. |   ~|  ~ |  ~ |  Brand  | Not clear if it actually solves for sybil resistence, how well it scales across identities,
+| Comments | Backed by Gnosis| Not specifically a sybil resistance tool, but could be useful for sybil resistance  | ~ | ~ |  Backed by [Vitalik](https://twitter.com/VitalikButerin/status/1288545712343527425), [lengthy thread on Gitcoin/BrightID Aura here](https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159) |   Forking Soon, Backed by [Vitalik](https://ubi-alliance.medium.com/vitalik-buterin-supporting-proof-of-humanity-16339af97104)  | Backed by Silicon Valley Luminaries | 
+
+I was not able to find all information for all of the tools so please comment below if there is something I missed or got wrong.
+
+Some trends I observed while doing this analysis:
+1. The tools with good developer docs seemed to have more apps built on top of them.
+2. The tools with built in economics (eg Passport & Gitcoin Grants, Proof of Humanity & UBI, Worldcoin & Worldcoin airdrop) seemed to have the most distribution.
+3.  There are a lot of web of trust based tools.
+4.  While many of these tools claimed to solve sybil resistance, none of them really had easy to use tools that allowed you to inspect whether it was working or not (except BrightID and their Aura tool)
+
+I think that the web3 sybil resistance ecosystem is small but growing, with no clear winner yet.  It seems to me it's anyone's game to create an ecosystem that has exponential growth and runaway value.
+
+It's possible that there will be multiple winners.   These are the scenarios I am considering:
+1. There is 1 winner.
+2. There is 1 winner for creating sybil resistant identities (user centered use cases) and another 1 winner for making those identities easy to use with things like Sign In With Ethereum (developer centric use case).
+3. There are multiple winners in each of those categories.
+4. Because of the composability of this space, "winner" is too zero-sum of a mentality.  All of these apps will rise and fall together.
+
+---------------------
+
+This is what I would like to see in 2023:
+
+> Passport will be the foundation of a new sybil resistant economy in web3.
+
+Is Gitcoin Passport on track for this outcome?  Why or why not?  Which projects in the above list should Gitcoin try to emulate or integrate with?
+Wed, 04 Jan 2023 10:51:56 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Web3 Sybil Resistance Tool Competitive Landscape
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="a33titude" data-post="4" data-topic="12461">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/a33titude/48/7786_2.png" class="avatar"> a33titude:</div>
+<blockquote>
+<p>Am I correct in presuming the boolean output is whether the user is a sybil attacker or not?</p>
+</blockquote>
+</aside>
+<p>We would be lucky to have that! Unfortunately, it turns out that there is no one analysis that says for sure that user is sybil. Instead, we have many of these “legos” that say a user is likely sybil via a combination of multiple signals.</p>
+<ol>
+<li>if a user is triggering specific known combinations</li>
+<li>If they pass a threshold score from an ML model.  The model looks at all these outputs against our “Thor &amp; Loki” datasets (read: for sure not sybil &amp; for sure sybil)  We then choose a threshold whereby we deem the users most likely sybil. This method aims to minimize false positives even over avoiding false negatives.</li>
+</ol>
+<p>Here is a comment from a past budget discussion where I explained how any one signal is not sufficient on its own. <a href="https://gov.gitcoin.co/t/proposal-fdd-season-14-budget-request/10658/12" class="inline-onebox">[Proposal] FDD Season 14 Budget Request - #12 by DisruptionJoe</a></p>
+<aside class="quote no-group" data-username="a33titude" data-post="4" data-topic="12461">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/a33titude/48/7786_2.png" class="avatar"> a33titude:</div>
+<blockquote>
+<p>Is there any place I can read about the holistic 2023 roadmap for Passport? Or see wireframes of what it will look like at the end of 2023? I get bits and pieces here and there, it would be great to see something holistic.</p>
+</blockquote>
+</aside>
+<p>My team at FDD is working with the GPC Passport team to do a few specific things.</p>
+<ol>
+<li>In November we provided 4 models for scoring they could use for preventative sybil defense. These one score to rule them all models aren’t as good as customized scores per use case, but it is more scalable and we are studying how well it works.</li>
+<li>We performed analysis to estimate the effectiveness of the Snapshot &amp; Bankless integrations and fine new “legos” specific to their use cases.</li>
+<li>We created a topology model and recommendations for which stamps to prioritize to solve sybil resistance. The GPC team is thinking about UX and has final say for what is prioritized. At this point, they seem to be leaning towards a steward voting model to determine which stamps are included. (I believe this is a mistake because the purpose of passport is to solve sybil resistance, not to be a popularity contest, but we hope stewards will take FDD recommendations.)</li>
+<li>We are documenting and building pipelines for best way to extract data from ceramic and join with other data such as onchain signals.</li>
+</ol>
+<p>Here is a view of priorities from the cross-functional passport pod priorities for this season.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/ad6af5ffc98ae52b00542b5f699ba1dfb2f9628f.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/ad6af5ffc98ae52b00542b5f699ba1dfb2f9628f" title="Image 2023-01-04 at 11.47.08 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad6af5ffc98ae52b00542b5f699ba1dfb2f9628f_2_690x346.jpeg" alt="Image 2023-01-04 at 11.47.08 AM" data-base62-sha1="oK7LratZxoJxeFSxogB9efaTZiT" width="690" height="346" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad6af5ffc98ae52b00542b5f699ba1dfb2f9628f_2_690x346.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad6af5ffc98ae52b00542b5f699ba1dfb2f9628f_2_1035x519.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ad6af5ffc98ae52b00542b5f699ba1dfb2f9628f_2_1380x692.jpeg 2x" data-dominant-color="CEC9D5"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461/5
+        Wed, 04 Jan 2023 10:51:56 +0000
+gov.gitcoin.co-post-12461-5
+Web3 Sybil Resistance Tool Competitive Landscape
+      
+
+Web3 Sybil Resistance Tool Competitive Landscape
+a33titude
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="3" data-topic="12461">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>Think of each individual analysis as having a boolean output</p>
+</blockquote>
+</aside>
+<p>Am I correct in presuming the boolean output is whether the user is a sybil attacker or not?</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="3" data-topic="12461">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>When you envision this productized where the interface for a fraud analyst or round operator can utilize the many legos beneath the surface, here are a few ways to think of it:</p>
+</blockquote>
+</aside>
+<p>Is there any place I can read about the holistic 2023 roadmap for Passport?  Or see wireframes of what it will look like at the end of 2023?  I get bits and pieces here and there, it would be great to see something holistic.</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461/4
+        Wed, 04 Jan 2023 04:40:14 +0000
+gov.gitcoin.co-post-12461-4
+Web3 Sybil Resistance Tool Competitive Landscape
+      
+
+Web3 Sybil Resistance Tool Competitive Landscape
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="a33titude" data-post="1" data-topic="12461">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/a33titude/48/7786_2.png" class="avatar"> a33titude:</div>
+<blockquote>
+<p>While many of these tools claimed to solve sybil resistance, none of them really had easy to use tools that allowed you to inspect whether it was working or not (except BrightID and their Aura tool)</p>
+</blockquote>
+</aside>
+<p>Very true. This is where the sybil scoring legos we are building with FDD will come into play. Think of each individual analysis as having a boolean output. The exploratory analysis of these has primarily been done and funded by FDD/Gitcoin in the past. Now we have built up the Open Data Community to split this cost with other orgs. Our hackathon in October was 100% Gitcoin funded prizes. The upcoming one in January is 39% Gitcoin funded!</p>
+<p>We also clarified the specifications to include containerization and a boolean output. For more on the anti-sybil legos see the articles <a href="https://gov.gitcoin.co/t/introducing-the-fdd-review/11095">here</a>.</p>
+<p>When you envision this productized where the interface for a fraud analyst or round operator can utilize the many legos beneath the surface, here are a few ways to think of it:</p>
+<ul>
+<li>As a fraud analyst, I want to be able to suggest  wallet/passport/grant and see how it relates to it’s relevant sybil analysis legos.</li>
+<li>As a fraud analyst, I want to be able to upload a list of wallets/passports/grants and get an output with the rows being the identifier and the columns being the boolean output of each lego.</li>
+<li>As a fraud analyst, I want to be able to select which analysis legos are executed for my list to save on computation costs.</li>
+</ul>
+<p>We have a much more detailed article coming out this week really sharing the vision along with the start of the hackathon which have rewards for both the exploratory analysis discovering new analysis legos and the building of legos, contanerization/standardization of known analysis.</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461/3
+        Mon, 02 Jan 2023 15:23:04 +0000
+gov.gitcoin.co-post-12461-3
+Web3 Sybil Resistance Tool Competitive Landscape
+      
+
+Web3 Sybil Resistance Tool Competitive Landscape
+castall
+
+            <p>I love to see research like this.</p>
+<p>More points of interest about BrightID/Aura</p>
+<ul>
+<li>
+<p>There is a snapshot BrightID strategy.  SongADAO is using it.</p>
+</li>
+<li>
+<p>BrightID Aura has a <a href="https://github.com/BrightID/BrightID-Soulbound-Token" rel="noopener nofollow ugc">Soulbound Token standard</a></p>
+</li>
+<li>
+<p>BrightID &amp; Aura are happy to be stamps in Gitcoin Passport .  BrightID has always positioned itself as a stamp, not a wallet or passport.</p>
+</li>
+<li>
+<p>BrightID has social recovery which we’d like to bring to Gitcoin Passport.  Maybe Gitcoin Passport could help bring (decentralized) institutional recovery (e.g. recover with Gitcoin, Giveth, etc. – like social recovery but with semi-trusted orgs).</p>
+</li>
+<li>
+<p>BrightID would like to bring its privacy tech to Gitcoin Passport so users can avoid cross-linking or doxxing. (<a href="https://gov.gitcoin.co/t/passport-scoring-as-a-service/12419/3">See this post.</a>)</p>
+</li>
+<li>
+<p>Aura at its core is a decentralized tool for experts appointing other experts. The experts can operate in any domain.  We’d like to add Gitcoin as an energy team to allow independent Sybil hunters to help Gitcoin and learn to use its legos.</p>
+</li>
+</ul>
+<p>I’m looking forward to much more collaboration between Gitcoin and BrightID in 2023.</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461/2
+        Fri, 30 Dec 2022 21:30:35 +0000
+gov.gitcoin.co-post-12461-2
+Web3 Sybil Resistance Tool Competitive Landscape
+      
+
+Web3 Sybil Resistance Tool Competitive Landscape
+a33titude
+
+            <p>Following the success of my post <a href="https://gov.gitcoin.co/t/web3-crowdfunding-tool-competitive-landscape/12266/1" class="inline-onebox">Web3 Crowdfunding Tool Competitive Landscape</a> post I have decided to do a similar one for Gitcoin Passport.</p>
+<p>As I mentioned in my <a href="https://gov.gitcoin.co/t/a-bull-bear-case-for-gitcoin-gtc-in-2023/12442" class="inline-onebox">A BULL/BEAR case for Gitcoin/GTC in 2023</a> post, the most positive outlook I can imagine for Gitcoin Passport is:</p>
+<blockquote>
+<p>Passport will be the foundation of a new sybil resistant economy in web3.</p>
+</blockquote>
+<p>In order to understand if that is on track or not, I created this table of the competitive outlook. Here is the competitive landscape for Sybil Tools in web3:</p>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th><a href="https://joincircles.net/" rel="noopener nofollow ugc">Circles UBI</a></th>
+<th><a href="https://poap.xyz/" rel="noopener nofollow ugc">POAP</a></th>
+<th><a href="https://kycdao.xyz/" rel="noopener nofollow ugc">KYC-DAO</a></th>
+<th><a href="https://www.idena.io/" rel="noopener nofollow ugc">Idena</a></th>
+<th><a href="https://www.brightid.org/" rel="noopener nofollow ugc">BrightID</a></th>
+<th><a href="https://proofofhumanity.xyz/" rel="noopener nofollow ugc">Proof Of Humanity</a></th>
+<th><a href="https://worldcoin.org/" rel="noopener nofollow ugc">Worldcoin</a></th>
+<th><a href="https://passport.gitcoin.co/" rel="noopener nofollow ugc">Gitcoin Passport</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mechanism</td>
+<td>Web of Trust</td>
+<td>Web of Trust</td>
+<td>Nation State ID</td>
+<td>Presence/Intelligence Testing</td>
+<td>Web of Trust</td>
+<td>Web of Trust</td>
+<td>Biometric</td>
+<td>Aggregator of other mechanisms</td>
+</tr>
+<tr>
+<td>Traction</td>
+<td><a href="https://twitter.com/koeppelmann/status/1563089304775061504" rel="noopener nofollow ugc">100k users</a></td>
+<td><a href="https://dune.com/greywizard/sgc-work" rel="noopener nofollow ugc">1million wallets</a></td>
+<td>Not launched</td>
+<td>3k validated identities</td>
+<td>65K+ sponsored users / 15 Apps Integrated</td>
+<td>17k users</td>
+<td>700k users</td>
+<td>100k users</td>
+</tr>
+<tr>
+<td>Notable Integrations</td>
+<td>$CIRCLES</td>
+<td>~</td>
+<td>~</td>
+<td>~</td>
+<td>Gitcoin, Rabbithole, Unitap, <a href="https://apps.brightid.org/" rel="noopener nofollow ugc">&amp; others</a></td>
+<td>$UBI, easy on-chain integration</td>
+<td>~</td>
+<td>Snapshot, Gitcoin Grants</td>
+</tr>
+<tr>
+<td>Pros</td>
+<td>~</td>
+<td>~</td>
+<td>~</td>
+<td>~</td>
+<td>~</td>
+<td>~</td>
+<td>Distribution worldwide, scale, simple mechanism</td>
+<td>Integration with Gitcoin Grants, Pluralistic Approach</td>
+</tr>
+<tr>
+<td>Cons</td>
+<td>~</td>
+<td>Not specifically a sybil tool</td>
+<td>Nation State IDs not likely to be seen as legitimate in blockchain communities.</td>
+<td>~</td>
+<td>~</td>
+<td>~</td>
+<td>Brand</td>
+<td>Not clear if it actually solves for sybil resistence, how well it scales across identities,</td>
+</tr>
+<tr>
+<td>Comments</td>
+<td>Backed by Gnosis</td>
+<td>Not specifically a sybil resistance tool, but could be useful for sybil resistance</td>
+<td>~</td>
+<td>~</td>
+<td>Backed by <a href="https://twitter.com/VitalikButerin/status/1288545712343527425" rel="noopener nofollow ugc">Vitalik</a>, <a href="https://gov.gitcoin.co/t/what-can-we-learn-from-brightids-aura-sybil-defense-software/11159">lengthy thread on Gitcoin/BrightID Aura here</a></td>
+<td>Forking Soon, Backed by <a href="https://ubi-alliance.medium.com/vitalik-buterin-supporting-proof-of-humanity-16339af97104" rel="noopener nofollow ugc">Vitalik</a></td>
+<td>Backed by Silicon Valley Luminaries</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div><p>I was not able to find all information for all of the tools so please comment below if there is something I missed or got wrong.</p>
+<p>Some trends I observed while doing this analysis:</p>
+<ol>
+<li>The tools with good developer docs seemed to have more apps built on top of them.</li>
+<li>The tools with built in economics (eg Passport &amp; Gitcoin Grants, Proof of Humanity &amp; UBI, Worldcoin &amp; Worldcoin airdrop) seemed to have the most distribution.</li>
+<li>There are a lot of web of trust based tools.</li>
+<li>While many of these tools claimed to solve sybil resistance, none of them really had easy to use tools that allowed you to inspect whether it was working or not (except BrightID and their Aura tool)</li>
+</ol>
+<p>I think that the web3 sybil resistance ecosystem is small but growing, with no clear winner yet.  It seems to me it’s anyone’s game to create an ecosystem that has exponential growth and runaway value.</p>
+<p>It’s possible that there will be multiple winners.   These are the scenarios I am considering:</p>
+<ol>
+<li>There is 1 winner.</li>
+<li>There is 1 winner for creating sybil resistant identities (user centered use cases) and another 1 winner for making those identities easy to use with things like Sign In With Ethereum (developer centric use case).</li>
+<li>There are multiple winners in each of those categories.</li>
+<li>Because of the composability of this space, “winner” is too zero-sum of a mentality.  All of these apps will rise and fall together.</li>
+</ol>
+<hr>
+<p>This is what I would like to see in 2023:</p>
+<blockquote>
+<p>Passport will be the foundation of a new sybil resistant economy in web3.</p>
+</blockquote>
+<p>Is Gitcoin Passport on track for this outcome?  Why or why not?  Which projects in the above list should Gitcoin try to emulate or integrate with?</p>
+          <p><a href="https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/web3-sybil-resistance-tool-competitive-landscape/12461/1
+        Fri, 30 Dec 2022 15:46:42 +0000
+gov.gitcoin.co-post-12461-1
+Web3 Sybil Resistance Tool Competitive Landscape
+      
+
+

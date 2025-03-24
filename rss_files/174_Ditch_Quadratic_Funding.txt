@@ -1,0 +1,265 @@
+
+
+
+Ditch Quadratic Funding?
+https://gov.gitcoin.co/t/ditch-quadratic-funding/10316
+    This post assumes you have knowledge of [Quadratic Funding](https://wtfisqf.com/?grant=&grant=&grant=&grant=&match=1000), henceforth known as "QF".
+
+**Warning! Hot take ahead.**
+
+it seems like QF is a central part of the gitcoin identity. how hard-set of a constraint is this?
+
+![Screen Shot 2022-04-06 at 1.54.36 PM|690x291](upload://vLUcjANrRdHPgAJWVAmhnQMVaaf.jpeg)
+
+QF was assumed to have product-market fit [after some experimentation](https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462). 
+
+is this *really* because of the mathematical properties of QF being optimal? or *is it actually* because of the [immediate (inaccurate) promise of matching funds ridiculous amounts](https://twitter.com/LefterisJP/status/1505311006645526533)? My intuition is the latter.
+
+In practice, using QF might not be worth the [consequences it has](https://medium.com/block-science/deterring-adversarial-behavior-at-scale-in-gitcoin-grants-a8a5cd7899ff). This is made apparent with all of the [modifications](https://gitcoin.co/blog/grants-round-12-matching-caps/) to [QF we have to make](https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553) to keep it usable. 
+
+[Sybil account](https://en.wikipedia.org/wiki/Sybil_attack) detection has been raising significant concerns of privacy-invasive machine learning practices of our users, and they should be taken very seriously.
+
+In the spirit of [pluralism](https://gov.gitcoin.co/t/a-vision-for-a-pluralistic-civilizational-scale-infrastructure-for-funding-public-goods/9503), it makes sense for QF to exist in some capacity, especially with different modifications. However, It feels like we're jamming a square peg (QF, pun intended lmao) into a circular hole (gitcoin grants). 
+
+This inevitably brings in [computational complexity](https://github.com/gitcoinco/web/blob/master/app/grants/clr.py), making smart contracts (if we ever continue dGrants development) for the QF mechanism potentially more vulnerable to attacks.
+
+[The simplest answer is often the best.](https://en.wikipedia.org/wiki/Occam's_razor)
+
+the question i would like to pose is: how married to QF is gitcoin? if a funding mechanism design totally different from QF emerged and had better in-practice capabilities, is this something we would be willing to adopt?
+
+the optimality assumptions that the QF paper makes are rooted in theory, and as we've seen through pragmatism, it isn't optimal (at least not yet).
+
+despite the pessimistic tone of this post, i'm still optimistic that more bullet proof identity systems can make QF more usable, but there are still problems that need fine-tuning to the community (as with everything). 
+
+so my judgement is withheld, i'm moreso interested in what others' thoughts are and if they are having similar concerns. Btw, Glen Weyl the co-author of many QF white papers [does](https://gov.gitcoin.co/t/a-vision-for-a-pluralistic-civilizational-scale-infrastructure-for-funding-public-goods/9503/11?u=glenweyl).
+Fri, 29 Apr 2022 04:55:29 +0000
+🤖 DAO Governance and Vision
+
+
+Ditch Quadratic Funding?
+nollied
+
+            <p>CRL? i don’t think im in there. my discord is nollied#6773 i’d love to join</p>
+<p>i work closely with octopus though, he’s part of my catalyst squad in FDD</p>
+          <p><a href="https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/7
+        Fri, 29 Apr 2022 04:55:29 +0000
+gov.gitcoin.co-post-10316-7
+Ditch Quadratic Funding?
+      
+
+Ditch Quadratic Funding?
+bestape
+
+            <p>Are you in our CRL chat on Discord? Octopus and I both suggested ways to lower computational complexity. Let me know if you’re not included and I’ll try to add you.</p>
+          <p><a href="https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/5
+        Sun, 17 Apr 2022 19:48:19 +0000
+gov.gitcoin.co-post-10316-5
+Ditch Quadratic Funding?
+      
+
+Ditch Quadratic Funding?
+nollied
+
+            <p>i can’t stop thinking about this lol, i think we should wrestle a bit more.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10316">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<ol>
+<li><em>(from the perspective of a contributor)</em> - an incentive to get over the free rider problem by providing a matching contribution to every crowd contribution</li>
+<li><em>(from the perspective of an ecosystem)</em></li>
+</ol>
+<ul>
+<li>an opportunity to measure the signal of what your ecosystem participants want to fund,</li>
+<li>a way to push the power/responsibility of deciding what to fund away from a central grants team,</li>
+<li>and an opportunity to double(ish) your matching pool money (because contributors will crowdfund + this often doubles the amount of money that goes to those projects)</li>
+</ul>
+</blockquote>
+</aside>
+<p>none of these pros are specific to QF. in fact, any funding mechanism like 1d1v or 1p1v with a sufficient matching pool checks these boxes.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10316">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p><em>(for everyone)</em> - funding for projects supported by the poor/many instead of just the rich few</p>
+</blockquote>
+</aside>
+<p>1p1v with a bullet proof identity system would cover this. Is it more accurate to say that QF <strong>balances</strong> the poor/many with the rich/few?</p>
+<p>so far, all of the pros you’ve mentioned <strong>combined</strong> would be fully supported by a 1p1v with a robust identity system and sufficiently large matching pool (approximately 2x the size of the expected total contributions).</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10316">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>A secondary reason is that I’ve seen the most energy &amp; excitement around QF of anything I’ve seen that Gitcoin has done over the last 5 years.</p>
+</blockquote>
+</aside>
+<p>why do you think that is? is it because they feel it captures the sentiment of the community effectively (dampening wealth) while also offering wicked matching ratios? Or are there other reasons (for example, very good game-ification/marketing)?</p>
+<p>note that in <a href="https://vitalik.ca/general/2019/10/24/gitcoin.html" rel="noopener nofollow ugc">GR3</a> the total amount of grants received from donators exceeded the matching pool. (i’m sure this close to applies to other grant rounds also, but i haven’t combed through them all)</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10316">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>and an opportunity to double(ish) your matching pool money (because contributors will crowdfund + this often doubles the amount of money that goes to those projects)</p>
+</blockquote>
+</aside>
+<p>you can say the same thing about 1d1v with a 1:1 matching pool or 1p1v with a 1:N matching pool.</p>
+<hr>
+<p>clearly QF taps into <em>something</em>, but what <em>exactly</em>?</p>
+<hr>
+<p>in the case you’ve outlined, and from my own perspective, it appears that QF could be replaced if we could derive a new funding mechanism that has all of the following properties:</p>
+<ul>
+<li>immune to sybil accounts by design (for example, 1d1v)</li>
+<li>it also captures the sentiment of the community, without giving too much power to the rich</li>
+<li>marketability (it’s gotta be at least as sexy as QF)</li>
+</ul>
+<p>the other pros you mentioned seem to be covered by any non-negligible matching pool allocator.</p>
+<p>what do you think? it might be tempting to say QF (and modifications thereof) is the only way, but i’ve got some ideas i want to explore. there’s a low likelihood of my efforts bearing fruit, but it’s fun and either way i will learn something!</p>
+          <p><a href="https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/4
+        Thu, 07 Apr 2022 09:51:17 +0000
+gov.gitcoin.co-post-10316-4
+Ditch Quadratic Funding?
+      
+
+Ditch Quadratic Funding?
+nollied
+
+            <aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10316">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>again <a class="mention" href="https://gov.gitcoin.co/u/nollied">@nollied</a> for starting the</p>
+</blockquote>
+</aside>
+<p>Of course, thank you for taking the time to respond!</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10316">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Have you seen this post? <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981">Gitcoin Grants 2.0</a>. IMO Grants 2.0 is the successor to dGrants.</p>
+</blockquote>
+</aside>
+<p>i have not seen this… but wow, it’s incredible. it actually is super similar to a project i’m working on in FDD. i left a comment <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/16">here</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/3
+        Wed, 06 Apr 2022 23:31:45 +0000
+gov.gitcoin.co-post-10316-3
+Ditch Quadratic Funding?
+      
+
+Ditch Quadratic Funding?
+owocki
+
+            <p>Hi nollied,  thanks for starting this discussion! I think its important to be willing to revisit &amp; update our priors from time to time, so this conversation could serve as a nice discussion about “why QF”.</p>
+<p>IMO this post jumps into solutioning (ditch QF) a bit too early for me.  I think that it makes sense to explore the problem space a bit first.  In this reply I am to do so by articulating the</p>
+<ol>
+<li><strong>problems/cons of QF</strong> - starting with the discrete problems with QF you noted as currently implemented on Gitcoin Grants &amp;</li>
+<li><strong>what QF provides/pros of QF</strong> - what Gitcoin Grants gains from QF.</li>
+</ol>
+<p>Here goes:</p>
+<h2><a name="problems-cons-1" class="anchor" href="https://gov.gitcoin.co#problems-cons-1"></a>problems (cons)</h2>
+<p>In my opinion, the problems you noted are</p>
+<ol>
+<li>inaccurate match estimates</li>
+<li>privacy of sybil resistence</li>
+<li>computational complexity</li>
+</ol>
+<p>I would also add these problems which you did not note (but I think about a lot)</p>
+<ol>
+<li>the necessity to keep raising matching pools</li>
+<li>collusion attacks</li>
+</ol>
+<h2><a name="what-qf-provides-pros-2" class="anchor" href="https://gov.gitcoin.co#what-qf-provides-pros-2"></a>what QF provides (pros)</h2>
+<p>QF provides:</p>
+<ol>
+<li><em>(from the perspective of a contributor)</em> - an incentive to get over the free rider problem by providing a matching contribution to every crowd contribution</li>
+<li><em>(from the perspective of an ecosystem)</em></li>
+</ol>
+<ul>
+<li>an opportunity to measure the signal of what your ecosystem participants want to fund,</li>
+<li>a way to push the power/responsibility of deciding what to fund away from a central grants team,</li>
+<li>and an opportunity to double(ish) your matching pool money (because contributors will crowdfund + this often doubles the amount of money that goes to those projects)</li>
+</ul>
+<ol start="3">
+<li><em>(for everyone)</em> - funding for projects supported by the poor/many instead of just the rich few</li>
+</ol>
+<h2><a name="pros-vs-cons-3" class="anchor" href="https://gov.gitcoin.co#pros-vs-cons-3"></a>pros vs cons</h2>
+<p>The DAO should make its own decision (this post is just my thoughts) about the pros vs cons.</p>
+<p>In my opinion,</p>
+<ol>
+<li>the juice QF provides is worth the squeeze,</li>
+<li>QF is a money lego for the space (similar to AMMs),</li>
+<li>but the approach Gitcoin Grants uses could be evolved.</li>
+</ol>
+<p>The core reason I think QF is worth the effort that goes into it is that it is an elegant &amp; scalable way of getting over the free rider problem, which is a core problem to solve for Gitcoin’s <a href="https://gitcoin.co/mission">mission</a> to build/fund digital public goods.</p>
+<p>A secondary reason is that I’ve seen the most energy &amp; excitement around QF of anything I’ve seen that Gitcoin has done over the last 5 years.</p>
+<p>I also believe that the problems noted above have discrete solutions which could be explored:</p>
+<ol>
+<li>inaccurate match estimates =&gt; updated matching estimate algorithms</li>
+<li>privacy of sybil resistence =&gt; Proof of Personhood Passport, ZK tech, &amp; MACI</li>
+<li>computational complexity =&gt; MACI or off-chain computation verifiable on-chain</li>
+<li>the necessity to keep raising matching pools =&gt; <a href="https://gov.gitcoin.co/t/gitcoin-aqueduct/9684" class="inline-onebox">Gitcoin Aqueduct</a> &amp; <a href="https://gov.gitcoin.co/t/how-does-the-dao-prioritize-side-rounds/9827" class="inline-onebox">How does the DAO prioritize side rounds?</a></li>
+<li>collusion attacks =&gt; MACI / pairwise</li>
+</ol>
+<p>but I welcome differing views!</p>
+<h2><a name="grants-20-4" class="anchor" href="https://gov.gitcoin.co#grants-20-4"></a>Grants 2.0</h2>
+<aside class="quote no-group" data-username="nollied" data-post="1" data-topic="10316">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/nollied/48/5163_2.png" class="avatar"> nollied:</div>
+<blockquote>
+<p>if we ever continue dGrants development</p>
+</blockquote>
+</aside>
+<p>Have you seen this post? <a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981" class="inline-onebox">Gitcoin Grants 2.0</a>.  IMO Grants 2.0 is the successor to dGrants.</p>
+<p>FWIW, Gitcoin Grants 2.0 has a Grants Registry at a base layer that does not have any opinions about what mechanisms should be built on top of it (see below diagram).  One could build pairwise QF, MACI QF, retroactive public goods funding, dominance assurance contracts, or <a href="https://gov.gitcoin.co/t/quadratic-funding-x-effective-altruism/10016">effective altruism</a> on top of it.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/19a264bccbae1c6434a1a2554c1f326d5d284088" title="fLTzUgQ8zK5zC3vXgcp8STSz8GT2BfKgvPj2IVzHtdnyzaezrQCiFB38G71-UJgm0axtGWImIVWBMTIwXY0SYiXMM9MPiIP2HtNMBLFDLDhJheqxD_8mQbA_2xy7AsK9c6tIiJrv"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088_2_690x323.jpeg" alt="fLTzUgQ8zK5zC3vXgcp8STSz8GT2BfKgvPj2IVzHtdnyzaezrQCiFB38G71-UJgm0axtGWImIVWBMTIwXY0SYiXMM9MPiIP2HtNMBLFDLDhJheqxD_8mQbA_2xy7AsK9c6tIiJrv" data-base62-sha1="3ELRwiVb7hCoYGYccYia277rDUA" width="690" height="323" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088_2_690x323.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088_2_1035x484.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088_2_1380x646.jpeg 2x" data-dominant-color="F0F0F0"></a></div><p></p>
+<p>This is of course just my personal opinion + I welcome differing views !</p>
+<p>Thanks again <a class="mention" href="https://gov.gitcoin.co/u/nollied">@nollied</a> for starting the convo!</p>
+          <p><a href="https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/2
+        Wed, 06 Apr 2022 22:37:20 +0000
+gov.gitcoin.co-post-10316-2
+Ditch Quadratic Funding?
+      
+
+Ditch Quadratic Funding?
+nollied
+
+            <p>This post assumes you have knowledge of <a href="https://wtfisqf.com/?grant=&amp;grant=&amp;grant=&amp;grant=&amp;match=1000" rel="noopener nofollow ugc">Quadratic Funding</a>, henceforth known as “QF”.</p>
+<p><strong>Warning! Hot take ahead.</strong></p>
+<p>it seems like QF is a central part of the gitcoin identity. how hard-set of a constraint is this?</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/deadb9229bc27e27cc06febc4098fffd6da13d9b.jpeg" data-download-href="/uploads/short-url/vLUcjANrRdHPgAJWVAmhnQMVaaf.jpeg?dl=1" title="Screen Shot 2022-04-06 at 1.54.36 PM" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/d/deadb9229bc27e27cc06febc4098fffd6da13d9b_2_690x291.jpeg" alt="Screen Shot 2022-04-06 at 1.54.36 PM" data-base62-sha1="vLUcjANrRdHPgAJWVAmhnQMVaaf" width="690" height="291" srcset="/uploads/db4391/optimized/2X/d/deadb9229bc27e27cc06febc4098fffd6da13d9b_2_690x291.jpeg, /uploads/db4391/optimized/2X/d/deadb9229bc27e27cc06febc4098fffd6da13d9b_2_1035x436.jpeg 1.5x, /uploads/db4391/optimized/2X/d/deadb9229bc27e27cc06febc4098fffd6da13d9b_2_1380x582.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/d/deadb9229bc27e27cc06febc4098fffd6da13d9b_2_10x10.png"></a></div><p></p>
+<p>QF was assumed to have product-market fit <a href="https://gov.gitcoin.co/t/a-quadratic-funding-powered-social-network/9462">after some experimentation</a>.</p>
+<p>is this <em>really</em> because of the mathematical properties of QF being optimal? or <em>is it actually</em> because of the <a href="https://twitter.com/LefterisJP/status/1505311006645526533" rel="noopener nofollow ugc">immediate (inaccurate) promise of matching funds ridiculous amounts</a>? My intuition is the latter.</p>
+<p>In practice, using QF might not be worth the <a href="https://medium.com/block-science/deterring-adversarial-behavior-at-scale-in-gitcoin-grants-a8a5cd7899ff" rel="noopener nofollow ugc">consequences it has</a>. This is made apparent with all of the <a href="https://gitcoin.co/blog/grants-round-12-matching-caps/" rel="noopener nofollow ugc">modifications</a> to <a href="https://ethresear.ch/t/pairwise-coordination-subsidies-a-new-quadratic-funding-design/5553" rel="noopener nofollow ugc">QF we have to make</a> to keep it usable.</p>
+<p><a href="https://en.wikipedia.org/wiki/Sybil_attack" rel="noopener nofollow ugc">Sybil account</a> detection has been raising significant concerns of privacy-invasive machine learning practices of our users, and they should be taken very seriously.</p>
+<p>In the spirit of <a href="https://gov.gitcoin.co/t/a-vision-for-a-pluralistic-civilizational-scale-infrastructure-for-funding-public-goods/9503">pluralism</a>, it makes sense for QF to exist in some capacity, especially with different modifications. However, It feels like we’re jamming a square peg (QF, pun intended lmao) into a circular hole (gitcoin grants).</p>
+<p>This inevitably brings in <a href="https://github.com/gitcoinco/web/blob/master/app/grants/clr.py" rel="noopener nofollow ugc">computational complexity</a>, making smart contracts (if we ever continue dGrants development) for the QF mechanism potentially more vulnerable to attacks.</p>
+<p><a href="https://en.wikipedia.org/wiki/Occam's_razor" rel="noopener nofollow ugc">The simplest answer is often the best.</a></p>
+<p>the question i would like to pose is: how married to QF is gitcoin? if a funding mechanism design totally different from QF emerged and had better in-practice capabilities, is this something we would be willing to adopt?</p>
+<p>the optimality assumptions that the QF paper makes are rooted in theory, and as we’ve seen through pragmatism, it isn’t optimal (at least not yet).</p>
+<p>despite the pessimistic tone of this post, i’m still optimistic that more bullet proof identity systems can make QF more usable, but there are still problems that need fine-tuning to the community (as with everything).</p>
+<p>so my judgement is withheld, i’m moreso interested in what others’ thoughts are and if they are having similar concerns. Btw, Glen Weyl the co-author of many QF white papers <a href="https://gov.gitcoin.co/t/a-vision-for-a-pluralistic-civilizational-scale-infrastructure-for-funding-public-goods/9503/11">does</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/ditch-quadratic-funding/10316/1
+        Wed, 06 Apr 2022 21:10:47 +0000
+gov.gitcoin.co-post-10316-1
+Ditch Quadratic Funding?
+      
+
+

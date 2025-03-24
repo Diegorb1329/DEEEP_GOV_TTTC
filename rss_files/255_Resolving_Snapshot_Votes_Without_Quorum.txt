@@ -1,0 +1,105 @@
+
+
+
+Resolving Snapshot Votes Without Quorum
+https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404
+    So given that we're still releasing treasury funds, hitting quorum is still relatively hard to do in many cases. For example, this vote was overwhelmingly positive with about 99% of turnout voting yes:
+
+https://gov.gitcoin.co/t/rfc-transfer-sacks-lp-position-to-gitcoin-governance-timelock/3262/7
+
+Even if 1m votes came in against and quorum was reached this would have passed. In these scenarios, given we're early on in governance and that even with quorum it would have passed, should we simply count these kinds of votes as ratified?
+
+cc @monet-supply @Yalor @HelloShreyas and others who participated in the initial thread!
+Fri, 11 Jun 2021 18:56:54 +0000
+🤖 DAO Governance and Vision
+
+
+Resolving Snapshot Votes Without Quorum
+imfredmi
+
+            <p>i can’t agree with you any more <img src="https://emoji.discourse-cdn.com/twitter/100.png?v=9" title=":100:" class="emoji" alt=":100:"> <img src="https://emoji.discourse-cdn.com/twitter/100.png?v=9" title=":100:" class="emoji" alt=":100:"> <img src="https://emoji.discourse-cdn.com/twitter/100.png?v=9" title=":100:" class="emoji" alt=":100:"></p>
+          <p><a href="https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404/5
+        Fri, 11 Jun 2021 18:56:54 +0000
+gov.gitcoin.co-post-5404-5
+Resolving Snapshot Votes Without Quorum
+      
+
+Resolving Snapshot Votes Without Quorum
+monet-supply
+
+            <p>I think quorum thresholds are somewhat less important for Snapshot votes because they don’t directly execute any transfer - a clearly malicious proposal that makes it through with low participation can always be rejected by multisig signers.</p>
+<p>That being said, it definitely helps give governance a greater sense of legitimacy to make formal procedures/standards for this - Index Coop stands out as a protocol with well specified processes around snapshot voting.</p>
+<p>A low quorum threshold for snapshot votes should work fine (maybe anywhere from 100k-500k GTC) considering the low security concerns. Maintaining the existing 2.5% quorum requirement for on chain governance is probably best for now, as this has direct control over funds in the treasury.</p>
+          <p><a href="https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404/4
+        Wed, 09 Jun 2021 22:58:04 +0000
+gov.gitcoin.co-post-5404-4
+Resolving Snapshot Votes Without Quorum
+      
+
+Resolving Snapshot Votes Without Quorum
+cupOjoseph
+
+            <aside class="quote no-group" data-username="ceresstation" data-post="1" data-topic="5404">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ceresstation/48/11042_2.png" class="avatar"> ceresstation:</div>
+<blockquote>
+<p>should we simply count these kinds of votes as ratified?</p>
+</blockquote>
+</aside>
+<p>Yes, we will not get anything done if we dismiss largely popular things that miss quorum by a small margin.</p>
+          <p><a href="https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404/3
+        Tue, 08 Jun 2021 01:45:34 +0000
+gov.gitcoin.co-post-5404-3
+Resolving Snapshot Votes Without Quorum
+      
+
+Resolving Snapshot Votes Without Quorum
+HelloShreyas
+
+            <p>I like the idea of using a soft quorum, but could we have a standard policy in place? We could use one of these options or something else:</p>
+<ul>
+<li>Temporarily change quorum from 2.5 million to something lower (e.g. 1.5 million)</li>
+<li>Temporarily change quorum from 2.5 million to something lower (e.g. 1.5 million) <strong>and</strong> require that the proposal should have passed even if all votes to get to 2.5 million voted against the proposal.</li>
+<li>Require 2.5 million quorum on critical decisions (call it “hard quorum”) but lower quorum on other decisions (call it “soft quorum”)</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404/2
+        Mon, 07 Jun 2021 21:44:21 +0000
+gov.gitcoin.co-post-5404-2
+Resolving Snapshot Votes Without Quorum
+      
+
+Resolving Snapshot Votes Without Quorum
+ceresstation
+
+            <p>So given that we’re still releasing treasury funds, hitting quorum is still relatively hard to do in many cases. For example, this vote was overwhelmingly positive with about 99% of turnout voting yes:</p>
+<aside class="quote" data-post="7" data-topic="3262">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/icepy/48/286_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/rfc-transfer-sacks-lp-position-to-gitcoin-governance-timelock/3262/7">[Proposal] RFC: Transfer $SACKS LP position to Gitcoin Governance Timelock</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/governance-proposals/5"><span data-category-id="5" style="--category-badge-color: #0E76BD; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="All budget requests for discussion before it goes to vote"><span class="badge-category__name">📜 Proposals</span></span></a>
+  </div>
+  <blockquote>
+    Support this proposal. I would vote for it.
+  </blockquote>
+</aside>
+
+<p>Even if 1m votes came in against and quorum was reached this would have passed. In these scenarios, given we’re early on in governance and that even with quorum it would have passed, should we simply count these kinds of votes as ratified?</p>
+<p>cc <a class="mention" href="https://gov.gitcoin.co/u/monet-supply">@monet-supply</a> <a class="mention" href="https://gov.gitcoin.co/u/yalor">@Yalor</a> <a class="mention" href="https://gov.gitcoin.co/u/helloshreyas">@HelloShreyas</a> and others who participated in the initial thread!</p>
+          <p><a href="https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/resolving-snapshot-votes-without-quorum/5404/1
+        Mon, 07 Jun 2021 20:18:24 +0000
+gov.gitcoin.co-post-5404-1
+Resolving Snapshot Votes Without Quorum
+      
+
+

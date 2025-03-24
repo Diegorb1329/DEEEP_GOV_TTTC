@@ -1,0 +1,604 @@
+
+
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915
+    # **Summary**
+
+This proposal looks to discuss and finalize how funding allocations for the Gitcoin Grants Round 13 Matching Pool are distributed.
+
+After previous successful Grants Rounds, this proposal aims to continue community-owned decision making regarding the structure of the main matching pool.
+
+# **GR12 Matching Pool Results**
+
+### **Background**
+
+Prior to Grants Round 12, the pool was governed by categories that assigned specific percentages of the pool to grants in specific disciplines or geographies.
+
+In Grants Round 12, the community voted to run an experiment proposed by the Public Goods Funding workstream to test Vitalik’s theory that Quadratic Funding should be as effective at allocating funds as allocation via categories. By doing away with specific grant categories and having all grants listed together, we took a step towards simplifying and decentralizing matching. See [GR12 Matching Pool Allocations](https://gov.gitcoin.co/t/proposal-gitcoin-gr12-matching-pool-allocations/9007/7) brief for more context.
+
+### **Results**
+
+On the whole, the Public Goods Funding workstream believes the experiment was a success – directionally, at the very least. We believe the experiment was helpful in getting funding to more grants without complaints from top earners, and allowed us to test our assumptions about removing categories.
+
+Barring a small [implementation error](https://gitcoin.co/blog/grants-round-12-matching-caps/) in the cap logic that was fixed mid-round, the matching cap operated as intended and resulted in a small number of high-funded grantees being capped off at the 2.5% threshold.
+
+All of this said, it is a subjective exercise to define what success of the matching cap looks like – success will depend on one’s philosophical stance on the QF mechanism and how much, if at all, caps should be involved to achieve more democratic outcomes for the long-tail of grantees.
+
+With that out of the way, some information for you to interpret as you please:
+
+**The numbers:***
+
+* In GR12, 10 of 758 grants (1.3% of grants) funded organically hit the matching cap of $25K
+
+* The total matching funds for these 10 grants represented 25% of the entire pool (10 grants x $25,000 = $250,000 on a $1M pool), and it would have been about 64% of the pool ($664,000) if we’d had no cap
+
+* So, as a result of the cap, $414K (= $664K - $250K) was redistributed to the remaining 748 grantees, with each grantee receiving about 1.7x their otherwise expected match as a result of this cap
+
+See also [this great analysis](https://docs.google.com/document/d/1DntTPVP9zGJtSYGerKG8OqJ_w1_-MDTHzF7WCT4yghw/edit) by FDD contributor @kylin on matching cap results.
+
+**Note: These numbers are based on the preliminary round results as of Dec 16. They should be interpreted as directional, as they do not include removals after-the-fact by FDD.*
+
+**And some qualitative data points:**
+
+* The Public Goods Funding workstream did not receive complaints about the cap amount from grantees or funders
+
+* In the [GR12 finale event](https://www.youtube.com/watch?v=W-doVjkkZbg&t=623s), Vitalik suggested the matching cap was a successful experiment, noting that “in some ways, it might even be accelerating Gitcoin finding its product-market fit”
+
+Unfortunately, we do not have the ability to do a concrete ‘what-if’ analysis directly comparing the GR12 results under a matching cap structure versus categories, because the underlying metadata isn’t there. Grants were no longer assigned a category as of GR12 – so without manually going in and assigning a category to each of the 1,000+ grants that came in after GR11, which we have not prioritized for obvious reasons, this analysis is not possible.
+
+So, with all of the information above – and [the full GR12 results](https://docs.google.com/spreadsheets/d/1eJ51CPSsFdNCGvezhhL5B-DiZ04jV4I4blGWFCiNCz4/edit) at your fingertips – we would love to hear from community members as to whether you agree that the cap was a success, and if & how we should continue with it in GR13.
+
+A statement from the PGF workstream:
+
+*We don't know for sure yet if the main pool approach works best long-term, but we do know that there were major benefits for a longer tail of grantees and that it exceeded our expectations despite bugs, and we think it's worth trying again before we drastically change course.*
+
+# **GR13 Proposal**
+
+The Public Goods Funding workstream proposes that the structure of the round remains the same for GR13 at a high-level.
+
+In summary, the structure of the round will have:
+
+* A Main Pool
+* Cause Rounds
+* Ecosystem Rounds
+
+Details on each:
+
+### **Main Pool**
+
+The GR13 main pool will be a single matching pool fund/distribution of $1,200,000 in matching for the round. No individual grant’s matching contribution amount shall exceed X% of the overall matching pool fund (i.e., $XK) – as voted on by the community (see options below).
+
+### **Cause Rounds**
+
+In addition to the main pool, Gitcoin DAO will continue to leverage the multisig as a pass-through for cause rounds (aka thematic rounds), funded by external sponsors for clear sets of global public goods. As part of our work with[ Other Internet](https://otherinter.net/research/positive-sum-worlds/), we received a wide range of submissions about[ new](https://gitcoin.co/blog/seeking-a-new-kind-of-public-good-closing-the-loop/)[ types](https://gitcoin.co/blog/seeking-a-new-kind-of-public-good-honorable-mentions/) of public goods we should consider funding beyond just web3. In GR12, we experimented with rounds on climate, blockchain advocacy, and human longevity with net new funds. These cause rounds are a foray into Gitcoin moving beyond Digital Public Goods, and into Public Goods more broadly.
+
+By all accounts, these cause round experiments were successful first tests. We raised $1.7M in matching funds across the three causes (more than the main round matching pool!), and have continued to see meaningful interest here – both from our usual Web3 partners as well as from some Web2 donors – moving into GR13.
+
+### **Ecosystem Rounds**
+
+Finally, the DAO will operate ecosystem rounds for groups like Uniswap and Polygon, as we have continued to do in the past. These are pass-through funds that are not drawn from the existing multisig balance.
+
+# **Vote**
+
+The Public Goods Funding workstream has outlined three options on which we would like the community’s input before moving to a Snapshot vote:
+
+### **Option 1: Main Pool @ 2.5%**
+
+Stick to exactly what we did in GR12.
+
+No individual grant’s matching contribution amount shall exceed 2.5% of the overall matching pool fund (i.e., $30K of the $1.2M pool).
+
+### **Option 2: Main Pool @ Different Percentage**
+
+Stick to the GR12 structure, but with a new percentage.
+
+No individual grant’s matching contribution amount shall exceed X% of the overall matching pool fund (i.e., $XK of the $1.2M pool).
+
+We would like to see community members perform their own analysis & propose percentages we might try in the comments on this post.
+
+### **Option 3: Alternative Community-led Proposal**
+
+Gitcoin Stewards and the wider community decide on a new matching breakdown and propose such. This could include going back to categories, or something entirely new. We encourage any Steward or community member to submit their own matching pool breakdown if there are ideas!
+
+Please submit your proposal this week so that we have sufficient time to incorporate it into the vote!
+
+# **Next Steps**
+
+Once we have feedback on both this and any other proposals, the Public Goods Funding workstream will gather all formal proposals and submit a Snapshot vote to decide which to move forward with.
+
+Please do not submit a snapshot vote for your proposal specifically! This just adds confusion and makes it harder for the community’s voice to be heard effectively.
+Tue, 01 Mar 2022 04:04:52 +0000
+📜 Proposals
+
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+kyle
+
+            <aside class="quote no-group" data-username="lefterisjp" data-post="17" data-topic="9915">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lefterisjp/48/24_2.png" class="avatar"> lefterisjp:</div>
+<blockquote>
+<p>In essence allow grant owners to specify how much they and their team needs for a given quarter and once that is reached that is the cap for the round</p>
+</blockquote>
+</aside>
+<p>I love this idea. Further, there may be a threshold that needs to be reached before any funding is given (ideally from individuals as well).</p>
+<p>For example, I post a project of something I am planning to do, but only commit to this idea if I can get $500 in funding. If I dont raise this amount, I will not move forward and the funds I did receive should be returned.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/20
+        Tue, 01 Mar 2022 04:04:52 +0000
+gov.gitcoin.co-post-9915-20
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+bestape
+
+            <p>I suggest if the “longevity” cap is included, the timer should start at a certain point in a project’s maturity. For instance, my Cheerbot project has been early-stage simmering for a bit, waiting for Web3 to get more involved in the Maker and IRL space. This finally seems to be happening if ETHDenver2022 is any indication!</p>
+<p>The more likely a project will make a big difference, because it’s a major innovation or paradigm shift, the more likely it’ll take time for that project to find the right moment of opportunity as the market catches up.</p>
+<p>I hope we don’t accidentally penalize forward thinking projects that pick patience out of prudence with a one-size-fits-all longevity cap.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/19
+        Tue, 01 Mar 2022 00:11:33 +0000
+gov.gitcoin.co-post-9915-19
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+krrisis
+
+            <p>Thanks for the superclear outline &amp; overview Annika!</p>
+<p>As a Steward I totally support option 1, although I’m open to support valid options that come through the community. Really a big fan of the cap, because it gets more funds to smaller projects. To be honest I hadn’t seen this explained clearly before, so appreciate this.</p>
+<p>I also support <a class="mention" href="https://gov.gitcoin.co/u/tjayrush">@tjayrush</a>’s addition to add a max amount to this cap, but maybe this is only necessary at a later stage - could be good to have two identical rounds in setup to compare data, as Scott suggests.</p>
+<p>Very supportive of this suggestion by Kyle, as Joe echoed as well :</p>
+<aside class="quote no-group" data-username="kyle" data-post="9" data-topic="9915">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Something to consider on the product side, is to evaluate if longevity of a project is worth factoring in. ie, projects formed in the last 6 months have a cap of 2.5% projects over 6 months in tenure have a 2% cap and projects over a year old get 1.5%.</p>
+</blockquote>
+</aside>
+<p>Supportive of this suggestion as well, could liberate even more funds for smaller projects:</p>
+<aside class="quote no-group" data-username="lefterisjp" data-post="17" data-topic="9915">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/lefterisjp/48/24_2.png" class="avatar"> lefterisjp:</div>
+<blockquote>
+<p>In essence allow grant owners to specify how much they and their team needs for a given quarter and once that is reached that is the cap for the round.</p>
+</blockquote>
+</aside>
+<p>With regard to the categories I think it’s important to keep on having these clearly on the site for easy navigation (even still a lot to improve here), having all funds into one category (excl side and ecosystem rounds) makes total sense. The distinction between funding categories &amp; thematic categories should be further clarified (although not an immediate solution there, I think it’s a lot for non gitcoin people - and even gitcoin people - to wrap their heads around), good thoughts by <a class="mention" href="https://gov.gitcoin.co/u/ceresstation">@ceresstation</a> on this above.</p>
+<p>(Just a reminder, a snapshot vote for this will suffice, as no gitcoinDAO funds will be moved)</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/18
+        Mon, 28 Feb 2022 23:20:48 +0000
+gov.gitcoin.co-post-9915-18
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+lefterisjp
+
+            <p>Thank you for putting this together <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a></p>
+<p>I think that judging by how GR12 went the cap did not have any bad side effects and it may have indeed helped so I see no reason to experiment too much with almost no time left for GR13.<br>
+So I will be supporting option (1). Indeed the cap could change but I don’t really have a good alternative suggestion. So for this round I would say we keep it as is. (Option 1).</p>
+<p>Something I said in the previous round and I would like to revisit and saw also others suggested is to make the system a bit more modular.</p>
+<p>In essence allow grant owners to specify how much they and their team needs for a given quarter and once that is reached that is the cap for the round. There should probably be another cap on top which should be the max they can get but I think this would optimize the rounds (assuming most grant owners are honest).</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/17
+        Sat, 26 Feb 2022 09:17:39 +0000
+gov.gitcoin.co-post-9915-17
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+David_Dyor
+
+            <p>I support option 1.  Love the idea of introducing a time/grant age factor.<br>
+Might as well get at least 2 rounds with same parameters so we can compare as per Scott.</p>
+<p>I support the continued increase of the matching pool for optics.  Could do 1.1 if 1.2 seems high.<br>
+Thanks for all the discussion on this.</p>
+<p>And to comment on Fishbiscuit’s post: I think offering more autonomy to the Ecosystem Round funders via choice on funding mechanism is very intriguing.  This ties in to some of the discussion about potentially having Ecosystem’s provide their own eligibility criteria AND reviewers.  Historically most Ecosystem Funders have decided to simply use GC platform criteria &amp; reviewers - but this is not easily scaled up or out.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/16
+        Thu, 24 Feb 2022 19:06:40 +0000
+gov.gitcoin.co-post-9915-16
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+erich
+
+            <p>Good call, Joe — here is a Pol.is conversation around the matching cap issue: <a href="https://pol.is/2n6ccsua2a" class="inline-onebox" rel="noopener nofollow ugc">Polis</a>. Everyone can feel free to share perspectives and vote on each other’s views in that link.</p>
+<p>Perhaps, we should also consider sharing this on social media and our Discord <a class="mention" href="https://gov.gitcoin.co/u/seedphrase">@seedphrase</a>, <a class="mention" href="https://gov.gitcoin.co/u/fred">@Fred</a>, and <a class="mention" href="https://gov.gitcoin.co/u/seanmac">@seanmac</a>.</p>
+<p>After two weeks or so, we can open a thread on the forum to highlight and discuss the Pol.is report with the discussion results. It will likely help us identify the related views with the most plural common ground in the community.</p>
+<p>Let me know if you have questions.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/15
+        Thu, 24 Feb 2022 19:01:33 +0000
+gov.gitcoin.co-post-9915-15
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+DisruptionJoe
+
+            <p>I like your assessment of how we should approach this issue. Perhaps it is late in the game for GR13, but we could look at this as well as Kyle’s idea prior to GR14.</p>
+<p>Maybe we could proactively assess GR13 to be able to give insights while the ops team gets input from the community using Polis to figure out what is most important.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/14
+        Thu, 24 Feb 2022 15:33:28 +0000
+gov.gitcoin.co-post-9915-14
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+kylin
+
+            <p>Thanks for putting it all together! <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a></p>
+<p>I would support figuring out a new percentage. 2.5% might be good, but I didn’t see sufficient reasons to justify this choice.</p>
+<p>The aim of introducing the cap is to prevent a few grants from dominating the matching pool and letting the rest get more funds. It seems to me that the vision of the re-distribution is not clearly stated. It would be good if we can set specific goals that we want to achieve by introducing the cap, like:</p>
+<ol>
+<li>~$5000 is generally enough for a grant in the short term. We want to see at least the top 5% grant could hit this amount.</li>
+<li>we aim to let half of the grants get at least $500 to help their development.</li>
+</ol>
+<p>With some explicit criteria like these, it will be easier to determine what percentage is optimal. I am very happy to work on this if more specific goals can be available.</p>
+<p>An alternative way perhaps is to let the owners of grants set up caps for themselves before a round starts - a sensible short-term amount that they will need between the current and next round. Once a grant hits its pre-specified cap,  the excess funds will be re-distributed. The advantage of doing this is each grant can have a separate cap rather than a fixed one. It seems more reasonable that projects of different scales/stages/difficulties would have different levels of caps?</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/13
+        Thu, 24 Feb 2022 09:37:03 +0000
+gov.gitcoin.co-post-9915-13
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+DisruptionJoe
+
+            <p>I agree with <a class="mention" href="https://gov.gitcoin.co/u/ceresstation">@ceresstation</a> thought on continually raising the amount, especially with the commitments mentioned.</p>
+<aside class="quote no-group" data-username="kyle" data-post="9" data-topic="9915">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Something to consider on the product side, is to evaluate if longevity of a project is worth factoring in. ie, projects formed in the last 6 months have a cap of 2.5% projects over 6 months in tenure have a 2% cap and projects over a year old get 1.5%.</p>
+</blockquote>
+</aside>
+<p>This is incredibly interesting mechanism design. I really like the intention of this idea. Let’s ask <a class="mention" href="https://gov.gitcoin.co/u/kylin">@kylin</a> for any insights into how we might better understand what this might look like.</p>
+<p>My reservation is that we haven’t done any discovery research into whether the community really wants to focus more on springboarding new grants vs continuous funding. A good way to get feedback would be the tool that Audrey Tang uses to solicit public opinion, Polis. <a class="mention" href="https://gov.gitcoin.co/u/erich">@erich</a> could help us set up a poll to run for a bit. Even if we don’t get the answer this round, it would be great to have the insights for the next rounds decision.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/12
+        Thu, 24 Feb 2022 05:38:32 +0000
+gov.gitcoin.co-post-9915-12
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+annika
+
+            <p>Appreciate these thoughts!</p>
+<p><strong>On round size:</strong></p>
+<p>We did toy between proposing $1M and $1.2M before bringing forth the latter. I echo <a class="mention" href="https://gov.gitcoin.co/u/ceresstation">@ceresstation</a>’s points - and will add that with how main pool contributions are coming in so far, we’re going to end up with a large majority of that $1.2M being net new funds earmarked specifically for GR13, which makes me feel good about the $1.2M route.</p>
+<p>At a more macro level on round size, IMO we should find ways to be more scientific / less subjective about this for future rounds. Principally, I agree with <a class="mention" href="https://gov.gitcoin.co/u/ceresstation">@ceresstation</a> that we should strive to be net zero on new funds each round. Given that we often get new contributions after this proposal is finalized, I wonder if we might shift to having the matching pool size ratified alongside payouts post-round, rather than pre-round with the allocations.</p>
+<p><strong>On project longevity as an input to cap amount:</strong></p>
+<p>I love this thought - given that a lot of the ethos of grants is around getting new projects off the ground, I agree that testing creative structures like this might better bootstrap early-stage innovation. Let’s explore this as we plan GR14! I’ll loop product in on the concept.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/11
+        Thu, 24 Feb 2022 04:18:18 +0000
+gov.gitcoin.co-post-9915-11
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+ceresstation
+
+            <p>A few quick thoughts on the round amounts, although I think the other points are interesting to consider:</p>
+<ol>
+<li>
+<p>Generally, we’ve increased matching pool amounts for the main pool (or equivalent categories) round over round, I’m actually not sure if keeping the main pool constant has been done before but I might actually be wrong on this.</p>
+</li>
+<li>
+<p>Part of the reason this has been done is that each time we agree to raise the matching pool we actually move closer to our goals (across several workstreams) of scaling our impact, we shouldn’t simply raise the pool to make things easier for ourselves here but we should also always err on the side of helping more grantees reach sustainability,</p>
+</li>
+<li>
+<p>I do think it’s important to figure out how to remain net zero on new funds each round, but in this upcoming round we’ll be receiving approximately $1.5m in total funds from matching partners in addition to the $4m in AKITA, so I think $1.2m would be a small increase relative to new funds, if net inflows were lower (despite the macro market) I’d be more inclined to hold back.</p>
+</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/10
+        Thu, 24 Feb 2022 03:06:52 +0000
+gov.gitcoin.co-post-9915-10
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+kyle
+
+            <aside class="quote no-group" data-username="annika" data-post="1" data-topic="9915">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>The GR13 main pool will be a single matching pool fund/distribution of $1,200,000 in matching for the round.</p>
+</blockquote>
+</aside>
+<p>I appreciate the post and thoughtful nature of the options. I would advocate we hold the round at $1MM given the market turbulence and the increased funding in the cause rounds. This is mostly an intuition thing from many rounds before, but I figured I would flag that for thoughts.</p>
+<aside class="quote no-group" data-username="annika" data-post="1" data-topic="9915">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>Option 2: Main Pool @ Different Percentage</p>
+</blockquote>
+</aside>
+<p>I was originally going to propose a smaller cap (1.5%) based on the work from Kylin, but Scott’s thoughts below have left me conflicted. I like the idea of not changing too much too quickly. So I will hold on that being a formal reccomendation.</p>
+<aside class="quote no-group" data-username="ceresstation" data-post="4" data-topic="9915">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ceresstation/48/11042_2.png" class="avatar"> ceresstation:</div>
+<blockquote>
+<p>To make sure we’re getting all the data we need, we should at least try the same options a couple of times over to make sure there are no anomalies (unless it’s immediately clear that the choices made were failures, which doesn’t seem to be true for GR12).</p>
+</blockquote>
+</aside>
+<p>One last thought - Gitcoin had been a beacon for funding when others were not offering funds. This enabled sustenance for many projects that have now grown immensely. I am continuing to think about we encourage new projects in the space to find their footing using a Gitcoin Grant, and to reward well established projects less and less.</p>
+<p>Something to consider on the product side, is to evaluate if longevity of a project is worth factoring in. ie, projects formed in the last 6 months have a cap of 2.5% projects over 6 months in tenure have a 2% cap and projects over a year old get 1.5%.</p>
+<p>This might help us bootstrap more projects and more innovation (though I recognize more ecosystems will fill this gap too).</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/9
+        Wed, 23 Feb 2022 23:29:44 +0000
+gov.gitcoin.co-post-9915-9
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+tjayrush
+
+            <p>This is great. Thanks so much for putting it together.</p>
+<p>I too support the cap. The choice of percentage is hard to make, of course. Sticking with the existing percentage (2.5%) seems totally reasonable.</p>
+<p>One thing we might anticipate, though, is that, as the total amount of matching funds goes up, we may wish to impose a hard-number limit as well.</p>
+<p>So perhaps, the cap becomes something like, “2.5% with an absolute max of XX US dollars.”</p>
+<p>In this way, as the amount of matching funds increases, more small projects would get more funding and the projects that are hitting the max are still doing very well (depending on XX).</p>
+<p>If a project is getting a couple of hundred thousand dollars per quarter (at some point in the future), I would argue that they should use some of those funds to hire a business consultant to figure out how to monetize.</p>
+<p>I much prefer a broad distribution than a concentrated one in the long run and 2.5% is totally arbitrary after all.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/8
+        Wed, 23 Feb 2022 13:28:11 +0000
+gov.gitcoin.co-post-9915-8
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+Fishbiscuit
+
+            <aside class="quote no-group" data-username="annika" data-post="1" data-topic="9915">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>GR12 Matching Pool Allocations</p>
+</blockquote>
+</aside>
+<p>For this proposal I think that Option 1 is reasonable as I agree that this format would help more builders in the space.</p>
+<p>However, there are potentially many new ways to experiment with grant funding mechanisms and it might be interesting to see how Uniswap or Polygon (or other ecosystem round funders) might want to try different grant funding mechanisms in the future to help nurture key projects in their own ecosystems. As a grant funder, they might have different funding priorities such as <a href="https://gitcoin.co/blog/polygon-creating-ecosystem-match-pool-for-gr12/" rel="noopener nofollow ugc">Polygon’s focus areas</a> when kickstarting their ecosystem round and designing a grant allocation mechanism that coordinates funding to these focus areas could become a new feature of ecosystem rounds too.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/7
+        Wed, 23 Feb 2022 06:18:13 +0000
+gov.gitcoin.co-post-9915-7
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+connor
+
+            <p>Thank you for this extremely thorough write-up <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a>! It very clearly lays out the results of the last round, and the justification for this GR13 proposal.</p>
+<p>Personally, I am in favor of option 1 - the 2.5% cap did a great job of distributing funds more widely to aspiring projects, and it would be great to gather more data using this same benchmark. If the community did opt to go for option 2 and try a different percentage, my feeling is that percentage should be smaller than 2.5%, not higher. But for consistency and simplicity, I’d love to see us go for option 1.</p>
+<p>I also appreciate how you laid out the differences between the main, cause, and ecosystem rounds. Looking forward to experimenting further with these alternate matching pools in the near future.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/6
+        Wed, 23 Feb 2022 00:21:26 +0000
+gov.gitcoin.co-post-9915-6
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+bobjiang
+
+            <p>First congratulations for the huge success in matching cap in GR12, you and the team did great! <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a></p>
+<p>I would support Option 1 (continuously) or Option 2 (if we could have another N% suggested, like 2%?)</p>
+<p>I am not sure what’s the impact if we choose 2%, could anyone simulate with GR12 data?<br>
+if we could have some detailed data, comparing 2% with 2.5% (existing), I would make a choice.</p>
+<p>Anyway, I am open to have other proposal for matching pool distribution.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/5
+        Tue, 22 Feb 2022 07:42:14 +0000
+gov.gitcoin.co-post-9915-5
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+ceresstation
+
+            <p>Would love to get the broader steward community’s view on this of course, but personally I want to echo the sentiment that Option 1 or Option 2 makes sense for GR13.</p>
+<p>In particular:</p>
+<ol>
+<li>I agree with <a class="mention" href="https://gov.gitcoin.co/u/seanmac">@seanmac</a> that it helps give a larger pool of builders the chance to raise sustainable funding; and that</li>
+<li>it helps us in turn scale the number of grantees that will be comfortable sticking around in following rounds without needing to scramble and look for funds elsewhere</li>
+</ol>
+<p>The case for Option 1 specifically for me comes down to the fact that we aren’t just funding public goods but running experiments in how these goods should be funded. To make sure we’re getting all the data we need, we should at least try the same options a couple of times over to make sure there are no anomalies (unless it’s immediately clear that the choices made were failures, which doesn’t seem to be true for GR12).</p>
+<p>One thing I’d eventually like to dive into deeper is how ecosystem rounds could effectively serve as a kind of replacement for independent categories, instead creating an overlapping mesh of different opportunities for grantees (e.g. we could imagine a project, like Dark Forest, that fits into a zktech round, an NFT round, and a gaming round). As <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> has mentioned, QF can stack:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/becb5df885aaa2704d879d476b90df306189df8a.png" data-download-href="/uploads/short-url/rdQqK29JHYMtFauMOw9KfKg2Mwq.png?dl=1" title="b606ff5a76790c5460a740cf9febb7a0826f5bd7_2_1380x862"><img src="/uploads/db4391/optimized/2X/b/becb5df885aaa2704d879d476b90df306189df8a_2_690x431.png" alt="b606ff5a76790c5460a740cf9febb7a0826f5bd7_2_1380x862" data-base62-sha1="rdQqK29JHYMtFauMOw9KfKg2Mwq" width="690" height="431" srcset="/uploads/db4391/optimized/2X/b/becb5df885aaa2704d879d476b90df306189df8a_2_690x431.png, /uploads/db4391/optimized/2X/b/becb5df885aaa2704d879d476b90df306189df8a_2_1035x646.png 1.5x, /uploads/db4391/optimized/2X/b/becb5df885aaa2704d879d476b90df306189df8a_2_1380x862.png 2x" data-small-upload="/uploads/db4391/optimized/2X/b/becb5df885aaa2704d879d476b90df306189df8a_2_10x10.png"></a></div><p></p>
+<p>However, this progression is already happening naturally, and is fully compatible with Option 1.</p>
+<p><strong>TL;DR:</strong> As always should be making sure we get the experiments we run right, and so pushing forward with Option 1 to measure twice / cut once would be my choice.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/4
+        Mon, 21 Feb 2022 15:01:59 +0000
+gov.gitcoin.co-post-9915-4
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+socal434
+
+            <p>I second this sentiment. Having the 2.5% helps to spread the wealth without totally limiting the bigger projects that have the ability to generate more hype through social media than the smaller or newer projects.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/3
+        Fri, 18 Feb 2022 20:15:18 +0000
+gov.gitcoin.co-post-9915-3
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+seanmac
+
+            <aside class="quote no-group" data-username="annika" data-post="1" data-topic="9915">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>as a result of the cap, $414K (= $664K - $250K) was redistributed to the remaining 748 grantees, with each grantee receiving about 1.7x their otherwise expected match as a result of this cap</p>
+</blockquote>
+</aside>
+<p>This is a very helpful stat. I like that more builders are benefiting with the cap in place, while the big projects are still doing very well.</p>
+<p>There are a few goals that are sometimes in tension here:</p>
+<ol>
+<li>to support builders working for the open internet &amp; the open economy… (more grants getting ~$5k/quarter)</li>
+<li>to allow the community to decide what projects are most deserving of matching funds (supports a less restrictive cap)</li>
+<li>to increase scale/impact of grants, which requires building awareness, comprehension &amp; support for QF/grants as a credible mechanism for allocating funds (simpler is better)</li>
+</ol>
+<p>To me, the 2.5% cap and this structure strikes approximately the right balance between these goals.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/2
+        Fri, 18 Feb 2022 17:23:16 +0000
+gov.gitcoin.co-post-9915-2
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+annika
+
+            <h1>
+<a name="summary-1" class="anchor" href="https://gov.gitcoin.co#summary-1"></a><strong>Summary</strong>
+</h1>
+<p>This proposal looks to discuss and finalize how funding allocations for the Gitcoin Grants Round 13 Matching Pool are distributed.</p>
+<p>After previous successful Grants Rounds, this proposal aims to continue community-owned decision making regarding the structure of the main matching pool.</p>
+<h1>
+<a name="gr12-matching-pool-results-2" class="anchor" href="https://gov.gitcoin.co#gr12-matching-pool-results-2"></a><strong>GR12 Matching Pool Results</strong>
+</h1>
+<h3>
+<a name="background-3" class="anchor" href="https://gov.gitcoin.co#background-3"></a><strong>Background</strong>
+</h3>
+<p>Prior to Grants Round 12, the pool was governed by categories that assigned specific percentages of the pool to grants in specific disciplines or geographies.</p>
+<p>In Grants Round 12, the community voted to run an experiment proposed by the Public Goods Funding workstream to test Vitalik’s theory that Quadratic Funding should be as effective at allocating funds as allocation via categories. By doing away with specific grant categories and having all grants listed together, we took a step towards simplifying and decentralizing matching. See <a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr12-matching-pool-allocations/9007/7">GR12 Matching Pool Allocations</a> brief for more context.</p>
+<h3>
+<a name="results-4" class="anchor" href="https://gov.gitcoin.co#results-4"></a><strong>Results</strong>
+</h3>
+<p>On the whole, the Public Goods Funding workstream believes the experiment was a success – directionally, at the very least. We believe the experiment was helpful in getting funding to more grants without complaints from top earners, and allowed us to test our assumptions about removing categories.</p>
+<p>Barring a small <a href="https://gitcoin.co/blog/grants-round-12-matching-caps/" rel="noopener nofollow ugc">implementation error</a> in the cap logic that was fixed mid-round, the matching cap operated as intended and resulted in a small number of high-funded grantees being capped off at the 2.5% threshold.</p>
+<p>All of this said, it is a subjective exercise to define what success of the matching cap looks like – success will depend on one’s philosophical stance on the QF mechanism and how much, if at all, caps should be involved to achieve more democratic outcomes for the long-tail of grantees.</p>
+<p>With that out of the way, some information for you to interpret as you please:</p>
+<p><strong>The numbers:</strong>*</p>
+<ul>
+<li>
+<p>In GR12, 10 of 758 grants (1.3% of grants) funded organically hit the matching cap of $25K</p>
+</li>
+<li>
+<p>The total matching funds for these 10 grants represented 25% of the entire pool (10 grants x $25,000 = $250,000 on a $1M pool), and it would have been about 64% of the pool ($664,000) if we’d had no cap</p>
+</li>
+<li>
+<p>So, as a result of the cap, $414K (= $664K - $250K) was redistributed to the remaining 748 grantees, with each grantee receiving about 1.7x their otherwise expected match as a result of this cap</p>
+</li>
+</ul>
+<p>See also <a href="https://docs.google.com/document/d/1DntTPVP9zGJtSYGerKG8OqJ_w1_-MDTHzF7WCT4yghw/edit" rel="noopener nofollow ugc">this great analysis</a> by FDD contributor <a class="mention" href="https://gov.gitcoin.co/u/kylin">@kylin</a> on matching cap results.</p>
+<p>*<em>Note: These numbers are based on the preliminary round results as of Dec 16. They should be interpreted as directional, as they do not include removals after-the-fact by FDD.</em></p>
+<p><strong>And some qualitative data points:</strong></p>
+<ul>
+<li>
+<p>The Public Goods Funding workstream did not receive complaints about the cap amount from grantees or funders</p>
+</li>
+<li>
+<p>In the <a href="https://www.youtube.com/watch?v=W-doVjkkZbg&amp;t=623s" rel="noopener nofollow ugc">GR12 finale event</a>, Vitalik suggested the matching cap was a successful experiment, noting that “in some ways, it might even be accelerating Gitcoin finding its product-market fit”</p>
+</li>
+</ul>
+<p>Unfortunately, we do not have the ability to do a concrete ‘what-if’ analysis directly comparing the GR12 results under a matching cap structure versus categories, because the underlying metadata isn’t there. Grants were no longer assigned a category as of GR12 – so without manually going in and assigning a category to each of the 1,000+ grants that came in after GR11, which we have not prioritized for obvious reasons, this analysis is not possible.</p>
+<p>So, with all of the information above – and <a href="https://docs.google.com/spreadsheets/d/1eJ51CPSsFdNCGvezhhL5B-DiZ04jV4I4blGWFCiNCz4/edit" rel="noopener nofollow ugc">the full GR12 results</a> at your fingertips – we would love to hear from community members as to whether you agree that the cap was a success, and if &amp; how we should continue with it in GR13.</p>
+<p>A statement from the PGF workstream:</p>
+<p><em>We don’t know for sure yet if the main pool approach works best long-term, but we do know that there were major benefits for a longer tail of grantees and that it exceeded our expectations despite bugs, and we think it’s worth trying again before we drastically change course.</em></p>
+<h1>
+<a name="gr13-proposal-5" class="anchor" href="https://gov.gitcoin.co#gr13-proposal-5"></a><strong>GR13 Proposal</strong>
+</h1>
+<p>The Public Goods Funding workstream proposes that the structure of the round remains the same for GR13 at a high-level.</p>
+<p>In summary, the structure of the round will have:</p>
+<ul>
+<li>A Main Pool</li>
+<li>Cause Rounds</li>
+<li>Ecosystem Rounds</li>
+</ul>
+<p>Details on each:</p>
+<h3>
+<a name="main-pool-6" class="anchor" href="https://gov.gitcoin.co#main-pool-6"></a><strong>Main Pool</strong>
+</h3>
+<p>The GR13 main pool will be a single matching pool fund/distribution of $1,200,000 in matching for the round. No individual grant’s matching contribution amount shall exceed X% of the overall matching pool fund (i.e., $XK) – as voted on by the community (see options below).</p>
+<h3>
+<a name="cause-rounds-7" class="anchor" href="https://gov.gitcoin.co#cause-rounds-7"></a><strong>Cause Rounds</strong>
+</h3>
+<p>In addition to the main pool, Gitcoin DAO will continue to leverage the multisig as a pass-through for cause rounds (aka thematic rounds), funded by external sponsors for clear sets of global public goods. As part of our work with<a href="https://otherinter.net/research/positive-sum-worlds/" rel="noopener nofollow ugc"> Other Internet</a>, we received a wide range of submissions about<a href="https://gitcoin.co/blog/seeking-a-new-kind-of-public-good-closing-the-loop/" rel="noopener nofollow ugc"> new</a><a href="https://gitcoin.co/blog/seeking-a-new-kind-of-public-good-honorable-mentions/" rel="noopener nofollow ugc"> types</a> of public goods we should consider funding beyond just web3. In GR12, we experimented with rounds on climate, blockchain advocacy, and human longevity with net new funds. These cause rounds are a foray into Gitcoin moving beyond Digital Public Goods, and into Public Goods more broadly.</p>
+<p>By all accounts, these cause round experiments were successful first tests. We raised $1.7M in matching funds across the three causes (more than the main round matching pool!), and have continued to see meaningful interest here – both from our usual Web3 partners as well as from some Web2 donors – moving into GR13.</p>
+<h3>
+<a name="ecosystem-rounds-8" class="anchor" href="https://gov.gitcoin.co#ecosystem-rounds-8"></a><strong>Ecosystem Rounds</strong>
+</h3>
+<p>Finally, the DAO will operate ecosystem rounds for groups like Uniswap and Polygon, as we have continued to do in the past. These are pass-through funds that are not drawn from the existing multisig balance.</p>
+<h1>
+<a name="vote-9" class="anchor" href="https://gov.gitcoin.co#vote-9"></a><strong>Vote</strong>
+</h1>
+<p>The Public Goods Funding workstream has outlined three options on which we would like the community’s input before moving to a Snapshot vote:</p>
+<h3>
+<a name="option-1-main-pool-25-10" class="anchor" href="https://gov.gitcoin.co#option-1-main-pool-25-10"></a><strong>Option 1: Main Pool @ 2.5%</strong>
+</h3>
+<p>Stick to exactly what we did in GR12.</p>
+<p>No individual grant’s matching contribution amount shall exceed 2.5% of the overall matching pool fund (i.e., $30K of the $1.2M pool).</p>
+<h3>
+<a name="option-2-main-pool-different-percentage-11" class="anchor" href="https://gov.gitcoin.co#option-2-main-pool-different-percentage-11"></a><strong>Option 2: Main Pool @ Different Percentage</strong>
+</h3>
+<p>Stick to the GR12 structure, but with a new percentage.</p>
+<p>No individual grant’s matching contribution amount shall exceed X% of the overall matching pool fund (i.e., $XK of the $1.2M pool).</p>
+<p>We would like to see community members perform their own analysis &amp; propose percentages we might try in the comments on this post.</p>
+<h3>
+<a name="option-3-alternative-community-led-proposal-12" class="anchor" href="https://gov.gitcoin.co#option-3-alternative-community-led-proposal-12"></a><strong>Option 3: Alternative Community-led Proposal</strong>
+</h3>
+<p>Gitcoin Stewards and the wider community decide on a new matching breakdown and propose such. This could include going back to categories, or something entirely new. We encourage any Steward or community member to submit their own matching pool breakdown if there are ideas!</p>
+<p>Please submit your proposal this week so that we have sufficient time to incorporate it into the vote!</p>
+<h1>
+<a name="next-steps-13" class="anchor" href="https://gov.gitcoin.co#next-steps-13"></a><strong>Next Steps</strong>
+</h1>
+<p>Once we have feedback on both this and any other proposals, the Public Goods Funding workstream will gather all formal proposals and submit a Snapshot vote to decide which to move forward with.</p>
+<p>Please do not submit a snapshot vote for your proposal specifically! This just adds confusion and makes it harder for the community’s voice to be heard effectively.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/1
+        Thu, 17 Feb 2022 22:18:42 +0000
+gov.gitcoin.co-post-9915-1
+[Proposal] Gitcoin GR13 Matching Pool Allocations
+      
+
+

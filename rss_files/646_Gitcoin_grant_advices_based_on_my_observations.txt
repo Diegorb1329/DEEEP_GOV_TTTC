@@ -1,0 +1,152 @@
+
+
+
+Gitcoin grant advices based on my observations
+https://gov.gitcoin.co/t/gitcoin-grant-advices-based-on-my-observations/10317
+    # What questions the Gitcoin users have
+There are some FAQs from Gitcoin users for the grant, you can find them from [Gitcoin support knowledge base](https://support.gitcoin.co/gitcoin-grants/grantee-questions).
+
+-  **Some Grant issues examples**
+		- in the beginning of GR13, some grantees didn't know why their grants are inactive.
+		- some grants are not in matching round grants
+		- for the denied grants, the grantees didn't know next steps clearly.
+		- for the appealed grants, the grantees didn't know the status.
+		- removing tags, the grantees didn't get notifications for the reasons.
+
+## Grants status
+
+Based on above issues we can see, there are several statuses for the grants, and I would introduce a bit here (please correct me if I am wrong, I am not the grant guru):
+
+- **new** - This is a “virtual” status, without mapping a real status in the database. The new grants are inactive and invisible from web UI.
+- **inactive** - The grant is inactive after being created by default. Once the grant is approved, it should be changed to be active. The grant could be set to inactive by the review team after reported and confirmed.
+- **opt in for clr** - Eligible to get matching funds from the matching pool. By default the grant is in clr status after approval, but the grantees could de-select clr matching by themselves.
+- **cancel (removed)** - The grant will be canceled (removed) from the database.
+
+## Advices for grant status
+Firstly it is very confused with the inactive status for the grantees, I would like to re-design the grant status like:
+
+- **new** This is a “virtual” status, without mapping a real status in the database. The new grants are inactive and invisible from web UI.
+- **review** The grant is in review phase, it may move to `need more info` or `denied` or `approved`
+- **need more info** If the review team cannot make decisions with existing information, the grant could be required to provide more info.
+- **denied** The grant is denied by review team
+- **approved (active)** The grant is approved and shown on Gitcoin web.
+- **dispute** The grant is flagged by the community and in dispute phase.
+- **appeal** The grant is in appeal phase (after denied, the grantee could appeal for the result.)
+- **cancel (removed)** The grant will be canceled (removed) from the database.
+
+So the happy path should be `new -> review -> approved`.
+
+The major changes are for `inactive` status, which has more meanings for now. Once the grant is in review or dispute or appeal phase, it could be inactive.
+
+Just make the status more clear and meaningful.
+I would not describe the details for grant process here, but would like to have deep talk with grant ops team.
+
+**grant tags**
+
+For the grant tags changes, we need a clear process interacting with the users. 
+
+## Grant policies
+
+For now the grant policies are emerging, and we need the clear current policies for the users. According new knowledge base (support) is live, the latest policies are here https://support.gitcoin.co/gitcoin-policy/policy
+
+But for appeal and dispute processes, we need to refine them. For example, there are still 2 stages for appeal process, and stake $15 (https://support.gitcoin.co/gitcoin-policy/policy/appeals/appeal-process-stage-1)
+Fri, 08 Apr 2022 21:33:55 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Gitcoin grant advices based on my observations
+David_Dyor
+
+            <p>Some good ideas here Bob.  Thanks for sharing your thoughts.</p>
+<aside class="quote no-group" data-username="bobjiang" data-post="1" data-topic="10317">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bobjiang/48/676_2.png" class="avatar"> bobjiang:</div>
+<blockquote>
+<p>But for appeal and dispute processes, we need to refine them. For example, there are still 2 stages for appeal process, and stake $15 (<a href="https://support.gitcoin.co/gitcoin-policy/policy/appeals/appeal-process-stage-1" rel="noopener nofollow ugc">Appeal Process - Stage 1 - Gitcoin support </a>)</p>
+</blockquote>
+</aside>
+<p>I updated the appeal and dispute process in the Knowledge Base as a result of the extensive discussions in gr13, but the update is not showing up in the link you provided.  I suspect this is because I am updating a version of the KB that is not propagating to the KB available on <a href="http://Gitcoin.co" rel="noopener nofollow ugc">Gitcoin.co</a>.</p>
+<p>Here is the link I use to access the KB, and which reflects the appeal process changes recently made (no more deposit required, much simpler, typeform to trigger appeal)<br>
+<a href="https://discovery-1.gitbook.io/gitcoin-knowledge-base/-MjC5KnuB6HdGrn7Kh8T/gitcoin-policy/policy/appeals/appeal-process-stage-1" class="onebox" target="_blank" rel="noopener nofollow ugc">https://discovery-1.gitbook.io/gitcoin-knowledge-base/-MjC5KnuB6HdGrn7Kh8T/gitcoin-policy/policy/appeals/appeal-process-stage-1</a></p>
+<p>I am a bit confused by the fact there are 2 KBs showing up when I log into Gitbook.  One has multiple language translations and one has just two, English and Chinese.  Both are within ‘Discovery.’  I took steps to verify the proper version but clearly revising the multi-language version KB was not enough if the old un-revised appeal process is still publicly available.  I will repeat all the updates into the second version today just to be safe.  This is what I see when I log into Gitbook:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4e2e6d95de687e3e901e1bcb4631735fc7f12930.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/4e2e6d95de687e3e901e1bcb4631735fc7f12930" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4e2e6d95de687e3e901e1bcb4631735fc7f12930_2_235x500.png" alt="image" data-base62-sha1="b9CIi2Sau5R47eBQ2xRLGoG9UwU" width="235" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4e2e6d95de687e3e901e1bcb4631735fc7f12930_2_235x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/4e2e6d95de687e3e901e1bcb4631735fc7f12930_2_352x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/4e2e6d95de687e3e901e1bcb4631735fc7f12930.png 2x" data-dominant-color="3A4155"></a></div><p></p>
+<p>I think this is related to dCompass and maybe I am updating a KB that never got approved for <a href="http://Gitcoin.co" rel="noopener nofollow ugc">Gitcoin.co</a> publication.  Not really sure…I am puzzled by this.  It would be helpful to know why two KBs are showing in Gitbook, or equally helpful, if I understood where the content you say is on the Support KB is coming from.</p>
+<p>Thanks again for point that out!</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grant-advices-based-on-my-observations/10317/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grant-advices-based-on-my-observations/10317/2
+        Fri, 08 Apr 2022 21:33:55 +0000
+gov.gitcoin.co-post-10317-2
+Gitcoin grant advices based on my observations
+      
+
+Gitcoin grant advices based on my observations
+bobjiang
+
+            <h1>
+<a name="what-questions-the-gitcoin-users-have-1" class="anchor" href="https://gov.gitcoin.co#what-questions-the-gitcoin-users-have-1"></a>What questions the Gitcoin users have</h1>
+<p>There are some FAQs from Gitcoin users for the grant, you can find them from <a href="https://support.gitcoin.co/gitcoin-grants/grantee-questions">Gitcoin support knowledge base</a>.</p>
+<ul>
+<li>
+<strong>Some Grant issues examples</strong><br>
+- in the beginning of GR13, some grantees didn’t know why their grants are inactive.<br>
+- some grants are not in matching round grants<br>
+- for the denied grants, the grantees didn’t know next steps clearly.<br>
+- for the appealed grants, the grantees didn’t know the status.<br>
+- removing tags, the grantees didn’t get notifications for the reasons.</li>
+</ul>
+<h2>
+<a name="grants-status-2" class="anchor" href="https://gov.gitcoin.co#grants-status-2"></a>Grants status</h2>
+<p>Based on above issues we can see, there are several statuses for the grants, and I would introduce a bit here (please correct me if I am wrong, I am not the grant guru):</p>
+<ul>
+<li>
+<strong>new</strong> - This is a “virtual” status, without mapping a real status in the database. The new grants are inactive and invisible from web UI.</li>
+<li>
+<strong>inactive</strong> - The grant is inactive after being created by default. Once the grant is approved, it should be changed to be active. The grant could be set to inactive by the review team after reported and confirmed.</li>
+<li>
+<strong>opt in for clr</strong> - Eligible to get matching funds from the matching pool. By default the grant is in clr status after approval, but the grantees could de-select clr matching by themselves.</li>
+<li>
+<strong>cancel (removed)</strong> - The grant will be canceled (removed) from the database.</li>
+</ul>
+<h2>
+<a name="advices-for-grant-status-3" class="anchor" href="https://gov.gitcoin.co#advices-for-grant-status-3"></a>Advices for grant status</h2>
+<p>Firstly it is very confused with the inactive status for the grantees, I would like to re-design the grant status like:</p>
+<ul>
+<li>
+<strong>new</strong> This is a “virtual” status, without mapping a real status in the database. The new grants are inactive and invisible from web UI.</li>
+<li>
+<strong>review</strong> The grant is in review phase, it may move to <code>need more info</code> or <code>denied</code> or <code>approved</code>
+</li>
+<li>
+<strong>need more info</strong> If the review team cannot make decisions with existing information, the grant could be required to provide more info.</li>
+<li>
+<strong>denied</strong> The grant is denied by review team</li>
+<li>
+<strong>approved (active)</strong> The grant is approved and shown on Gitcoin web.</li>
+<li>
+<strong>dispute</strong> The grant is flagged by the community and in dispute phase.</li>
+<li>
+<strong>appeal</strong> The grant is in appeal phase (after denied, the grantee could appeal for the result.)</li>
+<li>
+<strong>cancel (removed)</strong> The grant will be canceled (removed) from the database.</li>
+</ul>
+<p>So the happy path should be <code>new -&gt; review -&gt; approved</code>.</p>
+<p>The major changes are for <code>inactive</code> status, which has more meanings for now. Once the grant is in review or dispute or appeal phase, it could be inactive.</p>
+<p>Just make the status more clear and meaningful.<br>
+I would not describe the details for grant process here, but would like to have deep talk with grant ops team.</p>
+<p><strong>grant tags</strong></p>
+<p>For the grant tags changes, we need a clear process interacting with the users.</p>
+<h2>
+<a name="grant-policies-4" class="anchor" href="https://gov.gitcoin.co#grant-policies-4"></a>Grant policies</h2>
+<p>For now the grant policies are emerging, and we need the clear current policies for the users. According new knowledge base (support) is live, the latest policies are here <a href="https://support.gitcoin.co/gitcoin-policy/policy" class="inline-onebox">Policy - Gitcoin support</a></p>
+<p>But for appeal and dispute processes, we need to refine them. For example, there are still 2 stages for appeal process, and stake $15 (<a href="https://support.gitcoin.co/gitcoin-policy/policy/appeals/appeal-process-stage-1" class="inline-onebox">Appeal Process - Stage 1 - Gitcoin support</a>)</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grant-advices-based-on-my-observations/10317/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grant-advices-based-on-my-observations/10317/1
+        Thu, 07 Apr 2022 01:53:02 +0000
+gov.gitcoin.co-post-10317-1
+Gitcoin grant advices based on my observations
+      
+
+

@@ -1,0 +1,665 @@
+
+
+
+Systematic Exploration of the Coordination Mechanism Design Space
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616
+    # Systematic Exploration of the Coordination Mechanism Design Space
+
+Shrey Jain and Kevin Owocki 
+
+Gitcoin recently released Grants Stack, which is a set of modular tools that act as the scaffolding for any capital allocation construction. It acts as a structure to modularize all components of grants into standardized open-source modules for any DAO. It is with this modularity that any Grants module can slip-n-out of any Grants program without hurting the rest of the funding stack. 
+
+In traditional organizations, it is very challenging to replace governance mechanisms with new ones, even if the members that make up the organization desire a new tool. The modularity of governance mechanisms seen with the Gitcoin Grants stack enables iteration on such mechanisms that human coordination has never experienced. 
+
+With all of these new tools, a question remains, what combination of modules is right for our community? 
+
+Of course, Gitcoin is known for Quadratic Funding (specifically, pairwise Quadratic Funding), but what other coordination mechanisms could be built into Grants Stack.
+
+This post aims at providing a pragmatic approach on how Gitcoin can run an experiment to better understand which mechanisms work for different types of communities. 
+
+## **Hyperparameter sweep on coordination mechanisms**
+
+In machine learning, a [hyperparameter sweep](https://en.wikipedia.org/wiki/Hyperparameter_optimization) is the process of training machine learning models with various different values of hyperparameters (learning rate, activation functions, training data size, etc.). For a given model, the calibration of one set of hyperparameters may work very well in one context but very poorly in another.
+
+We want to apply this concept to figuring out what models of coordination mechanisms work best in a given community. There are many different types of mechanisms that can be used for resource allocation, some of which include: quadratic funding, MACI quadratic funding, cluster-wise quadratic funding, subscriptions, demurrage, dominant assurance contracts, ranked-choice voting, and much more.
+
+Gitcoin founder Kevin Owocki and Giveth founder Griff Green recently did a podcast in which they discussed ~30 Coordination mechanisms [[link]](https://medium.com/giveth/coordination-mechanisms-notes-from-a-conversation-with-griff-green-kevin-owocki-af95f3e831b1). The mechanisms listed in this podcast could serve as a backlog of mechanisms that could be built into Grants Stack.
+
+**![|265x372](upload://oNjuVHCW66CRUElfDRQBHSGHGYa.jpeg)**
+
+A parameter sweep for coordination mechanisms would first require us to build all of the various different mechanisms that could be incorporated into an upcoming Grants round.
+
+We could then run simulated rounds on each of these different combinations to see how capital is allocated and determine what mechanism is most optimal for a given setting.
+
+
+![|624x321](upload://cCoHDihsrqtfngeI92Evc0ZAhfp.jpeg)
+
+
+The creation of these simulated rounds and the testing of which ones meet the heuristic of funding our shared needs, is essentially exploring the fitness landscape within this search space.
+
+Once the fitness landscape is mapped, we could then look for the global maxima of coordination mechanisms that help us meet the heuristic.
+
+Of course, different communities will have different value sets so they will have different fitness landscapes. Part of the exploration of this design space will mean figuring out different types of communities and how they define their heuristics of what they want to fund.
+
+
+
+![|624x348](upload://5gIZTPBqxxrCIcwN22q5cZHOvU4.jpeg)
+
+Right now, we know that the fitness landscape for the Ethereum ecosystem (Grants v1 explored this design space) looks kind of like this:
+
+![|624x347](upload://3NF0oCa9mH8S8tDlNJL1Wt3Un9u.jpeg)
+
+# Future Work
+
+If there is consensus that this is a direction of research that is worth exploring, then we recommend that
+
+1. GitcoinDAO create a prioritized backlog of coordination mechanisms to be built
+2. Gitcoin’s community of developers can build these coordination mechanisms
+3. Simulated Rounds will be run on top of these coordination mechanisms
+4. We will have started to traverse the design the design space of coordination mechanisms
+5. (Repeat 1-4 in an [OODA loop](https://community.supermodular.xyz/t/ooda-loops-for-fun-profit/133) until we’ve fully traversed the design space)
+
+In addition to the process we outline to determine a given social spaces coordination global maxima, we can reference the many tools created by https://metagov.org/ and https://www.radicalxchange.org/ along with what we can expect to see from https://supermodular.xyz/.
+Mon, 18 Sep 2023 16:48:55 +0000
+🤖 DAO Governance and Vision
+
+
+Systematic Exploration of the Coordination Mechanism Design Space
+PaigeDAO
+
+            <p>This is probly not the correct thread to add this to (please advise) but wanted to respond to <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a> and also pick up on the note in today’s newsletter by <a class="mention" href="https://gov.gitcoin.co/u/gaoa97">@gaoa97</a> about <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> open to hearing about Gitcoin-related projects to dig his hands into for this next phase his participation. And would like to loop in <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> and also <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a> and <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a> …</p>
+<p>Janine mentions here above about Gitcoin being ‘conservative with its capital’.</p>
+<p>This pipe dream/ proposal is an attempt to imagine RWA investments that could accrue value over time as well as diversify the DAO’s / Foundation’s holdings.</p>
+<p>It could also very well just be a pipe dream…</p>
+<p><strong>PROPOSAL: Gitcoin Schelling Point France</strong></p>
+<p>Firstly, let me say that this is not in any way a competition to Zuzalu. (afaik that’s a different, and very cool, vision)</p>
+<p>Gitcoin Schelling Point France can be a wholly Gitcoin community ecovillage.</p>
+<p><strong>WHAT:</strong> In France there are whole villages for sale such as in the S. of France. Yes, they are dilapidated stone buildings and mostly isolated and in need of massive restoration and development. But contrast purchasing a 20 room chateau with the possibility to purchase an entire village for about 3 Million Euro.</p>
+<p>Another possibility would be to invest in a vineyard with its manor and outbuildings which would come with enough property to construct tiny homes across the fields. We could perhaps solicit co-branding for the tiny homes to gather development funds support. The vineyard could be functional and produce wine for the guests and residents. Gitcoiners and their families could reserve in advance to help with the ‘vendange’ (harvest) each year.</p>
+<p>Pipe dream?</p>
+<p>Perhaps… But <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a> and I had a good time imagining such a scenario during our conversations at ETHCC in Paris this summer.</p>
+<p>I don’t expect that we’d be as successful as, say, Jimmy Buffett’s Margarataville resorts (valued at $1B today I believe). But we could work towards that direction.</p>
+<p>If we went towards the EcoVillage concept (not so much the vineyard and winery) then perhaps we could make strategic partnerships with tech companies that would use the village as a tech showcase for remote, self-sustainable autonomy without sacrificing quality of life. Services that come to mind are solar panels, internet connectivity, water purification, vertical gardens.</p>
+<p>I know I am getting carried away here with a Solar Punk vision. Maybe this is simply Gitcoin x Schelling Point France x Solar Punk?</p>
+<p>Like I said above, maybe this is just a pipe dream. But from an investment diversification standpoint, property holds its value, tourism (even if it’s eco tourism just for our community of Gitcoiners) will not be affected by AI like other industries, and, hey, who doesn’t want to spend time every year in the South of France picking grapes, eating French cheese and teaching your kids how to speak French on Duolinga?</p>
+<p>WDYT?</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/23
+        Mon, 18 Sep 2023 16:48:55 +0000
+gov.gitcoin.co-post-12616-23
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+jengajojo
+
+            <p>If the DAO is being conservative with it’s capital, then it’s best to prioritize those strategies which have the highest potential for usage immediately after deployment. Maybe there can be an initial market research with existing partners on which strategies maybe immediately relevant or which problems do we predict each of the strategies solve and cross reference those with the problems highlighted by the partner communities.</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/22
+        Mon, 18 Sep 2023 06:46:30 +0000
+gov.gitcoin.co-post-12616-22
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+owocki
+
+            <p>Reviving this topic now that Allo Protocol v2 is approaching launch.</p>
+<p>I wonder in what ways we might prioritize the creation of Allo Strategies for some of the ideas in this thread.</p>
+<p>Allo v1 uses Quadratic Funding to allocate capital. Allo v2 could use many different ones… but which ones should we prioritize first?</p>
+<p>I think it makes sense to prioritze the ones with the largest TAMs in web3 for now.  And especially the ones where there is an unmet need in the market.</p>
+<p>It may also make sense to weight simpler mechanisms first.  More complex mechanisms requiring oracles for examples, we might want to sequence in a later iteration.</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/21
+        Sun, 17 Sep 2023 23:03:31 +0000
+gov.gitcoin.co-post-12616-21
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+DisruptionJoe
+
+            <p>I really appreciate you taking the time to share your expertise here. Thank you.</p>
+<p>Here is an under visited thread with direct recommendations for others who are monitoring this thread: <a href="https://gov.gitcoin.co/t/tax-mechanisms-for-gitcoin-grants/12764" class="inline-onebox">Tax Mechanisms for GitCoin Grants</a></p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/20
+        Tue, 14 Feb 2023 00:29:30 +0000
+gov.gitcoin.co-post-12616-20
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+nikete
+
+            <p>One line of attack for exploring the mechanism design space around quadratic funding is how special is the quadratic really? So exploring the functional parametrization of the mechanism.  Since the underlying task seems like it can be cast as belief elicitation (where those beliefs are about preferred states of the world) I conjecture that you can replace the pairwise quadratic with any other proper scoring rule and get a mechanism that is better in some situations and worse in others (where different proper score rules correspond to different prior beliefs in some sense). For something with a related flavor, see <a href="https://arxiv.org/pdf/2302.00196v1.pdf" rel="noopener nofollow ugc">https://arxiv.org/pdf/2302.00196v1.pdf</a></p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/19
+        Fri, 10 Feb 2023 15:07:05 +0000
+gov.gitcoin.co-post-12616-19
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+dazzsherly
+
+            <p>Great stuff thanks for sharing</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/18
+        Fri, 10 Feb 2023 13:06:44 +0000
+gov.gitcoin.co-post-12616-18
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+griff
+
+            <p>I really like the concept of building in an interoperable way, that makes it easy to allocate funding to projects. The key pieces here are the Registry and Sybil protection. Getting those solid, and designing &amp; documenting the interfaces well will be the keys to success IMO.</p>
+<p>It shouldn’t be on Gitcoin alone to build this stack, we should lock down our core pieces and then let the other open source devs go wild with using it! One issue tho… the sybil protection is seemingly still very difficult to use.</p>
+<p>For example, GM is developing <a href="https://pairwise.generalmagic.io/" rel="noopener nofollow ugc">Pairwise</a> and I think once we solidify some funding integrating the registry and passport is a no brainer to be on the roadmap… but how do we (and any other group) integrate the post-round sybil analysis?</p>
+<p>How does a group get that done? What would/could/should that look like? Is it a paid service from GitcoinDAO… ?</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/17
+        Sun, 05 Feb 2023 16:55:26 +0000
+gov.gitcoin.co-post-12616-17
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+octopus
+
+            <p>I would like to suggest a few possible ideas for this:</p>
+<p>Overall, my concern is about too small a set of pre-selected mechanisms being explored, and computation/simulation being used where analysis gives more insight.</p>
+<p>The paper that proves “QF is optimal” explicitly states that the assumption for the math problem is that unique identities are enforced, i.e. no sybils. Since that isn’t the real world in which GitCoin operates, implementing QF has required a huge Sybil resistance cost.</p>
+<p>Here are a few ideas:</p>
+<ol>
+<li>
+<p>There are known sybil-resistant distribution mechanisms in literature; there’s a recent paper that discusses them. Try incorporating some of these?</p>
+</li>
+<li>
+<p>Having the community design a small test set of situations, which are of most interest. Human understanding/comfort are an important metric which can’t show up in simulations.</p>
+</li>
+<li>
+<p>I’d like to suggest one concrete metrics for exploring the mechanism space.</p>
+</li>
+</ol>
+<p>Mechanism alpha: Suppose we have a funding mechanism F(x) that takes a vector x of contributions and returns a number (which is then used to determine funding allocations by taking the proportion of that number compared to other numbers).</p>
+<p>Let w be the vector (1.0/n) * np.ones(n).</p>
+<p>One thing to look at would be F(w)/F((1.0,))</p>
+<p>In other words, how much more does a project get for N contributions of 1.0/N, compared to a single contribution of 1.0?</p>
+<p>For regular Quadratic Funding, this ratio grows like N, which makes sybils incredibly attractive. For 1Token1Vote (regular “total” voting), this ratio is constant, which gives no difference for popular support. Measuring this for a proposed metric shows how attractive making a larger Sybil would be.</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/16
+        Sun, 05 Feb 2023 01:52:55 +0000
+gov.gitcoin.co-post-12616-16
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+llllvvuu
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="14" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>This is an interesting discussion. I’ve recently been presented a viewpoint that no one wants to deal with this Wordpress like system. What works now are things like Medium, Substack, or maybe Mirror in web 3. Systems that just work.</p>
+</blockquote>
+</aside>
+<p>I’m sympathetic to this viewpoint. And I’m also sympathetic to the evolutionary argument you make further below. Maybe Gitcoin doesn’t have to quite be Medium, because it’s not as B2C. A middle ground could be investing heavily in DevRel or even forward deploying. So like suppose a Grants Protocol user wants to do an experiment on some variant of Hypercerts and there isn’t a plug-in for it yet. Gitcoin could deploy a few engineering hours to help them build that out and then they could take over in terms of administering it and collecting and analyzing the data. And we can talk about how to make that sustainable (is it a bespoke thing Gitcoin charges for or is it already included in the support plan for paying protocol users).</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/15
+        Wed, 25 Jan 2023 11:46:16 +0000
+gov.gitcoin.co-post-12616-15
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="llllvvuu" data-post="9" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/llllvvuu/48/6936_2.png" class="avatar"> llllvvuu:</div>
+<blockquote>
+<p>This sounds right, unless Gitcoin wants to dedicate resources to building, testing, iterating on, and documenting ~30 coordination mechanisms in-house (and surely there will be more in the future).</p>
+</blockquote>
+</aside>
+<p>This is an interesting discussion. I’ve recently been presented a viewpoint that no one wants to deal with this Wordpress like system. What works now are things like Medium, Substack, or maybe Mirror in web 3. Systems that just work.</p>
+<p>My counter was that in the timeline for democratization of INFORMATION, we needed a Wordpress for us to accelerate the evolutionary trials which eventually brought us to a state where we know what the best ways for communities to distribute information is. However, in the progression of democratization of VALUE, we still need the system that crowdsources the intelligence to speedrun the evolutionary process to find which systems work best for us.</p>
+<p>Now do I believe this? I don’t even have strong opinions held loosely yet. I’m hoping to hear some good arguments either way here.</p>
+<p>What are your thoughts on this?</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/14
+        Wed, 25 Jan 2023 10:56:59 +0000
+gov.gitcoin.co-post-12616-14
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+ceresstation
+
+            <blockquote>
+<p>In machine learning, a <a href="https://en.wikipedia.org/wiki/Hyperparameter_optimization" rel="noopener nofollow ugc">hyperparameter sweep</a> is the process of training machine learning models with various different values of hyperparameters (learning rate, activation functions, training data size, etc.). For a given model, the calibration of one set of hyperparameters may work very well in one context but very poorly in another.</p>
+</blockquote>
+<p>Really love the idea of running an experiment like this, I’ve actually been talking to <a href="https://artizen.fund/" rel="noopener nofollow ugc">Artizen</a> and a few others about participating in something like this.</p>
+<p>One trade-off space I’ve been thinking a lot about is between fully centralized expert decision-making and fully decentralized community decision-making.  This work has already been started at a small scale by Vitalik in the context of his review of <a href="https://vitalik.ca/general/2021/11/16/retro1.html" rel="noopener nofollow ugc">retroPGF</a>, which does a good job outlining how the current pairwise QF model seems to find a greater breadth of projects in a given domain, but possibly with lower average relevance (as defined by some domain expert).</p>
+<p>If we understand this space well then we can start to define how experts <em>interact</em> with community mechanisms in a way that helps us expand the boundary of how effective these mechanisms can be (which could pair well with existing work on <a href="https://research.protocol.ai/publications/generalized-impact-evaluators/" rel="noopener nofollow ugc">hypercerts</a>).</p>
+<blockquote>
+<p>Part of the exploration of this design space will mean figuring out different types of communities and how they define their heuristics of what they want to fund.</p>
+</blockquote>
+<p>As <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a> mentioned we’re actively working to launch the protocol which means we can start to help source some of these heuristics and map out the spaces to run through in the simulated rounds. Let us know what the next steps / ideal timeline would look like to help on this front!</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/13
+        Tue, 24 Jan 2023 16:21:42 +0000
+gov.gitcoin.co-post-12616-13
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+PaigeDAO
+
+            <p>Listening now.<br>
+Thank you for all this informative content!</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/12
+        Tue, 24 Jan 2023 11:13:29 +0000
+gov.gitcoin.co-post-12616-12
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+J9leger
+
+            <p>Appreciate the conversation here. These concepts of the possibilities of building on the protocol is what makes the Allo protocol so exciting and why we’re working hard to launch it as soon as possible.</p>
+<aside class="quote no-group" data-username="owocki" data-post="4" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>insofar as anyone else who would be pursuing such a strategy (hopefully they’d just build on Grants Stack instead), no other web3-era grants software suite is going be such a swiss army knife.</p>
+</blockquote>
+</aside>
+<p>GPC is actively working to build every module in a flexible way for people to easily see opportunities to build additional elements, such as alternative funding mechanisms or grant review processes etc.</p>
+<p>First, we’re working toward having runbooks for QF rounds on the protocol and info for how to build on the protocol by March.</p>
+<p>Ideally then, as a step 2, everyone who wants to build can test the protocol whether diving in and running full QF rounds or going in and running a small “simulated round” similar to what <a href="https://gov.gitcoin.co/t/grants-protocol-simulated-rounds-post-op-summary/12609">Gitcoin did in December</a> to learn about the grants stack flow. Dev’s could run simulated rounds to get a sense of where there is opportunity to build, what mechanisms they are most excited about and want to build and go from there without Gitcoin prescribing what people should build and how.</p>
+<p>This means <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> you can spin your OODA Loops as fast as you want and the broader community gets to benefit from it.</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/11
+        Mon, 23 Jan 2023 21:11:50 +0000
+gov.gitcoin.co-post-12616-11
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+DisruptionJoe
+
+            <p>Yes. This is exactly on point with how I’ve been envisioning it. Not to say there aren’t other correct ways, but the way I see is basically this with a subtraction mindset as a first principle. If there is a private business market that can sustain an effort, then Gitcoin shouldn’t be the one doing it. Gitcoin should focus on the ecosystem’s public goods - continually improving infrastructure, composability/compatibility, education, and extracting lore from the successes within the ecosystem.</p>
+<p>Mutual grant investments in spinouts from workstreams would let us capitalize on this and perhaps accelerate the rate at which sustainable businesses are available. It would be like Gitcoin building a city with roads, plumbing and electricity, but there are no grocery stores or gas stations. We could subsidize their path to sustainability and potentially invest in them, but when a new company comes around wanting to own gas stations and grocery stores, we would likely have to divest at that time. How would we set this community trigger? By GTC holders telling us when!!!</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/10
+        Mon, 23 Jan 2023 13:13:28 +0000
+gov.gitcoin.co-post-12616-10
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+llllvvuu
+
+            <aside class="quote no-group" data-username="owocki" data-post="4" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Or is Grants Stack more like Wordpress, a minimal tool with an active developer community around it and lots of plugins that can be built in to extend it?</p>
+</blockquote>
+</aside>
+<p>This sounds right, unless Gitcoin wants to dedicate resources to building, testing, iterating on, and documenting ~30 coordination mechanisms in-house (and surely there will be more in the future).</p>
+<p>We could also reason that such a developer community would also be a user community and take a lot of the OODA loop into their own hands. (e.g. suppose a Grants Protocol user were to develop a “HyperCerts” plugin, they would likely have their own report of the data, insights, etc - with ODC tools and support). Of course, Gitcoin would still need to have a head of plugins, to lead SDK, curation, collaborations, etc. For “front-page” plugins we might even want to forward deploy resources to make sure they are very well polished and documented.</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/9
+        Mon, 23 Jan 2023 09:20:23 +0000
+gov.gitcoin.co-post-12616-9
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="owocki" data-post="6" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Or put into an OODA loop language:</p>
+<ol>
+<li>They <strong>observe</strong> a need in market</li>
+<li>They <strong>orient</strong> about how Grants Stack + other money legos could meet that need.</li>
+<li>They <strong>decide</strong> to run a test.</li>
+<li>They <strong>act</strong> to execute the test.</li>
+<li>(repeat)</li>
+</ol>
+</blockquote>
+</aside>
+<p>Good question. All three are good starting points for sparking the fire.</p>
+<p>The first two are Orient stage. There will likely be multiple OODA loops running in parallel. Some will be within a workstream and some between.</p>
+<ol>
+<li>
+<p>The Grants Program has the ability to <strong>observe</strong> and understand all the rounds, in and out, of the program with the help of business intelligence / Open Data. They can then <strong>orient</strong> around what tests might reveal a most impactful learning, <strong>decide</strong> on an experiment to run in the Gitcoin Program, and run the test (<strong>action</strong>). Most other programs aren’t likely to have multiple rounds active, the technical ability to run a/b tests within and between rounds, or the deep understanding of the Gitcoin team.</p>
+</li>
+<li>
+<p>The wishlists for DevRel might be orientation derived from <strong>observations</strong> made primarily by program managers. It might be something like, “Reviewing grants at scale is costly and difficult to be consistent.” DevRel can now include this in a backlog of cool things to build. At the same time, business intelligence might do an assessment of each backlog item’s potential impact, thus <strong>orienting</strong> the decentralized community on what the top priority builds are. It is up to the community to <strong>decide</strong> what to build, but we are more likely to get useful builds (<strong>action</strong>) if the devs know what is needed, how much impact it could have, and support when they need it.</p>
+</li>
+<li>
+<p>This one is more about the simulation &amp; hyperparameter sweeps. Lets say you keep all funding stack functions constant except for the funding mechanism. We generate synthetic data and run millions of simulations to better understand what mechanisms are directional good ideas. You might consider this the entire OODA loop, or maybe a sub-loop of a larger loop. This "sub-loop’ is simply the process that orients in the larger loop which then goes and tests the finding in a live grants round. Containerizing the code with some standardization could allow for this larger OODA loop to run faster.</p>
+</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/8
+        Sun, 22 Jan 2023 09:33:37 +0000
+gov.gitcoin.co-post-12616-8
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+llllvvuu
+
+            <aside class="quote no-group" data-username="owocki" data-post="4" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>i think explaining Quadratic Funding is kind of complicated, so i have a lot of empathy for how hard it is to educate people about these mechanisms.</p>
+<p>over time i’ve learned to create <a href="https://www.youtube.com/watch?v=HJljTtLnymE" rel="noopener nofollow ugc">explainer videos </a> or show live examples to people is one of the easiest way to explain the mechanisms.</p>
+<p>but is the juice worth the squeeze?</p>
+</blockquote>
+</aside>
+<p>My thoughts on education:</p>
+<p>I don’t think it’s necessary to push users to learn a lot about the protocol, because most people just want to use it. In this regard, I think the way Alpha Round works right now is actually fine; it only namedrops QF once and I’m not even sure that’s necessary - it could also easily say something to the effect of “sponsors will amplify your donation (<a href="https://wtfisqf.com/?grant=&amp;grant=&amp;grant=&amp;grant=&amp;match=1000" rel="noopener nofollow ugc">how does this work?</a>)”.</p>
+<p>Similarly, I don’t feel like passports need to namedrop stuff like “Sybil attacks” and “voting power” - the concept of identity verification should be self-explanatory (there can be a link for “how can people cheat the system?” to learn more).</p>
+<p>A barbell strategy could be good I think. For a minority of the population - the skeptics and power users - they should be able to see in excruciating detail and dryness documentation of all the rationale, math proofs, attack analyses, open problems and research directions, etc. This is because this small minority <a href="https://sloanreview.mit.edu/article/the-user-innovation-revolution" rel="noopener nofollow ugc">can disproportionally drive</a> marketing, ideas, feedback, etc. But the average user doesn’t need any of this. They don’t even need to know what the word “quadratic” means.</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/7
+        Sun, 22 Jan 2023 02:31:46 +0000
+gov.gitcoin.co-post-12616-7
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+owocki
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="5" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>I see the OODA loop your refer to involving the following pieces:</p>
+<ul>
+<li>Crafted experimentation using the Gitcoin Program - Based on business intelligence and understanding of optimal capital allocation</li>
+<li>Prioritized wish lists for DevRel to help get built - Based on business intelligence combining our highest impact levers and our program managers most pressing needs</li>
+<li>Simulation experimentation where funding mechanism code can basically be swapped from simulation to live round calculations with ease</li>
+</ul>
+</blockquote>
+</aside>
+<p>IMO the loop looks somewhat like the scientific method.</p>
+<ol>
+<li>Someone has a testable hypothesis.</li>
+<li>They run an experiment to validate the hypothesis.</li>
+<li>They gather the results.</li>
+<li>They disseminate learnings.</li>
+<li>(repeat with updated information)</li>
+</ol>
+<p>Or put into an OODA loop language:</p>
+<ol>
+<li>They <strong>observe</strong> a need in market</li>
+<li>They <strong>orient</strong> about how Grants Stack + other money legos could meet that need.</li>
+<li>They <strong>decide</strong> to run a test.</li>
+<li>They <strong>act</strong> to execute the test.</li>
+<li>(repeat)</li>
+</ol>
+<p>I’m not sure how this jibes with your thought below, maybe like this?</p>
+<ol>
+<li>the experimentation or simulation = decide/act.</li>
+<li>the business intelligence + prioritized wish list = orienting?</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/6
+        Sat, 21 Jan 2023 23:39:13 +0000
+gov.gitcoin.co-post-12616-6
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="owocki" data-post="4" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>i can see four types of rounds (one real + three simulated):</p>
+<ol start="0">
+<li><em>[high level of effort]</em> - <strong>live</strong> - real humans doing their JTBDs</li>
+<li><em>[medium level of effort]</em> - <strong>simulated + human action needed</strong> - data created by real people, staffed by someone who wants experimental data results</li>
+<li><em>[low level of effort]</em> - <strong>simulated + computer agent action</strong> - data created by simulated people, staffed by someone who wants experimental data results</li>
+<li><em>[very low level of effort]</em> - <strong>simulated + data analysis</strong> - takes data created by rounds types 1 and 2 and tries to derive new analytic insights from them.</li>
+</ol>
+</blockquote>
+</aside>
+<p>The prioritization through impact and feasibility here is great. I think the entire community can help and that this is likely something the Open Data Community will be perfectly set up to execute!</p>
+<p>I see the OODA loop your refer to involving the following pieces:</p>
+<ul>
+<li>Crafted experimentation using the Gitcoin Program - Based on business intelligence and understanding of optimal capital allocation</li>
+<li>Prioritized wish lists for DevRel to help get built - Based on business intelligence combining our highest impact levers and our program managers most pressing needs</li>
+<li>Simulation experimentation where funding mechanism code can basically be swapped from simulation to live round calculations with ease</li>
+</ul>
+<p>I’m sure there are plenty of others. Exciting time to be building Supermodular on the Gitcoin ecosystem.</p>
+<p>I also just posted this <a href="https://gov.gitcoin.co/t/an-interactive-model-for-gitcoin-revenue-growth-forecasting/12625">growth and revenue forecasting model</a>.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2679cbc4104d9cb6df286e23eb9216967209a8d5.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/2679cbc4104d9cb6df286e23eb9216967209a8d5" title="Image 2023-01-21 at 6.44.23 PM (1)"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2679cbc4104d9cb6df286e23eb9216967209a8d5_2_690x334.jpeg" alt="Image 2023-01-21 at 6.44.23 PM (1)" data-base62-sha1="5un5BXaQ7e1CySOWmaYBXyEKLNH" width="690" height="334" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2679cbc4104d9cb6df286e23eb9216967209a8d5_2_690x334.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2679cbc4104d9cb6df286e23eb9216967209a8d5_2_1035x501.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2679cbc4104d9cb6df286e23eb9216967209a8d5_2_1380x668.jpeg 2x" data-dominant-color="C4B7D2"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/5
+        Sat, 21 Jan 2023 19:43:02 +0000
+gov.gitcoin.co-post-12616-5
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+owocki
+
+            <p>(hi from <a href="https://gov.gitcoin.co/t/supermodular-xyz-2023-roadmap/12263">supermodular</a> - commenting here to explore the design space stimulated by <a class="mention" href="https://gov.gitcoin.co/u/shreyjaineth">@shreyjaineth</a> 's comment at Pluralism summit to me “what if we did a hyperparameter sweep across all coordination mechanisms”? for data gathering purposes! )</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="2" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/c844705ffb5581d021f4088fa3f2a40c6e9f7c15" title="Gitcoin Weekly Workstream update (4)"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15_2_690x388.jpeg" alt="Gitcoin Weekly Workstream update (4)" data-base62-sha1="szE7GfGggrPyMwwHoXFe9TzxwgJ" width="690" height="388" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15_2_690x388.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15.jpeg 2x" data-dominant-color="BCB1BE"></a></div><p></p>
+<p>Each funding stack function has some tradeoffs. In experimentation, it will be important to recognize the consistency of the other functions. Simulation is a great way to do this.</p>
+</blockquote>
+</aside>
+<p>this is a great graphic.  <a class="mention" href="https://gov.gitcoin.co/u/shreyjaineth">@shreyjaineth</a> joe’s post makes me think the hyperparameter sweep of all coordination mechanisms could sweep all possible parameters (joe lists some important ones below) across <strong>[funding mechanism] x [passport rules] x [grant eligibility ] x [ui discoverability]</strong>.</p>
+<p>one thing i think thatll be an important design criteria from the start is the “cost” of running a simulated round.</p>
+<p>when you have low cost you can sweep parameters fast.  when you have high cost you sweep parameters very slowly and costlyly.  those who know me know i like to spin my <a href="https://community.supermodular.xyz/t/ooda-loops-for-fun-profit/133/2">OODA loops</a> fast!</p>
+<p>i can see four types of rounds (one real + three simulated):</p>
+<ol start="0">
+<li><em>[high level of effort]</em> - <strong>live</strong> - real humans doing their JTBDs</li>
+<li><em>[medium level of effort]</em> - <strong>simulated + human action needed</strong> - data created by real people, staffed by someone who wants experimental data results</li>
+<li><em>[low level of effort]</em> - <strong>simulated + computer agent action</strong> - data created by simulated people, staffed by someone who wants experimental data results</li>
+<li><em>[very low level of effort]</em> - <strong>simulated + data analysis</strong> - takes data created by rounds types 1 and 2 and tries to derive new analytic insights from them.</li>
+</ol>
+<aside class="quote no-group" data-username="epowell101" data-post="3" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<ul>
+<li>the importance of the humans in the communities being able to grok the alternatives would seem to put a significant burden on DevRel and other teams.</li>
+</ul>
+</blockquote>
+</aside>
+<p>i’m just one node in the network, but if Grants Stack helping communities to reach the “Global Maximas” of Coordination is important to it’s partners, or is important as a USP, then IMO it follows that articulating the value of all the permutations = articulating the value proposition of Grants Stack.</p>
+<p>insofar as anyone else who would be pursuing such a strategy (hopefully they’d just build on Grants Stack instead), no other web3-era grants software suite is going be such a swiss army knife.  .</p>
+<p>i dont mean to push you in one way or another tho…</p>
+<p>(hey - what is Grants Stacks USP by the way? USP = Unique Selling Proposition.  maybe <a class="mention" href="https://gov.gitcoin.co/u/coachjonathan">@CoachJonathan</a> and <a class="mention" href="https://gov.gitcoin.co/u/viriya">@Viriya</a> know)</p>
+<aside class="quote no-group" data-username="epowell101" data-post="3" data-topic="12616">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/epowell101/48/6371_2.png" class="avatar"> epowell101:</div>
+<blockquote>
+<p>however wouldn’t we need to undertake or seed or otherwise support an extensive education effort so that something approaching this level of knowledge is much more widespread than it is today?</p>
+</blockquote>
+</aside>
+<p>i think explaining Quadratic Funding is kind of complicated, so i have a lot of empathy for how hard it is to educate people about these mechanisms.</p>
+<p>over time i’ve learned to create <a href="https://www.youtube.com/watch?v=HJljTtLnymE">explainer videos</a> or show live examples to people is one of the easiest way to explain the mechanisms.</p>
+<p>but is the juice worth the squeeze?  i can’t say, it’s really up to MMM/GPC.  it probably deeply depends on the USP of Grants Stack.  some options i’ve heard flying around on twitter.</p>
+<ol>
+<li>Is the USP for Grants Stack that its a grants program that grows with you?</li>
+<li>That Grants Stack =  the simplest way to administer grants?</li>
+<li>Is it Grants Stack = easy Quadratic Funding?</li>
+<li>Is it Grants Stack = easy Retroactive Public Good Funding?</li>
+<li>Or is Grants Stack more like Wordpress, a minimal tool with an active developer community around it and lots of plugins that can be built in to extend it?</li>
+</ol>
+<p>assuming the juice is worth the squeeze <a class="mention" href="https://gov.gitcoin.co/u/epowell101">@epowell101</a>  , how do you think the educational efforts should differ from, or build upon, work like <a href="https://medium.com/giveth/coordination-mechanisms-notes-from-a-conversation-with-griff-green-kevin-owocki-af95f3e831b1">this 2 hour</a> episode on coordination mechanisms <a class="mention" href="https://gov.gitcoin.co/u/griff">@griff</a> and i did (and the article the giveth team made shortly thereafter).  i know <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> had some ideas about how to organize that content too.</p>
+<p>when Gitcoin first launched we launched <a href="https://wtfisqf.com/">https://wtfisqf.com/</a>, to show off the power of Quadratic Funding to people.  perhaps a microsite like that could be useful here too.</p>
+<p>we’ve actually done a few greenpill episodes on collective intelligence / coordination mechanisms come to think of it.  this is primarily because i find the concepts of collective intelligence intellectual fascinating and think them to be one of the great promises of web3…    as the meme goes <a href="https://www.youtube.com/watch?v=KpXPym_m_wA">its all coordination</a>…</p>
+<p>if there are any coordination mechanism deep dives you think we should do, let me knew.</p>
+<p>pasting a few such episodes below</p>
+<p><a href="https://www.youtube.com/watch?v=qyd7mvQmn5I">Coordination Mechanisms with Griff Green | Green Pill #65</a></p>
+
+<p>            <iframe src="https://www.youtube.com/embed/gQ4rEa9ULOo?feature=oembed&amp;wmode=opaque&amp;list=PLmkdAgtxf3ah0Vmyy1B3OU8BPacX4_gVY" width="480" height="360" frameborder="0" allowfullscreen="" class="youtube-onebox" seamless="seamless" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation"></iframe>
+</p>
+<p>            <iframe src="https://www.youtube.com/embed/L54lcwjUYzM?feature=oembed&amp;wmode=opaque&amp;list=PLmkdAgtxf3ah0Vmyy1B3OU8BPacX4_gVY" width="480" height="360" frameborder="0" allowfullscreen="" class="youtube-onebox" seamless="seamless" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation"></iframe>
+</p>
+<p>            <iframe src="https://www.youtube.com/embed/Bzpcrp3-dHU?feature=oembed&amp;wmode=opaque&amp;list=PLmkdAgtxf3ah0Vmyy1B3OU8BPacX4_gVY" width="480" height="360" frameborder="0" allowfullscreen="" class="youtube-onebox" seamless="seamless" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation"></iframe>
+</p>
+<p>            <iframe src="https://www.youtube.com/embed/2RSf2bRiieU?feature=oembed&amp;wmode=opaque&amp;list=PLmkdAgtxf3ah0Vmyy1B3OU8BPacX4_gVY" width="480" height="360" frameborder="0" allowfullscreen="" class="youtube-onebox" seamless="seamless" sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-popups-to-escape-sandbox allow-presentation"></iframe>
+</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/4
+        Sat, 21 Jan 2023 19:22:14 +0000
+gov.gitcoin.co-post-12616-4
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+epowell101
+
+            <p>Thanks for this.  Extremely exciting to see the design space open up here enormously.  Actually running a permutation sweep seems like a great idea based on what I know as a way to learn - in the open - about these alternatives in action.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> comment goes some way towards addressing the question I have concerning running something like a parameter sweep across the permutations - the importance of the humans in the communities being able to grok the alternatives would seem to put a significant burden on DevRel and other teams.</p>
+<p>Joe from his work can immediately cite the key trade-offs → however wouldn’t we need to undertake or seed or otherwise support an extensive education effort so that something approaching this level of knowledge is much more widespread than it is today?</p>
+<p>I guess I can imagine a lot of useful Green Pill episodes for example - much like <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> helped many understand the inevitability of Sybils and the impossibility of solving them once and for all and much else - would you envision a similar series doubling down on the podcast w/ <a class="mention" href="https://gov.gitcoin.co/u/griff">@griff</a> ?</p>
+<p>And that would need to just be a piece of a plan IMO to engage stakeholders and elevate everyone’s understanding such that they can internalize and act upon the results of this parameter sweep.</p>
+<p>Anyway - seems like a great idea to me, assuming we can figure out how to wrap around the experiments excellent DevRel &amp; explanations &amp; more.  Thanks for thinking it through and writing it up!</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/3
+        Sat, 21 Jan 2023 18:17:37 +0000
+gov.gitcoin.co-post-12616-3
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+DisruptionJoe
+
+            <p>This is a great post. I think the most under-rated metric for the Grant Stack UI is number of permutations of a <a href="https://gov.gitcoin.co/t/the-grants-2-0-funding-stack-choose-your-own-algorithm/10770">Funding Stack</a> available.</p>
+<p>This slide still represents the functions where I see opportunities for experimentation and DevRel focus. Keeping the protocol unopinionated, but easily compatible with unique funding stacks should be a high priority.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/c844705ffb5581d021f4088fa3f2a40c6e9f7c15" title="Gitcoin Weekly Workstream update (4)"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15_2_690x388.jpeg" alt="Gitcoin Weekly Workstream update (4)" data-base62-sha1="szE7GfGggrPyMwwHoXFe9TzxwgJ" width="690" height="388" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15_2_690x388.jpeg, https://gov.gitcoin.co/uploads/db4391/original/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/c/c844705ffb5581d021f4088fa3f2a40c6e9f7c15.jpeg 2x" data-dominant-color="BCB1BE"></a></div><p></p>
+<p>Each funding stack function has some tradeoffs. In experimentation, it will be important to recognize the consistency of the other functions. Simulation is a great way to do this.</p>
+<p>Here are some of the tradeoffs I am aware of:</p>
+<p><strong>Funding Mechanism</strong></p>
+<ul>
+<li>Taxation by fees vs Inflation</li>
+<li>DeSoc Incentivization of outgroup collaboration vs centralizing over time</li>
+<li>Sybil</li>
+</ul>
+<p><strong>User Moderation</strong></p>
+<ul>
+<li>Universal (more errors, but economy of scale benefits) vs customized (pluralistic, but more costly)</li>
+<li>Gating &amp; weighting (Creates systemic inequality which compounds over time) vs squelching (This is giving a 0 weight coefficient AFTER the vote is cast)</li>
+<li>Closed vs Open (Don’t let the attackers know your secrets vs Kerckoffs principle)</li>
+</ul>
+<p><strong>Grant Moderation</strong></p>
+<ul>
+<li>Programmatic filtering on specific data points (universal)  vs community scoring using aggregated data points (pluralist)</li>
+<li>Eligibility Reviews: Delegated authority (single point of failure, but cost efficient) vs intersubjective consensus (Like polis or ethelo). I HIGHLY believe that although delegated authority is more costly today, once a pluralistic review protocol is bootstrapped, it will provide minimum necessary decentralization for each community to trust the reviews at a lower cost per review.</li>
+<li>Crowdsourcing disputes and appeals: Incentivized (consistent, but likely to be gamed) vs UX driven (altruistic, but may not decentralize enough to be incorruptible)</li>
+<li>Appeals: Delegated authority vs decentralized and/or intersubjective consensus</li>
+<li>Eligibility Policy Evolution: Does the appeals judge use letter of the law and an appeal must change the law to overturn a decision that wasn’t an error in application of the law or a gray/novel interpretation? Or does the judge have freedom to judge the case as is and the legislation should consider legislative updates?</li>
+</ul>
+<p><strong>Grant &amp; Round Discoverability</strong></p>
+<ul>
+<li>Capital based decisions for social consensus based decisions</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/2
+        Sat, 21 Jan 2023 14:05:56 +0000
+gov.gitcoin.co-post-12616-2
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+Systematic Exploration of the Coordination Mechanism Design Space
+shreyjaineth
+
+            <h1>
+<a name="systematic-exploration-of-the-coordination-mechanism-design-space-1" class="anchor" href="https://gov.gitcoin.co#systematic-exploration-of-the-coordination-mechanism-design-space-1"></a>Systematic Exploration of the Coordination Mechanism Design Space</h1>
+<p>Shrey Jain and Kevin Owocki</p>
+<p>Gitcoin recently released Grants Stack, which is a set of modular tools that act as the scaffolding for any capital allocation construction. It acts as a structure to modularize all components of grants into standardized open-source modules for any DAO. It is with this modularity that any Grants module can slip-n-out of any Grants program without hurting the rest of the funding stack.</p>
+<p>In traditional organizations, it is very challenging to replace governance mechanisms with new ones, even if the members that make up the organization desire a new tool. The modularity of governance mechanisms seen with the Gitcoin Grants stack enables iteration on such mechanisms that human coordination has never experienced.</p>
+<p>With all of these new tools, a question remains, what combination of modules is right for our community?</p>
+<p>Of course, Gitcoin is known for Quadratic Funding (specifically, pairwise Quadratic Funding), but what other coordination mechanisms could be built into Grants Stack.</p>
+<p>This post aims at providing a pragmatic approach on how Gitcoin can run an experiment to better understand which mechanisms work for different types of communities.</p>
+<h2>
+<a name="hyperparameter-sweep-on-coordination-mechanisms-2" class="anchor" href="https://gov.gitcoin.co#hyperparameter-sweep-on-coordination-mechanisms-2"></a><strong>Hyperparameter sweep on coordination mechanisms</strong>
+</h2>
+<p>In machine learning, a <a href="https://en.wikipedia.org/wiki/Hyperparameter_optimization" rel="noopener nofollow ugc">hyperparameter sweep</a> is the process of training machine learning models with various different values of hyperparameters (learning rate, activation functions, training data size, etc.). For a given model, the calibration of one set of hyperparameters may work very well in one context but very poorly in another.</p>
+<p>We want to apply this concept to figuring out what models of coordination mechanisms work best in a given community. There are many different types of mechanisms that can be used for resource allocation, some of which include: quadratic funding, MACI quadratic funding, cluster-wise quadratic funding, subscriptions, demurrage, dominant assurance contracts, ranked-choice voting, and much more.</p>
+<p>Gitcoin founder Kevin Owocki and Giveth founder Griff Green recently did a podcast in which they discussed ~30 Coordination mechanisms <a href="https://medium.com/giveth/coordination-mechanisms-notes-from-a-conversation-with-griff-green-kevin-owocki-af95f3e831b1" rel="noopener nofollow ugc">[link]</a>. The mechanisms listed in this podcast could serve as a backlog of mechanisms that could be built into Grants Stack.</p>
+<p><strong></strong></p><div class="lightbox-wrapper"><strong><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/adc740a34bcedad4db68cf29e787cdc0e9ccdf02.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/adc740a34bcedad4db68cf29e787cdc0e9ccdf02" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/adc740a34bcedad4db68cf29e787cdc0e9ccdf02_2_265x372.jpeg" alt="" data-base62-sha1="oNjuVHCW66CRUElfDRQBHSGHGYa" width="265" height="372" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/adc740a34bcedad4db68cf29e787cdc0e9ccdf02_2_265x372.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/adc740a34bcedad4db68cf29e787cdc0e9ccdf02_2_397x558.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/adc740a34bcedad4db68cf29e787cdc0e9ccdf02_2_530x744.jpeg 2x" data-dominant-color="0A3352"></a></strong></div><p></p>
+<p>A parameter sweep for coordination mechanisms would first require us to build all of the various different mechanisms that could be incorporated into an upcoming Grants round.</p>
+<p>We could then run simulated rounds on each of these different combinations to see how capital is allocated and determine what mechanism is most optimal for a given setting.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/587145e60533cc7ec7de46c93f540d303ebb552f.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/587145e60533cc7ec7de46c93f540d303ebb552f" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/587145e60533cc7ec7de46c93f540d303ebb552f_2_624x321.jpeg" alt="" data-base62-sha1="cCoHDihsrqtfngeI92Evc0ZAhfp" width="624" height="321" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/587145e60533cc7ec7de46c93f540d303ebb552f_2_624x321.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/587145e60533cc7ec7de46c93f540d303ebb552f_2_936x481.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/587145e60533cc7ec7de46c93f540d303ebb552f_2_1248x642.jpeg 2x" data-dominant-color="110C30"></a></div><p></p>
+<p>The creation of these simulated rounds and the testing of which ones meet the heuristic of funding our shared needs, is essentially exploring the fitness landscape within this search space.</p>
+<p>Once the fitness landscape is mapped, we could then look for the global maxima of coordination mechanisms that help us meet the heuristic.</p>
+<p>Of course, different communities will have different value sets so they will have different fitness landscapes. Part of the exploration of this design space will mean figuring out different types of communities and how they define their heuristics of what they want to fund.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/24eee2a4fe9f57097187da4040d1219f40cc2110.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/24eee2a4fe9f57097187da4040d1219f40cc2110" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/24eee2a4fe9f57097187da4040d1219f40cc2110_2_624x348.jpeg" alt="" data-base62-sha1="5gIZTPBqxxrCIcwN22q5cZHOvU4" width="624" height="348" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/24eee2a4fe9f57097187da4040d1219f40cc2110_2_624x348.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/24eee2a4fe9f57097187da4040d1219f40cc2110_2_936x522.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/24eee2a4fe9f57097187da4040d1219f40cc2110_2_1248x696.jpeg 2x" data-dominant-color="120D31"></a></div><p></p>
+<p>Right now, we know that the fitness landscape for the Ethereum ecosystem (Grants v1 explored this design space) looks kind of like this:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1aa3a340d0c1a208f82d264688630a5a1ba04978.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/1aa3a340d0c1a208f82d264688630a5a1ba04978" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1aa3a340d0c1a208f82d264688630a5a1ba04978_2_624x347.jpeg" alt="" data-base62-sha1="3NF0oCa9mH8S8tDlNJL1Wt3Un9u" width="624" height="347" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1aa3a340d0c1a208f82d264688630a5a1ba04978_2_624x347.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1aa3a340d0c1a208f82d264688630a5a1ba04978_2_936x520.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1aa3a340d0c1a208f82d264688630a5a1ba04978_2_1248x694.jpeg 2x" data-dominant-color="110C30"></a></div><p></p>
+<h1>
+<a name="future-work-3" class="anchor" href="https://gov.gitcoin.co#future-work-3"></a>Future Work</h1>
+<p>If there is consensus that this is a direction of research that is worth exploring, then we recommend that</p>
+<ol>
+<li>GitcoinDAO create a prioritized backlog of coordination mechanisms to be built</li>
+<li>Gitcoin’s community of developers can build these coordination mechanisms</li>
+<li>Simulated Rounds will be run on top of these coordination mechanisms</li>
+<li>We will have started to traverse the design the design space of coordination mechanisms</li>
+<li>(Repeat 1-4 in an <a href="https://community.supermodular.xyz/t/ooda-loops-for-fun-profit/133" rel="noopener nofollow ugc">OODA loop</a> until we’ve fully traversed the design space)</li>
+</ol>
+<p>In addition to the process we outline to determine a given social spaces coordination global maxima, we can reference the many tools created by <a href="https://metagov.org/" rel="noopener nofollow ugc">https://metagov.org/</a> and <a href="https://www.radicalxchange.org/" rel="noopener nofollow ugc">https://www.radicalxchange.org/</a> along with what we can expect to see from <a href="https://supermodular.xyz/" rel="noopener nofollow ugc">https://supermodular.xyz/</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/systematic-exploration-of-the-coordination-mechanism-design-space/12616/1
+        Sat, 21 Jan 2023 03:18:02 +0000
+gov.gitcoin.co-post-12616-1
+Systematic Exploration of the Coordination Mechanism Design Space
+      
+
+

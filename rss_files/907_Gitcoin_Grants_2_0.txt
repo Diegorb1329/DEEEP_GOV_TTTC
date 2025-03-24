@@ -1,0 +1,654 @@
+
+
+
+Gitcoin Grants 2.0
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981
+    # Grants 2.0
+
+Authors
+[Lindsey Thrift](mailto:lindsey@gitcoin.co)
+[Kevin Olsen](mailto:kevinolsen@gitcoin.co)
+
+## Purpose of this document:
+
+* Bring awareness to the current thinking inside the Gitcoin Product Collective (GPC) to the rest of the Gitcoin ecosystem
+* Broadcast our intentions to the workstreams in the DAO to align efforts and identify overlapping efforts or unaccounted for needs
+* Build the muscle of communication, anticipating the need to participate in governance in the near future.
+
+## Who this doc is for:
+
+* DAO Workstream participants
+* Stewards
+* Engineering, Design, and Product within GPC
+* frens
+
+## Intro:
+
+By: [Kevin Owocki](mailto:kevin@gitcoin.co)
+
+Grants 2.0 is the accumulation of all that we’ve learned since launching Gitcoin Grants in January 2019 + evolving it for the last 3 years.
+
+Not only are we solving for decentralization with 2.0, we are also solving for the “meta-problem”.
+
+* The “problem” is public goods funding.
+* The “meta-problem” is finding the optimal capital allocation tool for public goods funding.
+
+Instead of a centralized monolith (1.0), grants 2.0 will be forkable, modular, and decentralized.
+
+Instead of having a grants protocol w QF in it (what we did with 1.0), we will create a protocol w a deep liquidity of grants on it, & create an ecosystem on top of it where different flavors of public goods funding can compete to optimally allocate capital on top of it (2.0).
+
+![|420x196](upload://3ELRwiVb7hCoYGYccYia277rDUA.jpeg)
+
+Once grants 2.0 is launched, we will have created an environment where the community can test different public goods funding mechanisms on top of a deeply liquid registry of grants. This tool will allow us to speedrun the “[hill climbing problem](https://cdixon.org/2009/09/19/climbing-the-wrong-hill)” of finding optimal democratic mechanisms for funding public goods.
+
+![|268x117](upload://zVnvKXLzrd2hraTKKl5GbYFXfX3.png)
+
+## Product Vision
+
+From open source software to [public goods](https://otherinter.net/research/positive-sum-worlds/) in the physical world, DAOs and other ecosystem builders (collectives of people) are seeking to gather community signal on where to invest as well as get their initiatives funded.
+
+As [an impact and protocol DAO](https://gov.gitcoin.co/t/the-impactdao-protocoldao-sandwich/8944), Gitcoin envisions a world with thousands of public goods funding rounds running at any given time, distributing capital in an optimal manner that is governed by the community being served. We imagine a future where DAOs and ecosystems can spin-up/skin/fork our Gitcoin Grants experience to participate directly in the Gitcoin Grants ecosystem, and allow them the flexibility to rapidly experiment and to best deliver a grant experience that matches the needs of their community. Gitcoin will build the foundation for on-going, open source development of the tooling, standards, and substrates necessary to reach maximum scale of public goods funding distribution through development of the Gitcoin Grants Protocol.
+
+In accomplishing our vision, grant owners, round owners, and grant funders are all sovereign actors that facilitate their funding coordination through the Gitcoin Grants Protocol.
+
+### Strategy Outline
+
+To achieve our vision, we will build a protocol with a SAM (simple, antifragile, modular) design and plugin architecture such that we are not too tightly coupled to any particular elements of the protocol.
+
+By doing so, the protocol is a container that:
+
+* allows Gitcoin to speedrun the evolution of optimal capital distribution by being able to rapidly test and scale novel mechanisms and embed grants everywhere public goods projects are organizing and launching (such as integrations with DAO service platforms or Retro Public Goods Funding).
+* enables the simple adoption of powerful tools that prevent fraud and sybil attacks, and encourage manipulation and curation of the data presented (ie, the Grants that are visible in the interface, the grants that are eligible in a round, the matching funds available, any matching fund caps, etc.).
+* Creates opportunity for DAOs to use governance mechanisms to curate and govern their grants program, consequently creating utility for their governance tokens
+
+The protocol must be built in a fundamentally open source manner that not only allows but encourages contributions from the community to advance it - developers are a first class citizen in the Gitcoin Grants ecosystem, and the Protocol will be well documented and have a thriving developer community. If we are successful, a plugin marketplace will emerge and the opportunity for anyone to contribute to the evolution of funding public goods will be within reach.
+
+We will build for the [L2 and multichain world](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698/57) by maintaining most data in decentralized schemas off-chain and allowing smart contracts to be round specific and composable based on where a round manager chooses to deploy and what token they choose for funding and governance.
+
+Finally, we will decouple grants from rounds so that grantees have a credibly neutral means by which they can create, manage, and update their grants agnostic of any grant round in which they may participate.
+
+## Architecture Overview:
+
+We envision the solution as 4 new code bases: decentralized Proof of Personhood Passport ([dPopp](http://proofofpersonhood.com)), Grants Explorer, Grant Publisher, and Round Manager.
+
+These four apps correspond 1:1 with the core processes and domain concepts that exist within the current centralized and monolithic gitcoin code base.
+
+![|624x377](upload://5289Rl7L6wf13QcYlBV28XooiL5.png)
+
+Note: there is an important architectural change that is implied here that differs from the current gitcoin.co experience. Namely, that each round is a distinct end to end experience, as opposed to the current gitcoin.co that is something of a meta-experience or round aggregator - whereby many grants corresponding to different rounds are presented together with a unified ‘checkout’ experience.
+
+Here, we are imagining each round having a grant explorer that is a distinct dApp that would launch to provide a customizable experience, putting grant curation and discovery in the hands of the community governing that round.
+
+![|624x456](upload://i50uDfZVdRSv56ZL1paT42qkte0.png)
+
+## The road to decentralization:
+
+Our goal is that by the end of Q1 2023 we can run Gitcoin Grants Rounds on a new constellation of software products that cover the core capabilities that gitcoin.co currently provides - giving our platform credible neutrality, opening up our protocol to a broader grants ecosystem, and allowing us to [prototype & test different funding mechanisms](https://twitter.com/owocki/status/1496513186442395649) more rapidly.
+
+#### ![|624x331](upload://qSyzsNr2rwMCn49pe4v87ZWNiix.png)
+
+Starting immediately after GR13 the Gitcoin.co web application will effectively go into maintenance mode. This means the GPG team will only be addressing critical issues to the platform.
+
+As we make progress on our delivery of the decentralized applications we will begin deprecating portions of the gitcoin.co experience and migrating to the new dapps that deliver the corresponding functionality.
+
+#### dPopp
+
+We will kick off the development of dPopp before the end of Q1 2022, and hope to have an MVP before the end of 1H 2022, with the stretch goal of deprecating the trust bonus UI and migrating the gitcoin.co trust bonus experience to dPopp. It is our backstop estimate that the trust bonus in gitcoin.co will be replaced in Q3 2022.
+
+#### Round Manager and Grant Publisher
+
+We will proceed to move through the core functions of the main web application, deprecate functionality in the main web application, and migrate to the corresponding dApps as we deliver them. The Round Manager and Grant Publisher will kick off in Q2 2022 and we hope to have a working end to end system sufficient to allow an alternate protocol to share the underlying decentralized grant registry in GR14. We are orienting this work to enable CLRFund to run a parallel round in GR14 that would demonstrate the decentralization of our registry, while also allowing for a comparison of CLRFund MACI with the existing Gitcoin QF fund distribution mechanism.
+
+#### Grant Explorer
+
+Finally, we will begin development of the Grant Explorer in Q2 2022 to build up to an end to end system that will allow gitcoin to open up our grant protocol to other DAOs.
+
+## The End of the Monolith
+
+It is our goal to deprecate most of the core gitcoin experience by GR16. Given the UX differences between the multiple separate rounds from the current centralized gitcoin experience we expect we may need an additional quarter to deliver a unified UX that replicates the multiple round grant exploration our users expect from gitcoin.co. By Q1 2023 it is our hope that this last piece of development will allow us to completely migrate away from the original gitcoin.co web application, and for us to retire the monolith.
+
+## Questions You Might Have Now
+
+* How is this good for the Gitcoin DAO?
+  * It enables a project to start up with Gitcoin and for Gitcoin to gain utility from projects that find product community fit (PCF) through governance token swaps etc. This is a critical component of achieving the [impact DAO protocol DAO sandwich mission](https://gov.gitcoin.co/t/the-impactdao-protocoldao-sandwich/8944).
+* Will Gitcoin DAO continue to run grants rounds or will they all be self-run by DAOs and ecosystems?
+  * Growth of the Gitcoin grants rounds have shifted from vertical scaling (more money into the main round for the Ethereum community) to horizontal scaling (more matching pools funded by other novel ecosystems and collectives with shared cause based missions).We have identified that the total addressable market of this horizontal scaling and very large and feel confident the growth of this scale on the centralized platform is validation to continue investing in this scale through decentralizing the platform into an open source protocol. 
+Gitcoin DAO will continue to run their own round while also assisting others in the running of their rounds (what we call side rounds today). We expect the Gitcoin Grants Protocol will enable Gitcoin DAO to continue to experiment with initiatives such as Aqueduct to discover the highest impact ways of running rounds and supporting ecosystem growth.
+* Why would we separate rounds from grants?
+  * So that rounds can be run on any chain, by any party, in any manner they wish and grants can be included in those rounds as (1) the grant owner desires to be included and (2) the grant project meets the eligibility criteria of the round
+* Why not just SaaS-ify the the round management platform to expedite the building and maintenance of it?
+  * By making round management independent of a centralized platform, round managers can configure and build upon the round structure to fully tailor to their needs and to make simple mechanism decisions that fit their needs; it’s likely that the value of creating token utility for DAOs to be able to use their governance tokens for curation and for ecosystems L1/L2 builders to use their native tokens for matching payout increases the inherent value of the Gitcoin Grants Standard and Schemas over building it themselves or using something “off the shelf”.
+  * Building a fully open-source protocol also means that we are building a public good that no longer depends on Gitcoin to exist and creates the opportunity for the emergence of a plugin marketplace.
+* Why doesn’t this vision and strategy center on quadratic funding?
+
+## Where do we go from here?
+
+We have been working this past month to align this roadmap with Kevin, Kyle, the FDD, GrantOps, our delivery partners, and the GPG. It is our hope that this document will serve as a strong foundation for continued evolution. We welcome any and all feedback to this plan!
+
+So what do we need to pull this off? Besides the focus and a bit of inspiration we’ll need to actually build this thing, we’ll need some help keeping people oriented on the end state while gitcoin.co slows down the rate of improvements. Going into maintenance mode might be hard for some of the team; namely, customer service, or sales might feel neglected as we build the future platform. Helping keep the community and team oriented on the goal of a decentralized multi-DAO future will take everyone’s help articulating the benefits, and weighing the tradeoffs between current and future pains and gains.
+
+If you have any questions, if you see things we may have missed, or have any feedback please tell us. We would love to have the broadest community buy-in to this plan that we can achieve, and we look forward to working together with this community to bring the gitcoin core technologies into [the great revival](https://gov.gitcoin.co/t/the-great-bear-the-great-reset-the-great-revival/9855).
+Fri, 24 Jun 2022 22:05:18 +0000
+🌱 Gitcoin Grants
+
+
+Gitcoin Grants 2.0
+thetagan
+
+            <p>My favorite part about this is that it is expanding the science laboratory. Though QF is an older concept, Gitcoin is testing new variables with new equipment. Now, we are able to upgrade after analyzing the test results.</p>
+<p>Creating better systems for funding public goods is the goal. So, what role will data scientists play in the future development of Gitcoin? How will they work with product designers?</p>
+<p>Furthermore, how can Gitcoin have a macro impact on policy design? What data from Grants 2.0 can help inform economic and governance design?</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/23
+        Fri, 24 Jun 2022 22:05:18 +0000
+gov.gitcoin.co-post-9981-23
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+zkWolf
+
+            <p>Hi guys. We built a coordination tool for DAOs and creators to collect feedback.</p>
+<p>I created a sequence for this Gitcoin Grants 2.0 post as an example of how DAOs can use the tool.  Please <a href="https://app.zeevo.co/dashboard/sequences/e13db9a2-5bf2-4e6f-b33f-0f6c3f5b6fc9" rel="noopener nofollow ugc">have a look</a> and let me know what you think.</p>
+<p>I also put together a quick write-up on how the tool works and how DAOs can use it <a href="https://mirror.xyz/zeevoco.eth/v8hH_cLES4HASpKb9dgJq-_G9kL-u_PioaYykkS5-PA" rel="noopener nofollow ugc">here.</a></p>
+<p>Sorry for the slightly off-topic post. I blame <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> for getting me jazzed up about DAO coordination tooling <img src="https://emoji.discourse-cdn.com/twitter/stuck_out_tongue_winking_eye.png?v=12" title=":stuck_out_tongue_winking_eye:" class="emoji" alt=":stuck_out_tongue_winking_eye:" loading="lazy" width="20" height="20"></p>
+<p>Hopefully, the Grants 2.0 team will find the tool helpful for keeping in sync with the DAO at large!  <img src="https://emoji.discourse-cdn.com/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/22
+        Fri, 20 May 2022 20:20:46 +0000
+gov.gitcoin.co-post-9981-22
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+kevin.olsen
+
+            <p>I think you’ve joined, but for transparency in the conversation here we’ve just spun this up! Currently limited to DAO contributors, with the potential to open up wider as we build our community engagement muscles: <a href="https://discord.com/channels/562828676480237578/970928914740437043" class="inline-onebox" rel="noopener nofollow ugc">Discord</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/21
+        Thu, 05 May 2022 12:03:05 +0000
+gov.gitcoin.co-post-9981-21
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+nollied
+
+            <p>for sure! honestly having a discord channel dedicated to grants 2.0 where i and other interested parties can communicate with you guys that would be cool.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/20
+        Fri, 29 Apr 2022 04:53:38 +0000
+gov.gitcoin.co-post-9981-20
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+seanmac
+
+            <p>Would love to help you get this support, definitely part of how a product marketer could help. Haven’t gotten any submissions to this yet, would love any help from anyone in promoting or making introductions to folks who might be interested.</p>
+<aside class="onebox twitterstatus" data-onebox-src="https://twitter.com/smacmannis/status/1511814732914651138?s=20&amp;t=LnWwE5ZwrwV-1C_qjewb4w">
+  <header class="source">
+
+      <a href="https://twitter.com/smacmannis/status/1511814732914651138?s=20&amp;t=LnWwE5ZwrwV-1C_qjewb4w" target="_blank" rel="noopener nofollow ugc">twitter.com</a>
+  </header>
+
+  <article class="onebox-body">
+    
+<h4><a href="https://twitter.com/smacmannis/status/1511814732914651138?s=20&amp;t=LnWwE5ZwrwV-1C_qjewb4w" target="_blank" rel="noopener nofollow ugc">seanmac.eth</a></h4>
+<div class="twitter-screen-name"><a href="https://twitter.com/smacmannis/status/1511814732914651138?s=20&amp;t=LnWwE5ZwrwV-1C_qjewb4w" target="_blank" rel="noopener nofollow ugc">@smacmannis</a></div>
+
+<div class="tweet">
+  <span class="tweet-description">This is it ❣️
+@GitcoinDAO is seeking an ✨amazing product marketer✨ for our upcoming "Grants 2.0" suite. You'll work closely with @thrift_lindsey and yours truly. 
+
+RFP: https://t.co/UtvDtK66Ki 
+
+🔥Proposals due by 15 April, 2022 (early submissions welcome and encouraged!) 🔥 https://t.co/6TngE7fej5</span>
+    <div class="quoted">
+      <a class="quoted-link" href="https://twitter.com/smacmannis/status/1511483092254425093" rel="noopener nofollow ugc">
+        <p class="quoted-title">seanmac.eth <span>@smacmannis</span></p>
+      </a>
+
+      <div> alpha alert: an incredible opp is about to drop 
+
+tag in the best web3 product marketers you know </div>
+    </div>
+</div>
+
+<div class="date">
+  <a href="https://twitter.com/smacmannis/status/1511814732914651138?s=20&amp;t=LnWwE5ZwrwV-1C_qjewb4w" class="timestamp" target="_blank" rel="noopener nofollow ugc">2:14 PM - 6 Apr 2022</a>
+
+    <span class="like">
+      <svg viewBox="0 0 512 512" width="14px" height="16px" aria-hidden="true">
+        <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path>
+      </svg>
+      9
+    </span>
+
+    <span class="retweet">
+      <svg viewBox="0 0 640 512" width="14px" height="16px" aria-hidden="true">
+        <path d="M629.657 343.598L528.971 444.284c-9.373 9.372-24.568 9.372-33.941 0L394.343 343.598c-9.373-9.373-9.373-24.569 0-33.941l10.823-10.823c9.562-9.562 25.133-9.34 34.419.492L480 342.118V160H292.451a24.005 24.005 0 0 1-16.971-7.029l-16-16C244.361 121.851 255.069 96 276.451 96H520c13.255 0 24 10.745 24 24v222.118l40.416-42.792c9.285-9.831 24.856-10.054 34.419-.492l10.823 10.823c9.372 9.372 9.372 24.569-.001 33.941zm-265.138 15.431A23.999 23.999 0 0 0 347.548 352H160V169.881l40.416 42.792c9.286 9.831 24.856 10.054 34.419.491l10.822-10.822c9.373-9.373 9.373-24.569 0-33.941L144.971 67.716c-9.373-9.373-24.569-9.373-33.941 0L10.343 168.402c-9.373 9.373-9.373 24.569 0 33.941l10.822 10.822c9.562 9.562 25.133 9.34 34.419-.491L96 169.881V392c0 13.255 10.745 24 24 24h243.549c21.382 0 32.09-25.851 16.971-40.971l-16.001-16z"></path>
+      </svg>
+      4
+    </span>
+</div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/18
+        Tue, 12 Apr 2022 17:51:17 +0000
+gov.gitcoin.co-post-9981-18
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+kevin.olsen
+
+            <aside class="quote no-group" data-username="nollied" data-post="16" data-topic="9981">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/nollied/48/5163_2.png" class="avatar"> nollied:</div>
+<blockquote>
+<p>i love this so much!</p>
+</blockquote>
+</aside>
+<p>Awesome!</p>
+<aside class="quote no-group" data-username="nollied" data-post="16" data-topic="9981">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/nollied/48/5163_2.png" class="avatar"> nollied:</div>
+<blockquote>
+<p>is there more progress on this? is there a way I can be part of this conversation more often?</p>
+</blockquote>
+</aside>
+<p>Yes, we’ve kicked off 2/3 workstreams, and will be kicking off the explorer/round manager here soon. I’d love to get you across the project, especially given the amount of overlap in thinking about mechanism plurality, data sharing, personhood/community anti-fraud signals… the list goes on.</p>
+<p>It’s great to see the dialogue unfolding across multiple channels, but I’m noticing the challenge of broadcasting, and sustaining a conversation around Grants 2.0. If you have some thoughts on a better way for us to keep people informed and involved (updates, community calls, dedicated channel in discord) I’d appreciate your ideas.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/17
+        Mon, 11 Apr 2022 10:54:23 +0000
+gov.gitcoin.co-post-9981-17
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+nollied
+
+            <p>i love this so much!</p>
+<p>is there more progress on this? is there a way I can be part of this conversation more often?</p>
+<p>it seems like there’s a symmetry for the work you guys are doing with modular design to facilitate mechanism design prototyping and what we’re doing in “The Matrix” (which I’m renaming to “Mechanism Design” for next season) squad within FDD.</p>
+<p>part of the vision is to build a simulation environment to do agent based behavioral analysis (using reinforcement learning/game theory) in an environment that is <em>as close to reality as possible</em>. <a href="https://docs.google.com/document/d/1oWP95oiNrSSZbcMlPVAy6KcjIizG-juxzk0lPDFtdJY/edit?pli=1#" rel="noopener nofollow ugc">Here is a rough document explaining our vision</a>.</p>
+<p>i think it would be amazing if we met in the middle of our orthogonal perspectives and collaborate.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/16
+        Wed, 06 Apr 2022 23:31:02 +0000
+gov.gitcoin.co-post-9981-16
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+kevin.olsen
+
+            <p>Good eyes spotting that dangling question there, that definitely got lost in the writing/editing process.</p>
+<p>The answer was hinted at here:</p>
+<aside class="quote no-group" data-username="kevin.olsen" data-post="1" data-topic="9981">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p>opening up our protocol to a broader grants ecosystem, and allowing us to <a href="https://twitter.com/owocki/status/1496513186442395649" rel="noopener nofollow ugc">prototype &amp; test different funding mechanisms </a> more rapidly</p>
+</blockquote>
+</aside>
+<p>So to flesh that out: our goal is to unbundle the gitcoin grants user and management experiences and provide a container that allows for a pluralistic future with many parallel mechanisms being deployed by different communities. Imagine a smaller ecosystem with high levels of trust, perhaps a DAO funding grants for internal teams, or an IRL community offering a small curated list of grants for their member to steer. We could see non-QF mechanisms being the right fit, and we want the grants 2.0 protocol to be the logical first place to stand up that grant program, and let these communities experiment on the meta-problem space of optimal distribution of funds for public goods.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/15
+        Thu, 24 Mar 2022 10:29:17 +0000
+gov.gitcoin.co-post-9981-15
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+thelostone-mc
+
+            <aside class="quote no-group" data-username="krrisis" data-post="13" data-topic="9981">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/krrisis/48/6203_2.png" class="avatar"> krrisis:</div>
+<blockquote>
+<p>Another question I personally have: will any of the work previously done by the dgrants team be recycled? Is part of what was done in that workstream over the past 6 months worth integrating into this new initiative?</p>
+</blockquote>
+</aside>
+<p>The work done by the dgrants team was to build out a POC which I believe we succeed.<br>
+Building out the actual integration using the learning from the dgrants POC.<br>
+While it is too early to say if code would be re-used, I do believe our decisions made here would be based off what we built out on dGrants</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/14
+        Mon, 21 Mar 2022 06:51:40 +0000
+gov.gitcoin.co-post-9981-14
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+krrisis
+
+            <p>Great and visionary overview, finally caught up on this and all comments below.</p>
+<p>I believe this post will be quoted often in the future, so for that reason, a little possible thing to edit is under 'questions you might have, this last bullet point…</p>
+<aside class="quote no-group" data-username="kevin.olsen" data-post="1" data-topic="9981">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kevin.olsen/48/8138_2.png" class="avatar"> kevin.olsen:</div>
+<blockquote>
+<p>Why doesn’t this vision and strategy center on quadratic funding?</p>
+</blockquote>
+</aside>
+<p>… seems to be missing an answer?</p>
+<p>Another question I personally have: will any of the work previously done by the dgrants team be recycled? Is part of what was done in that workstream over the past 6 months worth integrating into this new initiative?</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/13
+        Tue, 15 Mar 2022 04:22:28 +0000
+gov.gitcoin.co-post-9981-13
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+lthrift
+
+            <p><img src="https://emoji.discourse-cdn.com/twitter/100.png?v=12" title=":100:" class="emoji only-emoji" alt=":100:" loading="lazy" width="20" height="20"></p>
+<p>I think Moonshot could certainly be innovating on new protocols and dapps in this space, but I don’t think they will be exclusively. My hope is that the future of Gitcoin Grants is not only built in an open source manner, but that strategy enables the open source expansion of the Gitcoin ecosystem. <img src="https://emoji.discourse-cdn.com/twitter/seedling.png?v=12" title=":seedling:" class="emoji" alt=":seedling:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/12
+        Tue, 08 Mar 2022 04:38:08 +0000
+gov.gitcoin.co-post-9981-12
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+annika
+
+            <p>Very excited for this proposal. Super well-crafted and clearly a lot of long-term thinking here. This will be critical to making grants our grants program even better accessible to the community &amp; scalable for years to come.</p>
+<p>Thank you for all this work!</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/11
+        Sat, 05 Mar 2022 02:11:33 +0000
+gov.gitcoin.co-post-9981-11
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+DisruptionJoe
+
+            <p>I am starting to see a marketplace develop that allows a user to plug and play their own rules for a grants round. They would select inclusive vs exclusive logic for grant eligibility, funding mechanism, and a sybil vendor. One example of these might be community curated, using QF Pairwise, and dPoPP standard sybil defense.</p>
+<p>Do you see moonshot innovating on the marketplace for each of these solutions or on new protocols and dapps altogether? (While acknowledging that it is their decision)</p>
+<p>Is that how you see the Gitcoin ecosystem expanding as well?</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/10
+        Fri, 04 Mar 2022 18:31:16 +0000
+gov.gitcoin.co-post-9981-10
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+lthrift
+
+            <blockquote>
+<ul>
+<li>Listening to customer feedback and suggesting tools to improve round running UI/UX to Moonshot Collective</li>
+</ul>
+</blockquote>
+<p>I don’t think this feedback would/should go to Moonshot Collective, but directly to the product team that is building this tooling. Innovation and continuous improvement should be a principal and practice of all teams building software for Gitcoin, not just Moonshot Collective.</p>
+<p>A bit of a tangent for a separate post, but Moonshot Collective has the opportunity to really be the “<a href="https://www.clearpointstrategy.com/blue-ocean-strategy/" rel="noopener nofollow ugc">blue ocean</a>” focused team on the continuum of the product development lifecycle within <a href="https://i.imgflip.com/66ckr5.jpg" rel="noopener nofollow ugc">Gitcoin Product Collective</a>.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a6c0c7d7380f80ea0aa43b07dde99fe378463b84.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/a6c0c7d7380f80ea0aa43b07dde99fe378463b84" title="Screen Shot 2022-03-02 at 7.35.23 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a6c0c7d7380f80ea0aa43b07dde99fe378463b84_2_690x202.png" alt="Screen Shot 2022-03-02 at 7.35.23 PM" data-base62-sha1="nNai1oh1xSs7twGfUvcD8D8iATi" width="690" height="202" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a6c0c7d7380f80ea0aa43b07dde99fe378463b84_2_690x202.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a6c0c7d7380f80ea0aa43b07dde99fe378463b84_2_1035x303.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/a/a6c0c7d7380f80ea0aa43b07dde99fe378463b84.png 2x" data-dominant-color="DCADC2"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/9
+        Thu, 03 Mar 2022 22:57:08 +0000
+gov.gitcoin.co-post-9981-9
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+ceresstation
+
+            <p>I’ll likely edit this to respond in more detail when time permits, but I just want to say amazing job on this roadmap <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> <a class="mention" href="https://gov.gitcoin.co/u/lthrift">@lthrift</a>. I’m super optimistic about the direction put forward here, and specifically about the level of thought put into our path towards decentralization. Excited for the great revival.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/8
+        Thu, 03 Mar 2022 21:06:23 +0000
+gov.gitcoin.co-post-9981-8
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+DisruptionJoe
+
+            <p>I especially like this line of thinking. With the new setup, we will be thinking less about “who will donate” and more about “how do we help them grow their ecosystem”.</p>
+<p>I see PGF being instrumental in:</p>
+<ul>
+<li>Listening to customer feedback and suggesting tools to improve round running UI/UX to Moonshot Collective</li>
+<li>Continuing operations for a main and/or Ethereum round</li>
+<li>Building playbooks of “round running best practices”</li>
+<li>Discovering best practices by enabling round experiments like what are being discussed in the <a href="https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/20">https://gov.gitcoin.co/t/proposal-gitcoin-gr13-matching-pool-allocations/9915/20</a>
+</li>
+<li>Setting up materials with MMM to begin collecting top of the funnel contacts to solicit for future rounds</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/7
+        Thu, 03 Mar 2022 12:14:09 +0000
+gov.gitcoin.co-post-9981-7
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+kevin.olsen
+
+            <p>I think we’re still in the phase where we’re building up our governance muscles here in the <a href="https://i.imgflip.com/66ckr5.jpg" rel="noopener nofollow ugc">Gitcoin Product Collective</a> but you’re spot on that the end state vision is one where we are converging on the workstream governance model.</p>
+<p>It’s our hope that posts like these will help broadcast our intentions and bring in collaboration from the DAO, and ultimately create a smooth transition when this work finds it’s home as one or more funded workstreams inside the DAO.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/6
+        Thu, 03 Mar 2022 11:06:28 +0000
+gov.gitcoin.co-post-9981-6
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+lthrift
+
+            <p>A lot of this architecture and product vision have been informed by the way the Gitcoin Grants program/Public Goods Funding Workstream have evolved over the the last 12-18 months with the significant scaling of siderounds and community appetite for aqueduct.</p>
+<p>So yes, the modularity and composability of the architecture are to support that continued evolution as we seek to build the tech that enables the amazing work Public Goods Funding Workstream is embarking!</p>
+<blockquote>
+<p>Potentially this might mean even educating other organisations and foundations on how to run rounds of their own.</p>
+</blockquote>
+<p>Yes! We have heard from PGF that they plan to educate others on best practices for running founds. We hope this is another flywheel effect between the tech and operations of scaling public goods funding. It should also provide a short feedback loop between how the tech is (or is not) enable round management since we’re working together within the DAO.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/5
+        Wed, 02 Mar 2022 17:51:37 +0000
+gov.gitcoin.co-post-9981-5
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+thelostone-mc
+
+            <p>Would these individual teams also share quarterly plans to ensure DAO is informed of the progress as these units likely are to operate independently and overlap over common pieces ?</p>
+<p>I would advocate for these and hold them at the same level as other streams so as to ensure these team doesn’t work alone but instead with input / feedback from DAO at a high level</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/4
+        Wed, 02 Mar 2022 15:19:03 +0000
+gov.gitcoin.co-post-9981-4
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+nategosselin
+
+            <p>Very excited to see this out in the world. Can’t wait to start building <img src="https://emoji.discourse-cdn.com/twitter/fire.png?v=12" title=":fire:" class="emoji" alt=":fire:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/3
+        Wed, 02 Mar 2022 15:05:45 +0000
+gov.gitcoin.co-post-9981-3
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+Fishbiscuit
+
+            <p>Thank you <a class="mention" href="https://gov.gitcoin.co/u/kevin.olsen">@kevin.olsen</a> and congratulations on your first forum post! (great meeting you irl at ETHDenver and Boulder btw)</p>
+<p>Based on the current architecture, I would imagine that the Public Goods Funding Workstream might evolve to support this as a ‘round manager’ that could run all sorts of different types of funding rounds for different ecosystems and causes with this product suite as the underlying stack. Potentially this might mean even educating other organisations and foundations on how to run rounds of their own. What do you think? <a class="mention" href="https://gov.gitcoin.co/u/ceresstation">@ceresstation</a></p>
+<p>I really like how grants will be evolving and am excited to see it happen!</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/2
+        Wed, 02 Mar 2022 04:29:16 +0000
+gov.gitcoin.co-post-9981-2
+Gitcoin Grants 2.0
+      
+
+Gitcoin Grants 2.0
+kevin.olsen
+
+            <h1>
+<a name="grants-20-1" class="anchor" href="https://gov.gitcoin.co#grants-20-1"></a>Grants 2.0</h1>
+<p>Authors<br>
+<a href="mailto:lindsey@gitcoin.co">Lindsey Thrift</a><br>
+<a href="mailto:kevinolsen@gitcoin.co">Kevin Olsen</a></p>
+<h2>
+<a name="purpose-of-this-document-2" class="anchor" href="https://gov.gitcoin.co#purpose-of-this-document-2"></a>Purpose of this document:</h2>
+<ul>
+<li>Bring awareness to the current thinking inside the Gitcoin Product Collective (GPC) to the rest of the Gitcoin ecosystem</li>
+<li>Broadcast our intentions to the workstreams in the DAO to align efforts and identify overlapping efforts or unaccounted for needs</li>
+<li>Build the muscle of communication, anticipating the need to participate in governance in the near future.</li>
+</ul>
+<h2>
+<a name="who-this-doc-is-for-3" class="anchor" href="https://gov.gitcoin.co#who-this-doc-is-for-3"></a>Who this doc is for:</h2>
+<ul>
+<li>DAO Workstream participants</li>
+<li>Stewards</li>
+<li>Engineering, Design, and Product within GPC</li>
+<li>frens</li>
+</ul>
+<h2>
+<a name="intro-4" class="anchor" href="https://gov.gitcoin.co#intro-4"></a>Intro:</h2>
+<p>By: <a href="mailto:kevin@gitcoin.co">Kevin Owocki</a></p>
+<p>Grants 2.0 is the accumulation of all that we’ve learned since launching Gitcoin Grants in January 2019 + evolving it for the last 3 years.</p>
+<p>Not only are we solving for decentralization with 2.0, we are also solving for the “meta-problem”.</p>
+<ul>
+<li>The “problem” is public goods funding.</li>
+<li>The “meta-problem” is finding the optimal capital allocation tool for public goods funding.</li>
+</ul>
+<p>Instead of a centralized monolith (1.0), grants 2.0 will be forkable, modular, and decentralized.</p>
+<p>Instead of having a grants protocol w QF in it (what we did with 1.0), we will create a protocol w a deep liquidity of grants on it, &amp; create an ecosystem on top of it where different flavors of public goods funding can compete to optimally allocate capital on top of it (2.0).</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088.jpeg" data-download-href="/uploads/short-url/3ELRwiVb7hCoYGYccYia277rDUA.jpeg?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088_2_420x196.jpeg" alt="" data-base62-sha1="3ELRwiVb7hCoYGYccYia277rDUA" width="420" height="196" srcset="/uploads/db4391/optimized/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088_2_420x196.jpeg, /uploads/db4391/optimized/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088_2_630x294.jpeg 1.5x, /uploads/db4391/optimized/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088_2_840x392.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/1/19a264bccbae1c6434a1a2554c1f326d5d284088_2_10x10.png"></a></div><p></p>
+<p>Once grants 2.0 is launched, we will have created an environment where the community can test different public goods funding mechanisms on top of a deeply liquid registry of grants. This tool will allow us to speedrun the “<a href="https://cdixon.org/2009/09/19/climbing-the-wrong-hill" rel="noopener nofollow ugc">hill climbing problem</a>” of finding optimal democratic mechanisms for funding public goods.</p>
+<p><img src="/uploads/db4391/original/2X/f/fbc88bb19780234d67624a2e8c4b4484d6977281.png" alt="" data-base62-sha1="zVnvKXLzrd2hraTKKl5GbYFXfX3" width="268" height="117"></p>
+<h2>
+<a name="product-vision-5" class="anchor" href="https://gov.gitcoin.co#product-vision-5"></a>Product Vision</h2>
+<p>From open source software to <a href="https://otherinter.net/research/positive-sum-worlds/" rel="noopener nofollow ugc">public goods</a> in the physical world, DAOs and other ecosystem builders (collectives of people) are seeking to gather community signal on where to invest as well as get their initiatives funded.</p>
+<p>As <a href="https://gov.gitcoin.co/t/the-impactdao-protocoldao-sandwich/8944">an impact and protocol DAO</a>, Gitcoin envisions a world with thousands of public goods funding rounds running at any given time, distributing capital in an optimal manner that is governed by the community being served. We imagine a future where DAOs and ecosystems can spin-up/skin/fork our Gitcoin Grants experience to participate directly in the Gitcoin Grants ecosystem, and allow them the flexibility to rapidly experiment and to best deliver a grant experience that matches the needs of their community. Gitcoin will build the foundation for on-going, open source development of the tooling, standards, and substrates necessary to reach maximum scale of public goods funding distribution through development of the Gitcoin Grants Protocol.</p>
+<p>In accomplishing our vision, grant owners, round owners, and grant funders are all sovereign actors that facilitate their funding coordination through the Gitcoin Grants Protocol.</p>
+<h3>
+<a name="strategy-outline-6" class="anchor" href="https://gov.gitcoin.co#strategy-outline-6"></a>Strategy Outline</h3>
+<p>To achieve our vision, we will build a protocol with a SAM (simple, antifragile, modular) design and plugin architecture such that we are not too tightly coupled to any particular elements of the protocol.</p>
+<p>By doing so, the protocol is a container that:</p>
+<ul>
+<li>allows Gitcoin to speedrun the evolution of optimal capital distribution by being able to rapidly test and scale novel mechanisms and embed grants everywhere public goods projects are organizing and launching (such as integrations with DAO service platforms or Retro Public Goods Funding).</li>
+<li>enables the simple adoption of powerful tools that prevent fraud and sybil attacks, and encourage manipulation and curation of the data presented (ie, the Grants that are visible in the interface, the grants that are eligible in a round, the matching funds available, any matching fund caps, etc.).</li>
+<li>Creates opportunity for DAOs to use governance mechanisms to curate and govern their grants program, consequently creating utility for their governance tokens</li>
+</ul>
+<p>The protocol must be built in a fundamentally open source manner that not only allows but encourages contributions from the community to advance it - developers are a first class citizen in the Gitcoin Grants ecosystem, and the Protocol will be well documented and have a thriving developer community. If we are successful, a plugin marketplace will emerge and the opportunity for anyone to contribute to the evolution of funding public goods will be within reach.</p>
+<p>We will build for the <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698/57" rel="noopener nofollow ugc">L2 and multichain world</a> by maintaining most data in decentralized schemas off-chain and allowing smart contracts to be round specific and composable based on where a round manager chooses to deploy and what token they choose for funding and governance.</p>
+<p>Finally, we will decouple grants from rounds so that grantees have a credibly neutral means by which they can create, manage, and update their grants agnostic of any grant round in which they may participate.</p>
+<h2>
+<a name="architecture-overview-7" class="anchor" href="https://gov.gitcoin.co#architecture-overview-7"></a>Architecture Overview:</h2>
+<p>We envision the solution as 4 new code bases: decentralized Proof of Personhood Passport (<a href="http://proofofpersonhood.com" rel="noopener nofollow ugc">dPopp</a>), Grants Explorer, Grant Publisher, and Round Manager.</p>
+<p>These four apps correspond 1:1 with the core processes and domain concepts that exist within the current centralized and monolithic gitcoin code base.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/23488dfc0cea0a73000f90bc373b903b4d09bb0f.png" data-download-href="/uploads/short-url/5289Rl7L6wf13QcYlBV28XooiL5.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/2/23488dfc0cea0a73000f90bc373b903b4d09bb0f_2_624x377.png" alt="" data-base62-sha1="5289Rl7L6wf13QcYlBV28XooiL5" width="624" height="377" srcset="/uploads/db4391/optimized/2X/2/23488dfc0cea0a73000f90bc373b903b4d09bb0f_2_624x377.png, /uploads/db4391/optimized/2X/2/23488dfc0cea0a73000f90bc373b903b4d09bb0f_2_936x565.png 1.5x, /uploads/db4391/optimized/2X/2/23488dfc0cea0a73000f90bc373b903b4d09bb0f_2_1248x754.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/23488dfc0cea0a73000f90bc373b903b4d09bb0f_2_10x10.png"></a></div><p></p>
+<p>Note: there is an important architectural change that is implied here that differs from the current <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a> experience. Namely, that each round is a distinct end to end experience, as opposed to the current <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a> that is something of a meta-experience or round aggregator - whereby many grants corresponding to different rounds are presented together with a unified ‘checkout’ experience.</p>
+<p>Here, we are imagining each round having a grant explorer that is a distinct dApp that would launch to provide a customizable experience, putting grant curation and discovery in the hands of the community governing that round.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7eb80db23d6e7b6511825a3ba2d3facf890d7518.png" data-download-href="/uploads/short-url/i50uDfZVdRSv56ZL1paT42qkte0.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/7/7eb80db23d6e7b6511825a3ba2d3facf890d7518_2_624x456.png" alt="" data-base62-sha1="i50uDfZVdRSv56ZL1paT42qkte0" width="624" height="456" srcset="/uploads/db4391/optimized/2X/7/7eb80db23d6e7b6511825a3ba2d3facf890d7518_2_624x456.png, /uploads/db4391/optimized/2X/7/7eb80db23d6e7b6511825a3ba2d3facf890d7518_2_936x684.png 1.5x, /uploads/db4391/optimized/2X/7/7eb80db23d6e7b6511825a3ba2d3facf890d7518_2_1248x912.png 2x" data-small-upload="/uploads/db4391/optimized/2X/7/7eb80db23d6e7b6511825a3ba2d3facf890d7518_2_10x10.png"></a></div><p></p>
+<h2>
+<a name="the-road-to-decentralization-8" class="anchor" href="https://gov.gitcoin.co#the-road-to-decentralization-8"></a>The road to decentralization:</h2>
+<p>Our goal is that by the end of Q1 2023 we can run Gitcoin Grants Rounds on a new constellation of software products that cover the core capabilities that <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a> currently provides - giving our platform credible neutrality, opening up our protocol to a broader grants ecosystem, and allowing us to <a href="https://twitter.com/owocki/status/1496513186442395649" rel="noopener nofollow ugc">prototype &amp; test different funding mechanisms</a> more rapidly.</p>
+<h4>
+<a name="h-624x331uploadqsyzsnr2rwmcn49pe4v87zwniixpng-9" class="anchor" href="https://gov.gitcoin.co#h-624x331uploadqsyzsnr2rwmcn49pe4v87zwniixpng-9"></a><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/bc6353c3f34c378e62f82db2cf0acbe32cf4b8fd.png" data-download-href="/uploads/short-url/qSyzsNr2rwMCn49pe4v87ZWNiix.png?dl=1" title="" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/2X/b/bc6353c3f34c378e62f82db2cf0acbe32cf4b8fd_2_624x331.png" alt="" data-base62-sha1="qSyzsNr2rwMCn49pe4v87ZWNiix" width="624" height="331" srcset="/uploads/db4391/optimized/2X/b/bc6353c3f34c378e62f82db2cf0acbe32cf4b8fd_2_624x331.png, /uploads/db4391/optimized/2X/b/bc6353c3f34c378e62f82db2cf0acbe32cf4b8fd_2_936x496.png 1.5x, /uploads/db4391/optimized/2X/b/bc6353c3f34c378e62f82db2cf0acbe32cf4b8fd_2_1248x662.png 2x" data-small-upload="/uploads/db4391/optimized/2X/b/bc6353c3f34c378e62f82db2cf0acbe32cf4b8fd_2_10x10.png"></a></div>
+</h4>
+<p>Starting immediately after GR13 the <a href="http://Gitcoin.co" rel="noopener nofollow ugc">Gitcoin.co</a> web application will effectively go into maintenance mode. This means the GPG team will only be addressing critical issues to the platform.</p>
+<p>As we make progress on our delivery of the decentralized applications we will begin deprecating portions of the <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a> experience and migrating to the new dapps that deliver the corresponding functionality.</p>
+<h4>
+<a name="dpopp-10" class="anchor" href="https://gov.gitcoin.co#dpopp-10"></a>dPopp</h4>
+<p>We will kick off the development of dPopp before the end of Q1 2022, and hope to have an MVP before the end of 1H 2022, with the stretch goal of deprecating the trust bonus UI and migrating the <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a> trust bonus experience to dPopp. It is our backstop estimate that the trust bonus in <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a> will be replaced in Q3 2022.</p>
+<h4>
+<a name="round-manager-and-grant-publisher-11" class="anchor" href="https://gov.gitcoin.co#round-manager-and-grant-publisher-11"></a>Round Manager and Grant Publisher</h4>
+<p>We will proceed to move through the core functions of the main web application, deprecate functionality in the main web application, and migrate to the corresponding dApps as we deliver them. The Round Manager and Grant Publisher will kick off in Q2 2022 and we hope to have a working end to end system sufficient to allow an alternate protocol to share the underlying decentralized grant registry in GR14. We are orienting this work to enable CLRFund to run a parallel round in GR14 that would demonstrate the decentralization of our registry, while also allowing for a comparison of CLRFund MACI with the existing Gitcoin QF fund distribution mechanism.</p>
+<h4>
+<a name="grant-explorer-12" class="anchor" href="https://gov.gitcoin.co#grant-explorer-12"></a>Grant Explorer</h4>
+<p>Finally, we will begin development of the Grant Explorer in Q2 2022 to build up to an end to end system that will allow gitcoin to open up our grant protocol to other DAOs.</p>
+<h2>
+<a name="the-end-of-the-monolith-13" class="anchor" href="https://gov.gitcoin.co#the-end-of-the-monolith-13"></a>The End of the Monolith</h2>
+<p>It is our goal to deprecate most of the core gitcoin experience by GR16. Given the UX differences between the multiple separate rounds from the current centralized gitcoin experience we expect we may need an additional quarter to deliver a unified UX that replicates the multiple round grant exploration our users expect from <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a>. By Q1 2023 it is our hope that this last piece of development will allow us to completely migrate away from the original <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a> web application, and for us to retire the monolith.</p>
+<h2>
+<a name="questions-you-might-have-now-14" class="anchor" href="https://gov.gitcoin.co#questions-you-might-have-now-14"></a>Questions You Might Have Now</h2>
+<ul>
+<li>How is this good for the Gitcoin DAO?
+<ul>
+<li>It enables a project to start up with Gitcoin and for Gitcoin to gain utility from projects that find product community fit (PCF) through governance token swaps etc. This is a critical component of achieving the <a href="https://gov.gitcoin.co/t/the-impactdao-protocoldao-sandwich/8944">impact DAO protocol DAO sandwich mission</a>.</li>
+</ul>
+</li>
+<li>Will Gitcoin DAO continue to run grants rounds or will they all be self-run by DAOs and ecosystems?
+<ul>
+<li>Growth of the Gitcoin grants rounds have shifted from vertical scaling (more money into the main round for the Ethereum community) to horizontal scaling (more matching pools funded by other novel ecosystems and collectives with shared cause based missions).We have identified that the total addressable market of this horizontal scaling and very large and feel confident the growth of this scale on the centralized platform is validation to continue investing in this scale through decentralizing the platform into an open source protocol.<br>
+Gitcoin DAO will continue to run their own round while also assisting others in the running of their rounds (what we call side rounds today). We expect the Gitcoin Grants Protocol will enable Gitcoin DAO to continue to experiment with initiatives such as Aqueduct to discover the highest impact ways of running rounds and supporting ecosystem growth.</li>
+</ul>
+</li>
+<li>Why would we separate rounds from grants?
+<ul>
+<li>So that rounds can be run on any chain, by any party, in any manner they wish and grants can be included in those rounds as (1) the grant owner desires to be included and (2) the grant project meets the eligibility criteria of the round</li>
+</ul>
+</li>
+<li>Why not just SaaS-ify the the round management platform to expedite the building and maintenance of it?
+<ul>
+<li>By making round management independent of a centralized platform, round managers can configure and build upon the round structure to fully tailor to their needs and to make simple mechanism decisions that fit their needs; it’s likely that the value of creating token utility for DAOs to be able to use their governance tokens for curation and for ecosystems L1/L2 builders to use their native tokens for matching payout increases the inherent value of the Gitcoin Grants Standard and Schemas over building it themselves or using something “off the shelf”.</li>
+<li>Building a fully open-source protocol also means that we are building a public good that no longer depends on Gitcoin to exist and creates the opportunity for the emergence of a plugin marketplace.</li>
+</ul>
+</li>
+<li>Why doesn’t this vision and strategy center on quadratic funding?</li>
+</ul>
+<h2>
+<a name="where-do-we-go-from-here-15" class="anchor" href="https://gov.gitcoin.co#where-do-we-go-from-here-15"></a>Where do we go from here?</h2>
+<p>We have been working this past month to align this roadmap with Kevin, Kyle, the FDD, GrantOps, our delivery partners, and the GPG. It is our hope that this document will serve as a strong foundation for continued evolution. We welcome any and all feedback to this plan!</p>
+<p>So what do we need to pull this off? Besides the focus and a bit of inspiration we’ll need to actually build this thing, we’ll need some help keeping people oriented on the end state while <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a> slows down the rate of improvements. Going into maintenance mode might be hard for some of the team; namely, customer service, or sales might feel neglected as we build the future platform. Helping keep the community and team oriented on the goal of a decentralized multi-DAO future will take everyone’s help articulating the benefits, and weighing the tradeoffs between current and future pains and gains.</p>
+<p>If you have any questions, if you see things we may have missed, or have any feedback please tell us. We would love to have the broadest community buy-in to this plan that we can achieve, and we look forward to working together with this community to bring the gitcoin core technologies into <a href="https://gov.gitcoin.co/t/the-great-bear-the-great-reset-the-great-revival/9855">the great revival</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-grants-2-0/9981/1
+        Tue, 01 Mar 2022 17:00:02 +0000
+gov.gitcoin.co-post-9981-1
+Gitcoin Grants 2.0
+      
+
+

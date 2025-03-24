@@ -1,0 +1,538 @@
+
+
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010
+    ## Summary
+
+Gitcoin has been working with [ScopeLift](https://scopelift.co) for a number of months to develop, test and now implement new onchain governance contracts for the Gitcoin DAO. These new contracts are built on [tested Open Zeppelin](https://blog.openzeppelin.com/compound-governor-bravo-audit/) contracts that bring [Governor Bravo](https://blog.tally.xyz/understanding-governor-bravo-69b06f1875da) functionality to our DAO’s governance. These new contracts also have the [Flexible Voting](https://www.scopelift.co/blog/how-scopelift-built-a-flex-voting-atoken-on-aave) extension which has been [audited](https://blog.openzeppelin.com/scopelift-flexible-voting-audit/). Flexible Voting provides a permissionless interface for integration and experimentation via voting contracts, enabling a host of new use cases to eventually be built (layer 2 voting, shielded voting, new delegation schemes, etc..). It is our goal to have the DAO review and approve the upgrade to these new contracts, and then for us to migrate our governor contracts.
+
+## Abstract
+
+The Gitcoin DAO was launched nearly two years ago, in May of 2021 using our iconic [Quadratic Lands website](https://quadraticlands.com). The initial governance contracts used were the only “battle tested” contracts available at the time (though Governor Bravo was just emerging as an option). As a result, when deploying the DAO, the selection of Governor Alpha contracts were used to ensure stability and safety.
+
+Fast forward two years and we have seen an explosion of new governance mechanisms (Nouns, NFTs, token voting, Gnosis voting, etc.). Gitcoin has explored a number of options to encourage more voter participation (like our Quadratic Votes on Snapshot, Signaling on our governance forums, etc.), but remains deeply tied to our governance token and the onchain mechanisms that it affords. We would like to upgrade the existing contract (technically replace) with new contracts to expand our onchain governance capabilities.
+
+ScopeLift is a team that has been building and developing smart contracts with Gitcoin for years. They built the first bulk checkout experience and our zkSync checkout flow on the cGrants Platform, contributed to the first version of the Trust Bonus which became Passport, were integral in a large revamp of cGrants at GR9, and also shared their wisdom on how to construct dGrants.
+
+## Motivation
+
+The Alpha contracts we have work and are reliable, but we feel they are restrictive in our ability to explore, and upgrade components of our governance process. We would like to give the community the ability to decide the proposal threshold, voting delay, voting duration, and also introduce novel mechanisms via Flexible Voting strategies.
+
+It has been flagged multiple times that we want more capabilities in governance voting. Even just giving voters an abstain option for on chain votes is not possible right now with the existing governor contracts.
+
+## Specification
+
+The new Governor contract and associated tests, simulations, and scripts are available in a [GitHub repository](https://github.com/gitcoinco/Alpha-Governor-Upgrade). The [Governor](https://github.com/gitcoinco/Alpha-Governor-Upgrade/blob/main/src/GitcoinGovernor.sol) was assembled from OpenZeppelin’s widely used, audited, and battle tested implementation of the Governor. It is compatible with Governo Bravo and with the existing GTC token contract and governance Timelock contract, which will remain in place.
+
+The Governor contract also inherits ScopeLift’s Flexible Voting extension, which is backwards compatible with the existing Governor interface. It provides a new point for integrations. It is also fully [audited](https://blog.openzeppelin.com/scopelift-flexible-voting-audit/).
+
+The repository contains an [extensive suite of tests](https://github.com/gitcoinco/Alpha-Governor-Upgrade/blob/main/test/GitcoinGovernor.t.sol). These tests simulate the upgrade to the new Governor, from deployment, proposal, Governance vote, and future votes by the DAO. The tests run on a “forked” state from mainnet to simulate the closest possible production state. They exercise all scenarios before and after the upgrade, and ensure Governance will still function properly after it is completed.
+
+The repository contains [scripts](https://github.com/gitcoinco/Alpha-Governor-Upgrade/tree/main/script) for deploying the new Governor and for submitting a proposal for the upgrade to the existing Governor. The scripts are exercised by the tests. The deployment script was used to [deploy](https://etherscan.io/address/0x1a84384e1f1b12d53e60c8c528178dc87767b488) a candidate Governor contract. If the DAO chooses to move this to an onchain vote, the proposal script will be used by a delegate with sufficient weight to submit the proposal.
+
+If an onchain vote on the proposal fails, the existing Governor will retain its Governance privileges and can continue to be used. This scenario has also been fully tested.
+
+If an onchain vote on the proposal is successful, the old Governor will be left without a privileged role, while the new candidate Governor will be given control of the treasury and other Governance functions. Votes on future proposals will proceed through the new Governor. We are coordinating with Tally to ensure the change is reflected immediately in the Governance frontend should it succeed.
+
+No proposals should be queued behind the upgrade proposal, as it will not be possible for them to execute if the upgrade succeeds. Any such proposal could still be resubmitted to the new Governor.
+
+## Benefits
+
+Upgrading (aka replacing) the existing Governor Contracts will offer the following benefits:
+
+* Ongoing Customization of key voting criteria (proposal threshold, voting delays, voting period)
+* Introduction of Flexible Voting to enable new use cases, such as GTC locked in various locations (Uniswap, Maker, Compound) to still be used for voting, Layer 2 voting, shielded voting, etc…
+* Extensibility to explore additional customizations in delegation, such as expiring delegation, overridable delegation, chained delegation, quadratic delegation, and more
+
+## Drawbacks
+
+The cost of this work has been funded by the Gitcoin Foundation and is not something DAO will incur. The largest drawback to this proposal is execution risk. If there were a serious bug, we could lock the treasury. Said differently, without an operational governor contract, the treasury would be inaccessible. This is why all contracts have been audited and why ScopeLift has spent extensive time testing and simulating the upgrade.
+
+## Vote
+
+I propose three options:
+
+1 - Vote Yes to upgrade the Governor Contract to the contracts ScopeLift has deployed [here](https://etherscan.io/address/0x1a84384e1f1b12d53e60c8c528178dc87767b488).
+
+2 - Vote No and do not upgrade
+
+3 - Abstain
+Wed, 06 Sep 2023 15:30:13 +0000
+📜 Proposals
+
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+owocki
+
+            <p>Kudos to everyone who worked on this on a successful upgrade.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/57">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/57
+        Wed, 06 Sep 2023 15:30:13 +0000
+gov.gitcoin.co-post-14010-57
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+kyle
+
+            <p>As Ben mentioned, the Upgrade has been successful!</p>
+<p>We are going to spend a bit of time outlining where there are opportunities to introduce novel voting schemes in the future.</p>
+<p>Just a heads up, Tally will continue to show the details for the old governor, and now also the new governor. All voting and on-chain interaction will happen using the new page and new governor.</p>
+<p>Let us know if you have any questions <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/56">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/56
+        Wed, 06 Sep 2023 13:49:30 +0000
+gov.gitcoin.co-post-14010-56
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>Excited to say that <a href="https://www.tally.xyz/gov/gitcoin/proposal/49342153689828217040461764921799237826821432521798787433997318257313751977548" rel="noopener nofollow ugc">one proposal</a> has now executed through the new Governor, with several others lined up to do so soon. It is now possible to say with full confidence that the upgrade has gone as expected. Once more, thanks to the Gitcoin community for entrusting us with this work!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/55">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/55
+        Tue, 05 Sep 2023 13:21:59 +0000
+gov.gitcoin.co-post-14010-55
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <aside class="quote no-group" data-username="owocki" data-post="53" data-topic="14010">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Does the new Tally proposal have to pass and successfully execute to 100% prove it works?</p>
+</blockquote>
+</aside>
+<p>Hey Kevin, good question. We can say with high confidence that the Governor is working based on the execution of the proposal and the queuing of a new one. But you’re right. We’ll be able to say with <strong>total</strong> confidence that it worked only after the first proposal clears through it!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/54">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/54
+        Fri, 25 Aug 2023 13:19:05 +0000
+gov.gitcoin.co-post-14010-54
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+owocki
+
+            <p>Kudos on the successful upgrade. (err seemingly successful?  Does the new Tally proposal have to pass and successfully execute to 100% prove it works?)</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="14010">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Flexible Voting provides a permissionless interface for integration and experimentation via voting contracts, enabling a host of new use cases to eventually be built (layer 2 voting, shielded voting, new delegation schemes, etc…).</p>
+</blockquote>
+</aside>
+<p>Looking forward to seeing what kind of things are built here.  I’d love to wrap my mind around the possibilities enabled.</p>
+<aside class="quote no-group" data-username="kyle" data-post="1" data-topic="14010">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>The Alpha contracts we have work and are reliable, but we feel they are restrictive in our ability to explore, and upgrade components of our governance process. We would like to give the community the ability to decide the proposal threshold, voting delay, voting duration, and also introduce novel mechanisms via Flexible Voting strategies.</p>
+</blockquote>
+</aside>
+<p>Kyle teased some possibilities here.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/53">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/53
+        Thu, 24 Aug 2023 13:33:10 +0000
+gov.gitcoin.co-post-14010-53
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>Hi all, as most of you have no doubt seen, the upgrade has now executed successfully. The new Governor is available on Tally and one new proposal has already been submitted to it. I again reiterate my thanks to the Gitcoin community for trusting ScopeLift with this work. We’re excited to see what comes next, and eager for the opportunity for continued collaboration. Congrats to Gitcoin!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/52">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/52
+        Thu, 24 Aug 2023 12:58:42 +0000
+gov.gitcoin.co-post-14010-52
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/garm">@garm</a>, thanks! And no worries at all for the late question.</p>
+<p>The final Gitcoin Governor contract is assembled from fully audited components, namely: ScopeLift’s Flexible Voting extension and the battle tested OpenZeppelin Governor implementation.</p>
+<p>Flexible Voting was audited twice, but only one of the audits was made public, which you can see <a href="https://blog.openzeppelin.com/scopelift-flexible-voting-audit" rel="noopener nofollow ugc">here</a>. The code was audited a second time by Trail of Bits as part of that projects Governance system audit. We have seen the final report but it has not (yet?) been published.</p>
+<p>As you can see by looking at the <a href="https://github.com/gitcoinco/Alpha-Governor-Upgrade/blob/main/src/GitcoinGovernor.sol" rel="noopener nofollow ugc">Gitcoin Governor</a>, there is no new code—only the inheriting of audited contracts and the configuration of parameters as appropriate for Gitcoin.</p>
+<p>Most of the work for the upgrade actually comes from the <a href="https://github.com/gitcoinco/Alpha-Governor-Upgrade/blob/main/test/GitcoinGovernor.t.sol" rel="noopener nofollow ugc">tests/simulations</a> we wrote to ensure the upgrade would execute properly and that the new Governor contract we put in place would function as expected afterwards.</p>
+<p>Please let me know if you have any further questions! We are also excited to see this upgrade coming to fruition.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/51">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/51
+        Wed, 16 Aug 2023 13:00:11 +0000
+gov.gitcoin.co-post-14010-51
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+garm
+
+            <p>Excited to see the proposal going live <a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a> ! Appreciate I’m late to the party, but I was wondering if you could share the links to the audits of the GitcoinGovernor contracts? I’m probably overlooking something obvious, but can’t find them myself <img src="https://gov.gitcoin.co/images/emoji/twitter/sweat_smile.png?v=12" title=":sweat_smile:" class="emoji" alt=":sweat_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/50">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/50
+        Tue, 15 Aug 2023 11:58:14 +0000
+gov.gitcoin.co-post-14010-50
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>The upgrade proposal is now live onchain. We have done two additional security/safety checks since the proposal was put onchain by <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a>.</p>
+<p>First, we updated our tests &amp; simulations to run with actual deployed proposal data, to ensure no errors were introduced when the proposal was put onchain. See results <a href="https://github.com/gitcoinco/Alpha-Governor-Upgrade/pull/27" rel="noopener nofollow ugc">here</a>.</p>
+<p>Secondly, we modified <a href="https://github.com/Uniswap/governance-seatbelt" rel="noopener nofollow ugc">Seatbelt</a> to simulate the proposal and analyze its effects. You can see the report <a href="https://gist.github.com/mds1/ce7b65b02c257dab1569fac081e3aa94" rel="noopener nofollow ugc">here</a>.</p>
+<p>Both checks indicate that the proposal will behave as expected, that Gitcoin’s Governor will be properly upgraded, and that the DAO’s onchain governance will continue to function as expected afterwards.</p>
+<p>Given all this, we encourage DAO Delegates to vote in favor of the proposal. <a href="https://www.tally.xyz/gov/gitcoin/proposal/65" class="inline-onebox" rel="noopener nofollow ugc">Tally | Gitcoin Proposal</a></p>
+<p>Thanks again to the Gitcoin community for entrusting ScopeLift with this sensitive work. We look forward to seeing the upgrade completed and what will get built on top of it afterwards.</p>
+<p>As always, I’m happy to answer any additional questions anyone has.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/49">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/49
+        Fri, 11 Aug 2023 17:21:42 +0000
+gov.gitcoin.co-post-14010-49
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+dcictalireza
+
+            <p>Vote Yes to upgrade the Governor Contract to the contracts ScopeLift has deployed</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/48">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/48
+        Tue, 01 Aug 2023 22:58:23 +0000
+gov.gitcoin.co-post-14010-48
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>We’re gratified to see the snapshot vote on the upgrade is going well. As promised, the updated candidate Governor has been deployed:</p><aside class="onebox allowlistedgeneric" data-onebox-src="https://etherscan.io/address/0x9d4c63565d5618310271bf3f3c01b2954c1d1639">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7509193f79f8e07c89bc0bbc7e8f29ea636d71e9.png" class="site-icon" width="48" height="48">
+
+      <a href="https://etherscan.io/address/0x9d4c63565d5618310271bf3f3c01b2954c1d1639" target="_blank" rel="noopener nofollow ugc">Ethereum (ETH) Blockchain Explorer</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:101/70;"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0714c340ff75839319f83db28260c42d50729e1e.png" class="thumbnail" width="101" height="70"></div>
+
+<h3><a href="https://etherscan.io/address/0x9d4c63565d5618310271bf3f3c01b2954c1d1639" target="_blank" rel="noopener nofollow ugc">GitcoinGovernor | Address 0x9d4c63565d5618310271bf3f3c01b2954c1d1639 | Etherscan</a></h3>
+
+  <p>The Contract Address 0x9d4c63565d5618310271bf3f3c01b2954c1d1639 page allows users to view the source code, transactions, balances, and analytics for the contract address. Users can also interact and make transactions to the contract directly on...</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/47">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/47
+        Mon, 31 Jul 2023 17:07:20 +0000
+gov.gitcoin.co-post-14010-47
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>Thanks for moving this forward Kyle. As always, happy to answer any questions anyone might have!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/46">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/46
+        Wed, 26 Jul 2023 14:08:42 +0000
+gov.gitcoin.co-post-14010-46
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+kyle
+
+            <p>Hey all - I want to bump this thread again for everyone.</p>
+<p>We recently withdrew $3MM USDC from the treasury to support the workstreams and moved that into the gnosis safe.</p>
+<p>I wold love to revive these conversations and move this to a vote on snapshot. If the snapshot vote passes, I will work with ben to ensure we test this together a few times prior to que`ing up the Tally vote.</p>
+<p>Hopefully folks are interested in supporting the upgrade!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/45">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/45
+        Wed, 26 Jul 2023 11:54:08 +0000
+gov.gitcoin.co-post-14010-45
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>Hey Kyle, we’re working on the engineering side of this now. Realistically I think a proposal for PoolTogether could be live in 4-5 weeks.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="43" data-topic="14010">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>Considering the fact that bugs are being found on an ongoing basis, I suggest we move all non-native tokens to another address. The reason being that non-native tokens cannot be recovered but a new contract can be deployed for native tokens</p>
+</blockquote>
+</aside>
+<p>I understand this reaction, and if the Gitcoin community decides to move 100% of non-native funds, we are happy to support it. I just want to reiterate a few facts:</p>
+<ol>
+<li>The bug in question would not have resulted in lost or locked funds</li>
+<li>The contracts have now gone through two in-depth audits</li>
+<li>Moving of the funds is not a risk free endeavor, as they have to be sent back to the DAO by the entity that holds them, such as the CSDO as you are suggesting, and errors can happen in that process as well.</li>
+</ol>
+<p>With regards to the CSDO as a suggested entity to custody the funds, I have a couple of quick practical questions:</p>
+<ol>
+<li>How many people are on the CSDO</li>
+<li>Does the CSDO currently have a multisig it operates on mainnet, and how is that multisig configured if so? What is its address?</li>
+</ol>
+<p>Thanks for the suggestion! Hoping we can move this forward and come to a consensus soon <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/44">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/44
+        Mon, 26 Jun 2023 15:54:39 +0000
+gov.gitcoin.co-post-14010-44
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+jengajojo
+
+            <p>Thanks for the update <a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a></p>
+<aside class="quote no-group" data-username="bendi" data-post="41" data-topic="14010">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bendi/48/6661_2.png" class="avatar"> bendi:</div>
+<blockquote>
+<p>How much of the treasury funds to move out before executing the upgrade</p>
+</blockquote>
+</aside>
+<p>Considering the fact that bugs are being found on an ongoing basis, I suggest we move all non-native tokens to another address. The reason being that non-native tokens cannot be recovered but a new contract can be deployed for native tokens</p>
+<aside class="quote no-group" data-username="bendi" data-post="41" data-topic="14010">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/bendi/48/6661_2.png" class="avatar"> bendi:</div>
+<blockquote>
+<p>Where to move the backup funds to</p>
+</blockquote>
+</aside>
+<p>Assuming that these responsibilities still hold true for CSDO <a href="https://gov.gitcoin.co/t/csdo-charter-v1/12490" class="inline-onebox">CSDO Charter V1</a> I suggest them to make a separate address to hold these funds. Alternatively a time dependant contract can escrow but I am not sure if it’s worth the operational effort for you all.</p>
+<p>In either case, I am happy to add my feedback on the draft proposal if you want. Thanks once again <a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/43">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/43
+        Wed, 21 Jun 2023 06:30:19 +0000
+gov.gitcoin.co-post-14010-43
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+kyle
+
+            <p>Thanks, Ben for the update!</p>
+<p>When are the the PoolTogether contract upgrades going live?</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/42">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/42
+        Tue, 20 Jun 2023 17:16:34 +0000
+gov.gitcoin.co-post-14010-42
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>Hey all, I wanted to share that we just <a href="https://www.scopelift.co/blog/flexible-voting-bugfix-and-adoption-update" rel="noopener nofollow ugc">disclosed</a> and <a href="https://github.com/ScopeLift/flexible-voting/releases/tag/v1.1.0" rel="noopener nofollow ugc">patched</a> a bug with Flexible Voting. The bug was found during an audit of Frax Finance’s governance contracts, which use Flexible Voting. PoolTogether has also <a href="https://www.tally.xyz/gov/pooltogether/proposal/73" rel="noopener nofollow ugc">funded</a> ScopeLift to execute their upgrade to an Flexible Voting Governor.</p>
+<p>It’s important to note that this bug was an edge case, would <em>not</em> have put treasury funds at risk, and would not have impacted Gitcoin directly, as signature based voting is not (currently) leveraged by the DAO.</p>
+<p>All that said, the fact this bug was discovered <em>does</em> emphasize the very valid concerns the community has had around security and safety of funds.</p>
+<p>Next week, we will deploy a new candidate Governor—with the fix included—for Gitcoin to consider, and update the repository to reflect this change. We hope the community can come to some consensus soon on a path forward, in particular on:</p>
+<ul>
+<li>How much of the treasury funds to move out before executing the upgrade and…</li>
+<li>Where to move the backup funds to</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/41">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/41
+        Fri, 16 Jun 2023 21:56:07 +0000
+gov.gitcoin.co-post-14010-41
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>Hey Shawn, no worries at all. These are good things to talk through to make sure they’re clear. If I understand what you’re saying correctly, it basically sounds like what you’re recommending is that the upgrade be done in incremental steps instead of all at once. Is that basically right?</p>
+<p>Unfortunately, because of the way the existing contracts are designed, you can’t put one system in place and slowly migrate over to it. Here’s why, in (somewhat) more technical detail:</p>
+<p>The treasury is held by a contract called a <a href="https://etherscan.io/address/0x57a8865cfB1eCEf7253c27da6B4BC3dAEE5Be518#code" rel="noopener nofollow ugc">Timelock</a>, which executes the onchain proposals after a delay. The Timelock has an administrator that can queue the transactions to execute through it. The <a href="https://etherscan.io/address/0xDbD27635A534A3d3169Ef0498beB56Fb9c937489" rel="noopener nofollow ugc">Governor</a> contract is the administrator of the Timelock. There can only be one administrator at a time. Only the existing administrator can update it.</p>
+<p>This means there must be a proposal where the existing Governor transfers the Timelock’s administrator role over to the <a href="https://etherscan.io/address/0x1a84384e1f1b12d53e60c8c528178dc87767b488" rel="noopener nofollow ugc">new Governor</a>. It must be done in one step. And in the unlikely event that something went wrong with that step, such that the new Governor could not properly queue transactions to the Timelock, the funds there would be locked.</p>
+<p>That’s why we wrote all the tests as part of this process. These tests effectively simulate the upgrade process in an environment that mimics the network state of mainnet.</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="38" data-topic="14010">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p><a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> 's line of thinking doesn’t sound so bad. I would like to hear what the other members of the stewards council have to say in this matter.</p>
+</blockquote>
+</aside>
+<p>I’ll let <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> comment, but I think he meant this as an example of how we could go too far in attempting mitigations.</p>
+<p>As I said, I do think moving some proportion of the funds out of the treasury and into some other wallet is a reasonable disaster mitigation plan. We can incorporate this into the proposal itself and test the transfer out.</p>
+<p>That said, it’s important to remember that the mitigation itself is not risk free, may actually be riskier than the upgrade. What is more likely: the carefully planned and extensively tested/simulated upgrade process fails? Or a well intentioned multi-sig member fat-fingering the address in the Safe UI when they go to transfer the funds back?</p>
+<p>This is why my personal recommendation would be to only move some percentage of the funds out. I think you’d want to transfer enough to allow the DAO to continue to function and recover in the very unlikely event that something went wrong, but also an amount small enough that the DAO could afford to lose it should something go wrong moving the funds back.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/40">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/40
+        Fri, 26 May 2023 14:00:18 +0000
+gov.gitcoin.co-post-14010-40
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+jengajojo
+
+            <p>Thanks <a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a></p>
+<p>kyle brings a good point here</p>
+<aside class="quote no-group" data-username="kyle" data-post="33" data-topic="14010">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Why not just empty the treasury to that gnosis safe, then move it back after the upgrade?</p>
+</blockquote>
+</aside>
+<p>if this is indeed a</p>
+<aside class="quote no-group" data-username="shawn16400" data-post="35" data-topic="14010">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar"> shawn16400:</div>
+<blockquote>
+<p>major/catastrophic.</p>
+</blockquote>
+</aside>
+<p>risk, then <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> 's line of thinking doesn’t sound so bad. I would like to hear what the other members of the stewards council have to say in this matter.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/38">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/38
+        Fri, 26 May 2023 06:49:28 +0000
+gov.gitcoin.co-post-14010-38
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+shawn16400
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a> thanks for all you and <span class="mention">@ScopeLift</span> have done to upgrade governance for the network.  During Tally Delegation Week I heard Scopelift mentioned in two different twitterspaces so these changes are indeed anticipated.  And to note, that once one or two protocols successfully perform this move without incident, I think migration becomes easier.</p>
+<p>In the old world (if I did not have a QA environment), for a change with this potential impact I would have taken one of two approaches:</p>
+<ol>
+<li>Upgrade a stand alone (back-up) system which has the same configuration as the target system.  This means move the changes to a mirror copy and (depending on interfaces), run a suite of business cases against the back up to ensure nothing broke.  If nothing breaks after testing, move the changes into the target system.</li>
+<li>Move the entire upgrade to a new environment and migrate “business” over to the new environment.  Basically do step 1, but instead of moving the changes over to the old system after testing the backup, bring the treasury over to the new system in series of increasing stages based on demonstrated use.</li>
+</ol>
+<p>Now part of the reason DAOs <s>run like crap</s> are sometimes slow is because people with little knowledge get to weigh in on things they may not know all that much about. Sometimes the outside perspective helps, and sometimes it just gums things up.  Not sure which case this is, but if it looks like help to you, I am happy to jump on a call and work through it. <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/37">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/37
+        Thu, 25 May 2023 13:59:48 +0000
+gov.gitcoin.co-post-14010-37
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>Hey Shawn, I love this framework for thinking about the risks and agree with where you’ve benchmarked it. <em>Very</em> unlikely/rare, but very negative consequences were it to happen.</p>
+<p>I’m curious what concrete plan you think ought to be in place beyond moving some of the tokens out of the treasury before the upgrade? I.e. can you flesh out what you mean here, and how what’s suggested is different than simply moving the tokens?</p>
+<blockquote>
+<p>Typically I would have done this via phasing in the changes to lower risk components (move change to a sub-treasury), building emergency inventory (moving tokens to a back up wallet), or building a back-up site (new &amp; functional copy of our existing treasury) that is ready for execution</p>
+</blockquote>
+<p>As I mentioned, I think moving the tokens is a reasonable step to consider, and it can be done (without additional risk) as part of the upgrade proposal itself. We’re happy to execute on this, we just need to decide how much of the tokens to move and where to send them. If you have concrete additional suggestions for risk mitigation we’re also happy to discuss!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/36">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/36
+        Tue, 23 May 2023 16:32:53 +0000
+gov.gitcoin.co-post-14010-36
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+shawn16400
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/bendi">@bendi</a><br>
+In a past life, we would do a risk assessment with each project that would list out realistic risks associated to a project.  This would be risks to the project, and risk because of the project (unintended consequences).<br>
+Each risk is then weighted according to the vectors of “likelihood” and “consequences”.  In this example the likelihood might be considered rare, unlikely, or even unknown.  However the consequence of bricking the treasury would rank up there with major/catastrophic.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/6/65fff6f97378b1f6c930fd074a658d5ab250b978.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/65fff6f97378b1f6c930fd074a658d5ab250b978" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/6/65fff6f97378b1f6c930fd074a658d5ab250b978.jpeg" alt="image" data-base62-sha1="eykCQ4wyPX8b4GYbL4NX944SIcg" width="690" height="401" data-dominant-color="CFA293"></a></div><p></p>
+<p>If Gitcoin followed this methodology, we have to put in a risk mitigation plan in place to protect against the occurrence.  Typically I would have done this via phasing in the changes to lower risk components (move change to a sub-treasury), building emergency inventory (moving tokens to a back up wallet), or building a back-up site (new &amp; functional copy of our existing treasury) that is ready  for execution.</p>
+<p>Net - we really should put a plan in place.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/35">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/35
+        Tue, 23 May 2023 11:59:20 +0000
+gov.gitcoin.co-post-14010-35
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+bendi
+
+            <p>If the DAO is interested in moving some or all of the non-GTC funds out of the treasury before the update, we can facilitate this as part of the upgrade itself.</p>
+<p>Onchain proposals can contain multiple actions that execute in sequence. We can add actions to the upgrade proposal which transfer any amount of any tokens to the desired address <em>before</em> upgrading the Governor.</p>
+<p>In the very unlikely event the upgrade breaks governance, the tokens will still be available. This change can be made in the proposal script and we can add simulations to test it as well.</p>
+<p>If the DAO would like to go this route, there are two questions which will have to be answered:</p>
+<ol>
+<li>How much of the USDC and RAD tokens held by the <a href="https://etherscan.io/address/0x57a8865cfB1eCEf7253c27da6B4BC3dAEE5Be518#code" rel="noopener nofollow ugc">timelock</a> should be moved.</li>
+<li>Where should the tokens be moved to, e.g. a multisig held by DAO leaders, etc…</li>
+</ol>
+<p>If the community would be more comfortable with the upgrade given these changes we are happy to facilitate them. I’m curious to hear what folks like <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a>, <a class="mention" href="https://gov.gitcoin.co/u/shawn16400">@shawn16400</a>, <a class="mention" href="https://gov.gitcoin.co/u/jengajojo">@jengajojo</a>, and others in the community think about this option. Thanks!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/34">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/34
+        Fri, 19 May 2023 13:58:02 +0000
+gov.gitcoin.co-post-14010-34
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+kyle
+
+            <p>hmm… this seems like a slippery slope. Why not just empty the treasury to that gnosis safe, then move it back after the upgrade? Im not sure where we draw the line.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/33">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/33
+        Tue, 09 May 2023 15:01:22 +0000
+gov.gitcoin.co-post-14010-33
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+jengajojo
+
+            <p>I agree with your comments. Maybe a multi-sig with one member each from CSDO, Steward Council, foundation and yourself could be a starting point before diving deeper into governance around the backup address. As long as members on that multi-sig can be trusted, those backup funds are relatively safer in case the main treasury becomes inaccessible.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/32">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-009-upgrading-gitcoin-s-governance-contracts/14010/32
+        Tue, 09 May 2023 11:03:16 +0000
+gov.gitcoin.co-post-14010-32
+[GCP-009] - Upgrading Gitcoin’s Governance Contracts
+      
+
+

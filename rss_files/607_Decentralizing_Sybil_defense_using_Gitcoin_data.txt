@@ -1,0 +1,193 @@
+
+
+
+Decentralizing Sybil defense using Gitcoin data
+https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382
+    It seems like almost every non DeFi project, from DAOs to gaming and from airdrops to the support for public goods provided by Gitcoin and others, rely on some notion of identity in their decision making.  And yet - all too often such systems are attacked by actors seeking to amplify their votes, game the games, farm the airdrops, and even divert public goods funding to their own projects. Such attacks that rely on the impersonation of thousands of seemingly independent identities that are actually orchestrated as one are called sybil attacks, and they are a growing threat across many sectors of web3. This is because fungible tokens can easily be divided across multiple wallets - a strategy that can enable one individual to divide into multiple virtual personas that each have some voting power. If the cost to create a new persona is lower than the reward that new persona can generate, users are incentivized to divide themselves. The ability to mount Sybil attacks undermines the one-person one-vote model that many projects would ideally implement.
+
+Because Sybil attacks are a big problem across Web3, many projects have independently developed their own systems of Sybil defense. This has led to a useful diversity of methods but not many composable, transferable tools. This has caused lots of developers to spend a lot of time and money reinventing the wheel, or missing opportunities to develop synergistically across projects. Composability and openness are core principles of web3, but Sybil defense has so far remained strangely siloed. Web3 natives have the decentralized infrastructure, tooling and open-source ethos required to solve this problem. An explicit intention to tap into the power of web3 native communities to build open, composable tools together could lead to a much healthier, more Sybil-resistant industry.
+
+***Building together, in the open to defend the space against bad actors is the natural state for web3 natives!***
+
+## Gitcoin's Sybil problem
+
+Gitcoin is a platform for public goods funding that currently uses a quadratic voting mechanism to boost donations to individual projects with funds from a matching pool. The quadratic voting mechanism aims to direct more funds from the matching pool to more popular projects. Popularity is measured as the number of individuals voting for a project as opposed to simply the number of tokens voting. Sybil attackers can therefore divide their donation across multiple addresses to boost the amount of funds Gitcoin allocates from the matching pool. The effect is to skew Gitcoin's view of the community preferences for each project and cause misallocation of funds to projects that aren't as popular as they appear.
+
+In the most recent grants round, up to [26% (> 16k accounts)](https://gov.gitcoin.co/t/gr14-governance-brief/11050) of the total population of users was estimate to be Sybil - substantially greater than in previous rounds. There was also a notable increase in airdrop farming, where individuals are encouraged to create wallets and donate to projects in the expectation of a return in the form of a token airdrop. Regardless of whether the Sybils target the matching pool or future airdrops, they aim to maximize their return on investment by tricking the grants round into over-weighting a particular project.
+
+Defending against Sybil attacks helps to realign capital allocation and distribution of real human votes. For Gitcoin the Sybil defense problem reduces down to:
+
+***”Detect users that are gaming the system of quadratic funding and minimize their impact on capital allocation.”***
+
+## The current Sybil defenses
+
+Gitcoin currently uses two [Sybil defense strategies](https://gov.gitcoin.co/t/closing-the-gap-between-fdd-and-gitcoin-passport-sybil-defenses/11218) that have been developed independently, in parallel. One is a retrospective "squelching" of accounts that a human-in-the-loop machine learning algorithm identifies as Sybil. The other is a proactive system that gathers evidence of humanity through passport stamps and uses this evidence to weight an individual's influence on the capital allocation.
+
+The passport project is open source and is being developed by Gitcoin into a protocol that any project can adopt.  In addition to passport, we are also interested in sharing with the broader community our machine learning, data grooming, data sets and other approaches to finding and countering sybil attacks.
+
+
+## What do we need to build? 
+
+Gitcoin passport and retroactive Sybil defenses need to be made interoperable, synergistic and applicable to small independent projects. As Gitcoin implements Grants 2.0 (which aims to give individuals ownership over the management of their own projects) it is critical that Sybil defense evolves into a toolset that can reasonably be deployed and configured frictionlessly for individual projects. 
+
+
+The two established approaches to Sybil defense, retrospective squelching and proactive scoring, resolve to two basic ideas: finding signals for bad actors (wallets with similar handle names, donation patterns, etc) and finding signals for good actors (passport stamps, high cost of forgery, personhood score etc). These concepts need to be the foundations upon which composable anti-Sybil tools are built. Can we develop light-weight tools that integrate these lines of evidence into Sybil detection in a way that is configurable to individual users and scales across many projects inside and outside of Gitcoin? What steps can we take now that can get us there as soon as possible?
+
+## Capitalizing on existing data
+
+One of the primary features of blockchains is the immutable and open ledger of current and historical data. For Ethereum, every full-node stores the global state dating back at least 128 blocks, and older blocks are available by querying archive nodes. The majority execution client, Geth, currently requires more than 650GB of free disk pace and grows by about 14GB/week for a default cache configuration. An archive node requires multiple TB of disk space and cannt be pruned. This is a blocker for most downstream users of the data, especially because searching through on-chain data directly can be slow, computationally expensive and unintuitive.
+
+In addition to on-chain data, rich information about individual grants and users can be found in Gitcoin's own offchain data resources. This includes metadata about individual projects, inclusion criteria and conditions for specific actions, information about projects, Gitcoin passport scores, Sybil defense scores, etc.
+
+Clearly, there is a huge vault of data, some of which resides on-chain and some off-chain, which can be mined in the service of Sybil defense. However, the bottleneck for now is that this data needs a substantial amount of cleaning, organizing and curating to make it accessible to the data scientists who can tease useful Sybil-signals out of it. This is an important pain point that is well-known in corporate data engineering. The data is also currently predominantly centralized under Gitcoin control, which is not only counter to Gitcoin's core ethos but also limits the community participation in data mining. 
+
+Dedicated efforts to build the infrastructure for data and intelligence sharing could go a long way to solving these pain points and maximizing the value users can extract from the available data. In the following sections we examine the inrastructure requirements for extracting the maximum value from this data resource and how it can be put to use for developing composable Sybil defenses.
+
+## Infrastructure
+
+### Storage
+
+The base infrastructure for a system that makes data more easily available to the community is *storage*. The easy but expensive and centralized option for this is to use cloud providers. A cheaper solution is to establish and maintain hardware storage internally to Gitcoin and make the data available to the community, but this just moves the centralized power to Gitcoin. The decentralized option is to make use of decentralized data platforms such as IPFS, Arweave, Filecoin, BitTorrent etc. These platforms generally require a user to "rent out" a portion of their local storage, sometimes in return for some form of tokenized reward. 
+
+It is not just a case of storing raw data though. What is more empowering is distributing cleaned data that can be readily analysed or potentially used directly as features in machine learning models, taking cues from platforms such as [Feature Store](https://www.featurestore.org/). This kind of infrastructure would make open data much easier to share, especially combined with composable compute options.
+
+
+### Compute
+
+Making data available is great, but the community could really level up if tools for extracting value from that data was composable too. For on-chain data the foundational tools for data exploration are in-client tracers and network analysis tools, but these require specialist technical know-how to use effectively and can be computationally expensive. 
+
+Thankfully, there are some third-party services such as [TheGraph](https://thegraph.com/en/) that wrangle that blockchain data into SQL-like databases that can be interrogated more easily and cheaply than the blockchain itself. This data can include interactions between individual accounts and contracts (e.g. voting in DAOs, delegations, staking) and ownership of digital assets (e.g. POAPs, NFTs, ENS, governance tokens) that can be used to build topologies of Web3 interactions and web3 "fingerprints" for certain (groups of) users that may reveal diagnostic signals for Sybil/non-Sybil users. This is a rich data resource that could be served by incentivizing a community of sub-graph builders who produce quick-access databases for useful data from the blockchain and make them available downstream. Dune Analytics is another provider of on-chain data - it is used to generate user-friendly dashboards for blockchain metrics that can include complex queries. These dashboards and the underlying data can then be shared easily between data analysts or delivered straight to end-users. The launch of Grants 2.0 will include the publication of a subgraph or collection of subgraphs that will expose the important on-chain data - an important step towards community-powered Sybil defense.
+
+Jupyter Notebooks are an excellent option for serving user-facing applications that exploit offchain data. These are shareable, executable notebooks containing (usually) Python code in a run-time environment in the browser - a very accessible way to share model code and analysis. Notebooks can be written and shared by a community of analysts, allowing easy programmatic access to Gitcoin data. Notebooks could be modified and used as code-legos between different groups. Jupyter Notebooks are also well-suited to running in the cloud, making access to large computing resources relatively straightforward. This is important for machine learning and AI pipelines that require batch processing and large computational resources- such as those used by the SAD model. 
+
+To maximize the power of the stack, the data storage infrastructure should expose an API that can easily be called in Jupyter Notebooks or similarly shareable code or web-applications with decentralized front-ends. This could then lead to a composable data-science stack that includes onchain and offchain data and builds a community of analysts and developers that can continually improve upon and adapt each other's work. Extending this idea, one could imagine `pip install sybil-defense` in the future.
+
+Ultimately, this work needs to feed into Gitcoin Passport so that there is a clear pipeline from community data science activity to Sybil defense. There are many useful Sybil-signals ossified in on-chain data, but it is not immediately clear how these translate into unambiguous flags that can be used in Sybil defense. There needs to be some middleware that translates insights from community-led data analysis into Gitcoin Passport stamps. This middleware needs to evaluate evidence from community data analysis in favour of some signal being diagnostic of Sybil behaviours and turn that into a stamp or an influence on a user's Trust Score. 
+
+
+ 
+## Incentives
+
+A particular challenge is bootstrapping an active community. Strategies to incentivize users includes branding, marketing and monetary/non-monetary rewards for participation. Users should also be incentivized by the potential outcomes which will be valuable to project owners - specifically the improved user-experience of a composable set of anti-Sybil tools and the flexibility to apply them bespoke to their own project. Rewards could come in the form of a custom token on Ethereum or it could be bootstrapped using existing tokens such as $GTC. Non-monetary rewards could include POAPs and NFTs that could then become Gitcoin Passport stamps or features in a user's Gitcoin Passport trust score. There could also be other incentivization schemes such as data science competitions, bounties and dedicated grant rounds, leaderboards and other forms of gamification. 
+
+## Outcomes
+
+The ultimate goal of this focus on infrastructure is to build the most efficient and accessible rails for giving away our data for free. We can then encourage the community to jam on novel ways to use it in service of Sybil defense. Probably this includes generating models and insights from the data and returning them to the community as building blocks for more innovation, and especially translating data insights into Gitcoin Passport stamps.
+
+The potential concrete outcomes from this are a more composable and more performant set of Sybil-defense tools. In the context of Grants 2.0 where project leads are responsible for managing their own grant round using a set of software tools, they could also take on responsibility for their own Sybil defenses. The data and the tools for analysing and making decisions from that data would be *available* and *accessible* such that they could be tuned specifically to the needs of an individual project and better serve their particular needs, rather than having a monolithic Sybil defense strategy as in the current grants system. Overall, the outcome is to empower the community to establish their own bespoke defenses.
+
+## Where to go from here
+
+Empowering the community with open data could be a substanbtial unlock for Gitcoin because it broadens participation in Sybil defense to the entire community. Instead of a dedicated team of individual being responsible for defending the entire space, the entire space becomes responsible for defending themselves and their peers.
+
+The first step towards this goal is to define a roadmap for building an open data infrastructure that makes Gitcoin data openly available (which will be a natural part of launching Grants 2.0) and, critically, *accessible* and *useable* to as many people as possible. This means auditing the available data, devising a plan to organize and disseminate it, creating strong documentation, starting communities around data wrangling and analysis, and determining the incentive structure. 
+
+These should be topics of focus in the coming weeks.
+
+
+(written by @j-cook, @Takuya Kitagawa, @carl, @epowell101, @DisruptionJoe et al)
+Thu, 08 Sep 2022 17:26:12 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Decentralizing Sybil defense using Gitcoin data
+epowell101
+
+            <p>Excellent note <a class="mention" href="https://gov.gitcoin.co/u/richardblythman">@richardblythman</a> Feel free to ping me - I have a thirst for this subject and am doing a little bit w gitcoin in the space such as helping w upcoming open data science efforts.  Discord:  epowell101#7717</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382/5
+        Thu, 08 Sep 2022 17:26:12 +0000
+gov.gitcoin.co-post-11382-5
+Decentralizing Sybil defense using Gitcoin data
+      
+
+Decentralizing Sybil defense using Gitcoin data
+j-cook
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/richardblythman">@richardblythman</a> - thanks for responding. Agree that sounds like a useful set of tools! The discord might be a good place to start a conversation about it <a href="https://discord.gg/gitcoin" class="inline-onebox" rel="noopener nofollow ugc">Gitcoin</a></p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382/4
+        Thu, 01 Sep 2022 14:45:26 +0000
+gov.gitcoin.co-post-11382-4
+Decentralizing Sybil defense using Gitcoin data
+      
+
+Decentralizing Sybil defense using Gitcoin data
+richardblythman
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/j-cook">@j-cook</a>. Awesome post. Gitcoin is a big inspiration for us and I’m excited to hear more about you have been using ML.</p>
+<p>Doing data science in Web3 requires a number of different technologies, such as decentralized storage and compute, as you mention. Another one that we’ve found useful is a decentralized hub for publishing and discoverability of datasets, features, models and notebooks (we use Ocean Protocol for this). For example, a dataset or notebook stored on IPFS can be published to the hub with ownership and provenance represented by an NFT. DAO tools can also be used to govern ownership of assets built within teams. We call this collection of technologies the decentralized AI stack and we’ve been working on it for over a year through Web3 grants. We’re also building a custom notebook environment that integrates with the different components.</p>
+<p>(wanted to share some links to previous grants for different parts of the stack such as decentralized marketplace, storage, DAO, notebook but won’t allow links)</p>
+<p>We’re also collaborating with Digital Gaia to help them to deploy their regen data and algorithms on decentralized infrastructure.</p>
+<p>We would absolutely love to collaborate, and share our work to date to enable decentralized data science cooperation.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382/3
+        Tue, 30 Aug 2022 14:54:50 +0000
+gov.gitcoin.co-post-11382-3
+Decentralizing Sybil defense using Gitcoin data
+      
+
+Decentralizing Sybil defense using Gitcoin data
+j-cook
+
+            <p>It seems like almost every non DeFi project, from DAOs to gaming and from airdrops to the support for public goods provided by Gitcoin and others, rely on some notion of identity in their decision making.  And yet - all too often such systems are attacked by actors seeking to amplify their votes, game the games, farm the airdrops, and even divert public goods funding to their own projects. Such attacks that rely on the impersonation of thousands of seemingly independent identities that are actually orchestrated as one are called sybil attacks, and they are a growing threat across many sectors of web3. This is because fungible tokens can easily be divided across multiple wallets - a strategy that can enable one individual to divide into multiple virtual personas that each have some voting power. If the cost to create a new persona is lower than the reward that new persona can generate, users are incentivized to divide themselves. The ability to mount Sybil attacks undermines the one-person one-vote model that many projects would ideally implement.</p>
+<p>Because Sybil attacks are a big problem across Web3, many projects have independently developed their own systems of Sybil defense. This has led to a useful diversity of methods but not many composable, transferable tools. This has caused lots of developers to spend a lot of time and money reinventing the wheel, or missing opportunities to develop synergistically across projects. Composability and openness are core principles of web3, but Sybil defense has so far remained strangely siloed. Web3 natives have the decentralized infrastructure, tooling and open-source ethos required to solve this problem. An explicit intention to tap into the power of web3 native communities to build open, composable tools together could lead to a much healthier, more Sybil-resistant industry.</p>
+<p><em><strong>Building together, in the open to defend the space against bad actors is the natural state for web3 natives!</strong></em></p>
+<h2>
+<a name="gitcoins-sybil-problem-1" class="anchor" href="https://gov.gitcoin.co#gitcoins-sybil-problem-1"></a>Gitcoin’s Sybil problem</h2>
+<p>Gitcoin is a platform for public goods funding that currently uses a quadratic voting mechanism to boost donations to individual projects with funds from a matching pool. The quadratic voting mechanism aims to direct more funds from the matching pool to more popular projects. Popularity is measured as the number of individuals voting for a project as opposed to simply the number of tokens voting. Sybil attackers can therefore divide their donation across multiple addresses to boost the amount of funds Gitcoin allocates from the matching pool. The effect is to skew Gitcoin’s view of the community preferences for each project and cause misallocation of funds to projects that aren’t as popular as they appear.</p>
+<p>In the most recent grants round, up to <a href="https://gov.gitcoin.co/t/gr14-governance-brief/11050">26% (&gt; 16k accounts)</a> of the total population of users was estimate to be Sybil - substantially greater than in previous rounds. There was also a notable increase in airdrop farming, where individuals are encouraged to create wallets and donate to projects in the expectation of a return in the form of a token airdrop. Regardless of whether the Sybils target the matching pool or future airdrops, they aim to maximize their return on investment by tricking the grants round into over-weighting a particular project.</p>
+<p>Defending against Sybil attacks helps to realign capital allocation and distribution of real human votes. For Gitcoin the Sybil defense problem reduces down to:</p>
+<p><em><strong>”Detect users that are gaming the system of quadratic funding and minimize their impact on capital allocation.”</strong></em></p>
+<h2>
+<a name="the-current-sybil-defenses-2" class="anchor" href="https://gov.gitcoin.co#the-current-sybil-defenses-2"></a>The current Sybil defenses</h2>
+<p>Gitcoin currently uses two <a href="https://gov.gitcoin.co/t/closing-the-gap-between-fdd-and-gitcoin-passport-sybil-defenses/11218">Sybil defense strategies</a> that have been developed independently, in parallel. One is a retrospective “squelching” of accounts that a human-in-the-loop machine learning algorithm identifies as Sybil. The other is a proactive system that gathers evidence of humanity through passport stamps and uses this evidence to weight an individual’s influence on the capital allocation.</p>
+<p>The passport project is open source and is being developed by Gitcoin into a protocol that any project can adopt.  In addition to passport, we are also interested in sharing with the broader community our machine learning, data grooming, data sets and other approaches to finding and countering sybil attacks.</p>
+<h2>
+<a name="what-do-we-need-to-build-3" class="anchor" href="https://gov.gitcoin.co#what-do-we-need-to-build-3"></a>What do we need to build?</h2>
+<p>Gitcoin passport and retroactive Sybil defenses need to be made interoperable, synergistic and applicable to small independent projects. As Gitcoin implements Grants 2.0 (which aims to give individuals ownership over the management of their own projects) it is critical that Sybil defense evolves into a toolset that can reasonably be deployed and configured frictionlessly for individual projects.</p>
+<p>The two established approaches to Sybil defense, retrospective squelching and proactive scoring, resolve to two basic ideas: finding signals for bad actors (wallets with similar handle names, donation patterns, etc) and finding signals for good actors (passport stamps, high cost of forgery, personhood score etc). These concepts need to be the foundations upon which composable anti-Sybil tools are built. Can we develop light-weight tools that integrate these lines of evidence into Sybil detection in a way that is configurable to individual users and scales across many projects inside and outside of Gitcoin? What steps can we take now that can get us there as soon as possible?</p>
+<h2>
+<a name="capitalizing-on-existing-data-4" class="anchor" href="https://gov.gitcoin.co#capitalizing-on-existing-data-4"></a>Capitalizing on existing data</h2>
+<p>One of the primary features of blockchains is the immutable and open ledger of current and historical data. For Ethereum, every full-node stores the global state dating back at least 128 blocks, and older blocks are available by querying archive nodes. The majority execution client, Geth, currently requires more than 650GB of free disk pace and grows by about 14GB/week for a default cache configuration. An archive node requires multiple TB of disk space and cannt be pruned. This is a blocker for most downstream users of the data, especially because searching through on-chain data directly can be slow, computationally expensive and unintuitive.</p>
+<p>In addition to on-chain data, rich information about individual grants and users can be found in Gitcoin’s own offchain data resources. This includes metadata about individual projects, inclusion criteria and conditions for specific actions, information about projects, Gitcoin passport scores, Sybil defense scores, etc.</p>
+<p>Clearly, there is a huge vault of data, some of which resides on-chain and some off-chain, which can be mined in the service of Sybil defense. However, the bottleneck for now is that this data needs a substantial amount of cleaning, organizing and curating to make it accessible to the data scientists who can tease useful Sybil-signals out of it. This is an important pain point that is well-known in corporate data engineering. The data is also currently predominantly centralized under Gitcoin control, which is not only counter to Gitcoin’s core ethos but also limits the community participation in data mining.</p>
+<p>Dedicated efforts to build the infrastructure for data and intelligence sharing could go a long way to solving these pain points and maximizing the value users can extract from the available data. In the following sections we examine the inrastructure requirements for extracting the maximum value from this data resource and how it can be put to use for developing composable Sybil defenses.</p>
+<h2>
+<a name="infrastructure-5" class="anchor" href="https://gov.gitcoin.co#infrastructure-5"></a>Infrastructure</h2>
+<h3>
+<a name="storage-6" class="anchor" href="https://gov.gitcoin.co#storage-6"></a>Storage</h3>
+<p>The base infrastructure for a system that makes data more easily available to the community is <em>storage</em>. The easy but expensive and centralized option for this is to use cloud providers. A cheaper solution is to establish and maintain hardware storage internally to Gitcoin and make the data available to the community, but this just moves the centralized power to Gitcoin. The decentralized option is to make use of decentralized data platforms such as IPFS, Arweave, Filecoin, BitTorrent etc. These platforms generally require a user to “rent out” a portion of their local storage, sometimes in return for some form of tokenized reward.</p>
+<p>It is not just a case of storing raw data though. What is more empowering is distributing cleaned data that can be readily analysed or potentially used directly as features in machine learning models, taking cues from platforms such as <a href="https://www.featurestore.org/" rel="noopener nofollow ugc">Feature Store</a>. This kind of infrastructure would make open data much easier to share, especially combined with composable compute options.</p>
+<h3>
+<a name="compute-7" class="anchor" href="https://gov.gitcoin.co#compute-7"></a>Compute</h3>
+<p>Making data available is great, but the community could really level up if tools for extracting value from that data was composable too. For on-chain data the foundational tools for data exploration are in-client tracers and network analysis tools, but these require specialist technical know-how to use effectively and can be computationally expensive.</p>
+<p>Thankfully, there are some third-party services such as <a href="https://thegraph.com/en/" rel="noopener nofollow ugc">TheGraph</a> that wrangle that blockchain data into SQL-like databases that can be interrogated more easily and cheaply than the blockchain itself. This data can include interactions between individual accounts and contracts (e.g. voting in DAOs, delegations, staking) and ownership of digital assets (e.g. POAPs, NFTs, ENS, governance tokens) that can be used to build topologies of Web3 interactions and web3 “fingerprints” for certain (groups of) users that may reveal diagnostic signals for Sybil/non-Sybil users. This is a rich data resource that could be served by incentivizing a community of sub-graph builders who produce quick-access databases for useful data from the blockchain and make them available downstream. Dune Analytics is another provider of on-chain data - it is used to generate user-friendly dashboards for blockchain metrics that can include complex queries. These dashboards and the underlying data can then be shared easily between data analysts or delivered straight to end-users. The launch of Grants 2.0 will include the publication of a subgraph or collection of subgraphs that will expose the important on-chain data - an important step towards community-powered Sybil defense.</p>
+<p>Jupyter Notebooks are an excellent option for serving user-facing applications that exploit offchain data. These are shareable, executable notebooks containing (usually) Python code in a run-time environment in the browser - a very accessible way to share model code and analysis. Notebooks can be written and shared by a community of analysts, allowing easy programmatic access to Gitcoin data. Notebooks could be modified and used as code-legos between different groups. Jupyter Notebooks are also well-suited to running in the cloud, making access to large computing resources relatively straightforward. This is important for machine learning and AI pipelines that require batch processing and large computational resources- such as those used by the SAD model.</p>
+<p>To maximize the power of the stack, the data storage infrastructure should expose an API that can easily be called in Jupyter Notebooks or similarly shareable code or web-applications with decentralized front-ends. This could then lead to a composable data-science stack that includes onchain and offchain data and builds a community of analysts and developers that can continually improve upon and adapt each other’s work. Extending this idea, one could imagine <code>pip install sybil-defense</code> in the future.</p>
+<p>Ultimately, this work needs to feed into Gitcoin Passport so that there is a clear pipeline from community data science activity to Sybil defense. There are many useful Sybil-signals ossified in on-chain data, but it is not immediately clear how these translate into unambiguous flags that can be used in Sybil defense. There needs to be some middleware that translates insights from community-led data analysis into Gitcoin Passport stamps. This middleware needs to evaluate evidence from community data analysis in favour of some signal being diagnostic of Sybil behaviours and turn that into a stamp or an influence on a user’s Trust Score.</p>
+<h2>
+<a name="incentives-8" class="anchor" href="https://gov.gitcoin.co#incentives-8"></a>Incentives</h2>
+<p>A particular challenge is bootstrapping an active community. Strategies to incentivize users includes branding, marketing and monetary/non-monetary rewards for participation. Users should also be incentivized by the potential outcomes which will be valuable to project owners - specifically the improved user-experience of a composable set of anti-Sybil tools and the flexibility to apply them bespoke to their own project. Rewards could come in the form of a custom token on Ethereum or it could be bootstrapped using existing tokens such as $GTC. Non-monetary rewards could include POAPs and NFTs that could then become Gitcoin Passport stamps or features in a user’s Gitcoin Passport trust score. There could also be other incentivization schemes such as data science competitions, bounties and dedicated grant rounds, leaderboards and other forms of gamification.</p>
+<h2>
+<a name="outcomes-9" class="anchor" href="https://gov.gitcoin.co#outcomes-9"></a>Outcomes</h2>
+<p>The ultimate goal of this focus on infrastructure is to build the most efficient and accessible rails for giving away our data for free. We can then encourage the community to jam on novel ways to use it in service of Sybil defense. Probably this includes generating models and insights from the data and returning them to the community as building blocks for more innovation, and especially translating data insights into Gitcoin Passport stamps.</p>
+<p>The potential concrete outcomes from this are a more composable and more performant set of Sybil-defense tools. In the context of Grants 2.0 where project leads are responsible for managing their own grant round using a set of software tools, they could also take on responsibility for their own Sybil defenses. The data and the tools for analysing and making decisions from that data would be <em>available</em> and <em>accessible</em> such that they could be tuned specifically to the needs of an individual project and better serve their particular needs, rather than having a monolithic Sybil defense strategy as in the current grants system. Overall, the outcome is to empower the community to establish their own bespoke defenses.</p>
+<h2>
+<a name="where-to-go-from-here-10" class="anchor" href="https://gov.gitcoin.co#where-to-go-from-here-10"></a>Where to go from here</h2>
+<p>Empowering the community with open data could be a substanbtial unlock for Gitcoin because it broadens participation in Sybil defense to the entire community. Instead of a dedicated team of individual being responsible for defending the entire space, the entire space becomes responsible for defending themselves and their peers.</p>
+<p>The first step towards this goal is to define a roadmap for building an open data infrastructure that makes Gitcoin data openly available (which will be a natural part of launching Grants 2.0) and, critically, <em>accessible</em> and <em>useable</em> to as many people as possible. This means auditing the available data, devising a plan to organize and disseminate it, creating strong documentation, starting communities around data wrangling and analysis, and determining the incentive structure.</p>
+<p>These should be topics of focus in the coming weeks.</p>
+<p>(written by <a class="mention" href="https://gov.gitcoin.co/u/j-cook">@j-cook</a>, <a class="mention" href="https://gov.gitcoin.co/u/takuya">@Takuya</a> Kitagawa, <a class="mention" href="https://gov.gitcoin.co/u/carl">@carl</a>, <a class="mention" href="https://gov.gitcoin.co/u/epowell101">@epowell101</a>, <a class="mention" href="https://gov.gitcoin.co/u/disruptionjoe">@DisruptionJoe</a> et al)</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382/1
+        Mon, 29 Aug 2022 15:11:17 +0000
+gov.gitcoin.co-post-11382-1
+Decentralizing Sybil defense using Gitcoin data
+      
+
+

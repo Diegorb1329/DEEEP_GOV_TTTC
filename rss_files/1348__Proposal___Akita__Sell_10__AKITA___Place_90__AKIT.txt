@@ -1,0 +1,516 @@
+
+
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663
+    Authored by @HelloShreyas, @ajbeal, and @AcceleratedCapital from [Llama](https://twitter.com/llamacommunity_), which provides treasury management as a service to DAOs.
+
+**Summary**
+
+We propose that Gitcoin **sell 10% of its AKITA balance and place 90% of its AKITA balance in a Sablier contract unlocked over 2 years**.
+
+* Sell 10% of AKITA balance
+  * Sell 7% of AKITA balance via a market maker. This is 3.5 trillion AKITA worth $9m.
+  * Sell 3% of AKITA balance via Gnosis Auctions. This is 1.5 trillion AKITA worth $4m.
+
+* Allocate 90% of AKITA balance to Sablier contract unlocked over 2 years
+  * 45% of AKITA balance will be unlocked to Gitcoin’s treasury over 2 years to fund quadratic rounds. This is 22.2 trillion AKITA worth $59m.
+  * 45% of AKITA balance will be unlocked to AKITA’s treasury over 2 years fund AKITA development or public goods. This is 22.2 trillion AKITA worth $59m.
+
+This proposal is inspired by Vitalik’s [recommendation](https://gov.gitcoin.co/t/discussion-what-should-the-gitcoin-community-multisig-do-with-the-donated-akita/67/126). We want this donation to fund important public goods and support the development of both Gitcoin and AKITA.
+
+*Note that dollar amounts stated are as of May 26, 2021.*
+
+**Abstract**
+
+Gitcoin’s [treasury](https://etherscan.io/address/0xde21F729137C5Af1b01d73aF1dC21eFfa2B8a0d6) currently has about $131m worth AKITA or 49 trillion AKITA tokens. This is about half of AKITA’s total circulating supply. This proposal provides practical next steps for how Gitcoin should deal with the AKITA donation.
+
+![|597x232](upload://mf78Iz2Rjxv07A6zQxMlH9zQjhl.png)
+
+AKITA’s total liquidity on [Uniswap](https://v2.info.uniswap.org/token/0x3301ee63fb29f863f2333bd4466acb46cd8323e6) is $2.5m. AKITA is not listed on many exchanges, which makes a liquidation difficult. We have had conversations with teams from [Wintermute](https://www.wintermute.com/) (market maker) and Gnosis Auctions to evaluate a realistic amount we can sell. Despite this, given current market conditions, we might be able to sell less than what we plan or take longer to execute it.
+
+The AKITA donation is substantial. We cannot decide everything now so have decided to take a piecemeal approach. We want to maximize the value of the donation to further Gitcoin’s goal of funding public goods. We also want to avoid causing significant harm to AKITA’s project. Based on these goals, we recommend placing 90% of the AKITA donation in a 2-year Sablier contract that helps fund critical development that the Gitcoin and AKITA communities independently deem valuable.
+
+**I. a) Sell 7% of AKITA Balance via Market Maker**
+
+We recommend selling 7% of the AKITA balance via a market maker. The market maker will sell AKITA via exchanges and attempt to get the best execution for Gitcoin. They will also try to sell tokens via OTC but OTC buyers are unlikely.
+
+We recommend using [Wintermute](https://www.wintermute.com/) as the market maker. Wintermute has been effective with the sale of SHIB tokens donated by Vitalik to the [CryptoRelief](https://cryptorelief.in/) fund. They have sold $140m worth SHIB so far. Unlike SHIB, AKITA is not listed on many exchanges and is far more illiquid so we cannot expect similar outcomes.
+
+**Benefits**
+
+* Quick execution with an effective market maker
+* Tried and tested method
+
+**Drawbacks**
+
+* Not trustless: we will have to transfer AKITA to market maker to execute the trade
+* Market maker will charge a fee, whereas Gnosis Auctions is free
+
+**Implementation**
+
+* KYC for Gitcoin multisig wallet signers
+* Enter into agreement with Wintermute to execute sale over 1 week
+* Transfer AKITA to Wintermute
+* Wintermute will sell AKITA via exchanges (and, possibly, OTC)
+* Wintermute will transfer ETH/USDC/DAI/USDT from sale to Gitcoin treasury
+
+**I. b) Sell 3% of AKITA Balance via Gnosis Auctions**
+
+[Gnosis batch auctions](https://gnosis-auction.eth.link/#/) let you execute trades on-chain and trustlessly. [Batch auctions](https://blog.gnosis.pm/announcing-gnosis-auction-launch-390124d56248) enable matching of limit orders of buyers and sellers with the same clearing price for all participants. They are designed to reduce the risk of frontrunning, gas bidding wars, and lower the amount of extracted value from auctioneers and bidders. The largest auction executed so far is by Boson Protocol, which had >$50m of bids and ended up settling ~$26m.
+
+**Benefits:**
+
+* Fully on-chain and trustless
+* Batch auctions help prevent getting front run or sandwiched
+* Good precedent for the Gitcoin treasury; auctions are transparent and don't privilege any particular players
+* Gnosis does not charge a fee for batch auctions
+
+**Drawbacks:**
+
+* Can be a slower process than selling via market maker
+* Execution could be worse than market maker
+
+**Implementation**
+
+* Set up Gnosis Auctions via Gnosis safe app by following [these](https://gnosis-auction.eth.link/#/docs/starting-an-auction-with-safe#topAnchor) steps
+* Enter parameters including but not limited to:
+  * Token address we plan to auction
+  * Token address we accept for bidding
+  * Amount of tokens we plan to auction
+  * Limit price we are willing to accept for tokens
+* Finalize bid and receive ETH or stablecoins
+
+Note that we have the option of KYC’ing bidders. However, this will make the process longer and reduce demand.
+
+**II. Place 90% of AKITA Balance in a 2-year Sablier Contract**
+
+We recommend placing 90% of the AKITA balance in a Sablier contract unlocked over 2 years. 45% of the total AKITA balance will accrue to the Gitcoin treasury over 2 years to fund quadratic rounds. 45% of the total AKITA balance will accrue to the AKITA treasury over 2 years to fund AKITA development. The Gitcoin and AKITA community will independently control how funds streamed to them are spent.
+
+**Why place this amount in a 2-year Sablier contract instead of selling it?**
+
+* Liquidity is thin and attempting to sell this balance will be difficult in current market conditions
+* A sale does not maximize the amount of public goods that can be funded with this substantial donation
+* A 2-year contract gives confidence to AKITA that the token won’t be sold at once
+
+**Why place this amount in a 2-year Sablier contract instead of burning it?**
+
+* 90% of the AKITA balance is a substantial amount that could be used to fund public goods; burning all of this could mean important projects miss out on funding
+* Placing this amount in a 2-year Sablier contract helps Gitcoin and AKITA take more time to decide the best course of action and get the most value out of this donation
+* 2 years is a long enough time horizon to help both Gitcoin and AKITA to think longer-term about funding development that matters
+
+**Drawbacks**
+
+* A substantial portion of AKITA’s token supply will be held in the Sablier contract
+* There could be immediate benefits from a sale that Gitcoin isn’t realizing
+* Although minimal, this might necessitate some coordination between Gitcoin and AKITA that both communities may or may not want
+
+**Conclusion**
+
+We recommend selling 10% of the AKITA balance and placing 90% of the AKITA balance in a 2-year Sablier contract. There is no perfect way to deal with the AKITA donation. However, given the goals of Gitcoin (funding public goods), the risks involved (reputational and headline risks), and current market conditions (low liquidity for the token), we believe this proposal is the best out of the possible options. 
+
+We would love to hear any feedback and questions! We plan to set up a Snapshot vote on this proposal later this week.
+Mon, 29 Nov 2021 11:17:56 +0000
+📜 Proposals
+
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+munky
+
+            <p>Create value through <strong>shared</strong> truths.</p>
+<p>From what I understand,  the way this started, a community of people pumping a meme coin decided:<br>
+<strong>put coins in Vitalik’s wallet,<br>
+wen moon?</strong>.<br>
+Just as stupid as the rest of the dog strategies that worked.<br>
+However well meaning it may have been, it was extremely speculative, and involved putting somebody in a situation to make a really hard decision against their will.  It wasn’t an investment into their community, they literally placed the value of the community into another parties hands and hoped for the best.</p>
+<p>I think our communities deserve to be responsible for the outcomes of the decisions that we make, because in that process of failing or making a wrong prediction, we are able to see the ways to avoid or move through that better in the future.</p>
+<p>Putting the future of their community into another communities hands wasn’t a way to add value to anything.  I haven’t had enough time to read about this yet, but I think whatever we decide should not be influenced by trying to rescue the AKITA community from something they decided they could benefit from if it worked, without worrying about any risk or what problems it might cause for the people they involved if it backfired.</p>
+<p>I ultimately just want everybody to be friends, but I don’t think its fair to plop this all onto another person or community and expect it to work out in your favor.</p>
+<p>We should reward those who collaborate in shared truths with <strong>consent</strong> from the party they are collaborating with.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/36">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/36
+        Mon, 29 Nov 2021 11:17:56 +0000
+gov.gitcoin.co-post-1663-36
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+JAKP162
+
+            <p>It’s a very good initiative since it will help solve the problem at hand</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/33">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/33
+        Sat, 12 Jun 2021 11:11:46 +0000
+gov.gitcoin.co-post-1663-33
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+wschwab
+
+            <p>um, I think you might want to read that again - I was the one arguing <em>not</em> to do the “rug pull”, for pretty much the same reason you mentioned <img src="https://emoji.discourse-cdn.com/twitter/rofl.png?v=9" title=":rofl:" class="emoji" alt=":rofl:"></p>
+<p><strong>update</strong>: this was originally written as a reply to a post which argued against my previous post, that post has either been updated or removed now</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/32">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/32
+        Mon, 07 Jun 2021 06:02:13 +0000
+gov.gitcoin.co-post-1663-32
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+hisefly
+
+            <p>I fully agree with this proposal, which is conducive to the better development of gitcoin. I wish you all the best</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/31">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/31
+        Mon, 07 Jun 2021 05:17:33 +0000
+gov.gitcoin.co-post-1663-31
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+wschwab
+
+            <blockquote>
+<p>if the akita project disbands in a month we’ll be kicking ourselves for not acting rationally</p>
+</blockquote>
+<p>I respectfully disagree. While you’re right that deliberation may cause de-optimization of the amount of financial value Gitcoin can extract, I think there are things even more important than the finances at stake here. I’ll explain what I mean.</p>
+<p>When we look at Gitcoin’s mission of supporting public goods, I personally (this is an opinion) see it as a mission that should last long into the future. i think everyone here would see Gitcoin as a success if it is still supporting public goods a hundred years in the future. I think many would see it as a failure of sorts if it fails within the next couple of years (there have been many successes, but alas, they weren’t sustainable). I think we need to realize that the actions around AKITA can possibly affect the “life expectancy” of Gitcoin. Gitcoin does also succeed based on reputation, and has moral legitimacy to contemplate. As strange as this may sound, this could be worth more than the instant millions in the long run.</p>
+<p>It is true that this money wouldn’t even be for Gitcoin, but rather to support projects now. Even so, if there is resulting damage to Gitcoin’s reputation or worse, I do not think the burst of funding in the short term will be worth it. I think we need to be very careful with overly economics-based definitions of rationality here.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/29">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/29
+        Sun, 06 Jun 2021 12:12:43 +0000
+gov.gitcoin.co-post-1663-29
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+souptacular
+
+            <p>I just voted on Snapshot in favor of this proposal. Great job ya’ll! Here are my thoughts I put on Twitter (<a href="https://twitter.com/hudsonjameson/status/1399868787579625480?s=20" rel="noopener nofollow ugc">https://twitter.com/hudsonjameson/status/1399868787579625480?s=20</a>).</p>
+<blockquote>
+<p>I have been reading forum posts on <a href="https://gov.gitcoin.co/">https://gov.gitcoin.co/</a> regarding what to do about the AKITA tokens Vitalik donated:</p>
+<p><a href="https://gitcoin.co/blog/announcement-gitcoin-community-receives-generous-gift-from-vitalik-buterin/" class="inline-onebox" rel="noopener nofollow ugc">Announcement: Gitcoin Community Receives Generous Gift From Vitalik Buterin | Gitcoin Blog</a></p>
+<p>I just voted for the proposal that sells 10% AKITA &amp; places 90% AKITA in a 2-year Sablier Contract</p>
+<p>Thread on my thinking <img src="https://gov.gitcoin.co/images/emoji/twitter/point_down.png?v=12" title=":point_down:" class="emoji" alt=":point_down:" loading="lazy" width="20" height="20"></p>
+<p>It is a common tactic for a projects to send a portion of their token supply to Vitalik’s public Ethereum address for publicity reasons. I’ve heard different reasons for why the AKITA team did this: publicity, as a “burn” address, as a gift to Ethereum’s creator. Akita’s creator sent roughly half of their supply (500 million tokens) to Vitalik’s address. Now that Vitalik has donated much of the 500 million to the Gitcoin community multi-sig we all need to decide what to do with those tokens.  To me this decision hinges on the collective opinion of the viability of the AKITA community. The AKITA coin started “as joke coin without a team or project” by it’s own admission, that is now trying to find use cases to no longer be a joke coin (see: <a href="https://akita.network/faq" rel="noopener nofollow ugc">https://akita.network/faq</a>).</p>
+<p>I’ve seen a proposals that distributes or locks in other ways the token over a period of 2 years. What are the chances that the AKITA team, community, and token are viable in that time? What’s unique about their token? What if we slowly distribute over 2 years, but the team disappears and the price/liquidity tank? I don’t think the token and team will last 2 years and I don’t see any evidence on their site (plans, etc.) to convince me otherwise. So does that mean we should liquidate all of the tokens and get it over with?</p>
+<p>As much as I would like to think positively about AKITA, I was starting to lean towards a more pragmatic approach of selling all of the tokens for maximum profit and avoid the risks and overhead of dealing with the tokens any longer. That was my thinking until I read this: <a href="https://gov.gitcoin.co/t/discussion-what-should-the-gitcoin-community-multisig-do-with-the-donated-akita/67/126" class="inline-onebox">Discussion: What should the gitcoin community multisig do with the donated AKITA - #126 by vbuterin</a></p>
+<p>Vitalik’s reply seems to indicate he believes there are better ways to handle this than pure liquidation of all of the tokens. His words should hold some weight as he is the donor of the tokens and generally a smart dude. Thinking/reading on the forum more brought up a few other points. A point that resonated most with me is that it is bad optics/not in the ethos of Gitcoin to wreck a token/community, even if the origins of the project or viability of the project are in question. If we can help both AKITA and Gitcoin that is the best. So my “pragmatic” approach of liquidating the token completely is now in the trash can somewhat. However, I can be convinced to support a proposal that liquidates some of the tokens so Gitcoin can benefit now.</p>
+<p>Specifically, the proposal that “sells 10% of its AKITA balance and place 90% of its AKITA balance in a Sablier contract unlocked over 2 years” is intriguing. <a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663" class="inline-onebox">[Proposal - Akita] Sell 10% AKITA &amp; Place 90% AKITA in 2-year Sablier Contract</a></p>
+<p>I will be voting on this proposal since it seems to be balanced and looking out for both communities to maximize value.</p>
+<p>If you have GTC and want to delegate your coins to me check out this thread! I appreciate everyone who has delegated so far <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p><a href="https://twitter.com/hudsonjameson/status/1399853366847717379?s=20" rel="noopener nofollow ugc">https://twitter.com/hudsonjameson/status/1399853366847717379?s=20</a></p>
+</blockquote>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/28">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/28
+        Tue, 01 Jun 2021 23:22:15 +0000
+gov.gitcoin.co-post-1663-28
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+wijuwiju
+
+            <p>hello guys,</p>
+<p>imho I have no idea why everyone is so worried about committing to singleish strategy of getting rude of entire $AKITA holdings in one swift move, whether that’s a liquidation, burn, sending back to VB, airdropping to GTC holders proportionally to GTC drop, whatever you can come up with</p>
+<p>I mean, I understand the reasoning behind getting hands clean asap, but not sure whether that’s the best solution</p>
+<p>So that’s said I was thinking of maybe suggesting to diverge discussion into a different stream, not stop keep coming up with the proposals on what to do with entire $AKITA in our treasury and trying to execute it asap, but rather how we in long term and in a sustainable fashion can actually use those funds to do public good.</p>
+<p>For example if there is need for additional liquidity to be raised for next matching grants round we can vote to liquidate whatever about of akita (e.g 3%) to fund it, maybe use some of those funds to educate $AKITA people on how our governance works (because from what I see, many don’t even understand that by swapping their akita for gtc they can vote on what to do with the treasury)</p>
+<p>Again, I’m not suggesting anything here, just some random ideas, but what I’m saying is that I don’t see a real urge to rush into getting rude of all $AKITA straight, since it causes so much division and solving one problem at time makes a lot more sense to me</p>
+<p>In the end we are all here kinda together</p>
+<p>wijuwiju.eth</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/27">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/27
+        Tue, 01 Jun 2021 07:21:04 +0000
+gov.gitcoin.co-post-1663-27
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+airtwothree
+
+            <p>They aren’t selling AKITA. They literally have an ICO going on and the AKITA community wants Gitcoin to stop and focus on a mistake. Why couldn’t this wait till after $GTC is well distributed ? These proposals seem like you guys are trying to sabotage Gitcoin when Gitcoin can have so much potential to grow right now. Just put it behind yall and let Gitcoin carry on doing something great this week.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/26">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/26
+        Mon, 31 May 2021 22:14:30 +0000
+gov.gitcoin.co-post-1663-26
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+relic
+
+            <p>Great timing? How is that our fault? How can you say they aren’t going to sell our token when every single proposal and vote made is how to sell our token…</p>
+<p>Shreyas is the only person making strides toward a logical scenario.</p>
+<p>Everyone else commenting and making snapshot votes is just kicking the hornets nest.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/25">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/25
+        Mon, 31 May 2021 20:51:12 +0000
+gov.gitcoin.co-post-1663-25
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+androolloyd
+
+            <p>I think this is a bad proposal, 2 years is forever in crypto, if the akita project disbands in a month we’ll be kicking ourselves for not acting rationally.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/24">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/24
+        Mon, 31 May 2021 12:31:15 +0000
+gov.gitcoin.co-post-1663-24
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+airtwothree
+
+            <p>The more proposals I see about AKITA , the more I get scared to become a holder. Can you guys give it a rest? Gitcoin isn’t going to sell your meme coin. They have their own coin and you guys are acting like babies while their ICO is literally happening. Great timing guys.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/23
+        Mon, 31 May 2021 12:10:11 +0000
+gov.gitcoin.co-post-1663-23
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+wschwab
+
+            <p>I’m a bit confused by your posts in this thread <a class="mention" href="https://gov.gitcoin.co/u/relic">@relic</a> . <a class="mention" href="https://gov.gitcoin.co/u/helloshreyas">@HelloShreyas</a> is clearly trying to sell the tokens in a way which is sustainable for the AKITA community, by assuring that the rate of sale is low. I would’ve even read your comments here as being in support of the proposal if it wasn’t for the occasional zero-sum comment.</p>
+<p>If you are unhappy with this proposal, what is it that you would like to see Gitcoin do with their AKITA? I see you write multiple times that it should “benefit the AKITA community”, but that isn’t a concrete plan. I would strongly recommend coming up with a detailed proposal (along with the AKITA community), and writing it up in a new thread. It should include a plan for where whichever amount of AKITA should go where, as <a class="mention" href="https://gov.gitcoin.co/u/helloshreyas">@HelloShreyas</a> did here. There are already multiple threads with solutions. We would love to hear what positive-sum games you can come up with!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/22
+        Mon, 31 May 2021 09:44:11 +0000
+gov.gitcoin.co-post-1663-22
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+blcold
+
+            <p>I agree with the goal of this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/21
+        Sun, 30 May 2021 07:28:25 +0000
+gov.gitcoin.co-post-1663-21
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+Edunwa18
+
+            <p>I support your proposal, originally the tokens sent to VB was taken as burnt…i think it’s against all good coincidence to dump it back against the Akita Community, I support burning, dumping is against the maxim of equity and natural justice</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/20
+        Sat, 29 May 2021 17:48:16 +0000
+gov.gitcoin.co-post-1663-20
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+relic
+
+            <p>This actually becomes the classic scenario that is zero-sum. Both entities control half of the supply, both entities have the power to nuke eachother, the only possible solution that doesnt result in nuking,is by cooperation. Funny to think that the <a href="https://medium.com/@danrobinson/ethereum-is-a-dark-forest-ecc5f0505dff" rel="noopener nofollow ugc">fundamental problem with Ethereum</a> at the blockchain level is the same ZERO sum game being played at the social level. Interesting.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/19
+        Sat, 29 May 2021 02:26:27 +0000
+gov.gitcoin.co-post-1663-19
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+relic
+
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/1X/54c7b14eb020d3b6c91836920a28af11ec2f3c0b.png" data-download-href="/uploads/short-url/c5ZWI5RNA82Y9qJ3pi6FWAmjXAv.png?dl=1" title="image" rel="noopener nofollow ugc"><img src="/uploads/db4391/optimized/1X/54c7b14eb020d3b6c91836920a28af11ec2f3c0b_2_690x379.png" alt="image" data-base62-sha1="c5ZWI5RNA82Y9qJ3pi6FWAmjXAv" width="690" height="379" srcset="/uploads/db4391/optimized/1X/54c7b14eb020d3b6c91836920a28af11ec2f3c0b_2_690x379.png, /uploads/db4391/optimized/1X/54c7b14eb020d3b6c91836920a28af11ec2f3c0b_2_1035x568.png 1.5x, /uploads/db4391/optimized/1X/54c7b14eb020d3b6c91836920a28af11ec2f3c0b_2_1380x758.png 2x" data-small-upload="/uploads/db4391/optimized/1X/54c7b14eb020d3b6c91836920a28af11ec2f3c0b_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/18
+        Sat, 29 May 2021 01:09:28 +0000
+gov.gitcoin.co-post-1663-18
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+relic
+
+            <p>Without funding the AKITA community, you would effectively be liquidating the AKITA community  to fund Gitcoin grants. The tokens that Vitalik “donated” to gitcoin, were assumed burned by our community (not an actual burn but more of a DE circulation). Those tokens were one half of our supply. What would happen if half of the GTC supply was “donated” to UNICEF and UNICEF decided that world health was more important to fund than “public goods”. Its a sticky situation.</p>
+<p>If Gitcoin chooses to proceed in any way toward liquidation without including the AKITA community, then I don’t believe it will be possible to salvage the situation or reach a positive outcome for both parties.</p>
+<p>The results would be Gitcoin liquidating the position for minimal value and the rest of the AKITA community following suit, this is not just including retail investors but exchanges as well. This type of mass liquidation event is of no help to anyone and would only result in one outcome.</p>
+<p>The Gitcoin community would receive some funding from the initial liquidation, yet would also receive a ton of negative feedback/PR, and <em>NO</em> source of long term funding.</p>
+<p>Where as, if we choose to work together on a solution beneficial to both parties, both communities could leverage each others respective “specialties”.</p>
+<p>The term “complimentary opposites” comes to mind although in this context it means something a bit different.</p>
+<p>Although Gitcoin and the AKITA communities started in much different fashions, I do not think our long term goals are dissimilar (We too want our community empowered through a decentralized internet) and I do whole heartedly believe that these communities can be mutually beneficial to each other short and long term.</p>
+<p>Its a delicate situation, trying to extract value efficiently without causing any collateral damage in the process.</p>
+<p>I stand by my point that we should take care of the place that this value accrued from in the first place, which is the AKITA community. Thus far we have proven that even without funding, or paid advertising, that building a decentralized community project <em>IS</em> possible.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/17
+        Sat, 29 May 2021 01:00:06 +0000
+gov.gitcoin.co-post-1663-17
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+linda
+
+            <p>I mostly agree with the goal of this proposal. Thanks for putting it together!</p>
+<ul>
+<li>I don’t think it’s ideal to hurt the AKITA community by selling all of the tokens at once given how that will impact price. While we aren’t beholden to AKITA, the idea of negatively impacting a community doesn’t seem in line with the ethos of Gitcoin</li>
+<li>I like the idea of selling 10% of the balance using a reputable market maker (provided that Gitcoin multisig signers are comfortable with the KYC) and the rest with Gnosis Auctions</li>
+<li>I think it makes sense to use Sablier to stream the rest over a period of time (2 years sounds reasonable) but it’s not really clear to me why 45% of the total AKITA balance will accrue to the AKITA treasury since Gitcoin’s mission is to fund open source public goods, not specifically fund the AKITA community. Perhaps if 2 years is too short and selling the rest in 2 years would harm the AKITA community, the time period can be lengthened</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/16
+        Fri, 28 May 2021 21:59:42 +0000
+gov.gitcoin.co-post-1663-16
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+Reader_kk
+
+            <p>in trading and investor wise, one of the highest possibility would be that the moment this proposal is approval and accepted, the price of Akita would crashed to near zero as investor pull out their funds.  it’s like 1929 where people withdraw their money from banks as soon as they know the situation.</p>
+<p>so instead of the few hundreds of millions dollars gitcoin would like to extract when they approach liquidating akita in any form.  It is too easy for these meme token to crash.  there are similar crash in other tokens when adverts information is released.</p>
+<p><strong>Any proposal to liquidate in any form, no matter the duration</strong><br>
+current price: $0.000002106<br>
+crash price: $0.0000000002 (estimated)<br>
+worth at crash price: $2millions<br>
+presume gitcoin 50% liquidation take home value : $1million</p>
+<p><strong>relic proposal and price goes back to ath</strong><br>
+back to ath price: $0.00003346<br>
+worth at ath price: $3,346,000,000 ($3.3billions)<br>
+relic proposal of burning 45% and keeping 5% : $3.3billions* 5% = $167millions</p>
+<p><strong>relic proposal and price goes back to midpoint</strong><br>
+back to midpoint price: ($0.00003346 - 0.000002106)/2 + 0.000002106 = 0.000017783<br>
+worth at midpoint price: $1,778,300,000 ($1.7billions)<br>
+relic proposal of burning 45% and keeping 5% : $1.7billions* 5% = $88millions</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/15
+        Fri, 28 May 2021 18:23:17 +0000
+gov.gitcoin.co-post-1663-15
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+relic
+
+            <p>I like the idea of using the sablier contract to distribute, but we should do that with the 5% and still burn the 45%. This is the safest way back to normal and instills confidence back into the retail investor.</p>
+<p>We will still have a lot of tokens coming to us while making sure that the AKITA community, who are the reason that this is possible, gets back to the original tokenomics of the project.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/14
+        Thu, 27 May 2021 02:16:24 +0000
+gov.gitcoin.co-post-1663-14
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+fu58889
+
+            <p>将硬币放入Sablier合约中，该合约会在很长一段时间（例如20年）内将其解锁</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/13
+        Thu, 27 May 2021 02:15:26 +0000
+gov.gitcoin.co-post-1663-13
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+castall
+
+            <aside class="quote no-group" data-username="James" data-post="11" data-topic="1663">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/james/48/534_2.png" class="avatar"> James:</div>
+<blockquote>
+<p><a href="https://gov.gitcoin.co/t/fund-public-goods-with-akita-via-quadratic-funding/185">Proposal</a> from <a class="mention" href="https://gov.gitcoin.co/u/castall">@castall</a> proposing the Gitcoin community use AKITA as part of the next quadratic matching pool. Where ‘A smart contract for distributing Akita will be funded at the end of a round once the multisig owners approve of the contract’s particulars’. AKITA is distributed according to matching pool distributions.</p>
+</blockquote>
+</aside>
+<p>Just to clarify, I’m still trying to decide an appropriate length of time in which Akita could be used as matching funds.  I’m not suggesting to blow it all in one round</p>
+<aside class="quote no-group" data-username="vbuterin" data-post="126" data-topic="67">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/v/e9a140/48.png" class="avatar"><a href="https://gov.gitcoin.co/t/discussion-what-should-the-gitcoin-community-multisig-do-with-the-donated-akita/67/126">Discussion: What should the gitcoin community multisig do with the donated AKITA</a></div>
+<blockquote>
+<p>Put the coins into a Sablier contract that unlocks them over the course of some long period of time (eg. 20 years).</p>
+</blockquote>
+</aside>
+<p>Vitalik threw out 20 years as a time frame.  I’m thinking something shorter than that, but one that still feels long, like 5 years (i.e. 20 rounds).  If you have feedback, please <a href="https://gov.gitcoin.co/t/fund-public-goods-with-akita-via-quadratic-funding/185">add to the post</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/12
+        Thu, 27 May 2021 02:11:42 +0000
+gov.gitcoin.co-post-1663-12
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+James
+
+            <p>Hey all,</p>
+<p>Just posting on behalf of <img src="https://emoji.discourse-cdn.com/twitter/fire.png?v=9" title=":fire:" class="emoji" alt=":fire:">_ <img src="https://emoji.discourse-cdn.com/twitter/fire.png?v=9" title=":fire:" class="emoji" alt=":fire:"> in support of <a class="mention" href="https://gov.gitcoin.co/u/helloshreyas">@HelloShreyas</a> proposal. Currently there are ~4 proposals that have been posted regarding AKITA;</p>
+<p><a href="https://gov.gitcoin.co/t/sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/8">This proposal</a>; outlining a short/medium/long term strategy for how the Gitcoin community can collaborate with the AKITA community as well as use some portion of tokens to continue to drive forward public goods funding.</p>
+<p><a href="https://gov.gitcoin.co/t/fund-public-goods-with-akita-via-quadratic-funding/185">Proposal</a> from <a class="mention" href="https://gov.gitcoin.co/u/castall">@castall</a> proposing the Gitcoin community use AKITA as part of the next quadratic matching pool. Where ‘A smart contract for distributing Akita will be funded at the end of a round once the multisig owners approve of the contract’s particulars’. AKITA is distributed according to matching pool distributions.</p>
+<p><a href="https://gov.gitcoin.co/t/proposal-to-gitcoin-community-from-akita/218">Proposal</a> from <a class="mention" href="https://gov.gitcoin.co/u/relic">@relic</a> to ‘burn everything that VB sent except for 5%. Leave 5% to stimulate progress between both communities’.</p>
+<p><a href="https://gov.gitcoin.co/t/return-akita-tokens-to-its-source/199">Proposal</a> from <a class="mention" href="https://gov.gitcoin.co/u/tjayrush">@tjayrush</a> proposing the Gitcoin community return the AKITA funds to their source (Vitaliks sending address).</p>
+<p>There has also been a significant amount of discussion on <a class="mention" href="https://gov.gitcoin.co/u/lefterisjp">@lefterisjp</a>’s <a href="https://gov.gitcoin.co/t/discussion-what-should-the-gitcoin-community-multisig-do-with-the-donated-akita/67">thread</a> introducing the idea to the Gitcoin community.</p>
+<p>This reply aims to summarize the majority of AKITA proposals from the Gitcoin community, <strong>we’re proposing a snapshot vote which will allow the community to compare the current four proposals and ultimately make a decision on what to do with the AKITA held by Gitcoin.</strong></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/11
+        Thu, 27 May 2021 01:26:18 +0000
+gov.gitcoin.co-post-1663-11
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+remix
+
+            <p>出售10％AKITA并将90％AKITA放置在2年Sablier合同中 <img src="https://emoji.discourse-cdn.com/twitter/+1.png?v=9" title=":+1:" class="emoji" alt=":+1:"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/10
+        Wed, 26 May 2021 22:51:42 +0000
+gov.gitcoin.co-post-1663-10
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+paulrberg
+
+            <aside class="quote no-group" data-username="trent" data-post="5" data-topic="1663" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/trent/48/32_2.png" class="avatar"> trent:</div>
+<blockquote>
+<p>I can’t find it in the documentation, but does Sablier take a % of each stream?</p>
+</blockquote>
+</aside>
+<p>No, we don’t. And we don’t have the power to turn on any fee. The protocol is completely free to use.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-akita-sell-10-akita-place-90-akita-in-2-year-sablier-contract/1663/9
+        Wed, 26 May 2021 21:50:21 +0000
+gov.gitcoin.co-post-1663-9
+[Proposal - Akita] Sell 10% AKITA & Place 90% AKITA in 2-year Sablier Contract
+      
+
+

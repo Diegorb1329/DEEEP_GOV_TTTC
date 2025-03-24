@@ -1,0 +1,491 @@
+
+
+
+[GCP - XXX] Predictive Funding Competition for GG23
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902
+    **Summary**
+
+This GCP proposes to support a machine learning competition to predict funding received by projects in GG23. The objective is an understanding of the metrics and models that are most likely to give a similar allocation outcome as the human judgment mechanism of quadratic funding.
+
+For this, we are requesting a total of 20,000 GTC (~$11k as of 29th January), half of which is given as prizes to winning contestants while the other half covers pay for judges and operating expenses.
+
+**Abstract**
+
+Deep Funding has a market of AI models competing to make predictions aligning as closely as possible with human judgment. Plugging in Deep Funding for GG23 will be an experiment in replicating human judgment in QF with AI, create an information surfacing tool for voters, and more generally involve the machine learning community with gitcoin rounds.
+
+There are 3 primary components :
+
+1. A list of all competing projects in GG23
+
+2. A competition where contestants provide weights to each project indicating the relative funding they will receive
+
+3. After funding amounts are announced, finalizing a leaderboard showing which ML models best predicted funding to projects in the round
+
+**Motivation**
+
+With its move to becoming multi-mechanism, especially retrofunding and futarchy, the Gitcoin ecosystem needs a capability boost in its understanding of metrics and assessment of predictions. This competition seeks to do just that by asking top performing model submitters to make public the metrics considered in their predictions on relative funding between projects in GG23.
+
+Previously, Deep Funding demonstrated the impact of these contests by asking models to predict funding received by projects in Gitcoin, Optimism, Open Collective and Octant rounds from 2019 to 2024. You can see the submissions in the contest here; to give one example, the current [top rated model](https://research.allo.capital/t/submission-of-entries-to-the-deep-funding-mini-contest/22) by @davidgasquez used the following weights to predict how much funding a project would receive
+
+![image|224x500](upload://kbnNP8LmS1eZbly76sI0h2EIQ0C.jpeg)
+
+
+By expanding Deep Funding to GG23, we can gauge the impact of AI models in predicting not just past funding but also upcoming round results. **If the gap between model predictions & eventual funding allocation is narrow, we can eventually utilize these models to determine how much funding a project should receive in a round without them having to even take part in it**
+
+This collaboration will result in;
+
+* Submissions on Gitcoin’s forum by machine learning experts on what parameters fed into their models could best predict results of a GG23 round before it is concluded
+
+* An indicator to voters on which projects are predicted to be perform well in a GG23 round
+
+* Provide concrete data on the gap between the winning models' predictions of funding received by projects in the round and the actual amount it ends up receiving in GG23.
+
+**Specifications**
+
+1. Creation of the GG23 predictive funding contest on [cryptopond.xyz](https://cryptopond.xyz)
+
+* *Receive the Project List*: Upload a list of all participating projects to cryptopond.
+
+* *Submit Your Predictions*: For each project, forecast the fraction of the total funding it will receive. All predicted weights must sum to 1.
+
+* *Compare to Reality*: When the round completes and actual payouts are finalized, we’ll calculate the actual weight for each project. For example, if Project A receives $10,000 out of a $100,000 round, its weight is 0.10.
+
+* *Scoring*: We’ll use RMSE (root mean squared error) to evaluate how close each submission is to the real, final allocation. The model with the lowest RMSE wins.
+
+2. Submission write-up by model submitters on Gitcoin forum
+
+To be considered for prizes, model submitters will need to submit a write-up similar to the earlier contest ([example](https://research.allo.capital/t/submission-of-entries-to-the-deep-funding-mini-contest/22)). Participants are encouraged to be visual in their communication, show weights given to their models, share their juypter notebooks or code used in the submissions and explain the performance parameters of their model.
+
+3. A jury will look at the comments and model performance and select the prize winners
+
+We will use willing jury members from the mini-contest to also judge models in GG23. The committee for the mini-contest is composed of @vbuterin (Vitalik Buterin) , @Kronosapiens (Daniel Kronovet), @Joel_m (Joel Miller), @ccerv1 (Carl Cervone) and @octopus , with Devansh Mehta as facilitating member.
+
+Those members willing to re-serve for the GG23 competition will comprise the jury.
+
+**Milestones**
+
+1. Get competition uploaded on cryptopond
+
+2. Finalize the leaderboard of submissions based on how closely their model matches with actual GG23 round allocation
+
+3. Choose winners from among those making a writeup on Gitcoin’s forum
+
+**Budget**
+
+We are requesting a total of 20,000 GTC for this experiment.
+
+10,000 GTC will be awarded as prizes to winning model submissions.
+
+5000 GTC is kept aside for operational expenses such as getting the contest uploaded to cryptopond, marketing of the initiative to get high quality model submissions and completion of other reporting requirements under this grant
+
+5000 GTC is kept aside for compensation of committee members that are willing to serve (maximum of 1000 GTC per member). Unutilized funds from this bucket will be returned to Gitcoin.
+
+**KPIs**
+
+1. Schelling point for machine learning models and AI agents: Number of model submissions and high quality comments on the forum from contestants (Quantitative)
+
+2. Performance benchmarking : Measure gap between top model predictions on funding allocations and the actual allocation to projects (Quantitative)
+
+3. Information surfacing tool: Useful to GG23 participants in seeing which projects are predicted to perform well (Qualitative)
+
+special thanks to Nidhi Harihar, @sejalrekhan , @MathildaDV & @owocki for their comments on the draft
+Mon, 10 Feb 2025 12:23:54 +0000
+📝 Citizen Grants
+
+
+[GCP - XXX] Predictive Funding Competition for GG23
+ccerv1
+
+            <p>Happy to see this move ahead! It’s been great working with this group over the past two months on Deep Funding.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/12
+        Mon, 10 Feb 2025 12:23:54 +0000
+gov.gitcoin.co-post-19902-12
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+thedevanshmehta
+
+            <p>This is great news!</p>
+<p>Looking forward to seeing how well modeloors can forecast the funding each project will get in GG23.</p>
+<aside class="quote no-group" data-username="MathildaDV" data-post="10" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/mathildadv/48/10198_2.png" class="avatar"> MathildaDV:</div>
+<blockquote>
+<p>applications are generally only open for 2-2.5 weeks ahead of the round</p>
+</blockquote>
+</aside>
+<p>Even having one round of projects accepted 5 days before the forecasting begins would be sufficient!</p>
+<p>So one early bird deadline to apply which is a week before GG23, and another regular deadline which wouldn’t count towards weights of projects. Happy to explore alternatives as well that might be better and still not bias model submitters towards simply extending the community funding for projects in the first few days of the round.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/11
+        Sat, 08 Feb 2025 09:38:20 +0000
+gov.gitcoin.co-post-19902-11
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+MathildaDV
+
+            <p>I’m happy to announce that this GCP has passed! The team has voted for this to move forward. I’ll be in direct touch with <a class="mention" href="https://gov.gitcoin.co/u/thedevanshmehta">@thedevanshmehta</a> and co for next steps.</p>
+<p>And to answer this question:</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="5" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>This would be a question for <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a> : in GG23, can we keep an early bird deadline (say 10 days before the round begins), where if they apply and get accepted they are entered into the predictive funding contest? We would then run the contest for only one week before GG23 starts, which will hopefully drum up some interest in the main round.</p>
+</blockquote>
+</aside>
+<p>IMO this would be pretty difficult as applications are generally only open for 2-2.5 weeks ahead of the round and it’ll be another piece to communicate out. But let’s discuss this more in detail to see where we may be able to find a middle ground.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/10
+        Fri, 07 Feb 2025 13:34:21 +0000
+gov.gitcoin.co-post-19902-10
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+mars
+
+            <aside class="quote no-group" data-username="thedevanshmehta" data-post="1" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>create an information surfacing tool for voters</p>
+</blockquote>
+</aside>
+<p>I’m against this. Will act as “priming”: <a href="https://en.wikipedia.org/wiki/Priming_(psychology)" class="inline-onebox" rel="noopener nofollow ugc">Priming (psychology) - Wikipedia</a></p>
+<p>That directly leads to privacy / confidentiality / publicity of the model / weights / results. I think a simple solution will be to “commit-reveal”… Publish a hash before the round, publish the results after the round?</p>
+<aside class="quote no-group quote-modified" data-username="thedevanshmehta" data-post="1" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>You can see the submissions in the contest here.</p>
+</blockquote>
+</aside>
+<p>Please update the link.</p>
+<hr>
+<p>About the info on the projects there is also: <a href="https://checker.gitcoin.co/" rel="noopener nofollow ugc">https://checker.gitcoin.co/</a> and Karma GAP and <a href="https://devouch.xyz/" rel="noopener nofollow ugc">https://devouch.xyz/</a> etc…</p>
+<p>I think that GG funding rounds and the aspect of voting / marketing / shilling has some value in itself.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/9
+        Thu, 06 Feb 2025 11:33:55 +0000
+gov.gitcoin.co-post-19902-9
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+MathildaDV
+
+            <p>Thank you for this proposal. I think this is a great and would be a great addition to GG23! I’m all about experimenting and building hype for the round.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/thedevanshmehta">@thedevanshmehta</a> next steps here is that our internal grants council will vote on whether to approve this GCP and then I’ll update you here on the forum.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/8
+        Wed, 05 Feb 2025 13:30:07 +0000
+gov.gitcoin.co-post-19902-8
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+thedevanshmehta
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a>  what next is needed to move ahead with this challenge for GG23?</p>
+<p>Would be keen to have enough time for preparation!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/7
+        Wed, 05 Feb 2025 13:03:01 +0000
+gov.gitcoin.co-post-19902-7
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+davidgasquez
+
+            <p>Great points <a class="mention" href="https://gov.gitcoin.co/u/thedevanshmehta">@thedevanshmehta</a>!</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="5" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>so with that in mind, do you think <strong>project, round, weight</strong> is better or <strong>project, round, USD</strong>?</p>
+</blockquote>
+</aside>
+<p>Weights sounds great! We can always go from total USD to round weight when building a model! <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="5" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Curious to know why you think quadratic funding should be eliminated when its usually 2-3x more than community contributions.</p>
+</blockquote>
+</aside>
+<p>You are totally right! We should be including quadratic funding as it’s also a function of number of contributors.</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="5" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>50-50 would be my initial guess just shooting from the hip</p>
+</blockquote>
+</aside>
+<p>Sounds good! I think, even if small, splitting prices to get a diverse set of approaches is worth in this early prototypes. The focus should be on exploration!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/6
+        Tue, 04 Feb 2025 08:44:26 +0000
+gov.gitcoin.co-post-19902-6
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+thedevanshmehta
+
+            <p>Thanks for all the responses! some thoughts below</p>
+<aside class="quote no-group" data-username="davidgasquez" data-post="2" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/davidgasquez/48/12057_2.png" class="avatar"> davidgasquez:</div>
+<blockquote>
+<p>An <strong>alternative target</strong> might be to predict the <code>total_funding_usd</code> instead of the <code>relative_funding_in_round</code>. This would make the problem and error easier to understand.</p>
+</blockquote>
+</aside>
+<p>This is true, while adding an extra variable that models need to predict: amount of community contributions in the round.</p>
+<p>By making it relative funding, we eliminate the error fluctuations that occur because community contributions were greater or lower than expected.</p>
+<p>so with that in mind, do you think <strong>project, round, weight</strong> is better or <strong>project, round, USD</strong>?</p>
+<aside class="quote no-group" data-username="davidgasquez" data-post="2" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/davidgasquez/48/12057_2.png" class="avatar"> davidgasquez:</div>
+<blockquote>
+<p>The <strong>evaluation is done at the end of the round</strong>, comparing the test set contestant predictions with the real funding received (I’d say before the quadratic funding is applied to keep things simple).</p>
+</blockquote>
+</aside>
+<p>Curious to know why you think quadratic funding should be eliminated when its usually 2-3x more than community contributions.</p>
+<p>wouldn’t it be more fun if models also have to account for wide support in community base? Otherwise we skew the contest with a project receiving a single large donation. Also, if we want to expand crowdsourced predictions to whether a wallet would be counted as a sybil or not, including QF in final leaderboard rankings is an important intermediate step we can take.</p>
+<aside class="quote no-group" data-username="Sov" data-post="3" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sov/48/7688_2.png" class="avatar"> Sov:</div>
+<blockquote>
+<p>Have you considered including historical GG round data as a training set for the models? This could help establish baseline performance metrics before tackling GG23 predictions.</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="davidgasquez" data-post="2" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/davidgasquez/48/12057_2.png" class="avatar"> davidgasquez:</div>
+<blockquote>
+<p>This approaches will miss projects that apply during the round or the week earlier. That’s ok as they can be excluded from the ratio calculations too later on. <strong>This approach focuses on keeping the problem as close to the goal</strong> (predict the potential funding a project would get if they applied) as possible.</p>
+</blockquote>
+</aside>
+<p>So there’s certainly an advantage to giving past gitcoin data as training and closing new model submissions once the round begins.</p>
+<p>This would be a question for <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a> : in GG23, can we keep an early bird deadline (say 10 days before the round begins), where if they apply and get accepted they are entered into the predictive funding contest? We would then run the contest for only one week before GG23 starts, which will hopefully drum up some interest in the main round.</p>
+<p>David Gasquez had an excellent point that if we include 1 week of data in GG23, we can’t really know how well models predict funding to projects since we literally have some of the funding data in the round. so new submissions in the contest needs to close BEFORE the round begins.</p>
+<aside class="quote no-group" data-username="davidgasquez" data-post="2" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/davidgasquez/48/12057_2.png" class="avatar"> davidgasquez:</div>
+<blockquote>
+<ul>
+<li>Given there is no possible data leaking, and you want accuracy, prices should reward more the position in the leaderboard than during the mini contest (getting to error 0 or, more hard to detect, getting the test set locally and overfit the model parameters are possible)</li>
+<li>Would be great to come up with a way to reward multiple models (similar to Numer.ai) so there is some specialization encouraged, and the price is spread a bit more between useful models.</li>
+</ul>
+</blockquote>
+</aside>
+<p>I like this idea, we keep one prize amount just for having the least error possible. Purely meritocratic with no juror bias involved.</p>
+<aside class="quote no-group" data-username="davidgasquez" data-post="2" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/davidgasquez/48/12057_2.png" class="avatar"> davidgasquez:</div>
+<blockquote>
+<p>Depending on your goals (e.g: GC running models in future rounds), it might be useful to reward also open source submissions in some way. They might be open source at the end of the competition, but will help future competitions as they will be able to use the same approach.</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="Sov" data-post="3" data-topic="19902">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sov/48/7688_2.png" class="avatar"> Sov:</div>
+<blockquote>
+<p>Regarding the judging criteria - are there plans to weight the quality of explanation/documentation in the forum write-ups? Some of the most valuable insights might come from participants even if they don’t achieve the lowest score.</p>
+</blockquote>
+</aside>
+<p>Would be curious to know your thoughts on the split in prize amounts, between purely meritocratic and based on leaderboard ranking vs forum writeups. 50-50 would be my initial guess just shooting from the hip</p>
+<p>One other thought i had: since its not a very large amount earmarked as prizes for contestants (~10k GTC), could we create a multi-sig like deepfunding.gitcoin.eth and try crowdfunding amounts into it for adding to the prize pool, as <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> has sometimes done in the past for other new initiatives?</p>
+<p>Excited to see the support so far and hope we can get this tested out in GG23!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/5
+        Fri, 31 Jan 2025 12:38:18 +0000
+gov.gitcoin.co-post-19902-5
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+owocki
+
+            <p>I am supportive of this proposal.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/4
+        Thu, 30 Jan 2025 05:35:22 +0000
+gov.gitcoin.co-post-19902-4
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+Sov
+
+            <p>Excited to see this creative approach to understanding allocation patterns! The competition format could provide insights into what drives successful outcomes.</p>
+<p>A few questions I have:</p>
+<ol>
+<li>Have you considered including historical GG round data as a training set for the models? This could help establish baseline performance metrics before tackling GG23 predictions.</li>
+<li>Regarding the judging criteria - are there plans to weight the quality of explanation/documentation in the forum write-ups? Some of the most valuable insights might come from participants even if they don’t achieve the lowest score.</li>
+</ol>
+<p>Count me as supportive of this initiative. It’s exactly the kind of creative experimentation we need to better understand and improve our funding mechanisms.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/3
+        Wed, 29 Jan 2025 15:55:54 +0000
+gov.gitcoin.co-post-19902-3
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+davidgasquez
+
+            <p>Excellent write up <a class="mention" href="https://gov.gitcoin.co/u/thedevanshmehta">@thedevanshmehta</a>! I’m excited about this proposal. Wanted to share some scattered thoughts as a mini-contest participant.</p>
+<ul>
+<li>An <strong>alternative target</strong> might be to predict the <code>total_funding_usd</code> instead of the <code>relative_funding_in_round</code>. This would make the problem and error easier to understand.
+<ul>
+<li>The training becomes: <strong><code>project, round, usd</code> and is distributed one week before the round starts</strong>. The test set to predict would be only  <code>project, round</code> where round is <code>gg23</code> on the entire dataset.</li>
+<li>The <strong>evaluation is done at the end of the round</strong>, comparing the test set contestant predictions with the real funding received (I’d say before the quadratic funding is applied to keep things simple).</li>
+<li>Since you’d be asking for total funding received, <strong>you can compute the ratio later on</strong> and compare the ratios with the live ratios in the round.</li>
+<li>This approaches will miss projects that apply during the round or the week earlier. That’s ok as they can be excluded from the ratio calculations too later on. <strong>This approach focuses on keeping the problem as close to the goal</strong> (predict the potential funding a project would get if they applied) as possible.</li>
+</ul>
+</li>
+<li>Given there is no possible data leaking, and you want accuracy, prices should reward more the position in the leaderboard than during the mini contest (getting to error 0 or, more hard to detect, getting the test set locally and overfit the model parameters are possible)</li>
+<li>Would be great to come up with a way to reward multiple models (similar to Numer.ai) so there is some specialization encouraged, and the price is spread a bit more between useful models.</li>
+<li>Depending on your goals (e.g: GC running models in future rounds), it might be useful to reward also open source submissions in some way. They might be open source at the end of the competition, but will help future competitions as they will be able to use the same approach.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/2
+        Wed, 29 Jan 2025 11:10:39 +0000
+gov.gitcoin.co-post-19902-2
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+[GCP - XXX] Predictive Funding Competition for GG23
+thedevanshmehta
+
+            <p><strong>Summary</strong></p>
+<p>This GCP proposes to support a machine learning competition to predict funding received by projects in GG23. The objective is an understanding of the metrics and models that are most likely to give a similar allocation outcome as the human judgment mechanism of quadratic funding.</p>
+<p>For this, we are requesting a total of 20,000 GTC (~$11k as of 29th January), half of which is given as prizes to winning contestants while the other half covers pay for judges and operating expenses.</p>
+<p><strong>Abstract</strong></p>
+<p>Deep Funding has a market of AI models competing to make predictions aligning as closely as possible with human judgment. Plugging in Deep Funding for GG23 will be an experiment in replicating human judgment in QF with AI, create an information surfacing tool for voters, and more generally involve the machine learning community with gitcoin rounds.</p>
+<p>There are 3 primary components :</p>
+<ol>
+<li>
+<p>A list of all competing projects in GG23</p>
+</li>
+<li>
+<p>A competition where contestants provide weights to each project indicating the relative funding they will receive</p>
+</li>
+<li>
+<p>After funding amounts are announced, finalizing a leaderboard showing which ML models best predicted funding to projects in the round</p>
+</li>
+</ol>
+<p><strong>Motivation</strong></p>
+<p>With its move to becoming multi-mechanism, especially retrofunding and futarchy, the Gitcoin ecosystem needs a capability boost in its understanding of metrics and assessment of predictions. This competition seeks to do just that by asking top performing model submitters to make public the metrics considered in their predictions on relative funding between projects in GG23.</p>
+<p>Previously, Deep Funding demonstrated the impact of these contests by asking models to predict funding received by projects in Gitcoin, Optimism, Open Collective and Octant rounds from 2019 to 2024. You can see the submissions in the contest here; to give one example, the current <a href="https://research.allo.capital/t/submission-of-entries-to-the-deep-funding-mini-contest/22" rel="noopener nofollow ugc">top rated model</a> by <a class="mention" href="https://gov.gitcoin.co/u/davidgasquez">@davidgasquez</a> used the following weights to predict how much funding a project would receive</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8d74e92c0395f33dfb9c42f4efb99a846a4d6216.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/8d74e92c0395f33dfb9c42f4efb99a846a4d6216" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8d74e92c0395f33dfb9c42f4efb99a846a4d6216_2_224x500.jpeg" alt="image" data-base62-sha1="kbnNP8LmS1eZbly76sI0h2EIQ0C" width="224" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8d74e92c0395f33dfb9c42f4efb99a846a4d6216_2_224x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/8/8d74e92c0395f33dfb9c42f4efb99a846a4d6216_2_336x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/8/8d74e92c0395f33dfb9c42f4efb99a846a4d6216.jpeg 2x" data-dominant-color="EFF2F5"></a></div><p></p>
+<p>By expanding Deep Funding to GG23, we can gauge the impact of AI models in predicting not just past funding but also upcoming round results. <strong>If the gap between model predictions &amp; eventual funding allocation is narrow, we can eventually utilize these models to determine how much funding a project should receive in a round without them having to even take part in it</strong></p>
+<p>This collaboration will result in;</p>
+<ul>
+<li>
+<p>Submissions on Gitcoin’s forum by machine learning experts on what parameters fed into their models could best predict results of a GG23 round before it is concluded</p>
+</li>
+<li>
+<p>An indicator to voters on which projects are predicted to be perform well in a GG23 round</p>
+</li>
+<li>
+<p>Provide concrete data on the gap between the winning models’ predictions of funding received by projects in the round and the actual amount it ends up receiving in GG23.</p>
+</li>
+</ul>
+<p><strong>Specifications</strong></p>
+<ol>
+<li>Creation of the GG23 predictive funding contest on <a href="https://cryptopond.xyz" rel="noopener nofollow ugc">cryptopond.xyz</a></li>
+</ol>
+<ul>
+<li>
+<p><em>Receive the Project List</em>: Upload a list of all participating projects to cryptopond.</p>
+</li>
+<li>
+<p><em>Submit Your Predictions</em>: For each project, forecast the fraction of the total funding it will receive. All predicted weights must sum to 1.</p>
+</li>
+<li>
+<p><em>Compare to Reality</em>: When the round completes and actual payouts are finalized, we’ll calculate the actual weight for each project. For example, if Project A receives $10,000 out of a $100,000 round, its weight is 0.10.</p>
+</li>
+<li>
+<p><em>Scoring</em>: We’ll use RMSE (root mean squared error) to evaluate how close each submission is to the real, final allocation. The model with the lowest RMSE wins.</p>
+</li>
+</ul>
+<ol start="2">
+<li>Submission write-up by model submitters on Gitcoin forum</li>
+</ol>
+<p>To be considered for prizes, model submitters will need to submit a write-up similar to the earlier contest (<a href="https://research.allo.capital/t/submission-of-entries-to-the-deep-funding-mini-contest/22" rel="noopener nofollow ugc">example</a>). Participants are encouraged to be visual in their communication, show weights given to their models, share their juypter notebooks or code used in the submissions and explain the performance parameters of their model.</p>
+<ol start="3">
+<li>A jury will look at the comments and model performance and select the prize winners</li>
+</ol>
+<p>We will use willing jury members from the mini-contest to also judge models in GG23. The committee for the mini-contest is composed of <a class="mention" href="https://gov.gitcoin.co/u/vbuterin">@vbuterin</a> (Vitalik Buterin) , <a class="mention" href="https://gov.gitcoin.co/u/kronosapiens">@Kronosapiens</a> (Daniel Kronovet), <a class="mention" href="https://gov.gitcoin.co/u/joel_m">@Joel_m</a> (Joel Miller), <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> (Carl Cervone) and <a class="mention" href="https://gov.gitcoin.co/u/octopus">@octopus</a> , with Devansh Mehta as facilitating member.</p>
+<p>Those members willing to re-serve for the GG23 competition will comprise the jury.</p>
+<p><strong>Milestones</strong></p>
+<ol>
+<li>
+<p>Get competition uploaded on cryptopond</p>
+</li>
+<li>
+<p>Finalize the leaderboard of submissions based on how closely their model matches with actual GG23 round allocation</p>
+</li>
+<li>
+<p>Choose winners from among those making a writeup on Gitcoin’s forum</p>
+</li>
+</ol>
+<p><strong>Budget</strong></p>
+<p>We are requesting a total of 20,000 GTC for this experiment.</p>
+<p>10,000 GTC will be awarded as prizes to winning model submissions.</p>
+<p>5000 GTC is kept aside for operational expenses such as getting the contest uploaded to cryptopond, marketing of the initiative to get high quality model submissions and completion of other reporting requirements under this grant</p>
+<p>5000 GTC is kept aside for compensation of committee members that are willing to serve (maximum of 1000 GTC per member). Unutilized funds from this bucket will be returned to Gitcoin.</p>
+<p><strong>KPIs</strong></p>
+<ol>
+<li>
+<p>Schelling point for machine learning models and AI agents: Number of model submissions and high quality comments on the forum from contestants (Quantitative)</p>
+</li>
+<li>
+<p>Performance benchmarking : Measure gap between top model predictions on funding allocations and the actual allocation to projects (Quantitative)</p>
+</li>
+<li>
+<p>Information surfacing tool: Useful to GG23 participants in seeing which projects are predicted to perform well (Qualitative)</p>
+</li>
+</ol>
+<p>special thanks to Nidhi Harihar, <a class="mention" href="https://gov.gitcoin.co/u/sejalrekhan">@sejalrekhan</a> , <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a> &amp; <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> for their comments on the draft</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-xxx-predictive-funding-competition-for-gg23/19902/1
+        Wed, 29 Jan 2025 09:21:18 +0000
+gov.gitcoin.co-post-19902-1
+[GCP - XXX] Predictive Funding Competition for GG23
+      
+
+

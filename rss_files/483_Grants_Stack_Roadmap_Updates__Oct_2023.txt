@@ -1,0 +1,195 @@
+
+
+
+Grants Stack Roadmap Updates (Oct 2023)
+https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642
+    Hi all – I recently posted an update to our roadmap based on GG18 feedback. You can see that GG18 feedback here on the forum (https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423) and on Twitter (https://twitter.com/MegLister/status/1697326744544616602). The Twitter thread to accompany this post is here: https://twitter.com/MegLister/status/1708832178333970532 :) 
+
+First, a few things we’ve been up to since GG18!
+
+1. We've been supporting community-led rounds by launching Grants Stack on Polygon, Arbitrum, and Avalanche. Arbitrum is just wrapping up 4 Quadratic Funding rounds on Grants Stack, and Polygon and Avalanche have plans to launch QF rounds within the next month!
+2. We launched Direct Grants, a new feature that allows grants managers to allocate funds directly to projects. You can view a demo of that feature here: https://www.loom.com/share/91aca72b1ff94145863d5010fe7501af?sid=6a60a051-e188-4834-8005-f9eba70a003f
+3. We resolved some persistent bugs in our build process and upgraded our front-end deployment system from Fleek to Vercel, enabling us to ship faster
+4. In the coming days, you can expect to see us ship Matching Estimates – a favorite feature from the old platform that estimates how much matching power individual donations might have!
+
+![|624x401](upload://61uoHY9bEaRgJIKPiV8CzpF87nN.png)
+
+To address GG18-specific feedback, we summarized all of the pain points and loosely ideated features we could build to address those. We then prioritized those features by impact, feasibility and readiness.
+
+* Impact: will this accelerate Grants Stack adoption?
+* Feasibility: level of effort + do we have all of the tools and skills we need to do this?
+* Readiness: are we confident in the viability of our product solution?
+
+As you can see, Passport and Explorer features rose to the top!
+
+![|624x185](upload://2lKGw94ZJRYP5gA3YNjFRIqsC8x.png)
+
+This week we'll kick off creating a sliding scale for Passport, so that donations that don't reach >20 can still be eligible for some matching funds. Wou can also expect to see Explorer homepage redesigns rolled out for GG19. We're particularly excited about new sort/filter options and community-curated collections!
+
+Preview of those designs:
+![Screenshot 2023-10-02 at 9.11.31 AM|294x500](upload://xCc2kC0kXlaTf0U5ygW0T3tcgtI.jpeg)
+
+
+Unfortunately, we're not going to be able to fix the edit application flow or in-product accept/reject rationale for GG19. I know that the edit application flow is particularly painful and sucks!! We will fix it in the future, but we need more time and thought behind the architecture.
+
+Luckily, our awesome PGF team is working on some automated accept/reject rationale messaging outside of the product that should hopefully ease pain around timeliness and transparency of those decisions.
+
+As always, our roadmap is public, my DMs are open, and would love to hear thoughts/feedback/etc!
+
+https://docs.google.com/spreadsheets/d/1ckMnZWXeJzMfrg8C1g305OE1cRFWaULnu2rpKhnbTdE/edit#gid=0
+Tue, 03 Oct 2023 17:32:47 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Grants Stack Roadmap Updates (Oct 2023)
+meglister
+
+            <p>Thrilled to hear this! We are so happy to be able to partner with the Arbitrum team – looking forward to many future collabs <img src="https://gov.gitcoin.co/images/emoji/twitter/saluting_face.png?v=12" title=":saluting_face:" class="emoji" alt=":saluting_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/6
+        Tue, 03 Oct 2023 17:32:47 +0000
+gov.gitcoin.co-post-16642-6
+Grants Stack Roadmap Updates (Oct 2023)
+      
+
+Grants Stack Roadmap Updates (Oct 2023)
+ZER8
+
+            <p>Great to see all the updates and the Direct Grants-this is really interesting. I’m dreaming of a future in which we can have a mix of funding methods in a single grant program <img src="https://gov.gitcoin.co/images/emoji/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> (maybe it’s even possible atm…idk)</p>
+<aside class="quote no-group" data-username="meglister" data-post="1" data-topic="16642">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/meglister/48/9618_2.png" class="avatar"> meglister:</div>
+<blockquote>
+<p>Arbitrum is just wrapping up 4 Quadratic Funding rounds on Grants Stack, and Polygon and Avalanche have plans to launch QF rounds within the next month!</p>
+</blockquote>
+</aside>
+<p>FYI. The Arbitrum program just ended and the results are great. I can testify to the support received during the Arbitrum grant programs, the team has been extremely responsive and fast to action.</p>
+<p>PS. Can’t w8 for the matching estimates, people just lov’em!</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/5
+        Tue, 03 Oct 2023 16:41:17 +0000
+gov.gitcoin.co-post-16642-5
+Grants Stack Roadmap Updates (Oct 2023)
+      
+
+Grants Stack Roadmap Updates (Oct 2023)
+FractalVisions
+
+            <aside class="quote no-group" data-username="meglister" data-post="1" data-topic="16642">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/meglister/48/9618_2.png" class="avatar"> meglister:</div>
+<blockquote>
+<p>This week we’ll kick off creating a sliding scale for Passport, so that donations that don’t reach &gt;20 can still be eligible for some matching funds.</p>
+</blockquote>
+</aside>
+<p>I assume that participation amongst donors will dramatically increase with this ability to get a matching score with less than 20 points.<br>
+We have been preparing our community by telling them to obtain 20 GTC passport points since GG18 so they will be prepared to get matching funds.<br>
+Very nice updates here it seems like the team has been grinding nonstop since the last round ended in order to prepare for GG19.</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/4
+        Tue, 03 Oct 2023 15:02:30 +0000
+gov.gitcoin.co-post-16642-4
+Grants Stack Roadmap Updates (Oct 2023)
+      
+
+Grants Stack Roadmap Updates (Oct 2023)
+meglister
+
+            <p>The solution the team is working on (with Absolute Labs) will actually trigger emails based on contract status changes – so the notification should happen simultaneously with the product update!</p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/3
+        Mon, 02 Oct 2023 15:00:23 +0000
+gov.gitcoin.co-post-16642-3
+Grants Stack Roadmap Updates (Oct 2023)
+      
+
+Grants Stack Roadmap Updates (Oct 2023)
+owocki
+
+            <aside class="quote no-group" data-username="meglister" data-post="1" data-topic="16642">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/meglister/48/9618_2.png" class="avatar"> meglister:</div>
+<blockquote>
+<p>Luckily, our awesome PGF team is working on some automated accept/reject rationale messaging outside of the product that should hopefully ease pain around timeliness and transparency of those decisions.</p>
+</blockquote>
+</aside>
+<p>one stopgap thing we could do is just make sure the accept/reject emails are sent well before that info is shown on the product.  this would prevent ppl looking at their grant on day 1 and being like “wtf it was rejected but idk why”.  cc ppl on PGF who are closer to this <span class="mention">@monkeyflower</span> <a class="mention" href="https://gov.gitcoin.co/u/jon-spark-eco">@jon-spark-eco</a> <a class="mention" href="https://gov.gitcoin.co/u/connor">@connor</a> <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a></p>
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/2
+        Mon, 02 Oct 2023 14:22:43 +0000
+gov.gitcoin.co-post-16642-2
+Grants Stack Roadmap Updates (Oct 2023)
+      
+
+Grants Stack Roadmap Updates (Oct 2023)
+meglister
+
+            <p>Hi all – I recently posted an update to our roadmap based on GG18 feedback. You can see that GG18 feedback here on the forum (<a href="https://gov.gitcoin.co/t/grants-stack-product-reflections-gg18/16423" class="inline-onebox">Grants Stack Product Reflections: GG18</a>) and on Twitter (<a href="https://twitter.com/MegLister/status/1697326744544616602" rel="noopener nofollow ugc">https://twitter.com/MegLister/status/1697326744544616602</a>). The Twitter thread to accompany this post is here: <a href="https://twitter.com/MegLister/status/1708832178333970532" rel="noopener nofollow ugc">https://twitter.com/MegLister/status/1708832178333970532</a> <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>First, a few things we’ve been up to since GG18!</p>
+<ol>
+<li>We’ve been supporting community-led rounds by launching Grants Stack on Polygon, Arbitrum, and Avalanche. Arbitrum is just wrapping up 4 Quadratic Funding rounds on Grants Stack, and Polygon and Avalanche have plans to launch QF rounds within the next month!</li>
+<li>We launched Direct Grants, a new feature that allows grants managers to allocate funds directly to projects. You can view a demo of that feature here: <a href="https://www.loom.com/share/91aca72b1ff94145863d5010fe7501af?sid=6a60a051-e188-4834-8005-f9eba70a003f" class="inline-onebox" rel="noopener nofollow ugc">Loom | Free Screen &amp; Video Recording Software | Loom</a></li>
+<li>We resolved some persistent bugs in our build process and upgraded our front-end deployment system from Fleek to Vercel, enabling us to ship faster</li>
+<li>In the coming days, you can expect to see us ship Matching Estimates – a favorite feature from the old platform that estimates how much matching power individual donations might have!</li>
+</ol>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2a382ba6f7f88d9adcdee2043aa16759c790ddcf.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/2a382ba6f7f88d9adcdee2043aa16759c790ddcf" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2a382ba6f7f88d9adcdee2043aa16759c790ddcf_2_624x401.png" alt="" data-base62-sha1="61uoHY9bEaRgJIKPiV8CzpF87nN" width="624" height="401" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2a382ba6f7f88d9adcdee2043aa16759c790ddcf_2_624x401.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2a382ba6f7f88d9adcdee2043aa16759c790ddcf_2_936x601.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/2a382ba6f7f88d9adcdee2043aa16759c790ddcf.png 2x" data-dominant-color="EDEAF9"></a></div><p></p>
+<p>To address GG18-specific feedback, we summarized all of the pain points and loosely ideated features we could build to address those. We then prioritized those features by impact, feasibility and readiness.</p>
+<ul>
+<li>Impact: will this accelerate Grants Stack adoption?</li>
+<li>Feasibility: level of effort + do we have all of the tools and skills we need to do this?</li>
+<li>Readiness: are we confident in the viability of our product solution?</li>
+</ul>
+<p>As you can see, Passport and Explorer features rose to the top!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/1079d7ab19e49b4d88a6b22ccd2fc45e69a56da9.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/1079d7ab19e49b4d88a6b22ccd2fc45e69a56da9" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1079d7ab19e49b4d88a6b22ccd2fc45e69a56da9_2_624x185.png" alt="" data-base62-sha1="2lKGw94ZJRYP5gA3YNjFRIqsC8x" width="624" height="185" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1079d7ab19e49b4d88a6b22ccd2fc45e69a56da9_2_624x185.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1079d7ab19e49b4d88a6b22ccd2fc45e69a56da9_2_936x277.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/1079d7ab19e49b4d88a6b22ccd2fc45e69a56da9_2_1248x370.png 2x" data-dominant-color="EEEFEE"></a></div><p></p>
+<p>This week we’ll kick off creating a sliding scale for Passport, so that donations that don’t reach &gt;20 can still be eligible for some matching funds. Wou can also expect to see Explorer homepage redesigns rolled out for GG19. We’re particularly excited about new sort/filter options and community-curated collections!</p>
+<p>Preview of those designs:<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/eb9903b698bd23554d6837c770b43cacffa66842.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/eb9903b698bd23554d6837c770b43cacffa66842" title="Screenshot 2023-10-02 at 9.11.31 AM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/eb9903b698bd23554d6837c770b43cacffa66842_2_294x500.jpeg" alt="Screenshot 2023-10-02 at 9.11.31 AM" data-base62-sha1="xCc2kC0kXlaTf0U5ygW0T3tcgtI" width="294" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/eb9903b698bd23554d6837c770b43cacffa66842_2_294x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/eb9903b698bd23554d6837c770b43cacffa66842_2_441x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/eb9903b698bd23554d6837c770b43cacffa66842_2_588x1000.jpeg 2x" data-dominant-color="A6BFC6"></a></div><p></p>
+<p>Unfortunately, we’re not going to be able to fix the edit application flow or in-product accept/reject rationale for GG19. I know that the edit application flow is particularly painful and sucks!! We will fix it in the future, but we need more time and thought behind the architecture.</p>
+<p>Luckily, our awesome PGF team is working on some automated accept/reject rationale messaging outside of the product that should hopefully ease pain around timeliness and transparency of those decisions.</p>
+<p>As always, our roadmap is public, my DMs are open, and would love to hear thoughts/feedback/etc!</p>
+<aside class="onebox googledocs" data-onebox-src="https://docs.google.com/spreadsheets/d/1ckMnZWXeJzMfrg8C1g305OE1cRFWaULnu2rpKhnbTdE/edit#gid=0">
+  <header class="source">
+
+      <a href="https://docs.google.com/spreadsheets/d/1ckMnZWXeJzMfrg8C1g305OE1cRFWaULnu2rpKhnbTdE/edit#gid=0" target="_blank" rel="noopener nofollow ugc">docs.google.com</a>
+  </header>
+
+  <article class="onebox-body">
+    <a href="https://docs.google.com/spreadsheets/d/1ckMnZWXeJzMfrg8C1g305OE1cRFWaULnu2rpKhnbTdE/edit#gid=0" target="_blank" rel="noopener nofollow ugc"><span class="googledocs-onebox-logo g-sheets-logo"></span></a>
+
+<h3><a href="https://docs.google.com/spreadsheets/d/1ckMnZWXeJzMfrg8C1g305OE1cRFWaULnu2rpKhnbTdE/edit#gid=0" target="_blank" rel="noopener nofollow ugc">Grants Stack Roadmap</a></h3>
+
+<p>Overview
+
+Grants Stack Roadmap
+About this roadmap:
+-This should be updated at least 1x month by Product. Engineering will be consulted before any updates are made.
+-Subject to change at any time!
+-This is not meant to cover every effort -- only those...</p>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/grants-stack-roadmap-updates-oct-2023/16642/1
+        Mon, 02 Oct 2023 13:14:39 +0000
+gov.gitcoin.co-post-16642-1
+Grants Stack Roadmap Updates (Oct 2023)
+      
+
+

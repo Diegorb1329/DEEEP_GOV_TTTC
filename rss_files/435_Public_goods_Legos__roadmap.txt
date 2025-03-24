@@ -1,0 +1,402 @@
+
+
+
+Public goods Legos: roadmap
+https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546
+    An [earlier post](https://gov.gitcoin.co/t/anti-sybil-legos/12265) introduced the idea of Sybil defense "Legos" as composable building blocks that users can use to implement their own anti-Sybil systems. We want grant/round owners to be able to build their own grant management systems by picking freely from a set of tools that can be easily and intuitively connected together and even tweaked and modified to best serve the needs of specific subcommunities. We also want a diverse community of developers and data scientists to analyze Gitcoin data and turn their insights into Legos. Any analysis that can be shown to identify Sybil behaviour can be expressed in code and developed into a Lego.
+
+This post aims to add some more detail and dig a little deeper beyond the conceptual overview in the first post and start to show some of the practicalities of building and implementing anti-Sybil Legos and show where hope to go from here. We also introduce the upcoming Open Data Science Hackathon that will onboard new Lego builders to the Gitcoin/Open Data community.
+
+
+![](upload://1NE3LSt8rzYaT4uPNsX6zKP0PWG.png)
+
+
+## What Legos are already available?
+
+Several Lego's are already built and being used to manage Sybils in Gitcoin grants. These are:
+
+- **Gitcoin Passport:** When a user connects a passport, a trust score can be calculated for them which is used as evidence of personhood - the greater the score the more likely they are to be a genuine user.
+- **Levenstein distance:** Every user has a username - when they sign up to Gitcoin grants the similarity of their name can be compared against all other usernames to generate a likelihood of the username being auto-generated - evidence of a Sybil account. This Lego **will be deprecated** in the grants protocol because usernames will no longer be available - only Ethereum addresses, wallet IDs and grant/round nonce. 
+- **Shared IP**: User IP addresses can also be checked to see if they are shared with many other users. Lots of addresses originating from the same IP could be a marker for Sybil attackers.
+- **SAD model:** The user also has a Gitcoin account whose history can be analyzed using the SAD model to give another Sybil-likelihood score.
+- **DonorDNA**: When a donor connects their wallet their profile of past donations can be analyzed to see whether it is similar to groups of other users, which may be indicatative of Sybil rings.
+- **GrantDNA**: Each grant has a set of donors that can be represented as a set of binary data. This can be used to compare grants against flagged grants to see if they have similar donor profiles.
+- **Onchain Intersectionality**: How many out of a set of on-chain credentials does a user have?
+
+The outputs from the Legos are either Booleans (Sybil/non-Sybil) or floats (0-1) representing Sybil likelihood.  They are aggregated and used collectively to come to a decision about the trustability of the user. In summary, the Legos are run independently and the results passed to an aggregator. The user sees the result of each independent Lego and also the result of the aggregator - i.e. they get an overall Sybil likelihood score/trust score and also a break down of the individual Sybil "dimensions".
+
+
+## What other Legos could exist?
+
+During Season 14, Gitcoin Passport was integrated into Bankless Academy. Analysis revealed that Gitcoin Passport was most powerful when combined with additional anti-Sybil Legos. 
+
+- **Farmer Boolean**: (uses on-chain data to determine whether a user has >X ERC-20 tokens and an average transaction value <Y ETH)
+- **Onchain History Boolean**: (has a user engaged in certain web3 activities in a specific timeframe? Activites and timeframe can be customized by round owner)
+- **Money-Mixer**: (Does a user interact with mixers e.g. Tornado cash)
+- **On-Trend / Off-Trend**: (is the donation profile of a user similar to a grant's target community?)
+- **Flagged Activity on Etherscan**: (is an address closely associated with addresses flagged as phishing/spam on etherscan?)
+
+
+There are many possibilities for more Legos - *any analysis that can be shown to be indicative of Sybil behaviour and implementable as an algorithm could be turned into a Lego*. Some might be relatively complex analyses of on-chain data, like detecting when a user has rapidly swapped funds back and forth in order to seem more active. Sequences of rapid transactions between wallets, especially when they are ultimately returned to where they started or at least stay within a small group of addresses, could be a Sybil behaviour. Other on-chain indicators might be whether a wallet was initially funded from a contract, as this might be a way for Sybil attackers to automate their donations from many externally-owned accounts.
+
+Other simple Legos could be checks for users that hold certain POAPs or NFTs. Some POAPs and NFTs are easy to farm, others require significant investment of time and/or capital. For example, some education programs award their graduates NFTs as proof of completion - those are difficult to farm without taking a course, and they are in very limited supply so the total bribable population is small - ownership of these credentials is good evidence a user is not a Sybil attacker. 
+Some specific NFTs and POAPs might be especially high-signal for certain communities - e.g. POAPs distributed in community calls or at in-person meetups. There is also high potential for creating Legos based on past behaviours and interactions with other grant rounds - e.g. has a particular address donated to grants that have been flagged as fraudulent in the past - if so, how often? If some threshold of a user's donations, say 50%, have gone to flagged grants, the user gets flagged too.
+
+Not all Legos have to use on-chain data. There may be more Sybil signals that can be extracted using clever analysis of Gitcoin data - DonorDNA and GrantDNA are good examples of existing Legos that only use off-chain data.
+
+## What do these Legos actually look like?
+
+Right now, these Legos exist as code that is run manually by data scientists. The code is run against individual Ethereum addresses and Gitcoin usernames to determine their Sybil-likelihoood. They are currently run as independent, standalone algorithms, although development is tending towards increased automation and interoperability so that users are better able to implement these algorithms for themselves. 
+
+Right now, Sybil Legos are implemented by Gitcoin data scientists, but in a protocol-based system they will be implemented as a service that can be configured for individual users. Ultimately there should be a freemium type model where foundational Sybil defenses are made available for free, and more computationally heavy algorithms can be optionally added for a fee.
+
+## A Lego development roadmap
+
+### Who can use the Legos?
+
+In the centralized era, Lego users are primarily Gitcoin data scientists (or "Fraud analyts"). These Fraud analysts have access to source code for the various Legos and apply it to Gitcoin data as part of a service provided to round owners. As the platform becomes a protocol, the Legos become increasingly decentralized - first by making the Legos usable directly by round owners, and then by making them available to anyone via a simple dashboard-based UI.
+
+### How to decentralize Legos
+
+Up until now, the focus for Lego developers has been on experimenting with different prototypes and identifying those that are worth developing into products. Now, those existing Legos can be further developed to enhance their useability.
+
+
+#### More accessible code
+
+Legos are currently discrete code packages that implement some algorithm on Gitcoin data. However, scripts for running algorithms are not particularly useful in their "raw" form - they require additional functions that load and validate Gitcoin data and return a useful, correctly formatted result. The algorithm itself needs to be wrapped in helper functions that turn the code into a self-contained unit that takes in Gitcoin data and returns a Boolean (Sybil/not Sybil) or a float (Sybil likelihood).
+
+More useful would be bundling the code, along with other Legos, into a single package that could be easily imported into user's projects. A good example would be a Python package that could be installed using a package manager, such as
+
+`pip install sybil-legos`
+
+and then individual Legos could be invoked simply using something like:
+
+```
+import sybil-legos as sybil
+
+result = sybil.donor_dna(data)
+```
+
+This would also naturally extend to other Legos, all available inside the `sybil-legos` package. A minimal example of a pipeline for anti-Sybils could be as follows:
+
+```
+import sybil-legos as sybil
+
+dna = sybil.donor_dna(data)
+grant_dna = sybil.grant_dna(data)
+trust_score = sybil.trust_score(data)
+
+result = sybil.aggregator(dna, grant_dna, trust_scores)
+```
+
+In this example, each Lego is invoked as a separate function within the `sybil-legos` package and the results are all fed into an `aggregator` function which applies some decision-making function to the results of each individual Lego and returns a list of Sybils. Likely, the `trust_score` function would make an external call to the Gitcoin Passport API where trust score calculations are already handled in a developer-friendly way that abstracts all the communication with Ceramic, data verification, cleaning and validation away from the end user. 
+
+To best serve the developer community and lower the barrier to entry as far as possible, creating containerized versions of Legos that can be executed in a single line of code, great documentation, explainer articles and investing in devrel activity will go a long way. In this state, Legos are easier for a wider community of developers to implement. This removes a lot of friction in implementing Legos for Gitcoin Fraud Consultants and round owners.
+
+#### No-code Legos
+
+Longer term, it will be much more useful to abstract Lego execution out another level and provide no-code options for implementing the same tools. The transition from code to no-code Lego building is potentially a major unlock in terms of the number and diversity of people that can configure their own Sybil defenses. 
+
+The obvious route to no-code Legos would be a public frontend where users can upload their data (e.g. list of usernames and/or Ethereum addresses) and download their results in a web page. A webpage could enable a user to simply opt-in to the Legos they wish to apply just by clicking tickboxes. The app then uploads the user's data to a virtual machine, execute the selected algorithms, aggregate the results and return Sybil scores back to the browser. It is also easy to imagine additional features being made available via a marketplace of optional anti-Sybil add-ons.
+
+Some advancement in this direction has already been made: the screenshot below shows a web-app interface where users can input the account names of their users and see their Sybil likelihoods as determined by each of six metrics immediately in the browser - effectively a dashboard that shows a round owner whether their round is being attacked.
+
+![](upload://6XTxHHSOiOvGetLD9uHbPCh2pVN.png)
+
+There are costs associated with computing Lego scores. This means that eventually, a cost would need to be attached to the Lego execution such that users pay a small fee to add a Lego to their anti-Sybil pipeline and the actual execution is done in a virtual machine whose management is abstracted away from the user. Web3 integration seems to be a good solution for this -  a cost in ETH or a stablecoin could be calculated depending on the Legos the user has selected to implement which can be paid via a wallet integration before executing the Sybil Lego code. A freemium model may work well, with foundational Sybil algorithms being provided for free, and more computationally heavy ones being optionally added for a fee.
+
+Overall, most of the available Legos are currently only really useable by Gitcoin developers, but the roadmap is to gradually reduce the barrier to entry by first producing extensive documentation and beginner-friendly guides, then sequentially more and more accessible UIs that abstract complexity away from the user.
+
+
+## How can I help build Legos?
+
+The best way to get involved with Lego development is to participate in the Gitcoin and/or Open Data Science communities. Data scientists are required to analyze Gitcoin data and identify signals that can be used to find Sybils. Developers are required to turn those signals into Legos. There is also a great need for people to work on UX and documentation. A great way to start participating is to join a community hackathon.
+
+
+
+![](upload://ljolJzkovib4UiaJjGw7gnbU0dU.jpeg)
+
+
+
+
+### Hackathon 
+
+The Open Data Community is a fast-growing open community founded by Gitcoin. Our mission is to protect web3 by fighting Sybil attackers and resisting recentralization at the data layer. In January 2023 the Open Data Community and Gitcoin will host a hackathon specifically for anti-Sybil Lego builders. Hackers will have access to open data technology such as the decentralized node provider, Pocket, and decentralized data from Ocean Protocol. These tools will be used to hackers to build useful Sybil defense algorithms for Gitcoin's grants protocol. To help builders get off the ground there will be a set of algorithms-of-interest that we would like to see developed into Legos. There may also be more points available for builders that go outside of the suggested data/algorithms and create new ideas from novel data sources.
+
+This hackathon builds upon the success of the inaugural hackathon in autumn 2022. That previous hackathon yielded several novel algorithms that are now being developed into algorithms for the upcoming Gitcoin grants protocol - we want to build on this success and add more algorithms to the anti-Sybil toolbox.
+
+The hackathon will open for applications in January 2023. Until then, visit the [hackathon webpage](https://gitcoin.co/hackathon/DataBuilders/onboard), join the fast-growing Open Data Community on [Discord](https://discord.gg/KJ6PGH4cnK) or follow them on [Twitter](@OpenDataforWeb3).
+Tue, 19 Dec 2023 05:41:07 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Public goods Legos: roadmap
+tkgshn
+
+            <p>I’ve just published absolutely NoCode Lego as DeCartography!<br>
+how can I call you? <a class="mention" href="https://gov.gitcoin.co/u/j-cook">@j-cook</a></p><aside class="quote quote-modified" data-post="1" data-topic="17290">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tkgshn/48/6258_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/decartography-beta-is-out-how-to-generate-clustered-data-from-grs-participation-data-and-how-to-improve-current-gitcoin-grants/17290">DeCartography Beta is out! How to generate clustered data from GR's participation data, and how to improve current Gitcoin Grants</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/open-discussion/9"><span data-category-id="9" style="--category-badge-color: #12A89D; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Discuss, and even debate topics, that might be good ideas for us to explore or will spark a good conversation.  And some of them might turn into an official proposal eventually, but don’t need to."><span class="badge-category__name">🧙 🧙‍♀️ Ideas and Open Discussion</span></span></a>
+  </div>
+  <blockquote>
+    <a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TLDR
+I finally finished a project I had been working on for some time called DeCartography. 
+A brief description of this project is “a tool to analyze and cluster data from participants in Gitcoin Grant Rounds and other events through crowdsourcing” 
+This clustered data could be used as an infrastructure for Plural QF and may be useful in <a href="https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709">reducing collusion</a>. As a result, it is hypothesized that paying DeCartography to generate clustered data would make GR more efficient in funding. 
+However, Plu…
+  </blockquote>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/6
+        Tue, 19 Dec 2023 05:41:07 +0000
+gov.gitcoin.co-post-12546-6
+Public goods Legos: roadmap
+      
+
+Public goods Legos: roadmap
+owocki
+
+            <aside class="quote no-group" data-username="j-cook" data-post="1" data-topic="12546">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j-cook/48/5804_2.png" class="avatar"> j-cook:</div>
+<blockquote>
+<p><code>result = sybil.aggregator(dna, grant_dna, trust_scores)</code></p>
+</blockquote>
+</aside>
+<p>Hey <a class="mention" href="https://gov.gitcoin.co/u/j-cook">@j-cook</a> I just wanted to make sure you saw <a href="https://gov.gitcoin.co/t/passport-scoring-as-a-service/12419/7">this comment</a> on another sybil lego post about some of the ways these sybil legos compose (or dont compose).</p>
+          <p><a href="https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/5
+        Thu, 12 Jan 2023 18:48:56 +0000
+gov.gitcoin.co-post-12546-5
+Public goods Legos: roadmap
+      
+
+Public goods Legos: roadmap
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="kyle" data-post="3" data-topic="12546">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>One of the most common feedbacks we received was “I didn’t know ABC behavior wasn’t allowed” (ie airdrop farming with lots of wallets).</p>
+</blockquote>
+</aside>
+<p>This is a great callout! I think there is value in better user education during their journey and maybe FDD should better communicate these types of simple solutions to GPC!</p>
+<p>There is also communication value in the “This house is protected by Allstate” type deterrence.</p>
+<aside class="quote no-group" data-username="kyle" data-post="3" data-topic="12546">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>I wonder if we have considered other scoring mechanisms like a cost of forgery? Instead of trying to predict whether someone is a good actor, could we introduce a cost of forgery (in $USD) that is then tied to other USD denominated outcomes? For example, if my passport has a cost of forgery of $150 (I have a bankless POAP which was only possible by paying $100, and also I have $50 worth of GTC staked on my passport) then I might only be eligible to direct 2x my passport “value” (value is the interpretation of the cost to forge).</p>
+</blockquote>
+</aside>
+<p>Yes. We have a cost of forgery model which was developed this season. It performed almost as well as the regression models when compared to the Thor/Loki datasets.</p>
+<p>We discussed a Upala trial and deprioritized it because it doesn’t include systemic value. In other words, it measures how much the stamps and a passport are worth to someone with nothing to gain other than what we would be willing to pay them. This could serve as a great validation to our current cost of forgery model, but would not be useful in stopping the “attacker” sybil persona (as opposed to the “farmer”).</p>
+<aside class="quote no-group" data-username="kyle" data-post="3" data-topic="12546">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Going a step further, Cost of forgery offers other communities more granular (and arguably intuitive) opportunities to gate airdrops, entrance into the community etc.</p>
+</blockquote>
+</aside>
+<p>I believe this model is in code on the Passport repo. We offered it as another option because of this UX advantage even though it was 2-3% less accurate than the regression models.</p>
+<aside class="quote no-group" data-username="kyle" data-post="3" data-topic="12546">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>For example, if we use the same analogy of the $150 passport value, the $50 worth of GTC may be liquid and slashing eligible if it is found I am acting in bad faith (see above though that the context needs to be clear and agreed to). If $50 may be slashed, we now have an economy in which Sybil Hunters are literally getting paid to find bad actors.</p>
+</blockquote>
+</aside>
+<p>This is holy grail level. We need to know two things for this.</p>
+<ol>
+<li>Are we sure of the slashing condition?</li>
+<li>What is the proper continuous (closed loop) funding mechanism? (like insurance pools)</li>
+</ol>
+<p>We are more focused on the slashing conditions at this point. Are we sure that the account is sybil. I’d love to pair with you on thinking through the product management methods you would use to iterate towards the second mechanism.</p>
+<p>I’ve always thought of this ability to reward and slash as a module where round owners could create their own settings. (We would likely consult them on best practices to begin.)</p>
+<aside class="quote no-group" data-username="kyle" data-post="3" data-topic="12546">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Overall, I really appreciate you outlining the thinking. I see “is this person Sybil” the imprecise question to ask. One question I am interested in exploring more with Passport is “How we can make the system more expensive to attack than to defend and offer immense upside to good actors while deterring bad actors”</p>
+</blockquote>
+</aside>
+<p>I think this is spot on.</p>
+          <p><a href="https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/4
+        Thu, 12 Jan 2023 18:39:26 +0000
+gov.gitcoin.co-post-12546-4
+Public goods Legos: roadmap
+      
+
+Public goods Legos: roadmap
+kyle
+
+            <aside class="quote no-group" data-username="j-cook" data-post="1" data-topic="12546">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j-cook/48/5804_2.png" class="avatar"> j-cook:</div>
+<blockquote>
+<p>ownership of these credentials is good evidence a user is not a Sybil attacker.</p>
+</blockquote>
+</aside>
+<p>This assumes we know intent, and the user has sufficient education on the behavior we expect. One minor nuance we have not articulated is that a score is only valuable in predicting behavior if we (system operators) and the users share a common understanding of expectations. This is one place I am feeling like we need to bolster our efforts.</p>
+<p>One of the most common feedbacks we received was “I didn’t know ABC behavior wasn’t allowed” (ie airdrop farming with lots of wallets).</p>
+<aside class="quote no-group" data-username="j-cook" data-post="1" data-topic="12546">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j-cook/48/5804_2.png" class="avatar"> j-cook:</div>
+<blockquote>
+<p>The algorithm itself needs to be wrapped in helper functions that turn the code into a self-contained unit that takes in Gitcoin data and returns a Boolean (Sybil/not Sybil) or a float (Sybil likelihood).</p>
+</blockquote>
+</aside>
+<p>I wonder if we have considered other scoring mechanisms like a cost of forgery? Instead of trying to predict whether someone is a good actor, could we introduce a cost of forgery (in $USD) that is then tied to other USD denominated outcomes? For example, if my passport has a cost of forgery of $150 (I have a bankless POAP which was only possible by paying $100, and also I have $50 worth of GTC staked on my passport) then I might only be eligible to direct 2x my passport “value” (value is the interpretation of the cost to forge).</p>
+<p>Going a step further, Cost of forgery offers other communities more granular (and arguably intuitive) opportunities to gate airdrops, entrance into the community etc. <em>I only want to airdrop the amount of tokens up to someone’s passport value</em> or <em>I only want users (during a QF round) to have 2x their passport value</em></p>
+<p>One final thought on this, if passport value is better defined and explored, it may open new opportunities on “slashing” conditions where some of that value may be recouped if the user is a bad actor. For example, if we use the same analogy of the $150 passport value, the $50 worth of GTC may be liquid and slashing eligible if it is found I am acting in bad faith (see above though that the context needs to be clear and agreed to). If $50 may be slashed, we now have an economy in which Sybil Hunters are literally getting paid to find bad actors. And as a user, I may receive a 5x bonus to the matching pool funds my donations have (increase risk of slashing, but also increase reward of directing more matching pool funds).</p>
+<aside class="quote no-group" data-username="j-cook" data-post="1" data-topic="12546">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j-cook/48/5804_2.png" class="avatar"> j-cook:</div>
+<blockquote>
+<p>Sybil likelihoods as determined by each of six metrics immediately in the browser</p>
+</blockquote>
+</aside>
+<p>Do you have a link to this?</p>
+<p>–<br>
+Overall, I really appreciate you outlining the thinking. I see “is this person Sybil” the imprecise question to ask. One question I am interested in exploring more with Passport is “How we can make the system more expensive to attack than to defend and offer immense upside to good actors while deterring bad actors”</p>
+          <p><a href="https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/3
+        Thu, 12 Jan 2023 14:23:15 +0000
+gov.gitcoin.co-post-12546-3
+Public goods Legos: roadmap
+      
+
+Public goods Legos: roadmap
+DisruptionJoe
+
+            <p>Great overview. This article I put up to sensemake around the users of legos is a good companion piece as well. <a href="https://gov.gitcoin.co/t/using-fdd-fraud-defense-tools-in-a-protocol-future/12526/1" class="inline-onebox">Using FDD Fraud Defense Tools in a Protocol Future</a></p>
+          <p><a href="https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/2
+        Thu, 12 Jan 2023 13:53:47 +0000
+gov.gitcoin.co-post-12546-2
+Public goods Legos: roadmap
+      
+
+Public goods Legos: roadmap
+j-cook
+
+            <p>An <a href="https://gov.gitcoin.co/t/anti-sybil-legos/12265">earlier post</a> introduced the idea of Sybil defense “Legos” as composable building blocks that users can use to implement their own anti-Sybil systems. We want grant/round owners to be able to build their own grant management systems by picking freely from a set of tools that can be easily and intuitively connected together and even tweaked and modified to best serve the needs of specific subcommunities. We also want a diverse community of developers and data scientists to analyze Gitcoin data and turn their insights into Legos. Any analysis that can be shown to identify Sybil behaviour can be expressed in code and developed into a Lego.</p>
+<p>This post aims to add some more detail and dig a little deeper beyond the conceptual overview in the first post and start to show some of the practicalities of building and implementing anti-Sybil Legos and show where hope to go from here. We also introduce the upcoming Open Data Science Hackathon that will onboard new Lego builders to the Gitcoin/Open Data community.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/0c9ed932dfd269527cb2a6044fd5e3a4da23ee32.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/0c9ed932dfd269527cb2a6044fd5e3a4da23ee32" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0c9ed932dfd269527cb2a6044fd5e3a4da23ee32_2_690x345.png" alt="" data-base62-sha1="1NE3LSt8rzYaT4uPNsX6zKP0PWG" role="presentation" width="690" height="345" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0c9ed932dfd269527cb2a6044fd5e3a4da23ee32_2_690x345.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/0c9ed932dfd269527cb2a6044fd5e3a4da23ee32_2_1035x517.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/0/0c9ed932dfd269527cb2a6044fd5e3a4da23ee32.png 2x" data-dominant-color="E9F9F5"></a></div><p></p>
+<h2>
+<a name="what-legos-are-already-available-1" class="anchor" href="https://gov.gitcoin.co#what-legos-are-already-available-1"></a>What Legos are already available?</h2>
+<p>Several Lego’s are already built and being used to manage Sybils in Gitcoin grants. These are:</p>
+<ul>
+<li>
+<strong>Gitcoin Passport:</strong> When a user connects a passport, a trust score can be calculated for them which is used as evidence of personhood - the greater the score the more likely they are to be a genuine user.</li>
+<li>
+<strong>Levenstein distance:</strong> Every user has a username - when they sign up to Gitcoin grants the similarity of their name can be compared against all other usernames to generate a likelihood of the username being auto-generated - evidence of a Sybil account. This Lego <strong>will be deprecated</strong> in the grants protocol because usernames will no longer be available - only Ethereum addresses, wallet IDs and grant/round nonce.</li>
+<li>
+<strong>Shared IP</strong>: User IP addresses can also be checked to see if they are shared with many other users. Lots of addresses originating from the same IP could be a marker for Sybil attackers.</li>
+<li>
+<strong>SAD model:</strong> The user also has a Gitcoin account whose history can be analyzed using the SAD model to give another Sybil-likelihood score.</li>
+<li>
+<strong>DonorDNA</strong>: When a donor connects their wallet their profile of past donations can be analyzed to see whether it is similar to groups of other users, which may be indicatative of Sybil rings.</li>
+<li>
+<strong>GrantDNA</strong>: Each grant has a set of donors that can be represented as a set of binary data. This can be used to compare grants against flagged grants to see if they have similar donor profiles.</li>
+<li>
+<strong>Onchain Intersectionality</strong>: How many out of a set of on-chain credentials does a user have?</li>
+</ul>
+<p>The outputs from the Legos are either Booleans (Sybil/non-Sybil) or floats (0-1) representing Sybil likelihood.  They are aggregated and used collectively to come to a decision about the trustability of the user. In summary, the Legos are run independently and the results passed to an aggregator. The user sees the result of each independent Lego and also the result of the aggregator - i.e. they get an overall Sybil likelihood score/trust score and also a break down of the individual Sybil “dimensions”.</p>
+<h2>
+<a name="what-other-legos-could-exist-2" class="anchor" href="https://gov.gitcoin.co#what-other-legos-could-exist-2"></a>What other Legos could exist?</h2>
+<p>During Season 14, Gitcoin Passport was integrated into Bankless Academy. Analysis revealed that Gitcoin Passport was most powerful when combined with additional anti-Sybil Legos.</p>
+<ul>
+<li>
+<strong>Farmer Boolean</strong>: (uses on-chain data to determine whether a user has &gt;X ERC-20 tokens and an average transaction value &lt;Y ETH)</li>
+<li>
+<strong>Onchain History Boolean</strong>: (has a user engaged in certain web3 activities in a specific timeframe? Activites and timeframe can be customized by round owner)</li>
+<li>
+<strong>Money-Mixer</strong>: (Does a user interact with mixers e.g. Tornado cash)</li>
+<li>
+<strong>On-Trend / Off-Trend</strong>: (is the donation profile of a user similar to a grant’s target community?)</li>
+<li>
+<strong>Flagged Activity on Etherscan</strong>: (is an address closely associated with addresses flagged as phishing/spam on etherscan?)</li>
+</ul>
+<p>There are many possibilities for more Legos - <em>any analysis that can be shown to be indicative of Sybil behaviour and implementable as an algorithm could be turned into a Lego</em>. Some might be relatively complex analyses of on-chain data, like detecting when a user has rapidly swapped funds back and forth in order to seem more active. Sequences of rapid transactions between wallets, especially when they are ultimately returned to where they started or at least stay within a small group of addresses, could be a Sybil behaviour. Other on-chain indicators might be whether a wallet was initially funded from a contract, as this might be a way for Sybil attackers to automate their donations from many externally-owned accounts.</p>
+<p>Other simple Legos could be checks for users that hold certain POAPs or NFTs. Some POAPs and NFTs are easy to farm, others require significant investment of time and/or capital. For example, some education programs award their graduates NFTs as proof of completion - those are difficult to farm without taking a course, and they are in very limited supply so the total bribable population is small - ownership of these credentials is good evidence a user is not a Sybil attacker.<br>
+Some specific NFTs and POAPs might be especially high-signal for certain communities - e.g. POAPs distributed in community calls or at in-person meetups. There is also high potential for creating Legos based on past behaviours and interactions with other grant rounds - e.g. has a particular address donated to grants that have been flagged as fraudulent in the past - if so, how often? If some threshold of a user’s donations, say 50%, have gone to flagged grants, the user gets flagged too.</p>
+<p>Not all Legos have to use on-chain data. There may be more Sybil signals that can be extracted using clever analysis of Gitcoin data - DonorDNA and GrantDNA are good examples of existing Legos that only use off-chain data.</p>
+<h2>
+<a name="what-do-these-legos-actually-look-like-3" class="anchor" href="https://gov.gitcoin.co#what-do-these-legos-actually-look-like-3"></a>What do these Legos actually look like?</h2>
+<p>Right now, these Legos exist as code that is run manually by data scientists. The code is run against individual Ethereum addresses and Gitcoin usernames to determine their Sybil-likelihoood. They are currently run as independent, standalone algorithms, although development is tending towards increased automation and interoperability so that users are better able to implement these algorithms for themselves.</p>
+<p>Right now, Sybil Legos are implemented by Gitcoin data scientists, but in a protocol-based system they will be implemented as a service that can be configured for individual users. Ultimately there should be a freemium type model where foundational Sybil defenses are made available for free, and more computationally heavy algorithms can be optionally added for a fee.</p>
+<h2>
+<a name="a-lego-development-roadmap-4" class="anchor" href="https://gov.gitcoin.co#a-lego-development-roadmap-4"></a>A Lego development roadmap</h2>
+<h3>
+<a name="who-can-use-the-legos-5" class="anchor" href="https://gov.gitcoin.co#who-can-use-the-legos-5"></a>Who can use the Legos?</h3>
+<p>In the centralized era, Lego users are primarily Gitcoin data scientists (or “Fraud analyts”). These Fraud analysts have access to source code for the various Legos and apply it to Gitcoin data as part of a service provided to round owners. As the platform becomes a protocol, the Legos become increasingly decentralized - first by making the Legos usable directly by round owners, and then by making them available to anyone via a simple dashboard-based UI.</p>
+<h3>
+<a name="how-to-decentralize-legos-6" class="anchor" href="https://gov.gitcoin.co#how-to-decentralize-legos-6"></a>How to decentralize Legos</h3>
+<p>Up until now, the focus for Lego developers has been on experimenting with different prototypes and identifying those that are worth developing into products. Now, those existing Legos can be further developed to enhance their useability.</p>
+<h4>
+<a name="more-accessible-code-7" class="anchor" href="https://gov.gitcoin.co#more-accessible-code-7"></a>More accessible code</h4>
+<p>Legos are currently discrete code packages that implement some algorithm on Gitcoin data. However, scripts for running algorithms are not particularly useful in their “raw” form - they require additional functions that load and validate Gitcoin data and return a useful, correctly formatted result. The algorithm itself needs to be wrapped in helper functions that turn the code into a self-contained unit that takes in Gitcoin data and returns a Boolean (Sybil/not Sybil) or a float (Sybil likelihood).</p>
+<p>More useful would be bundling the code, along with other Legos, into a single package that could be easily imported into user’s projects. A good example would be a Python package that could be installed using a package manager, such as</p>
+<p><code>pip install sybil-legos</code></p>
+<p>and then individual Legos could be invoked simply using something like:</p>
+<pre><code class="lang-auto">import sybil-legos as sybil
+
+result = sybil.donor_dna(data)
+</code></pre>
+<p>This would also naturally extend to other Legos, all available inside the <code>sybil-legos</code> package. A minimal example of a pipeline for anti-Sybils could be as follows:</p>
+<pre><code class="lang-auto">import sybil-legos as sybil
+
+dna = sybil.donor_dna(data)
+grant_dna = sybil.grant_dna(data)
+trust_score = sybil.trust_score(data)
+
+result = sybil.aggregator(dna, grant_dna, trust_scores)
+</code></pre>
+<p>In this example, each Lego is invoked as a separate function within the <code>sybil-legos</code> package and the results are all fed into an <code>aggregator</code> function which applies some decision-making function to the results of each individual Lego and returns a list of Sybils. Likely, the <code>trust_score</code> function would make an external call to the Gitcoin Passport API where trust score calculations are already handled in a developer-friendly way that abstracts all the communication with Ceramic, data verification, cleaning and validation away from the end user.</p>
+<p>To best serve the developer community and lower the barrier to entry as far as possible, creating containerized versions of Legos that can be executed in a single line of code, great documentation, explainer articles and investing in devrel activity will go a long way. In this state, Legos are easier for a wider community of developers to implement. This removes a lot of friction in implementing Legos for Gitcoin Fraud Consultants and round owners.</p>
+<h4>
+<a name="no-code-legos-8" class="anchor" href="https://gov.gitcoin.co#no-code-legos-8"></a>No-code Legos</h4>
+<p>Longer term, it will be much more useful to abstract Lego execution out another level and provide no-code options for implementing the same tools. The transition from code to no-code Lego building is potentially a major unlock in terms of the number and diversity of people that can configure their own Sybil defenses.</p>
+<p>The obvious route to no-code Legos would be a public frontend where users can upload their data (e.g. list of usernames and/or Ethereum addresses) and download their results in a web page. A webpage could enable a user to simply opt-in to the Legos they wish to apply just by clicking tickboxes. The app then uploads the user’s data to a virtual machine, execute the selected algorithms, aggregate the results and return Sybil scores back to the browser. It is also easy to imagine additional features being made available via a marketplace of optional anti-Sybil add-ons.</p>
+<p>Some advancement in this direction has already been made: the screenshot below shows a web-app interface where users can input the account names of their users and see their Sybil likelihoods as determined by each of six metrics immediately in the browser - effectively a dashboard that shows a round owner whether their round is being attacked.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/30d253e5004c36a62b6443b1eb2dd9ee232529e3.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/30d253e5004c36a62b6443b1eb2dd9ee232529e3" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/30d253e5004c36a62b6443b1eb2dd9ee232529e3_2_690x306.png" alt="" data-base62-sha1="6XTxHHSOiOvGetLD9uHbPCh2pVN" role="presentation" width="690" height="306" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/30d253e5004c36a62b6443b1eb2dd9ee232529e3_2_690x306.png, https://gov.gitcoin.co/uploads/db4391/original/2X/3/30d253e5004c36a62b6443b1eb2dd9ee232529e3.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/3/30d253e5004c36a62b6443b1eb2dd9ee232529e3.png 2x" data-dominant-color="E4ECE4"></a></div><p></p>
+<p>There are costs associated with computing Lego scores. This means that eventually, a cost would need to be attached to the Lego execution such that users pay a small fee to add a Lego to their anti-Sybil pipeline and the actual execution is done in a virtual machine whose management is abstracted away from the user. Web3 integration seems to be a good solution for this -  a cost in ETH or a stablecoin could be calculated depending on the Legos the user has selected to implement which can be paid via a wallet integration before executing the Sybil Lego code. A freemium model may work well, with foundational Sybil algorithms being provided for free, and more computationally heavy ones being optionally added for a fee.</p>
+<p>Overall, most of the available Legos are currently only really useable by Gitcoin developers, but the roadmap is to gradually reduce the barrier to entry by first producing extensive documentation and beginner-friendly guides, then sequentially more and more accessible UIs that abstract complexity away from the user.</p>
+<h2>
+<a name="how-can-i-help-build-legos-9" class="anchor" href="https://gov.gitcoin.co#how-can-i-help-build-legos-9"></a>How can I help build Legos?</h2>
+<p>The best way to get involved with Lego development is to participate in the Gitcoin and/or Open Data Science communities. Data scientists are required to analyze Gitcoin data and identify signals that can be used to find Sybils. Developers are required to turn those signals into Legos. There is also a great need for people to work on UX and documentation. A great way to start participating is to join a community hackathon.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/955ed8ad72ccf6e14199dc07783d00c507d73bee.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/955ed8ad72ccf6e14199dc07783d00c507d73bee" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/955ed8ad72ccf6e14199dc07783d00c507d73bee_2_690x245.jpeg" alt="" data-base62-sha1="ljolJzkovib4UiaJjGw7gnbU0dU" role="presentation" width="690" height="245" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/955ed8ad72ccf6e14199dc07783d00c507d73bee_2_690x245.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/955ed8ad72ccf6e14199dc07783d00c507d73bee_2_1035x367.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/955ed8ad72ccf6e14199dc07783d00c507d73bee_2_1380x490.jpeg 2x" data-dominant-color="A1E5D6"></a></div><p></p>
+<h3>
+<a name="hackathon-10" class="anchor" href="https://gov.gitcoin.co#hackathon-10"></a>Hackathon</h3>
+<p>The Open Data Community is a fast-growing open community founded by Gitcoin. Our mission is to protect web3 by fighting Sybil attackers and resisting recentralization at the data layer. In January 2023 the Open Data Community and Gitcoin will host a hackathon specifically for anti-Sybil Lego builders. Hackers will have access to open data technology such as the decentralized node provider, Pocket, and decentralized data from Ocean Protocol. These tools will be used to hackers to build useful Sybil defense algorithms for Gitcoin’s grants protocol. To help builders get off the ground there will be a set of algorithms-of-interest that we would like to see developed into Legos. There may also be more points available for builders that go outside of the suggested data/algorithms and create new ideas from novel data sources.</p>
+<p>This hackathon builds upon the success of the inaugural hackathon in autumn 2022. That previous hackathon yielded several novel algorithms that are now being developed into algorithms for the upcoming Gitcoin grants protocol - we want to build on this success and add more algorithms to the anti-Sybil toolbox.</p>
+<p>The hackathon will open for applications in January 2023. Until then, visit the <a href="https://gitcoin.co/hackathon/DataBuilders/onboard" rel="noopener nofollow ugc">hackathon webpage</a>, join the fast-growing Open Data Community on <a href="https://discord.gg/KJ6PGH4cnK" rel="noopener nofollow ugc">Discord</a> or follow them on <a href="https://gov.gitcoin.co">Twitter</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/public-goods-legos-roadmap/12546/1
+        Wed, 11 Jan 2023 17:01:39 +0000
+gov.gitcoin.co-post-12546-1
+Public goods Legos: roadmap
+      
+
+

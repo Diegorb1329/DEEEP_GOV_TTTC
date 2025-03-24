@@ -1,0 +1,535 @@
+
+
+
+Decentralizing the Gitcoin Grants Program
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669
+    # Decentralizing Gitcoin’s Grants Program
+
+## Authors: [Janine Leger](@J9leger), [Scott Moore](@ceresstation), [Connor O'Day](@connor ), [Ben West](@ben_west), [Maxwell Kanter](@Maxwell), [Madison Adams](@madisonadams)
+
+Thank you this team and the whole of PGF and broader DAO contributors who helped thinking through this initial strategy. We're still starting this journey and would love thoughts and feedback about how we're thinking about the program. 
+
+## TL;DR
+
+The Gitcoin Program will start to decentralize over the coming months while continuing to fund public goods on a quarterly cadence. The Gitcoin Grants Program will consist of Core Rounds decided on by GTC token holders and core community members. Gitcoin contributors will run these core rounds (fundraise, operate, market and analyze for fraud/sybil). In addition, we encourage mission-aligned programs to run what we are calling “Featured Rounds” alongside the Gitcoin Core rounds for a fee. Featured Rounds will be independently run but will be marketed as part of the Gitcoin Program round and will benefit from market visibility.
+
+Thanks to the entire PGF team for a lot of thought and effort that went into this approach.
+
+## Background
+
+Over the last 3 years, Gitcoin’s Grants Program has been focused on helping sustain digital public goods that the Gitcoin and broader web3 community cares about. This journey has led us from funding everything from Ethereum infrastructure all the way to climate and open science.
+
+As we shift to a decentralized protocol, we want to effectively decentralize our program. This means decentralizing its operations and finding ways to achieve long term financial sustainability with the help of the broader Gitcoin community. Now that we’re in the throws of a round on the protocol and so far we know it works, we want to take the time to outline the next steps we’re taking toward a decentralized, community-owned program.
+
+## Grants Program Definition
+
+Previously, Gitcoin managed and ran all operational aspects for a combination of our Gitcoin main round (anything public goods related), cause rounds (rounds focused on a general cause with multiple funders, i.e., Climate Change) and ecosystem rounds (rounds focused on a project-specific theme, usually with one funder, i.e., ENS). These rounds were decided on by the Public Goods Funding Workstream (PGF) and then put to a [community vote](https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632) each quarter.
+
+With the launch of [Gitcoin Grants Stack](https://gov.gitcoin.co/t/introducing-gitcoin-grants-stack-allo-protocol-product-overviews-part-1-of-2/12664), anyone will be able to launch and manage their own programs the same way we manage ours at any given time. In practice, the Gitcoin Grants Stack removes a major barrier to adoption and gives any ecosystem the tools to fund their own shared needs and become a manager of their own program, without relying on Gitcoin. In this world, our team will focus on two key initiatives - setting up the Gitcoin program (core grants rounds our community wants to fund) and separately driving Grants Stack (anyone using our existing dApps to fund their community’s shared needs).
+
+![|624x297](upload://bWhwhyLIf4LgQ5N8oW6sUzpNEc2.jpeg)
+
+For the purpose of this post, we’re going to dive into details for the Gitcoin Program and not the details of how we’re going to drive protocol adoption. In the short to medium term Gitcoin will solicit feedback from our community about core rounds to run every quarter that fund public goods and encourage other communities to run rounds that align with the public goods ethos alongside these Gitcoin core rounds as “featured rounds”. These rounds will benefit from a discoverability standpoint and the network effects of many rounds happening at the same time. Unlike our centralized grants platform, the eventual goal will be that the program consists of a festival of public goods funding rounds all running independently on Gitcoin Grants Stackat the same time in support of public goods. This would mean that regardless of the PGF team, public goods will be funded and likely at a scale way larger than we could achieve if we owned every round.
+
+At least to start, Gitcoin itself will be the largest round manager of these core Gitcoin program rounds. In the next few weeks we will share the different public good cause rounds we’ve run in the past or seen interest from funders, round managers and grantees for our community to vote on. We will ask community members to provide suggestions on which 4-5 rounds to prioritize as core rounds for Gitcoin to fundraise for, operate and market.
+
+In addition, we are seeing programs interested in running their rounds at the same time as our core round and these will be the “Featured Rounds” that organizations run themselves but are profiled alongside our Gitcoin core program rounds.
+
+It’s important to understand the program in this context, and to look at the kinds of rounds this new world enables. 
+
+In summary, the Gitcoin Program will consist of two elements:
+
+* **Program Core** - Gitcoin does fundraising, operational and full marketing support to start and ideally over time, we will decrease the fundraising and operational lift.
+* **Program Featured** - Programs that apply and, if accepted by the community, buy-in to run a round at the same time as the Gitcoin Program to receive additional exposure to new grantees and donors, where Gitcoin provides marketing and customer support but the round is fundraised for and operated by the Program Manager (company, DAO, cause, NGO etc.).
+
+![|606x226](upload://v6rnPkE9OkFoKS54JuO3KL734T0.jpeg)
+
+**In more detail:**
+
+**Program Core Round(s)** would be a very limited set of recurring thematic rounds most aligned with the Gitcoin DAO’s community and mission
+
+* For example this could include rounds we’ve seen large support for including OSS, Eth Infrastructure, Climate, Decentralized Science, DEI (Diversity, Equity and Inclusion) etc - or only OSS if that is what our broader community votes on
+* GTC token holders will have full agency over which core rounds we run, how much funding we give to each from the Gitcoin Multisig, round eligibility, and structure of core rounds
+* Gitcoin full time contributors (i.e., PGF and MMM) will be the round operators and marketers for Core rounds and FDD contributors will support fraud and sybil detection
+* Core rounds can change each quarter but relative consistency is a goal to strive for. As these core rounds mature, they can also graduate to featured rounds with community members stepping up to run them. We’re already starting to see this happen with the climate round.
+
+**Program Featured rounds** will be where we encourage a subset of communities who align with Gitcoin to run their own rounds as part of our Gitcoin Grants Program Festival like experience (Gitcoin’s quarterly program cadence) and in turn benefit from the round marketing, Gitcoin brand and full endorsement. Over time we hope communities are encouraged to join the festival of rounds and we further decentralize how we scale funding public goods.
+
+* Featured rounds run alongside core rounds, but can have independent round managers
+* These include cause rounds, thematic ecosystem rounds, aligned community Ecosystem rounds
+* Communities and ecosystems will pay a fee to be included as featured rounds as benefits include being a visible round on the program webpage, marketing, exposure, priority support, basic Sybil reviews, etc
+* GTC token holders may veto a featured round if they don’t think it’s in line with the Gitcoin Ethos of funding public goods in web3 and beyond
+  * GTC token holders do not have agency over funding, eligibility, and structure of featured rounds, that is up to the round managers
+* Featured rounds have the option to run as meta-rounds to the core program
+  * Dependent on future deployment of meta-round functionality
+* Featured rounds will receive minimal onboarding support, marketing support and general support
+* Additional services will be limited (and more expensive due to team constraints) during the Gitcoin Program rounds
+* In the near term, what we have historically called “jet-engine QF” whereby a grantee who receives funding in one round, receives matching funding from any other round they are in, will not exist. However, grantees project pages will profile all the different rounds they are in for discoverability
+
+**Continuing to run our Gitcoin program does a few key things:**
+
+* It allows us to experiment and showcase best practices for round managers
+* Generate fees from funds raised that help us reach financial sustainability
+* Demonstrate how funding [digital public goods](https://www.un.org/techenvoy/content/digital-public-goods) can benefit the broader ecosystem
+* Creates network effects for creating a culture in crypto of funding public goods
+* Provides opportunities for more communities to test the protocol and potentially see opportunities to build on it
+* Creates consistent funding for meaningful projects in our ecosystem
+* Creates a consistent cadence that incentivizes people to run rounds during
+
+Gitcoin was one of the first projects in the crypto space to double down on funding public goods and we want to not only continue what we were doing to promote funding public goods but significantly amplify doing so with the protocols. A big reason why we’re charging for featured rounds is to create a state of program sustainability vs operate the Gitcoin program as a non-profit and constantly be in a state of fundraising. We hope that charging for Featured Rounds will overtime cover costs and if we reach profitability we would be committed to putting those funds back into public goods.
+
+## Wen Program Launch?
+
+We hope to launch the program in early April, share more about the Program at EthDenver and will start engaging GTC token holders in Core Round decision making in the coming weeks once we conclude the Gitcoin Alpha Rounds.
+
+Thanks for reading and look forward to your thoughts and feedback.
+Sat, 15 Apr 2023 17:49:13 +0000
+🌱 Gitcoin Grants
+
+
+Decentralizing the Gitcoin Grants Program
+montwang91223
+
+            <p>my english is poor ,but i love what you are doing .just go ahead,and make the great job.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/23">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/23
+        Sat, 15 Apr 2023 17:49:13 +0000
+gov.gitcoin.co-post-12669-23
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+hollymom
+
+            <p>thanks for all info, sorry My english not awesome. I using translator. I think Gitcoin Grants will be hug DAO next years. I am happy.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/22">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/22
+        Tue, 04 Apr 2023 18:36:18 +0000
+gov.gitcoin.co-post-12669-22
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+GIDAO
+
+            <p>Good morning and I was hoping for some direction. We were part of the ReFi DAO Corhort 2 circle last year which was designed to end as your last round opening approached.</p>
+<p>We understand why decisions were made to limit to previous participants but for those of us in the circle excluded it felt a little like we were dressed for the ball and then had to watch from the outside on twitter as the dance took place.</p>
+<p>Nothing was adjusted in the ReFi DAO circle to recognise the implications for those excluded as not only do you offer exposure for potential grant funding but also provide much needed exposure to a wider community.</p>
+<p>The Green Initiative DAO we see as filling an important space that is missing and we are a Founders of Regen projects led DAO.</p>
+<p>Would like to get a better understanding of what is envisaged in April if that is ok. What I read sounds amazing in terms building an eco system to allow others to build or stack on your foundations.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/21">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/21
+        Sat, 11 Mar 2023 03:38:16 +0000
+gov.gitcoin.co-post-12669-21
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+jchip300
+
+            <p>Outstanding Information This really puts a lot of things on the table!</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/20">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/20
+        Sat, 11 Mar 2023 02:46:37 +0000
+gov.gitcoin.co-post-12669-20
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+bobjiang
+
+            <p>Thank you Joe, I will read the post and talk to Paige (I know her).</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/19">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/19
+        Wed, 15 Feb 2023 22:15:09 +0000
+gov.gitcoin.co-post-12669-19
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+DisruptionJoe
+
+            <p>When you are able to run a round on the protocol yourself, you can put the funds from the main round earnings into a multisig to use as future matching funds for Asia rounds!</p>
+<p>Another cool idea would be to connect with <a class="mention" href="https://gov.gitcoin.co/u/paigexu522">@paigexu522</a> and <a class="mention" href="https://gov.gitcoin.co/u/jr-okx">@JR-OKX</a> to discuss support for an Asia round. They have tons of connections and are invested in Gitcoin’s success as well. Your community driven brand could operate rounds as a program manager with them and/or others as the matching pool funders.</p>
+<p>You might even campaign for your new Asia round to run alongside the Gitcoin Core Program as a “Featured” round… or potentially be a core round!</p>
+<p>Check out this post to learn about how the core and featured rounds will be chosen for the beta rounds running in April! <a href="https://gov.gitcoin.co/t/shaping-the-new-gitcoin-grants-program-with-community-engagement/12811" class="inline-onebox">Shaping the new Gitcoin Grants Program With Community Engagement</a></p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/18">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/18
+        Wed, 15 Feb 2023 16:49:04 +0000
+gov.gitcoin.co-post-12669-18
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+bobjiang
+
+            <p>Hi Joe,</p>
+<blockquote>
+<p>Bob had to collect the QF from the main round and disributed it to Chinese projects. Now, Bob or you, can turn the earnings from one round into the matching pool for another!</p>
+</blockquote>
+<p>What do you mean here?<br>
+I am thinking about how to expand the Gitcoin impact in Asia Pacific, and we will have some tests in 2023.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/17">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/17
+        Wed, 15 Feb 2023 09:56:13 +0000
+gov.gitcoin.co-post-12669-17
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+connor
+
+            <aside class="quote no-group" data-username="alexalombardo" data-post="13" data-topic="12669" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/letter_avatar_proxy/v4/letter/a/df788c/48.png" class="avatar"> alexalombardo:</div>
+<blockquote>
+<p>but wouldn’t one of the hopes be that they (at last some) can eventually operate independently and not be dependent on the Gitcoin festival? isn’t that why we’re building the Grants Stack and the Allo Protocol?</p>
+</blockquote>
+</aside>
+<p>Yes absolutely! Ideally, the Gitcoin program and everything it encompasses will only be a fraction (and shrinking) of the total platform adoption and activity. This write-up is narrowly focused on discussing the future of the Gitcoin <em>Program</em> and how we can decentralize it, but is not about the broader adoption and decentralization of the Gitcoin <em>Protocol</em> (aka Allo/Grants Stack).</p>
+<p>In my view, most external grant programs will prefer to run with their own schedule, cadence, and structure, and not be tied to Gitcoin’s Program. Some may start as featured rounds and then go off to do their own thing, some may start independently but decide to try out a featured program round, and many will never even consider or want to run a featured round.</p>
+<p>IMO certain external communities that have large overlaps with the Gitcoin community, core round themes, and overall mission, may find it valuable to run alongside the program (we saw the positive impact of these network effects on cGrants). However this will be the minority, and the work on growing the program should not impact general protocol adoption, self serve users are a priority.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/16">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/16
+        Tue, 14 Feb 2023 06:24:30 +0000
+gov.gitcoin.co-post-12669-16
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+koday
+
+            <p>Fantastic writeup, thanks <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a> and all other contributors!</p>
+<p>I just want to echo the other comments that this piece does a great job highlighting the difference between Program Core and Program Featured rounds and will be super valuable to refer back to as we get closer to April and beyond. Can’t wait to see the adoption and growth that this sets into motion!</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/15">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/15
+        Tue, 07 Feb 2023 22:34:50 +0000
+gov.gitcoin.co-post-12669-15
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+terexitarius
+
+            <p>We are currently discussing a grant round for dMRV and I recently did a little write up around this, would love to share. Would also love to know y’alls thoughts and what next steps you think would be.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/14">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/14
+        Tue, 07 Feb 2023 08:32:20 +0000
+gov.gitcoin.co-post-12669-14
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+alexalombardo
+
+            <p>but wouldn’t one of the hopes be that they (at last some) can eventually operate independently and not be dependent on the Gitcoin festival? isn’t that why we’re building the Grants Stack and the Allo Protocol?</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/13">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/13
+        Sun, 05 Feb 2023 17:29:18 +0000
+gov.gitcoin.co-post-12669-13
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+connor
+
+            <p>Thank you so much <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a> for laying this all out so eloquently and clearly! Super helpful for the entire community and a great summary of what we’ve been discussing, debating, and planning over the past few months. It’s all coming together!</p>
+<p>A few scattered thoughts -</p>
+<aside class="quote no-group" data-username="J9leger" data-post="1" data-topic="12669">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j9leger/48/7629_2.png" class="avatar"> J9leger:</div>
+<blockquote>
+<ul>
+<li>GTC token holders will have full agency over which core rounds we run, <strong>how much funding we give to each from the Gitcoin Multisig</strong>, round eligibility, and structure of core rounds</li>
+</ul>
+</blockquote>
+</aside>
+<p>I agree with this approach of governance in deciding the themes, structure, criteria, etc. The one part that we will need to further figure out is the funding aspect.</p>
+<p>Currently, most rounds we run are specifically fundraised for by the partnerships team. We do have the matching pool multisig treasury, which has grown and decreased over the years, and we do pull from that when need be. BUT I do think the majority of funding for our core rounds will need to be brought in externally, otherwise, the multisig will drain instantly.</p>
+<p>I do think what you were alluding to is that the PGF team will fundraise for core rounds the community decides on (say OSS, Infra, Climate) and then perhaps we can set aside some amount from the multisig that the DAO gets to vote to allocate as a “bonus” to the externally raised funds.</p>
+<p>I think it will be really hard to allow the community to choose how to allocate ALL matching funds, simply because the matching pool donors typically want to support a specific cause. It’s much easier to raise funds for climate or OSS from orgs that really care about that specific topic. It’s much harder to fundraise for a “general pool” that others will decide what it goes to. And someone who wanted to donate to climate will not be happy if we have to say “sorry but the community decided to fund X instead”</p>
+<p>So all that said, I think we should find a balance between setting aside a subset of funds that the DAO gets to allocate, while also empowering the partnerships team to pull in as much capital as possible by working with donors that care deeply about specific topics.</p>
+<aside class="quote no-group" data-username="J9leger" data-post="1" data-topic="12669">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j9leger/48/7629_2.png" class="avatar"> J9leger:</div>
+<blockquote>
+<p>In the near term, what we have historically called “jet-engine QF” whereby a grantee who receives funding in one round, receives matching funding from any other round they are in, will not exist</p>
+</blockquote>
+</aside>
+<p>I will also just state for the record that I believe jet engine QF (I prefer “meta rounds/QF”) is a HUGE value add to running QF programs in tandem. It creates network effects, allows communities to grow together, and prevents grants that may be in multiple rounds from getting their support diluted.</p>
+<p>I think this feature will be super important for the Gitcoin Core Program, it could be an added benefit or upsell to featured program rounds, and will be a great tool for other communities using the protocol in a permissionless way.</p>
+<p>I know you specifically called out “in the near term” and that this will likely come about eventually, but I personally believe it should be prioritized sooner rather than later. I think we’ll see what the community thinks when the program launches <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Anyway, extremely well-written post, I’m in full agreement and excited to get this ball rolling!</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/12">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/12
+        Thu, 02 Feb 2023 06:40:43 +0000
+gov.gitcoin.co-post-12669-12
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+PaigeDAO
+
+            <p>This leaves me with remarkable clarity and understanding of the difference between Program ‘Core Rounds’ and Program ‘Featured Rounds.’  So, thank you!</p>
+<p>It also makes sense to engineer a sustainable business model for Gitcoin/ Allo Protocol and charge for Featured rounds. Because, in fact, those participants will be benefitting from strong services delivered by a well-oiled machine. <img src="https://gov.gitcoin.co/images/emoji/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/11
+        Wed, 01 Feb 2023 18:06:40 +0000
+gov.gitcoin.co-post-12669-11
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+J9leger
+
+            <p>Appreciate the note Kevin. The PGF team is a strong one. Feel very lucky to work with them all on our overall grants direction.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/10
+        Tue, 31 Jan 2023 23:11:35 +0000
+gov.gitcoin.co-post-12669-10
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+J9leger
+
+            <aside class="quote no-group" data-username="shawn16400" data-post="5" data-topic="12669">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar"> shawn16400:</div>
+<blockquote>
+<p>I am thinking the next step, where we, the DAO enable pathways for the independent camps at Burning Man to sprout their own “Burning Man Brazil”, “Burning Man Singapore” or “Burning Man End-World-Poverty”.</p>
+</blockquote>
+</aside>
+<p>Ideally we get there where we have people using Allo protocol and customize it through building different tools they want to run “clustered” rounds at different times. This might be rounds that use different funding mechanisms that are built on the protocol and cluster rounds together. There are so many ways this can evolve but first and foremost let’s build the initial infrastructure to make sure this works.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/9
+        Tue, 31 Jan 2023 23:10:49 +0000
+gov.gitcoin.co-post-12669-9
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+DisruptionJoe
+
+            <p>I think this is awesome. Previously, Bob had to collect the QF from the main round and disributed it to Chinese projects. Now, Bob or you, can turn the earnings from one round into the matching pool for another!</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/8
+        Mon, 30 Jan 2023 18:24:11 +0000
+gov.gitcoin.co-post-12669-8
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+ZER8
+
+            <p>Thanks for asking the qs that you asked as they are very important for people like me who want to build local rounds and possibly a national round via Gitcoin. Since my first month in Gitcoin DAO I asked myself how would a Gitcoin Romania round would look like and I have to say I’m more excited than ever about this now that the protocol is being created and tested before our very eyes.</p>
+<p>The web3 dreamer in me was and is curious how can Gitcoins ethos/tech/values can be exported and implemented worldwide and adapted to those cultures as well.</p>
+<aside class="quote no-group" data-username="shawn16400" data-post="5" data-topic="12669">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/shawn16400/48/6906_2.png" class="avatar"> shawn16400:</div>
+<blockquote>
+<p>Might be too early for this kind of thinking <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+</aside>
+<p>Personally I don’t think it’s 2 early and <a class="mention" href="https://gov.gitcoin.co/u/bobjiang">@bobjiang</a> is a great example with the work he’s doing via Gitcoin Chinese ecosystem. Kudos to Bob <img src="https://gov.gitcoin.co/images/emoji/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"> as he inspired me last year to think and try to create a Gitcoin Romanian ecosystem and test out different funding narratives inside of it.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/7
+        Sun, 29 Jan 2023 10:53:58 +0000
+gov.gitcoin.co-post-12669-7
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+kevin.olsen
+
+            <p>Amazing. No notes.</p>
+<p>Having watched this concept evolve for a while, I’m so impressed with how clean the framing and articulation of the plan is here. That Authors list is a dream team.</p>
+<p>So psyched to see this move into action</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/6
+        Thu, 26 Jan 2023 09:31:26 +0000
+gov.gitcoin.co-post-12669-6
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+shawn16400
+
+            <aside class="quote no-group" data-username="J9leger" data-post="4" data-topic="12669">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j9leger/48/7629_2.png" class="avatar"> J9leger:</div>
+<blockquote>
+<p>No Burning Man camp graduates from Burning Man, they just build more of an infrastructure of their own within the festival and if anything the festival celebrates each camps independence.</p>
+</blockquote>
+</aside>
+<p>I love this analogy and was struggling with one when I wrote my prior post.  It makes perfect sense to help participants graduate from Core to the self managed Featured Rounds.  I am thinking the next step, where we, the DAO enable pathways for the independent camps at Burning Man to sprout their own “Burning Man Brazil”,  “Burning Man Singapore” or “Burning Man End-World-Poverty”.</p>
+<p>Using the hub and spoke model - with Gitcoin at the center is great, we build that ecosystem for a killer Burning Man with a bunch of independent camps.  But do we think about how we (the remaining DAO) exist to use our Burning Man experience to enable the building of new and antifragile ecosystem(s) enabled by the Grants Stack?</p>
+<p>Might be too early for this kind of thinking <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/5
+        Wed, 25 Jan 2023 12:33:21 +0000
+gov.gitcoin.co-post-12669-5
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+J9leger
+
+            <p>Great question <a class="mention" href="https://gov.gitcoin.co/u/shawn16400">@shawn16400</a>. The hope is that over time we have core rounds graduate to sustained featured rounds run by community members. I’m not sure I was clear enough about how featured rounds are in themselves independent rounds. That was an important call out. Ideally featured rounds are independently run by communities interested in running rounds during our cadence for the reasons listed above.</p>
+<p>The analogy I’ve used for a few people is Burning Man. No Burning Man camp graduates from Burning Man, they just build more of an infrastructure of their own within the festival and if anything the festival celebrates each camps independence. Featured rounds are the equivalent of camps in this context. They don’t need to graduate from running featured rounds but they can expand their efforts during the Gitcoin Grants Festival Rounds.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/4
+        Wed, 25 Jan 2023 06:36:18 +0000
+gov.gitcoin.co-post-12669-4
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+alexalombardo
+
+            <p>I love this question <a class="mention" href="https://gov.gitcoin.co/u/shawn16400">@shawn16400</a> -  I cant wait to see how we “graduate” projects from one step to the next</p>
+<p>Thanks for this context <a class="mention" href="https://gov.gitcoin.co/u/j9leger">@J9leger</a> - really excited for the future of the Gitcoin Grants Program and the scaling of Gitcoin’s impact via the Gitcoin Grants Stack and our protocols</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/3
+        Wed, 25 Jan 2023 04:03:17 +0000
+gov.gitcoin.co-post-12669-3
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+shawn16400
+
+            <aside class="quote no-group" data-username="J9leger" data-post="1" data-topic="12669">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j9leger/48/7629_2.png" class="avatar"> J9leger:</div>
+<blockquote>
+<p>In summary, the Gitcoin Program will consist of two elements:</p>
+<ul>
+<li><strong>Program Core</strong> - Gitcoin does fundraising, operational and full marketing support to start and ideally over time, we will decrease the fundraising and operational lift.</li>
+<li><strong>Program Featured</strong> - Programs that apply and, if accepted by the community, buy-in to run a round at the same time as the Gitcoin Program to receive additional exposure to new grantees and donors, where Gitcoin provides marketing and customer support but the round is fundraised for and operated by the Program Manager (company, DAO, cause, NGO etc.).</li>
+</ul>
+</blockquote>
+</aside>
+<p>Is there an intentional progression or pathway from a program core round, to the program featured round, to an independent user of the grants stack?</p>
+<p>If this were the case, does Gitcoin eventually become a kind of incubator for communities to sprout, mature, and if an ecosystem develops around the community - give it a pathway to build into its own functional impact network?</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/2
+        Wed, 25 Jan 2023 01:37:54 +0000
+gov.gitcoin.co-post-12669-2
+Decentralizing the Gitcoin Grants Program
+      
+
+Decentralizing the Gitcoin Grants Program
+J9leger
+
+            <h1>
+<a name="decentralizing-gitcoins-grants-program-1" class="anchor" href="https://gov.gitcoin.co#decentralizing-gitcoins-grants-program-1"></a>Decentralizing Gitcoin’s Grants Program</h1>
+<h2>
+<a name="authors-janine-legerj9leger-scott-mooreceresstation-connor-odayconnor-ben-westben_west-maxwell-kantermaxwell-madison-adamsmadisonadams-2" class="anchor" href="https://gov.gitcoin.co#authors-janine-legerj9leger-scott-mooreceresstation-connor-odayconnor-ben-westben_west-maxwell-kantermaxwell-madison-adamsmadisonadams-2"></a>Authors: <a href="https://gov.gitcoin.co">Janine Leger</a>, <a href="https://gov.gitcoin.co">Scott Moore</a>, <a href="https://gov.gitcoin.co">Connor O’Day</a>, <a href="https://gov.gitcoin.co">Ben West</a>, <a href="https://gov.gitcoin.co">Maxwell Kanter</a>, <a href="https://gov.gitcoin.co">Madison Adams</a>
+</h2>
+<p>Thank you this team and the whole of PGF and broader DAO contributors who helped thinking through this initial strategy. We’re still starting this journey and would love thoughts and feedback about how we’re thinking about the program.</p>
+<h2>
+<a name="tldr-3" class="anchor" href="https://gov.gitcoin.co#tldr-3"></a>TL;DR</h2>
+<p>The Gitcoin Program will start to decentralize over the coming months while continuing to fund public goods on a quarterly cadence. The Gitcoin Grants Program will consist of Core Rounds decided on by GTC token holders and core community members. Gitcoin contributors will run these core rounds (fundraise, operate, market and analyze for fraud/sybil). In addition, we encourage mission-aligned programs to run what we are calling “Featured Rounds” alongside the Gitcoin Core rounds for a fee. Featured Rounds will be independently run but will be marketed as part of the Gitcoin Program round and will benefit from market visibility.</p>
+<p>Thanks to the entire PGF team for a lot of thought and effort that went into this approach.</p>
+<h2>
+<a name="background-4" class="anchor" href="https://gov.gitcoin.co#background-4"></a>Background</h2>
+<p>Over the last 3 years, Gitcoin’s Grants Program has been focused on helping sustain digital public goods that the Gitcoin and broader web3 community cares about. This journey has led us from funding everything from Ethereum infrastructure all the way to climate and open science.</p>
+<p>As we shift to a decentralized protocol, we want to effectively decentralize our program. This means decentralizing its operations and finding ways to achieve long term financial sustainability with the help of the broader Gitcoin community. Now that we’re in the throws of a round on the protocol and so far we know it works, we want to take the time to outline the next steps we’re taking toward a decentralized, community-owned program.</p>
+<h2>
+<a name="grants-program-definition-5" class="anchor" href="https://gov.gitcoin.co#grants-program-definition-5"></a>Grants Program Definition</h2>
+<p>Previously, Gitcoin managed and ran all operational aspects for a combination of our Gitcoin main round (anything public goods related), cause rounds (rounds focused on a general cause with multiple funders, i.e., Climate Change) and ecosystem rounds (rounds focused on a project-specific theme, usually with one funder, i.e., ENS). These rounds were decided on by the Public Goods Funding Workstream (PGF) and then put to a <a href="https://gov.gitcoin.co/t/proposal-gr14-round-structure-grants-eligibility-update/10632">community vote</a> each quarter.</p>
+<p>With the launch of <a href="https://gov.gitcoin.co/t/introducing-gitcoin-grants-stack-allo-protocol-product-overviews-part-1-of-2/12664">Gitcoin Grants Stack</a>, anyone will be able to launch and manage their own programs the same way we manage ours at any given time. In practice, the Gitcoin Grants Stack removes a major barrier to adoption and gives any ecosystem the tools to fund their own shared needs and become a manager of their own program, without relying on Gitcoin. In this world, our team will focus on two key initiatives - setting up the Gitcoin program (core grants rounds our community wants to fund) and separately driving Grants Stack (anyone using our existing dApps to fund their community’s shared needs).</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/5/53ae831f1c5849055ee81c7097ae561715016032.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/53ae831f1c5849055ee81c7097ae561715016032" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/53ae831f1c5849055ee81c7097ae561715016032_2_624x297.jpeg" alt="" data-base62-sha1="bWhwhyLIf4LgQ5N8oW6sUzpNEc2" width="624" height="297" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/53ae831f1c5849055ee81c7097ae561715016032_2_624x297.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/53ae831f1c5849055ee81c7097ae561715016032_2_936x445.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/5/53ae831f1c5849055ee81c7097ae561715016032_2_1248x594.jpeg 2x" data-dominant-color="ECEBED"></a></div><p></p>
+<p>For the purpose of this post, we’re going to dive into details for the Gitcoin Program and not the details of how we’re going to drive protocol adoption. In the short to medium term Gitcoin will solicit feedback from our community about core rounds to run every quarter that fund public goods and encourage other communities to run rounds that align with the public goods ethos alongside these Gitcoin core rounds as “featured rounds”. These rounds will benefit from a discoverability standpoint and the network effects of many rounds happening at the same time. Unlike our centralized grants platform, the eventual goal will be that the program consists of a festival of public goods funding rounds all running independently on Gitcoin Grants Stackat the same time in support of public goods. This would mean that regardless of the PGF team, public goods will be funded and likely at a scale way larger than we could achieve if we owned every round.</p>
+<p>At least to start, Gitcoin itself will be the largest round manager of these core Gitcoin program rounds. In the next few weeks we will share the different public good cause rounds we’ve run in the past or seen interest from funders, round managers and grantees for our community to vote on. We will ask community members to provide suggestions on which 4-5 rounds to prioritize as core rounds for Gitcoin to fundraise for, operate and market.</p>
+<p>In addition, we are seeing programs interested in running their rounds at the same time as our core round and these will be the “Featured Rounds” that organizations run themselves but are profiled alongside our Gitcoin core program rounds.</p>
+<p>It’s important to understand the program in this context, and to look at the kinds of rounds this new world enables.</p>
+<p>In summary, the Gitcoin Program will consist of two elements:</p>
+<ul>
+<li>
+<strong>Program Core</strong> - Gitcoin does fundraising, operational and full marketing support to start and ideally over time, we will decrease the fundraising and operational lift.</li>
+<li>
+<strong>Program Featured</strong> - Programs that apply and, if accepted by the community, buy-in to run a round at the same time as the Gitcoin Program to receive additional exposure to new grantees and donors, where Gitcoin provides marketing and customer support but the round is fundraised for and operated by the Program Manager (company, DAO, cause, NGO etc.).</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/d/d9fdcde781959b6bb88948869c8a66ff64c1f4da.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/d9fdcde781959b6bb88948869c8a66ff64c1f4da" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d9fdcde781959b6bb88948869c8a66ff64c1f4da_2_606x226.jpeg" alt="" data-base62-sha1="v6rnPkE9OkFoKS54JuO3KL734T0" width="606" height="226" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d9fdcde781959b6bb88948869c8a66ff64c1f4da_2_606x226.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d9fdcde781959b6bb88948869c8a66ff64c1f4da_2_909x339.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/d/d9fdcde781959b6bb88948869c8a66ff64c1f4da_2_1212x452.jpeg 2x" data-dominant-color="EBE9EB"></a></div><p></p>
+<p><strong>In more detail:</strong></p>
+<p><strong>Program Core Round(s)</strong> would be a very limited set of recurring thematic rounds most aligned with the Gitcoin DAO’s community and mission</p>
+<ul>
+<li>For example this could include rounds we’ve seen large support for including OSS, Eth Infrastructure, Climate, Decentralized Science, DEI (Diversity, Equity and Inclusion) etc - or only OSS if that is what our broader community votes on</li>
+<li>GTC token holders will have full agency over which core rounds we run, how much funding we give to each from the Gitcoin Multisig, round eligibility, and structure of core rounds</li>
+<li>Gitcoin full time contributors (i.e., PGF and MMM) will be the round operators and marketers for Core rounds and FDD contributors will support fraud and sybil detection</li>
+<li>Core rounds can change each quarter but relative consistency is a goal to strive for. As these core rounds mature, they can also graduate to featured rounds with community members stepping up to run them. We’re already starting to see this happen with the climate round.</li>
+</ul>
+<p><strong>Program Featured rounds</strong> will be where we encourage a subset of communities who align with Gitcoin to run their own rounds as part of our Gitcoin Grants Program Festival like experience (Gitcoin’s quarterly program cadence) and in turn benefit from the round marketing, Gitcoin brand and full endorsement. Over time we hope communities are encouraged to join the festival of rounds and we further decentralize how we scale funding public goods.</p>
+<ul>
+<li>Featured rounds run alongside core rounds, but can have independent round managers</li>
+<li>These include cause rounds, thematic ecosystem rounds, aligned community Ecosystem rounds</li>
+<li>Communities and ecosystems will pay a fee to be included as featured rounds as benefits include being a visible round on the program webpage, marketing, exposure, priority support, basic Sybil reviews, etc</li>
+<li>GTC token holders may veto a featured round if they don’t think it’s in line with the Gitcoin Ethos of funding public goods in web3 and beyond
+<ul>
+<li>GTC token holders do not have agency over funding, eligibility, and structure of featured rounds, that is up to the round managers</li>
+</ul>
+</li>
+<li>Featured rounds have the option to run as meta-rounds to the core program
+<ul>
+<li>Dependent on future deployment of meta-round functionality</li>
+</ul>
+</li>
+<li>Featured rounds will receive minimal onboarding support, marketing support and general support</li>
+<li>Additional services will be limited (and more expensive due to team constraints) during the Gitcoin Program rounds</li>
+<li>In the near term, what we have historically called “jet-engine QF” whereby a grantee who receives funding in one round, receives matching funding from any other round they are in, will not exist. However, grantees project pages will profile all the different rounds they are in for discoverability</li>
+</ul>
+<p><strong>Continuing to run our Gitcoin program does a few key things:</strong></p>
+<ul>
+<li>It allows us to experiment and showcase best practices for round managers</li>
+<li>Generate fees from funds raised that help us reach financial sustainability</li>
+<li>Demonstrate how funding <a href="https://www.un.org/techenvoy/content/digital-public-goods" rel="noopener nofollow ugc">digital public goods</a> can benefit the broader ecosystem</li>
+<li>Creates network effects for creating a culture in crypto of funding public goods</li>
+<li>Provides opportunities for more communities to test the protocol and potentially see opportunities to build on it</li>
+<li>Creates consistent funding for meaningful projects in our ecosystem</li>
+<li>Creates a consistent cadence that incentivizes people to run rounds during</li>
+</ul>
+<p>Gitcoin was one of the first projects in the crypto space to double down on funding public goods and we want to not only continue what we were doing to promote funding public goods but significantly amplify doing so with the protocols. A big reason why we’re charging for featured rounds is to create a state of program sustainability vs operate the Gitcoin program as a non-profit and constantly be in a state of fundraising. We hope that charging for Featured Rounds will overtime cover costs and if we reach profitability we would be committed to putting those funds back into public goods.</p>
+<h2>
+<a name="wen-program-launch-6" class="anchor" href="https://gov.gitcoin.co#wen-program-launch-6"></a>Wen Program Launch?</h2>
+<p>We hope to launch the program in early April, share more about the Program at EthDenver and will start engaging GTC token holders in Core Round decision making in the coming weeks once we conclude the Gitcoin Alpha Rounds.</p>
+<p>Thanks for reading and look forward to your thoughts and feedback.</p>
+          <p><a href="https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/decentralizing-the-gitcoin-grants-program/12669/1
+        Tue, 24 Jan 2023 22:39:07 +0000
+gov.gitcoin.co-post-12669-1
+Decentralizing the Gitcoin Grants Program
+      
+
+

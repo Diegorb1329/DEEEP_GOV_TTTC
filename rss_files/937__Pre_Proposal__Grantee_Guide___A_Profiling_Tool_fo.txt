@@ -1,0 +1,265 @@
+
+
+
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716
+    Thanks to @harryeastham for seeding the concept and to @umarkhaneth for reviewing.
+
+tl;dr The following ideation post proposes a prototype for a data app to inspire confidence in potential grantees on Gitcoin Grants (GG) and Independent Rounds by demonstrating other successful funding journeys on Grants Stack. This post kick-starts an 8-week timeline to accelerate from idea to app using Citizens Innovate by supporting and funding builders with the most robust proposals.
+
+Timeline:
+
+* **May 2 - May 16th:** The post will be open for feedback on the gov forum until May 16th, along with a [sign-up form](https://forms.gle/cVZ6voLCmFxY8q3q7) for Citizens interested in opting for a direct grant to build the prototype
+* **The week of May 20th:** A debrief call and 1:1 sessions the following week with Citizens interested in submitting their proposal for funds to build the prototype
+* **The week of May 27th:** The Grant Council may approve one or more GCPs to implement the functionality
+* **June 3rd to June 28th:** 4-week timeline to implement the prototype with interim demos as well as support and mentorship from Gitcoin team members with context on the problem
+
+### Hypothesis
+
+> Prospective Gitcoin grantees are more likely to apply for a grant on Grants Stack when they see the journey of similar grantees in their niche who have successfully raised funds on Gitcoin Grants and Independent Rounds.
+
+### Validation
+
+We propose a self-service data app prototype designed to test this hypothesis for potential applicants. This prototype will allow users to input a summary of their project and retrieve information about similar grantees who have previously participated in Gitcoin grants. The prototype will provide answers to questions like:
+
+* Which projects similar to ours have participated on Gitcoin in the past?
+* How much funding have these projects raised over time?
+* How much funding can we expect to receive for our project?
+* Which funding rounds are we eligible to apply for?
+* What attributes are key to increasing the chances of being accepted in these rounds?
+* What else?
+
+### Technical Considerations
+
+These are for reference only. Interested builders are encouraged to research and opt into most appropriate approaches to address the problem.
+
+***Where can I find data about past grantees?***
+
+Databases such as [RegenData](https://regendata.xyz/) and [Gitcoin Grants Data Portal](https://grantsdataportal.xyz/) provide valuable information that can be leveraged to support prospective grantees. These databases can retrieve:
+
+* A list of past grantees whose work is similar to the user's project.
+* The trend of their participation in Gitcoin, including the number of contributors and the amount raised over time.
+
+***How do I find grantees similar to the applicant?***
+
+To facilitate this, clustering algorithms can be employed to match a given project description with similar grantees. For an example of how feature extraction, dimensionality reduction, and similarity measurement are implemented, refer to the [GrantsScope App for GreenPill x Octant round](https://gp-octant.streamlit.app/). Click [here](https://github.com/rohitmalekar/gp-octant) for the GitHub Repo. Advanced approaches involving Retrieval-Augmented Generation (RAG) or fine-tuning LLMs might also be relevant here.
+
+***How do I estimate how much funding a prospective grantee can expect?***
+
+The [historical curves in the power law distribution](https://x.com/RohitMalekar/status/1773102167890559420) of the matching pool could provide a suggestive range of funds that could be raised in a QF round. This estimation requires assumptions for percentile rank and the size of the matching pool.
+
+### Limitations and Risks
+
+* **User Assumptions and Expectations:** The tool relies on user inputs regarding their assumptions about percentile rank and matching pool size to estimate potential funding. Incorrect assumptions or a lack of understanding about these parameters could lead to unrealistic expectations about the funding amount. Educating users on how to make informed assumptions is crucial.
+
+* **Algorithm Bias and Fairness:** The algorithms used may inadvertently favor certain types of projects or grantees based on the data they have been trained on. This could lead to a lack of diversity in the recommended or seen as successful projects, potentially reinforcing existing biases in funding allocation.
+
+* **Complexity of Clustering Algorithms:** Clustering algorithms are central to matching project descriptions with similar past grantees. However, these algorithms' complexity could lead to implementation and maintenance challenges. There's also the risk of overfitting, where the model is too closely fitted to the historical data, potentially making it less effective in predicting or matching new, unseen projects.
+
+### Next Steps
+
+* Share your feedback here on the hypothesis and validation approach before May 16th
+* Sign up [here](https://forms.gle/cVZ6voLCmFxY8q3q7) if you want to opt in for a deeper dive to submit a proposal to build this prototype or to shadow along the discussions and demos.
+Mon, 06 May 2024 16:33:26 +0000
+📝 Citizen Grants
+
+
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+mars
+
+            <aside class="quote no-group" data-username="rohit" data-post="4" data-topic="18716">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/rohit/48/11353_2.png" class="avatar"> rohit:</div>
+<blockquote>
+<p>writing a proposal for a direct grant is a time-consuming endeavor</p>
+</blockquote>
+</aside>
+<aside class="quote no-group" data-username="rohit" data-post="4" data-topic="18716">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/rohit/48/11353_2.png" class="avatar"> rohit:</div>
+<blockquote>
+<p>assist citizens in determining whether they wish to commit to writing a proposal</p>
+</blockquote>
+</aside>
+<p>Now I see!</p>
+<p>It’s not for GG20 (or other runds proposal).</p>
+<p>It’s for <strong>direct grant</strong>.</p>
+<p>Now I see the difference, I should pay more attention to the title of the topic.</p>
+<p>I would solve this problem using “no code” approach. Intentionally brief  “expression of interest”. 1 pager, simple, basic info:</p>
+<blockquote>
+<p>We know that writing a grant proposal is massive task that’s why offer “expression of interest” that is 1 page long and allows us to offer direct feedback whether the fully pledged proposal is likely to be accepted.</p>
+</blockquote>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/7
+        Mon, 06 May 2024 16:33:26 +0000
+gov.gitcoin.co-post-18716-7
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+      
+
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+Decentralizedceo
+
+            <p>I am in full support of this!<br>
+It will be a great tool that will enhance the grantee experience for sure.<br>
+I can also see this being used for the <a href="https://gofundop.vercel.app/" rel="noopener nofollow ugc">“gofundop”</a> project. A way for projects to obtain a fraction of their potential resources to kick start their initiatives.</p>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/6
+        Mon, 06 May 2024 14:44:27 +0000
+gov.gitcoin.co-post-18716-6
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+      
+
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+KMLLC
+
+            <p>I am not a builder or have developer skills, that being said would love to share our story both from business and personal POVs of how Gitcoin has benefited us since we have been involved, circa GG18. I feel strongly that providing peer support for incoming grantees to have a model and resources they can learn from so they can have the best possible experience in applying for grants offered. Level setting expectations I feel strongly has high value so grantees are prepared for the seasonal grind, while asynchronously thinking about activity in between seasonal efforts.</p>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/5
+        Mon, 06 May 2024 14:27:54 +0000
+gov.gitcoin.co-post-18716-5
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+      
+
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+rohit
+
+            <aside class="quote no-group" data-username="mars" data-post="3" data-topic="18716">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/mars/48/10960_2.png" class="avatar"> mars:</div>
+<blockquote>
+<p>Wish I’ve received this feedback sooner in order to improbve the application.</p>
+</blockquote>
+</aside>
+<p>Hey <a class="mention" href="https://gov.gitcoin.co/u/mars">@mars</a> This looks like a climate round application. If you haven’t already, please share your inputs with <a href="https://twitter.com/climate_program">Climate Coordination Network</a>.</p>
+<aside class="quote no-group" data-username="mars" data-post="3" data-topic="18716">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/mars/48/10960_2.png" class="avatar"> mars:</div>
+<blockquote>
+<p>I was rejected from recent Gitcoin Citizen round (another rejection) so not sure if eligible to apply?</p>
+</blockquote>
+</aside>
+<p>The short answer is yes. You may apply for a direct grant under Citizen Grants (Forward or Innovate) regardless of a decision on another grant application.</p>
+<p>The long answer is that writing a proposal for a direct grant is a time-consuming endeavor. To streamline the process and facilitate more focused discussions on the problem space, assess potential technical pathways, and assist citizens in determining whether they wish to commit to writing a proposal, I recommend utilizing the sign-up form. Whether individuals are interested in shadowing the process to gain insight and context or are ready to submit a proposal themselves, we encourage them to sign up and participate.</p>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/4
+        Mon, 06 May 2024 14:14:47 +0000
+gov.gitcoin.co-post-18716-4
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+      
+
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+mars
+
+            <h3><a name="fyi-1" class="anchor" href="https://gov.gitcoin.co#fyi-1"></a>FYI</h3>
+<h3><a name="related-2" class="anchor" href="https://gov.gitcoin.co#related-2"></a>Related</h3>
+<blockquote>
+<p>demonstrating other successful funding journeys on Grants Stack</p>
+</blockquote>
+<p>Successful journeys.</p>
+<p>Passing the review.</p>
+<p>Inclusing automated AI review.</p>
+<p>2 humans did <img src="https://gov.gitcoin.co/images/emoji/twitter/white_check_mark.png?v=12" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20"> but AI did <img src="https://gov.gitcoin.co/images/emoji/twitter/x.png?v=12" title=":x:" class="emoji" alt=":x:" loading="lazy" width="20" height="20"> and <a href="http://basex.com" rel="noopener nofollow ugc">basex.com</a> was ultimately rejected. Wish I’ve received this feedback sooner in order to improbve the application.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/12db1f11dd9115b3e89a479f68ac4ff8b281692b.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/12db1f11dd9115b3e89a479f68ac4ff8b281692b" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/12db1f11dd9115b3e89a479f68ac4ff8b281692b_2_230x500.jpeg" alt="image" data-base62-sha1="2GO3HZflkjYGVirfbXdxLPReV2b" width="230" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/12db1f11dd9115b3e89a479f68ac4ff8b281692b_2_230x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/12db1f11dd9115b3e89a479f68ac4ff8b281692b_2_345x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/12db1f11dd9115b3e89a479f68ac4ff8b281692b_2_460x1000.jpeg 2x" data-dominant-color="F4F6F7"></a></div><p></p>
+<p>Link to the AI reviewer that was in use for Climate Coordination Network (community round): <a href="https://checker.gitcoin.co/public/projects" class="inline-onebox" rel="noopener nofollow ugc">Gitcoin: What we have been funding</a></p>
+<p>That sounds like a decent tool that can offer immediate feedback in order to clarify various nuance.</p>
+<h3><a name="please-highlight-differences-between-existing-and-proposed-tool-3" class="anchor" href="https://gov.gitcoin.co#please-highlight-differences-between-existing-and-proposed-tool-3"></a>Please highlight differences between existing and proposed tool <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"></h3>
+<h3><a name="feature-request-instant-feedback-4" class="anchor" href="https://gov.gitcoin.co#feature-request-instant-feedback-4"></a>Feature request: instant feedback</h3>
+<p><em>(me not wasting time and energy to clarify various issues)</em></p>
+<h3><a name="additional-question-about-eligibility-5" class="anchor" href="https://gov.gitcoin.co#additional-question-about-eligibility-5"></a>Additional question about eligibility</h3>
+<blockquote>
+<p><a href="https://forms.gle/cVZ6voLCmFxY8q3q7" rel="noopener nofollow ugc">sign-up form</a> for Citizens interested in opting for a direct grant to build the prototype</p>
+</blockquote>
+<p>Do you need to be a Citizen (capital “c”) in order to buidl? What is the minimum citizenship requirement? I was rejected from recent Gitcoin Citizen round (another rejection) so not sure if eligible to apply?</p>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/3
+        Sat, 04 May 2024 22:01:34 +0000
+gov.gitcoin.co-post-18716-3
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+      
+
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+Sov
+
+            <p>I’m in support of this.</p>
+<p>The grantee journey is an important part of our work and surfacing more information and insights as this initiative seeks to do is a great idea.</p>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/2
+        Sat, 04 May 2024 13:07:56 +0000
+gov.gitcoin.co-post-18716-2
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+      
+
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+rohit
+
+            <p>Thanks to <a class="mention" href="https://gov.gitcoin.co/u/harryeastham">@harryeastham</a> for seeding the concept and to <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> for reviewing.</p>
+<p>tl;dr The following ideation post proposes a prototype for a data app to inspire confidence in potential grantees on Gitcoin Grants (GG) and Independent Rounds by demonstrating other successful funding journeys on Grants Stack. This post kick-starts an 8-week timeline to accelerate from idea to app using Citizens Innovate by supporting and funding builders with the most robust proposals.</p>
+<p>Timeline:</p>
+<ul>
+<li><strong>May 2 - May 16th:</strong> The post will be open for feedback on the gov forum until May 16th, along with a <a href="https://forms.gle/cVZ6voLCmFxY8q3q7">sign-up form</a> for Citizens interested in opting for a direct grant to build the prototype</li>
+<li><strong>The week of May 20th:</strong> A debrief call and 1:1 sessions the following week with Citizens interested in submitting their proposal for funds to build the prototype</li>
+<li><strong>The week of May 27th:</strong> The Grant Council may approve one or more GCPs to implement the functionality</li>
+<li><strong>June 3rd to June 28th:</strong> 4-week timeline to implement the prototype with interim demos as well as support and mentorship from Gitcoin team members with context on the problem</li>
+</ul>
+<h3><a name="hypothesis-1" class="anchor" href="https://gov.gitcoin.co#hypothesis-1"></a>Hypothesis</h3>
+<blockquote>
+<p>Prospective Gitcoin grantees are more likely to apply for a grant on Grants Stack when they see the journey of similar grantees in their niche who have successfully raised funds on Gitcoin Grants and Independent Rounds.</p>
+</blockquote>
+<h3><a name="validation-2" class="anchor" href="https://gov.gitcoin.co#validation-2"></a>Validation</h3>
+<p>We propose a self-service data app prototype designed to test this hypothesis for potential applicants. This prototype will allow users to input a summary of their project and retrieve information about similar grantees who have previously participated in Gitcoin grants. The prototype will provide answers to questions like:</p>
+<ul>
+<li>Which projects similar to ours have participated on Gitcoin in the past?</li>
+<li>How much funding have these projects raised over time?</li>
+<li>How much funding can we expect to receive for our project?</li>
+<li>Which funding rounds are we eligible to apply for?</li>
+<li>What attributes are key to increasing the chances of being accepted in these rounds?</li>
+<li>What else?</li>
+</ul>
+<h3><a name="technical-considerations-3" class="anchor" href="https://gov.gitcoin.co#technical-considerations-3"></a>Technical Considerations</h3>
+<p>These are for reference only. Interested builders are encouraged to research and opt into most appropriate approaches to address the problem.</p>
+<p><em><strong>Where can I find data about past grantees?</strong></em></p>
+<p>Databases such as <a href="https://regendata.xyz/">RegenData</a> and <a href="https://grantsdataportal.xyz/">Gitcoin Grants Data Portal</a> provide valuable information that can be leveraged to support prospective grantees. These databases can retrieve:</p>
+<ul>
+<li>A list of past grantees whose work is similar to the user’s project.</li>
+<li>The trend of their participation in Gitcoin, including the number of contributors and the amount raised over time.</li>
+</ul>
+<p><em><strong>How do I find grantees similar to the applicant?</strong></em></p>
+<p>To facilitate this, clustering algorithms can be employed to match a given project description with similar grantees. For an example of how feature extraction, dimensionality reduction, and similarity measurement are implemented, refer to the <a href="https://gp-octant.streamlit.app/">GrantsScope App for GreenPill x Octant round</a>. Click <a href="https://github.com/rohitmalekar/gp-octant">here</a> for the GitHub Repo. Advanced approaches involving Retrieval-Augmented Generation (RAG) or fine-tuning LLMs might also be relevant here.</p>
+<p><em><strong>How do I estimate how much funding a prospective grantee can expect?</strong></em></p>
+<p>The <a href="https://x.com/RohitMalekar/status/1773102167890559420">historical curves in the power law distribution</a> of the matching pool could provide a suggestive range of funds that could be raised in a QF round. This estimation requires assumptions for percentile rank and the size of the matching pool.</p>
+<h3><a name="limitations-and-risks-4" class="anchor" href="https://gov.gitcoin.co#limitations-and-risks-4"></a>Limitations and Risks</h3>
+<ul>
+<li>
+<p><strong>User Assumptions and Expectations:</strong> The tool relies on user inputs regarding their assumptions about percentile rank and matching pool size to estimate potential funding. Incorrect assumptions or a lack of understanding about these parameters could lead to unrealistic expectations about the funding amount. Educating users on how to make informed assumptions is crucial.</p>
+</li>
+<li>
+<p><strong>Algorithm Bias and Fairness:</strong> The algorithms used may inadvertently favor certain types of projects or grantees based on the data they have been trained on. This could lead to a lack of diversity in the recommended or seen as successful projects, potentially reinforcing existing biases in funding allocation.</p>
+</li>
+<li>
+<p><strong>Complexity of Clustering Algorithms:</strong> Clustering algorithms are central to matching project descriptions with similar past grantees. However, these algorithms’ complexity could lead to implementation and maintenance challenges. There’s also the risk of overfitting, where the model is too closely fitted to the historical data, potentially making it less effective in predicting or matching new, unseen projects.</p>
+</li>
+</ul>
+<h3><a name="next-steps-5" class="anchor" href="https://gov.gitcoin.co#next-steps-5"></a>Next Steps</h3>
+<ul>
+<li>Share your feedback here on the hypothesis and validation approach before May 16th</li>
+<li>Sign up <a href="https://forms.gle/cVZ6voLCmFxY8q3q7">here</a> if you want to opt in for a deeper dive to submit a proposal to build this prototype or to shadow along the discussions and demos.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pre-proposal-grantee-guide-a-profiling-tool-for-prospective-grant-applicants/18716/1
+        Thu, 02 May 2024 14:50:09 +0000
+gov.gitcoin.co-post-18716-1
+[Pre-Proposal] Grantee Guide - A Profiling Tool for Prospective Grant Applicants
+      
+
+

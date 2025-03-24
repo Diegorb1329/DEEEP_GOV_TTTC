@@ -1,0 +1,234 @@
+
+
+
+Gitcoin Digest #6 2023
+https://gov.gitcoin.co/t/gitcoin-digest-6-2023/15097
+    # 🔥 Hot Topics:
+
+* So far, Gitcoin Grants has been used to support projects that create public good, could it be deployed on a micro-scale to support people who created public good? [Kevin](https://gov.gitcoin.co/u/owocki/summary) shares his recent experience on MetaCamp (a community-led unconference event organized by [MetaCartel](https://www.metacartel.org/), hosted in Costa Rica), which inspired him to spin up a [micro-QF Metacamp Round on the L2](https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068), bringing the pool of funding to a total of 10.28 ETH.
+* After discussing and incorporating [community feedback](https://gov.gitcoin.co/t/discussion-poll-aligning-on-gitcoins-mission-vision/13639/4) around Gitcoin’s Mission and Vision, [Viriya ](https://gov.gitcoin.co/u/viriya/summary)shares an update confirming the [adopted statements](https://gov.gitcoin.co/t/update-gitcoins-adopted-mission-and-vision-statements/15039) as ratified by CSDO on Friday May 12, 2023.
+* Formalising Impact Markets as a public good funding mechanism? [Thedevanshmehta](https://gov.gitcoin.co/u/thedevanshmehta/summary) proposes a GTM strategy and requests feedback on [his suggestion](https://gov.gitcoin.co/t/discussion-and-feedback-request-impact-market-workstream/15020) to implement an Impact Market on top of the new [Allo Protocol](https://docs.allo.gitcoin.co/getting-started/introduction) and/or [Grants Stacks](https://www.gitcoin.co/grants-stack).
+* Web3 (Gitcoin included) has recently experienced a series of “fake” or scam Snapshot proposals that have been posted to various DAO snapshot sites. [Shawn16400](https://gov.gitcoin.co/u/shawn16400/summary) suggests that it is important to ensure that any major change in governance should be ratified by voters and explores [options for gating proposals.](https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050)
+* How can we create a system that is not biased towards a self-benefiting outcome? User [Supreme](https://gov.gitcoin.co/u/supreme/summary) [requests for feedback](https://gov.gitcoin.co/t/request-for-feedback-conflict-of-interest-with-steward-voting/14971) by highlighting the conflict of interest when stewards vote on proposals that directly impact financial gains, career advancement and also donate to grant recipients.
+* The proposal shared by [David](https://gov.gitcoin.co/u/davidacasey/summary) and [CoachJ](https://gov.gitcoin.co/u/coachjonathan/summary) for Gitcoin to [Support the Funding the Commons Hackathon, Residency and Conference Series](https://gov.gitcoin.co/t/proposal-support-the-funding-the-commons-hackathon-residency-and-conference-series/14904) is currently [active](https://snapshot.org/#/gitcoindao.eth/proposal/0x1bf4e07b5919f9fd92e2e08ddbcb681f5e84f16f2621aa0844690a7d9b73aff5). The event series would directly utilize Gitcoin’s Grants Stack in a variety of ways, including to deploy funding to projects by running a Funding the Commons grant round.
+
+## 🧭 Weekly Workstream Update
+
+Here are key highlights from the [weekly workstream update](https://docs.google.com/presentation/d/1WJseBI_raaBPhZFxTD-ProPvb9e9Ay-6vzWSERKmgmY/edit?usp=sharing)
+
+**Allo + Grants Stack:**
+
+* An insane amount of software has been shipped since the beginning of Alpha Rounds!
+* Manager updates include: new Indexer backend for all round stats / calculations, end-to-end round funding and payouts, new “Easy Button QF” and calculation revisions (Matching caps, Minimum Donations, Passport Integration), round stats page, round settings and edit capability, and enhanced application customization (Require socials + New question data types)
+* Builder updates include: Application Preview, Application Status, Round Stats, and Markdown support for applications
+* Explorer updates include: Checkout donation experience, stats on project cards, stats on project details page, and updated Passport integration and UX
+* 15 / 13 Quadratic Funding rounds were completed, hitting the first goal!
+* Documentation and tutorials in progress for voting and payout strategy with documentation for project registry integration lined up next
+* Upcoming Allo [integrations](https://gitcoin.notion.site/Allo-Integrations-115d3f4aebbe432fa616221c1716b0ff) include Privy Sweepstakes (expected May 22), Endaoment (confirmed, dev started), Decent (dev starts soon)
+* Q2 priorities for DevRel can be reviewed [here](https://gitcoin.notion.site/Q2-2023-Dev-Ecosystem-Priorities-151d258304fb4173bee5a095d59b6947)
+* Logo concepts and website design underway for Allo
+* New Allo v1 “drip” launch kickoff is on May 22 with site go-live and blog announcement in the week of May 29th
+* Refinement in progress for Grants Stack designs and logos
+
+**Public Goods Funding**
+
+* Focus on fraud detection and squelching, including cursory analysis for partners’ rounds; some featured rounds already finalized and paid out
+* Final results on Gov forum EOW, snapshot vote to ratify ~5 days later
+* Seeing lower rates of Sybils/airdrop farmers/self donors (possibly due to gas fees)
+* First iteration [results here](https://docs.google.com/spreadsheets/d/1-Z7_CWcIJW2gNSgiNlrCYGi1msXjCvj1MnrRzsM5Ra0/edit?usp=sharing) (in progress - includes passport data and donation minimums but no other Sybil squelching yet)
+* View the [metrics dashboard](https://gitcoin-grants.streamlit.app/) to see contributions across rounds and projects for the Gitcoin Beta Round.
+* View the new round-wide data visualization tool from Supermodular [here](https://grants-graph.vercel.app/)
+
+**Passport**
+
+* Focus on bug fixes based on Beta Round feedback, along with onchain stamps (EAS) (MVP working on Sepolia)
+* Roadmap updates for introduction of new stamps (e.g. Hypercert, Civic, Holonym) in progress
+* Upcoming focus on data dashboard, Unique Humanity Score improvements, UX improvements, Ceramic ComposeDB Upgrade
+* Integration in progress with Snapshot and Bankless SDK for migrating to API; technical guide for Score integration
+* New protocol for social with [Cyberconnect ](https://cyberconnect.me/)and application Link3 built as showcase; anticipate ~100K passports based on active users
+
+**MMM**
+
+* As part of efforts to reposition Gitcoin as a tech-first organization, the [Gitcoin Thought Leadership Program](https://docs.google.com/presentation/d/1WJseBI_raaBPhZFxTD-ProPvb9e9Ay-6vzWSERKmgmY/edit#slide=id.g23e096f692b_0_212) will help existing and emerging thought leaders share their expertise to build eminence. For details on participation, see the [Notion page here](https://www.notion.so/gitcoin/GTC008-S18-19-Thought-Leadership-Program-d52bcc3c8dea45b4a73280f52a228f97).
+* Pages in progress and planning (see [schedule](https://sharing.clickup.com/42083557/l/h/6-900900854532-1/0a09648fad87ae5)): Allo page, Program page, Grants Stack v2 page, revised home page, and a refresh for WTFisQF, search and topic sections for Blog, media center ([full schedule](https://sharing.clickup.com/42083557/l/h/6-900900854532-1/0a09648fad87ae5))
+* In progress: Grants Stack visual identity, Canva template, [Impact Report and Research](https://gov.gitcoin.co/t/proposal-state-of-web3-grants-report/14562), DAO-wide visual audit, PGN visual identity, EthCC planning and visuals
+* Roles open for [publicist](https://docs.google.com/document/d/1qRL2ccPQrs5trjPf-nhG-fAgK-cPfZM-CrF1rA75k3c/edit) and [designers](https://wellfound.com/company/gitcoin/jobs)
+* Introducing a new format for Schelling Point - an invite-only setting for participatory exploration of culture, public goods and funding solutions (kicking off in July in Paris).
+* Focus on new subjects, talks and areas of expertise that enable us to explore public goods through different lenses, including: Regenerative Systems for People & Planet, Circular Economics of Community, Creativity in a Post-Creator Economy, Driving Impact & Advocacy in Public.
+
+## 🗳️ GitcoinDAO Governance Overview:
+
+Snapshot polls GTC Stewards. Tally performs on-chain actions. Proposals that have on-chain steps, such as budget requests, are approved on Snapshot before moving on to Tally.
+
+## 📊 Active Proposals:
+
+* [[GCP-011] - Support the Funding the Commons Hackathon, Residency and Conference Series](https://gov.gitcoin.co/t/gcp-011-support-the-funding-the-commons-hackathon-residency-and-conference-series/14904) - [Go vote](https://snapshot.org/#/gitcoindao.eth/proposal/0x1bf4e07b5919f9fd92e2e08ddbcb681f5e84f16f2621aa0844690a7d9b73aff5), ends May 23,2023
+
+* [[GCP-009] - Upgrading Gitcoin Governance Contracts](https://gov.gitcoin.co/t/gcp-00x-upgrading-gitcoin-s-governance-contracts/14010)
+* [[Proposal] - State of Web3 Grants Report](https://gov.gitcoin.co/t/proposal-state-of-web3-grants-report/14562)
+* [[Proposal] - Gating who can make a Snapshot governance proposals](https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050)
+
+## 📅 [Upcoming events](https://gitcoin.notion.site/Upcoming-Events-d749e53de96147a88a2f4864ea381afc)
+
+* Gitcoin Community Call: Weekly discussions to seek community opinions on the latest DAO decisions happen every Wednesday @ 12 pm ET. Catch-up on recordings of recent conversations here:
+  * May 17: [The Future of Schelling Point](https://twitter.com/i/spaces/1jMJgLvwqlbxL?s=20)
+  * May 10: [Beta Round Recap](https://twitter.com/i/spaces/1jMJgLvVWEexL)
+  * May 3: [Beta Round Half Time Show](https://twitter.com/gitcoin/status/1653791672487100419?s=20)
+
+### 👋 New to Gitcoin?
+
+* Explore the future of Gitcoin at [our new website](https://www.gitcoin.co/), a hub for all things related to public goods funding
+
+Thanks for reading!
+
+PS: Click [here](https://share.hsforms.com/1qr4-szfGQAmHKqItMstzoAd0r2h) to subscribe to the DAO Digest
+Thu, 25 May 2023 00:22:35 +0000
+👋 News and Community
+
+
+Gitcoin Digest #6 2023
+MathildaDV
+
+            <p>Thank you <a class="mention" href="https://gov.gitcoin.co/u/gaoa97">@gaoa97</a>! This is great</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-digest-6-2023/15097/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-digest-6-2023/15097/4
+        Thu, 25 May 2023 00:22:35 +0000
+gov.gitcoin.co-post-15097-4
+Gitcoin Digest #6 2023
+      
+
+Gitcoin Digest #6 2023
+ZER8
+
+            <p>Tis is the first digest that doesn’t contain the FDD(because it dissolved) and that makes me sad <img src="https://gov.gitcoin.co/images/emoji/twitter/frowning_face.png?v=12" title=":frowning_face:" class="emoji" alt=":frowning_face:" loading="lazy" width="20" height="20">, but besides that it’s a great resource for stewards and interested individuals to learn about all the stuff that’s going on in the DAO…and there’s a lot of it. Great work!</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-digest-6-2023/15097/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-digest-6-2023/15097/3
+        Wed, 24 May 2023 21:12:02 +0000
+gov.gitcoin.co-post-15097-3
+Gitcoin Digest #6 2023
+      
+
+Gitcoin Digest #6 2023
+CoachJonathan
+
+            <p>Great write up <a class="mention" href="https://gov.gitcoin.co/u/gaoa97">@gaoa97</a>! Thanks for your contribution here!</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-digest-6-2023/15097/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-digest-6-2023/15097/2
+        Fri, 19 May 2023 12:19:27 +0000
+gov.gitcoin.co-post-15097-2
+Gitcoin Digest #6 2023
+      
+
+Gitcoin Digest #6 2023
+gaoa97
+
+            <h1>
+<a name="hot-topics-1" class="anchor" href="https://gov.gitcoin.co#hot-topics-1"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/fire.png?v=12" title=":fire:" class="emoji" alt=":fire:" loading="lazy" width="20" height="20"> Hot Topics:</h1>
+<ul>
+<li>So far, Gitcoin Grants has been used to support projects that create public good, could it be deployed on a micro-scale to support people who created public good? <a href="https://gov.gitcoin.co/u/owocki/summary">Kevin</a> shares his recent experience on MetaCamp (a community-led unconference event organized by <a href="https://www.metacartel.org/" rel="noopener nofollow ugc">MetaCartel</a>, hosted in Costa Rica), which inspired him to spin up a <a href="https://gov.gitcoin.co/t/metacamp-micro-qf-round-wrap-up-review/15068">micro-QF Metacamp Round on the L2</a>, bringing the pool of funding to a total of 10.28 ETH.</li>
+<li>After discussing and incorporating <a href="https://gov.gitcoin.co/t/discussion-poll-aligning-on-gitcoins-mission-vision/13639/4">community feedback</a> around Gitcoin’s Mission and Vision, <a href="https://gov.gitcoin.co/u/viriya/summary">Viriya </a>shares an update confirming the <a href="https://gov.gitcoin.co/t/update-gitcoins-adopted-mission-and-vision-statements/15039">adopted statements</a> as ratified by CSDO on Friday May 12, 2023.</li>
+<li>Formalising Impact Markets as a public good funding mechanism? <a href="https://gov.gitcoin.co/u/thedevanshmehta/summary">Thedevanshmehta</a> proposes a GTM strategy and requests feedback on <a href="https://gov.gitcoin.co/t/discussion-and-feedback-request-impact-market-workstream/15020">his suggestion</a> to implement an Impact Market on top of the new <a href="https://docs.allo.gitcoin.co/getting-started/introduction" rel="noopener nofollow ugc">Allo Protocol</a> and/or <a href="https://www.gitcoin.co/grants-stack" rel="noopener nofollow ugc">Grants Stacks</a>.</li>
+<li>Web3 (Gitcoin included) has recently experienced a series of “fake” or scam Snapshot proposals that have been posted to various DAO snapshot sites. <a href="https://gov.gitcoin.co/u/shawn16400/summary">Shawn16400</a> suggests that it is important to ensure that any major change in governance should be ratified by voters and explores <a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050">options for gating proposals.</a>
+</li>
+<li>How can we create a system that is not biased towards a self-benefiting outcome? User <a href="https://gov.gitcoin.co/u/supreme/summary">Supreme</a> <a href="https://gov.gitcoin.co/t/request-for-feedback-conflict-of-interest-with-steward-voting/14971">requests for feedback</a> by highlighting the conflict of interest when stewards vote on proposals that directly impact financial gains, career advancement and also donate to grant recipients.</li>
+<li>The proposal shared by <a href="https://gov.gitcoin.co/u/davidacasey/summary">David</a> and <a href="https://gov.gitcoin.co/u/coachjonathan/summary">CoachJ</a> for Gitcoin to <a href="https://gov.gitcoin.co/t/proposal-support-the-funding-the-commons-hackathon-residency-and-conference-series/14904">Support the Funding the Commons Hackathon, Residency and Conference Series</a> is currently <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x1bf4e07b5919f9fd92e2e08ddbcb681f5e84f16f2621aa0844690a7d9b73aff5" rel="noopener nofollow ugc">active</a>. The event series would directly utilize Gitcoin’s Grants Stack in a variety of ways, including to deploy funding to projects by running a Funding the Commons grant round.</li>
+</ul>
+<h2>
+<a name="weekly-workstream-update-2" class="anchor" href="https://gov.gitcoin.co#weekly-workstream-update-2"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/compass.png?v=12" title=":compass:" class="emoji" alt=":compass:" loading="lazy" width="20" height="20"> Weekly Workstream Update</h2>
+<p>Here are key highlights from the <a href="https://docs.google.com/presentation/d/1WJseBI_raaBPhZFxTD-ProPvb9e9Ay-6vzWSERKmgmY/edit?usp=sharing" rel="noopener nofollow ugc">weekly workstream update</a></p>
+<p><strong>Allo + Grants Stack:</strong></p>
+<ul>
+<li>An insane amount of software has been shipped since the beginning of Alpha Rounds!</li>
+<li>Manager updates include: new Indexer backend for all round stats / calculations, end-to-end round funding and payouts, new “Easy Button QF” and calculation revisions (Matching caps, Minimum Donations, Passport Integration), round stats page, round settings and edit capability, and enhanced application customization (Require socials + New question data types)</li>
+<li>Builder updates include: Application Preview, Application Status, Round Stats, and Markdown support for applications</li>
+<li>Explorer updates include: Checkout donation experience, stats on project cards, stats on project details page, and updated Passport integration and UX</li>
+<li>15 / 13 Quadratic Funding rounds were completed, hitting the first goal!</li>
+<li>Documentation and tutorials in progress for voting and payout strategy with documentation for project registry integration lined up next</li>
+<li>Upcoming Allo <a href="https://gitcoin.notion.site/Allo-Integrations-115d3f4aebbe432fa616221c1716b0ff" rel="noopener nofollow ugc">integrations</a> include Privy Sweepstakes (expected May 22), Endaoment (confirmed, dev started), Decent (dev starts soon)</li>
+<li>Q2 priorities for DevRel can be reviewed <a href="https://gitcoin.notion.site/Q2-2023-Dev-Ecosystem-Priorities-151d258304fb4173bee5a095d59b6947" rel="noopener nofollow ugc">here</a>
+</li>
+<li>Logo concepts and website design underway for Allo</li>
+<li>New Allo v1 “drip” launch kickoff is on May 22 with site go-live and blog announcement in the week of May 29th</li>
+<li>Refinement in progress for Grants Stack designs and logos</li>
+</ul>
+<p><strong>Public Goods Funding</strong></p>
+<ul>
+<li>Focus on fraud detection and squelching, including cursory analysis for partners’ rounds; some featured rounds already finalized and paid out</li>
+<li>Final results on Gov forum EOW, snapshot vote to ratify ~5 days later</li>
+<li>Seeing lower rates of Sybils/airdrop farmers/self donors (possibly due to gas fees)</li>
+<li>First iteration <a href="https://docs.google.com/spreadsheets/d/1-Z7_CWcIJW2gNSgiNlrCYGi1msXjCvj1MnrRzsM5Ra0/edit?usp=sharing" rel="noopener nofollow ugc">results here</a> (in progress - includes passport data and donation minimums but no other Sybil squelching yet)</li>
+<li>View the <a href="https://gitcoin-grants.streamlit.app/" rel="noopener nofollow ugc">metrics dashboard</a> to see contributions across rounds and projects for the Gitcoin Beta Round.</li>
+<li>View the new round-wide data visualization tool from Supermodular <a href="https://grants-graph.vercel.app/" rel="noopener nofollow ugc">here</a>
+</li>
+</ul>
+<p><strong>Passport</strong></p>
+<ul>
+<li>Focus on bug fixes based on Beta Round feedback, along with onchain stamps (EAS) (MVP working on Sepolia)</li>
+<li>Roadmap updates for introduction of new stamps (e.g. Hypercert, Civic, Holonym) in progress</li>
+<li>Upcoming focus on data dashboard, Unique Humanity Score improvements, UX improvements, Ceramic ComposeDB Upgrade</li>
+<li>Integration in progress with Snapshot and Bankless SDK for migrating to API; technical guide for Score integration</li>
+<li>New protocol for social with <a href="https://cyberconnect.me/" rel="noopener nofollow ugc">Cyberconnect </a>and application Link3 built as showcase; anticipate ~100K passports based on active users</li>
+</ul>
+<p><strong>MMM</strong></p>
+<ul>
+<li>As part of efforts to reposition Gitcoin as a tech-first organization, the <a href="https://docs.google.com/presentation/d/1WJseBI_raaBPhZFxTD-ProPvb9e9Ay-6vzWSERKmgmY/edit#slide=id.g23e096f692b_0_212" rel="noopener nofollow ugc">Gitcoin Thought Leadership Program</a> will help existing and emerging thought leaders share their expertise to build eminence. For details on participation, see the <a href="https://www.notion.so/gitcoin/GTC008-S18-19-Thought-Leadership-Program-d52bcc3c8dea45b4a73280f52a228f97" rel="noopener nofollow ugc">Notion page here</a>.</li>
+<li>Pages in progress and planning (see <a href="https://sharing.clickup.com/42083557/l/h/6-900900854532-1/0a09648fad87ae5" rel="noopener nofollow ugc">schedule</a>): Allo page, Program page, Grants Stack v2 page, revised home page, and a refresh for WTFisQF, search and topic sections for Blog, media center (<a href="https://sharing.clickup.com/42083557/l/h/6-900900854532-1/0a09648fad87ae5" rel="noopener nofollow ugc">full schedule</a>)</li>
+<li>In progress: Grants Stack visual identity, Canva template, <a href="https://gov.gitcoin.co/t/proposal-state-of-web3-grants-report/14562">Impact Report and Research</a>, DAO-wide visual audit, PGN visual identity, EthCC planning and visuals</li>
+<li>Roles open for <a href="https://docs.google.com/document/d/1qRL2ccPQrs5trjPf-nhG-fAgK-cPfZM-CrF1rA75k3c/edit" rel="noopener nofollow ugc">publicist</a> and <a href="https://wellfound.com/company/gitcoin/jobs" rel="noopener nofollow ugc">designers</a>
+</li>
+<li>Introducing a new format for Schelling Point - an invite-only setting for participatory exploration of culture, public goods and funding solutions (kicking off in July in Paris).</li>
+<li>Focus on new subjects, talks and areas of expertise that enable us to explore public goods through different lenses, including: Regenerative Systems for People &amp; Planet, Circular Economics of Community, Creativity in a Post-Creator Economy, Driving Impact &amp; Advocacy in Public.</li>
+</ul>
+<h2>
+<a name="gitcoindao-governance-overview-3" class="anchor" href="https://gov.gitcoin.co#gitcoindao-governance-overview-3"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/ballot_box.png?v=12" title=":ballot_box:" class="emoji" alt=":ballot_box:" loading="lazy" width="20" height="20"> GitcoinDAO Governance Overview:</h2>
+<p>Snapshot polls GTC Stewards. Tally performs on-chain actions. Proposals that have on-chain steps, such as budget requests, are approved on Snapshot before moving on to Tally.</p>
+<h2>
+<a name="active-proposals-4" class="anchor" href="https://gov.gitcoin.co#active-proposals-4"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/bar_chart.png?v=12" title=":bar_chart:" class="emoji" alt=":bar_chart:" loading="lazy" width="20" height="20"> Active Proposals:</h2>
+<ul>
+<li>
+<p><a href="https://gov.gitcoin.co/t/gcp-011-support-the-funding-the-commons-hackathon-residency-and-conference-series/14904">[GCP-011] - Support the Funding the Commons Hackathon, Residency and Conference Series</a> - <a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x1bf4e07b5919f9fd92e2e08ddbcb681f5e84f16f2621aa0844690a7d9b73aff5" rel="noopener nofollow ugc">Go vote</a>, ends May 23,2023</p>
+</li>
+<li>
+<p><a href="https://gov.gitcoin.co/t/gcp-00x-upgrading-gitcoin-s-governance-contracts/14010">[GCP-009] - Upgrading Gitcoin Governance Contracts</a></p>
+</li>
+<li>
+<p><a href="https://gov.gitcoin.co/t/proposal-state-of-web3-grants-report/14562">[Proposal] - State of Web3 Grants Report</a></p>
+</li>
+<li>
+<p><a href="https://gov.gitcoin.co/t/proposal-gating-who-can-make-a-snapshot-governance-proposals/15050">[Proposal] - Gating who can make a Snapshot governance proposals</a></p>
+</li>
+</ul>
+<h2>
+<a name="upcoming-eventshttpsgitcoinnotionsiteupcoming-events-d749e53de96147a88a2f4864ea381afc-5" class="anchor" href="https://gov.gitcoin.co#upcoming-eventshttpsgitcoinnotionsiteupcoming-events-d749e53de96147a88a2f4864ea381afc-5"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/date.png?v=12" title=":date:" class="emoji" alt=":date:" loading="lazy" width="20" height="20"> <a href="https://gitcoin.notion.site/Upcoming-Events-d749e53de96147a88a2f4864ea381afc" rel="noopener nofollow ugc">Upcoming events</a>
+</h2>
+<ul>
+<li>Gitcoin Community Call: Weekly discussions to seek community opinions on the latest DAO decisions happen every Wednesday @ 12 pm ET. Catch-up on recordings of recent conversations here:
+<ul>
+<li>May 17: <a href="https://twitter.com/i/spaces/1jMJgLvwqlbxL?s=20" rel="noopener nofollow ugc">The Future of Schelling Point</a>
+</li>
+<li>May 10: <a href="https://twitter.com/i/spaces/1jMJgLvVWEexL" rel="noopener nofollow ugc">Beta Round Recap</a>
+</li>
+<li>May 3: <a href="https://twitter.com/gitcoin/status/1653791672487100419?s=20" rel="noopener nofollow ugc">Beta Round Half Time Show</a>
+</li>
+</ul>
+</li>
+</ul>
+<h3>
+<a name="new-to-gitcoin-6" class="anchor" href="https://gov.gitcoin.co#new-to-gitcoin-6"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/wave.png?v=12" title=":wave:" class="emoji" alt=":wave:" loading="lazy" width="20" height="20"> New to Gitcoin?</h3>
+<ul>
+<li>Explore the future of Gitcoin at <a href="https://www.gitcoin.co/" rel="noopener nofollow ugc">our new website</a>, a hub for all things related to public goods funding</li>
+</ul>
+<p>Thanks for reading!</p>
+<p>PS: Click <a href="https://share.hsforms.com/1qr4-szfGQAmHKqItMstzoAd0r2h" rel="noopener nofollow ugc">here</a> to subscribe to the DAO Digest</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-digest-6-2023/15097/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-digest-6-2023/15097/1
+        Thu, 18 May 2023 15:08:48 +0000
+gov.gitcoin.co-post-15097-1
+Gitcoin Digest #6 2023
+      
+
+

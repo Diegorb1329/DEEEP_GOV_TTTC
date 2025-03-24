@@ -1,0 +1,887 @@
+
+
+
+[Proposal]S22 - Gitcoin Passport Business Unit Budget Proposal
+https://gov.gitcoin.co/t/proposal-s22-gitcoin-passport-business-unit-budget-proposal/18731
+    <h1>S22 - Gitcoin Passport Business Unit Budget Proposal </h1>
+
+
+This seeks funding for the Gitcoin Passport Business Unit for the next 2 months (May 1st - June 30th). Starting July 1st we’ll move from the Seasons concept (made to align previously with Gitcoin Grants rounds) to traditional quarters (Q3 & Q4) and request a budget for the 2nd half of the year, as needed, depending on the spinout. We want and encourage broader DAO feedback and find it crucial to optimize our roadmap.
+
+
+<h2>TL;DR</h2>
+
+
+Gitcoin Passport aims to be the go-to solution for web3 identity and reputation management. In the next partial season we’ll concentrate on five key pillars:
+
+1. **Ease:** Improve ease of use for both end users and partners
+2. **Effectiveness:** Improve identity scoring models 
+3. **Adoption:** Grow to 1.5M passports
+4. **GTC Utility**: Strengthen GTC-based identity and community ties
+5. **Partnerships:** Increase both API and onchain partnerships
+
+<h2>Outline</h2>
+
+
+Passport is the premier web3 native offering that enables ecosystems to protect, understand and organically grow what matters most – their communities. We see Passport at the confluence of a best in class identity solution, backed by the most relevant and comprehensive data analysis toolset that also offers communities the ability to ascribe reputation.
+
+Objectives for Seasons 22: This table lists the milestones and deliverables we plan to tackle. While they are in a loose priority order, their final sequencing is still under evaluation.
+
+
+<table>
+  <tr>
+   <td><strong>Initiative/Project		</strong>
+   </td>
+   <td><strong>Outcome</strong>
+   </td>
+   <td><strong>Milestone/ deliverable</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Ease
+   </td>
+   <td>Reduce time to obtain a passing Passport
+   </td>
+   <td>Average user is able to claim a Passport in &lt;5 minutes
+   </td>
+  </tr>
+  <tr>
+   <td>Effectiveness
+   </td>
+   <td>Enhance the scoring model
+   </td>
+   <td>Develop a scoring model with &lt;10% Type I errors (False positives - Sybils are classified as human)
+<p>
+Aggregate L2 Models
+   </td>
+  </tr>
+  <tr>
+   <td>Adoption
+   </td>
+   <td>Expand user base
+<p>
+ 
+Grow Model based detection (MBD)
+   </td>
+   <td>Increase Passport count 150k to 1.3M Passports from a baseline of 1.15M
+<p>
+Launch MBD and score > 10,000 addresses
+   </td>
+  </tr>
+  <tr>
+   <td>GTC Utility
+   </td>
+   <td>Strengthen GTC-based identity and community ties
+   </td>
+   <td>Increase GTC staked 220k to 1.87M GTC from baseline of 1.65M GTC
+   </td>
+  </tr>
+  <tr>
+   <td>Partnerships
+   </td>
+   <td>Increase API integrations
+<p>
+Onboard onchain partners
+   </td>
+   <td>Partner > 64 API users from a baseline of 54
+<p>
+Engage > 12 onchain partners from a baseline of 7
+   </td>
+  </tr>
+</table>
+
+
+<h2>Milestone Update: Season 21</h2>
+
+
+In Season 21, our top line growth picked up quite a bit adding 279k new Passports or 35% total growth in the last 3 months. We continued to underperform against aggressive targets, but excited to see the growth as the markets are becoming more bullish. We have a total of 1.1M unique all time passports. We also continued to drive strongly against our targets in GTC staking, hitting over 1.5M GTC staked.
+
+We’ve continued to expand our potential service offerings beyond the standard Passport & onchain Passports to include our new Model Based Detection (MBD) system that is now in beta with the Eth activity model. This is proving to be highly effective at classifying Sybils (94% accurate) and enables scoring of addresses without requiring any user interaction. The Ethereum Activity model is the first model with additional models to be added to the MBD endpoint soon. Additions will include: NFT (Eth L1), zkSync (L2), OP (L2) and Polygon (L2) with more in the pipeline. 
+
+<h3>Milestone Report for Past Season</h3>
+
+
+**Legend:**
+
+:green_circle: Success/Completed/Shipped
+:yellow_circle: Incomplete, but partial success
+:red_circle: Incomplete, Will Not Hit Goal
+:black_circle: Canceled
+
+
+<table>
+  <tr>
+   <td><strong>Initiative/Project</strong>
+   </td>
+   <td><strong>Key Results</strong>
+   </td>
+   <td><strong>Value Delivered</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Improve Effectiveness</strong> 
+   </td>
+   <td>
+
+:green_circle: 95% accuracy with Eth Stamp
+   </td>
+   <td>Launched new zkSync Activity stamp, NFT stamp, and revamped all credential weights to dramatically improve classification and reduce Sybils able to get a passing score of 20.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Grow Adoption & Usage</strong>
+   </td>
+   <td>
+
+:yellow_circle: 1.15M Passports
+   </td>
+   <td>Continued to drive top line growth of unique Passports by adding 279k brand new Passports, but were still short of our target of 1.5M
+   </td>
+  </tr>
+  <tr>
+   <td><strong>GTC Utility</strong> 
+   </td>
+   <td>
+
+:yellow_circle: 1.65M GTC Staked
+<p>
+
+:yellow_circle: 22,100 Community staking addresses
+   </td>
+   <td>Staking remains strong, having increased another 350k GTC staked, but unable to hit the 2M GTC target. It will likely take another ~6 months to achieve.
+<p>
+Almost hit our target of 25k community staking addresses despite being behind on launching revamped identity staking in S21. Identity staking v2 will launch in S22.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Data</strong>
+   </td>
+   <td>
+
+
+:black_circle: 200,000 Sybils
+<p>
+
+:black_circle: Catalog ~ 11,000 human users (verified and human)
+   </td>
+   <td>Adjusted our approach to this milestone last season and focused on both growing the human data set and also releasing the first of our L2 models: zkSync. Started building both OP and Polygon models and determing feasiblity for additional L2 models.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Partnerships</strong>
+   </td>
+   <td>
+
+:yellow_circle:  54 API Partners
+<p>
+ 
+:green_circle: _circle: 7 onchain partners (users of attestations)
+   </td>
+   <td>Under delivered against a target of 70 which also impacted our top line Passport growth & adoption. 
+<p>
+We exceeded our goal of 5 onchain partners in S21! 
+   </td>
+  </tr>
+</table>
+
+
+**Observations:**
+
+* While we fell short again on passport adoption against very aggressive targets of doubling every 6 months. We’re continuing to drive a pipeline for new integration partners to continue growth.
+* We’ve found success in both GTC staking and onchain revenue starting to drive the flywheel for both utility and sustainability. The upcoming revamp of identity staking, from smart contracts to UI, should continue to grow the utility of GTC. This was delayed several months from our original go-live estimates as we focused on supporting key partners.
+
+For more granular details on our past work and plans, please refer to our previous budgets for [S17](https://gov.gitcoin.co/t/s17-proposal-integrated-gitcoin-passport-budget-request/12727), [S18 & S19](https://gov.gitcoin.co/t/proposal-gitcoin-passport-workstream-season-18-19-budget-request/14121), [S19 (Amended)](https://gov.gitcoin.co/t/s19-proposal-amended-passport-s19-budget-request/16184), [S20 & S21](https://gov.gitcoin.co/t/proposal-passport-season-20-21-budget-request/16765), and also our updated [Passport Roadmap](https://github.com/orgs/gitcoinco/projects/25/views/1).
+
+<h2>Budget Update: Season Next (May & June) </h2>
+
+
+We are increasing the budget for this season as part of the move to the BU concept; adding 3 additional headcount accounting for resources who were previously shared or part time. The additional budget includes hiring a Sr. Product Marketing Manager (still in progress), moving from part time to full time Operations, adding an additional BD resource dedicated to support growth, and adding Kyle to the team!
+
+**Team Composition**
+
+**Full-Time Contributors:** 15 (after hiring the two described above)
+
+* Developers: 4
+* Product Manager: 1
+* Data Scientists: 2
+* Business Unit Co-leads: 2 (Kyle moving in)
+* Operations: 1
+* Marketing: 1
+* Support: 2 
+* Design: 1 (previously part time, moving to full time role dedicated to Passport)
+* BD: 1 (previously cost for BD was out of PGF which is now Grants Labs, moving to fully dedicated to Passport)
+
+**Part-Time or Shared Contributors:** 5
+
+* DevRel: 2
+* DevOps: 1
+* Operations: 1
+
+<h2>Funding Request for Seasons S22</h2>
+
+
+**Requested Amount:** Gitcoin Passport is requesting a net allocation of 0 GTC*, equivalent to approximately $0 out of treasury to cover this season. We have plenty of funds in our reserves, in part due to the Eth revenue from onchain Passports, to cover all funds needed for this shortened season of 2 months.
+
+
+<table>
+  <tr>
+   <td>
+   </td>
+   <td><strong>Budgeted</strong>
+   </td>
+   <td><strong>Budgeted</strong>
+   </td>
+   <td><strong>Budgeted</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td><strong>May 2024</strong>
+   </td>
+   <td><strong>Jun 2024</strong>
+   </td>
+   <td><strong>May-2024 - Jun-2024</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Total GP Budgeted Spend
+   </td>
+   <td>$196,366
+   </td>
+   <td>$198,926
+   </td>
+   <td>$460,405
+   </td>
+  </tr>
+  <tr>
+   <td>33% Reserves
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>$153,468
+   </td>
+  </tr>
+  <tr>
+   <td>Past Season Treasury Balance
+   </td>
+   <td>
+   </td>
+   <td><strong>(We will still have a buffer of at least $225k in treasury)</strong>
+   </td>
+   <td>$840,325
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Total Request</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><strong>$0</strong>
+   </td>
+  </tr>
+</table>
+
+
+**Budget Evolution**
+
+
+<table>
+  <tr>
+   <td>
+   </td>
+   <td><strong>S17</strong>
+   </td>
+   <td><strong>S18</strong>
+   </td>
+   <td><strong>Amended S19</strong>
+   </td>
+   <td><strong>S20</strong>
+   </td>
+   <td><strong>S21</strong>
+   </td>
+   <td><strong>S22 </strong>
+<p>
+<strong>(May & June)</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Passport Budget 
+   </td>
+   <td>$515,254
+   </td>
+   <td>$589,846
+   </td>
+   <td>$494,116
+   </td>
+   <td>$478,591
+   </td>
+   <td>$642,216
+   </td>
+   <td>$460,405*
+   </td>
+  </tr>
+</table>
+
+
+*** Note: **No GTC is being requested as the team will be using existing reserves.
+
+<h2>Budget Breakdown</h2>
+
+
+**Breakdown staffing, contracting, operational expenses**
+
+We have accounted for upcoming expenses, aiming for a lean but comprehensive budget. Our 16-member team comprises roles in Product, Design, Engineering, DevRel, Operations, and Support.
+
+
+<table>
+  <tr>
+   <td>
+   </td>
+   <td>S18 (Actual Spend)
+   </td>
+   <td>S19 (Projected Actuals)
+   </td>
+   <td>S20 (Requested)
+   </td>
+   <td>S21 (Adjusted)
+   </td>
+   <td>S22 (May & June)
+   </td>
+  </tr>
+  <tr>
+   <td>Contributor Rewards
+   </td>
+   <td>$373,791
+   </td>
+   <td>$318,102
+   </td>
+   <td>$341,674
+   </td>
+   <td>$426,799
+   </td>
+   <td>$378,496
+   </td>
+  </tr>
+  <tr>
+   <td>Contracting (Dev Ops, DevRel, design, Marketing)
+   </td>
+   <td>$114,192
+   </td>
+   <td>$70,969
+   </td>
+   <td>$75,192
+   </td>
+   <td>$149,192
+   </td>
+   <td>$11,000
+   </td>
+  </tr>
+  <tr>
+   <td>OpEx (Software subscriptions, gas, audits, travel, professional development)
+   </td>
+   <td>$31,835
+   </td>
+   <td>$42,236
+   </td>
+   <td>$61,725
+   </td>
+   <td>$66,225
+   </td>
+   <td>$70,908
+   </td>
+  </tr>
+  <tr>
+   <td><strong><em>Total</em></strong>
+   </td>
+   <td><strong><em>$519,818</em></strong>
+   </td>
+   <td><strong><em>$431,307</em></strong>
+   </td>
+   <td><strong><em>$478,591</em></strong>
+   </td>
+   <td><strong><em>$642,216</em></strong>
+   </td>
+   <td><strong><em>$460,404</em></strong>
+   </td>
+  </tr>
+</table>
+
+
+**We Want Your Input**
+
+We welcome your expertise in several key areas:
+
+
+
+* Suggestions for integration partners.
+* Introductions to potential onchain pilot programs.
+* Participation in user interviews.
+
+Your novel ideas for expanding the reach of Gitcoin Passport are invaluable.
+
+Thank you for your time and insights; your input makes us better.
+Mon, 06 May 2024 14:27:19 +0000
+📜 Proposals
+
+
+[Proposal]S22 - Gitcoin Passport Business Unit Budget Proposal
+Jeremy
+
+            <p>Thanks for the feedback!</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="18731">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>How much revenue? Do you have a monthly breakdown of (1) num passports put on chain and (2) revenue in ETH ?</p>
+</blockquote>
+</aside>
+<p>The best place to see all of the details are in this <a href="https://dune.com/ivanmolto/passport-ethereum-attestation-service-eas" rel="noopener nofollow ugc">Passport &amp; EAS attestation Dashboard</a>. Attestations specific to Passport and Revenue are at the bottom of the dashboard</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="18731">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I’d be curious to play with testing the price point of the onchain passport. I wonder how elastic the demand is.</p>
+</blockquote>
+</aside>
+<p>Yep definitely something I’m interested as well. The next step is to see what happens to revenue when we add additional chains likely 1-2 more will be added in the next month. I think we can also play with decoupling a full passport onchain with a single attestation (e.g. 1 stamp) and price it much cheaper ($0.25) to see if that actually results in a lot more attestations and therefore revenue. What else did you have in mind?</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="18731">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>would love to see more details on this be unveiled publicly as that date gets closer! i think there is some interesting potential here in staking on others.</p>
+</blockquote>
+</aside>
+<p>Sounds good. <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> is in charge of the launch plan, but perhaps we should start sharing the upcoming changes with the community?</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="18731">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>i think it would be neat to make it easy to prefill addresses of users i commonly interact with + show them in this form.that or import my twitter/lens/farcaster social graphs…</p>
+<p>would make it easy to bulk import + bulk stake. i wonder if that would increase the conversion rate.</p>
+</blockquote>
+</aside>
+<p>Great feedback. <a class="mention" href="https://gov.gitcoin.co/u/erich">@erich</a> let’s make sure we have this in the backlog.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-s22-gitcoin-passport-business-unit-budget-proposal/18731/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-s22-gitcoin-passport-business-unit-budget-proposal/18731/3
+        Mon, 06 May 2024 14:27:19 +0000
+gov.gitcoin.co-post-18731-3
+[Proposal]S22 - Gitcoin Passport Business Unit Budget Proposal
+      
+
+[Proposal]S22 - Gitcoin Passport Business Unit Budget Proposal
+owocki
+
+            <aside class="quote no-group" data-username="Jeremy" data-post="1" data-topic="18731">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jeremy/48/10131_2.png" class="avatar"> Jeremy:</div>
+<blockquote>
+<p>We have plenty of funds in our reserves, in part due to the Eth revenue from onchain Passports, to cover all funds needed for this shortened season of 2 months.</p>
+</blockquote>
+</aside>
+<p>How much revenue?  Do you have a monthly breakdown of (1) num passports put on chain and (2) revenue in ETH ?</p>
+<p>I’d be curious to play with testing the price point of the onchain passport.  I wonder how elastic the demand is.</p>
+<aside class="quote no-group" data-username="Jeremy" data-post="1" data-topic="18731">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jeremy/48/10131_2.png" class="avatar"> Jeremy:</div>
+<blockquote>
+<p>Identity staking v2 will launch in S22.</p>
+</blockquote>
+</aside>
+<p>would love to see more details on this be unveiled publicly as that date gets closer!  i think there is some interesting potential here in staking on others.</p>
+<p>this is a sceenshot from gtc staking v1<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/aa165e796017442f32285601c6c7142415362d95.webp" data-download-href="https://gov.gitcoin.co/uploads/db4391/aa165e796017442f32285601c6c7142415362d95" title="Screenshot_2024-04-26_at_5.19.50_PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aa165e796017442f32285601c6c7142415362d95_2_690x334.webp" alt="Screenshot_2024-04-26_at_5.19.50_PM" data-base62-sha1="ogF5UNRiFHNFqjz31E9sPOCCjvn" width="690" height="334" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aa165e796017442f32285601c6c7142415362d95_2_690x334.webp, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/aa165e796017442f32285601c6c7142415362d95_2_1035x501.webp 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/a/aa165e796017442f32285601c6c7142415362d95.webp 2x" data-dominant-color="979699"></a></div><p></p>
+<p>i think it would be neat to make it easy to prefill addresses of users i commonly interact with + show them in this form.that or import my twitter/lens/farcaster social graphs…</p>
+<p>would make it easy to bulk import + bulk stake. i wonder if that would increase the conversion rate.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-s22-gitcoin-passport-business-unit-budget-proposal/18731/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-s22-gitcoin-passport-business-unit-budget-proposal/18731/2
+        Mon, 06 May 2024 04:39:16 +0000
+gov.gitcoin.co-post-18731-2
+[Proposal]S22 - Gitcoin Passport Business Unit Budget Proposal
+      
+
+[Proposal]S22 - Gitcoin Passport Business Unit Budget Proposal
+Jeremy
+
+            <h1>S22 - Gitcoin Passport Business Unit Budget Proposal </h1>
+<p>This seeks funding for the Gitcoin Passport Business Unit for the next 2 months (May 1st - June 30th). Starting July 1st we’ll move from the Seasons concept (made to align previously with Gitcoin Grants rounds) to traditional quarters (Q3 &amp; Q4) and request a budget for the 2nd half of the year, as needed, depending on the spinout. We want and encourage broader DAO feedback and find it crucial to optimize our roadmap.</p>
+<h2>TL;DR</h2>
+<p>Gitcoin Passport aims to be the go-to solution for web3 identity and reputation management. In the next partial season we’ll concentrate on five key pillars:</p>
+<ol>
+<li><strong>Ease:</strong> Improve ease of use for both end users and partners</li>
+<li><strong>Effectiveness:</strong> Improve identity scoring models</li>
+<li><strong>Adoption:</strong> Grow to 1.5M passports</li>
+<li><strong>GTC Utility</strong>: Strengthen GTC-based identity and community ties</li>
+<li><strong>Partnerships:</strong> Increase both API and onchain partnerships</li>
+</ol>
+<h2>Outline</h2>
+<p>Passport is the premier web3 native offering that enables ecosystems to protect, understand and organically grow what matters most – their communities. We see Passport at the confluence of a best in class identity solution, backed by the most relevant and comprehensive data analysis toolset that also offers communities the ability to ascribe reputation.</p>
+<p>Objectives for Seasons 22: This table lists the milestones and deliverables we plan to tackle. While they are in a loose priority order, their final sequencing is still under evaluation.</p>
+<table>
+  <tbody><tr>
+   <td><strong>Initiative/Project		</strong>
+   </td>
+   <td><strong>Outcome</strong>
+   </td>
+   <td><strong>Milestone/ deliverable</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Ease
+   </td>
+   <td>Reduce time to obtain a passing Passport
+   </td>
+   <td>Average user is able to claim a Passport in &lt;5 minutes
+   </td>
+  </tr>
+  <tr>
+   <td>Effectiveness
+   </td>
+   <td>Enhance the scoring model
+   </td>
+   <td>Develop a scoring model with &lt;10% Type I errors (False positives - Sybils are classified as human)
+<p>
+Aggregate L2 Models
+   </p></td>
+  </tr>
+  <tr>
+   <td>Adoption
+   </td>
+   <td>Expand user base
+<p>
+</p><p>Grow Model based detection (MBD)</p>
+   </td>
+   <td>Increase Passport count 150k to 1.3M Passports from a baseline of 1.15M
+<p>
+Launch MBD and score &gt; 10,000 addresses
+   </p></td>
+  </tr>
+  <tr>
+   <td>GTC Utility
+   </td>
+   <td>Strengthen GTC-based identity and community ties
+   </td>
+   <td>Increase GTC staked 220k to 1.87M GTC from baseline of 1.65M GTC
+   </td>
+  </tr>
+  <tr>
+   <td>Partnerships
+   </td>
+   <td>Increase API integrations
+<p>
+Onboard onchain partners
+   </p></td>
+   <td>Partner &gt; 64 API users from a baseline of 54
+<p>
+Engage &gt; 12 onchain partners from a baseline of 7
+   </p></td>
+  </tr>
+</tbody></table>
+<h2>Milestone Update: Season 21</h2>
+<p>In Season 21, our top line growth picked up quite a bit adding 279k new Passports or 35% total growth in the last 3 months. We continued to underperform against aggressive targets, but excited to see the growth as the markets are becoming more bullish. We have a total of 1.1M unique all time passports. We also continued to drive strongly against our targets in GTC staking, hitting over 1.5M GTC staked.</p>
+<p>We’ve continued to expand our potential service offerings beyond the standard Passport &amp; onchain Passports to include our new Model Based Detection (MBD) system that is now in beta with the Eth activity model. This is proving to be highly effective at classifying Sybils (94% accurate) and enables scoring of addresses without requiring any user interaction. The Ethereum Activity model is the first model with additional models to be added to the MBD endpoint soon. Additions will include: NFT (Eth L1), zkSync (L2), OP (L2) and Polygon (L2) with more in the pipeline.</p>
+<h3>Milestone Report for Past Season</h3>
+<p><strong>Legend:</strong></p>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> Success/Completed/Shipped<br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> Incomplete, but partial success<br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/red_circle.png?v=12" title=":red_circle:" class="emoji" alt=":red_circle:" loading="lazy" width="20" height="20"> Incomplete, Will Not Hit Goal<br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/black_circle.png?v=12" title=":black_circle:" class="emoji" alt=":black_circle:" loading="lazy" width="20" height="20"> Canceled</p>
+<table>
+  <tbody><tr>
+   <td><strong>Initiative/Project</strong>
+   </td>
+   <td><strong>Key Results</strong>
+   </td>
+   <td><strong>Value Delivered</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Improve Effectiveness</strong> 
+   </td>
+   <td>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> 95% accuracy with Eth Stamp</p>
+   </td>
+   <td>Launched new zkSync Activity stamp, NFT stamp, and revamped all credential weights to dramatically improve classification and reduce Sybils able to get a passing score of 20.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Grow Adoption &amp; Usage</strong>
+   </td>
+   <td>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> 1.15M Passports</p>
+   </td>
+   <td>Continued to drive top line growth of unique Passports by adding 279k brand new Passports, but were still short of our target of 1.5M
+   </td>
+  </tr>
+  <tr>
+   <td><strong>GTC Utility</strong> 
+   </td>
+   <td>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> 1.65M GTC Staked</p>
+<p>
+</p><p><img src="https://gov.gitcoin.co/images/emoji/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20"> 22,100 Community staking addresses</p>
+   </td>
+   <td>Staking remains strong, having increased another 350k GTC staked, but unable to hit the 2M GTC target. It will likely take another ~6 months to achieve.
+<p>
+Almost hit our target of 25k community staking addresses despite being behind on launching revamped identity staking in S21. Identity staking v2 will launch in S22.
+   </p></td>
+  </tr>
+  <tr>
+   <td><strong>Data</strong>
+   </td>
+   <td>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/black_circle.png?v=12" title=":black_circle:" class="emoji" alt=":black_circle:" loading="lazy" width="20" height="20"> 200,000 Sybils</p>
+<p>
+</p><p><img src="https://gov.gitcoin.co/images/emoji/twitter/black_circle.png?v=12" title=":black_circle:" class="emoji" alt=":black_circle:" loading="lazy" width="20" height="20"> Catalog ~ 11,000 human users (verified and human)</p>
+   </td>
+   <td>Adjusted our approach to this milestone last season and focused on both growing the human data set and also releasing the first of our L2 models: zkSync. Started building both OP and Polygon models and determing feasiblity for additional L2 models.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Partnerships</strong>
+   </td>
+   <td>
+<p><img src="https://gov.gitcoin.co/images/emoji/twitter/yellow_circle.png?v=12" title=":yellow_circle:" class="emoji" alt=":yellow_circle:" loading="lazy" width="20" height="20">  54 API Partners</p>
+<p>
+</p><p><img src="https://gov.gitcoin.co/images/emoji/twitter/green_circle.png?v=12" title=":green_circle:" class="emoji" alt=":green_circle:" loading="lazy" width="20" height="20"> _circle: 7 onchain partners (users of attestations)</p>
+   </td>
+   <td>Under delivered against a target of 70 which also impacted our top line Passport growth &amp; adoption. 
+<p>
+We exceeded our goal of 5 onchain partners in S21! 
+   </p></td>
+  </tr>
+</tbody></table>
+<p><strong>Observations:</strong></p>
+<ul>
+<li>While we fell short again on passport adoption against very aggressive targets of doubling every 6 months. We’re continuing to drive a pipeline for new integration partners to continue growth.</li>
+<li>We’ve found success in both GTC staking and onchain revenue starting to drive the flywheel for both utility and sustainability. The upcoming revamp of identity staking, from smart contracts to UI, should continue to grow the utility of GTC. This was delayed several months from our original go-live estimates as we focused on supporting key partners.</li>
+</ul>
+<p>For more granular details on our past work and plans, please refer to our previous budgets for <a href="https://gov.gitcoin.co/t/s17-proposal-integrated-gitcoin-passport-budget-request/12727">S17</a>, <a href="https://gov.gitcoin.co/t/proposal-gitcoin-passport-workstream-season-18-19-budget-request/14121">S18 &amp; S19</a>, <a href="https://gov.gitcoin.co/t/s19-proposal-amended-passport-s19-budget-request/16184">S19 (Amended)</a>, <a href="https://gov.gitcoin.co/t/proposal-passport-season-20-21-budget-request/16765">S20 &amp; S21</a>, and also our updated <a href="https://github.com/orgs/gitcoinco/projects/25/views/1" rel="noopener nofollow ugc">Passport Roadmap</a>.</p>
+<h2>Budget Update: Season Next (May &amp; June) </h2>
+<p>We are increasing the budget for this season as part of the move to the BU concept; adding 3 additional headcount accounting for resources who were previously shared or part time. The additional budget includes hiring a Sr. Product Marketing Manager (still in progress), moving from part time to full time Operations, adding an additional BD resource dedicated to support growth, and adding Kyle to the team!</p>
+<p><strong>Team Composition</strong></p>
+<p><strong>Full-Time Contributors:</strong> 15 (after hiring the two described above)</p>
+<ul>
+<li>Developers: 4</li>
+<li>Product Manager: 1</li>
+<li>Data Scientists: 2</li>
+<li>Business Unit Co-leads: 2 (Kyle moving in)</li>
+<li>Operations: 1</li>
+<li>Marketing: 1</li>
+<li>Support: 2</li>
+<li>Design: 1 (previously part time, moving to full time role dedicated to Passport)</li>
+<li>BD: 1 (previously cost for BD was out of PGF which is now Grants Labs, moving to fully dedicated to Passport)</li>
+</ul>
+<p><strong>Part-Time or Shared Contributors:</strong> 5</p>
+<ul>
+<li>DevRel: 2</li>
+<li>DevOps: 1</li>
+<li>Operations: 1</li>
+</ul>
+<h2>Funding Request for Seasons S22</h2>
+<p><strong>Requested Amount:</strong> Gitcoin Passport is requesting a net allocation of 0 GTC*, equivalent to approximately $0 out of treasury to cover this season. We have plenty of funds in our reserves, in part due to the Eth revenue from onchain Passports, to cover all funds needed for this shortened season of 2 months.</p>
+<table>
+  <tbody><tr>
+   <td>
+   </td>
+   <td><strong>Budgeted</strong>
+   </td>
+   <td><strong>Budgeted</strong>
+   </td>
+   <td><strong>Budgeted</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td><strong>May 2024</strong>
+   </td>
+   <td><strong>Jun 2024</strong>
+   </td>
+   <td><strong>May-2024 - Jun-2024</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Total GP Budgeted Spend
+   </td>
+   <td>$196,366
+   </td>
+   <td>$198,926
+   </td>
+   <td>$460,405
+   </td>
+  </tr>
+  <tr>
+   <td>33% Reserves
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>$153,468
+   </td>
+  </tr>
+  <tr>
+   <td>Past Season Treasury Balance
+   </td>
+   <td>
+   </td>
+   <td><strong>(We will still have a buffer of at least $225k in treasury)</strong>
+   </td>
+   <td>$840,325
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Total Request</strong>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><strong>$0</strong>
+   </td>
+  </tr>
+</tbody></table>
+<p><strong>Budget Evolution</strong></p>
+<table>
+  <tbody><tr>
+   <td>
+   </td>
+   <td><strong>S17</strong>
+   </td>
+   <td><strong>S18</strong>
+   </td>
+   <td><strong>Amended S19</strong>
+   </td>
+   <td><strong>S20</strong>
+   </td>
+   <td><strong>S21</strong>
+   </td>
+   <td><strong>S22 </strong>
+<p>
+<strong>(May &amp; June)</strong>
+   </p></td>
+  </tr>
+  <tr>
+   <td>Passport Budget 
+   </td>
+   <td>$515,254
+   </td>
+   <td>$589,846
+   </td>
+   <td>$494,116
+   </td>
+   <td>$478,591
+   </td>
+   <td>$642,216
+   </td>
+   <td>$460,405*
+   </td>
+  </tr>
+</tbody></table>
+<p>*** Note: **No GTC is being requested as the team will be using existing reserves.</p>
+<h2>Budget Breakdown</h2>
+<p><strong>Breakdown staffing, contracting, operational expenses</strong></p>
+<p>We have accounted for upcoming expenses, aiming for a lean but comprehensive budget. Our 16-member team comprises roles in Product, Design, Engineering, DevRel, Operations, and Support.</p>
+<table>
+  <tbody><tr>
+   <td>
+   </td>
+   <td>S18 (Actual Spend)
+   </td>
+   <td>S19 (Projected Actuals)
+   </td>
+   <td>S20 (Requested)
+   </td>
+   <td>S21 (Adjusted)
+   </td>
+   <td>S22 (May &amp; June)
+   </td>
+  </tr>
+  <tr>
+   <td>Contributor Rewards
+   </td>
+   <td>$373,791
+   </td>
+   <td>$318,102
+   </td>
+   <td>$341,674
+   </td>
+   <td>$426,799
+   </td>
+   <td>$378,496
+   </td>
+  </tr>
+  <tr>
+   <td>Contracting (Dev Ops, DevRel, design, Marketing)
+   </td>
+   <td>$114,192
+   </td>
+   <td>$70,969
+   </td>
+   <td>$75,192
+   </td>
+   <td>$149,192
+   </td>
+   <td>$11,000
+   </td>
+  </tr>
+  <tr>
+   <td>OpEx (Software subscriptions, gas, audits, travel, professional development)
+   </td>
+   <td>$31,835
+   </td>
+   <td>$42,236
+   </td>
+   <td>$61,725
+   </td>
+   <td>$66,225
+   </td>
+   <td>$70,908
+   </td>
+  </tr>
+  <tr>
+   <td><strong><em>Total</em></strong>
+   </td>
+   <td><strong><em>$519,818</em></strong>
+   </td>
+   <td><strong><em>$431,307</em></strong>
+   </td>
+   <td><strong><em>$478,591</em></strong>
+   </td>
+   <td><strong><em>$642,216</em></strong>
+   </td>
+   <td><strong><em>$460,404</em></strong>
+   </td>
+  </tr>
+</tbody></table>
+<p><strong>We Want Your Input</strong></p>
+<p>We welcome your expertise in several key areas:</p>
+<ul>
+<li>Suggestions for integration partners.</li>
+<li>Introductions to potential onchain pilot programs.</li>
+<li>Participation in user interviews.</li>
+</ul>
+<p>Your novel ideas for expanding the reach of Gitcoin Passport are invaluable.</p>
+<p>Thank you for your time and insights; your input makes us better.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-s22-gitcoin-passport-business-unit-budget-proposal/18731/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-s22-gitcoin-passport-business-unit-budget-proposal/18731/1
+        Fri, 03 May 2024 21:31:05 +0000
+gov.gitcoin.co-post-18731-1
+[Proposal]S22 - Gitcoin Passport Business Unit Budget Proposal
+      
+
+

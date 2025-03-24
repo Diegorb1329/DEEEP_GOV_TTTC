@@ -1,0 +1,255 @@
+
+
+
+The limits of Sybil defense (and how composability might help)
+https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524
+    # Exploring the limits of Sybil defense
+
+This post is intended to outline some of the fundamental issues that we face when designing anti-Sybil systems and why composability might help tame them. 
+
+## Do Sybil's dream of electric sheep?
+
+Do Androids Dream of Electric Sheep tells the story of a detective tasked with eliminating humanoid "replicants" that are almost indistinguishable from natural humans. They do this using a system of tests, including an instrumented interview that look for subtle "tells" such as a limited ability to make complex moral judgments in hypothetical scenarios. Sybil defenders are similarly tasked with distinguishing real and virtual humans in a mixed population where they are difficult to tell apart. They too look for subtle "tells" that give Sybils away. Sometimes the Sybil signals are obvious and unambiguous, sometimes they are not. The additional complication for Sybil hunters is that the entire population exists in a digital space where a human's physical existence cannot be proven by their presence- it can only be demonstrated using forgeable proxies. Reliably linking actions to identities is therefore a subtle science that pieces together multiple lines of evidence to build a personhood profile.
+
+One such line of evidence is proof that a person has participated in certain activities that would be difficult, time consuming or expensive for someone to fake. Gitcoin Passport is used to collect approved participation 'stamps' and combine them into a score that acts as a continuous measure of an entity's personhood. Another line of evidence is the extent to which an individual's behaviour matches that of a typical Sybil. There are many telltale actions that, when taken together, can be used as powerful diagnostic tools for identifying Sybils. Machine learning algorithms can quickly match an individual's behaviour against that of known Sybils to determine their trustability, like an automated Voight-Kampff test. A high degree of automation can be achieved by ensuring Gitcoin grant voters, reviewers and grant owners meet thresholds of trustability as tested proactively using Gitcoin Passport evidence and retrospectively using machine learning behaviour analysis. An adversary is then forced to expend a sufficient amount of time, effort and/or capital to create virtual humans that fool the system into thinking they are real. As more and more effective detection methods are created, adversaries are forced to invest in more and more human-like replicants.
+
+
+## Plutocratic tendencies
+
+*Cost-of-forgery* is a concept aiming to create an economic environment where rational actors are disincentivized from attacking a system. One way to manipulate the environment is simply to raise the cost of attack to some unobtainable level, but without excluding honest participants. The problem is that simply raising the cost really just reduces down to wealth-gating. This creates an a two-tier community - people who can afford to attack and people who can't. There is also a risk that the concept bleeds into wealth-gating participation, not just attacks, which would unfairly eliminate an honest but less-wealthy portion of the community (i.e. increasing the cost of demonstrating personhood for honest users as a side effect of increasing the cost of forgery for attackers). To some extent, this is also the case with proof-of-stake: attackers are required to accumulate and then risk losing a large amount of capital in the form of staked crypto in order to unfairly influence the past or future contents of a blockchain. For Ethereum proof-of-stake the thresholds are 34%, 51% and 66% of the total staked ether on the network for various attacks on liveness or security - tens of billions of dollars for even the cheapest attack. The amount of ether staked makes the pool of potential attackers small - the pool is probably mostly populated by nation states and crypto deca-billionairres.
+
+For a proof-of-stake or cost-of-forgery system to be anything other than a plutocracy there must be additional mechanisms in place other than raising the cost of attack. An attack has to be irrational, even for rich adversaries. One way an attack can be irrational is to ensure the cost of attack is greater than the potential return, so that an attacker can only become poorer even if their attack is successful. Ethereum's proof-of-stake includes penalties for lazy and dishonest behaviour. In the more severe cases individuals lose their staked coins and are also ejected from the network. When more validators collude, the punishments scale quadratically. 
+
+There are also scenarios where rich adversaries might attack irrationally, i.e. despite knowing that they will be economically punished - either because they are motivated by chaos more than by enrichment, or because the factors that make their behaviour rational are non-monetary or somehow hidden (political, secret short positions, competitive edge, etc). These scenarios can overcome any defenses built in to the protocol because it only really makes sense to define unambiguous coded rules for rational adversaries.
+
+
+The two primary lines of defense in Gitcoin grants are retrospective squelching and Gitcoin Passport. Users prove themselves beyond reasonable doubt to be a real human using a set of credentials a community agrees are trustworthy. They are then more likely to survive the squelching because they behave more like humans than Sybils. The problem, however skillful the modelling becomes, is that being provably human does not equate to being trustable, nor is a community of real humans immune from plutocratic control - rich adversaries could bribe or use their capital to coerce verifiable human individuals to act in a certain way. An example of this is airdrop farming - a suitably wealthy attacker could promise to retrospectively reward users who vote in favour of their Gitcoin grant in order to falsely inflate the active user-base and popularity of the grant in the eyes of the matching pool. A simpler example is a wealthy adversary simply paying users directly to verify their credentials and then vote in a particular way.
+
+It is impossible to define every plausible attack vector into a coded set of rules that can be implemented as a protocol, not least because what the community considers to be an attack might be somewhat vague and will probably change over time (see debates on "exploits" vs "hacks" in DeFi- when does capitalizing on a quirk become a hack, where should the line be between unethical and illegal?). This, along with the potential for attackers to outpace Sybil defenders and overcome protocol defenses, necessitates the protocol being wrapped in a protective social layer.
+
+## Social defenses
+
+There has to be some kind of more ambiguous, catch-all defense that can rescue the system when an edge-case-adversary fools or overwhelsm the protocol's built-in defenses. For Ethereum, this function is fulfilled by the social layer - a coordinated response from the community to recognize a minority honest fork of the blockchain as canonical. This means the community can rescue an honest network from an attacker that is rich enough to buy out the majority stake or finds a clever way to defraud the protocol.
+
+For a Sybil resistance system, it would probably have to be a social-layer backstop too, because only humans have the subjective decision-making powers to deal with the kind of "unknown unknown" attacks that can't be anticipated. By definition, protocol defenses close known attack vectors, not the hidden zero-day bugs that spring up later. For a Sybil-defense system it would be manual squelching of users or projects that have acted somehow dishonestly in ways that have not been detected by the protocol but are in some way offensive to the community as a whole.
+
+The danger here is that even with a perfectly decentralized and unambiguous protocol, power can centralize in the social layer creating opportunities for corruption. For example, if only a few individuals are able to overrule the protocol and squelch certain users while promoting others those individuals naturally become targets of bribes or intimidation or they themselves could manipulate the round to their advantage. 
+
+Therefore, there needs to be some way to impose checks and balances that keep the social coordination fair. There is a delicate balance to strike between sufficiently decentralizing the social layer and exposing it to its own Sybil attacks where the logic could become an infinite loop - to protect against attacks that circumvent the protocol defenses we need to fall back to social coordination which itself needs protecting from Sybil's using protocol rules that Sybil's can circumvent meaning we fall back to social action which itself needs protecting...ad infinitum. 
+
+It is still not completely clear how a social-rescue would take place on Ethereum, although there have been calls to define the process more clearly and even undertake "fire-drill" practices so that a rapid and decisive action can be taken when needed. Anti-Sybil systems and grant review systems such as Gitcoins could explore something similar.
+
+
+## Anti-Sybil onions
+
+The pragmatic approach to Sybil defense is to create an efficient protocol that can deal with the majority of cases quickly and cheaply, then wrap that protocol in an outer layer of social coordination. This social layer should be flexible enough to quickly and skillfully handle unexpected scenarios. However, to keep the scial coordination layer honest, it needs to be wrapped in its own loose protocol.
+
+From the inner core to the outer layers the protocols become more loosely defined and subjective, closer to the core the protocol should be sufficiently precise as to be defined in computer code. There will be some optimum number of layers that will emerge organically to produce a system that is sufficiently robust to all kinds of adversarial behaviour.
+
+To make this less abstract, the core in-protocol defenses could include automated eligibility checks, retroactive squelching of users identified as Sybils by data modelling, and proactive proof-of-humanity checks against carefully tuned thresholds. This alone creates a community of reviewers, owners and donors that are quite trustable. The social wrapper should be a trusted community that can handle war-rooms and rapid-response decision making for scenarios that are not well handled by the core protocol. One way to do this while protecting against centralized control is to use delegated stake so that the community "votes in" stewards to an emergency response squad they trust to act on their behalf. This will be self-correcting because the community will add and remove stake from individual stewards based on their behaviour. These stewards need a standard-operating procedure so that they can spring to action immediately when an attack is detected, which can be crowdsourced - effectively adding a second protocol and social layer to the anti-Sybil onion.
+
+The benefit of this onion approach is that it allows the great majority of attacks to be neutralized efficiently by the in-protocol defenses, but allows for subjective responses to edge-case attacks. It is impossible to defend against the entire attack space, but this approach offers a community-approved route to pragmatic out-of-band decision making when in-protocol defenses are breached or some edge case arises.
+
+
+## Outlook
+
+Tackling Sybil defense across Gitcoin grants using a monolithic "global" system will necessarily bump up against these issues. One option to overcome this is to break Sybil defense down into composable units that can be tuned and deployed by individual sub-communities instead of trying to construct a Sybil panopticon that works well for everyone. It wil be much easier to construct layered anti-Sybil onion systems for individual subcommunities than trying to tune a single monolithic system to work for everyone. This is the approach Gitcoin intends to take in Grants 2.0. A well-defined, easily accessible set of tools and APIs that can be used to invoke Sybil defense within the context of a single project not only allows the Sybil-defense tuning to be optimized for a specific set of users but also empowers the community to control their own security. The challenges then become how to share tools, knowledge and experience across users so they don't continually re-invent the wheel. We discussed this in some detail in our [Data Empowerment](https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382/5) post. Decentralizing Sybil defense via a composable set of tools is also an opportunity to crowd-source a stronger defensive layer via communty knowledge sharing and parallel experimentation.
+Fri, 23 Sep 2022 14:00:10 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+The limits of Sybil defense (and how composability might help)
+porobov_p
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/j-cook">@j-cook</a>!</p>
+<p>Awesome read! Love the onion idea! And I particularly like that it aligns pretty well with <a class="mention" href="https://gov.gitcoin.co/u/tjayrush">@tjayrush</a> concerns. It leaves a room for tweaking and … friction (A cool helpful term that I adopted while talking with Phillip Sheldrake. Totally recommend reading <a href="https://generative-identity.org/human-identity-the-number-one-challenge-in-computer-science/" rel="noopener nofollow ugc">his essay</a>. Bends mind in proper ways). Also thanks for describing airdrop farming and “exploits” vs “hacks” in DeFi. Helpful too!</p>
+<p>Wanna insert though a short note on <em>Cost of forgery</em> and plutocracy. It seems to me that the “Plutocratic tendencies” section relates to “staked identity” which requires that a person stakes money on theirselves or peers (<a href="https://gov.gitcoin.co/t/establishing-a-new-process-for-identify-verification-scoring-and-removing-troubled-id-methods/7506/2">described in this post</a>). Anyway it makes no sense in case of <em>Price of forgery</em> (PoF) or <em>Cost of forgery</em> (AFAIK the term got into Gitcoin from <a href="https://arxiv.org/abs/2008.05300" rel="noopener nofollow ugc">this paper</a> and then transformed a bit, but ”<em>Price of forgery</em>” is how we still call it in Upala, the reason and the difference is also described in the <a href="https://gov.gitcoin.co/t/benefits-of-using-price-of-forgery-in-gitcoin/11314/2#pof-and-pool-size-relation-8">methodology</a>). Explaining my point further.</p>
+<blockquote>
+<p>“rational actors are disincentivized from attacking a system”</p>
+</blockquote>
+<p>The <a href="https://gov.gitcoin.co/t/benefits-of-using-price-of-forgery-in-gitcoin/11314/2">methodology of Price of forgery measurement</a> does recommend a setup of an environment where conditions slowly approach the point of disincentivizing the rational actor from attacking the system (to be specific attacking matching funds). But disincentivizing is not the goal, the goal is measurement.</p>
+<p>It <em>may</em> happen that we would nudge exiting Fraudsters to sell their bots instead of using them to extract matching funds. But chances are they will be outperformed by other Bot farmers who would sell their armies faster and for lower price. The measurement would happen long before the above described condition. Moreover we could be satisfied with just a single measurement (single bot sale event). We don’t need to keep the environment (and funds at risk) forever. Just rerun the measurement periodically to stay up to date.</p>
+<p><strong>So In the context of fraud detection the benefit of using Upala protocol and figuring out PoF is just knowing.</strong> Otherwise it would require enormous amount of money and does not make sense.</p>
+<blockquote>
+<p>“One way to manipulate the environment is simply to raise the cost of attack to some unobtainable level, but without excluding honest participants.”</p>
+</blockquote>
+<p>Accordingly, we cannot <em>set</em> the <em>Price of forgery</em>. After we measure it we can only <em>require</em> a certain <em>PoF</em> or alternatively we can set trust bonus in relation to PoF (just an example, still learning how Fraud detection works in Gitcoin - would be happy to brainstorm btw).</p>
+<p>As for plutocracy. For any human verification method there’s price of forgery anyway whether we measure it or not. Learning PoF does not affect this fact. We could require 6 stamps or require a sum of approved PoFs behind those stamps - it would be the same thing. If we wanna raise PoF, we have to offer more stamps (and measure their PoFs). There’s no other way.</p>
+<p>Also there are no money involved for the users. There’s no deposit or stake. They don’t even have to know that they got PoF calculated/measured. It is bots who do all the job. No wealth-gating occurs.</p>
+<p><strong>PoF makes plutocratic tendencies neither stronger, nor weaker. It is a measurement tool.</strong> Which I believe could be a very useful one in the fraud detection pipeline. And which could be easily integrated into the fraud detection <img src="https://gov.gitcoin.co/images/emoji/twitter/onion.png?v=12" title=":onion:" class="emoji" alt=":onion:" loading="lazy" width="20" height="20">.</p>
+<p>If you wanna dive deeper check out this <a href="https://gitcoin.co/grants/7602/price-of-forgery-measurement-campaign" rel="noopener nofollow ugc">Price of forgery measurement campaign</a> grant for details. Also check out <a href="https://www.notion.so/UPALA-DASHBOARD-a46d88209ecb4a4cabf1560acc8673a2" rel="noopener nofollow ugc">Upala dashboard</a> and <a href="https://ethresear.ch/t/price-of-forgery-digital-identity-measuring-human-uniqueness-score-in-dollars/8328" rel="noopener nofollow ugc">article on EthResearch on price of forgery</a>. I’m working hard to deliver an up-to-date documentation. And best of all let’s chat (<a href="https://twitter.com/porobov_p" rel="noopener nofollow ugc">my twitter</a>).</p>
+          <p><a href="https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/9
+        Fri, 23 Sep 2022 14:00:10 +0000
+gov.gitcoin.co-post-11524-9
+The limits of Sybil defense (and how composability might help)
+      
+
+The limits of Sybil defense (and how composability might help)
+j-cook
+
+            <p>Hi <a class="mention" href="https://gov.gitcoin.co/u/lee0007">@lee0007</a> thanks for the reply - you are right that spam is a real problem.  We are totally aligned that some additional automation could help filter out obvious junk before it reaches human reviewers - one idea that has been discussed quite a bit is an automated set of eligibility checks that act as a spam filter.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/8
+        Wed, 21 Sep 2022 09:08:18 +0000
+gov.gitcoin.co-post-11524-8
+The limits of Sybil defense (and how composability might help)
+      
+
+The limits of Sybil defense (and how composability might help)
+lee0007
+
+            <p>Recognise this as a much more techinical conversation than I can add value to…</p>
+<p>Yet seems like an opportunity to request a more robust filtering mechanism for grant eligibility…</p>
+<p>Having joined the GR15 Grant Hunt I’m surprised  at the amount of zero effort to mediocre and poor proposals I’m asked to review… it has effectively lowered my tolerance for potentially legit, but poorly communicated grant requests.</p>
+<p>Now, I’m not informed on the quality objectives and constraints that apply to grants so take this request with a grain of salt …</p>
+<p>Can we filter for existance of a description? Maybe even a minimum word count? Call me bias but if people are to lazy to provide a description they should automatically fail eligibility for funding…</p>
+<p>Feel like if we raised the bar on what constitutes a proposal we could immediately reduce (50% in my experience to date) the level of what I percieve to be fraud.</p>
+<p>Effectively, spamming is a attack and distract that lower the average tolerance, allowing more complex sybil attack to appear legit.</p>
+<p>Had asked in Discord where I could share this feedback, no response yet and picked this up via the forum summary.</p>
+<p>Appreciate I’m not informed here on QC but as a human in the loop it’s a disincentive to assess non-existant proposals when it feels like existance of a proposal description, could be automated.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/7
+        Wed, 21 Sep 2022 08:28:09 +0000
+gov.gitcoin.co-post-11524-7
+The limits of Sybil defense (and how composability might help)
+      
+
+The limits of Sybil defense (and how composability might help)
+epowell101
+
+            <p>This is insightful feedback.</p>
+<p>That said - there were some ideas expressed about how to prevent the anti sybil squad itself becoming a locus for potential corruption due to centralization that I think could use more discussion and appreciation as well.</p>
+<aside class="quote no-group" data-username="j-cook" data-post="1" data-topic="11524">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j-cook/48/5804_2.png" class="avatar"> j-cook:</div>
+<blockquote>
+<p>The danger here is that even with a perfectly decentralized and unambiguous protocol, power can centralize in the social layer creating opportunities for corruption. For example, if only a few individuals are able to overrule the protocol and squelch certain users while promoting others those individuals naturally become targets of bribes or intimidation or they themselves could manipulate the round to their advantage.</p>
+</blockquote>
+</aside>
+<p>Very innovative thinking is happening in Gitcoin here as you know - and this example as well as being very careful to help create models that do not rely web server logging for eg - are suggestive of ways to insure that the “cure isn’t worse than the disease.”</p>
+          <p><a href="https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/6
+        Mon, 19 Sep 2022 18:56:32 +0000
+gov.gitcoin.co-post-11524-6
+The limits of Sybil defense (and how composability might help)
+      
+
+The limits of Sybil defense (and how composability might help)
+kyle
+
+            <aside class="quote no-group" data-username="j-cook" data-post="1" data-topic="11524">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j-cook/48/5804_2.png" class="avatar"> j-cook:</div>
+<blockquote>
+<p>One option to overcome this is to break Sybil defense down into composable units that can be tuned and deployed by individual sub-communities instead of trying to construct a Sybil panopticon that works well for everyone. It wil be much easier to construct layered anti-Sybil onion systems for individual subcommunities than trying to tune a single monolithic system to work for everyone.</p>
+</blockquote>
+</aside>
+<p>I really appreciate the post and would love to collaborate more on the roadmap to accomplish this. In that roadmap we can spell out what TJ is looking for, and also start to outline how we can test each layer of the onion so to speak.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/5
+        Sun, 18 Sep 2022 22:59:04 +0000
+gov.gitcoin.co-post-11524-5
+The limits of Sybil defense (and how composability might help)
+      
+
+The limits of Sybil defense (and how composability might help)
+tjayrush
+
+            <aside class="quote no-group quote-modified" data-username="j-cook" data-post="3" data-topic="11524">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/j-cook/48/5804_2.png" class="avatar"> j-cook:</div>
+<blockquote>
+<p>…that I did not include here…</p>
+</blockquote>
+</aside>
+<p>This is exactly the point I’m making.</p>
+<p>My first suggestion on how to derisk the tech would be to include as detailed a discussion of the potential downsides as you do the potential benefits. Think defensively.</p>
+<p>And, please understand, I’m not pointing to you specifically <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20">. I’m talking about the whole space.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/4
+        Sun, 18 Sep 2022 14:16:44 +0000
+gov.gitcoin.co-post-11524-4
+The limits of Sybil defense (and how composability might help)
+      
+
+The limits of Sybil defense (and how composability might help)
+j-cook
+
+            <p>Thanks a lot for the really important response - I’ll point out that there has been substantial discussion around eliminating personal identifying information that I did not include here, but agree it is more complicated. I would be very interested if you have further thoughts around how one might derisk a Sybil defense system with respect to privacy?</p>
+          <p><a href="https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/3
+        Sat, 17 Sep 2022 10:46:09 +0000
+gov.gitcoin.co-post-11524-3
+The limits of Sybil defense (and how composability might help)
+      
+
+The limits of Sybil defense (and how composability might help)
+tjayrush
+
+            <p>I encourage anyone working on Sybil or any identity-related tech to consider carefully not only what happens if the efforts fail, but <em>what happens if they succeed</em>.</p>
+<p>Consider the simple techniques of web server logging and web cookies, both of which, it can be argued work exactly as designed, and both of which might be considered to carry serious societal downsides such as deep privacy invasion.</p>
+<p>I watched silently as both of those techniques were born. If I had known what I know now and how profoundly negative the externalities would be, I would have screamed from the rafters. The negative cost of web tracking on society is massive.</p>
+<p>I feel that Sybil tech (and more broadly Identity tech) has not only similar but a much larger potential negative externality than cookies and web server logs. I feel compelled to climb to the rafters and speak loudly.</p>
+<p>Please think carefully about the negative future uses of the work you are doing. What if governments, especially rouge governments, impose these tools on their citizens?</p>
+<p>I’d love to see more discussion of this in the design documents. Add a section called “Mitigation of Potential Future Negative Externalities.” And actually spend as much time considering that aspect of the work as the design for how the technology works.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/2
+        Sat, 17 Sep 2022 09:51:12 +0000
+gov.gitcoin.co-post-11524-2
+The limits of Sybil defense (and how composability might help)
+      
+
+The limits of Sybil defense (and how composability might help)
+j-cook
+
+            <h1>
+<a name="exploring-the-limits-of-sybil-defense-1" class="anchor" href="https://gov.gitcoin.co#exploring-the-limits-of-sybil-defense-1"></a>Exploring the limits of Sybil defense</h1>
+<p>This post is intended to outline some of the fundamental issues that we face when designing anti-Sybil systems and why composability might help tame them.</p>
+<h2>
+<a name="do-sybils-dream-of-electric-sheep-2" class="anchor" href="https://gov.gitcoin.co#do-sybils-dream-of-electric-sheep-2"></a>Do Sybil’s dream of electric sheep?</h2>
+<p>Do Androids Dream of Electric Sheep tells the story of a detective tasked with eliminating humanoid “replicants” that are almost indistinguishable from natural humans. They do this using a system of tests, including an instrumented interview that look for subtle “tells” such as a limited ability to make complex moral judgments in hypothetical scenarios. Sybil defenders are similarly tasked with distinguishing real and virtual humans in a mixed population where they are difficult to tell apart. They too look for subtle “tells” that give Sybils away. Sometimes the Sybil signals are obvious and unambiguous, sometimes they are not. The additional complication for Sybil hunters is that the entire population exists in a digital space where a human’s physical existence cannot be proven by their presence- it can only be demonstrated using forgeable proxies. Reliably linking actions to identities is therefore a subtle science that pieces together multiple lines of evidence to build a personhood profile.</p>
+<p>One such line of evidence is proof that a person has participated in certain activities that would be difficult, time consuming or expensive for someone to fake. Gitcoin Passport is used to collect approved participation ‘stamps’ and combine them into a score that acts as a continuous measure of an entity’s personhood. Another line of evidence is the extent to which an individual’s behaviour matches that of a typical Sybil. There are many telltale actions that, when taken together, can be used as powerful diagnostic tools for identifying Sybils. Machine learning algorithms can quickly match an individual’s behaviour against that of known Sybils to determine their trustability, like an automated Voight-Kampff test. A high degree of automation can be achieved by ensuring Gitcoin grant voters, reviewers and grant owners meet thresholds of trustability as tested proactively using Gitcoin Passport evidence and retrospectively using machine learning behaviour analysis. An adversary is then forced to expend a sufficient amount of time, effort and/or capital to create virtual humans that fool the system into thinking they are real. As more and more effective detection methods are created, adversaries are forced to invest in more and more human-like replicants.</p>
+<h2>
+<a name="plutocratic-tendencies-3" class="anchor" href="https://gov.gitcoin.co#plutocratic-tendencies-3"></a>Plutocratic tendencies</h2>
+<p><em>Cost-of-forgery</em> is a concept aiming to create an economic environment where rational actors are disincentivized from attacking a system. One way to manipulate the environment is simply to raise the cost of attack to some unobtainable level, but without excluding honest participants. The problem is that simply raising the cost really just reduces down to wealth-gating. This creates an a two-tier community - people who can afford to attack and people who can’t. There is also a risk that the concept bleeds into wealth-gating participation, not just attacks, which would unfairly eliminate an honest but less-wealthy portion of the community (i.e. increasing the cost of demonstrating personhood for honest users as a side effect of increasing the cost of forgery for attackers). To some extent, this is also the case with proof-of-stake: attackers are required to accumulate and then risk losing a large amount of capital in the form of staked crypto in order to unfairly influence the past or future contents of a blockchain. For Ethereum proof-of-stake the thresholds are 34%, 51% and 66% of the total staked ether on the network for various attacks on liveness or security - tens of billions of dollars for even the cheapest attack. The amount of ether staked makes the pool of potential attackers small - the pool is probably mostly populated by nation states and crypto deca-billionairres.</p>
+<p>For a proof-of-stake or cost-of-forgery system to be anything other than a plutocracy there must be additional mechanisms in place other than raising the cost of attack. An attack has to be irrational, even for rich adversaries. One way an attack can be irrational is to ensure the cost of attack is greater than the potential return, so that an attacker can only become poorer even if their attack is successful. Ethereum’s proof-of-stake includes penalties for lazy and dishonest behaviour. In the more severe cases individuals lose their staked coins and are also ejected from the network. When more validators collude, the punishments scale quadratically.</p>
+<p>There are also scenarios where rich adversaries might attack irrationally, i.e. despite knowing that they will be economically punished - either because they are motivated by chaos more than by enrichment, or because the factors that make their behaviour rational are non-monetary or somehow hidden (political, secret short positions, competitive edge, etc). These scenarios can overcome any defenses built in to the protocol because it only really makes sense to define unambiguous coded rules for rational adversaries.</p>
+<p>The two primary lines of defense in Gitcoin grants are retrospective squelching and Gitcoin Passport. Users prove themselves beyond reasonable doubt to be a real human using a set of credentials a community agrees are trustworthy. They are then more likely to survive the squelching because they behave more like humans than Sybils. The problem, however skillful the modelling becomes, is that being provably human does not equate to being trustable, nor is a community of real humans immune from plutocratic control - rich adversaries could bribe or use their capital to coerce verifiable human individuals to act in a certain way. An example of this is airdrop farming - a suitably wealthy attacker could promise to retrospectively reward users who vote in favour of their Gitcoin grant in order to falsely inflate the active user-base and popularity of the grant in the eyes of the matching pool. A simpler example is a wealthy adversary simply paying users directly to verify their credentials and then vote in a particular way.</p>
+<p>It is impossible to define every plausible attack vector into a coded set of rules that can be implemented as a protocol, not least because what the community considers to be an attack might be somewhat vague and will probably change over time (see debates on “exploits” vs “hacks” in DeFi- when does capitalizing on a quirk become a hack, where should the line be between unethical and illegal?). This, along with the potential for attackers to outpace Sybil defenders and overcome protocol defenses, necessitates the protocol being wrapped in a protective social layer.</p>
+<h2>
+<a name="social-defenses-4" class="anchor" href="https://gov.gitcoin.co#social-defenses-4"></a>Social defenses</h2>
+<p>There has to be some kind of more ambiguous, catch-all defense that can rescue the system when an edge-case-adversary fools or overwhelsm the protocol’s built-in defenses. For Ethereum, this function is fulfilled by the social layer - a coordinated response from the community to recognize a minority honest fork of the blockchain as canonical. This means the community can rescue an honest network from an attacker that is rich enough to buy out the majority stake or finds a clever way to defraud the protocol.</p>
+<p>For a Sybil resistance system, it would probably have to be a social-layer backstop too, because only humans have the subjective decision-making powers to deal with the kind of “unknown unknown” attacks that can’t be anticipated. By definition, protocol defenses close known attack vectors, not the hidden zero-day bugs that spring up later. For a Sybil-defense system it would be manual squelching of users or projects that have acted somehow dishonestly in ways that have not been detected by the protocol but are in some way offensive to the community as a whole.</p>
+<p>The danger here is that even with a perfectly decentralized and unambiguous protocol, power can centralize in the social layer creating opportunities for corruption. For example, if only a few individuals are able to overrule the protocol and squelch certain users while promoting others those individuals naturally become targets of bribes or intimidation or they themselves could manipulate the round to their advantage.</p>
+<p>Therefore, there needs to be some way to impose checks and balances that keep the social coordination fair. There is a delicate balance to strike between sufficiently decentralizing the social layer and exposing it to its own Sybil attacks where the logic could become an infinite loop - to protect against attacks that circumvent the protocol defenses we need to fall back to social coordination which itself needs protecting from Sybil’s using protocol rules that Sybil’s can circumvent meaning we fall back to social action which itself needs protecting…ad infinitum.</p>
+<p>It is still not completely clear how a social-rescue would take place on Ethereum, although there have been calls to define the process more clearly and even undertake “fire-drill” practices so that a rapid and decisive action can be taken when needed. Anti-Sybil systems and grant review systems such as Gitcoins could explore something similar.</p>
+<h2>
+<a name="anti-sybil-onions-5" class="anchor" href="https://gov.gitcoin.co#anti-sybil-onions-5"></a>Anti-Sybil onions</h2>
+<p>The pragmatic approach to Sybil defense is to create an efficient protocol that can deal with the majority of cases quickly and cheaply, then wrap that protocol in an outer layer of social coordination. This social layer should be flexible enough to quickly and skillfully handle unexpected scenarios. However, to keep the scial coordination layer honest, it needs to be wrapped in its own loose protocol.</p>
+<p>From the inner core to the outer layers the protocols become more loosely defined and subjective, closer to the core the protocol should be sufficiently precise as to be defined in computer code. There will be some optimum number of layers that will emerge organically to produce a system that is sufficiently robust to all kinds of adversarial behaviour.</p>
+<p>To make this less abstract, the core in-protocol defenses could include automated eligibility checks, retroactive squelching of users identified as Sybils by data modelling, and proactive proof-of-humanity checks against carefully tuned thresholds. This alone creates a community of reviewers, owners and donors that are quite trustable. The social wrapper should be a trusted community that can handle war-rooms and rapid-response decision making for scenarios that are not well handled by the core protocol. One way to do this while protecting against centralized control is to use delegated stake so that the community “votes in” stewards to an emergency response squad they trust to act on their behalf. This will be self-correcting because the community will add and remove stake from individual stewards based on their behaviour. These stewards need a standard-operating procedure so that they can spring to action immediately when an attack is detected, which can be crowdsourced - effectively adding a second protocol and social layer to the anti-Sybil onion.</p>
+<p>The benefit of this onion approach is that it allows the great majority of attacks to be neutralized efficiently by the in-protocol defenses, but allows for subjective responses to edge-case attacks. It is impossible to defend against the entire attack space, but this approach offers a community-approved route to pragmatic out-of-band decision making when in-protocol defenses are breached or some edge case arises.</p>
+<h2>
+<a name="outlook-6" class="anchor" href="https://gov.gitcoin.co#outlook-6"></a>Outlook</h2>
+<p>Tackling Sybil defense across Gitcoin grants using a monolithic “global” system will necessarily bump up against these issues. One option to overcome this is to break Sybil defense down into composable units that can be tuned and deployed by individual sub-communities instead of trying to construct a Sybil panopticon that works well for everyone. It wil be much easier to construct layered anti-Sybil onion systems for individual subcommunities than trying to tune a single monolithic system to work for everyone. This is the approach Gitcoin intends to take in Grants 2.0. A well-defined, easily accessible set of tools and APIs that can be used to invoke Sybil defense within the context of a single project not only allows the Sybil-defense tuning to be optimized for a specific set of users but also empowers the community to control their own security. The challenges then become how to share tools, knowledge and experience across users so they don’t continually re-invent the wheel. We discussed this in some detail in our <a href="https://gov.gitcoin.co/t/decentralizing-sybil-defense-using-gitcoin-data/11382/5">Data Empowerment</a> post. Decentralizing Sybil defense via a composable set of tools is also an opportunity to crowd-source a stronger defensive layer via communty knowledge sharing and parallel experimentation.</p>
+          <p><a href="https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/the-limits-of-sybil-defense-and-how-composability-might-help/11524/1
+        Sat, 17 Sep 2022 09:02:16 +0000
+gov.gitcoin.co-post-11524-1
+The limits of Sybil defense (and how composability might help)
+      
+
+

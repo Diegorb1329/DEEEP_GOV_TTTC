@@ -1,0 +1,547 @@
+
+
+
+PGN Technical Transparency and the Path Forward
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304
+    # **TLDR**
+
+- Initial technical hurdles impacted PGN’s early growth
+- PGN is part of the Optimism Superchain, a network of L2s working together
+- Our alliance with OP Labs provides vital technical support and resource that can accelerate our technical development
+
+---
+
+PGN launched 6 months ago with an innovative and ambitious goal of creating durable and recurring funding for public goods. As one of the first small players to launch an L2 on the OP Stack, we have admittedly encountered technical challenges due to the inherent novelty and complexity involved in operationalizing decentralized compute environments. While these technical challenges have hindered our ability to grow at the pace and scale we envisioned, our commitment to the original goal remains steadfast.
+
+We also feel it is worthwhile and productive to share more transparently on what it really takes to launch an L2. We are confident that as L2 technology matures, and as our ecosystem grows, the original vision of growing the pie of available public goods funding is still possible.
+
+# **Technical Hurdles**
+
+It is easy to take for granted how well developed the Ethereum ecosystem is, with new platforms and improvements being added regularly. Today’s Ethereum is a very functional place for a crypto native person, with multiple wallet, exchange, block explorer and security solutions available. When building an L2 from scratch, each of these technical integrations must be identified and built independently, based on the focus of that specific L2.
+
+### **Integrating technical dependencies**
+
+The process for integrating with various technical dependency providers can be broken down into three main approaches:
+
+1. **Decentralized Providers:** This usually involves drafting a detailed proposal on their forum that highlights the advantages of integrating PGN. Then, we rally community support and gather votes to ensure our network gets added.
+1. **Traditional Teams:** The focus here is on building relationships. This typically involves communicating directly with providers to explain PGN's advantages and offering technical support for integration.
+1. **Self-integration:** In some instances, we can directly add our network and submit a pull request. However, more often than not, getting our pull request merged hinges on the integration partner’s willingness to include our network. This also doesn’t guarantee that our network will be incorporated into the frontend UI.
+
+Understandably, providers often want to see evidence of significant activity on our network to justify the effort required for integration. Some may request upfront capital to cover deployment and maintenance costs.
+
+### **Limited resources**
+
+PGN has no external (venture) funding pumping our network activity.
+
+As a public good itself, this was an intentional part of PGN’s strategy. We prioritize allocating sequencer fees towards public goods instead of venture capitalists. However, bootstrapping an L2 with a small team and a limited budget is challenging. This constraint has limited our ability to integrate with various service providers as we have to strategize which technical dependencies we prioritize.
+
+### **L2s flywheel problem**
+
+Initially, we underestimated the extent of technical dependencies and integrations needed for an **ecosystem-ready** L2 network. This resulted in technical obstacles, most notably the lack of a Safe UI, which significantly slowed down our deployment with ecosystem partners. Without the necessary technical dependencies in place, the pace of our ecosystem growth was delayed.
+
+Once we overcome these initial technical hurdles and achieve ecosystem readiness, we can confidently move forward with the next phase of PGN's development. At a high level, we aim to focus on expanding alliance partnerships, integrating dApps, and growing transaction volume. (More details on this to come in future discussion posts).
+
+We launched in a state where PGN was not fully ecosystem-ready. We lost momentum in the process. So, the big question still remains… When will we get the flywheel moving?!
+
+# **The OP Superchain**
+
+Despite our initial challenges, being part of Optimism’s Superchain ecosystem provides us with a vital lifeline. **We’re not a siloed L2.** PGN is still in its infancy but being one of the early adopters in the Superchain ecosystem gives us a unique advantage; we get to work directly with OP Labs, Base, Test in Prod, and other Optimism core contributors, shaping the future of how these chains can effectively interact and function together.
+
+### **What does this mean?**
+
+Since meeting in person at DevConnect, we’ve gone deep in our relationship with extremely helpful individuals on the OP Labs team and across the Optimism Collective. We have been closely working with them to overcome these technical barriers and develop our overall strategy. This includes weekly meetings where we discuss and address broader L2 strategy and identify areas where we need technical support. We have received valuable feedback regarding bridging, stablecoins, and areas within our ecosystem that require further attention. Additionally, they are helping to support the development of crucial components of our technical dependencies, such as the Safe UI, which was a major obstacle for our partners before they could build on our network. (More details on that to come soon!)
+
+### **Why are they doing this?**
+
+PGN’s success advances the success of the Superchain ecosystem. The grander vision is a network of chains, each with an individual market and value prop, that share bridging, decentralized governance, upgrades, a communication layer and more—all built on the OP Stack.
+
+The ultimate goal is to merge OP Mainnet and other L2s built on the OP Stack (such as Base, Zora, PGN, and others into a single unified network of chains. Learn more about it [here](https://stack.optimism.io/docs/understand/explainer/). This paves the way for a more scalable and decentralized web.
+
+### **A shared vision**
+
+In a truly decentralized web, more players should be able to create an L2 and benefit from sequencer fees, with governance over their allocation within their ecosystem. Not just players that have a lot of upfront venture capital where fees benefit early investors.
+
+Yes, bootstrapping an L2 in the current ecosystem is incredibly challenging. However, creating this opportunity is crucial for the overall L2 and Superchain ecosystem, which itself is vital to a thriving on chain future. PGN's experiences and transparency as a public good itself serve as valuable learning opportunities for the Optimism Collective, allowing them to design better support mechanisms for the L2 Superchain ecosystem.
+
+We will explore the Optimism Superchain and PGN's role within this broader narrative and movement in a future post. Stay tuned!
+
+## **Looking ahead**
+
+The Superchain ecosystem is still early. Many of the anticipated benefits, such as interchain interoperability and standardization, are yet to be fully realized.
+
+For example, Grant Stack is exploring multi-chain checkout solutions. In a future where Superchain interoperability tooling is more abundant, multichain checkout across PGN, Base, and OP Mainnet would be effortless, offering dApps a plug-and-play solution.
+
+Another example is span batches, a technique developed for the OP Stack specificallyto efficiently aggregate and compress transaction data, significantly reducing data size and lowering costs for PGN. Research from Test in Prod indicates that, during the GG18 event, the use of span batches could have slashed PGN's L1 costs by 50% to 90%. This is planned to be implemented as part of the Optimism Delta hard fork if it passes a governance vote scheduled for January - in which case it would be rolled out around mid to late February. You can read more about it here [https://x.com/testinprod_io/status/1723367847483646175?s=20] and I'll continue to update as I learn more.
+
+# **The Bigger Picture**
+
+Though PGN is still in its initial development stage, with technical hurdles still to tackle, we are part of a larger movement. PGN is not a siloed L2; we are deeply integrated within the Optimism ecosystem and supported by its powerful network.
+
+Our mission is important. The future is leaning towards a world with multiple L2s, and PGN is not an outlier in this trend. While the current landscape is crowded with L2s, leading to fractured UX challenges, the need for horizontal scalability requires multiple chains. The current user experience pain points surrounding L2s primarily stem from the incomplete development of interoperability solutions - but these challenges are being actively addressed, and acceleration toward solutions will only come from a willing commitment to engage in the challenges.
+
+***It’s important that we lay down the groundwork. By building the necessary infrastructure now, more communities can create and support their own L2 ecosystems, ensuring that sequencer fee control isn’t just in the hands of those with the most resources.***
+
+PGN is an ambitious experiment. We acknowledge that bootstrapping an L2 is a challenging task, and PGN's struggles highlight the need for improved support. While we faced many blockers, it’s an important problem to try and solve. We are learning and sharing valuable lessons along the way and contributing to a future where public goods receive the sustainable funding they deserve.
+
+## **Our call to action**
+**If you believe in our mission, the most helpful thing you can do is contribute to and advocate for the development of core infrastructure on PGN.**
+
+Here’s how:
+
+- [Join our Telegram](https://t.me/pgn_eth) and shape the technical roadmap through feedback and support.
+- [Join the Alliance](mailto:pgn@gitcoin.co) and contribute to public goods funding by filling blockspace.
+- [Deploy your project onto PGN](https://docs.publicgoods.network/) and [join the biweekly Builders Calls](https://docs.publicgoods.network/) to grow the ecosystem.
+Thu, 21 Dec 2023 22:47:03 +0000
+PGN
+
+
+PGN Technical Transparency and the Path Forward
+owocki
+
+            <p>Thanks for the engagement and earnest answers <a class="mention" href="https://gov.gitcoin.co/u/sophia">@sophia</a> !</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="9" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>I do not mean to be needlessly critical or harsh, I like the vision of PGN !</p>
+</blockquote>
+</aside>
+<p>Like Devansh, I do not mean to be needlessly critical or harsh, and like the vision of PGN.</p>
+<p>But I do think that the state of PGN does warrant some necessary questions about it’s future.</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="9" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>As someone closely following PGN since inception, the lack of momentum has caused me to reconsider plans of launching my dapp on it.</p>
+</blockquote>
+</aside>
+<p>Unfortunately for PGN, a lot of crypto is reflexive.  Momentum begets momentum.  And a lack of momentum begets more lack of momentum.</p>
+<p>This can work in the favor of product rollouts where the team behind them engineer (and with the benefit of a bit of luck + tailwinds) engineer momentum!  Look at BASE, which caught fire over onchain summer.  Or Zora, with a similar order of magnitude of resources as Gitcoin, has <a href="https://dune.com/queries/2453515/4755478">consumed a lot of blockspace with Zora chain</a>.</p>
+<aside class="quote no-group" data-username="sophia" data-post="8" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sophia/48/11928_2.png" class="avatar"> sophia:</div>
+<blockquote>
+<p>The link you added is referencing what we spent on posting data to Ethereum. What is not shown is that that same month our total revenue from gas fees was 38.78 ETH (numbers from Conduit our rollup provider). So our data cost was the difference (around 10 ETH).</p>
+</blockquote>
+</aside>
+<p>So for 1 month per quarter (the month that Gitcoin Grants runs), PGN loses 10 ETH.  And the other 2 months, it loses ~50 ETH/month?  By my math, PGN costs the Gitcoin Foundation roughly 110 ETH($220k)/quarter  - Though I assume this varies quarter over quarter depending on gas costs + amount of block space Gitcoin Grants can consume.</p>
+<p>This leads me to a few questions:</p>
+<ol>
+<li>Do you know when these operational costs will reduce (either via danksharding or batch txns, or perhaps PGN should become a L3?)?</li>
+<li>When will the confidence of the market be restored? (to me this means a clearly articulated path to success + a credible resource commitment to make it happen, but I cannot speak for other builders)</li>
+<li>Or when will we call it quits and recap our learning experiences?  I personally think learning from experiments should be celebrated, and <a href="https://twitter.com/owocki/status/1736831846439076250">there are a lot of early Gitcoin ventures that didn’t work out</a> that I’m still proud to have given a shot.</li>
+</ol>
+<p>It pains me to be losing this $$$ much on a product that lacks the confidence of the market.</p>
+<aside class="quote no-group" data-username="sophia" data-post="8" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sophia/48/11928_2.png" class="avatar"> sophia:</div>
+<blockquote>
+<p>Officially, our USP is that net sequencer fees go to public good projects.</p>
+</blockquote>
+</aside>
+<p>I feel like this USP suffers from two significant drawbacks right now.</p>
+<ol>
+<li>There are no net-postive sequencer fees rn.</li>
+<li>There is nothing in it for the builder to choose PGN.  Only a vague promise of future ecosystem benefit.</li>
+</ol>
+<p>It seems like until PGN solves its <a href="https://www.nfx.com/post/network-effects-bible#Chicken-or-Egg-Problem-(Cold-Start-Problem)">cold start problem</a>, it lacks a compelling USP that will get dApps and users to consume block space on it.</p>
+<aside class="quote no-group" data-username="sophia" data-post="8" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sophia/48/11928_2.png" class="avatar"> sophia:</div>
+<blockquote>
+<p>Admittedly, we’ve been playing it safe.</p>
+</blockquote>
+</aside>
+<p>PGN is <a href="http://paulgraham.com/aord.html">default dead</a> until it hits profitability, so I’d love to see the team behind it playing it less safe + making more decisive moves towards success.</p>
+<aside class="quote no-group" data-username="sophia" data-post="8" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sophia/48/11928_2.png" class="avatar"> sophia:</div>
+<blockquote>
+<p>I joined the team last month with a specific focus on integrating new technical dependencies, so might be lacking some context.</p>
+</blockquote>
+</aside>
+<p>I’m sorry to hear that you’ve been put in this position.</p>
+<p>I hope that something or someone emerges to restore confidence in PGN soon.  Or that we move on and pursue other ventures to fund public goods.</p>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/11">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/11
+        Thu, 21 Dec 2023 22:47:03 +0000
+gov.gitcoin.co-post-17304-11
+PGN Technical Transparency and the Path Forward
+      
+
+PGN Technical Transparency and the Path Forward
+sophia
+
+            <aside class="quote no-group" data-username="thedevanshmehta" data-post="9" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>As someone closely following PGN since inception, the lack of momentum has caused me to reconsider plans of launching my dapp on it.</p>
+</blockquote>
+</aside>
+<p>PGN doesn’t have to be the default network. Can I ask why it can’t be an added network? As we move into a multi-chain future, I envision most dapps will be on many networks.</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="9" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Firstly, I can’t see enough differentiation from Optimism in the comms as both claim a public goods allocation from sequencer fees. OP Mainnet has the advantage of a much more well developed ecosystem</p>
+</blockquote>
+</aside>
+<p>Optimism allocates to network public goods. We don’t just support public goods on our network, but any public goods at large.</p>
+<p>In general, having more systems supporting and funding public goods is good. Optimism will have their own governance method of retropgf and PGN will have their own governance method as well. We love Optimism and think their well developed sequencer fee allocation methods are great! But, one big player deciding how fees are allocated creates centralization. If we value the ethos of web3, it’s crucial to also decentralize sequencer fee allocation control.</p>
+<aside class="quote no-group" data-username="thedevanshmehta" data-post="9" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Secondly many of the protocols i want to build on, such as hypercerts, are not on PGN with no plans of launching there either</p>
+</blockquote>
+</aside>
+<p>We’re adding Hypercerts. What other protocols/tech dependencies aren’t available?</p>
+<p>I’d encourage you to join our telegram channel and participate in our builder calls. That way, we can communicate and assess if we’re on track to provide the necessary technical dependencies for your dApp. We have a roadmap detailing our future tech integrations, which is flexible and evolves based on the needs of our builders. Would love to get your involvement in these conversations <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>As mentioned in this forum post, integrating with new tech dependencies as a smaller L2 hasn’t been seamless. But, we are in the process of working alongside other L2s in the Superchain ecosystem to “unionize” our efforts.</p>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/10">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/10
+        Thu, 21 Dec 2023 18:56:33 +0000
+gov.gitcoin.co-post-17304-10
+PGN Technical Transparency and the Path Forward
+      
+
+PGN Technical Transparency and the Path Forward
+thedevanshmehta
+
+            <p>As someone closely following PGN since inception, the lack of momentum has caused me to reconsider plans of launching my dapp on it.</p>
+<p>Firstly, I can’t see enough differentiation from Optimism in the comms as both claim a public goods allocation from sequencer fees. OP Mainnet has the advantage of a much more well developed ecosystem</p>
+<p>Secondly many of the protocols i want to build on, such as hypercerts, are not on PGN with no plans of launching there either</p>
+<p>Thirdly, PGN itself seems too much like a Gitcoin Foundation initiative with not enough buy-in from its Alliance partners Giveth, Octant, Hypercerts or even Gitcoin DAO. A true alliance would do cost-sharing and support more than what we have witnessed so far.</p>
+<p>I do not mean to be needlessly critical or harsh, I like the vision of PGN ! What needs more clarification is how different alliance members show buy-in of the chain and also how the mission is substantively different from Optimism</p>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/9">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/9
+        Thu, 21 Dec 2023 13:28:42 +0000
+gov.gitcoin.co-post-17304-9
+PGN Technical Transparency and the Path Forward
+      
+
+PGN Technical Transparency and the Path Forward
+sophia
+
+            <p>Thanks for the detailed response - I fully agree. We need to be candid about what’s happening at PGN if we want to see things change.</p>
+<p>I joined the team last month with a specific focus on integrating new technical dependencies, so might be lacking some context. But here are my thoughts based off of my understanding so far:</p>
+<aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>It’s not clear to me what the Unique Selling Proposition of PGN is, nor where the deep well of market demand is realistically going to come from.</p>
+</blockquote>
+</aside>
+<p>Officially, our USP is that net sequencer fees go to public good projects. While, that doesn’t mean much in our current state, exploring sustainable funding methods is crucial for the public good ecosystem. Yet, a compelling mission alone isn’t enough.</p>
+<p>I believe a well designed sequencer fee allocation plan would strengthen our USP. PGN plans to announce more information on the governance strategy in January. I haven’t been directly involved in these discussions, but as you know, I personally would like to see us implement contract secured revenue. The main issue isn’t getting dApps to deploy on our network, its incentivizing them to consume block space. I’d like to see PGN leverage CSR as a mutually beneficial unique selling point to mitigate this.</p>
+<aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Other than Gitcoin Grants, there is not any other dApps consuming block space on PGN.</p>
+</blockquote>
+</aside>
+<p>True. While getting developers to deploy dApps on PGN hasn’t been seamless (because of some technical hurdles), we’re still an added network on <a href="https://publicgoods.network/">other high traffic dApps</a> besides just Gitcoin Grants. Yet, they aren’t consuming nearly enough block space - probably due to our weak USP and mediocre tech.</p>
+<p>As outlined above, we have a strategy to fix our mediocre tech. And, I’d like to test if bootstrapping CSR can fix our weak USP.</p>
+<p>The scalability vision of the <a href="https://docs.optimism.io/stack/explainer">Superchain</a> is that most big dApps will <a href="https://x.com/Th3Optimist/status/1735042164780880246?s=20">eventually have their own app chain.</a> If that is the direction we’re going in, public good dApps might as well use PGN. It’s already built out, values aligned, part of the superchain, and (if CSR is implemented) creates a new source of direct funding. Win win!!</p>
+<aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>If PGN is going to continue, I want to see more volatile energy coming out of the PGN team</p>
+</blockquote>
+</aside>
+<p>Admittedly, we’ve been playing it safe. I like your bootstrap suggestions for some experiments we can run. There’s a lot more we can do to be creative, cut corners, and get this flywheel moving. Hopefully, we can test that out in the new year.</p>
+<aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Gitcoin was funded by Consensys/Paradigm.</p>
+</blockquote>
+</aside>
+<p>oops didn’t know that. I still don’t think we plan to allocate any sequencer fees back to them though. No shade to other L2s, but my understanding of other L2 funding models is that they typically start with a significant amount of capital that pumps network activity to generate sequencer fees and be profitable.</p>
+<p>But, like you said, there are other creative ways to pump network activity that don’t require significant capital.</p>
+<aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>It <a href="https://vxtwitter.com/0xkofi/status/1735796630769512526?s=46&amp;t=X0oQ26a3ezptVAZLp1QFaw">spends $10k-100k/mo (depending on whether there is a Gitcoin Grants round that month) </a> on keeping PGN alive.</p>
+</blockquote>
+</aside>
+<p>The link you added is referencing what we spent on posting data to Ethereum. What is not shown is that that same month our total revenue from gas fees was 38.78 ETH (numbers from Conduit our rollup provider). So our data cost was the difference (around 10 ETH).</p>
+<p>Besides getting more tx volume, we can also increase gas fees so that we break even. Of course, increasing gas fees might upset users, so the key here is strengthening our USP.</p>
+<aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Here’s one thing we could do to bootstrap demand with only a few thousand $$$/mo. Implement <a href="https://eips.ethereum.org/EIPS/eip-6968">Contract Secured Revenue</a> with a lean no-code approach:</p>
+</blockquote>
+</aside>
+<p>Love this! I wanted to run some adoption reward experiments but need to get the green light from budgeting first… I don’t have full understanding for how finances work, but pretty sure we have to get every financial cost (from tech dependencies to experiments) approved by the foundation. And asking the foundation for money is a bit sensitive. (Would like to re-emphasize I don’t get how this stuff works so I could be totally wrong here. Don’t mean to speak for anyone or throw people under the bus).</p>
+<aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>What would have to be true for the original vision of growing the pie of available public goods funding <strong>to be on track</strong> (not just possible)?.</p>
+</blockquote>
+</aside>
+<ol>
+<li>Better tech (more superchain interoperability tooling, funding to pay for key tech dependencies, etc.)</li>
+<li>A stronger USP</li>
+<li>More capital to experiment with adoption rewards</li>
+</ol>
+<p>Would enable:</p>
+<ol>
+<li>More dApps deploying on PGN</li>
+<li>dApps incentivized to add us as their default network and consume blockspace</li>
+</ol>
+<aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I have authored a brief <a href="https://docs.google.com/document/d/1TaIdypMcXyjn_d4m3Y6SWfbkYNJCmy4NfES_s4PLxno/edit">here </a> in which I propose an increase in momentum for PGN. I am looking forward to discussing together with PGN leaders in the coming months.</p>
+</blockquote>
+</aside>
+<p>Same here! We have a challenging road ahead but an important one.</p>
+<p>The L2 ecosystem is not slowing down. As this ecosystem continues to evolve, it’s likely that mature dApps will start considering creating their own L2s. While being early created a lot of technical hurdles and killed our momentum, it also means we are well positioned for a multi-chain future.</p>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/8
+        Thu, 21 Dec 2023 04:45:59 +0000
+gov.gitcoin.co-post-17304-8
+PGN Technical Transparency and the Path Forward
+      
+
+PGN Technical Transparency and the Path Forward
+sophia
+
+            <p>Ooo great thinking!</p>
+<p>PGN is already an active network on jokerace and zora, so that’d be an easy lift.</p>
+<p>Some feedback we received from OP Labs is to identify <strong>how</strong> we expect users to engage on our network and build for that. Previously, we were targetting other public good funding dApps but the defi infra on our network is not the strongest.</p>
+<p>Perhaps the social use case is strong enough for PGN to be self sufficient. (With our current financial models and transaction volume, we are about half way there). This is something I’d definitely like to explore more in the new year.</p>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/7
+        Thu, 21 Dec 2023 01:42:49 +0000
+gov.gitcoin.co-post-17304-7
+PGN Technical Transparency and the Path Forward
+      
+
+PGN Technical Transparency and the Path Forward
+sophia
+
+            <aside class="quote no-group" data-username="Jimi" data-post="2" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jimi/48/12003_2.png" class="avatar"> Jimi:</div>
+<blockquote>
+<p>Since PGN is apart of Optimism’s Superchain ecosystem, does that mean startups that launch on PGN will still qualify for Optimism Retro PGF?</p>
+</blockquote>
+</aside>
+<p>Yes! This is something we definitely need to publicize more.</p>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/6
+        Thu, 21 Dec 2023 01:26:12 +0000
+gov.gitcoin.co-post-17304-6
+PGN Technical Transparency and the Path Forward
+      
+
+PGN Technical Transparency and the Path Forward
+CryptoReuMD
+
+            <aside class="quote no-group" data-username="owocki" data-post="4" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>Reading between the lines, the launch of PGN has been lackluster so far. Other than Gitcoin Grants, there is not any other dApps consuming block space on PGN. According to the dune dashboards <a href="https://dune.com/oplabspbc/op-stack-chains-l1-activity" rel="noopener nofollow ugc">here</a> and <a href="https://dune.com/kouei/pgn-bridge-overview" rel="noopener nofollow ugc">here</a> it’s not being used much outside of Gitcoin Grants.</p>
+</blockquote>
+</aside>
+<p>Interestingly, several people within the DeFi universe are keeping track of this. No other use can be found.<br>
+Areas for improvement:<br>
+1.- We could start using chain governance and start by voting on a tool like Tally that signs on PGN.<br>
+2.- Make more use of the terms and conditions in PGN, as we often have to bridge to Ethereum to make decisions.<br>
+3.- Launch a stable coin ecosystem or in due time a DeFi place to be able to make exchanges within PGN.<br>
+4.- The introduction of hyper-certs in PGN, not only in optimism.<br>
+5.- The Gitcoin passport, the atm station is done in Optimism. We could mine it in PGN.<br>
+In the end, the intention is to use more PGN chain, not only for rounds.<br>
+Best</p>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/5
+        Wed, 20 Dec 2023 18:53:48 +0000
+gov.gitcoin.co-post-17304-5
+PGN Technical Transparency and the Path Forward
+      
+
+PGN Technical Transparency and the Path Forward
+owocki
+
+            <p>Thanks for the detailed post Sophia.</p>
+<p>Reading between the lines, the launch of PGN has been lackluster so far.  Other than Gitcoin Grants, there is not any other dApps consuming block space on PGN.  According to the dune dashboards <a href="https://dune.com/oplabspbc/op-stack-chains-l1-activity">here</a> and <a href="https://dune.com/kouei/pgn-bridge-overview">here</a> it’s not being used much outside of Gitcoin Grants.</p>
+<p>I say this not to be needlessly critical, but because I think we should look at this soberly if we are to turn it around.</p>
+<p>It’s not clear to me what the Unique Selling Proposition of PGN is, nor where the deep well of market demand is realistically going to come from.   “How do we get developers to deploy their dApps on PGN?” feels like a very germane question.</p>
+<p>If PGN is going to continue operations, I’d love to see the PGN team have more of a bias towards creating momentum on PGN.   Momentum begets momentum   PGN is basically a mini pre product market fit startup + most startups die because of a lack of momentum. -  If PGN is going to continue, I want to see more volatile energy coming out of the PGN team ( <a href="https://randsinrepose.com/archives/stables-and-volatiles/" class="inline-onebox">Stables and Volatiles – Rands in Repose</a> ) creating momentum.</p>
+<hr>
+<aside class="quote no-group" data-username="sophia" data-post="1" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sophia/48/11928_2.png" class="avatar"> sophia:</div>
+<blockquote>
+<p>PGN has no external (venture) funding</p>
+</blockquote>
+</aside>
+<p>Gitcoin was funded by Consensys/Paradigm.  And has a fairly large treasury relative to it’s humble beginnings.  It <a href="https://vxtwitter.com/0xkofi/status/1735796630769512526?s=46&amp;t=X0oQ26a3ezptVAZLp1QFaw">spends $10k-100k/mo (depending on whether there is a Gitcoin Grants round that month)</a> on keeping PGN alive.</p>
+<p>Between 2018-2021 Gitcoin spent less than $130k/mo on all of Gitcoin (at the time, this meant Grants, Bounties, and KERNEL business lines).</p>
+<p>I feel like PGN has got a scarcity mindset here when we need not have one.</p>
+<p>Maybe if/when batch txns go live, ya’ll can save some $$$ on gas fees + reroute that to marketing and adoption rewards.</p>
+<p>Here’s one thing we could do to bootstrap demand with only a few thousand $$$/mo.  Implement <a href="https://eips.ethereum.org/EIPS/eip-6968">Contract Secured Revenue</a> with a lean no-code approach:</p>
+<ol>
+<li>i can get u a list of addresses by the amount of blockspace they consumed</li>
+<li>we airdrop $5k of rewards to them</li>
+<li>we market that PGN rewards developers of public goods.</li>
+<li>repeat every month + increase funding as more becomes available.</li>
+</ol>
+<p>thats 0 to 1 on PGN CSR that we can do in a few hours.</p>
+<hr>
+<aside class="quote no-group" data-username="sophia" data-post="1" data-topic="17304">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/sophia/48/11928_2.png" class="avatar"> sophia:</div>
+<blockquote>
+<p>We are confident that as L2 technology matures, and as our ecosystem grows, the original vision of growing the pie of available public goods funding is still possible.</p>
+</blockquote>
+</aside>
+<p>What would have to be true for the original vision of growing the pie of available public goods funding <strong>to be on track</strong> (not just possible)?.</p>
+<hr>
+<p>Given that PGN was launched out of the Gitcoin Foundation + not through DAO governance, I do not have much more to say on the gov forums other than to say that I hope this situation is resolved well before the Foundation needs to come to the DAO for more funding.   The Foundation does critical support work for the DAO, and I don’t want to see that complicated, or put at risk, by the Foundation burning too much of its $$$ on a skunkworks project. (i’m not saying that has already happened, i’m saying its a potential future scenario that should be avoided)</p>
+<p>I have authored a brief <a href="https://docs.google.com/document/d/1TaIdypMcXyjn_d4m3Y6SWfbkYNJCmy4NfES_s4PLxno/edit">here</a> in which I propose an increase in momentum for PGN.   I am looking forward to discussing together with PGN leaders in the coming months.</p>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/4
+        Tue, 19 Dec 2023 17:30:59 +0000
+gov.gitcoin.co-post-17304-4
+PGN Technical Transparency and the Path Forward
+      
+
+PGN Technical Transparency and the Path Forward
+ccerv1
+
+            <p>Great post!</p>
+<p>It’s worth considering what could be done to encourage more public goods projects to build their community on PGN first and foremost, eg, layering use cases across Zora, Guild, Jokerace, etc. These are much more social than financial use cases.</p>
+<p>I’d also love to see more identity primitives take root on PGN. For instance, it would be great to see a protocol like EAS deploy on PGN.</p>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/3
+        Tue, 19 Dec 2023 13:56:50 +0000
+gov.gitcoin.co-post-17304-3
+PGN Technical Transparency and the Path Forward
+      
+
+PGN Technical Transparency and the Path Forward
+Jimi
+
+            <p>Thank you for sharing all of these aspects of PGN, Sophia.</p>
+<p>Talk about building in public! <img src="https://gov.gitcoin.co/images/emoji/twitter/clap.png?v=12" title=":clap:" class="emoji" alt=":clap:" loading="lazy" width="20" height="20"></p>
+<p>Questions for you:</p>
+<ol>
+<li>Since PGN is apart of Optimism’s Superchain ecosystem, does that mean startups that launch on PGN will still qualify for Optimism Retro PGF?</li>
+<li>Since limited resources is challenge, why not launch a token or NFT that could crowdfund for PGN?</li>
+</ol>
+<p>Let’s GROW</p>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/2
+        Tue, 19 Dec 2023 12:27:56 +0000
+gov.gitcoin.co-post-17304-2
+PGN Technical Transparency and the Path Forward
+      
+
+PGN Technical Transparency and the Path Forward
+sophia
+
+            <h1><a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a><strong>TLDR</strong></h1>
+<ul>
+<li>Initial technical hurdles impacted PGN’s early growth</li>
+<li>PGN is part of the Optimism Superchain, a network of L2s working together</li>
+<li>Our alliance with OP Labs provides vital technical support and resource that can accelerate our technical development</li>
+</ul>
+<hr>
+<p>PGN launched 6 months ago with an innovative and ambitious goal of creating durable and recurring funding for public goods. As one of the first small players to launch an L2 on the OP Stack, we have admittedly encountered technical challenges due to the inherent novelty and complexity involved in operationalizing decentralized compute environments. While these technical challenges have hindered our ability to grow at the pace and scale we envisioned, our commitment to the original goal remains steadfast.</p>
+<p>We also feel it is worthwhile and productive to share more transparently on what it really takes to launch an L2. We are confident that as L2 technology matures, and as our ecosystem grows, the original vision of growing the pie of available public goods funding is still possible.</p>
+<h1><a name="technical-hurdles-2" class="anchor" href="https://gov.gitcoin.co#technical-hurdles-2"></a><strong>Technical Hurdles</strong></h1>
+<p>It is easy to take for granted how well developed the Ethereum ecosystem is, with new platforms and improvements being added regularly. Today’s Ethereum is a very functional place for a crypto native person, with multiple wallet, exchange, block explorer and security solutions available. When building an L2 from scratch, each of these technical integrations must be identified and built independently, based on the focus of that specific L2.</p>
+<h3><a name="integrating-technical-dependencies-3" class="anchor" href="https://gov.gitcoin.co#integrating-technical-dependencies-3"></a><strong>Integrating technical dependencies</strong></h3>
+<p>The process for integrating with various technical dependency providers can be broken down into three main approaches:</p>
+<ol>
+<li><strong>Decentralized Providers:</strong> This usually involves drafting a detailed proposal on their forum that highlights the advantages of integrating PGN. Then, we rally community support and gather votes to ensure our network gets added.</li>
+<li><strong>Traditional Teams:</strong> The focus here is on building relationships. This typically involves communicating directly with providers to explain PGN’s advantages and offering technical support for integration.</li>
+<li><strong>Self-integration:</strong> In some instances, we can directly add our network and submit a pull request. However, more often than not, getting our pull request merged hinges on the integration partner’s willingness to include our network. This also doesn’t guarantee that our network will be incorporated into the frontend UI.</li>
+</ol>
+<p>Understandably, providers often want to see evidence of significant activity on our network to justify the effort required for integration. Some may request upfront capital to cover deployment and maintenance costs.</p>
+<h3><a name="limited-resources-4" class="anchor" href="https://gov.gitcoin.co#limited-resources-4"></a><strong>Limited resources</strong></h3>
+<p>PGN has no external (venture) funding pumping our network activity.</p>
+<p>As a public good itself, this was an intentional part of PGN’s strategy. We prioritize allocating sequencer fees towards public goods instead of venture capitalists. However, bootstrapping an L2 with a small team and a limited budget is challenging. This constraint has limited our ability to integrate with various service providers as we have to strategize which technical dependencies we prioritize.</p>
+<h3><a name="l2s-flywheel-problem-5" class="anchor" href="https://gov.gitcoin.co#l2s-flywheel-problem-5"></a><strong>L2s flywheel problem</strong></h3>
+<p>Initially, we underestimated the extent of technical dependencies and integrations needed for an <strong>ecosystem-ready</strong> L2 network. This resulted in technical obstacles, most notably the lack of a Safe UI, which significantly slowed down our deployment with ecosystem partners. Without the necessary technical dependencies in place, the pace of our ecosystem growth was delayed.</p>
+<p>Once we overcome these initial technical hurdles and achieve ecosystem readiness, we can confidently move forward with the next phase of PGN’s development. At a high level, we aim to focus on expanding alliance partnerships, integrating dApps, and growing transaction volume. (More details on this to come in future discussion posts).</p>
+<p>We launched in a state where PGN was not fully ecosystem-ready. We lost momentum in the process. So, the big question still remains… When will we get the flywheel moving?!</p>
+<h1><a name="the-op-superchain-6" class="anchor" href="https://gov.gitcoin.co#the-op-superchain-6"></a><strong>The OP Superchain</strong></h1>
+<p>Despite our initial challenges, being part of Optimism’s Superchain ecosystem provides us with a vital lifeline. <strong>We’re not a siloed L2.</strong> PGN is still in its infancy but being one of the early adopters in the Superchain ecosystem gives us a unique advantage; we get to work directly with OP Labs, Base, Test in Prod, and other Optimism core contributors, shaping the future of how these chains can effectively interact and function together.</p>
+<h3><a name="what-does-this-mean-7" class="anchor" href="https://gov.gitcoin.co#what-does-this-mean-7"></a><strong>What does this mean?</strong></h3>
+<p>Since meeting in person at DevConnect, we’ve gone deep in our relationship with extremely helpful individuals on the OP Labs team and across the Optimism Collective. We have been closely working with them to overcome these technical barriers and develop our overall strategy. This includes weekly meetings where we discuss and address broader L2 strategy and identify areas where we need technical support. We have received valuable feedback regarding bridging, stablecoins, and areas within our ecosystem that require further attention. Additionally, they are helping to support the development of crucial components of our technical dependencies, such as the Safe UI, which was a major obstacle for our partners before they could build on our network. (More details on that to come soon!)</p>
+<h3><a name="why-are-they-doing-this-8" class="anchor" href="https://gov.gitcoin.co#why-are-they-doing-this-8"></a><strong>Why are they doing this?</strong></h3>
+<p>PGN’s success advances the success of the Superchain ecosystem. The grander vision is a network of chains, each with an individual market and value prop, that share bridging, decentralized governance, upgrades, a communication layer and more—all built on the OP Stack.</p>
+<p>The ultimate goal is to merge OP Mainnet and other L2s built on the OP Stack (such as Base, Zora, PGN, and others into a single unified network of chains. Learn more about it <a href="https://stack.optimism.io/docs/understand/explainer/">here</a>. This paves the way for a more scalable and decentralized web.</p>
+<h3><a name="a-shared-vision-9" class="anchor" href="https://gov.gitcoin.co#a-shared-vision-9"></a><strong>A shared vision</strong></h3>
+<p>In a truly decentralized web, more players should be able to create an L2 and benefit from sequencer fees, with governance over their allocation within their ecosystem. Not just players that have a lot of upfront venture capital where fees benefit early investors.</p>
+<p>Yes, bootstrapping an L2 in the current ecosystem is incredibly challenging. However, creating this opportunity is crucial for the overall L2 and Superchain ecosystem, which itself is vital to a thriving on chain future. PGN’s experiences and transparency as a public good itself serve as valuable learning opportunities for the Optimism Collective, allowing them to design better support mechanisms for the L2 Superchain ecosystem.</p>
+<p>We will explore the Optimism Superchain and PGN’s role within this broader narrative and movement in a future post. Stay tuned!</p>
+<h2><a name="looking-ahead-10" class="anchor" href="https://gov.gitcoin.co#looking-ahead-10"></a><strong>Looking ahead</strong></h2>
+<p>The Superchain ecosystem is still early. Many of the anticipated benefits, such as interchain interoperability and standardization, are yet to be fully realized.</p>
+<p>For example, Grant Stack is exploring multi-chain checkout solutions. In a future where Superchain interoperability tooling is more abundant, multichain checkout across PGN, Base, and OP Mainnet would be effortless, offering dApps a plug-and-play solution.</p>
+<p>Another example is span batches, a technique developed for the OP Stack specificallyto efficiently aggregate and compress transaction data, significantly reducing data size and lowering costs for PGN. Research from Test in Prod indicates that, during the GG18 event, the use of span batches could have slashed PGN’s L1 costs by 50% to 90%. This is planned to be implemented as part of the Optimism Delta hard fork if it passes a governance vote scheduled for January - in which case it would be rolled out around mid to late February. You can read more about it here [<a href="https://x.com/testinprod_io/status/1723367847483646175?s=20">https://x.com/testinprod_io/status/1723367847483646175?s=20</a>] and I’ll continue to update as I learn more.</p>
+<h1><a name="the-bigger-picture-11" class="anchor" href="https://gov.gitcoin.co#the-bigger-picture-11"></a><strong>The Bigger Picture</strong></h1>
+<p>Though PGN is still in its initial development stage, with technical hurdles still to tackle, we are part of a larger movement. PGN is not a siloed L2; we are deeply integrated within the Optimism ecosystem and supported by its powerful network.</p>
+<p>Our mission is important. The future is leaning towards a world with multiple L2s, and PGN is not an outlier in this trend. While the current landscape is crowded with L2s, leading to fractured UX challenges, the need for horizontal scalability requires multiple chains. The current user experience pain points surrounding L2s primarily stem from the incomplete development of interoperability solutions - but these challenges are being actively addressed, and acceleration toward solutions will only come from a willing commitment to engage in the challenges.</p>
+<p><em><strong>It’s important that we lay down the groundwork. By building the necessary infrastructure now, more communities can create and support their own L2 ecosystems, ensuring that sequencer fee control isn’t just in the hands of those with the most resources.</strong></em></p>
+<p>PGN is an ambitious experiment. We acknowledge that bootstrapping an L2 is a challenging task, and PGN’s struggles highlight the need for improved support. While we faced many blockers, it’s an important problem to try and solve. We are learning and sharing valuable lessons along the way and contributing to a future where public goods receive the sustainable funding they deserve.</p>
+<h2><a name="our-call-to-action-12" class="anchor" href="https://gov.gitcoin.co#our-call-to-action-12"></a><strong>Our call to action</strong></h2>
+<p><strong>If you believe in our mission, the most helpful thing you can do is contribute to and advocate for the development of core infrastructure on PGN.</strong></p>
+<p>Here’s how:</p>
+<ul>
+<li><a href="https://t.me/pgn_eth">Join our Telegram</a> and shape the technical roadmap through feedback and support.</li>
+<li><a href="mailto:pgn@gitcoin.co">Join the Alliance</a> and contribute to public goods funding by filling blockspace.</li>
+<li><a href="https://docs.publicgoods.network/">Deploy your project onto PGN</a> and <a href="https://docs.publicgoods.network/">join the biweekly Builders Calls</a> to grow the ecosystem.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/pgn-technical-transparency-and-the-path-forward/17304/1
+        Tue, 19 Dec 2023 02:37:40 +0000
+gov.gitcoin.co-post-17304-1
+PGN Technical Transparency and the Path Forward
+      
+
+

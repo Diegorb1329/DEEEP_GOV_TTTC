@@ -1,0 +1,270 @@
+
+
+
+Gitcoin Citizens Retro #3 - Early Retrospective
+https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637
+    # How did Citizens #3 round go?
+
+It turns out **Gitcoin Citizens #3** round was quite successful, so as we are waiting for matching payouts, I wanted to share brief retrospective here which answers some questions that I was curious about. 
+
+Big thanks to @umarkhaneth, @ghostffcode and [RegenData.xyz](regendata.xyz) for making it easy to explore round data, and folks working on [ReportCards](reportcards.gitcoin.co) for creating a great tool to browse round summaries.
+
+Gitcoin Citizen rounds are supposed to reward contributors to Gitcoin ecosystem.
+
+Donation stats for each round held to date:
+
+- [Citizens #1](https://reportcards.gitcoin.co/10/0x984e29dCB4286c2D9cbAA2c238AfDd8A191Eefbc) - **$82,995.13** to **33** projects from **17,023** donors on **Optimism**
+- [Citizens #2](https://reportcards.gitcoin.co/424/0x7492a8c4ED29B1F1559888Bd832fAe5D33E10370) - **$14,710.96** to **64** contributors from **1,350** donors on **PGN**
+- [Citizens #3](https://reportcards.gitcoin.co/42161/0x5aA255d5CAe9B6cE0F2d9AEE209cB02349B83731) - **$54,451.88** to **61** contributors from **3,495** donors on **Arbitrum**
+
+Notable Differences between rounds:
+- **Citizens #3** focused 100% on retroactive work, unlike **Citizens #2**
+- Citizens **2-3** focused on individuals instead of projects, possibly making rounds less attractive for airdrop farmers [(?)](https://gov.gitcoin.co/t/gitcoin-citizens-round-1-results/16302)
+- **Citizens #3** introduced *[signal boosting](https://gov.gitcoin.co/t/signal-boosting-for-gitcoin-citizens-retro-3/18518)* with 12 Gitcoiners sponsored with about $1,400 each to donate.
+
+Technically, when counting **"crowdfunding"** we may want to discount those signal boosting donations but from granteee POV this looks like any other donation. 
+### Final Donations
+
+Short summary of **Citizens #3**:
+- $54k of crowdfunding dispersed among 61 citizens. 
+- 16 citizens in total got over $1000
+- 53 citizens in total got over $500 
+
+Trivia:
+- Best performing grant yielded $1700
+- Worst performing grant yielded $300
+- 32 grantees donated to other grantees
+- Total grantee-to-grantee donations amount to $5k (including $3k sponsored by Signal Boosting)
+
+Lets compare money recieved with each recipient against number of individual donations they received:
+
+**Gitcoin Citizens #3 - value and number donations**
+![Pasted image 20240418231546|690x302](upload://xB7O5kuovQQjALbl5gsq2Simru.png)
+
+What I find encouraging, is that although some citizens were given less money (**so far** - matching is yet to be dispersed) they still got fair share of attention from donors.
+
+We can contrast this with previous round, where decrease in dollar value received followed decrease in number of donations obtained by each grantee.
+
+ **Gitcoin Citizens #2 - value and number of donations** 
+![image|690x298](upload://hBUQ4bTppag1U3yW7YwnlEQIr2c.png)
+
+I cannot really explain why we are seeing this right now, but I think answer may lie in distribution of donations. 
+
+Going back to **Citizens #3**, I found it interesting to count how many grantees each individual donor decided to support. The result is the following distribution: 
+
+![Pasted image 20240418232352|690x304](upload://5jfMZSbAdClW7kcQyBUjxmtCZKY.png)
+Donating to a single project was a popular choice. Yet, majority of donors opted to support multiple grantees with 10 being second most popular option: 
+
+- 3,495 donors in total
+- 1,300 (37%) donated to exactly one grantee
+-  930 (27%) donated to exactly ten grantees
+
+Two peaks on the graph may suggest new donors are trying to qualify or somehow "reaffirm" the "donated to 10 projects" and "donated to 25 projects" passport stamp.
+
+Majority of donors supporting multiple project, did not have strong preferences and donated roughly similar amount to each:
+- 1,096 donors split donation **evenly** (no difference) between multiple projects
+- 1,960 donors staggered donations by $1 or less
+- 45 donors staggered donations by $10 dollars or more
+
+For actual breakdown of donations to each grantee, I recommend following the [Citizens#3 Reportcard](https://reportcards.gitcoin.co/42161/0x5aA255d5CAe9B6cE0F2d9AEE209cB02349B83731)
+
+### Tokens Used
+
+![Pasted image 20240418234658|690x248](upload://7wQxcAHo4zhgmkYValpvhDEQImx.png)
+
+Most value in donations was transferred using either Eth or USDC. 
+
+![Pasted image 20240418234614|690x207](upload://qx0XAXUk3TmSJ0xkyqXLA6sqryj.png)
+If we look at proportion of tokens received by each grantee we would see those proportions are consistent with distribution shown above.  
+
+The chart is ordered by total dollar value of donations obtained by each recipient, starting from grant with highest total of donations received placed on the left.  
+
+Eight of best performing grantees got higher proportion (around 70%) of donations in USDC as compared to other tokens. This can be due to "signal boosting donations" sponsored by Gitcoin being dispersed as USDC? I want to make closer look at signal boosting once we know how final outcome of matching.
+ 
+### Acceptance 
+How strict was the application process?
+
+I took a quick look at public application details to see how selective the review process was. Around **~100** applications were submitted, with **61** being accepted in the end. Some of initially rejected applicants were able to secure approval after modifying application.
+
+**Common problems:**
+- Unclear or non-existent description
+- Application describes project or group of people instead of a person
+- Application contains promise of future work, but no mention of what was done so far
+
+I did not read through every applications, but from what I have seen, I feel like every person that made good-faith effort to showcase how work done is a past was relevant to Gitcoin was ultimately accepted into the round. 
+### Do the results make sense?
+![image|689x492](upload://9tdQxRN6NdWDRaZHONnfLtxm6Xs.png)
+
+This is purely personal outlook on how things went so far:
+
+- I see instances of people who worked on same projects (e.g. Streaming QF) ranking close in donation amounts. I see it as positive signal that overal distribution of donations is sensible as opposed to random.
+- People who are "closer" to Gitcoin core (Stewards, Workstream members) did well but fair share of donations went to folks working on periphery of the DAO with no "official function" so to speak.
+- Citizens doing various activities like translations, running-rounds, onboarding seem fairly represented throughout the round.
+
+Looking beyond donations and numbers, and moving-on to my experience as grantee and donor:
+- I like "matching-on-matching" sponsored by Arbitrum and partially by @Owocki. As grantee I would like to know a bit more about breakdown of matching pool - as in what proportion of total dollar value in matching pool comes from which sponsor?  
+ - Social media support by **GitcoinCitizens** twitter handle was always stellar, at least from my perspective. I like that in this round, **Gitcoin** handle was much more active in promoting the round than it was previously during Citizens #2. 
+- Apart from donations, it is nice to have event that brings community together so that we can see what everyone in ecosystem is doing. 
+- Browsing through grantee profiles on Grants Stack wasn't easy, so I apperciated "signal boosters" and fellow grantees who took time to make twitter lists, as well as @rohit sharing GrantsScope.
+
+I hope organizations looking to reward contributors would see current Citizens initiative as proof that running such Retroactive rounds together with Gitcoin can be a pretty good deal.
+
+Crowdfunding and matching-on-matching can markedly increase money going to ecosystem contributors!
+
+
+This is all I have at the moment, so feel free to drop any opinions about the round itself or this post, as we wait for final results!
+Fri, 26 Apr 2024 07:25:20 +0000
+🌱 Gitcoin Grants
+
+
+Gitcoin Citizens Retro #3 - Early Retrospective
+webx1610
+
+            <p>how to find out if you are part of grantee</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637/5
+        Fri, 26 Apr 2024 07:25:20 +0000
+gov.gitcoin.co-post-18637-5
+Gitcoin Citizens Retro #3 - Early Retrospective
+      
+
+Gitcoin Citizens Retro #3 - Early Retrospective
+free2ride19
+
+            <p>An avenue to gain more knowledge on recent trends in data signal, thank you for the update.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/free2ride19">@free2ride19</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637/4
+        Fri, 26 Apr 2024 06:29:54 +0000
+gov.gitcoin.co-post-18637-4
+Gitcoin Citizens Retro #3 - Early Retrospective
+      
+
+Gitcoin Citizens Retro #3 - Early Retrospective
+Swiftevo
+
+            <p>Detail reportting about the round. Thanks for the analysis.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637/3
+        Sat, 20 Apr 2024 16:08:03 +0000
+gov.gitcoin.co-post-18637-3
+Gitcoin Citizens Retro #3 - Early Retrospective
+      
+
+Gitcoin Citizens Retro #3 - Early Retrospective
+MonicaTalan
+
+            <p>Thank you - very helpful insights. A recommended read to those who want to apply to future rounds.</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637/2
+        Fri, 19 Apr 2024 22:03:16 +0000
+gov.gitcoin.co-post-18637-2
+Gitcoin Citizens Retro #3 - Early Retrospective
+      
+
+Gitcoin Citizens Retro #3 - Early Retrospective
+DistributedDoge
+
+            <h1><a name="how-did-citizens-3-round-go-1" class="anchor" href="https://gov.gitcoin.co#how-did-citizens-3-round-go-1"></a>How did Citizens <span class="hashtag-raw">#3</span> round go?</h1>
+<p>It turns out <strong>Gitcoin Citizens <span class="hashtag-raw">#3</span></strong> round was quite successful, so as we are waiting for matching payouts, I wanted to share brief retrospective here which answers some questions that I was curious about.</p>
+<p>Big thanks to <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a>, <a class="mention" href="https://gov.gitcoin.co/u/ghostffcode">@ghostffcode</a> and <a href="https://gov.gitcoin.co">RegenData.xyz</a> for making it easy to explore round data, and folks working on <a href="https://gov.gitcoin.co">ReportCards</a> for creating a great tool to browse round summaries.</p>
+<p>Gitcoin Citizen rounds are supposed to reward contributors to Gitcoin ecosystem.</p>
+<p>Donation stats for each round held to date:</p>
+<ul>
+<li><a href="https://reportcards.gitcoin.co/10/0x984e29dCB4286c2D9cbAA2c238AfDd8A191Eefbc" rel="noopener nofollow ugc">Citizens #1</a> - <strong>$82,995.13</strong> to <strong>33</strong> projects from <strong>17,023</strong> donors on <strong>Optimism</strong></li>
+<li><a href="https://reportcards.gitcoin.co/424/0x7492a8c4ED29B1F1559888Bd832fAe5D33E10370" rel="noopener nofollow ugc">Citizens #2</a> - <strong>$14,710.96</strong> to <strong>64</strong> contributors from <strong>1,350</strong> donors on <strong>PGN</strong></li>
+<li><a href="https://reportcards.gitcoin.co/42161/0x5aA255d5CAe9B6cE0F2d9AEE209cB02349B83731" rel="noopener nofollow ugc">Citizens #3</a> - <strong>$54,451.88</strong> to <strong>61</strong> contributors from <strong>3,495</strong> donors on <strong>Arbitrum</strong></li>
+</ul>
+<p>Notable Differences between rounds:</p>
+<ul>
+<li><strong>Citizens <span class="hashtag-raw">#3</span></strong> focused 100% on retroactive work, unlike <strong>Citizens <span class="hashtag-raw">#2</span></strong></li>
+<li>Citizens <strong>2-3</strong> focused on individuals instead of projects, possibly making rounds less attractive for airdrop farmers <a href="https://gov.gitcoin.co/t/gitcoin-citizens-round-1-results/16302">(?)</a></li>
+<li><strong>Citizens <span class="hashtag-raw">#3</span></strong> introduced <em><a href="https://gov.gitcoin.co/t/signal-boosting-for-gitcoin-citizens-retro-3/18518">signal boosting</a></em> with 12 Gitcoiners sponsored with about $1,400 each to donate.</li>
+</ul>
+<p>Technically, when counting <strong>“crowdfunding”</strong> we may want to discount those signal boosting donations but from granteee POV this looks like any other donation.</p>
+<h3><a name="final-donations-2" class="anchor" href="https://gov.gitcoin.co#final-donations-2"></a>Final Donations</h3>
+<p>Short summary of <strong>Citizens <span class="hashtag-raw">#3</span></strong>:</p>
+<ul>
+<li>$54k of crowdfunding dispersed among 61 citizens.</li>
+<li>16 citizens in total got over $1000</li>
+<li>53 citizens in total got over $500</li>
+</ul>
+<p>Trivia:</p>
+<ul>
+<li>Best performing grant yielded $1700</li>
+<li>Worst performing grant yielded $300</li>
+<li>32 grantees donated to other grantees</li>
+<li>Total grantee-to-grantee donations amount to $5k (including $3k sponsored by Signal Boosting)</li>
+</ul>
+<p>Lets compare money recieved with each recipient against number of individual donations they received:</p>
+<p><strong>Gitcoin Citizens <span class="hashtag-raw">#3</span> - value and number donations</strong><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/03cc4abe6019037d7e905a10780eec3994600c10.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/03cc4abe6019037d7e905a10780eec3994600c10" title="Pasted image 20240418231546"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/03cc4abe6019037d7e905a10780eec3994600c10_2_690x302.png" alt="Pasted image 20240418231546" data-base62-sha1="xB7O5kuovQQjALbl5gsq2Simru" width="690" height="302" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/03cc4abe6019037d7e905a10780eec3994600c10_2_690x302.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/03cc4abe6019037d7e905a10780eec3994600c10_2_1035x453.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/0/03cc4abe6019037d7e905a10780eec3994600c10.png 2x" data-dominant-color="EFF4E9"></a></div><p></p>
+<p>What I find encouraging, is that although some citizens were given less money (<strong>so far</strong> - matching is yet to be dispersed) they still got fair share of attention from donors.</p>
+<p>We can contrast this with previous round, where decrease in dollar value received followed decrease in number of donations obtained by each grantee.</p>
+<p><strong>Gitcoin Citizens <span class="hashtag-raw">#2</span> - value and number of donations</strong><br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/7b6e3437eec87be5532c29038628367d72276494.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/7b6e3437eec87be5532c29038628367d72276494" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7b6e3437eec87be5532c29038628367d72276494_2_690x298.png" alt="image" data-base62-sha1="hBUQ4bTppag1U3yW7YwnlEQIr2c" width="690" height="298" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7b6e3437eec87be5532c29038628367d72276494_2_690x298.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/7b6e3437eec87be5532c29038628367d72276494_2_1035x447.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/7/7b6e3437eec87be5532c29038628367d72276494.png 2x" data-dominant-color="F9FAF7"></a></div><p></p>
+<p>I cannot really explain why we are seeing this right now, but I think answer may lie in distribution of donations.</p>
+<p>Going back to <strong>Citizens <span class="hashtag-raw">#3</span></strong>, I found it interesting to count how many grantees each individual donor decided to support. The result is the following distribution:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/253811422053932c83d8a73154336d3be55b53f4.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/253811422053932c83d8a73154336d3be55b53f4" title="Pasted image 20240418232352"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/253811422053932c83d8a73154336d3be55b53f4_2_690x304.png" alt="Pasted image 20240418232352" data-base62-sha1="5jfMZSbAdClW7kcQyBUjxmtCZKY" width="690" height="304" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/253811422053932c83d8a73154336d3be55b53f4_2_690x304.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/253811422053932c83d8a73154336d3be55b53f4_2_1035x456.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/253811422053932c83d8a73154336d3be55b53f4.png 2x" data-dominant-color="F9FCFC"></a></div><br>
+Donating to a single project was a popular choice. Yet, majority of donors opted to support multiple grantees with 10 being second most popular option:<p></p>
+<ul>
+<li>3,495 donors in total</li>
+<li>1,300 (37%) donated to exactly one grantee</li>
+<li>930 (27%) donated to exactly ten grantees</li>
+</ul>
+<p>Two peaks on the graph may suggest new donors are trying to qualify or somehow “reaffirm” the “donated to 10 projects” and “donated to 25 projects” passport stamp.</p>
+<p>Majority of donors supporting multiple project, did not have strong preferences and donated roughly similar amount to each:</p>
+<ul>
+<li>1,096 donors split donation <strong>evenly</strong> (no difference) between multiple projects</li>
+<li>1,960 donors staggered donations by $1 or less</li>
+<li>45 donors staggered donations by $10 dollars or more</li>
+</ul>
+<p>For actual breakdown of donations to each grantee, I recommend following the <a href="https://reportcards.gitcoin.co/42161/0x5aA255d5CAe9B6cE0F2d9AEE209cB02349B83731" rel="noopener nofollow ugc">Citizens#3 Reportcard</a></p>
+<h3><a name="tokens-used-3" class="anchor" href="https://gov.gitcoin.co#tokens-used-3"></a>Tokens Used</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/34c5c38af00c6daa9db939fc009a7666168d21e5.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/34c5c38af00c6daa9db939fc009a7666168d21e5" title="Pasted image 20240418234658"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34c5c38af00c6daa9db939fc009a7666168d21e5_2_690x248.png" alt="Pasted image 20240418234658" data-base62-sha1="7wQxcAHo4zhgmkYValpvhDEQImx" width="690" height="248" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34c5c38af00c6daa9db939fc009a7666168d21e5_2_690x248.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/34c5c38af00c6daa9db939fc009a7666168d21e5_2_1035x372.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/3/34c5c38af00c6daa9db939fc009a7666168d21e5.png 2x" data-dominant-color="F6F1F0"></a></div><p></p>
+<p>Most value in donations was transferred using either Eth or USDC.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b9f3ef76c007388d347478fd91e7f9ebb1ff446b.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/b9f3ef76c007388d347478fd91e7f9ebb1ff446b" title="Pasted image 20240418234614"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b9f3ef76c007388d347478fd91e7f9ebb1ff446b_2_690x207.png" alt="Pasted image 20240418234614" data-base62-sha1="qx0XAXUk3TmSJ0xkyqXLA6sqryj" width="690" height="207" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b9f3ef76c007388d347478fd91e7f9ebb1ff446b_2_690x207.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/b/b9f3ef76c007388d347478fd91e7f9ebb1ff446b_2_1035x310.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/b/b9f3ef76c007388d347478fd91e7f9ebb1ff446b.png 2x" data-dominant-color="D8DBBC"></a></div><br>
+If we look at proportion of tokens received by each grantee we would see those proportions are consistent with distribution shown above.<p></p>
+<p>The chart is ordered by total dollar value of donations obtained by each recipient, starting from grant with highest total of donations received placed on the left.</p>
+<p>Eight of best performing grantees got higher proportion (around 70%) of donations in USDC as compared to other tokens. This can be due to “signal boosting donations” sponsored by Gitcoin being dispersed as USDC? I want to make closer look at signal boosting once we know how final outcome of matching.</p>
+<h3><a name="acceptance-4" class="anchor" href="https://gov.gitcoin.co#acceptance-4"></a>Acceptance</h3>
+<p>How strict was the application process?</p>
+<p>I took a quick look at public application details to see how selective the review process was. Around <strong>~100</strong> applications were submitted, with <strong>61</strong> being accepted in the end. Some of initially rejected applicants were able to secure approval after modifying application.</p>
+<p><strong>Common problems:</strong></p>
+<ul>
+<li>Unclear or non-existent description</li>
+<li>Application describes project or group of people instead of a person</li>
+<li>Application contains promise of future work, but no mention of what was done so far</li>
+</ul>
+<p>I did not read through every applications, but from what I have seen, I feel like every person that made good-faith effort to showcase how work done is a past was relevant to Gitcoin was ultimately accepted into the round.</p>
+<h3><a name="do-the-results-make-sense-5" class="anchor" href="https://gov.gitcoin.co#do-the-results-make-sense-5"></a>Do the results make sense?</h3>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/42613d49d5b4d58d3a6ad4b33ae62e27c1f09d7e.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/42613d49d5b4d58d3a6ad4b33ae62e27c1f09d7e" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/42613d49d5b4d58d3a6ad4b33ae62e27c1f09d7e_2_689x492.png" alt="image" data-base62-sha1="9tdQxRN6NdWDRaZHONnfLtxm6Xs" width="689" height="492" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/42613d49d5b4d58d3a6ad4b33ae62e27c1f09d7e_2_689x492.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/4/42613d49d5b4d58d3a6ad4b33ae62e27c1f09d7e_2_1033x738.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/4/42613d49d5b4d58d3a6ad4b33ae62e27c1f09d7e.png 2x" data-dominant-color="B5ADA7"></a></div><p></p>
+<p>This is purely personal outlook on how things went so far:</p>
+<ul>
+<li>I see instances of people who worked on same projects (e.g. Streaming QF) ranking close in donation amounts. I see it as positive signal that overal distribution of donations is sensible as opposed to random.</li>
+<li>People who are “closer” to Gitcoin core (Stewards, Workstream members) did well but fair share of donations went to folks working on periphery of the DAO with no “official function” so to speak.</li>
+<li>Citizens doing various activities like translations, running-rounds, onboarding seem fairly represented throughout the round.</li>
+</ul>
+<p>Looking beyond donations and numbers, and moving-on to my experience as grantee and donor:</p>
+<ul>
+<li>I like “matching-on-matching” sponsored by Arbitrum and partially by <a class="mention" href="https://gov.gitcoin.co/u/owocki">@Owocki</a>. As grantee I would like to know a bit more about breakdown of matching pool - as in what proportion of total dollar value in matching pool comes from which sponsor?</li>
+<li>Social media support by <strong>GitcoinCitizens</strong> twitter handle was always stellar, at least from my perspective. I like that in this round, <strong>Gitcoin</strong> handle was much more active in promoting the round than it was previously during Citizens <span class="hashtag-raw">#2</span>.</li>
+<li>Apart from donations, it is nice to have event that brings community together so that we can see what everyone in ecosystem is doing.</li>
+<li>Browsing through grantee profiles on Grants Stack wasn’t easy, so I apperciated “signal boosters” and fellow grantees who took time to make twitter lists, as well as <a class="mention" href="https://gov.gitcoin.co/u/rohit">@rohit</a> sharing GrantsScope.</li>
+</ul>
+<p>I hope organizations looking to reward contributors would see current Citizens initiative as proof that running such Retroactive rounds together with Gitcoin can be a pretty good deal.</p>
+<p>Crowdfunding and matching-on-matching can markedly increase money going to ecosystem contributors!</p>
+<p>This is all I have at the moment, so feel free to drop any opinions about the round itself or this post, as we wait for final results!</p>
+          <p><a href="https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gitcoin-citizens-retro-3-early-retrospective/18637/1
+        Fri, 19 Apr 2024 08:31:02 +0000
+gov.gitcoin.co-post-18637-1
+Gitcoin Citizens Retro #3 - Early Retrospective
+      
+
+

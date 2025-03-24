@@ -1,0 +1,933 @@
+
+
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448
+    Newest proposal: [https://gov.gitcoin.co/t/proposal-fdd-season-14-budget-request/10658](https://gov.gitcoin.co/t/proposal-fdd-season-14-budget-request/10658) 
+
+![|234x234](upload://596NvA6cp56U1cMtkUPuGmg69Ym.png)
+
+**Workstream Mandate:** Defend Gitcoin (Grants, DAO, & future products) from threats to its legitimacy, credible neutrality, and sustainability.
+
+# Season 14 Budget Proposal
+
+This is a renewal proposal for the Fraud Detection & Defense workstream requesting budgetary funds for Season 14 (1 May 2022 through 31 July 2022).
+
+**FDD is requesting $486,130 to fund Season 14 (S14) and replenish its reserves for S15.**
+
+## High Level Budget Breakdown
+
+Season 14 Budget Total = **$649,455**
+
+PLUS Season 15 Reserves = $432,970
+
+Total Needed = $1,082,425
+
+MINUS Current Reserves = $596,295
+
+($690k total holdings | $596k Season 13 reserves & $94k treasury)
+
+Total Amount requested at this time = **$486,130***
+
+**The GTC total will be adjusted based on the current market value at the time this proposal is moved to Snapshot and to Tally. The vote will be to send $ in GTC at the current price when moved to Tally or the 20 day moving average (whichever is lower).*
+
+## TLDR
+
+**FDD is responsible for the following items which are mapped to the outcome sets below**
+
+* Defending Gitcoin Grants from exploits. (Sybil Accounts, Collusion, etc)
+* Coordinating the grant eligibility policy & reviews
+* Sustainably operating the workstream. Goal setting, delivery, accountability, & comms.
+
+**Sybil Defenders (Legitimacy)**
+
+* Maintains DevOps for Sybil Detection machine learning pipeline
+* Designing models for decentralizing the inputs to the machine learning pipeline
+* Humans evaluating accounts to determine if they are sybil and train machine learning
+* Solving for sustainable mechanism design minimizing the exploit surface area/profitability
+* Inform decisions and improve our resilience to fraud using research, simulations, NLP/ML, etc
+
+**Grants Intelligence Agency (Credible Neutrality)**
+
+* Set up tooling to lower our cost, improve the quality of reviews, and give transparency/consistency to the decision processes
+* Execute all grant reviews, disputes, and appeals to ensure grants rounds run fairly
+* Design, test, and implement a model for decentralizing grant reviews using incentives
+* Deep dive reviews of grants to better understand the methods attackers use
+
+**Evolution (Sustainability)**
+
+* Ensuring governance decisions and processes are properly designed and implemented
+* Supporting payments and advancement of smart contract usage in comp models
+* Articulating the work being done in FDD for internal and external stakeholders
+* Setting strategy goals and ensuring that the workstream is accountable for delivering
+* Providing data analysis services for FDD (this season we are opening to all GitcoinDAO)
+
+# Season 13 Recap
+
+[FDD Season 13 Report Card](https://docs.google.com/document/u/0/d/1xLFfWCrJ-WA5aZvOU2l7l0gLJ4a4vpwKtjFexPuxP-4/edit)
+
+[GR13 Governance Brief](https://gov.gitcoin.co/t/gr13-governance-brief/10289)
+
+### Key highlights & learnings:
+
+Sybil Defenders
+
+* GitcoinDAO now runs the full anti-sybil operational process (previously done by Blockscience)
+* Doubled the number of human evaluations done at ⅓ of the cost
+* Classified sybil behaviors & ran impact analysis
+* Performed trust bonus analysis and [provided recommendations](https://docs.google.com/presentation/d/1nF1k8R5MtvSgJ3oE38OXuCskcEHOj64H/)
+* Won Metapod pitch competition and validated users for Sybil Detection DAO
+* Reviewed sybil assumptions and began work on mechanism design & simulations
+
+Grants Intelligence Agency
+
+* Hit all primary round OKRs without getting data integration on time from Holdings
+* Assisted PGF ops in tag requests for eco & cause rounds
+* Began creation of “trusted seed” of reviewers
+* Designed [curation incentivization structure](https://gov.gitcoin.co/t/gia-rewards-okr-report/10438/2) for any community to have community curation
+* Grants Curation NLP model that can replicate the GIA team’s decisions with 69% accuracy
+* Reviewed and rewrote all current eligibility policy
+* A full end to end process mapping of the grant review process was created
+
+Evolution
+
+* Kishorditya's [Mandate Delivery Report](https://gov.gitcoin.co/t/mandates-delivery-report-open-for-feedback/10470) outlining a Six Sigma style system review health metric for FDD to overcome Goodhart's law
+* Onboarding experience overview article on [Mirror](https://mirror.xyz/jmcook.eth/Cq2dj3ihqkYumYmyCD1jDGididAFnUj3f47zI428Vi0) by JCook
+* First season of source council was a success and even implemented accountability measures
+* Developed FDD decision making process to encourage autonomy
+* FDD contributor experience survey implemented
+* Designed PEC model for bottoms up governance issuance within workstreams
+* Created a data science pipeline for requests from other workstreams
+* Created a data repository for public gitcoin datasets
+* Designed architecture for GitcoinDAO data storage layer
+* Made improvements/refactors/optimizations/bug fixes in SAD codebase
+
+# Season 14 Goals
+
+[FDD Season 14 Goal Planning](https://docs.google.com/document/d/1sWPEYJSY6P5exNxaiUtCaFrcX2bNPAmOJZt-6veGoko/edit?usp=sharing)
+
+FDD has **Top Level Goals** which seasonally examine its respective **medium term focus** tagged **Essential Intent**. Consequently, (round over round) **RoR Health Metrics** are deployed to determine progress toward the **medium term** (12-18 months) **goals**.
+
+**Objectives & Key Results (OKRs)** are used to guide each top level goal set **within a season**.
+
+**Outcomes** are derived from our retro & strategy workshops, discussed with CSDO leadership, then **assigned to an Outcome Owner** through a process of nomination, synthesis, and ratification. Outcome owners are allowed to participate on the **FDD Source Council**. This **gives them voice** through the **progressively decentralized FDD decision-making process**. The corresponding Decision Making Agreement can be found in [Notion](https://gitcoin.notion.site/Decision-Making-Agreement-00808e48bee74ad1a2d08d58051111f5).
+
+Most importantly, **Outcome Owners are accountable** for successfully executing on **deliverables during a season** and transparently communicating blockers and impediments preventing or delaying the delivery of **key results**. The **FDD Source Council** is responsible for incubating ideas and implementing passed proposals in the interest of the **continuous improvement and progressive decentralization of FDD** & Gitcoin.
+
+# Essential Intent & RoR Health Metrics
+
+These metrics are how we show the round over round improvements of the FDD workstream.
+
+## Sybil Defenders
+
+***To minimize the effect of sybil attacks on Gitcoin Grants now and in the future***
+
+* Cost/evaluation (S12=$4.39;S13=$1.42)
+* Inter-reviewer reliability score (n/a)
+* USD removed from fraudulent allocation (S11=$606k;S12=$621k;S13=)
+* Number of models (S11=2;S12=2;S13=2)
+* Human evaluations (S11=1,800;S12=6,000;S13=12,000)
+
+## Grant Intelligence Agency
+
+***To improve the legitimacy, scalability, and quality of grant eligibility processes***
+
+* Grant time to activation (S11<96hr;S12=<48hr;S13=<48hr)
+* Cost per review (S13=$5.38)
+* Total # of reviewers (S11=7;S12=8;S13=7)
+* Poison pill score (Quality) (n/a)
+* Successful appeals/total new applications (S13=16/33=48%)
+
+## Evolution
+
+***To empower contributors to help FDD deliver on outcomes and become sustainable***
+
+* Contributor UX score
+* Time from proposal to pass/fail
+* Grant round execution score
+* GIA Execution Score
+* Sybil Execution Score
+
+The evolution scores will be baselined during season 14.
+
+# Season 14 Top Level OKRs
+
+These seasonal objectives and key results highlight our focus within Season 14.
+
+## Sybil Defenders
+
+**Objective:** Improve the quality of data inputs & processes in preparation for Grants 2.0
+
+* **KR1:** Add 2 anti-fraud components with Grants 2.0 applicability
+* **KR2:** Lower the cost per evaluation by 10% while maintaining inter-reviewer reliability
+* **KR3:** Add the community model to the “meta-model” for sybil detection
+
+## Grant Intelligence Agency
+
+**Objective:** Collaborate to improve scalability and quality of reviews in preparation for Grants 2.0
+
+* **KR1:** To re-review the entire set of active grants in prep for Grants 2.0
+* **KR2:** To reduce the number of outstanding appeals and disputes to zero
+* **KR3:** Lower the cost per grant review by 50% while maintaining quality
+
+## Evolution
+
+**Objective:** Build the workstream to be sustainable and remove “key person” issues
+
+* **KR1:** A contributor UX score improvement of 10%
+* **KR2:** Find and plan 5 opportunities for revenue or protocol funding
+* **KR3:** Build metric dashboards for each top level goal set
+
+# Season 14 Budget Requirements
+
+![|585x170](upload://lKmF2cU0YUrdrffAoenDl4GX119.jpeg)
+
+![|561x372](upload://bZ68He66LUoYyoMADSAgI1uqght.jpeg)
+
+## Current Holdings
+
+(*Using spot prices of $5.42 GTC & $2,875 ETH*)
+
+**FDD Primary Multisig** (This entire wallet is counted as reserves on hand at the end of S13)
+
+* GTC = 101,115 = $548k
+* USDC = 87,585 = $87k
+* ETH = 17.18 = 49k
+* DAI = 6,000 = $6k
+* **TOTAL = $690k**
+
+**FDD Ops Multisig** (approximately $107k will be used for S13 epoch 11,12,13 payments)
+
+* GTC = 16,876 = $91k
+* USDC = 15,616 = $15k
+* ETH = 0.375 = $1.5k
+* **TOTAL = $107k**
+
+**FDD Payments** 
+
+* GTC = 0
+* USDC = 0
+* ETH = .3
+* DAI = 0
+
+## Team Updates
+
+**Source Council (Core contributors) - 9**
+
+**FDD Roles**
+
+* Collaboration
+* Talent
+* Accounting
+* WS Lead
+* CSDO 1,2,3
+
+**Full (Trusted) Contributors (Not SC)- 18**
+
+* Multisig Keyholders
+* Subject Matter Experts
+* FTE
+* PTE
+
+**Human Intelligence Task(HIT) Roles**
+
+* Grant reviewers - 8
+* Human Evaluators - 37
+Thu, 26 May 2022 16:24:51 +0000
+📜 Proposals
+
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <p>Maybe this round isn’t the time to officially put budget towards it, but if we did the initial discovery this round, it could be great timing. We will keep it an option on the vote.</p>
+<p>Here is what we would do if it was voted for:</p>
+<h2>
+<a name="problem-narrative-1" class="anchor" href="https://gov.gitcoin.co#problem-narrative-1"></a>Problem Narrative</h2>
+<p>In order for a borderless democracy on the internet to succeed, it will require sybil resistance. Gitcoin Grants has shown us that the machine learning detection models can scale, but it does not provide a sustainable source of funding to build a digital public infrastructure.</p>
+<h2>
+<a name="solution-2" class="anchor" href="https://gov.gitcoin.co#solution-2"></a>Solution</h2>
+<p>A model for launching Sybil Detection DAO (SDD) needs to be designed. This begins with standing up supply side microservice subDAOs specialized in incentivizing one behavior. FDD will use funding from Gitcoin and potentially other grants to fund the contributors to build these microservice subDAOs while earning governance in the future Sybil Detection DAO via an issuance curve.</p>
+<h2>
+<a name="season-14-deliverables-3" class="anchor" href="https://gov.gitcoin.co#season-14-deliverables-3"></a>Season 14 Deliverables</h2>
+<ul>
+<li>Reaching potential data partners and scoping bi-directional interface points
+<ul>
+<li>Interface point 1: Data flows</li>
+<li>Interface point 2: Token/governance flows</li>
+<li>PoC Use Case: Bright ID</li>
+</ul>
+</li>
+<li>Sketching and modeling potential SDD token governance and economic systems
+<ul>
+<li>Include how microservice subDAOs would be embedded in the scheme</li>
+<li>Include budget estimates for operational costs for 1 year</li>
+<li>Mapping of microservice protocols to launch prior to SDD with roadmap</li>
+</ul>
+</li>
+<li>Description of a technical roadmap for making SDD viable
+<ul>
+<li>How incentive mining might perform in SDD microservice subDAOs</li>
+<li>System engineering graphic identifying inputs and outputs</li>
+</ul>
+</li>
+<li>Research and recommendations for legal “container”</li>
+<li>Research and describe integration points between SAD, SDD, and dPoPP</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/60">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/60
+        Thu, 26 May 2022 16:24:51 +0000
+gov.gitcoin.co-post-10448-60
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+owocki
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="57" data-topic="10448" data-full="true">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p><a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> I’d love to get your thoughts on this. I think the sybil detection DAO plan could potentially be the driver of dPoPP adoption.</p>
+</blockquote>
+</aside>
+<p>IMO this is going to require less data science/ML focused, more devrel, marketing, mechanism design, fraud detection + remediation + governance management.  would be interested to build a strategy around it.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/59">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/59
+        Thu, 26 May 2022 16:17:47 +0000
+gov.gitcoin.co-post-10448-59
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+kyle
+
+            <p>I think maybe in the medium term it could be…</p>
+<p>We have a need in serving Gitcoin’s use case first (and driving adoption that way). As mentioned previously, I see this as a crawl → walk → run approach. lets solve our need, using the protocol (and developing the protocol) before we turn outward for customers and guidance.</p>
+<p>Gitcoin Passport is like a baby bird. We are not ready to throw it out of the nest, but we do see a big blue sky of potential.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/58">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/58
+        Thu, 26 May 2022 14:55:40 +0000
+gov.gitcoin.co-post-10448-58
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> I’d love to get your thoughts on this. I think the sybil detection DAO plan could potentially be the driver of dPoPP adoption.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/57">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/57
+        Tue, 24 May 2022 21:07:44 +0000
+gov.gitcoin.co-post-10448-57
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <p>Started a new thread with the new proposal <a href="https://gov.gitcoin.co/t/proposal-fdd-season-14-budget-request/10658" class="inline-onebox">[Proposal] FDD Season 14 Budget Request</a></p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/56">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/56
+        Fri, 20 May 2022 18:23:47 +0000
+gov.gitcoin.co-post-10448-56
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <p>One more refinement before we post, hopefully tomorrow.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b93b396b4afe7b1fe2b70d1c9f25b8b3c64a77dd.jpeg" data-download-href="/uploads/short-url/qqDdBKa9phc3M72gHmuAypmu6VD.jpeg?dl=1" title="FDD Budget • Gitcoin Holdings - Google Chrome 2022-05-19 at 1.28.38 PM"><img src="/uploads/db4391/optimized/2X/b/b93b396b4afe7b1fe2b70d1c9f25b8b3c64a77dd_2_690x455.jpeg" alt="FDD Budget • Gitcoin Holdings - Google Chrome 2022-05-19 at 1.28.38 PM" data-base62-sha1="qqDdBKa9phc3M72gHmuAypmu6VD" width="690" height="455" srcset="/uploads/db4391/optimized/2X/b/b93b396b4afe7b1fe2b70d1c9f25b8b3c64a77dd_2_690x455.jpeg, /uploads/db4391/optimized/2X/b/b93b396b4afe7b1fe2b70d1c9f25b8b3c64a77dd_2_1035x682.jpeg 1.5x, /uploads/db4391/optimized/2X/b/b93b396b4afe7b1fe2b70d1c9f25b8b3c64a77dd_2_1380x910.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/b/b93b396b4afe7b1fe2b70d1c9f25b8b3c64a77dd_2_10x10.png"></a></div><p></p>
+<p>The voting will ask voters which option they would fund at the highest level. Then votes will be added from higher levels to the lower levels.</p>
+<p>If Option 1 has 1 million votes, and option 2 has one million votes, then option 2 will be considered to have 2 million votes.</p>
+<p>Then, if option 3 had one million votes, it would be considered to have 3 million votes, enough to pass quorum, therefore option 3 would win.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/55">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/55
+        Thu, 19 May 2022 19:31:55 +0000
+gov.gitcoin.co-post-10448-55
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+ZER8
+
+            <p>Translated into hype slang:</p>
+<p>Vote for the FDD Starter Pack<br>
+Vote for the FDD Premium Pack<br>
+Vote for the FDD Full Pack<br>
+Vote for the FDD Full + Expansion Pack</p>
+<p><img src="https://emoji.discourse-cdn.com/twitter/smiley.png?v=12" title=":smiley:" class="emoji only-emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/54">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/54
+        Thu, 19 May 2022 10:55:56 +0000
+gov.gitcoin.co-post-10448-54
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <p>We plan on making a new budget request using this framework if ratified by FDD source council tomorrow.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/f6a7edb09f1f846a787b103b46661ef01c35c9a5.jpeg" data-download-href="/uploads/short-url/zc1f3rz94z4ApHLU1MTetMbKhg1.jpeg?dl=1" title="FDD Budget • Gitcoin Holdings - Google Chrome 2022-05-18 at 2.54.35 PM"><img src="/uploads/db4391/optimized/2X/f/f6a7edb09f1f846a787b103b46661ef01c35c9a5_2_690x448.jpeg" alt="FDD Budget • Gitcoin Holdings - Google Chrome 2022-05-18 at 2.54.35 PM" data-base62-sha1="zc1f3rz94z4ApHLU1MTetMbKhg1" width="690" height="448" srcset="/uploads/db4391/optimized/2X/f/f6a7edb09f1f846a787b103b46661ef01c35c9a5_2_690x448.jpeg, /uploads/db4391/optimized/2X/f/f6a7edb09f1f846a787b103b46661ef01c35c9a5_2_1035x672.jpeg 1.5x, /uploads/db4391/optimized/2X/f/f6a7edb09f1f846a787b103b46661ef01c35c9a5_2_1380x896.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/f/f6a7edb09f1f846a787b103b46661ef01c35c9a5_2_10x10.png"></a></div><p></p>
+<p>I would say options 4,3,2 are all part of FDD’s critical mandate only on a short, medium, and long term timeline. Option 5 includes the concept covered succinctly by Danilo above.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/53">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/53
+        Wed, 18 May 2022 21:47:23 +0000
+gov.gitcoin.co-post-10448-53
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <p>So FDD had some autonomy and realized it could make a bigger impact on GitcoinDAO’s mission by expanding positive externalities outside of Gitcoin, and this is the misunderstanding.</p>
+<p>GitcoinDAO stewards may see FDD going outside it’s critical mandate as not within it’s mandate.</p>
+<p>While FDD may see it as serving GitcoinDAO’s mission better.</p>
+<p>The way we solve this is to transparently and publicly discuss the situation. Perhaps FDD should lose some autonomy and scope as to not confuse the stewards, but then it should probably also spin out sybil detection DAO to serve Gitcoin’s mandate if the Stewards agree that it has value and fits within the GitcoinDAO scope.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/52">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/52
+        Wed, 18 May 2022 21:27:24 +0000
+gov.gitcoin.co-post-10448-52
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+Sirlupinwatson
+
+            <p>Wow, love that post and the storytelling inside…</p>
+<p>Feels like Ethereum and Ether, or a car can’t run without gas/electricity.</p>
+<p>Nothing much to add here but really enjoyed to read this <a class="mention" href="https://gov.gitcoin.co/u/danlessa">@danlessa</a> <img src="https://emoji.discourse-cdn.com/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> <img src="https://emoji.discourse-cdn.com/twitter/star_struck.png?v=12" title=":star_struck:" class="emoji" alt=":star_struck:" loading="lazy" width="20" height="20"> <img src="https://emoji.discourse-cdn.com/twitter/clap.png?v=12" title=":clap:" class="emoji" alt=":clap:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/51">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/51
+        Wed, 18 May 2022 20:25:55 +0000
+gov.gitcoin.co-post-10448-51
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+danlessa
+
+            <p>Hey friends on GitcoinDAO <img src="https://emoji.discourse-cdn.com/twitter/earth_americas.png?v=12" title=":earth_americas:" class="emoji" alt=":earth_americas:" loading="lazy" width="20" height="20"></p>
+<p>Sorry for the late comment. I’ll express my contribution which will make the case towards us <strong>exploring what it takes to push for more evolution</strong> and how this passes through <strong>sketching how a Sybil Detection DAO could look like,</strong> as we can and should perform incentive alignment around our ultimate goal of <strong>providing Web3’s best Sybil Detection as a Service.</strong></p>
+<hr>
+<p>Most of the current function as well as some challenges of FDD has been described in the discussion here. FDD performs a <strong>critical function</strong> in GitcoinDAO, as Sybil Resistance and Collusion Resistance are critical for the legitimacy of Grants.</p>
+<p>This is done through a series of increasingly sophisticated processes that have been developed by the entire FDD group since before the DAO was created, and required because our ecosystem demands ever increasing technical excellence with no compromises whatsoever on transparency, decentralization and community ownership on the input, process and outcome. It has been a process of pioneering both in how we organize (governance of algorithmic processes - i.e. the machine learning pipeline), and how we detect and defend against sybil attacks and collusion (governance by algorithms, in a DAO).</p>
+<p>Going deep and evolving this critical function is not easy nor trivial, and it can be far from sexy when scratching the surface of what it should be. After all, it is about the ongoing <strong>operation and maintenance <strong>of GitcoinDAO as</strong> infrastructure</strong>. It also requires domain expertise to develop, operate, iterate on, and maintain the machine learning sybil detection pipeline.</p>
+<p>Additionally, <strong>FDD has arguably managed to create one of the most distinctive initiatives on Web3 <strong>so far in terms of real-world Sybil Account Detection - one of the space’s biggest challenges, especially where quadratic voting is employed. The unique blend of experts together with the</strong> holistic / integrated processes that were battle-tested on one of the Web3 mostly used platforms</strong> is certainly something to be proud of. Something that can also be <strong>leveraged and used by all value-aligned platforms on which their success depends on reaching out to real users without compromising</strong> on their privacy or incentive alignments.</p>
+<hr>
+<p><strong>Given the above considerations</strong>, it can be helpful to also share some thinking about what can be a possible strategic direction and a proposal for next steps.</p>
+<p>We want to ensure FDD and GitcoinDAO have incentive alignment AND <strong>functional alignment</strong> to defend against sybils. <strong>I have written a tale below that provides an analogy for what is functional alignment in this case.</strong></p>
+<p>We think it could be possible for FDD to evolve further from a GitcoinDAO core team, to become its own DAO that is a service provider to Gitcoin, and potentially other DAOs. FDD is a critical function for DAO maintenance (especially with Quadratic Voting), but it also may likely be a useful service to other DAOs, which would reduce cost dependencies on GitcoinDAO.</p>
+<p>This being true, then it could be the best long-term sustainable path by both improving the sybil detection (through bi-directional interface points with other data partners) and reducing the cost to GitcoinDAO as various ecosystem partners will be involved in the usage and cost sharing on this new Sybil Detection DAO.</p>
+<hr>
+<p>The next step is to <strong>Explore</strong>. To sketch how it could look like and to map its limitations and opportunities. To discuss as much as possible while there aren’t points of no return. To have a document which allows the community at large to constructively criticize and reject in detail or in its whole form. This is the core intent and function of the SDD work-stream, and it is expected to take the following form:</p>
+<ul>
+<li>Deliverable: A written briefing report that includes:
+<ul>
+<li>Definition of a clear purpose and functional remit for SDD</li>
+<li>Diagrams/sketches of potential SDD token governance and economic systems</li>
+<li>Summary of the results of discussions with potential data partners and scoping of bi-directional interface points</li>
+<li>Description of a technical roadmap for making SDD viable</li>
+<li>Recommended next steps</li>
+</ul>
+</li>
+<li>Method: a 3-phase process, on which:
+<ul>
+<li>Phase 1: Freestyle sketching
+<ul>
+<li>A strawman sketch will be produced based on the combined knowledge of how the SDD + ecosystem tech &amp; dynamics is playing right now.</li>
+</ul>
+</li>
+<li>Phase 2: Intense Iterations
+<ul>
+<li>The strawman sketch will pass through extensive review from SMEs to ensure that its cohesive and viable</li>
+</ul>
+</li>
+<li>Phase 3: Polish &amp; Communicate
+<ul>
+<li>The iterated document will be transformed and published into an form that invites public-facing iterations &amp; criticisms</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>I hope these thoughts help share the broader context going into this function, its value to GitcoinDAO and the broader ecosystem, and the potential strategic direction.</p>
+<hr>
+<h2>
+<a name="extra-the-tale-of-the-decentralized-common-goods-factory-and-its-own-sybil-detection-generator-1" class="anchor" href="https://gov.gitcoin.co#extra-the-tale-of-the-decentralized-common-goods-factory-and-its-own-sybil-detection-generator-1"></a>Extra: The Tale of the Decentralized Common Goods Factory and its own Sybil Detection Generator</h2>
+<p>(If is too wacky, replace DCG Factory → Factory, and Sybil Detection → Electricity)</p>
+<p>Let’s imagine a fictitious factory. The <strong>Decentralized Common Goods (DCG) Factory,</strong> which is owned and <strong>managed by the diligent Quadratic Bot</strong>, which <strong>concerns itself only with maximizing the quality</strong> and the positive externalities of what’s being produced.</p>
+<p>Quadratic Bot knows that the DCG Factory consumes a lot of Sybil Detection energy, and <strong>in order to have consistent production results, he decides to purchase and operate its own Sybil Detection Generator, which provides this critical piece of infrastructure</strong> to the factory to be autonomous.</p>
+<p>At some point in time, Quadratic Bot decides that <strong>the factory should be less monolithic and that its core functions should be more decentralized</strong> and autonomous. <strong>As a result of that, the Sybil Detection Generator now has its own manager: Not-Sybil</strong>.</p>
+<p>Not-Sybil, which is as diligent as Quadratic Bot, also only concerns himself with the quality and the positive externalities of what’s produced too. The product in this case is delivering the best Sybil Detection to his users.</p>
+<p><strong>As the DCG Factory is decentralized and open-source, the commoners of the local village quickly take notice</strong> of all the innovation happening inside it, including the Sybil Detection Generator, which is tailored end-to-end for being as optimal as possible for its function.</p>
+<p>Not-Sybil, observing the demand for Sybil Detection and taking in mind his mission of maximizing positive externalities, decides that it can be a good idea to expand the Sybil Detection Generator capacity and technology for more deeply integrating with the community demands.</p>
+<p>Quadratic Bot is enthusiastic, but this capacity is way more than he needs, and it is not obvious how the payoff is going to be in terms of the quality improval on the factory products. It may even be a distraction.</p>
+<p><strong>Quadratic Bot and Not-Sybil are intertwined in a dilemma</strong>. There are <strong>no questions about the history and the ownership</strong>: it was Quadratic Bot who bought and took the risk for the Sybil Detection Ownership. But now that it is being managed by Not-Sybil, the goals are different. <strong>Quadratic Bot wants the generator to provide critical services. Not-Sybil wants the generator to provide the best services.</strong></p>
+<p>How do we untangle that? <strong>One option is to re-absorb the Sybil Detection Generator</strong> under the Quadratic Bot guidance and dismiss / re-educate Not-Sybil. Make it provide the critical service again.</p>
+<p><strong>Another one is to imagine a future where the Sybil Detection Generator becomes its own autonomous organization</strong>. On which Sybil Detection is also a decentralized common good product too, which is used as a critical service by multiple villages and projects.</p>
+<p>The future is uncertain and risky. <strong>Discovering and mapping it beforehand, and making explicit the landmarks and obstacles can allow for us to have a grasp of the journey without taking points of no return.</strong></p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/50">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/50
+        Wed, 18 May 2022 20:07:31 +0000
+gov.gitcoin.co-post-10448-50
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+owocki
+
+            <aside class="quote no-group" data-username="DisruptionJoe" data-post="48" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>We have decided to go back to the drawing board rather than push forward a proposal which doesn’t take the current situation into consideration. We would love to get more feedback from you here:</p>
+</blockquote>
+</aside>
+<p>hey Joe, voter turnout on this looks a bit low.  i wonder how we can get that up.</p>
+<p>there are many options in the poll, which can be complicated for stewards to wade through.</p>
+<p>from speaking with stewards, i perceive that many of them would be aligned with the following:</p>
+<ol>
+<li>lean Grants 1.0/ GR14 sybil protection &amp; grants approvals</li>
+<li>Grants 2.0 rebuild for decentralization/protocol-centric fraud defense</li>
+</ol>
+<p>i wonder if a more thematic poll with fewer options would yield more turnout?</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/49">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/49
+        Mon, 16 May 2022 17:04:42 +0000
+gov.gitcoin.co-post-10448-49
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <p>We have decided to go back to the drawing board rather than push forward a proposal which doesn’t take the current situation into consideration. We would love to get more feedback from you here:</p>
+<p><a href="https://snapshot.org/#/gitcoindao.eth/proposal/0x332237cf15443ea727e914431b9d916aa2b72d421ce1fa2f8165cc7774dbde0e" class="onebox" target="_blank" rel="noopener">https://snapshot.org/#/gitcoindao.eth/proposal/0x332237cf15443ea727e914431b9d916aa2b72d421ce1fa2f8165cc7774dbde0e</a></p>
+<p>Simply select the squads or principles you agree with and vote to help us get an understanding of what is most important to you.</p>
+<p>We hope to ratify an updated budget request by Thursday, May 19th.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/48">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/48
+        Mon, 16 May 2022 15:32:20 +0000
+gov.gitcoin.co-post-10448-48
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="ZER8" data-post="46" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/zer8/48/882_2.png" class="avatar"> ZER8:</div>
+<blockquote>
+<p>which signals that the work and outcomes generated by them are visible, while it seems that our collective work in the FDD has not reached the same level of awareness… <img src="https://gov.gitcoin.co/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"></p>
+</blockquote>
+</aside>
+<p>AGREE.</p>
+<h1><a name="fdd-is-working-on-a-revised-budget-hopefully-to-post-on-friday-513-with-input-from-other-leadership-in-gitcoin-1" class="anchor" href="https://gov.gitcoin.co#fdd-is-working-on-a-revised-budget-hopefully-to-post-on-friday-513-with-input-from-other-leadership-in-gitcoin-1"></a>FDD is working on a revised budget. Hopefully to post on Friday 5/13 with input from other leadership in Gitcoin.</h1>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/47">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/47
+        Thu, 12 May 2022 15:44:06 +0000
+gov.gitcoin.co-post-10448-47
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+ZER8
+
+            <p>\</p>
+<aside class="quote no-group" data-username="kyle" data-post="26" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>DD is a cost center, like DAO Ops and should be focused on maintaining as slim of an operating budget as possible. Gitcoin seems to be paying for the education and advancement of a number of ideas - Sybil DAO, Most of “Evolution”, Catalyst, etc. without any discernible increase in value being delivered back to the DAO. Cutting most of “Evolution”, scaling back “Sybil defenders” and doing a deeper dive on the value of GIA would be valuable</p>
+</blockquote>
+</aside>
+<p>Thank you on behalf of the GIA <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20">  We appreciate your praises and the fact that you have noticed us  means we are getting stuff done and that’s nice…we have actually worked a lot and also put in a lot of passion, late hours and brain matter <img src="https://gov.gitcoin.co/images/emoji/twitter/brain.png?v=12" title=":brain:" class="emoji" alt=":brain:" loading="lazy" width="20" height="20"> into defending Gitcoin from threats to its credible neutrality. It’s not easy for us to make friends when our mission is to maintain fairness  (in the degree that we can and are allowed). We are decentralizing more and more each round and building, modelling based on our results. We work very closely with the “Sybil defenders” and the data science <a class="mention" href="https://gov.gitcoin.co/u/omnianalytics">@omnianalytics</a> have been slowly but surely  building on our results. We are working to become a fine tuned machine that has the purpose to integrate with Grants 2.0</p>
+<p>It’s not healthy to compare things, but I was want to give this as an example:</p>
+<p><em>I personally help out with the MMM(because I love it) pro bono because I like co-hosting and participating in fun events that are beneficial for Gitcoin and the web3 space overall. I don’t have the deepest understanding on what’s going on over there, but I do find it intriguing that the MMMs budget is a decent amount and it was approved by almost everyone, which signals that the work and outcomes generated by them are visible, while it seems that our collective work in the FDD has not reached the same level of awareness…  <img src="https://gov.gitcoin.co/images/emoji/twitter/frowning.png?v=12" title=":frowning:" class="emoji" alt=":frowning:" loading="lazy" width="20" height="20"></em></p>
+<p>Tough times, we will make it through. <img src="https://gov.gitcoin.co/images/emoji/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/blue_heart.png?v=12" title=":blue_heart:" class="emoji" alt=":blue_heart:" loading="lazy" width="20" height="20"></p>
+<p>I apologize for all my “emotion” filled posts and thank you for all the work you are doing! Without the collective efforts of the Gitcoin core team we would not be here and we should also remember that<br>
+<img src="https://gov.gitcoin.co/images/emoji/twitter/smiley.png?v=12" title=":smiley:" class="emoji only-emoji" alt=":smiley:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/46">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/46
+        Wed, 11 May 2022 21:38:01 +0000
+gov.gitcoin.co-post-10448-46
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+kyle
+
+            <p>I know FDD is taking a lot of steps to evaluate where changes can be made. I appreciate the work and contemplation.</p>
+<p>I am still not sure how to vote until the final thoughts are shared (I think FDD is going to revise again tomorrow after an internal meeting per my conversation with Joe).</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/45">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/45
+        Wed, 11 May 2022 16:54:49 +0000
+gov.gitcoin.co-post-10448-45
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+annika
+
+            <p>This is a step in the right direction - I really appreciate the bucketing - but I still feel a little DDoS attacked (to steal anon’s on-point wording) even when looking at this view.</p>
+<p>I said this to <a class="mention" href="https://gov.gitcoin.co/u/kishoraditya">@kishoraditya</a> just now about something else - “I think the challenge with FDD’s “at a glance” stuff so far is that it’s still quite complex - e.g., the bucketing of what FDD is focused on in the four buckets is a step in the right direction, but understanding 30 broad strokes bullet points and what’s underlying them is still far, far too granular / lacking context to be a summary”</p>
+<p>As a Steward coming in to review this, my head goes towards:</p>
+<ul>
+<li>What are the top 1-2 priority / impact items in each of the four buckets?</li>
+<li>What is the resource allocation / rationale for each of those?</li>
+</ul>
+<p>That is where I would want to start to make sure I’m understanding &amp; agreeing with the most critical items. Beyond that, as a Steward, I care less about understanding the long-tail (unless, of course, it’s taking up substantial budget - in which case I would want to go into its rationale, but only after understanding the core pieces).</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/44">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/44
+        Wed, 11 May 2022 15:47:47 +0000
+gov.gitcoin.co-post-10448-44
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <p>I’ve gotten feedback about people not understanding what is going on in the workstream. It seems that there are many impressions about what the stream is, or should be, but they have missed the ongoing effort due to our having too much content to review.</p>
+<p>“I feel somewhat DDos attacked when I read FDD budget”</p>
+<p>Here are a few ways to look at it.</p>
+<p>First, check out this explainer from Octopus <a href="https://youtu.be/GrYD_gTHgys" class="inline-onebox">octopus Thoughts On FDD - YouTube</a></p>
+<p>Next, you can see how evolution is more about understanding what we did the last round, finding what is and isn’t working, and then converting to a better overall process. It is not redundant with DAOops.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a2d7b3f8794997fbb6d49ad5aead92a28e648f4e.png" data-download-href="/uploads/short-url/nezuup5WKyd3HxBfSySrplv7HZ4.png?dl=1" title="FDD Control Flow"><img src="/uploads/db4391/optimized/2X/a/a2d7b3f8794997fbb6d49ad5aead92a28e648f4e_2_690x489.png" alt="FDD Control Flow" data-base62-sha1="nezuup5WKyd3HxBfSySrplv7HZ4" width="690" height="489" srcset="/uploads/db4391/optimized/2X/a/a2d7b3f8794997fbb6d49ad5aead92a28e648f4e_2_690x489.png, /uploads/db4391/optimized/2X/a/a2d7b3f8794997fbb6d49ad5aead92a28e648f4e_2_1035x733.png 1.5x, /uploads/db4391/optimized/2X/a/a2d7b3f8794997fbb6d49ad5aead92a28e648f4e_2_1380x978.png 2x" data-small-upload="/uploads/db4391/optimized/2X/a/a2d7b3f8794997fbb6d49ad5aead92a28e648f4e_2_10x10.png"></a></div><p></p>
+<p>Here we show which squads focus on executing this round vs innovating and if they are about efficiency or decentralization.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e7adb4e66cd57f58781819c187e4164d042b4188.jpeg" data-download-href="/uploads/short-url/x3wsxUIpnyUYbtT2Cqe5oYOockw.jpeg?dl=1" title="Gitcoin Weekly Workstream update (1)"><img src="/uploads/db4391/optimized/2X/e/e7adb4e66cd57f58781819c187e4164d042b4188_2_690x388.jpeg" alt="Gitcoin Weekly Workstream update (1)" data-base62-sha1="x3wsxUIpnyUYbtT2Cqe5oYOockw" width="690" height="388" srcset="/uploads/db4391/optimized/2X/e/e7adb4e66cd57f58781819c187e4164d042b4188_2_690x388.jpeg, /uploads/db4391/original/2X/e/e7adb4e66cd57f58781819c187e4164d042b4188.jpeg 1.5x, /uploads/db4391/original/2X/e/e7adb4e66cd57f58781819c187e4164d042b4188.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/e/e7adb4e66cd57f58781819c187e4164d042b4188_2_10x10.png"></a></div><p></p>
+<p>This shows our essential intent agreed upon by CSDO and how each FDD squad fits.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a8a786ab63c1d22e6a784b57c86178c8d51325a8.jpeg" data-download-href="/uploads/short-url/o3Z8ygScmWkWJF5t05xPNFWn30k.jpeg?dl=1" title="Gitcoin Weekly Workstream update"><img src="/uploads/db4391/optimized/2X/a/a8a786ab63c1d22e6a784b57c86178c8d51325a8_2_690x388.jpeg" alt="Gitcoin Weekly Workstream update" data-base62-sha1="o3Z8ygScmWkWJF5t05xPNFWn30k" width="690" height="388" srcset="/uploads/db4391/optimized/2X/a/a8a786ab63c1d22e6a784b57c86178c8d51325a8_2_690x388.jpeg, /uploads/db4391/original/2X/a/a8a786ab63c1d22e6a784b57c86178c8d51325a8.jpeg 1.5x, /uploads/db4391/original/2X/a/a8a786ab63c1d22e6a784b57c86178c8d51325a8.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/a/a8a786ab63c1d22e6a784b57c86178c8d51325a8_2_10x10.png"></a></div><p></p>
+<p>Then we connect which squads are related to which aspects of GitcoinDAO.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e544c8936c611962aff44f8cc6e40a19e6d6ef68.jpeg" data-download-href="/uploads/short-url/wIcHWfg3SWwALs5g1V5XUCkp98s.jpeg?dl=1" title="Gitcoin Weekly Workstream update (2)"><img src="/uploads/db4391/optimized/2X/e/e544c8936c611962aff44f8cc6e40a19e6d6ef68_2_690x388.jpeg" alt="Gitcoin Weekly Workstream update (2)" data-base62-sha1="wIcHWfg3SWwALs5g1V5XUCkp98s" width="690" height="388" srcset="/uploads/db4391/optimized/2X/e/e544c8936c611962aff44f8cc6e40a19e6d6ef68_2_690x388.jpeg, /uploads/db4391/original/2X/e/e544c8936c611962aff44f8cc6e40a19e6d6ef68.jpeg 1.5x, /uploads/db4391/original/2X/e/e544c8936c611962aff44f8cc6e40a19e6d6ef68.jpeg 2x" data-small-upload="/uploads/db4391/optimized/2X/e/e544c8936c611962aff44f8cc6e40a19e6d6ef68_2_10x10.png"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/43">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/43
+        Tue, 10 May 2022 21:18:07 +0000
+gov.gitcoin.co-post-10448-43
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="kyle" data-post="41" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Being a cost center is not a bad thing, and shouldn’t be viewed as a criticism</p>
+</blockquote>
+</aside>
+<p>I do not view it as a criticism, but as an inaccurate description or at best, part of the story.</p>
+<aside class="quote no-group" data-username="kyle" data-post="41" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>It’s been difficult to navigate the story line on the value being delivered</p>
+</blockquote>
+</aside>
+<p>We thought so too, so we added a very small budget to be intentional about this during s14.</p>
+<aside class="quote no-group" data-username="kyle" data-post="41" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>1.1 - Defend Grants Rounds from Sybil Attacks</p>
+</blockquote>
+</aside>
+<p>This is not only for today, but for tomorrow. The ASOP could run without innovation, but it would cease to be effective. We HAVE to innovate every round to keep up with the red team and larger rounds.</p>
+<aside class="quote no-group" data-username="kyle" data-post="41" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>1.2 - Review Grants to confirm compliance to our rules/policies</p>
+</blockquote>
+</aside>
+<p>Looking at this from a grants 2.0 perspective, we need to give communities who use or fork grants 2.0 a way to be credibly neutral.</p>
+<p>This is a wildly subjective area</p>
+<aside class="quote no-group" data-username="kyle" data-post="41" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>1.3 - Defend against collusion attacks</p>
+</blockquote>
+</aside>
+<p>I don’t think the grants 2.0 architecture will solve this through “policy” but rather by giving communities tools to provide legitimacy (sybil defense) and credible neutrality (community consent). These communities would then compete for mechanisms that truly work better for their participants. Basically, our longer term strategies for sybil and grant eligibility have a by product of collusion protection, but this has not been a focus in the last few rounds.</p>
+<aside class="quote no-group" data-username="kyle" data-post="41" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Generate ML models to run programmatic sybil detection (using the centralized data set, and a growing on-chain data set)</p>
+</blockquote>
+</aside>
+<p>For grants 2.0, users will have a dPoPP. By integrating many services, they will be able to participate meaningfully. By only allowing them to advance by integration, we would be putting new users at a disadvantage in the system. How might we provide the new and disadvantaged users the same access to the system. (That is the point afterall)</p>
+<p>Our job is to find a way to decentralized the inputs, remove PII from the equation, and still be able to make sense of the rich history of participation users will acquire on dPoPP.</p>
+<aside class="quote no-group" data-username="kyle" data-post="41" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Conduct human review of potential Sybils</p>
+</blockquote>
+</aside>
+<p>This is done so algorithmic bias does not co-opt our system. We don’t have a steady true state for what is sybil.</p>
+<p>If we had zero ethical concerns about the bias of our algorithms, we could remove this, but I think it is best thought of as part of 1.1.</p>
+<aside class="quote no-group" data-username="kyle" data-post="41" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Build/invest in tooling to make 1.1 and 1.2 more scalable and approachable</p>
+</blockquote>
+</aside>
+<p>And reduce unwanted bias. Additionally, I think providing a solution which includes legitmacy and credible neutrality to any ecosystem who starts a round is a part of grants 2.0, not just an accessory.</p>
+<p>If we hand them the 2.0 rails without this protection, they may use 2.0 and get worse results than legacy systems. The reason a community would want to use grants 2.0 is to allocate better.</p>
+<p>It’s like selling a car without tires. Sure, you can do that, but good luck!</p>
+<aside class="quote no-group" data-username="kyle" data-post="41" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/kyle/48/3892_2.png" class="avatar"> kyle:</div>
+<blockquote>
+<p>Invest in OS and working norms (and operations) for the workstream</p>
+</blockquote>
+</aside>
+<p>Yes. Can we make sure that the machine building the machines of legitimacy and credible neutrality are sustainable without key man issues.</p>
+<p>Lastly, the desire to define innovation as secondary for FDD is not realistic. Each round the attackers advance their strategies and we need to innovate ours to be effictive.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/42">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/42
+        Tue, 10 May 2022 20:07:06 +0000
+gov.gitcoin.co-post-10448-42
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+kyle
+
+            <p>I really appreciate the thoughts from <a class="mention" href="https://gov.gitcoin.co/u/annika">@annika</a> and agree with so many points she made:<br>
+1 - Being a cost center is not a bad thing, and shouldn’t be viewed as a criticism<br>
+2 - It’s been difficult to navigate the story line on the value being delivered<br>
+3 - Sybil defense is important work and needs to be part of any QF round</p>
+<p>For my own edification I have tried to break down the core work FDD does<br>
+1 - Primary scope:<br>
+1.1 - Defend Grants Rounds from Sybil Attacks<br>
+1.2 - Review Grants to confirm compliance to our rules/policies<br>
+1.3 - Defend against collusion attacks</p>
+<p>2 - Secondary scope:<br>
+2.1 - Generate ML models to run programmatic sybil detection (using the centralized data set, and a growing on-chain data set)<br>
+2.2 - Conduct human review of potential Sybils<br>
+2.3 - Build/invest in tooling to make 1.1 and 1.2 more scalable and approachable<br>
+2.4 - Invest in OS and working norms (and operations) for the workstream</p>
+<p>Is this accurate? I am trying to keep this as “pure” of a scope as possible.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/41">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/41
+        Tue, 10 May 2022 19:49:18 +0000
+gov.gitcoin.co-post-10448-41
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="annika" data-post="39" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>I agree with the assessment that FDD is a cost center - if we didn’t have the problem of sybil attacks, we wouldn’t spend money on fraud detection;</p>
+</blockquote>
+</aside>
+<p>Yes, and… Sybil defense is an unsolved research problem with a total addressable market of everyone on earth and not a person more!</p>
+<p>When we find solutions for unsolved problems with a large TAM, should we generalize the solution and have Gitcoin invest in it, or even own it outright?</p>
+<p>Should we only allow certain workstreams to do this?</p>
+<p>I guess I only agree that it is not gross GMV generative if you don’t consider a fair mechanism to be something that attracts more participants.</p>
+<aside class="quote no-group" data-username="annika" data-post="39" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>This view is reinforced by FDD’s own stated workstream mandate - “defend Gitcoin from threats”; it’s here to protect downside, rather than to generate upside.</p>
+</blockquote>
+</aside>
+<p>This should have the … before and after  “…defend Gitcoin from threats…”</p>
+<p>The full mandate, unchanged since the first budget passed has been, “Defend Gitcoin from threats to it’s legitimacy, credible neutrality, and sustainability”</p>
+<aside class="quote no-group" data-username="annika" data-post="39" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>Being a cost center is by no means a bad thing, and doesn’t make the work FDD does any less important - calling something a ‘cost center’ shouldn’t be viewed as an attack or as a diminishing sentiment.</p>
+</blockquote>
+</aside>
+<p>I do not view it as an “attack”. It is an invalid statement in my opinion.</p>
+<aside class="quote no-group" data-username="annika" data-post="39" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>Without the work FDD does, we would not have a viable grants program.</p>
+</blockquote>
+</aside>
+<p>Yes. Then please explain why every other workstream should have higher budgets if this is true? Honestly not trying to be snarky here, I’d really like to know how we consider every other workstream’s work to be more important than dealing with this existential risk. (Considering <a class="mention" href="https://gov.gitcoin.co/u/kyle">@kyle</a> is asking for a 40% reduction)</p>
+<p>Especially when you consider it is an unsolved research problem with a red-team blue team aspect continually changing the strategy and it is core to the grants 2.0 roadmap.</p>
+<p>With a cost center, you can set and maintain a strategy. With this work, we have to innovate every round and try to stay ahead of the attacks as the honeypot gets larger and larger.</p>
+<aside class="quote no-group" data-username="annika" data-post="39" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>That said, I do worry about FDD’s rising costs</p>
+</blockquote>
+</aside>
+<p>In relation to what?</p>
+<p>Other workstreams? We have a lower rate of increase than the majority.</p>
+<p>Last season? We lowered our rate of increase from 30% to 9%.</p>
+<p>Something else?</p>
+<aside class="quote no-group" data-username="annika" data-post="39" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>the budget request and supporting documents are extremely cumbersome to review</p>
+</blockquote>
+</aside>
+<p>We found last season that although we have clear round over round metrics and seasonal objectives along with specific deliverables, people DO find it confusing still. That is why we added the storytellers stream. It is not redundant with MMM because they are not close enough to the work to explain it. We would work with them.</p>
+<p>It is a small amount to make sure the rest of the DAO does not rob itself of impact, efficiency, ethics, and income, by simply not understanding our work which is admittedly more complex than most other streams. (Again, the problems we are working on are complex)</p>
+<aside class="quote no-group" data-username="annika" data-post="39" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/annika/48/3725_2.png" class="avatar"> annika:</div>
+<blockquote>
+<p>I feel like I need someone to summarize it all for me - and that shouldn’t be the case, given how closely I work with FDD.</p>
+</blockquote>
+</aside>
+<p>So we should or shouldn’t do our storyteller initiative to help communicate this?</p>
+<p>Would we want the DAO to vote no to funding us because the work we do is in a complex domain and no one has the time to learn about it?</p>
+<h2><a name="in-conclusion-1" class="anchor" href="https://gov.gitcoin.co#in-conclusion-1"></a>In conclusion</h2>
+<p>I would love to talk with you about each initiative.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/40">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/40
+        Tue, 10 May 2022 16:01:50 +0000
+gov.gitcoin.co-post-10448-40
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+annika
+
+            <p>Jumping in to provide my two cents as I go through all the proposals.</p>
+<p>This is probably the toughest proposal of them all for me to review &amp; comment on. On one hand, FDD does important work that is critical to our mission. On the other hand, I share the concerns raised by others around FDD’s rising costs.</p>
+<p>I agree with the assessment that FDD is a cost center - if we didn’t have the problem of sybil attacks, we wouldn’t spend money on fraud detection; it is not GMV-generative. This view is reinforced by FDD’s own stated workstream mandate - “defend Gitcoin from threats”; it’s here to protect downside, rather than to generate upside. And that’s just fine. Being a cost center is by no means a bad thing, and doesn’t make the work FDD does any less important - calling something a ‘cost center’ shouldn’t be viewed as an attack or as a diminishing sentiment. Without the work FDD does, we would not have a viable grants program. Sybil resistance is work to be extremely proud of.</p>
+<p>That said, I do worry about FDD’s rising costs, and frankly, the budget request and supporting documents are extremely cumbersome to review - after going through them all, I still don’t feel confident in having a clear assessment of this workstream and what, at a macro level, FDD is building towards. I feel like I need someone to summarize it all for me - and that shouldn’t be the case, given how closely I work with FDD.</p>
+<p>I believe others have shared similar feedback, and so I will wait to see what the resolution is before making a decision on voting.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/39">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/39
+        Tue, 10 May 2022 04:10:04 +0000
+gov.gitcoin.co-post-10448-39
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+Sirlupinwatson
+
+            <p>What I can do to help with the current market and reduce our spending (Only for the ASOP + Human Evaluation)</p>
+<p>Instead of scaling up the team I will limit it and reduce the Numbers or contributors/Human Evaluators to 5 only.</p>
+<p>Here is a brief resume of what I am anticipating:</p>
+<p><strong>Breaking down GR13: Total amount of contributor</strong>: 35<br>
+35 x 500$ = 17,500$ (± 11,000 Evaluations) (300 Evaluations each)<br>
+<strong>Poap creation (Bounty)</strong>: 250$<br>
+Workshop session: 2<br>
+35 x 50$ x 2 = 3,500$<br>
+<strong>Total</strong>: 21,250$</p>
+<p><strong>Breaking down GR14: Total amount of contributors</strong>: 5<br>
+12,000 Evaluation / 60 Minutes = 200 Hrs<br>
+200 Hrs / 5 Human Evaluators = 40 Hrs<br>
+40 Hrs / 5 Rounds (June 9, June 11, June 13, June 15, June 17) = 8 Hrs <strong>Non-Stop For each Day</strong><br>
+40 Hrs x 60?$/Hrs = 2,400$ x 5 = 12,000$<br>
+<strong>Poap Creation (Bounty)</strong>: 250$<br>
+<strong>Workshop session</strong>: 2<br>
+5 x 50$ x 2 = 500$<br>
+<strong>New Total</strong>: 12,750$<br>
+<strong>Amount saved</strong>: 8,500$</p>
+<p>This is of course only an small-scale of the total amount that we are requesting. I’ll need to work on the operation side to see where we can cut the budget. Writing this here in the hope that this will help other to do the same with their own initiative, if not, then we might have to lay-off contributors or even partially remove some initiative/inventiveness.</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/38">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/38
+        Mon, 09 May 2022 20:54:51 +0000
+gov.gitcoin.co-post-10448-38
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+ZER8
+
+            <p>No <img src="https://gov.gitcoin.co/images/emoji/twitter/smiley.png?v=12" title=":smiley:" class="emoji" alt=":smiley:" loading="lazy" width="20" height="20"> Not at all, but good point maybe if all of us actually voiced that and didn’t join the euforia, we wouldn’t be in this situation.</p>
+<aside class="quote no-group quote-modified" data-username="ZER8" data-post="33" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/zer8/48/882_2.png" class="avatar"> ZER8:</div>
+<blockquote>
+<p>I actually asked for the minim minimorum that we need to get things running and ensuring that we can meet our goals</p>
+</blockquote>
+</aside>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/37">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/37
+        Mon, 09 May 2022 18:30:32 +0000
+gov.gitcoin.co-post-10448-37
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+owocki
+
+            <aside class="quote no-group" data-username="ZER8" data-post="35" data-topic="10448">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/zer8/48/882_2.png" class="avatar"> ZER8:</div>
+<blockquote>
+<p>I was not in any way excluding me, I stated above that I personally reduced the budgets for the initiatives that I’m driving to the minimum.</p>
+</blockquote>
+</aside>
+<p>Thanks for responding and the clarification.  Maybe something lost in translation!</p>
+          <p><a href="https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/36">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/cancelled-superceded-s14-proposal-fdd-season-14-budget-request/10448/36
+        Mon, 09 May 2022 18:26:24 +0000
+gov.gitcoin.co-post-10448-36
+[Cancelled/Superceded S14 Proposal] FDD Season 14 Budget Request
+      
+
+

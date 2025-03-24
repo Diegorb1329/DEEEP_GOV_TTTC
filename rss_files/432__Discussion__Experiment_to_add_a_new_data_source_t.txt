@@ -1,0 +1,101 @@
+
+
+
+[Discussion] Experiment to add a new data source to Plural QF
+https://gov.gitcoin.co/t/discussion-experiment-to-add-a-new-data-source-to-plural-qf/17324
+    side story from https://gov.gitcoin.co/t/decartography-beta-is-out-how-to-generate-clustered-data-from-grs-participation-data-and-how-to-improve-current-gitcoin-grants/17290
+---
+The hypothesis is that if we simulate Plural QF using cluster data with DeCartography, we can implement a more reliable Pluralism. To implement this with Gitcoin, I think a demonstration would be in order. There are several candidates for how to proceed with that. For example, we could do backtesting in GR, where there are fewer participants, and then try it out in GR19? (backtesting: testing a method/algorithm on historical data before testing it on production data to see if it works)
+
+So I was going to do backtesting, but the IPFS linked at https://fddhub.io/downloads/grant_rounds is broken. Where is the data for this?
+
+---
+
+After backtesting, I’ll be able to provide data like this https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709 this image compares RetroPGF vs Gitcoin. but, imagine comparing current Plural QF vs Plural QF by DeCartography social graph
+
+after backtesting, we can continue to provide clustered data if gitcoin can be paid
+
+https://gov.gitcoin.co/t/gr14-governance-brief/11050
+Now it looks like FDD has been dissolved, but Sybil Account Detection (SAD) was originally there.
+ 
+>The primary Sybil Account Detection (SAD) model used in production is operated by the Data Operations squad. Sybil Operational Processes (ASOP). Humans evaluate random samples of accounts to statistically validate the model and to identify new behavioral insights which can be built into new "features" or inputs to the machine learning model by the Community Intelligence squad.
+  Briefly, the process is to "humanely determine suspicious accounts and to reflect the findings in the machine learning model.
+
+FDD has spent an average of `$12,000`/round on this work, which is referred to as "Human Evaluations." DeCartography can be easily understood by replacing this work as crowdsourcing.
+
+The expenses required to convert GR participant data into a social graph using DeCartography are as follows: 
+To begin with, the expenses are calculated using the following structure
+ - Size of data to be analyzed
+ - How many times per session you want the crowd worker to solve the task
+ - How much to pay per session
+ 
+A simple code to calculate the necessary expenses can be found at: 
+ https://gist.github.com/tkgshn/aece3bdd6ba193ebb2be932d621f131c
+
+---
+# Next Action
+- anyone teach me about where is GR3 data (to preparing backtesting)
+- after backtesting, I'll share the result. then, let's keep discuss paid PoC
+Fri, 22 Dec 2023 03:27:13 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+[Discussion] Experiment to add a new data source to Plural QF
+tkgshn
+
+            <h2><a name="side-story-from-httpsgovgitcoincotdecartography-beta-is-out-how-to-generate-clustered-data-from-grs-participation-data-and-how-to-improve-current-gitcoin-grants17290-1" class="anchor" href="https://gov.gitcoin.co#side-story-from-httpsgovgitcoincotdecartography-beta-is-out-how-to-generate-clustered-data-from-grs-participation-data-and-how-to-improve-current-gitcoin-grants17290-1"></a>side story from <a href="https://gov.gitcoin.co/t/decartography-beta-is-out-how-to-generate-clustered-data-from-grs-participation-data-and-how-to-improve-current-gitcoin-grants/17290" class="inline-onebox">DeCartography Beta is out! How to generate clustered data from GR's participation data, and how to improve current Gitcoin Grants</a></h2>
+<p>The hypothesis is that if we simulate Plural QF using cluster data with DeCartography, we can implement a more reliable Pluralism. To implement this with Gitcoin, I think a demonstration would be in order. There are several candidates for how to proceed with that. For example, we could do backtesting in GR, where there are fewer participants, and then try it out in GR19? (backtesting: testing a method/algorithm on historical data before testing it on production data to see if it works)</p>
+<p>So I was going to do backtesting, but the IPFS linked at <a href="https://fddhub.io/downloads/grant_rounds" rel="noopener nofollow ugc">https://fddhub.io/downloads/grant_rounds</a> is broken. Where is the data for this?</p>
+<hr>
+<p>After backtesting, I’ll be able to provide data like this <a href="https://gov.gitcoin.co/t/how-much-does-plural-qf-reduce-collusion-compared-to-normal-qf/15709" class="inline-onebox">How Much Does Plural QF Reduce Collusion Compared to Normal QF?</a> this image compares RetroPGF vs Gitcoin. but, imagine comparing current Plural QF vs Plural QF by DeCartography social graph</p>
+<p>after backtesting, we can continue to provide clustered data if gitcoin can be paid</p>
+<aside class="quote quote-modified" data-post="1" data-topic="11050">
+  <div class="title">
+    <div class="quote-controls"></div>
+    <img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar">
+    <a href="https://gov.gitcoin.co/t/gr14-governance-brief/11050">GR14 Governance Brief</a> <a class="badge-category__wrapper " href="https://gov.gitcoin.co/c/grants/15"><span data-category-id="15" style="--category-badge-color: #0088CC; --category-badge-text-color: #FFFFFF;" data-drop-close="true" class="badge-category " title="Everything around Gitcoin Grants, our flagship product"><span class="badge-category__name">🌱 Grants</span></span></a>
+  </div>
+  <blockquote>
+    The Fraud Detection &amp; Defense workstream (FDD) aims to minimize the impact of fraud on our community. In this post, we highlight the quantitative data behind GR14 and the qualitative decisions made. We also describe the reasoning behind any subjective judgments along with making recommendations to the Grants Operations team and Stewards for new policy revisions to match changing circumstances. 
+
+<a name="tldr-1" class="anchor" href="https://gov.gitcoin.co#tldr-1"></a>TL:DR
+
+Sybil Defense
+
+Sybil attacks are way up!
+
+Contributors - 16,073 / 44886 contributors
+Contribut…
+  </blockquote>
+</aside>
+<p>
+Now it looks like FDD has been dissolved, but Sybil Account Detection (SAD) was originally there.</p>
+<blockquote>
+<p>The primary Sybil Account Detection (SAD) model used in production is operated by the Data Operations squad. Sybil Operational Processes (ASOP). Humans evaluate random samples of accounts to statistically validate the model and to identify new behavioral insights which can be built into new “features” or inputs to the machine learning model by the Community Intelligence squad.<br>
+Briefly, the process is to "humanely determine suspicious accounts and to reflect the findings in the machine learning model.</p>
+</blockquote>
+<p>FDD has spent an average of <code>$12,000</code>/round on this work, which is referred to as “Human Evaluations.” DeCartography can be easily understood by replacing this work as crowdsourcing.</p>
+<p>The expenses required to convert GR participant data into a social graph using DeCartography are as follows:<br>
+To begin with, the expenses are calculated using the following structure</p>
+<ul>
+<li>Size of data to be analyzed</li>
+<li>How many times per session you want the crowd worker to solve the task</li>
+<li>How much to pay per session</li>
+</ul>
+<p>A simple code to calculate the necessary expenses can be found at:<br>
+<a href="https://gist.github.com/tkgshn/aece3bdd6ba193ebb2be932d621f131c" class="inline-onebox" rel="noopener nofollow ugc">Estimating the cost of generate clustered data in GR participant data via DeCartography · GitHub</a></p>
+<hr>
+<h1><a name="next-action-2" class="anchor" href="https://gov.gitcoin.co#next-action-2"></a>Next Action</h1>
+<ul>
+<li>anyone teach me about where is GR3 data (to preparing backtesting)</li>
+<li>after backtesting, I’ll share the result. then, let’s keep discuss paid PoC</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/discussion-experiment-to-add-a-new-data-source-to-plural-qf/17324/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-experiment-to-add-a-new-data-source-to-plural-qf/17324/1
+        Fri, 22 Dec 2023 03:27:13 +0000
+gov.gitcoin.co-post-17324-1
+[Discussion] Experiment to add a new data source to Plural QF
+      
+
+

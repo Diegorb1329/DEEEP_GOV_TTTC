@@ -1,0 +1,166 @@
+
+
+
+[GCP] Coordinape <> Allo RFP
+https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333
+    Greetings!
+
+Spanning this proposal out from some conversations with @owocki , I would like to propose an Allo Strategy research and development RFP, with the goal of crafting a new Allo Strategy template that allows Coordinape GIVE to become an onchain mapping for Allo distributions of tokens.
+
+Coordinape GIVE is written onchain via an EAS schema, and we feel it is possible to use this data to now close the loop of GIVE-based allocation via Allo's onchain distribution mechanism, providing a new, decentralized layer of incentives management for web3 at large.  
+
+## Proposal:
+
+An Allo Strategy could be crafted that uses Coordinape data as a distribution mapping. This is performed by the Strategy interacting with Coordinape’s Ethereum Attestation Service (EAS) schema (The Social Oracle) on Base, an onchain data source which can manage Recipients and Allocation.
+
+### Goal:
+
+Using the GIVE data EAS schema, users of Allo could theoretically manage a strategy that processes transactions based on GIVE outcomes.
+
+* Right now, EAS GIVE comes from Coordinape’s social apps and Farcaster, supporting the attestation of one user to another for any skill or tag.
+* With 45,000+ attestations made for hundreds of skill tags, communities and ideas, this data can already suit a wide range of token distribution goals.
+* In the future, we will also be able to port Coordinape Gift Circle outcomes to be published on EAS in the same schema, making it possible to allocate to specific DAO memberships and work histories in Gift Circles.
+* Tens of millions of GIVE have been sent in Gift Circles since 2021, for tens of thousands of users, making it one of the most rich and well used work evaluation dapps in web3..
+* The GIVE EAS schema is additionally outfitted with a placeholder field that will allow for GIVE to be weighted by a global Reputation coefficient, making it a potentially sybil resistant and flexible way to allocate resources to groups users.
+
+### Who Can Build This?
+
+* Gitcoin <> Coordinape will conduct an RFP process to find interested developers for the Allo strategy, with the help of @deltajuliet 
+* All developers or teams with an interest in Allo Strategies, EAS, good solidity knowledge, and a track record of building, would be excellent candidates.
+* Coordinape can also contribute PM resources to assist developers with scope and design of the project.
+
+### Example Use:
+
+A user wants to allocate a distribution of token funds to developers that are considered well versed or connected to Eigen Layer.
+
+They can create an Allo strategy that finds wallets that are highly recognized by GIVE for their skills in Dev, as well as highly recognized for Eigen Layer tags. This strategy could take advantage of Coordinape’s reputation weighting, and use a date range to introduce more filtering.
+
+Recipients = wallets with 10+ GIVE in Dev & 5+ GIVE in Eigen Layer
+
+Allocation = the percentage of GIVE each member has of the total in the represented category.
+
+### Example Use (future):
+
+A user wants to allocation a distribution of funding to a specific work team using a Coordinape Gift Circle.
+
+They can create an Allo strategy that finds wallets that received GIVE in this Gif Circle, for a specified Epoch, and distributes an allocation based on the percentage of GIVE received.
+
+Recipients = wallets with GIVE tagged with the targeted Organization, Gift Circle and Epoch
+
+Allocation = the percentage of GIVE each member has of the total in the represented category.
+
+### Resources:
+
+[The Social Oracle Co-op](https://coordinape.com/codao/social-oracle)
+
+[Social Oracle EAS Schema (Base)](https://base.easscan.org/schema/view/0x82c2ec8ec89cf1d13022ff0867744f1cecf932faa4fe334aa1bb443edbfee3fa)
+
+[Social Oracle Developer Docs](https://docs.coordinape.com/social-oracle-tm-give)
+Sat, 21 Sep 2024 10:43:36 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+[GCP] Coordinape <> Allo RFP
+deltajuliet
+
+            <p>Thanks for much for this <a class="mention" href="https://gov.gitcoin.co/u/zemm">@Zemm</a> - Agree w/ <a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> on the synergies between this and the Allo Points temp check.</p>
+<p>What is next on the roadmap? I believe you’re looking for interested devs to scope this out further to make this a formal GCP w/ roadmap, milestones and cost estimates? How can we support you on fleshing this out further and validating within the community?</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333/5
+        Sat, 21 Sep 2024 10:43:36 +0000
+gov.gitcoin.co-post-19333-5
+[GCP] Coordinape <> Allo RFP
+      
+
+[GCP] Coordinape <> Allo RFP
+Sov
+
+            <p>Thank you for sharing this idea. In reading the proposal I can see some potential synergies with <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> Allo Points concept: <a href="https://gov.gitcoin.co/t/temp-check-allo-points-devcon/19259/1" class="inline-onebox">TEMP CHECK - Allo Points - Devcon</a></p>
+<ul>
+<li>Contribution Tracking: Combining Coordinape’s GIVE data with Allo-specific metrics could provide a holistic view of platform user contributions.</li>
+<li>Reward Mechanisms: The proposed Allo Strategy could distribute rewards based on Coordinate GIVE and Allo Points.</li>
+<li>Sybil-Resistant Allocations: Using the GIVE EAS schema for allocations could address concerns about ensuring fair and accurate distributions.</li>
+</ul>
+<p>I support exploring this idea further, especially if we can bring these two concepts closer together.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333/4
+        Tue, 17 Sep 2024 19:15:33 +0000
+gov.gitcoin.co-post-19333-4
+[GCP] Coordinape <> Allo RFP
+      
+
+[GCP] Coordinape <> Allo RFP
+SkyDAO
+
+            <p>I’m a big fan of Gitcoin and Allo protocol (it’s so smooth) and a big fan of Coordinape and GIVE (it’s so valuable, useful and fun).</p>
+<p>Bringing these two systems closer together seems like it would open doors to some really cool opportunities.</p>
+<p>Making it easier to identify, incentivize and reward the right community members is beneficial for all communities.</p>
+<p>Looking forward to seeing what can be done!</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333/3
+        Wed, 11 Sep 2024 21:21:59 +0000
+gov.gitcoin.co-post-19333-3
+[GCP] Coordinape <> Allo RFP
+      
+
+[GCP] Coordinape <> Allo RFP
+zippy1979
+
+            <p>I think this is a good initiative. Like the way you guys are thinking. Have used CoordinAPE when I was working with Ocean Protocol, it’s rather useful.</p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333/2
+        Wed, 11 Sep 2024 14:49:19 +0000
+gov.gitcoin.co-post-19333-2
+[GCP] Coordinape <> Allo RFP
+      
+
+[GCP] Coordinape <> Allo RFP
+Zemm
+
+            <p>Greetings!</p>
+<p>Spanning this proposal out from some conversations with <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> , I would like to propose an Allo Strategy research and development RFP, with the goal of crafting a new Allo Strategy template that allows Coordinape GIVE to become an onchain mapping for Allo distributions of tokens.</p>
+<p>Coordinape GIVE is written onchain via an EAS schema, and we feel it is possible to use this data to now close the loop of GIVE-based allocation via Allo’s onchain distribution mechanism, providing a new, decentralized layer of incentives management for web3 at large.</p>
+<h2><a name="proposal-1" class="anchor" href="https://gov.gitcoin.co#proposal-1"></a>Proposal:</h2>
+<p>An Allo Strategy could be crafted that uses Coordinape data as a distribution mapping. This is performed by the Strategy interacting with Coordinape’s Ethereum Attestation Service (EAS) schema (The Social Oracle) on Base, an onchain data source which can manage Recipients and Allocation.</p>
+<h3><a name="goal-2" class="anchor" href="https://gov.gitcoin.co#goal-2"></a>Goal:</h3>
+<p>Using the GIVE data EAS schema, users of Allo could theoretically manage a strategy that processes transactions based on GIVE outcomes.</p>
+<ul>
+<li>Right now, EAS GIVE comes from Coordinape’s social apps and Farcaster, supporting the attestation of one user to another for any skill or tag.</li>
+<li>With 45,000+ attestations made for hundreds of skill tags, communities and ideas, this data can already suit a wide range of token distribution goals.</li>
+<li>In the future, we will also be able to port Coordinape Gift Circle outcomes to be published on EAS in the same schema, making it possible to allocate to specific DAO memberships and work histories in Gift Circles.</li>
+<li>Tens of millions of GIVE have been sent in Gift Circles since 2021, for tens of thousands of users, making it one of the most rich and well used work evaluation dapps in web3…</li>
+<li>The GIVE EAS schema is additionally outfitted with a placeholder field that will allow for GIVE to be weighted by a global Reputation coefficient, making it a potentially sybil resistant and flexible way to allocate resources to groups users.</li>
+</ul>
+<h3><a name="who-can-build-this-3" class="anchor" href="https://gov.gitcoin.co#who-can-build-this-3"></a>Who Can Build This?</h3>
+<ul>
+<li>Gitcoin &lt;&gt; Coordinape will conduct an RFP process to find interested developers for the Allo strategy, with the help of <a class="mention" href="https://gov.gitcoin.co/u/deltajuliet">@deltajuliet</a></li>
+<li>All developers or teams with an interest in Allo Strategies, EAS, good solidity knowledge, and a track record of building, would be excellent candidates.</li>
+<li>Coordinape can also contribute PM resources to assist developers with scope and design of the project.</li>
+</ul>
+<h3><a name="example-use-4" class="anchor" href="https://gov.gitcoin.co#example-use-4"></a>Example Use:</h3>
+<p>A user wants to allocate a distribution of token funds to developers that are considered well versed or connected to Eigen Layer.</p>
+<p>They can create an Allo strategy that finds wallets that are highly recognized by GIVE for their skills in Dev, as well as highly recognized for Eigen Layer tags. This strategy could take advantage of Coordinape’s reputation weighting, and use a date range to introduce more filtering.</p>
+<p>Recipients = wallets with 10+ GIVE in Dev &amp; 5+ GIVE in Eigen Layer</p>
+<p>Allocation = the percentage of GIVE each member has of the total in the represented category.</p>
+<h3><a name="example-use-future-5" class="anchor" href="https://gov.gitcoin.co#example-use-future-5"></a>Example Use (future):</h3>
+<p>A user wants to allocation a distribution of funding to a specific work team using a Coordinape Gift Circle.</p>
+<p>They can create an Allo strategy that finds wallets that received GIVE in this Gif Circle, for a specified Epoch, and distributes an allocation based on the percentage of GIVE received.</p>
+<p>Recipients = wallets with GIVE tagged with the targeted Organization, Gift Circle and Epoch</p>
+<p>Allocation = the percentage of GIVE each member has of the total in the represented category.</p>
+<h3><a name="resources-6" class="anchor" href="https://gov.gitcoin.co#resources-6"></a>Resources:</h3>
+<p><a href="https://coordinape.com/codao/social-oracle" rel="noopener nofollow ugc">The Social Oracle Co-op</a></p>
+<p><a href="https://base.easscan.org/schema/view/0x82c2ec8ec89cf1d13022ff0867744f1cecf932faa4fe334aa1bb443edbfee3fa" rel="noopener nofollow ugc">Social Oracle EAS Schema (Base)</a></p>
+<p><a href="https://docs.coordinape.com/social-oracle-tm-give" rel="noopener nofollow ugc">Social Oracle Developer Docs</a></p>
+          <p><a href="https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gcp-coordinape-allo-rfp/19333/1
+        Mon, 09 Sep 2024 18:27:43 +0000
+gov.gitcoin.co-post-19333-1
+[GCP] Coordinape <> Allo RFP
+      
+
+

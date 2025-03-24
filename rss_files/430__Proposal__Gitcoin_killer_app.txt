@@ -1,0 +1,728 @@
+
+
+
+[Proposal] Gitcoin killer app
+https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347
+    # Gitcoin Grant Application
+
+- **Project Name:** Salaries Science
+- **Team Name:** World Science DAO
+- **Payment Address:** 0x36A0356d43EE4168ED24EFA1CAe3198708667ac0
+
+I propose to allocate funds for development of "Gitcoin killer" app.
+
+## Project Overview :page_facing_up:
+
+### Overview
+
+Gitcoin killer: Gitcoin-like project for both science and software. Special features to support basic science and software components to be priority-financed.
+
+I propose a grants system similar to Gitcoin, but with the following features:
+- allocating a part of donation to dependencies
+- mandatory affiliate program, to ensure that no scientific discovery goes unmarketed (it is especially important, because a scientific project can be published, so preventing publication or re-discoveries, but go unmarketed, this way blocking development of science)
+- rewarding first-comer affiliates, in order not only to start small but encompass broad adoption
+
+The project is planned to be implemented on DFINITY Internet Computer, thanks to its super-low gas fees. Dependencies for software (like `crates.io`) and for science (Semantic Scholar) are projected to be managed by third-party servers in a decentralized way.
+
+This project is unrelated to other projects of Radicle, but its purpose is somehow similar to Drip project. However, my project is focused on a different purpose than only rewarding contributions, but intends to save science for mis-publication catastrophe.
+
+Case study: Ordered semicategory actions (OSA) were discovered by me in 2019. Upon reading my work it becomes obvious that most of future science should build upon this discovery. But publication of OSA wasn't successful and I after a sequence of steps came to the situation that I cannot publish my discovery neither in full (500 pages), nor by parts. So, the entire science development is stalled, until OSA will be published. I see no way to publish OSA through traditional publishers, so we need this project to support scientific marketing: I shown that even one scientific discovery without funds for publication may severely block the entire science. Apparently, other similar cases may exists, so we see that science is in deep crisis.
+
+The radical solution of this problem is to replace the entire system of peer review by quadratic funding.
+
+So, this project is intended for:
+- provide good "salaries" to scientists and free software authors (especially for software components and basic science, through allocation of a part of donations to dependencies)
+- unstuck science by paid scientific marketing instead of traditional peer review
+
+Importance to unstuck science from mis-publications happened in the centralized world is immense. Even one mis-published scientific project (such as OSA) may push down the entire science and therefore world economy. It is also important to establish an effective way to reward unknown to the world software components authors.
+
+## Team :busts_in_silhouette:
+
+### Team members
+
+- Victor Porton
+
+### Contact
+
+- **Contact Name:** Victor Porton
+- **Contact Email:** porton.victor@gmail.com
+- **Website:** https://science-dao.org/salaries-science/
+
+### Team's experience
+
+I have an extensive experience with DFINITY Internet Computer programming: I created the MVP (and advanced the work further) of Zon, an elaborate social network on the same platform DFINITY Internet Computer: https://docs.zoncirlce.com
+
+I also have extensive exprience with TypeScript, the language that I am going to use.
+
+I also created XML Boiler: https://github.com/vporton/xml-boiler - the most advanced software for XML processing.
+
+I developed math related to OSA (more than 500 pages).
+
+### Team Code Repos
+
+- https://github.com/vporton
+- https://github.com/vporton/zondirectory2
+- https://github.com/vporton/xml-boiler
+
+### Team LinkedIn Profiles
+
+- https://www.linkedin.com/in/victor-porton/
+
+## Project Description :page_facing_up:
+
+[The detailed description of the algorithm.](https://github.com/vporton/salaries-science/blob/main/financing-science-algorithm.odt?raw=true)
+
+I am applying for this grant, because I want to save science from mis-publication (including but not limited to proper marketing of OSA).
+
+## Deliverables :nut_and_bolt:
+
+- **Total Estimated Duration:** 410 days
+- **Full-time equivalent (FTE):** 242
+- **Total Costs:** 47000 USD
+
+### Milestone 1
+
+- **Estimated Duration:** 30 days
+- **FTE:** 15
+- **Costs:** 3000 USD
+
+| Number | Deliverable              | Specification                                                                           |
+| ------ | ------------------------ | --------------------------------------------------------------------------------------- |
+| 1.     | Onchain data structure   | Data structures and associated APIs for all on-chain storage described in the algorithm |
+
+### Milestone 2
+
+- **Estimated Duration:** 10
+- **FTE:** 7
+- **Costs:** 3000 USD
+
+| Number | Deliverable              | Specification                                                                       |
+| ------ | ------------------------ | ----------------------------------------------------------------------------------- |
+| 1.     | Storing GitHub JSON      | API for reading the JSON file (see the article) from GitHub and storing it on-chain |
+
+### Milestone 3
+
+- **Estimated Duration:** 60
+- **FTE:** 40
+- **Costs:** 6000 USD
+
+| Number | Deliverable                   | Specification                                                                       |
+| ------ | ----------------------------- | ----------------------------------------------------------------------------------- |
+| 1.     | general dependencies API      | public API for storing on-chain dependencies                                        |
+
+### Milestone 4
+
+- **Estimated Duration:** 20
+- **FTE:** 10
+- **Costs:** 2000 USD
+
+| Number | Deliverable                   | Specification                                                                       |
+| ------ | ----------------------------- | ----------------------------------------------------------------------------------- |
+| 1.     | Gitcoin passport              | Querying and storing Gitcoin passport scores for an address                         |
+
+### Milestone 5
+
+- **Estimated Duration:** 20
+- **FTE:** 10
+- **Costs:** 3000 USD
+
+| Number | Deliverable                   | Specification                                                |
+| ------ | ----------------------------- | ------------------------------------------------------------ |
+| 1.     | Creating rounds backend       | Backend for creating matching rounds                         |
+| 2.     | Creating rounds frontend      | Frontend for creating matching rounds                         |
+
+### Milestone 6
+
+- **Estimated Duration:** 20
+- **FTE:** 10
+- **Costs:** 3000 USD
+
+| Number | Deliverable                   | Specification                                                                       |
+| ------ | ----------------------------- | ----------------------------------------------------------------------------------- |
+| 1.     | Pledging matchers             | Accept matchers pledging matching funds                                             |
+| 2.     | Pledging servers              | Accept servers pledging gas tokens                                                  |
+
+### Milestone 7
+
+- **Estimated Duration:** 90
+- **FTE:** 60
+- **Costs:** 6000 USD
+
+| Number | Deliverable                   | Specification                                                                       |
+| ------ | ----------------------------- | ----------------------------------------------------------------------------------- |
+| 1.     | Accept donations backend      | Accepting funds from a donor, writing basic donation info, also writing affiliate   |
+| 2.     | Accept donations frontend     | Accepting funds from a donor, support for affiliates                                |
+| 3.     | Write dependencies            | Query dependencies, store them in the DB                                            |
+
+### Milestone 8
+
+- **Estimated Duration:** 20
+- **FTE:** 10
+- **Costs:** 3000 USD
+
+| Number | Deliverable                   | Specification                                                                       |
+| ------ | ----------------------------- | ----------------------------------------------------------------------------------- |
+| 1.     | Matching calculation          | Calculate the entire amounts paid to each user                                      |
+
+### Milestone 9
+
+- **Estimated Duration:** 30
+- **FTE:** 15
+- **Costs:** 3000 USD
+
+| Number | Deliverable                   | Specification                                                                       |
+| ------ | ----------------------------- | ----------------------------------------------------------------------------------- |
+| 1.     | Consensus                     | Removal of erring servers by votes of other servers                                 |
+
+### Milestone 10
+
+- **Estimated Duration:** 20
+- **FTE:** 10
+- **Costs:** 3000 USD
+
+| Number | Deliverable                   | Specification                                                                       |
+| ------ | ----------------------------- | ----------------------------------------------------------------------------------- |
+| 1.     | Voting for user accounts      | Voting for each user account (or no account)                                        |
+
+### Milestone 11
+
+- **Estimated Duration:** 20
+- **FTE:** 10
+- **Costs:** 3000 USD
+
+| Number | Deliverable                   | Specification                                                                       |
+| ------ | ----------------------------- | ----------------------------------------------------------------------------------- |
+| 1.     | Voting for passport scores    | Voting for user's Gitcoin passport scores                                           |
+
+### Milestone 12
+
+- **Estimated Duration:** 20
+- **FTE:** 15
+- **Costs:** 3000 USD
+
+| Number | Deliverable                   | Specification                                                                       |
+| ------ | ----------------------------- | ----------------------------------------------------------------------------------- |
+| 1.     | Rewarding servers             | Calculate and pay to server accounts                                                |
+
+### Milestone 13
+
+- **Estimated Duration:** 50
+- **FTE:** 30
+- **Costs:** 6000 USD
+
+| Number | Deliverable                     | Specification                                    |
+| ------ | ------------------------------- | ------------------------------------------------ |
+| 1.     | Server reference implementation | Calculate and pay to server accounts             |
+|        |                                 | - Semantic Scholar dependencies                  |
+|        |                                 | - `crates.io`` dependencies                      |
+
+## Future Plans
+
+In the short term (after the release), I am going to press-release my project and gain some supporters.
+
+In the long term, I am going to displace Gitcoin and Drip replacing them by my project.
+
+The project will be sustainable because it will gather money, among other projects for itself.
+
+We will need further grants for improving design, SEO, and other marketing.
+
+## Additional Information :heavy_plus_sign:
+
+Work I have already done:
+- written the [algorithm](https://github.com/vporton/salaries-science/blob/main/financing-science-algorithm.odt?raw=true) (in English). I also started to write Motoko code, but it is very preliminary. (I am also going to replace Motoko by TypeScript.)
+- created [NacDB](https://github.com/vporton/NacDB), a database useful for this project.
+Thu, 28 Dec 2023 20:59:39 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+[Proposal] Gitcoin killer app
+owocki
+
+            <p>This proposal is not in line with <a href="https://gov.gitcoin.co/t/update-gitcoin-s-ratified-essential-intents-2023-2024-and-a-recap-of-our-successes/16818">Gitcoin’s 2024 Essential Intents</a>, and so I will be voting against this proposal if it is brought to a vote.</p>
+<p><a class="mention" href="https://gov.gitcoin.co/u/vporton">@vporton</a> I suggest making a Gitcoin Grant @ <a href="https://explorer.gitcoin.co/">https://explorer.gitcoin.co/</a> and trying to get funding that way.  Good luck!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347/5
+        Thu, 28 Dec 2023 20:59:39 +0000
+gov.gitcoin.co-post-17347-5
+[Proposal] Gitcoin killer app
+      
+
+[Proposal] Gitcoin killer app
+vporton
+
+            <aside class="quote no-group" data-username="thedevanshmehta" data-post="2" data-topic="17347">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Overall your project seems more apt for receiving money via Gitcoin grant rounds rather than the DAO treasury, which is for helping gitcoin succeed rather than helping any particular project.</p>
+</blockquote>
+</aside>
+<p>This project may replace Gitcoin in the future. So, I want money from DAO treasury.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347/4
+        Thu, 28 Dec 2023 15:39:47 +0000
+gov.gitcoin.co-post-17347-4
+[Proposal] Gitcoin killer app
+      
+
+[Proposal] Gitcoin killer app
+vporton
+
+            <aside class="quote no-group" data-username="thedevanshmehta" data-post="2" data-topic="17347">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/thedevanshmehta/48/10076_2.png" class="avatar"> thedevanshmehta:</div>
+<blockquote>
+<p>Overall your project seems more apt for receiving money via Gitcoin grant rounds rather than the DAO treasury, which is for helping gitcoin succeed rather than helping any particular project.</p>
+<p>Maybe submit this project for GG20 and raise funds from there? Have you taken part in earlier gitcoin rounds?</p>
+</blockquote>
+</aside>
+<p>Yes, I want to receive funding from Gitcoin, please help.</p>
+<p>I will submit it to GG20, of course. But I don’t expect to receive enough money from GG20.</p>
+<p>If I remember correctly, in GR18 my project was rejected due to a misunderstanding. If I remember correctly, nn GG19 there was no DeSci track.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347/3
+        Thu, 28 Dec 2023 15:35:20 +0000
+gov.gitcoin.co-post-17347-3
+[Proposal] Gitcoin killer app
+      
+
+[Proposal] Gitcoin killer app
+thedevanshmehta
+
+            <p>I appreciate how detailed you have made the proposal.</p>
+<aside class="quote no-group" data-username="vporton" data-post="1" data-topic="17347">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/vporton/48/1247_2.png" class="avatar"> vporton:</div>
+<blockquote>
+<p>In the long term, I am going to displace Gitcoin and Drip replacing them by my project.</p>
+</blockquote>
+</aside>
+<p>Overall your project seems more apt for receiving money via Gitcoin grant rounds rather than the DAO treasury, which is for helping gitcoin succeed rather than helping any particular project.</p>
+<p>Maybe submit this project for GG20 and raise funds from there? Have you taken part in earlier gitcoin rounds?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347/2
+        Thu, 28 Dec 2023 13:26:34 +0000
+gov.gitcoin.co-post-17347-2
+[Proposal] Gitcoin killer app
+      
+
+[Proposal] Gitcoin killer app
+vporton
+
+            <h1><a name="gitcoin-grant-application-1" class="anchor" href="https://gov.gitcoin.co#gitcoin-grant-application-1"></a>Gitcoin Grant Application</h1>
+<ul>
+<li><strong>Project Name:</strong> Salaries Science</li>
+<li><strong>Team Name:</strong> World Science DAO</li>
+<li><strong>Payment Address:</strong> 0x36A0356d43EE4168ED24EFA1CAe3198708667ac0</li>
+</ul>
+<p>I propose to allocate funds for development of “Gitcoin killer” app.</p>
+<h2><a name="project-overview-page_facing_up-2" class="anchor" href="https://gov.gitcoin.co#project-overview-page_facing_up-2"></a>Project Overview <img src="https://gov.gitcoin.co/images/emoji/twitter/page_facing_up.png?v=12" title=":page_facing_up:" class="emoji" alt=":page_facing_up:" loading="lazy" width="20" height="20"></h2>
+<h3><a name="overview-3" class="anchor" href="https://gov.gitcoin.co#overview-3"></a>Overview</h3>
+<p>Gitcoin killer: Gitcoin-like project for both science and software. Special features to support basic science and software components to be priority-financed.</p>
+<p>I propose a grants system similar to Gitcoin, but with the following features:</p>
+<ul>
+<li>allocating a part of donation to dependencies</li>
+<li>mandatory affiliate program, to ensure that no scientific discovery goes unmarketed (it is especially important, because a scientific project can be published, so preventing publication or re-discoveries, but go unmarketed, this way blocking development of science)</li>
+<li>rewarding first-comer affiliates, in order not only to start small but encompass broad adoption</li>
+</ul>
+<p>The project is planned to be implemented on DFINITY Internet Computer, thanks to its super-low gas fees. Dependencies for software (like <code>crates.io</code>) and for science (Semantic Scholar) are projected to be managed by third-party servers in a decentralized way.</p>
+<p>This project is unrelated to other projects of Radicle, but its purpose is somehow similar to Drip project. However, my project is focused on a different purpose than only rewarding contributions, but intends to save science for mis-publication catastrophe.</p>
+<p>Case study: Ordered semicategory actions (OSA) were discovered by me in 2019. Upon reading my work it becomes obvious that most of future science should build upon this discovery. But publication of OSA wasn’t successful and I after a sequence of steps came to the situation that I cannot publish my discovery neither in full (500 pages), nor by parts. So, the entire science development is stalled, until OSA will be published. I see no way to publish OSA through traditional publishers, so we need this project to support scientific marketing: I shown that even one scientific discovery without funds for publication may severely block the entire science. Apparently, other similar cases may exists, so we see that science is in deep crisis.</p>
+<p>The radical solution of this problem is to replace the entire system of peer review by quadratic funding.</p>
+<p>So, this project is intended for:</p>
+<ul>
+<li>provide good “salaries” to scientists and free software authors (especially for software components and basic science, through allocation of a part of donations to dependencies)</li>
+<li>unstuck science by paid scientific marketing instead of traditional peer review</li>
+</ul>
+<p>Importance to unstuck science from mis-publications happened in the centralized world is immense. Even one mis-published scientific project (such as OSA) may push down the entire science and therefore world economy. It is also important to establish an effective way to reward unknown to the world software components authors.</p>
+<h2><a name="team-busts_in_silhouette-4" class="anchor" href="https://gov.gitcoin.co#team-busts_in_silhouette-4"></a>Team <img src="https://gov.gitcoin.co/images/emoji/twitter/busts_in_silhouette.png?v=12" title=":busts_in_silhouette:" class="emoji" alt=":busts_in_silhouette:" loading="lazy" width="20" height="20"></h2>
+<h3><a name="team-members-5" class="anchor" href="https://gov.gitcoin.co#team-members-5"></a>Team members</h3>
+<ul>
+<li>Victor Porton</li>
+</ul>
+<h3><a name="contact-6" class="anchor" href="https://gov.gitcoin.co#contact-6"></a>Contact</h3>
+<ul>
+<li><strong>Contact Name:</strong> Victor Porton</li>
+<li><strong>Contact Email:</strong> <a href="mailto:porton.victor@gmail.com">porton.victor@gmail.com</a></li>
+<li><strong>Website:</strong> <a href="https://science-dao.org/salaries-science/" class="inline-onebox" rel="noopener nofollow ugc">Support Science and Free Software Development with Cryptocurrency Donations – World Science DAO</a></li>
+</ul>
+<h3><a name="teams-experience-7" class="anchor" href="https://gov.gitcoin.co#teams-experience-7"></a>Team’s experience</h3>
+<p>I have an extensive experience with DFINITY Internet Computer programming: I created the MVP (and advanced the work further) of Zon, an elaborate social network on the same platform DFINITY Internet Computer: <a href="https://docs.zoncirlce.com" rel="noopener nofollow ugc">https://docs.zoncirlce.com</a></p>
+<p>I also have extensive exprience with TypeScript, the language that I am going to use.</p>
+<p>I also created XML Boiler: <a href="https://github.com/vporton/xml-boiler" class="inline-onebox" rel="noopener nofollow ugc">GitHub - vporton/xml-boiler: Automatically transform between XML namespaces in a clever way: https://vporton.github.io/xml-boiler-docs/</a> - the most advanced software for XML processing.</p>
+<p>I developed math related to OSA (more than 500 pages).</p>
+<h3><a name="team-code-repos-8" class="anchor" href="https://gov.gitcoin.co#team-code-repos-8"></a>Team Code Repos</h3>
+<ul>
+<li><a href="https://github.com/vporton" class="inline-onebox" rel="noopener nofollow ugc">vporton (mathematician) · GitHub</a></li>
+<li><a href="https://github.com/vporton/zondirectory2" class="inline-onebox" rel="noopener nofollow ugc">GitHub - vporton/zondirectory2: My social network that pays to authors with referral programs</a></li>
+<li><a href="https://github.com/vporton/xml-boiler" class="inline-onebox" rel="noopener nofollow ugc">GitHub - vporton/xml-boiler: Automatically transform between XML namespaces in a clever way: https://vporton.github.io/xml-boiler-docs/</a></li>
+</ul>
+<h3><a name="team-linkedin-profiles-9" class="anchor" href="https://gov.gitcoin.co#team-linkedin-profiles-9"></a>Team LinkedIn Profiles</h3>
+<ul>
+<li><a href="https://www.linkedin.com/in/victor-porton/" rel="noopener nofollow ugc">https://www.linkedin.com/in/victor-porton/</a></li>
+</ul>
+<h2><a name="project-description-page_facing_up-10" class="anchor" href="https://gov.gitcoin.co#project-description-page_facing_up-10"></a>Project Description <img src="https://gov.gitcoin.co/images/emoji/twitter/page_facing_up.png?v=12" title=":page_facing_up:" class="emoji" alt=":page_facing_up:" loading="lazy" width="20" height="20"></h2>
+<p><a href="https://github.com/vporton/salaries-science/blob/main/financing-science-algorithm.odt?raw=true" rel="noopener nofollow ugc">The detailed description of the algorithm.</a></p>
+<p>I am applying for this grant, because I want to save science from mis-publication (including but not limited to proper marketing of OSA).</p>
+<h2><a name="deliverables-nut_and_bolt-11" class="anchor" href="https://gov.gitcoin.co#deliverables-nut_and_bolt-11"></a>Deliverables <img src="https://gov.gitcoin.co/images/emoji/twitter/nut_and_bolt.png?v=12" title=":nut_and_bolt:" class="emoji" alt=":nut_and_bolt:" loading="lazy" width="20" height="20"></h2>
+<ul>
+<li><strong>Total Estimated Duration:</strong> 410 days</li>
+<li><strong>Full-time equivalent (FTE):</strong> 242</li>
+<li><strong>Total Costs:</strong> 47000 USD</li>
+</ul>
+<h3><a name="milestone-1-12" class="anchor" href="https://gov.gitcoin.co#milestone-1-12"></a>Milestone 1</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 30 days</li>
+<li><strong>FTE:</strong> 15</li>
+<li><strong>Costs:</strong> 3000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Onchain data structure</td>
+<td>Data structures and associated APIs for all on-chain storage described in the algorithm</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-2-13" class="anchor" href="https://gov.gitcoin.co#milestone-2-13"></a>Milestone 2</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 10</li>
+<li><strong>FTE:</strong> 7</li>
+<li><strong>Costs:</strong> 3000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Storing GitHub JSON</td>
+<td>API for reading the JSON file (see the article) from GitHub and storing it on-chain</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-3-14" class="anchor" href="https://gov.gitcoin.co#milestone-3-14"></a>Milestone 3</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 60</li>
+<li><strong>FTE:</strong> 40</li>
+<li><strong>Costs:</strong> 6000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>general dependencies API</td>
+<td>public API for storing on-chain dependencies</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-4-15" class="anchor" href="https://gov.gitcoin.co#milestone-4-15"></a>Milestone 4</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 20</li>
+<li><strong>FTE:</strong> 10</li>
+<li><strong>Costs:</strong> 2000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Gitcoin passport</td>
+<td>Querying and storing Gitcoin passport scores for an address</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-5-16" class="anchor" href="https://gov.gitcoin.co#milestone-5-16"></a>Milestone 5</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 20</li>
+<li><strong>FTE:</strong> 10</li>
+<li><strong>Costs:</strong> 3000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Creating rounds backend</td>
+<td>Backend for creating matching rounds</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Creating rounds frontend</td>
+<td>Frontend for creating matching rounds</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-6-17" class="anchor" href="https://gov.gitcoin.co#milestone-6-17"></a>Milestone 6</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 20</li>
+<li><strong>FTE:</strong> 10</li>
+<li><strong>Costs:</strong> 3000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Pledging matchers</td>
+<td>Accept matchers pledging matching funds</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Pledging servers</td>
+<td>Accept servers pledging gas tokens</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-7-18" class="anchor" href="https://gov.gitcoin.co#milestone-7-18"></a>Milestone 7</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 90</li>
+<li><strong>FTE:</strong> 60</li>
+<li><strong>Costs:</strong> 6000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Accept donations backend</td>
+<td>Accepting funds from a donor, writing basic donation info, also writing affiliate</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>Accept donations frontend</td>
+<td>Accepting funds from a donor, support for affiliates</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>Write dependencies</td>
+<td>Query dependencies, store them in the DB</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-8-19" class="anchor" href="https://gov.gitcoin.co#milestone-8-19"></a>Milestone 8</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 20</li>
+<li><strong>FTE:</strong> 10</li>
+<li><strong>Costs:</strong> 3000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Matching calculation</td>
+<td>Calculate the entire amounts paid to each user</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-9-20" class="anchor" href="https://gov.gitcoin.co#milestone-9-20"></a>Milestone 9</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 30</li>
+<li><strong>FTE:</strong> 15</li>
+<li><strong>Costs:</strong> 3000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Consensus</td>
+<td>Removal of erring servers by votes of other servers</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-10-21" class="anchor" href="https://gov.gitcoin.co#milestone-10-21"></a>Milestone 10</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 20</li>
+<li><strong>FTE:</strong> 10</li>
+<li><strong>Costs:</strong> 3000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Voting for user accounts</td>
+<td>Voting for each user account (or no account)</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-11-22" class="anchor" href="https://gov.gitcoin.co#milestone-11-22"></a>Milestone 11</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 20</li>
+<li><strong>FTE:</strong> 10</li>
+<li><strong>Costs:</strong> 3000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Voting for passport scores</td>
+<td>Voting for user’s Gitcoin passport scores</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-12-23" class="anchor" href="https://gov.gitcoin.co#milestone-12-23"></a>Milestone 12</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 20</li>
+<li><strong>FTE:</strong> 15</li>
+<li><strong>Costs:</strong> 3000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Rewarding servers</td>
+<td>Calculate and pay to server accounts</td>
+</tr>
+</tbody>
+</table>
+</div><h3><a name="milestone-13-24" class="anchor" href="https://gov.gitcoin.co#milestone-13-24"></a>Milestone 13</h3>
+<ul>
+<li><strong>Estimated Duration:</strong> 50</li>
+<li><strong>FTE:</strong> 30</li>
+<li><strong>Costs:</strong> 6000 USD</li>
+</ul>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Deliverable</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td>Server reference implementation</td>
+<td>Calculate and pay to server accounts</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>- Semantic Scholar dependencies</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>- `crates.io`` dependencies</td>
+</tr>
+</tbody>
+</table>
+</div><h2><a name="future-plans-25" class="anchor" href="https://gov.gitcoin.co#future-plans-25"></a>Future Plans</h2>
+<p>In the short term (after the release), I am going to press-release my project and gain some supporters.</p>
+<p>In the long term, I am going to displace Gitcoin and Drip replacing them by my project.</p>
+<p>The project will be sustainable because it will gather money, among other projects for itself.</p>
+<p>We will need further grants for improving design, SEO, and other marketing.</p>
+<h2><a name="additional-information-heavy_plus_sign-26" class="anchor" href="https://gov.gitcoin.co#additional-information-heavy_plus_sign-26"></a>Additional Information <img src="https://gov.gitcoin.co/images/emoji/twitter/heavy_plus_sign.png?v=12" title=":heavy_plus_sign:" class="emoji" alt=":heavy_plus_sign:" loading="lazy" width="20" height="20"></h2>
+<p>Work I have already done:</p>
+<ul>
+<li>written the <a href="https://github.com/vporton/salaries-science/blob/main/financing-science-algorithm.odt?raw=true" rel="noopener nofollow ugc">algorithm</a> (in English). I also started to write Motoko code, but it is very preliminary. (I am also going to replace Motoko by TypeScript.)</li>
+<li>created <a href="https://github.com/vporton/NacDB" rel="noopener nofollow ugc">NacDB</a>, a database useful for this project.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-gitcoin-killer-app/17347/1
+        Thu, 28 Dec 2023 04:08:47 +0000
+gov.gitcoin.co-post-17347-1
+[Proposal] Gitcoin killer app
+      
+
+

@@ -1,0 +1,654 @@
+
+
+
+GR13 Governance Brief
+https://gov.gitcoin.co/t/gr13-governance-brief/10289
+    
+# GR13 Governance Brief
+
+Grants Round 13 has been a monumental round for improving the community ownership, legitimacy, and credible neutrality of our systems. This post discusses how the Fraud Detection & Defense workstream (FDD) has worked to stay ahead in the red team versus blue team game. It also documents the decisions and reasons behind our subjective judgements. This workstream is tasked with minimizing the effect of these liabilities on the community.
+
+# Sybil Defenders
+
+## Sybil Detection Improvements
+
+FDD is responsible for detecting & deterring potential sybil accounts. In the past we have done this using a semi-supervised reinforcement machine learning algorithm run by BlockScience. This season we transferred the ownership of the [Anti-Sybil Operationalized Process](https://medium.com/block-science/operationalizing-the-gitcoindao-anti-sybil-process-7f2595544f44) to FDD with contributors running it end-to-end.
+
+During Season 13 we identified multiple new behaviors by the sybil attackers. Part of this was made possible by our Matrix squad. The squad developed a classification of all sybil behaviors and began to challenge assumptions held in the current process. Another effort helped us to understand the nuances behind the behaviors such as “airdrop farming” or “donation recycling”.
+
+GR13 also saw the first run of our “community model”, a second algorithm built from scratch to test and improve the Blockscience built ASOP model. FDD intends to use the newly developed community model and the ASOP model in the future, potentially as an ensemble with the human evaluations.
+
+The human evaluators, commonly referred to as “sybil hunters”, are key to the system. Not only do they help train the system while actively providing inputs, they also provide statistical validation for the model. [Humans-in-the-loop](https://medium.com/vsinghbisen/what-is-human-in-the-loop-machine-learning-why-how-used-in-ai-60c7b44eb2c0) (HITL) machine learning combined with rewards for evaluators allows us to decentralize the inputs to the system. This means the system “thinks” like the community, not the engineers that built it.
+
+GR13 saw an increase in the number of human evaluations by 100% with the cost going down by 300%!
+
+* GR10 - Core team does all evaluations
+* GR11 = $1.25/eval | $1,750 for 1,400 evaluations by 8 contributors
+  * First DAO led evaluations - Probably higher cost due to expert time from core team and SMEs for help
+  * Fairly low quality, little training done
+* GR12 = $4.39/eval | $26,350 for 6,000 evaluations by 25 contributors
+  * Opened up participation to all GitcoinDAO contributors
+  * First inter-reviewer reliability analysis to improve inputs
+  * Focused on improving quality of data entering the system
+  * Higher cost to get the inputs right and attract new people to participate
+* GR13 = $1.42/eval | $17,050 for 12,000 evaluations by 37 contributors
+  * Second time “sybil hunters” improve quality
+  * Established systems for recruiting and executing
+  * Focused on improving quality while lowering cost/eval
+  * Brought out the meme culture in FDD
+
+![|379x237](upload://jNd9rZo1UK8KH9zDUJsYGno0RV4.png)
+
+## GR13 Sybil Incidence & Flagging
+
+[Blockscience GR13 Statistical Review](https://hackmd.io/@bsci-gitcoin/SkdBF87Xc)
+
+A total of 11.9% of the Gitcoin users making donation in GR13 were flagged during R13. The Sybil Incidence during this round is significantly lower than R12, with an estimate of being approximately 70% of it was before.
+
+The Flagging Efficiency was 84% (lower boundary: 77% and upper boundary: 93%) which means that the combined process is under flagging sybils compared to what humans would do.
+
+![|624x257](upload://tnyxZsoKZG96oNzVRMCEVFCiAaC.png)
+
+Please note that some metrics are followed by a confidence interval in brackets, in keeping with statistical analysis practices.
+
+GR13
+
+* Estimated Sybil Incidence: 14.1% +/-1.3% (95% CI)
+* Estimated # of Sybil Users: 2453 (between 2227 and 2680 w/ 95% CI)
+* Number of Flagged Users: 2071
+  * % of flags due to humans: 951
+  * % of flags due to heuristics: 1067
+  * % of flags due to algorithms: 53
+* Total contributions flagged: TBD
+* Estimated Flagging Per Incidence: 84%
+
+GR12
+
+* Estimated Sybil Incidence: 16.4% (between 14.5% and 18.3%)
+* Number of Flagged Users: 8100 (27.9% of total)
+  * % of flags due to humans: 19.4%
+  * % of flags due to heuristics: 34.7%
+  * % of flags due to algorithms: 49.2%
+* Total contributions flagged: 115k (21.7% of total)
+* Estimated Flagging Per Incidence: 170% (between 118% and 249%)
+
+GR11
+
+* Estimated Sybil Incidence: 6.4% (between 3.6% and 9.3%)
+* Number of Flagged Users: 853 (5.3% of total)
+  * % of flags due to humans: 46.1%
+  * % of flags due to heuristics 14.3%
+  * % of flags due to algorithms: 39.6%
+* % of total contributions flagged: 29.3k (6.6% of total)
+* Estimated Flagging Per Incidence: 83% (between 57% and 147%)
+
+Compared to GR12, we saw a significant decrease in sybil movements. If we assume the $1.4 million in individual donations came from ½ the number of total donors which donated over $3 million in GR12, we still have a significant drop in sybil behavior.
+
+According to human evaluation statistics, it has increased by a factor of 2.6x (between 1.6x and 5.0x). This was matched by a more than proportional response through flagged users, which seems to be “over efficient”. The interpretation of this is that the combo of using human evaluations, heuristics, squelches and algorithms is generating more flags than if we did flag the entire dataset of users using humans only.
+
+## GR13 Sybil Detection Details
+
+Gitcoin Grants sybil detection depends on three fundamental inputs: survey answers as provided by the human evaluator squads, Blockscience provided heuristics, and a ML model that uses the previous two pieces in order to fill in “scores” of how likely an user is or is not sybil. With those pieces available, it is possible to compute an “aggregate score” that decides if a user is sybil or not.
+
+This aggregate score depends on a prioritization rule which works as follows:
+
+1. Has a user been evaluated by a human? If yes, and if his score is 1.0 (is_sybil = True & confidence = high), then flag it. If the score is 0 or 0.2, then do not flag.
+2. Else, has the user been evaluated by a heuristic? If yes, then simply use whenever score has been attributed
+3. For all remaining users, use the flag as evaluated by the ML prediction score.
+
+GR13 is the second time that we’re able to have an indirect proxy about how sybil incidence evolves during the round. We increased the number of human evaluations from 6,000 to 12,000. The estimated sybil incidence on each round is illustrated on the following figure.
+
+![|624x257](upload://b6CsQdJMtZeU51znKSlp8Yuwjyz.png)
+
+Notice the spike in human evaluators catching sybils during the fifth round. This may be a sign that the evaluators were learning from each other about a newly discovered behavior present in this round. The behavior included a video from user [Imeosgo](https://gitcoin.co/imeosgo).
+
+[rss3空投数量可以查询了，我可以领几万块钱。去年领了好几个项目，几十万到手](https://www.youtube.com/watch?v=Md1yJtlw7m8&t=12s)
+
+The user encourages people to create sybil accounts and donate to grants to receive airdrops. (Post on Airdrop Farming in the works!) This hypothesis is dually supported by traffic spikes from China during this timeframe as well.
+
+While these anecdotes are intuitive, FDD will work to invalidate the hypothesis between rounds and use the information to continue improving Gitcoin’s fraud detection & defense effort..
+
+# Grants Intelligence Agency
+
+The GIA evolved from a couple of initiatives and workgroups within the FDD two months before GR13 began. It has four squads: Development, Review Quality, Policy and Rewards. The main goal of the GIA is to handle grant reviews and appeals. While executing on the current round is the primary goal, decentralizing and opening up our processes to the community is also of high importance.
+
+.
+
+Grant eligibility is handled by a collaboration of multiple working groups. They review new grant applications and any grants which are flagged by the community. The grant review process is also continually being decentralized. Feedback from the process feeds into the policy via an English common law method.
+
+When the stewards ratify the round results, they are also approving the sanctions adjudicated by the FDD workstream.
+
+Full transparency to the community* is available at:
+
+* [Grant Approvals](https://www.notion.so/gitcoin/3940c8762a304e8c9630a05418ebd2a1?v=8fd78e98993e4dc29fd40a5b12a9ea75) - When new grant applications are received
+* [Grant Disputes](https://www.notion.so/gitcoin/e79f1dd9e5074a1d986ee3f91b12943e?v=74372375b4ba42ebb269be219f2c452d) - When a grant is “flagged” by a user
+* [Grant Appeals](https://www.notion.so/gitcoin/5627564cce204a0f8ae5af463873bb3d?v=2510b1a2634b4a0ea24cf2b81241d13a) - When a grant denied eligibility argues an incorrect judgment
+
+*User Actions & Reviews is currently in “open review” allowing for select participation to stewards due to sensitive Personal Identifiable Information (PII) data and potential vulnerability to counter-attacks.
+
+Additional transparency for all flags is provided at [@gitcoindisputes](https://twitter.com/GitcoinDisputes) Twitter.
+
+## ![|317x294](upload://pXu4tDVbR3EG13bepv8KbaThu5u.jpeg)
+
+FDD is dependent on the Gitcoin Holdings team for a few operational needs including some technical infrastructure, administrative access, and tagging of grants for inclusion in the eco & cause rounds. The coordination and communication between FDD | GIA, Gitcoin Holdings, PGF | Grants Operations squad, and DAOops | Support squad needs to continue to evolve and improve for matters related to grant eligibility.
+
+## New Grant Application Review Process
+
+Between GR12 and GR13, FDD shifted to an open grant review period beginning 1 month before the round and ending 1 week into it. The [Grant Review Quality](https://www.notion.so/gitcoin/FDD-Review-Quality-13445a7023bd481789ca1e314c145391) squad in FDD is responsible for ensuring that reviews are handled in a timely manner and that the reviews are of a high quality.
+
+Before the round began the Grant Review Quality squad ensured that the grant application backlog was reviewed and all new grants were approved/denied before February 11th, 2022. During the round, the grant approvers hit their goal of approving grants in under 48 hours or less (except for the weekends).
+
+Due to complications with getting data from Gitcoin Holdings we were unable to use our newly developed tool to help scale the grant review efforts. Luckily, FDD had approved a review quality budget which contained a “plan B” for grant reviews to use the previous system. (Which cost the DAO a significant amount!)
+
+A birds eye view of the progress in grant reviews
+
+* GR10 |
+  * 3 Reviewers / NA cost
+  * First time using outside reviewers
+  * FDD did not have a budget yet! Volunteer help.
+* GR11 | 7 Reviewers / $10,000
+  * Opened up to the community even more
+  * Multiple payments models tested
+* GR12 | 8 Reviewers / $14,133 (1 approver - Joe)
+  * Experimented with two grant review squads
+  * Recruited more community members and started to focus on quality
+* GR13 | $5.38 cost per review & 2.3 average reviews per grant
+  * 2,300 Reviews / 1000 Grants (Duplication error made this an estimate)
+  * 7 Reviewers / $12,380 (2 approvers -Joe, Zer8)
+  * The main focus was balancing between high quality reviews and number of reviews
+  * Working towards Ethelo integration, senior grant reviewers => Trusted seed reviewers
+
+
+
+The experiment run in GR12 using Ethelo for the Grant Disputes not only provided the same outcomes as the former review process, it garnered 53 reviewers in 7 days. Of the reviewers to use the system, 65% reviewed all of the grants presented. All this for the reward of a POAP! By using the Ethelo system in the future, a cost savings is likely.
+
+## Grants Disputes & Appeals
+
+The policy squad exists to create and maintain policies affecting platform use and grant round participation. They set definitions based on reviewer feedback and advise on judgements for flags, disputes, appeals, and sanctions during the round.
+
+During GR13, a discussion on the governance forum included analysis and recommendations for a grant eligibility policy change triggered by the [BrightID appeal](https://gitcoin.notion.site/BrightID-191-87bafad66140414ebf235f85ecb771e6). This discussion found the need for policy to be an iterative process informed by the public goods workstream and the community as well as FDD. Should Gitcoin model its authority like English common law? What alternatives exist?
+
+The outcome of the BrightID appeal was found using a well thought-out process which needed more education and validation from the community to execute. This is the process we had recommended prior to BrightID being the first appeal to make it to the level of needing to change a policy!
+
+![|435x251](upload://527N0ZWDH20dYS5w6xYsHdIKQCk.png)
+
+However, the collaboration between FDD & PGF Grants Ops showed us that the snapshot vote was unnecessary at this level. The process ended up playing out in these steps:
+
+1. BrightID submits their request for appeal
+2. The FDD source council hears the case as an appellate judge would to determine if the appeal has merit. In this case, they found it to be a [novel situation](https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125).
+3. The appeal was then posted to the governance forum for discussion. The FDD recommended a steward vote for legitimacy of the process, but the post did not get 5 stewards commenting in approval of moving it to a vote.
+4. FDD then went with its judgment and reactivated the grant. (Technically, the grant was reactivated before the round to participate rather than “being in jail while awaiting trial.)
+
+The first appeal to require a policy shift produced deep discussion & general agreement about how the dao should process appeals and found ways to increase the decentralization of the entire process. The real question was which appeals should reach a Steward vote, and which can be disposed of by (currently) the FDD or a decentralized group?
+
+While the policy change suggestion did not proceed to a Snapshot vote it resulted in progress for Gitcoin. It also involved suggestions of market cap limitation for projects with governance tokens whereas presently, projects with tokens get denied. The policy change itself was deferred to a time after the grant round.
+
+Gitcoin Grants policy is currently held on a “living document” which can be found on the new Knowledge base which was recently installed at support.gitcoin.co. This new open source Gitbook instance, which is maintained by the support squad, replaces the previous closed source Happyfox knowledge base.
+
+# FDD Statement on GR13
+
+The sybil attacks slowed down this round, but they are not stopping. They are evolving new and more complex tactics which require FDD’s best effort to defend. Last round we commented on our dependence on Gitcoin Holdings to supply new sources of data outside of what we are whitelisted to access.
+
+FDD requires an appropriate level of data access to quickly respond to new red team strategies. The blue team is at a significant disadvantage when we must wait months to get approval to access the data needed to defend against new styles and classes of attack.
+
+Simply getting the publicly available data about grants to integrate into our review software took the entire time between GR12 and GR13 due to legal concerns. The issue was finally solved for us on 3/11, two days after the start of GR13. We could have redirected the current integration which sends information to Notion. (Not to mention we lost the testing opportunity and all the learning we would have gotten by using the fully operational software which only needed the integration to avoid manual inputting of the data. This issue cost the DAO around $10-15k.)
+
+We currently have two open data requests which have both been open for over a month. How is the Fraud Detection & Defense workstream supposed to function properly when we cannot access data in a dynamic way which allows us to respond to new behaviors?
+
+We again encourage Gitcoin Holdings to make ALL data that isn’t legally protected available to the FDD workstream. Our data storage layer squad can work with Gitcoin Holdings engineering to set up a warehouse with proper roles and permissioning for DAO contributors and the public. Please help us to innovate further and faster.
+
+[Disruption Joe](https://twitter.com/disruptionjoe), FDD Workstream Lead
+Mon, 04 Apr 2022 17:19:43 +0000
+🤖 DAO Governance and Vision
+
+
+GR13 Governance Brief
+DisruptionJoe
+
+            <aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>i wonder if most of the sybil attackers or automated or not.</p>
+</blockquote>
+</aside>
+<p>Intuitively, I would say the answer is no. I believe the largest known class of sybil attack is “airdrop farming”. Working on a gov post to release next week about this behavior. In short, we are currently making this behavior trigger an account to be ineligible for matching funds if the ml identifies the account as sybil as opposed to simply a new account.</p>
+<p>A big question remains concerning the connection of a grant owner to media/influencers convincing followers to airdrop farm as a sybil attack.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>what is the numerator / demoninator here? is this on a per-user basis? or per-contribution basis?</p>
+</blockquote>
+</aside>
+<p>This is sybil users / unique users to contribute in GR13.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>what is the policy on disclosure of said tactics? is there transparency with stewards about them? i suppose yall dont want to be public about what they are to avoid tipping off attackoooorrrs?</p>
+</blockquote>
+</aside>
+<p>Right now we are considering our methods to be “open review”. Any steward can contact me for a walkthrough of our system, but I believe this will also require nomination by at least one person from the steward council to prevent a malicious actor from becoming a steward via GTC holdings and gaining access to sensitive info.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>ACK - lets work together on this.</p>
+</blockquote>
+</aside>
+<p>It is getting better thanks to Engineering and Legal leadership engaging more on the topic. Some of the questions are just difficult though, so this is less blame and more awareness in intention.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>FDD first made the GPG (Gitcoin Product Group) aware of the technical needs to integrate Ethelo in <a href="https://discord.com/channels/562828676480237578/916079015280926790/936348899168370718">late Jan </a>. You <a href="https://discord.com/channels/562828676480237578/941434914409185300/941435166621040710">first requested a legal engagement for</a> Holdings to integrate with Ethelo in mid February 2022.</p>
+<p>Let me know if I am mistaken about these days. I searched my Discord &amp; gmail, but may have missed something!</p>
+</blockquote>
+</aside>
+<p>I believe in Jan was when you were added to conversations. The discussions absolutely started during GR12 as we manually input the data for our test run on disputes.</p>
+<p>In January, we picked up the thread again as we set our Season 13 outcomes and began to work on them. This is when we began very actively pursuing the outcome.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>in early late February / March during a code freeze &amp; right before GR13 started and were open during the busy period during the round.</p>
+</blockquote>
+</aside>
+<p>This is when a more aggressive push for the access happened due to outcome ownership being assigned within FDD for Season 13. Access to more data, specifically having gitcoin holdings make all data available which is not PII be available to FDD has been a request since before FDD officially started in August 2021.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>the GPG has put Grants 1.0 into maintenance mode. There is not much work being done beyond KTL (Keep the Lights On) work, and focus has shifted to Grants 2.0 (which will not have these data access issues because its decentralized!).</p>
+</blockquote>
+</aside>
+<p>Nate, Lindsey, and Kevin Olsen have been great about communicating what is happening with this transition and including us in their discovery.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<ol>
+<li>the legal team (just 1 person) is rather preoccupied with a (somewhat complicated) (1) international Foundation asset transfer + (2) the KERNEL spinout + (3)an ever-changing regulatory environment.</li>
+</ol>
+<p>because of this, the resources to sort through multiple data requests (each of which carry massive data privacy liability risks) are not always ready to respond to the FDDs requests in a timely matter.</p>
+</blockquote>
+</aside>
+<p>This would also fall under the desire to share because of awareness rather than blame. I am pushing for it because our workstream depends on this data access. I’m guessing MMM and Grants Ops will begin pushing for this priortity as well due to their need for realtime data to make good decisions.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I also want to name a miscommunication between the groups. When the Holdings company gave access to BlockScience/FDD back in late 2021, I was told that BlockScience was managing the dataset + making it available (in a privacy preserving way) to community contributors. It does not seem like that function has been maintained or migrated to the FDD. Are there plans to migrate that function to the FDD?</p>
+</blockquote>
+</aside>
+<p>Blockscience did indeed transfer the knowledge, code, and processes for this. What they couldn’t transfer is the access tokens assigned to them with an NDA contract wherein they shouldn’t share it with FDD contributors, therefore we needed a new one of our own to access the same data. We also ran into issues around the VPN requirements (whitelisting) and the addition of DevOps to Gitcoin Holdings and the DAO taking longer than planned. There were also rate limiting issues.</p>
+<p>Metabase is not a sufficient tool for real-time data analysis of the type we do. Many times our data requests would simply save the DAO money as it takes contributor time to scrape and piece together data which could be shared in a more efficient (and accurate) way.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>FDD takes the brunt of the product/engineering work (a well-tested PR to gitcoinco/web comes with the request)</p>
+</blockquote>
+</aside>
+<p>We provided the code for the ethelo data request and it still took a couple more weeks for the legal side. I think this request is very reasonable though.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>We enable FDD to stand on it’s own two feet, without Holdings. This means either waiting for Grants 2.0 or enabling it for Grants 1.0 by FDD creating a “all for one, one for all” datawarehouse that has scrubbed any PII in it, so it can service its own data requests.</p>
+</blockquote>
+</aside>
+<p>Our Data Storage Layer squad has shared the <a href="https://docs.google.com/presentation/d/1cnmIG7TSM8qfK23ebtI16psTZNtEVSocMtQxCwS6Tso/edit?usp=sharing">architecture and process plans</a> for this and built the portion of the system we can.</p>
+<p>I do think this solution is best because of the need for data analysts to “tinker” with the data to find the insights with significant meaning. It is difficult to make a perfect request for exactly the data you need.</p>
+<aside class="quote no-group" data-username="owocki" data-post="2" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/owocki/48/12006_2.png" class="avatar"> owocki:</div>
+<blockquote>
+<p>I’m glad to see the progress the FDD has made on sybil data detection &amp; scaling its resources and I dont want that to be overshadowed by my attempt to clarity some things &amp; draw some boundaries above. Glad we can have these discussions constructively and respectfully, this is what decentralized governance is I think.</p>
+</blockquote>
+</aside>
+<p>I appreciate the discussion.</p>
+          <p><a href="https://gov.gitcoin.co/t/gr13-governance-brief/10289/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gr13-governance-brief/10289/4
+        Mon, 04 Apr 2022 17:19:43 +0000
+gov.gitcoin.co-post-10289-4
+GR13 Governance Brief
+      
+
+GR13 Governance Brief
+bobjiang
+
+            <p>I believe we need a close coordinations in these teams including product team.<br>
+E.g we could have a weekly sync call 1 month before GR14.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>The coordination and communication between FDD | GIA, Gitcoin Holdings, PGF | Grants Operations squad, and DAOops | Support squad needs to continue to evolve and improve for matters related to grant eligibility.</p>
+</blockquote>
+</aside>
+<p>New knowledge base site is live now.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p><a href="http://support.gitcoin.co">support.gitcoin.co</a>.</p>
+</blockquote>
+</aside>
+<p>Last but not least, about the grant status according with Grant policy, I have some suggestions, will create a separate post for it.</p>
+          <p><a href="https://gov.gitcoin.co/t/gr13-governance-brief/10289/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gr13-governance-brief/10289/3
+        Sat, 02 Apr 2022 05:48:32 +0000
+gov.gitcoin.co-post-10289-3
+GR13 Governance Brief
+      
+
+GR13 Governance Brief
+owocki
+
+            <p>OOoh Sybil report day! woo hoo. <img src="https://gov.gitcoin.co/images/emoji/twitter/christmas_tree.png?v=12" title=":christmas_tree:" class="emoji" alt=":christmas_tree:" loading="lazy" width="20" height="20"></p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>Estimated Sybil Incidence: 14.1% +/-1.3% (95% CI)</p>
+</blockquote>
+</aside>
+<p>what is the numerator / demoninator here?  is this on a per-user basis? or per-contribution basis?</p>
+<p>interesting that the number is not that far down between GR12/GR13 given the new bot protections.  i wonder if most of the sybil attackers or automated or not.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=Md1yJtlw7m8&amp;t=12s">rss3空投数量可以查询了，我可以领几万块钱。去年领了好几个项目，几十万到手</a></p>
+</blockquote>
+</aside>
+<p>its interesting when videos like this get leaked to FDD.  i think that game theoretically, videos like this will always get leaked to FDD.</p>
+<p>here’s why: Because quadratic funding requires the largest number of contributors possible to get the highest matching, black hats will try to create sybil accounts at scale by scaling their comms, and in the inevitably large population that consumes those videos, someone is likely to tip off the FDD.</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>They are evolving new and more complex tactics which require FDD’s best effort to defend.</p>
+</blockquote>
+</aside>
+<p>what is the policy on disclosure of said tactics?  is there transparency with stewards about them?  i suppose yall dont want to be public about what they are to avoid tipping off attackoooorrrs?</p>
+<aside class="quote no-group" data-username="DisruptionJoe" data-post="1" data-topic="10289">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/disruptionjoe/48/106_2.png" class="avatar"> DisruptionJoe:</div>
+<blockquote>
+<p>The coordination and communication between FDD | GIA, Gitcoin Holdings, PGF | Grants Operations squad, and DAOops | Support squad needs to continue to evolve and improve for matters related to grant eligibility.</p>
+</blockquote>
+</aside>
+<p>ACK - donno what all can be done (and how) while Grants 1.0 is in maintenance mode, but happy to take a look.</p>
+<blockquote>
+<p>The blue team is at a significant disadvantage when we must wait months to get approval to access the data needed to defend against new styles and classes of attack.</p>
+</blockquote>
+<p>ACK - lets work together on this.</p>
+<blockquote>
+<p>Simply getting the publicly available data about grants to integrate into our review software took the entire time between GR12 and GR13 due to legal concerns.</p>
+</blockquote>
+<p>I’m not sure this is entirely accurate.  Lets get on the same page here.</p>
+<p>GR12 ended in mid-December 2021.   FDD first made the GPG (Gitcoin Product Group) aware of the technical needs to integrate Ethelo in <a href="https://discord.com/channels/562828676480237578/916079015280926790/936348899168370718">late Jan</a>.   You <a href="https://discord.com/channels/562828676480237578/941434914409185300/941435166621040710">first requested a legal engagement for</a> Holdings to integrate with Ethelo in mid February 2022.</p>
+<p>Let me know if I am mistaken about these days. I searched my Discord &amp; gmail, but may have missed something!</p>
+<blockquote>
+<p>We currently have two open data requests which have both been open for over a month. How is the Fraud Detection &amp; Defense workstream supposed to function properly when we cannot access data in a dynamic way which allows us to respond to new behaviors?</p>
+</blockquote>
+<p>As you noted, the data requests were opened a month ago - in early late February / March during a code freeze &amp; right before GR13 started and were open during the busy period during the round.</p>
+<p>I advise that FDD revisit the expectation that Holdings can provide access at the last minute (right before a round).  I want to remind everyone that</p>
+<ol>
+<li>the GPG has put Grants 1.0 into maintenance mode.  There is not much work being done beyond KTL (Keep the Lights On) work, and focus has shifted to Grants 2.0 (which will not have these data access issues because its decentralized!).</li>
+<li>the legal team (just 1 person) is rather preoccupied with a (somewhat complicated) (1) international Foundation asset transfer + (2) the KERNEL spinout + (3)an ever-changing regulatory environment.</li>
+</ol>
+<p>because of this, the resources to sort through multiple data requests (each of which carry massive data privacy liability risks) are not always ready to respond to the FDDs requests in a timely matter.</p>
+<p>I also want to name a miscommunication between the groups. When the Holdings company gave access to BlockScience/FDD back in late 2021, I was told that BlockScience was managing the dataset + making it available (in a privacy preserving way) to community contributors. It does not seem like that function has been maintained or migrated to the FDD.  Are there plans to migrate that function to the FDD? It was not made clear to us that the FDD was treating Holdings as the source of truth for data requests and therefore would require multiple more data connection requests to Holdings for different projects over time (at present, it seems like multiple per quarter).  Given the Ethelo request in Q1 2022, and now your two new data requests in Q2 2022, I think an adjustment in expectations is in order.</p>
+<p>I have massive empathy for the FDD’s need for data, but I dont know that Holdings can always accomodate them under current circumstances.</p>
+<p>Here is what I’d suggest:</p>
+<ol>
+<li>Holdings can agree to a SLA in which data requests are responded to within a certain time period.</li>
+<li>We set up expectations of what a “work request” looks like between the two orgs.</li>
+</ol>
+<p>In exchange, I hope to see FDD take further ownership of their own outcomes - I think that means three things</p>
+<ol>
+<li>at least 1 quarter advance notice</li>
+</ol>
+<ul>
+<li>and/or -</li>
+</ul>
+<ol start="2">
+<li>FDD takes the brunt of the product/engineering work (a well-tested PR to gitcoinco/web comes with the request)</li>
+<li>FDD takes the brunt of the legal work (a legal structure that minimizes risk for Holdings)</li>
+</ol>
+<ul>
+<li>and/or -</li>
+</ul>
+<ol start="4">
+<li>We enable FDD to stand on it’s own two feet, without Holdings. This means either waiting for Grants 2.0 or enabling it for Grants 1.0 by FDD creating a “all for one, one for all” datawarehouse that has scrubbed any PII in it, so it can service its own data requests.</li>
+</ol>
+<p>Let me know what you think of this proposal.</p>
+<hr>
+<p>I’m glad to see the progress the FDD has made on sybil data detection &amp; scaling its resources and I dont want that to be overshadowed by my attempt to clarity some things &amp; draw some boundaries above.  Glad we can have these discussions constructively and respectfully, this is what decentralized governance is I think.</p>
+          <p><a href="https://gov.gitcoin.co/t/gr13-governance-brief/10289/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gr13-governance-brief/10289/2
+        Sat, 02 Apr 2022 03:34:17 +0000
+gov.gitcoin.co-post-10289-2
+GR13 Governance Brief
+      
+
+GR13 Governance Brief
+DisruptionJoe
+
+            <h1>
+<a name="gr13-governance-brief-1" class="anchor" href="https://gov.gitcoin.co#gr13-governance-brief-1"></a>GR13 Governance Brief</h1>
+<p>Grants Round 13 has been a monumental round for improving the community ownership, legitimacy, and credible neutrality of our systems. This post discusses how the Fraud Detection &amp; Defense workstream (FDD) has worked to stay ahead in the red team versus blue team game. It also documents the decisions and reasons behind our subjective judgements. This workstream is tasked with minimizing the effect of these liabilities on the community.</p>
+<h1>
+<a name="sybil-defenders-2" class="anchor" href="https://gov.gitcoin.co#sybil-defenders-2"></a>Sybil Defenders</h1>
+<h2>
+<a name="sybil-detection-improvements-3" class="anchor" href="https://gov.gitcoin.co#sybil-detection-improvements-3"></a>Sybil Detection Improvements</h2>
+<p>FDD is responsible for detecting &amp; deterring potential sybil accounts. In the past we have done this using a semi-supervised reinforcement machine learning algorithm run by BlockScience. This season we transferred the ownership of the <a href="https://medium.com/block-science/operationalizing-the-gitcoindao-anti-sybil-process-7f2595544f44">Anti-Sybil Operationalized Process</a> to FDD with contributors running it end-to-end.</p>
+<p>During Season 13 we identified multiple new behaviors by the sybil attackers. Part of this was made possible by our Matrix squad. The squad developed a classification of all sybil behaviors and began to challenge assumptions held in the current process. Another effort helped us to understand the nuances behind the behaviors such as “airdrop farming” or “donation recycling”.</p>
+<p>GR13 also saw the first run of our “community model”, a second algorithm built from scratch to test and improve the Blockscience built ASOP model. FDD intends to use the newly developed community model and the ASOP model in the future, potentially as an ensemble with the human evaluations.</p>
+<p>The human evaluators, commonly referred to as “sybil hunters”, are key to the system. Not only do they help train the system while actively providing inputs, they also provide statistical validation for the model. <a href="https://medium.com/vsinghbisen/what-is-human-in-the-loop-machine-learning-why-how-used-in-ai-60c7b44eb2c0">Humans-in-the-loop</a> (HITL) machine learning combined with rewards for evaluators allows us to decentralize the inputs to the system. This means the system “thinks” like the community, not the engineers that built it.</p>
+<p>GR13 saw an increase in the number of human evaluations by 100% with the cost going down by 300%!</p>
+<ul>
+<li>GR10 - Core team does all evaluations</li>
+<li>GR11 = $1.25/eval | $1,750 for 1,400 evaluations by 8 contributors
+<ul>
+<li>First DAO led evaluations - Probably higher cost due to expert time from core team and SMEs for help</li>
+<li>Fairly low quality, little training done</li>
+</ul>
+</li>
+<li>GR12 = $4.39/eval | $26,350 for 6,000 evaluations by 25 contributors
+<ul>
+<li>Opened up participation to all GitcoinDAO contributors</li>
+<li>First inter-reviewer reliability analysis to improve inputs</li>
+<li>Focused on improving quality of data entering the system</li>
+<li>Higher cost to get the inputs right and attract new people to participate</li>
+</ul>
+</li>
+<li>GR13 = $1.42/eval | $17,050 for 12,000 evaluations by 37 contributors
+<ul>
+<li>Second time “sybil hunters” improve quality</li>
+<li>Established systems for recruiting and executing</li>
+<li>Focused on improving quality while lowering cost/eval</li>
+<li>Brought out the meme culture in FDD</li>
+</ul>
+</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/8/8ab96ba3ccbc5bc6c5f78bd8440e5589ca17fac6.png" data-download-href="/uploads/short-url/jNd9rZo1UK8KH9zDUJsYGno0RV4.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/8/8ab96ba3ccbc5bc6c5f78bd8440e5589ca17fac6_2_379x237.png" alt="" data-base62-sha1="jNd9rZo1UK8KH9zDUJsYGno0RV4" width="379" height="237" srcset="/uploads/db4391/optimized/2X/8/8ab96ba3ccbc5bc6c5f78bd8440e5589ca17fac6_2_379x237.png, /uploads/db4391/optimized/2X/8/8ab96ba3ccbc5bc6c5f78bd8440e5589ca17fac6_2_568x355.png 1.5x, /uploads/db4391/optimized/2X/8/8ab96ba3ccbc5bc6c5f78bd8440e5589ca17fac6_2_758x474.png 2x" data-small-upload="/uploads/db4391/optimized/2X/8/8ab96ba3ccbc5bc6c5f78bd8440e5589ca17fac6_2_10x10.png"></a></div><p></p>
+<h2>
+<a name="gr13-sybil-incidence-flagging-4" class="anchor" href="https://gov.gitcoin.co#gr13-sybil-incidence-flagging-4"></a>GR13 Sybil Incidence &amp; Flagging</h2>
+<p><a href="https://hackmd.io/@bsci-gitcoin/SkdBF87Xc">Blockscience GR13 Statistical Review</a></p>
+<p>A total of 11.9% of the Gitcoin users making donation in GR13 were flagged during R13. The Sybil Incidence during this round is significantly lower than R12, with an estimate of being approximately 70% of it was before.</p>
+<p>The Flagging Efficiency was 84% (lower boundary: 77% and upper boundary: 93%) which means that the combined process is under flagging sybils compared to what humans would do.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/cde8c0442da63cf3e7fb9b1f6bc8e9f460224212.png" data-download-href="/uploads/short-url/tnyxZsoKZG96oNzVRMCEVFCiAaC.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/c/cde8c0442da63cf3e7fb9b1f6bc8e9f460224212_2_624x257.png" alt="" data-base62-sha1="tnyxZsoKZG96oNzVRMCEVFCiAaC" width="624" height="257" srcset="/uploads/db4391/optimized/2X/c/cde8c0442da63cf3e7fb9b1f6bc8e9f460224212_2_624x257.png, /uploads/db4391/optimized/2X/c/cde8c0442da63cf3e7fb9b1f6bc8e9f460224212_2_936x385.png 1.5x, /uploads/db4391/original/2X/c/cde8c0442da63cf3e7fb9b1f6bc8e9f460224212.png 2x" data-small-upload="/uploads/db4391/optimized/2X/c/cde8c0442da63cf3e7fb9b1f6bc8e9f460224212_2_10x10.png"></a></div><p></p>
+<p>Please note that some metrics are followed by a confidence interval in brackets, in keeping with statistical analysis practices.</p>
+<p>GR13</p>
+<ul>
+<li>Estimated Sybil Incidence: 14.1% +/-1.3% (95% CI)</li>
+<li>Estimated # of Sybil Users: 2453 (between 2227 and 2680 w/ 95% CI)</li>
+<li>Number of Flagged Users: 2071
+<ul>
+<li>% of flags due to humans: 951</li>
+<li>% of flags due to heuristics: 1067</li>
+<li>% of flags due to algorithms: 53</li>
+</ul>
+</li>
+<li>Total contributions flagged: TBD</li>
+<li>Estimated Flagging Per Incidence: 84%</li>
+</ul>
+<p>GR12</p>
+<ul>
+<li>Estimated Sybil Incidence: 16.4% (between 14.5% and 18.3%)</li>
+<li>Number of Flagged Users: 8100 (27.9% of total)
+<ul>
+<li>% of flags due to humans: 19.4%</li>
+<li>% of flags due to heuristics: 34.7%</li>
+<li>% of flags due to algorithms: 49.2%</li>
+</ul>
+</li>
+<li>Total contributions flagged: 115k (21.7% of total)</li>
+<li>Estimated Flagging Per Incidence: 170% (between 118% and 249%)</li>
+</ul>
+<p>GR11</p>
+<ul>
+<li>Estimated Sybil Incidence: 6.4% (between 3.6% and 9.3%)</li>
+<li>Number of Flagged Users: 853 (5.3% of total)
+<ul>
+<li>% of flags due to humans: 46.1%</li>
+<li>% of flags due to heuristics 14.3%</li>
+<li>% of flags due to algorithms: 39.6%</li>
+</ul>
+</li>
+<li>% of total contributions flagged: 29.3k (6.6% of total)</li>
+<li>Estimated Flagging Per Incidence: 83% (between 57% and 147%)</li>
+</ul>
+<p>Compared to GR12, we saw a significant decrease in sybil movements. If we assume the $1.4 million in individual donations came from ½ the number of total donors which donated over $3 million in GR12, we still have a significant drop in sybil behavior.</p>
+<p>According to human evaluation statistics, it has increased by a factor of 2.6x (between 1.6x and 5.0x). This was matched by a more than proportional response through flagged users, which seems to be “over efficient”. The interpretation of this is that the combo of using human evaluations, heuristics, squelches and algorithms is generating more flags than if we did flag the entire dataset of users using humans only.</p>
+<h2>
+<a name="gr13-sybil-detection-details-5" class="anchor" href="https://gov.gitcoin.co#gr13-sybil-detection-details-5"></a>GR13 Sybil Detection Details</h2>
+<p>Gitcoin Grants sybil detection depends on three fundamental inputs: survey answers as provided by the human evaluator squads, Blockscience provided heuristics, and a ML model that uses the previous two pieces in order to fill in “scores” of how likely an user is or is not sybil. With those pieces available, it is possible to compute an “aggregate score” that decides if a user is sybil or not.</p>
+<p>This aggregate score depends on a prioritization rule which works as follows:</p>
+<ol>
+<li>Has a user been evaluated by a human? If yes, and if his score is 1.0 (is_sybil = True &amp; confidence = high), then flag it. If the score is 0 or 0.2, then do not flag.</li>
+<li>Else, has the user been evaluated by a heuristic? If yes, then simply use whenever score has been attributed</li>
+<li>For all remaining users, use the flag as evaluated by the ML prediction score.</li>
+</ol>
+<p>GR13 is the second time that we’re able to have an indirect proxy about how sybil incidence evolves during the round. We increased the number of human evaluations from 6,000 to 12,000. The estimated sybil incidence on each round is illustrated on the following figure.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/4/4dd77f34ac9c7b57c4ceda4fd2232fa37e281d8b.png" data-download-href="/uploads/short-url/b6CsQdJMtZeU51znKSlp8Yuwjyz.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/4/4dd77f34ac9c7b57c4ceda4fd2232fa37e281d8b_2_624x257.png" alt="" data-base62-sha1="b6CsQdJMtZeU51znKSlp8Yuwjyz" width="624" height="257" srcset="/uploads/db4391/optimized/2X/4/4dd77f34ac9c7b57c4ceda4fd2232fa37e281d8b_2_624x257.png, /uploads/db4391/optimized/2X/4/4dd77f34ac9c7b57c4ceda4fd2232fa37e281d8b_2_936x385.png 1.5x, /uploads/db4391/original/2X/4/4dd77f34ac9c7b57c4ceda4fd2232fa37e281d8b.png 2x" data-small-upload="/uploads/db4391/optimized/2X/4/4dd77f34ac9c7b57c4ceda4fd2232fa37e281d8b_2_10x10.png"></a></div><p></p>
+<p>Notice the spike in human evaluators catching sybils during the fifth round. This may be a sign that the evaluators were learning from each other about a newly discovered behavior present in this round. The behavior included a video from user <a href="https://gitcoin.co/imeosgo">Imeosgo</a>.</p>
+<p><a href="https://www.youtube.com/watch?v=Md1yJtlw7m8&amp;t=12s">rss3空投数量可以查询了，我可以领几万块钱。去年领了好几个项目，几十万到手</a></p>
+<p>The user encourages people to create sybil accounts and donate to grants to receive airdrops. (Post on Airdrop Farming in the works!) This hypothesis is dually supported by traffic spikes from China during this timeframe as well.</p>
+<p>While these anecdotes are intuitive, FDD will work to invalidate the hypothesis between rounds and use the information to continue improving Gitcoin’s fraud detection &amp; defense effort…</p>
+<h1>
+<a name="grants-intelligence-agency-6" class="anchor" href="https://gov.gitcoin.co#grants-intelligence-agency-6"></a>Grants Intelligence Agency</h1>
+<p>The GIA evolved from a couple of initiatives and workgroups within the FDD two months before GR13 began. It has four squads: Development, Review Quality, Policy and Rewards. The main goal of the GIA is to handle grant reviews and appeals. While executing on the current round is the primary goal, decentralizing and opening up our processes to the community is also of high importance.</p>
+<p>.</p>
+<p>Grant eligibility is handled by a collaboration of multiple working groups. They review new grant applications and any grants which are flagged by the community. The grant review process is also continually being decentralized. Feedback from the process feeds into the policy via an English common law method.</p>
+<p>When the stewards ratify the round results, they are also approving the sanctions adjudicated by the FDD workstream.</p>
+<p>Full transparency to the community* is available at:</p>
+<ul>
+<li>
+<a href="https://www.notion.so/gitcoin/3940c8762a304e8c9630a05418ebd2a1?v=8fd78e98993e4dc29fd40a5b12a9ea75">Grant Approvals</a> - When new grant applications are received</li>
+<li>
+<a href="https://www.notion.so/gitcoin/e79f1dd9e5074a1d986ee3f91b12943e?v=74372375b4ba42ebb269be219f2c452d">Grant Disputes</a> - When a grant is “flagged” by a user</li>
+<li>
+<a href="https://www.notion.so/gitcoin/5627564cce204a0f8ae5af463873bb3d?v=2510b1a2634b4a0ea24cf2b81241d13a">Grant Appeals</a> - When a grant denied eligibility argues an incorrect judgment</li>
+</ul>
+<p>*User Actions &amp; Reviews is currently in “open review” allowing for select participation to stewards due to sensitive Personal Identifiable Information (PII) data and potential vulnerability to counter-attacks.</p>
+<p>Additional transparency for all flags is provided at <a href="https://twitter.com/GitcoinDisputes">@gitcoindisputes</a> Twitter.</p>
+<h2>
+<a name="h-317x294uploadpxu4tdvbr3eg13bepv8kbathu5ujpeg-7" class="anchor" href="https://gov.gitcoin.co#h-317x294uploadpxu4tdvbr3eg13bepv8kbathu5ujpeg-7"></a><img src="/uploads/db4391/original/2X/b/b5efbe93181ac7012f31bd315e468176f5323234.jpeg" alt="" data-base62-sha1="pXu4tDVbR3EG13bepv8KbaThu5u" width="317" height="294">
+</h2>
+<p>FDD is dependent on the Gitcoin Holdings team for a few operational needs including some technical infrastructure, administrative access, and tagging of grants for inclusion in the eco &amp; cause rounds. The coordination and communication between FDD | GIA, Gitcoin Holdings, PGF | Grants Operations squad, and DAOops | Support squad needs to continue to evolve and improve for matters related to grant eligibility.</p>
+<h2>
+<a name="new-grant-application-review-process-8" class="anchor" href="https://gov.gitcoin.co#new-grant-application-review-process-8"></a>New Grant Application Review Process</h2>
+<p>Between GR12 and GR13, FDD shifted to an open grant review period beginning 1 month before the round and ending 1 week into it. The <a href="https://www.notion.so/gitcoin/FDD-Review-Quality-13445a7023bd481789ca1e314c145391">Grant Review Quality</a> squad in FDD is responsible for ensuring that reviews are handled in a timely manner and that the reviews are of a high quality.</p>
+<p>Before the round began the Grant Review Quality squad ensured that the grant application backlog was reviewed and all new grants were approved/denied before February 11th, 2022. During the round, the grant approvers hit their goal of approving grants in under 48 hours or less (except for the weekends).</p>
+<p>Due to complications with getting data from Gitcoin Holdings we were unable to use our newly developed tool to help scale the grant review efforts. Luckily, FDD had approved a review quality budget which contained a “plan B” for grant reviews to use the previous system. (Which cost the DAO a significant amount!)</p>
+<p>A birds eye view of the progress in grant reviews</p>
+<ul>
+<li>GR10 |
+<ul>
+<li>3 Reviewers / NA cost</li>
+<li>First time using outside reviewers</li>
+<li>FDD did not have a budget yet! Volunteer help.</li>
+</ul>
+</li>
+<li>GR11 | 7 Reviewers / $10,000
+<ul>
+<li>Opened up to the community even more</li>
+<li>Multiple payments models tested</li>
+</ul>
+</li>
+<li>GR12 | 8 Reviewers / $14,133 (1 approver - Joe)
+<ul>
+<li>Experimented with two grant review squads</li>
+<li>Recruited more community members and started to focus on quality</li>
+</ul>
+</li>
+<li>GR13 | $5.38 cost per review &amp; 2.3 average reviews per grant
+<ul>
+<li>2,300 Reviews / 1000 Grants (Duplication error made this an estimate)</li>
+<li>7 Reviewers / $12,380 (2 approvers -Joe, Zer8)</li>
+<li>The main focus was balancing between high quality reviews and number of reviews</li>
+<li>Working towards Ethelo integration, senior grant reviewers =&gt; Trusted seed reviewers</li>
+</ul>
+</li>
+</ul>
+<p>The experiment run in GR12 using Ethelo for the Grant Disputes not only provided the same outcomes as the former review process, it garnered 53 reviewers in 7 days. Of the reviewers to use the system, 65% reviewed all of the grants presented. All this for the reward of a POAP! By using the Ethelo system in the future, a cost savings is likely.</p>
+<h2>
+<a name="grants-disputes-appeals-9" class="anchor" href="https://gov.gitcoin.co#grants-disputes-appeals-9"></a>Grants Disputes &amp; Appeals</h2>
+<p>The policy squad exists to create and maintain policies affecting platform use and grant round participation. They set definitions based on reviewer feedback and advise on judgements for flags, disputes, appeals, and sanctions during the round.</p>
+<p>During GR13, a discussion on the governance forum included analysis and recommendations for a grant eligibility policy change triggered by the <a href="https://gitcoin.notion.site/BrightID-191-87bafad66140414ebf235f85ecb771e6">BrightID appeal</a>. This discussion found the need for policy to be an iterative process informed by the public goods workstream and the community as well as FDD. Should Gitcoin model its authority like English common law? What alternatives exist?</p>
+<p>The outcome of the BrightID appeal was found using a well thought-out process which needed more education and validation from the community to execute. This is the process we had recommended prior to BrightID being the first appeal to make it to the level of needing to change a policy!</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288.png" data-download-href="/uploads/short-url/527N0ZWDH20dYS5w6xYsHdIKQCk.png?dl=1" title=""><img src="/uploads/db4391/optimized/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288_2_435x251.png" alt="" data-base62-sha1="527N0ZWDH20dYS5w6xYsHdIKQCk" width="435" height="251" srcset="/uploads/db4391/optimized/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288_2_435x251.png, /uploads/db4391/optimized/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288_2_652x376.png 1.5x, /uploads/db4391/optimized/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288_2_870x502.png 2x" data-small-upload="/uploads/db4391/optimized/2X/2/234861f57bf4ca143fbc0f4a9d3da587af6d9288_2_10x10.png"></a></div><p></p>
+<p>However, the collaboration between FDD &amp; PGF Grants Ops showed us that the snapshot vote was unnecessary at this level. The process ended up playing out in these steps:</p>
+<ol>
+<li>BrightID submits their request for appeal</li>
+<li>The FDD source council hears the case as an appellate judge would to determine if the appeal has merit. In this case, they found it to be a <a href="https://gov.gitcoin.co/t/proposal-grants-policy-update-projects-with-tokens/10125">novel situation</a>.</li>
+<li>The appeal was then posted to the governance forum for discussion. The FDD recommended a steward vote for legitimacy of the process, but the post did not get 5 stewards commenting in approval of moving it to a vote.</li>
+<li>FDD then went with its judgment and reactivated the grant. (Technically, the grant was reactivated before the round to participate rather than “being in jail while awaiting trial.)</li>
+</ol>
+<p>The first appeal to require a policy shift produced deep discussion &amp; general agreement about how the dao should process appeals and found ways to increase the decentralization of the entire process. The real question was which appeals should reach a Steward vote, and which can be disposed of by (currently) the FDD or a decentralized group?</p>
+<p>While the policy change suggestion did not proceed to a Snapshot vote it resulted in progress for Gitcoin. It also involved suggestions of market cap limitation for projects with governance tokens whereas presently, projects with tokens get denied. The policy change itself was deferred to a time after the grant round.</p>
+<p>Gitcoin Grants policy is currently held on a “living document” which can be found on the new Knowledge base which was recently installed at <a href="http://support.gitcoin.co">support.gitcoin.co</a>. This new open source Gitbook instance, which is maintained by the support squad, replaces the previous closed source Happyfox knowledge base.</p>
+<h1>
+<a name="fdd-statement-on-gr13-10" class="anchor" href="https://gov.gitcoin.co#fdd-statement-on-gr13-10"></a>FDD Statement on GR13</h1>
+<p>The sybil attacks slowed down this round, but they are not stopping. They are evolving new and more complex tactics which require FDD’s best effort to defend. Last round we commented on our dependence on Gitcoin Holdings to supply new sources of data outside of what we are whitelisted to access.</p>
+<p>FDD requires an appropriate level of data access to quickly respond to new red team strategies. The blue team is at a significant disadvantage when we must wait months to get approval to access the data needed to defend against new styles and classes of attack.</p>
+<p>Simply getting the publicly available data about grants to integrate into our review software took the entire time between GR12 and GR13 due to legal concerns. The issue was finally solved for us on 3/11, two days after the start of GR13. We could have redirected the current integration which sends information to Notion. (Not to mention we lost the testing opportunity and all the learning we would have gotten by using the fully operational software which only needed the integration to avoid manual inputting of the data. This issue cost the DAO around $10-15k.)</p>
+<p>We currently have two open data requests which have both been open for over a month. How is the Fraud Detection &amp; Defense workstream supposed to function properly when we cannot access data in a dynamic way which allows us to respond to new behaviors?</p>
+<p>We again encourage Gitcoin Holdings to make ALL data that isn’t legally protected available to the FDD workstream. Our data storage layer squad can work with Gitcoin Holdings engineering to set up a warehouse with proper roles and permissioning for DAO contributors and the public. Please help us to innovate further and faster.</p>
+<p><a href="https://twitter.com/disruptionjoe">Disruption Joe</a>, FDD Workstream Lead</p>
+          <p><a href="https://gov.gitcoin.co/t/gr13-governance-brief/10289/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/gr13-governance-brief/10289/1
+        Fri, 01 Apr 2022 19:07:28 +0000
+gov.gitcoin.co-post-10289-1
+GR13 Governance Brief
+      
+
+

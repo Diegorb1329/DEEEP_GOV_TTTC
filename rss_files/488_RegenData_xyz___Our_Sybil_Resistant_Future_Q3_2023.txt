@@ -1,0 +1,423 @@
+
+
+
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474
+    [![|506x500](upload://aybKMyLaX4TG2PuPkXiIK9Qi267.jpeg)](https://twitter.com/thedevanshmehta/status/1692603574252101985?s=46&t=X0oQ26a3ezptVAZLp1QFaw)
+
+This document is meant to describe the sybil resistance investments being made for S18/S19/S20, and to begin to describe what a minimum viable anti-sybil future looks like.
+
+This document was prepared by:
+
+1. @umarkhaneth 
+2. @ghostffcode 
+3. Owocki
+4. @Jeremy 
+
+# Problem Statement
+
+The Gitcoin anti sybil ecosystem has many different moving parts.
+
+1. The transition from cGrants => Grants Stack/Allo/Passport
+2. The transition from FDD => ODC.
+3. The cluster mapping project by Joel Miller.
+4. The YOLO data analysis that Umar does to support Connor in anti sybil work.
+
+As it stands right now, there is no group that is formally responsible & enabled via budget to deliver solid anti sybil results for the program (especially GG18). Passport is focused on their product. PGF works on fundraising & round ops. Our aim is to build the glue between these groups and enable anti-sybil to be better every round than it was the last round.
+
+Anti sybil at Gitcoin is an ongoing evolutionary game between the anti-fraud folks (blue team) and the sybil/collusion attackers (the red team). We aim to empower a diverse & decentralized ecosystem of blue teams to stay ahead of the red team’s evolving tactics.
+
+Right now, the anti sybil pipeline is pretty barebones. Umar has a series of scripts & data sources that he uses to put together an analysis that he delivers to Connor/PGF.
+
+# Solution
+
+Our hope is to enable Umar to contribute his data sources, scripts, and methodology into a resource known as RegenData.xyz (formerly [Grants-ETL](https://gov.gitcoin.co/t/grants-etl-a-new-tool-to-make-pulling-data-for-anti-sybil-anti-collusion-analysis-easier/16060))... which any data scientist has easy access to. By enabling this community of data scientists to have access to all the data they need without writing a bunch of custom ETL scripts + also have access to Umar’s tools very easily, we will empower these data scientists to do what they are good at (finding sybils) and not what they’re not (cleaning data, writing data gathering scripts). This ecosystem of data scientists will be able to do their own sybil/collusion analysis and contribute back to RegenData.xyz, ultimately creating a plurality of approaches & a community of practice around anti sybil/collusion at Gitcoin.
+
+![|624x229](upload://kGNdN29c4HSgCV5Olxk8mevT4qG.png)
+
+Instead of relying on personal relationships between Umar + Connor, this community of practice will have a diverse tapestry of relationships.
+
+Further, we will be developing this community with community/ecosystem funding to draw in and retain top data scientists.
+
+All in all, this initiative is designed to help the blue team systematically stay ahead of the red team by accelerating the Blue team OODA Loop end-to-end:
+
+![|624x419](upload://l0EDTCU82SjVTUJ36K6BgPcp2oW.png)
+
+# Goals
+
+What are our goals for the future?
+
+## Near term priority
+
+* good sybil resistance for GG18
+* get Umar reports on grants-etl
+
+## Med term priority
+
+* Good sybil resistance for GG19
+* Add in the ability to update these passport scoring algorithms with blocklist + data that we find.
+* give all of this to ODC & other groups (publish via OCEAN, etc)
+* Co-develop community driven lists (Humans/Good actors, Sybil / Bad actor, Attacker(s), Suspicious, etc)
+* Fund Red Team Work Through a QF Round (come take the matching pool if you tell us how you do it)
+
+## Long term priority
+
+* Invite outside community contributions + support them with funding.
+* Integrate Joel Millers cluster mapping algorithm.
+* Nurture a community of blue-team contributors.
+* Introduce more governance to the process.
+
+## Ongoing priority
+
+* Make sure Grants-ETL has the latest data + reports in it.
+* Iterate + Revise the ecosystem as we learn.
+
+## Call to Action
+
+If you are interested in getting access to this toolset / community, please join the [RegenData.xyz community on telegram](https://t.me/+rMPm30SrC583NjZh).
+Wed, 13 Sep 2023 21:28:59 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+FractalVisions
+
+            <p>I just wanted to share my two cents here for the day!!!</p>
+<p>We worked really hard early on last year to help beta test with Guild and give them as much feedback as possible to improve the UI and UX of their product. Shortly after we watched many other protocols and integrations expand to utilizing this platform for safeguarding their communities.</p>
+<p>Including Gitcoin passport.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://guild.xyz/explorer">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e2b29488cedb83c1f3dfa426d51c44871fbd1092.png" class="site-icon" data-dominant-color="565656" width="64" height="64">
+
+      <a href="https://guild.xyz/explorer" target="_blank" rel="noopener nofollow ugc">guild.xyz</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/388;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/19a3053ebccee0da35c68e15f8cd81c79e95f73f_2_690x388.png" class="thumbnail" data-dominant-color="37383C" width="690" height="388"></div>
+
+<h3><a href="https://guild.xyz/explorer" target="_blank" rel="noopener nofollow ugc">Guildhall</a></h3>
+
+  <p>Automated membership management for the platforms your community already uses.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>I figured this was worth sharing to help give others guidance on how they can also make participants of their community more honest when it comes to building their ecosystem during or in between the donation rounds for quadratic funding on Gitcoin.</p>
+<p>Also, I must add that it’s really cool you can purchase the Gitcoin governance token directly on this platform…!!</p>
+<aside class="onebox twitterstatus" data-onebox-src="https://twitter.com/fractal_visions/status/1701457846184161640?s=46&amp;t=_8dkepIOA6H5XhasVM4F9g">
+  <header class="source">
+
+      <a href="https://twitter.com/fractal_visions/status/1701457846184161640?s=46&amp;t=_8dkepIOA6H5XhasVM4F9g" target="_blank" rel="noopener nofollow ugc">twitter.com</a>
+  </header>
+
+  <article class="onebox-body">
+    
+<h4><a href="https://twitter.com/fractal_visions/status/1701457846184161640?s=46&amp;t=_8dkepIOA6H5XhasVM4F9g" target="_blank" rel="noopener nofollow ugc">FractalVisions.eth</a></h4>
+<div class="twitter-screen-name"><a href="https://twitter.com/fractal_visions/status/1701457846184161640?s=46&amp;t=_8dkepIOA6H5XhasVM4F9g" target="_blank" rel="noopener nofollow ugc">@Fractal_Visions</a></div>
+
+<div class="tweet">
+  <span class="tweet-description">Here is a full video update ❤️ of how we have included @gitcoinpassport in our member verification process for joining @guildxyz . !
+
+Did you know you can purchase $GTC directly on Guild which is the @gitcoin governance token ? 🟢
+
+@OptimismGov "Optimist" NFTs also grant access!</span>
+</div>
+
+<div class="date">
+  <a href="https://twitter.com/fractal_visions/status/1701457846184161640?s=46&amp;t=_8dkepIOA6H5XhasVM4F9g" class="timestamp" target="_blank" rel="noopener nofollow ugc"></a>
+
+
+</div>
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>There are many other tools out there that are also very useful through this platform you might find will help increase the Sybil prevention efforts of your ecosystem.</p>
+<p>Shield <img src="https://gov.gitcoin.co/images/emoji/twitter/shield.png?v=12" title=":shield:" class="emoji" alt=":shield:" loading="lazy" width="20" height="20"> is also one of our ecosystem partners  that has a integration with Guild to detect users wallet behavior activities onchain… They have helped significantly to provide safety amongst all allowing us to sleep a little bit better at night.</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://www.getshield.xyz/">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/e/ee28b678687e68da8be7915ba4cec22da8eb6c01.png" class="site-icon" data-dominant-color="2D8EC6" width="144" height="144">
+
+      <a href="https://www.getshield.xyz/" target="_blank" rel="noopener nofollow ugc">Shield</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/335;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/a4692cfa07887a7d75a29ab3131339561cb624b7_2_690x335.jpeg" class="thumbnail" data-dominant-color="1A1F46" width="690" height="335"></div>
+
+<h3><a href="https://www.getshield.xyz/" target="_blank" rel="noopener nofollow ugc">Shield - Stop scams and drive revenue with security for your project</a></h3>
+
+  <p>Shield is a holistic user security engine for web3 platforms and communities. Our system secures 250,000+ crypto users via discord bot and API integration.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p>I hope to add value to the Gitcoin ecosystem by sharing our trials and tribulations over the years along with additional resources or tools <img src="https://gov.gitcoin.co/images/emoji/twitter/toolbox.png?v=12" title=":toolbox:" class="emoji" alt=":toolbox:" loading="lazy" width="20" height="20"> we have recently learned about.</p>
+<p>Personally we have watched many grant systems become highly sought out by these methods of gaming the system. So we must be extra diligent when implementing these prevention mechanisms in order not to give away the secret sauce.</p>
+<p>If you like what we do and want to help support us on our mission we would love to have you in our guild as well…!</p>
+<p>We want to set a safety standard &amp; positive example for others to use as a template for their own ecosystem. Feel free to check out our template for your own ideas. Give us some feedback and if you have any questions, please let us know!</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://guild.xyz/fractalvisions">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/f0985ff3893c0eaf6b18bc7d78e80953a6a8ba29_2_500x500.png" class="site-icon" data-dominant-color="240F23" width="500" height="500">
+
+      <a href="https://guild.xyz/fractalvisions" target="_blank" rel="noopener nofollow ugc">guild.xyz</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/388;"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/3/38ebc96847238994ff8f06422f124a93bc042be6.png" class="thumbnail" data-dominant-color="37373A" width="690" height="388"></div>
+
+<h3><a href="https://guild.xyz/fractalvisions" target="_blank" rel="noopener nofollow ugc">FRACTAL VISIONS</a></h3>
+
+  <p>A multifaceted &amp; multidimensional creative hub for impact makers.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+          <p><a href="https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/6
+        Wed, 13 Sep 2023 21:28:59 +0000
+gov.gitcoin.co-post-16474-6
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+      
+
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+mars
+
+            <aside class="quote no-group quote-modified" data-username="umarkhaneth" data-post="4" data-topic="16474">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<aside class="quote no-group" data-username="jengajojo" data-post="3" data-topic="16474">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>Maybe sybil defence as a service?</p>
+</blockquote>
+</aside>
+<p>Yes absolutely</p>
+</blockquote>
+</aside>
+<h1><a name="h-1" class="anchor" href="https://gov.gitcoin.co#h-1"></a><img src="https://gov.gitcoin.co/images/emoji/twitter/100.png?v=12" title=":100:" class="emoji only-emoji" alt=":100:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/100.png?v=12" title=":100:" class="emoji only-emoji" alt=":100:" loading="lazy" width="20" height="20"> <img src="https://gov.gitcoin.co/images/emoji/twitter/100.png?v=12" title=":100:" class="emoji only-emoji" alt=":100:" loading="lazy" width="20" height="20"></h1>
+<p>The sybil-resistance is practical for Gitcoin matching rounds as well as broader Web3 ecosystem.</p>
+<h3><a name="related-hop-protocol-25-bounty-2" class="anchor" href="https://gov.gitcoin.co#related-hop-protocol-25-bounty-2"></a>Related: Hop Protocol 25% bounty</h3>
+<p><em>(this could provide ongoing revenue stream for “good guys” team)</em></p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://decrypt.co/143231/hop-protocols-sybil-hunter-payout-unveils-powerful-new-airdrop-tool">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/b/b2e1e1250e781a5f7ef3e918ee608949b1f27a4f.png" class="site-icon" data-dominant-color="818181" width="32" height="32">
+
+      <a href="https://decrypt.co/143231/hop-protocols-sybil-hunter-payout-unveils-powerful-new-airdrop-tool" target="_blank" rel="noopener nofollow ugc" title="10:01AM - 03 June 2023">Decrypt – 3 Jun 23</a>
+  </header>
+
+  <article class="onebox-body">
+    <div class="aspect-image" style="--aspect-ratio:690/345;"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/754c27bd8f7712cb36825f63e47043ce310ad94a_2_690x345.jpeg" class="thumbnail" data-dominant-color="6D6D6F" width="690" height="345"></div>
+
+<h3><a href="https://decrypt.co/143231/hop-protocols-sybil-hunter-payout-unveils-powerful-new-airdrop-tool" target="_blank" rel="noopener nofollow ugc">Hop Protocol's 'Sybil Hunter' Payout Unveils Powerful New Airdrop Tool - Decrypt</a></h3>
+
+  <p>For tracking airdrop farmers last year, Hop Protocol is now coming good on its promise to reward so-called Sybil hunters for their diligence.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<blockquote>
+<p>If all checked out, those hunters were to be rewarded 25% of all HOP tokens with a one-year lockup.</p>
+</blockquote>
+<p>Some more links in the theme:</p>
+<ul>
+<li><a href="https://github.com/ArbitrumFoundation/sybil-detection" class="inline-onebox" rel="noopener nofollow ugc">GitHub - ArbitrumFoundation/sybil-detection</a></li>
+<li><a href="https://mirror.xyz/x-explore.eth/AFroG11e24I6S1oDvTitNdQSDh8lN5bz9VZAink8lZ4" class="inline-onebox" rel="noopener nofollow ugc">Advanced Analysis For Arbitrum Airdrop — X-explore</a></li>
+<li><a href="https://www.coindesk.com/consensus-magazine/2023/04/10/crypto-airdrop-sybil-attacks/" class="inline-onebox" rel="noopener nofollow ugc">Crypto Traders Exploit Airdrops with Sybil Attacks for Massive Profits - CoinDesk</a></li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/5
+        Wed, 13 Sep 2023 15:46:57 +0000
+gov.gitcoin.co-post-16474-5
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+      
+
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+umarkhaneth
+
+            <aside class="quote no-group" data-username="jengajojo" data-post="3" data-topic="16474">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>Is it possible for non GG rounds or anyone using the grants stack in their own communities to get access to sybil defence for their own rounds? Maybe sybil defence as a service?</p>
+</blockquote>
+</aside>
+<p>Yes absolutely</p>
+<aside class="quote no-group" data-username="jengajojo" data-post="3" data-topic="16474">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jengajojo/48/9255_2.png" class="avatar"> jengajojo:</div>
+<blockquote>
+<p>This is a good point. Is there an open document today which the red team can read up on to get a overview of which sybil strategies have been identified?</p>
+</blockquote>
+</aside>
+<p>No that would help the sybils too much.</p>
+<p>Good questions!</p>
+          <p><a href="https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/4
+        Wed, 13 Sep 2023 14:59:52 +0000
+gov.gitcoin.co-post-16474-4
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+      
+
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+jengajojo
+
+            <p>Thanks for summarising current state of anti-sybil strategy.</p>
+<ul>
+<li>Is it possible for non GG rounds or anyone using the grants stack in their own communities to get access to sybil defence for their own rounds? Maybe sybil defence as a service?</li>
+</ul>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="2" data-topic="16474">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>Not giving the game away</p>
+</blockquote>
+</aside>
+<p>This is a good point. Is there an open document today which the red team can read up on to get a overview of which sybil strategies have been identified?</p>
+          <p><a href="https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/3
+        Mon, 11 Sep 2023 07:01:42 +0000
+gov.gitcoin.co-post-16474-3
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+      
+
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+umarkhaneth
+
+            <p>There are three big challenges we’ve been discussing in reaching this future I want to explicitly call out here</p>
+<ol>
+<li>
+<p>Attracting sufficient talent - We need more data scientists. We’re boosted by the ODC. Evan has done a great job stewarding this community as a data science hub. They’ve been thought-partners and their members spent time to try to assist Connor’s sybil squelching in the Beta round. They also were willing to extend their help for the Citizens round and now GG18. Their team continues to put effort into this area and develop greater expertise in Anti Sybil. They’ll be invaluable partners in continued work. We should also seek to draw in the many sybil hunters in other communities like Hop, Connext, and Optimism to learn their methods, collaborate, and build a schelling point around anti-sybil work.</p>
+</li>
+<li>
+<p>Assessing the accuracy of our methods - There is no answer sheet. We have to know how our methods perform in order to pick the best from among them to use, focus on, and develop but we don’t know who the sybils are and aren’t. What’ll likely be most helpful here is backtesting on the lists we do have, visualizing on-chain activity, and some manual evaluations.</p>
+</li>
+<li>
+<p>Not giving the game away - As we invite people to be a part of our sybil resistant future we also invite the sybils in to come learn how we’re detecting them. There is a tipping point in adversarial games where being completely transparent is more of an advantage than a disadvantage. When open-sourcing increases the talent made available to help our blue team to such an extent that it outweighs the disadvantage we give up to the red team. Until we reach that point, we’re discussing what it looks like to use permissioned tiers among new members of the blue team to unlock greater access to developed detection methods.</p>
+</li>
+</ol>
+          <p><a href="https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/2
+        Sun, 10 Sep 2023 01:15:13 +0000
+gov.gitcoin.co-post-16474-2
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+      
+
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+owocki
+
+            <p><a href="https://twitter.com/thedevanshmehta/status/1692603574252101985?s=46&amp;t=X0oQ26a3ezptVAZLp1QFaw"><img src="https://gov.gitcoin.co/uploads/db4391/original/2X/4/49f320c12de947decf5d36fee4cd0d8537d25493.jpeg" alt="" data-base62-sha1="aybKMyLaX4TG2PuPkXiIK9Qi267" width="506" height="500" role="presentation"></a></p>
+<p>This document is meant to describe the sybil resistance investments being made for S18/S19/S20, and to begin to describe what a minimum viable anti-sybil future looks like.</p>
+<p>This document was prepared by:</p>
+<ol>
+<li><a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a></li>
+<li><a class="mention" href="https://gov.gitcoin.co/u/ghostffcode">@ghostffcode</a></li>
+<li>Owocki</li>
+<li><a class="mention" href="https://gov.gitcoin.co/u/jeremy">@Jeremy</a></li>
+</ol>
+<h1><a name="problem-statement-1" class="anchor" href="https://gov.gitcoin.co#problem-statement-1"></a>Problem Statement</h1>
+<p>The Gitcoin anti sybil ecosystem has many different moving parts.</p>
+<ol>
+<li>The transition from cGrants =&gt; Grants Stack/Allo/Passport</li>
+<li>The transition from FDD =&gt; ODC.</li>
+<li>The cluster mapping project by Joel Miller.</li>
+<li>The YOLO data analysis that Umar does to support Connor in anti sybil work.</li>
+</ol>
+<p>As it stands right now, there is no group that is formally responsible &amp; enabled via budget to deliver solid anti sybil results for the program (especially GG18). Passport is focused on their product. PGF works on fundraising &amp; round ops. Our aim is to build the glue between these groups and enable anti-sybil to be better every round than it was the last round.</p>
+<p>Anti sybil at Gitcoin is an ongoing evolutionary game between the anti-fraud folks (blue team) and the sybil/collusion attackers (the red team). We aim to empower a diverse &amp; decentralized ecosystem of blue teams to stay ahead of the red team’s evolving tactics.</p>
+<p>Right now, the anti sybil pipeline is pretty barebones. Umar has a series of scripts &amp; data sources that he uses to put together an analysis that he delivers to Connor/PGF.</p>
+<h1><a name="solution-2" class="anchor" href="https://gov.gitcoin.co#solution-2"></a>Solution</h1>
+<p>Our hope is to enable Umar to contribute his data sources, scripts, and methodology into a resource known as RegenData.xyz (formerly <a href="https://gov.gitcoin.co/t/grants-etl-a-new-tool-to-make-pulling-data-for-anti-sybil-anti-collusion-analysis-easier/16060">Grants-ETL</a>)… which any data scientist has easy access to. By enabling this community of data scientists to have access to all the data they need without writing a bunch of custom ETL scripts + also have access to Umar’s tools very easily, we will empower these data scientists to do what they are good at (finding sybils) and not what they’re not (cleaning data, writing data gathering scripts). This ecosystem of data scientists will be able to do their own sybil/collusion analysis and contribute back to RegenData.xyz, ultimately creating a plurality of approaches &amp; a community of practice around anti sybil/collusion at Gitcoin.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9101dca907ab0654b1f1cd061c7196dac0c2cd7e.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/9101dca907ab0654b1f1cd061c7196dac0c2cd7e" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9101dca907ab0654b1f1cd061c7196dac0c2cd7e_2_624x229.png" alt="" data-base62-sha1="kGNdN29c4HSgCV5Olxk8mevT4qG" width="624" height="229" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9101dca907ab0654b1f1cd061c7196dac0c2cd7e_2_624x229.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9101dca907ab0654b1f1cd061c7196dac0c2cd7e_2_936x343.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9101dca907ab0654b1f1cd061c7196dac0c2cd7e_2_1248x458.png 2x" data-dominant-color="F4F4F4"></a></div><p></p>
+<p>Instead of relying on personal relationships between Umar + Connor, this community of practice will have a diverse tapestry of relationships.</p>
+<p>Further, we will be developing this community with community/ecosystem funding to draw in and retain top data scientists.</p>
+<p>All in all, this initiative is designed to help the blue team systematically stay ahead of the red team by accelerating the Blue team OODA Loop end-to-end:</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/93409fa1e5574c53337f682ca0ee65df81e5002a.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/93409fa1e5574c53337f682ca0ee65df81e5002a" title=""><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/93409fa1e5574c53337f682ca0ee65df81e5002a_2_624x419.png" alt="" data-base62-sha1="l0EDTCU82SjVTUJ36K6BgPcp2oW" width="624" height="419" role="presentation" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/93409fa1e5574c53337f682ca0ee65df81e5002a_2_624x419.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/93409fa1e5574c53337f682ca0ee65df81e5002a_2_936x628.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/9/93409fa1e5574c53337f682ca0ee65df81e5002a.png 2x" data-dominant-color="F3F3F3"></a></div><p></p>
+<h1><a name="goals-3" class="anchor" href="https://gov.gitcoin.co#goals-3"></a>Goals</h1>
+<p>What are our goals for the future?</p>
+<h2><a name="near-term-priority-4" class="anchor" href="https://gov.gitcoin.co#near-term-priority-4"></a>Near term priority</h2>
+<ul>
+<li>good sybil resistance for GG18</li>
+<li>get Umar reports on grants-etl</li>
+</ul>
+<h2><a name="med-term-priority-5" class="anchor" href="https://gov.gitcoin.co#med-term-priority-5"></a>Med term priority</h2>
+<ul>
+<li>Good sybil resistance for GG19</li>
+<li>Add in the ability to update these passport scoring algorithms with blocklist + data that we find.</li>
+<li>give all of this to ODC &amp; other groups (publish via OCEAN, etc)</li>
+<li>Co-develop community driven lists (Humans/Good actors, Sybil / Bad actor, Attacker(s), Suspicious, etc)</li>
+<li>Fund Red Team Work Through a QF Round (come take the matching pool if you tell us how you do it)</li>
+</ul>
+<h2><a name="long-term-priority-6" class="anchor" href="https://gov.gitcoin.co#long-term-priority-6"></a>Long term priority</h2>
+<ul>
+<li>Invite outside community contributions + support them with funding.</li>
+<li>Integrate Joel Millers cluster mapping algorithm.</li>
+<li>Nurture a community of blue-team contributors.</li>
+<li>Introduce more governance to the process.</li>
+</ul>
+<h2><a name="ongoing-priority-7" class="anchor" href="https://gov.gitcoin.co#ongoing-priority-7"></a>Ongoing priority</h2>
+<ul>
+<li>Make sure Grants-ETL has the latest data + reports in it.</li>
+<li>Iterate + Revise the ecosystem as we learn.</li>
+</ul>
+<h2><a name="call-to-action-8" class="anchor" href="https://gov.gitcoin.co#call-to-action-8"></a>Call to Action</h2>
+<p>If you are interested in getting access to this toolset / community, please join the <a href="https://t.me/+rMPm30SrC583NjZh">RegenData.xyz community on telegram</a>.</p>
+          <p><a href="https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474/1
+        Wed, 06 Sep 2023 22:51:53 +0000
+gov.gitcoin.co-post-16474-1
+RegenData.xyz + Our Sybil-Resistant Future Q3 2023 and beyond
+      
+
+

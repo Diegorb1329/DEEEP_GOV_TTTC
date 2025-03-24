@@ -1,0 +1,135 @@
+
+
+
+Announcing the Gitcoin 2.0 Whitepaper
+https://gov.gitcoin.co/t/announcing-the-gitcoin-2-0-whitepaper/18294
+    Last week at EthDenver, I had the honor of introducing Gitcoin's 2.0 whitepaper with my coauthor @owocki ! We've been working hard on Gitcoin 2.0 behind the scenes for a while, and it's exciting to have this vision live in the world. 
+
+Here's a link to the whitepaper: https://www.gitcoin.co/whitepaper/read
+Don't want to read? Here's a quick infographic! https://www.gitcoin.co/whitepaper#
+
+I encourage you to read the paper... it's a quick 10 pages, I swear :) I'm also capturing some highlights below.
+
+# History of Gitcoin / 2.0 Transformation
+Gitcoin has been around since 2017 -- basically forever, in crypto years! During that time, we've gone through a few pivotal transformations that have led up to Gitcoin 2.0. We've recently completed the 2.0 transformation. This transformation was driven by many changes in the market, including the expansion of the Ethereum ecosystem with L2 launches, the growth of open-source development, and increasing adoption of grant programs. Gitcoin’s transformation breaks down as the following:
+
+* Transformation from a centralized, Gitcoin-operated platform to a suite of **modularized products and protocols** that anyone can use and build on top of.
+* Transformation from only Quadratic Funding to **many types of capital allocation** mechanism
+* (Quadratic Funding, Direct Grants, Retroactive Public Goods Funding, and more).
+* Transformation from Ethereum-only to being deployed across **many EVM-based networks** ‍
+* (Optimism, Arbitrum, Base, Polygon, zkSync, Scroll, Avalanche, and more).
+
+![gitcoinevolution|690x311](upload://6Iwb4OGmgKoQ7y68SCJA5wtna7f.png)
+
+# What is Gitcoin 2.0?
+Gitcoin 2.0 builds on our success in Quadratic Funding and grants programs more generally. We believe that this traction and success points to a larger opportunity in a new area, which we're calling *Capital Allocation*. Capital allocation is a simple concept: it’s the act of deciding how to distribute funding or resources. If you’ve ever paid bills, taxes, or repaid friends for a meal, you’ve allocated capital. Capital allocation is a task for most individuals but a full time job for many: governments and grant-making organizations spend vast amounts of time and money figuring out the process, logistics, and decision-making involved in allocating capital. At scale, capital allocation inevitably becomes mired in gatekeeping, rivalrous decision making, and lack of transparency and accountability. 
+
+![image|690x488](upload://70nl1mzMscw5X1VYe6kXItToHfu.png)
+
+Blockchain and crypto, with their programmable smart contracts, present incredible advantages towards allocating capital in an efficient, effective, and transparent manner. Gitcoin has seized this advantage by moving the entirety of our grants program onchain: from governance, creation, management, and disbursement. Moving the grants program onchain and it being open source also allows us to build a network of developers, grants programs, and capital allocators in web3 – which all ultimately benefit the Gitcoin ecosystem.
+
+# Grants = Growth
+While the market for web3 capital allocation tools is currently limited to organizations with token treasuries, we expect this market will grow by many orders of magnitude. However, 11 years after the invention of Ethereum, web3 is still in the early stages of growth. Grants have emerged as a core driver of growth in web3 – both through builder onboarding as well as retention. Builders are onboarded through grants when tokens are distributed as incentives or compensation. These grants are often given in the early stages of a project and provide crucial funding to the project, as well as visibility and validation. Many early stage builders opt to apply for grants instead of raising traditional seed funding. Grants can be disbursed much more quickly than VC capital and come with added benefits, including publicity and connections to other grantees within the ecosystem. Unlike VC funding, they don’t require builders to give up equity. Grants instead create positive-sum outcomes by distributing funding in the native currency of their ecosystem, where value may accrue if the project is successful.
+
+![image|690x311](upload://xg3yIdWvKzwBHPwJsBMIDApa1VN.png)
+
+Grants = Growth isn’t just theory – it’s been empirically tested and proven over the previous four years of the Gitcoin Grants program. The chart above maps [strong correlations between grant funding received and value-additive activity for a given project](https://docs.opensource.observer/blog/gitcoin-grants-impact). For every $1M that has been paid out through Gitcoin Grants since 2019, there are seven full-time developers who are still active in the project. Factoring in the crowdfund multiplier, that ratio grows to 13 retained full-time developers for every $1M put into the matching pool. These numbers are particularly impressive when you contrast them with the [$76B in venture funding](https://pitchbook.com/news/reports/q4-2023-crypto-report) that has produced roughly .1 developers per funding dollar.
+
+# Our Solutions
+The design space of capital allocation is vast. Though our first and primary focus is solving the grants use case, we’ve designed a modular solutions stack that is intended to be extensible or repeatable across many different use cases.
+
+
+The stack consists of three primary layers.
+
+1. Protocol Layer
+2. Application Layer
+3. Program Layer
+
+![image|690x488](upload://7P8lZTujFHO5LUhcgE7RVq6BAVP.png)
+
+**First, and most extensible, the protocol layer.** Allo Protocol, short for Capital Allocation Protocol, is designed to be an infinitely flexible and extensible but also trusted and precise method of capital allocation.
+
+
+**Secondly, the application layer.** Gitcoin’s Grants Stack is a no-code platform for running grant programs. The app currently provides the ability for grants managers to create, manage, and run Quadratic Funding, Direct Grants, and Retro PGF grants, with plans to extend into any grants mechanism with strong popular demand. Grants Stack is an open-source dApp, which allows communities to customize their experiences by creating companion applications or even forking the application to create their own version.
+
+
+
+**Finally, the program layer,** which is the most long standing and Gitcoin-specific part of the stack. The Gitcoin Grants program is a powerful tool to onboard and educate communities on the power of grants programs. It has run 19 funding rounds to date and distributed over $59M in funding to the Ethereum ecosystem.
+
+# Conclusion
+The evolution from Gitcoin 1.0 to Gitcoin 2.0 marks a significant milestone in the field of capital allocation, especially in the realm of public goods funding within the Ethereum ecosystem and beyond. By transitioning to a more decentralized, modular approach and expanding its funding mechanisms beyond Quadratic Funding, Gitcoin has positioned itself at the forefront of a movement towards more democratic, efficient, and transparent capital allocation practices. The expansion into various blockchain networks signifies a broadening of Gitcoin's impact, offering a scalable and flexible platform for funding public goods across the web3 space. We couldn't be more excited about what's to come.
+
+## Acknowledgements
+We would like to acknowledge those who have supported Grants on Gitcoin, including our Grantees, Donors, and Matching Pool partners.
+
+Thank you also to our many collaborators on this paper. @MathildaDV edited this paper and @harryeastham created designs and the microsite. @ccerv1 and @umarkhaneth provided the data analysis referenced in Grants = Growth.
+
+‍
+Wed, 13 Mar 2024 20:01:22 +0000
+🧙 🧙‍♀️ Ideas and Open Discussion
+
+
+Announcing the Gitcoin 2.0 Whitepaper
+Viriya
+
+            <p>You can now watch a <a href="https://www.youtube.com/watch?v=rBFSavB82hw" rel="noopener nofollow ugc">video presentation of this whitepaper here</a>:</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-gitcoin-2-0-whitepaper/18294/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-gitcoin-2-0-whitepaper/18294/2
+        Wed, 13 Mar 2024 20:01:22 +0000
+gov.gitcoin.co-post-18294-2
+Announcing the Gitcoin 2.0 Whitepaper
+      
+
+Announcing the Gitcoin 2.0 Whitepaper
+meglister
+
+            <p>Last week at EthDenver, I had the honor of introducing Gitcoin’s 2.0 whitepaper with my coauthor <a class="mention" href="https://gov.gitcoin.co/u/owocki">@owocki</a> ! We’ve been working hard on Gitcoin 2.0 behind the scenes for a while, and it’s exciting to have this vision live in the world.</p>
+<p>Here’s a link to the whitepaper: <a href="https://www.gitcoin.co/whitepaper/read" class="inline-onebox" rel="noopener nofollow ugc">Read the Whitepaper | Gitcoin</a><br>
+Don’t want to read? Here’s a quick infographic! <a href="https://www.gitcoin.co/whitepaper#" class="inline-onebox" rel="noopener nofollow ugc">Whitepaper | Gitcoin</a></p>
+<p>I encourage you to read the paper… it’s a quick 10 pages, I swear <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"> I’m also capturing some highlights below.</p>
+<h1><a name="history-of-gitcoin-20-transformation-1" class="anchor" href="https://gov.gitcoin.co#history-of-gitcoin-20-transformation-1"></a>History of Gitcoin / 2.0 Transformation</h1>
+<p>Gitcoin has been around since 2017 – basically forever, in crypto years! During that time, we’ve gone through a few pivotal transformations that have led up to Gitcoin 2.0. We’ve recently completed the 2.0 transformation. This transformation was driven by many changes in the market, including the expansion of the Ethereum ecosystem with L2 launches, the growth of open-source development, and increasing adoption of grant programs. Gitcoin’s transformation breaks down as the following:</p>
+<ul>
+<li>Transformation from a centralized, Gitcoin-operated platform to a suite of <strong>modularized products and protocols</strong> that anyone can use and build on top of.</li>
+<li>Transformation from only Quadratic Funding to <strong>many types of capital allocation</strong> mechanism</li>
+<li>(Quadratic Funding, Direct Grants, Retroactive Public Goods Funding, and more).</li>
+<li>Transformation from Ethereum-only to being deployed across <strong>many EVM-based networks</strong> ‍</li>
+<li>(Optimism, Arbitrum, Base, Polygon, zkSync, Scroll, Avalanche, and more).</li>
+</ul>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/2/2f15590cd067b8dc3fce892404c5bca2fa0dea41.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/2f15590cd067b8dc3fce892404c5bca2fa0dea41" title="gitcoinevolution"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2f15590cd067b8dc3fce892404c5bca2fa0dea41_2_690x311.png" alt="gitcoinevolution" data-base62-sha1="6Iwb4OGmgKoQ7y68SCJA5wtna7f" width="690" height="311" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2f15590cd067b8dc3fce892404c5bca2fa0dea41_2_690x311.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/2/2f15590cd067b8dc3fce892404c5bca2fa0dea41_2_1035x466.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/2/2f15590cd067b8dc3fce892404c5bca2fa0dea41.png 2x" data-dominant-color="ECEEEF"></a></div><p></p>
+<h1><a name="what-is-gitcoin-20-2" class="anchor" href="https://gov.gitcoin.co#what-is-gitcoin-20-2"></a>What is Gitcoin 2.0?</h1>
+<p>Gitcoin 2.0 builds on our success in Quadratic Funding and grants programs more generally. We believe that this traction and success points to a larger opportunity in a new area, which we’re calling <em>Capital Allocation</em>. Capital allocation is a simple concept: it’s the act of deciding how to distribute funding or resources. If you’ve ever paid bills, taxes, or repaid friends for a meal, you’ve allocated capital. Capital allocation is a task for most individuals but a full time job for many: governments and grant-making organizations spend vast amounts of time and money figuring out the process, logistics, and decision-making involved in allocating capital. At scale, capital allocation inevitably becomes mired in gatekeeping, rivalrous decision making, and lack of transparency and accountability.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/311a1c785ab7fe34b9f7e3a3d41c409e572ce9fc.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/311a1c785ab7fe34b9f7e3a3d41c409e572ce9fc" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/311a1c785ab7fe34b9f7e3a3d41c409e572ce9fc_2_690x488.png" alt="image" data-base62-sha1="70nl1mzMscw5X1VYe6kXItToHfu" width="690" height="488" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/311a1c785ab7fe34b9f7e3a3d41c409e572ce9fc_2_690x488.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/311a1c785ab7fe34b9f7e3a3d41c409e572ce9fc_2_1035x732.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/311a1c785ab7fe34b9f7e3a3d41c409e572ce9fc_2_1380x976.png 2x" data-dominant-color="EEF1EC"></a></div><p></p>
+<p>Blockchain and crypto, with their programmable smart contracts, present incredible advantages towards allocating capital in an efficient, effective, and transparent manner. Gitcoin has seized this advantage by moving the entirety of our grants program onchain: from governance, creation, management, and disbursement. Moving the grants program onchain and it being open source also allows us to build a network of developers, grants programs, and capital allocators in web3 – which all ultimately benefit the Gitcoin ecosystem.</p>
+<h1><a name="grants-growth-3" class="anchor" href="https://gov.gitcoin.co#grants-growth-3"></a>Grants = Growth</h1>
+<p>While the market for web3 capital allocation tools is currently limited to organizations with token treasuries, we expect this market will grow by many orders of magnitude. However, 11 years after the invention of Ethereum, web3 is still in the early stages of growth. Grants have emerged as a core driver of growth in web3 – both through builder onboarding as well as retention. Builders are onboarded through grants when tokens are distributed as incentives or compensation. These grants are often given in the early stages of a project and provide crucial funding to the project, as well as visibility and validation. Many early stage builders opt to apply for grants instead of raising traditional seed funding. Grants can be disbursed much more quickly than VC capital and come with added benefits, including publicity and connections to other grantees within the ecosystem. Unlike VC funding, they don’t require builders to give up equity. Grants instead create positive-sum outcomes by distributing funding in the native currency of their ecosystem, where value may accrue if the project is successful.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e9186a4919287b226926285b57054f6dbc63f183.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/e9186a4919287b226926285b57054f6dbc63f183" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e9186a4919287b226926285b57054f6dbc63f183_2_690x311.png" alt="image" data-base62-sha1="xg3yIdWvKzwBHPwJsBMIDApa1VN" width="690" height="311" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e9186a4919287b226926285b57054f6dbc63f183_2_690x311.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e9186a4919287b226926285b57054f6dbc63f183_2_1035x466.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/e/e9186a4919287b226926285b57054f6dbc63f183.png 2x" data-dominant-color="EBEDEE"></a></div><p></p>
+<p>Grants = Growth isn’t just theory – it’s been empirically tested and proven over the previous four years of the Gitcoin Grants program. The chart above maps <a href="https://docs.opensource.observer/blog/gitcoin-grants-impact" rel="noopener nofollow ugc">strong correlations between grant funding received and value-additive activity for a given project</a>. For every $1M that has been paid out through Gitcoin Grants since 2019, there are seven full-time developers who are still active in the project. Factoring in the crowdfund multiplier, that ratio grows to 13 retained full-time developers for every $1M put into the matching pool. These numbers are particularly impressive when you contrast them with the <a href="https://pitchbook.com/news/reports/q4-2023-crypto-report" rel="noopener nofollow ugc">$76B in venture funding</a> that has produced roughly .1 developers per funding dollar.</p>
+<h1><a name="our-solutions-4" class="anchor" href="https://gov.gitcoin.co#our-solutions-4"></a>Our Solutions</h1>
+<p>The design space of capital allocation is vast. Though our first and primary focus is solving the grants use case, we’ve designed a modular solutions stack that is intended to be extensible or repeatable across many different use cases.</p>
+<p>The stack consists of three primary layers.</p>
+<ol>
+<li>Protocol Layer</li>
+<li>Application Layer</li>
+<li>Program Layer</li>
+</ol>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/3/36d6f85b49d998720fd4bc0cd4cbc328a86ce849.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/36d6f85b49d998720fd4bc0cd4cbc328a86ce849" title="image"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/36d6f85b49d998720fd4bc0cd4cbc328a86ce849_2_690x488.png" alt="image" data-base62-sha1="7P8lZTujFHO5LUhcgE7RVq6BAVP" width="690" height="488" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/36d6f85b49d998720fd4bc0cd4cbc328a86ce849_2_690x488.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/36d6f85b49d998720fd4bc0cd4cbc328a86ce849_2_1035x732.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/3/36d6f85b49d998720fd4bc0cd4cbc328a86ce849_2_1380x976.png 2x" data-dominant-color="E4EAEB"></a></div><p></p>
+<p><strong>First, and most extensible, the protocol layer.</strong> Allo Protocol, short for Capital Allocation Protocol, is designed to be an infinitely flexible and extensible but also trusted and precise method of capital allocation.</p>
+<p><strong>Secondly, the application layer.</strong> Gitcoin’s Grants Stack is a no-code platform for running grant programs. The app currently provides the ability for grants managers to create, manage, and run Quadratic Funding, Direct Grants, and Retro PGF grants, with plans to extend into any grants mechanism with strong popular demand. Grants Stack is an open-source dApp, which allows communities to customize their experiences by creating companion applications or even forking the application to create their own version.</p>
+<p><strong>Finally, the program layer,</strong> which is the most long standing and Gitcoin-specific part of the stack. The Gitcoin Grants program is a powerful tool to onboard and educate communities on the power of grants programs. It has run 19 funding rounds to date and distributed over $59M in funding to the Ethereum ecosystem.</p>
+<h1><a name="conclusion-5" class="anchor" href="https://gov.gitcoin.co#conclusion-5"></a>Conclusion</h1>
+<p>The evolution from Gitcoin 1.0 to Gitcoin 2.0 marks a significant milestone in the field of capital allocation, especially in the realm of public goods funding within the Ethereum ecosystem and beyond. By transitioning to a more decentralized, modular approach and expanding its funding mechanisms beyond Quadratic Funding, Gitcoin has positioned itself at the forefront of a movement towards more democratic, efficient, and transparent capital allocation practices. The expansion into various blockchain networks signifies a broadening of Gitcoin’s impact, offering a scalable and flexible platform for funding public goods across the web3 space. We couldn’t be more excited about what’s to come.</p>
+<h2><a name="acknowledgements-6" class="anchor" href="https://gov.gitcoin.co#acknowledgements-6"></a>Acknowledgements</h2>
+<p>We would like to acknowledge those who have supported Grants on Gitcoin, including our Grantees, Donors, and Matching Pool partners.</p>
+<p>Thank you also to our many collaborators on this paper. <a class="mention" href="https://gov.gitcoin.co/u/mathildadv">@MathildaDV</a> edited this paper and <a class="mention" href="https://gov.gitcoin.co/u/harryeastham">@harryeastham</a> created designs and the microsite. <a class="mention" href="https://gov.gitcoin.co/u/ccerv1">@ccerv1</a> and <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> provided the data analysis referenced in Grants = Growth.</p>
+<p>‍</p>
+          <p><a href="https://gov.gitcoin.co/t/announcing-the-gitcoin-2-0-whitepaper/18294/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/announcing-the-gitcoin-2-0-whitepaper/18294/1
+        Tue, 12 Mar 2024 01:23:50 +0000
+gov.gitcoin.co-post-18294-1
+Announcing the Gitcoin 2.0 Whitepaper
+      
+
+

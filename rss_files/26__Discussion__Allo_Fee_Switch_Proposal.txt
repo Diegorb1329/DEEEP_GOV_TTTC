@@ -1,0 +1,285 @@
+
+
+
+[Discussion] Allo Fee Switch Proposal
+https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974
+    # Allo Fee Switch Proposal
+
+## Abstract & Background
+
+Fire Eyes DAO has been working towards creating a roadmap for [GTC Value Accrual](https://gov.gitcoin.co/t/gtc-value-accrual-intro/18380)  as well as driving more clear sustainability and value to the GitcoinDAO.
+
+As mentioned in the [GTC Value Accrual Intro](https://gov.gitcoin.co/t/gtc-value-accrual-intro/18380) forum post, introducing a fee switch to the Allo Protocol is a straightforward decision that can allow us to begin this journey.
+
+**This forum post aims to ignite initial discussion on an Allo fee switch, not be a ‘ready to vote’ proposal.**
+
+## Motivation
+
+Allo protocol v2 (and its predecessors) have had $60m+ in combined volume. The introduction of a fee to Allo would create a new revenue stream which would be passed back into the DAO treasury.
+
+Uniswaps previous discussion on the activation of their fee switch provides some guidance around the process involved in making this change, and valuable insight into the wider community response to such a change.
+
+Although Gitcoin is a different protocol to Uniswap, the foundation of these decisions should follow the same logical course. **Protocols cannot sustain being public goods indefinitely and leaning into value accrual as a protocol is important.**
+
+## Specification
+
+This initial pre-proposal discussion centres around two decisions that need to be made before we move forward: 
+- Firstly (1.) if the fee is added to Gitcoin’s deployment of Allo protocol **or** (2.) to all deployments of Allo protocol. 
+- Secondly if this fee was to be added, what percentage of volume the fee would take.
+
+**Firstly:**
+
+1. The fee switch could added to the Allo Protocol but only be enacted via the official Gitcoin deployment, not at the overall contract level.
+    * This allows others to fork the contracts and deploy their own instance without the fee if they wish to.
+
+2. The fee switch could be implemented at the contract level, meaning that all deployments would include the switch unless it was removed from the contract itself.
+    * This more strongly encourages anyone using the allo contracts to contribute to the funding of public goods via GitcoinDAO.
+
+**Secondly:** The fee level is an open question - we invite community feedback and discussion but envision the fee sitting at one of the following levels:
+
+- 0.5%
+- 1%
+- 3%
+
+For context, looking at these fee levels retroactively gives us an idea of how impactful a fee could be over time:
+
+#### GG20:
+
+- 0.5% of total GG20 donations = $3165
+- 1% of total GG20 donations = $6330
+- 3% of total GG20 donations = $18,990
+
+#### All time:
+
+- 0.5% of total Grants distributions to date = ~$300k
+- 1% of total Grants distributions to date = ~$600k
+- 3% of total Grants distributions to date = ~$1.8m
+
+These numbers show value flows that could be directed towards sustainability.
+
+**It is important to note that the proceeds of this fee will be deposited back into the Gitcoin DAO treasury,** to be directed into funding both the development of Gitcoin infrastructure, and the commons more broadly. As such, it makes sense for the fee to be higher than average and that most users would be accepting of this given that the fee exists purely to sustain the provision of Allo and related public goods.
+
+*FireEyes would recommend that the switch be implemented at the Allo contract level with a fee of 1%. This is because it provides a clear value proposition to GitcoinDAO’s sustainability whilst remaining reasonably unobtrusive to users donating via the Allo protocol. It is obviously still possible to remove or reduce this fee switch, but this would need to be an explicit decision to exclude by anyone deploying.*
+
+## Drawbacks / Risks
+
+There are reasonable discussion points that this type of fee switch could damage Gitcoin's public goods reputation, here’s how we feel that we could mitigate this if deemed necessary by the community:
+
+- Start with the checkout process having an optional donation/fee to Gitcoin DAO.
+- Only enact the fee switch on the official Gitcoin frontend, and let others deploy their own frontends without fee switches.
+
+Allo has established itself as a credible tool for capital allocation, projects with large sums of capital have two incentives to use Allo with a fee switch.
+
+- It has pre-existing infrastructure which is easy to use, making the fee worthwhile.
+- Using Allo (with a fee) also means that you are also contributing to public goods inherently by contributing to the sustainability of public goods infrastructure.
+
+## Conclusion
+
+We hope to foster community discussion around both the introduction of this mechanism and its finer details, as well as more broadly around sustainability for the GitcoinDAO and it's infrastructure. 
+
+We realise this is a controversial topic to introduce to a public goods focused community like Gitcoin however starting this conversation is an important step towards ensuring that we can continue sustainably building public goods infrastructure for years to come!
+
+Please share your thoughts and feedback in this forum post 🤖
+Wed, 24 Jul 2024 12:43:01 +0000
+🤖 DAO Governance and Vision
+
+
+[Discussion] Allo Fee Switch Proposal
+kyle
+
+            <p>Thanks, Umar - this is really helpful. We could play with the mint fee as well (2-4?) to determine if there is a trend in which we see less attestation minting based on fee amount.</p>
+<p>One item of note. I would enable this for all rounds run on the platform, not just our GG rounds. These attestations become public goods, and a strong funding signal for communities to leverage. As something that is totally optional, turning it on for all community &amp; ecosystem rounds seems low downside.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/8">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/8
+        Wed, 24 Jul 2024 12:43:01 +0000
+gov.gitcoin.co-post-18974-8
+[Discussion] Allo Fee Switch Proposal
+      
+
+[Discussion] Allo Fee Switch Proposal
+umarkhaneth
+
+            <p>Hey, just wanted to quickly add some data on the amount Gitcoin stands to make per round. These are some numbers on unique_checkouts over the last ~2 years of Gitcoin Grants.</p>
+<p>If we look at ~50k average unique checkouts at 80% participation and $2 per attestation then an average GG could bring in close to $80k. In the bull case if we get back to ~100k unique checkouts per GG then this could be ~$160k per round.<br>
+Over one year of running four similar rounds, we could see around $320k-$640k annual recurring revenue.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/05f873588d5bead8a641a36009d8ffe8edd520f9.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/05f873588d5bead8a641a36009d8ffe8edd520f9" title="Screen Shot 2024-07-18 at 5.47.09 PM"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/05f873588d5bead8a641a36009d8ffe8edd520f9_2_398x500.png" alt="Screen Shot 2024-07-18 at 5.47.09 PM" data-base62-sha1="QOGNikuRI6yMkp1VTol99fByJz" width="398" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/05f873588d5bead8a641a36009d8ffe8edd520f9_2_398x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/05f873588d5bead8a641a36009d8ffe8edd520f9_2_597x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/05f873588d5bead8a641a36009d8ffe8edd520f9_2_796x1000.png 2x" data-dominant-color="FBFCFC"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/7">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/7
+        Thu, 18 Jul 2024 21:48:41 +0000
+gov.gitcoin.co-post-18974-7
+[Discussion] Allo Fee Switch Proposal
+      
+
+[Discussion] Allo Fee Switch Proposal
+kyle
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/james">@James</a> - Thanks for this. FWIW, I think turning on a fee switch for the protocol is not great at our current stage. ie, we are still too small to turn on a fee switch, it will deter adoption and create more problems for us… I had one idea that may be worth exploring though. It offers value for us and for our ecosystem as a whole:</p>
+<p>I wonder if we could create an attestation for contributions to grants rounds as part of the checkout flow? Here are a few details - As part of the checkout flow, you mint an attestation (on the checkout network). This attestation details the contribution, expected match, and round details, etc. Ideally it includes information that only we would know (expected match amount, etc.), and then serves as an onchain proof for all contributors.</p>
+<p>We start to build an attestation network (via the Gitcoin Grants EAS schema) that can be used for any number of things (reputation, airdrops, etc.) But then you also capture $1 per attestation, or $2 per attestation. We can turn Gitcoin into one of the largest attestors of funding sources and the projects that receive that funding. Ideally we deploy a smart contract to each network (like Passport has done) that enables easy, on chain querying of info. There by enabling gating on contributions, etc. I can share more details on this if this isn’t well understood.</p>
+<p>Gitcoin is often asked “who contributed to XXX round or YYY project” - now users have incentive to mint the attestation as they might be included in airdrops that target this info in the future AND because its onchain, we can look up details on who is minting, versus who isnt, etc.</p>
+<p>This attestation (and the revenue to Gitcoin) is on the donor, optional, and has value to them as a credibility builder (or airdrop farmer). This also can serve as a proof to issue a hypercert in the future (or the contributions themselves to the project’s wallet).</p>
+<p>At 400k transactions per grants round, let’s say 80% do it… Gitcoin is making nearly $300k - $600k a round, collected in Eth. These attestations also provide more value to the ecosystem (and L2s). which means we can drive more grant funding from OP and others for providing interesting and valuable attestation data on chain (ie, filling block space).</p>
+<p>Would love thoughts. I think the level of effort is fairly small given the knowledge, contracts and attestations Passport has done too.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/6">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/6
+        Wed, 03 Jul 2024 18:08:50 +0000
+gov.gitcoin.co-post-18974-6
+[Discussion] Allo Fee Switch Proposal
+      
+
+[Discussion] Allo Fee Switch Proposal
+jengajojo
+
+            <p>Thanks for initiating this discussion <a class="mention" href="https://gov.gitcoin.co/u/james">@James</a> I generally support sustainable development of protocols and the conversation around the fee switch. However, I’d like us to consider the consequences of switching it on too early! There is always a risk that the protocol doesn’t have sufficient lindy yet and a competitor with 0 fees or even negative fees (backed by investors) can take huge chunks of marketshare if implemented too early. A deep analysis of the competitor landscape should be conducted before switching on fees imo.</p>
+<p>On the other hand, there maybe some benefits to selectively charging fees. Eg:</p>
+<p><strong>Case A:</strong> Fees are inversely proportional to a minimum donation threshold and 0 fees above that threshold. This can incentivize wallets to donate minimum amounts.</p>
+<p><strong>Case B:</strong> Fees are inversely proportional to amount of GTC staked and 0 fees if the stake is above this threshold</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/5">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/5
+        Wed, 12 Jun 2024 11:21:42 +0000
+gov.gitcoin.co-post-18974-5
+[Discussion] Allo Fee Switch Proposal
+      
+
+[Discussion] Allo Fee Switch Proposal
+Sov
+
+            <p>Projects could be amenable to this, but (as with everything), the devil would be in the details (how much, when applied, etc.).</p>
+<p>I’m sure I am biased, but I think the ecosystem being built on Allo could justify a fee switch both in the current app stack and what is sure to come.  With this, Gitcoin would need to make what is being built much more accessible to any network where Allo is deployed.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/4">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/4
+        Tue, 11 Jun 2024 16:29:06 +0000
+gov.gitcoin.co-post-18974-4
+[Discussion] Allo Fee Switch Proposal
+      
+
+[Discussion] Allo Fee Switch Proposal
+owocki
+
+            <p><a class="mention" href="https://gov.gitcoin.co/u/sov">@Sov</a> i’d be curious if you think that adding a Fee Switch would create an impediment to adoption, and if so what you make of that feedback.</p>
+<p>I’m also curious to hear if alternatives to fee switches (optional but default donations in checkout flow, having Gitcoin in each round as a project to fund, perhaps token staking schemes) would be more viable in your opinion.</p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/3">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/3
+        Tue, 11 Jun 2024 15:18:12 +0000
+gov.gitcoin.co-post-18974-3
+[Discussion] Allo Fee Switch Proposal
+      
+
+[Discussion] Allo Fee Switch Proposal
+DistributedDoge
+
+            <p>Allo v2 smart-contract suite, as it is deployed, already has a mechanism to extract fee from any <em>matching pool</em> (i.e. money submitted by sponsors/round managers) but not from donations.</p>
+<p>Taking a quick look at stats in your example taking 3% fee <em>from round sponsors/managers</em> is a much better deal than skimming 3% <em>from donations</em>, let’s take a look at money moved in GG20:</p>
+<ul>
+<li>$1.647M Sponsored matching pools</li>
+<li>$633,431.29 Donations</li>
+</ul>
+<p>I think proposal to activate fee switch on donations as well is worth considering, but from pragmatic perspective it might be easier to start by working with functionality that is already deployed.</p>
+<p>The functionality that is already deployed enables two kinds of fees:</p>
+<ul>
+<li><code>BaseFee</code> - round manager pays fixed amount (e.g. 40DAI) to deploy a round.</li>
+<li><code>PercentageFee</code> - when round manager funds matching pool, fixed percentage of that (e.g. 3%) goes to Gitcoin</li>
+</ul>
+<p>Both of those fees are currently set to 0 on every major chain I checked, but DAO is able to change them if willing to do so.</p>
+<p>To the best of my knowledge, there is currently no mechanism to be selective with fees. If fee starts being enforced on protocol-level, it means every round (on a given chain) created within Allo V2 would need to pay such fee.</p>
+<p>You can look at Allo contract code to see how this works under the hood:</p>
+<p><a href="https://optimistic.etherscan.io/address/0xB087535DB0df98fC4327136e897A5985E5Cfbd66#code" class="onebox" target="_blank" rel="noopener nofollow ugc">https://optimistic.etherscan.io/address/0xB087535DB0df98fC4327136e897A5985E5Cfbd66#code</a></p>
+<p><strong>My personal conclusions:</strong></p>
+<ul>
+<li>I think having a small fee that is enforced on protocol level is a good idea!</li>
+<li>Since functionality for collecting fees on matching pools already exists, I would be in favour of asking DAO to activate existing <code>PercentageFee</code> switch at <code>1%</code> or similar (could be done on single chain to test the idea first?).</li>
+<li>Gitcoin has no realistic way to enforce what happens inside third-party deployments of Allo Protocol but I pretty much agree with your recomendations at the end of <em>Specification</em> section.</li>
+</ul>
+          <p><a href="https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/2">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/2
+        Tue, 11 Jun 2024 00:38:12 +0000
+gov.gitcoin.co-post-18974-2
+[Discussion] Allo Fee Switch Proposal
+      
+
+[Discussion] Allo Fee Switch Proposal
+James
+
+            <h1><a name="allo-fee-switch-proposal-1" class="anchor" href="https://gov.gitcoin.co#allo-fee-switch-proposal-1"></a>Allo Fee Switch Proposal</h1>
+<h2><a name="abstract-background-2" class="anchor" href="https://gov.gitcoin.co#abstract-background-2"></a>Abstract &amp; Background</h2>
+<p>Fire Eyes DAO has been working towards creating a roadmap for <a href="https://gov.gitcoin.co/t/gtc-value-accrual-intro/18380">GTC Value Accrual</a>  as well as driving more clear sustainability and value to the GitcoinDAO.</p>
+<p>As mentioned in the <a href="https://gov.gitcoin.co/t/gtc-value-accrual-intro/18380">GTC Value Accrual Intro</a> forum post, introducing a fee switch to the Allo Protocol is a straightforward decision that can allow us to begin this journey.</p>
+<p><strong>This forum post aims to ignite initial discussion on an Allo fee switch, not be a ‘ready to vote’ proposal.</strong></p>
+<h2><a name="motivation-3" class="anchor" href="https://gov.gitcoin.co#motivation-3"></a>Motivation</h2>
+<p>Allo protocol v2 (and its predecessors) have had $60m+ in combined volume. The introduction of a fee to Allo would create a new revenue stream which would be passed back into the DAO treasury.</p>
+<p>Uniswaps previous discussion on the activation of their fee switch provides some guidance around the process involved in making this change, and valuable insight into the wider community response to such a change.</p>
+<p>Although Gitcoin is a different protocol to Uniswap, the foundation of these decisions should follow the same logical course. <strong>Protocols cannot sustain being public goods indefinitely and leaning into value accrual as a protocol is important.</strong></p>
+<h2><a name="specification-4" class="anchor" href="https://gov.gitcoin.co#specification-4"></a>Specification</h2>
+<p>This initial pre-proposal discussion centres around two decisions that need to be made before we move forward:</p>
+<ul>
+<li>Firstly (1.) if the fee is added to Gitcoin’s deployment of Allo protocol <strong>or</strong> (2.) to all deployments of Allo protocol.</li>
+<li>Secondly if this fee was to be added, what percentage of volume the fee would take.</li>
+</ul>
+<p><strong>Firstly:</strong></p>
+<ol>
+<li>
+<p>The fee switch could added to the Allo Protocol but only be enacted via the official Gitcoin deployment, not at the overall contract level.</p>
+<ul>
+<li>This allows others to fork the contracts and deploy their own instance without the fee if they wish to.</li>
+</ul>
+</li>
+<li>
+<p>The fee switch could be implemented at the contract level, meaning that all deployments would include the switch unless it was removed from the contract itself.</p>
+<ul>
+<li>This more strongly encourages anyone using the allo contracts to contribute to the funding of public goods via GitcoinDAO.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Secondly:</strong> The fee level is an open question - we invite community feedback and discussion but envision the fee sitting at one of the following levels:</p>
+<ul>
+<li>0.5%</li>
+<li>1%</li>
+<li>3%</li>
+</ul>
+<p>For context, looking at these fee levels retroactively gives us an idea of how impactful a fee could be over time:</p>
+<h4><a name="gg20-5" class="anchor" href="https://gov.gitcoin.co#gg20-5"></a>GG20:</h4>
+<ul>
+<li>0.5% of total GG20 donations = $3165</li>
+<li>1% of total GG20 donations = $6330</li>
+<li>3% of total GG20 donations = $18,990</li>
+</ul>
+<h4><a name="all-time-6" class="anchor" href="https://gov.gitcoin.co#all-time-6"></a>All time:</h4>
+<ul>
+<li>0.5% of total Grants distributions to date = ~$300k</li>
+<li>1% of total Grants distributions to date = ~$600k</li>
+<li>3% of total Grants distributions to date = ~$1.8m</li>
+</ul>
+<p>These numbers show value flows that could be directed towards sustainability.</p>
+<p><strong>It is important to note that the proceeds of this fee will be deposited back into the Gitcoin DAO treasury,</strong> to be directed into funding both the development of Gitcoin infrastructure, and the commons more broadly. As such, it makes sense for the fee to be higher than average and that most users would be accepting of this given that the fee exists purely to sustain the provision of Allo and related public goods.</p>
+<p><em>FireEyes would recommend that the switch be implemented at the Allo contract level with a fee of 1%. This is because it provides a clear value proposition to GitcoinDAO’s sustainability whilst remaining reasonably unobtrusive to users donating via the Allo protocol. It is obviously still possible to remove or reduce this fee switch, but this would need to be an explicit decision to exclude by anyone deploying.</em></p>
+<h2><a name="drawbacks-risks-7" class="anchor" href="https://gov.gitcoin.co#drawbacks-risks-7"></a>Drawbacks / Risks</h2>
+<p>There are reasonable discussion points that this type of fee switch could damage Gitcoin’s public goods reputation, here’s how we feel that we could mitigate this if deemed necessary by the community:</p>
+<ul>
+<li>Start with the checkout process having an optional donation/fee to Gitcoin DAO.</li>
+<li>Only enact the fee switch on the official Gitcoin frontend, and let others deploy their own frontends without fee switches.</li>
+</ul>
+<p>Allo has established itself as a credible tool for capital allocation, projects with large sums of capital have two incentives to use Allo with a fee switch.</p>
+<ul>
+<li>It has pre-existing infrastructure which is easy to use, making the fee worthwhile.</li>
+<li>Using Allo (with a fee) also means that you are also contributing to public goods inherently by contributing to the sustainability of public goods infrastructure.</li>
+</ul>
+<h2><a name="conclusion-8" class="anchor" href="https://gov.gitcoin.co#conclusion-8"></a>Conclusion</h2>
+<p>We hope to foster community discussion around both the introduction of this mechanism and its finer details, as well as more broadly around sustainability for the GitcoinDAO and it’s infrastructure.</p>
+<p>We realise this is a controversial topic to introduce to a public goods focused community like Gitcoin however starting this conversation is an important step towards ensuring that we can continue sustainably building public goods infrastructure for years to come!</p>
+<p>Please share your thoughts and feedback in this forum post <img src="https://gov.gitcoin.co/images/emoji/twitter/robot.png?v=12" title=":robot:" class="emoji" alt=":robot:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/1">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/discussion-allo-fee-switch-proposal/18974/1
+        Mon, 10 Jun 2024 22:27:17 +0000
+gov.gitcoin.co-post-18974-1
+[Discussion] Allo Fee Switch Proposal
+      
+
+

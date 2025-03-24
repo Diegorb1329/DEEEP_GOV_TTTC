@@ -1,0 +1,607 @@
+
+
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553
+    Thank you ​​to @Joel_m, @ghostffcode, @gerald, @jeremy, @owocki, @Sov, @M0nkeyFl0wer, and @Connor for getting us to final round results!
+
+**Payments have now gone out!** 
+
+This proposal has passed on [snapshot](https://snapshot.org/#/gitcoindao.eth/proposal/0xf4f44efa6c9a2968c8fba8fd664b7ba03a03b876eb033c09dd088d62877eb2fa)
+
+# TL;DR
+
+GG18 matching results are live [here](https://docs.google.com/spreadsheets/d/133eTg4V0iSsK0Id3iBMV1eHRogeWhJm91H2t0fWL0WE/edit#gid=1644179427)! We propose five days for discussion and review followed by a 5-day snapshot vote to ratify before processing final payouts. In GG18, we move to a variant of QF that uses cluster-matching to introduce sybil and collusion resistance natively into the mechanism and reward projects with more diverse and pluralistic communities.
+
+Edit: Results have been updated. 
+[Version 2 detailed](https://docs.google.com/spreadsheets/d/133eTg4V0iSsK0Id3iBMV1eHRogeWhJm91H2t0fWL0WE/edit#gid=1644179427)
+[Version 2](https://docs.google.com/spreadsheets/d/1Qm8fLGPEoxzmioi42bgiaEZiyStfbxQ8H4Be9ysGANU/edit?usp=sharing) 
+[Version 1](https://docs.google.com/spreadsheets/d/1HXhxuG8ElPF99Xs_q9_MY7-kV_S3GSf5jCyRSXp465s/edit#gid=1426584490)
+
+# Round Results
+
+This round saw increased crowdfunded contributions above the previous two rounds on Grants Stack & Allo – making it the biggest ever on the new decentralized tech stack.
+
+* With $680k crowdfunded, we saw a 12% increase from the Beta round 🎉
+* With 328k contributions, we saw a 65% increase from the Alpha round 🎉
+
+This round also saw the Grants Stack team make significant improvements to the product, including Multi Round Checkout, which makes it easy to donate across rounds *and chains.*
+
+Every core round was also on an L2, including the first round on the new Public Goods Network. This round, fittingly, funded Ethereum Infrastructure. It ended up being the second-largest round of the season by crowdfunding despite having the smallest matching fund and fewest grantees of the four core rounds. This is a testament to the ease of bridging and the focused interests of our community.
+
+Kudos to everyone who worked hard to make this round a success!
+
+# Round and Results Calculation Details
+
+The complete list of matching results & payout amounts can be found [here](https://docs.google.com/spreadsheets/d/133eTg4V0iSsK0Id3iBMV1eHRogeWhJm91H2t0fWL0WE/edit#gid=1644179427). Below, we’ll cover how these results were calculated and other decisions.
+
+Post-round analysis had a $300k financial impact. This means $150k was reduced from projects that saw sybil or collusive activity and given to other projects.
+
+## Core Rounds:
+
+|Round|Matching Pool|Matching Cap|
+| --- | --- | --- |
+|Open Source Software|$300,000.00|5%|
+|Ethereum Infrastructure|$200,000.00 or 106.9 ETH|10%|
+|Web3 Community & Education|$250,000.00|6%|
+|Climate|$350,000.00|10%|
+
+In the climate round grantees were given the option to opt-in to an extra $100k of matching funding from Shell. Over 64% of projects chose to opt-in to this funding.
+
+# Next Gen Quadratic Funding
+
+In theory, quadratic funding combines democracy and markets to create an optimal mechanism for communities to fund what matters. Under this mechanism, a project with many different supporters contributing some amount will receive much more funding than another project that gets the same total contribution from a single “whale.” However, Quadratic Funding’s optimality relies on assumptions that don’t hold in the real world.
+
+It assumes that each donor is entirely different from every other and perfectly rational when deciding what projects will create the most value for them. However, we have users who will produce hundreds or even thousands of fake wallets to support themself. We also know users who will conspire to vote a particular way based on others voting the same way. Further, we’re not all completely distinct; many are members of the same social circles or communities.
+
+[Cluster-Match Quadratic Funding](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507) takes a step toward solving the sybil and collusion problems by embracing the meaning of our social connections. It was developed by [Joel](https://gov.gitcoin.co/u/joel_m/summary) (who joined Gitcoin as part of the [QED](https://gov.gitcoin.co/t/gcp-010-evolving-gitcoin-grants-the-q-e-d-quadratic-experimentation-and-development-program/14174) program), [E. Glen Weyl](https://gov.gitcoin.co/u/glenweyl/summary) (who co-authored the original QF paper with Vitalik), and our very own Erich (who has been working on pluralism since at least 2019 and most recently on Gitcoin Passport).
+
+Cluster-Match QF takes the projects you vote for as signals of the communities you belong to. It then calculates matching amounts for each supporter and unique community combination. This method provides more significant matching funding to projects that receive support from more diverse communities.
+
+The outcome is clear: sybils and colluders receive fewer matching funds, while grants that create value for the broadest range of communities receive the most. By implementing this method, we reduced the match of the most suspicious projects by up to 70% and redirected those funds to other projects.
+
+For more details about pluralistic QF methods, check out [this paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4311507) and/or [this podcast](https://open.spotify.com/episode/2Z0u8x4SQtK9LABzAuQteR).
+
+
+# Sybil Detection
+
+The primary anti-sybil mechanism for this round is Gitcoin Passport. Passport aggregates identity signals from across web2 and web3 to understand the likelihood of an individual being a unique human. If an individual’s score is below a set threshold, then they’re less likely to be a real human because they don’t have all the identity signals a real human typically would. Individual donations have previously received multipliers of anywhere from 2 to 25x, and this means our system is a target for bad actors that’s worth making it hard to get into.
+
+73.2% of wallets that donated reached a score of 20 or higher.
+
+As with most QF Rounds, we saw some sophisticated Sybil attack patterns that still needed to be stopped by Passport (yet!). We can learn from these attack patterns and modify the stamp scoring mechanism to make it impossible for Sybils to get in the same way again.
+
+We were able to detect these sybil attacks through programmatic analysis built specifically for Anti-sybil. We leveraged the new [regendata](https://gov.gitcoin.co/t/regendata-xyz-our-sybil-resistant-future-q3-2023-and-beyond/16474) database to build new python-based tools for finding Sybils. These tools can continue to be used and iterated on such that every round sees them get better.
+
+After our on-chain data analysis, donations from addresses associated with these behaviors were excluded from match calculations. This includes the following:
+
+* Enhanced analysis of passport stamps to flag evidence of abuse between different wallets
+* ​​Flagging known sybil networks/addresses from our 40k address blacklist
+* Suspected bot activity based on anomalies detected in transaction patterns
+* Suspected bot activity based on anomalies detected in donation patterns
+
+
+# Vote
+
+We ask our Community Stewards to ratify the GG18 payout amounts as being correct, fair, and abiding by community norms, including the implementation of Passport scoring as well as Sybil/Fraud judgments, squelching, and quadratic funding parameters made by the Public Goods Funding workstream.
+
+If stewards and the community approve after this discussion, we suggest voting on Snapshot from Wednesday, September 26th to Sunday, October 1st. If the vote passes, the multisig signers can then approve a transaction to fund the round contracts, the results will be finalized on-chain, and payouts will be processed promptly after
+
+Options to vote on:
+
+**1. Ratify the round results**
+
+You ratify the results as reported by the Public Goods Funding workstream and request the keyholders of the community multisig to payout funds according to the GG18 final payout amounts.
+
+**2. Request further deliberation**
+
+You wait to ratify the results and request keyholders of the community multi-sig wallet to delay payment until further notice.
+
+Lastly:
+
+![|447x421](upload://fTNC06FjVgRhJGoMgzIqt79y6bX.png) meme credit to @McKennedy
+Sun, 15 Oct 2023 02:35:27 +0000
+🌱 Gitcoin Grants
+
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+raybankless
+
+            <p>Hello,</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="31" data-topic="16553">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>This mechanism disempowers uniform, established monoliths and actually empowers grassroots organizations if they’re made of diverse, different members.</p>
+</blockquote>
+</aside>
+<p>From what i read, as far as gitcoin concerned the top 2 projects that joined this climate round, are uniform, established monoliths. Since they have been slashed enormous percentages, that means the decision of their uniformness and monolithness is made.</p>
+<p>and also, from the recent round operator lesson, i learned that<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/a/ab9ba06120d1630ef937870933c6d29467cec24c.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/ab9ba06120d1630ef937870933c6d29467cec24c" title="Screenshot 2023-10-15 at 03.42.12"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ab9ba06120d1630ef937870933c6d29467cec24c_2_517x229.png" alt="Screenshot 2023-10-15 at 03.42.12" data-base62-sha1="ou74GMLbIsk5J5gdAIRLblITwFS" width="517" height="229" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ab9ba06120d1630ef937870933c6d29467cec24c_2_517x229.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/a/ab9ba06120d1630ef937870933c6d29467cec24c_2_775x343.png 1.5x, https://gov.gitcoin.co/uploads/db4391/original/2X/a/ab9ba06120d1630ef937870933c6d29467cec24c.png 2x" data-dominant-color="F5F6F4"></a></div><p></p>
+<p>Seems like we are also doing suspicious activity.</p>
+<p>Projects like us are not accepted to the round by just clicking the “submit” button. There was an election process. Our projects were reviewed by Gitcoin. But now, we are called suspicious monoliths by the same Gitcoin.</p>
+<p>Either the language is wrong, or there is a much bigger problem here. Because what gitcoin gave me as an explanation to the %74 percent cut, was that we were either suspicious, or a uniform monolith.</p>
+<p>Or our donators donated only to us and no one else.</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="22" data-topic="16553">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>Looking at your data, I agree that your matching seems low when comparing your number of voters to the number of voters of projects who receive similar matching. Digging deeper into your data, I see this is because of how identical your voters are. Of your 187 eligible voters, 151 (over 80%) of them supported only Nawonmesh.</p>
+</blockquote>
+</aside>
+<p>What is wrong with they voted only for us? That means our community has moved, they used gitcoin and donated $1 to us, we should not get a cut for that imo. We can not go check who voted for how many projects and find the ones that voted only for us then warn them about “no you can not just vote for us, you have to vote random amounts of $$ to random number of projects or it is fraudulent”</p>
+<p>We should do that before the round. This video is made by greenpill.network, i translated it to Turkish and shared from BanklessDAO Turkish YT. The video explains QF but there is no explanation of Cluster Matching, it just says “which ever project gets more number of people donating to them regardless of the amount of asset they donated, that project will get more from the matching pool”.</p>
+<p><a href="https://www.youtube.com/watch?v=EjoiCWg9-r4">Kuadratik Funding Nedir?</a></p>
+
+<p>That means we should update all our QF content ASAP until GG19, because it is missing the most important part of Gitcoin rounds. Since it caused us, %74 percent, there is nothing more important then knowing how CM works. There is no importance of what QF is for Nawonmesh, because %86 of their funds would have come from Cluster Matching.</p>
+<p>We were the slashed side of the CM, how about the gainers?</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="22" data-topic="16553">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<p>For example, if enough people from my hometown on Long Island decided we needed to improve our parks and we could quickly each give $1 to a gitcoin grant then we would outvote everyone else to claim a lions share of the matching pool by ourselves.</p>
+</blockquote>
+</aside>
+<p>If you mean you can get %80 percent of the pool by shear numbers, you can’t, because there is a cap. I assume you already know about the cap thus by saying lions share you meant the cap.</p>
+<p>Then how come Atlantis is eligible for the lions share of $23,876 with average number of backers?</p>
+<p>Cluster Matching just got dismissed of QF in my experience.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/84">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/84
+        Sun, 15 Oct 2023 02:35:27 +0000
+gov.gitcoin.co-post-16553-84
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+RedAce7
+
+            <p>Well done Guys , Looking forward to help the community in upcoming rounds as well .</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/83">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/83
+        Fri, 13 Oct 2023 13:41:30 +0000
+gov.gitcoin.co-post-16553-83
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+ZER8
+
+            <p>The results overall look great, I’m personally very happy to see some of my favorite regen projects make it to the top in the Climate round!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/82">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/82
+        Wed, 11 Oct 2023 14:25:33 +0000
+gov.gitcoin.co-post-16553-82
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+FractalVisions
+
+            <aside class="quote no-group" data-username="pcfreak30" data-post="80" data-topic="16553">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/pcfreak30/48/8557_2.png" class="avatar"> pcfreak30:</div>
+<blockquote>
+<p>I checked some and one that stands out is <code>DefiLab.xyz</code> whos domain points to a for sale page…</p>
+</blockquote>
+</aside>
+<p>Can confirm the site goes here.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/1/15980a58834bf2256d6cc6f69d091c36bcfa738a.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/15980a58834bf2256d6cc6f69d091c36bcfa738a" title="IMG_3710"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/15980a58834bf2256d6cc6f69d091c36bcfa738a_2_230x500.jpeg" alt="IMG_3710" data-base62-sha1="351LRqctMyXxGlJ1xayYptlalYe" width="230" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/15980a58834bf2256d6cc6f69d091c36bcfa738a_2_230x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/15980a58834bf2256d6cc6f69d091c36bcfa738a_2_345x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/1/15980a58834bf2256d6cc6f69d091c36bcfa738a_2_460x1000.jpeg 2x" data-dominant-color="BCC9D5"></a></div><p></p>
+<p>The actual site is here. It doesn’t look like it’s been updated since 2021…</p>
+<aside class="onebox allowlistedgeneric" data-onebox-src="https://defi-lab.xyz/">
+  <header class="source">
+      <img src="https://gov.gitcoin.co/uploads/db4391/original/2X/a/a23b23170a0bba7ccbe298008535444f59b731c2.png" class="site-icon" data-dominant-color="DDDEFB" width="16" height="16">
+
+      <a href="https://defi-lab.xyz/" target="_blank" rel="noopener nofollow ugc">defi-lab.xyz</a>
+  </header>
+
+  <article class="onebox-body">
+    
+
+<h3><a href="https://defi-lab.xyz/" target="_blank" rel="noopener nofollow ugc">DefiLab: Essential Tools for the DeFi Community - Uniswap V3 Simulator and...</a></h3>
+
+  <p>DefiLab offers cutting-edge tools tailored for the DeFi community. Dive into our Uniswap V3 Simulator, backtest strategies, and explore essential resources to elevate your DeFi experience.</p>
+
+
+  </article>
+
+  <div class="onebox-metadata">
+    
+    
+  </div>
+
+  <div style="clear: both"></div>
+</aside>
+
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/92c4aab925f7c73f4e4b724f8c194f04e171a052.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/92c4aab925f7c73f4e4b724f8c194f04e171a052" title="IMG_3713"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/92c4aab925f7c73f4e4b724f8c194f04e171a052_2_230x500.jpeg" alt="IMG_3713" data-base62-sha1="kWn4bEPtIDWEKXroUlUzXBvlngK" width="230" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/92c4aab925f7c73f4e4b724f8c194f04e171a052_2_230x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/92c4aab925f7c73f4e4b724f8c194f04e171a052_2_345x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/92c4aab925f7c73f4e4b724f8c194f04e171a052_2_460x1000.jpeg 2x" data-dominant-color="BBC4C8"></a></div><p></p>
+<p>Twitter is unfortunately not as active as one <img src="https://gov.gitcoin.co/images/emoji/twitter/point_up.png?v=12" title=":point_up:" class="emoji" alt=":point_up:" loading="lazy" width="20" height="20"> might hope.</p>
+<p>I only see one post about Gitcoin from the Alpha round so this is definitely a bit suspicious.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/e/e7599b8afd4d8c6fd1058fa939c532427f0b8c80.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/e7599b8afd4d8c6fd1058fa939c532427f0b8c80" title="IMG_3715"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e7599b8afd4d8c6fd1058fa939c532427f0b8c80_2_230x500.jpeg" alt="IMG_3715" data-base62-sha1="x0ChiFb0GA4mjQoPg9p2GBndwgU" width="230" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e7599b8afd4d8c6fd1058fa939c532427f0b8c80_2_230x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e7599b8afd4d8c6fd1058fa939c532427f0b8c80_2_345x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/e/e7599b8afd4d8c6fd1058fa939c532427f0b8c80_2_460x1000.jpeg 2x" data-dominant-color="222434"></a></div><p></p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/f/fc0c394f22cd6b2f0482591c06026230739a1eea.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/fc0c394f22cd6b2f0482591c06026230739a1eea" title="IMG_3712"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fc0c394f22cd6b2f0482591c06026230739a1eea_2_279x500.jpeg" alt="IMG_3712" data-base62-sha1="zXIvKmm11t3e1TjOEFgCIggxW4i" width="279" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fc0c394f22cd6b2f0482591c06026230739a1eea_2_279x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fc0c394f22cd6b2f0482591c06026230739a1eea_2_418x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/f/fc0c394f22cd6b2f0482591c06026230739a1eea_2_558x1000.jpeg 2x" data-dominant-color="2D2C30"></a></div><p></p>
+<p>The one <img src="https://gov.gitcoin.co/images/emoji/twitter/point_up.png?v=12" title=":point_up:" class="emoji" alt=":point_up:" loading="lazy" width="20" height="20"> thing that does raise a bit of a red flag <img src="https://gov.gitcoin.co/images/emoji/twitter/triangular_flag_on_post.png?v=12" title=":triangular_flag_on_post:" class="emoji" alt=":triangular_flag_on_post:" loading="lazy" width="20" height="20"> is the number of donations. I can’t tell if these are legitimate donations or not based on their campaign activity on social media.</p>
+<p>It’s also very hard to imagine 2370 individual donations being made when we all spent two weeks straight in Gitcoin radio <img src="https://gov.gitcoin.co/images/emoji/twitter/radio.png?v=12" title=":radio:" class="emoji" alt=":radio:" loading="lazy" width="20" height="20"> fighting to get over 100 donations. Maybe we are missing something here but something definitely doesn’t add up.<br>
+</p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/0/033f22bbf9ce30d935cf1eed710032c339a8a763.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/033f22bbf9ce30d935cf1eed710032c339a8a763" title="IMG_3711"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/033f22bbf9ce30d935cf1eed710032c339a8a763_2_230x500.png" alt="IMG_3711" data-base62-sha1="sIHoJGxl1hwdPcc6QzD1FNNFiX" width="230" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/033f22bbf9ce30d935cf1eed710032c339a8a763_2_230x500.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/033f22bbf9ce30d935cf1eed710032c339a8a763_2_345x750.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/0/033f22bbf9ce30d935cf1eed710032c339a8a763_2_460x1000.png 2x" data-dominant-color="E3E5EA"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/81">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/81
+        Wed, 11 Oct 2023 03:44:23 +0000
+gov.gitcoin.co-post-16553-81
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+pcfreak30
+
+            <p>I was told somewhere that the gitcoin rule of no VC funding was revoked. I am not sure if that is true, but I think it is a mistake if so.</p>
+<p>My view as a small project is that I feel much of Gitcoin is a popularity contest that benefits established projects way more than early ones? For me at-least, I would need to rank in the top 50, probably the top 30 minimum to survive if I did not have community funding from my primary tribe.</p>
+<p>While I cannot confirm it, I also feel like some of the projects in the top ranks may not fully qualify, or may be violating the VC funding, aka double-dipping.</p>
+<p>I checked some and one that stands out is <code>DefiLab.xyz</code> whos domain points to a for sale page…</p>
+<p>Another that is a name that stands out is <code>4EVERLAND</code> who IIRC has made VC biz dev deals and operates as a .Inc (meaning they have big fish investors more cases then not).</p>
+<p>Some of these names I recognize as legit projects providing a valuable service like <code>revoke.cash</code>.</p>
+<p>I feel a lot more vetting is needed on funding so that projects that actually need the money get it. I am fortunate to have a community funding source outside of Gitcoin, but if I did not, frankly the work I’m doing for the space would never exist and I would be working as a consultant again. But I do hope as <em>my</em> project grows, I can rely on Gitcoin more than getting a few hundred USD a quarter.</p>
+<p>Unrelated to who gets what, some general product feedback is that the on/off ramps need solving. All the L2 stuff just fragments things and makes it more painful than cGrants ever was such only the most dedicated supporter will go though the BS needed to donate.</p>
+<p>The batch donating is a good thing but we need to have a unified means of donating across grant pools, a unified profile for all grants on <a href="http://gitcoin.co" rel="noopener nofollow ugc">gitcoin.co</a>, and a frictionless way to go from USD to X crypto to donate, KYC or not.</p>
+<p>Overall I echo a lot of the criticism <a class="mention" href="https://gov.gitcoin.co/u/lefterisjp">@lefterisjp</a> left on Twitter. Im also glad to see someone helped his project outside Gitcoin <img src="https://gov.gitcoin.co/images/emoji/twitter/slight_smile.png?v=12" title=":slight_smile:" class="emoji" alt=":slight_smile:" loading="lazy" width="20" height="20"></p>
+<p>Kudos.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/80">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/80
+        Wed, 11 Oct 2023 02:42:51 +0000
+gov.gitcoin.co-post-16553-80
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+umarkhaneth
+
+            <p>All core rounds have now been paid out!! <img src="https://gov.gitcoin.co/images/emoji/twitter/tada.png?v=12" title=":tada:" class="emoji" alt=":tada:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/tada.png?v=12" title=":tada:" class="emoji" alt=":tada:" loading="lazy" width="20" height="20"><img src="https://gov.gitcoin.co/images/emoji/twitter/tada.png?v=12" title=":tada:" class="emoji" alt=":tada:" loading="lazy" width="20" height="20">  (with the exception of shell’s 100k side pool for climate)</p>
+<p>If you have any questions please reach out on telegram: umarkhaneth</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/79">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/79
+        Tue, 10 Oct 2023 18:14:04 +0000
+gov.gitcoin.co-post-16553-79
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+realsahabia
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> thanks for your response. Please find my message on your telegram inbox.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/78">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/78
+        Tue, 10 Oct 2023 07:22:30 +0000
+gov.gitcoin.co-post-16553-78
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+umarkhaneth
+
+            <aside class="quote no-group" data-username="TiarnachEsq" data-post="76" data-topic="16553">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/tiarnachesq/48/6610_2.png" class="avatar"> TiarnachEsq:</div>
+<blockquote>
+<p>There are five projects in the climate round that received more than $15,000 - why has the matching cap not been enforced in these instances?</p>
+</blockquote>
+</aside>
+<p>The matching cap is different by round. Climate has a 10% cap on the $250,000 in the main climate pool for a $25k cap</p>
+<aside class="quote no-group" data-username="umarkhaneth" data-post="1" data-topic="16553">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/umarkhaneth/48/11954_2.png" class="avatar"> umarkhaneth:</div>
+<blockquote>
+<h2>Core Rounds:</h2>
+<div class="md-table">
+<table>
+<thead>
+<tr>
+<th>Round</th>
+<th>Matching Pool</th>
+<th>Matching Cap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open Source Software</td>
+<td>$300,000.00</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>Ethereum Infrastructure</td>
+<td>$200,000.00 or 106.9 ETH</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>Web3 Community &amp; Education</td>
+<td>$250,000.00</td>
+<td>6%</td>
+</tr>
+<tr>
+<td>Climate</td>
+<td>$350,000.00</td>
+<td>10%</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</aside>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/77">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/77
+        Mon, 09 Oct 2023 13:26:52 +0000
+gov.gitcoin.co-post-16553-77
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+TiarnachEsq
+
+            <aside class="quote no-group" data-username="jon-spark-eco" data-post="58" data-topic="16553">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jon-spark-eco/48/10207_2.png" class="avatar"> jon-spark-eco:</div>
+<blockquote>
+<p>To this point, the round has a 6% matching cap, so a project can’t earn more than 6% of the pie or $15k.</p>
+</blockquote>
+</aside>
+<p>There are five projects in the climate round that received more than $15,000 - why has the matching cap not been enforced in these instances?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/76">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/76
+        Mon, 09 Oct 2023 13:14:33 +0000
+gov.gitcoin.co-post-16553-76
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+adminrefimedellin
+
+            <p>Thanks to all Gitcoin Team for the hardwrok. <img src="https://gov.gitcoin.co/images/emoji/twitter/herb.png?v=12" title=":herb:" class="emoji" alt=":herb:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/75">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/75
+        Mon, 09 Oct 2023 10:43:36 +0000
+gov.gitcoin.co-post-16553-75
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+umarkhaneth
+
+            <p>Hey <a class="mention" href="https://gov.gitcoin.co/u/realsahabia">@realsahabia</a> thanks for your message and you have my apologies for this taking so long that you’re considering rescheduling your event. Payouts should go out early this upcoming week. Could you dm me on telegram and we can figure out how to support your event in the meantime? I’m umarkhaneth on there as well.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/74">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/74
+        Sun, 08 Oct 2023 08:41:03 +0000
+gov.gitcoin.co-post-16553-74
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+realsahabia
+
+            <p>Hello everyone.</p>
+<p>Thanks to <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a> and the team for your efforts.</p>
+<p>On behalf of our team at <strong>DeFi Africa</strong>, I would like to know when the payouts will be carried out?</p>
+<p>We had a planned to host a workshop in this October, which has already been announced and registration is full. We’re just left with some few days away to the workshop and funds are yet to be released.</p>
+<p>I would like to know when it’s planned to release so we can  reschedule our event.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/73">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/73
+        Sun, 08 Oct 2023 00:27:56 +0000
+gov.gitcoin.co-post-16553-73
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+littertoken
+
+            <p>Thanks Jon for the response &amp; explanation. We’ll try to do better next round.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/72">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/72
+        Fri, 29 Sep 2023 17:23:55 +0000
+gov.gitcoin.co-post-16553-72
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+FractalVisions
+
+            <p>You are correct <img src="https://gov.gitcoin.co/images/emoji/twitter/white_check_mark.png?v=12" title=":white_check_mark:" class="emoji" alt=":white_check_mark:" loading="lazy" width="20" height="20">… I am wrong <img src="https://gov.gitcoin.co/images/emoji/twitter/expressionless.png?v=12" title=":expressionless:" class="emoji" alt=":expressionless:" loading="lazy" width="20" height="20">…</p>
+<p>I see the difference here on the original contributions which makes more sense. It’s just not included in the article and that’s why I felt it was misleading.</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/9/9b5faaa0a2286d5b603e32dd228371a1dae1e1da.jpeg" data-download-href="https://gov.gitcoin.co/uploads/db4391/9b5faaa0a2286d5b603e32dd228371a1dae1e1da" title="IMG_3645"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9b5faaa0a2286d5b603e32dd228371a1dae1e1da_2_230x500.jpeg" alt="IMG_3645" data-base62-sha1="mauYid7YihinFHheYMyr4zKVZjk" width="230" height="500" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9b5faaa0a2286d5b603e32dd228371a1dae1e1da_2_230x500.jpeg, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9b5faaa0a2286d5b603e32dd228371a1dae1e1da_2_345x750.jpeg 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/9/9b5faaa0a2286d5b603e32dd228371a1dae1e1da_2_460x1000.jpeg 2x" data-dominant-color="DBDEE1"></a></div><p></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/71">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/71
+        Fri, 29 Sep 2023 16:32:19 +0000
+gov.gitcoin.co-post-16553-71
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+ASTRO-HSU
+
+            <p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/c/c96a087abd841d53d71f34504a92831f86e38ccb.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/c96a087abd841d53d71f34504a92831f86e38ccb" title="截圖 2023-09-29 下午11.56.28"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c96a087abd841d53d71f34504a92831f86e38ccb_2_690x280.png" alt="截圖 2023-09-29 下午11.56.28" data-base62-sha1="sJN953SmvDU01ufh4UYnoS0TyKn" width="690" height="280" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c96a087abd841d53d71f34504a92831f86e38ccb_2_690x280.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c96a087abd841d53d71f34504a92831f86e38ccb_2_1035x420.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/c/c96a087abd841d53d71f34504a92831f86e38ccb_2_1380x560.png 2x" data-dominant-color="F1F1F1"></a></div><p></p>
+<p>Thank you for your response and clarification. I understand your concern, but I believe there may be some misunderstanding. The diagram provided explains the difference between Base Voters and Eligible Voters.</p>
+<p>As mentioned, voters must have a Gitcoin passport score higher than 20 and donation over $1 to become Base Voters. These Base Voters then undergo additional screening to ensure they are not sybils, bots, or duplicate accounts before becoming Eligible Voters. The final results are determined through simpleQF and cluster-matching QF separately.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/70">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/70
+        Fri, 29 Sep 2023 16:10:10 +0000
+gov.gitcoin.co-post-16553-70
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+FractalVisions
+
+            <p>The vote <img src="https://gov.gitcoin.co/images/emoji/twitter/ballot_box.png?v=12" title=":ballot_box:" class="emoji" alt=":ballot_box:" loading="lazy" width="20" height="20"> will conclude in a few days which is already overwhelmingly for the approval of funds being distributed. That will take place afterwards.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/69">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/69
+        Fri, 29 Sep 2023 15:59:09 +0000
+gov.gitcoin.co-post-16553-69
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+FractalVisions
+
+            <p>“ For example, EtherScore, which is ranked first in the table, had an original voter count of 2,941, but the final number of eligible voters was only 643. In other words, nearly 80% of the voters for this project were determined to be voting troops. ”</p>
+<p></p><div class="lightbox-wrapper"><a class="lightbox" href="https://gov.gitcoin.co/uploads/db4391/original/2X/7/787138f5e7e332a73122d6ea3d1198084a23e4f3.png" data-download-href="https://gov.gitcoin.co/uploads/db4391/787138f5e7e332a73122d6ea3d1198084a23e4f3" title="IMG_3644"><img src="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/787138f5e7e332a73122d6ea3d1198084a23e4f3_2_690x230.png" alt="IMG_3644" data-base62-sha1="hbtSdKPGy9ce4Pew4zAiXlv27sf" width="690" height="230" srcset="https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/787138f5e7e332a73122d6ea3d1198084a23e4f3_2_690x230.png, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/787138f5e7e332a73122d6ea3d1198084a23e4f3_2_1035x345.png 1.5x, https://gov.gitcoin.co/uploads/db4391/optimized/2X/7/787138f5e7e332a73122d6ea3d1198084a23e4f3_2_1380x460.png 2x" data-dominant-color="E6E8EA"></a></div><p></p>
+<p>I don’t think <img src="https://gov.gitcoin.co/images/emoji/twitter/thought_balloon.png?v=12" title=":thought_balloon:" class="emoji" alt=":thought_balloon:" loading="lazy" width="20" height="20"> they understand how this works because the 643 voters were the ones with matching funds. There were not any voters who were removed. They simply didn’t have their Gitcoin passport score higher than 20 points for the matching funds.</p>
+<p>So the article is misleading.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/68">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/68
+        Fri, 29 Sep 2023 15:51:16 +0000
+gov.gitcoin.co-post-16553-68
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+giri
+
+            <p>The word “SYBIL” is enough to bring create a panic sensation in market <img src="https://gov.gitcoin.co/images/emoji/twitter/grin.png?v=12" title=":grin:" class="emoji" alt=":grin:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/67">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/67
+        Fri, 29 Sep 2023 13:22:25 +0000
+gov.gitcoin.co-post-16553-67
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+giri
+
+            <p>I’m flagging this <img src="https://gov.gitcoin.co/images/emoji/twitter/black_flag.png?v=12" title=":black_flag:" class="emoji" alt=":black_flag:" loading="lazy" width="20" height="20">because few things are not proper in a certain manner <img src="https://gov.gitcoin.co/images/emoji/twitter/slightly_smiling_face.png?v=12" title=":slightly_smiling_face:" class="emoji" alt=":slightly_smiling_face:" loading="lazy" width="20" height="20"></p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/66">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/66
+        Fri, 29 Sep 2023 13:19:49 +0000
+gov.gitcoin.co-post-16553-66
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+charlesfreeborn
+
+            <p>What next? Are we proceeding with payouts or ratification of the results?</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/65">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/65
+        Fri, 29 Sep 2023 09:08:54 +0000
+gov.gitcoin.co-post-16553-65
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+ASTRO-HSU
+
+            <p>I wanted to share an insightful piece written by <a href="https://blocktrend.substack.com/" rel="noopener nofollow ugc">Blocktrend</a>, a leading blockchain media in Taiwan. The article provides a detailed analysis of  Gitcoin Grants 18 results. Originally intended for Blocktrend’s readers, the piece offers a comprehensive review of how Gitcoin identifies “voting troops” and addresses the issue of “wrongful accusations”.</p>
+<p>The article delves into the specifics of the Quadratic Funding mechanism, the concept of community importance, and the challenges faced by projects in attracting diverse supporters. It also highlights the potential of Gitcoin Grants as a sustainable funding model for small to medium-sized projects in the blockchain space.</p>
+<p>We believe that this article could serve as a valuable resource for the Gitcoin community as well. Here is the link to the article:</p>
+<ul>
+<li>English version: <a href="https://blocktrendintl.substack.com/p/gg18-results-analysis" rel="noopener nofollow ugc">Analysis of GG18 Results: How Gitcoin Identifies Voting Troops and Wrongly Accuses the Innocent</a></li>
+<li>Chinese version: <a href="https://blocktrend.substack.com/p/565" rel="noopener nofollow ugc">平方募資結果分析：Gitcoin 如何揪出投票部隊、錯殺無辜</a></li>
+</ul>
+<p>Feel free to share it with others who might find it informative. We appreciate your time and look forward to hearing your thoughts on the piece.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/64">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/64
+        Fri, 29 Sep 2023 07:10:57 +0000
+gov.gitcoin.co-post-16553-64
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+Yoshi420
+
+            <p>I love the concept but have multiple concerns. Does the product have any potential risk for labeling people on the spectrum as bots? We tend to be more robotic in our movements.<br>
+Does the product have issues with IPhone? I’ve struggled to get it to work, it won’t recognize my social media, or Google I’m not getting credit for much of any activity on the chain. It’s disappointing.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/63">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/63
+        Fri, 29 Sep 2023 04:09:09 +0000
+gov.gitcoin.co-post-16553-63
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+robioreefeco
+
+            <p>Thank you for all the people and contributors that made this possible!!</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/62">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/62
+        Thu, 28 Sep 2023 20:53:26 +0000
+gov.gitcoin.co-post-16553-62
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+PouPou
+
+            <p>Thank you, <a class="mention" href="https://gov.gitcoin.co/u/umarkhaneth">@umarkhaneth</a>, and the entire team for your efforts and for providing clarity. Would it be possible for you to add a column indicating the initial number of votes?<br>
+From my rapid calculations based on the OSS round data, it appears that 58% of the base votes were not considered. How much does this compare to previous rounds?</p>
+<aside class="quote no-group" data-username="ale.k" data-post="19" data-topic="16553">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/ale.k/48/8436_2.png" class="avatar"> ale.k:</div>
+<blockquote>
+<p>Overall though- I support ratifying these results. In line with expectations and past rounds’ sybil-rates.</p>
+</blockquote>
+</aside>
+<p>In my opinion, these numbers are staggering. Additionally, considering that 73% didn’t surpass the passport score, how many total voters and votes does this account for? It seems that fewer than a third of the votes are getting counted. Is that an accurate estimation? Does this also represent a third of the unique voters?</p>
+<p>I also have some questions regarding the cluster QF. Do you consolidate votes from a single donor before the clustering process? For instance, if a donor votes multiple times within a round, are all their donations counted as one? If this isn’t the case, I imagine the results might vary, especially as voters familiarize themselves with new projects and subsequently vote for them during the round.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/61">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/61
+        Thu, 28 Sep 2023 20:49:02 +0000
+gov.gitcoin.co-post-16553-61
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+FractalVisions
+
+            <aside class="quote no-group" data-username="jon-spark-eco" data-post="58" data-topic="16553">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jon-spark-eco/48/10207_2.png" class="avatar"> jon-spark-eco:</div>
+<blockquote>
+<p>On the flip side, it is difficult for QF mechanisms not to become popularity contests, and I think that may be what you are pointing at.</p>
+</blockquote>
+</aside>
+<p>Jon thanks <img src="https://gov.gitcoin.co/images/emoji/twitter/pray.png?v=12" title=":pray:" class="emoji" alt=":pray:" loading="lazy" width="20" height="20"> for taking your time to respond to us today. Yes. I think it’s a positive sign to see the space that was held today with security experts who were joining together.<br>
+That was a great example of how the energy can be laser focused on initiatives and security is definitely number one.</p>
+<aside class="quote no-group" data-username="jon-spark-eco" data-post="58" data-topic="16553">
+<div class="title">
+<div class="quote-controls"></div>
+<img loading="lazy" alt="" width="24" height="24" src="https://gov.gitcoin.co/user_avatar/gov.gitcoin.co/jon-spark-eco/48/10207_2.png" class="avatar"> jon-spark-eco:</div>
+<blockquote>
+<p>We could make the eligibility requirements stricter, but I suspect this would not make the community happy. In general, it isn’t easy running a grants program, and in the end, you can never make everyone happy.</p>
+</blockquote>
+</aside>
+<p>On this note <img src="https://gov.gitcoin.co/images/emoji/twitter/memo.png?v=12" title=":memo:" class="emoji" alt=":memo:" loading="lazy" width="20" height="20"> I definitely <img src="https://gov.gitcoin.co/images/emoji/twitter/100.png?v=12" title=":100:" class="emoji" alt=":100:" loading="lazy" width="20" height="20"> understand what you mean &amp; respect everyone for their hard work during or in between rounds. It’s truly amazing. I assume the passport is constantly being improved upon for matching fund eligibility slowly over the course of the future.</p>
+<p>Has there been any proposals from projects that have offered to pay back a portion of their donations into the matching pools at the end of the round if they received “x” amount of funding in round ? This is an idea that I think would be interesting to experiment with if builders who are heavily committed to the grants stack are also willing to turn around and help spread the distribution more evenly.</p>
+<p>Dashboards for analytics research are great a way for anyone to learn more about blockchain in general. We will do our best to add value to the GTC ecosystem by doing our own research.</p>
+          <p><a href="https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/60">Read full topic</a></p>
+        
+https://gov.gitcoin.co/t/proposal-ratify-the-results-of-gg18-and-formally-request-the-community-multisig-holders-to-payout-matching-allocations/16553/60
+        Thu, 28 Sep 2023 20:39:57 +0000
+gov.gitcoin.co-post-16553-60
+[Proposal] Ratify the Results of GG18 and Formally Request the Community Multisig Holders to Payout Matching Allocations
+      
+
+
